@@ -22,9 +22,15 @@ import {
   Zap
   Globe
   BarChart3
+<<<<<<< HEAD
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+=======
+} from 'lucide-react;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);

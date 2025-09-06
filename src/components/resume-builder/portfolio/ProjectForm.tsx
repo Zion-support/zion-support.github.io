@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -16,6 +17,27 @@ import { Form;
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
+=======
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+} from '@/components/ui/form';
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
 const projectSchema = null;
@@ -54,9 +76,17 @@ const projectSchema = z.object({
 })
 type ProjectFormValues = z.infer<typeof projectSchema>
 interface ProjectFormProps {
+<<<<<<< HEAD
   project?: PortfolioProject
   onSuccess: () => void
   onCancel: () => void
+=======
+  project?: PortfolioProject;
+  onSuccess: () => void;
+  onCancel: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectForm({
   project
   onSuccess
@@ -231,6 +261,10 @@ export function ProjectForm({
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

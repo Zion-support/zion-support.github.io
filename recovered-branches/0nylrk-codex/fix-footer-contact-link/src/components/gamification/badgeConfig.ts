@@ -25,9 +25,16 @@ export interface BadgeMeta {
   name: string;
   description: string;
   icon: LucideIcon;
+<<<<<<< HEAD
   color: string
   bg: string
 }
+=======
+  color: string;
+  bg: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing";
@@ -70,6 +77,7 @@ export const badgeList: BadgeMeta[] = [
     bg: "#F3F3F3",   // Light Gray
   }
   {
+<<<<<<< HEAD
     key: "monetized";
     name: "Monetized";
     description: "Earned your first AI dollar in the marketplace.";
@@ -77,6 +85,18 @@ export const badgeList: BadgeMeta[] = [
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }];
+=======
+    key: 'monetized',
+    name: 'Monetized',
+    description: 'Earned your first AI dollar in the marketplace.',
+    icon: BadgeDollarSign,
+    color: '#22C55E', // Soft Green
+    bg: '#F2FCE2', // Soft Green
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

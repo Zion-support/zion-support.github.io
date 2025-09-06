@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -7,6 +8,18 @@ import { ProjectCard  } from './ProjectCard';
 import { ProjectForm  } from './ProjectForm';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
+=======
+import { useState, useEffect } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus, Loader2 } from 'lucide-react';
+import { ProjectCard } from './ProjectCard';
+import { ProjectForm } from './ProjectForm';
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PortfolioBuilder() {
 <<<<<<< HEAD
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
@@ -69,6 +82,7 @@ export function PortfolioBuilder() {
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
+<<<<<<< HEAD
             <ProjectForm              project={editingProject |undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
@@ -81,11 +95,21 @@ export function PortfolioBuilder() {
                 setEditingProject(null);                setEditingProject(null)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 setEditingProject(null)
+=======
+
+            <ProjectForm
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }}
             />
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -94,6 +118,14 @@ export function PortfolioBuilder() {
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
+=======
+
+      {/* Projects List */}
+      {projects.length > 0 ? (
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {projects.map(project => (
+            <ProjectCard
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
@@ -124,6 +156,7 @@ export function PortfolioBuilder() {
                 </p>
                 <Button
                   onClick={() => setShowAddProject(true)}
+<<<<<<< HEAD
                   className='mt-2'                >            <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -136,6 +169,9 @@ export function PortfolioBuilder() {
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className="mt-2"
+=======
+                  className='mt-2'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Add Your First Project
                 </Button>
@@ -145,5 +181,9 @@ export function PortfolioBuilder() {
         )
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

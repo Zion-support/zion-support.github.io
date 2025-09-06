@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Check } from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,8 +12,12 @@ import { Check } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
+<<<<<<< HEAD
   style?: React.CSSProperties
 <<<<<<< HEAD
+=======
+  style?: React.CSSProperties;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
@@ -78,6 +89,7 @@ export function FeatureHighlights({
                   {category.features.map((feature, idx) => (
                     <li key={idx} className='flex items-start'>
                       <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0' />
+<<<<<<< HEAD
                       <span className='text-zion-slate-light'>{feature}</span>                    </li>            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
@@ -86,6 +98,10 @@ export function FeatureHighlights({
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
+=======
+                      <span className='text-zion-slate-light'>{feature}</span>
+                    </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </ul>
               </CardContent>
@@ -94,6 +110,7 @@ export function FeatureHighlights({
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 import { motion  } from 'framer-motion'
@@ -242,3 +259,6 @@ export function FeatureHighlights() {
   )}
 '"`
 )
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

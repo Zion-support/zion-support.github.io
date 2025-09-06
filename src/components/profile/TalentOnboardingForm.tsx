@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { useRouter  } from 'next/router';
+=======
+import React, { useState } from 'react';
+import { useForm, useFieldArray } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { useRouter } from 'next/router';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form
@@ -98,11 +106,22 @@ const talentSchema = z.object({
         })
       )
       .optional()
+<<<<<<< HEAD
       .default([])
     cv: z.any().optional()
   })
 })
 type TalentFormValues = z.infer<typeof talentSchema>
+=======
+      .default([]),
+    cv: z.any().optional(),
+  }),
+});
+
+type TalentFormValues = z.infer<typeof talentSchema>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentOnboardingForm() {
   const { user } = useAuth()
   const router = useRouter()
@@ -191,6 +210,7 @@ export function TalentOnboardingForm() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
+<<<<<<< HEAD
   return null
   //Step 1: Basic Info basicInfo: z.object ({
   ) .optional () .default ([])
@@ -219,3 +239,37 @@ return publicUrl
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null
 }'}
+=======
+
+  return null;
+
+  //Step 1: Basic Info basicInfo: z.object ({;
+  ) .optional () .default ([]);
+cv: z.any () .optional () ;
+}) ;
+});
+type TalentFormValues = z.infer<typeof talentSchema>;
+const form = useForm<TalentFormValues> ({;
+  resolver: zodResolver (talentSchema), defaultValues: {;
+  basicInfo: {;
+  cv: undefined ;
+
+};
+//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const file = e.target.files?.[0];
+if (!file) return;
+//Preview the image const reader = new FileReader ();
+reader.onloadend = () => {;
+  setProfilePictureUrl (reader.result as string) ;
+};
+reader.readAsDataURL (file);
+}//Get the public window.URL const {;
+  data: {;
+  publicUrl ;
+
+}= supabase.storage.from ('resumes') .getPublicUrl (fileName);
+return publicUrl;
+};
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

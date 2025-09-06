@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { TalentOnboardingForm } from '@/components/profile/TalentOnboardingForm';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { useAuth } from '@/hooks/useAuth';
+import { Navigate } from 'react-router-dom';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
@@ -28,5 +38,9 @@ export default function TalentOnboarding() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

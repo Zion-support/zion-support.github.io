@@ -6,6 +6,10 @@ import { ArrowLeft } from "lucide-react";
 interface ProfileErrorStateProps {
   error: string | null;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">

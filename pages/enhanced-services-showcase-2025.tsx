@@ -2,6 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, Star, Users, TrendingUp;
   DollarSign, Clock, CheckCircle, ArrowRight;
   Rocket, Monitor, Cpu;
@@ -52,6 +53,68 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount }
+=======
+import {
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Monitor,
+  Cpu,
+  Zap,
+  Database,
+  Cloud,
+  Lock,
+  Code,
+  Sparkles,
+  Target,
+  Award,
+  Lightbulb,;
+} from 'lucide-react';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+}
+
+export default function EnhancedServicesShowcase2025() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+  const allServices = [...innovative2025Services, ...emergingTech2025Services];
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category.includes('AI')
+  ).length;
+  const quantumCount = allServices.filter(service =>
+    service.category.includes('Quantum')
+  ).length;
+  const blockchainCount = allServices.filter(service =>
+    service.category.includes('Blockchain')
+  ).length;
+  const iotCount = allServices.filter(service =>
+    service.category.includes('IoT')
+  ).length;
+  const spaceCount = allServices.filter(service =>
+    service.category.includes('Space')
+  ).length;
+  const cybersecurityCount = allServices.filter(
+    service =>
+      service.category.includes('Security') ||
+      service.category.includes('Cybersecurity')
+  ).length;
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       id: 'quantum'
       name: 'Quantum Computing'
@@ -67,6 +130,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount }
     { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount }
     {
+<<<<<<< HEAD
       id: 'security'
       name: 'Cybersecurity'
       icon: '🔒'
@@ -84,13 +148,42 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     { id: 'price-high', name: 'Price High to Low' }
     { id: 'rating', name: 'Rating' }
     { id: 'customers', name: 'Customer Count' },  ];
+=======
+      id: 'security',
+      name: 'Cybersecurity',
+      icon: '🔒',
+      count: cybersecurityCount,
+    },
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },
+    { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },
+    { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },
+    { id: 'premium', name: '$20K+/month', range: '$20K+' },
+  ];
+
+  const sortOptions = [
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customer Count' },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: string | number): number => {
       if (typeof price === 'number') return price
       if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g, '');
+<<<<<<< HEAD
         const parsed = parseFloat(match |'0');
+=======
+        const parsed = parseFloat(match || '0');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         return isNaN(parsed) ? 0 : parsed;
       }
       return 0;
@@ -124,7 +217,14 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
           parsePriceToNumber(service.price) < 20000) |
         (selectedPriceRange === 'premium' &&
           parsePriceToNumber(service.price) >= 20000);
+<<<<<<< HEAD
       return matchesSearch && matchesCategory && matchesPrice;    });
+=======
+
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Sort services
     switch (sortBy) {
       case 'price-low':
@@ -135,7 +235,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       case 'price-high':
         filtered.sort(
           (a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price)
+<<<<<<< HEAD
         );        break;
+=======
+        );
+        break;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
         break;
@@ -145,26 +250,49 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       default:
         filtered.sort((a, b) => a.name.localeCompare(b.name));
     }
+<<<<<<< HEAD
     return filtered;  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
+=======
+
+    return filtered;
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     }
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        duration: 0.5,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='min-h-screen'>
         <Head>
@@ -201,7 +329,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         </Head>
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -245,7 +378,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   <div className='text-3xl font-bold text-pink-400'>
                     {spaceCount + cybersecurityCount}
                   </div>
+<<<<<<< HEAD
                   <div className='text-gray-400'>Specialized</div>                </div>
+=======
+                  <div className='text-gray-400'>Specialized</div>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </div>
@@ -263,7 +401,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     placeholder='Search services...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />
+=======
+                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
                 {/* Category Filter */}
                 <select
@@ -271,7 +414,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
+<<<<<<< HEAD
                   {categories.map(category => (                    <option key={category.id} value={category.id}>
+=======
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {category.name} ({category.count})
                     </option>
                   ))}
@@ -282,7 +430,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
+<<<<<<< HEAD
                   {priceRanges.map(range => (                    <option key={range.id} value={range.id}>
+=======
+                  {priceRanges.map(range => (
+                    <option key={range.id} value={range.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {range.name}
                     </option>
                   ))}
@@ -293,7 +446,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   onChange={e => setSortBy(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
+<<<<<<< HEAD
                   {sortOptions.map(option => (                    <option key={option.id} value={option.id}>
+=======
+                  {sortOptions.map(option => (
+                    <option key={option.id} value={option.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {option.name}
                     </option>
                   ))}
@@ -324,7 +482,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className='text-3xl'>{service.icon}</div>
                       {service.popular && (
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
+<<<<<<< HEAD
                           <Star className='w-4 h-4 fill-current' />                          <span>Popular</span>
+=======
+                          <Star className='w-4 h-4 fill-current' />
+                          <span>Popular</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                       )}
                     </div>
@@ -332,7 +495,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>
                       {service.name}
                     </h3>
+<<<<<<< HEAD
                     <p className='text-gray-300 text-sm mb-4 line-clamp-2'>                      {service.description}
+=======
+                    <p className='text-gray-300 text-sm mb-4 line-clamp-2'>
+                      {service.description}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </p>
                     {/* Price and Customer Count */}
                     <div className='flex items-center justify-between mb-4'>
@@ -343,7 +511,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                         </span>
                       </div>
                       <div className='flex items-center space-x-2 text-sm text-gray-400'>
+<<<<<<< HEAD
                         <Users className='w-4 h-4' />                        <span>{service.customers}</span>
+=======
+                        <Users className='w-4 h-4' />
+                        <span>{service.customers}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                     {/* Key Features */}
@@ -358,7 +531,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                             className='flex items-center text-sm text-gray-300'
                           >
                             <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+<<<<<<< HEAD
                             <span className='line-clamp-1'>{feature}</span>                          </li>
+=======
+                            <span className='line-clamp-1'>{feature}</span>
+                          </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         ))}
                       </ul>
                     </div>
@@ -367,7 +545,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className='text-xs text-gray-400 mb-1'>
                         Market Position
                       </div>
+<<<<<<< HEAD
                       <div className='text-sm text-gray-300 line-clamp-2'>                        {service.marketPosition}
+=======
+                      <div className='text-sm text-gray-300 line-clamp-2'>
+                        {service.marketPosition}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                     {/* ROI and Setup Time */}
@@ -377,7 +560,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                         <span>Average ROI</span>
                       </div>
                       <div className='flex items-center space-x-1 text-blue-400'>
+<<<<<<< HEAD
                         <Clock className='w-4 h-4' />                        <span>{service.setupTime}</span>
+=======
+                        <Clock className='w-4 h-4' />
+                        <span>{service.setupTime}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                     {/* Action Buttons */}
@@ -394,7 +582,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <a
                         href='/contact'
                         className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'
+<<<<<<< HEAD
                       >                        Contact Us
+=======
+                      >
+                        Contact Us
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </a>
                     </div>
                     {/* Contact Information */}
@@ -402,7 +595,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className='text-xs text-gray-400 mb-2'>
                         Contact Information:
                       </div>
+<<<<<<< HEAD
                       <div className='text-xs text-gray-300 space-y-1'>                        <div>📱 {service.contactInfo.mobile}</div>
+=======
+                      <div className='text-xs text-gray-300 space-y-1'>
+                        <div>📱 {service.contactInfo.mobile}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -424,13 +622,23 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your search criteria or filters
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             )}
           </div>
         </section>
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -464,10 +672,19 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   </div>
                   <span className='text-lg text-white'>
                     364 E Main St STE 1008 Middletown DE 19709
+<<<<<<< HEAD
                   </span>                </div>
+=======
+                  </span>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
               {/* Action Buttons */}
+<<<<<<< HEAD
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+=======
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'
@@ -480,11 +697,20 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'
                 >
                   <span className='relative'>View Pricing</span>
+<<<<<<< HEAD
                   <DollarSign className='ml-2 w-6 h-6' />                </a>
+=======
+                  <DollarSign className='ml-2 w-6 h-6' />
+                </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </EnhancedFuturisticBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

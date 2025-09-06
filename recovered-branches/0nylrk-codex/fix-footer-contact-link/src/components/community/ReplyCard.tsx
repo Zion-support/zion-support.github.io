@@ -15,9 +15,14 @@ interface ReplyCardProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
+<<<<<<< HEAD
   className?: string
 }
 <<<<<<< HEAD
+=======
+  className?: string;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const ReplyCard = null;
 =======
@@ -83,7 +88,14 @@ export const ReplyCard = ({
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ReplyCard;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

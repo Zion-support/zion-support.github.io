@@ -61,6 +61,11 @@ export type DisputeReason =
   | 'payment'
   | 'contract_terms'
   | 'other';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const disputeReasonLabels: Record<DisputeReason, string> = {
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';

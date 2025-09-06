@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React from 'react';
 import { useRouter  } from 'next/router';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 interface ProjectHeaderProps {
+<<<<<<< HEAD
   title: string
+=======
+  title: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
   return (
@@ -23,5 +32,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

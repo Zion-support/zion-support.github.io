@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -6,12 +7,42 @@ import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
+=======
+import { useState } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AIMatchingResults } from '@/components/AIMatchingResults';
+import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
+import { Textarea } from '@/components/ui/textarea';
+import { Sparkles, Search } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 <<<<<<< HEAD
   serviceType?: string;
+<<<<<<< HEAD
   onMatchSelect?: (match: any) => void;
   className?: string
+=======
+onMatchSelect?: (match: any) => void;
+className?: string ;
+}if (!query.trim () ) {;
+  toast ({;
+  return;
+}setIsMatchmaking (true);
+setHasSearched (true);
+serviceType;
+3);
+}catch (error) {';
+  logErrorToProduction ('Error during AI matching:', {;
+  data: error ;
+});
+toast ({;
+  //Set empty matches to show no results found UI setMatches ([]) ;
+}finally {;
+  setIsMatchmaking (false) ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function AIMatchmaker({ serviceType;
@@ -97,7 +128,12 @@ export function AIMatchmaker({
     }
   }
   // Extract just the items from each MatchResult
+<<<<<<< HEAD
   const matchItems = matches.map(match => match.item)
+=======
+  const matchItems = matches.map(match => match.item);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
@@ -146,5 +182,9 @@ export function AIMatchmaker({
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

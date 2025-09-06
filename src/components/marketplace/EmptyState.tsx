@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -86,9 +85,17 @@ const defaultContent = {
     icon: <RefreshCw className='w-16 h-16 text-blue-400 animate-spin' />
     title: 'Loading...'
     description:
+<<<<<<< HEAD
       "We're fetching the latest data for you. This should only take a moment."
   }
 }
+=======
+      "We're fetching the latest data for you. This should only take a moment.",
+  },
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EmptyState({
   type
   title
@@ -96,11 +103,20 @@ export function EmptyState({
   action
   icon
 }: EmptyStateProps) {
+<<<<<<< HEAD
   const { t } = useTranslation();  const content = defaultContent[type]
   const content = defaultContent[type]
   const displayTitle = title |content.title
   const displayDescription = description |content.description
   const displayIcon = icon |content.icon
+=======
+  const { t } = useTranslation();
+  const content = defaultContent[type];
+  const displayTitle = title || content.title;
+  const displayDescription = description || content.description;
+  const displayIcon = icon || content.icon;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
       <div className='mb-4'>{displayIcon}</div>
@@ -138,6 +154,8 @@ export function EmptyState({
     </div>
   )
 // Specific empty state variants for quick use
+}
+
 export function ProductsEmptyState({
   onRetry
   onAddProduct
@@ -156,6 +174,7 @@ export function ProductsEmptyState({
       : undefined
   const customDescription = isAuthenticated
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
+<<<<<<< HEAD
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -180,3 +199,45 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 }
+=======
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+
+    />
+  );
+}
+
+export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
+
+    />
+  );
+}
+
+export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
+
+    />
+  );
+}
+
+export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+
+    />
+  );
+}
+
+export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+
+    />
+  );
+}
+
+export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+
+    />
+  );
+}
+
+export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

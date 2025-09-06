@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
+import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { Briefcase } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { useRouter } from "next/router",
@@ -27,6 +38,7 @@ function HiringTrackerContent() {
               <Briefcase className='mr-2 h-6 w-6 text-primary' />
               Hiring Pipeline
             </h1>
+<<<<<<< HEAD
             <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -43,10 +55,17 @@ function HiringTrackerContent() {
               Hiring Pipeline
             </h1>
             <p className="text-muted-foreground mt-1">
+=======
+            <p className='text-muted-foreground mt-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
@@ -59,6 +78,7 @@ function HiringTrackerContent() {
           <TabsContent value='kanban' className='mt-6'>
             <KanbanBoard jobId={jobId} />
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='analytics' className='mt-6'>            <HiringAnalytics jobId={jobId} />          <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
@@ -67,17 +87,31 @@ function HiringTrackerContent() {
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           <TabsContent value="analytics" className="mt-6">
+=======
+
+          <TabsContent value='analytics' className='mt-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

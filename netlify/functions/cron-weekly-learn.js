@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 exports.handler = async function () {
   try {
     const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
@@ -12,10 +16,15 @@ exports.handler = async function () {
     );
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 <<<<<<< HEAD
+<<<<<<< HEAD
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
+=======
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const summary = {
       updatedAt: Date.now();
 =======
@@ -27,8 +36,13 @@ exports.handler = async function () {
       updatedAt: Date.now()
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       totals: {
+<<<<<<< HEAD
         users: Object.keys(users).length
         courses: courses.length
+=======
+        users: Object.keys(users).length,
+        courses: courses.length,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         completions: Object.values(users).reduce(
           (acc, u) => acc + (u.certifications?.length |0)
           0
@@ -61,6 +75,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
+<<<<<<< HEAD
 };      },
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
@@ -104,3 +119,6 @@ exports.handler = async function () {
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+import { Resume } from '@/types/resume';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -8,7 +17,13 @@ import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
+<<<<<<< HEAD
   isLoading: boolean
+=======
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResumePreviewCard({
   resume
   onDownload
@@ -49,21 +64,30 @@ export function ResumePreviewCard({
               <Badge
                 key={index}
                 variant='outline'
+<<<<<<< HEAD
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key = {index,}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+=======
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
               <Badge
                 variant='outline'
+<<<<<<< HEAD
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+=======
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 +{resume.skills.length - 5} more
               </Badge>
@@ -72,5 +96,9 @@ export function ResumePreviewCard({
         )}
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

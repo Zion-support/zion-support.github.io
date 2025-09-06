@@ -10,11 +10,17 @@ import { ModelConfig } from '@/utils/zion-gpt';
 interface ModelVersionData extends ModelConfig {
 <<<<<<< HEAD
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+<<<<<<< HEAD
 =======
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   errorMessage?: string
 }
+=======
+  errorMessage?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
   const [isLoading, setIsLoading] = useState(true);

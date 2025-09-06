@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -17,6 +31,7 @@ import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {
   const { toast } = useToast();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleExport = null;
 =======
   const handleExport = (format: "csv" | "json") => {
@@ -34,6 +49,28 @@ export function ExportPanel() {
       }, 1500));
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  const handleExport = (format: 'csv' | 'json') => {
+    // Placeholder for actual
+}
+
+export functionality
+    toast({
+      title: `Exporting as ${format.toUpperCase()}`,
+      description: 'Your export is being prepared and will download shortly.',
+    });
+
+    // In a real implementation, this would trigger an API call to generate and download the export
+    setTimeout(() => {
+      toast({
+        title: `${format.toUpperCase()} Export Ready`,
+        description: 'Your export has been downloaded.',
+      });
+    }, 1500);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>

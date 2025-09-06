@@ -55,6 +55,7 @@ const Footer = () => {
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
+<<<<<<< HEAD
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -62,6 +63,41 @@ const Footer = () => {
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
   ];
+=======
+];
+
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+
+const aiServiceCategories = [
+  { title: 'Machine Learning', icon: Brain, count: 25 },
+  { title: 'Computer Vision', icon: Eye, count: 18 },
+  { title: 'Natural Language', icon: MessageSquare, count: 20 },
+  { title: 'Predictive Analytics', icon: TrendingUp, count: 15 },
+  { title: 'Robotics', icon: Settings, count: 8 },
+  { title: 'Quantum AI', icon: Code, count: 5 }
+];
+
+const itServiceCategories = [
+  { title: 'Cloud Computing', icon: Cloud, count: 30 },
+  { title: 'Cybersecurity', icon: Shield, count: 25 },
+  { title: 'DevOps', icon: Settings, count: 20 },
+  { title: 'Data Management', icon: HardDrive, count: 15 },
+  { title: 'Network Security', icon: Lock, count: 18 },
+  { title: 'Infrastructure', icon: Building, count: 22 }
+];
+}
+
+export default function Footer() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">

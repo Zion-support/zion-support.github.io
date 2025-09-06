@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu;
 	X;
 	ChevronDown;
@@ -86,6 +87,61 @@ export default function NeoFuturisticNavigation() {
 							<div className="text-xs text-gray-400">Revolutionary Technology</div>
 						</div>
 					</Link>
+=======
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  FlaskConical,
+  Link as LinkIcon,;
+} from 'lucide-react';
+import Button from '../ui/Button';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
 import {
@@ -491,6 +547,10 @@ export default function NeoFuturisticNavigation() {
     }
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>
@@ -950,6 +1010,7 @@ export default function NeoFuturisticNavigation() {
 }/> </button>) )
 }</div>)
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)
+<<<<<<< HEAD
 }</nav>) 								<div className="mt-6 space-y-3">
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
@@ -967,3 +1028,6 @@ export default function NeoFuturisticNavigation() {
 		</nav>
 );
 }
+=======
+}</nav>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,14 +1,25 @@
 import { useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const IOS_APP_URL = null;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL =
   process.env.NEXT_PUBLIC_ANDROID_APP_URL |
   'https://play.google.com/store/apps/details?id=com.zion.app';
+<<<<<<< HEAD
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {
+=======
+const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
+}
+
+export default function OpenApp() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const isAndroid = /Android/i.test(navigator.userAgent);
@@ -16,7 +27,11 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';expor
     const timeout = setTimeout(() => {
       const elapsed = Date.now() - now;
       if (elapsed < 2000) {
+<<<<<<< HEAD
         window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;      }        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
+=======
+        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }, 1200);
     // Try to open the deep link
@@ -27,7 +42,11 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';expor
     const timer = setTimeout(() => {
       try {
         document.body.removeChild(iframe);
+<<<<<<< HEAD
       } catch {}    }, 1500);      try { document.body.removeChild(iframe) } catch {}
+=======
+      } catch {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }, 1500);
     return () => {
       clearTimeout(timeout);
@@ -46,6 +65,7 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';expor
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );  }, []);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -57,3 +77,6 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';expor
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

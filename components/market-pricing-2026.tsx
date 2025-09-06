@@ -7,6 +7,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 =======
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   TrendingUp
   Star
   Users
@@ -22,16 +23,39 @@ import {
   Target as TargetIcon
   Award;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
+=======
+  TrendingUp,
+  Star,
+  Users,
+  Zap,
+  Brain,
+  Atom,
+  Sparkles,
+  Shield,
+  Target,
+  Cloud,
+  DollarSign,
+  BarChart3,
+  Target as TargetIcon,
+  Award,;
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   // Combine all 2026 services
+<<<<<<< HEAD
 <<<<<<< HEAD
   const allServices = null;
 =======
@@ -41,6 +65,12 @@ export default function MarketPricing2026() {
     ...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services
+=======
+  const allServices = [
+    ...revolutionary2026Services,
+    ...emergingTech2026Services,
+    ...comprehensiveIT2026Services,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
@@ -101,6 +131,7 @@ export default function MarketPricing2026() {
       name: 'Cloud & DevOps'
       icon: Cloud
       count: allServices.filter(
+<<<<<<< HEAD
         s => s.category.includes('Cloud') |s.category.includes('DevOps')
       ).length
     },  ];
@@ -114,6 +145,15 @@ export default function MarketPricing2026() {
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('DevOps')).length }
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All price ranges' }
+=======
+        s => s.category.includes('Cloud') || s.category.includes('DevOps')
+      ).length,
+    },
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All price ranges' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       id: 'budget'
       name: 'Budget ($0 - $5K)'
@@ -125,14 +165,22 @@ export default function MarketPricing2026() {
       range: 'Professional solutions for growing companies'
     }
     {
+<<<<<<< HEAD
       id: 'premium'
       name: 'Premium ($15K+)'
       range: 'Enterprise-grade solutions for large organizations'
     },  ];    { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' }
     { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' }
     { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
+=======
+      id: 'premium',
+      name: 'Premium ($15K+)',
+      range: 'Enterprise-grade solutions for large organizations',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -141,6 +189,17 @@ export default function MarketPricing2026() {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+  // Calculate pricing statistics
+  const pricingStats = {
+    totalServices: allServices.length,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     averagePrice:
       allServices.reduce(
         (sum, service) =>
@@ -159,7 +218,13 @@ export default function MarketPricing2026() {
     )
     averageRating:
       allServices.reduce((sum, service) => sum + service.rating, 0) /
+<<<<<<< HEAD
       allServices.length
+=======
+      allServices.length,
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='min-h-screen'>
         <Head>
@@ -193,6 +258,7 @@ export default function MarketPricing2026() {
           <link
             rel='canonical'
             href='https://ziontechgroup.com/market-pricing-2026'
+<<<<<<< HEAD
           />        </Head>          <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title>
           <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis" />
@@ -203,12 +269,21 @@ export default function MarketPricing2026() {
           <meta property="og:url" content="https://ziontechgroup.com/market-pricing-2026" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/market-pricing-2026" />
+=======
+          />
+        </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Navigation */}
         <UltraAdvancedNavigation />
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+=======
+          <div className='max-w-7xl mx-auto text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -254,6 +329,7 @@ export default function MarketPricing2026() {
                   <div className='text-3xl font-bold text-yellow-400 mb-2'>
                     {pricingStats.totalCustomers.toLocaleString()}+
                   </div>
+<<<<<<< HEAD
                   <div className='text-gray-400 text-sm'>Total Customers</div>                </div>                  2026 Market Pricing
                 </span>
               </h1>
@@ -283,6 +359,9 @@ export default function MarketPricing2026() {
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
                   <div className="text-3xl font-bold text-yellow-400 mb-2">{pricingStats.totalCustomers.toLocaleString()}+</div>
                   <div className="text-gray-400 text-sm">Total Customers</div>
+=======
+                  <div className='text-gray-400 text-sm'>Total Customers</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
@@ -298,6 +377,7 @@ export default function MarketPricing2026() {
                   <label className='block text-white font-semibold mb-3'>
                     Service Category
                   </label>
+<<<<<<< HEAD
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
@@ -306,6 +386,10 @@ export default function MarketPricing2026() {
                 <div>
                   <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+=======
+                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
+                    {categories.map(category => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
@@ -321,11 +405,16 @@ export default function MarketPricing2026() {
                         </div>
                         <div className='text-xs mt-1 opacity-75'>
                           ({category.count})
+<<<<<<< HEAD
                         </div>                      </button>                        <div className="flex items-center justify-center space-x-2">
                           <category.icon className="w-4 h-4" />
                           <span>{category.name}</span>
                         </div>
                         <div className="text-xs mt-1 opacity-75">({category.count})</div>
+=======
+                        </div>
+                      </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ))}
                   </div>
                 </div>
@@ -334,8 +423,12 @@ export default function MarketPricing2026() {
                   <label className='block text-white font-semibold mb-3'>
                     Price Range
                   </label>
+<<<<<<< HEAD
                   <div className='space-y-2'>                    {priceRanges.map(range => (                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
                   <div className="space-y-2">
+=======
+                  <div className='space-y-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {priceRanges.map(range => (
                       <button
                         key={range.id}
@@ -347,8 +440,12 @@ export default function MarketPricing2026() {
                         }`}
                       >
                         <div className='font-medium'>{range.name}</div>
+<<<<<<< HEAD
                         <div className='text-xs opacity-75'>{range.range}</div>                      </button>                        <div className="font-medium">{range.name}</div>
                         <div className="text-xs opacity-75">{range.range}</div>
+=======
+                        <div className='text-xs opacity-75'>{range.range}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </button>
                     ))}
                   </div>
@@ -359,8 +456,12 @@ export default function MarketPricing2026() {
         </section>
         {/* Market Analysis Section */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+=======
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -374,9 +475,15 @@ export default function MarketPricing2026() {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our services are strategically positioned to provide maximum
                 value while maintaining competitive pricing in the rapidly
+<<<<<<< HEAD
                 evolving technology landscape              </p>
+=======
+                evolving technology landscape
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             {/* Market Insights Grid */}
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing
@@ -384,6 +491,9 @@ export default function MarketPricing2026() {
             </motion.div>
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+=======
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -401,6 +511,7 @@ export default function MarketPricing2026() {
                   superior features and ROI
                 </p>
                 <div className='flex items-center text-cyan-400 text-sm'>
+<<<<<<< HEAD
                   <TrendingUp className='w-4 h-4 mr-2' />                  <span>20-40% cost savings</span>              >
                 <div className="text-4xl mb-4">📊</div>
                 <h3 className="text-xl font-bold text-white mb-3">Competitive Pricing</h3>
@@ -410,6 +521,9 @@ export default function MarketPricing2026() {
                 </p>
                 <div className="flex items-center text-cyan-400 text-sm">
                   <TrendingUp className="w-4 h-4 mr-2" />
+=======
+                  <TrendingUp className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>20-40% cost savings</span>
                 </div>
               </motion.div>
@@ -429,6 +543,7 @@ export default function MarketPricing2026() {
                   that customers see exceptional returns on their investment
                 </p>
                 <div className='flex items-center text-green-400 text-sm'>
+<<<<<<< HEAD
                   <Award className='w-4 h-4 mr-2' />                  <span>1000% ROI guarantee</span>              >
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-xl font-bold text-white mb-3">ROI Guarantee</h3>
@@ -438,6 +553,9 @@ export default function MarketPricing2026() {
                 </p>
                 <div className="flex items-center text-green-400 text-sm">
                   <Award className="w-4 h-4 mr-2" />
+=======
+                  <Award className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>1000% ROI guarantee</span>
                 </div>
               </motion.div>
@@ -457,6 +575,7 @@ export default function MarketPricing2026() {
                   will remain relevant and competitive for years to come
                 </p>
                 <div className='flex items-center text-purple-400 text-sm'>
+<<<<<<< HEAD
                   <Zap className='w-4 h-4 mr-2' />                  <span>Future-proof solutions</span>              >
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-bold text-white mb-3">Future-Proof Technology</h3>
@@ -466,6 +585,9 @@ export default function MarketPricing2026() {
                 </p>
                 <div className="flex items-center text-purple-400 text-sm">
                   <Zap className="w-4 h-4 mr-2" />
+=======
+                  <Zap className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>Future-proof solutions</span>
                 </div>
               </motion.div>
@@ -474,8 +596,12 @@ export default function MarketPricing2026() {
         </section>
         {/* Services Pricing Grid */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+=======
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -486,6 +612,7 @@ export default function MarketPricing2026() {
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Service Pricing & Features
               </h2>
+<<<<<<< HEAD
               <p className='text-xl text-gray-300'>                {filteredServices.length} services found matching your criteria
               </p>
             </motion.div>
@@ -496,6 +623,14 @@ export default function MarketPricing2026() {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+              <p className='text-xl text-gray-300'>
+                {filteredServices.length} services found matching your criteria
+              </p>
+            </motion.div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -509,6 +644,7 @@ export default function MarketPricing2026() {
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Service Header */}
@@ -516,11 +652,15 @@ export default function MarketPricing2026() {
                       <div className="text-4xl">{service.icon}</div>
                       {service.popular && (
                         <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
+=======
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           Popular
                         </span>
                       )}
                     </div>
                     {/* Service Title */}
+<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
                     {/* Tagline */}
@@ -530,10 +670,17 @@ export default function MarketPricing2026() {
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
                       <div className='text-center'>
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+=======
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.name}
                     </h3>
                     {/* Tagline */}
+<<<<<<< HEAD
                     <p className='text-gray-300 text-sm mb-4'>                    <p className="text-gray-300 text-sm mb-4">
+=======
+                    <p className='text-gray-300 text-sm mb-4'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.tagline}
                     </p>
                     {/* Pricing Section */}
@@ -547,12 +694,16 @@ export default function MarketPricing2026() {
                         </div>
                         <div className='text-gray-400 text-sm'>
                           Starting price
+<<<<<<< HEAD
                         </div>                      </div>
                     </div>
                     {/* Market Position */}                          {service.price}
                           <span className="text-gray-400 text-lg font-normal">{service.period}</span>
                         </div>
                         <div className="text-gray-400 text-sm">Starting price</div>
+=======
+                        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                     {/* Market Position */}
@@ -560,9 +711,13 @@ export default function MarketPricing2026() {
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Market Position
                       </h4>
+<<<<<<< HEAD
                       <p className='text-gray-400 text-xs leading-relaxed'>                        {service.marketPosition}                    <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>
                       <p className="text-gray-400 text-xs leading-relaxed">
+=======
+                      <p className='text-gray-400 text-xs leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {service.marketPosition}
                       </p>
                     </div>
@@ -578,6 +733,7 @@ export default function MarketPricing2026() {
                         <div className='text-lg font-bold text-blue-400 mb-1'>
                           {service.customers.toLocaleString()}+
                         </div>
+<<<<<<< HEAD
                         <div className='text-gray-400 text-xs'>Customers</div>                      </div>
                     </div>
                     {/* Key Features */}                          {service.roi.split(' ')[0]}
@@ -589,6 +745,9 @@ export default function MarketPricing2026() {
                           {service.customers.toLocaleString()}+
                         </div>
                         <div className="text-gray-400 text-xs">Customers</div>
+=======
+                        <div className='text-gray-400 text-xs'>Customers</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                     {/* Key Features */}
@@ -602,12 +761,17 @@ export default function MarketPricing2026() {
                             key={idx}
                             className='text-gray-400 text-xs flex items-center'
                           >
+<<<<<<< HEAD
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+=======
+                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
+                            {feature}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </li>
                         ))}
                       </ul>
@@ -622,6 +786,7 @@ export default function MarketPricing2026() {
                           <span
                             key={idx}
                             className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'
+<<<<<<< HEAD
                           >                            {tech}
                           </span>
                         ))}
@@ -635,6 +800,14 @@ export default function MarketPricing2026() {
                         ))}
                         {service.technology.length > 3 && (
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                          <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
+=======
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {service.technology.length > 3 && (
+                          <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             +{service.technology.length - 3} more
                           </span>
                         )}
@@ -643,7 +816,11 @@ export default function MarketPricing2026() {
                     {/* CTA Button */}
                     <a
                       href={service.link}
+<<<<<<< HEAD
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
+=======
+                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     >
                       View Details
                     </a>
@@ -664,18 +841,27 @@ export default function MarketPricing2026() {
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your category or price range filters
+<<<<<<< HEAD
                 </p>              </motion.div>                className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>
+=======
+                </p>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             )}
           </div>
         </section>
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -710,6 +896,7 @@ export default function MarketPricing2026() {
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
+<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'                >
                   Get Custom Quote
                 </a>
@@ -739,13 +926,20 @@ export default function MarketPricing2026() {
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+=======
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Get Custom Quote
                 </a>
                 <a
                   href='/2026-services-showcase'
+<<<<<<< HEAD
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/2026-services-showcase"
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+=======
+                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   View All Services
                 </a>
@@ -755,5 +949,9 @@ export default function MarketPricing2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

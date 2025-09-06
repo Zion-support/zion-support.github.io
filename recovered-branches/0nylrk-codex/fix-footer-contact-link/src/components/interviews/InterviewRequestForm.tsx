@@ -31,6 +31,7 @@ const formSchema = null;
   userDetails?: UserProfile
 }
 const formSchema = z.object({
+<<<<<<< HEAD
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
@@ -42,6 +43,29 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview.");
   notes: z.string().optional()})
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+=======
+  date: z
+    .date({
+      required_error: 'Please select a date for the interview.',
+    })
+    .refine(date => date > new Date(), {
+      message: 'Interview date must be in the future',
+    }),
+  time: z.string().min(1, 'Please select a time for the interview.'),
+  duration: z.string().min(1, 'Please select the interview duration.'),
+  platform: z.string().min(1, 'Please select a meeting platform.'),
+  meetingLink: z.string().optional(),
+  title: z.string().min(3, 'Please provide a brief title for the interview.'),
+  notes: z.string().optional(),
+});
+}
+
+export function InterviewRequestForm({
+  talent,
+  onClose,
+  userDetails,
+}: InterviewRequestFormProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({

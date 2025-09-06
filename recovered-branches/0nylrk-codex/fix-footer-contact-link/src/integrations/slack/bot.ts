@@ -97,5 +97,10 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   const port = env.PORT ? Number(env.PORT) : 3000;
   await app.start(port)
 })();
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default app;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

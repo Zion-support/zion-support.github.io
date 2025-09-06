@@ -14,6 +14,7 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void;
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
+<<<<<<< HEAD
 =======
   searchQuery: string
   setSearchQuery: (value: string) => void
@@ -26,6 +27,11 @@ interface FraudFiltersProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   resetFilters: () => void
 }
+=======
+  resetFilters: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;
   setSearchQuery;

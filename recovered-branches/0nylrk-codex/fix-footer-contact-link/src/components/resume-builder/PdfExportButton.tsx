@@ -17,8 +17,14 @@ import { exportResumeToPDF, ExportOptions  } from '@/utils/pdfExport';
 import { toast  } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
+<<<<<<< HEAD
   resume: Resume
 }
+=======
+  resume: Resume;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),

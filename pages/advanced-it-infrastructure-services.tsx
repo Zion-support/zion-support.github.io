@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -45,6 +46,88 @@ const heroStats = [
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing'
+=======
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Users,
+  Globe,
+  Cpu,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Target as TargetIcon,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Search,
+  Code,
+  TestTube,
+  Server,
+  Database,
+  Network,
+  Shield as SecurityIcon,
+  Wifi,
+  Building,
+  Cpu as CpuIcon,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const heroStats = [
+  {
+    label: 'Infrastructure Projects',
+    value: '150+',
+    icon: <Server className='w-5 h-5' />,
+  },
+  {
+    label: 'Enterprise Clients',
+    value: '300+',
+    icon: <Building className='w-5 h-5' />,
+  },
+  {
+    label: 'Uptime Guarantee',
+    value: '99.99%',
+    icon: <Award className='w-5 h-5' />,
+  },
+  {
+    label: 'Cost Reduction',
+    value: '60%',
+    icon: <TrendingUp className='w-5 h-5' />,
+  },
+];
+
+const serviceCategories = [
+  {
+    title: 'Quantum Cloud Computing',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Next-generation cloud infrastructure with quantum processing capabilities'
     services: advancedITInfrastructureServices2025.filter(
@@ -96,6 +179,7 @@ const serviceCategories = [
     icon: Network
     color: 'from-purple-500 to-pink-600'
     features: [
+<<<<<<< HEAD
       'Quantum Encryption'
       'Network Optimization'
       'Security Monitoring'
@@ -157,6 +241,77 @@ const testimonials = [
     avatar: '👩‍🔒'
   },];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Quantum Encryption',
+      'Network Optimization',
+      'Security Monitoring',
+    ],
+  },
+];
+
+const heroFeatures = [
+  {
+    title: 'Quantum Computing',
+    description:
+      'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
+    icon: Atom,
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+  },
+  {
+    title: 'AI-Powered Automation',
+    description:
+      'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',
+    icon: Brain,
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600',
+  },
+  {
+    title: 'Edge Computing',
+    description:
+      'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.',
+    icon: Wifi,
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600',
+  },
+  {
+    title: 'Zero Trust Security',
+    description:
+      'Continuous verification and monitoring that provides comprehensive protection against modern threats.',
+    icon: Shield,
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Dr. Jennifer Martinez',
+    role: 'CTO, QuantumTech Industries',
+    company: 'QuantumTech Industries',
+    content:
+      "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
+    rating: 5,
+    avatar: '👩‍🔬',
+  },
+  {
+    name: 'Robert Thompson',
+    role: 'Infrastructure Director, EdgeNet Solutions',
+    company: 'EdgeNet Solutions',
+    content:
+      'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
+    rating: 5,
+    avatar: '👨‍💼',
+  },
+  {
+    name: 'Lisa Chang',
+    role: 'Security CISO, SecureCorp International',
+    company: 'SecureCorp International',
+    content:
+      'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
+    rating: 5,
+    avatar: '👩‍🔒',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>
@@ -191,7 +346,12 @@ export default function AdvancedITInfrastructureServices() {
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
+<<<<<<< HEAD
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+=======
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -203,7 +363,12 @@ export default function AdvancedITInfrastructureServices() {
               Revolutionary infrastructure solutions with quantum computing
               edge computing, and AI-powered automation for the future
             </p>
+<<<<<<< HEAD
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
+=======
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>
+              {heroStats.map((stat, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -231,14 +396,27 @@ export default function AdvancedITInfrastructureServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
               >
+<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Get Started
+=======
+                <Phone className='mr-2 w-5 h-5' />
+                Get Started
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+      {/* Features Section */}
+      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -254,7 +432,13 @@ export default function AdvancedITInfrastructureServices() {
               reliability
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {heroFeatures.map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -274,16 +458,29 @@ export default function AdvancedITInfrastructureServices() {
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
+<<<<<<< HEAD
                       <p className='text-gray-300'>{feature.description}</p>                    </div>
+=======
+                      <p className='text-gray-300'>{feature.description}</p>
+                    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+      {/* Services Section */}
+      <section id='services' className='py-20 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -298,7 +495,13 @@ export default function AdvancedITInfrastructureServices() {
               edge computing, security, and data centers
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
+=======
+
+          <div className='space-y-16'>
+            {serviceCategories.map((category, categoryIndex) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
@@ -320,7 +523,13 @@ export default function AdvancedITInfrastructureServices() {
                     {category.description}
                   </p>
                 </div>
+<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
+=======
+
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+                  {category.services.map((service, serviceIndex) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -334,7 +543,12 @@ export default function AdvancedITInfrastructureServices() {
                           <div className='flex items-center justify-between mb-4'>
                             <span className='text-3xl'>{service.icon}</span>
                             {service.popular && (
+<<<<<<< HEAD
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>                                Popular
+=======
+                              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
+                                Popular
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               </span>
                             )}
                           </div>
@@ -378,7 +592,12 @@ export default function AdvancedITInfrastructureServices() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
+<<<<<<< HEAD
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'                            >
+=======
+                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'
+                            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               Get Started
                             </Link>
                           </div>
@@ -394,7 +613,12 @@ export default function AdvancedITInfrastructureServices() {
       </section>
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -409,7 +633,13 @@ export default function AdvancedITInfrastructureServices() {
               infrastructure with our advanced services
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {testimonials.map((testimonial, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -434,7 +664,12 @@ export default function AdvancedITInfrastructureServices() {
                 <div className='flex items-center'>
                   <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
+<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
+=======
+                      <Star key={i} className='w-4 h-4 fill-current' />
+                    ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </motion.div>
@@ -444,7 +679,12 @@ export default function AdvancedITInfrastructureServices() {
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -462,7 +702,12 @@ export default function AdvancedITInfrastructureServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
               >
+<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
+=======
+                <Phone className='mr-2 w-5 h-5' />
+                Call Now: {contactInfo.mobile}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
@@ -474,9 +719,18 @@ export default function AdvancedITInfrastructureServices() {
             </div>
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
+<<<<<<< HEAD
               <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>
+=======
+              <p className='text-gray-300'>🌐 {contactInfo.website}</p>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award;
   Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code;
@@ -55,6 +56,85 @@ const features = [
     icon: Zap
     color: 'from-yellow-500 to-orange-500'
   },];
+=======
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  BarChart3,
+  Target,
+  Zap,
+  Shield,
+  Globe,
+  Users,
+  Award,
+  Clock,
+  DollarSign,
+  Check,
+  ArrowUpRight,
+  Play,
+  BookOpen,
+  Code,
+  ShoppingCart,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const features = [
+  {
+    title: 'Real-time Content Analytics',
+    description:
+      'Monitor content performance across all channels with live dashboards and insights',
+    icon: BarChart3,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    title: 'AI-Powered Optimization',
+    description:
+      'Get intelligent suggestions for content improvement based on performance data',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
+    title: 'Predictive Performance Modeling',
+    description:
+      'Forecast content success before publishing using advanced AI algorithms',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    title: 'Multi-Channel Strategy',
+    description: 'Optimize content across all digital platforms simultaneously',
+    icon: Globe,
+    color: 'from-orange-500 to-red-500',
+  },
+  {
+    title: 'Competitor Analysis',
+    description:
+      'Track competitor content performance and identify opportunities',
+    icon: Target,
+    color: 'from-indigo-500 to-blue-500',
+  },
+  {
+    title: 'SEO Content Intelligence',
+    description: 'AI-powered SEO optimization and keyword gap identification',
+    icon: Zap,
+    color: 'from-yellow-500 to-orange-500',
+  },
+];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const pricingPlans = [
   {
     name: 'Starter'
@@ -62,6 +142,7 @@ const pricingPlans = [
     period: '/month'
     description: 'Perfect for small businesses and content creators'
     features: [
+<<<<<<< HEAD
       'Real-time content analytics'
       'AI optimization suggestions'
       'Basic performance tracking'
@@ -152,6 +233,105 @@ const integrations = [
   'Zapier'
   'API Access',];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Real-time content analytics',
+      'AI optimization suggestions',
+      'Basic performance tracking',
+      'SEO content insights',
+      'Email support',
+      'Up to 100 content pieces/month',
+    ],
+    popular: false,
+    color: 'from-gray-500 to-gray-600',
+  },
+  {
+    name: 'Professional',
+    price: '$5,000',
+    period: '/month',
+    description: 'Ideal for growing businesses and marketing teams',
+    features: [
+      'Everything in Starter',
+      'Predictive performance modeling',
+      'Advanced competitor analysis',
+      'Multi-channel optimization',
+      'Priority support',
+      'Up to 500 content pieces/month',
+      'Custom integrations',
+    ],
+    popular: true,
+    color: 'from-blue-500 to-purple-600',
+  },
+  {
+    name: 'Enterprise',
+    price: '$10,000',
+    period: '/month',
+    description: 'For large organizations with complex content needs',
+    features: [
+      'Everything in Professional',
+      'Custom AI models',
+      'Advanced analytics',
+      'Dedicated account manager',
+      '24/7 phone support',
+      'Unlimited content pieces',
+      'White-label solutions',
+      'API access',
+    ],
+    popular: false,
+    color: 'from-purple-500 to-pink-600',
+  },
+];
+
+const useCases = [
+  {
+    title: 'Content Marketing Optimization',
+    description:
+      'Optimize your content strategy based on real-time performance data and AI insights',
+    icon: Target,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    title: 'SEO Strategy Enhancement',
+    description:
+      'Identify content gaps and optimize for search engines with AI-powered recommendations',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    title: 'Social Media Management',
+    description:
+      'Create engaging content that performs across all social media platforms',
+    icon: Globe,
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
+    title: 'E-commerce Content',
+    description:
+      'Optimize product descriptions and marketing content for better conversions',
+    icon: ShoppingCart,
+    color: 'from-orange-500 to-red-500',
+  },
+];
+
+const integrations = [
+  'WordPress',
+  'Shopify',
+  'HubSpot',
+  'Mailchimp',
+  'Google Analytics',
+  'Facebook Ads',
+  'Google Ads',
+  'LinkedIn',
+  'Twitter',
+  'Instagram',
+  'YouTube',
+  'TikTok',
+  'Slack',
+  'Zapier',
+  'API Access',
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AIContentIntelligencePlatform() {
   return (
     <Layout>
@@ -194,7 +374,12 @@ export default function AIContentIntelligencePlatform() {
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
+=======
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -224,7 +409,12 @@ export default function AIContentIntelligencePlatform() {
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Link>
                 <button className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>
+<<<<<<< HEAD
                   <Play className='w-5 h-5 mr-2' />                  Watch Demo
+=======
+                  <Play className='w-5 h-5 mr-2' />
+                  Watch Demo
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
             </motion.div>
@@ -249,16 +439,29 @@ export default function AIContentIntelligencePlatform() {
                     <span>80% faster content optimization</span>
                   </div>
                   <div className='flex items-center text-green-400'>
+<<<<<<< HEAD
                     <CheckCircle className='w-5 h-5 mr-3' />                    <span>Real-time performance insights</span>
+=======
+                    <CheckCircle className='w-5 h-5 mr-3' />
+                    <span>Real-time performance insights</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
+<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+      {/* Features Section */}
+      <section className='py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -273,7 +476,12 @@ export default function AIContentIntelligencePlatform() {
               to create, optimize, and scale your content strategy.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -291,7 +499,12 @@ export default function AIContentIntelligencePlatform() {
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
+<<<<<<< HEAD
                   <p className='text-gray-400'>{feature.description}</p>                </div>
+=======
+                  <p className='text-gray-400'>{feature.description}</p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
             ))}
           </div>
@@ -299,7 +512,12 @@ export default function AIContentIntelligencePlatform() {
       </section>
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -314,7 +532,12 @@ export default function AIContentIntelligencePlatform() {
               organization, our platform adapts to your specific requirements.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {useCases.map((useCase, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -332,7 +555,12 @@ export default function AIContentIntelligencePlatform() {
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {useCase.title}
                   </h3>
+<<<<<<< HEAD
                   <p className='text-gray-400 text-lg'>{useCase.description}</p>                </div>
+=======
+                  <p className='text-gray-400 text-lg'>{useCase.description}</p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
             ))}
           </div>
@@ -340,7 +568,12 @@ export default function AIContentIntelligencePlatform() {
       </section>
       {/* Pricing Section */}
       <section className='py-20'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -355,7 +588,12 @@ export default function AIContentIntelligencePlatform() {
               grow.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
+=======
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {pricingPlans.map((plan, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -366,7 +604,12 @@ export default function AIContentIntelligencePlatform() {
               >
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                     <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full'>                      MOST POPULAR
+=======
+                    <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full'>
+                      MOST POPULAR
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </span>
                   </div>
                 )}
@@ -389,7 +632,12 @@ export default function AIContentIntelligencePlatform() {
                         key={featureIndex}
                         className='flex items-center text-gray-300'
                       >
+<<<<<<< HEAD
                         <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
+=======
+                        <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+                        {feature}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </li>
                     ))}
                   </ul>
@@ -398,7 +646,12 @@ export default function AIContentIntelligencePlatform() {
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
                   >
                     Get Started
+<<<<<<< HEAD
                     <ArrowRight className='w-4 h-4 ml-2' />                  </Link>
+=======
+                    <ArrowRight className='w-4 h-4 ml-2' />
+                  </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </motion.div>
             ))}
@@ -407,7 +660,12 @@ export default function AIContentIntelligencePlatform() {
       </section>
       {/* Integrations Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -422,7 +680,12 @@ export default function AIContentIntelligencePlatform() {
               content management experience.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {integrations.map((integration, index) => (
+=======
+          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
+            {integrations.map((integration, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -431,14 +694,24 @@ export default function AIContentIntelligencePlatform() {
                 viewport={{ once: true }}
                 className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300'
               >
+<<<<<<< HEAD
                 <span className='text-white font-medium'>{integration}</span>              </motion.div>
+=======
+                <span className='text-white font-medium'>{integration}</span>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
       </section>
       {/* Contact Section */}
       <section className='py-20'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -491,7 +764,12 @@ export default function AIContentIntelligencePlatform() {
               </Link>
               <Link
                 href='/2025-innovative-new-services-showcase'
+<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'              >
+=======
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 View All Services
               </Link>
             </div>
@@ -499,4 +777,8 @@ export default function AIContentIntelligencePlatform() {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
@@ -22,6 +23,11 @@ import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-
 
 const mapLocalToServiceItem = null;
 =======
+=======
+
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
@@ -30,6 +36,7 @@ export default function ServicesIndexPage () {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
   'Content-Type': 'application/json'
+<<<<<<< HEAD
 }
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
@@ -37,6 +44,16 @@ body: JSON.stringify ({
 }
 budgetRange: values.budgetRange;
 }
+=======
+};
+body: JSON.stringify ({
+  service: values.serviceTitle, description: values.projectDescription, timeline: {
+  start: values.timelineStart, end: values.timelineEnd
+};
+budgetRange: values.budgetRange;
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
 }</div> </div> </div> </div> <QuoteRequestModal open= {
   modalOpen
@@ -47,6 +64,7 @@ budgetRange: values.budgetRange;
 }onSubmit= {
   handleSubmit
 }/> </div>)
+<<<<<<< HEAD
 };export default ServicesPage;
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
@@ -162,5 +180,10 @@ export default function ServicesIndexPage() {
     </div>
   )
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ServicesPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

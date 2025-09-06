@@ -1,12 +1,15 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Phone
   Mail
@@ -18,11 +21,22 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-iot-platform')
   );  if (!service) return null;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+export default function AIIoTPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-iot-platform')
+  );
+  if (!service) return null;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Layout>
       <Head>
@@ -96,10 +110,19 @@ export default function AIIoTPlatformPage() {
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
+<<<<<<< HEAD
                 </div>              </div>
             </div>
           </div>
         </div>
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className="bg-violet-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Connect Your World</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -116,4 +139,8 @@ export default function AIIoTPlatformPage() {
         </div>
       </main>
     </Layout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

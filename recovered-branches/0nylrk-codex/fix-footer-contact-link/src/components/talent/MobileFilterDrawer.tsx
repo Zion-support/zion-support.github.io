@@ -6,12 +6,18 @@ interface MobileFilterDrawerProps {
 <<<<<<< HEAD
   isMobileFilterOpen: boolean;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
+<<<<<<< HEAD
 =======
   isMobileFilterOpen: boolean
   setIsMobileFilterOpen: (isOpen: boolean) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   filterProps: any, // We'll pass all filter-related props through this object
 }
+=======
+  filterProps: any; // We'll pass all filter-related props through this object
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileFilterDrawer({
   isMobileFilterOpen;
 <<<<<<< HEAD

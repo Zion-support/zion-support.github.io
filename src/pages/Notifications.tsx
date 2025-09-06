@@ -1,5 +1,30 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
+import {
+  NotificationType,
+  NotificationContextType,;
+} from '@/context/notifications';
+import { formatDistanceToNow } from 'date-fns';
+import {
+  Bell,
+  Check,
+  Trash2,
+  ChevronRight,
+  CheckCircle,
+  AlertCircle,
+  MessageCircle,
+  Briefcase,
+  UserCheck,
+  Settings,
+  Package,;
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -49,6 +74,7 @@ const getNotificationBadge = (type: string) => {
     default:
       return <Badge variant="outline">Notification</Badge>;
   }
+<<<<<<< HEAD
 }
 export default function Notifications() {
   const { user } = useAuth();
@@ -118,9 +144,89 @@ export default function Notifications() {
             {[1, 2, 3].map(i => (
               <div key={i} className="h-20 bg-gray-200 rounded"></div>
             ))}
+=======
+};
+
+const NotificationCard: React.FC<{
+  notification: {
+    id: string;
+    title: string;
+    message: string;
+    type: NotificationType;
+    read: boolean;
+    created_at: string;
+    action_url?: string;
+    action_text?: string;
+  };
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+}> = ({ notification, onMarkAsRead, onDismiss }) => {
+  const router = useRouter();
+
+  const handleAction = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id);
+    }
+
+    if (notification.action_url) {
+      router.push(notification.action_url);
+    }
+  };
+
+    >
+      <div className='flex items-start gap-4'>
+        <div className='mt-1'>
+          {getNotificationIcon(notification.type, 'h-6 w-6')}
+        </div>
+        <div className='flex-1'>
+          <div className='flex justify-between'>
+            <div className='flex flex-col'>
+              <h3 className='font-medium text-white'>{notification.title}</h3>
+              <div className='flex items-center gap-2 mb-2'>
+                {getNotificationTypeBadge(notification.type)}
+                <span className='text-xs text-zion-slate-light'>
+                  {formatDistanceToNow(new Date(notification.created_at), {
+                    addSuffix: true,
+                  })}
+                </span>
+                {!notification.read && (
+                  <Badge
+                    variant='outline'
+                    className='bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs'
+                  >
+                    New
+                  </Badge>
+                )}
+              </div>
+            </div>
+
+            <div className='flex items-center gap-2'>
+              {!notification.read && (
+                <Button
+                  variant='ghost'
+                  size='sm'
+                  className='h-8 w-8 p-0'
+                  onClick={() => onMarkAsRead(notification.id)}
+                >
+                  <Check className='h-4 w-4 text-green-400' />
+                  <span className='sr-only'>Mark as read</span>
+                </Button>
+              )}
+              <Button
+                variant='ghost'
+                size='sm'
+                className='h-8 w-8 p-0'
+                onClick={() => onDismiss(notification.id)}
+              >
+                <Trash2 className='h-4 w-4 text-red-400' />
+                <span className='sr-only'>Dismiss</span>
+              </Button>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     );
   }
 <<<<<<< HEAD
@@ -223,3 +329,165 @@ const getNotificationIcon = null;
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    </div>
+  );
+};
+}
+}
+
+export default function NotificationsPage() {
+  const {
+    filteredNotifications,
+    unreadCount,
+    markAsRead,
+    markAllAsRead,
+    dismissNotification,
+    loading,
+    filter,
+    setFilter,
+  } = useNotifications() as NotificationContextType;
+
+  return (
+    <>
+      <SEO
+        title='Notifications | Zion AI Marketplace'
+        description='View and manage your notifications on the Zion AI Marketplace.'
+      />
+      <main className='container mx-auto px-4 py-8 min-h-screen'>
+        <div className='flex justify-between items-center mb-6'>
+          <div>
+            <h1 className='text-3xl font-bold flex items-center'>
+              <Bell className='mr-3 h-7 w-7' /> Notifications
+              {unreadCount > 0 && (
+                <Badge className='ml-3 bg-zion-cyan'>
+                  {unreadCount} unread
+                </Badge>
+              )}
+            </h1>
+            <p className='text-muted-foreground'>
+              Stay updated with the latest activities and reminders
+            </p>
+          </div>
+
+          {unreadCount > 0 && (
+            <Button variant='outline' onClick={() => markAllAsRead()}>
+              <Check className='mr-2 h-4 w-4' />
+              Mark all as read
+            </Button>
+          )}
+        </div>
+
+        <div className='mb-8'>
+          <Tabs
+            defaultValue={filter}
+            onValueChange={value => setFilter(value as any)}
+          >
+            <TabsList className='grid w-full max-w-md grid-cols-6'>
+              <TabsTrigger value='all'>All</TabsTrigger>
+              <TabsTrigger value='unread'>Unread</TabsTrigger>
+              <TabsTrigger value='onboarding'>Onboarding</TabsTrigger>
+              <TabsTrigger value='messages'>Messages</TabsTrigger>
+              <TabsTrigger value='system'>System</TabsTrigger>
+              <TabsTrigger value='orders'>Orders</TabsTrigger>
+            </TabsList>
+            <TabsContent value={filter} className='mt-6'>
+              {loading ? (
+                <div className='space-y-4'>
+                  <Skeleton className='h-24 w-full rounded-lg' />
+                  <Skeleton className='h-24 w-full rounded-lg' />
+                  <Skeleton className='h-24 w-full rounded-lg' />
+                </div>
+              ) : filteredNotifications.length === 0 ? (
+                <div className='text-center py-12 bg-muted rounded-lg'>
+                  <Bell className='mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30' />
+                  <h3 className='text-xl font-medium'>
+                    No notifications found
+                  </h3>
+                  <p className='text-muted-foreground mt-1'>
+                    {filter === 'all'
+                      ? "You don't have any notifications yet"
+                      : `You don't have any ${filter} notifications`}
+                  </p>
+                </div>
+              ) : (
+                <div>
+                  {filteredNotifications.map(notification => (
+                    <NotificationCard
+                      key={notification.id}
+                      notification={notification}
+                      onMarkAsRead={markAsRead}
+                      onDismiss={dismissNotification}
+                    />
+                  ))}
+                </div>
+              )}
+            </TabsContent>
+          </Tabs>
+        </div>
+      </main>
+    </>
+  );
+
+};
+const getNotificationTypeBadge = (type: NotificationType) => {;
+  switch (type) {;
+  case 'message': ;
+
+};
+const NotificationCard: React.FC< {;
+  notification: {;
+  id: string;
+title: string;
+message: string;
+type: NotificationType;
+read: boolean;
+created at: string;
+action url?: string;
+action text?: string ;
+};
+onMarkAsRead: (id: string) => Promise<void>;
+onDismiss: (id: string) => Promise<void> ;
+}> = ({;
+  notification,  onMarkAsRead, onDismiss ;
+}) => {;
+  const router = useRouter ();
+if (!notification.read) {;
+
+}</span> {;
+  !notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs" > New </Badge>) ;
+}</div> </div> onClick={;
+  () => onMarkAsRead (notification.id) ";
+}> <Check className="h-4 w-4 text-green-400" /> <span className="sr-only" >Mark as read</span> </Button>) ";
+}<Button > <Trash2 className="h-4 w-4 text-red-400" /> <span className="sr-only" >Dismiss</span> </Button> </div> </div> {";
+  notification.action url && notification.action text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={;
+  handleAction ;
+}> </Button>) ;
+}</div> </div> </div>) ;
+};";
+return (<> <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8 min-h-screen" > <div className="flex justify-between items-center mb-6" > <div> {;
+  unreadCount ;
+}unread </Badge>) ";
+}</h1> <p className="text-muted-foreground" > Stay updated with the latest activities and reminders </p> </div> Mark all as read </Button>) ";
+}</div> <div className="mb-8" > <Tabs defaultValue= {;
+  filter ;
+}onValueChange= {;
+  (value) => setFilter (value as any) ";
+}> <TabsList className="grid w-full max-w-md grid-cols-6" > <TabsTrigger value="all" >All</TabsTrigger> <TabsTrigger value="unread" >Unread</TabsTrigger> <TabsTrigger value="onboarding" >Onboarding</TabsTrigger> <TabsTrigger value="messages" >Messages</TabsTrigger> <TabsTrigger value="system" >System</TabsTrigger> <TabsTrigger value="orders" >Orders</TabsTrigger> </TabsList> </div>) : filteredNotifications.length === 0 ? (<div className="text-center py-12 bg-muted rounded-lg" > <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" /> <h3 className="text-xl font-medium" > No notifications found </h3> <p className="text-muted-foreground mt-1" > {'";
+  filter === 'all' ? "You don't have any notifications yet" : `You don't have any $ {;
+  filter ;
+}notifications` ;
+}</p> </div>) : (<div> {;
+  filteredNotifications.map ( (notification) => (<NotificationCard key= {;
+  notification.id ;
+}notification= {;
+  notification ;
+}onMarkAsRead= {;
+  markAsRead ;
+}onDismiss= {;
+  dismissNotification ;
+}/>) ) ;
+}</div>) ;
+}</TabsContent> </Tabs> </div> </main> </>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

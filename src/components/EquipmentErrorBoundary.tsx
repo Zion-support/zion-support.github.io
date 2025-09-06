@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 <<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
@@ -51,6 +52,34 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
+=======
+import { AlertTriangle, RefreshCw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface Props {
+  children: React.ReactNode;
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+
+export class EquipmentErrorBoundary extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    logErrorToProduction('Equipment page error:', error, {
+      componentStack: errorInfo.componentStack,
+    });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   render() {
     if (this.state.hasError) {
@@ -78,6 +107,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 <Button
                   onClick={() => window.location.reload()}
                   variant='default'
+<<<<<<< HEAD
                 >                  Refresh Page
                 <Button onClick={() => window.location.reload()} variant="default">
               </p>
@@ -90,12 +120,16 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   Try Again
                 </Button>
                 <Button onClick={() => window.location.reload()} variant="default">
+=======
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Refresh Page
                 </Button>
               </div>
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
       )
     }
     return this.props.children
@@ -104,3 +138,10 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
     return this.props.children
   }
 }
+=======
+      );
+    }
+
+    return this.props.children;
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

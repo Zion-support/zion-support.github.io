@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { ApplyForm } from './ApplyForm';
+import { ApplyToJobModalProps } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react';
 import { Dialog;

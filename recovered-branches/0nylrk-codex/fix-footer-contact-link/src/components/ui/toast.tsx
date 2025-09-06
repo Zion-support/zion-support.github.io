@@ -113,6 +113,8 @@ export {
   ToastAction
 }
 // Add useToast hook export
+}
+
 export function useToast() {
   return {
     // Accept a loosely typed props object to allow custo</typeof>m fields like `description`

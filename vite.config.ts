@@ -1,7 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+<<<<<<< HEAD
 import path from 'node:path';
 // https://vitejs.dev/config/
+=======
+import path from 'node: path',
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default defineConfig({
   plugins: [react()]
   resolve: {

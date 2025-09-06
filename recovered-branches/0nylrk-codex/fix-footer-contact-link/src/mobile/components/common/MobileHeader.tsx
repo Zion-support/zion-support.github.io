@@ -15,8 +15,14 @@ interface MobileHeaderProps {
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
   onSettingsClick?: () => void
 }
+=======
+  onSettingsClick?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileHeader({
   title;
 <<<<<<< HEAD

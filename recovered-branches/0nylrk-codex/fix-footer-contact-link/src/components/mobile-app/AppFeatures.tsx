@@ -30,6 +30,11 @@ const features = [
     description: "Get instant alerts about new job opportunities, messages, and hiring requests."
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">

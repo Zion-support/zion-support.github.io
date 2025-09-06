@@ -1,9 +1,12 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Layout from '../components/layout/Layout';
 const AIAssistant: React.FC = () => {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -70,4 +73,8 @@ const AIAssistant: React.FC = () => {
         </div>
       </main>
     </Layout>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

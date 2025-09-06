@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { X } from 'lucide-react'
 <<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
     const handleScroll = null;
 =======
   const [isVisible, setIsVisible] = useState(false)
@@ -78,6 +87,32 @@ export function FloatingCTA() {
   }
   if (!isVisible) return null
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px
+
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isClosed]);
+
+  const handleClose = () => {
+    setIsClosed(true);
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in'>
       <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between'>
@@ -99,14 +134,21 @@ export function FloatingCTA() {
           <button
             onClick={handleClose}
             className='text-zion-slate hover:text-white p-1'
+<<<<<<< HEAD
             aria-label='Close'          >
             <X className='w-5 h-5' />          </button>
             <X className="w-5 h-5" />
             <X className="w-5 h-5" />
+=======
+            aria-label='Close'
+          >
+            <X className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </button>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 }, [isClosed])
@@ -132,3 +174,11 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
   )}
 '"
 }
+=======
+  );
+
+};
+}, [isClosed]);
+return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

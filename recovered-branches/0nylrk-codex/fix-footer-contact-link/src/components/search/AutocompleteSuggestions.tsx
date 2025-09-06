@@ -28,11 +28,21 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     return { before: '', match: text, after: '' }
   }
   return {
+<<<<<<< HEAD
     before: text.substring(0, index);
     match: text.substring(index, index + searchTerm.length);
     after: text.substring(index + searchTerm.length)
   }
 }
+=======
+    before: text.substring(0, index),
+    match: text.substring(index, index + searchTerm.length),
+    after: text.substring(index + searchTerm.length),
+  };
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AutocompleteSuggestions({
   suggestions
   searchTerm

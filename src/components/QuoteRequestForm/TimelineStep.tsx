@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns'
 import { Calendar } from '@/components/ui/calendar'
 import { Button } from '@/components/ui/button'
@@ -8,6 +9,13 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 =======
+=======
+import { format } from 'date-fns';
+import { Calendar } from '@/components/ui/calendar';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { CalendarIcon } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Popover
   PopoverContent
@@ -18,7 +26,13 @@ import { QuoteFormData } from '@/types/quotes'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface TimelineStepProps {
   formData: QuoteFormData;
+<<<<<<< HEAD
   updateFormData: (data: Partial<QuoteFormData>) => void
+=======
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 <<<<<<< HEAD
@@ -135,5 +149,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

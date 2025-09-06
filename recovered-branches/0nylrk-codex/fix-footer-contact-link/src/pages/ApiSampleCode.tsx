@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
+import { CodeBlock } from '@/components/developers/CodeBlock';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import React from "react",
@@ -261,7 +270,14 @@ main(),`;
         </ul>
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ApiSampleCode;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

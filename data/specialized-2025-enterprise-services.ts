@@ -1,5 +1,9 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface SpecializedEnterpriseService {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -49,6 +53,7 @@ export interface SpecializedEnterpriseService {
   benefits: string[];
   capabilities: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   marketAdvantage: string
 }
 
@@ -72,6 +77,26 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     tagline: 'Advanced AI consciousness simulation and research'
     price: '$5,999'
     period: '/month'
+=======
+  marketAdvantage: string;
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
+  // Advanced AI & Consciousness Services
+  {
+    id: 'ai-consciousness-research-platform',
+    name: 'AI Consciousness Research Platform',
+    tagline: 'Advanced AI consciousness simulation and research',
+    price: '$5,999',
+    period: '/month',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.'
       'Consciousness simulation engine'
@@ -574,6 +599,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Advanced predictive analytics platform with custom ML model development'
   }
 ];
+<<<<<<< HEAD
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     name: 'Quantum Machine Learning Platform';
     tagline: 'Quantum-enhanced machine learning and optimization';
@@ -851,3 +877,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 ];
 export default specializedEnterpriseServices;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+export default specializedEnterpriseServices;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

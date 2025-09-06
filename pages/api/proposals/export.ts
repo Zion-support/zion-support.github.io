@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PDFDocument, StandardFonts } from '[^']*';
 import crypto from 'crypto';
@@ -23,6 +24,21 @@ import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
 import fs from "fs";
 import path from "path";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { PDFDocument, StandardFonts } from 'pdf-lib';
+import crypto from 'crypto';
+import {
+  updateArtifacts,
+  getProposal,
+  savePdf,;
+} from '../../../utils/data/proposals';
+import { create as createIpfsClient } from 'ipfs-http-client';
+import { ethers } from 'ethers';
+import fs from 'fs';
+import path from 'path';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID;
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
@@ -35,7 +51,11 @@ function buildIpfsClient() {
     url: apiUrl
     headers: { authorization: auth } as any
   });
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
@@ -44,10 +64,17 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   const margin = 40;
   const maxWidth = page.getWidth() - margin * 2;
   const lines = markdown
+<<<<<<< HEAD
     .replace(/\r\n/g, "\n")
     .split("\n")
     .flatMap((line) => {
       const words = line.split(" ");
+=======
+    .replace(/\r\n/g, '\n')
+    .split('\n')
+    .flatMap(line => {
+      const words = line.split(' ');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const wrapped: string[] = [];
       let current = "";
       for (const word of words) {
@@ -61,11 +88,16 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
         }
       }
       if (current) wrapped.push(current);
+<<<<<<< HEAD
       return wrapped.length ? wrapped : [" "];
+=======
+      return wrapped.length ? wrapped : [' '];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
   let y = page.getHeight() - margin;
   page.drawText(title, { x: margin, y, size: 16, font });
   y -= 24;
+<<<<<<< HEAD
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -94,6 +126,44 @@ export default async function handler(
     const markdown = fs.existsSync(markdownPath)
       ? fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
+=======
+
+    page.drawText(line, { x: margin, y, size: fontSize, font });
+    y -= 14;
+  }
+
+  return pdfDoc.save();
+}
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    const { id } = req.body || {};
+    if (!id) return res.status(400).json({ error: 'id is required' });
+    
+}
+
+const meta = getProposal(id);
+    if (!meta) return res.status(404).json({ error: 'Proposal not found' });
+
+    
+}
+
+const markdownPath = path.join(
+      process.cwd(),
+      'public',
+      meta.artifacts.markdownPath || ''
+    );
+    const markdown = fs.existsSync(markdownPath)
+      ? fs.readFileSync(markdownPath, 'utf8')
+      : '# Proposal';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
     const hasher = crypto.createHash("sha256");
@@ -105,7 +175,13 @@ export default async function handler(
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest));
     }
+<<<<<<< HEAD
     let ipfsCid: string | undefined;
+=======
+}
+
+let ipfsCid: string | undefined;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
@@ -119,8 +195,16 @@ export default async function handler(
       ipfsCid
     });
     return res.status(200).json({ meta: updated });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |"Export failed" });
   }
 }
+=======
+ 
+} catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Export failed' });
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

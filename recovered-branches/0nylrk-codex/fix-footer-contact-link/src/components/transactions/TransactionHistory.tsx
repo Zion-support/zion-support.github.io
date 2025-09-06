@@ -13,6 +13,7 @@ import { formatDistanceToNow } from "date-fns";
 interface Transaction {
 <<<<<<< HEAD
   id: string;
+<<<<<<< HEAD
   user_id: string;
   provider_id: string;
   service_id: string;
@@ -42,6 +43,26 @@ interface Transaction {
     title?: string
   }
 }
+=======
+user id: string;
+provider id: string;
+service id: string;
+amount: number;
+currency: string;
+status: 'pending' | 'completed' | 'refunded' | 'cancelled';
+in escrow: boolean;
+created at: string;
+completed at?: string;
+refunded at?: string;
+cancelled at?: string;
+provider?: {
+  display name?: string 
+};
+service?: {
+  title?: string
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();

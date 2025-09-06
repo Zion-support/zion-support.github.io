@@ -7,11 +7,17 @@ import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
 <<<<<<< HEAD
   message: Message;
+<<<<<<< HEAD
 =======
   message: Message
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isUserMessage: boolean
 }
+=======
+  isUserMessage: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 <<<<<<< HEAD

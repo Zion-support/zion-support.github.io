@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useRouter  } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -5,13 +6,28 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { useRouter } from 'next/router';
+import { ChevronLeft, Bell, Settings } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+
+interface MobileHeaderProps {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   title: string;
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
   onSettingsClick?: () => void
+=======
+  onSettingsClick?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileHeader({
   title;
   showBack;
@@ -79,7 +95,12 @@ export function MobileHeader({
   onNotificationsClick
   onSettingsClick
 }: MobileHeaderProps) {
+<<<<<<< HEAD
   const router = useRouter()
+=======
+  const router = useRouter();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='flex items-center justify-between h-14 px-4'>
         <div className='flex items-center'>
@@ -106,6 +127,7 @@ export function MobileHeader({
           {showSettings && (
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
+<<<<<<< HEAD
               <span className='sr-only'>Settings</span>            </Button>            <Button
               variant="ghost"
               size="icon"
@@ -113,9 +135,17 @@ export function MobileHeader({
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
+=======
+              <span className='sr-only'>Settings</span>
+            </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           )}
         </div>
       </div>
     </header>
+<<<<<<< HEAD
   );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -34,8 +34,14 @@ interface TemplateSaveFormProps {
   onCancel: () => void
   onComplete: () => void
   editTemplate?: ContractTemplate | null;
+<<<<<<< HEAD
   currentValues?: ContractFormValues
 }
+=======
+  currentValues?: ContractFormValues;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TemplateSaveForm({
   onCancel;
   onComplete;

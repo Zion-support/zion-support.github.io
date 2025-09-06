@@ -145,8 +145,10 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   );
 <<<<<<< HEAD
 };
+}
 
 export default EnhancedMarketplaceCard;
+<<<<<<< HEAD
 
           <div className;
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
@@ -167,3 +169,5 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
 }
 export default EnhancedMarketplaceCard;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

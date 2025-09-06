@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fetcher = null;
     mutate()
 =======
@@ -8,12 +9,30 @@ const fetcher = (url: string) => fetch(url).then(r => r.json())
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
+=======
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+}
+
+export default function ClientDashboard() {
+  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
+
+  if (error) return <div className='text-red-600'>Failed to load</div>;
+  if (!data) return <div>Loading…</div>;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const jobs = data.jobs as any[];
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
+<<<<<<< HEAD
       method: 'PATCH'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ status: 'Closed' })
+=======
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: 'Closed' }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     mutate();
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -51,7 +70,12 @@ export default function ClientDashboard() {
                         className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
                       >
                         {s}
+<<<<<<< HEAD
                       </span>                    ))}
+=======
+                      </span>
+                    ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 )}
               </div>
@@ -69,10 +93,19 @@ export default function ClientDashboard() {
                   onClick={() => closeJob(job.id)}
                 >
                   Close Job
+<<<<<<< HEAD
                 </button>              </div>
+=======
+                </button>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

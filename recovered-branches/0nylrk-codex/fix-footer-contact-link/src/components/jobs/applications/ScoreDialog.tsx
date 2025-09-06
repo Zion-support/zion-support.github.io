@@ -12,6 +12,7 @@ interface ScoreDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   application: JobApplication | null;
+<<<<<<< HEAD
 =======
   open: boolean
   onOpenChange: (open: boolean) => void
@@ -19,6 +20,11 @@ interface ScoreDialogProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
+=======
+  onScoreUpdated: (updatedApplication: JobApplication) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ScoreDialog({
   open;
   onOpenChange;

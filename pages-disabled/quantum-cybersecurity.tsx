@@ -6,6 +6,11 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
   const features = null;

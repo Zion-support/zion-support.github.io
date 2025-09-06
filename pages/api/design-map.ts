@@ -1,6 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {try {;
+=======
+import {
+  getZionDesignMap,
+  buildTokenSet,
+  fetchLovableTokens,;
+} from '../../utils/design-map';
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  try {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();

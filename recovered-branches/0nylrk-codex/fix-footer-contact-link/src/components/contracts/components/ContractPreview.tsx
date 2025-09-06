@@ -13,8 +13,14 @@ interface ContractPreviewProps {
   onSign?: () => void;
   onClose?: () => void;
   deployStatus?: string;
+<<<<<<< HEAD
   deploymentInfo?: SmartContractInfo | null
 }
+=======
+  deploymentInfo?: SmartContractInfo | null;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractPreview({
   contractContent;
 <<<<<<< HEAD

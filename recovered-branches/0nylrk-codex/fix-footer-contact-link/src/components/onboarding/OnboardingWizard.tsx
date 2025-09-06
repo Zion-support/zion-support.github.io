@@ -30,6 +30,7 @@ interface OnboardingWizardProps {
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
+<<<<<<< HEAD
 =======
   type: 'client' | 'talent'
   onComplete: () => void
@@ -38,6 +39,17 @@ interface OnboardingWizardProps {
   className?: string
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+=======
+  className?: string;
+}
+
+export function OnboardingWizard({
+  type,
+  onComplete,
+  onSkip,
+  className,
+}: OnboardingWizardProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [currentStep, setCurrentStep] = useState(0);
 <<<<<<< HEAD
   const navigate = null;

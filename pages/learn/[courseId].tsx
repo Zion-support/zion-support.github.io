@@ -4,6 +4,11 @@ import ProgressBar from '../../components/learn/ProgressBar',
 import Quiz from '../../components/learn/Quiz',
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CourseView() {
 <<<<<<< HEAD
   const router = null;
@@ -12,14 +17,22 @@ export default function CourseView() {
   const { courseId } = router.query as { courseId: string }
   const [course, setCourse] = useState<any>(null);
   const [progress, setProgress] = useState<any>({
+<<<<<<< HEAD
     percent: 0
     completedLessons: []
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+=======
+    percent: 0,
+    completedLessons: [],
+  });
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [finalPassed, setFinalPassed] = useState(false);
   useEffect(() => {
     if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
+<<<<<<< HEAD
         fetch(`/api/learn/courses/${courseId}`)
         fetch(`/api/learn/progress?userId=demo-user`),      ]);
       const courseData = await courseResp.json();
@@ -29,6 +42,18 @@ export default function CourseView() {
         percent: 0
         completedLessons: []
       }
+=======
+        fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/progress?userId=demo-user`),
+      ]);
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) || {
+        percent: 0,
+        completedLessons: [],
+      };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
@@ -38,10 +63,18 @@ export default function CourseView() {
     () => course?.lessons?.find((l: any) => l.id === currentLessonId)
     [course, currentLessonId]
   );
+<<<<<<< HEAD
   async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons |[]).includes(lessonId)
       ? (progress.completedLessons |[]).length
       : (progress.completedLessons |[]).length + 1;
+=======
+
+  async function markLessonComplete(lessonId: string) {
+    const completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const percent = Math.round(
       (completedCount / (course?.lessons?.length |1)) * 100
     );
@@ -56,14 +89,31 @@ export default function CourseView() {
       })
     });
     const data = await resp.json();
+<<<<<<< HEAD
     setProgress(data.progress);  }
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId);  }
+=======
+    setProgress(data.progress);
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+    if (currentLessonId) markLessonComplete(currentLessonId);
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold |0;
     const passed = score >= needed;
+<<<<<<< HEAD
     setFinalPassed(passed);  }
+=======
+    setFinalPassed(passed);
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!course) return <div>Loading...</div>;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -90,12 +140,21 @@ export default function CourseView() {
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
+<<<<<<< HEAD
                   >                    {l.title}
+=======
+                  >
+                    {l.title}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </button>
                 </li>
               ))}
             </ul>
           </aside>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <section className='lg:col-span-3 space-y-4'>
             {currentLesson ? (
               <div className='border rounded p-4'>
@@ -132,12 +191,25 @@ export default function CourseView() {
                 {finalPassed && (
                   <div className='mt-3 text-green-700'>
                     Passed! You can download your certificate below.
+<<<<<<< HEAD
                   </div>                )}
               </div>
             ) : null}
             {finalPassed && <CertificatePreview courseId={courseId} />}          </section>
         </div>
       </div>
+=======
+                  </div>
+                )}
+              </div>
+            ) : null}
+
+            {finalPassed && <CertificatePreview courseId={courseId} />}
+          </section>
+        </div>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='space-y-4'>
         <CoachWidget />
         <div className='border rounded p-3'>
@@ -155,4 +227,8 @@ export default function CourseView() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

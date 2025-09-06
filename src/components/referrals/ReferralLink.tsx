@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -21,7 +36,13 @@ import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
+<<<<<<< HEAD
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
+=======
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ReferralLink({
   referralLink
   onCopy
@@ -64,6 +85,7 @@ export function ReferralLink({
             </Button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false);
@@ -104,6 +126,11 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           </div>
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
+=======
+
+          {copied && (
+            <p className='text-sm text-green-600 dark:text-green-500'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Copied to clipboard!
             </p>
           )}
@@ -145,13 +172,23 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant='outline'
               size='sm'
               className='flex items-center gap-2'
+<<<<<<< HEAD
               onClick={() => onShare('linkedin')}            >
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
+=======
+              onClick={() => onShare('linkedin')}
+            >
+              <Share className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               LinkedIn
             </Button>
           </div>
         </div>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

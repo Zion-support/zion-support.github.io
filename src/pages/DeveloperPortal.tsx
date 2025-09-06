@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -12,6 +13,10 @@ import { ApiLogs } from "@/components/developers/ApiLogs";
 =======
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
+=======
+import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   BookOpen
   Code
@@ -30,7 +35,13 @@ import { ApiLogs } from '@/components/developers/ApiLogs'
 interface TabDefinition {
   id: string;
   label: string;
+<<<<<<< HEAD
   icon: LucideIcon
+=======
+  icon: LucideIcon;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DeveloperPortal() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation"),
@@ -64,6 +75,7 @@ export function DeveloperPortal() {
       <div className='border-b border-zinc-800 mb-8'>
         <div className='flex flex-wrap -mb-px'>
           {tabs.map(tab => {
+<<<<<<< HEAD
             const Icon = tab.icon
                 onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -72,6 +84,11 @@ export function DeveloperPortal() {
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
                 onClick = {(,) => setActiveTab(tab.id),}
+=======
+            const Icon = tab.icon;
+
+                onClick={() => setActiveTab(tab.id)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}
@@ -88,6 +105,7 @@ export function DeveloperPortal() {
         {activeTab === 'logs' && <ApiLogs />}
       </div>
     </div>
+<<<<<<< HEAD
   )
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -108,13 +126,22 @@ export function DeveloperPortal() {
     </div>
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
 }
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

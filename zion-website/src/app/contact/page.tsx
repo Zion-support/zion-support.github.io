@@ -54,8 +54,18 @@ const faqs = [
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
+<<<<<<< HEAD
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+=======
+    question: 'What security measures do you have?',
+    answer:
+      'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ContactPage() {
   return (
     <div className=&quot;bg-black&quot;>

@@ -106,6 +106,11 @@ const teamMembers = [
     available: true
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

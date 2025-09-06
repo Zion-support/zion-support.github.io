@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { toast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, {
   createContext
   useContext
@@ -21,8 +24,14 @@ interface ErrorContextType {
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
+<<<<<<< HEAD
   clearAllErrors: () => void
 <<<<<<< HEAD
+=======
+  clearAllErrors: () => void;
+
+}, []);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 const ErrorContext = null;
@@ -114,7 +123,13 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     <ErrorContext.Provider value={contextValue}>
       {children}
     </ErrorContext.Provider>
+<<<<<<< HEAD
   )
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useGlobalErrorHandler(): ErrorContextType {
   const context = useContext(ErrorContext)
   if (!context) {
@@ -158,6 +173,8 @@ function getErrorMessage(error: Error): string {
   // Fallback for unknown errors
   return 'An unexpected error occurred. Please try again.'
 // Utility hook for common error scenarios
+}
+
 export function useErrorHandler() {
   const { reportError, showRetryableError, showNetworkError, showAuthError } =
     useGlobalErrorHandler()
@@ -203,6 +220,7 @@ export function useErrorHandler() {
     [reportError, handleApiError]
   )
   return {
+<<<<<<< HEAD
     reportError
     handleApiError
     handleAsyncOperation
@@ -211,3 +229,9 @@ export function useErrorHandler() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     handleAsyncOperation}
 }
+=======
+    reportError,
+    handleApiError,
+    handleAsyncOperation,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

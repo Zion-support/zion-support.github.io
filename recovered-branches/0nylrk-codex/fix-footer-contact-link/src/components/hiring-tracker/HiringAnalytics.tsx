@@ -4,8 +4,15 @@ import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 interface HiringAnalyticsProps {
+<<<<<<< HEAD
   jobId?: string
 }
+=======
+  jobId?: string;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
@@ -89,8 +96,15 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
       </Card>
     )
   }
+<<<<<<< HEAD
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Status Distribution */}

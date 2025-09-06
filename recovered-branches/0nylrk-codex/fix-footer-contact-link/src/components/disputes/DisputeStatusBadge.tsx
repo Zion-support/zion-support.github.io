@@ -3,8 +3,14 @@ import { Badge } from "@/components/ui/badge",
 import { ShieldAlert } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 interface DisputeStatusBadgeProps {
+<<<<<<< HEAD
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
+=======
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 <<<<<<< HEAD
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
+import { CodeBlock } from '@/components/developers/CodeBlock';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
@@ -19,8 +28,13 @@ export function ApiWebhooks() {
     "cover_letter": "I'm excited to apply for this position...";
     "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
     "created_at": "2023-06-10T15:42:31Z"
+<<<<<<< HEAD
   }
 }`;
+=======
+  }`;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const newHirePayload = `{
   "event_type": "talent_hired";
   "created_at": "2023-06-12T09: 15:22Z";
@@ -214,7 +228,14 @@ app.listen(3000, () => {
         </ul>
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ApiWebhooks;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

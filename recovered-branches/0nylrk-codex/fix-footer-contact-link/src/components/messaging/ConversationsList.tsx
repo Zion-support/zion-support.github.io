@@ -8,6 +8,7 @@ interface ConversationsListProps {
   conversations: Conversation[];
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
+<<<<<<< HEAD
 =======
   conversations: Conversation[]
   activeConversation: Conversation | null
@@ -15,6 +16,11 @@ interface ConversationsListProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   markAsRead: (conversationId: string) => Promise<void>
 }
+=======
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ConversationsList({
   conversations;
 <<<<<<< HEAD

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T23:25:59.890Z",
   "fixedFiles": [],
   "errors": [],
@@ -8,3 +9,10 @@
     "errors": 0
   }
 }
+=======
+  "timestamp": "2025-09-06T08:45:00.591Z",
+  "totalFiles": 0,
+  "fixedFiles": 0,
+  "files": []
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

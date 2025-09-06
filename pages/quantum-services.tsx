@@ -3,6 +3,7 @@ import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
+<<<<<<< HEAD
 export default function QuantumServicesPage() {
 <<<<<<< HEAD
   const features = null;
@@ -12,6 +13,16 @@ export default function QuantumServicesPage() {
     'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable'
     'Quantum-safe cryptography assessments and roadmaps'
     'R&D ideation for quantum-ready workloads'
+=======
+}
+
+export default function QuantumServicesPage() {
+  const features = [
+    'Quantum-inspired optimization & annealing strategies',
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable',
+    'Quantum-safe cryptography assessments and roadmaps',
+    'R&D ideation for quantum-ready workloads',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const solutions = [
     {
@@ -61,7 +72,12 @@ export default function QuantumServicesPage() {
                 className='px-8 py-4'
               >
                 See Market Pricing
+<<<<<<< HEAD
               </Button>            </div>
+=======
+              </Button>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </header>
           <section>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
@@ -74,7 +90,12 @@ export default function QuantumServicesPage() {
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'
                 >
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5' />
+<<<<<<< HEAD
                   <span className='text-gray-200'>{f}</span>                </div>
+=======
+                  <span className='text-gray-200'>{f}</span>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </div>
           </section>
@@ -93,18 +114,36 @@ export default function QuantumServicesPage() {
                     <Sparkles className='w-5 h-5' />
                     <span className='font-semibold'>{s.name}</span>
                   </div>
+<<<<<<< HEAD
                   <p className='text-gray-300 text-sm'>Learn more</p>                </a>
               ))}
             </div>
           </section>
+=======
+                  <p className='text-gray-300 text-sm'>Learn more</p>
+                </a>
+              ))}
+            </div>
+          </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <section className='text-center'>
             <div className='inline-flex items-center justify-center gap-3 text-gray-300'>
               <Shield className='w-5 h-5 text-purple-400' />
               <span>
                 Post-quantum readiness assessments and migration planning
+<<<<<<< HEAD
               </span>            </div>
+=======
+              </span>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

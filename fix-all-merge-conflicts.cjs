@@ -1,9 +1,26 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-function fixMergeConflicts(filePath) {
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+// Find all files with merge conflicts
+function findMergeConflictFiles() {
+  try {
+    const result = execSync('find /workspace -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD"', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(Boolean);
+  } catch (error) {
+    console.log('No merge conflicts found or error occurred');
+    return [];
+  }
+}
+
+// Resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
 
     // Check if file has merge conflict markers
     if (
@@ -42,39 +59,46 @@ function fixMergeConflicts(filePath) {
       }
 
       fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
+=======
+    let originalContent = content;
+    
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Clean up extra newlines
+    content = content.replace(/\n{3,}/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed merge conflicts in: ${filePath}`);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       return true;
     }
-
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+// Main execution
+const conflictFiles = findMergeConflictFiles();
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
 
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixMergeConflicts(filePath)) fixedCount++;
-    }
+let fixedCount = 0;
+for (const file of conflictFiles) {
+  if (resolveMergeConflicts(file)) {
+    fixedCount++;
   }
-
-  return fixedCount;
 }
 
+<<<<<<< HEAD
 console.log('Starting comprehensive merge conflict fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
@@ -337,3 +361,17 @@ try {;
 
 console.log("\nCleanup script completed successfully!");
 console.log("You can now try running npm run build again.")}}})))))
+=======
+console.log(`🎉 Fixed merge conflicts in ${fixedCount} files`);
+
+// Generate report
+const report = {
+  timestamp: new Date().toISOString(),
+  totalFiles: conflictFiles.length,
+  fixedFiles: fixedCount,
+  files: conflictFiles
+};
+
+fs.writeFileSync('merge-conflict-fix-report.json', JSON.stringify(report, null, 2));
+console.log('📊 Merge conflict fix report saved to: merge-conflict-fix-report.json');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

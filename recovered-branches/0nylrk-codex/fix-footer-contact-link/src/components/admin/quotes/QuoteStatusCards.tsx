@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 interface QuoteStatusCardsProps {
   statusCounts: {
+<<<<<<< HEAD
     new: number;
     in_review: number;
     responded: number;
@@ -15,6 +16,15 @@ interface QuoteStatusCardsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }
+=======
+  new: number;
+in review: number;
+responded: number;
+accepted: number;
+closed: number
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
   statusCounts
 }) => {

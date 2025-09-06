@@ -21,11 +21,21 @@ const QUICK_REPLIES = [
   { id: "match", text: "How do I get matched?" }
   { id: "billing", text: "Billing help" }]
 type Message = {
+<<<<<<< HEAD
   id: string
   content: string
   sender: "user" | "bot"
   timestamp: Date
 }
+=======
+  id: string;
+  content: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {

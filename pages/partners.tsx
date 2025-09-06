@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Handshake, Globe, Rocket, Brain, Atom, Shield;
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
  } from 'lucide-react';
@@ -116,6 +117,118 @@ export default function PartnersPage() {
       icon: Handshake
       color: 'from-blue-500 to-cyan-500'
     }
+=======
+import {
+  Handshake,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  ArrowRight,
+  ExternalLink,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+}
+
+export default function PartnersPage() {
+  const partners = [
+    {
+      name: 'Microsoft Azure',
+      category: 'Cloud Infrastructure',
+      description:
+        'Strategic partnership for enterprise cloud solutions and AI services',
+      logo: '/api/placeholder/200/100',
+      website: 'https://azure.microsoft.com',
+      partnership: 'Technology Alliance',
+      benefits: [
+        'Joint go-to-market',
+        'Technical integration',
+        'Co-selling opportunities',
+      ],
+      icon: Globe,
+      color: 'from-blue-500 to-cyan-500',
+    },
+    {
+      name: 'NVIDIA',
+      category: 'AI & Computing',
+      description:
+        'Collaboration on GPU-accelerated AI and quantum computing solutions',
+      logo: '/api/placeholder/200/100',
+      website: 'https://nvidia.com',
+      partnership: 'Technology Partner',
+      benefits: ['Hardware optimization', 'Joint R&D', 'Market expansion'],
+      icon: Brain,
+      color: 'from-green-500 to-emerald-500',
+    },
+    {
+      name: 'IBM Quantum',
+      category: 'Quantum Computing',
+      description:
+        'Partnership for quantum computing research and enterprise solutions',
+      logo: '/api/placeholder/200/100',
+      website: 'https://quantum-computing.ibm.com',
+      partnership: 'Research Partner',
+      benefits: ['Quantum access', 'Joint research', 'Enterprise deployment'],
+      icon: Atom,
+      color: 'from-purple-500 to-pink-500',
+    },
+    {
+      name: 'Cisco',
+      category: 'Cybersecurity',
+      description:
+        'Strategic alliance for network security and threat detection solutions',
+      logo: '/api/placeholder/200/100',
+      website: 'https://cisco.com',
+      partnership: 'Security Alliance',
+      benefits: ['Network integration', 'Security solutions', 'Global reach'],
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+    },
+    {
+      name: 'AWS',
+      category: 'Cloud Services',
+      description:
+        'Partnership for scalable cloud infrastructure and AI services',
+      logo: '/api/placeholder/200/100',
+      website: 'https://aws.amazon.com',
+      partnership: 'Technology Partner',
+      benefits: ['Cloud infrastructure', 'AI services', 'Global expansion'],
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+    },
+    {
+      name: 'Intel',
+      category: 'Hardware & AI',
+      description:
+        'Collaboration on AI-optimized hardware and edge computing solutions',
+      logo: '/api/placeholder/200/100',
+      website: 'https://intel.com',
+      partnership: 'Technology Partner',
+      benefits: [
+        'Hardware optimization',
+        'Edge computing',
+        'Performance tuning',
+      ],
+      icon: Brain,
+      color: 'from-indigo-500 to-purple-500',
+    },
+  ];
+
+  const partnershipTypes = [
+    {
+      title: 'Technology Alliance',
+      description: 'Deep technical integration and joint product development',
+      benefits: ['Shared technology roadmap', 'Joint R&D', 'Co-innovation'],
+      icon: Handshake,
+      color: 'from-blue-500 to-cyan-500',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'Go-to-Market'
       description: 'Joint sales and marketing initiatives for mutual growth'
@@ -167,11 +280,22 @@ export default function PartnersPage() {
           property='og:description'
           content='Strategic partnerships and collaboration opportunities.'
         />
+<<<<<<< HEAD
         <link rel='canonical' href='https://ziontechgroup.com/partners' />      </Head>
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/partners' />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <EnhancedNavigation />
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -182,7 +306,12 @@ export default function PartnersPage() {
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships
+<<<<<<< HEAD
               and collaboration            </p>
+=======
+              and collaboration
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -197,14 +326,24 @@ export default function PartnersPage() {
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Become a Partner
+<<<<<<< HEAD
               <ArrowRight className='w-5 h-5' />            </button>
+=======
+              <ArrowRight className='w-5 h-5' />
+            </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </div>
       </section>
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
+<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
+=======
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            {stats.map((stat, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -219,14 +358,24 @@ export default function PartnersPage() {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
+<<<<<<< HEAD
                 <div className='text-white/70'>{stat.label}</div>              </motion.div>
+=======
+                <div className='text-white/70'>{stat.label}</div>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
       </section>
       {/* Partnership Types */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -241,7 +390,13 @@ export default function PartnersPage() {
               objectives and growth goals
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {partnershipTypes.map((type, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={type.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -265,7 +420,12 @@ export default function PartnersPage() {
                       key={benefit}
                       className='flex items-center text-white/80'
                     >
+<<<<<<< HEAD
                       <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />                      {benefit}
+=======
+                      <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />
+                      {benefit}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
                   ))}
                 </ul>
@@ -276,7 +436,12 @@ export default function PartnersPage() {
       </section>
       {/* Current Partners */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -289,7 +454,13 @@ export default function PartnersPage() {
               deliver innovative solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {partners.map((partner, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -309,10 +480,19 @@ export default function PartnersPage() {
                       <span className='text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full'>
                         {partner.category}
                       </span>
+<<<<<<< HEAD
                       <span className='text-xs text-white/40 bg-white/5 px-2 py-1 rounded'>                        {partner.partnership}
                       </span>
                     </div>
                   </div>
+=======
+                      <span className='text-xs text-white/40 bg-white/5 px-2 py-1 rounded'>
+                        {partner.partnership}
+                      </span>
+                    </div>
+                  </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {partner.name}
                   </h3>
@@ -329,11 +509,20 @@ export default function PartnersPage() {
                           key={benefit}
                           className='text-xs text-white/80 flex items-center'
                         >
+<<<<<<< HEAD
                           <div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />                          {benefit}
+=======
+                          <div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />
+                          {benefit}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <div className='flex items-center justify-between'>
                     <a
                       href={partner.website}
@@ -344,7 +533,12 @@ export default function PartnersPage() {
                       Visit Website
                       <ExternalLink className='w-3 h-3' />
                     </a>
+<<<<<<< HEAD
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More
+=======
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>
+                      Learn More
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 </div>
@@ -355,7 +549,12 @@ export default function PartnersPage() {
       </section>
       {/* Become a Partner CTA */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -372,7 +571,12 @@ export default function PartnersPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Partnership Inquiry
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Download Partnership Guide
+=======
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+                Download Partnership Guide
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </button>
             </div>
           </motion.div>
@@ -380,7 +584,11 @@ export default function PartnersPage() {
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 )
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
 }</ul> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) )
@@ -388,6 +596,7 @@ export default function PartnersPage() {
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
+<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -398,3 +607,19 @@ export default function PartnersPage() {
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+=======
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+}viewport= {
+  {
+  once: true
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

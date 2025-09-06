@@ -2,8 +2,14 @@
 import React from "react";
 interface TalentDirectoryHeaderProps {
   title: string;
+<<<<<<< HEAD
   description: string
 }
+=======
+  description: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentDirectoryHeader({
   title
   description
@@ -18,4 +24,7 @@ export function TalentDirectoryHeader({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

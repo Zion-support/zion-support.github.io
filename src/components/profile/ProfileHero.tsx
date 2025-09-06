@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
@@ -6,6 +7,15 @@ import { Star } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
 <<<<<<< HEAD
+=======
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+interface ProfileHeroProps {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   name: string;
   title: string;
   avatarUrl?: string;
@@ -14,6 +24,7 @@ interface ProfileHeroProps {
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+<<<<<<< HEAD
   profileType: 'service' | 'talent'
 export function ProfileHero({
   name;
@@ -49,10 +60,26 @@ export function ProfileHero({
   reviewCount
   aiScore
   profileType
+=======
+  profileType: 'service' | 'talent';
+}
+
+export function ProfileHero({
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+  profileType,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }: ProfileHeroProps) {
   return (
     <div className='w-full overflow-hidden'>
       <div className='relative'>
+<<<<<<< HEAD
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>          {coverImageUrl ? (
             <img
               src={coverImageUrl}
@@ -78,6 +105,13 @@ export function ProfileHero({
             <img
               src = {coverImageUrl,}
               alt={`${name} cover`}
+=======
+        <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>
+          {coverImageUrl ? (
+            <img
+              src={coverImageUrl}
+              alt={`${name} cover`}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               className='w-full h-full object-cover'
               loading='lazy'
             />
@@ -91,6 +125,7 @@ export function ProfileHero({
               {avatarUrl ? (
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
+<<<<<<< HEAD
                 <AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>                  {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -106,10 +141,17 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+=======
+                <AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
             </Avatar>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>
               <div className='flex flex-wrap items-center gap-2 mb-1'>
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>
@@ -121,6 +163,7 @@ export function ProfileHero({
                     'ml-2 border-zion-purple/50 text-zion-cyan'
                     profileType === 'service'
                       ? 'bg-zion-purple/10'
+<<<<<<< HEAD
                       : 'bg-zion-cyan/10'                  )}
             <div className="mt-4 md: mt-0 md:ml-6 md:mb-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
@@ -131,10 +174,17 @@ export function ProfileHero({
                     "ml-2 border-zion-purple/50 text-zion-cyan"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+=======
+                      : 'bg-zion-cyan/10'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   )}
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>
                 {title}
               </h2>
@@ -158,6 +208,7 @@ export function ProfileHero({
                   </div>
                 )}
                 {aiScore && (
+<<<<<<< HEAD
                   <div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -172,6 +223,9 @@ export function ProfileHero({
                 )}
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
+=======
+                  <div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     AI Match: {aiScore}%
                   </div>
                 )}
@@ -181,6 +235,10 @@ export function ProfileHero({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }}
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

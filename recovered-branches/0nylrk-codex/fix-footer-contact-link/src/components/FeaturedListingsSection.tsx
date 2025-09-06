@@ -4,9 +4,14 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 interface FeaturedListingsSectionProps {
+<<<<<<< HEAD
   showTitle?: boolean
 }
 <<<<<<< HEAD
+=======
+  showTitle?: boolean;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function FeaturedListingsSection({ showTitle;
 =======

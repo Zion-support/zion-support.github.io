@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -12,6 +13,43 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Label } from '@/components/ui/label';
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+
+type ResumeStep = 'basics' | 'experience' | 'education' | 'skills';
+}
+
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>('basics');
+
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case 'basics':
+        return <BasicsStep />;
+      case 'experience':
+        return <ExperienceStep />;
+      case 'education':
+        return <EducationStep />;
+      case 'skills':
+        return <SkillsStep />;
+      default:
+        return <BasicsStep />;
+    }
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 type ResumeStep = any;
   return (
@@ -81,6 +119,7 @@ type ResumeStep = any;
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
 ;
@@ -219,3 +258,13 @@ function ExperienceStep() {
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+
+};";
+  () => removeSkill (skill.id) ";
+}aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;
+}</div>) ) ";
+}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

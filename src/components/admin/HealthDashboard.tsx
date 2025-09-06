@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -428,9 +427,17 @@ const HealthDashboard: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
+<<<<<<< HEAD
   )
 }
 export default HealthDashboard
 export default HealthDashboard
 export default HealthDashboard
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default HealthDashboard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

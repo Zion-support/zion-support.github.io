@@ -11,6 +11,8 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
  */
+}
+
 export function useMessages(
   user: UserWithProfile;
   activeConversation: Conversation | null;

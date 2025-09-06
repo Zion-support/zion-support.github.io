@@ -39,8 +39,13 @@ export type {
 } from './textAnalysisService';
 // Service categories for easy discovery
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const SERVICE_CATEGORIES = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools';
@@ -59,6 +64,8 @@ export const SERVICE_CATEGORIES = {
   }
 } as const;
 // Service metadata for the application
+}
+
 export const SERVICES_METADATA = {
   urlShortener: {
     name: 'URL Shortener'
@@ -117,6 +124,8 @@ export const SERVICES_METADATA = {
   }
 } as const;
 // Service availability and status
+}
+
 export const getServiceStatus = () => {
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -127,6 +136,8 @@ export const getServiceStatus = () => {
   }
 }
 // Service usage statistics
+}
+
 export const getServiceStats = () => {
   return {
     totalUsers: 15420;

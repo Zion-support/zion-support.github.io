@@ -4,11 +4,17 @@ import { Slider } from "@/components/ui/slider";
 interface BudgetStepProps {
 <<<<<<< HEAD
   formData: QuoteFormData;
+<<<<<<< HEAD
 =======
   formData: QuoteFormData
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
+=======
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
 <<<<<<< HEAD
   const handleBudgetTypeSelect = null;

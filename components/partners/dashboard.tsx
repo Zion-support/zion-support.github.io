@@ -1,14 +1,28 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import Head from "next/head";
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState("");
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
+=======
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+}
+
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');
+  const [token, setToken] = useState<string | null>(null);
+  const [usage, setUsage] = useState<any>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [loading, setLoading] = useState(false);
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const saved = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const saved = localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
   }, []);
@@ -21,6 +35,7 @@ export default function PartnerDashboard() {
     const data = await res.json();
     if (data.token) {
       localStorage.setItem('zion_partner_token', data.token);
+<<<<<<< HEAD
       setToken(data.token);    }  }, []);
   async function getToken() {
     const res = await fetch("/api/partners/token", {
@@ -31,6 +46,9 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
+=======
+      setToken(data.token);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   async function fetchUsage() {
@@ -49,6 +67,7 @@ export default function PartnerDashboard() {
     });
     const data = await res.json();
     if (data.apiKey) {
+<<<<<<< HEAD
       alert(`New API Key: ${data.apiKey}`);    }
   }
   return (
@@ -64,6 +83,9 @@ export default function PartnerDashboard() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
+=======
+      alert(`New API Key: ${data.apiKey}`);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -90,6 +112,7 @@ export default function PartnerDashboard() {
                 className='bg-black text-white px-4 py-2 rounded'
               >
                 Get JWT
+<<<<<<< HEAD
               </button>            </div>
           </div>
         )}
@@ -100,6 +123,13 @@ export default function PartnerDashboard() {
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
           </div>
         )}
+=======
+              </button>
+            </div>
+          </div>
+        )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='grid md:grid-cols-3 gap-6'>
           <div className='bg-white p-6 rounded-lg shadow'>
             <h3 className='font-medium mb-2'>API Keys</h3>
@@ -132,6 +162,7 @@ export default function PartnerDashboard() {
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>
                         {k}: {v as any}
+<<<<<<< HEAD
                       </li>                    ))}          </div>
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
@@ -144,11 +175,15 @@ export default function PartnerDashboard() {
                   <ul className="list-disc ml-6">
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
+=======
+                      </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ))}
                   </ul>
                 </div>
               </div>
             ) : (
+<<<<<<< HEAD
               <p className='text-gray-500 text-sm'>No usage yet.</p>            )}
           </div>
         </div>
@@ -156,6 +191,13 @@ export default function PartnerDashboard() {
             )}
           </div>
         </div>
+=======
+              <p className='text-gray-500 text-sm'>No usage yet.</p>
+            )}
+          </div>
+        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='bg-white p-6 rounded-lg shadow mt-6'>
           <h3 className='font-medium mb-2'>SDKs</h3>
           <a
@@ -169,6 +211,7 @@ export default function PartnerDashboard() {
             href='/api/partners/sdk?type=graphql'
           >
             GraphQL SDK
+<<<<<<< HEAD
           </a>        </div>
       </div>
     </div>
@@ -181,3 +224,10 @@ export default function PartnerDashboard() {
     </div>
 );
 }
+=======
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

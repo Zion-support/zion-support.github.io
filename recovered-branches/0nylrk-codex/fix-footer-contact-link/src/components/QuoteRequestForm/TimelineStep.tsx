@@ -24,8 +24,14 @@ import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
   formData: QuoteFormData;
+<<<<<<< HEAD
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
+=======
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 <<<<<<< HEAD

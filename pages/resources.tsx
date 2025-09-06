@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 =======
@@ -274,3 +275,6 @@ export default function ResourcesPage() {
     </>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

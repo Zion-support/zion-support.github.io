@@ -1,6 +1,7 @@
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 const STEPS = null;
 =======
@@ -9,8 +10,21 @@ const STEPS = [
   { key: 'job', label: 'Job posted' }
   { key: 'invite', label: 'First invite sent' }
   { key: 'response', label: 'First response received' }
+=======
+import { useEffect, useState } from 'react';
+
+const STEPS = [
+  { key: 'job', label: 'Job posted' },
+  { key: 'invite', label: 'First invite sent' },
+  { key: 'response', label: 'First response received' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ClientDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
     job: false
@@ -20,7 +34,12 @@ export default function ClientDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
+<<<<<<< HEAD
       if (raw) setCompleted(JSON.parse(raw));    } catch {}
+=======
+      if (raw) setCompleted(JSON.parse(raw));
+    } catch {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   useEffect(() => {
     try {
@@ -52,7 +71,12 @@ export default function ClientDashboard() {
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
+<<<<<<< HEAD
           />        </div>
+=======
+          />
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </EnhancedCard>
       <EnhancedCard>
         <h2 className='font-semibold mb-2'>Checklist</h2>
@@ -81,10 +105,19 @@ export default function ClientDashboard() {
                   className='text-xs py-1 px-2'
                 >
                   {s.key === 'job' ? 'Post a Job' : 'Mark done'}
+<<<<<<< HEAD
                 </EnhancedButton>              )}
+=======
+                </EnhancedButton>
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </li>
           ))}
         </ul>
       </EnhancedCard>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

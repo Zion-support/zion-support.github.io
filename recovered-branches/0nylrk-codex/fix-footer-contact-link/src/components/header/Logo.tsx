@@ -4,8 +4,14 @@ import { Link  } from 'react-router-dom';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 interface LogoProps {
   customLogo?: string;
+<<<<<<< HEAD
   customColor?: string
 }
+=======
+  customColor?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
   // Use the white-label logo if available and no specific customLogo is provided

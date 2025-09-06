@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -44,6 +45,33 @@ export function ZapierIntegration() {
     toast.success("API key copied to clipboard")
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import React, { useState } from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { toast } from 'sonner';
+import { Check, Copy, ExternalLink } from 'lucide-react';
+}
+
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
+
+  const handleCopyApiKey = () => {
+    navigator.clipboard.writeText(apiKey);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    toast.success('API key copied to clipboard');
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='space-y-6'>
       <div className='grid md:grid-cols-3 gap-6'>
@@ -78,8 +106,12 @@ export function ZapierIntegration() {
                       <Check className='h-4 w-4' />
                     ) : (
                       <Copy className='h-4 w-4' />
+<<<<<<< HEAD
                     )}                  </Button>                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+=======
+                    )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </Button>
                 </div>
               </div>
@@ -87,6 +119,7 @@ export function ZapierIntegration() {
           </CardContent>
           <CardFooter className='flex flex-col items-start'>
             <Button variant='outline' className='gap-2'>
+<<<<<<< HEAD
               <ExternalLink className='h-4 w-4' />              Open Zapier Dashboard
             </Button>
           </CardFooter>
@@ -94,10 +127,17 @@ export function ZapierIntegration() {
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
+=======
+              <ExternalLink className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Open Zapier Dashboard
             </Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <Card>
           <CardHeader>
             <h3 className='text-lg font-semibold'>Popular Zaps</h3>
@@ -116,21 +156,33 @@ export function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className='flex items-center gap-2'>
+<<<<<<< HEAD
                 <Check className='h-4 w-4 text-green-500' />                <span>Create calendar events for interviews</span>              <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
+=======
+                <Check className='h-4 w-4 text-green-500' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
             <Button variant='outline' className='w-full gap-1'>
+<<<<<<< HEAD
               <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
               <ExternalLink className="h-4 w-4" />
+=======
+              <ExternalLink className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
@@ -165,11 +217,19 @@ export function ZapierIntegration() {
               </p>
               <Button size='sm' variant='outline'>
                 Set Up Trigger
+<<<<<<< HEAD
               </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>
+=======
+              </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

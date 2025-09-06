@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { useRef, useEffect } from 'react';
+import { useAnalytics } from '@/context/AnalyticsContext';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useRef, useEffect  } from 'react';
 import { useAnalytics } from '@/context/AnalyticsContext';

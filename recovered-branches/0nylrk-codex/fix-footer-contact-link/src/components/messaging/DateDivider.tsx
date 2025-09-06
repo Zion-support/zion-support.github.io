@@ -4,6 +4,10 @@ import { format } from 'date-fns';
 interface DateDividerProps {
   date: Date;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DateDivider({ date }: DateDividerProps) {
   return (
     <div className="flex items-center my-4">

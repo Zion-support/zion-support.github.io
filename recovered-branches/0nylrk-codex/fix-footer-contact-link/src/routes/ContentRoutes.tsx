@@ -44,7 +44,14 @@ const ContentRoutes = () => {
       {/* Sitemap Page */}
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ContentRoutes;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

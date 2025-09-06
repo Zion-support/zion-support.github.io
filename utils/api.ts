@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Define RequestInit if not available
 interface File extends Blob {
   name: string;
@@ -65,6 +66,20 @@ interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 }
+=======
+}};
+}
+}
+
+export const apiClient = new ApiClient();
+};
+}
+}
+
+export const apiClient = new ApiClient();
+export type { ApiResponse, RequestOptions };
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
@@ -178,5 +193,11 @@ class ApiClient {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
 }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions }

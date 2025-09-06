@@ -1,6 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
@@ -8,6 +9,8 @@ import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Phone
   Mail
@@ -19,6 +22,7 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
@@ -27,6 +31,14 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
+=======
+}
+
+export default function MDMPage() {
+  const service = extraServices.find(s =>
+    s.link.endsWith('/mdm-mobile-device-management')
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) return null;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -103,15 +115,23 @@ export default function MDMPage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
+<<<<<<< HEAD
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+=======
+                </div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

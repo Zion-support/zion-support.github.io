@@ -17,6 +17,10 @@ import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
     <>

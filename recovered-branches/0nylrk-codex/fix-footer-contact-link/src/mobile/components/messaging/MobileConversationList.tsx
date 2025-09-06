@@ -31,8 +31,14 @@ interface MobileConversationListProps {
   conversations: Conversation[]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   activeConversation?: string;
+<<<<<<< HEAD
   onSelectConversation: (id: string) => void
 }
+=======
+  onSelectConversation: (id: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileConversationList({
   conversations;
   activeConversation;

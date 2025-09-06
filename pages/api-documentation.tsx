@@ -1,6 +1,11 @@
 import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function APIDocumentationPage() {
   return (
     <Layout>
@@ -18,4 +23,8 @@ export default function APIDocumentationPage() {
         <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
       </section>
     </Layout>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

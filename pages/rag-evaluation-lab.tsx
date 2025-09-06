@@ -1,6 +1,11 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function RAGEvaluationLabPage() {
 <<<<<<< HEAD
 	return (
@@ -92,4 +97,7 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

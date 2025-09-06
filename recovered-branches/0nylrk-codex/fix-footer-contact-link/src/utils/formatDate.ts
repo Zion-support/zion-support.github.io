@@ -6,9 +6,19 @@
  * @returns Formatted date string
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const formatDate = null;
 =======
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
+=======
+}
+}
+
+export const formatDate = (
+  date: Date | string | number,
+  format: string = 'medium'
+): string => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -53,6 +63,9 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
  * @param date Date to format
  * @returns Time ago string (e.g., "2 hours ago")
  */
+}
+}
+
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date(date);
   const now = new Date();

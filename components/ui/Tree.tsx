@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, { useState } from 'react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface TreeNode {
   name: string;
   path: string;
@@ -24,6 +29,7 @@ function NodeItem({
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
   const copyPath = async () => {
+<<<<<<< HEAD
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
   name: string
@@ -56,9 +62,19 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
     const url = `${window.location.origin}/api/dev/source-map`;
     await fetch(url, {
       method: 'POST'
+=======
+    await navigator.clipboard.writeText(node.path);
+  };
+
+  const clonePath = async () => {
+    const url = `${window.location.origin}/api/dev/source-map`;
+    await fetch(url, {
+      method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       headers: {
         'Content-Type': 'application/json'
         // Expect an admin token in local storage, fall back to prompt
+<<<<<<< HEAD
         'x-admin-token': localStorage.getItem('ADMIN_TOKEN') |''
       } as any
       body: JSON.stringify({ path: node.path })
@@ -68,6 +84,14 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
   }
+=======
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',
+      } as any,
+      body: JSON.stringify({ path: node.path }),
+    });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const deploy = () => onDeploy && onDeploy(node.path);
   return (
     <div className='ml-2'>
@@ -116,6 +140,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
               node={child}
               depth={depth + 1}
               onDeploy={onDeploy}
+<<<<<<< HEAD
             />          ))}
         </div>
       )}
@@ -139,11 +164,15 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+=======
+            />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           ))}
         </div>
       )}
     </div>
   );
+<<<<<<< HEAD
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className='w-full'>
@@ -159,6 +188,20 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
       ))}
     </div>
   );
+=======
+}
+
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className='w-full'>
+      {nodes.map(n => (
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default Tree;
 }</div> </div> {
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {
@@ -187,6 +230,10 @@ export default Tree;
   onDeploy
 }/>) )
 }</div>)
+<<<<<<< HEAD
 }export default Tree;}
 export default Tree;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}export default Tree;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

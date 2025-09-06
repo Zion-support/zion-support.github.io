@@ -1,9 +1,21 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Award } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Award } from 'lucide-react'
 interface TalentCardBadgesProps {
+<<<<<<< HEAD
   featured: boolean | undefined
+=======
+  featured: boolean | undefined;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null;
   return (
@@ -13,7 +25,11 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
   );  )
 }
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

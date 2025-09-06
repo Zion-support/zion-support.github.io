@@ -7,8 +7,14 @@ interface InterviewResponseFormProps {
   interview: Interview;
   onConfirm: () => Promise<void>;
   onClose: () => void;
+<<<<<<< HEAD
   isLoading: boolean
 }
+=======
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function InterviewResponseForm({
   interview
   onConfirm

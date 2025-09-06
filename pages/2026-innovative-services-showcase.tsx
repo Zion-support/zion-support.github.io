@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail  } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
@@ -36,14 +37,76 @@ import {
   Phone
   Mail;
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Zap,
+  Brain,
+  Globe,
+  Shield,
+  Phone,
+  Mail,;
+} from 'lucide-react';
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
     { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount }
+=======
+}
+
+export default function Innovative2026ServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+  const allServices = [
+    ...innovative2026MicroSaasServicesV4,
+    ...emergingTech2026ServicesV4,
+    ...enterpriseIT2026ServicesV4,
+  ];
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category?.includes('AI')
+  ).length;
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum')
+  ).length;
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise')
+  ).length;
+  const microSaasCount = allServices.filter(service =>
+    service.category?.includes('Micro SaaS')
+  ).length;
+  const emergingTechCount = allServices.filter(
+    service =>
+      service.category?.includes('Emerging') ||
+      service.category?.includes('Neuromorphic') ||
+      service.category?.includes('Synthetic')
+  ).length;
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       id: 'enterprise'
       name: 'Enterprise IT'
@@ -52,6 +115,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     }
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount }
     {
+<<<<<<< HEAD
       id: 'emerging'
       name: 'Emerging Tech'
       icon: '🔬'
@@ -67,6 +131,29 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     { id: 'price', name: 'Price' }
     { id: 'rating', name: 'Rating' }
     { id: 'popularity', name: 'Popularity' },  ];
+=======
+      id: 'emerging',
+      name: 'Emerging Tech',
+      icon: '🔬',
+      count: emergingTechCount,
+    },
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $500', range: 'Under $500' },
+    { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },
+    { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },
+  ];
+
+  const sortOptions = [
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'popularity', name: 'Popularity' },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
@@ -88,9 +175,18 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               service.category?.includes('Neuromorphic') |
               service.category?.includes('Synthetic')
             );
+<<<<<<< HEAD
           default: return true
         }
       });    }
+=======
+          default:
+            return true;
+        }
+      });
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -102,9 +198,18 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             return price >= 500 && price <= 1000;
           case 'high':
             return price > 1000;
+<<<<<<< HEAD
           default: return true
         }
       });    }
+=======
+          default:
+            return true;
+        }
+      });
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(
@@ -114,7 +219,13 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             .toLowerCase()
             .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
+<<<<<<< HEAD
       );    }
+=======
+      );
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -126,27 +237,54 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           return b.rating - a.rating;
         case 'popularity':
           return b.customers - a.customers;
+<<<<<<< HEAD
         default: return a.name.localeCompare(b.name)
       }
     });
     return filtered;  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
+=======
+        default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+
+    return filtered;
+  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     },  }
+=======
+        duration: 0.5,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -179,7 +317,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       </Head>
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
+<<<<<<< HEAD
         colorScheme='neural-network'        particleCount={800}
+=======
+        colorScheme='neural-network'
+        particleCount={800}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         animationSpeed={3.0}
         enableHolographic={true}
         enableQuantumEffects={true}
@@ -187,10 +330,19 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         enableMultidimensional={true}
       />
       <UltraAdvancedNavigation2026 />
+<<<<<<< HEAD
       <div className='min-h-screen relative z-10'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
+=======
+
+      <div className='min-h-screen relative z-10'>
+        {/* Hero Section */}
+        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -203,7 +355,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                 Discover the future of technology with our cutting-edge 2026
                 services. From AI-powered solutions to quantum computing and
                 emerging technologies, transform your business with
+<<<<<<< HEAD
                 next-generation innovation.              </p>
+=======
+                next-generation innovation.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -229,7 +386,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               <div className='bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3'>
                 <span className='text-orange-400 font-semibold'>
                   Future-Proof
+<<<<<<< HEAD
                 </span>              </div>
+=======
+                </span>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             {/* Search and Filters */}
             <motion.div
@@ -249,7 +411,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                 />
               </div>
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
+<<<<<<< HEAD
                 {categories.map(category => (                  <button
+=======
+                {categories.map(category => (
+                  <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${
@@ -258,12 +425,24 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
                     }`}
                   >
+<<<<<<< HEAD
                     <span className='mr-2'>{category.icon}</span>                    {category.name} ({category.count})
                   </button>
                 ))}
               </div>
               <div className='flex flex-wrap gap-4 justify-center'>
                 {priceRanges.map(range => (                  <button
+=======
+                    <span className='mr-2'>{category.icon}</span>
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+
+              <div className='flex flex-wrap gap-4 justify-center'>
+                {priceRanges.map(range => (
+                  <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     key={range.id}
                     onClick={() => setSelectedPriceRange(range.id)}
                     className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 ${
@@ -302,7 +481,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                       <div className='flex items-center justify-between mb-4'>
                         <span className='text-4xl'>{service.icon}</span>
                         {service.popular && (
+<<<<<<< HEAD
                           <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>                            POPULAR
+=======
+                          <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
+                            POPULAR
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </span>
                         )}
                       </div>
@@ -352,8 +536,15 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                           <Zap className='w-4 h-4 text-yellow-400' />
                           <span className='text-gray-300 text-sm'>
                             {service.trialDays} days trial
+<<<<<<< HEAD
                           </span>                        </div>
                       </div>
+=======
+                          </span>
+                        </div>
+                      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {/* Features Preview */}
                       <div className='mb-4'>
                         <h4 className='text-white font-semibold mb-2'>
@@ -376,14 +567,24 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                           {service.features.length > 3 && (
                             <span className='text-gray-500 text-xs'>
                               +{service.features.length - 3} more features
+<<<<<<< HEAD
                             </span>                          )}
+=======
+                            </span>
+                          )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                       </div>
                       {/* Category Badge */}
                       <div className='mb-4'>
                         <span
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
+<<<<<<< HEAD
                         >                          {service.category}
+=======
+                        >
+                          {service.category}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </span>
                       </div>
                       {/* CTA Button */}
@@ -391,12 +592,22 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                         <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                           <span className='flex items-center justify-center space-x-2'>
                             <span>Learn More</span>
+<<<<<<< HEAD
                             <ArrowRight className='w-4 h-4' />                          </span>
+=======
+                            <ArrowRight className='w-4 h-4' />
+                          </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </button>
                       </Link>
                     </div>
                     {/* Hover Effect Overlay */}
+<<<<<<< HEAD
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
+=======
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </motion.div>
@@ -408,14 +619,24 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               >
                 <div className='text-gray-400 text-xl mb-4'>
                   No services found matching your criteria
+<<<<<<< HEAD
                 </div>                <button
+=======
+                </div>
+                <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   }}
+<<<<<<< HEAD
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
+=======
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Clear Filters
                 </button>
               </motion.div>
@@ -424,7 +645,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         </section>
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -455,7 +681,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                 </div>
               </div>
               <Link href='/contact'>
+<<<<<<< HEAD
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today
+=======
+                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
+                  Get Started Today
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </Link>
             </motion.div>
@@ -463,4 +694,8 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         </section>
       </div>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

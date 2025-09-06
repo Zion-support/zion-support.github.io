@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface EmailValidationResult {
   email: string;
@@ -17,6 +18,11 @@ interface EmailValidationResult {
     isFreeProvider: boolean
   }
 }
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
 <<<<<<< HEAD
   req: NextApiRequest;
@@ -26,8 +32,15 @@ export default async function handler(
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+ 
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const { email } = req.body;
 <<<<<<< HEAD
@@ -36,7 +49,13 @@ export default async function handler(
     if (!email |typeof email !== 'string') {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       return res.status(400).json({ error: 'Email is required' });
+<<<<<<< HEAD
     }
+=======
+   
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Basic email format validation
 <<<<<<< HEAD
     const emailRegex = null;
@@ -48,6 +67,7 @@ export default async function handler(
     const hasValidDomain = domain && domain.length > 0;
     // Check for common disposable email providers
     const disposableDomains = [
+<<<<<<< HEAD
       'tempmail.org'
       'guerrillamail.com'
       'mailinator.com'
@@ -56,10 +76,21 @@ export default async function handler(
       'sharklasers.com'
       'getairmail.com'
       'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+=======
+      'tempmail.org',
+      'guerrillamail.com',
+      'mailinator.com',
+      '10minutemail.com',
+      'temp-mail.org',
+      'sharklasers.com',
+      'getairmail.com',
+      'mailnesia.com',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ];
     const isDisposable = disposableDomains.some(d => domain?.includes(d));
     // Check for role-based emails
     const roleBasedPatterns = [
+<<<<<<< HEAD
       'admin@'
       'info@'
       'support@'
@@ -70,12 +101,25 @@ export default async function handler(
       'no-reply@'
       'donotreply@'
       'do-not-reply@'
+=======
+      'admin@',
+      'info@',
+      'support@',
+      'contact@',
+      'sales@',
+      'help@',
+      'noreply@',
+      'no-reply@',
+      'donotreply@',
+      'do-not-reply@',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ];
     const isRoleBased = roleBasedPatterns.some(pattern =>
       email.startsWith(pattern)
     );
     // Check for free email providers
     const freeProviders = [
+<<<<<<< HEAD
       'gmail.com'
       'yahoo.com'
       'hotmail.com'
@@ -89,6 +133,17 @@ export default async function handler(
     // Check for free email providers
     const freeProviders = [
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
+=======
+      'gmail.com',
+      'yahoo.com',
+      'hotmail.com',
+      'outlook.com',
+      'aol.com',
+      'icloud.com',
+      'protonmail.com',
+      'mail.com',
+      'yandex.com',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
     // Calculate score (0-100)
@@ -111,11 +166,21 @@ export default async function handler(
     if (score < 50) {
       suggestions.push('This email may not be suitable for business use');
     }
+<<<<<<< HEAD
     const result: EmailValidationResult = {
       email
       isValid: score >= 70
       score: Math.max(0, score)
       suggestions
+=======
+}
+
+const result: EmailValidationResult = {
+      email,
+      isValid: score >= 70,
+      score: Math.max(0, score),
+      suggestions,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       details: {
         hasValidFormat
         hasValidDomain
@@ -129,6 +194,7 @@ export default async function handler(
   } catch (error) {
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
   }      email;
       isValid: score >= 70;
       score: Math.max(0, score);
@@ -148,3 +214,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+=======
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

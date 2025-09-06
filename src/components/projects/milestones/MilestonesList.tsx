@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import {
+  Milestone,
+  MilestoneStatus,
+  MilestoneActivity,;
+} from '@/hooks/useMilestones';
+import { useAuth } from '@/hooks/useAuth';
+import { MilestoneCard } from './MilestoneCard';
+import { AddMilestoneForm } from './AddMilestoneForm';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react';
+import { EmptyState } from '@/components/ui/empty-state';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
@@ -21,6 +38,7 @@ interface MilestonesListProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>;
   isSubmitting: boolean;
   onApprove?: (id: string) => Promise<void>;
+<<<<<<< HEAD
   onReject?: (id: string) => Promise<void>
 =======
   milestones: Milestone[]
@@ -35,6 +53,11 @@ interface MilestonesListProps {
   onReject?: (id: string,) => Promise<void>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
+=======
+  onReject?: (id: string) => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const MilestonesList: React.FC<MilestonesListProps> = ({
 <<<<<<< HEAD
   milestones;
@@ -84,6 +107,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     )
   }
   if (milestones.length === 0 && !showAddForm) {
+<<<<<<< HEAD
     return (
       <EmptyState
         icon = {<span className="text-3xl">📊</span>,}
@@ -96,6 +120,23 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             text: "Create First Milestone"
             onClick: (,) => setShowAddForm(true)
           } : undefined
+=======
+
+        icon={<span className='text-3xl'>📊</span>}
+        title='No Milestones Yet'
+        description={
+          isClient
+            ? 'Break down the project into manageable milestones to track progress and payments.'
+            : 'No milestones have been created for this project yet.'
+        }
+        action={
+          isClient
+            ? {
+                text: 'Create First Milestone',
+                onClick: () => setShowAddForm(true),
+              }
+            : undefined
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       />
     )
@@ -142,4 +183,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   )
 }
 "
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

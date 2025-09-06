@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 type Props = {
   onSubmit: (payload: {
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
+<<<<<<< HEAD
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 }
+=======
+  }) => Promise<void> | void;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function MilestoneForm({ onSubmit }: Props) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -40,6 +51,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
     } catch (err: any) {
       setError(err?.message |'Failed to create milestone');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
   }
   return (
@@ -56,6 +68,9 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setError(err?.message |'Failed to create milestone')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -68,6 +83,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
           className='mt-1 w-full rounded border px-3 py-2'
           value={title}
           onChange={e => setTitle(e.target.value)}
+<<<<<<< HEAD
           placeholder='Phase 1 – Backend Setup'          required
         />
       </div>
@@ -79,6 +95,9 @@ export default function MilestoneForm({ onSubmit }: Props) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
+=======
+          placeholder='Phase 1 – Backend Setup'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           required
         />
       </div>
@@ -99,6 +118,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
             type='date'
             className='mt-1 w-full rounded border px-3 py-2'
             value={dueDate}
+<<<<<<< HEAD
             onChange={e => setDueDate(e.target.value)}            required
           />
         </div>
@@ -119,6 +139,9 @@ export default function MilestoneForm({ onSubmit }: Props) {
             className="mt-1 w-full rounded border px-3 py-2"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
+=======
+            onChange={e => setDueDate(e.target.value)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             required
           />
         </div>
@@ -131,6 +154,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
             className='mt-1 w-full rounded border px-3 py-2'
             value={amountUsd}
             onChange={e => setAmountUsd(e.target.value)}
+<<<<<<< HEAD
             placeholder='3000'            required          <input
             type="number"
             min={0}
@@ -139,18 +163,29 @@ export default function MilestoneForm({ onSubmit }: Props) {
             value={amountUsd}
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
+=======
+            placeholder='3000'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             required
           />
         </div>
       </div>
       <button
         type='submit'
+<<<<<<< HEAD
         className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'        disabled={loading}        type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+=======
+        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

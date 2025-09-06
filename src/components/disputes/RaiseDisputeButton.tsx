@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,;
+} from '@/components/ui/dialog';
+import { DisputeForm } from './DisputeForm';
+import { useRouter } from 'next/router';
+import { ShieldAlert } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -28,10 +43,22 @@ import { useRouter } from 'next/router'
 interface RaiseDisputeButtonProps {
   projectId: string;
   milestoneId?: string;
+<<<<<<< HEAD
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
 <<<<<<< HEAD
+=======
+  variant?:
+    | 'default'
+    | 'outline'
+    | 'secondary'
+    | 'destructive'
+    | 'ghost'
+    | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function RaiseDisputeButton({ 
@@ -80,5 +107,9 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

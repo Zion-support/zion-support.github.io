@@ -2,11 +2,17 @@ import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
+<<<<<<< HEAD
   const steps = useMemo(() => {
     if (isClient) {
       return [
@@ -19,6 +25,9 @@ export default function OnboardingWizard() {
   const isClient = null;
 =======
   const isClient = user?.role === 'client'
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const steps = useMemo(() => {
     if (isClient) {
       return [
@@ -158,6 +167,7 @@ export default function OnboardingWizard() {
             className='px-3 py-2 rounded-md border'
           >
             Finish
+<<<<<<< HEAD
           </button>        )}
       </div>
     </div>
@@ -217,3 +227,10 @@ export default function OnboardingWizard() {
     </div>
 );
 }
+=======
+          </button>
+        )}
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

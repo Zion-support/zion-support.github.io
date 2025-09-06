@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { Company } from '@/components/enterprise/workspace/CompanyDashboard';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";

@@ -7,8 +7,14 @@ import { flagContent } from './flagContent';
  * Create a monitoring system helper to easily monitor any content
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const monitorContent = null;
 =======
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const monitorContent = async (
   userId: string;
   userEmail: string | undefined;

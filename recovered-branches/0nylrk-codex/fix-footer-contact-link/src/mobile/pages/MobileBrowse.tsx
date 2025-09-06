@@ -80,6 +80,11 @@ const talentsData = [
     match: 82
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';

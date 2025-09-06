@@ -13,9 +13,20 @@ import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 interface ChatInputProps {
   onSend: (message: string) => void;
+<<<<<<< HEAD
   disabled?: boolean
 }
 <<<<<<< HEAD
+=======
+disabled?: boolean 
+}export function ChatInput ({
+  onSend, disabled = false 
+}: ChatInputProps) {
+  const [message, setMessage] = useState ('');
+const inputRef = useRef<HTMLTextAreaElement> (null);
+//Focus input when component mounts
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ChatInput({ onSend, disabled;
 =======

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -16,6 +17,23 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" };
     { id: "summary", label: "Summary" }
+=======
+import { QuoteRequestSteps } from '../QuoteRequestForm';
+import { CheckIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+interface StepProgressProps {
+  currentStep: QuoteRequestSteps;
+}
+
+export function StepProgress({ currentStep }: StepProgressProps) {
+  const steps: { id: QuoteRequestSteps; label: string }[] = [
+    { id: 'service', label: 'Service' },
+    { id: 'details', label: 'Details' },
+    { id: 'timeline', label: 'Timeline' },
+    { id: 'budget', label: 'Budget' },
+    { id: 'summary', label: 'Summary' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const getStepStatus = null;
                   status === "complete" ? "text-zion-cyan" : 
@@ -27,6 +45,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "budget", label: "Budget" }
     { id: "summary", label: "Summary" }
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
     const stepOrder = steps.findIndex(s => s.id === stepId)
     const currentStepOrder = steps.findIndex(s => s.id === currentStep)
     if (stepOrder < currentStepOrder) return 'complete'
@@ -39,6 +58,16 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder === currentStepOrder) return "current"
     return "upcoming"
   }
+=======
+    const stepOrder = steps.findIndex(s => s.id === stepId);
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+
+    if (stepOrder < currentStepOrder) return 'complete';
+    if (stepOrder === currentStepOrder) return 'current';
+    return 'upcoming';
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='relative'>
       <div className='absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light'>
@@ -78,11 +107,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     ? 'text-zion-cyan'
                     : status === 'current'
                       ? 'text-white'
+<<<<<<< HEAD
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   "text-zion-slate-light"
+=======
+                      : 'text-zion-slate-light'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 )}
               <span
                 className = {cn(
@@ -95,6 +128,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 {step.label}
               </span>
             </div>
+<<<<<<< HEAD
           )
         })}
       </div>
@@ -118,3 +152,24 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
+=======
+          );
+        })}
+      </div>
+    </div>
+  );
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 ;
+}%` ;
+
+}/> </div>
+}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {;
+  steps.findIndex (s => s.id === step.id) + 1 ;
+}</span>) ;
+}</div> <span) ;
+}> {;
+  step.label ;
+}</span> </div>) ;
+}) ;
+}</div> </div>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

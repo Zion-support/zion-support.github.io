@@ -42,4 +42,7 @@ export async function createNotification({
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     return { success: false, error }
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

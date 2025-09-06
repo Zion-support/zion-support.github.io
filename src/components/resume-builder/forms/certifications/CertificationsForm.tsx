@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
@@ -16,8 +29,12 @@ interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
   onComplete: () => void;
+<<<<<<< HEAD
   onBack: () => void
 <<<<<<< HEAD
+=======
+  onBack: () => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
@@ -91,7 +108,12 @@ export function CertificationsForm({
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);    form.reset({
       ...cert
@@ -99,11 +121,21 @@ export function CertificationsForm({
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!)
     form.reset({
+<<<<<<< HEAD
       issue_date: formatDateValue(cert.issue_date)
       expiration_date: formatDateValue(cert.expiration_date)
     })
   }
   const handleDelete = async (id: string,) => {
+=======
+      ...cert,
+      issue_date: formatDateValue(cert.issue_date),
+      expiration_date: formatDateValue(cert.expiration_date),
+    });
+  };
+
+  const handleDelete = async (id: string) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
     }
@@ -179,8 +211,17 @@ export function CertificationsForm({
         </Form>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }> {
   editingId ? 'Cancel' : 'Back'
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
+=======
+  );
+
+}> {;
+  editingId ? 'Cancel' : 'Back' ;
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

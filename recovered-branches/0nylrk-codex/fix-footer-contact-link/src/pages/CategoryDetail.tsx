@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+import { useParams, Link } from 'react-router-dom';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { GradientHeading } from '@/components/GradientHeading';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { useState, useEffect } from 'react';
+import {
+  Brain,
+  PenLine,
+  BarChart,
+  Eye,
+  Bot,
+  Mic,
+  Code,
+  Briefcase,;
+} from 'lucide-react';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { useNavigate } from 'react-router-dom';
+import { toast } from '@/hooks/use-toast';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",

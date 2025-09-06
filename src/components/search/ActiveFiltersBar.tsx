@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -28,6 +27,7 @@ interface ActiveFiltersBarProps {
   filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   onClearAll: () => void;
+<<<<<<< HEAD
 =======
   filters: SearchFilters
   onFiltersChange: (filters: SearchFilters,) => void
@@ -35,6 +35,11 @@ interface ActiveFiltersBarProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 <<<<<<< HEAD
   filters;
@@ -150,6 +155,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
         Clear all
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }
 export default ActiveFiltersBar
@@ -170,3 +176,17 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
   )}
 '"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+{;
+  activeFilters.map (filter => (<Badge key= {;
+  filter.key ;
+}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
+}<Button > Clear all </Button> </div>) ;
+};
+}
+
+export default ActiveFiltersBar;
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

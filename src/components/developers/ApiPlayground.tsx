@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
+=======
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import CodeBlock from './CodeBlock';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface Param {
 <<<<<<< HEAD
   name: string;
@@ -13,7 +22,11 @@ interface Param {
 interface ApiPlaygroundProps {
   method: string;
   path: string;
+<<<<<<< HEAD
   params?: Param[]
+=======
+  params?: Param[];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ApiPlayground({ method, path, params;
@@ -128,6 +141,7 @@ export function ApiPlayground({
       </Button>
       {response && <CodeBlock code={response} language='json' />}
     </div>
+<<<<<<< HEAD
   )
 export default ApiPlayground
   const val = paramValues[p.name]
@@ -158,3 +172,36 @@ if (contentType?.includes ('application/json') ) {
 }export default ApiPlayground
 '"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+}
+
+export default ApiPlayground;
+  const val = paramValues[p.name];
+if (val) searchParams.append (p.name, val) ;
+});
+const query = searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params.map ( (p) => (<Input key= {;
+  p.name ;
+}</div>) ;
+}export default ApiPlayground;
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

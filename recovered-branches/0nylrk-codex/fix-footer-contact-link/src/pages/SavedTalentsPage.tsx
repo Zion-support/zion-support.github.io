@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { AppHeader } from '@/layout/AppHeader';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { TalentProfile } from '@/types/talent';
+import { toast } from '@/components/ui/use-toast';
+import { useNavigate } from 'react-router-dom';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
@@ -25,8 +40,15 @@ export default function SavedTalentsPage() {
           console.warn("User not authenticated.");
           return
         }
+<<<<<<< HEAD
         const { data, error } = await supabase
           .from("saved_talents")
+=======
+}
+
+const { data, error } = await supabase
+          .from('saved_talents')
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           .select(
             `
             talent_profile (
@@ -172,5 +194,32 @@ export default function SavedTalentsPage() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+}, [user]);
+};
+  try {
+  if (!user) {
+  
+}//Remove from saved talents const {
+  error 
+}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId);
+}else {
+  //Add to saved talents const {
+  error 
+}= await supabase .from ('saved talents') .insert ([ {
+  user id: user.id, talent id: talentId 
+}]);
+if (error) {
+  throw error 
+}data: talentData, error: talentError 
+}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
+return;
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

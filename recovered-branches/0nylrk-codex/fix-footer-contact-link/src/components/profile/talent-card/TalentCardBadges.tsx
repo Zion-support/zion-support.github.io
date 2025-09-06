@@ -5,6 +5,10 @@ import { Award } from "lucide-react";
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null;
   return (

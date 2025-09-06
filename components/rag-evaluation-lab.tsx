@@ -2,6 +2,11 @@ import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -153,6 +158,7 @@ export default function RAGEvaluationLabPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
@@ -163,3 +169,6 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -279,8 +279,16 @@ const itServices: ITService[] = [;
     ];
   }
 ];
+<<<<<<< HEAD
 export default function ITSolutionsPage() {return (;
     <div className="space-y-8">;
+=======
+}
+
+export default function ITSolutionsPage() {
+  return (
+    <div className='space-y-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Header */}
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">IT Solutions & Services</h1>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -12,6 +13,24 @@ import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
+=======
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+import { toast } from '@/components/ui/use-toast';
+import z from 'zod';
+import { ChatAssistant } from '@/components/ChatAssistant';
+import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
+import { AppLayout } from '@/layout/AppLayout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Contact() {
   const [formData, setFormData] = useState({
 <<<<<<< HEAD
@@ -299,5 +318,22 @@ export default function Contact() {
         />
       )}
     </AppLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}catch (error) {
+  if (error instanceof z.ZodError) {
+  toast ({
+  title: "Form Validation Error";
+description: error.errors[0].message;
+
+};
+//Handle sending messages to the AI chat assistant 
+}return Promise.resolve () 
+}catch (error) {
+  return Promise.resolve ();
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

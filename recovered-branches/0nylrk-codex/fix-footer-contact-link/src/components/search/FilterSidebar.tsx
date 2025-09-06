@@ -15,6 +15,7 @@ interface FilterSidebarProps {
   filterOptions: FilterOptions;
   onFilterChange: (filterType: string, value: string) => void;
   onRatingChange: (rating: number | null) => void;
+<<<<<<< HEAD
 =======
     selectedProductTypes: string[]
     selectedLocations: string[]
@@ -27,6 +28,11 @@ interface FilterSidebarProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClearFilters: () => void
 }
+=======
+  onClearFilters: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FilterSidebar({
   filters;
   filterOptions;

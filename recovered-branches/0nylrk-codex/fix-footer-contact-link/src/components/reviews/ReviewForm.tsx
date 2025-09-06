@@ -38,8 +38,14 @@ interface ReviewFormProps {
   onSubmit: (data: any) => Promise<boolean>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   defaultValues?: Review;
+<<<<<<< HEAD
   isSubmitting: boolean
 }
+=======
+  isSubmitting: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ReviewForm({
   projectId;
   revieweeId;

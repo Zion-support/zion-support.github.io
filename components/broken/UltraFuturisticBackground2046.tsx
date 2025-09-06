@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const UltraFuturisticBackground2046: React.FC;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const UltraFuturisticBackground2046: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
@@ -15,8 +19,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
+<<<<<<< HEAD
       canvas.height = window.innerHeight;      canvas.height = window.innerHeight
     }
+=======
+      canvas.height = window.innerHeight;
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Particle class
@@ -29,6 +39,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
       color: string;
       life: number;
       maxLife: number;
+<<<<<<< HEAD
       type: 'quantum' | 'neural' | 'data' | 'energy';      x: number
       y: number
       vx: number
@@ -38,6 +49,11 @@ const UltraFuturisticBackground2046: React.FC = () => {
       life: number
       maxLife: number
       type: 'quantum' | 'neural' | 'data' | 'energy'
+=======
+      type: 'quantum' | 'neural' | 'data' | 'energy';
+
+      constructor() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
@@ -45,10 +61,18 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.size = Math.random() * 3 + 1;
         this.life = Math.random() * 100;
         this.maxLife = 100;
+<<<<<<< HEAD
         const types = ['quantum', 'neural', 'data', 'energy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
+=======
+
+        const types = ['quantum', 'neural', 'data', 'energy'];
+        this.type = types[Math.floor(Math.random() * types.length)] as any;
+
+        switch (this.type) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
             break;
@@ -60,7 +84,11 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break;
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+<<<<<<< HEAD
             break;        }            break
+=======
+            break;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       }
       update() {
@@ -73,6 +101,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Add some quantum randomness
         if (Math.random() < 0.01) {
           this.vx += (Math.random() - 0.5) * 0.5;
+<<<<<<< HEAD
           this.vy += (Math.random() - 0.5) * 0.5;        }
         // Limit velocity
         this.vx = Math.max(-3, Math.min(3, this.vx));
@@ -83,25 +112,48 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Limit velocity
         this.vx = Math.max(-3, Math.min(3, this.vx));
         this.vy = Math.max(-3, Math.min(3, this.vy));        this.vy = Math.max(-3, Math.min(3, this.vy))
+=======
+          this.vy += (Math.random() - 0.5) * 0.5;
+        }
+
+        // Limit velocity
+        this.vx = Math.max(-3, Math.min(3, this.vx));
+        this.vy = Math.max(-3, Math.min(3, this.vy));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       draw() {
         if (!ctx) return;
+<<<<<<< HEAD
         const alpha = this.life / this.maxLife;
         ctx.save();
         ctx.globalAlpha = alpha;
         const alpha = this.life / this.maxLife;
         ctx.save();
         ctx.globalAlpha = alpha;
+=======
+
+        const alpha = this.life / this.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+
+        switch (this.type) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+<<<<<<< HEAD
             // Wave function rings
             for (let i = 1; i <= 3; i++) {              ctx.beginPath();
             // Wave function rings
             for (let i = 1, i <= 3, i++) {
+=======
+
+            // Wave function rings
+            for (let i = 1; i <= 3; i++) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
               ctx.strokeStyle = this.color;
@@ -109,20 +161,34 @@ const UltraFuturisticBackground2046: React.FC = () => {
               ctx.globalAlpha = alpha * (0.3 - i * 0.1);
               ctx.stroke();
             }
+<<<<<<< HEAD
             break;              ctx.stroke()
             }
             break;
+=======
+            break;
+
+          case 'neural':
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             // Neural network nodes
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             // Neural connections
             particlesRef.current.forEach(particle => {
               if (particle.type === 'neural' && particle !== this) {
                 const distance = Math.sqrt(
                   Math.pow(this.x - particle.x, 2) +
+<<<<<<< HEAD
                     Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+=======
+                    Math.pow(this.y - particle.y, 2)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 );
                 if (distance < 100) {
                   ctx.beginPath();
@@ -131,14 +197,22 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   ctx.strokeStyle = this.color;
                   ctx.lineWidth = 0.5;
                   ctx.globalAlpha = alpha * (1 - distance / 100);
+<<<<<<< HEAD
                   ctx.stroke();                }
               }
             });
             break;                  ctx.stroke()
+=======
+                  ctx.stroke();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 }
               }
             });
             break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           case 'data':
             // Data streams
             ctx.fillStyle = this.color;
@@ -148,10 +222,15 @@ const UltraFuturisticBackground2046: React.FC = () => {
               this.size
               this.size
             );
+<<<<<<< HEAD
           case 'data':
             // Data streams
             ctx.fillStyle = this.color;
             ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+=======
+
+            // Data flow lines
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
@@ -159,12 +238,20 @@ const UltraFuturisticBackground2046: React.FC = () => {
             ctx.lineWidth = 1;
             ctx.stroke();
             break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           case 'energy':
             // Energy particles with glow effect
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             // Glow effect
             const gradient = ctx.createRadialGradient(
               this.x
@@ -173,6 +260,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
               this.x
               this.y
               this.size * 3
+<<<<<<< HEAD
             );            gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
@@ -180,6 +268,9 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break;
             // Glow effect
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
+=======
+            );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
@@ -190,24 +281,36 @@ const UltraFuturisticBackground2046: React.FC = () => {
       }
       isDead() {
         return this.life <= 0;
+<<<<<<< HEAD
       }    }        }
         ctx.restore()
       }
       isDead() {
         return this.life <= 0
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
       for (let i = 0; i < 150; i++) {
+<<<<<<< HEAD
         particlesRef.current.push(new Particle());      }      for (let i = 0, i < 150, i++) {
         particlesRef.current.push(new Particle())
+=======
+        particlesRef.current.push(new Particle());
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     // Animation loop
     const animate = () => {
+<<<<<<< HEAD
       if (!ctx |!canvas) return;
+=======
+      if (!ctx || !canvas) return;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -215,15 +318,27 @@ const UltraFuturisticBackground2046: React.FC = () => {
       particlesRef.current.forEach((particle, index) => {
         particle.update();
         particle.draw();
+<<<<<<< HEAD
         // Remove dead particles and add new ones
         if (particle.isDead()) {
           particlesRef.current[index] = new Particle();        }
         // Remove dead particles and add new ones
         if (particle.isDead()) {
           particlesRef.current[index] = new Particle()
+=======
+
+        // Remove dead particles and add new ones
+        if (particle.isDead()) {
+          particlesRef.current[index] = new Particle();
+        }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Draw quantum field lines
       drawQuantumField(ctx, canvas.width, canvas.height);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Draw neural network grid
       drawNeuralGrid(ctx, canvas.width, canvas.height);
       animationRef.current = requestAnimationFrame(animate);
@@ -248,6 +363,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
           ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j);
         }
+<<<<<<< HEAD
         ctx.stroke();      }
     }
     // Neural network grid      // Draw neural network grid
@@ -271,6 +387,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j)
         }
         ctx.stroke()
+=======
+
+        ctx.stroke();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     // Neural network grid
@@ -285,14 +405,24 @@ const UltraFuturisticBackground2046: React.FC = () => {
       for (let x = 0; x < width; x += gridSize) {
         for (let y = 0; y < height; y += gridSize) {
           const offset =
+<<<<<<< HEAD
             Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;      for (let x = 0, x < width, x += gridSize) {
         for (let y = 0, y < height, y += gridSize) {
           const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+=======
+            Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+
+          ctx.beginPath();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
           ctx.moveTo(x, y + offset);
           ctx.lineTo(x, y + gridSize + offset);
+<<<<<<< HEAD
           ctx.stroke();        }          ctx.stroke()
+=======
+          ctx.stroke();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       }
     }
@@ -415,6 +545,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
               opacity: [0.05, 0.1, 0.05]
             }}
             transition={{
+<<<<<<< HEAD
               duration: Math.random() * 6 + 4
               repeat: Infinity
               ease: 'easeInOut'
@@ -427,13 +558,27 @@ const UltraFuturisticBackground2046: React.FC = () => {
 }
 export default UltraFuturisticBackground2046;              ease: "easeInOut"
               delay: i * 0.8}}
+=======
+              duration: Math.random() * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.8,
+            }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         ))}
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraFuturisticBackground2046;  )
 }
 export default UltraFuturisticBackground2046;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraFuturisticBackground2046;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

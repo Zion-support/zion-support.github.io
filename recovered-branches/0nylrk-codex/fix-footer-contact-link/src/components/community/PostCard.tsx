@@ -12,7 +12,46 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge";
 interface PostCardProps {
 <<<<<<< HEAD
   post: ForumPost;
+<<<<<<< HEAD
   compact?: boolean
+=======
+compact?: boolean 
+}export const PostCard = ({
+  post, compact = false 
+}: PostCardProps) => {
+  const timeAgo = formatDistanceToNow (new Date (post.createdAt), {
+  addSuffix: true 
+});
+
+  cn ("transition-shadow hover:shadow-md";
+post.isPinned && "border-zion-purple/50";
+post.isFeatured && "bg-zion-purple/5") 
+}> <CardHeader className="flex flex-row items-start gap-4 space-y-0" > <Avatar className="h-10 w-10" > <AvatarImage src= {
+  post.authorAvatar 
+}/> <AvatarFallback> {
+  post.authorName.charAt (0) 
+}</AvatarFallback> </Avatar> <div className="flex-1" > <div className="flex items-center" > <Link to= {
+  `/community/post/$ {
+  post.id 
+}` 
+}className="font-semibold text-lg hover:text-zion-purple transition-colors" > {
+  post.title 
+}</Link> {
+  post.isAnswered && (<CheckCircle className="h-4 w-4 text-green-500 ml-2" />) 
+}{
+  post.isPinned && (<Pin className="h-4 w-4 text-amber-500 ml-2" />) 
+}{
+  post.isLocked && (<Lock className="h-4 w-4 text-red-500 ml-2" />) 
+}</div> <div className="text-sm text-muted-foreground" > Posted by {
+  post.authorName 
+}{
+  timeAgo 
+}</div> <div className="flex flex-wrap gap-2 mt-2" > {
+  post.tags?.map (tag => (<Badge key= {
+  tag 
+}variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {
+  tag
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const PostCard = null;
@@ -89,7 +128,14 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default PostCard;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -9,12 +9,17 @@ interface Talent {
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   testimonial?: { quote: string, author: string }
 }
+=======
+  testimonial?: { quote: string; author: string };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1);
   name: `Talent ${i + 1}`,
+<<<<<<< HEAD
   title: 'Full-Stack Developer';
   badges: (i % 3;
 =======
@@ -23,6 +28,9 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1)
   name: `Talent ${i + 1}`
   title: 'Full-Stack Developer'
+=======
+  title: 'Full-Stack Developer',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   badges: (i % 3 === 0
     ? ['Verified']
     : i % 3 === 1
@@ -33,6 +41,10 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined
 }));
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
@@ -42,9 +54,17 @@ const TalentDirectory: NextPage = () => {
     return mockTalent.slice(start, start + pageSize);
   }, [page]);
   return (
+<<<<<<< HEAD
     <div className='space-y-6 pb-16'>      <Head>
         <title>Talent - Zion</title>
       </Head>
+=======
+    <div className='space-y-6 pb-16'>
+      <Head>
+        <title>Talent - Zion</title>
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <h1 className='text-2xl font-semibold'>Explore Talent</h1>
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
         {pageItems.map(t => (
@@ -52,7 +72,12 @@ const TalentDirectory: NextPage = () => {
             <div className='flex items-center justify-between'>
               <h3 className='font-semibold'>{t.name}</h3>
               <div className='flex gap-1'>
+<<<<<<< HEAD
                 {t.badges.map(b => (                  <TrustBadge key={b} type={b} />
+=======
+                {t.badges.map(b => (
+                  <TrustBadge key={b} type={b} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ))}
               </div>
             </div>
@@ -61,10 +86,19 @@ const TalentDirectory: NextPage = () => {
               <MicroTestimonial
                 quote={t.testimonial.quote}
                 author={t.testimonial.author}
+<<<<<<< HEAD
               />            )}
           </article>
         ))}
       </div>
+=======
+              />
+            )}
+          </article>
+        ))}
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <Pagination
         page={page}
         pageSize={pageSize}
@@ -73,6 +107,13 @@ const TalentDirectory: NextPage = () => {
       />
     </div>
   );
+<<<<<<< HEAD
 }
 export default TalentDirectory;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default TalentDirectory;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

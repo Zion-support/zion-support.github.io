@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
@@ -12,6 +13,13 @@ import {
   Cloud
   XCircle
 } from "lucide-react";
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function APIPage() {
   const apiEndpoints = [
     {

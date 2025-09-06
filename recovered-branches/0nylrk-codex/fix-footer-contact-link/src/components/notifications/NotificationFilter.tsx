@@ -16,6 +16,10 @@ interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
   onFilterChange

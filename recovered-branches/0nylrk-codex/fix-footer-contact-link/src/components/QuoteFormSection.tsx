@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { GradientHeading } from './GradientHeading';
+import { useState } from 'react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",

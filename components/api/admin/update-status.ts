@@ -2,6 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
@@ -26,6 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     updatedAt: new Date().toISOString()
   }
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
+<<<<<<< HEAD
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
@@ -52,3 +58,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   res.status(200).json({ ok: true })
 }
+=======
+  res.status(200).json({ ok: true });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

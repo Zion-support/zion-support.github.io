@@ -3,10 +3,15 @@ import CodeSamples from './CodeSamples',
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
     <div className="space-y-4">
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function EndpointDetail({
   endpoint
 }: {
@@ -30,6 +35,7 @@ export default function EndpointDetail({
           </code>
           <span className='px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'>
             {endpoint.visibility}
+<<<<<<< HEAD
           </span>        </div>
       </div>
       <div>
@@ -41,9 +47,17 @@ export default function EndpointDetail({
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.method}</span>
           <code className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.path}</code>
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.visibility}</span>
+=======
+          </span>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
       <div>
+<<<<<<< HEAD
         <div className='font-medium mb-2'>Code Examples</div>        <div className="font-medium mb-2">Code Examples</div>
+=======
+        <div className='font-medium mb-2'>Code Examples</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
@@ -65,6 +79,7 @@ export default function EndpointDetail({
               <li key={idx}>
                 {r.tier}: {r.limitPerMinute}/min
                 {r.burst ? `, burst ${r.burst}` : ''}
+<<<<<<< HEAD
               </li>            ))}      </div>
       {(endpoint.rateLimits && endpoint.rateLimits.length > 0) && (
         <div>
@@ -72,10 +87,17 @@ export default function EndpointDetail({
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
+=======
+              </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </ul>
         </div>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -83,13 +105,21 @@ export default function EndpointDetail({
             {endpoint.errors.map(e => (
               <li key={e.code}>
                 <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}
+<<<<<<< HEAD
               </li>            ))}          <div className="font-medium mb-2">Error Codes</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
+=======
+              </li>
+            ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </ul>
         </div>
       )}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

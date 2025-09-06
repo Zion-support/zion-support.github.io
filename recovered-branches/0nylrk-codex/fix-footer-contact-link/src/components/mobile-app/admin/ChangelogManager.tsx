@@ -15,10 +15,19 @@ type ChangelogEntry = any;
 =======
 type ChangelogEntry = {
   id: string;
+<<<<<<< HEAD
   version: string;
   date: string;
   changes: string;
 }
+=======
+version: string;
+date: string;
+changes: string 
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform
 }) => {

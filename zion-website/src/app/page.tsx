@@ -66,6 +66,11 @@ const solutions = [
     href: '/solutions/it-asset-management'
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function HomePage() {
   return (
     <div className="bg-black">

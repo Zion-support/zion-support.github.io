@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 export default function HolographicAICommunicationPage() {
 <<<<<<< HEAD
   const contactInfo = null;
@@ -23,6 +24,26 @@ export default function HolographicAICommunicationPage() {
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+export default function HolographicAICommunicationPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  };
+
+  const features = [
+    'AI-powered 3D holographic projection',
+    'Real-time holographic rendering',
+    'Multi-user holographic meetings',
+    'Gesture and voice control',
+    'Cross-platform WebXR support',
+    'Enterprise-grade security',
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -91,6 +112,7 @@ export default function HolographicAICommunicationPage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{contactInfo.address}</span>
+<<<<<<< HEAD
                 </div>              </div>            <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">
               <div className="text-3xl font-bold text-white">$1,899<span className="text-slate-400 text-base">/month</span></div>
               <div className="text-slate-400">30-day free trial • Setup: 1 week</div>
@@ -99,10 +121,17 @@ export default function HolographicAICommunicationPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
+=======
+                </div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

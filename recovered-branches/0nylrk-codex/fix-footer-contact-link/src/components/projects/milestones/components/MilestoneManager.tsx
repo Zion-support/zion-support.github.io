@@ -18,6 +18,7 @@ interface MilestoneManagerProps {
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
   onDeleteMilestone: (id: string) => Promise<boolean>;
   onUploadDeliverable: (id: string, file: File) => Promise<any>;
+<<<<<<< HEAD
 =======
   projectId: string
   milestones: Milestone[]
@@ -34,6 +35,11 @@ interface MilestoneManagerProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   refetch: () => Promise<void>
 }
+=======
+  refetch: () => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MilestoneManager({
   projectId;
   milestones;

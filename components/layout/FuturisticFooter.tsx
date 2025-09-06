@@ -1,6 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 export default function FuturisticFooter() {
   const currentYear = null;
@@ -32,6 +33,38 @@ export default function FuturisticFooter() {
     { name: 'About', href: '/about' }
     { name: 'Contact', href: '/contact' }
     { name: 'Blog', href: '/blog' }
+=======
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Zap,
+  Bot,
+  Cloud,
+  Shield,
+  ArrowRight,;
+} from 'lucide-react';
+}
+
+export default function FuturisticFooter() {
+  const currentYear = new Date().getFullYear();
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+  const quickLinks = [
+    { name: 'Services', href: '/services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const serviceCategories = [
     {
@@ -100,6 +133,7 @@ export default function FuturisticFooter() {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
                 >
+<<<<<<< HEAD
                   <span className='text-lg'>{social.icon}</span>                </a>  const serviceCategories = [
     { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' }
     { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' }
@@ -146,6 +180,9 @@ export default function FuturisticFooter() {
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
                 >
                   <span className="text-lg">{social.icon}</span>
+=======
+                  <span className='text-lg'>{social.icon}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               ))}
             </div>
@@ -161,6 +198,7 @@ export default function FuturisticFooter() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
+<<<<<<< HEAD
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Quick Links
             </h3>
             <ul className="space-y-3">
@@ -169,6 +207,9 @@ export default function FuturisticFooter() {
                   <Link
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+=======
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     {link.name}
                   </Link>
@@ -187,6 +228,7 @@ export default function FuturisticFooter() {
                 <li key={service.name}>
                   <Link
                     href={service.href}
+<<<<<<< HEAD
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Services
             </h3>
             <ul className="space-y-3">
@@ -195,6 +237,9 @@ export default function FuturisticFooter() {
                   <Link
                     href={service.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+=======
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     {service.name}
                   </Link>
@@ -215,6 +260,7 @@ export default function FuturisticFooter() {
                   <p className='text-white font-medium'>Phone</p>
                   <a
                     href={`tel:${contactInfo.mobile}`}
+<<<<<<< HEAD
                     className='text-gray-400 hover:text-blue-400 transition-colors duration-200'                  >              Contact Us
             </h3>
             <div className="space-y-4">
@@ -225,35 +271,55 @@ export default function FuturisticFooter() {
                   <a
                     href={`tel:${contactInfo.mobile}`}
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+=======
+                    className='text-gray-400 hover:text-blue-400 transition-colors duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     {contactInfo.mobile}
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='flex items-start space-x-3'>
                 <Mail className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
                 <div>
                   <p className='text-white font-medium'>Email</p>
                   <a
                     href={`mailto:${contactInfo.email}`}
+<<<<<<< HEAD
                     className='text-gray-400 hover:text-green-400 transition-colors duration-200'                  >                <div>
                   <p className="text-white font-medium">Email</p>
                   <a
                     href={`mailto:${contactInfo.email}`}
                     className="text-gray-400 hover:text-green-400 transition-colors duration-200"
+=======
+                    className='text-gray-400 hover:text-green-400 transition-colors duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     {contactInfo.email}
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='flex items-start space-x-3'>
                 <MapPin className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />
                 <div>
                   <p className='text-white font-medium'>Address</p>
+<<<<<<< HEAD
                   <p className='text-gray-400 text-sm'>{contactInfo.address}</p>                </div>                  <p className="text-white font-medium">Address</p>
                   <p className="text-gray-400 text-sm">
                     {contactInfo.address}
                   </p>
+=======
+                  <p className='text-gray-400 text-sm'>{contactInfo.address}</p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -280,6 +346,7 @@ export default function FuturisticFooter() {
               <Link
                 href='/cookies'
                 className='text-gray-400 hover:text-white transition-colors duration-200'
+<<<<<<< HEAD
               >                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
@@ -290,6 +357,9 @@ export default function FuturisticFooter() {
                 Terms of Service
               </Link>
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+=======
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Cookie Policy
               </Link>
             </div>
@@ -301,9 +371,13 @@ export default function FuturisticFooter() {
       <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />
       <div className='absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500' />
     </footer>
+<<<<<<< HEAD
   );      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

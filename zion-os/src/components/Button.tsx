@@ -77,7 +77,10 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
   );
 });
 Button.displayName = 'Button';
+}
+
 export default Button;
+<<<<<<< HEAD
 // Specialized button variants;
 export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="primary" />;
 }
@@ -93,9 +96,41 @@ export function IconButton({icon;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
+=======
+
+// Specialized button variants
+}
+
+export function PrimaryButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant='primary' />;
+}
+
+export function SecondaryButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant='secondary' />;
+}
+
+export function OutlineButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant='outline' />;
+}
+
+export function GhostButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant='ghost' />;
+
+// Icon button variant
+}
+
+export function IconButton({
+  icon,
+  children,
+  ...props
+}: ButtonProps & { icon: React.ReactNode }) {
+  return (
+    <Button {...props} icon={icon} iconPosition='left' size='sm'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {children}
     </Button>;
   );
+<<<<<<< HEAD
 }
 // Floating action button;
 export function FloatingActionButton({icon;
@@ -111,5 +146,19 @@ export function FloatingActionButton({icon;
       size="lg";
       rounded="full";
     />;
+=======
+
+// Floating action button
+}
+
+export function FloatingActionButton({
+  icon,
+  onClick,
+  className = '',
+  ...props
+}: ButtonProps & { icon: React.ReactNode }) {
+  
+    />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   );
 }

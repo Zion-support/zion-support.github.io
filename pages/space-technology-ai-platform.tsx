@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
   Globe, Zap, Shield, Users, Rocket;
   Phone, Mail, MapPin, Brain, Sparkles
@@ -27,6 +28,37 @@ export default function SpaceTechnologyAIPlatform() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+=======
+import {
+  Satellite,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Globe,
+  Zap,
+  Shield,
+  Users,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Sparkles,;
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+}
+
+export default function SpaceTechnologyAIPlatform() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const features = [
     'AI-powered satellite operations'
     'Autonomous space exploration'
@@ -64,7 +96,11 @@ export default function SpaceTechnologyAIPlatform() {
     'Boeing'
     'Northrop Grumman'
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='min-h-screen'>
         <Head>
@@ -93,12 +129,23 @@ export default function SpaceTechnologyAIPlatform() {
           <link
             rel='canonical'
             href='https://ziontechgroup.com/space-technology-ai-platform'
+<<<<<<< HEAD
           />        </Head>
+=======
+          />
+        </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <EnhancedNavigation2026 />
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto relative z-10'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto relative z-10'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -150,7 +197,12 @@ export default function SpaceTechnologyAIPlatform() {
                   <span>Enterprise security</span>
                 </div>
                 <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                   <Users className='w-5 h-5 text-blue-400' />                  <span>120+ customers</span>
+=======
+                  <Users className='w-5 h-5 text-blue-400' />
+                  <span>120+ customers</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
@@ -158,7 +210,12 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -175,7 +232,13 @@ export default function SpaceTechnologyAIPlatform() {
                 operations and autonomous exploration
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {features.map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -194,7 +257,12 @@ export default function SpaceTechnologyAIPlatform() {
                     </h3>
                     <p className='text-gray-400'>
                       Advanced AI-powered {feature.toLowerCase()} for enhanced
+<<<<<<< HEAD
                       space operations and exploration.                    </p>
+=======
+                      space operations and exploration.
+                    </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </motion.div>
               ))}
@@ -203,7 +271,12 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -220,7 +293,13 @@ export default function SpaceTechnologyAIPlatform() {
                 capabilities
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
+=======
+
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+              <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -247,7 +326,12 @@ export default function SpaceTechnologyAIPlatform() {
                     <span className='text-green-300 font-semibold'>
                       Our Advantage: AI integration, comprehensive platform
                       affordable pricing
+<<<<<<< HEAD
                     </span>                  </div>
+=======
+                    </span>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </motion.div>
               <motion.div
@@ -283,7 +367,12 @@ export default function SpaceTechnologyAIPlatform() {
                     <div className='text-3xl font-bold text-yellow-400 mb-2'>
                       24
                     </div>
+<<<<<<< HEAD
                     <div className='text-yellow-300 text-sm'>Months to ROI</div>                  </div>
+=======
+                    <div className='text-yellow-300 text-sm'>Months to ROI</div>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </motion.div>
             </div>
@@ -291,7 +380,12 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -308,7 +402,13 @@ export default function SpaceTechnologyAIPlatform() {
                 intelligence
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {useCases.map((useCase, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={useCase}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -327,7 +427,12 @@ export default function SpaceTechnologyAIPlatform() {
                     </h3>
                     <p className='text-gray-400'>
                       Leverage AI-powered space technology to optimize{' '}
+<<<<<<< HEAD
                       {useCase.toLowerCase()} and drive innovation.                    </p>
+=======
+                      {useCase.toLowerCase()} and drive innovation.
+                    </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </motion.div>
               ))}
@@ -336,7 +441,12 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -352,7 +462,13 @@ export default function SpaceTechnologyAIPlatform() {
                 Technology AI Platform to achieve unprecedented exploration
                 capabilities and operational efficiency.
               </p>
+<<<<<<< HEAD
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>                <motion.a
+=======
+
+              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>
+                <motion.a
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -361,15 +477,27 @@ export default function SpaceTechnologyAIPlatform() {
                   <Phone className='w-5 h-5' />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'
                 >
+<<<<<<< HEAD
                   <Mail className='w-5 h-5' />                  <span>Email Us</span>
                 </motion.a>
               </div>
+=======
+                  <Mail className='w-5 h-5' />
+                  <span>Email Us</span>
+                </motion.a>
+              </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                   <div>
@@ -388,7 +516,12 @@ export default function SpaceTechnologyAIPlatform() {
                     <MapPin className='w-6 h-6 text-purple-400 mx-auto mb-2' />
                     <p className='text-white font-medium'>
                       {contactInfo.address}
+<<<<<<< HEAD
                     </p>                  </div>
+=======
+                    </p>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
@@ -396,4 +529,8 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

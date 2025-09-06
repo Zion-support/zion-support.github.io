@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react'
 import EmptyState from '../../components/ui/EmptyState'
+=======
+import { useEffect, useState } from 'react';
+import EmptyState from '../../components/ui/EmptyState';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState<string[]>([])
   useEffect(() => {

@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const BookBuilder = null;
 =======
 const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false })
@@ -7,3 +8,12 @@ const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ss
 export default function BookBuilderPage() {
   return <BookBuilder />
 }
+=======
+const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), {
+  ssr: false,
+});
+}
+
+export default function BookBuilderPage() {
+  return <BookBuilder />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

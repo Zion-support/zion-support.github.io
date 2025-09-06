@@ -1,6 +1,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
@@ -8,6 +9,44 @@ import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
  } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
+=======
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  ChevronRight,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Globe,
+  Code,
+  Server,
+  TrendingUp,
+  BarChart3,
+  Cloud,
+  Network,
+  Lightbulb,
+  Flame,
+  Zap as ZapIcon,;
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ExplorePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -20,6 +59,7 @@ export default function ExplorePage() {
 =======
   const categories = [
     {
+<<<<<<< HEAD
       id: 'ai'
       name: 'AI & Machine Learning'
       icon: Brain
@@ -141,14 +181,160 @@ export default function ExplorePage() {
       icon: Rocket
       color: 'from-indigo-500 to-purple-500'
     },  ];
+=======
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      description:
+        'Revolutionary AI consciousness and machine learning solutions',
+      color: 'from-purple-500 to-pink-500',
+      serviceCount: 25,
+      featured: true,
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: Atom,
+      description: 'Quantum-powered computing and consciousness simulation',
+      color: 'from-blue-500 to-cyan-500',
+      serviceCount: 18,
+      featured: true,
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: Shield,
+      description: 'Quantum-resistant security and AI threat detection',
+      color: 'from-red-500 to-orange-500',
+      serviceCount: 22,
+      featured: true,
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Autonomous DevOps and cloud infrastructure',
+      color: 'from-emerald-500 to-teal-500',
+      serviceCount: 20,
+      featured: false,
+    },
+    {
+      id: 'edge',
+      name: 'Edge Computing',
+      icon: Network,
+      description: 'Edge computing orchestration and IoT management',
+      color: 'from-yellow-500 to-orange-500',
+      serviceCount: 15,
+      featured: false,
+    },
+    {
+      id: 'space',
+      name: 'Space Technology',
+      icon: Rocket,
+      description: 'Space exploration and resource optimization',
+      color: 'from-indigo-500 to-purple-500',
+      serviceCount: 12,
+      featured: true,
+    },
+    {
+      id: 'biotech',
+      name: 'Biotechnology',
+      icon: ZapIcon,
+      description: 'Neural interfaces and biomedical innovations',
+      color: 'from-pink-500 to-rose-500',
+      serviceCount: 16,
+      featured: false,
+    },
+    {
+      id: 'blockchain',
+      name: 'Blockchain',
+      icon: Code,
+      description: 'AI-powered blockchain governance and DeFi',
+      color: 'from-green-500 to-emerald-500',
+      serviceCount: 14,
+      featured: false,
+    },
+    {
+      id: 'automation',
+      name: 'Automation',
+      icon: Zap,
+      description: 'Business process automation and AI agents',
+      color: 'from-cyan-500 to-blue-500',
+      serviceCount: 19,
+      featured: false,
+    },
+    {
+      id: 'fintech',
+      name: 'Financial Technology',
+      icon: TrendingUp,
+      description: 'Quantum financial trading and AI analytics',
+      color: 'from-emerald-500 to-green-500',
+      serviceCount: 17,
+      featured: false,
+    },
+  ];
+
+  const featuredServices = [
+    {
+      id: 'ai-consciousness-evolution',
+      title: 'AI Consciousness Evolution',
+      category: 'ai',
+      description:
+        'Revolutionary AI consciousness platform with emotional intelligence',
+      status: 'beta',
+      price: '$1,999/month',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+    },
+    {
+      id: 'quantum-neural-networks',
+      title: 'Quantum Neural Networks',
+      category: 'quantum',
+      description:
+        'Quantum-powered AI with advanced consciousness capabilities',
+      status: 'beta',
+      price: '$1,299/month',
+      icon: Atom,
+      color: 'from-blue-500 to-cyan-500',
+    },
+    {
+      id: 'quantum-cybersecurity',
+      title: 'Quantum Cybersecurity',
+      category: 'cybersecurity',
+      description: 'Future-proof security with quantum-resistant encryption',
+      status: 'active',
+      price: '$799/month',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+    },
+    {
+      id: 'space-technology',
+      title: 'Space Technology Innovation',
+      category: 'space',
+      description: 'AI-powered space exploration and resource optimization',
+      status: 'beta',
+      price: '$2,499/month',
+      icon: Rocket,
+      color: 'from-indigo-500 to-purple-500',
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch =
       category.name.toLowerCase().includes(searchTerm.toLowerCase()) |
       category.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter =
+<<<<<<< HEAD
       selectedCategory === 'all' |category.id === selectedCategory;
     return matchesSearch && matchesFilter;  });
+=======
+      selectedCategory === 'all' || category.id === selectedCategory;
+    return matchesSearch && matchesFilter;
+  });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
@@ -159,7 +345,12 @@ export default function ExplorePage() {
       case 'featured':
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
       default:
+<<<<<<< HEAD
         return 0;    }
+=======
+        return 0;
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   });
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
@@ -177,11 +368,22 @@ export default function ExplorePage() {
           property='og:description'
           content='Comprehensive technology categories and innovative solutions.'
         />
+<<<<<<< HEAD
         <link rel='canonical' href='https://ziontechgroup.com/explore' />      </Head>
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/explore' />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <SmartHeader />
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -199,7 +401,12 @@ export default function ExplorePage() {
                 Start Exploring
                 <ArrowRight className='w-5 h-5 ml-2' />
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View All Services
+=======
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+                View All Services
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </button>
             </div>
           </motion.div>
@@ -219,7 +426,12 @@ export default function ExplorePage() {
                     placeholder='Search categories...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />
+=======
+                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'
+                  />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
               {/* Sort Options */}
@@ -231,7 +443,12 @@ export default function ExplorePage() {
                 >
                   <option value='popularity'>Sort by Popularity</option>
                   <option value='name'>Sort by Name</option>
+<<<<<<< HEAD
                   <option value='featured'>Sort by Featured</option>                </select>
+=======
+                  <option value='featured'>Sort by Featured</option>
+                </select>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -239,7 +456,12 @@ export default function ExplorePage() {
       </section>
       {/* Featured Services */}
       <section className='px-6 pb-16'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -248,10 +470,20 @@ export default function ExplorePage() {
             <h2 className='text-3xl font-bold text-white mb-4'>
               Featured Services
             </h2>
+<<<<<<< HEAD
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+=======
+            <p className='text-white/60'>
+              Explore our most innovative and cutting-edge technology solutions
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {featuredServices.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -298,7 +530,12 @@ export default function ExplorePage() {
                     className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
                   >
                     Learn More
+<<<<<<< HEAD
                     <ChevronRight className='w-4 h-4 ml-1' />                  </a>
+=======
+                    <ChevronRight className='w-4 h-4 ml-1' />
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </motion.div>
             ))}
@@ -307,7 +544,12 @@ export default function ExplorePage() {
       </section>
       {/* Categories Grid */}
       <section className='px-6 pb-20'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -316,10 +558,20 @@ export default function ExplorePage() {
             <h2 className='text-3xl font-bold text-white mb-4'>
               Technology Categories
             </h2>
+<<<<<<< HEAD
             <p className='text-white/60'>              {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
+=======
+            <p className='text-white/60'>
+              {sortedCategories.length} categories available for exploration
+            </p>
+          </motion.div>
+
+          <AnimatePresence mode='wait'>
+            {sortedCategories.length === 0 ? (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -332,16 +584,31 @@ export default function ExplorePage() {
                 <h3 className='text-2xl font-semibold text-white mb-2'>
                   No categories found
                 </h3>
+<<<<<<< HEAD
                 <p className='text-white/60 mb-6'>                  Try adjusting your search terms
                 </p>
                 <button
                   onClick={() => setSearchTerm('')}
                   className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'                >
+=======
+                <p className='text-white/60 mb-6'>
+                  Try adjusting your search terms
+                </p>
+                <button
+                  onClick={() => setSearchTerm('')}
+                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Clear Search
                 </button>
               </motion.div>
             ) : (
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories.map((category, index) => (
+=======
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {sortedCategories.map((category, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <motion.div
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -357,10 +624,19 @@ export default function ExplorePage() {
                       {/* Featured Badge */}
                       {category.featured && (
                         <div className='absolute top-4 right-4'>
+<<<<<<< HEAD
                           <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>                            ⭐ Featured
                           </span>
                         </div>
                       )}
+=======
+                          <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>
+                            ⭐ Featured
+                          </span>
+                        </div>
+                      )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {/* Category Icon */}
                       <div
                         className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
@@ -386,16 +662,30 @@ export default function ExplorePage() {
                           <div className='text-2xl font-bold text-purple-400'>
                             {category.featured ? '⭐' : '🚀'}
                           </div>
+<<<<<<< HEAD
                           <div className='text-xs text-white/60'>                            {category.featured ? 'Featured' : 'Active'}
                           </div>
                         </div>
                       </div>
+=======
+                          <div className='text-xs text-white/60'>
+                            {category.featured ? 'Featured' : 'Active'}
+                          </div>
+                        </div>
+                      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
                           Explore Category
                         </span>
+<<<<<<< HEAD
                         <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />                      </div>
+=======
+                        <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </motion.div>
                 ))}
@@ -406,7 +696,12 @@ export default function ExplorePage() {
       </section>
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -421,6 +716,7 @@ export default function ExplorePage() {
               technology developments
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
               {
                 icon: Brain
@@ -471,6 +767,60 @@ export default function ExplorePage() {
                 color: 'from-emerald-500 to-green-500'
               },            ].map((trend, index) => (
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {[
+              {
+                icon: Brain,
+                title: 'AI Consciousness',
+                description:
+                  'The evolution of AI towards true consciousness and emotional intelligence',
+                trend: 'Rising',
+                color: 'from-purple-500 to-pink-500',
+              },
+              {
+                icon: Atom,
+                title: 'Quantum Supremacy',
+                description:
+                  'Breakthroughs in quantum computing and quantum AI applications',
+                trend: 'Breakthrough',
+                color: 'from-blue-500 to-cyan-500',
+              },
+              {
+                icon: Shield,
+                title: 'Quantum Security',
+                description:
+                  'Quantum-resistant cryptography and AI-powered threat detection',
+                trend: 'Critical',
+                color: 'from-red-500 to-orange-500',
+              },
+              {
+                icon: Rocket,
+                title: 'Space Innovation',
+                description:
+                  'AI-powered space exploration and resource optimization',
+                trend: 'Emerging',
+                color: 'from-indigo-500 to-purple-500',
+              },
+              {
+                icon: ZapIcon,
+                title: 'Neural Interfaces',
+                description:
+                  'Brain-computer interfaces and neural augmentation',
+                trend: 'Experimental',
+                color: 'from-pink-500 to-rose-500',
+              },
+              {
+                icon: TrendingUp,
+                title: 'Autonomous Systems',
+                description:
+                  'Self-improving AI systems and autonomous business operations',
+                trend: 'Growing',
+                color: 'from-emerald-500 to-green-500',
+              },
+            ].map((trend, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={trend.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -508,14 +858,24 @@ export default function ExplorePage() {
                 </div>
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -538,7 +898,12 @@ export default function ExplorePage() {
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'              >
+=======
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Get Expert Guidance
               </a>
             </div>
@@ -547,4 +912,8 @@ export default function ExplorePage() {
       </section>
       <SmartFooter />
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

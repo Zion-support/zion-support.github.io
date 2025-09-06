@@ -10,8 +10,14 @@ interface StickyActionProps {
   children: React.ReactNode
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   showAfterScroll?: number;
+<<<<<<< HEAD
   position?: "bottom" | "top"
 }
+=======
+  position?: 'bottom' | 'top';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function StickyAction({
   className;
   children;

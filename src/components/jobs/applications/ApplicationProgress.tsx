@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { ApplicationStatus } from '@/types/jobs';
+import { Progress } from '@/components/ui/progress';
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress";
@@ -6,12 +13,28 @@ import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
 <<<<<<< HEAD
   status: ApplicationStatus;
+<<<<<<< HEAD
 =======
   status: ApplicationStatus
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   className?: string
 }
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
+=======
+className?: string ;
+}status, className ;
+}: ApplicationProgressProps) {;
+  //Define the progress value based on status const getProgressValue = () => {;
+  switch (status) {;
+  ;
+}
+}
+
+export function ApplicationProgress({
+  status,
+  className,
+}: ApplicationProgressProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Define the progress value based on status
 <<<<<<< HEAD
   const getProgressValue = null;
@@ -80,4 +103,9 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
   }
+<<<<<<< HEAD
 }
+=======
+
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

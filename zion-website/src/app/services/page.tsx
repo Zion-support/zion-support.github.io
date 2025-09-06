@@ -97,9 +97,20 @@ const reasonsToChoose = [
     description: 'Access to the latest AI research and technology innovations.'
     icon: LightBulbIcon}
   {
+<<<<<<< HEAD
     name: 'Global Support'
     description: '24/7 support and maintenance services across multiple time zones.'
     icon: GlobeAltIcon}]
+=======
+    name: 'Global Support',
+    description:
+      '24/7 support and maintenance services across multiple time zones.',
+    icon: GlobeAltIcon,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServicesPage() {
   return (
     <div className=&quot;bg-black&quot;>

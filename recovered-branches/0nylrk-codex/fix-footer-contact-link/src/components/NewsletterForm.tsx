@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState } from 'react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);

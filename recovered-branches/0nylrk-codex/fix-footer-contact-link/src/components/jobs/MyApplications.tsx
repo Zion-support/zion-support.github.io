@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns';
+import { Link } from 'react-router-dom';
+import { ApplicationStatus } from '@/types/jobs';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",

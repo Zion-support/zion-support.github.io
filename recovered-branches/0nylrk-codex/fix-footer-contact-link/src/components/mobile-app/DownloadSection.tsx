@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { QrCodeIcon } from 'lucide-react';
+import { AppStoreButtons } from './AppStoreButtons';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { QrCodeIcon } from "lucide-react";

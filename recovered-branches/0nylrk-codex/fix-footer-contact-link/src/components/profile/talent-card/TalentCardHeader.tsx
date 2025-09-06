@@ -9,6 +9,7 @@ interface TalentCardHeaderProps {
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
+<<<<<<< HEAD
 =======
   fullName: string
   professionalTitle: string
@@ -17,6 +18,11 @@ interface TalentCardHeaderProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   yearsExperience: number
 }
+=======
+  yearsExperience: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCardHeader({
   fullName;
 <<<<<<< HEAD

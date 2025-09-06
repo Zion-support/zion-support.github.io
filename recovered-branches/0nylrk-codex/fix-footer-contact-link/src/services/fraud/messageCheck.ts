@@ -7,8 +7,13 @@ import { MessageAnalysisResult } from './types';
  * Check message for suspicious content
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const checkMessage = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues

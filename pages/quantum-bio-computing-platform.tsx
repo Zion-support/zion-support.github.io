@@ -1,6 +1,11 @@
 import React from 'react',
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function QuantumBioComputingPlatformPage() {
   return (
     <UltraFuturisticBackground>
@@ -33,4 +38,8 @@ export default function QuantumBioComputingPlatformPage() {
         </ul>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

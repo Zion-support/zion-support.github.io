@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 =======
 import { Button } from '@/components/ui/button'
+=======
+import { Button } from '@/components/ui/button';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Card
   CardContent
@@ -15,8 +19,15 @@ import {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { FileText, ShieldCheck } from 'lucide-react'
 interface ContractTypeCardsProps {
+<<<<<<< HEAD
   onStandardClick: () => void
   onSmartClick: () => void
+=======
+  onStandardClick: () => void;
+  onSmartClick: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractTypeCards({
   onStandardClick
   onSmartClick
@@ -26,6 +37,7 @@ export function ContractTypeCards({
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
+<<<<<<< HEAD
             <FileText className='h-5 w-5' />            Standard Contracts
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
@@ -44,6 +56,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
+=======
+            <FileText className='h-5 w-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Standard Contracts
           </CardTitle>
           <CardDescription>
@@ -59,6 +74,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
           <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract
           </Button>
         </CardFooter>
@@ -75,6 +91,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
+=======
+          <Button variant='outline' onClick={onStandardClick}>
+            Create Standard Contract
+          </Button>
+        </CardFooter>
+      </Card>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <Card>
         <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
           <div className='flex justify-between items-center'>
@@ -82,6 +106,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
               <ShieldCheck className='h-5 w-5 text-primary' />
               Smart Contracts
             </CardTitle>
+<<<<<<< HEAD
             <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -90,6 +115,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
               Smart Contracts
             </CardTitle>
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
+=======
+            <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Blockchain Powered
             </span>
           </div>
@@ -108,6 +136,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
           <Button
+<<<<<<< HEAD
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
             <li className="text-sm">✓ All standard contract features</li>
             <li className="text-sm">✓ Automatic escrow payment release</li>
@@ -120,11 +149,19 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           <Button
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
             onClick = {onSmartClick,}
+=======
+            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'
+            onClick={onSmartClick}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             Create Smart Contract
           </Button>
         </CardFooter>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -23,6 +31,7 @@ export function AdminHeader() {
             Settings
           </Button>
           <Button variant='outline' size='sm' className='gap-2'>
+<<<<<<< HEAD
             <Download className='h-4 w-4' />            Export Data
           </Button>
         </div>
@@ -33,10 +42,17 @@ export function AdminHeader() {
           </Button>
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
+=======
+            <Download className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>
@@ -69,6 +85,7 @@ export function AdminHeader() {
           <div>
             <h2 className='font-medium'>{company?.name |'Company Name'}</h2>
             <p className='text-sm text-muted-foreground'>
+<<<<<<< HEAD
               Workspace URL: {company?.workspaceUrl |'loading...'}            </p>
             <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
@@ -97,11 +114,18 @@ export function AdminHeader() {
             <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl |"loading..."}
+=======
+              Workspace URL: {company?.workspaceUrl || 'loading...'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </p>
           </div>
         </div>
         <Button>Customize Workspace</Button>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

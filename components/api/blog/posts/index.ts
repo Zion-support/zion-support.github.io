@@ -3,6 +3,11 @@ import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (req.method;
@@ -27,6 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const l = parseInt(String(limit |20), 10) |20;
     return res
       .status(200)
+<<<<<<< HEAD
       .json({ items: posts.slice(o, o + l), total: posts.length });    if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
     if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics |[]).includes(topic));
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags |[]).includes(tag));
@@ -40,10 +46,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const body = req.body as Partial<BlogPost>;
     if (!body.title |!body.slug |!body.author |!body.publishDate) {
       return res.status(400).json({ error: 'Missing required fields' });
+=======
+      .json({ items: posts.slice(o, o + l), total: posts.length });
+  }
+
+  if (req.method === 'POST') {
+    if (!requireAdmin(req, res)) return;
+    const body = req.body as Partial<BlogPost>;
+    if (!body.title || !body.slug || !body.author || !body.publishDate) {
+      return res.status(400).json({ error: 'Missing required fields' });
+   
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const posts = readPosts();
     if (posts.some(p => p.slug === body.slug)) {
       return res.status(409).json({ error: 'Slug already exists' });
-    }
+   
+}
     const post: BlogPost = {
       id: uuidv4()
       title: body.title!
@@ -65,7 +84,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 return res.status(405).end();
 }
+=======
+ 
+}
+
+  return res.status(405).end();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

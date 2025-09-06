@@ -8,8 +8,14 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
   delay?: number, // Delay in milliseconds before showing the banner
 }
+=======
+  delay?: number; // Delay in milliseconds before showing the banner
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
   appName;

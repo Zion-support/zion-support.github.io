@@ -16,8 +16,14 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>;
   timeRange: string;
+<<<<<<< HEAD
   onTimeRangeChange: (range: string) => void
 }
+=======
+  onTimeRangeChange: (range: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PageViewsChart({
   data
   timeRange

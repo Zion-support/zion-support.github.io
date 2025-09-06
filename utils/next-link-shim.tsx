@@ -21,6 +21,12 @@ function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Link({ href, children, className, ...rest }: LinkProps) {
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {

@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check, Star, Users, TrendingUp, DollarSign, Clock;
 =======
 import {
@@ -24,6 +25,28 @@ import {
   Mail
   MapPin
   ExternalLink;} from 'lucide-react';
+=======
+import {
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,;
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
@@ -35,16 +58,26 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Import all service data
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
   // Combine all services
+<<<<<<< HEAD
 <<<<<<< HEAD
   const allServices = null;
 =======
@@ -54,6 +87,14 @@ export default function PricingPage() {
     ...quantumSpaceInnovations2029
     ...enterpriseITInnovations2029
     ...innovativeMicroSaas2029
+=======
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices2029,
+    ...quantumSpaceInnovations2029,
+    ...enterpriseITInnovations2029,
+    ...innovativeMicroSaas2029,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   // Get unique services by ID
   const uniqueServices = allServices.filter(
@@ -68,6 +109,7 @@ export default function PricingPage() {
           Array.isArray(s.category) ? s.category[0] : s.category
         )
       )
+<<<<<<< HEAD
     )
   ];  ];
   // Get unique services by ID
@@ -87,6 +129,18 @@ export default function PricingPage() {
     { id: '$20K+', name: '$20K+/month', range: '$20K+' },  ];
   // Filter services
   const filteredServices = uniqueServices.filter(service => {    { id: '$20K+', name: '$20K+/month', range: '$20K+' }
+=======
+    ),
+  ];
+
+  // Price ranges
+  const priceRanges = [
+    { id: 'All', name: 'All Prices', range: 'All' },
+    { id: 'Under $1K', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: '$20K+', name: '$20K+/month', range: '$20K+' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   // Filter services
   const filteredServices = uniqueServices.filter(service => {
@@ -102,6 +156,7 @@ export default function PricingPage() {
       (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) |
       (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) |
       (selectedPriceRange === '$20K+' && price >= 20000);
+<<<<<<< HEAD
     return matchesCategory && matchesPrice;  });    const matchesPrice = selectedPriceRange === 'All' |
                         (selectedPriceRange === 'Under $1K' && price < 1000) |
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) |
@@ -114,6 +169,19 @@ export default function PricingPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+=======
+
+    return matchesCategory && matchesPrice;
+  });
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Group services by category for better organization
   const servicesByCategory = filteredServices.reduce(
     (acc, service) => {
@@ -128,6 +196,7 @@ export default function PricingPage() {
     }
     {} as Record<string, typeof filteredServices>
   );
+<<<<<<< HEAD
   const faqs = [
     {
       question: 'Can I change my plan at any time?'
@@ -144,6 +213,12 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'Can I change my plan at any time?'
+=======
+
+  const faqs = [
+    {
+      question: 'Can I change my plan at any time?',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       answer:
         'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
     }
@@ -192,6 +267,7 @@ export default function PricingPage() {
       : microSaasServices.filter(
           service => service.category === selectedCategory
         );
+<<<<<<< HEAD
   const yearlyDiscount = 0.2; // 20% discount for yearly billing    {
       question: 'Is there a free trial available?'
       answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.'
@@ -222,6 +298,11 @@ export default function PricingPage() {
     : microSaasServices.filter(service => service.category === selectedCategory);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
+=======
+
+  const yearlyDiscount = 0.2; // 20% discount for yearly billing
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraFuturisticBackground2029>
       <Head>
@@ -235,6 +316,7 @@ export default function PricingPage() {
           content='technology pricing, AI services pricing, quantum computing pricing, space technology pricing, 2029 technology pricing'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+<<<<<<< HEAD
         <link rel='canonical' href='https://ziontechgroup.com/pricing' />      </Head>
       <UltraFuturisticNavigation2029 />
       <main className='relative z-10 pt-20'>
@@ -253,6 +335,16 @@ export default function PricingPage() {
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>      <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/pricing' />
+      </Head>
+
+      <UltraFuturisticNavigation2029 />
+
+      <main className='relative z-10 pt-20'>
+        {/* Hero Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -291,6 +383,7 @@ export default function PricingPage() {
                 {priceRanges.map(range => (
                   <option key={range.id} value={range.id}>
                     {range.name}
+<<<<<<< HEAD
                   </option>                ))}
               </select>
             </div>
@@ -326,12 +419,23 @@ export default function PricingPage() {
                 ))}
               </select>
             </div>
+=======
+                  </option>
+                ))}
+              </select>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='text-center text-gray-400'>
               <p>
                 Showing {filteredServices.length} services in{' '}
                 {Object.keys(servicesByCategory).length} categories
+<<<<<<< HEAD
               </p>            </div>            <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
+=======
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </motion.div>
         </section>
@@ -520,6 +624,7 @@ export default function PricingPage() {
                   </div>
                 </motion.div>
               )
+<<<<<<< HEAD
             )}          </div>
         </section>
         {/* Contact CTA Section */}
@@ -559,11 +664,19 @@ export default function PricingPage() {
                 </div>
               </motion.div>
             ))}
+=======
+            )}
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -583,6 +696,7 @@ export default function PricingPage() {
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Link href='/contact'>
                   <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
+<<<<<<< HEAD
                     <Phone className='inline-block w-5 h-5 mr-2' />                    Schedule Consultation
                   </button>
                 </Link>
@@ -593,12 +707,20 @@ export default function PricingPage() {
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                     <Phone className="inline-block w-5 h-5 mr-2" />
+=======
+                    <Phone className='inline-block w-5 h-5 mr-2' />
+                    Schedule Consultation
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </button>
                 </Link>
                 <a href={`mailto:${contactInfo.email}`}>
                   <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105'>
+<<<<<<< HEAD
                     <Mail className='inline-block w-5 h-5 mr-2' />                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105">
                     <Mail className="inline-block w-5 h-5 mr-2" />
+=======
+                    <Mail className='inline-block w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Get Quote
                   </button>
                 </a>
@@ -615,6 +737,7 @@ export default function PricingPage() {
                 </div>
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-5 h-5 text-pink-400' />
+<<<<<<< HEAD
                   <span className='text-sm'>{contactInfo.address}</span>                </div>
               </div>
               {/* Additional Info */}                  <span>{contactInfo.mobile}</span>
@@ -626,6 +749,9 @@ export default function PricingPage() {
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5 text-pink-400" />
                   <span className="text-sm">{contactInfo.address}</span>
+=======
+                  <span className='text-sm'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
               {/* Additional Info */}
@@ -656,8 +782,12 @@ export default function PricingPage() {
                     <span>Comprehensive support and implementation</span>
                   </div>
                   <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                     <Check className='w-4 h-4 text-green-400' />                    <span>Cutting-edge 2029 technology</span>                  <div className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-400" />
+=======
+                    <Check className='w-4 h-4 text-green-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <span>Cutting-edge 2029 technology</span>
                   </div>
                 </div>
@@ -668,6 +798,7 @@ export default function PricingPage() {
       </main>
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
+<<<<<<< HEAD
 );
 }whileInView= {
   {
@@ -679,3 +810,20 @@ export default function PricingPage() {
   {
   once: true
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
+=======
+  );
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+}viewport= {
+  {
+  once: true
+
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

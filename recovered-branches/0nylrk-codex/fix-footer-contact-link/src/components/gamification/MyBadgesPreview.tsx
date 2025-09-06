@@ -13,6 +13,11 @@ export const MyBadgesPreview: React.FC;
   { badge: "profile_complete", date: "2024-11-22" }
   { badge: "first_action", date: "2024-09-08" }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const MyBadgesPreview: React.FC = () => {
   return (
     <div className="p-4 bg-zion-blue rounded-xl shadow-md mx-auto w-full max-w-sm">

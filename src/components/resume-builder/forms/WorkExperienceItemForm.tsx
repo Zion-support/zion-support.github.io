@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -21,6 +22,15 @@ import { z } from 'zod'
 import { WorkExperience } from '@/types/resume'
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
+=======
+import { useState } from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { WorkExperience } from '@/types/resume';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Form
   FormControl
@@ -62,9 +72,17 @@ const formSchema = z.object({
 })
 type FormValues = z.infer<typeof formSchema>
 interface WorkExperienceItemFormProps {
+<<<<<<< HEAD
   initialData?: WorkExperience
   onSubmit: (data: WorkExperience) => Promise<void>
   onCancel: () => void
+=======
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function WorkExperienceItemForm({
   initialData
   onSubmit
@@ -368,5 +386,8 @@ setIsEnhancementDialogOpen (false)
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

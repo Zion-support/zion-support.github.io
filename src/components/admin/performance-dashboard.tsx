@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -56,7 +55,13 @@ interface BundleChunk {
   size: number;
   loadTime: number;
   cached: boolean;
+<<<<<<< HEAD
   type: string
+=======
+  type: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PerformanceDashboard() {
 <<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
@@ -450,7 +455,11 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

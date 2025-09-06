@@ -35,11 +35,24 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=28"
     company: "AI Systems"}
   {
+<<<<<<< HEAD
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
+=======
+    quote:
+      'Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.',
+    author: 'Thomas Klein',
+    role: 'Operations Manager, EcoTech Systems',
+    avatar: 'https://i.pravatar.cc/150?img=67',
+    company: 'EcoTech',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">

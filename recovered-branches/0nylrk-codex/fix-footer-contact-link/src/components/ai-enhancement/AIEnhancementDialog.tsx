@@ -13,6 +13,7 @@ interface AIEnhancementDialogProps {
   onClose: () => void;
   onApply: (content: string) => void;
   defaultOptions: AIEnhancementOptions;
+<<<<<<< HEAD
 =======
   title: string
   isOpen: boolean
@@ -22,6 +23,11 @@ interface AIEnhancementDialogProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   initialContent?: string
 }
+=======
+  initialContent?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementDialog({
   title;
   isOpen;

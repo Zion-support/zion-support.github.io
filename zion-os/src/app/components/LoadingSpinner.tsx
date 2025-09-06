@@ -2,7 +2,16 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
   text?: string;
   className?: string;
 }
+<<<<<<< HEAD
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
+=======
+
+export default function LoadingSpinner({
+  size = 'md',
+  text,
+  className = '',
+}: LoadingSpinnerProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const sizeClasses = {
     sm: 'w-4 h-4'
     md: 'w-6 h-6'

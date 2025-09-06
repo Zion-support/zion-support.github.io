@@ -5,9 +5,14 @@ import { cn } from "@/lib/utils";
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
   asChild?: boolean
 }
 <<<<<<< HEAD
+=======
+  asChild?: boolean;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const SidebarMenuButton = null;
 =======

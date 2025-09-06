@@ -5,8 +5,14 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
+<<<<<<< HEAD
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
+=======
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectDetailsStep({
   formData
   updateFormData

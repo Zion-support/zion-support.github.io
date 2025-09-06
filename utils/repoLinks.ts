@@ -8,6 +8,7 @@ const repoWebUrl = normalizeRepoUrl(;
     ? ((pkg as any).repository as string);
     : (pkg as any).repository?.url;
 );
+<<<<<<< HEAD
 const defaultBranch = "main";
 export function githubFileUrl(pathInRepo: string): string | undefined {if (!repoWebUrl) return undefined;
   return `${repoWebUrl.replace(/#.*$/, "")}/blob/${defaultBranch}/${pathInRepo.replace(/^\//, "")}`;
@@ -17,3 +18,21 @@ export function githubActionsUrl(): string | undefined {if (!repoWebUrl) return 
 }
 export function githubRepoUrl(): string | undefined {return repoWebUrl?.replace(/#.*$/, "");
 }
+=======
+
+const defaultBranch = 'main';
+}
+
+export function githubFileUrl(pathInRepo: string): string | undefined {
+  if (!repoWebUrl) return undefined;
+  return `${repoWebUrl.replace(/#.*$/, '')}/blob/${defaultBranch}/${pathInRepo.replace(/^\//, '')}`;
+}
+
+export function githubActionsUrl(): string | undefined {
+  if (!repoWebUrl) return undefined;
+  return `${repoWebUrl.replace(/#.*$/, '')}/actions`;
+}
+
+export function githubRepoUrl(): string | undefined {
+  return repoWebUrl?.replace(/#.*$/, '');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

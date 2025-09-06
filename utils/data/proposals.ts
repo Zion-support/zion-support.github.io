@@ -20,6 +20,7 @@ export type ProposalMeta = {id: string;
     ipfsCid?: string;
     ensRecordHash?: string;
     signature?: string;
+<<<<<<< HEAD
   }
 }
 export type ProposalPayload = {title: string;
@@ -38,6 +39,15 @@ function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recu
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 }
 export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDirs();
+=======
+  };
+};
+}
+}
+
+export function createProposal(payload: ProposalPayload): ProposalMeta {
+  ensureDirs();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -67,7 +77,17 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
   return meta;
 }
+<<<<<<< HEAD
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
+=======
+}
+
+export function updateProposalMeta(
+  id: string,
+  updater: (meta: ProposalMeta) => ProposalMeta
+): ProposalMeta {
+  ensureDirs();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -75,29 +95,67 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
+<<<<<<< HEAD
 export function listProposals(): ProposalMeta[] {ensureDirs();
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
   const metas: ProposalMeta[] = entries.map((id) => {;
+=======
+}
+
+export function listProposals(): ProposalMeta[] {
+  ensureDirs();
+  const entries = fs
+    .readdirSync(dataDir)
+    .filter(f => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map(id => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
+<<<<<<< HEAD
 export function getProposal(id: string): ProposalMeta | null {try {;
+=======
+}
+
+export function getProposal(id: string): ProposalMeta | null {
+  try {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {return null;
   }
 }
+<<<<<<< HEAD
 export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+=======
+}
+
+export function savePdf(id: string, pdfBytes: Uint8Array): string {
+  ensureDirs();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
 }
+<<<<<<< HEAD
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
 }
+=======
+}
+
+export function updateArtifacts(
+  id: string,
+  artifacts: Partial<ProposalMeta['artifacts']>
+): ProposalMeta {
+  return updateProposalMeta(id, meta => ({
+    ...meta,
+    artifacts: { ...meta.artifacts, ...artifacts },
+  }));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

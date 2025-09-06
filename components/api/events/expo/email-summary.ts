@@ -1,11 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const provider = null;
       return res.status(200).json({ status: 'queued', provider: 'stub' })
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -16,14 +21,27 @@ export default async function handler(
     if (provider === 'none') {
       console.log('[EmailSummary] Stub: no provider configured');
       return res.status(200).json({ status: 'queued', provider: 'stub' });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     }
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
 return res
+=======
+   
+}
+    // TODO: Integrate with actual provider
+    return res.status(200).json({ status: 'queued', provider });
+ 
+} catch (e: any) {
+    return res
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       .status(500)
       .json({ error: e.message |'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message |'Failed to queue emails' })
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

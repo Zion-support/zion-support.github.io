@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
 <<<<<<< HEAD
@@ -19,6 +20,27 @@ import {
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void
   selectedCountry: CountryPricing | null
+=======
+import { useState, useEffect } from 'react';
+import { Globe } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import {
+  CountryPricing,
+  onsiteServicePricing,;
+} from '@/data/onsiteServicePricing';
+
+interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void;
+  selectedCountry: CountryPricing | null;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CountrySelector({
   onCountryChange
   selectedCountry
@@ -78,6 +100,7 @@ export function CountrySelector({
                 key={item.country}
                 value={item.country}
                 className='text-white'
+<<<<<<< HEAD
               >                {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
@@ -86,6 +109,10 @@ export function CountrySelector({
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item,) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
+=======
+              >
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </SelectItem>
             ))}
           </div>
@@ -101,6 +128,7 @@ export function CountrySelector({
                 >
                   {item.country} - ${item.pricePerIncident.toFixed(2)}
                 </SelectItem>
+<<<<<<< HEAD
               ))}          </div>              .map((item) => (
               .sort((a, b,) => a.country.localeCompare(b.country))
               .map((item,) => (
@@ -113,3 +141,11 @@ export function CountrySelector({
     </div>
   )
 }
+=======
+              ))}
+          </div>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

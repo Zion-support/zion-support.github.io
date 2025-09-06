@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useState } from 'react'
+=======
+import { useState } from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Card
   CardContent
@@ -16,8 +20,12 @@ interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
+<<<<<<< HEAD
   showApplied?: boolean
 <<<<<<< HEAD
+=======
+  showApplied?: boolean;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
@@ -113,5 +121,9 @@ export function JobMatchesCard({
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

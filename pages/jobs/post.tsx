@@ -3,11 +3,27 @@ import Head from 'next/head';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const PostJob: NextPage;
 =======
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
+=======
+
+const PostJob: NextPage = () => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [budget, setBudget] = useState('');
+  const [preview, setPreview] = useState(false);
+
+  return (
+    <div className='space-y-6 pb-20'>
+      <Head>
+        <title>Post a Job - Zion</title>
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <h1 className='text-2xl font-semibold'>Post a Job</h1>
       <div className='grid md:grid-cols-2 gap-6'>
         <form className='space-y-4'>
@@ -79,11 +95,23 @@ const PostJob: NextPage;
           ) : (
             <p className='text-sm opacity-80'>
               Click Preview to see how your job will appear to talent.
+<<<<<<< HEAD
             </p>          )}
+=======
+            </p>
+          )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </aside>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default PostJob;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default PostJob;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

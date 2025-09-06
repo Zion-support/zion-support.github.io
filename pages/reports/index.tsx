@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
+=======
+import { useEffect, useState } from 'react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -9,6 +15,7 @@ export default function Reports() {
   useEffect(() => {
     Promise.all([
 <<<<<<< HEAD
+<<<<<<< HEAD
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -17,6 +24,28 @@ export default function Reports() {
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {})
   }, []),
+=======
+      fetch('/api/reports/uptime')
+        .then(r => r.json())
+        .then(setUptime),
+      fetch('/api/reports/seo')
+        .then(r => r.json())
+        .then(setSeo),
+      fetch('/api/reports/links')
+        .then(r => r.json())
+        .then(setLinks),
+      fetch('/api/reports/deps')
+        .then(r => r.json())
+        .then(setDeps),
+      fetch('/api/reports/changelog')
+        .then(r => r.json())
+        .then(setChangelog),
+      fetch('/api/reports/pagespeed')
+        .then(r => r.json())
+        .then(setPagespeed),
+    ]).catch(() => {});
+  }, []);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
   const lastUptime = null;
 =======
@@ -98,4 +127,8 @@ export default function Reports() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,11 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
   const { moduleTitle, moduleContent } = req.body |{}
   const apiKey = process.env.OPENAI_API_KEY;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,12 +22,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   const { moduleTitle, moduleContent } = req.body |{}
   const apiKey = process.env.OPENAI_API_KEY;
+=======
+
+  
+}
+
+const { moduleTitle, moduleContent } = req.body || {};
+  const apiKey = process.env.OPENAI_API_KEY;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const fallback = () =>
     res.status(200).json({
       summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`
     });
+<<<<<<< HEAD
   const fallback = () => res.status(200).json({
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -42,6 +61,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {
     return fallback();
   }
+<<<<<<< HEAD
     const text = completion.choices?.[0]?.message?.content ?? '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     return res.status(200).json({ summary: text.trim() })
@@ -49,3 +69,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return fallback()
 }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

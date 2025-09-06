@@ -1,20 +1,78 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GovernanceTrustPage() {
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+<<<<<<< HEAD
         <meta name;
               desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
             }].map((opt) => (
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+=======
+        <meta
+          name='description'
+          content='Governance, legal registry options, and public trust commitments for the Zion Protocol.'
+        />
+      </Head>
+      <div className='space-y-12'>
+        <section className='space-y-3'>
+          <h1 className='text-3xl font-bold'>Governance & Public Trust</h1>
+          <p className='text-gray-600 dark:text-gray-300 max-w-3xl'>
+            Appoint Core Stewards, delegate voting rights to nation and
+            community DAOs, and publish quarterly reports with impact metrics.
+          </p>
+          <Link href='/foundation'>
+            <a className='underline text-sm'>Back to Foundation Portal</a>
+          </Link>
+        </section>
+
+        <section className='space-y-4'>
+          <h2 className='text-2xl font-semibold'>Registry & Legal Structure</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+            {[
+              {
+                title: 'Cayman Foundation',
+                desc: 'Globally recognized for crypto-native, non-profit style public-good coordination.',
+              },
+              {
+                title: 'Swiss Verein',
+                desc: 'Member association model with global neutrality and flexible local chapters.',
+              },
+              {
+                title: 'US 501(c)(6)',
+                desc: 'Business league for industry coordination and standards; disclosure-focused.',
+              },
+              {
+                title: 'DAO-native Wrapper',
+                desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.',
+              },
+            ].map(opt => (
+              <div
+                key={opt.title}
+                className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'
+              >
+                <div className='font-medium'>{opt.title}</div>
+                <div className='text-sm text-gray-600 dark:text-gray-400'>
+                  {opt.desc}
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
@@ -45,9 +103,17 @@ export default function GovernanceTrustPage() {
               <div className='text-sm text-gray-600 dark:text-gray-400'>
                 Charter versions, MOUs, audits, and on-chain dashboards are
                 publicly accessible and time-stamped.
+<<<<<<< HEAD
               </div>            </div>
           </div>
         </section>
+=======
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='space-y-2'>
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
           <p className='text-sm text-gray-600 dark:text-gray-400'>
@@ -61,4 +127,8 @@ export default function GovernanceTrustPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

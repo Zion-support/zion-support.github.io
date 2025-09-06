@@ -7,12 +7,18 @@ interface MobileFilterBarProps {
 <<<<<<< HEAD
   searchTerm: string;
   setSearchTerm: (value: string) => void;
+<<<<<<< HEAD
 =======
   searchTerm: string
   setSearchTerm: (value: string) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
+=======
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileFilterBar({
   searchTerm;
 <<<<<<< HEAD

@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+import {
+  BlockchainNetwork,
+  DeploymentOptions,
+  SmartContractInfo,;
+} from '@/types/smart-contracts';
+import { TalentProfile } from '@/types/talent';
+import { ContractFormValues } from '@/components/contracts/components/ContractForm';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -87,6 +102,7 @@ export function useSmartContracts() {
     }
   }
   return {
+<<<<<<< HEAD
     generateSolidityContract;
     deploySmartContract;
     isLoading;
@@ -94,3 +110,38 @@ export function useSmartContracts() {
     deploymentStatus
   }
 }
+=======
+    generateSolidityContract,
+    deploySmartContract,
+    isLoading,
+    deploymentStatus,
+  };
+
+};
+options: DeploymentOptions 
+}try {
+  setDeploymentStatus ('deploying');
+//This would normally connect to MetaMask or other Web3 provider //For now, we'll just simulate success const mockTransactionHash = `0x$ {
+  Array.from ({
+  length: 64 
+}, () => Math.floor (Math.random () * 16) .toString (16) ) .join ('') 
+}`;
+id: window.crypto.randomUUID (), transactionHash: mockTransactionHash, networkName: options.network, blockNumber: Math.floor (Math.random () * 1000000), deployedAddress: `0x$ {
+  Array.from ({
+  length: 40 
+}, () => Math.floor (Math.random () * 16) .toString (16) ) .join ('') 
+}`;
+contractType: 'escrow';
+createdAt: new Date () .toISOString ();
+createdBy: user.id;
+status: 'deployed' 
+};
+// Wait to simulate blockchain transaction time await new Promise (resolve => setTimeout (resolve, 2000) );
+
+};
+
+  generateSolidityContract;
+deploySmartContract;
+isLoading;
+deploymentStatus 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

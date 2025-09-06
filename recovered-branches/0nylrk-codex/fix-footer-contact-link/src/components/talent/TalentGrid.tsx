@@ -11,7 +11,11 @@ export interface TalentGridProps {
   isAuthenticated: boolean;
   viewProfile?: (id: string) => void;
   clearFilters?: () => void;
+<<<<<<< HEAD
   handleRequestHire?: (talent: TalentProfile) => void
+=======
+  handleRequestHire?: (talent: TalentProfile) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function TalentGrid({ 

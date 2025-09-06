@@ -21,8 +21,14 @@ interface ListingScoreCardProps {
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
+<<<<<<< HEAD
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ListingScoreCard({
   title;
 <<<<<<< HEAD

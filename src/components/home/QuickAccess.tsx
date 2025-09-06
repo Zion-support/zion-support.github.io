@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { cn } from '@/lib/utils';
+import {
+  ArrowRight,
+  Search,
+  Users,
+  Briefcase,
+  Settings,
+  MessageSquare,
+  Smartphone,;
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import Link from "next/link",
@@ -23,7 +39,13 @@ import {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface QuickAccessProps {
   className?: string;
+<<<<<<< HEAD
   style?: React.CSSProperties
+=======
+  style?: React.CSSProperties;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function QuickAccess({ className, style }: QuickAccessProps) {
 <<<<<<< HEAD
   const { t } = useTranslation();
@@ -272,7 +294,14 @@ export default function Page() {"
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 export default QuickAccess }
 export default QuickAccess
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+}
+
+export default QuickAccess;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

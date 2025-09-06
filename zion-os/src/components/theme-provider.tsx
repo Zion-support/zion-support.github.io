@@ -11,11 +11,23 @@ type ThemeProviderState = {theme: Theme;
 const initialState: ThemeProviderState = {theme: "system";
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
+<<<<<<< HEAD
 export function ThemeProvider({children;
   defaultTheme = "system";
   storageKey = "zion-ui-theme";
   ...props;
 }: ThemeProviderProps) {const [theme, setTheme] = useState<Theme>(defaultTheme);
+=======
+}
+
+export function ThemeProvider({
+  children,
+  defaultTheme = 'system',
+  storageKey = 'zion-ui-theme',
+  ...props
+}: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [mounted, setMounted] = useState(false);
   useEffect(() => {;
     setMounted(true);
@@ -56,8 +68,18 @@ export function ThemeProvider({children;
     </ThemeProviderContext.Provider>;
   );
 }
+<<<<<<< HEAD
 export const useTheme = () => {const context = useContext(ThemeProviderContext);
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
+=======
+
+export const useTheme = () => {
+  const context = useContext(ThemeProviderContext);
+
+  if (context === undefined)
+    throw new Error('useTheme must be used within a ThemeProvider');
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return context;
 }

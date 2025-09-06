@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { logDebug  } from '@/utils/productionLogger';
@@ -6,6 +7,26 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
+=======
+import React from 'react';
+import { logDebug } from '@/utils/productionLogger';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  ArrowRight,
+  Check,
+  ExternalLink,
+  Slack,
+  Briefcase,
+  Users,;
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 interface IntegrationCardProps {
   title: string;
@@ -13,6 +34,7 @@ interface IntegrationCardProps {
   icon: React.ReactNode;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
+<<<<<<< HEAD
   onConnect?: () => void
 =======
 import React from 'react'
@@ -38,6 +60,11 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
+=======
+  onConnect?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function IntegrationCard({
   title
   description
@@ -94,6 +121,7 @@ export function IntegrationCard({
         ) : (
           <Button variant='default' className='w-full' onClick={onConnect}>
             <span>Connect</span>
+<<<<<<< HEAD
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 interface IntegrationCardProps {
@@ -150,11 +178,20 @@ export function IntegrationCard({
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+=======
+            <ArrowRight className='ml-1.5 h-3.5 w-3.5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>
@@ -178,6 +215,7 @@ export function IntegrationCards() {
       <IntegrationCard
         title='Microsoft Teams'
         description='Receive updates through Microsoft Teams.'
+<<<<<<< HEAD
         icon={<Users className='h-5 w-5' />}        onConnect={() => logDebug('Connect Teams clicked')}
       />
     </div>
@@ -189,10 +227,17 @@ export function IntegrationCards() {
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
+=======
+        icon={<Users className='h-5 w-5' />}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         onConnect={() => logDebug('Connect Teams clicked')}
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

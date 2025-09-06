@@ -16,6 +16,7 @@ interface TalentRateRecommenderProps {
   yearsExperience: number;
   location?: string;
   onSuggestionApplied: (value: number) => void;
+<<<<<<< HEAD
 =======
   skills: string[]
   yearsExperience: number
@@ -24,6 +25,11 @@ interface TalentRateRecommenderProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   rateType: "hourly" | "fixed"
 }
+=======
+  rateType: 'hourly' | 'fixed';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills;
   yearsExperience;

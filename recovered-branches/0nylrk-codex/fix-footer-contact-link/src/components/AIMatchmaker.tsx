@@ -9,8 +9,24 @@ import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {
   serviceType?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onMatchSelect?: (match: any) => void;
   className?: string
+=======
+onMatchSelect?: (match: any) => void;
+className?: string 
+}if (!query.trim () ) {
+  toast ({
+  return;
+}setIsMatchmaking (true);
+setHasSearched (true);
+//Get AI matches const results = await findMatches (query;
+serviceType;
+3);
+//Set empty matches to show no results found UI setMatches ([]) 
+}finally {
+  setIsMatchmaking (false)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function AIMatchmaker({ serviceType;

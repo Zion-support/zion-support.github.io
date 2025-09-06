@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';

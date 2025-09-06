@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CoachWidget() {
   const [input, setInput] = useState('');
   const [reply, setReply] = useState<string | null>(null),
@@ -7,6 +12,7 @@ export default function CoachWidget() {
     if (!input.trim()) return;
     setLoading(true);
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       const resp = null;
       setReply(data.text || '')
@@ -27,6 +33,17 @@ export default function CoachWidget() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     } finally {
       setLoading(false)
+=======
+      const resp = await fetch('/api/learn/coach', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: input }),
+      });
+      const data = await resp.json();
+      setReply(data.text || '');
+    } finally {
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -52,5 +69,9 @@ export default function CoachWidget() {
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

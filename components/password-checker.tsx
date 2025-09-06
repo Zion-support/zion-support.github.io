@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 =======
 import {
@@ -18,6 +19,22 @@ import {
   ArrowRight;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Lock,
+  Shield,
+  Eye,
+  EyeOff,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
+  AlertTriangle,
+  ArrowRight,;
+} from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -25,6 +42,7 @@ export default function PasswordCheckerPage() {
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
   const [checks, setChecks] = useState({
+<<<<<<< HEAD
 <<<<<<< HEAD
     length: false;
     uppercase: false;
@@ -42,6 +60,15 @@ export default function PasswordCheckerPage() {
     noCommon: false
     noSequential: false,  });    noSequential: false
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    numbers: false,
+    symbols: false,
+    noCommon: false,
+    noSequential: false,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   });
   const [suggestions, setSuggestions] = useState<string[]>([]),
   const [generatedPassword, setGeneratedPassword] = useState('');
@@ -49,9 +76,13 @@ export default function PasswordCheckerPage() {
     if (password) {
       analyzePassword(password);
     } else {
+<<<<<<< HEAD
       resetAnalysis();    }      analyzePassword(password)
     } else {
       resetAnalysis()
+=======
+      resetAnalysis();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }, [password]);
 <<<<<<< HEAD
@@ -59,6 +90,7 @@ export default function PasswordCheckerPage() {
 =======
   const analyzePassword = (pass: string) => {
     const newChecks = {
+<<<<<<< HEAD
       length: pass.length >= 8
       uppercase: /[A-Z]/.test(pass)
       lowercase: /[a-z]/.test(pass)
@@ -69,6 +101,17 @@ export default function PasswordCheckerPage() {
       noCommon: !isCommonPassword(pass)
       noSequential: !hasSequentialChars(pass)
     }
+=======
+      length: pass.length >= 8,
+      uppercase: /[A-Z]/.test(pass),
+      lowercase: /[a-z]/.test(pass),
+      numbers: /\d/.test(pass),
+      symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
+      noCommon: !isCommonPassword(pass),
+      noSequential: !hasSequentialChars(pass),
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setChecks(newChecks);
     // Calculate strength score
     let score = 0;
@@ -101,6 +144,7 @@ export default function PasswordCheckerPage() {
       setStrengthColor('text-red-400');
     }
     // Generate suggestions
+<<<<<<< HEAD
     generateSuggestions(newChecks, pass);  }
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [    } else if (score >= 70) {
@@ -134,14 +178,43 @@ export default function PasswordCheckerPage() {
       'dragon'
       'master'
       'hello'
+=======
+    generateSuggestions(newChecks, pass);
+  };
+
+  const isCommonPassword = (pass: string) => {
+    const commonPasswords = [
+      'password',
+      '123456',
+      '123456789',
+      'qwerty',
+      'abc123',
+      'password123',
+      'admin',
+      'letmein',
+      'welcome',
+      'monkey',
+      'dragon',
+      'master',
+      'hello',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ];
     return commonPasswords.includes(pass.toLowerCase());
   }
   const hasSequentialChars = (pass: string) => {
     const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc', '789', '456'];
+<<<<<<< HEAD
     return sequences.some(seq => pass.toLowerCase().includes(seq));  }
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [];
+=======
+    return sequences.some(seq => pass.toLowerCase().includes(seq));
+  };
+
+  const generateSuggestions = (checks: any, pass: string) => {
+    const suggestions: string[] = [];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!checks.length)
       suggestions.push('Make your password at least 8 characters long');
     if (!checks.uppercase)
@@ -161,17 +234,25 @@ export default function PasswordCheckerPage() {
       );
     if (pass.length < 16)
       suggestions.push('For maximum security, use 16+ characters');
+<<<<<<< HEAD
     setSuggestions(suggestions);  };    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
     if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"');
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"');
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters');
     setSuggestions(suggestions)
+=======
+
+    setSuggestions(suggestions);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const resetAnalysis = () => {
     setStrength(0);
     setStrengthText('');
     setStrengthColor('');
     setChecks({
+<<<<<<< HEAD
       length: false
       uppercase: false
       lowercase: false
@@ -188,6 +269,19 @@ export default function PasswordCheckerPage() {
     });
     setSuggestions([])
   }
+=======
+      length: false,
+      uppercase: false,
+      lowercase: false,
+      numbers: false,
+      symbols: false,
+      noCommon: false,
+      noSequential: false,
+    });
+    setSuggestions([]);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const generateStrongPassword = () => {
     const length = 16;
     const charset =
@@ -211,6 +305,7 @@ export default function PasswordCheckerPage() {
     setPassword(result);
   }
   const copyToClipboard = (text: string) => {
+<<<<<<< HEAD
     navigator.clipboard.writeText(text);  };    let result = '';
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
@@ -229,17 +324,29 @@ export default function PasswordCheckerPage() {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
   }
+=======
+    navigator.clipboard.writeText(text);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getStrengthBarColor = () => {
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
+<<<<<<< HEAD
     return 'bg-red-400';  }
+=======
+    return 'bg-red-400';
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
       <CheckCircle className='w-5 h-5 text-green-400' />
     ) : (
       <XCircle className='w-5 h-5 text-red-400' />
+<<<<<<< HEAD
     );  };    return 'bg-red-400'
   }
   const getCheckIcon = (passed: boolean) => {
@@ -251,6 +358,11 @@ export default function PasswordCheckerPage() {
     ) : (
       <XCircle className="w-5 h-5 text-red-400" />
     )
+=======
+    );
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -283,6 +395,7 @@ export default function PasswordCheckerPage() {
           <p className='text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed'>
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
+<<<<<<< HEAD
             protect your accounts and data.          </p>      </Head>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -300,6 +413,9 @@ export default function PasswordCheckerPage() {
             Analyze your password security with our advanced strength checker. Get detailed feedback
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             suggestions, and generate strong passwords to protect your accounts and data.
+=======
+            protect your accounts and data.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
       </section>
@@ -345,6 +461,7 @@ export default function PasswordCheckerPage() {
                         <EyeOff className='w-5 h-5' />
                       ) : (
                         <Eye className='w-5 h-5' />
+<<<<<<< HEAD
                       )}                    </button>              Check Your Password Strength
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -380,6 +497,9 @@ export default function PasswordCheckerPage() {
                       className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+=======
+                      )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 </div>
@@ -389,9 +509,13 @@ export default function PasswordCheckerPage() {
                     onClick={generateStrongPassword}
                     className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
                   >
+<<<<<<< HEAD
                     <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
+=======
+                    <RefreshCw className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Generate Strong Password
                   </Button>
                 </div>
@@ -412,6 +536,7 @@ export default function PasswordCheckerPage() {
                         Copy
                       </Button>
                     </div>
+<<<<<<< HEAD
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
                         onClick={() => copyToClipboard(generatedPassword)}
                         variant="outline"
@@ -423,11 +548,19 @@ export default function PasswordCheckerPage() {
                       </Button>
                     </div>
                     <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
+=======
+                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {generatedPassword}
                     </div>
                   </div>
                 )}
+<<<<<<< HEAD
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">
+=======
+
+                <div className='text-sm text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <p>• Real-time strength analysis</p>
                   <p>• Multiple security criteria</p>
                   <p>• Detailed feedback and suggestions</p>
@@ -438,11 +571,15 @@ export default function PasswordCheckerPage() {
             {/* Strength Analysis */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
+<<<<<<< HEAD
                 <Shield className='w-6 h-6 mr-3 text-purple-400' />                Security Analysis
               </h3>
               {password ? (            <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />
+=======
+                <Shield className='w-6 h-6 mr-3 text-purple-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Security Analysis
               </h3>
               {password ? (
@@ -455,6 +592,7 @@ export default function PasswordCheckerPage() {
                       </span>                      <span className={`text-lg font-bold ${strengthColor}`}>
                         {strengthText} ({strength}/100)
                       </span>
+<<<<<<< HEAD
                     </div>
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
@@ -462,6 +600,9 @@ export default function PasswordCheckerPage() {
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm text-gray-300">Password Strength:</span>
+=======
+                      <span className={`text-lg font-bold ${strengthColor}`}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
@@ -484,10 +625,14 @@ export default function PasswordCheckerPage() {
                           {getCheckIcon(passed)}
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
+<<<<<<< HEAD
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
                           {getCheckIcon(passed)}
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
+=======
+                          >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -495,7 +640,11 @@ export default function PasswordCheckerPage() {
                             {key === 'symbols' && 'Contains special character'}
                             {key === 'noCommon' && 'Not a common password'}
                             {key === 'noSequential' &&
+<<<<<<< HEAD
                               'No sequential characters'}                          </span>                            {key === 'noSequential' && 'No sequential characters'}
+=======
+                              'No sequential characters'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </span>
                         </div>
                       ))}
@@ -516,12 +665,17 @@ export default function PasswordCheckerPage() {
                             <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
                             <span className='text-sm text-yellow-300'>
                               {suggestion}
+<<<<<<< HEAD
                             </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
                       <div className="space-y-2">
                         {suggestions.map((suggestion, index) => (
                           <div key={index} className="flex items-start space-x-3">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-yellow-300">{suggestion}</span>
+=======
+                            </span>
+                          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         ))}
                       </div>
                     </div>
@@ -532,10 +686,15 @@ export default function PasswordCheckerPage() {
                   <div className='text-6xl mb-4'>🔒</div>
                   <p className='text-gray-400'>
                     Enter a password above to see the security analysis and get
+<<<<<<< HEAD
                     personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
                   <div className="text-6xl mb-4">🔒</div>
                   <p className="text-gray-400">
                     Enter a password above to see the security analysis and get personalized suggestions.
+=======
+                    personalized suggestions.
+                  </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
             </Card>
@@ -611,11 +770,16 @@ export default function PasswordCheckerPage() {
               </h3>
               <p className='text-gray-400'>
                 Your passwords are never stored or transmitted - analysis
+<<<<<<< HEAD
                 happens locally in your browser.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-4">Privacy First</h3>
               <p className="text-gray-400">
                 Your passwords are never stored or transmitted - analysis happens locally in your browser.
+=======
+                happens locally in your browser.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Card>
           </div>
         </div>
@@ -653,12 +817,20 @@ export default function PasswordCheckerPage() {
                   Consider using a password manager
                 </li>
                 <li className='flex items-start'>
+<<<<<<< HEAD
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />                  Update passwords regularly                <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+=======
+                  <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Update passwords regularly
                 </li>
               </ul>
             </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>❌</div>
               <h3 className='text-2xl font-bold text-white mb-4'>Don'ts</h3>
@@ -693,8 +865,12 @@ export default function PasswordCheckerPage() {
                   Don't reuse passwords across accounts
                 </li>
                 <li className='flex items-start'>
+<<<<<<< HEAD
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />                  Avoid writing passwords down                <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+=======
+                  <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Avoid writing passwords down
                 </li>
               </ul>
@@ -724,15 +900,24 @@ export default function PasswordCheckerPage() {
               href='/pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600"
+=======
+              className='border-white text-white hover:bg-white hover:text-indigo-600'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Pricing
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

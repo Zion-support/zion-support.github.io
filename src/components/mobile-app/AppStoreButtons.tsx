@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Apple, GithubIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
@@ -8,9 +15,14 @@ interface AppStoreButtonsProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
+<<<<<<< HEAD
   onGooglePlayClick?: () => void
 }
 <<<<<<< HEAD
+=======
+  onGooglePlayClick?: () => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className;
@@ -82,6 +94,12 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         </div>
       </a>
     </div>
+<<<<<<< HEAD
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

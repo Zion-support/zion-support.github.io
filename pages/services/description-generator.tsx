@@ -1,10 +1,21 @@
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServiceDescriptionGeneratorPage() {
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+<<<<<<< HEAD
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
+=======
+  const [tone, setTone] = useState<
+    'professional' | 'friendly' | 'persuasive' | 'technical'
+  >('professional');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
@@ -18,7 +29,13 @@ export default function ServiceDescriptionGeneratorPage() {
     return featuresInput
       .split('\n')
       .map(f => f.trim())
+<<<<<<< HEAD
       .filter(Boolean);  }, [featuresInput]);
+=======
+      .filter(Boolean);
+  }, [featuresInput]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
@@ -29,12 +46,21 @@ export default function ServiceDescriptionGeneratorPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           title
           keyFeatures
           targetAudience
           additionalNotes: additionalNotes |undefined
           tone
         })
+=======
+          title,
+          keyFeatures,
+          targetAudience,
+          additionalNotes: additionalNotes || undefined,
+          tone,
+        }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
@@ -45,10 +71,21 @@ export default function ServiceDescriptionGeneratorPage() {
     } catch (err: any) {
       setError(err.message |'Something went wrong');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   function handleAccept() {
+<<<<<<< HEAD
     setAccepted(true);  }
+=======
+    setAccepted(true);
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   function handleCopy() {
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
@@ -76,7 +113,12 @@ export default function ServiceDescriptionGeneratorPage() {
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e.g., On-Demand Web Performance Audit'
             value={title}
+<<<<<<< HEAD
             onChange={e => setTitle(e.target.value)}            required
+=======
+            onChange={e => setTitle(e.target.value)}
+            required
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </div>
         <div>
@@ -88,7 +130,12 @@ export default function ServiceDescriptionGeneratorPage() {
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
+<<<<<<< HEAD
             onChange={e => setTargetAudience(e.target.value)}            required
+=======
+            onChange={e => setTargetAudience(e.target.value)}
+            required
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </div>
         <div>
@@ -101,7 +148,12 @@ export default function ServiceDescriptionGeneratorPage() {
               'e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
+<<<<<<< HEAD
             onChange={e => setFeaturesInput(e.target.value)}            required
+=======
+            onChange={e => setFeaturesInput(e.target.value)}
+            required
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </div>
         <div>
@@ -114,7 +166,12 @@ export default function ServiceDescriptionGeneratorPage() {
             <option value='professional'>Professional</option>
             <option value='friendly'>Friendly</option>
             <option value='persuasive'>Persuasive</option>
+<<<<<<< HEAD
             <option value='technical'>Technical</option>          </select>
+=======
+            <option value='technical'>Technical</option>
+          </select>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
         <div>
           <label className='block text-sm font-medium mb-1'>
@@ -135,7 +192,12 @@ export default function ServiceDescriptionGeneratorPage() {
           >
             {loading ? 'Generating…' : 'Generate Description'}
           </button>
+<<<<<<< HEAD
           {error && <span className='text-red-600 text-sm'>{error}</span>}        </div>
+=======
+          {error && <span className='text-red-600 text-sm'>{error}</span>}
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </form>
       {generated && (
         <div className='mt-8 space-y-3'>
@@ -144,12 +206,22 @@ export default function ServiceDescriptionGeneratorPage() {
             <div className='flex items-center gap-2'>
               <button
                 onClick={handleCopy}
+<<<<<<< HEAD
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'              >
+=======
+                className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Copy
               </button>
               <button
                 onClick={handleAccept}
+<<<<<<< HEAD
                 className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'              >
+=======
+                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Accept
               </button>
             </div>
@@ -162,8 +234,17 @@ export default function ServiceDescriptionGeneratorPage() {
           {accepted && (
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
               Accepted. You can copy and paste this into your CMS.
+<<<<<<< HEAD
             </div>          )}
         </div>
       )}
     </div>
 );
+=======
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

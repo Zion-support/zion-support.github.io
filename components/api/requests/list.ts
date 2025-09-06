@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 const REQUESTS_PATH = path.join(process.cwd(), "data", "requests.json");
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -19,4 +29,7 @@ export default async function handler(
   } catch {
     res.status(200).json({ items: [] });
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,6 +5,11 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star  } from 'lucide-react
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AutonomousVehicleAIPage() {
   const service = null;
 =======

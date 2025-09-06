@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 import { Gift } from 'lucide-react'
 <<<<<<< HEAD
+=======
+import { Gift } from 'lucide-react';
+
+const REWARDS = [
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 },
+  { id: 'premium-week', title: 'Premium Week', cost: 1000 },
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 },
+];
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const REWARDS = null;
 export default function RewardsPage() {
@@ -27,10 +38,18 @@ const REWARDS = [
               <p className='font-medium'>{r.title}</p>
               <p className='text-sm text-muted-foreground'>{r.cost} pts</p>
             </div>
+<<<<<<< HEAD
             <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />
+=======
+            <Gift className='h-5 w-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </li>
         ))}
       </ul>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

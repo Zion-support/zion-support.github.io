@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import { BadgeCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { BadgeCheck } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface Achievement {
 <<<<<<< HEAD
   id: string;
   title: string;
   description: string;
+<<<<<<< HEAD
 =======
   id: string
   title: string
@@ -24,6 +31,14 @@ export interface Achievement {
 interface AchievementBadgesProps {
   achievements: Achievement[]
 }
+=======
+  achieved: boolean;
+
+interface AchievementBadgesProps {
+  achievements: Achievement[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
     <Card>
@@ -37,6 +52,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
             />
             <div>
               <p className='font-medium'>{a.title}</p>
+<<<<<<< HEAD
               <p className='text-sm text-muted-foreground'>{a.description}</p>            </div>
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
@@ -46,10 +62,17 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
             <div>
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
+=======
+              <p className='text-sm text-muted-foreground'>{a.description}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         ))}
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

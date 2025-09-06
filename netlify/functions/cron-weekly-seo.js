@@ -1,4 +1,8 @@
 const { upsertFile } = require('./_lib/github');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function scorePage(url) {
   const t0 = Date.now();
   try {
@@ -82,6 +86,7 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 =======
     const report = { updatedAt: Date.now(), results }
     const owner = process.env.GITHUB_OWNER
@@ -100,3 +105,25 @@ exports.handler = async function() {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/reports/seo/weekly-seo.json',
+        content: JSON.stringify(report, null, 2),
+        message: 'chore(automation): weekly SEO report',
+        token,
+      });
+    }
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, pages: results.length }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

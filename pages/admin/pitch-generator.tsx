@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useCallback, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -6,6 +7,8 @@ import { GetServerSideProps  } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 export type Slide = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -25,6 +28,10 @@ function SlidePreview({
   isActive: boolean;
   onClick: () => void;
 }) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='font-semibold text-sm line-clamp-2'>
         {slide.title |'Untitled'}
@@ -34,11 +41,17 @@ function SlidePreview({
       </div>
     </button>
   );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
   if ('redirect' in result) return result;
   return result;
+<<<<<<< HEAD
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
@@ -49,26 +62,61 @@ export default function PitchGenerator() {
     targetRaise: ''
     assets: []
   });  const [slides, setSlides] = useState<Slide[]>([]);
+=======
+};
+}
+
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({
+    mission: '',
+    fundingStage: '',
+    vision: '',
+    roundType: '',
+    targetRaise: '',
+    assets: [],
+  });
+  const [slides, setSlides] = useState<Slide[]>([]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
   const [history, setHistory] = useState<
     { id: string; createdAt: string, version: string }[]
   >([]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const activeSlide = slides[activeIndex];
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
+<<<<<<< HEAD
     const files = Array.from(e.dataTransfer.files |[]);
     setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation()
   }
+=======
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));
+  }, []);
+
+  const prevent = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const operatorPrompt = useMemo(
     () =>
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`
     []
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
     try {
@@ -76,9 +124,16 @@ export default function PitchGenerator() {
       const data = await res.json();
       return data;
     } catch (e) {
+<<<<<<< HEAD
       return {}
     } finally {
       setLoading(false);    }
+=======
+      return {};
+    } finally {
+      setLoading(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   const buildDeck = useCallback(async () => {
     setLoading(true);
@@ -88,6 +143,7 @@ export default function PitchGenerator() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           operatorPrompt
           inputs: builder
           metrics
@@ -95,6 +151,16 @@ export default function PitchGenerator() {
       });
       const json = await res.json();
       const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
+=======
+          operatorPrompt,
+          inputs: builder,
+          metrics,
+        }),
+      });
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides || [];
+      setSlides(newSlides);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       setActiveIndex(0);
       const v = json.version |`v${new Date().toISOString()}`;
       setVersionTag(v);
@@ -137,6 +203,10 @@ export default function PitchGenerator() {
     }
     [slides]
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const addSlide = useCallback(async () => {
     setLoading(true);
     try {
@@ -153,16 +223,29 @@ export default function PitchGenerator() {
       setActiveIndex(slides.length);
     } catch (e) {
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [slides.length]);
   const exportPdf = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/export', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag })
       });      const blob = await res.blob();
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
+      });
+      const blob = await res.blob();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -171,7 +254,12 @@ export default function PitchGenerator() {
       URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
@@ -191,12 +279,23 @@ export default function PitchGenerator() {
       }
     } catch (e) {
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [slides, versionTag]);
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
+<<<<<<< HEAD
     );  }
+=======
+    );
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null
     const { type, data } = slide.chart;
@@ -225,7 +324,12 @@ export default function PitchGenerator() {
                     style={{ width: `${100 - idx * 12}%` }}
                   >
                     {d.label}: {d.value}
+<<<<<<< HEAD
                   </div>                ))}
+=======
+                  </div>
+                ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           )}
@@ -233,7 +337,12 @@ export default function PitchGenerator() {
             <div className='text-xs grid grid-cols-4 gap-2 w-full'>
               {data.map(d => (
                 <div key={d.label} className='border p-1 rounded'>
+<<<<<<< HEAD
                   <div className='font-medium'>{d.label}</div>                  <div>{d.value}</div>
+=======
+                  <div className='font-medium'>{d.label}</div>
+                  <div>{d.value}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               ))}
             </div>
@@ -315,7 +424,12 @@ export default function PitchGenerator() {
                 }
                 className='w-full border rounded px-2 py-1 bg-transparent'
               >
+<<<<<<< HEAD
                 <option value=''>Select</option>                <option>Seed</option>
+=======
+                <option value=''>Select</option>
+                <option>Seed</option>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <option>Series A</option>
                 <option>Token Sale</option>
               </select>
@@ -349,7 +463,12 @@ export default function PitchGenerator() {
               >
                 Refresh
               </button>
+<<<<<<< HEAD
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>
+                <li>Active users (30d)</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -357,6 +476,10 @@ export default function PitchGenerator() {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
@@ -371,11 +494,20 @@ export default function PitchGenerator() {
                     <span>{h.version}</span>
                     <span className='text-gray-500 dark:text-gray-400'>
                       {new Date(h.createdAt).toLocaleString()}
+<<<<<<< HEAD
                     </span>                  </li>
+=======
+                    </span>
+                  </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ))}
               </ul>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='lg:col-span-2 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='flex items-center justify-between'>
@@ -479,6 +611,7 @@ export default function PitchGenerator() {
                   >
                     Timeline
                   </button>
+<<<<<<< HEAD
                 </div>              </div>
             )}
           </div>
@@ -486,3 +619,13 @@ export default function PitchGenerator() {
 </main>
     </>
   );
+=======
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </main>
+    </>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

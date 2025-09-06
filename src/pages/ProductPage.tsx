@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useParams
 import { useEffect, useState  } from 'react';
 import Image from 'next/image';
@@ -7,6 +8,20 @@ import { useCart  } from '@/context/CartContext';
 import { toast  } from '@/hooks/use-toast';
 import { SEO  } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import { useRouter } from 'next/router'; // Changed from useParams
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { NEW_PRODUCTS } from '@/data/newProductsData';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { SEO } from '@/components/SEO';
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ProductPage() {
 <<<<<<< HEAD
 
@@ -52,7 +67,14 @@ export default function ProductPage() {
   if (!product) {
     return <div className="p-6 text-white">Product not found</div>;
   }
+<<<<<<< HEAD
   const inCart = items.some(i => i.id === product.id);
+=======
+}
+
+const inCart = items.some(i => i.id === product.id);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleAdd = () => {
     if (inCart) return;
     setAdding(true);
@@ -107,5 +129,9 @@ product.title ;
 }description= {product.description ;
 }ogImage= {product.images?.[0] ;
 }/> </Button> </div> </>) ;
+<<<<<<< HEAD
 }';
 }
+=======
+}'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

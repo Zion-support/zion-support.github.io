@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast";
+=======
+import React from 'react';
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { useRouter } from 'next/router';
 interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
+<<<<<<< HEAD
   isAuthenticated: boolean
+=======
+  isAuthenticated: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCardSaveButton({
 <<<<<<< HEAD
   profileId;
@@ -54,10 +67,18 @@ export function TalentCardSaveButton({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
         ? `${profileName} has been removed from your favorites`
+<<<<<<< HEAD
         : `${profileName} has been added to your favorites`
       variant: 'default'
     })
   }
+=======
+        : `${profileName} has been added to your favorites`,
+      variant: 'default',
+    });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <Heart
         className={cn(
@@ -72,4 +93,7 @@ export function TalentCardSaveButton({
 }
 }/> </button>)
 }"
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

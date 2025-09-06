@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+import { GradientHeading } from './GradientHeading';
+import { Button } from './ui/button';
+import { CheckCircle2 } from 'lucide-react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from './ui/table';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",

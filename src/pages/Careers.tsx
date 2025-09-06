@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -5,6 +6,17 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careersJobs";
+=======
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
+import { CAREER_JOBS } from '@/data/careersJobs';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Careers() {
 <<<<<<< HEAD
   const applyEmail = null;
@@ -279,6 +291,7 @@ export default function Careers() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 import React from 'react'
 import { SEO } from '../components/SEO'
@@ -296,3 +309,6 @@ const Careers: React.FC = () => {
 }
 export default Careers
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

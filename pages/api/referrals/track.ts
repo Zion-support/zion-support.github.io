@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '[^']*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,10 +11,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
@@ -32,6 +40,39 @@ export default async function handler(
       url: url |null
       referrer: referrer |null
       user_agent: req.headers["user-agent"] |null
+=======
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+
+  
+}
+
+const { code, event, url, referrer } = req.body || {};
+  if (!code || !event)
+    return res.status(400).json({ error: 'Missing code or event' });
+
+  
+}
+
+const usingPlaceholder =
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
+      'placeholder-key';
+
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({ saved: false, mock: true });
+   
+}
+
+    const supabase = getServerSupabase();
+    const { error } = await supabase.from('referral_events').insert({
+      partner_code: String(code).toLowerCase(),
+      event: String(event),
+      url: url || null,
+      referrer: referrer || null,
+      user_agent: req.headers['user-agent'] || null,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       ip_address:
         (req.headers["x-forwarded-for"] as string) |
         req.socket.remoteAddress |
@@ -39,8 +80,16 @@ export default async function handler(
     });
     if (error) return res.status(500).json({ error: "Database error" });
     return res.status(200).json({ saved: true });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } catch (e: any) {
     return res.status(200).json({ saved: false, error: e?.message });
   }
 }
+=======
+ 
+} catch (e: any) {
+    return res.status(200).json({ saved: false, error: e?.message });
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

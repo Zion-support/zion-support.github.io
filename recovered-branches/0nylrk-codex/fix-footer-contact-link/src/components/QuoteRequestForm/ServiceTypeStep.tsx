@@ -56,6 +56,11 @@ const SAMPLE_LISTINGS: ListingItem[] = [
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ServiceTypeStep({
   formData
   updateFormData

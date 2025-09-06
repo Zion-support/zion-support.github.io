@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
+=======
+import { useRouter } from 'next/router';
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import ProductCard from '@/components/ProductCard';
 <<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo, useRef  } from 'react';
@@ -244,6 +249,8 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
+}
+
 export default function Marketplace() {
   const router = useRouter();
   const { t } = useTranslation();
@@ -751,7 +758,13 @@ case 'rating': return (b.rating |0) - (a.rating |0);';
 case 'popular': return (b.reviewCount |0) - (a.reviewCount |0);';
 case 'ai-score': return (b.aiScore |0) - (a.aiScore |0);';
 case 'newest': ;
+<<<<<<< HEAD
 }else {handleApiError (err), //This might show a toast or log to Sentry ;
+=======
+}else {;
+  handleApiError (err), //This might show a toast or log to Sentry ;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
 }, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {{;
@@ -839,8 +852,16 @@ case 'newest': ;
 }onBuy= {async () => {;
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
+<<<<<<< HEAD
 }buyDisabled= {false ;
 }//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
+=======
+
+}buyDisabled= {;
+  false ;
+}//Still false, ProductCard handles its own disabled state based on auth /> {;
+  /* AI Score Badge */ ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }{";
   product.aiScore && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {product.aiScore ;
 }</Badge>) ;
@@ -888,6 +909,7 @@ case 'newest': ;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
+<<<<<<< HEAD
   )
 import React from "react";
 import Head from "next/head";
@@ -937,3 +959,5 @@ const Marketplace = () => {return (;
     </>;
   );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

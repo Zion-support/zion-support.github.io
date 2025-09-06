@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
   const features = null;
@@ -36,6 +37,43 @@ export default function CloudMonitoringPage() {
       icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
   const features = [
+=======
+import {
+  Activity,
+  BarChart3,
+  AlertTriangle,
+  Clock,
+  Database,
+  Globe,
+  Lock,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Server,
+  Cloud,
+  Eye,
+  Bell,
+  Settings,
+  Code,;
+} from 'lucide-react';
+}
+
+export default function CloudMonitoringPage() {
+  const features = [
+    {
+      icon: <Activity className='w-8 h-8 text-white' />,
+      title: 'Real-time Monitoring',
+      description:
+        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       icon: <Activity className='w-8 h-8 text-white' />
       description:
@@ -122,6 +160,7 @@ export default function CloudMonitoringPage() {
       category: 'Security'
       icon: <Shield className='w-6 h-6 text-red-400' />
       metrics: [
+<<<<<<< HEAD
         'Threat Detection'
         'Access Logs'
         'Vulnerability Scans'
@@ -131,6 +170,15 @@ export default function CloudMonitoringPage() {
     },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
       metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
     }
+=======
+        'Threat Detection',
+        'Access Logs',
+        'Vulnerability Scans',
+        'Compliance Status',
+        'Audit Trails',
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const pricingPlans = [
     {
@@ -139,6 +187,7 @@ export default function CloudMonitoringPage() {
       period: '/month'
       description: 'Perfect for small teams and startups'
       features: [
+<<<<<<< HEAD
         'Up to 10 servers'
         'Basic monitoring'
         'Email alerts'
@@ -210,13 +259,80 @@ export default function CloudMonitoringPage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' }
     { name: 'PagerDuty', icon: '🚨', description: 'Incident management' }
     { name: 'Jira', icon: '📋', description: 'Issue tracking' },  ];    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
+=======
+        'Up to 10 servers',
+        'Basic monitoring',
+        'Email alerts',
+        '7-day data retention',
+        'Community support',
+        'Mobile app access',
+      ],
+      popular: false,
+      color: 'border-gray-600',
+      buttonColor: 'bg-gray-600 hover:bg-gray-700',
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 100 servers',
+        'Advanced monitoring',
+        'SMS & Slack alerts',
+        '30-day data retention',
+        'Priority support',
+        'Custom dashboards',
+        'API access',
+        'Team collaboration',
+      ],
+      popular: true,
+      color: 'border-blue-500',
+      buttonColor: 'bg-blue-600 hover:bg-blue-700',
+    },
+    {
+      name: 'Enterprise',
+      price: '$599',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited servers',
+        'Full monitoring suite',
+        'Custom integrations',
+        '1-year data retention',
+        'Dedicated support',
+        'White-label solution',
+        'SLA guarantee',
+        'On-premise option',
+      ],
+      popular: false,
+      color: 'border-purple-600',
+      buttonColor: 'bg-purple-600 hover:bg-purple-700',
+    },
+  ];
+
+  const integrations = [
+    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
+    { name: 'Azure', icon: '🔷', description: 'Monitor integration' },
+    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' },
+    { name: 'Docker', icon: '🐳', description: 'Container monitoring' },
+    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
+    { name: 'Slack', icon: '💬', description: 'Team notifications' },
+    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
+    { name: 'Jira', icon: '📋', description: 'Issue tracking' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const useCases = [
     {
+<<<<<<< HEAD
       title: 'DevOps Teams'
+=======
+      title: 'DevOps Teams',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.'
       benefits: [
+<<<<<<< HEAD
         'Faster deployments'
         'Reduced downtime'
         'Better collaboration'
@@ -260,6 +376,50 @@ export default function CloudMonitoringPage() {
       ]
     },  ];      benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
+=======
+        'Faster deployments',
+        'Reduced downtime',
+        'Better collaboration',
+        'Automated scaling',
+      ],
+    },
+    {
+      title: 'SaaS Companies',
+      description:
+        'Track user experience, application performance, and business metrics.',
+      icon: '💼',
+      benefits: [
+        'User satisfaction',
+        'Revenue optimization',
+        'Competitive advantage',
+        'Customer retention',
+      ],
+    },
+    {
+      title: 'E-commerce',
+      description:
+        'Monitor website performance, payment processing, and inventory systems.',
+      icon: '🛒',
+      benefits: [
+        'Higher conversion',
+        'Faster checkout',
+        'Inventory optimization',
+        'Revenue growth',
+      ],
+    },
+    {
+      title: 'Financial Services',
+      description:
+        'Ensure compliance, security, and 24/7 availability of critical systems.',
+      icon: '💰',
+      benefits: [
+        'Regulatory compliance',
+        'Fraud detection',
+        'Risk management',
+        'Customer trust',
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -318,6 +478,7 @@ export default function CloudMonitoringPage() {
               size='lg'
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
+<<<<<<< HEAD
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -354,6 +515,9 @@ export default function CloudMonitoringPage() {
               className="border-white/20 hover:border-white/40 hover:bg-white/5"
             >
               <Play className="w-5 h-5 mr-2" />
+=======
+              <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Watch Demo
             </Button>
           </div>
@@ -381,6 +545,7 @@ export default function CloudMonitoringPage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
                 &lt;100ms
               </div>
+<<<<<<< HEAD
               <div className='text-gray-400'>Latency</div>            </div>            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">1M+</div>
@@ -393,6 +558,9 @@ export default function CloudMonitoringPage() {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">&lt,100ms</div>
               <div className="text-gray-400">Latency</div>
+=======
+              <div className='text-gray-400'>Latency</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -404,6 +572,7 @@ export default function CloudMonitoringPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Powerful Monitoring Features
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to monitor and optimize your infrastructure
             </p>
           </div>
@@ -416,6 +585,13 @@ export default function CloudMonitoringPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Everything you need to monitor and optimize your infrastructure
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -433,6 +609,7 @@ export default function CloudMonitoringPage() {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
+<<<<<<< HEAD
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}            {features.map((feature, index) => (
               <Card
                 key={index}
@@ -448,6 +625,9 @@ export default function CloudMonitoringPage() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
+=======
+                <p className='text-gray-400 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {feature.description}
                 </p>
               </Card>
@@ -485,6 +665,7 @@ export default function CloudMonitoringPage() {
                           key={metricIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
+<<<<<<< HEAD
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {metric}              Comprehensive Monitoring
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -507,6 +688,9 @@ export default function CloudMonitoringPage() {
                       {capability.metrics.map((metric, metricIndex) => (
                         <div key={metricIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+=======
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {metric}
                         </div>
                       ))}
@@ -551,6 +735,7 @@ export default function CloudMonitoringPage() {
                           key={benefitIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
+<<<<<<< HEAD
                           <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {benefit}              Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -576,6 +761,9 @@ export default function CloudMonitoringPage() {
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+=======
+                          <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {benefit}
                         </div>
                       ))}
@@ -594,6 +782,7 @@ export default function CloudMonitoringPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Simple, Transparent Pricing
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs
             </p>
           </div>
@@ -607,6 +796,14 @@ export default function CloudMonitoringPage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Choose the plan that fits your monitoring needs
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
@@ -614,15 +811,23 @@ export default function CloudMonitoringPage() {
               >
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                     <span className='bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
                     </span>
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+=======
+                    <span className='bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -639,6 +844,7 @@ export default function CloudMonitoringPage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
@@ -646,6 +852,9 @@ export default function CloudMonitoringPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
                     </li>
                   ))}
@@ -656,11 +865,15 @@ export default function CloudMonitoringPage() {
                   size='lg'
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               </Card>
             ))}
@@ -674,6 +887,7 @@ export default function CloudMonitoringPage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Seamless Integrations
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
             </p>
           </div>
@@ -686,6 +900,13 @@ export default function CloudMonitoringPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Connect with your favorite tools and platforms
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -700,6 +921,7 @@ export default function CloudMonitoringPage() {
                 </h3>
                 <p className='text-sm text-gray-400'>
                   {integration.description}
+<<<<<<< HEAD
                 </p>              </Card>            {integrations.map((integration, index) => (
               <Card
                 key={index}
@@ -710,6 +932,9 @@ export default function CloudMonitoringPage() {
                 </div>
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
+=======
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
@@ -742,6 +967,7 @@ export default function CloudMonitoringPage() {
               size='lg'
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
+<<<<<<< HEAD
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Monitor Your Infrastructure?
           </h2>
           <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -764,11 +990,18 @@ export default function CloudMonitoringPage() {
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
+=======
+              <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Watch Demo
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

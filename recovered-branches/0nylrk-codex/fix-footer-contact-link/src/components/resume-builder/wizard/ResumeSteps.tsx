@@ -4,9 +4,14 @@ import { StepProps } from "./types";
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
+<<<<<<< HEAD
   onChange: (value: string) => void
 }
 <<<<<<< HEAD
+=======
+  onChange: (value: string) => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const ResumeSteps = null;
 =======

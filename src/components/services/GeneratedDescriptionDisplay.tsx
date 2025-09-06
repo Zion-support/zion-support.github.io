@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,;
+} from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Check, Pencil } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -8,7 +23,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {
   description: string;
+<<<<<<< HEAD
   onSave: (editedDescription: string) => void
+=======
+  onSave: (editedDescription: string) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function GeneratedDescriptionDisplay({ 
@@ -112,4 +131,7 @@ export function GeneratedDescriptionDisplay({
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
 }</Card>)
 }'"
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

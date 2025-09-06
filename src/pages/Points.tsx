@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth  } from '@/hooks/useAuth';
 import { usePoints  } from '@/hooks/usePoints';
@@ -9,6 +10,8 @@ import { Badge  } from '@/components/ui/badge';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import { formatDistanceToNow  } from 'date-fns';
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Gift
   Star
@@ -21,6 +24,7 @@ import {
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
@@ -34,6 +38,14 @@ import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } fr
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+=======
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -41,6 +53,11 @@ import { formatDistanceToNow } from 'date-fns';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
@@ -53,12 +70,17 @@ export default function PointsPage() {
     id: string;
     cost: number;
     title: string;
+<<<<<<< HEAD
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  }) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!user?.id) return;
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
+<<<<<<< HEAD
 <<<<<<< HEAD
         method: 'POST';
         headers: { 'Content-Type': 'application/json' },
@@ -66,6 +88,10 @@ export default function PointsPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           userId: user.id
           cost: reward.cost
@@ -74,10 +100,14 @@ export default function PointsPage() {
       });
       await fetchLedger();
     } finally {
+<<<<<<< HEAD
       setRedeeming(false);    }      });
       await fetchLedger()
     } finally {
       setRedeeming(false)
+=======
+      setRedeeming(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
 <<<<<<< HEAD
@@ -86,6 +116,7 @@ export default function PointsPage() {
 =======
   const earningOpportunities = [
     {
+<<<<<<< HEAD
       icon: <Users className='h-5 w-5' />
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
@@ -98,6 +129,14 @@ export default function PointsPage() {
       points: '100 pts'
       action: 'Browse Marketplace'
     }
+=======
+      icon: <Users className='h-5 w-5' />,
+      title: 'Sign Up & Profile Setup',
+      description: 'Complete your profile and verify your email',
+      points: '50 pts',
+      action: isAuthenticated ? '✓ Completed' : 'Get Started',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       icon: <MessageSquare className='h-5 w-5' />
       title: 'Community Engagement'
@@ -106,6 +145,7 @@ export default function PointsPage() {
       action: 'Join Community'
     }
     {
+<<<<<<< HEAD
       icon: <Users className='h-5 w-5' />
       title: 'Refer Friends'
       description: 'Invite friends to join Zion marketplace'
@@ -120,6 +160,25 @@ export default function PointsPage() {
     }
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' }
+=======
+      icon: <MessageSquare className='h-5 w-5' />,
+      title: 'Community Engagement',
+      description: 'Post in the community or comment on discussions',
+      points: '25 pts per post',
+      action: 'Join Community',
+    },
+    {
+      icon: <Users className='h-5 w-5' />,
+      title: 'Refer Friends',
+      description: 'Invite friends to join Zion marketplace',
+      points: '200 pts per referral',
+      action: 'Share Referral Link',
+    },
+  ];
+
+  const upcomingRewards = [
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       id: 'premium1'
       title: 'Premium Features (1 month)'
@@ -151,6 +210,7 @@ export default function PointsPage() {
               Earn points for every action you take and redeem them for
               exclusive rewards!
             </p>
+<<<<<<< HEAD
             <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning
             </Button>
           </div>
@@ -159,15 +219,27 @@ export default function PointsPage() {
               Join Now to Start Earning
             </Button>
           </div>
+=======
+            <Button onClick={() => setLoginOpen(true)} size='lg'>
+              Join Now to Start Earning
+            </Button>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid md:grid-cols-2 gap-8 mb-12'>
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
+<<<<<<< HEAD
                   <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
+=======
+                  <TrendingUp className='h-5 w-5' />
+                  How to Earn Points
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
@@ -184,6 +256,7 @@ export default function PointsPage() {
                       <h4 className='font-medium'>{opportunity.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
+<<<<<<< HEAD
                       </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
                     <div className="flex-1">
@@ -192,6 +265,11 @@ export default function PointsPage() {
                     </div>
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
                     <Badge variant="secondary">{opportunity.points}</Badge>
+=======
+                      </p>
+                    </div>
+                    <Badge variant='secondary'>{opportunity.points}</Badge>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 ))}
               </CardContent>
@@ -199,8 +277,12 @@ export default function PointsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
+<<<<<<< HEAD
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
+=======
+                  <Gift className='h-5 w-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Upcoming Rewards
                 </CardTitle>
                 <CardDescription>
@@ -218,6 +300,7 @@ export default function PointsPage() {
                         {reward.category}
                       </p>
                     </div>
+<<<<<<< HEAD
                     <Badge variant='outline'>{reward.cost}</Badge>                  </div>
                     <Badge variant="outline">{reward.cost}</Badge>
                 {upcomingRewards.map((reward, index) => (
@@ -227,11 +310,18 @@ export default function PointsPage() {
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
                     <Badge variant="outline">{reward.cost}</Badge>
+=======
+                    <Badge variant='outline'>{reward.cost}</Badge>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 ))}
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -240,6 +330,7 @@ export default function PointsPage() {
                 Our full rewards system is launching soon! Sign up now to start
                 earning points immediately.
               </p>
+<<<<<<< HEAD
               <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -250,6 +341,10 @@ export default function PointsPage() {
               <Button onClick={() => setLoginOpen(true)}>
                 Create Account
               </Button>
+=======
+              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>
+            </CardContent>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -266,24 +361,37 @@ export default function PointsPage() {
         </div>
         <p className='text-xl text-muted-foreground'>Points Available</p>
         {!loading && balance === 0 && (
+<<<<<<< HEAD
           <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
+=======
+          <p className='text-sm text-muted-foreground mt-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
         )}
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
+<<<<<<< HEAD
               <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
+=======
+              <TrendingUp className='h-5 w-5' />
+              Keep Earning
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
@@ -312,10 +420,14 @@ export default function PointsPage() {
                   </Badge>
                   <p className='text-xs text-muted-foreground'>
                     {opportunity.action}
+<<<<<<< HEAD
                   </p>                </div>                </div>
                 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
+=======
+                  </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             ))}
@@ -324,8 +436,12 @@ export default function PointsPage() {
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
+<<<<<<< HEAD
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
+=======
+              <Gift className='h-5 w-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Available Rewards
             </CardTitle>
             <CardDescription>
@@ -357,6 +473,7 @@ export default function PointsPage() {
                   ) : (
                     <p className='text-xs text-muted-foreground'>
                       Need more points
+<<<<<<< HEAD
                     </p>                  )}
                     <p className="text-xs text-muted-foreground">Need more points</p>
                 <div>
@@ -371,6 +488,9 @@ export default function PointsPage() {
                     </Button>
                   ) : (
                     <p className="text-xs text-muted-foreground">Need more points</p>
+=======
+                    </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   )}
                 </div>
               </div>
@@ -381,8 +501,12 @@ export default function PointsPage() {
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
+<<<<<<< HEAD
             <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
             <History className="h-5 w-5" />
+=======
+            <History className='h-5 w-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Points History
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
@@ -418,7 +542,13 @@ export default function PointsPage() {
                       }                      variant="outline"
                       className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
                     >
+<<<<<<< HEAD
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
+=======
+                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta} pts
+                    </Badge>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 ))}
               </div>
@@ -426,6 +556,10 @@ export default function PointsPage() {
           )}
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <Card className='text-center'>
         <CardContent className='pt-6'>
           <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -438,6 +572,7 @@ export default function PointsPage() {
           </p>
           <div className='flex gap-4 justify-center'>
             <Button variant='outline' asChild>
+<<<<<<< HEAD
               <Link href='/marketplace'>Browse Marketplace</Link>          </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
@@ -446,6 +581,12 @@ export default function PointsPage() {
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
+=======
+              <Link href='/marketplace'>Browse Marketplace</Link>
+            </Button>
+            <Button variant='outline' asChild>
+              <Link href='/community'>Join Community</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            </Button>
@@ -454,4 +595,7 @@ export default function PointsPage() {
       </Card>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

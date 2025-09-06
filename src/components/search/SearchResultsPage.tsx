@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter  } from 'next/router';
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
@@ -342,6 +341,9 @@ const NoResultsState: React.FC<{
   )
 }
 // Main Search Results Page Component
+}
+}
+
 export const SearchResultsPage: React.FC = () => {
   const router = useRouter()
   const [searchTerm, setSearchTerm] = useState('')
@@ -411,8 +413,16 @@ export const SearchResultsPage: React.FC = () => {
       if (searchFilters.sort !== 'relevance') {
         params.append('sort', searchFilters.sort)
       }
+<<<<<<< HEAD
       const response = await fetch(`/api/search?${params}`)
       const data: SearchResponse = await response.json()
+=======
+}
+
+const response = await fetch(`/api/search?${params}`);
+      const data: SearchResponse = await response.json();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (page === 1) {
         setResults(data.results)
       } else {
@@ -634,6 +644,7 @@ export const SearchResultsPage: React.FC = () => {
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 export default SearchResultsPage
@@ -698,3 +709,72 @@ export default SearchResultsPage
 export default SearchResultsPage
 export default SearchResultsPage
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+}
+
+export default SearchResultsPage;
+  suggestion ;
+}</Button>) ) ;
+}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) ;
+};
+//Main Search Results Page Component setTotalCount (data.totalCount);
+setCurrentPage (data.page);
+setHasMore (data.hasMore);
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);";
+}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {;
+  /* Mobile Filter Toggle */ ;
+}<Sheet open= {;
+  showFilters ;
+}onOpenChange= {;
+  setShowFilters ";
+}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {;
+  filters ;
+}onFiltersChange= {;
+  handleFiltersChange ;
+}availableCategories= {;
+  availableCategories ;
+}/> </div> </SheetContent> </Sheet> </div> </div>) ";
+}</div> <Button variant="ghost" size="sm" onClick={;
+  () => setFilters ({';
+  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance' ;
+}) ;
+}> Clear All </Button>) ;
+}</div> <FilterSidebar filters= {;
+  filters ;
+}onFiltersChange= {;
+  handleFiltersChange ;
+}availableCategories= {;
+  availableCategories ;
+}/> </div> </div> </div>) : results.length === 0 && searchTerm ? (<NoResultsState searchTerm= {;
+  searchTerm ;
+}onNewSearch= {;
+  handleSearch ;
+}/> <SearchResultCard key= {;
+  `$ {;
+  result.type ;
+}-$ {;
+  result.id ;
+}` ;
+}result= {;
+  result ;
+}searchTerm= {;
+  searchTerm ;
+}viewMode= {;
+  viewMode ;
+}/>) ) ;
+}</div> > {'";
+  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results') ;
+}</Button> </div>) ;
+}</>) ;
+}</div> </div>) ;
+}</div>) ;
+};
+}
+}
+
+export default SearchResultsPage;
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -4,9 +4,14 @@ import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
 interface SkillsListProps {
   skills: Skill[];
+<<<<<<< HEAD
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 <<<<<<< HEAD
+=======
+  onDeleteSkill: (id: string, category: string) => Promise<void>;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const SkillsList = null;
 =======

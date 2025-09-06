@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+import { GradientHeading } from './GradientHeading';
+import { Button } from './ui/button';
+import { CheckCircle2 } from 'lucide-react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from './ui/table';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button";
@@ -42,6 +57,7 @@ export function ComparisonSection() {
                   </TableHead>
                   <TableHead className='text-white text-center'>
                     Savings
+<<<<<<< HEAD
                   </TableHead>                </TableRow>
               </TableHeader>
               <TableBody>
@@ -50,6 +66,10 @@ export function ComparisonSection() {
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
+=======
+                  </TableHead>
+                </TableRow>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </TableHeader>
               <TableBody>
                 {[
@@ -96,6 +116,7 @@ export function ComparisonSection() {
                     </TableCell>
                     <TableCell className='text-center text-green-400 font-bold'>
                       {item.savings}
+<<<<<<< HEAD
                     </TableCell>                  </TableRow>
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -104,10 +125,18 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
+=======
+                    </TableCell>
+                  </TableRow>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ))}
               </TableBody>
             </Table>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>
             <div className='flex items-start'>
               <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />
@@ -122,6 +151,7 @@ export function ComparisonSection() {
                 </span>
               </p>
             </div>
+<<<<<<< HEAD
             <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap'>              Calculate Your Savings          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
             <div className="flex items-start">
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
@@ -132,10 +162,19 @@ export function ComparisonSection() {
               </p>
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
+=======
+
+            <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap'>
+              Calculate Your Savings
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

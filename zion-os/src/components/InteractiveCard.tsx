@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -21,6 +22,48 @@ export default function InteractiveCard({title;
     <Link;
       href={href}
       className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
+=======
+ 
+  () => setIsHovered (true) 
+}onMouseLeave= {
+  () => setIsHovered (false) 
+}aria-label= {
+  `Navigate to $ {
+  title 
+}page` 
+}> <div className= {
+  `absolute inset-0 bg-gradient-to-r $ {
+  color 
+}rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl` 
+}/> </svg> </div>) 
+}</div> {
+  /* Hover effect overlay */ 
+}<div className= {
+  `absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r $ {
+  color 
+}opacity-0 group-hover:opacity-20 transition-opacity duration-500` 
+}style= {
+  {
+  background: `linear-gradient (45deg, var (--$ {
+  color.split ('-') [1] 
+}-500), var (--$ {
+  color.split ('-') [3] 
+}-500) ) `
+}
+
+export default function InteractiveCard({
+  title,
+  description,
+  icon,
+  href,
+  color = 'from-purple-500 to-blue-500',
+  className = '',
+  children,
+}: InteractiveCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
@@ -69,6 +112,7 @@ export default function InteractiveCard({title;
     </Link>;
   );
 }
+<<<<<<< HEAD
 export function FeatureCard({title;
   description;
   icon;
@@ -83,6 +127,19 @@ export function FeatureCard({title;
       href={href}
       className={className}
 >
+=======
+
+export function FeatureCard({
+  title,
+  description,
+  icon,
+  href,
+  stats,
+  className = '',
+}: InteractiveCardProps & { stats?: { label: string; value: string }[] }) {
+  
+    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {stats && (
         <div className=&quot;mt-6 pt-6 border-t border-white/10&quot;>
           <div className=&quot;grid grid-cols-2 gap-4&quot;>
@@ -98,6 +155,7 @@ export function FeatureCard({title;
     </InteractiveCard>;
   );
 }
+<<<<<<< HEAD
 export function TestimonialCard({quote;
   author;
   position;
@@ -105,6 +163,18 @@ export function TestimonialCard({quote;
   rating = 5;
   className = '';
 }: {quote: string;
+=======
+
+export function TestimonialCard({
+  quote,
+  author,
+  position,
+  company,
+  rating = 5,
+  className = '',
+}: {
+  quote: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   author: string;
   position: string;
   company: string;

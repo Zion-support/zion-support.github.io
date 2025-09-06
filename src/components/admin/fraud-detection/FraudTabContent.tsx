@@ -1,8 +1,20 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 interface FraudTabContentProps {
+<<<<<<< HEAD
   tabValue: string
+=======
+  tabValue: string;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({
   tabValue
 }) => {
@@ -39,9 +51,18 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
             This tab shows flags where action has already been taken.
           </p>
         </div>
+<<<<<<< HEAD
       )
     default:
       return null
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      );
+
+    default:
+      return null;
+  }
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

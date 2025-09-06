@@ -17,6 +17,7 @@ export interface Webhook {
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
+<<<<<<< HEAD
   created_at: string
   last_triggered_at: string | null
 }
@@ -25,6 +26,28 @@ export interface TestWebhookResult {
   statusText: string
   responseBody: string
 }
+=======
+  created_at: string;
+  last_triggered_at: string | null;
+  //import.meta may be undefined when this hook is executed in a Node //environment (e.g. during server side rendering or tests) . Using optional //chaining avoids a TypeError in those cases and falls back to process.env. setLoading (true);
+setError (null);
+try {
+  
+}getWebhookUrl () 
+}/webhooks`, {
+  method: 'GET', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+
+});
+}finally {
+  setLoading (false)
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useWebhooks() {
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
@@ -51,8 +74,15 @@ export function useWebhooks() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET'
+=======
+}
+
+const response = await fetch(`${getWebhookUrl()}/webhooks`, {
+        method: 'GET',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -85,8 +115,15 @@ export function useWebhooks() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/create`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getWebhookUrl()}/create`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -130,8 +167,15 @@ export function useWebhooks() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getWebhookUrl()}/toggle`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -172,8 +216,15 @@ export function useWebhooks() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getWebhookUrl()}/delete`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -213,8 +264,15 @@ export function useWebhooks() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getWebhookUrl()}/test`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -251,6 +309,7 @@ export function useWebhooks() {
     }
   }
   return {
+<<<<<<< HEAD
     webhooks;
     loading;
     error;
@@ -264,3 +323,100 @@ export function useWebhooks() {
     clearTestResult: () => setTestResult(null)
   }
 }
+=======
+    webhooks,
+    loading,
+    error,
+    testResult,
+    fetchWebhooks,
+    createWebhook,
+    toggleWebhook,
+    deleteWebhook,
+    testWebhook,
+    clearTestResult: () => setTestResult(null),
+  };
+
+};
+//Toggle webhook active status const toggleWebhook = async (webhookId: string, isActive: boolean) => {
+  if (!user) return;
+setError (null);
+try {
+  
+}getWebhookUrl () 
+}/toggle`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+return result;
+}catch (err) {
+  console.error ('Error toggling webhook:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+
+};
+//Delete webhook const deleteWebhook = async (webhookId: string) => {
+  if (!user) return;
+setError (null);
+try {
+  
+}getWebhookUrl () 
+}/delete`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+//Remove the webhook from the list setWebhooks (prev => prev.filter (webhook => webhook.id !== webhookId) );
+return result;
+}catch (err) {
+  console.error ('Error deleting webhook:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+
+};
+//Test webhook const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+  if (!user) return;
+setError (null);
+setTestResult (null);
+try {
+  
+}getWebhookUrl () 
+}/test`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+return result;
+}catch (err) {
+  console.error ('Error testing webhook:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+
+};
+
+  webhooks;
+loading;
+error;
+testResult;
+fetchWebhooks;
+createWebhook;
+toggleWebhook;
+deleteWebhook;
+testWebhook;
+clearTestResult: () => setTestResult (null) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

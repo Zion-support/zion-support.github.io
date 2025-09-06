@@ -210,9 +210,12 @@ export class ApiErrorBoundary extends Component<
     return this.props.children
   }
 // Hook for accessing query client in function components
+}
+
 export const useApiErrorHandler = () => {
   const handleApiError = (error: Error) => {
     Sentry.withScope(scope => {
+<<<<<<< HEAD
       scope.setTag('source', 'useApiErrorHandler')
       scope.setLevel('error')
       Sentry.captureException(error)
@@ -225,3 +228,13 @@ export const useApiErrorHandler = () => {
   return { handleApiError }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      scope.setTag('source', 'useApiErrorHandler');
+      scope.setLevel('error');
+      Sentry.captureException(error);
+    });
+  };
+
+  return { handleApiError };
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

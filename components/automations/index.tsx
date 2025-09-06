@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
+=======
+import React from 'react';
+import Link from 'next/link';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AutomationsPage() {
   return (
     <main className='mx-auto max-w-5xl px-4 py-12'>
@@ -25,14 +32,23 @@ export default function AutomationsPage() {
               href='https://github.com/Zion-Holdings/zion.app/actions'
               target='_blank'
               rel='noreferrer'
+<<<<<<< HEAD
               className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'            >              href="https://github.com/Zion-Holdings/zion.app/actions"
               target="_blank"
               rel="noreferrer"
               className="rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+=======
+              className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Live Runs
             </a>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>
           <h2 className='text-lg font-semibold text-gray-900'>
             AI Content Curator
@@ -46,6 +62,7 @@ export default function AutomationsPage() {
               <a className='rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700'>
                 View Curated Output
               </a>
+<<<<<<< HEAD
             </Link>          </div>        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>
           <p className="mt-2 text-sm text-gray-600">
@@ -53,8 +70,15 @@ export default function AutomationsPage() {
           </p>
           <div className="mt-4 flex gap-3">
             <Link href="/automations/curation"><a className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover: bg-indigo-700">View Curated Output</a></Link>
+=======
+            </Link>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

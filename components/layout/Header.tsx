@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
   Menu;
   X;
   Home;
@@ -176,6 +177,13 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
 
   return (
     <header className;
+=======
+    Menu,
+    X
+  } from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default Header;
 =======
     { name: 'Documentation', href: '/docs' }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BadgeDollarSign } from 'lucide-react'
 <<<<<<< HEAD
@@ -17,6 +18,22 @@ import {
 import { Button } from '@/components/ui/button'
 import Skeleton from '@/components/ui/skeleton'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import React from 'react';
+import { BadgeDollarSign } from 'lucide-react';
+import { useWallet } from '@/hooks/useWallet';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Skeleton from '@/components/ui/skeleton';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
   return (
@@ -42,8 +59,12 @@ export function TokenDisplay() {
               convert to credits.
             </p>
             <div className='mt-2'>
+<<<<<<< HEAD
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
               <Button variant="outline" size="sm">
+=======
+              <Button variant='outline' size='sm'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 View Wallet
               </Button>
             </div>
@@ -51,5 +72,9 @@ export function TokenDisplay() {
         )}
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,8 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 function rand(min: number, max: number) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
+=======
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 function generateSeries(n: number, base: number, volatility;
 =======
@@ -17,6 +21,10 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   }
   return series;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
@@ -135,6 +143,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     timestamp: now.toISOString()
     labels
     history: {
+<<<<<<< HEAD
       marketplace: marketplace.map(m => m.trend |generateSeries(14, m.value))
       dao: dao.map(m => m.trend |generateSeries(14, m.value))
       token: token.map(m => m.trend |generateSeries(14, m.value))
@@ -144,6 +153,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       dao: dao.map((m) => m.trend |generateSeries(14, m.value));
       token: token.map((m) => m.trend |generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend |generateSeries(14, m.value))}}
+=======
+      marketplace: marketplace.map(m => m.trend || generateSeries(14, m.value)),
+      dao: dao.map(m => m.trend || generateSeries(14, m.value)),
+      token: token.map(m => m.trend || generateSeries(14, m.value)),
+      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
@@ -161,6 +179,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     }
   }
+<<<<<<< HEAD
   res.status(200).json(response);        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
@@ -169,3 +188,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.status(200).json(response)
 }
+=======
+
+  res.status(200).json(response);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

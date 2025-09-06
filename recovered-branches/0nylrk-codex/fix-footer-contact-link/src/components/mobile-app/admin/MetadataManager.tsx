@@ -30,6 +30,7 @@ export type AppMetadataValues = {
   platform: AppPlatform
 }
 const defaultValues: AppMetadataValues = {
+<<<<<<< HEAD
   appTitle: "Zion AI Marketplace"
   shortDescription: "Hire top AI talent or find global IT jobs on the go."
   longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
@@ -37,6 +38,24 @@ const defaultValues: AppMetadataValues = {
   version: "1.0.0"
   platform: "ios"
 }
+=======
+  appTitle: 'Zion AI Marketplace',
+  shortDescription: 'Hire top AI talent or find global IT jobs on the go.',
+  longDescription:
+    "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
+  keywords: [
+    'AI freelancer',
+    'tech jobs',
+    'hire developers',
+    'IT marketplace',
+    'artificial intelligence jobs',
+  ],
+  version: '1.0.0',
+  platform: 'ios',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const MetadataManager: React.FC = () => {
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
   const [isSaving, setIsSaving] = useState(false);

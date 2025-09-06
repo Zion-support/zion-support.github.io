@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -21,6 +22,26 @@ export default function Internationalization() {
     "url": "https://app.ziontechgroup.com/features/internationalization"
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+}
+
+export default function Internationalization() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Internationalization',
+    description:
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.',
+    url: 'https://app.ziontechgroup.com/features/internationalization',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <SEO
@@ -80,6 +101,7 @@ export default function Internationalization() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
+<<<<<<< HEAD
               <Link href='/'>Explore Zion</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -120,10 +142,17 @@ export default function Internationalization() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
+=======
+              <Link href='/'>Explore Zion</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

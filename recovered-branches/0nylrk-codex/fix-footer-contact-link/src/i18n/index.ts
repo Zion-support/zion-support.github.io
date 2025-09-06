@@ -48,5 +48,10 @@ i18n.on('languageChanged', (lng) => {
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default i18n;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

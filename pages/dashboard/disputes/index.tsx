@@ -4,9 +4,16 @@ import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fetcher = null;
 =======
 const fetcher = (url: string) => fetch(url).then(r => r.json())
+=======
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
     (acc: any, part: string) => {
@@ -19,22 +26,44 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   let role = 'guest';
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
+<<<<<<< HEAD
     role = user?.role |'guest';
   } catch {}
   if (role !== 'admin') {
     return { redirect: { destination: '/', permanent: false } }
   }
   return { props: {} };}
+=======
+    role = user?.role || 'guest';
+  } catch {}
+  if (role !== 'admin') {
+    return { redirect: { destination: '/', permanent: false } };
+  }
+  return { props: {} };
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher);
   const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const disputes = useMemo(() => {
     const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
+<<<<<<< HEAD
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    return list.filter((d: any) => d.status === statusFilter);
+  }, [data, statusFilter]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <EnhancedLayout>
       <div className='max-w-6xl mx-auto'>
@@ -62,7 +91,12 @@ export default function AdminDisputesDashboard() {
                 <th className='text-left px-3 py-2'>Project</th>
                 <th className='text-left px-3 py-2'>Created At</th>
                 <th className='text-left px-3 py-2'>Status</th>
+<<<<<<< HEAD
                 <th className='text-left px-3 py-2'>Actions</th>              </tr>
+=======
+                <th className='text-left px-3 py-2'>Actions</th>
+              </tr>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </thead>
             <tbody>
               {disputes.map((d: any) => (
@@ -94,7 +128,12 @@ export default function AdminDisputesDashboard() {
                       <a className='text-gray-700 hover:underline'>
                         Download Evidence
                       </a>
+<<<<<<< HEAD
                     </Link>                  </td>
+=======
+                    </Link>
+                  </td>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </tr>
               ))}
             </tbody>
@@ -102,4 +141,8 @@ export default function AdminDisputesDashboard() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

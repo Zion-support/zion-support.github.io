@@ -6,8 +6,14 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
+<<<<<<< HEAD
   talentId?: string
 }
+=======
+  talentId?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
 <<<<<<< HEAD

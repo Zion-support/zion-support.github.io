@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+=======
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
   // Security headers
@@ -15,8 +22,15 @@ export function middleware(request: NextRequest) {
     "Content-Security-Policy"
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
+<<<<<<< HEAD
 return response;
 }
+=======
+  
+  return response;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
 }

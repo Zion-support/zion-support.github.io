@@ -5,17 +5,26 @@ import type { TalentProfile } from '@/utils/types/talent';
 <<<<<<< HEAD
 import { v4 as uuid } from 'uuid';
 import { translateText, detectLanguageSimple } from '@/utils/api/translate';
+<<<<<<< HEAD
 const hasSupabase = null;
         return res.status(201).json({ slug: item.slug })
 =======
 import {v4, as, uuid} from 'uuid';
 import {translateText, detectLanguageSimple} from '@/utils/api/translate';
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -29,10 +38,13 @@ export default async function handler(
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res.status(200).json({ items: data as TalentProfile[] });
-      }
+     
+}
       return res.status(200).json({ items: LOCAL });
-    } catch (e: any) {
+   
+} catch (e: any) {
       return res.status(500).json({ error: e.message });
+<<<<<<< HEAD
     }  }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -46,6 +58,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
     }
+=======
+   
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   if (req.method === 'POST') {
     try {
@@ -104,13 +120,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             item.category
             lang
             originalLang
+<<<<<<< HEAD
           );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
+=======
+          );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
+<<<<<<< HEAD
           id: item.id
           slug: item.slug
           name: item.name
@@ -139,14 +160,52 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(201).json({ slug: item.slug });
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       }
+=======
+          id: item.id,
+          slug: item.slug,
+          name: item.name,
+          title: item.title,
+          category: item.category,
+          location: item.location,
+          timezone: item.timezone,
+          region: item.region,
+          skills: item.skills,
+          summary: item.summary,
+          bio: item.bio,
+          hourly_rate_usd: item.hourlyRateUsd ?? null,
+          request_quote: item.requestQuote ?? null,
+          availability: item.availability,
+          profile_image_url: item.profileImageUrl ?? null,
+          video_url: item.videoUrl ?? null,
+          portfolio: item.portfolio ?? null,
+          verified: item.verified ?? null,
+          rating: item.rating ?? null,
+          reviews_count: item.reviewsCount ?? null,
+          created_at: item.createdAt,
+          // i18n
+          original_language: item.originalLanguage,
+          translations: item.translations as any,
+        } as any);
+        if (error) throw error;
+        return res.status(201).json({ slug: item.slug });
+     
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug });
-    } catch (e: any) {
+   
+} catch (e: any) {
       return res.status(500).json({ error: e.message });
-    }
+   
+}
   }
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
+<<<<<<< HEAD
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
+=======
+    .end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

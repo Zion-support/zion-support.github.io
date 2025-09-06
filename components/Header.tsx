@@ -255,4 +255,11 @@ export default function Header() {
       </div>
     </header>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+export default Header;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

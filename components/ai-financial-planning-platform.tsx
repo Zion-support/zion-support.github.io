@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
   Award, MessageCircle, Calculator
@@ -32,6 +33,32 @@ export default function AIFinancialPlanningPlatform() {
   const features = [
     {
       icon: <DollarSign className='w-6 h-6' />
+=======
+import {
+  DollarSign,
+  TrendingUp,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  CheckCircle,
+  Star,
+  Globe,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,
+  Calculator,;
+} from 'lucide-react';
+}
+
+export default function AIFinancialPlanningPlatform() {
+  const features = [
+    {
+      icon: <DollarSign className='w-6 h-6' />,
+      title: 'AI-Powered Financial Analysis',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
     }
@@ -135,6 +162,7 @@ export default function AIFinancialPlanningPlatform() {
       </a>
       .
     </p>
+<<<<<<< HEAD
   </div>;					<div className="mt-12">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -156,6 +184,10 @@ export default function AIFinancialPlanningPlatform() {
 						</div>
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
 					</div>
+=======
+  </div>;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -190,6 +222,7 @@ export default function AIFinancialPlanningPlatform() {
         {/* Hero Section */}
         <section className='relative pt-32 pb-20 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20'></div>
+<<<<<<< HEAD
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -200,6 +233,9 @@ export default function AIFinancialPlanningPlatform() {
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -223,6 +259,7 @@ export default function AIFinancialPlanningPlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'                >            >
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4">
@@ -242,13 +279,20 @@ export default function AIFinancialPlanningPlatform() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
+=======
+                  className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'                >                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
+=======
+                  className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Watch Demo
                 </motion.button>
@@ -258,12 +302,16 @@ export default function AIFinancialPlanningPlatform() {
         </section>
         {/* Features Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -279,6 +327,7 @@ export default function AIFinancialPlanningPlatform() {
                 wealth management solutions.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Financial Planning Features
@@ -289,6 +338,10 @@ export default function AIFinancialPlanningPlatform() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -305,6 +358,7 @@ export default function AIFinancialPlanningPlatform() {
                   </h3>
                   <p className='text-gray-400 leading-relaxed'>
                     {feature.description}
+<<<<<<< HEAD
                   </p>                </motion.div>                >
                   <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-yellow-400">
@@ -313,6 +367,9 @@ export default function AIFinancialPlanningPlatform() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+=======
+                  </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -320,12 +377,16 @@ export default function AIFinancialPlanningPlatform() {
         </section>
         {/* Benefits Section */}
         <section className='py-20 bg-black'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -341,6 +402,7 @@ export default function AIFinancialPlanningPlatform() {
                 AI-powered financial planning platform.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits.map((benefit, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Financial Future
@@ -351,6 +413,10 @@ export default function AIFinancialPlanningPlatform() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
@@ -363,11 +429,16 @@ export default function AIFinancialPlanningPlatform() {
                     <CheckCircle className='w-5 h-5 text-yellow-400' />
                     <span className='text-white font-medium text-sm'>
                       {benefit}
+<<<<<<< HEAD
                     </span>                  </div>                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
                     <span className="text-white font-medium text-sm">{benefit}</span>
+=======
+                    </span>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -375,12 +446,16 @@ export default function AIFinancialPlanningPlatform() {
         </section>
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -396,6 +471,7 @@ export default function AIFinancialPlanningPlatform() {
                 life.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>              {useCases.map((useCase, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
@@ -406,6 +482,10 @@ export default function AIFinancialPlanningPlatform() {
               </p>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+=======
+
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
@@ -419,11 +499,15 @@ export default function AIFinancialPlanningPlatform() {
                   </div>
                   <span className='text-white font-medium text-sm'>
                     {useCase}
+<<<<<<< HEAD
                   </span>                </motion.div>                >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
                   </div>
                   <span className="text-white font-medium text-sm">{useCase}</span>
+=======
+                  </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -431,8 +515,12 @@ export default function AIFinancialPlanningPlatform() {
         </section>
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -450,6 +538,7 @@ export default function AIFinancialPlanningPlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'                >                Ready to Transform Your Financial Planning?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -461,13 +550,20 @@ export default function AIFinancialPlanningPlatform() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
+=======
+                  className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Get Started Now
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'                >                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
+=======
+                  className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Contact Sales
                 </motion.button>
@@ -477,5 +573,9 @@ export default function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

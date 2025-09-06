@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles  } from 'lucide-react';
 import Link from 'next/link';
@@ -65,6 +66,65 @@ export default function UltraFuturisticHero2029() {
     { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp }
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
+=======
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+  Globe,
+  Sparkles,;
+} from 'lucide-react';
+import Link from 'next/link';
+}
+
+export default function UltraFuturisticHero2029() {
+  const features = [
+    {
+      icon: Brain,
+      text: 'AI Consciousness Evolution',
+      color: 'from-violet-500 to-purple-600',
+    },
+    {
+      icon: Atom,
+      text: 'Quantum Computing Solutions',
+      color: 'from-blue-500 to-cyan-600',
+    },
+    {
+      icon: Rocket,
+      text: 'Space Technology Innovation',
+      color: 'from-emerald-500 to-teal-600',
+    },
+    {
+      icon: Target,
+      text: 'Micro SAAS Excellence',
+      color: 'from-orange-500 to-red-600',
+    },
+    {
+      icon: Shield,
+      text: 'Enterprise Security',
+      color: 'from-indigo-500 to-blue-600',
+    },
+    {
+      icon: Cpu,
+      text: 'Autonomous IT Operations',
+      color: 'from-cyan-500 to-teal-600',
+    },
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Innovative Services', icon: Sparkles },
+    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp },
+    { number: '99.9%', label: 'Success Rate', icon: Star },
+    { number: '24/7', label: 'AI Operations', icon: Zap },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
@@ -87,6 +147,7 @@ export default function UltraFuturisticHero2029() {
                 ease: 'linear'
               }}
               style={{
+<<<<<<< HEAD
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
               }}            />  ];
@@ -112,6 +173,11 @@ export default function UltraFuturisticHero2029() {
               style={{
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'}}
+=======
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%',
+              }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             />
           ))}
         </div>
@@ -131,6 +197,7 @@ export default function UltraFuturisticHero2029() {
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' />
       </div>
       {/* Content */}
+<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}        </div>
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
@@ -138,6 +205,9 @@ export default function UltraFuturisticHero2029() {
       </div>
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -158,10 +228,15 @@ export default function UltraFuturisticHero2029() {
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future of technology with Zion Tech Group's
             revolutionary 2029 services. From AI consciousness evolution to
+<<<<<<< HEAD
             quantum space mining, we're building tomorrow's solutions today.          </p>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
+=======
+            quantum space mining, we're building tomorrow's solutions today.
+          </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </motion.div>
         {/* CTA Buttons */}
         <motion.div
@@ -182,6 +257,7 @@ export default function UltraFuturisticHero2029() {
             className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2'
           >
             <span>Get Started</span>
+<<<<<<< HEAD
             <Zap className='w-5 h-5' />          </Link>        >
           <Link
             href="/services"
@@ -196,6 +272,9 @@ export default function UltraFuturisticHero2029() {
           >
             <span>Get Started</span>
             <Zap className="w-5 h-5" />
+=======
+            <Zap className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Link>
         </motion.div>
         {/* Features Grid */}
@@ -203,7 +282,11 @@ export default function UltraFuturisticHero2029() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'        >          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
+=======
+          className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           {features.map((feature, index) => (
             <motion.div
@@ -218,11 +301,15 @@ export default function UltraFuturisticHero2029() {
               >
                 <feature.icon className='w-6 h-6 text-white' />
               </div>
+<<<<<<< HEAD
               <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>                {feature.text}            >
               <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}>
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
               <p className="text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight">
+=======
+              <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {feature.text}
               </p>
             </motion.div>
@@ -233,7 +320,11 @@ export default function UltraFuturisticHero2029() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-8'        >          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+=======
+          className='grid grid-cols-2 md:grid-cols-4 gap-8'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -249,6 +340,7 @@ export default function UltraFuturisticHero2029() {
               <div className='text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {stat.number}
               </div>
+<<<<<<< HEAD
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}            >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform">
                 <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -257,6 +349,9 @@ export default function UltraFuturisticHero2029() {
                 {stat.number}
               </div>
               <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+=======
+              <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {stat.label}
               </div>
             </motion.div>
@@ -267,6 +362,7 @@ export default function UltraFuturisticHero2029() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
+<<<<<<< HEAD
           className='absolute bottom-8 left-1/2 transform -translate-x-1/2'        >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -276,16 +372,27 @@ export default function UltraFuturisticHero2029() {
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               className='w-1 h-3 bg-cyan-400 rounded-full mt-2'            />          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
+          className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
             className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
+=======
+            className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
               className='w-1 h-3 bg-cyan-400 rounded-full mt-2'              className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+=======
+              className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             />
           </motion.div>
         </motion.div>
@@ -302,6 +409,7 @@ export default function UltraFuturisticHero2029() {
         className='absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full'
       />
     </section>
+<<<<<<< HEAD
   );      />
       <motion.div
         animate={{ rotate: -360 }}
@@ -311,3 +419,6 @@ export default function UltraFuturisticHero2029() {
     </section>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

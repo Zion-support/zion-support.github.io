@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
     throw err
 =======
 let pool: Pool | null = null;
 }return pool
+=======
+let pool: Pool | null = null;
+}return pool
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>
@@ -25,4 +31,7 @@ export async function withUser<T>(
   } finally {
     client.release();
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

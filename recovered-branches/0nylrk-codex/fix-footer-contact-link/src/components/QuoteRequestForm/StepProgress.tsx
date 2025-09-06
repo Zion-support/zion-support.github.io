@@ -3,8 +3,14 @@ import {QuoteRequestSteps} from "../QuoteRequestForm";
 import {CheckIcon} from "@/components/icons";
 import {cn} from "@/lib/utils";
 interface StepProgressProps {
+<<<<<<< HEAD
   currentStep: QuoteRequestSteps
 }
+=======
+  currentStep: QuoteRequestSteps;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
 <<<<<<< HEAD

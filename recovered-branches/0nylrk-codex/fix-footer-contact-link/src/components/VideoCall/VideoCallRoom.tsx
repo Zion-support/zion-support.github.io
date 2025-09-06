@@ -7,9 +7,22 @@ interface VideoCallRoomProps {
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
+<<<<<<< HEAD
   className?: string
 }
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+=======
+  className?: string;
+}
+
+export function VideoCallRoom({
+  room,
+  token,
+  serverUrl,
+  onDisconnect,
+  className,
+}: VideoCallRoomProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>

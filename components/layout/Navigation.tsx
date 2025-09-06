@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, Home, Brain, Cpu, Rocket;
 =======
 import {
@@ -25,6 +26,24 @@ import Link from 'next/link';
 <<<<<<< HEAD
 const Navigation: React.FC;
 =======
+=======
+import {
+  Menu,
+  X,
+  Home,
+  Brain,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ChevronDown,;
+} from 'lucide-react';
+import Link from 'next/link';
+
+const Navigation: React.FC = () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -33,6 +52,7 @@ const Navigation: React.FC;
       setIsScrolled(window.scrollY > 50);
     }
     window.addEventListener('scroll', handleScroll);
+<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll);
@@ -44,6 +64,17 @@ const Navigation: React.FC;
       icon: Home
     },    {      icon: Home
     }
+=======
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home,
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'Services'
       href: '/services'
@@ -68,6 +99,7 @@ const Navigation: React.FC;
           description: 'Specialized software solutions'
         }
         {
+<<<<<<< HEAD
           name: 'Innovative Showcase'
           href: '/innovative-services-showcase'
           icon: Globe
@@ -104,13 +136,46 @@ const Navigation: React.FC;
       icon: Phone
     },  ];      icon: Phone
     }
+=======
+          name: 'Innovative Showcase',
+          href: '/innovative-services-showcase',
+          icon: Globe,
+          description: 'Cutting-edge technology',
+        },
+      ],
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Cpu,
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Globe,
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone,
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       {/* Navigation Bar */}
@@ -143,6 +208,7 @@ const Navigation: React.FC;
                   </div>
                   <div className='text-cyan-400 text-xs'>
                     Revolutionary Technology
+<<<<<<< HEAD
                   </div>                </div>            : 'bg-transparent'
         }`}
       >
@@ -160,18 +226,25 @@ const Navigation: React.FC;
                 <div className="hidden sm:block">
                   <div className="text-white font-bold text-lg lg:text-xl">Zion Tech Group</div>
                   <div className="text-cyan-400 text-xs">Revolutionary Technology</div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </Link>
             </motion.div>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
+<<<<<<< HEAD
                 <div key={item.name} className='relative group'>                  {item.dropdown ? (
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
+=======
+                <div key={item.name} className='relative group'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {item.dropdown ? (
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
@@ -180,10 +253,15 @@ const Navigation: React.FC;
                     >
                       <span className='font-medium'>{item.name}</span>
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
+<<<<<<< HEAD
                       className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
                     >
                       <span className="font-medium">{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+=======
+
+                      {/* Dropdown Menu */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -196,6 +274,10 @@ const Navigation: React.FC;
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
                                 const Icon = dropdownItem.icon;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                   >
                                     <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>
                                       <Icon className='w-5 h-5 text-cyan-400' />
@@ -204,6 +286,7 @@ const Navigation: React.FC;
                                       <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
                                         {dropdownItem.name}
                                       </div>
+<<<<<<< HEAD
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
                                       </div>
                                     </div>
@@ -226,11 +309,18 @@ const Navigation: React.FC;
                                         {dropdownItem.name}
                                       </div>
                                       <div className="text-gray-400 text-sm">
+=======
+                                      <div className='text-gray-400 text-sm'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                         {dropdownItem.description}
                                       </div>
                                     </div>
                                   </Link>
+<<<<<<< HEAD
                                 );                                )
+=======
+                                );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               })}
                             </div>
                           </motion.div>
@@ -243,10 +333,15 @@ const Navigation: React.FC;
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
+<<<<<<< HEAD
                       <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
                     >
                       <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                       <span className="font-medium">{item.name}</span>
+=======
+                      <span className='font-medium'>{item.name}</span>
+                    </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   )}
                 </div>
               ))}
@@ -257,11 +352,15 @@ const Navigation: React.FC;
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >              <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+=======
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Get Started
               </motion.a>
@@ -277,12 +376,16 @@ const Navigation: React.FC;
                   <X className='w-6 h-6' />
                 ) : (
                   <Menu className='w-6 h-6' />
+<<<<<<< HEAD
                 )}              </motion.button>              <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+=======
+                )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.button>
             </div>
           </div>
@@ -302,12 +405,17 @@ const Navigation: React.FC;
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
             />          >
             {/* Backdrop */}
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
+=======
+            />
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {/* Mobile Menu */}
             <motion.div
               initial={{ x: '100%' }}
@@ -324,6 +432,7 @@ const Navigation: React.FC;
                     onClick={() => setIsOpen(false)}
                     className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
+<<<<<<< HEAD
                     <X className='w-6 h-6' />                  </motion.button>
                 </div>
                 {/* Mobile Menu Items */}
@@ -338,6 +447,9 @@ const Navigation: React.FC;
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     <X className="w-6 h-6" />
+=======
+                    <X className='w-6 h-6' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </motion.button>
                 </div>
                 {/* Mobile Menu Items */}
@@ -352,6 +464,10 @@ const Navigation: React.FC;
                           <div className='pl-4 space-y-2'>
                             {item.dropdown.map(dropdownItem => {
                               const Icon = dropdownItem.icon;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                   onClick={() => setIsOpen(false)}
                                   className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                                 >
@@ -365,6 +481,7 @@ const Navigation: React.FC;
                                     </div>
                                   </div>
                                 </Link>
+<<<<<<< HEAD
                               );                            })}                    <div key={item.name}>
                       {item.dropdown ? (
                         <div className="space-y-2">
@@ -388,6 +505,9 @@ const Navigation: React.FC;
                                   </div>
                                 </Link>
                               )
+=======
+                              );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             })}
                           </div>
                         </div>
@@ -400,10 +520,15 @@ const Navigation: React.FC;
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
                             {item.name}
+<<<<<<< HEAD
                           </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                         >
                           <item.icon className="w-5 h-5 text-cyan-400" />
                           <span className="text-white font-medium">{item.name}</span>
+=======
+                          </span>
+                        </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       )}
                     </div>
                   ))}
@@ -424,6 +549,7 @@ const Navigation: React.FC;
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <MapPin className='w-4 h-4 text-pink-400' />
+<<<<<<< HEAD
                       <span className='text-xs'>{contactInfo.address}</span>                    </div>                      <span>{contactInfo.mobile}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-300">
@@ -433,6 +559,9 @@ const Navigation: React.FC;
                     <div className="flex items-center space-x-2 text-gray-300">
                       <MapPin className="w-4 h-4 text-pink-400" />
                       <span className="text-xs">{contactInfo.address}</span>
+=======
+                      <span className='text-xs'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </div>
@@ -442,11 +571,15 @@ const Navigation: React.FC;
                     href='/contact'
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                     className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'                  >                  <motion.a
                     href="/contact"
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
+=======
+                    className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     Get Started Today
                   </motion.a>
@@ -458,8 +591,15 @@ const Navigation: React.FC;
       </AnimatePresence>
     </>
   );
+<<<<<<< HEAD
 }
 export default Navigation;  )
 }
 export default Navigation;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Navigation;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

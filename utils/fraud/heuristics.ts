@@ -110,8 +110,15 @@ export function runHeuristics(data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
+<<<<<<< HEAD
     flagged: reasons.length > 0
     reasons
     severity
   }
 }
+=======
+    flagged: reasons.length > 0,
+    reasons,
+    severity,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -173,5 +173,11 @@ const ContactForm: React.FC = () => {
       </form>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ContactForm;

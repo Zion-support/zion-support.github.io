@@ -9,7 +9,11 @@ interface TalentCardSaveButtonProps {
   profileName: string;
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
+<<<<<<< HEAD
   isAuthenticated: boolean
+=======
+  isAuthenticated: boolean;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function TalentCardSaveButton({ 

@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Mail, Phone, MapPin, Globe;
   Twitter, Linkedin, Github;
   ArrowUp, Crown, Zap, Brain, Rocket;
   Shield, Users, BookOpen, Briefcase, Atom
  } from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Mail
   Phone
@@ -38,6 +41,7 @@ interface FooterLink {
   external?: boolean;
 interface FooterSection {
   title: string;
+<<<<<<< HEAD
   links: FooterLink[];} from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
@@ -56,6 +60,10 @@ interface FooterSection {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   links: FooterLink[]
 }
+=======
+  links: FooterLink[];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const footerSections: FooterSection[] = [
   {
 <<<<<<< HEAD
@@ -147,6 +155,7 @@ const footerSections: FooterSection[] = [
     title: 'Solutions'
     links: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
       { label: 'Financial Services', href: '/solutions?industry;
 =======
@@ -168,6 +177,127 @@ const footerSections: FooterSection[] = [
   }
   {
     title: 'Company'
+=======
+      {
+        label: 'AI & Machine Learning',
+        href: '/ai-services',
+        description: 'Advanced AI solutions',
+      },
+      {
+        label: 'Quantum Computing',
+        href: '/quantum-computing',
+        description: 'Next-gen quantum tech',
+      },
+      {
+        label: 'Space Technology',
+        href: '/space-tech',
+        description: 'Innovative space solutions',
+      },
+      {
+        label: 'Q4 2025 Innovation',
+        href: '/innovative-2025-q4-showcase',
+        description: 'Latest revolutionary services',
+      },
+      {
+        label: 'Pricing Guide',
+        href: '/comprehensive-pricing-2025-q4',
+        description: 'Comprehensive pricing',
+      },
+      {
+        label: 'Cybersecurity',
+        href: '/cybersecurity',
+        description: 'Enterprise security',
+      },
+      {
+        label: 'Cloud Solutions',
+        href: '/cloud-platform',
+        description: 'Scalable cloud infrastructure',
+      },
+      {
+        label: 'View All Services',
+        href: '/services',
+        description: 'Complete service portfolio',
+      },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      {
+        label: 'Healthcare & Biotech',
+        href: '/healthcare-solutions',
+        description: 'Medical technology',
+      },
+      {
+        label: 'Financial Services',
+        href: '/solutions?industry=financial',
+        description: 'Fintech solutions',
+      },
+      {
+        label: 'Manufacturing',
+        href: '/solutions?industry=manufacturing',
+        description: 'Industry 4.0',
+      },
+      {
+        label: 'Retail & E-commerce',
+        href: '/solutions?industry=retail',
+        description: 'Digital commerce',
+      },
+      {
+        label: 'Government',
+        href: '/solutions?industry=government',
+        description: 'Public sector',
+      },
+      {
+        label: 'Education',
+        href: '/solutions?industry=education',
+        description: 'EdTech solutions',
+      },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      {
+        label: 'About Us',
+        href: '/about',
+        description: 'Our mission and values',
+      },
+      { label: 'Careers', href: '/careers', description: 'Join our team' },
+      { label: 'Contact', href: '/contact', description: 'Get in touch' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },
+      {
+        label: 'White Papers',
+        href: '/white-papers',
+        description: 'In-depth research',
+      },
+      {
+        label: 'Webinars',
+        href: '/webinars',
+        description: 'Educational content',
+      },
+      {
+        label: 'Documentation',
+        href: '/docs',
+        description: 'Technical guides',
+      },
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },
+      {
+        label: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories',
+      },
+      { label: 'Support', href: '/support', description: 'Help & assistance' },
+    ],
+  },
+  {
+    title: 'Industries',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     links: [
       {
         label: 'About Us'
@@ -219,6 +349,7 @@ const footerSections: FooterSection[] = [
         description: 'Technical guides'
       }
       {
+<<<<<<< HEAD
         label: 'Case Studies'
         href: '/case-studies'
         description: 'Success stories'
@@ -304,10 +435,64 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+=======
+        label: 'Education',
+        href: '/education-technology-solutions',
+        description: 'EdTech solutions',
+      },
+    ],
+  },
+];
+
+const socialLinks = [
+  {
+    icon: <Linkedin className='w-5 h-5' />,
+    href: 'https://linkedin.com/company/ziontechgroup',
+    label: 'LinkedIn',
+    external: true,
+  },
+  {
+    icon: <Twitter className='w-5 h-5' />,
+    href: 'https://twitter.com/ziontechgroup',
+    label: 'Twitter',
+    external: true,
+  },
+  {
+    icon: <Github className='w-5 h-5' />,
+    href: 'https://github.com/ziontechgroup',
+    label: 'GitHub',
+    external: true,
+  },
+];
+
+const quickLinks = [
+  { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> },
+  { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> },
+  {
+    name: 'Support',
+    href: '/support',
+    icon: <HelpCircle className='w-4 h-4' />,
+  },
+  {
+    name: 'Documentation',
+    href: '/docs',
+    icon: <FileText className='w-4 h-4' />,
+  },
+  { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> },
+  { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },
+];
+
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const footerSections = [
     {
       title: 'Services'
       items: [
+<<<<<<< HEAD
         { label: 'AI & Machine Learning', href: '/ai-services' }
         { label: 'Quantum Computing', href: '/quantum-computing' }
         { label: 'Space Technology', href: '/space-tech' }
@@ -317,9 +502,19 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     },    {        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
       ]
     }
+=======
+        { label: 'AI & Machine Learning', href: '/ai-services' },
+        { label: 'Quantum Computing', href: '/quantum-computing' },
+        { label: 'Space Technology', href: '/space-tech' },
+        { label: 'Cybersecurity', href: '/cybersecurity' },
+        { label: '2040 Services', href: '/innovative-2040-services-showcase' },
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'Solutions'
       items: [
+<<<<<<< HEAD
         { label: 'Enterprise Solutions', href: '/enterprise-solutions' }
         { label: 'Micro SAAS', href: '/micro-saas' }
         { label: 'IT Services', href: '/it-services' }
@@ -329,9 +524,19 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     },    {        { label: 'Research & Development', href: '/research-development' }
       ]
     }
+=======
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { label: 'Micro SAAS', href: '/micro-saas' },
+        { label: 'IT Services', href: '/it-services' },
+        { label: 'Innovation Lab', href: '/innovation-lab' },
+        { label: 'Research & Development', href: '/research-development' },
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'Company'
       items: [
+<<<<<<< HEAD
         { label: 'About Us', href: '/about' }
         { label: 'Our Team', href: '/team' }
         { label: 'Careers', href: '/careers' }
@@ -341,9 +546,19 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     },    {        { label: 'Press & Media', href: '/press' }
       ]
     }
+=======
+        { label: 'About Us', href: '/about' },
+        { label: 'Our Team', href: '/team' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'Investors', href: '/investors' },
+        { label: 'Press & Media', href: '/press' },
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'Resources'
       items: [
+<<<<<<< HEAD
         { label: 'Blog', href: '/blog' }
         { label: 'Case Studies', href: '/case-studies' }
         { label: 'White Papers', href: '/white-papers' }
@@ -370,24 +585,57 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' }
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' }
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
+=======
+        { label: 'Blog', href: '/blog' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/white-papers' },
+        { label: 'Documentation', href: '/docs' },
+        { label: 'Support', href: '/support' },
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: Twitter,
+      href: 'https://twitter.com/ziontechgroup',
+      label: 'Twitter',
+    },
+    {
+      icon: Linkedin,
+      href: 'https://linkedin.com/company/ziontechgroup',
+      label: 'LinkedIn',
+    },
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
+    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
       }
     }
   }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     }
@@ -403,12 +651,24 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
+=======
+        duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
+      {/* Animated Background Elements */}
+      <div className='absolute inset-0 -z-10'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
+<<<<<<< HEAD
               x: [0, Math.random() * 1000, 0]
               y: [0, Math.random() * 1000, 0]
               opacity: [0, 0.6, 0]
@@ -425,6 +685,18 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               repeat: -1
               delay: Math.random() * 8
               ease: 'easeInOut'
+=======
+              x: [0, Math.random() * 1000, 0],
+              y: [0, Math.random() * 1000, 0],
+              opacity: [0, 0.6, 0],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: 15 + Math.random() * 10,
+              repeat: -1,
+              delay: Math.random() * 8,
+              ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
             style={{
               left: `${Math.random() * 100}%`
@@ -493,6 +765,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   <a
                     href='https://ziontechgroup.com'
                     className='hover:text-white transition-colors duration-200'
+<<<<<<< HEAD
                   >                    ziontechgroup.com            }}
             style={{
               left: `${Math.random() * 100}%`
@@ -554,6 +827,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-blue-400" />
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
+=======
+                  >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ziontechgroup.com
                   </a>
                 </div>
@@ -582,6 +858,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     <li key={item.label}>
                       <Link
                         href={item.href}
+<<<<<<< HEAD
                         className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                      >                  <span>{section.title}</span>
                 </h4>
                 <ul className="space-y-3">
@@ -590,6 +867,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                       <Link
                         href={item.href}
                         className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+=======
+                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       >
                         {item.label}
                       </Link>
@@ -621,6 +901,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
+<<<<<<< HEAD
                     <social.icon className='w-5 h-5' />                  </motion.a>          >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Social Links */}
@@ -637,6 +918,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <social.icon className="w-5 h-5" />
+=======
+                    <social.icon className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </motion.a>
                 ))}
               </div>
@@ -656,6 +940,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />
                   <motion.button
+<<<<<<< HEAD
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
                 <div className="flex space-x-2">
                   <input
@@ -665,6 +950,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   />
                   <motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+=======
+                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -712,8 +1000,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </div>
                 <span>•</span>
                 <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                   <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">
                   <Rocket className="w-4 h-4 text-pink-400" />
+=======
+                  <Rocket className='w-4 h-4 text-pink-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>Space Technology</span>
                 </div>
               </div>
@@ -724,7 +1016,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
+<<<<<<< HEAD
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
+=======
+        className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -735,6 +1031,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       </motion.button>
     </footer>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
@@ -742,3 +1039,9 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>
 }
 export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraAdvancedFuturisticFooter2025;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

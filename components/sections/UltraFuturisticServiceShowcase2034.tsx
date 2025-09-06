@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Star
   CheckCircle
@@ -31,6 +34,7 @@ import {
   Phone;
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
+<<<<<<< HEAD
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -53,6 +57,21 @@ visible: {
   staggerChildren: 0.1
 }
 }
+=======
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
 }</div> </motion.div> {
   /* Search and Filter */
@@ -63,6 +82,7 @@ visible: {
   /* Service Categories */
 }<motion.div key= {
   category.id
+<<<<<<< HEAD
 }initial= {  {}
 const serviceCategories = [
   {
@@ -94,11 +114,41 @@ const serviceCategories = [
     description: 'Autonomous operations and zero-trust security'
     icon: Cpu
     color: 'from-blue-500 to-cyan-500'
+=======
+}initial= {
+  {
+    id: 'ai-services',
+    title: '🧠 Revolutionary AI Services',
+    description: 'Next-generation AI consciousness and creativity',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
+    gradient: 'from-violet-500/20 to-indigo-500/20',
+  },
+  {
+    id: 'quantum-tech',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-500',
+    services: aiEmergingTechServices.filter(
+      s => s.category.includes('Quantum') || s.category.includes('Blockchain')
+    ),
+    gradient: 'from-indigo-500/20 to-cyan-500/20',
+  },
+  {
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT Solutions',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Cpu,
+    color: 'from-blue-500 to-cyan-500',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: realMarketServices.filter(
       s =>
         s.category.includes('Security') |
         s.category.includes('HR') |
         s.category.includes('Project')
+<<<<<<< HEAD
     )
     gradient: 'from-blue-500/20 to-teal-500/20'
   },  {    services: realMarketServices.filter(s => s.category.includes('Security') |s.category.includes('HR') |s.category.includes('Project'))
@@ -110,11 +160,23 @@ const serviceCategories = [
     description: 'Streamline business operations'
     icon: ShoppingCart
     color: 'from-teal-500 to-emerald-500'
+=======
+    ),
+    gradient: 'from-blue-500/20 to-teal-500/20',
+  },
+  {
+    id: 'business-automation',
+    title: '🛒 Business Automation',
+    description: 'Streamline business operations',
+    icon: ShoppingCart,
+    color: 'from-teal-500 to-emerald-500',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: realMarketServices.filter(
       s =>
         s.category.includes('E-commerce') |
         s.category.includes('Marketing') |
         s.category.includes('Finance')
+<<<<<<< HEAD
     )
     gradient: 'from-teal-500/20 to-green-500/20'
   },  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') |s.category.includes('Marketing') |s.category.includes('Finance'))
@@ -147,10 +209,45 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+=======
+    ),
+    gradient: 'from-teal-500/20 to-green-500/20',
+  },
+  {
+    id: 'robotics-automation',
+    title: '🤖 Robotics & Automation',
+    description: 'Intelligent automation solutions',
+    icon: Rocket,
+    color: 'from-green-500 to-yellow-500',
+    services: aiEmergingTechServices.filter(
+      s => s.category.includes('Robotics') || s.category.includes('Edge')
+    ),
+    gradient: 'from-green-500/20 to-orange-500/20',
+  },
+  {
+    id: 'research-development',
+    title: '🔬 Research & Development',
+    description: 'Breakthrough technologies and innovations',
+    icon: Globe,
+    color: 'from-orange-500 to-red-500',
+    services: aiEmergingTechServices.filter(
+      s => s.category.includes('Drug') || s.category.includes('Climate')
+    ),
+    gradient: 'from-orange-500/20 to-pink-500/20',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticServiceShowcase2034() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
+<<<<<<< HEAD
+=======
+
+  const filteredServices = allServices.filter(service => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const matchesCategory =
       selectedCategory === 'all' |
       serviceCategories.some(cat => cat.services.includes(service));
@@ -158,15 +255,22 @@ export default function UltraFuturisticServiceShowcase2034() {
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
+<<<<<<< HEAD
     return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
+=======
+    return matchesCategory && matchesSearch;
+  });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  }
@@ -180,6 +284,18 @@ export default function UltraFuturisticServiceShowcase2034() {
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 }
   }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>
       {/* Animated Background */}
@@ -188,6 +304,7 @@ export default function UltraFuturisticServiceShowcase2034() {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
+<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
@@ -198,6 +315,10 @@ export default function UltraFuturisticServiceShowcase2034() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -218,6 +339,7 @@ export default function UltraFuturisticServiceShowcase2034() {
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
             {[
               {
+<<<<<<< HEAD
                 label: 'Total Services'
                 value: allServices.length.toString()
                 icon: Rocket
@@ -240,6 +362,15 @@ export default function UltraFuturisticServiceShowcase2034() {
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
+=======
+                label: 'Total Services',
+                value: allServices.length.toString(),
+                icon: Rocket,
+              },
+              { label: 'Happy Customers', value: '50K+', icon: Users },
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -253,11 +384,16 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <div className='text-2xl font-bold text-white'>
                   {stat.value}
                 </div>
+<<<<<<< HEAD
                 <div className='text-sm text-gray-400'>{stat.label}</div>              </motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
+=======
+                <div className='text-sm text-gray-400'>{stat.label}</div>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </motion.div>
@@ -279,6 +415,7 @@ export default function UltraFuturisticServiceShowcase2034() {
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
+<<<<<<< HEAD
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>        >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             {/* Search */}
@@ -291,6 +428,9 @@ export default function UltraFuturisticServiceShowcase2034() {
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+=======
+              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
             {/* Category Filter */}
             <select
@@ -298,10 +438,15 @@ export default function UltraFuturisticServiceShowcase2034() {
               onChange={e => setSelectedCategory(e.target.value)}
               className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
             >
+<<<<<<< HEAD
               <option value='all'>All Categories</option>              {serviceCategories.map(category => (              onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               <option value="all">All Categories</option>
+=======
+              <option value='all'>All Categories</option>
+              {serviceCategories.map(category => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <option key={category.id} value={category.id}>
                   {category.title.split(' ')[0]}
                 </option>
@@ -317,9 +462,13 @@ export default function UltraFuturisticServiceShowcase2034() {
           viewport={{ once: true }}
           className='mb-16'
         >
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (          className="mb-16"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -353,6 +502,7 @@ export default function UltraFuturisticServiceShowcase2034() {
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className='text-sm text-gray-300'>                  {category.services.length} services available                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
                 }`}
                 onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
@@ -367,6 +517,9 @@ export default function UltraFuturisticServiceShowcase2034() {
                   </div>
                 </div>
                 <div className="text-sm text-gray-300">
+=======
+                <div className='text-sm text-gray-300'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {category.services.length} services available
                 </div>
               </motion.div>
@@ -379,10 +532,15 @@ export default function UltraFuturisticServiceShowcase2034() {
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+        >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -391,11 +549,16 @@ export default function UltraFuturisticServiceShowcase2034() {
             >
               {/* Popular Badge */}
               {service.popular && (
+<<<<<<< HEAD
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
             >
               {/* Popular Badge */}
               {service.popular && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+=======
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>
+                  Popular
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
               {/* Service Icon */}
@@ -409,6 +572,7 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <div className='text-2xl font-bold text-white'>
                     {service.price}
                   </div>
+<<<<<<< HEAD
                   <div className='text-sm text-gray-400'>{service.period}</div>                </div>
               </div>
               {/* Service Info */}
@@ -424,15 +588,24 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <div className="text-right">
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.period}</div>
+=======
+                  <div className='text-sm text-gray-400'>{service.period}</div>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
               {/* Service Info */}
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {service.name}
               </h3>
+<<<<<<< HEAD
               <p className='text-gray-300 mb-4 leading-relaxed'>              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-300 mb-4 leading-relaxed">
+=======
+              <p className='text-gray-300 mb-4 leading-relaxed'>
+                {service.description}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </p>
               {/* Features */}
               <div className='space-y-2 mb-4'>
@@ -441,6 +614,7 @@ export default function UltraFuturisticServiceShowcase2034() {
                     key={idx}
                     className='flex items-center space-x-2 text-sm text-gray-400'
                   >
+<<<<<<< HEAD
                     <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />                    <span>{feature}</span>
                   </div>
                 ))}
@@ -453,6 +627,14 @@ export default function UltraFuturisticServiceShowcase2034() {
                 ))}
                 {service.features.length > 3 && (
                   <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
+=======
+                    <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                    <span>{feature}</span>
+                  </div>
+                ))}
+                {service.features.length > 3 && (
+                  <div className='text-sm text-cyan-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     +{service.features.length - 3} more features
                   </div>
                 )}
@@ -481,8 +663,12 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <span>{service.rating}/5</span>
                 </div>
                 <div className='flex items-center space-x-2 text-gray-400'>
+<<<<<<< HEAD
                   <TrendingUp className='w-4 h-4 text-green-400' />                  <span>{service.growthRate}</span>                <div className="flex items-center space-x-2 text-gray-400">
                   <TrendingUp className="w-4 h-4 text-green-400" />
+=======
+                  <TrendingUp className='w-4 h-4 text-green-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>{service.growthRate}</span>
                 </div>
               </div>
@@ -491,9 +677,13 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <div className='text-xs text-gray-400 mb-1'>
                   Market Position
                 </div>
+<<<<<<< HEAD
                 <div className='text-sm text-gray-300 leading-relaxed'>                  {service.marketPosition}              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
                 <div className="text-xs text-gray-400 mb-1">Market Position</div>
                 <div className="text-sm text-gray-300 leading-relaxed">
+=======
+                <div className='text-sm text-gray-300 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.marketPosition}
                 </div>
               </div>
@@ -502,9 +692,13 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <div className='text-xs text-green-400 mb-1 font-semibold'>
                   Expected ROI
                 </div>
+<<<<<<< HEAD
                 <div className='text-sm text-green-300 font-medium'>                  {service.roi}              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
                 <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
                 <div className="text-sm text-green-300 font-medium">
+=======
+                <div className='text-sm text-green-300 font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.roi}
                 </div>
               </div>
@@ -518,6 +712,7 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />
                 </a>
                 <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200'>
+<<<<<<< HEAD
                   <Eye className='w-4 h-4' />                </button>
               </div>
               {/* Trial Info */}                <a
@@ -529,6 +724,9 @@ export default function UltraFuturisticServiceShowcase2034() {
                 </a>
                 <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200">
                   <Eye className="w-4 h-4" />
+=======
+                  <Eye className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
               {/* Trial Info */}
@@ -537,9 +735,13 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <span className='text-cyan-400 font-semibold'>
                     {service.trialDays} days
                   </span>{' '}
+<<<<<<< HEAD
                   free trial                </div>              <div className="mt-4 text-center">
                 <div className="text-sm text-gray-400">
                   <span className="text-cyan-400 font-semibold">{service.trialDays} days</span> free trial
+=======
+                  free trial
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
@@ -577,6 +779,7 @@ export default function UltraFuturisticServiceShowcase2034() {
               </a>
             </div>
             <div className='mt-6 text-sm text-gray-400'>
+<<<<<<< HEAD
               <Phone className='w-4 h-4 inline mr-2' />              Need help? Call us at {contactInfo.mobile}        >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -602,11 +805,18 @@ export default function UltraFuturisticServiceShowcase2034() {
             </div>
             <div className="mt-6 text-sm text-gray-400">
               <Phone className="w-4 h-4 inline mr-2" />
+=======
+              <Phone className='w-4 h-4 inline mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Need help? Call us at {contactInfo.mobile}
             </div>
           </div>
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

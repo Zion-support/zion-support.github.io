@@ -12,8 +12,14 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
 type UserRole = "talent" | "client" | null;
 interface RolePickerProps {
+<<<<<<< HEAD
   onSelect: (role: UserRole) => void
 }
+=======
+  onSelect: (role: UserRole) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
   const handleSelect = (role: UserRole) => {

@@ -83,6 +83,11 @@ const mockDeployments: Deployment[] = [
     country: 'Singapore'
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function DeploymentsPage() {
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
@@ -153,6 +158,7 @@ const getVerticalIcon = (vertical: string) => {
       hour: '2-digit'
       minute: '2-digit'
     });
+<<<<<<< HEAD
   }
   const filteredDeployments = deployments.filter(
     deployment => filter === 'all' |deployment.status === filter
@@ -161,6 +167,18 @@ const getVerticalIcon = (vertical: string) => {
   const filteredDeployments = deployments.filter(deployment => filter === 'all' |deployment.status === filter);
     return deployments.filter(d => d.status === status).length;
   }
+=======
+  };
+
+  const filteredDeployments = deployments.filter(
+    deployment => filter === 'all' || deployment.status === filter
+  );
+
+  const getStatusCount = (status: string) => {
+    return deployments.filter(d => d.status === status).length;
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='space-y-8'>
       {/* Header Section */}
@@ -229,6 +247,7 @@ const getVerticalIcon = (vertical: string) => {
             </div>
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
+<<<<<<< HEAD
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">
       {/* Header Section */}
@@ -292,6 +311,9 @@ const getVerticalIcon = (vertical: string) => {
             <div>
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
               <p className="text-sm text-white/60">Failed</p>
+=======
+              <p className='text-sm text-white/60'>Failed</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -322,7 +344,11 @@ const getVerticalIcon = (vertical: string) => {
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
               filter === key
                 ? 'bg-blue-600 text-white shadow-lg'
+<<<<<<< HEAD
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
+=======
+                : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }`}
           >
             {label} ({count})
@@ -351,6 +377,7 @@ const getVerticalIcon = (vertical: string) => {
                       <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80'>
                         {deployment.vertical}
                       </span>
+<<<<<<< HEAD
                       <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>                        {deployment.governanceType}          <div
             key={deployment.id}
             className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5"
@@ -371,21 +398,33 @@ const getVerticalIcon = (vertical: string) => {
                         {deployment.vertical}
                       </span>
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
+=======
+                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {deployment.governanceType}
                       </span>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='flex items-center gap-2'>
                   {getStatusIcon(deployment.status)}
                   <span
                     className={`text-sm font-medium ${getStatusColor(deployment.status)}`}
                   >
                     {deployment.status.charAt(0).toUpperCase() +
+<<<<<<< HEAD
                       deployment.status.slice(1)}                  </span>                <div className="flex items-center gap-2">
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
                     {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
+=======
+                      deployment.status.slice(1)}
+                  </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
               {/* Progress Bar for Active Deployments */}
@@ -397,12 +436,16 @@ const getVerticalIcon = (vertical: string) => {
                   </div>
                   <div className='w-full bg-white/10 rounded-full h-2'>
                     <div
+<<<<<<< HEAD
                       className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ width: `${deployment.progress}%` }}                    <span>Deployment Progress</span>
                     <span>{deployment.progress}%</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-2">
                     <div
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
+=======
+                      className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       style={{ width: `${deployment.progress}%` }}
                     ></div>
                   </div>
@@ -428,6 +471,7 @@ const getVerticalIcon = (vertical: string) => {
                       {[deployment.region, deployment.country]
                         .filter(Boolean)
                         .join(', ')}
+<<<<<<< HEAD
                     </span>                  </div>              {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2 text-white/70">
@@ -440,6 +484,9 @@ const getVerticalIcon = (vertical: string) => {
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
+=======
+                    </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 )}
               </div>
@@ -458,6 +505,7 @@ const getVerticalIcon = (vertical: string) => {
                     </span>
                   ))}
                   {deployment.features.length > 4 && (
+<<<<<<< HEAD
                     <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>                      +{deployment.features.length - 4} more                    <span
                       key={feature}
                       className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70"
@@ -467,6 +515,9 @@ const getVerticalIcon = (vertical: string) => {
                   ))}
                   {deployment.features?.length > 4 && (
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
+=======
+                    <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       +{deployment.features.length - 4} more
                     </span>
                   )}
@@ -480,6 +531,7 @@ const getVerticalIcon = (vertical: string) => {
                 </div>
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
+<<<<<<< HEAD
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
                 <div className="flex items-center gap-1">
                   <span>📅</span>
@@ -488,6 +540,10 @@ const getVerticalIcon = (vertical: string) => {
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className="flex items-center gap-1">
                     <span>🔄</span>
+=======
+                    <RefreshCw className='w-3 h-3' />
+                    <span>Updated: {formatDate(deployment.updatedAt)}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 )}
               </div>
@@ -526,6 +582,7 @@ const getVerticalIcon = (vertical: string) => {
                   </button>
                 )}
                 <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
+<<<<<<< HEAD
                   <Settings className='w-4 h-4' />                </button>                {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
                     ▶️ Start Deployment
@@ -553,6 +610,9 @@ const getVerticalIcon = (vertical: string) => {
                 )}
                 <button className="flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200">
                   ⚙️
+=======
+                  <Settings className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
             </div>
@@ -578,6 +638,7 @@ const getVerticalIcon = (vertical: string) => {
               href='/admin/os-deploy'
               className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'
             >
+<<<<<<< HEAD
               <Rocket className='w-4 h-4' />              Deploy First Instance
             </a>
           )}
@@ -595,6 +656,9 @@ const getVerticalIcon = (vertical: string) => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
               <Rocket className="w-4 h-4" />
+=======
+              <Rocket className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Deploy First Instance
             </a>
           )}
@@ -644,7 +708,11 @@ const getVerticalIcon = (vertical: string) => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );      )}
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

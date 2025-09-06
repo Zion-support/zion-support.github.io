@@ -11,6 +11,7 @@ interface StepProps {
   label: string
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   description?: string;
+<<<<<<< HEAD
   className?: string
 }
 export function Step({
@@ -29,6 +30,13 @@ export function Step({
           "opacity-60": status === "incomplete"}
         className
       )}
+=======
+  className?: string;
+}
+
+export function Step({ status, label, description, className }: StepProps) {
+  
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div
         className={cn(
@@ -68,8 +76,14 @@ export function Step({
 interface StepsProps {
   currentStep: number
   className?: string;
+<<<<<<< HEAD
   children: React.ReactNode
 }
+=======
+  children: React.ReactNode;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children);
   return (

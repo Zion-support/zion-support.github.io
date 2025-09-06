@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
+<<<<<<< HEAD
   Select;
   SelectContent;
   SelectItem;
@@ -24,6 +25,20 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
 type ResumeStep = "basics" | "experience" | "education" | "skills";
+=======
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Label } from '@/components/ui/label';
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+
+type ResumeStep = 'basics' | 'experience' | 'education' | 'skills';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
   const renderStepContent = () => {

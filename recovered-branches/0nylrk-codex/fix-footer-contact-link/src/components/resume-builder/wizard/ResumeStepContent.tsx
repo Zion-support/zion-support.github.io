@@ -12,7 +12,11 @@ interface ResumeStepContentProps {
   activeTab: string;
   resume: Resume;
   onNextStep: () => void;
+<<<<<<< HEAD
   onPrevStep: () => void
+=======
+  onPrevStep: () => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ResumeStepContent = null;

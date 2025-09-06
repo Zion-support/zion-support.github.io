@@ -3,8 +3,14 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
+<<<<<<< HEAD
   setSelectedCountry: (country: CountryPricing | null) => void
 }
+=======
+  setSelectedCountry: (country: CountryPricing | null) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ServiceDetailsSection({
   selectedCountry
   setSelectedCountry

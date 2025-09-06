@@ -4,6 +4,10 @@ import path from 'path';
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string;
@@ -39,7 +43,11 @@ async function summarizeAndTag(input: {fullName: string;
   );
   if (!openaiApiKey) {
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+<<<<<<< HEAD
     return { summary, tags: basicTags.slice(0, 24) };  }    return { summary, tags: basicTags.slice(0, 24) }
+=======
+    return { summary, tags: basicTags.slice(0, 24) };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   try {
     const { OpenAI } = await import('openai');
@@ -48,6 +56,7 @@ async function summarizeAndTag(input: {fullName: string;
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
+<<<<<<< HEAD
         { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }
       ]
@@ -59,6 +68,15 @@ async function summarizeAndTag(input: {fullName: string;
         { role: 'user', content: prompt }];
       temperature: 0.4});
     const content = response.choices?.[0]?.message?.content |'';
+=======
+        { role: 'system', content: 'You are an expert technical recruiter.' },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.4,
+    });
+
+    const content = response.choices?.[0]?.message?.content || '';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     try {
       const parsed = JSON.parse(content);
       if (
@@ -66,8 +84,12 @@ async function summarizeAndTag(input: {fullName: string;
         typeof parsed.summary === 'string' &&
         Array.isArray(parsed.tags)
       ) {
+<<<<<<< HEAD
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
+=======
+        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     } catch (_) {
       // fall through to heuristic
@@ -75,14 +97,25 @@ async function summarizeAndTag(input: {fullName: string;
   } catch (err) {
     // ignore and fallback
   }
+<<<<<<< HEAD
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+=======
+}
+
+const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) };
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  }  }
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
@@ -109,6 +142,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       portfolioLinks
       cvFile
     } = req.body |{}
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+ 
+}
+
+  try {
+    const id = randomUUID();
+    const {
+      fullName,
+      professionalTitle,
+      profilePicture,
+      bio,
+      projects,
+      yearsOfExperience,
+      skills,
+      tools,
+      availability,
+      timezone,
+      hourlyRate,
+      portfolioLinks,
+      cvFile,
+    } = req.body || {};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (
       !fullName |
       !professionalTitle |
@@ -119,13 +176,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       !timezone
     ) {
       return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
     }
+=======
+   
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
     const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
+<<<<<<< HEAD
     let savedProfileImagePath: string | null = null;    if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) |'.png';
+=======
+
+    let savedProfileImagePath: string | null = null;
+    if (profilePicture?.base64 && profilePicture?.name) {
+      const ext = path.extname(profilePicture.name) || '.png';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const filename = `${id}-profile${ext}`;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = profilePicture.base64.split(',')[1];
@@ -133,13 +203,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         savedProfileImagePath = `/uploads/${filename}`;
       }
     }
+<<<<<<< HEAD
     let savedCvPath: string | null = null;    if (cvFile?.base64 && cvFile?.name) {
       const ext = path.extname(cvFile.name) |'.pdf';
+=======
+
+    let savedCvPath: string | null = null;
+    if (cvFile?.base64 && cvFile?.name) {
+      const ext = path.extname(cvFile.name) || '.pdf';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const filename = `${id}-cv${ext}`;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = cvFile.base64.split(',')[1];
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
+<<<<<<< HEAD
         savedCvPath = `/uploads/${filename}`;      }
     }
     const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile.base64.split()[1];
@@ -184,20 +262,70 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         tags}}
     const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
+=======
+        savedCvPath = `/uploads/${filename}`;
+      }
+    }
+
+    const { summary, tags } = await summarizeAndTag({
+      fullName,
+      professionalTitle,
+      bio,
+      projects,
+      skills,
+      tools,
+    });
+
+    const record = {
+      id,
+      createdAt: new Date().toISOString(),
+      fullName,
+      professionalTitle,
+      bio,
+      projects,
+      yearsOfExperience: Number(yearsOfExperience) || 0,
+      skills,
+      tools,
+      availability,
+      timezone,
+      hourlyRate: hourlyRate ? Number(hourlyRate) : null,
+      portfolioLinks,
+      assets: {
+        profileImage: savedProfileImagePath,
+        cv: savedCvPath,
+      },
+      ai: {
+        summary,
+        tags,
+      },
+    };
+
+    const perRecordPath = path.join(dataDir, `${id}.json`);
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const aggregatePath = path.join(
       process.cwd()
       'data'
       'talent-submissions.json'
+<<<<<<< HEAD
     );    let aggregate: any[] = [];
     if (fs.existsSync(aggregatePath)) {
       try {
         const content = await fse.readJSON(aggregatePath);
         if (Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
+=======
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     let aggregate: any[] = [];
     if (fs.existsSync(aggregatePath)) {
       try {
         const content = await fse.readJSON(aggregatePath);
+<<<<<<< HEAD
         if (Array.isArray(content)) aggregate = content;        if (Array.isArray(content)) aggregate = content
+=======
+        if (Array.isArray(content)) aggregate = content;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       } catch (_) {
         // ignore
       }
@@ -207,11 +335,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     return res.status(200).json({ ok: true, id, summary, tags });
-  } catch (error) {
+ 
+} catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
   }    return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' })
 }
 }
+=======
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

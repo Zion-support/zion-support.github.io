@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
@@ -18,6 +19,27 @@ import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmat
 import React, { useState } from "react", // Import React and useState
 import { toast } from "@/hooks/use-toast";
 import Image from 'next/image', // Import next/image
+=======
+import { format } from 'date-fns';
+import { JobApplication } from '@/types/jobs';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
+import { ClickableBadge } from '@/components/ui/clickable-badge';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import { ApplicationActions } from './ApplicationActions';
+import { StatusBadge } from './StatusBadge';
+import { Briefcase, User } from 'lucide-react';
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
+import React, { useState } from 'react'; // Import React and useState
+import { toast } from '@/hooks/use-toast';
+import Image from 'next/image'; // Import next/image
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
 import { format } from 'date-fns'
@@ -87,8 +109,15 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         <User className='h-4 w-4' />
       )}
     </AvatarPrimitive>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplicationsTable({
   applications
   processingId
@@ -191,6 +220,7 @@ export function ApplicationsTable({
         onConfirm = {handleHireConfirmed,}
       />
     </>
+<<<<<<< HEAD
   )
   /* Using Renamed AvatarPrimitive */
 }{
@@ -236,3 +266,51 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
+=======
+  );
+
+  /* Using Renamed AvatarPrimitive */ ;
+}{;
+  application.talent profile?.profile picture url && !avatarError ? (<Image src= {;
+  application.talent profile.profile picture url ;
+}alt= {;
+  talentName ;
+}width= {;
+  32 ;
+}//for h-8 w-8 height= {;
+  32 ";
+}//for h-8 w-8 className="rounded-full object-cover" onError= {;
+  () => setAvatarError (true) ;
+}priority= {;
+  false ";
+}h-4 w-4"/>) ;
+}</AvatarPrimitive>) ;
+};";
+return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  applications.map ( (application) => (<TableRow key= {;
+  application.id ;
+}> <TableCell> </div> </div> </div> </TableCell> onClick={;
+  () => onViewScore (application) ;
+}> {;
+  application.match score ";
+}% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) ";
+}</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {;
+  application ;
+}processingId= {;
+  processingId ;
+}onViewApplication= {;
+  onViewApplication ;
+}onStatusChange= {;
+  onStatusChange ;
+}/> </div> </TableCell> </TableRow>) ) ;
+}</TableBody> </Table> </div> <HireConfirmationModal isOpen= {;
+  hireModalOpen ;
+}onClose= {;
+  () => setHireModalOpen (false) ;
+}application= {;
+  selectedApplication || undefined ;
+}onConfirm= {;
+  handleHireConfirmed ;
+}/> </>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

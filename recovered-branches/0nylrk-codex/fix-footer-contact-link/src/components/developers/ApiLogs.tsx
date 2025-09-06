@@ -1,9 +1,30 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
 import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
 <<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",

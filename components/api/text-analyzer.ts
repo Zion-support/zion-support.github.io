@@ -55,11 +55,17 @@ interface TextAnalysisResult {
     topWords: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
+<<<<<<< HEAD
   };    topWords: Array<{ word: string, count: number, frequency: number }>;
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>
   }
 }
+=======
+  };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
 <<<<<<< HEAD
   req: NextApiRequest;
@@ -69,6 +75,7 @@ export default async function handler(
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   try {
@@ -87,6 +94,26 @@ export default async function handler(
     }
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+ 
+}
+
+  try {
+    const { text } = req.body;
+
+    if (!text || typeof text !== 'string') {
+      return res.status(400).json({ error: 'Text is required' });
+   
+}
+
+    if (text.length > 10000) {
+      return res
+        .status(400)
+        .json({ error: 'Text too long (max 10,000 characters)' });
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Basic statistics
 <<<<<<< HEAD
     const characters = null;
@@ -102,9 +129,14 @@ export default async function handler(
       .filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
+<<<<<<< HEAD
       .filter(para => para.trim().length > 0).length;    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+=======
+      .filter(para => para.trim().length > 0).length;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -115,10 +147,16 @@ export default async function handler(
       return matches ? matches.length : 1;
     }
     const syllables = text.split(/\s+/).reduce((total, word) => {
+<<<<<<< HEAD
       return total + syllableCount(word);    }, 0);      return matches ? matches.length : 1
     }
     const syllables = text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
+=======
+      return total + syllableCount(word);
+    }, 0);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil(words / 200);
     const speakingTime = Math.ceil(words / 150);
@@ -202,7 +240,13 @@ export default async function handler(
     ).length;
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
+<<<<<<< HEAD
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
+=======
+    if (sentimentScore <= -3) sentimentLabel = 'very-negative';
+    else if (sentimentScore <= -1) sentimentLabel = 'negative';
+    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
@@ -215,38 +259,57 @@ export default async function handler(
         if (cleanWord.length > 2) {
           wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1);
         }
+<<<<<<< HEAD
       });    text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, '');
       if (cleanWord.length > 2) {
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1)
       }
     });
+=======
+      });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
+<<<<<<< HEAD
         word
         count
         frequency: Math.round((count / words) * 1000) / 10,      }));        word;
         count;
         frequency: Math.round((count / words) * 1000) / 10
+=======
+        word,
+        count,
+        frequency: Math.round((count / words) * 1000) / 10,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }));
     // Bigrams and trigrams
     const wordsArray = text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     for (let i = 0; i < wordsArray.length - 1; i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
     }
     for (let i = 0; i < wordsArray.length - 2; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
+<<<<<<< HEAD
       trigramCounts.set(trigram, (trigramCounts.get(trigram) |0) + 1);    }      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1)
     }
     for (let i = 0, i < wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) |0) + 1)
+=======
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -257,13 +320,18 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+<<<<<<< HEAD
     const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
     const result: TextAnalysisResult = {
       text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+=======
+    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
     const result: TextAnalysisResult = {
+<<<<<<< HEAD
       text
         characters
         charactersNoSpaces
@@ -274,6 +342,19 @@ export default async function handler(
         readingTime
         speakingTime
       }
+=======
+      text,
+      statistics: {
+        characters,
+        charactersNoSpaces,
+        words,
+        sentences,
+        paragraphs,
+        syllables,
+        readingTime,
+        speakingTime,
+      },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
@@ -304,6 +385,7 @@ export default async function handler(
   } catch (error) {
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
   }        score: sentimentScore;
         label: sentimentLabel;
         positiveWords: textWords.filter(word => positiveWords.includes(word));
@@ -323,3 +405,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+=======
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

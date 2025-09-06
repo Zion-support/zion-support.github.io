@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
+import { CountryPricing } from '@/data/onsiteServicePricing';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -22,6 +36,7 @@ interface CountryServiceCardProps {
   country: CountryPricing;
   onSelect: (country: CountryPricing) => void;
   onQuote?: (country: CountryPricing) => void;
+<<<<<<< HEAD
 =======
   country: CountryPricing
   onSelect: (country: CountryPricing) => void
@@ -36,6 +51,11 @@ interface CountryServiceCardProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isPopular?: boolean
 }
+=======
+  isPopular?: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CountryServiceCard({
   country
   onSelect
@@ -107,7 +127,12 @@ export function CountryServiceCard({
     } else {
       return '8-24 hours'
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -178,5 +203,9 @@ export function CountryServiceCard({
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

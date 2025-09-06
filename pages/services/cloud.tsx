@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cloud, Cpu, Database, Zap, Shield, Rocket;
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
  } from 'lucide-react';
@@ -10,6 +11,8 @@ import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CloudServicesPage() {
   const services = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Cloud
   Cpu
@@ -26,6 +29,11 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CloudServicesPage() {
   const services = [
     {
@@ -107,11 +115,22 @@ export default function CloudServicesPage() {
           property='og:description'
           content='Scalable cloud infrastructure solutions for modern businesses.'
         />
+<<<<<<< HEAD
         <link rel='canonical' href='https://ziontechgroup.com/services/cloud' />      </Head>
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/services/cloud' />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <EnhancedNavigation />
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -122,7 +141,12 @@ export default function CloudServicesPage() {
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Scalable cloud solutions that drive efficiency and accelerate
+<<<<<<< HEAD
               digital transformation            </p>
+=======
+              digital transformation
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -137,14 +161,24 @@ export default function CloudServicesPage() {
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Cloud Consultation
+<<<<<<< HEAD
               <ArrowRight className='w-5 h-5' />            </button>
+=======
+              <ArrowRight className='w-5 h-5' />
+            </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </div>
       </section>
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
+<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
+=======
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            {stats.map((stat, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -159,14 +193,24 @@ export default function CloudServicesPage() {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
+<<<<<<< HEAD
                 <div className='text-white/70'>{stat.label}</div>              </motion.div>
+=======
+                <div className='text-white/70'>{stat.label}</div>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
       </section>
       {/* Services Grid */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -181,7 +225,13 @@ export default function CloudServicesPage() {
               infrastructure and drive innovation
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {services.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -205,7 +255,12 @@ export default function CloudServicesPage() {
                       key={feature}
                       className='flex items-center text-white/80'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}
+=======
+                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />
+                      {feature}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
                   ))}
                 </ul>
@@ -213,7 +268,12 @@ export default function CloudServicesPage() {
                   <span className='text-2xl font-bold text-teal-400'>
                     {service.price}
                   </span>
+<<<<<<< HEAD
                   <button className='px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>                    Get Started
+=======
+                  <button className='px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>
+                    Get Started
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </button>
                 </div>
               </motion.div>
@@ -223,7 +283,12 @@ export default function CloudServicesPage() {
       </section>
       {/* CTA Section */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -240,7 +305,12 @@ export default function CloudServicesPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Infrastructure Assessment
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View Case Studies
+=======
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+                View Case Studies
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </button>
             </div>
           </motion.div>
@@ -248,11 +318,17 @@ export default function CloudServicesPage() {
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 )
+=======
+  );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
+<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -263,3 +339,19 @@ export default function CloudServicesPage() {
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+=======
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+}viewport= {
+  {
+  once: true
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

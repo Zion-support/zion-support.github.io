@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { ApplicationCard } from './ApplicationCard';
+import { LoadingState } from './LoadingState';
+import { EmptyState } from './EmptyState';
+import { ErrorState } from './ErrorState';
+import { Button } from '@/components/ui/button';
+import { ApplicationStatus } from '@/types/jobs';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -29,8 +42,15 @@ export function ApplicationsTracker() {
   if (applications.length === 0) {
     return <EmptyState />;
   }
+<<<<<<< HEAD
   const filteredApplications =
     statusFilter === "all"
+=======
+}
+
+const filteredApplications =
+    statusFilter === 'all'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       ? applications
       : applications.filter((app) => app.status === statusFilter);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

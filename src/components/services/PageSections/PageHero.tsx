@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { GradientHeading } from '@/components/GradientHeading';
+import { Clock, Map, DollarSign } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react'
@@ -42,6 +48,7 @@ export function PageHero() {
           <p className='text-zion-slate-light'>
             Clear per-incident pricing includes transportation and first hour
             onsite
+<<<<<<< HEAD
           </p>        </div>
       </div>
     </div>
@@ -82,3 +89,10 @@ export function PageHero() {
     </div>
   )
 }
+=======
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

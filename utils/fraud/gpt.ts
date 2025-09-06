@@ -54,6 +54,7 @@ export async function classifyWithGPT(
     } as GptClassification;
   } catch {
     return {
+<<<<<<< HEAD
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
@@ -72,3 +73,10 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   }
 }
+=======
+      label: 'SUSPICIOUS',
+      reason: 'Invalid JSON from GPT',
+      confidence: 0.5,
+    };
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

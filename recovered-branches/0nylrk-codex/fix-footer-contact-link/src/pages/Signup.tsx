@@ -47,6 +47,11 @@ const signupSchema = z
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type SignupFormValues = z.infer<typeof signupSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);

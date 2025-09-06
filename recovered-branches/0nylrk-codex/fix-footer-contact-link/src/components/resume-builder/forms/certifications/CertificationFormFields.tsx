@@ -19,6 +19,10 @@ import { CertificationFormValues } from "./types";
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CertificationFormFields({
   form
 }: CertificationFormFieldsProps) {

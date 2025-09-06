@@ -7,11 +7,16 @@ import type {
 } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
+<<<<<<< HEAD
   return path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
+=======
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
 <<<<<<< HEAD
@@ -29,6 +34,7 @@ function writeGrant(record: GrantApplication) {
     JSON.stringify(record, null, 2)
     'utf8'
   );
+<<<<<<< HEAD
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -37,6 +43,9 @@ function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |''
   const token = header.replace('Bearer ', '');
@@ -45,6 +54,7 @@ function isAuthorized(req: NextApiRequest) {
     process.env.ZION_ADMIN_TOKEN &&
     token === process.env.ZION_ADMIN_TOKEN
   );
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
@@ -54,6 +64,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
     return;    return
+=======
+}
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   const { id } = req.query as { id: string }
   if (!id) {
@@ -63,6 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
     return;  }  }
   }
   if (req.method !== 'POST') {
@@ -74,11 +94,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!existing) {
     res.status(404).json({ error: 'Not found' });
     return;  }    return
+=======
+    return;
+  }
+}
+
+const existing = readGrant(id);
+  if (!existing) {
+    res.status(404).json({ error: 'Not found' });
+    return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
+<<<<<<< HEAD
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  res.status(200).json({ record: existing });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -23,10 +24,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { vendorId, title } = req.body |{}
   if (!vendorId |!title) return res.status(400).json({ error: 'Missing required fields' });
   const vendor = getVendorById(vendorId);
+=======
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  
+}
+
+const { vendorId, title } = req.body || {};
+  if (!vendorId || !title)
+    return res.status(400).json({ error: 'Missing required fields' });
+  
+}
+
+const vendor = getVendorById(vendorId);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);
     res.status(201).json({ item });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } catch (e: any) {
     res.status(500).json({ error: e.message })
@@ -34,3 +53,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e.message })
   }
 }
+=======
+  } catch (e: any) {
+    res.status(500).json({ error: e.message });
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

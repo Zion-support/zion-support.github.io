@@ -1,4 +1,5 @@
  > Report abuse </button> </div>)
+<<<<<<< HEAD
 }</div> </div>) }
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
@@ -12,6 +13,11 @@ import {Star} from 'lucide-react';
 type Props = {
   review: PublicReview
   onReport?: (id: string) => void
+=======
+}</div> </div>)
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
@@ -28,6 +34,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
           </span>
         </div>
         <button
+<<<<<<< HEAD
           className='text-xs text-red-500 hover:underline'          onClick={() => onReport && onReport(review.id)}    <div className="enhanced-card hover: shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
@@ -36,6 +43,10 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         </div>
         <button
           className="text-xs text-red-500 hover:underline"
+=======
+          className='text-xs text-red-500 hover:underline'
+          onClick={() => onReport && onReport(review.id)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           Report abuse
         </button>
@@ -66,6 +77,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>
@@ -88,3 +100,9 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
 }
 export default ReviewCard;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default ReviewCard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -6,6 +7,17 @@ import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+=======
+import React, { useState } from 'react';
+import { MessageCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface DiscussionPost {
 <<<<<<< HEAD
   id: number;
@@ -13,6 +25,7 @@ interface DiscussionPost {
   avatar?: string;
   time: string;
   title: string;
+<<<<<<< HEAD
 =======
   id: number
   author: string
@@ -63,10 +76,39 @@ export const CommunityDiscussion: React.FC = () => {
   const [newTitle, setNewTitle] = useState('')
   const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
   const [newBody, setNewBody] = useState("")
+=======
+  body: string;
+
+const initialPosts: DiscussionPost[] = [
+  {
+    id: 1,
+    author: 'Anna Zhou',
+    time: '2h ago',
+    title: 'What AI trends are you most excited for in 2025?',
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+  },
+  {
+    id: 2,
+    author: 'David Kim',
+    time: '50m ago',
+    title: 'Quick tip: How to rank your Zion listing higher',
+    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
+  },
+];
+}
+
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
+  const [newBody, setNewBody] = useState('');
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleAddPost = () => {
     if (!newTitle.trim() |!newBody.trim()) return
     setPosts([
       {
+<<<<<<< HEAD
         id: Date.now()
         author: 'You'
         time: 'Now'
@@ -79,6 +121,21 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody('')
     setShowNew(false)
   }
+=======
+        id: Date.now(),
+        author: 'You',
+        time: 'Now',
+        title: newTitle,
+        body: newBody,
+      },
+      ...posts,
+    ]);
+    setNewTitle('');
+    setNewBody('');
+    setShowNew(false);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in'>
       <div className='flex items-center gap-3 mb-4'>
@@ -108,6 +165,7 @@ export const CommunityDiscussion: React.FC = () => {
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setNewTitle(e.target.value)
+<<<<<<< HEAD
               }              maxLength={80}
             />
             <Textarea
@@ -148,6 +206,9 @@ export const CommunityDiscussion: React.FC = () => {
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+=======
+              }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               maxLength={80}
             />
             <Textarea
@@ -163,18 +224,27 @@ export const CommunityDiscussion: React.FC = () => {
               <Button
                 variant='secondary'
                 size='sm'
+<<<<<<< HEAD
                 className='bg-zion-blue text-white hover:bg-zion-blue-dark'                onClick={() => setShowNew(false)}
                 variant="secondary"
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick = {() => setShowNew(false),}
+=======
+                className='bg-zion-blue text-white hover:bg-zion-blue-dark'
+                onClick={() => setShowNew(false)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Cancel
               </Button>
               <Button
                 size='sm'
+<<<<<<< HEAD
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'                onClick={handleAddPost}                size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
+=======
+                className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() |!newBody.trim()}
                 onClick = {handleAddPost,}
@@ -198,6 +268,7 @@ export const CommunityDiscussion: React.FC = () => {
                   {post.author
                     .split(' ')
                     .map(s => s[0])
+<<<<<<< HEAD
                     .join('')                    .toUpperCase()      <div className="flex flex-col gap-6">
         {posts.map((post,) => (
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
@@ -208,6 +279,10 @@ export const CommunityDiscussion: React.FC = () => {
                     .split(" ")
                     .map((s,) => s[0])
                     .join("")
+=======
+                    .join('')
+                    .toUpperCase()
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     .slice(0, 2)}
                 </AvatarFallback>
               </Avatar>
@@ -225,12 +300,17 @@ export const CommunityDiscussion: React.FC = () => {
                 </h3>
                 <p className='text-zion-slate-light mt-1 whitespace-pre-line'>
                   {post.body}
+<<<<<<< HEAD
                 </p>              </div>                <div className="flex gap-2 items-center">
                   <span className="font-semibold text-white">{post.author}</span>
                   <span className="text-xs text-zion-slate-light">{post.time}</span>
                 </div>
                 <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
+=======
+                </p>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </CardContent>
           </Card>
         ))}
@@ -240,6 +320,7 @@ export const CommunityDiscussion: React.FC = () => {
         homepage.
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
   newTitle
@@ -267,3 +348,26 @@ export const CommunityDiscussion: React.FC = () => {
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+  newTitle ;
+}onChange= {;
+  (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
+}maxLength= {;
+  80 ";
+}/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
+}.join ("") .toUpperCase () .slice (0, 2) ";
+}</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
+  post.author ";
+}</span> <span className="text-xs text-zion-slate-light"> {;
+  post.time ";
+}</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {;
+  post.title ";
+}</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;
+  post.body ;
+}</p> </div> </CardContent> </Card>) ) ";
+}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -4,6 +4,10 @@ import { ProfileSkill } from "@/types/profile";
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileSkills({ skills }: ProfileSkillsProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

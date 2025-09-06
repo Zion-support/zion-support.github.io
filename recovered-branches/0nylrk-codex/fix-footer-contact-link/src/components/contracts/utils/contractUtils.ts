@@ -59,4 +59,7 @@ export async function generateContract(
   } else {
     throw new Error("Failed to generate contract")
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

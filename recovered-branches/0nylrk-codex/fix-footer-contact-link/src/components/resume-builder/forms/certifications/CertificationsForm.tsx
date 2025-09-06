@@ -17,6 +17,7 @@ interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
   onComplete: () => void;
+<<<<<<< HEAD
 =======
   resumeId: string
   certifications: Certification[]
@@ -29,6 +30,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 <<<<<<< HEAD
   const [editingId, setEditingId] = useState<string | null>(null),
   const [error, setError] = useState<string | null>(null),
+=======
+  onBack: () => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
   // Helper function to format dates as strings for form inputs
   const formatDateValue = null;

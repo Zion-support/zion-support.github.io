@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Zap, Brain, Code, Shield, Users, TrendingUp;
   CheckCircle, ArrowRight, Star, Clock, Target;
   Cpu, Rocket, Globe, BarChart3, Settings
@@ -20,11 +21,44 @@ const contactInfo = {
 const serviceHighlights = [
   {
     title: 'AI Code Generation'
+=======
+import {
+  Zap,
+  Brain,
+  Code,
+  Shield,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Target,
+  Cpu,
+  Rocket,
+  Globe,
+  BarChart3,
+  Settings,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const serviceHighlights = [
+  {
+    title: 'AI Code Generation',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Generate production-ready code across multiple languages with AI intelligence'
     icon: Code
     color: 'from-emerald-500 to-teal-600'
     features: [
+<<<<<<< HEAD
       'Multi-language support'
       'Security scanning'
       'Performance optimization'
@@ -107,6 +141,97 @@ const benefits = [
     icon: BarChart3
     color: 'text-pink-400'
   },];
+=======
+      'Multi-language support',
+      'Security scanning',
+      'Performance optimization',
+      'Team collaboration',
+    ],
+  },
+  {
+    title: 'DevOps Automation',
+    description:
+      'Intelligent automation for modern DevOps workflows with predictive analytics',
+    icon: Cpu,
+    color: 'from-purple-500 to-indigo-600',
+    features: [
+      'CI/CD optimization',
+      'Self-healing infrastructure',
+      'Cost optimization',
+      'Multi-cloud support',
+    ],
+  },
+  {
+    title: 'Customer Support AI',
+    description:
+      'Transform customer support with intelligent automation and sentiment analysis',
+    icon: Users,
+    color: 'from-blue-500 to-cyan-600',
+    features: [
+      'Intelligent chatbots',
+      'Multi-language support',
+      'Predictive resolution',
+      '24/7 availability',
+    ],
+  },
+  {
+    title: 'Marketing Automation',
+    description:
+      'AI-powered marketing automation with predictive analytics and optimization',
+    icon: BarChart3,
+    color: 'from-pink-500 to-rose-600',
+    features: [
+      'Campaign optimization',
+      'Customer personalization',
+      'ROI tracking',
+      'Multi-channel automation',
+    ],
+  },
+  {
+    title: 'Sales Intelligence',
+    description:
+      'Boost sales performance with AI-powered insights and predictive analytics',
+    icon: TrendingUp,
+    color: 'from-yellow-500 to-orange-600',
+    features: [
+      'Lead scoring',
+      'Sales forecasting',
+      'Customer insights',
+      'Performance optimization',
+    ],
+  },
+];
+
+const benefits = [
+  {
+    title: '80% Reduction in Manual Work',
+    description: 'Automate repetitive tasks and focus on high-value activities',
+    icon: Zap,
+    color: 'text-emerald-400',
+  },
+  {
+    title: '300% ROI Improvement',
+    description:
+      'Significant returns through increased efficiency and productivity',
+    icon: TrendingUp,
+    color: 'text-blue-400',
+  },
+  {
+    title: '24/7 Operation',
+    description: 'Round-the-clock automation without human intervention',
+    icon: Clock,
+    color: 'text-purple-400',
+  },
+  {
+    title: 'Real-time Insights',
+    description: 'Instant analytics and decision-making support',
+    icon: BarChart3,
+    color: 'text-pink-400',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AIAutomationServices() {
   return (
     <Layout>
@@ -176,7 +301,13 @@ export default function AIAutomationServices() {
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
+<<<<<<< HEAD
         <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
+=======
+
+        <div className='relative z-10 container mx-auto px-4 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -212,11 +343,20 @@ export default function AIAutomationServices() {
               <Link href='/contact' className='group'>
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
                   <span>Get Started</span>
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
+=======
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>
           <div className='w-4 h-4 bg-emerald-400 rounded-full'></div>
@@ -231,14 +371,24 @@ export default function AIAutomationServices() {
           className='absolute bottom-40 left-20 opacity-25 animate-float'
           style={{ animationDelay: '2s' }}
         >
+<<<<<<< HEAD
           <div className='w-3 h-3 bg-cyan-400 rounded-full'></div>        </div>
+=======
+          <div className='w-3 h-3 bg-cyan-400 rounded-full'></div>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </section>
       {/* Service Highlights */}
       <section
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
+<<<<<<< HEAD
         <div className='container mx-auto px-4'>          <motion.div
+=======
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -256,7 +406,13 @@ export default function AIAutomationServices() {
               of your business operations
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {serviceHighlights.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -282,7 +438,12 @@ export default function AIAutomationServices() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>
+=======
+                      <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />
+                      <span>{feature}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
                   ))}
                 </ul>
@@ -290,9 +451,17 @@ export default function AIAutomationServices() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>          <motion.div
+=======
+
+      {/* Detailed Services */}
+      <section className='py-20 bg-black'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -311,7 +480,13 @@ export default function AIAutomationServices() {
               designed for modern enterprises
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (
+=======
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {advancedAIAutomationServices2025.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -334,10 +509,19 @@ export default function AIAutomationServices() {
                       </div>
                     </div>
                     {service.popular && (
+<<<<<<< HEAD
                       <span className='bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium'>                        Popular
                       </span>
                     )}
                   </div>
+=======
+                      <span className='bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
+                        Popular
+                      </span>
+                    )}
+                  </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -397,7 +581,12 @@ export default function AIAutomationServices() {
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+<<<<<<< HEAD
                     >                      Get Started
+=======
+                    >
+                      Get Started
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </Link>
                   </div>
                 </div>
@@ -408,7 +597,12 @@ export default function AIAutomationServices() {
       </section>
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+<<<<<<< HEAD
         <div className='container mx-auto px-4'>          <motion.div
+=======
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -426,7 +620,13 @@ export default function AIAutomationServices() {
               measurable results
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {benefits.map((benefit, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -445,14 +645,24 @@ export default function AIAutomationServices() {
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>
+<<<<<<< HEAD
         <div className='container mx-auto px-4 text-center'>          <motion.div
+=======
+        <div className='container mx-auto px-4 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -505,10 +715,19 @@ export default function AIAutomationServices() {
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   350%
                 </div>
+<<<<<<< HEAD
                 <div className='text-gray-300'>Average ROI</div>              </div>
+=======
+                <div className='text-gray-300'>Average ROI</div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

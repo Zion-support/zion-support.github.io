@@ -10,12 +10,22 @@ import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
 <<<<<<< HEAD
   application: JobApplication;
+<<<<<<< HEAD
 =======
   application: JobApplication
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
+=======
+  onScoreUpdated?: (updatedApplication: JobApplication) => void;
+}
+
+export function ApplicationScoreCard({
+  application,
+  onScoreUpdated,
+}: ApplicationScoreCardProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
 <<<<<<< HEAD

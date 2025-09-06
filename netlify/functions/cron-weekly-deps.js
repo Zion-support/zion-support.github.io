@@ -1,6 +1,10 @@
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function getLatest(pkg) {
   try {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`);
@@ -13,6 +17,11 @@ async function getLatest(pkg) {
   } catch (_) {
     return null;
   }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 exports.handler = async function () {
   try {
     const pkgPath = path.join(process.cwd(), 'package.json');
@@ -53,6 +62,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };async function getLatest(pkg) {
   try {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)
@@ -108,3 +118,6 @@ exports.handler = async function() {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

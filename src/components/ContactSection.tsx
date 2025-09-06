@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react",
@@ -8,6 +9,17 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { Mail } from 'lucide-react'
+=======
+import { useState } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from '@/components/ui/use-toast';
+import z from 'zod';
+import { Mail } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -272,6 +284,7 @@ export function ContactSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }setErrors (fieldErrors)
 toast ({
@@ -294,3 +307,29 @@ description: err.message
 }</Button>)
 }</div> </form> </div> </div> </div> </div> </section>)
 }'"}
+=======
+  );
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

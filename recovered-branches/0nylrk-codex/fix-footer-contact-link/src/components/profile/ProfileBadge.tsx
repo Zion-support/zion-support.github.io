@@ -10,9 +10,16 @@ import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 interface ProfileBadgeProps {
+<<<<<<< HEAD
   type: BadgeType
   className?: string
 }
+=======
+  type: BadgeType;
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {

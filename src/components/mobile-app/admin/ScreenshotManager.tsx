@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useRef } from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Upload, Trash2, Plus } from 'lucide-react';
+import { AppPlatform } from './MetadataManager';
+import { toast } from 'sonner';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -13,6 +22,7 @@ interface ScreenshotManagerProps {
 type Screenshot = any;
 =======
 type Screenshot = {
+<<<<<<< HEAD
   id: string
   url: string
   file: File
@@ -22,6 +32,22 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const [isDragging, setIsDragging] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>,) => {
+=======
+  id: string;
+url: string;
+file: File ;
+};
+}
+
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
+  platform,
+}) => {
+  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
@@ -136,6 +162,22 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+}setScreenshots (prev => [...prev, ...newScreenshots]);
+
+};
+return filtered;
+}) ;
+};
+<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;
+  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";
+  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
+}</div> </CardContent> </Card>) ;
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

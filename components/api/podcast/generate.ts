@@ -4,16 +4,21 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
     return res.status(500).json({ error: error?.message || 'Unknown error' })
 };
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
   'podcast'
   'episodes.json'
 );
+<<<<<<< HEAD
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -22,6 +27,12 @@ function ensureStorage() {
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+=======
+
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 }
@@ -30,12 +41,18 @@ writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -47,6 +64,13 @@ function writeEpisodes(episodes: any[]) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
+=======
+
+  
+}
+
+const { persona, invitee, topic, operatorPrompt } = req.body || {};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -55,19 +79,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+<<<<<<< HEAD
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
   let generated: any = null;
   try {
     const apiKey = process.env.OPENAI_API_KEY;
     let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey });
+=======
+
+  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
+
+  let generated: any = null;
+  try {
+    const apiKey = process.env.OPENAI_API_KEY;
+    let content: string;
+    if (apiKey) {
+      const openai = new OpenAI({ apiKey });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
         messages: [
+<<<<<<< HEAD
           { role: 'system', content: system }
           { role: 'user', content: user }
         ]
         temperature: 0.8
         max_tokens: 2048
+=======
+          { role: 'system', content: system },
+          { role: 'user', content: user },
+        ],
+        temperature: 0.8,
+        max_tokens: 2048,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       content = completion.choices?.[0]?.message?.content |'';
       content = JSON.stringify({
@@ -106,6 +150,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     if (!generated |!generated.title |!generated.transcript) {
       return res
         .status(500)
+<<<<<<< HEAD
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
@@ -130,11 +175,38 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       bestQuote: generated.bestQuote |''
       audio: {}
     }
+=======
+        .json({ error: 'Failed to generate structured content' });
+    }
+
+    const episodes = readEpisodes();
+    const episode = {
+      id,
+      createdAt: new Date().toISOString(),
+      persona,
+      invitee,
+      topic,
+      title: generated.title,
+      questions: generated.questions || [],
+      timeMarkers: generated.timeMarkers || {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
+      transcript: generated.transcript,
+      youtubeDescription: generated.youtubeDescription || '',
+      spotifyDescription: generated.spotifyDescription || '',
+      bestQuote: generated.bestQuote || '',
+      audio: {},
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     episodes.unshift(episode);
     writeEpisodes(episodes);
     return res.status(200).json({ episode });
-  } catch (error: any) {
+ 
+} catch (error: any) {
     console.error(error);
+<<<<<<< HEAD
     return res.status(500).json({ error: error?.message |'Unknown error' });
   }    episodes.unshift(episode);
     writeEpisodes(episodes);
@@ -145,3 +217,8 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
+=======
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

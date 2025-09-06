@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]),
@@ -10,6 +11,8 @@ export default function AdminPartners() {
         const res = null;
     setFlags(json.flags || [])
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 interface Partner {
@@ -75,6 +78,7 @@ const AdminPartnersPage: React.FC = () => {
     setTimeout(() => {
       setPartners(mockPartners);
       setLoading(false);
+<<<<<<< HEAD
     }, 1000);  }, []);
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
@@ -87,6 +91,24 @@ const AdminPartnersPage: React.FC = () => {
     setPartners(json.partners |[]);  }
   async function viewFlags(code: string) {
     setSelected(code)
+=======
+    }, 1000);
+  }, []);
+
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, ...updates }),
+    });
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || []);
+  }
+
+  async function viewFlags(code: string) {
+    setSelected(code);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
@@ -116,7 +138,12 @@ const AdminPartnersPage: React.FC = () => {
                 <td className='py-2 pr-4'>{p.status}</td>
                 <td className='py-2 pr-4'>
                   <input
+<<<<<<< HEAD
                     type='number'                    defaultValue={p.commission_rate}
+=======
+                    type='number'
+                    defaultValue={p.commission_rate}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     min={0}
                     max={1}
                     step={0.01}
@@ -150,7 +177,12 @@ const AdminPartnersPage: React.FC = () => {
                     onClick={() => viewFlags(p.code)}
                   >
                     Fraud Flags
+<<<<<<< HEAD
                   </button>                </td>
+=======
+                  </button>
+                </td>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </tr>
             ))}
           </tbody>
@@ -223,6 +255,10 @@ const AdminPartnersPage: React.FC = () => {
           <div className="px-6 py-4 border-b">
             <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {loading ? (
             <div className="text-center py-8">Loading partners...</div>
           ) : filteredPartners.length === 0 ? (
@@ -331,4 +367,8 @@ const AdminPartnersPage: React.FC = () => {
         </div>
       </main>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

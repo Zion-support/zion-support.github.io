@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
@@ -13,6 +14,15 @@ import {
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+=======
+import {
+  getWhitepaperSections,
+  OPERATOR_PROMPT,;
+} from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
@@ -40,6 +50,7 @@ export default function WhitepaperBuilderPage() {
           <option value='developer'>Developer</option>
         </select>
         <Link href={downloadHref} legacyBehavior>
+<<<<<<< HEAD
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -61,10 +72,17 @@ export default function WhitepaperBuilderPage() {
         </select>
         <Link href={downloadHref} legacyBehavior>
           <a className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90">
+=======
+          <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Download PDF
           </a>
         </Link>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='rounded border p-4 bg-gray-50 dark:bg-gray-900'>
         <h2 className='text-xl font-semibold mb-2'>Operator Prompt</h2>
         <pre className='whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200'>
@@ -78,6 +96,7 @@ export default function WhitepaperBuilderPage() {
             {s.subtitle ? <p className='text-gray-500'>{s.subtitle}</p> : null}
             <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>
               {s.contentMd}
+<<<<<<< HEAD
             </article>          </section>      <div className="space-y-10">
         {sections.map((s) => (
           <section key={s.id} className="space-y-2">
@@ -89,3 +108,11 @@ export default function WhitepaperBuilderPage() {
     </div>
 );
 }
+=======
+            </article>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

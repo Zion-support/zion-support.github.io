@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 exports.handler = async function () {
   try {
     // Demo ranking: based on certifications and progress
@@ -38,6 +42,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };  try {
     // Demo ranking: based on certifications and progress
     const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -77,3 +82,6 @@ exports.handler = async function () {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

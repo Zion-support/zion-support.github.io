@@ -13,11 +13,23 @@ interface ScreenshotManagerProps {
 type Screenshot = any;
 =======
 type Screenshot = {
+<<<<<<< HEAD
   id: string
   url: string
   file: File
 }
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+=======
+  id: string;
+url: string;
+file: File 
+};
+}
+
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
+  platform,
+}) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);

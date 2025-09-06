@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
@@ -18,3 +19,15 @@ export default function CertificatePage() {
     </div>
   )
 }
+=======
+import React from 'react';
+}
+
+export default function Page() {
+  return (
+    <div className='space-y-4'>
+      <h1 className='text-2xl font-semibold'>Certificate</h1>
+      <CertificatePreview courseId={courseId} />
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -13,6 +13,7 @@ import { Job } from "./types";
 interface ApplyFormProps {
 <<<<<<< HEAD
   job: Job;
+<<<<<<< HEAD
   onClose: () => void;
 =======
   job: Job
@@ -20,6 +21,30 @@ interface ApplyFormProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onApplySuccess?: (jobId: string) => Promise<void>
 }
+=======
+onClose: () => void;
+onApplySuccess?: (jobId: string) => Promise<void> 
+}export function ApplyForm ({
+  job, onClose, onApplySuccess 
+}: ApplyFormProps) {
+  const {
+  createConversation 
+}= useMessaging ();
+const {
+  applyToJob 
+}= useJobApplications ();
+const [message, setMessage] = useState ();
+const [proposalLink, setProposalLink] = useState ('');
+const [isSubmitting, setIsSubmitting] = useState (false);
+const [activeTab, setActiveTab] = useState<string> ("message");
+const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
+const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
+  if (!message.trim () ) {
+  toast ({
+  return;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();

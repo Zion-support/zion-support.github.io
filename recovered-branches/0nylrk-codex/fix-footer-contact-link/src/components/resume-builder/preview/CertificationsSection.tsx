@@ -2,12 +2,21 @@
 import { Certification  } from '@/types/resume';
 import { format } from 'date-fns';
 interface CertificationsSectionProps {
+<<<<<<< HEAD
   certifications: Certification[]
 }
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {
 <<<<<<< HEAD
   const formatDate = null;
 =======
+=======
+  certifications: Certification[];
+}
+
+export function CertificationsSection({
+  certifications,
+}: CertificationsSectionProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {

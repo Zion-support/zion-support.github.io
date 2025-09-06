@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -117,6 +118,116 @@ import {
   Globe2 as Globe2Icon
   Bot as BotIcon
     ChevronRight as ChevronRightIcon
+=======
+import React from 'react';
+import Head from 'next/head';
+import {
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  ChevronRight,
+  Crown,
+  Infinity,
+  Zap as ZapIcon2,
+  Shield as ShieldIcon,
+  Users as UsersIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon2,
+  Cloud as CloudIcon,
+  Smartphone as SmartphoneIcon,
+  Palette as PaletteIcon,
+  Search as SearchIcon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  Calendar as CalendarIcon,
+  CreditCard as CreditCardIcon,
+  BarChart3 as BarChart3Icon,
+  Settings as SettingsIcon,
+  Zap as ZapIcon3,
+  Code as CodeIcon,
+  BookOpen as BookOpenIcon,
+  Activity as ActivityIcon,
+  Database as DatabaseIcon3,
+  Play as PlayIcon,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPin as MapPinIcon,
+  Filter as FilterIcon,
+  Grid as GridIcon,
+  List as ListIcon,
+  ChevronDown as ChevronDownIcon,
+  ChevronUp as ChevronUpIcon,
+  Sparkles as SparklesIcon,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Globe2 as Globe2Icon,
+  Bot as BotIcon,
+  ChevronRight as ChevronRightIcon,;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -130,6 +241,7 @@ import {
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
@@ -203,6 +315,88 @@ export default function PricingPage() {
       avgPrice: '$2,999/month'
       savings: 'Save 45-65% vs. competitors'
     },  ];
+=======
+}
+
+export default function PricingPage() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly'
+  );
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+  const popularServices = getPopularServices();
+
+  // Combine all services for comprehensive pricing
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+  ];
+
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: [
+        'AI Multimodal Fusion',
+        'AI Autonomous Decision Engine',
+        'AI Emotional Intelligence',
+      ],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors',
+    },
+    {
+      name: 'Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+      services: [
+        'Zero Trust Architecture',
+        'Edge Computing Orchestration',
+        '5G Private Networks',
+      ],
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors',
+    },
+    {
+      name: 'Innovative Micro SaaS',
+      description: 'Creative and practical SaaS tools',
+      services: [
+        'AI Brand Personality',
+        'Virtual Event Holograms',
+        'AI Meeting Transcriber',
+      ],
+      avgPrice: '$199/month',
+      savings: 'Save 40-60% vs. competitors',
+    },
+    {
+      name: 'Quantum & Space Technology',
+      description: 'Quantum computing and space solutions',
+      services: [
+        'Quantum AI Hybrid',
+        'Space Technology Platform',
+        'Quantum Cybersecurity',
+      ],
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-85% vs. competitors',
+    },
+    {
+      name: 'Enterprise IT Services',
+      description: 'Comprehensive enterprise solutions',
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+      avgPrice: '$2,999/month',
+      savings: 'Save 45-65% vs. competitors',
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -212,6 +406,7 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
         'Access to 50+ Core Services'
         'Basic AI Integration'
         'Standard Support (24/7)'
@@ -352,6 +547,154 @@ export default function PricingPage() {
       metric: '300%'
       detail: 'Average ROI'
     }
+=======
+        'Access to 50+ Core Services',
+        'Basic AI Integration',
+        'Standard Support (24/7)',
+        '30-Day Free Trial',
+        'Basic Analytics Dashboard',
+        'Email Support',
+        '99.5% Uptime Guarantee',
+        'Standard Security Features',
+      ],
+      icon: <Sparkles className='w-8 h-8' />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaVariant: 'secondary' as const,
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 149 : 119,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+        'Access to 200+ Premium Services',
+        'Advanced AI & Quantum Computing',
+        'Priority Support (24/7)',
+        '60-Day Free Trial',
+        'Advanced Analytics & Reporting',
+        'Phone & Email Support',
+        '99.9% Uptime Guarantee',
+        'Enhanced Security & Compliance',
+        'Custom Integrations',
+        'Team Collaboration Tools',
+        'API Access',
+        'White-label Options',
+      ],
+      icon: <Crown className='w-8 h-8' />,
+      variant: 'holographic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaVariant: 'primary' as const,
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 499 : 399,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+        'Access to ALL 500+ Services',
+        'Full Quantum AI & Autonomous Systems',
+        'Dedicated Support Team (24/7)',
+        '90-Day Free Trial',
+        'Enterprise Analytics & AI Insights',
+        'Dedicated Account Manager',
+        '99.99% Uptime SLA',
+        'Enterprise Security & Compliance',
+        'Custom Development Services',
+        'Advanced Team Management',
+        'Full API & SDK Access',
+        'Custom Branding & White-label',
+        'On-premise Deployment Options',
+        'Advanced AI Training & Customization',
+        'Priority Feature Development',
+        'Global Infrastructure Access',
+      ],
+      icon: <Rocket className='w-8 h-8' />,
+      variant: 'neural' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      ctaVariant: 'primary' as const,
+    },
+  ];
+
+  // Service category pricing examples
+  const serviceCategoryPricing = [
+    {
+      category: 'Quantum AI & Computing',
+      services: [
+        'Quantum AI Platform',
+        'Neural Network Training',
+        'Quantum Optimization',
+      ],
+      startingPrice: '$99/month',
+      icon: <Brain className='w-6 h-6' />,
+    },
+    {
+      category: 'Autonomous Systems',
+      services: [
+        'AI Factory Management',
+        'Robotic Process Automation',
+        'Smart Manufacturing',
+      ],
+      startingPrice: '$149/month',
+      icon: <Factory className='w-6 h-6' />,
+    },
+    {
+      category: 'Healthcare & Biotech',
+      services: [
+        'Drug Discovery AI',
+        'Medical Imaging Analysis',
+        'Genomic Research Platform',
+      ],
+      startingPrice: '$199/month',
+      icon: <FlaskConical className='w-6 h-6' />,
+    },
+    {
+      category: 'Cybersecurity',
+      services: [
+        'Quantum Encryption',
+        'Threat Intelligence',
+        'Zero-Trust Security',
+      ],
+      startingPrice: '$129/month',
+      icon: <Shield className='w-6 h-6' />,
+    },
+    {
+      category: 'Financial Technology',
+      services: [
+        'AI Trading Platform',
+        'Risk Management',
+        'Portfolio Optimization',
+      ],
+      startingPrice: '$179/month',
+      icon: <DollarSign className='w-6 h-6' />,
+    },
+    {
+      category: 'Space Technology',
+      services: [
+        'Satellite Management',
+        'Space Data Analytics',
+        'Mission Planning AI',
+      ],
+      startingPrice: '$299/month',
+      icon: <Rocket className='w-6 h-6' />,
+    },
+  ];
+
+  // Value propositions
+  const valuePropositions = [
+    {
+      title: 'Unprecedented ROI',
+      description: 'Average 300% ROI within 6 months',
+      icon: <TrendingUp className='w-8 h-8' />,
+      metric: '300%',
+      detail: 'Average ROI',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'Time to Value'
       description: 'Get up and running in under 24 hours'
@@ -450,10 +793,19 @@ export default function PricingPage() {
               className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30'
             >
               <span className='flex items-center'>
+<<<<<<< HEAD
                 <Rocket className='mr-3 w-6 h-6' />                View 2026 Comprehensive Pricing
               </span>
             </Button>
           </div>
+=======
+                <Rocket className='mr-3 w-6 h-6' />
+                View 2026 Comprehensive Pricing
+              </span>
+            </Button>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>
             <span
@@ -467,7 +819,12 @@ export default function PricingPage() {
                   billingCycle === 'monthly' ? 'yearly' : 'monthly'
                 )
               }
+<<<<<<< HEAD
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
+=======
+              className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
@@ -478,12 +835,22 @@ export default function PricingPage() {
               className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
             >
               Yearly
+<<<<<<< HEAD
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>
+=======
+              <span className='ml-2 text-sm text-green-400'>Save 20%</span>
+            </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
         {/* Pricing Tiers */}
         <div className='mb-20'>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers.map((tier, index) => (
+=======
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+            {pricingTiers.map((tier, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <UltraFuturisticCard
                 key={tier.name}
                 variant={tier.variant}
@@ -494,10 +861,19 @@ export default function PricingPage() {
                 {tier.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center'>
+<<<<<<< HEAD
                       <Star className='w-4 h-4 mr-2' />                      Most Popular
                     </span>
                   </div>
                 )}
+=======
+                      <Star className='w-4 h-4 mr-2' />
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='text-center p-8'>
                   <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
                     {tier.icon}
@@ -536,7 +912,12 @@ export default function PricingPage() {
                     className='w-full'
                   >
                     {tier.cta}
+<<<<<<< HEAD
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
+=======
+                    <ArrowRight className='ml-2 w-5 h-5' />
+                  </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </UltraFuturisticCard>
             ))}
@@ -547,7 +928,12 @@ export default function PricingPage() {
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Why Choose Zion Tech Group?
           </h2>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions.map((proposition, index) => (
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {valuePropositions.map((proposition, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
@@ -568,7 +954,12 @@ export default function PricingPage() {
                 </div>
                 <div className='text-sm text-gray-400'>
                   {proposition.detail}
+<<<<<<< HEAD
                 </div>              </UltraFuturisticCard>
+=======
+                </div>
+              </UltraFuturisticCard>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
@@ -610,10 +1001,19 @@ export default function PricingPage() {
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'
                     >
+<<<<<<< HEAD
                       <Check className='w-4 h-4 text-green-400 mr-2' />                      {service}
                     </li>
                   ))}
                 </ul>
+=======
+                      <Check className='w-4 h-4 text-green-400 mr-2' />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <Button
                   href='/services'
                   variant='secondary'
@@ -621,7 +1021,12 @@ export default function PricingPage() {
                   className='w-full'
                 >
                   Explore Services
+<<<<<<< HEAD
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>
+=======
+                  <ChevronRight className='ml-2 w-4 h-4' />
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </UltraFuturisticCard>
             ))}
           </div>
@@ -631,7 +1036,12 @@ export default function PricingPage() {
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Popular Services Pricing
           </h2>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {popularServices.slice(0, 6).map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <UltraFuturisticCard
                 key={service.id}
                 variant={service.variant as any}
@@ -657,11 +1067,20 @@ export default function PricingPage() {
                   <ul className='text-xs text-gray-300 space-y-1'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className='flex items-center'>
+<<<<<<< HEAD
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
+=======
+                        <Check className='w-3 h-3 text-green-400 mr-2' />
+                        {feature}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </li>
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <Button
                   href={service.link}
                   variant='primary'
@@ -669,7 +1088,12 @@ export default function PricingPage() {
                   className='w-full'
                 >
                   Learn More
+<<<<<<< HEAD
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>
+=======
+                  <ExternalLink className='ml-2 w-4 h-4' />
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </UltraFuturisticCard>
             ))}
           </div>
@@ -716,7 +1140,12 @@ export default function PricingPage() {
               <p className='text-gray-300'>
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
+<<<<<<< HEAD
               </p>            </UltraFuturisticCard>
+=======
+              </p>
+            </UltraFuturisticCard>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
         {/* Contact Information */}
@@ -752,7 +1181,12 @@ export default function PricingPage() {
               <p className='text-green-400 text-sm font-semibold leading-relaxed'>
                 {contactInfo.address}
               </p>
+<<<<<<< HEAD
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>
+=======
+              <p className='text-gray-400 text-sm mt-2'>Global operations</p>
+            </UltraFuturisticCard>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
         {/* CTA Section */}
@@ -796,6 +1230,7 @@ export default function PricingPage() {
               </p>
               <p className='mt-2'>
                 ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
+<<<<<<< HEAD
               </p>            </div>
           </UltraFuturisticCard>
         </div>
@@ -803,3 +1238,12 @@ export default function PricingPage() {
     </UltraFuturisticBackground>
   );
 }
+=======
+              </p>
+            </div>
+          </UltraFuturisticCard>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

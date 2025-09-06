@@ -1,6 +1,9 @@
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, {
 <<<<<<< HEAD
   useState;
@@ -72,8 +75,14 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   /** Optional canned questions shown when the chat is empty */
+<<<<<<< HEAD
   starterQuestions?: string[]
 }
+=======
+  starterQuestions?: string[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ChatAssistant({
 <<<<<<< HEAD
   isOpen;
@@ -203,6 +212,7 @@ export function ChatAssistant({
         e.preventDefault()
         onClose()
       }
+<<<<<<< HEAD
     }
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
@@ -215,6 +225,15 @@ export function ChatAssistant({
       role="dialog"
       aria-modal="true"
       aria-labelledby="chat-assistant-title"
+=======
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
         {/* Header */}
@@ -322,6 +341,51 @@ export function ChatAssistant({
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+
+}, [ isGuest;
+initialMessages;
+storedGuestMessages;
+setStoredGuestMessages;
+recipient.id]);
+//Effect for logged-in user messages useEffect ( () => {;
+  if (!isGuest) {;
+  //Update state if initialMessages prop changes (e.g. new conversation loaded) useEffect ( () => {;
+  if (debouncedApiCallParams) {;
+  onSendMessage (if (!isGuest) {;
+  //Logged-in user const newMessage: Message = {;
+  setShowGuestModal (false);
+setGuestMessage (null) ;
+};
+if (!isOpen) return null;
+return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title" >) ";
+}</div> </div> <Button > <X className="h-5 w-5" /> </Button> </div> {;
+  contextHeader ;
+}</div>) ;
+}{;
+  /* Messages */ ";
+}<div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite" > > {;
+  q ;
+}</Button>) ) ;
+}</div>) ;
+}</div>) : (currentMessages.map ( (msg) => (<ChatMessage key= {;
+  msg.id ;
+}role= {;
+  msg.role ;
+}message= {;
+  msg.message ;
+}/>) ) ) ;
+}<div ref= {;
+  messagesEndRef ;
+}/> </div> </div> </div> {";
+  showGuestModal && guestMessage && (<div className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title" > <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md" > <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4" > Confirm Message </h3> <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words" > {;
+  guestMessage ";
+}</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
+}</div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,13 +5,22 @@ import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EquipmentDetail: NextPage;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
+<<<<<<< HEAD
   const item = items.find(e => e.slug === slug);  const item = items.find((e) => e.slug === slug);
+=======
+  const item = items.find(e => e.slug === slug);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!item) {
     return (
       <EnhancedLayout>
@@ -25,12 +34,18 @@ const EquipmentDetail: NextPage = () => {
           </Link>
         </div>
       </EnhancedLayout>
+<<<<<<< HEAD
     );  }        <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
+=======
+    );
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <EnhancedLayout>
       <Head>
@@ -73,6 +88,7 @@ const EquipmentDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
 };export default EquipmentDetail;          <div>
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
@@ -94,5 +110,10 @@ const EquipmentDetail: NextPage = () => {
     </EnhancedLayout>
   )
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default EquipmentDetail;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

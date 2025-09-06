@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AICustomerSuccessPlatform() {
 	return (
@@ -26,3 +27,14 @@ export default function AICustomerSuccessPlatform() {
 		/>
 	)
 }
+=======
+import ServicePage, {
+  getStaticProps as getSlugStaticProps,;
+} from './services/[slug]';
+}
+
+export default function AICustomerSuccessPlatform() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

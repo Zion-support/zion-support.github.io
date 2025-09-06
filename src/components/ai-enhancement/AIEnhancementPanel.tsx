@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,;
+} from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import {
+  useAIContentEnhancer,
+  AIEnhancementOptions,;
+} from '@/hooks/useAIContentEnhancer';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
@@ -31,7 +50,13 @@ interface AIEnhancementPanelProps {
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
   initialContent?: string
+=======
+  initialContent?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementPanel({
 <<<<<<< HEAD
   title;
@@ -176,5 +201,9 @@ export function AIEnhancementPanel({
         </CardFooter>
       )}
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

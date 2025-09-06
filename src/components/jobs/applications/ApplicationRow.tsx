@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { formatDistanceToNow } from 'date-fns'
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 <<<<<<< HEAD
@@ -10,6 +11,19 @@ import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
+=======
+import { formatDistanceToNow } from 'date-fns';
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
+import { TableRow, TableCell } from '@/components/ui/table';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+import { StatusBadge } from './StatusBadge';
+import { ScoreBadge } from './ScoreBadge';
+import { ApplicationActions } from './ApplicationActions';
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 interface ApplicationRowProps {
   application: JobApplication;
@@ -34,6 +48,7 @@ interface ApplicationRowProps {
   onStatusChange: (
     applicationId: string
     newStatus: ApplicationStatus
+<<<<<<< HEAD
   ) => Promise<void>
   onViewScore: (application: JobApplication) => void
 interface ApplicationRowProps {
@@ -44,6 +59,12 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication,) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
+=======
+  ) => Promise<void>;
+  onViewScore: (application: JobApplication) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplicationRow({
 <<<<<<< HEAD
   application;
@@ -139,5 +160,9 @@ export function ApplicationRow({
         />
       </TableCell>
     </TableRow>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

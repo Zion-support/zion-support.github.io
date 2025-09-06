@@ -2,10 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -13,6 +17,7 @@ const EPISODES_PATH = path.join(
   'episodes.json'
 );
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
+<<<<<<< HEAD
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -24,6 +29,16 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+=======
+
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
@@ -32,8 +47,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes
     .filter(e => e.audio?.mp3Url)
+<<<<<<< HEAD
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
+=======
+    .map(e => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
@@ -58,13 +77,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ${items}
   </channel>
 </rss>`;
+<<<<<<< HEAD
 fs.writeFileSync(RSS_PATH, xml, 'utf8');
+=======
+
+  fs.writeFileSync(RSS_PATH, xml, 'utf8');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items
+<<<<<<< HEAD
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}</channel> </rss>`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

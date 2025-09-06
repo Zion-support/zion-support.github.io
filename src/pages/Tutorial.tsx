@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { TUTORIALS } from '@/data/tutorials'
@@ -8,6 +9,21 @@ import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
 interface TutorialPageProps {
   tutorial?: TutorialType
+=======
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { TUTORIALS } from '@/data/tutorials';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import type { Tutorial as TutorialType } from '@/types/tutorial';
+
+interface TutorialPageProps {
+  tutorial?: TutorialType;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Tutorial({
   tutorial: initialTutorial
 }: TutorialPageProps) {
@@ -63,5 +79,9 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

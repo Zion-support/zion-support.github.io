@@ -6,8 +6,14 @@ import { format } from "date-fns";
  * @returns Formatted date string
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const formatDate = null;
 =======
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const formatDate = (dateString: string): string => {
   try {
     return format(new Date(dateString), 'PP')

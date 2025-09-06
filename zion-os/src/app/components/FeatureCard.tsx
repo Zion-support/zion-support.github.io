@@ -5,6 +5,10 @@ interface FeatureCardProps {icon: string;
   gradient: string;
   className?: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FeatureCard({
   icon
   title

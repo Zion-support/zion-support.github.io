@@ -2,11 +2,22 @@
 <<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+<<<<<<< HEAD
 type EnhancementType = any;
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
+=======
+
+type EnhancementType =
+  | 'summary'
+  | 'work-description'
+  | 'skill-categorization'
+  | 'general';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useResumeEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);

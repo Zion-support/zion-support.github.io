@@ -11,6 +11,7 @@ interface LeaderboardEntry {
   avatar?: string;
   referrals: number;
   earnings: number;
+<<<<<<< HEAD
 =======
   id: string
   rank: number
@@ -21,6 +22,11 @@ interface LeaderboardEntry {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   badges: string[]
 }
+=======
+  badges: string[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [

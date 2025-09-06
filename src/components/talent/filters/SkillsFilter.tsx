@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { SkillsFilterProps } from '@/types/filters';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Common skills in AI and tech
 <<<<<<< HEAD
 const POPULAR_SKILLS = null;
 =======
 const POPULAR_SKILLS = [
+<<<<<<< HEAD
   'Machine Learning'
   'Deep Learning'
   'Python'
@@ -24,6 +33,27 @@ const POPULAR_SKILLS = [
   'DevOps'
   'Security'
 ]
+=======
+  'Machine Learning',
+  'Deep Learning',
+  'Python',
+  'TensorFlow',
+  'PyTorch',
+  'Computer Vision',
+  'NLP',
+  'Data Science',
+  'AWS',
+  'Docker',
+  'Kubernetes',
+  'React',
+  'Node.js',
+  'TypeScript',
+  'DevOps',
+  'Security',
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SkillsFilter({
   selectedSkills
   toggleSkill
@@ -46,6 +76,7 @@ export function SkillsFilter({
       {expanded && (
         <div className='mt-4 space-y-2'>
           {POPULAR_SKILLS.map(skill => (
+<<<<<<< HEAD
             <div key={skill} className='flex items-center'>              <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
@@ -92,10 +123,14 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
             <div key={skill} className="flex items-center">
+=======
+            <div key={skill} className='flex items-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+<<<<<<< HEAD
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`skill-${skill}`}
@@ -104,11 +139,24 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                htmlFor="input-
                 {skill}
               ">
+=======
+                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+              />
+              <label
+                htmlFor={`skill-${skill}`}
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >
+                {skill}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </label>
             </div>
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,12 +1,22 @@
 import Link from 'next/link';
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export async function getStaticProps() {
 <<<<<<< HEAD
   const articles = null;
 =======
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
+<<<<<<< HEAD
   return { props: { articles } }
+=======
+  return { props: { articles } };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -25,11 +35,20 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className='font-medium'>{a.title}</div>
                     <div className='text-xs opacity-70 mt-1'>
                       Last updated {new Date(a.updatedAt).toLocaleDateString()}
+<<<<<<< HEAD
                     </div>                  </a>
+=======
+                    </div>
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Link>
               ))}
           </div>
         </div>
       ))}
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

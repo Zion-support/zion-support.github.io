@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import {
+  getClientBudgetSuggestion,
+  PricingSuggestion,
+  ClientBudgetParams,
+  trackPricingSuggestion,;
+} from '@/services/pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { useAuth } from '@/hooks/useAuth';
+import { Sparkles } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button";
@@ -18,7 +33,11 @@ interface ClientBudgetRecommenderProps {
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
+<<<<<<< HEAD
   onSuggestionApplied: (minValue: number, maxValue: number) => void
+=======
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
@@ -79,6 +98,7 @@ export const ClientBudgetRecommender: React.FC<
     setIsLoading(true)
     try {
       const params: ClientBudgetParams = {
+<<<<<<< HEAD
         jobTitle
         category
       };        jobTitle
@@ -88,6 +108,18 @@ export const ClientBudgetRecommender: React.FC<
       if (experienceLevel) params.experienceLevel = experienceLevel
       const result = await getClientBudgetSuggestion(params)
       setSuggestion(result)
+=======
+        jobTitle,
+        category,
+      };
+
+      if (timeline) params.timeline = timeline;
+      if (scope) params.scope = scope;
+      if (experienceLevel) params.experienceLevel = experienceLevel;
+
+      const result = await getClientBudgetSuggestion(params);
+      setSuggestion(result);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     } catch (error) {
       logErrorToProduction('Error generating budget suggestion:', {
         data: error
@@ -132,6 +164,7 @@ export const ClientBudgetRecommender: React.FC<
         )}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 if (scope) params.scope = scope
@@ -148,3 +181,21 @@ return (<div className="space-y-4" > <div> {"
 '"  )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+if (scope) params.scope = scope;
+if (experienceLevel) params.experienceLevel = experienceLevel;
+//Track this suggestion application if (user && user.id) {;
+  trackPricingSuggestion ({;
+  ;
+
+};
+return (<div className="space-y-4" > <div> {";
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
+  generateSuggestion ";
+}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
+}</div> </div>) ;
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

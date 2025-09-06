@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface MicroSaasService {
   id: string;
   name: string;
@@ -2026,6 +2027,9 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 export const getServicesByCategory = null;
 =======
 name: string;
+=======
+ name: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 tagline: string;
 price: string;
 period: string;
@@ -2049,4 +2053,7 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -3,8 +3,13 @@ export const cuttingEdgeAIServices2025 = null;
 =======
 export const cuttingEdgeAIServices2025 = [
   {
+<<<<<<< HEAD
     id: 'ai-consciousness-evolution-pro'
     name: 'AI Consciousness Evolution Pro'
+=======
+    id: 'ai-consciousness-evolution-pro',
+    name: 'AI Consciousness Evolution Pro',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.'
       'Emotional intelligence development with 98% accuracy'
@@ -425,6 +430,7 @@ export const cuttingEdgeAIServices2025 = [
       'Collaboration tools'
     ]
     compliance: [
+<<<<<<< HEAD
       'SOC2'
       'ISO 27001'
       'GDPR'
@@ -439,3 +445,13 @@ export const cuttingEdgeAIServices2025 = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'SOC2',
+      'ISO 27001',
+      'GDPR',
+      'CCPA',
+      'Intellectual property protection',
+    ],
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

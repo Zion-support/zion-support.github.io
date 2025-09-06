@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { format  } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react'
@@ -10,6 +11,16 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 =======
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
+=======
+import { format } from 'date-fns';
+import { Edit, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Education } from '@/types/resume';
+import { EducationItemProps } from './types';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EducationItem({
   education
   onEdit
@@ -61,6 +72,7 @@ export function EducationItem({
               variant='ghost'
               size='icon'
               onClick={() => onDelete(education.id!)}
+<<<<<<< HEAD
               aria-label='Delete education'            >
               <Trash2 className='h-4 w-4' />            </Button>
           </div>
@@ -71,13 +83,26 @@ export function EducationItem({
     </Card>
   )
 }              <Trash2 className="h-4 w-4" />
+=======
+              aria-label='Delete education'
+            >
+              <Trash2 className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
         {education.description && (
+<<<<<<< HEAD
           <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>
     </Card>
   )
 }
+=======
+          <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>
+        )}
+      </CardContent>
+    </Card>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

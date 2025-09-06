@@ -55,6 +55,11 @@ const syncLogs = [
     details: "Updated candidate status to 'Interview Scheduled'"
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
     switch (status) {

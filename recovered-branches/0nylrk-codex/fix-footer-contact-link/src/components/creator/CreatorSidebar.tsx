@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+import {
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,;
+} from 'lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,;
+} from '@/components/ui/sidebar';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {

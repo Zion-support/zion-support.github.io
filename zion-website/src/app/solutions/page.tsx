@@ -84,10 +84,22 @@ const implementationSteps = [
     description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.'
     icon: RocketLaunchIcon}
   {
+<<<<<<< HEAD
     step: '05'
     title: 'Ongoing Support'
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
     icon: ShieldCheckIcon}]
+=======
+    step: '05',
+    title: 'Ongoing Support',
+    description:
+      'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
+    icon: ShieldCheckIcon,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SolutionsPage() {
   return (
     <div className=&quot;bg-black&quot;>

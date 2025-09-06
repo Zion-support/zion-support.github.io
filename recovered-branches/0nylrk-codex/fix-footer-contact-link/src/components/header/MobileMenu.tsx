@@ -7,9 +7,14 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 export interface MobileMenuProps {
   unreadCount?: number;
+<<<<<<< HEAD
   onClose: () => void
 }
 <<<<<<< HEAD
+=======
+  onClose: () => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function MobileMenu({ unreadCount;
 =======

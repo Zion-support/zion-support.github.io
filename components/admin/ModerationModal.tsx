@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ModerationModalProps = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type ModerationModalProps = {
   flag: any | null;
   onClose: () => void;
@@ -9,6 +13,12 @@ export type ModerationModalProps = {
     action: 'approve' | 'remove' | 'warn' | 'ban'
     adminNotes?: string
   ) => Promise<void>;
+<<<<<<< HEAD
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ModerationModal({
   flag
   onClose
@@ -110,6 +120,7 @@ export default function ModerationModal({
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
+<<<<<<< HEAD
           </button>        </div>
       </div>
     </div>
@@ -123,3 +134,10 @@ export default function ModerationModal({
     </div>
 );
 }
+=======
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

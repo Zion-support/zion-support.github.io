@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -17,6 +18,17 @@ import { ContractFormValues } from '@/components/contracts/components/ContractFo
 import { ContractTemplate } from '@/types/contracts'
 import { useContractTemplates } from '@/hooks/useContractTemplates'
 import { Button } from '@/components/ui/button'
+=======
+import { useState } from 'react';
+import { useForm, type ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Loader2 } from 'lucide-react';
+import { ContractFormValues } from '@/components/contracts/components/ContractForm';
+import { ContractTemplate } from '@/types/contracts';
+import { useContractTemplates } from '@/hooks/useContractTemplates';
+import { Button } from '@/components/ui/button';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Form
   FormControl
@@ -33,10 +45,19 @@ const formSchema = z.object({
 })
 type FormValues = z.infer<typeof formSchema>
 interface TemplateSaveFormProps {
+<<<<<<< HEAD
   onCancel: () => void
   onComplete: () => void
   editTemplate?: ContractTemplate | null
   currentValues?: ContractFormValues
+=======
+  onCancel: () => void;
+  onComplete: () => void;
+  editTemplate?: ContractTemplate | null;
+  currentValues?: ContractFormValues;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TemplateSaveForm({
   onCancel
   onComplete
@@ -135,6 +156,7 @@ export function TemplateSaveForm({
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 setSaving (true)
 try {
@@ -149,3 +171,20 @@ try {
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
+=======
+  );
+
+setSaving (true);
+try {;
+  if (editTemplate) {;
+  await updateTemplate.mutateAsync ({;
+  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
+  ...field ";
+}placeholder="Enter template name" /> ;
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
+  editTemplate ? "Update" : "Save" ;
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

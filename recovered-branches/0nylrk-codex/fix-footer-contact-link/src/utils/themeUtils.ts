@@ -12,7 +12,16 @@ export interface ThemeColors {
   cardBackground: string
 }
 // Define theme presets
+<<<<<<< HEAD
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
+=======
+}
+
+export function getThemeColors(
+  preset: ThemePreset,
+  primaryColor: string
+): ThemeColors {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   switch (preset) {
     case 'dark':
       return {
@@ -57,6 +66,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   }
 }
 // Apply theme colors to document CSS variables
+}
+
 export function applyThemeColors(colors: ThemeColors) {
   const root = document.documentElement
   root.style.setProperty('--primary-color', colors.primaryColor);

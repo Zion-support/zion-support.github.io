@@ -38,6 +38,7 @@ interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
+<<<<<<< HEAD
   context?: Record<string, unknown>,
   stack?: string;
   url?: string;
@@ -68,14 +69,33 @@ interface LogEntry {
 =======
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  component?: string;
+  timestamp: string;
+  sessionId?: string;
+  userId?: string;
+  error?: {
+    name: string;
+    stack?: string;
+  };
+  performance?: {
+    duration: number;
+    memory?: number;
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface LogsPageProps {
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastUpdated: string
 }
+=======
+  lastUpdated: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const LogLevelIcon = null;
 =======
@@ -96,6 +116,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
       return <Info className='h-4 w-4 text-gray-500' />;
   }
 ];
+<<<<<<< HEAD
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
     debug: 'bg-blue-100 text-blue-800'
@@ -113,12 +134,41 @@ export default function LogsPage({
   totalCount
   lastUpdated
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+=======
+
+const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
+  const colors = {
+    debug: 'bg-blue-100 text-blue-800',
+    info: 'bg-green-100 text-green-800',
+    warn: 'bg-yellow-100 text-yellow-800',
+    error: 'bg-red-100 text-red-800',
+    critical: 'bg-red-200 text-red-900',
+  };
+
+  return <Badge className={colors[level]}>{level.toUpperCase()}</Badge>;
+};
+}
+}
+
+export default function LogsPage({
+  logs: initialLogs,
+  errorCount,
+  warningCount,
+  totalCount,
+  lastUpdated,
+}: LogsPageProps) {
+  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
   );
@@ -159,8 +209,15 @@ export default function LogsPage({
       case 'warn': return 'bg-yellow-100 text-yellow-800';
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
+<<<<<<< HEAD
       default: return 'bg-gray-100 text-gray-800';    }
   }
+=======
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri =
@@ -172,9 +229,18 @@ export default function LogsPage({
     linkElement.click();
   }
   const formatTimestamp = (timestamp: string) => {
+<<<<<<< HEAD
     return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
+=======
+    return new Date(timestamp).toLocaleString();
+  };
+
+  const formatPerformance = (performance?: LogEntry['performance']) => {
+    if (!performance) return null;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`);
@@ -215,7 +281,12 @@ export default function LogsPage({
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>{totalCount}</div>
+<<<<<<< HEAD
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
+=======
+            <p className='text-xs text-muted-foreground'>All log entries</p>
+          </CardContent>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </Card>
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
@@ -226,7 +297,12 @@ export default function LogsPage({
             <div className='text-2xl font-bold text-red-600'>{errorCount}</div>
             <p className='text-xs text-muted-foreground'>
               Critical & error logs
+<<<<<<< HEAD
             </p>          </CardContent>
+=======
+            </p>
+          </CardContent>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </Card>
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
@@ -237,7 +313,12 @@ export default function LogsPage({
             <div className='text-2xl font-bold text-yellow-600'>
               {warningCount}
             </div>
+<<<<<<< HEAD
             <p className='text-xs text-muted-foreground'>Warning logs</p>          </CardContent>
+=======
+            <p className='text-xs text-muted-foreground'>Warning logs</p>
+          </CardContent>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </Card>
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
@@ -248,7 +329,12 @@ export default function LogsPage({
             <div className='text-sm font-medium'>
               {formatTimestamp(lastUpdated)}
             </div>
+<<<<<<< HEAD
             <p className='text-xs text-muted-foreground'>Data freshness</p>          </CardContent>
+=======
+            <p className='text-xs text-muted-foreground'>Data freshness</p>
+          </CardContent>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </Card>
       </div>
       {/* Filters */}
@@ -277,7 +363,12 @@ export default function LogsPage({
                 <SelectItem value='info'>Info</SelectItem>
                 <SelectItem value='warn'>Warning</SelectItem>
                 <SelectItem value='error'>Error</SelectItem>
+<<<<<<< HEAD
                 <SelectItem value='critical'>Critical</SelectItem>              </SelectContent>
+=======
+                <SelectItem value='critical'>Critical</SelectItem>
+              </SelectContent>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
@@ -288,7 +379,12 @@ export default function LogsPage({
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>
                     {category}
+<<<<<<< HEAD
                   </SelectItem>                ))}
+=======
+                  </SelectItem>
+                ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
@@ -300,11 +396,20 @@ export default function LogsPage({
                 {sources.map(source => (
                   <SelectItem key={source} value={source}>
                     {source}
+<<<<<<< HEAD
                   </SelectItem>                ))}
+=======
+                  </SelectItem>
+                ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </SelectContent>
             </Select>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Logs Table */}
       <Card>
         <CardHeader>
@@ -335,10 +440,19 @@ export default function LogsPage({
                       <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>
                         View Context
                       </summary>
+<<<<<<< HEAD
                       <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>                        {JSON.stringify(log.context, null, 2)}
                       </pre>
                     </details>
                   )}
+=======
+                      <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>
+                        {JSON.stringify(log.context, null, 2)}
+                      </pre>
+                    </details>
+                  )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {log.error && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-red-600 hover:text-red-800'>
@@ -376,19 +490,35 @@ export default function LogsPage({
                       </div>
                     </details>
                   )}
+<<<<<<< HEAD
                   <div className='flex items-center justify-between text-xs text-muted-foreground'>                    <div>
+=======
+
+                  <div className='flex items-center justify-between text-xs text-muted-foreground'>
+                    <div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Session: {log.sessionId}
                       {log.userId && ` • User: ${log.userId}`}
                     </div>
                   </div>
                   {log.url && (
+<<<<<<< HEAD
                     <div className='text-xs text-muted-foreground truncate'>                      URL: {log.url}
+=======
+                    <div className='text-xs text-muted-foreground truncate'>
+                      URL: {log.url}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   )}
                 </div>
               ))
             ) : (
+<<<<<<< HEAD
               <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.
+=======
+              <div className='text-center text-muted-foreground py-8'>
+                No logs found matching the current filters.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             )}
           </div>
@@ -396,11 +526,28 @@ export default function LogsPage({
       </main>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logsDir = path.join(process.cwd(), 'logs');
     const logs: LogEntry[] = [];
+<<<<<<< HEAD
+=======
+
+    // Read all log files
+    if (fs.existsSync(logsDir)) {
+      const files = fs.readdirSync(logsDir);
+      const logFiles = files.filter(file => file.endsWith('.log'));
+
+       catch (parseError) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               // Skip malformed log entries
             }
           }
@@ -416,12 +563,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
     );
     // Calculate statistics
     const errorCount = logs.filter(
+<<<<<<< HEAD
       log => log.level === 'error' |log.level === 'critical'
     ).length;    const warningCount = logs.filter(log => log.level === 'warn').length;
+=======
+      log => log.level === 'error' || log.level === 'critical'
+    ).length;
+    const warningCount = logs.filter(log => log.level === 'warn').length;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const totalCount = logs.length;
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
+<<<<<<< HEAD
         errorCount
         warningCount
         totalCount
@@ -441,3 +595,24 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        errorCount,
+        warningCount,
+        totalCount,
+        lastUpdated: new Date().toISOString(),
+      },
+    };
+  } catch (error) {
+    logErrorToProduction('Error reading logs:', error);
+    return {
+      props: {
+        logs: [],
+        errorCount: 0,
+        warningCount: 0,
+        totalCount: 0,
+        lastUpdated: new Date().toISOString(),
+      },
+    };
+  }
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

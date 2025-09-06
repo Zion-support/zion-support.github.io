@@ -1,4 +1,6 @@
 // Performance optimization utilities
+}
+
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
@@ -10,6 +12,7 @@ export const optimizeImages = () => {
     }
   });
 };
+}
 
 export const preloadCriticalResources = null;
     '/css/critical.css'
@@ -23,6 +26,7 @@ export const preloadCriticalResources = null;
     document.head.appendChild(link);
   });
 };
+}
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components

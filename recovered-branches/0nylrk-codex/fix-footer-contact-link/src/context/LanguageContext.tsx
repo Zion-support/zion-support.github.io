@@ -28,14 +28,30 @@ const defaultLanguageContext: LanguageContextType = {
   supportedLanguages
 }
 const LanguageContext = createContext(defaultLanguageContext);
+<<<<<<< HEAD
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+=======
+}
+
+export const useLanguage = (): LanguageContextType =>
+  useContext(LanguageContext);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface LanguageProviderProps {
   children: ReactNode
   authState?: {
+<<<<<<< HEAD
     isAuthenticated: boolean
     user: { id?: string } | null
   }
 }
+=======
+    isAuthenticated: boolean;
+    user: { id?: string } | null;
+  };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children
   authState = { isAuthenticated: false, user: null }

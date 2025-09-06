@@ -1,14 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = any;
 =======
 }
+=======
+
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>)
 }</li>) )
 }</ul> </div>)
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function InnovationDigest({ items }: Props) {
   return (
@@ -35,3 +42,5 @@ export default function InnovationDigest({ items }: Props) {
     </div>
 );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

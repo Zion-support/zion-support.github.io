@@ -1,6 +1,7 @@
 import Head from 'next/head',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart  } from 'lucide-react';
 import { motion, useScroll, useSpring  } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -37,6 +38,35 @@ export default function MainFrontIndex() {
   useEffect(() => {
     const onScroll = () => setShowToTop(window.scrollY > 400);
     window.addEventListener('scroll', onScroll, { passive: true } as any);  const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 })
+=======
+import {
+  Cpu,
+  Gauge,
+  GitBranch,
+  Rocket,
+  ShieldCheck,
+  Zap,
+  Activity,
+  Globe,
+  Layers,
+  BarChart3,
+  Search,
+  Link2,
+  Palette,
+  LineChart,;
+} from 'lucide-react';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
+}
+
+export default function MainFrontIndex() {
+  const { scrollYProgress } = useScroll();
+  const progressX = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 20,
+    mass: 0.2,
+  });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [showToTop, setShowToTop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
@@ -160,6 +190,7 @@ export default function MainFrontIndex() {
             className='md:hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80'
           >
             Menu
+<<<<<<< HEAD
           </button>        </nav>    onScroll();
     return () => window.removeEventListener('scroll', onScroll)
   }, []);
@@ -230,6 +261,9 @@ export default function MainFrontIndex() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
           </div>
           <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md:hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu</button>
+=======
+          </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </nav>
         {/* Mobile overlay menu */}
         {mobileOpen && (
@@ -237,7 +271,11 @@ export default function MainFrontIndex() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}            className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
+=======
+            className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             onClick={() => setMobileOpen(false)}
           >
             <motion.div
@@ -305,6 +343,7 @@ export default function MainFrontIndex() {
                   >
                     Launch Hub
                   </a>
+<<<<<<< HEAD
                 </Link>              </div>            >
               <div className="mb-4 flex items-center justify-between">
                 <div className="text-lg font-semibold">Navigate</div>
@@ -339,17 +378,24 @@ export default function MainFrontIndex() {
               </div>
               <div className="mt-4 flex justify-end">
                 <Link href="/automation"><a onClick={() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a></Link>
+=======
+                </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </motion.div>
         )}
       </header>
       {/* Hero */}
+<<<<<<< HEAD
       <div role='main' className='relative z-10'>        <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'      <div role="main" className="relative z-10">
+=======
+      <div role='main' className='relative z-10'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -480,6 +526,7 @@ export default function MainFrontIndex() {
                   rel='noopener'
                 >
                   Repo Radar & Knowledge →
+<<<<<<< HEAD
                 </a>              </div>
             </div>
             {/* Live metrics strip */}            <div className="mx-auto mt-6 max-w-5xl text-left">
@@ -495,6 +542,10 @@ export default function MainFrontIndex() {
                 <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/a11y-contrast-guardian.yml" target="_blank" rel="noopener noreferrer">A11y & Contrast Guardian →</a>
                 <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-pulse.yml" target="_blank" rel="noopener noreferrer">Marketing Pulse →</a>
                 <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/repo-radar-knowledge.yml" target="_blank" rel="noopener noreferrer">Repo Radar & Knowledge →</a>
+=======
+                </a>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
             {/* Live metrics strip */}
             <div className='mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4'>
@@ -509,6 +560,7 @@ export default function MainFrontIndex() {
                   className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
                 >
                   <div className='text-lg font-bold text-white'>{k}</div>
+<<<<<<< HEAD
                   <div className='text-xs text-white/70'>{v}</div>                </div>                ['24/7Autonomous'];
                 ['MainDirect Sync'];
                 ['0 OpsCloud‑Native']
@@ -516,6 +568,10 @@ export default function MainFrontIndex() {
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
                   <div className="text-lg font-bold text-white">{k}</div>
                   <div className="text-xs text-white/70">{v}</div>
+=======
+                  <div className='text-xs text-white/70'>{v}</div>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </div>
             {/* Futuristic marquee */}
@@ -543,11 +599,16 @@ export default function MainFrontIndex() {
                         <span className='h-1.5 w-1.5 rounded-full bg-cyan-400' />{' '}
                         {label}
                       </span>
+<<<<<<< HEAD
                     ))}                </div>                    'Autonomous AgentsRepo Sync to MainZero‑Ops CloudSafety GuardrailsA11y + PerformanceObservabilitySEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
                     </span>
                   ))}
+=======
+                    ))}
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
             {/* Quick Links */}
@@ -562,6 +623,7 @@ export default function MainFrontIndex() {
                 <Link key={label as string} href={href as string}>
                   <a className='rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10'>
                     {label as string}
+<<<<<<< HEAD
                   </a>                </Link>              {[
                 ['Automation Hub/automation'];
                 ['SEO Audit/reports/seo'];
@@ -570,11 +632,18 @@ export default function MainFrontIndex() {
                 ['Site Health/site-health']].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
+=======
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Link>
               ))}
             </div>
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Showcase */}
         <motion.section
           id='showcase'
@@ -680,12 +749,17 @@ export default function MainFrontIndex() {
                 </p>
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Open <span aria-hidden>→</span>
+<<<<<<< HEAD
                 </div>              </a>            <Link href="/automation">
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Automation Hub</h3></div>
                 <p className="mt-1 text-sm text-white/75">Factories, agents, and live workflows in one place.</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+=======
+                </div>
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Link>
           </div>
         </motion.section>
@@ -772,6 +846,7 @@ export default function MainFrontIndex() {
               <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                 Open <span aria-hidden>↗</span>
               </div>
+<<<<<<< HEAD
             </a>          </div>
         </section>
         {/* Floating Quick-Nav Dock */}        <section className="mx-auto max-w-7xl px-6 pb-16">
@@ -783,6 +858,10 @@ export default function MainFrontIndex() {
             <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Product evolution</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
             <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
             <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized updates</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+=======
+            </a>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </section>
         {/* Floating Quick-Nav Dock */}
         <aside className='fixed left-4 top-1/2 z-30 -translate-y-1/2 block'>
@@ -808,6 +887,7 @@ export default function MainFrontIndex() {
                 key={href}
                 href={href}
                 className='block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white'
+<<<<<<< HEAD
               >                {label}              ['#command-centerCommand'];
               ['#feature-mapMap'];
               ['#enginesEngines'];
@@ -824,17 +904,25 @@ export default function MainFrontIndex() {
               ['#guardrailsGuardrails'];
               ['#roadmapDocs']].map(([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
+=======
+              >
+                {label}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             ))}
           </nav>
         </aside>
         {/* Engines: Alternative Automation Runtimes */}
         <motion.section
+<<<<<<< HEAD
           id='engines'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="engines"
+=======
+          id='engines'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1016,19 +1104,28 @@ export default function MainFrontIndex() {
                 Runs every minute: triggers all cloud functions and syncs to
                 main.
               </p>
+<<<<<<< HEAD
               <div className='mt-3 text-xs text-cyan-300/90'>Open ↗</div>            </a>              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Autonomous Master Orchestrator</div>
               <p className="mt-1 text-sm text-white/75">Runs every minute: triggers all cloud functions and syncs to main.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Open ↗</div>
+=======
+              <div className='mt-3 text-xs text-cyan-300/90'>Open ↗</div>
+            </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Autonomous Innovations */}
         <motion.section
+<<<<<<< HEAD
           id='innovations'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="innovations"
+=======
+          id='innovations'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1092,11 +1189,16 @@ export default function MainFrontIndex() {
               </p>
               <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                 Open <span aria-hidden>→</span>
+<<<<<<< HEAD
               </div>            </a>            <a href="/.netlify/functions/autonomous-invention-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Autonomous Invention Orchestrator</h3></div>
               <p className="mt-1 text-sm text-white/75">Continuously invents and applies front enhancements.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+=======
+              </div>
+            </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Autonomous Cloud Runners */}
@@ -1127,6 +1229,7 @@ export default function MainFrontIndex() {
                 <p className='mt-1 text-sm text-white/75'>{tool.desc}</p>
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Open <span aria-hidden>↗</span>
+<<<<<<< HEAD
                 </div>              </a>        <section id="cloud-runners" className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Cloud Runners</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -1138,6 +1241,10 @@ export default function MainFrontIndex() {
                 <h3 className="text-lg font-semibold">{tool.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{tool.desc}</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+=======
+                </div>
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </section>
@@ -1212,6 +1319,7 @@ export default function MainFrontIndex() {
                     <a className='mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline'>
                       Open
                     </a>
+<<<<<<< HEAD
                   </Link>                )}            {[
               { title: 'Automation Hub', desc: 'Runbooks, factories, and live autonomous agents.', href: '/automation' }
               { title: 'Site Health', desc: 'A11y, performance, and link‑health dashboards.', href: '/site-health' }
@@ -1230,6 +1338,9 @@ export default function MainFrontIndex() {
                   <a href={card.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a>
                 ) : (
                   <Link href={card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>
+=======
+                  </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 )}
               </article>
             ))}
@@ -1237,10 +1348,14 @@ export default function MainFrontIndex() {
         </section>
         {/* Netlify Automations */}
         <motion.section
+<<<<<<< HEAD
           id='netlify-automations'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}          id="netlify-automations"
+=======
+          id='netlify-automations'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1329,6 +1444,7 @@ export default function MainFrontIndex() {
                 <div className='mt-1 text-sm text-white/75'>{f.desc}</div>
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Trigger <span aria-hidden>↗</span>
+<<<<<<< HEAD
                 </div>              </a>          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Netlify Automations</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Zero‑ops scheduled functions power background tasks that improve the site and ship small, safe diffs to main.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -1351,6 +1467,10 @@ export default function MainFrontIndex() {
                 <div className="text-lg font-semibold">{f.label}</div>
                 <div className="mt-1 text-sm text-white/75">{f.desc}</div>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
+=======
+                </div>
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </motion.section>
@@ -1391,11 +1511,16 @@ export default function MainFrontIndex() {
               </div>
               <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                 Trigger <span aria-hidden>↗</span>
+<<<<<<< HEAD
               </div>            </a>            <a href="/.netlify/functions/autonomous-invention-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Autonomous Invention Orchestrator</div>
               <div className="mt-1 text-sm text-white/75">Invents and curates fresh automations and safely syncs diffs to main.</div>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
+=======
+              </div>
+            </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </section>
         {/* Feature Spotlight */}
@@ -1462,6 +1587,7 @@ export default function MainFrontIndex() {
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Open <span aria-hidden>→</span>
+<<<<<<< HEAD
                   </div>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Spotlight</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick tour of the most impactful capabilities — each card links to a deep dive.</p>
@@ -1482,6 +1608,9 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -1576,6 +1705,7 @@ export default function MainFrontIndex() {
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Open <span aria-hidden>→</span>
                 </div>
+<<<<<<< HEAD
               </a>            </div>        <section className="mx-auto max-w-7xl px-6 pb-16">
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl">
             <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,2.5rem_2.5rem,2.5rem_2.5rem] animate-grid" />
@@ -1588,6 +1718,10 @@ export default function MainFrontIndex() {
               <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">AI Trends Radar</h3><p className="mt-1 text-sm text-white/75">Signals that inspire new automations</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
               <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Newsroom</h3><p className="mt-1 text-sm text-white/75">Latest autonomous updates</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
               <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Live Workflows</h3><p className="mt-1 text-sm text-white/75">Observe pipelines running 24/7</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+=======
+              </a>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
@@ -1645,6 +1779,7 @@ export default function MainFrontIndex() {
                   <span className='text-sm text-white/80'>
                     <span className='font-semibold text-white'>{b.label}</span>{' '}
                     — {b.desc} <span className='ml-1 text-cyan-300/90'>→</span>
+<<<<<<< HEAD
                   </span>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcome‑Focused Benefits</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.</p>
@@ -1660,6 +1795,9 @@ export default function MainFrontIndex() {
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>
+=======
+                  </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -1667,11 +1805,15 @@ export default function MainFrontIndex() {
         </motion.section>
         {/* Suites */}
         <motion.section
+<<<<<<< HEAD
           id='suites'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="suites"
+=======
+          id='suites'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1753,6 +1895,7 @@ export default function MainFrontIndex() {
                         Open
                       </a>
                     </Link>
+<<<<<<< HEAD
                   ))}              </article>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -1777,6 +1920,9 @@ export default function MainFrontIndex() {
                     <Link href={suite.href}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>
                   )
                 )}
+=======
+                  ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </article>
             ))}
           </div>
@@ -1816,6 +1962,7 @@ export default function MainFrontIndex() {
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
                 <Icon className='h-6 w-6 text-cyan-300' />
                 <h3 className='mt-3 text-lg font-semibold'>{title}</h3>
+<<<<<<< HEAD
                 <p className='mt-1 text-sm text-white/75'>{desc}</p>              </article>              { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' }
               { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' }
               { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (
@@ -1824,6 +1971,10 @@ export default function MainFrontIndex() {
                 <Icon className="h-6 w-6 text-cyan-300" />
                 <h3 className="mt-3 text-lg font-semibold">{title}</h3>
                 <p className="mt-1 text-sm text-white/75">{desc}</p>
+=======
+                <p className='mt-1 text-sm text-white/75'>{desc}</p>
+              </article>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </motion.section>
@@ -1891,21 +2042,30 @@ export default function MainFrontIndex() {
                 </div>
                 <p className='mt-1 text-xs text-white/75'>
                   Stay ahead with intelligence signals.
+<<<<<<< HEAD
                 </p>              </a>            <Link href="/reports/ai-trends">
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">4. Track AI Trends</span></div>
                 <p className="mt-1 text-xs text-white/75">Stay ahead with intelligence signals.</p>
+=======
+                </p>
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Link>
           </div>
         </motion.section>
         {/* Features */}
         <motion.section
+<<<<<<< HEAD
           id='features'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="features"
+=======
+          id='features'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -2120,6 +2280,7 @@ export default function MainFrontIndex() {
                   <p className='mt-2 text-sm text-white/75'>{desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Learn more <Link2 className='h-3.5 w-3.5' />
+<<<<<<< HEAD
                   </div>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -2166,6 +2327,9 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-2 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn more <Link2 className="h-3.5 w-3.5" /></div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -2188,6 +2352,7 @@ export default function MainFrontIndex() {
             <div className='pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent' />
             <div className='pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent' />
             <div className='marquee'>
+<<<<<<< HEAD
               <div className='marquee__track'>                {[          <div className="relative mx-auto mt-6 max-w-6xl overflow-hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />
@@ -2201,18 +2366,35 @@ export default function MainFrontIndex() {
                   { label: 'Better content curation', href: '/newsroom' }
                   { label: 'Operational visibility', href: '/site-health' }
                   { label: 'Experiment velocity', href: '/automation' }
+=======
+              <div className='marquee__track'>
+                {[
+                  { label: 'Accessibility fixes', href: '/site-health' },
+                  { label: 'Performance boosts', href: '/site-health' },
+                  { label: 'SEO improvements', href: '/reports/seo' },
+                  { label: 'Safer main merges', href: '/automation' },
+                  { label: 'Cleaner codebase', href: '/automation' },
+                  { label: 'Better content curation', href: '/newsroom' },
+                  { label: 'Operational visibility', href: '/site-health' },
+                  { label: 'Experiment velocity', href: '/automation' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ]
                   .flatMap(item => [item, item])
                   .map((item, idx) => (
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className='mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10'>
                         <span className='h-1.5 w-1.5 rounded-full bg-cyan-400' />{' '}
+<<<<<<< HEAD
                         {item.label}                      </a>                  { label: 'Experiment velocity', href: '/automation' }]
                   .flatMap((item) => [item, item])
                   .map((item, idx) => (
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">
                         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
+=======
+                        {item.label}
+                      </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </Link>
                   ))}
               </div>
@@ -2221,7 +2403,12 @@ export default function MainFrontIndex() {
         </motion.section>
         {/* Feature Map */}
         <motion.section
+<<<<<<< HEAD
           id='feature-map'          initial={{ opacity: 0, y: 24 }}
+=======
+          id='feature-map'
+          initial={{ opacity: 0, y: 24 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
@@ -2327,7 +2514,12 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>
+=======
+            )}
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </motion.section>
         {/* AUTO: catalog injection for automated advertising */}
         {
@@ -2532,6 +2724,7 @@ export default function MainFrontIndex() {
                 href: '/automation'
               }
               {
+<<<<<<< HEAD
                 Icon: BarChart3
                 title: 'Impact Analytics'
                 desc: 'Track outcomes and ROI from automations.'
@@ -2617,6 +2810,14 @@ export default function MainFrontIndex() {
               { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' }
               { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' }
               { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
+=======
+                Icon: BarChart3,
+                title: 'Impact Analytics',
+                desc: 'Track outcomes and ROI from automations.',
+                href: '/site-health',
+              },
+            ].map(({ Icon, title, desc, href }) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Link key={title} href={href}>
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -2627,6 +2828,7 @@ export default function MainFrontIndex() {
                   <p className='mt-2 text-sm text-white/75'>{desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Open <Link2 className='h-3.5 w-3.5' />
+<<<<<<< HEAD
                   </div>                </a>              <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -2636,6 +2838,9 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-2 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -2771,6 +2976,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denser, at-a-glance atlas of what Zion ships autonomously. Every tile links to the live hub, report, or docs.</p>
@@ -2811,6 +3017,9 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Extended Feature Directory */}
@@ -2919,6 +3128,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hub, report, or live workflow.</p>
@@ -2951,6 +3161,9 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Capability Deep Links */}
@@ -3045,6 +3258,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
@@ -3076,15 +3290,22 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Use Cases */}
         <motion.section
+<<<<<<< HEAD
           id='use-cases'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="use-cases"
+=======
+          id='use-cases'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3126,6 +3347,7 @@ export default function MainFrontIndex() {
               >
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
                 <h3 className='text-lg font-semibold'>{u.title}</h3>
+<<<<<<< HEAD
                 <p className='mt-1 text-sm text-white/75'>{u.desc}</p>              </article>              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' }
               { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' }
               { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' }
@@ -3136,6 +3358,10 @@ export default function MainFrontIndex() {
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{u.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{u.desc}</p>
+=======
+                <p className='mt-1 text-sm text-white/75'>{u.desc}</p>
+              </article>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </motion.section>
@@ -3194,6 +3420,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>
@@ -3219,15 +3446,22 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Capabilities */}
         <motion.section
+<<<<<<< HEAD
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
+=======
+          id='capabilities'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3331,6 +3565,7 @@ export default function MainFrontIndex() {
                     <Icon className='h-5 w-5 text-cyan-300' />
                     <h3 className='text-lg font-semibold'>{title}</h3>
                   </div>
+<<<<<<< HEAD
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -3357,6 +3592,9 @@ export default function MainFrontIndex() {
                     <h3 className="text-lg font-semibold">{title}</h3>
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
+=======
+                  <p className='mt-1 text-sm text-white/75'>{desc}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -3400,6 +3638,7 @@ export default function MainFrontIndex() {
                 </div>
                 <div className='mt-1 text-sm text-white/75'>
                   {desc as string}
+<<<<<<< HEAD
                 </div>              </div>              ['🚀SpeedContinuous delivery to main with safe, incremental changes.'];
               ['🛡️SafetyConservative edits and guardrails keep production stable.'];
               ['📈ScaleAutomatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
@@ -3407,16 +3646,24 @@ export default function MainFrontIndex() {
                 <div className="text-2xl">{icon as string}</div>
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
                 <div className="mt-1 text-sm text-white/75">{desc as string}</div>
+=======
+                </div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </motion.section>
         {/* Value Pillars */}
         <motion.section
+<<<<<<< HEAD
           id='pillars'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="pillars"
+=======
+          id='pillars'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3464,6 +3711,7 @@ export default function MainFrontIndex() {
                     <Icon className='h-5 w-5 text-cyan-300' />
                     <h3 className='text-lg font-semibold'>{title}</h3>
                   </div>
+<<<<<<< HEAD
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Value Pillars</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Four pillars that guide every autonomous change — jump into the systems behind each.</p>
@@ -3481,6 +3729,9 @@ export default function MainFrontIndex() {
                     <h3 className="text-lg font-semibold">{title}</h3>
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
+=======
+                  <p className='mt-1 text-sm text-white/75'>{desc}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -3488,11 +3739,15 @@ export default function MainFrontIndex() {
         </motion.section>
         {/* Benefits */}
         <motion.section
+<<<<<<< HEAD
           id='benefits'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-20'          id="benefits"
+=======
+          id='benefits'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3506,6 +3761,7 @@ export default function MainFrontIndex() {
             <div className='pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent' />
             <div className='pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent' />
             <div className='marquee'>
+<<<<<<< HEAD
               <div className='marquee__track'>                {[          <div className="relative mx-auto mt-4 max-w-5xl overflow-hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />
@@ -3519,6 +3775,18 @@ export default function MainFrontIndex() {
                   { label: 'Guardrails & policy', href: '/site-health' }
                   { label: 'Faster iteration loops', href: '/newsroom' }
                   { label: 'Lower operational toil', href: '/automation' }
+=======
+              <div className='marquee__track'>
+                {[
+                  { label: '24/7 autonomous progress', href: '/automation' },
+                  { label: 'Main branch delivery', href: '/automation' },
+                  { label: 'A11y & performance wins', href: '/site-health' },
+                  { label: 'Continuous SEO gains', href: '/reports/seo' },
+                  { label: 'Transparent artifacts', href: '/site-health' },
+                  { label: 'Guardrails & policy', href: '/site-health' },
+                  { label: 'Faster iteration loops', href: '/newsroom' },
+                  { label: 'Lower operational toil', href: '/automation' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ]
                   .flatMap(i => [i, i])
                   .map((i, idx) => (
@@ -3560,12 +3828,16 @@ export default function MainFrontIndex() {
                 className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'
               >
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
+<<<<<<< HEAD
                 <span className='text-sm text-white/80'>{b}</span>              </div>              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs';
               'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically';
               'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>
+=======
+                <span className='text-sm text-white/80'>{b}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             ))}
           </div>
@@ -3646,6 +3918,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>
         </motion.section>
         {/* Tailored Value by Team */}        >
@@ -3673,6 +3946,9 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Tailored Value by Team */}
@@ -3710,22 +3986,31 @@ export default function MainFrontIndex() {
                   <p className='mt-1 text-sm text-white/75'>{card.desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Open <Link2 className='h-3.5 w-3.5' />
+<<<<<<< HEAD
                   </div>                </a>                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{card.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
+=======
+                  </div>
+                </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             ))}
           </div>
         </section>
         {/* Ecosystem & Integrations */}
         <motion.section
+<<<<<<< HEAD
           id='reports'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="reports"
+=======
+          id='reports'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3798,6 +4083,7 @@ export default function MainFrontIndex() {
               <p className='mt-1 text-sm text-white/75'>
                 Futuristic micro‑interactions and motion design system.
               </p>
+<<<<<<< HEAD
               <div className='mt-3 text-xs text-cyan-300/90'>Docs →</div>            </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Ecosystem & Integrations</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -3836,16 +4122,23 @@ export default function MainFrontIndex() {
               </div>
               <p className="mt-1 text-sm text-white/75">Futuristic micro‑interactions and motion design system.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>
+=======
+              <div className='mt-3 text-xs text-cyan-300/90'>Docs →</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </a>
           </div>
         </motion.section>
         {/* Quality Gates & Guardrails */}
         <motion.section
+<<<<<<< HEAD
           id='guardrails'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'          id="guardrails"
+=======
+          id='guardrails'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3881,10 +4174,15 @@ export default function MainFrontIndex() {
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30'>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
                   <h3 className='text-lg font-semibold'>{g.title}</h3>
+<<<<<<< HEAD
                   <p className='mt-1 text-sm text-white/75'>{g.desc}</p>                </a>                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <h3 className="text-lg font-semibold">{g.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{g.desc}</p>
+=======
+                  <p className='mt-1 text-sm text-white/75'>{g.desc}</p>
+                </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             ))}
           </div>
@@ -3913,11 +4211,16 @@ export default function MainFrontIndex() {
                 <span
                   key={t}
                   className='rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse'
+<<<<<<< HEAD
                 >                  {t}          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">
               {['Next.jsTypeScriptTailwindFramer MotionSupabaseNetlify'].map((t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">
+=======
+                >
+                  {t}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </span>
               ))}
             </div>
@@ -3942,6 +4245,7 @@ export default function MainFrontIndex() {
                   </div>
                   <div className='mt-1 text-xs text-white/70'>
                     {desc as string}
+<<<<<<< HEAD
                   </div>                </a>            {[
               ['ExploreBrowse live automations/automation'];
               ['AuditCheck site health/site-health'];
@@ -3951,6 +4255,9 @@ export default function MainFrontIndex() {
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="text-sm font-semibold text-white">{title as string}</div>
                   <div className="mt-1 text-xs text-white/70">{desc as string}</div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -3982,15 +4289,24 @@ export default function MainFrontIndex() {
                 <a className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>
                   View Automations
                 </a>
+<<<<<<< HEAD
               </Link>            </div>          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
+=======
+              </Link>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* AUTO-GENERATED: FRONT_FUTURIZER_START */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section id='front-futurizer' className='mx-auto max-w-7xl px-6 pb-20'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Explore More — Features, Capabilities, Benefits
@@ -4221,21 +4537,30 @@ export default function MainFrontIndex() {
                 </Link>
                 <a href='/' target='_blank' rel='noopener'>
                   GitHub
+<<<<<<< HEAD
                 </a>              </div>              <div className="flex flex-wrap justify-center gap-4 text-sm text-white/70">
                 <Link href="/automation"><a>Automations</a></Link>
                 <Link href="/newsroom"><a>Newsroom</a></Link>
                 <Link href="/site-health"><a>Site Health</a></Link>
                 <a href="/" target="_blank" rel="noopener">GitHub</a>
+=======
+                </a>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </footer>
         {/* AI Agents Gallery */}
         <motion.section
+<<<<<<< HEAD
           id='agents'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="agents"
+=======
+          id='agents'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4298,6 +4623,7 @@ export default function MainFrontIndex() {
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Open <span aria-hidden>→</span>
+<<<<<<< HEAD
                   </div>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>
@@ -4318,6 +4644,9 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
@@ -4325,11 +4654,15 @@ export default function MainFrontIndex() {
         </motion.section>
         {/* Capabilities Matrix */}
         <motion.section
+<<<<<<< HEAD
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'          id="capability-matrix"
+=======
+          id='capability-matrix'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4436,6 +4769,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hub, report, or workflow.</p>
@@ -4471,15 +4805,22 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </motion.section>
         {/* Benefits Directory */}
         <motion.section
+<<<<<<< HEAD
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'          id="benefits-directory"
+=======
+          id='benefits-directory'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4536,6 +4877,7 @@ export default function MainFrontIndex() {
                   <p className='mt-1 text-sm text-white/75'>{b.desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Explore <span aria-hidden>→</span>
+<<<<<<< HEAD
                   </div>                </a>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.</p>
@@ -4556,12 +4898,19 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-1 text-sm text-white/75">{b.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden>→</span></div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               </Link>
             ))}
           </div>
         </motion.section>
         {/* AUTO-GENERATED: FRONT_ADS_START */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Auto‑advertised Highlights
@@ -4658,6 +5007,7 @@ export default function MainFrontIndex() {
         {/* AUTO-GENERATED: FRONT_ADS_END */}
         {/* Feature Highlights (new) */}
         <motion.section
+<<<<<<< HEAD
           id='feature-highlights'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4668,6 +5018,9 @@ export default function MainFrontIndex() {
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
+=======
+          id='feature-highlights'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4723,6 +5076,7 @@ export default function MainFrontIndex() {
                 <p className='mt-1 text-sm text-white/75'>{card.desc}</p>
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Open <span aria-hidden>→</span>
+<<<<<<< HEAD
                 </div>              </a>              { title: 'SEO Audit', desc: 'Continuous on‑site improvements and artifacts.', href: '/reports/seo' }
               { title: 'AI Trends', desc: 'Signals that inspire new automation factories.', href: '/reports/ai-trends' }
               { title: 'Site Health', desc: 'A11y, performance and link integrity.', href: '/site-health' }
@@ -4734,13 +5088,21 @@ export default function MainFrontIndex() {
                 <h3 className="text-lg font-semibold">{card.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{card.desc}</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+=======
+                </div>
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </motion.section>
         {/* Reports */}
+<<<<<<< HEAD
         <section id='reports' className='mx-auto max-w-7xl px-6 pb-16'>          {/* existing reports content */}
         </section>
         {/* New Intelligent Automations */}        <section id="reports" className="mx-auto max-w-7xl px-6 pb-16">
+=======
+        <section id='reports' className='mx-auto max-w-7xl px-6 pb-16'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {/* existing reports content */}
         </section>
         {/* New Intelligent Automations */}
@@ -4775,6 +5137,7 @@ export default function MainFrontIndex() {
                 <div className='text-base font-semibold text-white'>
                   {tool.title}
                 </div>
+<<<<<<< HEAD
                 <div className='mt-1 text-xs text-white/70'>Open ↗</div>              </a>
             ))}
           </div>
@@ -4787,6 +5150,10 @@ export default function MainFrontIndex() {
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">
                 <div className="text-base font-semibold text-white">{tool.title}</div>
                 <div className="mt-1 text-xs text-white/70">Open ↗</div>
+=======
+                <div className='mt-1 text-xs text-white/70'>Open ↗</div>
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </section>
@@ -4796,8 +5163,12 @@ export default function MainFrontIndex() {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className='fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]'
+<<<<<<< HEAD
           aria-label='Scroll to top'        >          className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]"
           aria-label="Scroll to top"
+=======
+          aria-label='Scroll to top'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           ↑ Top
         </button>
@@ -4981,6 +5352,10 @@ export default function MainFrontIndex() {
   /* Showcase */
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Showcase: Features, Capabilities, Benefits</h2> <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70" >Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p> <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" > <Link href="#features" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Zap className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Explore Features</h3></div> <p className="mt-1 text-sm text-white/75" >Self‑improving systems, composable factories, observability and more.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#capabilities" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Cpu className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Browse Capabilities</h3></div> <p className="mt-1 text-sm text-white/75" >Design evolution, SEO, a11y, performance, refactors, and policy.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#benefits" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Gauge className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >See Benefits</h3></div> <p className="mt-1 text-sm text-white/75" >Momentum, quality, safety, and measurable outcomes.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#feature-map" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Globe className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Feature Map</h3></div> <p className="mt-1 text-sm text-white/75" >A quick overview of what you can explore right now.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#guardrails" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><ShieldCheck className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Guardrails</h3></div> <p className="mt-1 text-sm text-white/75" >Defense‑in‑depth checks and safety before shipping.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="/automation" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Automation Hub</h3></div> <p className="mt-1 text-sm text-white/75" >Factories, agents, and live workflows in one place.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> </div> </motion.section> {
   label
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }</nav> </aside> {
   /* Engines: Alternative Automation Runtimes */
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Autonomous Engines (Beyond GitHub Actions) </h2> <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70" >We run outside GitHub Actions using scheduled cloud functions and orchestrators. Explore the engines below.</p> <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" > <a href="/.netlify/functions/front-enhancer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Netlify Scheduled Functions</div> <p className="mt-1 text-sm text-white/75" >Cron-like cloud jobs that run every 20 minutes to enhance the front experience.</p> <div className="mt-3 text-xs text-cyan-300/90" >View logs via Netlify →</div> </a> <a > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Local Orchestrators</div> <p className="mt-1 text-sm text-white/75" >Node-based orchestrators that can run on any scheduler or platform.</p> <div className="mt-3 text-xs text-cyan-300/90" >Browse orchestration scripts ↗</div> </a> <a href="/automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Autonomous Cloud Orchestrator</div> <p className="mt-1 text-sm text-white/75" >End-to-end agents launching factories and syncing safe diffs to main.</p> <div className="mt-3 text-xs text-cyan-300/90" >Open Automation Hub →</div> </a> </div> <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" > <a href="/.netlify/functions/internal-link-graph-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Internal Link Graph</div> <p className="mt-1 text-sm text-white/75" >Live graph of internal navigation across pages.</p> <div className="mt-3 text-xs text-cyan-300/90" >Run now →</div> </a> <a href="/.netlify/functions/robots-enhancer-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Robots.txt Enhancer</div> <p className="mt-1 text-sm text-white/75" >Ensures sitemap and sensible defaults for crawling.</p> <div className="mt-3 text-xs text-cyan-300/90" >Run now →</div> </a> <a href="/.netlify/functions/alt-text-indexer-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Alt Text Indexer</div> <p className="mt-1 text-sm text-white/75" >Humanized alt suggestions for images across the site.</p> <div className="mt-3 text-xs text-cyan-300/90" >Run now →</div> </a> <a href="/.netlify/functions/content-registry-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Content Registry Builder</div> <p className="mt-1 text-sm text-white/75" >Continuously indexes pages and reports for discovery.</p> <div className="mt-3 text-xs text-cyan-300/90" >Run now →</div> </a> <a href="/.netlify/functions/autonomous-meta-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Rapid Sync (2m) </div> <p className="mt-1 text-sm text-white/75" >High‑frequency repo sync to push autonomous changes quickly.</p> <div className="mt-3 text-xs text-cyan-300/90" >Run now ↗</div> </a> <a href="/.netlify/functions/content-freshness-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > </a> <a href="/.netlify/functions/docs-link-audit-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Docs Link Audit</div> <p className="mt-1 text-sm text-white/75" >Scans docs for broken relative links and commits a CSV report.</p> <div className="mt-3 text-xs text-cyan-300/90" >Open →</div> </a> <a href="/.netlify/functions/image-dimension-audit-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Image Dimension Audit</div> <p className="mt-1 text-sm text-white/75" >Detects missing width/height in images and logs a report.</p> <div className="mt-3 text-xs text-cyan-300/90" >Open →</div> </a> <a href="/.netlify/functions/autonomous-master-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Autonomous Master Orchestrator</div> <p className="mt-1 text-sm text-white/75" >Runs every minute: triggers all cloud functions and syncs to main.</p> <div className="mt-3 text-xs text-cyan-300/90" >Open ↗</div> </a> </div> </motion.section> {
@@ -5102,6 +5477,10 @@ export default function MainFrontIndex() {
   /* Tech */
 }<motion.section > {
   t
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }</div> </div> </motion.section> </a> </a>) )
 }</div> </section> {
   /* CTA */
@@ -5132,4 +5511,8 @@ export default function MainFrontIndex() {
 }</div> </motion.section> </a>) )
 }</div> </section> </div> > ↑ Top </button>)
 }</div>)
+<<<<<<< HEAD
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+=======
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -32,9 +32,16 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
+<<<<<<< HEAD
   onSubmit: (data: WorkExperience) => Promise<void>
   onCancel: () => void
 }
+=======
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function WorkExperienceItemForm({
   initialData;
   onSubmit;

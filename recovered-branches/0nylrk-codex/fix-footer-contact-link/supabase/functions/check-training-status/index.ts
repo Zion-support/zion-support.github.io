@@ -15,7 +15,14 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+<<<<<<< HEAD
     const { modelId, jobId } = await req.json();
+=======
+}
+
+const { modelId, jobId } = await req.json();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
     }

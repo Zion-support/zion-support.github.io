@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
@@ -33,3 +34,7 @@ function Metric({ label, value }: { label: string, value: any }) {
     </div>
   )
 }
+=======
+// @ts-ignore </div> </div> </EnhancedLayout>)
+}</div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import Link from 'next/link',
@@ -14,6 +15,15 @@ import { SEO } from '@/components/SEO'
 import JsonLd from '@/components/JsonLd'
 import { Button } from '@/components/ui/button'
 import ImageWithRetry from '@/components/ui/ImageWithRetry'
+=======
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { SEO } from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
+import { Button } from '@/components/ui/button';
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   ArrowLeft
   Calendar
@@ -56,6 +66,11 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function BlogPost() {
 <<<<<<< HEAD
 
@@ -137,11 +152,19 @@ export default function BlogPost() {
       case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
       case 'facebook':
+<<<<<<< HEAD
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`
+=======
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       case 'twitter':
         return `https://twitter.com/intent/tweet?url=${url}&text=${title}`
       case 'linkedin':
+<<<<<<< HEAD
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
+=======
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       default:
         return '#'
   }
@@ -352,6 +375,7 @@ export default function BlogPost() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
@@ -655,3 +679,22 @@ export default function BlogPost() {return ("
 }
 }
 }
+=======
+  );
+
+};
+outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {';
+  getShareUrl ('facebook') ";
+}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>) ;
+}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {;
+  post.content ;
+}</ReactMarkdown> </div> <span key= {;
+  tag ";
+}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {;
+  tag ;
+}</span>) ) ";
+}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) ) ;
+}</div> </div>) ";
+}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

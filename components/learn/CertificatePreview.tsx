@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export default function CertificatePreview({ courseId, userId;
 =======
 import React from "react";
+=======
+import React from 'react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CertificatePreview({
   courseId
   userId = "demo-user"
@@ -29,6 +35,7 @@ export default function CertificatePreview({
       </a>
     </div>
   );
+<<<<<<< HEAD
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -48,3 +55,5 @@ export default function CertificatePreview({
     </div>
   );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

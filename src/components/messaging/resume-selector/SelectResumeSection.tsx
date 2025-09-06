@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { FileText } from 'lucide-react';
+import { ResumeOption } from '../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react';
 import { FileText } from 'lucide-react'
@@ -9,7 +17,13 @@ interface SelectResumeSectionProps {
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
+<<<<<<< HEAD
   isLoading: boolean
+=======
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SelectResumeSection({
 <<<<<<< HEAD
   resumeOptions;
@@ -55,12 +69,22 @@ export function SelectResumeSection({
               }`}
               onClick={() => handleResumeSelect(option.id)}
             >
+<<<<<<< HEAD
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
                 <span className="text-white">{option.title}</span>
               </div>
             </button>
           ))}
+=======
+              <div className='flex items-center'>
+                <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
+                <span className='text-white'>{option.title}</span>
+              </div>
+            </button>
+          ))}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume = {selectedResume.resume as Resume,}
@@ -71,6 +95,10 @@ export function SelectResumeSection({
         </>
       )}
     </div>
+<<<<<<< HEAD
   )
 }}
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

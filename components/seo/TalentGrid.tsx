@@ -2,6 +2,7 @@
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
+<<<<<<< HEAD
 type Props = any;
 =======
 import React from "react";
@@ -11,11 +12,23 @@ type Props = {
   region?: string;
   service?: string;
 }
+=======
+
+type Props = {
+  region?: string;
+  service?: string;
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true;
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r);
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function matchesService(profile: TalentProfile, service?: string) {
   if (!service) return true;
   const s = service.toLowerCase();
@@ -24,12 +37,21 @@ function matchesService(profile: TalentProfile, service?: string) {
     profile.skills.some((sk) => sk.toLowerCase().includes(s))
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
+<<<<<<< HEAD
         (p) => matchesRegion(p, region) && matchesService(p, service)
       )
+=======
+        p => matchesRegion(p, region) && matchesService(p, service)
+      ),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     [region, service]
   );
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -78,4 +100,7 @@ export default function TalentGrid({ region, service }: Props) {
       ))}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

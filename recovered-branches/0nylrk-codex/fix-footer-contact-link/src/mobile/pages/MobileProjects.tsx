@@ -47,7 +47,12 @@ const milestonesData = [
     amount: "$5,000"
   }
 ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileProjects() {
   return (
     <div className="min-h-screen">

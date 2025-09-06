@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 =======
 import Layout from '../components/Layout';
@@ -13,6 +14,11 @@ export default function TestPage() {
   );
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import Head from 'next/head';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TestPage() {
   return (
     <>
@@ -23,6 +29,7 @@ export default function TestPage() {
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
+<<<<<<< HEAD
 );
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
@@ -30,3 +37,6 @@ export default function TestPage() {
     </>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -21,8 +21,14 @@ import {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface PreviewResumeProps {
   resume: Resume;
+<<<<<<< HEAD
   onBack: () => void
 }
+=======
+  onBack: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">

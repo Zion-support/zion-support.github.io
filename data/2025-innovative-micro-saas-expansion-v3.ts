@@ -1,5 +1,9 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface InnovativeMicroSaasService {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -53,11 +57,21 @@ const contact = null;
 =======
   reviews: number;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
   [
     // AI-Powered Business Intelligence & Analytics
@@ -1068,6 +1082,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       contactInfo: contact
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
       launchDate: '2023-10-01'
       customers: 34
@@ -1099,3 +1114,12 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
+      launchDate: '2023-10-01',
+      customers: 34,
+      rating: 4.9,
+      reviews: 28,
+    },
+  ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

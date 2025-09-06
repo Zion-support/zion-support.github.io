@@ -89,6 +89,12 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
   }
 ];
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -115,7 +121,13 @@ export default function ForumPostPage() {
       </AppLayout>
     )
   }
+<<<<<<< HEAD
   const handleUpvote = () => {
+=======
+}
+
+const handleUpvote = () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!user) {
       toast({
         title: "Authentication required"

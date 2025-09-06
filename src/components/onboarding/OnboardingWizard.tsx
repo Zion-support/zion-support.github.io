@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import {
+  Rocket,
+  FileText,
+  Users,
+  Calendar,
+  Eye,
+  MessageSquare,;
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect  } from 'react';
 import { useRouter  } from 'next/router';
@@ -42,8 +65,12 @@ interface OnboardingWizardProps {
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
+<<<<<<< HEAD
   className?: string
 <<<<<<< HEAD
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
@@ -156,7 +183,12 @@ export function OnboardingWizard({
       // Last step
       onSkip()
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <CardHeader>
         <CardTitle className='text-center text-white'>
@@ -211,5 +243,9 @@ export function OnboardingWizard({
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

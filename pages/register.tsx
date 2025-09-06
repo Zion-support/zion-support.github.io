@@ -1,9 +1,21 @@
+<<<<<<< HEAD:pages/register.tsx
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
 import Layout from "../components/Layout";
 export default function RegisterPage() {
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from 'lucide-react';
+import Layout from '../components/Layout';
+}
+}
+
+export default function RegisterPage() {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b:temp_exclude/pages-disabled/register.tsx
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({

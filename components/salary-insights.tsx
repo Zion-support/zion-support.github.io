@@ -1,8 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   LineChart
   BarChart
@@ -18,6 +21,7 @@ type InsightResponse = {
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
+<<<<<<< HEAD
   gptRecommendation?: string;};  recommendedHourlyUsd: number
   recommendedMonthlyUsd: number
   medianHourlyUsd: number
@@ -28,6 +32,12 @@ type InsightResponse = {
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[]
   gptRecommendation?: string
+=======
+  gptRecommendation?: string;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SalaryInsightsPage() {
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -38,19 +48,27 @@ export default function SalaryInsightsPage() {
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<
     'contract' | 'freelance' | 'full-time'
+<<<<<<< HEAD
   >('contract');  const [loading, setLoading] = useState(false);  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
+=======
+  >('contract');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
     // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
         const user = await supabase.auth.getUser();
         setIsLoggedIn(!!user.data.user);    // Lightweight login check via Supabase client if available, otherwise public mode
+=======
+    // Lightweight login check via Supabase client if available; otherwise public mode
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -59,10 +77,14 @@ export default function SalaryInsightsPage() {
       } catch {
         setIsLoggedIn(false);
       }
+<<<<<<< HEAD
     })();  }, []);      } catch {
         setIsLoggedIn(false)
       }
     })()
+=======
+    })();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   async function fetchInsights() {
     setLoading(true);
@@ -72,7 +94,11 @@ export default function SalaryInsightsPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           roleTitle
+=======
+          roleTitle,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           skills: skills
             .split(',')
             .map(s => s.trim())
@@ -89,6 +115,7 @@ export default function SalaryInsightsPage() {
     } catch (e: any) {
       setError(e.message |'Unexpected error');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
@@ -96,6 +123,9 @@ export default function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   useEffect(() => {
@@ -106,6 +136,7 @@ export default function SalaryInsightsPage() {
     const payload = {
       createdAt: new Date().toISOString()
       input: {
+<<<<<<< HEAD
         roleTitle
         skills
         region
@@ -115,6 +146,17 @@ export default function SalaryInsightsPage() {
       }
       output: data
     };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data }
+=======
+        roleTitle,
+        skills,
+        region,
+        experienceLevel,
+        remote,
+        employmentType,
+      },
+      output: data,
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -122,18 +164,27 @@ export default function SalaryInsightsPage() {
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
+<<<<<<< HEAD
             user_id: user.data.user.id
             payload
+=======
+            user_id: user.data.user.id,
+            payload,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           });
           alert('Insight saved to your profile');
           return;
         }
       } catch {
+<<<<<<< HEAD
         // fall back      }          alert('Insight saved to your profile');
           return
         }
       } catch {
         // fall back;
+=======
+        // fall back
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       try {
         const key = 'zion.salary-insights.history';
@@ -145,23 +196,34 @@ export default function SalaryInsightsPage() {
     })();
   }
   const donutData = useMemo(() => {
+<<<<<<< HEAD
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
   }
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string, value: number }[]
+=======
+    if (!data) return [] as { label: string; value: number }[];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
+<<<<<<< HEAD
       { label: 'Below Median', value: lower |1 }
       { label: 'Median', value: median |1 }
       { label: 'Above Median', value: upper |1 }
     ];  }, [data]);
   return (
     <div>      { label: 'Above Median', value: upper |1 }]
+=======
+      { label: 'Below Median', value: lower || 1 },
+      { label: 'Median', value: median || 1 },
+      { label: 'Above Median', value: upper || 1 },
+    ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [data]);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -207,6 +269,7 @@ export default function SalaryInsightsPage() {
                   value={experienceLevel}
                   onChange={e => setExperienceLevel(e.target.value as any)}
                   className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+<<<<<<< HEAD
                 >                  <option>Junior</option>        </div>
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
@@ -224,6 +287,9 @@ export default function SalaryInsightsPage() {
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+=======
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <option>Junior</option>
                   <option>Mid</option>
                   <option>Senior</option>
@@ -239,6 +305,7 @@ export default function SalaryInsightsPage() {
                 >
                   <option value='contract'>Contract</option>
                   <option value='freelance'>Freelance</option>
+<<<<<<< HEAD
                   <option value='full-time'>Full-time</option>                </select>
               </div>
             </div>
@@ -249,6 +316,13 @@ export default function SalaryInsightsPage() {
                   <option value="full-time">Full-time</option>
               </div>
             </div>
+=======
+                  <option value='full-time'>Full-time</option>
+                </select>
+              </div>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='flex items-center gap-2 mt-3'>
               <input
                 id='remote'
@@ -261,6 +335,7 @@ export default function SalaryInsightsPage() {
               </label>
             </div>
             {!isLoggedIn && (
+<<<<<<< HEAD
               <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.
               </div>
             )}
@@ -273,10 +348,18 @@ export default function SalaryInsightsPage() {
                 Advanced filters are available when you sign in.
               </div>
             )}
+=======
+              <div className='mt-3 text-xs text-gray-500'>
+                Advanced filters are available when you sign in.
+              </div>
+            )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <button
               onClick={fetchInsights}
               disabled={loading}
               className='mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50'
+<<<<<<< HEAD
             >              {loading ? 'Calculating…' : 'Update Insights'}
             </button>
           </div>
@@ -284,6 +367,13 @@ export default function SalaryInsightsPage() {
               {loading ? 'Calculating…' : 'Update Insights'}
             </button>
           </div>
+=======
+            >
+              {loading ? 'Calculating…' : 'Update Insights'}
+            </button>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-medium mb-2'>Actions</h3>
             <div className='flex flex-col gap-2'>
@@ -306,6 +396,7 @@ export default function SalaryInsightsPage() {
                 className='rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700'
               >
                 Optimize Resume Rate
+<<<<<<< HEAD
               </button>            </div>
           </div>
         </div>
@@ -317,6 +408,13 @@ export default function SalaryInsightsPage() {
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
           </div>
         </div>
+=======
+              </button>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='lg:col-span-2 space-y-6'>
             <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
               {error}
@@ -384,15 +482,24 @@ export default function SalaryInsightsPage() {
                         className='border-t border-gray-100 dark:border-gray-900'
                       >
                         <td className='py-1'>{r.region}</td>
+<<<<<<< HEAD
                         <td className='py-1'>${r.medianHourlyUsd}</td>                      </tr>                    {data.regionalComparison.map((r) => (
                       <tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
                         <td className="py-1">{r.region}</td>
                         <td className="py-1">${r.medianHourlyUsd}</td>
+=======
+                        <td className='py-1'>${r.medianHourlyUsd}</td>
+                      </tr>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ))}
                   </tbody>
                 </table>
               )}
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Distribution</h3>
               {data ? (
@@ -412,6 +519,7 @@ export default function SalaryInsightsPage() {
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5'
                       >
                         {d.label}
+<<<<<<< HEAD
                       </span>                    ))}
                   </div>
                 </div>
@@ -425,6 +533,14 @@ export default function SalaryInsightsPage() {
                 </div>
               ) : (
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+=======
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               )}
             </div>
           </div>
@@ -433,11 +549,15 @@ export default function SalaryInsightsPage() {
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>
               <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
                 {data.gptRecommendation}
+<<<<<<< HEAD
               </p>            </div>
           )}
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
+=======
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           )}
           {data && (
@@ -453,17 +573,26 @@ export default function SalaryInsightsPage() {
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'
                   >
                     {t}
+<<<<<<< HEAD
                   </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Signals</h3>
               <div className="flex gap-2 flex-wrap">
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
                 {data.tags.map((t) => (
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
+=======
+                  </span>
+                ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           )}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
@@ -51,6 +52,19 @@ import {
 } from "@/components/icons";
 import { format } from "date-fns";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  Edit,
+  MoreHorizontal,
+  ExternalLink,
+  Power,
+  PowerOff,
+  Users,
+  RefreshCcw,;
+} from '@/components/icons';
+import { format } from 'date-fns';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);

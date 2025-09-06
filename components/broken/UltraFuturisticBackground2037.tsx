@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'high';
@@ -10,6 +11,29 @@ export default function UltraFuturisticBackground2037({intensity = 'medium';
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
     // Only run on client side;
+=======
+ useEffect ( () => {
+  // Only run on client side if (typeof window === 'undefined') return;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let animationFrameId: number;
+let particles: Particle[] = [];
+const quantumFields: QuantumField[] = [];
+// Enhanced theme-based color schemes const getThemeColors = () => {
+  switch (theme) {
+  case 'neon': return {
+}
+
+export default function UltraFuturisticBackground2037({
+  intensity = 'medium',
+  theme = 'quantum-neon',
+  children,
+}: UltraFuturisticBackground2037Props) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    // Only run on client side
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (typeof window === 'undefined') return;
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -332,4 +356,9 @@ export default function UltraFuturisticBackground2037({intensity = 'medium';
     </div>;
   );
 }
+<<<<<<< HEAD
 export default UltraFuturisticBackground2037;
+=======
+
+export default UltraFuturisticBackground2037;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,8 +5,14 @@ import { CheckCircle2, Circle, CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus;
+<<<<<<< HEAD
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplicationProgress({
   status
   className
@@ -91,4 +97,7 @@ function StatusIcon({
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

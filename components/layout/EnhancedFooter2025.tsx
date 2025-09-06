@@ -2,6 +2,7 @@ import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -42,6 +43,40 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+=======
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Zap,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,
+  Instagram,;
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const serviceCategories = [
   {
     title: 'AI & Consciousness'
@@ -53,6 +88,7 @@ const serviceCategories = [
       }
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' }
       {
+<<<<<<< HEAD
         name: 'Multimodal AI Orchestrator'
         href: '/multimodal-ai-orchestrator'
       }
@@ -148,6 +184,89 @@ const socialLinks = [
     icon: Instagram
     color: 'hover:text-pink-400'
   },];  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
+=======
+        name: 'Multimodal AI Orchestrator',
+        href: '/multimodal-ai-orchestrator',
+      },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
+    ],
+  },
+  {
+    title: 'Quantum & Emerging Tech',
+    icon: Atom,
+    services: [
+      { name: 'Space Mining Platform', href: '/space-mining-platform' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' },
+    ],
+  },
+  {
+    title: 'Enterprise IT',
+    icon: Shield,
+    services: [
+      {
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure',
+      },
+      {
+        name: 'Edge Computing Orchestrator',
+        href: '/edge-computing-orchestrator',
+      },
+      {
+        name: 'Zero Trust Security Platform',
+        href: '/zero-trust-security-platform',
+      },
+      {
+        name: 'Blockchain Enterprise Platform',
+        href: '/blockchain-enterprise-platform',
+      },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+    ],
+  },
+  {
+    title: 'Micro SAAS',
+    icon: Target,
+    services: [
+      { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
+      { name: 'Quantum CRM Suite', href: '/quantum-crm' },
+      { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
+      { name: 'DataVault Hub', href: '/data-vault-hub' },
+      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' },
+    ],
+  },
+];
+
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Resources', href: '/resources' },
+];
+
+const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
+  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'GDPR Compliance', href: '/gdpr' },
+];
+
+const socialLinks = [
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
+  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' },
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
+  {
+    name: 'Instagram',
+    href: '#',
+    icon: Instagram,
+    color: 'hover:text-pink-400',
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const EnhancedFooter2025: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -201,6 +320,7 @@ const EnhancedFooter2025: React.FC = () => {
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <MapPin className='w-4 h-4 text-pink-400' />
+<<<<<<< HEAD
                   <span className='text-sm'>{contactInfo.address}</span>                </div>      {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="relative z-10">
@@ -240,6 +360,9 @@ const EnhancedFooter2025: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin className="w-4 h-4 text-pink-400" />
                   <span className="text-sm">{contactInfo.address}</span>
+=======
+                  <span className='text-sm'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </div>
@@ -266,6 +389,7 @@ const EnhancedFooter2025: React.FC = () => {
                     <Link
                       key={service.name}
                       href={service.href}
+<<<<<<< HEAD
                       className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >              >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -279,6 +403,9 @@ const EnhancedFooter2025: React.FC = () => {
                       key={service.name}
                       href={service.href}
                       className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+=======
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     >
                       {service.name}
                     </Link>
@@ -297,6 +424,7 @@ const EnhancedFooter2025: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
+<<<<<<< HEAD
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >            {/* Company Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Company</h4>
@@ -306,6 +434,9 @@ const EnhancedFooter2025: React.FC = () => {
                     key={link.name}
                     href={link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+=======
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     {link.name}
                   </Link>
@@ -320,6 +451,7 @@ const EnhancedFooter2025: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
+<<<<<<< HEAD
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>
               <div className="space-y-2">
                 {legalLinks.map((link) => (
@@ -327,6 +459,10 @@ const EnhancedFooter2025: React.FC = () => {
                     key={link.name}
                     href={link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+=======
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
+                  >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {link.name}
                   </Link>
                 ))}
@@ -336,16 +472,24 @@ const EnhancedFooter2025: React.FC = () => {
             <div>
               <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
               <div className='flex space-x-4'>
+<<<<<<< HEAD
                 {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
+=======
+                {socialLinks.map(social => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <a
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
                     aria-label={social.name}
                   >
+<<<<<<< HEAD
                     <social.icon className='w-5 h-5' />                  </a>                    <social.icon className="w-5 h-5" />
+=======
+                    <social.icon className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </a>
                 ))}
               </div>
@@ -355,15 +499,23 @@ const EnhancedFooter2025: React.FC = () => {
         {/* Newsletter Section */}
         <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+<<<<<<< HEAD
             <div className='text-center'>              <motion.h3        <div className="border-t border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
+=======
+            <div className='text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
+=======
+                className='text-2xl md:text-3xl font-bold text-white mb-4'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -376,9 +528,14 @@ const EnhancedFooter2025: React.FC = () => {
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
+<<<<<<< HEAD
               </motion.p>              >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
+=======
+              </motion.p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -391,6 +548,7 @@ const EnhancedFooter2025: React.FC = () => {
                   placeholder='Enter your email'
                   className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 />
+<<<<<<< HEAD
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >
                 <input
                   type="email"
@@ -398,6 +556,9 @@ const EnhancedFooter2025: React.FC = () => {
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+=======
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Subscribe
                 </button>
               </motion.div>
@@ -411,6 +572,7 @@ const EnhancedFooter2025: React.FC = () => {
               <div className='text-gray-400 text-sm'>
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div>
+<<<<<<< HEAD
               <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -418,13 +580,21 @@ const EnhancedFooter2025: React.FC = () => {
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
                   <span>Trusted by 1000+ companies worldwide</span>
                 </div>
+=======
+
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='flex items-center space-x-2'>
                   <Star className='w-4 h-4 text-yellow-400 fill-current' />
                   <span>Trusted by 1000+ companies worldwide</span>
                 </div>
                 <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                   <div className='w-2 h-2 bg-green-400 rounded-full'></div>                  <span>99.9% Uptime Guarantee</span>                <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+=======
+                  <div className='w-2 h-2 bg-green-400 rounded-full'></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>99.9% Uptime Guarantee</span>
                 </div>
               </div>
@@ -434,8 +604,15 @@ const EnhancedFooter2025: React.FC = () => {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 export default EnhancedFooter2025;  )
 }
 export default EnhancedFooter2025;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default EnhancedFooter2025;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

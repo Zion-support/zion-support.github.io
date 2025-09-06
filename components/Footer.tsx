@@ -235,4 +235,11 @@ export default function Footer() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+export default Footer;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

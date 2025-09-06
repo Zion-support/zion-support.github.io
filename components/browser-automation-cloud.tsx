@@ -1,11 +1,17 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
 export default function BrowserAutomationCloudPage() {
 <<<<<<< HEAD
 	const features = null;
 	return (
 =======
+=======
+}
+
+export default function BrowserAutomationCloudPage() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
@@ -72,6 +78,7 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
+<<<<<<< HEAD
   );	return (
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 		<>
@@ -103,3 +110,6 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

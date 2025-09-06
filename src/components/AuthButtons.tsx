@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Facebook } from 'lucide-react'
 <<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Facebook } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { signIn } from 'next-auth/react';
 type Provider = any;
 =======
 import { signIn } from 'next-auth/react'
 type Provider = 'google' | 'github' | 'facebook' | 'credentials'
 interface AuthButtonsProps {
+<<<<<<< HEAD
   providers?: Provider[]
+=======
+  providers?: Provider[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AuthButtons({
   providers = ['google', 'github', 'facebook', 'credentials']
 }: AuthButtonsProps) {
@@ -109,5 +121,9 @@ export function AuthButtons({
         </Button>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

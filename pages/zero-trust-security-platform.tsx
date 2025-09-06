@@ -1,6 +1,11 @@
 import React from 'react',
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ZeroTrustSecurityPlatformPage() {
 <<<<<<< HEAD
 	return (
@@ -56,4 +61,7 @@ export default function ZeroTrustSecurityPlatformPage() {
       />
     </>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

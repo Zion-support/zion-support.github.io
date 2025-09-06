@@ -3,6 +3,7 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -37,6 +38,8 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 =======
@@ -119,4 +122,8 @@ export default function ITAssetDiscoveryAgentPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { Certification } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  formatDateForDB,
+  handleResumeError,
+  showSuccessToast,;
+} from './useResumeUtils';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -88,6 +101,7 @@ export function useCertifications() {
     }
   }
   return {
+<<<<<<< HEAD
     isLoading;
     error;
     addCertification;
@@ -96,3 +110,50 @@ export function useCertifications() {
     deleteCertification
   }
 }
+=======
+    isLoading,
+    error,
+    addCertification,
+    updateCertification,
+    deleteCertification,
+  };
+
+};
+const updateCertification = async (certId: string, cert: Certification) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to update certifications');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not update certification') 
+}finally {
+  setIsLoading (false) 
+
+};
+const deleteCertification = async (certId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete certifications');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') .delete () .eq ('id', certId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete certification') 
+}finally {
+  setIsLoading (false) 
+
+};
+
+  isLoading;
+error;
+addCertification;
+updateCertification;
+deleteCertification 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

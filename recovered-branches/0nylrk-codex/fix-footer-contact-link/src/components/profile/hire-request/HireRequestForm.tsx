@@ -22,6 +22,7 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string;
     email?: string;
+<<<<<<< HEAD
     id?: string
   }
   onSubmitSuccess?: () => void
@@ -32,6 +33,20 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     talent;
     onClose: onSubmitSuccess || onClose;
 =======
+=======
+    id?: string;
+  };
+  onSubmitSuccess?: () => void;
+}
+
+export function HireRequestForm({
+  talent,
+  onClose,
+  initialJobTitle,
+  userDetails,
+  onSubmitSuccess,
+}: HireRequestFormProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent
     onClose: onSubmitSuccess |onClose

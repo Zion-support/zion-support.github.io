@@ -1,9 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link";
 import Image from "next/image";
+=======
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import Image from 'next/image';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface ListingCardProps {
   id?: string;
   title: string;
@@ -13,7 +22,11 @@ interface ListingCardProps {
   tags?: string[];
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string;
+<<<<<<< HEAD
   profileType?: 'service' | 'talent'
+=======
+  profileType?: 'service' | 'talent';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ListingCard({ 
@@ -69,9 +82,15 @@ export function ListingCard({
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
   const profileId =
+<<<<<<< HEAD
     id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+
+    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {images && images.length > 0 && images[0] && (
         <div className='h-48 w-full overflow-hidden relative'>
           <Image
@@ -101,15 +120,23 @@ export function ListingCard({
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
+<<<<<<< HEAD
               >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+=======
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {tag}
               </Badge>
             ))}
           </div>
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {author && (
           <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
@@ -124,6 +151,7 @@ export function ListingCard({
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
             )}
+<<<<<<< HEAD
             <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -132,10 +160,17 @@ export function ListingCard({
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
             <span className="text-sm text-zion-slate-light">{author.name}</span>
+=======
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         )}
       </div>
     </Link>
+<<<<<<< HEAD
   )
 }
 ;"}) })"
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

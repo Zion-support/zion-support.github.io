@@ -4,12 +4,24 @@ import { motion  } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const contactInfo = null;
                   color: 'from-indigo-500 to-purple-600'
                 }
               ].map((feature, index) => (
 =======
 }
+=======
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Innovations2034Page() {
   return (
     <>
@@ -80,6 +92,7 @@ export default function Innovations2034Page() {
                     rotate: [0, 360]
                   }}
                   transition={{
+<<<<<<< HEAD
                     duration: 4 + Math.random() * 3
                     repeat: Infinity
                     delay: Math.random() * 2
@@ -88,12 +101,30 @@ export default function Innovations2034Page() {
             </div>
           </div>
           <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
+=======
+                    duration: 4 + Math.random() * 3,
+                    repeat: Infinity,
+                    delay: Math.random() * 2,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className='relative z-10 container mx-auto px-4 text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
               <motion.h1
+<<<<<<< HEAD
                 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'                initial={{ opacity: 0, scale: 0.8 }}
+=======
+                className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'
+                initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, delay: 0.2 }}
               >
@@ -104,14 +135,25 @@ export default function Innovations2034Page() {
                 <span className='text-6xl md:text-8xl'>Innovations</span>
               </motion.h1>
               <motion.p
+<<<<<<< HEAD
                 className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'                initial={{ opacity: 0, y: 30 }}
+=======
+                className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'
+                initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
               >
                 Experience the future with our revolutionary micro SAAS
                 services, IT solutions, and AI platforms. From AI consciousness
                 to space mining automation, we're building tomorrow's technology
+<<<<<<< HEAD
                 today.              </motion.p>
+=======
+                today.
+              </motion.p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -129,7 +171,12 @@ export default function Innovations2034Page() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'
+<<<<<<< HEAD
                 >                  Contact Us
+=======
+                >
+                  Contact Us
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -149,13 +196,23 @@ export default function Innovations2034Page() {
               <motion.div
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
                 className='w-1 h-3 bg-cyan-400 rounded-full mt-2'              />
+=======
+                className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
+              />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
           </motion.div>
         </section>
         {/* Innovation Categories Overview */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+<<<<<<< HEAD
           <div className='container mx-auto px-4'>            <motion.div
+=======
+          <div className='container mx-auto px-4'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -171,6 +228,7 @@ export default function Innovations2034Page() {
                 and accelerate human progress.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[
                 {
                   icon: '🧠'
@@ -234,6 +292,75 @@ export default function Innovations2034Page() {
                   color: 'from-teal-500 to-cyan-600'
                   count: '2+ Services'
                 },              ].map((category, index) => (
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              {[
+                {
+                  icon: '🧠',
+                  title: 'AI Consciousness',
+                  description:
+                    'Revolutionary AI consciousness and emotional intelligence platforms',
+                  color: 'from-violet-500 to-purple-600',
+                  count: '5+ Services',
+                },
+                {
+                  icon: '⚛️',
+                  title: 'Quantum Tech',
+                  description:
+                    'Quantum computing, DNA computing, and quantum internet infrastructure',
+                  color: 'from-indigo-500 to-blue-600',
+                  count: '6+ Services',
+                },
+                {
+                  icon: '🌌',
+                  title: 'Space & Metaverse',
+                  description:
+                    'Space mining automation and metaverse development platforms',
+                  color: 'from-teal-500 to-emerald-600',
+                  count: '4+ Services',
+                },
+                {
+                  icon: '🏙️',
+                  title: 'Enterprise IT',
+                  description:
+                    'Autonomous DevOps and zero-trust security solutions',
+                  color: 'from-blue-500 to-cyan-600',
+                  count: '5+ Services',
+                },
+                {
+                  icon: '🧬',
+                  title: 'Biotech & Neural',
+                  description:
+                    'Synthetic biology automation and neural interface platforms',
+                  color: 'from-green-500 to-emerald-600',
+                  count: '3+ Services',
+                },
+                {
+                  icon: '🤖',
+                  title: 'Robotics & Automation',
+                  description:
+                    'Swarm robotics orchestration and autonomous systems',
+                  color: 'from-orange-500 to-red-600',
+                  count: '2+ Services',
+                },
+                {
+                  icon: '⚡',
+                  title: 'Energy & Materials',
+                  description:
+                    'Fusion energy control and nanotechnology materials',
+                  color: 'from-yellow-500 to-orange-600',
+                  count: '3+ Services',
+                },
+                {
+                  icon: '🔄',
+                  title: 'Digital Twins',
+                  description: 'Digital twin simulation and edge AI computing',
+                  color: 'from-teal-500 to-cyan-600',
+                  count: '2+ Services',
+                },
+              ].map((category, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 50 }}
@@ -254,7 +381,12 @@ export default function Innovations2034Page() {
                     <p className='text-gray-400 text-sm mb-4'>
                       {category.description}
                     </p>
+<<<<<<< HEAD
                     <div className='text-cyan-400 font-semibold text-sm'>                      {category.count}
+=======
+                    <div className='text-cyan-400 font-semibold text-sm'>
+                      {category.count}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </motion.div>
@@ -263,9 +395,17 @@ export default function Innovations2034Page() {
           </div>
         </section>
         {/* Services Showcase */}
+<<<<<<< HEAD
         {/* Why Choose Zion Tech Group */}
         <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
           <div className='container mx-auto px-4'>            <motion.div
+=======
+
+        {/* Why Choose Zion Tech Group */}
+        <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+          <div className='container mx-auto px-4'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -280,6 +420,7 @@ export default function Innovations2034Page() {
                 building the future, one breakthrough innovation at a time.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[
                 {
                   icon: '🚀'
@@ -324,6 +465,54 @@ export default function Innovations2034Page() {
                   color: 'from-indigo-500 to-purple-600'
                 },              ].map((feature, index) => (
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
+                {
+                  icon: '🚀',
+                  title: 'First-to-Market',
+                  description:
+                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",
+                  color: 'from-cyan-500 to-blue-600',
+                },
+                {
+                  icon: '🧠',
+                  title: 'AI-First Approach',
+                  description:
+                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
+                  color: 'from-purple-500 to-pink-600',
+                },
+                {
+                  icon: '⚡',
+                  title: 'Lightning Fast',
+                  description:
+                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',
+                  color: 'from-yellow-500 to-orange-600',
+                },
+                {
+                  icon: '🛡️',
+                  title: 'Enterprise Security',
+                  description:
+                    'Military-grade security protocols ensure your data and operations are always protected.',
+                  color: 'from-green-500 to-emerald-600',
+                },
+                {
+                  icon: '🌍',
+                  title: 'Global Scale',
+                  description:
+                    'Built to scale globally, our services work seamlessly across borders and time zones.',
+                  color: 'from-teal-500 to-cyan-600',
+                },
+                {
+                  icon: '💎',
+                  title: 'Premium Support',
+                  description:
+                    '24/7 expert support from our team of technology pioneers and industry experts.',
+                  color: 'from-indigo-500 to-purple-600',
+                },
+              ].map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 50 }}
@@ -341,7 +530,12 @@ export default function Innovations2034Page() {
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {feature.title}
                     </h3>
+<<<<<<< HEAD
                     <p className='text-gray-400'>{feature.description}</p>                  </div>
+=======
+                    <p className='text-gray-400'>{feature.description}</p>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -349,7 +543,12 @@ export default function Innovations2034Page() {
         </section>
         {/* Contact CTA */}
         <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>
+<<<<<<< HEAD
           <div className='container mx-auto px-4 text-center'>            <motion.div
+=======
+          <div className='container mx-auto px-4 text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -374,14 +573,24 @@ export default function Innovations2034Page() {
                   <span>{contactInfo.email}</span>
                 </div>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
+<<<<<<< HEAD
                   <span className='text-pink-400'>📍</span>                  <span>{contactInfo.address}</span>
+=======
+                  <span className='text-pink-400'>📍</span>
+                  <span>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
+<<<<<<< HEAD
               >                Start Your Innovation Journey
+=======
+              >
+                Start Your Innovation Journey
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.button>
             </motion.div>
           </div>
@@ -389,4 +598,8 @@ export default function Innovations2034Page() {
       </div>
       <UltraFuturisticFooter2034 />
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

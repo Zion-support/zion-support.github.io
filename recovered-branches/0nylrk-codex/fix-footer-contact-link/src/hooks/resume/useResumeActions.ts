@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { Resume, ResumeBasicInfo } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  formatDateForDB,
+  handleResumeError,
+  showSuccessToast,;
+} from './useResumeUtils';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -94,6 +107,7 @@ export function useResumeActions() {
     }
   }
   return {
+<<<<<<< HEAD
     isLoading;
     error;
     createResume;
@@ -101,3 +115,40 @@ export function useResumeActions() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     setActiveResume}
 }
+=======
+    isLoading,
+    error,
+    createResume,
+    updateBasicInfo,
+    setActiveResume,
+  };
+
+};
+const setActiveResume = async (resumeId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to set active resume');
+return false;
+}setError (null);
+try {
+  //First, set all user's resumes to inactive const {
+  error: resetError 
+}= await supabase .from ('talent resumes') if (resetError) throw resetError;
+// Then, set the selected resume as active const {
+  error 
+}= await supabase .from ('talent resumes') .update ({
+  is active: true 
+}) .eq ('id', resumeId) .eq ('user id', user.id);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not set active resume') 
+}finally {
+  setIsLoading (false) 
+
+};
+
+  isLoading;
+error;
+createResume;
+updateBasicInfo;
+setActiveResume 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

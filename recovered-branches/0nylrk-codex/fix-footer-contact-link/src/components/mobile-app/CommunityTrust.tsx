@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Star } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { Star } from "lucide-react";

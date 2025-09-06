@@ -13,7 +13,30 @@ import { toast } from "@/components/ui/use-toast";
 interface TranslatableJobFormProps {
 <<<<<<< HEAD
   onSubmit: (formData: any) => void;
+<<<<<<< HEAD
   isSubmitting?: boolean
+=======
+isSubmitting?: boolean 
+}export function TranslatableJobForm ({
+  onSubmit, isSubmitting = false 
+}: TranslatableJobFormProps) {
+  const {
+  t 
+}= useTranslation ();
+const {
+  translateContent, isTranslating 
+}= useTranslationService ();
+const {
+  supportedLanguages, currentLanguage 
+}= useLanguage ();
+//Form fields with translations const [budget, setBudget] = useState ("");
+const [deadline, setDeadline] = useState ("");
+onSubmit ({
+  //Find first non-empty content to translate for (const lang of supportedLanguages.map (l => l.code) ) {
+  if (field === 'title' && title[lang]) {
+  return;
+}return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = any;
@@ -44,13 +45,69 @@ const InitPage: NextPage = () => {
     modules: defaultModules
     bonusModules: defaultBonus
   });  const [submitting, setSubmitting] = useState(false);
+=======
+ const InitPage: NextPage = () => {
+  const [state, setState] = useState<DeployFormState> ({
+  instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
+  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: ''
+};
+
+const defaultModules: DeployFormState['modules'] = {
+  marketplace: true,
+  gpt: true,
+  academy: true,
+  token: true,
+  dao: true,
+  'nation-builder': true,
+  'launch-kit': true,
+  'book-builder': true,
+  'roadmap-whitepaper': true,
+  'api-docs-wiki': true,
+  'zion-brain': true,
+};
+
+const defaultBonus: DeployFormState['bonusModules'] = {
+  'global-map': false,
+  'franchise-onboarding': false,
+  'referral-ambassadors': false,
+  'grant-portal': false,
+  trailer: false,
+  'book-store': false,
+};
+
+const InitPage: NextPage = () => {
+  const [state, setState] = useState<DeployFormState>({
+    instanceName: '',
+    defaultLanguage: 'en',
+    deploymentRegion: 'us-east-1',
+    tokenActivation: true,
+    governanceMode: 'Hybrid',
+    branding: {
+      logoUrl: '',
+      primaryColor: '#4f46e5',
+      secondaryColor: '#0ea5e9',
+      subdomain: '',
+    },
+    modules: defaultModules,
+    bonusModules: defaultBonus,
+  });
+  const [submitting, setSubmitting] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState(prev => ({
+<<<<<<< HEAD
       ...prev
       [group]: { ...prev[group], [key]: !prev[group][key] }
     }));  }
+=======
+      ...prev,
+      [group]: { ...prev[group], [key]: !prev[group][key] },
+    }));
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -58,9 +115,15 @@ const InitPage: NextPage = () => {
     setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(state)
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(state),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
@@ -68,8 +131,15 @@ const InitPage: NextPage = () => {
     } catch (err: any) {
       setError(err.message |'Unexpected error');
     } finally {
+<<<<<<< HEAD
       setSubmitting(false);    }
   }
+=======
+      setSubmitting(false);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='space-y-8'>
       <div>
@@ -150,12 +220,21 @@ const InitPage: NextPage = () => {
                   governanceMode: e.target.value as GovernanceMode
                 })
               }
+<<<<<<< HEAD
             >              <option>Admin</option>
+=======
+            >
+              <option>Admin</option>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
@@ -225,7 +304,12 @@ const InitPage: NextPage = () => {
                     type='checkbox'
                     checked={state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
+<<<<<<< HEAD
                   />                  <span>/{key}</span>
+=======
+                  />
+                  <span>/{key}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </label>
               ))}
             </div>
@@ -239,12 +323,21 @@ const InitPage: NextPage = () => {
                     type='checkbox'
                     checked={state.bonusModules[key]}
                     onChange={() => handleToggle('bonusModules', key)}
+<<<<<<< HEAD
                   />                  <span>/{key}</span>
+=======
+                  />
+                  <span>/{key}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </label>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='flex items-center gap-3'>
           <button
             disabled={submitting}
@@ -252,7 +345,12 @@ const InitPage: NextPage = () => {
           >
             {submitting ? 'Deploying…' : 'Deploy Genesis'}
           </button>
+<<<<<<< HEAD
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>
+=======
+          {error && <span className='text-sm text-red-500'>{error}</span>}
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </form>
       {result && (
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
@@ -264,6 +362,13 @@ const InitPage: NextPage = () => {
       )}
     </div>
   );
+<<<<<<< HEAD
 }
 export default InitPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default InitPage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

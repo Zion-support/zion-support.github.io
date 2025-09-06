@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -303,6 +304,13 @@ const categories = [
   { name: "Database", count: 1, icon: Database }
   { name: "Performance", count: 1, icon: Zap }
 ];
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GuidesPage() {
   return (
     <Layout>

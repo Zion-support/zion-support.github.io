@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useCallback } from "react";
 // Define MessageEvent if not available
 interface Event {
@@ -57,3 +58,20 @@ export function useMessageChannelHandler({
     }
   }, [handleMessage]);
 }
+=======
+import { useState, useEffect, useCallback } from 'react';
+}
+
+export const useMessageChannelHandler = () => {
+  const [state, setState] = useState(null);
+
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+
+  return { state, setState };
+};
+}
+
+export default useMessageChannelHandler;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

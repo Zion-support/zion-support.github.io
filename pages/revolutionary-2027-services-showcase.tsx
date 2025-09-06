@@ -1,18 +1,41 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe  } from 'lucide-react';
+=======
+
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Mail,
+  Phone,
+  MapPin,
+  MessageSquare,
+  Globe,;
+} from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices  } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices  } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Revolutionary2027ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
 
+<<<<<<< HEAD
   const allServices = null;
                     setSelectedPriceRange('all')
                   }} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
@@ -37,6 +60,40 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
+=======
+  const allServices = [
+    ...revolutionary2027AIServices,
+    ...revolutionary2027ITServices,
+    ...revolutionary2027MicroSaasServices,
+  ];
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category.includes('AI')
+  ).length;
+  const quantumCount = allServices.filter(service =>
+    service.category.includes('Quantum')
+  ).length;
+  const itCount = allServices.filter(
+    service =>
+      service.category.includes('IT') ||
+      service.category.includes('Infrastructure')
+  ).length;
+  const microSaasCount = allServices.filter(
+    service =>
+      service.category.includes('Micro SaaS') ||
+      service.category.includes('Marketing') ||
+      service.category.includes('Legal') ||
+      service.category.includes('Health')
+  ).length;
+  const holographicCount = allServices.filter(service =>
+    service.category.includes('Holographic')
+  ).length;
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       id: 'quantum'
       name: 'Quantum Services'
@@ -46,6 +103,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount }
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount }
     {
+<<<<<<< HEAD
       id: 'holographic'
       name: 'Holographic'
       icon: '🎭'
@@ -63,6 +121,31 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     { id: 'rating', name: 'Rating' }
     { id: 'customers', name: 'Customers' }
     { id: 'launchDate', name: 'Launch Date' },  ];
+=======
+      id: 'holographic',
+      name: 'Holographic',
+      icon: '🎭',
+      count: holographicCount,
+    },
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'under-500', name: 'Under $500', range: 'Under $500' },
+    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },
+    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },
+    { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' },
+  ];
+
+  const sortOptions = [
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customers' },
+    { id: 'launchDate', name: 'Launch Date' },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const filteredServices = useMemo(() => {
     let filtered = allServices;
     // Category filter
@@ -86,7 +169,13 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         if (selectedCategory === 'holographic')
           return service.category.includes('Holographic');
         return true;
+<<<<<<< HEAD
       });    }
+=======
+      });
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -98,7 +187,13 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           return price >= 2000 && price < 10000;
         if (selectedPriceRange === 'over-10000') return price >= 10000;
         return true;
+<<<<<<< HEAD
       });    }
+=======
+      });
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(
@@ -108,7 +203,13 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
             .toLowerCase()
             .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
+<<<<<<< HEAD
       );    }
+=======
+      );
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -116,7 +217,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           return (
             parseInt(a.price.replace(/[^0-9]/g, '')) -
             parseInt(b.price.replace(/[^0-9]/g, ''))
+<<<<<<< HEAD
           );        case 'rating':
+=======
+          );
+        case 'rating':
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
@@ -124,6 +230,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
+<<<<<<< HEAD
         default: return a.name.localeCompare(b.name)
       }
     });
@@ -133,6 +240,23 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  }
+=======
+        default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+
+    return filtered;
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <Head>
@@ -164,7 +288,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
       </Head>
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto text-center relative z-10'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -206,7 +335,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 <MapPin className='w-5 h-5' />
                 <span className='text-sm font-semibold'>
                   {contactInfo.address}
+<<<<<<< HEAD
                 </span>              </motion.div>
+=======
+                </span>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
             {/* CTA Buttons */}
             <div className='flex flex-wrap items-center justify-center gap-4'>
@@ -221,7 +355,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 href='/services'
                 className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
               >
+<<<<<<< HEAD
                 <Globe className='w-5 h-5 mr-2' />                View All Services
+=======
+                <Globe className='w-5 h-5 mr-2' />
+                View All Services
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             </div>
           </motion.div>
@@ -239,7 +378,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 placeholder='Search revolutionary services...'
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                 className='w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'              />
+=======
+                className='w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+              />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
             {/* Filters */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
@@ -253,7 +397,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
+<<<<<<< HEAD
                   {categories.map(category => (                    <option key={category.id} value={category.id}>
+=======
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {category.name} ({category.count})
                     </option>
                   ))}
@@ -269,7 +418,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
+<<<<<<< HEAD
                   {priceRanges.map(range => (                    <option key={range.id} value={range.id}>
+=======
+                  {priceRanges.map(range => (
+                    <option key={range.id} value={range.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {range.name}
                     </option>
                   ))}
@@ -285,7 +439,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   onChange={e => setSortBy(e.target.value)}
                   className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
+<<<<<<< HEAD
                   {sortOptions.map(option => (                    <option key={option.id} value={option.id}>
+=======
+                  {sortOptions.map(option => (
+                    <option key={option.id} value={option.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {option.name}
                     </option>
                   ))}
@@ -302,7 +461,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   <span className='font-semibold text-purple-400'>
                     {allServices.length}
                   </span>
+<<<<<<< HEAD
                   <span className='text-sm'> services</span>                </div>
+=======
+                  <span className='text-sm'> services</span>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -313,7 +477,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         <div className='max-w-7xl mx-auto'>
           <AnimatePresence mode='wait'>
             {filteredServices.length > 0 ? (
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (
+=======
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {filteredServices.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 30 }}
@@ -329,6 +498,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                         <div className='flex items-start justify-between mb-4'>
                           <div className='text-4xl'>{service.icon}</div>
                           {service.popular && (
+<<<<<<< HEAD
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>                              POPULAR
                             </div>
                           )}
@@ -337,6 +507,19 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                           {service.name}
                         </h3>
                         <p className='text-gray-300 text-sm mb-3 line-clamp-2'>                          {service.tagline}
+=======
+                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>
+                              POPULAR
+                            </div>
+                          )}
+                        </div>
+
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                          {service.name}
+                        </h3>
+                        <p className='text-gray-300 text-sm mb-3 line-clamp-2'>
+                          {service.tagline}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </p>
                         {/* Price */}
                         <div className='flex items-baseline gap-2 mb-4'>
@@ -348,7 +531,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                           </span>
                         </div>
                         {/* Description */}
+<<<<<<< HEAD
                         <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service.description}
+=======
+                        <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
+                          {service.description}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </p>
                         {/* Features */}
                         <div className='mb-4'>
@@ -368,7 +556,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                                     {feature}
                                   </span>
                                 </li>
+<<<<<<< HEAD
                               ))}                          </ul>
+=======
+                              ))}
+                          </ul>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                         {/* Stats */}
                         <div className='grid grid-cols-3 gap-4 mb-4 text-center'>
@@ -390,13 +583,23 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             <div className='text-lg font-bold text-green-400'>
                               {service.reviews}
                             </div>
+<<<<<<< HEAD
                             <div className='text-xs text-gray-400'>Reviews</div>                          </div>
+=======
+                            <div className='text-xs text-gray-400'>Reviews</div>
+                          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                         {/* Category Badge */}
                         <div className='mb-4'>
                           <span
                             className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}
+<<<<<<< HEAD
                           >                            {service.category}
+=======
+                          >
+                            {service.category}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </span>
                         </div>
                         {/* Action Buttons */}
@@ -412,7 +615,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             href='/contact'
                             className='px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300'
                           >
+<<<<<<< HEAD
                             <MessageSquare className='w-4 h-4' />                          </a>
+=======
+                            <MessageSquare className='w-4 h-4' />
+                          </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                       </div>
                     </div>
@@ -439,8 +647,13 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                     setSelectedPriceRange('all');
                   }}
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+<<<<<<< HEAD
                 >                  Clear Filters
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+                >
+                  Clear Filters
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </motion.div>
             )}
@@ -449,7 +662,12 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
       </section>
       {/* Contact CTA Section */}
       <section className='py-16 px-4'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -492,11 +710,20 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 href='/services'
                 className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
               >
+<<<<<<< HEAD
                 <Globe className='w-5 h-5 mr-2' />                Explore All Services
+=======
+                <Globe className='w-5 h-5 mr-2' />
+                Explore All Services
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             </div>
           </motion.div>
         </div>
       </section>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

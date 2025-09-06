@@ -13,12 +13,18 @@ interface SmartContractDeploymentProps {
 <<<<<<< HEAD
   solidityCode: string;
   onDeploy: (options: DeploymentOptions) => Promise<void>;
+<<<<<<< HEAD
 =======
   solidityCode: string
   onDeploy: (options: DeploymentOptions) => Promise<void>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isDeploying: boolean
 }
+=======
+  isDeploying: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SmartContractDeployment({
   solidityCode;
   onDeploy;

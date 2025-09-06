@@ -8,6 +8,7 @@ interface CountryServiceCardProps {
 <<<<<<< HEAD
   country: CountryPricing;
   onSelect: (country: CountryPricing) => void;
+<<<<<<< HEAD
 =======
   country: CountryPricing
   onSelect: (country: CountryPricing) => void
@@ -15,6 +16,16 @@ interface CountryServiceCardProps {
   isPopular?: boolean
 }
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+=======
+  isPopular?: boolean;
+}
+
+export function CountryServiceCard({
+  country,
+  onSelect,
+  isPopular,
+}: CountryServiceCardProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Get region flag based on country name (for demo purposes)
 <<<<<<< HEAD
   const getRegionEmoji = null;

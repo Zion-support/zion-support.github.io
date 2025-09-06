@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -125,11 +126,14 @@ export default function MicroSaasPage() {
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
 </Link>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Cloud
   Zap
   BarChart3
@@ -176,10 +180,60 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  Cloud,
+  Zap,
+  BarChart3,
+  Leaf,
+  Truck,
+  FileText,
+  Target,
+  Users,
+  Shield,
+  Globe,
+  Smartphone,
+  Laptop,
+  Monitor,
+  Database,
+  Camera,
+  HardDrive,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Award,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Building,
+  ShoppingCart,
+  BookOpen,
+  Heart,
+  Car,
+  Cpu,
+  Settings,
+  Lock,
+  Wifi,
+  Network,
+  Server,
+  Code,
+  Package,
+  GraduationCap,
+  Atom,
+  AlertTriangle,
+  Link as LinkIcon,
+  Award as AwardIcon,
+  Star as StarIcon,
+  Home;
+} from 'lucide-react';
+import Layout from '../components/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const timer = null;
 =======
@@ -202,6 +256,33 @@ export default function MicroSaaS() {
     {
       id: 1
       name: 'AI-Powered Video Clip Maker'
+=======
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
+  };
+
+  const categories = [
+    { id: 'all', name: 'All Products', count: 150 },
+    { id: 'ai', name: 'AI-Powered', count: 45 },
+    { id: 'analytics', name: 'Analytics', count: 30 },
+    { id: 'automation', name: 'Automation', count: 25 },
+    { id: 'security', name: 'Security', count: 20 },
+    { id: 'productivity', name: 'Productivity', count: 15 },
+    { id: 'marketing', name: 'Marketing', count: 15 },
+  ];
+
+  const products = [
+    {
+      id: 1,
+      name: 'AI-Powered Video Clip Maker',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Automatically create engaging video clips from long-form content using advanced AI algorithms.'
       category: 'ai'
@@ -384,6 +465,11 @@ export default function MicroSaaS() {
     selectedCategory === 'all'
       ? products
       : products.filter(product => product.category === selectedCategory);
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function MicroSaas() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -407,7 +493,12 @@ export default function MicroSaas() {
           {/* Hero Section */}
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
+<<<<<<< HEAD
               <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+=======
+              <h1
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Micro SaaS Products
               </h1>
@@ -420,15 +511,26 @@ export default function MicroSaas() {
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 Discover our comprehensive collection of micro SaaS products
+<<<<<<< HEAD
                 designed to solve specific business challenges with focused
                 efficient, and cost-effective solutions.              </p>
+=======
+                designed to solve specific business challenges with focused,
+                efficient, and cost-effective solutions.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </section>
           {/* Category Filter */}
           <section className='py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
               <div className='flex flex-wrap justify-center gap-4 mb-8'>
+<<<<<<< HEAD
                 {categories.map(category => (                  <button
+=======
+                {categories.map(category => (
+                  <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -448,7 +550,12 @@ export default function MicroSaas() {
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredProducts.map((product, index) => (
+<<<<<<< HEAD
                   <div                    key={product.id}
+=======
+                  <div
+                    key={product.id}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
@@ -468,11 +575,20 @@ export default function MicroSaas() {
                       <ul className='text-slate-400 text-sm space-y-1'>
                         {product.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
+<<<<<<< HEAD
                             <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
+=======
+                            <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0'></span>
+                            {feature}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
                         {product.price}
@@ -481,7 +597,13 @@ export default function MicroSaas() {
                         {product.category}
                       </span>
                     </div>
+<<<<<<< HEAD
                     <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
+=======
+
+                    <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>
+                      Learn More
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 ))}
@@ -578,7 +700,12 @@ export default function MicroSaas() {
                   <h3 className='text-xl font-bold mb-2'>Easy Integration</h3>
                   <p className='text-slate-400'>
                     Seamless integration with your existing tools and workflows
+<<<<<<< HEAD
                   </p>                </div>
+=======
+                  </p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </section>
@@ -608,7 +735,12 @@ export default function MicroSaas() {
                 </a>
                 <a
                   href={`mailto:${contact.email}`}
+<<<<<<< HEAD
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
+=======
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Email Us
                 </a>
               </div>
@@ -648,12 +780,18 @@ export default function MicroSaas() {
                       {product.category}
                     </span>
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {product.title}
                   </h3>
                   <p className="text-gray-600 mb-4">
                     {product.description}
                   </p>
+=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
+                  <p className="text-gray-600 mb-4">{solution.description}</p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-green-600">
                       {product.pricing}
@@ -742,6 +880,7 @@ Ready to Transform Your Business?
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
           </section>
         </main>
@@ -750,3 +889,5 @@ Ready to Transform Your Business?
   )
 }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

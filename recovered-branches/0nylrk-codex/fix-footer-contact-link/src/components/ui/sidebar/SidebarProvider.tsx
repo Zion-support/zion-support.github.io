@@ -16,11 +16,20 @@ const SidebarContext = createContext<SidebarContextType>({
   open: () => {}
   close: () => {}
 });
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 interface SidebarProviderProps {
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SidebarProvider({
   children
   defaultOpen = true

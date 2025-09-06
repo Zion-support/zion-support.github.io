@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '[^']*';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '[^']*';
@@ -17,20 +18,42 @@ import {
   isClient
 } from "../../../../utils/api/projects";
 import { Milestone } from "../../../../utils/types/milestones";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../../utils/api/auth';
+import {
+  addMilestone,
+  getProject,
+  assertParticipantOrAdmin,
+  isClient,;
+} from '../../../../utils/api/projects';
+import { Milestone } from '../../../../utils/types/milestones';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId } = req.query as { projectId: string }
   const project = getProject(projectId);
   if (!project) {
+<<<<<<< HEAD
     res.status(404).json({ error: "Project not found" });
+=======
+    res.status(404).json({ error: 'Project not found' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
     res.status(403).json({ error: "Forbidden" });
     return;
   }
+<<<<<<< HEAD
   if (req.method === "GET") {
+=======
+
+  if (req.method === 'GET') {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     res.status(200).json({ milestones: project.milestones });
     return;
   }
@@ -63,7 +86,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(201).json({ milestone: created });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

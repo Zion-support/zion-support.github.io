@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from 'lucide-react'
+=======
+import React from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Search, Filter } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 interface FraudFiltersProps {
 <<<<<<< HEAD
@@ -15,6 +29,7 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void;
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
+<<<<<<< HEAD
 =======
   searchQuery: string
   setSearchQuery: (value: string,) => void
@@ -27,6 +42,11 @@ interface FraudFiltersProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   resetFilters: () => void
 }
+=======
+  resetFilters: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 <<<<<<< HEAD
   searchQuery;
@@ -100,8 +120,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }
 '"}
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

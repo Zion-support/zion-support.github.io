@@ -27,10 +27,21 @@ const features = [
     description: "Powerful analytics and management tools for team leaders and administrators."
     icon: Settings}
   {
+<<<<<<< HEAD
     title: "Global Access"
     description: "Connect with talent across multiple regions with localized interfaces."
     icon: Globe}]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    title: 'Global Access',
+    description:
+      'Connect with talent across multiple regions with localized interfaces.',
+    icon: Globe,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnterpriseFeatures() {
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">

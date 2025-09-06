@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Zion Tech Group Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
@@ -421,6 +422,11 @@ function trackEvent(eventName, eventData = {}) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     // Implement your analytics tracking here
 }
+=======
+//Zion Tech Group Website JavaScript
+
+})
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
   entries.forEach (entry => {
@@ -433,6 +439,10 @@ function trackEvent(eventName, eventData = {}) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
   entries.forEach (entry => {
   if (entry.isIntersecting) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 })
 }//Newsletter subscription submitBtn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
@@ -442,6 +452,7 @@ function trackEvent(eventName, eventData = {}) {
 //Search function if (searchResults) {
   const results = [ {
   title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager'
+<<<<<<< HEAD
 }
 {
   title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform'
@@ -455,18 +466,46 @@ function trackEvent(eventName, eventData = {}) {
 }//Counter animation //Close modal on overlay click modals.forEach (modal => {
   modal.addEventListener ('click', function (e) {
   if (e.target === this) {
+=======
+};
+{
+  title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform'
+};
+{
+  title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems'
+};
+{
+  title: 'Quantum Computing Services', url: '/services/quantum-computing'
+}].filter (item => item.title.toLowerCase () .includes (query) );
+
+}//Counter animation //Close modal on overlay click modals.forEach (modal => {
+  modal.addEventListener ('click', function (e) {
+  if (e.target === this) {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 //Close modal on escape key document.addEventListener ('keydown', function (e) {
   if (e.key === 'Escape') {
   modals.forEach (modal => {
   if (modal.classList.contains ('active') ) {
+<<<<<<< HEAD
 })
 }//Performance monitoring
+=======
+
+})
+}//Performance monitoring
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }//Error tracking window.addEventListener ('error', function (e) {
   console.error ('JavaScript Error:', e.error);
 //Send to error tracking service
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }) {
   //Implement your analytics tracking here
 }//Track page views trackEvent ('page view', {
@@ -480,6 +519,7 @@ title: document.title
 button class: e.target.className;
 page: window.location.pathname
 })
+<<<<<<< HEAD
 });
 // Log performance when page is fully loaded window.addEventListener ('load', logPerformance);// Track page views
 trackEvent('page_view', {
@@ -506,3 +546,8 @@ window.addEventListener('load', logPerformance);
 =======
 window.addEventListener('load', logPerformance)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+});
+// Log performance when page is fully loaded window.addEventListener ('load', logPerformance);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

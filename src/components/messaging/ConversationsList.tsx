@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React, { useMemo } from 'react';
+import { User } from 'lucide-react';
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react'
@@ -8,7 +16,13 @@ interface ConversationsListProps {
   conversations: Conversation[];
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
+<<<<<<< HEAD
   markAsRead: (conversationId: string) => Promise<void>
+=======
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ConversationsList({
 <<<<<<< HEAD
   conversations;
@@ -68,5 +82,9 @@ export function ConversationsList({
         </List>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

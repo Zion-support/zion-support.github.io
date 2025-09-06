@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { z } from 'zod';
+import { LockKeyhole } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -21,7 +30,128 @@ import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils";
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Form validation schema
+<<<<<<< HEAD
 const updatePasswordSchema = null;
+=======
+const updatePasswordSchema = z
+  .object({
+    password: z
+      .string()
+      .min(8, 'Password must be at least 8 characters')
+      .max(64, 'Password must be less than 64 characters'),
+    confirmPassword: z.string(),
+  })
+  .refine(data => data.password === data.confirmPassword, {
+    message: 'Passwords do not match',
+    path: ['confirmPassword'],
+  });
+
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
+}
+
+export default function UpdatePassword() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const router = useRouter();
+
+  // Initialize react-hook-form
+  const form = useForm<UpdatePasswordFormValues>({
+    resolver: zodResolver(updatePasswordSchema),
+    defaultValues: {
+      password: '',
+      confirmPassword: '',
+    },
+  });
+
+  useEffect(() => {
+    // Extract access token from URL hash on the client
+    const hash = typeof window !== 'undefined' ? window.location.hash : '';
+    const hashParams = new URLSearchParams(hash.substring(1));
+    const token = hashParams.get('access_token');
+
+    if (token) {
+      setAccessToken(token);
+    } else {
+      setError(
+        'No access token found. Please request a new password reset link.'
+      );
+    }
+
+    // Clean up auth state to prevent issues
+    cleanupAuthState();
+  }, []);
+
+  // Form submission handler
+  const onSubmit = async (data: UpdatePasswordFormValues) => {
+    if (!accessToken) {
+      setError(
+        'No access token found. Please request a new password reset link.'
+      );
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      // Set the session with the access token
+      await supabase.auth.setSession({
+        access_token: accessToken,
+        refresh_token: '',
+      });
+
+      // Update the password
+      const { error } = await supabase.auth.updateUser({
+        password: data.password,
+      });
+
+      if (error) {
+        toast({
+          title: 'Password update failed',
+          description: error.message,
+          variant: 'destructive',
+        });
+        setError(error.message);
+        return;
+      }
+
+      // Show success message and clean up auth state
+      setSuccess(true);
+      toast({
+        title: 'Password updated successfully',
+        description: 'You can now log in with your new password.',
+      });
+
+      // Clean auth state and redirect after a delay
+      cleanupAuthState();
+      setTimeout(() => {
+        router.push('/login');
+      }, 3000);
+    } catch (error: any) {
+      logErrorToProduction(
+        error instanceof Error ? error.message : String(error),
+        error instanceof Error ? error : undefined,
+        { message: 'Password update error' }
+      );
+      toast({
+        title: 'Password update failed',
+        description: error.message || 'An unexpected error occurred',
+        variant: 'destructive',
+      });
+      setError(error.message || 'An unexpected error occurred');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const onInvalid = (errors: any) => {
+    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
+    if (firstError) {
+      form.setFocus(firstError);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <div className="flex min-h-screen bg-zion-blue">
@@ -148,6 +278,7 @@ const updatePasswordSchema = null;
         </div>
       </div>
     </>
+<<<<<<< HEAD
 =======
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -182,3 +313,68 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
+=======
+  );
+  password: z .string () if (token) {;
+  setAccessToken (token) ;
+}else {;
+  ;
+
+}, []);
+//Form submission handler ;
+}setIsLoading (true);
+try {;
+  //Set the session with the access token await supabase.auth.setSession ({;
+  access token: accessToken;
+refresh token: '' ;
+});
+//Update the password const {;
+  error ;
+}= await supabase.auth.updateUser ({;
+  password: data.password ;
+});
+if (error) {;
+  toast ({;
+  title: "Password update failed";
+description: error.message;
+setError (error.message);
+return;
+}//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();
+setTimeout ( () => {;
+  ;
+}catch (error: any) {;
+  logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
+  message: 'Password update error' ;
+});
+toast ({;
+  ;
+}finally {;
+  setIsLoading (false) ;
+
+};
+const onInvalid = (errors: any) => {;
+  const firstError = Object.keys (errors) [0] as keyof UpdatePasswordFormValues;
+if (firstError) {;
+  form.setFocus (firstError) ;
+
+};";
+error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white"> <p className="text-sm"> {;
+  error ;
+}</p> <Button > Request new reset link </Button> </div>) ;
+}{";
+  success ? (<div className="text-center py-8"> <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4"> <LockKeyhole className="h-6 w-6 text-zion-purple" /> </div> <h3 className="text-lg font-medium text-white">Password updated</h3> <p className="mt-2 text-sm text-zion-slate-light"> Your password has been successfully updated. </p> <p className="mt-2 text-sm text-zion-slate-light"> Redirecting you to login... </p> </div>) : (<Form {;
+  ...form ";
+}> >New Password</FormLabel> <FormControl> <Input className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled= {;
+  isLoading ;
+}{;
+  ...field ";
+}/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> <FormField >Confirm Password</FormLabel> <FormControl> <Input className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled= {;
+  isLoading ;
+}{;
+  ...field ";
+}/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> <Button </Button> <div className="text-center" > <Button > Back to login </Button> </div> </form> </Form>) ";
+}</div> </div> </div> <div className="hidden lg: block relative w-0 flex-1"> <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80"> <div className="flex flex-col justify-center items-center h-full px-8"> <div className="max-w-md text-center"> <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3> <p className="text-lg text-white/80"> Set a strong password to secure your account and continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> </>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

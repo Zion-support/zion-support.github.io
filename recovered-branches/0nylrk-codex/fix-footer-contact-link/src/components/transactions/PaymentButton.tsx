@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 interface PaymentButtonProps {
 <<<<<<< HEAD
   amount: number;
+<<<<<<< HEAD
   serviceId: string;
   providerId: string;
 =======
@@ -22,6 +23,37 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void;
   redirectUrl?: string
 }
+=======
+serviceId: string;
+providerId: string;
+buttonText?: string;
+className?: string;
+onPaymentInitiated?: () => void;
+redirectUrl?: string 
+}export function PaymentButton ({
+  amount;
+serviceId;
+providerId;
+buttonText = "Purchase";
+className;
+onPaymentInitiated;
+redirectUrl 
+}: PaymentButtonProps) {
+  const [isProcessing, setIsProcessing] = useState (false);
+const {
+  isAuthenticated, user 
+}= useAuth ();
+const navigate = useNavigate ();
+if (!isAuthenticated) {
+  toast ({
+  navigate ("/login", {
+  state: {
+  from: window.location.pathname
+}
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PaymentButton({
   amount;
   serviceId;

@@ -10,8 +10,14 @@ interface CodeBlockProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   language?: string;
   showLineNumbers?: boolean;
+<<<<<<< HEAD
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CodeBlock({
   code;
 <<<<<<< HEAD

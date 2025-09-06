@@ -17,6 +17,67 @@ interface InstanceWithCounts {id: string;
   _count: {;
     deployments: number;
     features: number;
+<<<<<<< HEAD
+=======
+  };
+  region: string;
+  version: string;
+}
+
+export default function InstancesPage() {
+  const [instances, setInstances] = useState<Instance[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error] = useState<string | null>(null);
+
+  useEffect(() => {
+    const mockInstances: Instance[] = [
+      {
+        id: '1',
+        name: 'Zion Main Economy',
+        description: 'Primary digital economy instance',
+        isPublic: true,
+        status: 'active',
+        createdAt: '2024-01-15',
+        lastDeployed: '2024-01-20',
+        count: { deployments: 12, features: 8 },
+        region: 'us-east-1',
+        version: 'v2.1.0'
+      }
+    ];
+
+    setTimeout(() => {
+      setInstances(mockInstances);
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active':
+        return 'text-green-400 bg-green-400/20';
+      case 'inactive':
+        return 'text-gray-400 bg-gray-400/20';
+      case 'deploying':
+        return 'text-yellow-400 bg-yellow-400/20';
+      case 'error':
+        return 'text-red-400 bg-red-400/20';
+      default:
+        return 'text-gray-400 bg-gray-400/20';
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center py-16">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+            <p className="text-white/70">Loading instances...</p>
+          </div>
+        </div>
+      </div>
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
 }
 export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 <<<<<<< HEAD
@@ -16,6 +17,15 @@ function generateSessionId(): string {
   window.localStorage.setItem('zion_support_session_id', id);
   return id
 }
+=======
+ useEffect ( () => {
+  if (!isOpen && messages.length === 0) {
+  //Seed greeting setMessages ([
+}
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -26,13 +36,18 @@ export default function ChatWidget() {
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
+<<<<<<< HEAD
     sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
+=======
+    sessionIdRef.current = generateSessionId();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
         {
+<<<<<<< HEAD
           role: 'assistant'
           content: 'Hi! How can I help you?'
           timestamp: Date.now()
@@ -40,20 +55,33 @@ export default function ChatWidget() {
       ]);    }
   }, [isOpen, messages.length]);
   useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
+=======
+          role: 'assistant',
+          content: 'Hi! How can I help you?',
+          timestamp: Date.now(),
+        },
+      ]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }, [isOpen, messages.length]);
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
   const quickReplies = useMemo(
+<<<<<<< HEAD
     () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages]);
   const quickReplies = useMemo(
     () => ['How do I hire?How do I get matched?Billing help'];
+=======
+    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
+    []
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   );
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -62,26 +90,49 @@ export default function ChatWidget() {
           payload
         })
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current,
+          eventType,
+          payload,
+        }),
+      });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     } catch {}
   }
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           sessionId: sessionIdRef.current
           reason
           tag: 'escalate'
         })
       });
+<<<<<<< HEAD
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
       setShowEscalation(true)
+=======
+      setShowEscalation(true);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     } catch {}
   }
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const newUserMessage: ChatMessage = {
       role: 'user'
       content: text
@@ -90,15 +141,22 @@ export default function ChatWidget() {
     setMessages(prev => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
+<<<<<<< HEAD
     await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() }
     setMessages((prev) => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
     await logEvent('message/user', { content: text })
+=======
+    await logEvent('message/user', { content: text });
+
+    try {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const res = await fetch('/api/support/chat', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           sessionId: sessionIdRef.current
           messages: [...messages, newUserMessage].map(({ role, content }) => ({
             role
@@ -106,13 +164,29 @@ export default function ChatWidget() {
           }))
         })
       });      const data = await res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
+=======
+          sessionId: sessionIdRef.current,
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({
+            role,
+            content,
+          })),
+        }),
+      });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const data = await res.json();
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
+<<<<<<< HEAD
           role: 'assistant'
           content: data.assistantMessage
           timestamp: Date.now()
         }
+=======
+          role: 'assistant',
+          content: data.assistantMessage,
+          timestamp: Date.now(),
+        };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         setMessages(prev => [...prev, assistantMessage]);
         await logEvent('message/assistant', {
           content: assistantMessage.content
@@ -141,6 +215,7 @@ export default function ChatWidget() {
         }
       ]);
     } finally {
+<<<<<<< HEAD
       setIsLoading(false);    }
   }
   return (
@@ -162,6 +237,9 @@ export default function ChatWidget() {
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+=======
+      setIsLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -170,11 +248,15 @@ export default function ChatWidget() {
         <button
           aria-label='Open support chat'
           onClick={() => setIsOpen(true)}
+<<<<<<< HEAD
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (
         <button
           aria-label="Open support chat"
           onClick={() => setIsOpen(true)}
           className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black"
+=======
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           ?
         </button>
@@ -187,6 +269,7 @@ export default function ChatWidget() {
               onClick={() => setIsOpen(false)}
               aria-label='Close'
               className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700'
+<<<<<<< HEAD
             >              <X size={18} />
             </button>
           </div>
@@ -196,6 +279,13 @@ export default function ChatWidget() {
             <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
             </button>
           </div>
+=======
+            >
+              <X size={18} />
+            </button>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>
             {messages.map((m, idx) => (
               <div
@@ -207,12 +297,16 @@ export default function ChatWidget() {
                 <div
                   className={
                     m.role === 'assistant'
+<<<<<<< HEAD
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages.map((m, idx) => (
               <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
                 <div
                   className={
                     m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
+=======
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }
                 >
@@ -224,8 +318,12 @@ export default function ChatWidget() {
               <div className='text-sm'>
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
                   Thinking…
+<<<<<<< HEAD
                 </div>              </div>              <div className="text-sm">
                 <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
+=======
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             )}
             <div ref={messagesEndRef} />
@@ -237,6 +335,7 @@ export default function ChatWidget() {
                   <button
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
@@ -244,12 +343,20 @@ export default function ChatWidget() {
                     key={q}
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+=======
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {q}
                   </button>
                 ))}
               </div>
             </div>
           )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -263,6 +370,7 @@ export default function ChatWidget() {
                     }
                   }}
                   placeholder='Ask a question…'
+<<<<<<< HEAD
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />
                 <button
                   onClick={() => onSend()}
@@ -281,11 +389,18 @@ export default function ChatWidget() {
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
+=======
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Send
                 </button>
@@ -307,16 +422,25 @@ export default function ChatWidget() {
                     className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                   >
                     Chat with Live Agent
+<<<<<<< HEAD
                   </a>                </div>              <div className="flex flex-col gap-2 text-sm">
                 <div className="text-gray-700 dark:text-gray-300">We can escalate this to our team:</div>
                 <div className="flex gap-2">
                   <a href="mailto:support@zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Email Support</a>
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
+=======
+                  </a>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             )}
           </div>
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

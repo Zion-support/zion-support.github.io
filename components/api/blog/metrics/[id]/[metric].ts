@@ -1,5 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { incrementMetric } from '@/utils/data/blogStore';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
@@ -10,8 +15,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json({ error: 'Invalid params' });
   if (!['views', 'likes', 'shares'].includes(metric))
     return res.status(400).json({ error: 'Invalid metric' });
-  const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares');
+  
+}
+
+const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares');
   if (!post) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
   return res.status(200).json({ ok: true, metrics: post.metrics });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
@@ -21,3 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
+=======
+  return res.status(200).json({ ok: true, metrics: post.metrics });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

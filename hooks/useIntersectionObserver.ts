@@ -3,8 +3,14 @@ interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+<<<<<<< HEAD
   freezeOnceVisible?: boolean
 }
+=======
+  freezeOnceVisible?: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useIntersectionObserver({
 <<<<<<< HEAD
   threshold;

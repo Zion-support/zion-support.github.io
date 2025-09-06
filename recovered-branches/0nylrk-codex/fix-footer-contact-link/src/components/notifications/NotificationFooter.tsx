@@ -6,6 +6,9 @@ interface NotificationFooterProps {
   onClose: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = null;

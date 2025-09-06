@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
@@ -28,6 +29,26 @@ interface UltraAdvancedServiceCardProps {
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Globe,;
+} from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface UltraAdvancedServiceCardProps {
   service: {
     id: string;
@@ -73,6 +94,7 @@ interface UltraAdvancedServiceCardProps {
     customers: number;
     rating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     reviews: number;
   }
@@ -103,6 +125,19 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 =======
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') |category.includes('Machine Learning'))
+=======
+    reviews: number;
+  };
+
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
+  service,
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const getCategoryIcon = (category: string) => {
+    if (category.includes('AI') || category.includes('Machine Learning'))
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       return <Brain className='w-4 h-4' />;
     if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
     if (category.includes('Space')) return <Rocket className='w-4 h-4' />;
@@ -114,6 +149,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       return <Lock className='w-4 h-4' />;
     if (category.includes('Internet') |category.includes('Network'))
       return <Globe className='w-4 h-4' />;
+<<<<<<< HEAD
     return <Zap className='w-4 h-4' />;  }
   const containerVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -152,9 +188,25 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     },        ease: "easeOut" as const
       }
     }
+=======
+    return <Zap className='w-4 h-4' />;
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut' as const,
+      },
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     hover: {
       y: -10
       transition: {
+<<<<<<< HEAD
         duration: 0.3
         ease: 'easeOut' as const
       }
@@ -164,9 +216,20 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   }
   const contentVariants = {
     hidden: { opacity: 0, height: 0 }
+=======
+        duration: 0.3,
+        ease: 'easeOut' as const,
+      },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     visible: {
       height: 'auto'
       transition: {
+<<<<<<< HEAD
         duration: 0.5
         ease: 'easeOut' as const
       }
@@ -183,6 +246,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       initial="hidden"
       animate="visible"
       whileHover="hover"
+=======
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    },
+  };
+
+      onHoverStart={() => setIsHovered(true)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
@@ -196,6 +268,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         }}
       />
       {/* Main Card */}
+<<<<<<< HEAD
       <div        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
@@ -208,6 +281,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       {/* Main Card */}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
@@ -232,6 +307,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             </div>
             {service.popular && (
               <motion.div
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1, 1.1, 1] }}          {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-3">
@@ -249,6 +325,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             {service.popular && (
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
+=======
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -257,9 +336,13 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             )}
           </div>
           {/* Tagline */}
+<<<<<<< HEAD
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
           </p>
           {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+=======
+          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {service.tagline}
           </p>
           {/* Price */}
@@ -274,9 +357,13 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <Star className='w-4 h-4 text-yellow-400 fill-current' />
                 <span className='text-white text-sm'>{service.rating}</span>
               </div>
+<<<<<<< HEAD
               <span className='text-gray-400 text-sm'>({service.reviews})</span>            </div>
           </div>
           {/* Quick Stats */}              <span className="text-gray-400 text-sm">({service.reviews})</span>
+=======
+              <span className='text-gray-400 text-sm'>({service.reviews})</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
           {/* Quick Stats */}
@@ -291,6 +378,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <Clock className='w-4 h-4 text-green-400' />
               <span className='text-gray-300'>
                 {service.trialDays} day trial
+<<<<<<< HEAD
               </span>            </div>
           </div>
           {/* Market Data */}          <div className="grid grid-cols-2 gap-3 mb-4">
@@ -301,6 +389,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <div className="flex items-center space-x-2 text-sm">
               <Clock className="w-4 h-4 text-green-400" />
               <span className="text-gray-300">{service.trialDays} day trial</span>
+=======
+              </span>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {/* Market Data */}
           <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>
@@ -314,6 +406,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className='text-gray-400'>Growth Rate:</span>
               <span className='text-blue-400 font-semibold'>
                 {service.growthRate}
+<<<<<<< HEAD
               </span>            </div>          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-400">Market Size:</span>
@@ -322,6 +415,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <div className="flex items-center justify-between text-sm mt-1">
               <span className="text-gray-400">Growth Rate:</span>
               <span className="text-blue-400 font-semibold">{service.growthRate}</span>
+=======
+              </span>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {/* Expandable Content */}
           <AnimatePresence>
@@ -336,6 +433,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 {/* Description */}
                 <div>
                   <h4 className='text-white font-semibold mb-2'>Description</h4>
+<<<<<<< HEAD
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}                initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -345,6 +443,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <div>
                   <h4 className="text-white font-semibold mb-2">Description</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">
+=======
+                  <p className='text-gray-300 text-sm leading-relaxed'>
+                    {service.description}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </p>
                 </div>
                 {/* Features */}
@@ -359,12 +461,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                         className='flex items-center space-x-2 text-sm'
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+<<<<<<< HEAD
                         <span className='text-gray-300'>{feature}</span>                      </div>                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 6).map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
+=======
+                        <span className='text-gray-300'>{feature}</span>
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ))}
                   </div>
                 </div>
@@ -395,6 +502,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <span className='text-gray-400'>Address:</span>
                       <span className='text-white text-xs'>
                         {service.contactInfo.address}
+<<<<<<< HEAD
                       </span>                    </div>                </div>
                 {/* Contact Info */}
                 <div className="bg-gray-800/50 rounded-lg p-3">
@@ -411,6 +519,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                     <div className="flex items-center space-x-2">
                       <span className="text-gray-400">Address:</span>
                       <span className="text-white text-xs">{service.contactInfo.address}</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </div>
@@ -420,9 +531,13 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>
             <motion.button
+<<<<<<< HEAD
               className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1.02 }}          <div className="flex space-x-3 mt-6">
             <motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+=======
+              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => window.open(service.link, '_blank')}
@@ -434,12 +549,16 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
+<<<<<<< HEAD
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
             <motion.button
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
+=======
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -454,6 +573,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
+<<<<<<< HEAD
             <ArrowRight className='w-5 h-5 text-gray-400' />          </motion.div>
         </div>
       </div>
@@ -465,12 +585,23 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
             transition={{ duration: 0.3 }}
           >
             <ArrowRight className="w-5 h-5 text-gray-400" />
+=======
+            <ArrowRight className='w-5 h-5 text-gray-400' />
+          </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedServiceCard;  )
 }
 export default UltraAdvancedServiceCard;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraAdvancedServiceCard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

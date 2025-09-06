@@ -107,5 +107,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       />
     </Head>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default Analytics;

@@ -166,8 +166,16 @@ const Card: React.FC<CardProps> = ({
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default Card;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -3,19 +3,32 @@ import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fetcher = null;
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
 =======
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+=======
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function JobApplicantsPage() {
   const router = useRouter()
   const { id } = router.query;
   const { data: appsData } = useSWR(
     id ? `/api/applications?jobId=${id}` : null
     fetcher
+<<<<<<< HEAD
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+=======
+  );
+  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
@@ -33,6 +46,10 @@ export default function JobApplicantsPage() {
         )}
         {applications.map(a => {
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               <div className='flex items-center justify-between'>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -52,4 +69,8 @@ export default function JobApplicantsPage() {
         })}
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

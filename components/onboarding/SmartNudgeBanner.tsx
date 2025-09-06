@@ -1,13 +1,23 @@
 import React from 'react';
 import { X } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SmartNudgeBannerProps = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
   userId?: string | null;
   message: string;
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SmartNudgeBanner({
   role
   userId
@@ -16,11 +26,18 @@ export default function SmartNudgeBanner({
   const storageKey = React.useMemo(
     () => `zion-nudge-${role}-${userId ?? 'anon'}`
     [role, userId]
+<<<<<<< HEAD
   );  const [hidden, setHidden] = React.useState<boolean>(false);
+=======
+  );
+  const [hidden, setHidden] = React.useState<boolean>(false);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   React.useEffect(() => {
     try {
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+<<<<<<< HEAD
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
   role: 'talent' | 'client'
   userId?: string | null;
@@ -35,13 +52,20 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed')
+=======
+      setHidden(v === 'dismissed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     } catch {}
   }, [storageKey]);
   const dismiss = React.useCallback(() => {
     setHidden(true);
     try {
       if (typeof window !== 'undefined')
+<<<<<<< HEAD
         localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+=======
+        localStorage.setItem(storageKey, 'dismissed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
@@ -57,6 +81,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
       </button>
       <div className='text-sm'>{message}</div>
     </div>
+<<<<<<< HEAD
   );        <X size={16} />
       </button>
       <div className="text-sm">
@@ -65,3 +90,6 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     </div>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

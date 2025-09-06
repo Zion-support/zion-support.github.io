@@ -10,6 +10,11 @@ import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast  } from '@/hooks/use-toast';
 import { OrderTimeline } from '@/components/orders/OrderTimeline';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OrderDetailPage() {
   const router = null;
   if (isLoading || !order) {
@@ -278,11 +283,18 @@ export default function OrderDetail() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
 }
 `Order #$ {order.orderId ;
+=======
+
+};
+`Order #$ {;
+  order.orderId ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }`;
 `Date: $ {new Date (order.date) .toLocaleDateString () ;
 }`;';
@@ -305,9 +317,12 @@ toast.success ('Order summary copied to clipboard') ;
 </li>) ) ;
 }</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
 }'"
+<<<<<<< HEAD
 }
 }
 =======
 }
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

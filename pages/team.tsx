@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 =======
@@ -21,6 +22,13 @@ import {
   Shield
 } from "lucide-react";
 import Layout from "../components/Layout";
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Cloud, Shield, Users } from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const teamMembers = [
   {
     id: 1
@@ -486,6 +494,11 @@ const teamMembers = [
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TeamPage() {
   return (
     <>
@@ -502,6 +515,7 @@ export default function TeamPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -518,3 +532,5 @@ export default function TeamPage() {
     </>
   );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

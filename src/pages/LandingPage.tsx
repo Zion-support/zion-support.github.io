@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Header } from "@/components/Header",
 import { TrustedBySection } from "@/components/TrustedBySection",
@@ -21,6 +22,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Header } from '@/components/Header';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
@@ -50,7 +53,12 @@ import {
   BarChart3
   Smartphone
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -141,16 +149,22 @@ export default function LandingPage() {
                   <span>{t('general.explore')}</span>
                   <ArrowRight
                     className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
+<<<<<<< HEAD
                   />                </div>                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
+=======
+                  />
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       <CategoriesSection />
       <BenefitsSection />
       <CategoriesSection />
@@ -163,11 +177,21 @@ export default function LandingPage() {
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
+=======
+
+      <CategoriesSection />
+      <BenefitsSection />
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
+<<<<<<< HEAD
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       {/* Add social share section to encourage users to spread the word */}
@@ -176,3 +200,13 @@ export default function LandingPage() {
     </div>
   );
 }
+=======
+
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
+
+      <WaitlistSection />
+      <FloatingCTA />
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

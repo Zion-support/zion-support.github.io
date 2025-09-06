@@ -39,6 +39,7 @@ interface ProjectViewProps {
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD
 =======
     id: string
     title: string
@@ -56,6 +57,13 @@ interface ProjectViewProps {
   }
   milestones: Milestone[]
 }
+=======
+    description: string;
+  };
+  milestones: Milestone[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 <<<<<<< HEAD
   const navigate = null;

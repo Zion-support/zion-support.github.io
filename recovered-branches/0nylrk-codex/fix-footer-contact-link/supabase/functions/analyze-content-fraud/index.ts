@@ -46,7 +46,14 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data |typeof data !== 'object') {
     throw new Error("Invalid request body")
   }
+<<<<<<< HEAD
   const request = data as AnalyzeRequest;
+=======
+}
+
+const request = data as AnalyzeRequest;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!request.content) {
     throw new Error("No content provided for analysis")
   }

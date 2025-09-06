@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import Head from 'next/head'
+=======
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { AlertTriangle } from 'lucide-react';
+import Link from 'next/link';
+import Head from 'next/head';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ErrorPage() {
   return (
     <>

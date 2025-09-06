@@ -21,6 +21,7 @@ interface UseHireRequestFormProps {
 }
 export interface FormValues {
   requesterName: string;
+<<<<<<< HEAD
   requesterEmail: string;
   projectOverview: string;
   timeline: string;
@@ -32,6 +33,46 @@ export interface FormValues {
   budgetMax: number
 }
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
+=======
+requesterEmail: string;
+projectOverview: string;
+timeline: string;
+budgetMin: number;
+budgetMax: number 
+}export function useHireRequestForm ({
+  talent, onClose, initialJobTitle, userDetails 
+}: UseHireRequestFormProps) {
+  const [isSubmitting, setIsSubmitting] = useState (false);
+const {
+  submitHireRequest 
+}= useHireRequest ();
+//Define the form schema with validation rules const formSchema = z.object ({
+  requesterName: z.string () .min (2, "Name is required");
+requesterEmail: z.string () .email ("Valid email is required");
+projectOverview: z.string () .min (10, "Please provide more details about your project");
+timeline: z.string () .min (5, "Please specify your timeline");
+budgetMin: z.number () .min (1, "Budget minimum is required");
+budgetMax: z.number () .min (1, "Budget maximum is required") 
+}) .refine (data => data.budgetMax >= data.budgetMin, {
+  //Initialize the form const form = useForm<FormValues> ({
+  resolver: zodResolver (formSchema);
+defaultValues: {
+  requesterName: userDetails?.name || "";
+requesterEmail: userDetails?.email || "";
+projectOverview: initialJobTitle ? `Job: $ {
+  initialJobTitle 
+}` : "";
+timeline: "";
+budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50
+}
+
+export function useHireRequestForm({
+  talent,
+  onClose,
+  initialJobTitle,
+  userDetails,
+}: UseHireRequestFormProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { submitHireRequest } = useHireRequest();
   // Define the form schema with validation rules
@@ -93,9 +134,22 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }
   return {
+<<<<<<< HEAD
     form;
     isSubmitting;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     onSubmit
   }
 }
+=======
+    form,
+    isSubmitting,
+    onSubmit,
+  };
+
+};
+
+  form;
+isSubmitting;
+onSubmit 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

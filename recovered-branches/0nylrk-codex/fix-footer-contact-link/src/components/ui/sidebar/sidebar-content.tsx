@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import * as React from 'react';
+import { Input } from '@/components/ui/input';
+import { Separator } from '@/components/ui/separator';
+import { cn } from '@/lib/utils';
+import type { SafeRef } from '../sidebar.types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import * as React from &quot;react&quot;
 import { Input } from &quot;@/components/ui/input&quot;
@@ -18,9 +27,17 @@ export const SidebarInput = React.forwardRef<
       )}
       {...props}
     />
+<<<<<<< HEAD
   )
 })
 SidebarInput.displayName = &quot;SidebarInput&quot;
+=======
+  );
+});
+SidebarInput.displayName = 'SidebarInput';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
@@ -32,9 +49,17 @@ export const SidebarHeader = React.forwardRef<
       className={cn(&quot;flex flex-col gap-2 p-2&quot;, props.className)}
       {...props}
     />
+<<<<<<< HEAD
   )
 })
 SidebarHeader.displayName = &quot;SidebarHeader&quot;
+=======
+  );
+});
+SidebarHeader.displayName = 'SidebarHeader';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarFooter = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
@@ -46,9 +71,17 @@ export const SidebarFooter = React.forwardRef<
       className={cn(&quot;flex flex-col gap-2 p-2&quot;, props.className)}
       {...props}
     />
+<<<<<<< HEAD
   )
 })
 SidebarFooter.displayName = &quot;SidebarFooter&quot;
+=======
+  );
+});
+SidebarFooter.displayName = 'SidebarFooter';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<typeof Separator>
@@ -60,9 +93,17 @@ export const SidebarSeparator = React.forwardRef<
       className={cn(&quot;mx-2 w-auto bg-sidebar-border&quot;, props.className)}
       {...props}
     />
+<<<<<<< HEAD
   )
 })
 SidebarSeparator.displayName = &quot;SidebarSeparator&quot;
+=======
+  );
+});
+SidebarSeparator.displayName = 'SidebarSeparator';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarContent = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
@@ -77,9 +118,17 @@ export const SidebarContent = React.forwardRef<
       )}
       {...props}
     />
+<<<<<<< HEAD
   )
 })
 SidebarContent.displayName = &quot;SidebarContent&quot;
+=======
+  );
+});
+SidebarContent.displayName = 'SidebarContent';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>

@@ -8,7 +8,11 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 interface AddSkillFormProps {
 <<<<<<< HEAD
   resumeId: string;
+<<<<<<< HEAD
   onAddSkill: (skill: Skill) => Promise<boolean>
+=======
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const AddSkillForm = null;

@@ -12,6 +12,7 @@ interface CountryTabsProps {
   filteredCountries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   searchQuery: string;
+<<<<<<< HEAD
 =======
   popularCountries: string[]
   filteredCountries: CountryPricing[]
@@ -20,6 +21,11 @@ interface CountryTabsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setSearchQuery: (query: string) => void
 }
+=======
+  setSearchQuery: (query: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CountryTabs({
   popularCountries;
 <<<<<<< HEAD

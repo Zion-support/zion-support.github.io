@@ -8,12 +8,18 @@ interface ChatMessageProps {
 <<<<<<< HEAD
   message: string;
   isUser: boolean;
+<<<<<<< HEAD
 =======
   message: string
   isUser: boolean
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   timestamp: Date
 }
+=======
+  timestamp: Date;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme();
   return (

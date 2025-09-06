@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { getServerSupabase } from '[^']*';
 function sanitizeCode(input: string): string {
   return input
@@ -6,9 +7,30 @@ function sanitizeCode(input: string): string {
     .replace(/[^a-z0-9-]/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
+=======
+import { getServerSupabase } from '../../../utils/supabase/server';
+
+function sanitizeCode(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+
+  
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, niche, socials, payout_method, desired_code } = req.body || {},
@@ -29,11 +51,35 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
+=======
+const { name, niche, socials, payout_method, desired_code } = req.body || {};
+  if (!name || !desired_code)
+    return res.status(400).json({ error: 'Missing required fields' });
+
+  
+}
+
+const code = sanitizeCode(desired_code);
+  if (!code) return res.status(400).json({ error: 'Invalid code' });
+
+  
+}
+
+const usingPlaceholder =
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
+      'placeholder-key';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     if (usingPlaceholder) {
       return res
         .status(200)
+<<<<<<< HEAD
         .json({ ok: true, code, status: "pending", mock: true });
+=======
+        .json({ ok: true, code, status: 'pending', mock: true });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -41,6 +87,7 @@ export default async function handler(
       .select("code")
       .eq("code", code)
       .maybeSingle();
+<<<<<<< HEAD
     if (existingErr) return res.status($1).json({ $2 });
     if (existing) return res.status($1).json({ $2 });
     const { error } = await supabase.from("partners").insert({
@@ -59,3 +106,31 @@ export default async function handler(
     return res.status(500).json({ error: e?.message });
   }
 }
+=======
+
+    if (existingErr)
+      return res.status(500).json({ error: existingErr.message });
+    if (existing) return res.status(409).json({ error: 'Code already taken' });
+
+    
+}
+
+const { error } = await supabase.from('partners').insert({
+      code,
+      name,
+      niche: niche || null,
+      socials: socials || null,
+      payout_method: payout_method || null,
+      status: 'pending',
+      commission_rate: 0.15,
+    });
+
+    if (error) return res.status(500).json({ error: error.message });
+
+    return res.status(200).json({ ok: true, code, status: 'pending' });
+ 
+} catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

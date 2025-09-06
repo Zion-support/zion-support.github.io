@@ -7,8 +7,14 @@ import { format } from 'date-fns';
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
+<<<<<<< HEAD
   onDelete: (id: string) => void
 }
+=======
+  onDelete: (id: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CertificationsList({
   certifications
   onEdit

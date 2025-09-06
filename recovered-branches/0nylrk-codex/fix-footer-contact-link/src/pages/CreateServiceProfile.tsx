@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ServiceProviderRegistrationForm } from '@/components/profile/ServiceProviderRegistrationForm';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";

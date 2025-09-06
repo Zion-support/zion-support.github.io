@@ -90,7 +90,17 @@ const OpenAppRedirect: React.FC = () => {
         )}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+  //Set a timeout to redirect to app store if the app doesn't open attemptAppOpen () 
+}, [navigate]);
+
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default OpenAppRedirect;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

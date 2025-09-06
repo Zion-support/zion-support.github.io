@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -12,6 +13,8 @@ import { innovativeMicroSaasExpansion2025  } from '../data/2025-innovative-micro
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
 const contactInfo = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   Search
@@ -62,6 +65,7 @@ const innovativeMicroSaasExpansion2025 = [
 ];
 const cuttingEdgeITInfrastructureServices = [
   {
+<<<<<<< HEAD
     id: "infra-1"
     title: "Cloud Infrastructure"
     description: "Scalable cloud infrastructure solutions"
@@ -178,18 +182,108 @@ const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';  return 'Other'
 }
+=======
+    id: "infra-1",
+    title: "Cloud Infrastructure",
+    description: "Scalable cloud infrastructure solutions",
+    category: "infrastructure",
+    price: "$5,000/month",
+    rating: 4.8,
+    tags: ["Cloud", "Infrastructure", "DevOps"],
+    color: "from-orange-500 to-red-500",
+    icon: "☁️",
+  },
+];
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const allServices = [
+  ...advancedEnterpriseServices2025,
+  ...innovativeMicroSaasExpansion2025,
+  ...cuttingEdgeITInfrastructureServices,
+];
+
+const categories = [
+  {
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of advanced services',
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise Solutions',
+    icon: <Building className='w-6 h-6' />,
+    color: 'from-blue-500 to-purple-500',
+    description: 'Enterprise-grade AI and IT solutions',
+  },
+  {
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Globe className='w-6 h-6' />,
+    color: 'from-green-500 to-emerald-500',
+    description: 'Innovative micro SAAS solutions',
+  },
+  {
+    id: 'infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Shield className='w-6 h-6' />,
+    color: 'from-orange-500 to-red-500',
+    description: 'Cutting-edge infrastructure services',
+  },
+  {
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Advanced AI and ML platforms',
+  },
+  {
+    id: 'quantum',
+    name: 'Quantum Computing',
+    icon: <Atom className='w-6 h-6' />,
+    color: 'from-violet-500 to-indigo-500',
+    description: 'Quantum computing solutions',
+  },
+];
+
+const getServiceCategory = (service: any) => {
+  if (service.category) return service.category;
+  return 'Other';
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+<<<<<<< HEAD
   return 'Contact for pricing';};  return 'Contact for pricing'
 }
+=======
+  return 'Contact for pricing';
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
+<<<<<<< HEAD
 };  return []
 }
+=======
+};
+}
+
+export default function AdvancedServicesShowcase() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -248,6 +342,7 @@ const getServiceFeatures = (service: any) => {
             .includes(searchTerm.toLowerCase())
       );
     }
+<<<<<<< HEAD
     setFilteredServices(filtered);  }, [selectedCategory, searchTerm]);    }
     // Filter by search term
     if (searchTerm) {
@@ -259,6 +354,10 @@ const getServiceFeatures = (service: any) => {
       )
     }
     setFilteredServices(filtered)
+=======
+
+    setFilteredServices(filtered);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [selectedCategory, searchTerm]);
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -313,6 +412,7 @@ const getServiceFeatures = (service: any) => {
           </div>
           <div className='flex items-center gap-2'>
             <Star className='w-4 h-4 text-yellow-500' />
+<<<<<<< HEAD
             <span className='text-sm text-gray-600 dark:text-gray-400'>              {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
@@ -355,10 +455,17 @@ const getServiceFeatures = (service: any) => {
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-600 dark:text-gray-400">
+=======
+            <span className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             Key Features:
@@ -375,6 +482,7 @@ const getServiceFeatures = (service: any) => {
                 </div>
               ))}
             {getServiceFeatures(service).length > 3 && (
+<<<<<<< HEAD
               <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
@@ -387,10 +495,18 @@ const getServiceFeatures = (service: any) => {
             ))}
             {getServiceFeatures(service).length > 3 && (
               <span className="text-sm text-gray-500 dark:text-gray-400">
+=======
+              <span className='text-sm text-gray-500 dark:text-gray-400'>
+                +{getServiceFeatures(service).length - 3} more features
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </span>
             )}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             ROI & Benefits:
@@ -417,6 +533,7 @@ const getServiceFeatures = (service: any) => {
           </a>
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+<<<<<<< HEAD
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'          >            {service.roi}
           </p>
         </div>
@@ -437,6 +554,9 @@ const getServiceFeatures = (service: any) => {
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+=======
+            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             Contact
           </a>
@@ -466,6 +586,7 @@ const getServiceFeatures = (service: any) => {
                 <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
                   {service.name}
                   {service.popular && (
+<<<<<<< HEAD
                     <span className='ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>                      Popular
                     </span>
                   )}
@@ -478,6 +599,9 @@ const getServiceFeatures = (service: any) => {
                   {service.name}
                   {service.popular && (
                     <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+=======
+                    <span className='ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Popular
                     </span>
                   )}
@@ -490,6 +614,7 @@ const getServiceFeatures = (service: any) => {
                 <div className='text-2xl font-bold text-gray-900 dark:text-white'>
                   {getServicePricing(service)}
                 </div>
+<<<<<<< HEAD
                 <div className='text-sm text-gray-500 dark:text-gray-400'>                  {service.trialDays} day trial
                 </div>
               </div>
@@ -501,10 +626,17 @@ const getServiceFeatures = (service: any) => {
                   {getServicePricing(service)}
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
+=======
+                <div className='text-sm text-gray-500 dark:text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.trialDays} day trial
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4 text-green-500' />
@@ -523,6 +655,7 @@ const getServiceFeatures = (service: any) => {
               </div>
               <div className='flex items-center gap-2'>
                 <Star className='w-4 h-4 text-yellow-500' />
+<<<<<<< HEAD
                 <span className='text-sm text-gray-600 dark:text-gray-400'>                  {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
@@ -539,10 +672,17 @@ const getServiceFeatures = (service: any) => {
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">
+=======
+                <span className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
               <div>
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
@@ -571,6 +711,7 @@ const getServiceFeatures = (service: any) => {
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
                   Market Position:
                 </h4>
+<<<<<<< HEAD
                 <p className='text-sm text-gray-600 dark:text-gray-400'>                  {service.marketPosition}
                 </p>
               </div>
@@ -593,10 +734,17 @@ const getServiceFeatures = (service: any) => {
                 </p>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
+=======
+                <p className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.marketPosition}
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='flex items-center gap-4'>
               <a
                 href={service.link}
@@ -607,6 +755,7 @@ const getServiceFeatures = (service: any) => {
               </a>
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+<<<<<<< HEAD
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >              <a
                 href={service.link}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -617,6 +766,9 @@ const getServiceFeatures = (service: any) => {
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+=======
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Contact Sales
               </a>
@@ -678,8 +830,12 @@ const getServiceFeatures = (service: any) => {
                 <span>Real Implementations</span>
               </div>
               <div className='flex items-center gap-2 text-white'>
+<<<<<<< HEAD
                 <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated</span>              <div className="flex items-center gap-2 text-white">
                 <CheckCircle className="w-5 h-5 text-green-300" />
+=======
+                <CheckCircle className='w-5 h-5 text-green-300' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span>Market Validated</span>
               </div>
             </motion.div>
@@ -722,6 +878,7 @@ const getServiceFeatures = (service: any) => {
                 href={contactInfo.website}
                 target='_blank'
                 rel='noopener noreferrer'
+<<<<<<< HEAD
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >              </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-blue-600" />
@@ -745,6 +902,9 @@ const getServiceFeatures = (service: any) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+=======
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Visit Website
               </a>
@@ -779,6 +939,7 @@ const getServiceFeatures = (service: any) => {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
+<<<<<<< HEAD
                   <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -788,6 +949,9 @@ const getServiceFeatures = (service: any) => {
                   }`}
                 >
                   <Grid className="w-5 h-5" />
+=======
+                  <Grid className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -797,6 +961,7 @@ const getServiceFeatures = (service: any) => {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
+<<<<<<< HEAD
                   <List className='w-5 h-5' />                </button>
               </div>
             </div>
@@ -817,6 +982,19 @@ const getServiceFeatures = (service: any) => {
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+=======
+                  <List className='w-5 h-5' />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Category Filters */}
+          <div className='mt-6'>
+            <div className='flex flex-wrap gap-3'>
+              {categories.map(category => (
+                <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -852,6 +1030,7 @@ const getServiceFeatures = (service: any) => {
                   <span>Market Growth: 150%+ YoY</span>
                 </div>
                 <div className='flex items-center gap-2'>
+<<<<<<< HEAD
                   <Award className='w-4 h-4 text-blue-500' />                  <span>4.8+ Average Rating</span>              <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
@@ -868,6 +1047,9 @@ const getServiceFeatures = (service: any) => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-blue-500" />
+=======
+                  <Award className='w-4 h-4 text-blue-500' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>4.8+ Average Rating</span>
                 </div>
               </div>
@@ -884,6 +1066,7 @@ const getServiceFeatures = (service: any) => {
               <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
                 No services found
               </h3>
+<<<<<<< HEAD
               <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices.length === 0 ? (
             <div className="text-center py-12">
               <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
@@ -891,6 +1074,9 @@ const getServiceFeatures = (service: any) => {
                 No services found
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
+=======
+              <p className='text-gray-600 dark:text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Try adjusting your search terms or category filters.
               </p>
             </div>
@@ -904,6 +1090,7 @@ const getServiceFeatures = (service: any) => {
                 </div>
               ) : (
                 <div className='space-y-6'>
+<<<<<<< HEAD
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
@@ -912,6 +1099,10 @@ const getServiceFeatures = (service: any) => {
               ) : (
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
+=======
+                  {filteredServices.map(service => (
+                    <ServiceList key={service.id} service={service} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </div>
               )}
@@ -941,6 +1132,7 @@ const getServiceFeatures = (service: any) => {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'
               >
+<<<<<<< HEAD
                 <Phone className='w-5 h-5' />                Call Now
               </a>
             </div>
@@ -963,18 +1155,29 @@ const getServiceFeatures = (service: any) => {
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
+=======
+                <Phone className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Call Now
               </a>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
           </button>
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 );        </div>
       </div>
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

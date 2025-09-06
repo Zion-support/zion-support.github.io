@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 :pages_minimal/_app.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }

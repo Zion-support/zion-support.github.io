@@ -4,14 +4,22 @@ import Revolutionary2026UltimateNavigation from '../components/layout/Revolution
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import { Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <meta
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
@@ -83,6 +91,7 @@ export default function Revolutionary2026ServicesPage() {
                 addressCountry: 'US'
               }
               contactPoint: {
+<<<<<<< HEAD
                 '@type': 'ContactPoint'
                 telephone: '+1-302-464-0950'
                 contactType: 'customer service'
@@ -92,6 +101,19 @@ export default function Revolutionary2026ServicesPage() {
             }),          }}
         />
       </Head>
+=======
+                '@type': 'ContactPoint',
+                telephone: '+1-302-464-0950',
+                contactType: 'customer service',
+                email: 'kleber@ziontechgroup.com',
+              },
+              sameAs: ['https://github.com/Zion-Holdings'],
+            }),
+          }}
+        />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <main className='min-h-screen bg-gray-900'>
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
@@ -112,14 +134,28 @@ export default function Revolutionary2026ServicesPage() {
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 We're not just another technology company. We're pioneers in the
+<<<<<<< HEAD
                 future of AI, quantum computing, and emerging technologies
                 delivering revolutionary solutions that transform industries.              </p>
+=======
+                future of AI, quantum computing, and emerging technologies,
+                delivering revolutionary solutions that transform industries.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
             {/* Features Grid */}
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[
                 {
                   icon: '🧠'
                   title: 'AI Consciousness'
+=======
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+              {[
+                {
+                  icon: '🧠',
+                  title: 'AI Consciousness',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   description:
                     'First-to-market AI consciousness orchestration and autonomous intelligence systems.'
                   color: 'from-purple-500 to-pink-500'
@@ -173,7 +209,12 @@ export default function Revolutionary2026ServicesPage() {
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
+<<<<<<< HEAD
                     </p>                  </div>
+=======
+                    </p>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               ))}
             </div>
@@ -200,7 +241,12 @@ export default function Revolutionary2026ServicesPage() {
                     href='mailto:kleber@ziontechgroup.com'
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
                   >
+<<<<<<< HEAD
                     <Mail className='w-5 h-5' />                    Email Us
+=======
+                    <Mail className='w-5 h-5' />
+                    Email Us
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </a>
                 </div>
               </div>
@@ -209,4 +255,8 @@ export default function Revolutionary2026ServicesPage() {
         </section>
       </main>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

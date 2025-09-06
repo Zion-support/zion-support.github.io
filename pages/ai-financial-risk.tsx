@@ -3,6 +3,11 @@ import { DollarSign, Check, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { innovativeAIServices } from '../data/innovative-ai-services';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AIFinancialRiskPage() {
 <<<<<<< HEAD
   const service = null;
@@ -106,10 +111,19 @@ const AIFinancialRisk: React.FC = () => {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{contactInfo.address}</span>
+<<<<<<< HEAD
                 </div>              </div>
+=======
+                </div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -2,8 +2,14 @@
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
 interface EducationSectionProps {
+<<<<<<< HEAD
   education: Education[]
 }
+=======
+  education: Education[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
 <<<<<<< HEAD

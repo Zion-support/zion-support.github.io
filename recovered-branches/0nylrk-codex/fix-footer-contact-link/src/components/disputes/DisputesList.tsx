@@ -27,9 +27,17 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 type DisputesListProps = {
+<<<<<<< HEAD
   disputes: Dispute[]
   isLoading: boolean
 }
+=======
+  disputes: Dispute[];
+isLoading: boolean 
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
   const filteredDisputes = statusFilter === "all"

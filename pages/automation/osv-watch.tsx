@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/security/osv-report.json';
 export default function OsvWatchPage() {
@@ -32,3 +33,9 @@ export default function OsvWatchPage() {
     </EnhancedLayout>
   )
 }
+=======
+// @ts-ignore) )
+}</ul> </li>) )
+}</ul>)
+}</div> </EnhancedLayout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

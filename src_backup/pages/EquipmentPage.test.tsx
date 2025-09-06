@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Link  } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '@/data/servicesData';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

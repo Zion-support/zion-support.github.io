@@ -12,12 +12,18 @@ export interface ProfessionalService {
     mobile: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string
   }
+=======
+    address: string;
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const professionalServices: ProfessionalService[] = [
   {
+<<<<<<< HEAD
     id: "it-consulting";
     name: "IT Consulting Services";
     tagline: "Expert IT consulting for business growth";
@@ -69,3 +75,28 @@ export const professionalServices: ProfessionalService[] = [
     }
   }
 ];
+=======
+    id: 'it-consulting',
+    name: 'IT Consulting Services',
+    tagline: 'Expert IT consulting for business growth',
+    price: '$120/hour',
+    description:
+      'Professional IT consulting services to help businesses optimize their technology investments.',
+    features: [
+      'Technology assessment',
+      'Strategic planning',
+      'Implementation guidance',
+      'Performance optimization',
+      'Ongoing support',
+    ],
+    link: '/services/it-consulting',
+    category: 'Professional Services',
+    realImplementation: true,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

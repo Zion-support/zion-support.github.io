@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";

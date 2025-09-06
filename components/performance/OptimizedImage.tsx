@@ -47,6 +47,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       />
     );
   }
+<<<<<<< HEAD
+=======
+
+  return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     <Image
       src={src}
       alt={alt}
@@ -58,5 +63,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 quality={quality}
       style={style}
   );
+<<<<<<< HEAD
 }
 export default OptimizedImage;
+=======
+};
+}
+
+export default OptimizedImage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

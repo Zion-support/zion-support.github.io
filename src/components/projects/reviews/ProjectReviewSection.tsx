@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Project  } from '@/types/projects';
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -10,6 +11,29 @@ import { useReviews } from "@/hooks/useReviews";
 import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project
+=======
+import { Project } from '@/types/projects';
+
+import { useState } from 'react';
+import { Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { ReviewsList } from '@/components/reviews/ReviewsList';
+import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal';
+import { useReviews } from '@/hooks/useReviews';
+import { useAuth } from '@/hooks/useAuth';
+
+interface ProjectReviewSectionProps {
+  project: Project;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
@@ -127,6 +151,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         />
       )}
     </Card>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,6 +5,8 @@ import { format } from 'date-fns';
  * @param date Date or string to format
  * @returns Formatted date string
  */
+}
+
 export function formatDate(date: Date | string | undefined): string {
 <<<<<<< HEAD
   if (!date) return '';

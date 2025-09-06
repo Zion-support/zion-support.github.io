@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { GradientHeading } from '@/components/GradientHeading';
+import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";

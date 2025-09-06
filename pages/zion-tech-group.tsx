@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Zap, Target, BarChart3, Users, TrendingUp;
   MessageSquare, Mail, Phone, MapPin, ArrowRight;
   Star, CheckCircle, Rocket, Globe, Shield, Cpu;
@@ -98,6 +99,89 @@ import {
   ChevronRight
   Home;} from 'lucide-react';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Users2,
+  Award,
+  Lock,
+  Server,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Play,
+  Pause,
+  AlertTriangle,
+  CheckCircle2,
+  Building,
+  Wifi,
+  HardDrive,
+  Cloud,
+  Smartphone,
+  Blocks,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building2,
+  Activity,
+  Waves,
+  BrainCircuit,
+  CpuIcon,
+  MonitorHeart,
+  Film,
+  Headphones,
+  Camera,
+  Gamepad2,
+  Tv,
+  Radio,
+  Factory,
+  Cog,
+  Gauge,
+  Wrench,
+  Settings2,
+  CpuIcon2,
+  Calendar,
+  Clock,
+  FileText2,
+  PieChart,
+  Atom,
+  Truck,
+  ChevronRight,
+  Home,;
+} from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ZionTechGroupPage() {
   return (
     <>
@@ -145,7 +229,12 @@ export default function ZionTechGroupPage() {
                   <Link
                     href='/contact'
                     className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+<<<<<<< HEAD
                   >                    Contact
+=======
+                  >
+                    Contact
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </Link>
                 </div>
               </div>
@@ -161,7 +250,12 @@ export default function ZionTechGroupPage() {
                   <div>
                     <Link href='/' className='text-gray-300 hover:text-white'>
                       <Home className='h-4 w-4' />
+<<<<<<< HEAD
                       <span className='sr-only'>Home</span>                    </Link>
+=======
+                      <span className='sr-only'>Home</span>
+                    </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </li>
                 <li>
@@ -169,7 +263,12 @@ export default function ZionTechGroupPage() {
                     <ChevronRight className='h-4 w-4 text-gray-400' />
                     <span className='ml-4 text-sm font-medium text-white'>
                       About Zion Tech Group
+<<<<<<< HEAD
                     </span>                  </div>
+=======
+                    </span>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </li>
               </ol>
             </nav>
@@ -186,7 +285,12 @@ export default function ZionTechGroupPage() {
               <p className='mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl'>
                 We are the architects of tomorrow, building revolutionary
                 quantum AI solutions and autonomous systems that will define the
+<<<<<<< HEAD
                 next decade of innovation.              </p>
+=======
+                next decade of innovation.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -210,7 +314,12 @@ export default function ZionTechGroupPage() {
                   We believe that technology should serve humanity, not replace
                   it. Our solutions are designed to augment human capabilities
                   enhance decision-making, and create a more sustainable and
+<<<<<<< HEAD
                   prosperous future for all.                </p>
+=======
+                  prosperous future for all.
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
               <div>
                 <div className='w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6'>
@@ -228,7 +337,12 @@ export default function ZionTechGroupPage() {
                   We envision a future where our technology platforms enable
                   breakthroughs in healthcare, climate change, space
                   exploration, and countless other fields that will shape the
+<<<<<<< HEAD
                   destiny of our species.                </p>
+=======
+                  destiny of our species.
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -318,7 +432,12 @@ export default function ZionTechGroupPage() {
                 </h3>
                 <p className='text-gray-300'>
                   We don't just adapt to change; we anticipate it and create the
+<<<<<<< HEAD
                   technologies that will define tomorrow.                </p>
+=======
+                  technologies that will define tomorrow.
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -381,7 +500,12 @@ export default function ZionTechGroupPage() {
                 </h3>
                 <p className='text-gray-300 text-sm'>
                   Quantum-resistant encryption and AI-powered threat detection
+<<<<<<< HEAD
                   systems.                </p>
+=======
+                  systems.
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -421,7 +545,12 @@ export default function ZionTechGroupPage() {
                 <div className='text-4xl font-bold text-purple-400 mb-2'>
                   10+
                 </div>
+<<<<<<< HEAD
                 <div className='text-gray-300'>Years Experience</div>              </div>
+=======
+                <div className='text-gray-300'>Years Experience</div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -474,7 +603,12 @@ export default function ZionTechGroupPage() {
                 <p className='text-purple-400 mb-2'>Chief Security Officer</p>
                 <p className='text-gray-300 text-sm'>
                   Cybersecurity specialist with expertise in quantum-resistant
+<<<<<<< HEAD
                   encryption and threat detection.                </p>
+=======
+                  encryption and threat detection.
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -500,7 +634,12 @@ export default function ZionTechGroupPage() {
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'
+<<<<<<< HEAD
               >                Schedule Consultation
+=======
+              >
+                Schedule Consultation
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </div>
           </div>
@@ -529,21 +668,36 @@ export default function ZionTechGroupPage() {
                         <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
+<<<<<<< HEAD
                         >                          Quantum AI
+=======
+                        >
+                          Quantum AI
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </Link>
                       </li>
                       <li>
                         <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
+<<<<<<< HEAD
                         >                          Autonomous Systems
+=======
+                        >
+                          Autonomous Systems
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </Link>
                       </li>
                       <li>
                         <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
+<<<<<<< HEAD
                         >                          Technology Platforms
+=======
+                        >
+                          Technology Platforms
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </Link>
                       </li>
                     </ul>
@@ -557,14 +711,24 @@ export default function ZionTechGroupPage() {
                         <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
+<<<<<<< HEAD
                         >                          About
+=======
+                        >
+                          About
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </Link>
                       </li>
                       <li>
                         <Link
                           href='/contact'
                           className='text-base text-gray-300 hover:text-white'
+<<<<<<< HEAD
                         >                          Contact
+=======
+                        >
+                          Contact
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </Link>
                       </li>
                     </ul>
@@ -574,10 +738,19 @@ export default function ZionTechGroupPage() {
             </div>
             <div className='mt-12 border-t border-gray-700 pt-8'>
               <p className='text-base text-gray-400 xl:text-center'>
+<<<<<<< HEAD
                 &copy; 2025 Zion Tech Group. All rights reserved.              </p>
+=======
+                &copy; 2025 Zion Tech Group. All rights reserved.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </footer>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

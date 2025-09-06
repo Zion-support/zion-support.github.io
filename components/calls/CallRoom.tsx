@@ -1,10 +1,13 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets  } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Room
   RoomEvent
@@ -25,7 +28,14 @@ type Props = {
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
+<<<<<<< HEAD
 }
+=======
+};
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CallRoom({
   projectId
   userId
@@ -39,6 +49,7 @@ export default function CallRoom({
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
+<<<<<<< HEAD
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
@@ -55,6 +66,9 @@ type Props = {
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
+=======
+  >([]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
@@ -77,6 +91,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       autoSubscribe: true
     });
     // publish local tracks
+<<<<<<< HEAD
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
@@ -93,6 +108,13 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     setConnectedAt(Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
+=======
+
+    setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [serverUrl, token, startMode]);
   const rebuild = (current?: Room | null) => {
     const r = current |room;
@@ -101,32 +123,50 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       r.localParticipant
       ...Array.from(r.participants.values())
     ];
+<<<<<<< HEAD
     setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
     setParticipants(list)
   }
+=======
+    setParticipants(list);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     connect();
     return () => {
       if (room) {
         room.disconnect();
       }
+<<<<<<< HEAD
     };  }, [connect]);
   const handleLeave = () => {
     if (room) {        room.disconnect()
       }
     }
+=======
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [connect]);
   const handleLeave = () => {
     if (room) {
       room.disconnect();
     }
-    const durationSec = connectedAt
+}
+
+const durationSec = connectedAt
       ? Math.round((Date.now() - connectedAt) / 1000)
       : 0;
+<<<<<<< HEAD
     onLeave?.(durationSec);  };      room.disconnect()
     }
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
+=======
+    onLeave?.(durationSec);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const gridCols = useMemo(() => {
     const count = participants.length |1;
     if (count <= 1) return 'grid-cols-1';
@@ -142,9 +182,13 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
           <h2 className='text-lg font-semibold'>Project Room: {projectId}</h2>
           <p className='text-xs text-gray-400'>Room {roomName}</p>
         </div>
+<<<<<<< HEAD
         <Controls room={room} onLeave={handleLeave} accent='cyan' />      </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (        <Controls room={room} onLeave={handleLeave} accent="cyan" />
+=======
+        <Controls room={room} onLeave={handleLeave} accent='cyan' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
@@ -156,6 +200,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
               (p as any).name |
               (p instanceof LocalParticipant ? 'You' : undefined)
             }
+<<<<<<< HEAD
           />        ))}
       </div>
     </div>
@@ -166,3 +211,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     </div>
 );
 }
+=======
+          />
+        ))}
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

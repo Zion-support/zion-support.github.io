@@ -25,8 +25,17 @@ serve(async (req) => {
     if (!resendApiKey) {
       throw new Error("Resend API key is not set in environment variables")
     }
+<<<<<<< HEAD
     const resend = new Resend(resendApiKey);
     const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest;
+=======
+}
+
+const resend = new Resend(resendApiKey);
+    const { subject, previewText, body, testMode, testEmail } =
+      (await req.json()) as SendNewsletterRequest;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // If test mode, send to test email only
     if (testMode && testEmail) {
       const emailResponse = await resend.emails.send({

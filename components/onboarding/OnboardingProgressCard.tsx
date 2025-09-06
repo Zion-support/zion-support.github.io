@@ -1,10 +1,15 @@
 import React from 'react',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 export type OnboardingStep = any;
 =======
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
+=======
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type OnboardingStep = {
   id: string;
   label: string;
@@ -15,6 +20,7 @@ export type OnboardingStep = {
 export type OnboardingProgressCardProps = {
   title: string;
   steps: OnboardingStep[];
+<<<<<<< HEAD
   highlightColorClass?: string;}
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
@@ -31,6 +37,17 @@ function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+=======
+  highlightColorClass?: string;
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+  return Math.round((completedCount / steps.length) * 100);
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OnboardingProgressCard({
   title
   steps
@@ -50,6 +67,7 @@ export default function OnboardingProgressCard({
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
+<<<<<<< HEAD
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
   const percentage = computePercentage(steps);
@@ -68,17 +86,24 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           className={
             `h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
           }
+=======
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           style={{ width: `${percentage}%` }}
         />
       </div>
       {allDone ? (
         <div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
           <PartyPopper size={18} />
+<<<<<<< HEAD
           <span className='text-sm'>All steps completed — great job!</span>        </div>
       ) : null}
       {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed — great job!</span>
+=======
+          <span className='text-sm'>All steps completed — great job!</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       ) : null}
       {/* Checklist */}
@@ -99,7 +124,11 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
             </div>
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
+<<<<<<< HEAD
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+=======
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -111,14 +140,22 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
+<<<<<<< HEAD
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>              {firstIncomplete.ctaLabel}        <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
+=======
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {firstIncomplete.ctaLabel}
             </a>
           </Link>
         </div>
       ) : null}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -3,6 +3,7 @@ import useSWR from 'swr';
 const fetcher = null;
 =======
 const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null));
+<<<<<<< HEAD
 export function useCurrentUser() {
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
@@ -16,3 +17,15 @@ export function useCurrentUser() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     mutate}
 }
+=======
+}
+
+export function useCurrentUser() {
+  const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
+  return {
+    user: data?.user || null,
+    loading: !data && !error,
+    error,
+    mutate,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

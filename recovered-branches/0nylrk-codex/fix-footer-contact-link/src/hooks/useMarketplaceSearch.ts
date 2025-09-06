@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+import { useState, useMemo } from 'react';
+import { ProductListing } from '@/types/listings';
+import { SearchSuggestion, FilterOptions } from '@/types/search';
+import {
+  generateSearchSuggestions,
+  generateFilterOptions,
+  MARKETPLACE_LISTINGS,;
+} from '@/data/marketplaceData';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
@@ -80,6 +92,7 @@ export function useMarketplaceSearch() {
     setSelectedRating(null)
   }
   return {
+<<<<<<< HEAD
     searchQuery;
     setSearchQuery;
     searchSuggestions;
@@ -95,3 +108,18 @@ export function useMarketplaceSearch() {
     filterOptions
   }
 }
+=======
+    searchQuery,
+    setSearchQuery,
+    searchSuggestions,
+    selectedProductTypes,
+    selectedLocations,
+    selectedAvailability,
+    selectedRating,
+    setSelectedRating,
+    filteredListings,
+    handleFilterChange,
+    clearAllFilters,
+    filterOptions,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

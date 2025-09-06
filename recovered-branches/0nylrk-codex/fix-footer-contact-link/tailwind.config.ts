@@ -88,9 +88,22 @@ const config: Config = {
           direction: 'rtl'
           textAlign: 'right'}
         '.ltr': {
+<<<<<<< HEAD
           direction: 'ltr'
           textAlign: 'left'}}
       addUtilities(newUtilities)
     })]}
+=======
+          direction: 'ltr',
+          textAlign: 'left',
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default config;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

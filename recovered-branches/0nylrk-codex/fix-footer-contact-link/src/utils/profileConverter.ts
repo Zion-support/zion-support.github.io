@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { ProfileData } from '@/types/profile';
+import { TalentProfile } from '@/types/talent';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
@@ -19,6 +25,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     profile_picture_url: profile.avatarUrl;
     years_experience: 3, // Default value
     skills: profile.skills?.map((skill: { name: string }) => skill.name) || [],
+<<<<<<< HEAD
     availability_type: profile.availability?.status;
     average_rating: profile.rating || 0
 =======
@@ -36,3 +43,16 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }
+=======
+    availability_type:
+      profile.availability?.status === 'available'
+        ? 'full_time'
+        : profile.availability?.status === 'limited'
+          ? 'part_time'
+          : 'unavailable',
+    timezone: 'UTC',
+    hourly_rate: profile.hourlyRate || 0,
+    rating_count: profile.reviewCount || 0,
+    average_rating: profile.rating || 0,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -160,6 +161,12 @@ const accessibilityGuidelines = [
     ]
   }
 ];
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AccessibilityPage() {
   return (
     <MainLayout

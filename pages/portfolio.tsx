@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Rocket, Brain, Atom, Shield, Cloud, BarChart3;
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
  } from 'lucide-react';
@@ -10,6 +11,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
   const projects = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Rocket
   Brain
@@ -26,6 +29,11 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PortfolioPage() {
   const projects = [
     {
@@ -165,11 +173,22 @@ export default function PortfolioPage() {
           property='og:description'
           content='Explore our portfolio of innovative technology projects and solutions.'
         />
+<<<<<<< HEAD
         <link rel='canonical' href='https://ziontechgroup.com/portfolio' />      </Head>
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/portfolio' />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <EnhancedNavigation />
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -180,7 +199,12 @@ export default function PortfolioPage() {
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Innovative technology solutions that drive business transformation
+<<<<<<< HEAD
               and growth            </p>
+=======
+              and growth
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -191,14 +215,24 @@ export default function PortfolioPage() {
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
+<<<<<<< HEAD
               results.            </p>
+=======
+              results.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </div>
       </section>
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
+<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
+=======
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            {stats.map((stat, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -213,7 +247,12 @@ export default function PortfolioPage() {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
+<<<<<<< HEAD
                 <div className='text-white/70'>{stat.label}</div>              </motion.div>
+=======
+                <div className='text-white/70'>{stat.label}</div>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
@@ -222,7 +261,12 @@ export default function PortfolioPage() {
       <section className='py-8 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-4'>
+<<<<<<< HEAD
             {categories.map(category => (              <button
+=======
+            {categories.map(category => (
+              <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -240,7 +284,12 @@ export default function PortfolioPage() {
       {/* Projects Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects.map((project, index) => (
+=======
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {filteredProjects.map((project, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -273,11 +322,20 @@ export default function PortfolioPage() {
                         <span
                           key={tech}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'
+<<<<<<< HEAD
                         >                          {tech}
+=======
+                        >
+                          {tech}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </span>
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
                       Results
@@ -288,16 +346,30 @@ export default function PortfolioPage() {
                           key={result}
                           className='text-sm text-white/80 flex items-center'
                         >
+<<<<<<< HEAD
                           <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
+=======
+                          <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />
+                          {result}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <div className='flex items-center justify-between'>
                     <span className='text-sm text-white/60'>
                       Client: {project.client}
                     </span>
+<<<<<<< HEAD
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details
+=======
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>
+                      View Details
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 </div>
@@ -308,7 +380,12 @@ export default function PortfolioPage() {
       </section>
       {/* CTA Section */}
       <section className='py-20 px-6'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
+=======
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -325,7 +402,12 @@ export default function PortfolioPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Start Your Project
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Schedule Consultation
+=======
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+                Schedule Consultation
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </button>
             </div>
           </motion.div>
@@ -333,7 +415,11 @@ export default function PortfolioPage() {
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 )
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
 }</div> </div> </section> key= {
   category
@@ -352,6 +438,7 @@ export default function PortfolioPage() {
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
+<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -362,3 +449,19 @@ export default function PortfolioPage() {
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+=======
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+}viewport= {
+  {
+  once: true
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

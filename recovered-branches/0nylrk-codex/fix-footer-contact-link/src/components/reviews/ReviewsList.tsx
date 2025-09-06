@@ -4,8 +4,14 @@ import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
+<<<<<<< HEAD
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>
 }
+=======
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ReviewsList({
   reviews
   isLoading

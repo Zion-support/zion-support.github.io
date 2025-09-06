@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
@@ -13,3 +14,6 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	)
 }
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { Check } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Check } from "lucide-react";
 export function ServiceIncludes() {

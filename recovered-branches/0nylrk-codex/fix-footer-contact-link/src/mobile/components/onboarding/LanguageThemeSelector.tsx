@@ -15,11 +15,22 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
+<<<<<<< HEAD
   { code: "en", name: "English", flag: "🇺🇸" }
   { code: "es", name: "Español", flag: "🇪🇸" }
   { code: "fr", name: "Français", flag: "🇫🇷" }
   { code: "de", name: "Deutsch", flag: "🇩🇪" }
   { code: "zh", name: "中文", flag: "🇨🇳" }]
+=======
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
 <<<<<<< HEAD

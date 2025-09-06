@@ -37,6 +37,7 @@ export default function Layout({
       <Footer />
     </div>
   );
+<<<<<<< HEAD
 }
 export default Layout;
 import React from 'react;
@@ -54,3 +55,9 @@ export default function Layout({ children }: LayoutProps) {return (;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
+=======
+};
+}
+
+export default Layout;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

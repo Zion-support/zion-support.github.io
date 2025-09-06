@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from 'react';
 export function useIsMobile() {

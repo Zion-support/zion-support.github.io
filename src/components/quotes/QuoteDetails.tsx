@@ -1,4 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,;
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { QuoteStatusBadge } from './QuoteStatusBadge';
+import type { QuoteRequest } from '@/types/quotes';
+import { format } from 'date-fns';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { 
@@ -146,4 +164,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)
 }
 '"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

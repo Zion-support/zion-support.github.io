@@ -2,8 +2,27 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
 export default function EmailValidatorPage() {const [emails, setEmails] = useState('');
+=======
+import {
+  Mail,
+  CheckCircle,
+  XCircle,
+  AlertTriangle,
+  ArrowRight,
+  Copy,
+  RefreshCw,
+  Shield,
+  Zap,
+  BarChart3,;
+} from 'lucide-react';
+}
+
+export default function EmailValidatorPage() {
+  const [emails, setEmails] = useState('');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [validationResults, setValidationResults] = useState<any[]>([]);
   const [isValidating, setIsValidating] = useState(false);
   const [bulkMode, setBulkMode] = useState(false);

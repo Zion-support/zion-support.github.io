@@ -23,6 +23,10 @@ import { FormValues } from "./useHireRequestForm";
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TimelineField({ form }: TimelineFieldProps) {
 <<<<<<< HEAD
   const timelineOptions = null;

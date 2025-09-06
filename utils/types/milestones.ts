@@ -3,6 +3,7 @@ export type ProjectParticipantRole = 'client' | 'talent';
 export type ProjectParticipants = {
   clientUserId: string;
   talentUserId: string;
+<<<<<<< HEAD
 }
 export type Project = {  id: string;
   title: string;
@@ -44,3 +45,25 @@ export interface UpdateMilestoneRequest {
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
 }
+=======
+};
+
+export type Project = {
+  id: string;
+  name: string;
+  participants: ProjectParticipants;
+  milestones: Milestone[];
+  createdAt: string;
+  updatedAt: string;
+};
+}
+
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' ||
+    value === 'In Progress' ||
+    value === 'Submitted' ||
+    value === 'Approved' ||
+    value === 'Paid'
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

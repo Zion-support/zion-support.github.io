@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
 export default function AIContentGeneratorPage() {
   const features = null;
@@ -74,6 +75,79 @@ import {
       gradient: 'from-teal-400 to-blue-500'
     }
   ];      gradient: 'from-teal-400 to-blue-500'}]
+=======
+import {
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Users,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  Code,
+  Globe,
+  Lock,
+  Sparkles,;
+} from 'lucide-react';
+}
+
+export default function AIContentGeneratorPage() {
+  const features = [
+    {
+      icon: <Brain className='w-8 h-8 text-white' />,
+      title: 'AI-Powered Content Creation',
+      description:
+        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500',
+    },
+    {
+      icon: <Zap className='w-8 h-8 text-white' />,
+      title: 'Real-time Generation',
+      description:
+        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+      gradient: 'from-yellow-400 to-orange-500',
+    },
+    {
+      icon: <Shield className='w-8 h-8 text-white' />,
+      title: 'Plagiarism-Free Content',
+      description:
+        'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500',
+    },
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+      title: 'SEO Optimization',
+      description:
+        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500',
+    },
+    {
+      icon: <Users className='w-8 h-8 text-white' />,
+      title: 'Multi-Language Support',
+      description:
+        'Generate content in 50+ languages with native-level fluency and cultural understanding.',
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      gradient: 'from-red-400 to-pink-500',
+    },
+    {
+      icon: <Clock className='w-8 h-8 text-white' />,
+      title: '24/7 Availability',
+      description:
+        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      gradient: 'from-teal-400 to-blue-500',
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const pricingPlans = [
     {
       name: 'Starter'
@@ -81,6 +155,7 @@ import {
       period: '/month'
       description: 'Perfect for individuals and small blogs'
       features: [
+<<<<<<< HEAD
         '1,000 words per month'
         '5 content templates'
         'Basic SEO optimization'
@@ -148,9 +223,67 @@ import {
   const useCases = [
     {
       title: 'Blog Writing'
+=======
+        '1,000 words per month',
+        '5 content templates',
+        'Basic SEO optimization',
+        'Email support',
+        'API access (100 calls/month)',
+        'Content analytics dashboard',
+      ],
+      popular: false,
+      color: 'border-gray-600',
+      buttonColor: 'bg-gray-600 hover:bg-gray-700',
+    },
+    {
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      features: [
+        '10,000 words per month',
+        '25+ content templates',
+        'Advanced SEO tools',
+        'Priority support',
+        'API access (1,000 calls/month)',
+        'Advanced analytics',
+        'Team collaboration',
+        'Custom branding',
+      ],
+      popular: true,
+      color: 'border-blue-500',
+      buttonColor: 'bg-blue-600 hover:bg-blue-700',
+    },
+    {
+      name: 'Enterprise',
+      price: '$299',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: [
+        'Unlimited words',
+        'All templates + custom',
+        'Full SEO suite',
+        'Dedicated support',
+        'Unlimited API access',
+        'Advanced analytics',
+        'White-label solution',
+        'Custom integrations',
+        'SLA guarantee',
+      ],
+      popular: false,
+      color: 'border-purple-600',
+      buttonColor: 'bg-purple-600 hover:bg-purple-700',
+    },
+  ];
+
+  const useCases = [
+    {
+      title: 'Blog Writing',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Generate engaging blog posts, articles, and long-form content in minutes.'
       examples: [
+<<<<<<< HEAD
         'Tech reviews'
         'How-to guides'
         'Industry insights'
@@ -196,6 +329,63 @@ import {
   const integrations = [
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
     }
+=======
+        'Tech reviews',
+        'How-to guides',
+        'Industry insights',
+        'Product comparisons',
+      ],
+    },
+    {
+      title: 'Marketing Copy',
+      description:
+        'Create compelling ad copy, landing pages, and marketing materials.',
+      icon: '🎯',
+      examples: [
+        'Facebook ads',
+        'Google ads',
+        'Landing pages',
+        'Email campaigns',
+      ],
+    },
+    {
+      title: 'Social Media',
+      description:
+        'Generate engaging social media posts, captions, and hashtag suggestions.',
+      icon: '📱',
+      examples: [
+        'Instagram posts',
+        'Twitter threads',
+        'LinkedIn articles',
+        'TikTok captions',
+      ],
+    },
+    {
+      title: 'E-commerce',
+      description:
+        'Write product descriptions, category pages, and promotional content.',
+      icon: '🛍️',
+      examples: [
+        'Product descriptions',
+        'Category pages',
+        'Promotional emails',
+        'FAQ sections',
+      ],
+    },
+  ];
+
+  const integrations = [
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    {
+      name: 'Shopify',
+      icon: '🛒',
+      description: 'E-commerce content automation',
+    },
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const integrations = [
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
@@ -269,6 +459,7 @@ import {
               size='lg'
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
+<<<<<<< HEAD
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -305,6 +496,9 @@ import {
               className="border-white/20 hover:border-white/40 hover:bg-white/5"
             >
               <Play className="w-5 h-5 mr-2" />
+=======
+              <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Watch Demo
             </Button>
           </div>
@@ -332,6 +526,7 @@ import {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
                 24/7
               </div>
+<<<<<<< HEAD
               <div className='text-gray-400'>Support</div>            </div>            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>
@@ -344,6 +539,9 @@ import {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">24/7</div>
               <div className="text-gray-400">Support</div>
+=======
+              <div className='text-gray-400'>Support</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -355,6 +553,7 @@ import {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Powerful Features
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to create exceptional content at scale
             </p>
           </div>
@@ -367,6 +566,13 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Everything you need to create exceptional content at scale
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -384,6 +590,7 @@ import {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
+<<<<<<< HEAD
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}            {features.map((feature, index) => (
               <Card
                 key={index}
@@ -399,6 +606,9 @@ import {
                   {feature.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
+=======
+                <p className='text-gray-400 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {feature.description}
                 </p>
               </Card>
@@ -413,6 +623,7 @@ import {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Use Cases
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
             </p>
           </div>
@@ -425,6 +636,13 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Versatile content creation for every industry and purpose
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -446,6 +664,7 @@ import {
                           key={exampleIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
+<<<<<<< HEAD
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases.map((useCase, index) => (
               <Card
                 key={index}
@@ -464,6 +683,9 @@ import {
                       {useCase.examples.map((example, exampleIndex) => (
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+=======
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {example}
                         </div>
                       ))}
@@ -485,6 +707,7 @@ import {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Simple, Transparent Pricing
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your content creation needs
             </p>
           </div>
@@ -498,6 +721,14 @@ import {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Choose the plan that fits your content creation needs
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
@@ -505,15 +736,23 @@ import {
               >
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                     <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
                     </span>
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+=======
+                    <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -530,6 +769,7 @@ import {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
@@ -537,6 +777,9 @@ import {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
                     </li>
                   ))}
@@ -547,11 +790,15 @@ import {
                   size='lg'
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               </Card>
             ))}
@@ -565,6 +812,7 @@ import {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Seamless Integrations
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
             </p>
           </div>
@@ -577,6 +825,13 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Connect with your favorite tools and platforms
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -591,6 +846,7 @@ import {
                 </h3>
                 <p className='text-sm text-gray-400'>
                   {integration.description}
+<<<<<<< HEAD
                 </p>              </Card>            {integrations.map((integration, index) => (
               <Card
                 key={index}
@@ -601,6 +857,9 @@ import {
                 </div>
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
+=======
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
@@ -633,6 +892,7 @@ import {
               size='lg'
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
             >
+<<<<<<< HEAD
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?
           </h2>
           <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -655,6 +915,9 @@ import {
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
+=======
+              <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Watch Demo
             </Button>
           </div>
@@ -662,4 +925,7 @@ import {
       </section>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

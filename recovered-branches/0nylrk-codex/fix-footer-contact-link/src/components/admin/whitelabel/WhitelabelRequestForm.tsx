@@ -28,6 +28,11 @@ const formSchema = z.object({
   subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' })
   cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })})
 type FormValues = z.infer<typeof formSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function WhitelabelRequestForm() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)

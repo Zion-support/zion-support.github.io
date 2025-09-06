@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 export async function connectMetaMask(): Promise<string[]> {
   if (typeof window === 'undefined' |!window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
+=======
+export type WalletProvider = any;
+}
+}
+
+export function getEthereumProvider(): WalletProvider | null {
+  if (typeof window === 'undefined') return null;
+  // @ts-ignore
+  const { ethereum } = window;
+  return ethereum ?? null;
+
+export async function connectMetaMask(): Promise<string[] | null> {
+  const provider = getEthereumProvider();
+  if (!provider) return null;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const accounts = await window.ethereum.request({
       method: 'eth_requestAccounts'
@@ -15,6 +31,14 @@ export async function getAccounts(): Promise<string[]> {
   if (typeof window === 'undefined' |!window.ethereum) {
     return [];
   }
+<<<<<<< HEAD
+=======
+}
+
+export async function getAccounts(): Promise<string[] | null> {
+  const provider = getEthereumProvider();
+  if (!provider) return null;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const accounts = await window.ethereum.request({
       method: 'eth_accounts'

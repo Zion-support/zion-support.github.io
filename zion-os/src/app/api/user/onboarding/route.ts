@@ -32,4 +32,7 @@ if (!session?.user?.email) {
       { status: 500 }
     );
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

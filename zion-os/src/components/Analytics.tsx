@@ -4,6 +4,7 @@ interface FirstInputEntry extends PerformanceEntry {processingStart: number;
   processingEnd: number;
   target?: Element;
 }
+<<<<<<< HEAD
 export function Analytics() {useEffect(() => {;
     // Performance monitoring;
     if (typeof window !== "undefined") {;
@@ -12,6 +13,18 @@ export function Analytics() {useEffect(() => {;
         for (const entry of list.getEntries()) {;
           if (entry.entryType === "largest-contentful-paint") {;
             // // // console.log("LCP:", entry.startTime);
+=======
+
+export function Analytics() {
+  useEffect(() => {
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      // Core Web Vitals monitoring
+      const observer = new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);

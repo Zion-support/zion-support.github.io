@@ -21,6 +21,7 @@ interface ClientBudgetRecommenderProps {
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
+<<<<<<< HEAD
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
@@ -34,6 +35,21 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   experienceLevel
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onSuggestionApplied}) => {
+=======
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+}
+
+export const ClientBudgetRecommender: React.FC<
+  ClientBudgetRecommenderProps
+> = ({
+  jobTitle,
+  category,
+  timeline,
+  scope,
+  experienceLevel,
+  onSuggestionApplied,
+}) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();

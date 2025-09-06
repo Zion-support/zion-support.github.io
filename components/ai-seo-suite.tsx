@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = null;
@@ -35,6 +36,42 @@ export default function AISeosuitePage() {
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = [
+=======
+import {
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
+  Rocket,
+  Settings,;
+} from 'lucide-react';
+}
+
+export default function AISeosuitePage() {
+  const features = [
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+      title: 'AI Keyword Research',
+      description:
+        'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       icon: <Search className='w-8 h-8 text-white' />
       title: 'AI Keyword Research'
@@ -122,6 +159,7 @@ export default function AISeosuitePage() {
       category: 'Analytics & Reporting'
       icon: <BarChart3 className='w-6 h-6 text-orange-400' />
       tools: [
+<<<<<<< HEAD
         'Ranking tracker'
         'Traffic analysis'
         'Conversion tracking'
@@ -183,6 +221,15 @@ export default function AISeosuitePage() {
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
+=======
+        'Ranking tracker',
+        'Traffic analysis',
+        'Conversion tracking',
+        'Competitor monitoring',
+        'Custom dashboards',
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const pricingPlans = [
     {
@@ -191,6 +238,7 @@ export default function AISeosuitePage() {
       period: '/month'
       description: 'Perfect for small websites and blogs'
       features: [
+<<<<<<< HEAD
         'Up to 5 websites'
         'Basic keyword research'
         'Monthly site audits'
@@ -273,6 +321,150 @@ export default function AISeosuitePage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' }
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' },  ];    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
+=======
+        'Up to 5 websites',
+        'Basic keyword research',
+        'Monthly site audits',
+        'Email support',
+        'Basic reporting',
+        'Mobile app access',
+      ],
+      popular: false,
+      color: 'border-gray-600',
+      buttonColor: 'bg-gray-600 hover:bg-gray-700',
+    },
+    {
+      name: 'Professional',
+      price: '$129',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      features: [
+        'Up to 25 websites',
+        'Advanced keyword research',
+        'Weekly site audits',
+        'Priority support',
+        'Advanced reporting',
+        'Competitor analysis',
+        'API access',
+        'White-label reports',
+      ],
+      popular: true,
+      color: 'border-blue-500',
+      buttonColor: 'bg-blue-600 hover:bg-blue-700',
+    },
+    {
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: [
+        'Unlimited websites',
+        'Full SEO suite',
+        'Daily site audits',
+        'Dedicated support',
+        'Custom reporting',
+        'Advanced analytics',
+        'SLA guarantee',
+        'On-premise option',
+      ],
+      popular: false,
+      color: 'border-purple-600',
+      buttonColor: 'bg-purple-600 hover:bg-purple-700',
+    },
+  ];
+
+  const integrations = [
+    {
+      name: 'Google Analytics',
+      icon: '📊',
+      description: 'Traffic data integration',
+    },
+    {
+      name: 'Google Search Console',
+      icon: '🔍',
+      description: 'Search performance data',
+    },
+    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
+    { name: 'Shopify', icon: '🛒', description: 'E-commerce optimization' },
+    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
+    { name: 'Slack', icon: '💬', description: 'Team notifications' },
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
+    { name: 'API Access', icon: '🔑', description: 'Custom integrations' },
+  ];
+
+  const useCases = [
+    {
+      title: 'E-commerce Websites',
+      description:
+        'Optimize product pages, category pages, and search functionality for better conversions.',
+      icon: '🛍️',
+      benefits: [
+        'Higher search rankings',
+        'Increased organic traffic',
+        'Better conversion rates',
+        'Competitive advantage',
+      ],
+    },
+    {
+      title: 'Content Marketing',
+      description:
+        'Optimize blog posts, articles, and content for search engines and user engagement.',
+      icon: '📝',
+      benefits: [
+        'Better content visibility',
+        'Higher engagement rates',
+        'More organic traffic',
+        'Authority building',
+      ],
+    },
+    {
+      title: 'Local Businesses',
+      description:
+        'Improve local search visibility and attract customers in your area.',
+      icon: '📍',
+      benefits: [
+        'Local search dominance',
+        'Increased foot traffic',
+        'Better customer acquisition',
+        'Competitive positioning',
+      ],
+    },
+    {
+      title: 'SaaS Companies',
+      description:
+        'Optimize landing pages, feature pages, and documentation for better user acquisition.',
+      icon: '💻',
+      benefits: [
+        'Higher conversion rates',
+        'Better user experience',
+        'Reduced acquisition costs',
+        'Market expansion',
+      ],
+    },
+  ];
+
+  const successMetrics = [
+    {
+      metric: 'Organic Traffic',
+      value: '+150%',
+      description: 'Average increase in organic traffic',
+    },
+    {
+      metric: 'Search Rankings',
+      value: '+45%',
+      description: 'Improvement in search rankings',
+    },
+    {
+      metric: 'Conversion Rate',
+      value: '+80%',
+      description: 'Increase in conversion rates',
+    },
+    {
+      metric: 'ROI',
+      value: '400%',
+      description: 'Average return on investment',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const useCases = [
     {
@@ -404,6 +596,7 @@ export default function AISeosuitePage() {
               size='lg'
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
+<<<<<<< HEAD
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -440,6 +633,9 @@ export default function AISeosuitePage() {
               className="border-white/20 hover:border-white/40 hover:bg-white/5"
             >
               <Play className="w-5 h-5 mr-2" />
+=======
+              <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Watch Demo
             </Button>
           </div>
@@ -467,6 +663,7 @@ export default function AISeosuitePage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
                 400%
               </div>
+<<<<<<< HEAD
               <div className='text-gray-400'>ROI</div>            </div>            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">+45%</div>
@@ -479,6 +676,9 @@ export default function AISeosuitePage() {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">400%</div>
               <div className="text-gray-400">ROI</div>
+=======
+              <div className='text-gray-400'>ROI</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -512,6 +712,7 @@ export default function AISeosuitePage() {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
+<<<<<<< HEAD
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -534,6 +735,9 @@ export default function AISeosuitePage() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
+=======
+                <p className='text-gray-400 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {feature.description}
                 </p>
               </Card>
@@ -548,6 +752,7 @@ export default function AISeosuitePage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Comprehensive SEO Tools
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Professional-grade tools used by top SEO agencies and marketers
             </p>
           </div>
@@ -560,6 +765,13 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Professional-grade tools used by top SEO agencies and marketers
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
               <Card
@@ -578,6 +790,7 @@ export default function AISeosuitePage() {
                           key={toolIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
+<<<<<<< HEAD
                           <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools.map((tool, index) => (
               <Card
                 key={index}
@@ -593,6 +806,9 @@ export default function AISeosuitePage() {
                       {tool.tools.map((toolName, toolIndex) => (
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+=======
+                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {toolName}
                         </div>
                       ))}
@@ -611,6 +827,7 @@ export default function AISeosuitePage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Proven Results
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              See the impact our AI-powered SEO suite has on businesses
             </p>
           </div>
@@ -623,6 +840,13 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              See the impact our AI-powered SEO suite has on businesses
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {successMetrics.map((metric, index) => (
               <Card
@@ -635,6 +859,7 @@ export default function AISeosuitePage() {
                 <h3 className='text-xl font-bold mb-2 text-white'>
                   {metric.metric}
                 </h3>
+<<<<<<< HEAD
                 <p className='text-gray-400 text-sm'>{metric.description}</p>              </Card>            {successMetrics.map((metric, index) => (
               <Card
                 key={index}
@@ -645,6 +870,9 @@ export default function AISeosuitePage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-white">{metric.metric}</h3>
                 <p className="text-gray-400 text-sm">{metric.description}</p>
+=======
+                <p className='text-gray-400 text-sm'>{metric.description}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
@@ -657,6 +885,7 @@ export default function AISeosuitePage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Use Cases
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Trusted by businesses across industries for SEO success
             </p>
           </div>
@@ -669,6 +898,13 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Trusted by businesses across industries for SEO success
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -690,6 +926,7 @@ export default function AISeosuitePage() {
                           key={benefitIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
+<<<<<<< HEAD
                           <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases.map((useCase, index) => (
               <Card
                 key={index}
@@ -708,6 +945,9 @@ export default function AISeosuitePage() {
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+=======
+                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {benefit}
                         </div>
                       ))}
@@ -729,6 +969,7 @@ export default function AISeosuitePage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Simple, Transparent Pricing
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your SEO needs
             </p>
           </div>
@@ -742,6 +983,14 @@ export default function AISeosuitePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Choose the plan that fits your SEO needs
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
@@ -749,15 +998,23 @@ export default function AISeosuitePage() {
               >
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                     <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
                     </span>
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+=======
+                    <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -774,6 +1031,7 @@ export default function AISeosuitePage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
@@ -781,6 +1039,9 @@ export default function AISeosuitePage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
                     </li>
                   ))}
@@ -791,11 +1052,15 @@ export default function AISeosuitePage() {
                   size='lg'
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               </Card>
             ))}
@@ -809,6 +1074,7 @@ export default function AISeosuitePage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Seamless Integrations
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
             </p>
           </div>
@@ -821,6 +1087,13 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Connect with your favorite tools and platforms
+            </p>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -835,6 +1108,7 @@ export default function AISeosuitePage() {
                 </h3>
                 <p className='text-sm text-gray-400'>
                   {integration.description}
+<<<<<<< HEAD
                 </p>              </Card>            {integrations.map((integration, index) => (
               <Card
                 key={index}
@@ -845,6 +1119,9 @@ export default function AISeosuitePage() {
                 </div>
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
+=======
+                </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
@@ -877,6 +1154,7 @@ export default function AISeosuitePage() {
               size='lg'
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
+<<<<<<< HEAD
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -899,11 +1177,18 @@ export default function AISeosuitePage() {
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
+=======
+              <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Watch Demo
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

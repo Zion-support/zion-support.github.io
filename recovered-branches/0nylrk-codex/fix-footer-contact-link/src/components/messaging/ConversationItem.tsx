@@ -8,6 +8,7 @@ interface ConversationItemProps {
 <<<<<<< HEAD
   conversation: Conversation;
   isActive: boolean;
+<<<<<<< HEAD
 =======
   conversation: Conversation
   isActive: boolean
@@ -26,6 +27,18 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
+=======
+  onClick: () => void;
+}
+
+export function ConversationItem({
+  conversation,
+  isActive,
+  onClick,
+}: ConversationItemProps) {
+  
+        conversation.unread_count > 0 && 'bg-zion-blue-dark/20'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       )}
       onClick={onClick}
     >

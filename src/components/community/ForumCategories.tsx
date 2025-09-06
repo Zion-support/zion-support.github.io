@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 import { ForumCategoryInfo } from "@/types/community";
+=======
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,;
+} from 'lucide-react';
+import { ForumCategoryInfo } from '@/types/community';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const categories: ForumCategoryInfo[] = [
   {
 <<<<<<< HEAD
@@ -80,12 +101,23 @@ const iconMap = null;
   }
 ]
 const iconMap = {
+<<<<<<< HEAD
   Briefcase
   MessageSquare
   Code
   FileText
   Megaphone
 }
+=======
+  Briefcase,
+  MessageSquare,
+  Code,
+  FileText,
+  Megaphone,
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ForumCategories = () => {
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
@@ -112,6 +144,7 @@ export const ForumCategories = () => {
         )
       })}
     </div>
+<<<<<<< HEAD
   )
 }
 export default ForumCategories
@@ -119,3 +152,24 @@ export default ForumCategories
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+
+{;
+  visibleCategories.map ( (category) => {;
+  const Icon = iconMap[category.icon as keyof typeof iconMap];
+
+}> <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer" > <CardHeader className="flex flex-row items-center gap-4" > <div className="p-2 bg-zion-purple/10 rounded-full" > <Icon className="h-6 w-6 text-zion-purple" /> </div> <CardTitle className="text-xl" > {;
+  category.name ";
+}</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-base" > {;
+  category.description ;
+}</CardDescription> ;
+}) ;
+}</div>) ;
+};
+}
+
+export default ForumCategories;
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

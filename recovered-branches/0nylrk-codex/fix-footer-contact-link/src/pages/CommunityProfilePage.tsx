@@ -104,6 +104,11 @@ const userPosts: ForumPost[] = [
     replyCount: 6
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CommunityProfilePage() {
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);

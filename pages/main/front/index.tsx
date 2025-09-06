@@ -1,6 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FrontLanding() {
   return (
 <<<<<<< HEAD
@@ -23,7 +28,12 @@ export default function FrontLanding() {
         <div className='absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast' />
         <div className='absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid' />
         <div className='absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]'>
+<<<<<<< HEAD
           <div className='twinkle-field absolute inset-0' />        </div>
+=======
+          <div className='twinkle-field absolute inset-0' />
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
       {/* Header */}
       <header className='relative z-10'>
@@ -47,19 +57,34 @@ export default function FrontLanding() {
             </Link>
             <Link href='/contact'>
               <a className='text-white/80 hover:text-white'>Contact</a>
+<<<<<<< HEAD
             </Link>          </div>
+=======
+            </Link>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </nav>
       </header>
       {/* Hero */}
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
+<<<<<<< HEAD
           <div className='text-center'>            <motion.div
+=======
+          <div className='text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'
             >
+<<<<<<< HEAD
               <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements
+=======
+              <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
+              Autonomous agents running continuous improvements
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
@@ -69,7 +94,13 @@ export default function FrontLanding() {
             >
               <span className='gradient-text'>
                 Autonomous Cloud Automations
+<<<<<<< HEAD
               </span>            </motion.h1>
+=======
+              </span>
+            </motion.h1>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -78,7 +109,13 @@ export default function FrontLanding() {
             >
               Self-improving, cloud-native agents that invent, generate, and run
               new automation factories—fixing, optimizing, and syncing changes
+<<<<<<< HEAD
               to the repository continuously.            </motion.p>
+=======
+              to the repository continuously.
+            </motion.p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -102,11 +139,20 @@ export default function FrontLanding() {
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
+<<<<<<< HEAD
                 ['24/7', 'Autonomous']
                 ['Main', 'Direct Sync']
                 ['0 Ops', 'Cloud‑Native']
                 ['Safety', 'Guardrails']
               ].map(([k, v]) => (                <motion.div
+=======
+                ['24/7', 'Autonomous'],
+                ['Main', 'Direct Sync'],
+                ['0 Ops', 'Cloud‑Native'],
+                ['Safety', 'Guardrails'],
+              ].map(([k, v]) => (
+                <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +161,12 @@ export default function FrontLanding() {
                   className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
                 >
                   <div className='text-lg font-bold text-white'>{k}</div>
+<<<<<<< HEAD
                   <div className='text-xs text-white/70'>{v}</div>                </motion.div>
+=======
+                  <div className='text-xs text-white/70'>{v}</div>
+                </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </div>
           </div>
@@ -148,10 +199,18 @@ export default function FrontLanding() {
                 desc: 'Generates domain‑specific factories on demand.'
               }
               {
+<<<<<<< HEAD
                 title: 'Observability'
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.'
               }
             ].map(f => (              <motion.article
+=======
+                title: 'Observability',
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.',
+              },
+            ].map(f => (
+              <motion.article
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 key={f.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +220,12 @@ export default function FrontLanding() {
               >
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
                 <h3 className='text-lg font-semibold'>{f.title}</h3>
+<<<<<<< HEAD
                 <p className='mt-1 text-sm text-white/75'>{f.desc}</p>              </motion.article>
+=======
+                <p className='mt-1 text-sm text-white/75'>{f.desc}</p>
+              </motion.article>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </section>
@@ -181,11 +245,19 @@ export default function FrontLanding() {
                 desc: 'Optimizes bundles, assets, and accessibility with continuous checks.'
               }
               {
+<<<<<<< HEAD
                 title: 'Content & SEO'
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.'
               }
             ].map(c => (              <motion.article
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+                title: 'Content & SEO',
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
+              },
+            ].map(c => (
+              <motion.article
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +267,12 @@ export default function FrontLanding() {
               >
                 <div className='absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl' />
                 <h3 className='text-lg font-semibold'>{c.title}</h3>
+<<<<<<< HEAD
                 <p className='mt-1 text-sm text-white/75'>{c.desc}</p>              </motion.article>
+=======
+                <p className='mt-1 text-sm text-white/75'>{c.desc}</p>
+              </motion.article>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </section>
@@ -206,11 +283,20 @@ export default function FrontLanding() {
           </h2>
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2'>
             {[
+<<<<<<< HEAD
               '24/7 progress without human intervention'
               'Rapid feedback loop with safe, incremental edits'
               'Continuous delivery directly to main branch'
               'Fewer regressions via layered checks and reports'
             ].map(b => (              <motion.div
+=======
+              '24/7 progress without human intervention',
+              'Rapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branch',
+              'Fewer regressions via layered checks and reports',
+            ].map(b => (
+              <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -219,12 +305,22 @@ export default function FrontLanding() {
                 className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'
               >
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
+<<<<<<< HEAD
                 <span className='text-sm text-white/80'>{b}</span>              </motion.div>
+=======
+                <span className='text-sm text-white/80'>{b}</span>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </section>
         {/* CTA */}
+<<<<<<< HEAD
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
+=======
+        <section className='mx-auto max-w-7xl px-6 pb-24'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -248,7 +344,12 @@ export default function FrontLanding() {
                 <a className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>
                   View Automations
                 </a>
+<<<<<<< HEAD
               </Link>            </div>
+=======
+              </Link>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </section>
         {/* Explore more */}
@@ -312,8 +413,17 @@ export default function FrontLanding() {
                   Contact — discuss your use‑case
                 </span>
               </a>
+<<<<<<< HEAD
             </Link>          </div>
         </section>
       </main>
     </div>
   );
+=======
+            </Link>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

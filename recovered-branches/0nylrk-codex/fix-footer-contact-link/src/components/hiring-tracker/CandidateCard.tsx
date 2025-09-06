@@ -45,8 +45,14 @@ import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {
   application: JobApplication;
+<<<<<<< HEAD
   index: number
 }
+=======
+  index: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application.notes |"");

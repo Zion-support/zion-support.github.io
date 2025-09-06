@@ -21,6 +21,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 interface JobMatchesProps {
   jobId: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function JobMatches({ jobId }: JobMatchesProps) {
 <<<<<<< HEAD
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);

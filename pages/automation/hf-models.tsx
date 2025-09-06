@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/hf-models.json';
 export default function HfModelsPage() {
@@ -24,3 +25,7 @@ export default function HfModelsPage() {
     </EnhancedLayout>
   )
 }
+=======
+// @ts-ignore </li>) )
+}</ul> </div> </EnhancedLayout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

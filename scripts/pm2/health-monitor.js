@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
+=======
+}};
+; async checkSystemResources() {; try {; this.log('💻 Checking system resources...');
+; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
+; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
+; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
+; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
+; return {; success: true, memory: {
+      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     }
     disk: {
@@ -16,4 +27,8 @@
 } catch (error) {this.log(`❌ Error running health monitor: ${error.message}`); process.exit(1)}}}
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
+<<<<<<< HEAD
 healthMonitor.run().catch(error = > {process.exit(1)});
+=======
+healthMonitor.run().catch(error = > {; process.exit(1)});
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

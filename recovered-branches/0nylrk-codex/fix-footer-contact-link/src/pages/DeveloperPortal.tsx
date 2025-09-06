@@ -20,6 +20,7 @@ import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string;
   label: string;
+<<<<<<< HEAD
 =======
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
@@ -35,6 +36,11 @@ interface TabDefinition {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   icon: LucideIcon
 }
+=======
+  icon: LucideIcon;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DeveloperPortal() {
   const { user } = useAuth();
 <<<<<<< HEAD
@@ -94,8 +100,14 @@ export function DeveloperPortal() {
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>

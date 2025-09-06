@@ -371,7 +371,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default EnhancedNavigation;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

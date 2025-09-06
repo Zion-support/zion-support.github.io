@@ -20,6 +20,7 @@ interface JobMatchProps {
   skills: string[];
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
+<<<<<<< HEAD
 =======
   matchId: string
   talentId: string
@@ -36,6 +37,11 @@ interface JobMatchProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onInvite?: (matchId: string) => void
 }
+=======
+  onInvite?: (matchId: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function JobMatchCard({
   matchId;
 <<<<<<< HEAD

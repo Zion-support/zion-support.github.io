@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
+<<<<<<< HEAD
 const steps = null;
 =======
 import type { NextPage } from "next";
@@ -22,17 +23,45 @@ const Onboarding: NextPage = () => {
       </Head>
       <h1 className="text-2xl font-semibold">Get Started</h1>
       <div className="flex items-center gap-2 text-sm flex-wrap">
+=======
+
+const steps = ['Account', 'Profile', 'Preferences', 'Preview'];
+
+const Onboarding: NextPage = () => {
+  const [step, setStep] = useState(0);
+
+  const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
+  const prev = () => setStep(s => Math.max(s - 1, 0));
+
+  return (
+    <div className='space-y-6'>
+      <Head>
+        <title>Onboarding - Zion</title>
+      </Head>
+
+      <h1 className='text-2xl font-semibold'>Get Started</h1>
+
+      <div className='flex items-center gap-2 text-sm flex-wrap'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {steps.map((label, i) => (
           <div
             key={label}
             className={`px-3 py-1 rounded-full border ${i === step ? "bg-blue-600 text-white border-blue-600" : "opacity-80"}`}
           >
+<<<<<<< HEAD
             {" "}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {i + 1}. {label}
           </div>
         ))}
       </div>
+<<<<<<< HEAD
       <div className="border rounded-md p-4 min-h-[200px]">
+=======
+
+      <div className='border rounded-md p-4 min-h-[200px]'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {step === 0 && <div>Account setup fields…</div>}
         {step === 1 && <div>Profile details fields…</div>}
         {step === 2 && <div>Preferences selection…</div>}
@@ -54,6 +83,13 @@ const Onboarding: NextPage = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default Onboarding;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Onboarding;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

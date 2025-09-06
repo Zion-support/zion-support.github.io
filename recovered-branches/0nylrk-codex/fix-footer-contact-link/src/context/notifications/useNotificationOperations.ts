@@ -2,12 +2,20 @@
 import { useState, useCallback  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Notification, FilterType, NotificationContextType } from './types';
+<<<<<<< HEAD
 export const useNotificationOperations = null;
 =======
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Notification, FilterType, NotificationContextType} from './types';
 export const useNotificationOperations = (userId?: string): NotificationContextType => {
+=======
+}
+
+export const useNotificationOperations = (
+  userId?: string
+): NotificationContextType => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState<FilterType>('all');

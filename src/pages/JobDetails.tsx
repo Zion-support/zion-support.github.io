@@ -46,7 +46,11 @@ interface Job {
   created_at: string;
   category: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   deadline?: string
+=======
+  deadline?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export default function JobDetails() {
@@ -261,5 +265,8 @@ const isOwnJob = user?.id === job.client id;
   />) ;
 }</>) ;
 }'"
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

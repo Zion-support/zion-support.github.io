@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -8,12 +9,31 @@ import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
+=======
+import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Save } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { ContractForm, ContractFormValues } from './components/ContractForm';
+import { ContractPreview } from './components/ContractPreview';
+import { TemplateManager } from './templates/TemplateManager';
+import { SmartContractBuilder } from './SmartContractBuilder';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface ContractBuilderProps {
 <<<<<<< HEAD
   isOpen: boolean;
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
+<<<<<<< HEAD
   onContractGenerated?: (contractContent: string) => void
 =======
   isOpen: boolean
@@ -23,6 +43,11 @@ interface ContractBuilderProps {
   onContractGenerated?: (contractContent: string,) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
+=======
+  onContractGenerated?: (contractContent: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractBuilder({
   isOpen;
   onClose;
@@ -36,9 +61,32 @@ export function ContractBuilder({
     undefined
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+<<<<<<< HEAD
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = null;
           onClose()
+=======
+  const [showSmartContractBuilder, setShowSmartContractBuilder] =
+    useState(false);
+
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData);
+  };
+
+  const handleContractGenerated = (contract: string) => {
+    setGeneratedContract(contract);
+    setActiveTab('preview');
+    if (onContractGenerated) {
+      onContractGenerated(contract);
+    }
+  };
+
+  if (showSmartContractBuilder) {
+
+        onClose={() => {
+          setShowSmartContractBuilder(false);
+          onClose();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }}
         talent = {talent,}
         clientName = {clientName,}
@@ -105,6 +153,7 @@ export function ContractBuilder({
         />
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
   )
 }
 }/>)
@@ -129,3 +178,31 @@ export function ContractBuilder({
   formValues
 }/> </DialogContent> </Dialog>)
 }"}
+=======
+  );
+
+};
+
+}/>) ;
+}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {;
+  talent ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleContractGenerated ;
+}/> </TabsContent> />) ;
+}</TabsContent> </Tabs> <TemplateManager isOpen= {;
+  templateManagerOpen ;
+}onClose= {;
+  () => setTemplateManagerOpen (false) ;
+}onSelectTemplate= {;
+  handleLoadTemplate ;
+}currentValues= {;
+  formValues ;
+}/> </DialogContent> </Dialog>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

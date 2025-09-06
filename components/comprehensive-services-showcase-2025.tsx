@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, Filter, Grid3X3, List;
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
@@ -54,12 +55,60 @@ import {
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Palette,
+  BookOpen,
+  Truck,
+  DollarSign,
+  Settings,
+  ArrowRight,
+  ChevronDown,
+  CheckCircle,
+  Clock,
+  Award,
+  Target,
+  Globe,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Eye,
+  Heart,
+  Lightbulb,
+  Palette as PaletteIcon,
+  Code,
+  Database,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Zap as ZapIcon,
+  Target as TargetIcon,;
+} from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Import service data
 import { innovativeRealMicroSaasServices2025  } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025  } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface Service {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -77,6 +126,7 @@ interface Service {
   growthRate: string;
   launchDate: string;
   badge?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   icon?: React.ReactNode
 }
@@ -144,14 +194,86 @@ const priceRanges = [
   { label: '$50 - $200/month', value: '50-200' }
   { label: '$200 - $500/month', value: '200-500' }
   { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
+=======
+  icon?: React.ReactNode;
+
+const allServices: Service[] = [
+  ...innovativeRealMicroSaasServices2025.map(service => ({
+    ...service,
+    category: 'Micro SAAS',
+    icon: <Rocket className='w-6 h-6' />,
+  })),
+  ...innovativeAIServicesEnhanced2025.map(service => ({
+    ...service,
+    category: 'AI & Consciousness',
+    icon: <Brain className='w-6 h-6' />,
+  })),
+  ...innovativeITServicesEnhanced2025.map(service => ({
+    ...service,
+    category: 'Enterprise IT',
+    icon: <Shield className='w-6 h-6' />,
+  })),
+  ...emergingTechServicesEnhanced2025.map(service => ({
+    ...service,
+    category: 'Quantum & Emerging Tech',
+    icon: <Atom className='w-6 h-6' />,
+  })),
+];
+
+const categories = [
+  {
+    name: 'All Services',
+    icon: <Globe className='w-5 h-5' />,
+    count: allServices.length,
+  },
+  {
+    name: 'Micro SAAS',
+    icon: <Rocket className='w-5 h-5' />,
+    count: innovativeRealMicroSaasServices2025.length,
+  },
+  {
+    name: 'AI & Consciousness',
+    icon: <Brain className='w-5 h-5' />,
+    count: innovativeAIServicesEnhanced2025.length,
+  },
+  {
+    name: 'Enterprise IT',
+    icon: <Shield className='w-5 h-5' />,
+    count: innovativeITServicesEnhanced2025.length,
+  },
+  {
+    name: 'Quantum & Emerging Tech',
+    icon: <Atom className='w-5 h-5' />,
+    count: emergingTechServicesEnhanced2025.length,
+  },
+];
+
+const priceRanges = [
+  { label: 'All Prices', value: 'all' },
+  { label: 'Under $50/month', value: 'under-50' },
+  { label: '$50 - $200/month', value: '50-200' },
+  { label: '$200 - $500/month', value: '200-500' },
+  { label: 'Over $500/month', value: 'over-500' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const sortOptions = [
+<<<<<<< HEAD
   { label: 'Most Popular', value: 'popular' }
   { label: 'Highest Rated', value: 'rating' }
   { label: 'Newest', value: 'newest' }
   { label: 'Price: Low to High', value: 'price-low' }
   { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
 ];
+=======
+  { label: 'Most Popular', value: 'popular' },
+  { label: 'Highest Rated', value: 'rating' },
+  { label: 'Newest', value: 'newest' },
+  { label: 'Price: Low to High', value: 'price-low' },
+  { label: 'Price: High to Low', value: 'price-high' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
@@ -159,7 +281,12 @@ export default function ComprehensiveServicesShowcase2025() {
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] =
+<<<<<<< HEAD
     useState<Service[]>(allServices);  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices);
+=======
+    useState<Service[]>(allServices);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     let filtered = allServices;
     // Filter by search term
@@ -171,11 +298,18 @@ export default function ComprehensiveServicesShowcase2025() {
             .toLowerCase()
             .includes(searchTerm.toLowerCase()) |
           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
+<<<<<<< HEAD
       );    }
+=======
+      );
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Filter by category
     if (selectedCategory !== 'All Services') {
       filtered = filtered.filter(
         service => service.category === selectedCategory
+<<<<<<< HEAD
       );    }      filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -186,6 +320,9 @@ export default function ComprehensiveServicesShowcase2025() {
       filtered = filtered.filter(
         service => service.category === selectedCategory
       );      filtered = filtered.filter(service => service.category === selectedCategory)
+=======
+      );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     // Filter by price range
     if (selectedPriceRange !== 'all') {
@@ -201,11 +338,16 @@ export default function ComprehensiveServicesShowcase2025() {
           case 'over-500':
             return price > 500;
           default:
+<<<<<<< HEAD
             return true;        }          case 'under-50': return price < 50;
           case '50-200': return price >= 50 && price <= 200;
           case '200-500': return price > 200 && price <= 500;
           case 'over-500': return price > 500;
           default: return true
+=======
+            return true;
+        }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
     }
     // Sort services
@@ -233,6 +375,7 @@ export default function ComprehensiveServicesShowcase2025() {
           return 0;
       }
     });
+<<<<<<< HEAD
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
     switch (category) {        case 'price-low':
@@ -243,6 +386,10 @@ export default function ComprehensiveServicesShowcase2025() {
       }
     });
     setFilteredServices(filtered)
+=======
+
+    setFilteredServices(filtered);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -255,12 +402,19 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Quantum & Emerging Tech':
         return 'from-orange-500 to-red-500';
       default:
+<<<<<<< HEAD
         return 'from-gray-500 to-slate-500';    }      case 'Micro SAAS': return 'from-blue-500 to-cyan-500';
       case 'AI & Consciousness': return 'from-purple-500 to-pink-500';
       case 'Enterprise IT': return 'from-green-500 to-emerald-500';
       case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500'
       default: return 'from-gray-500 to-slate-500'
   }
+=======
+        return 'from-gray-500 to-slate-500';
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Micro SAAS':
@@ -272,12 +426,19 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Quantum & Emerging Tech':
         return <Atom className='w-5 h-5' />;
       default:
+<<<<<<< HEAD
         return <Globe className='w-5 h-5' />;    }      case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
       case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
       case 'Enterprise IT': return <Shield className="w-5 h-5" />;
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />
       default: return <Globe className="w-5 h-5" />
   }
+=======
+        return <Globe className='w-5 h-5' />;
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Layout>
       <Head>
@@ -314,6 +475,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 delay: i * 0.5
               }}
               style={{
+<<<<<<< HEAD
                 left: `${Math.random() * 100}%`
                 top: `${Math.random() * 100}%`
               }}            />
@@ -324,6 +486,16 @@ export default function ComprehensiveServicesShowcase2025() {
           ))}
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+=======
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -358,6 +530,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   icon: <Shield className='w-8 h-8' />
                 }
                 {
+<<<<<<< HEAD
                   label: 'Emerging Tech'
                   value: emergingTechServicesEnhanced2025.length
                   icon: <Atom className='w-8 h-8' />
@@ -365,6 +538,13 @@ export default function ComprehensiveServicesShowcase2025() {
                 { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className="w-8 h-8" /> }
                 { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> }
                 { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
+=======
+                  label: 'Emerging Tech',
+                  value: emergingTechServicesEnhanced2025.length,
+                  icon: <Atom className='w-8 h-8' />,
+                },
+              ].map((stat, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
@@ -378,12 +558,16 @@ export default function ComprehensiveServicesShowcase2025() {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
+<<<<<<< HEAD
                   <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>                >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">
                     {stat.icon}
                   </div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-cyan-300">{stat.label}</div>
+=======
+                  <div className='text-sm text-cyan-300'>{stat.label}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -396,12 +580,16 @@ export default function ComprehensiveServicesShowcase2025() {
                   placeholder='Search for services, features, or solutions...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                   className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'                />                <input
                   type="text"
                   placeholder="Search for services, features, or solutions..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+=======
+                  className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 />
               </div>
             </div>
@@ -414,12 +602,17 @@ export default function ComprehensiveServicesShowcase2025() {
           <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0'>
             {/* Category Filters */}
             <div className='flex flex-wrap items-center space-x-2'>
+<<<<<<< HEAD
               {categories.map(category => (                <button      <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             {/* Category Filters */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
+=======
+              {categories.map(category => (
+                <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -430,7 +623,11 @@ export default function ComprehensiveServicesShowcase2025() {
                 >
                   {category.icon}
                   <span>{category.name}</span>
+<<<<<<< HEAD
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
+=======
+                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {category.count}
                   </span>
                 </button>
@@ -449,6 +646,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     key={range.value}
                     value={range.value}
                     className='bg-gray-900 text-white'
+<<<<<<< HEAD
                   >                    {range.label}              {/* Price Range Filter */}
               <select
                 value={selectedPriceRange}
@@ -457,6 +655,9 @@ export default function ComprehensiveServicesShowcase2025() {
               >
                 {priceRanges.map((range) => (
                   <option key={range.value} value={range.value} className="bg-gray-900 text-white">
+=======
+                  >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {range.label}
                   </option>
                 ))}
@@ -472,16 +673,25 @@ export default function ComprehensiveServicesShowcase2025() {
                     key={option.value}
                     value={option.value}
                     className='bg-gray-900 text-white'
+<<<<<<< HEAD
                   >                    {option.label}                onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
               >
                 {sortOptions.map((option) => (
                   <option key={option.value} value={option.value} className="bg-gray-900 text-white">
+=======
+                  >
+                    {option.label}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </option>
                 ))}
               </select>
               {/* View Mode Toggle */}
+<<<<<<< HEAD
               <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
+=======
+              <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
@@ -490,7 +700,11 @@ export default function ComprehensiveServicesShowcase2025() {
                       : 'text-gray-400 hover:text-white'
                   }`}
                 >
+<<<<<<< HEAD
                   <Grid3X3 className='w-4 h-4' />                </button>                  <Grid3X3 className="w-4 h-4" />
+=======
+                  <Grid3X3 className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -500,7 +714,11 @@ export default function ComprehensiveServicesShowcase2025() {
                       : 'text-white'
                   }`}
                 >
+<<<<<<< HEAD
                   <List className='w-4 h-4' />                </button>                  <List className="w-4 h-4" />
+=======
+                  <List className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
             </div>
@@ -511,14 +729,23 @@ export default function ComprehensiveServicesShowcase2025() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         {/* Results Count */}
         <div className='mb-8'>
+<<<<<<< HEAD
           <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Results Count */}
         <div className="mb-8">
           <p className="text-gray-400">
+=======
+          <p className='text-gray-400'>
+            Showing {filteredServices.length} of {allServices.length} services
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
         {viewMode === 'grid' ? (
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -533,6 +760,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}
                   >
                     {getCategoryIcon(service.category)}
+<<<<<<< HEAD
                     <span className='ml-2'>{service.category}</span>                  </span>
                 </div>
                 {/* Service Icon */}
@@ -543,12 +771,19 @@ export default function ComprehensiveServicesShowcase2025() {
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                     {getCategoryIcon(service.category)}
                     <span className="ml-2">{service.category}</span>
+=======
+                    <span className='ml-2'>{service.category}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </span>
                 </div>
                 {/* Service Icon */}
                 <div className='mb-4'>
+<<<<<<< HEAD
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+=======
+                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {service.icon}
                   </div>
                 </div>
@@ -559,6 +794,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <p className='text-gray-400 mb-3 line-clamp-2'>
                   {service.tagline}
                 </p>
+<<<<<<< HEAD
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>                  {service.description}
                 </p>
                 {/* Price */}                  {service.name}
@@ -567,6 +803,9 @@ export default function ComprehensiveServicesShowcase2025() {
                   {service.tagline}
                 </p>
                 <p className="text-sm text-gray-500 mb-4 line-clamp-3">
+=======
+                <p className='text-sm text-gray-500 mb-4 line-clamp-3'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.description}
                 </p>
                 {/* Price */}
@@ -583,8 +822,12 @@ export default function ComprehensiveServicesShowcase2025() {
                     <span className='text-gray-500'>({service.reviews})</span>
                   </div>
                   <div className='flex items-center space-x-1 text-gray-400'>
+<<<<<<< HEAD
                     <Users className='w-4 h-4' />                    <span>{service.customers.toLocaleString()}</span>                  <div className="flex items-center space-x-1 text-gray-400">
                     <Users className="w-4 h-4" />
+=======
+                    <Users className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <span>{service.customers.toLocaleString()}</span>
                   </div>
                 </div>
@@ -604,6 +847,7 @@ export default function ComprehensiveServicesShowcase2025() {
                       </div>
                     ))}
                     {service.features.length > 3 && (
+<<<<<<< HEAD
                       <div className='text-xs text-cyan-400'>                        +{service.features.length - 3} more features                    {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-3 h-3 text-cyan-400" />
@@ -612,6 +856,9 @@ export default function ComprehensiveServicesShowcase2025() {
                     ))}
                     {service.features.length > 3 && (
                       <div className="text-xs text-cyan-400">
+=======
+                      <div className='text-xs text-cyan-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         +{service.features.length - 3} more features
                       </div>
                     )}
@@ -619,21 +866,33 @@ export default function ComprehensiveServicesShowcase2025() {
                 </div>
                 {/* Market Info */}
                 <div className='mb-4 text-xs text-gray-500'>
+<<<<<<< HEAD
                   <div className='flex items-center justify-between'>                    <span>Market Size: {service.marketSize}</span>                <div className="mb-4 text-xs text-gray-500">
                   <div className="flex items-center justify-between">
+=======
+                  <div className='flex items-center justify-between'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <span>Market Size: {service.marketSize}</span>
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
                 {/* CTA Button */}
+<<<<<<< HEAD
                 <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>                  Learn More                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
+=======
+                <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Learn More
                 </button>
               </motion.div>
             ))}
           </div>
         ) : (
+<<<<<<< HEAD
           <div className='space-y-6'>            {filteredServices.map((service, index) => (          <div className="space-y-6">
+=======
+          <div className='space-y-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -645,11 +904,15 @@ export default function ComprehensiveServicesShowcase2025() {
                 <div className='flex items-start space-x-6'>
                   {/* Service Icon */}
                   <div className='flex-shrink-0'>
+<<<<<<< HEAD
                     <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                      {service.icon}              >
                 <div className="flex items-start space-x-6">
                   {/* Service Icon */}
                   <div className="flex-shrink-0">
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+=======
+                    <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.icon}
                     </div>
                   </div>
@@ -673,10 +936,15 @@ export default function ComprehensiveServicesShowcase2025() {
                         <div className='text-gray-500 text-sm'>/month</div>
                         <span
                           className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}
+<<<<<<< HEAD
                         >                          {service.category}                      <div className="text-right">
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-gray-500 text-sm">/month</div>
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
+=======
+                        >
+                          {service.category}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </span>
                       </div>
                     </div>
@@ -709,12 +977,17 @@ export default function ComprehensiveServicesShowcase2025() {
                         <span className='text-white font-medium'>
                           {service.marketSize}
                         </span>
+<<<<<<< HEAD
                         <span className='text-gray-500'>market</span>                      </div>
                     </div>
                     {/* Features */}                      <div className="flex items-center space-x-1 text-gray-400">
                         <Globe className="w-4 h-4" />
                         <span className="text-white font-medium">{service.marketSize}</span>
                         <span className="text-gray-500">market</span>
+=======
+                        <span className='text-gray-500'>market</span>
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                     {/* Features */}
                     <div className='mb-4'>
@@ -727,12 +1000,17 @@ export default function ComprehensiveServicesShowcase2025() {
                             key={idx}
                             className='flex items-center space-x-2 text-sm text-gray-400'
                           >
+<<<<<<< HEAD
                             <CheckCircle className='w-3 h-3 text-cyan-400 flex-shrink-0' />                            <span>{feature}</span>                    <div className="mb-4">
                       <div className="text-sm text-gray-500 mb-2">Key Features:</div>
                       <div className="grid grid-cols-2 gap-2">
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                             <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
+=======
+                            <CheckCircle className='w-3 h-3 text-cyan-400 flex-shrink-0' />
+                            <span>{feature}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </div>
                         ))}
                       </div>
@@ -744,12 +1022,17 @@ export default function ComprehensiveServicesShowcase2025() {
                       </button>
                       <div className='text-xs text-gray-500'>
                         Launched:{' '}
+<<<<<<< HEAD
                         {new Date(service.launchDate).toLocaleDateString()}                      </div>                    <div className="flex items-center justify-between">
                       <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                         Learn More
                       </button>
                       <div className="text-xs text-gray-500">
                         Launched: {new Date(service.launchDate).toLocaleDateString()}
+=======
+                        {new Date(service.launchDate).toLocaleDateString()}
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </div>
@@ -768,6 +1051,7 @@ export default function ComprehensiveServicesShowcase2025() {
             </h3>
             <p className='text-gray-400 mb-6'>
               Try adjusting your search terms or filters to find what you're
+<<<<<<< HEAD
               looking for.            </p>          <div className="text-center py-20">
             <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Search className="w-12 h-12 text-cyan-400" />
@@ -775,16 +1059,24 @@ export default function ComprehensiveServicesShowcase2025() {
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-gray-400 mb-6">
               Try adjusting your search terms or filters to find what you're looking for.
+=======
+              looking for.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <button
               onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('All Services');
                 setSelectedPriceRange('all');
               }}
+<<<<<<< HEAD
               className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'            >                setSelectedPriceRange('all')
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
+=======
+              className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               Clear All Filters
             </button>
@@ -793,8 +1085,12 @@ export default function ComprehensiveServicesShowcase2025() {
       </div>
       {/* CTA Section */}
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -812,6 +1108,7 @@ export default function ComprehensiveServicesShowcase2025() {
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <a
                 href='/contact'
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105'              >
                 Get Started Today
               </a>
@@ -827,13 +1124,20 @@ export default function ComprehensiveServicesShowcase2025() {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+=======
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Get Started Today
               </a>
               <a
                 href='/pricing'
+<<<<<<< HEAD
                 className='border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'                href="/pricing"
                 className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
+=======
+                className='border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 View Pricing Plans
               </a>
@@ -843,7 +1147,11 @@ export default function ComprehensiveServicesShowcase2025() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () )
+=======
+  filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () )
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
   case 'popular': return b.customers - a.customers;
@@ -858,16 +1166,32 @@ description"content=" Explore our complete portfolio of innovative micro SAAS, A
 top: `$ {
   Math.random () * 100
 }%`
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }/>) )
 }</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"> <motion.div initial= {
   {
   opacity: 0, y: 30
+<<<<<<< HEAD
 }animate= {
   {
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.8
+=======
+
+}animate= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h1 className=" text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6"> <span className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Comprehensive </span> <br /> <span className=" text-white">Services Showcase</span> </h1> </motion.div>) )
 }</div> /> </div> </div> </motion.div> </div> </div> key= {
   category.name
@@ -907,6 +1231,7 @@ top: `$ {
 }</div> <motion.div initial= {
   {
   opacity: 0, y: 30
+<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -918,3 +1243,19 @@ top: `$ {
   once: true
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 }
+=======
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+}viewport= {
+  {
+  once: true
+
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

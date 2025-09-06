@@ -2,6 +2,7 @@ import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
@@ -43,6 +44,41 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+=======
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Rocket,
+  Brain,
+  Atom,
+  Building,
+  Briefcase,
+  Microscope,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,
+  Database,;
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const serviceCategories = [
   {
     title: 'AI & Machine Learning'
@@ -61,6 +97,7 @@ const serviceCategories = [
         href: '/autonomous-business-operations-platform'
       }
       {
+<<<<<<< HEAD
         name: 'AI-Powered IT Asset Management'
         href: '/ai-powered-it-asset-management'
       }
@@ -81,9 +118,26 @@ const serviceCategories = [
   },  {      { name: 'Computer Vision', href: '/computer-vision' }
     ]
   }
+=======
+        name: 'AI-Powered IT Asset Management',
+        href: '/ai-powered-it-asset-management',
+      },
+    ],
+  },
+  {
+    title: '🧠 AI & Technology',
+    services: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'Machine Learning', href: '/machine-learning' },
+      { name: 'Natural Language Processing', href: '/nlp-services' },
+      { name: 'Computer Vision', href: '/computer-vision' },
+    ],
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   {
     title: '⚛️ Quantum & Emerging Tech'
     services: [
+<<<<<<< HEAD
       { name: 'Quantum Computing', href: '/quantum-computing' }
       { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
       { name: 'IoT Platforms', href: '/iot-platforms' }
@@ -92,9 +146,18 @@ const serviceCategories = [
   },  {      { name: 'Space Technology', href: '/space-tech' }
     ]
   }
+=======
+      { name: 'Quantum Computing', href: '/quantum-computing' },
+      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+      { name: 'IoT Platforms', href: '/iot-platforms' },
+      { name: 'Space Technology', href: '/space-tech' },
+    ],
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   {
     title: '🏙️ Enterprise Solutions'
     services: [
+<<<<<<< HEAD
       { name: 'Enterprise IT', href: '/enterprise-it' }
       { name: 'Cloud Solutions', href: '/cloud-solutions' }
       { name: 'Cybersecurity', href: '/cybersecurity' }
@@ -103,8 +166,17 @@ const serviceCategories = [
   },];      { name: 'DevOps Automation', href: '/devops-automation' }
     ]
   }
+=======
+      { name: 'Enterprise IT', href: '/enterprise-it' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'DevOps Automation', href: '/devops-automation' },
+    ],
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const quickLinks = [
+<<<<<<< HEAD
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
   { name: 'Solutions', href: '/solutions', icon: Rocket }
@@ -142,10 +214,50 @@ const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
+=======
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Rocket },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'Support', href: '/support', icon: MessageCircle },
+  { name: 'Privacy', href: '/privacy', icon: Shield },
+];
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin,
+    color: 'hover:text-blue-400',
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/ziontechgroup',
+    icon: Twitter,
+    color: 'hover:text-sky-400',
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/Zion-Holdings',
+    icon: Github,
+    color: 'hover:text-gray-400',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: Youtube,
+    color: 'hover:text-red-500',
+  },
+];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const footerSections = [
   {
     title: 'Company'
     links: [
+<<<<<<< HEAD
       { name: 'About Us', href: '/about' }
       { name: 'Our Mission', href: '/mission' }
       { name: 'Leadership Team', href: '/team' }
@@ -199,6 +311,51 @@ const UltraFuturisticFooter2029 = () => {
     ]
   }
 ];
+=======
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Mission', href: '/mission' },
+      { name: 'Leadership Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Press & Media', href: '/press' },
+      { name: 'Partnerships', href: '/partnerships' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'Quantum Technology', href: '/quantum-technology' },
+      { name: 'IT Infrastructure', href: '/it-infrastructure' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Blockchain', href: '/blockchain-solutions' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' },
+      { name: 'Support Center', href: '/support' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookie Policy', href: '/cookies' },
+      { name: 'Data Protection', href: '/data-protection' },
+      { name: 'Accessibility', href: '/accessibility' },
+      { name: 'Compliance', href: '/compliance' },
+    ],
+  },
+];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const UltraFuturisticFooter2029 = () => {
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>
@@ -239,6 +396,7 @@ const UltraFuturisticFooter2029 = () => {
               </div>
               <div className='flex items-center space-x-3 text-gray-400'>
                 <MapPin className='w-4 h-4' />
+<<<<<<< HEAD
                 <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
             {/* Social Links */}
             <div className='flex space-x-4'>
@@ -259,6 +417,9 @@ const UltraFuturisticFooter2029 = () => {
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="w-4 h-4" />
                 <span className="text-sm">{contactInfo.address}</span>
+=======
+                <span className='text-sm'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
             {/* Social Links */}
@@ -271,6 +432,7 @@ const UltraFuturisticFooter2029 = () => {
                   rel='noopener noreferrer'
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
                 >
+<<<<<<< HEAD
                   <social.icon className='w-5 h-5' />                </a>                <a
                   key={social.name}
                   href={social.href}
@@ -279,6 +441,9 @@ const UltraFuturisticFooter2029 = () => {
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
                 >
                   <social.icon className="w-5 h-5" />
+=======
+                  <social.icon className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
               ))}
             </div>
@@ -301,6 +466,7 @@ const UltraFuturisticFooter2029 = () => {
                           href={service.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'
                         >
+<<<<<<< HEAD
                           <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />                          <span>{service.name}</span>              {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{category.title}</h5>
@@ -312,6 +478,9 @@ const UltraFuturisticFooter2029 = () => {
                           className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group"
                         >
                           <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+=======
+                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           <span>{service.name}</span>
                         </Link>
                       </li>
@@ -333,12 +502,16 @@ const UltraFuturisticFooter2029 = () => {
                   href={link.href}
                   className='flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
                 >
+<<<<<<< HEAD
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>                <Link
                   key={link.name}
                   href={link.href}
                   className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50"
                 >
                   <link.icon className="w-4 h-4" />
+=======
+                  <link.icon className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>{link.name}</span>
                 </Link>
               ))}
@@ -358,6 +531,7 @@ const UltraFuturisticFooter2029 = () => {
                       <li key={link.name}>
                         <Link
                           href={link.href}
+<<<<<<< HEAD
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200'                        >                <div key={section.title}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section.title}</h5>
                   <ul className="space-y-2">
@@ -366,6 +540,9 @@ const UltraFuturisticFooter2029 = () => {
                         <Link
                           href={link.href}
                           className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+=======
+                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         >
                           {link.name}
                         </Link>
@@ -401,6 +578,7 @@ const UltraFuturisticFooter2029 = () => {
               <Link
                 href='/cookies'
                 className='hover:text-white transition-colors'
+<<<<<<< HEAD
               >                Cookie Policy              © 2025 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -411,6 +589,9 @@ const UltraFuturisticFooter2029 = () => {
                 Terms of Service
               </Link>
               <Link href="/cookies" className="hover:text-white transition-colors">
+=======
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Cookie Policy
               </Link>
             </div>
@@ -435,6 +616,7 @@ const UltraFuturisticFooter2029 = () => {
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               />
+<<<<<<< HEAD
               <button className='px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>                Subscribe              Stay Updated with Innovation
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -448,6 +630,9 @@ const UltraFuturisticFooter2029 = () => {
                 className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
+=======
+              <button className='px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Subscribe
               </button>
             </div>
@@ -456,8 +641,15 @@ const UltraFuturisticFooter2029 = () => {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraFuturisticFooter2029;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

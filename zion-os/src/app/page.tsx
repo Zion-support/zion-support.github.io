@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import FeatureCard from './components/FeatureCard'
+=======
+import FeatureCard from './components/FeatureCard';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function HomePage() {
   const features = [
     {

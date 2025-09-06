@@ -32,6 +32,11 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EducationFormFields({
   isEditing
   onSubmit

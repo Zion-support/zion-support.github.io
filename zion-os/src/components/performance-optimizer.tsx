@@ -40,9 +40,21 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
     }
     return this.props.children;
   }
+<<<<<<< HEAD
 }
 // Loading spinner component;
 export function LoadingSpinner({ size = "md", className = "" }: {size?: "sm" | "md" | "lg";
+=======
+
+// Loading spinner component
+}
+
+export function LoadingSpinner({
+  size = 'md',
+  className = '',
+}: {
+  size?: 'sm' | 'md' | 'lg';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   className?: string;
 }) {const sizeClasses = {;
     sm: "w-4 h-4";
@@ -52,9 +64,21 @@ export function LoadingSpinner({ size = "md", className = "" }: {size?: "sm" | "
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
+<<<<<<< HEAD
 }
 // Skeleton loading component;
 export function Skeleton({ className = "", lines = 1 }: {className?: string;
+=======
+
+// Skeleton loading component
+}
+
+export function Skeleton({
+  className = '',
+  lines = 1,
+}: {
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   lines?: number;
 }) {return (;
     <div className={`animate-pulse ${className}`}>;
@@ -67,12 +91,25 @@ export function Skeleton({ className = "", lines = 1 }: {className?: string;
       ))}
     </div>;
   );
+<<<<<<< HEAD
 }
 // Performance monitoring hook;
 export function usePerformanceMonitor(componentName: string) {const startTime = window.window.window.performance.now();
   return {;
     endMeasure: () => {;
       const endTime = window.window.window.performance.now();
+=======
+
+// Performance monitoring hook
+}
+
+export function usePerformanceMonitor(componentName: string) {
+  const startTime = performance.now();
+
+  return {
+    endMeasure: () => {
+      const endTime = performance.now();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const duration = endTime - startTime;
       // Log performance metrics in development;
       if (process.env.NODE_ENV === "development") {;
@@ -82,12 +119,23 @@ export function usePerformanceMonitor(componentName: string) {const startTime = 
       if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
+<<<<<<< HEAD
     }
   }
 }
 // Intersection observer hook for lazy loading;
 export function useIntersectionObserver(;
   ref: React.RefObject<HTMLElement>;
+=======
+    },
+  };
+
+// Intersection observer hook for lazy loading
+}
+
+export function useIntersectionObserver(
+  ref: React.RefObject<HTMLElement>,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   options: IntersectionObserverInit = {}
 ) {const [isIntersecting, setIsIntersecting] = useState(false);
   useEffect(() => {;
@@ -100,11 +148,23 @@ export function useIntersectionObserver(;
     return () => observer.disconnect();
   }, [ref, options]);
   return isIntersecting;
+<<<<<<< HEAD
 }
 // Debounced search hook for better performance;
 export function useDebounce<T>(value: T, delay: number): T {const [debouncedValue, setDebouncedValue] = useState<T>(value);
   useEffect(() => {;
     const handler = setTimeout(() => {;
+=======
+
+// Debounced search hook for better performance
+}
+
+export function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       setDebouncedValue(value);
     }, delay);
     return () => {clearTimeout(handler);

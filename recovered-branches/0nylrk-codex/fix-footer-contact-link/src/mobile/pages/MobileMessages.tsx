@@ -68,11 +68,24 @@ const mockMessages: Message[] = [
     isMe: true
     status: "read"}
   {
+<<<<<<< HEAD
     id: "5"
     content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
     timestamp: "10:45 AM"
     isMe: false
     status: "read"}]
+=======
+    id: '5',
+    content:
+      "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?",
+    timestamp: '10:45 AM',
+    isMe: false,
+    status: 'read',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileMessages() {
   const [activeConversation, setActiveConversation] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>(mockMessages);
@@ -121,5 +134,38 @@ export function MobileMessages() {
         </>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+  id: string;
+content: string;
+timestamp: string;
+isMe: boolean;
+}
+
+export function MobileMessages () {
+  const [activeConversation, setActiveConversation] = useState<string | null> (null);
+const [messages, setMessages] = useState<Message[]> (mockMessages);
+const handleSelectConversation = (id: string) => {
+  setActiveConversation (id) 
+};
+const handleBack = () => {
+  setActiveConversation (null) 
+};
+const newMessage: Message = {
+  id: `$ {
+  Date.now () 
+}`;
+content;
+timestamp: "Just now";
+isMe: true;
+/>) : (<> <MobileHeader title="Messages" /> <main className="flex-1 overflow-y-auto" > <MobileConversationList conversations= {
+  mockConversations 
+}onSelectConversation= {
+  handleSelectConversation 
+}/> </main> <BottomNavigation /> </>) 
+}</div>) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

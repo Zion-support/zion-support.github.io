@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from 'lucide-react'
+=======
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { CheckIcon } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 interface StepProps {
 <<<<<<< HEAD
   status: "incomplete" | "current" | "complete";
   label: string;
   description?: string;
+<<<<<<< HEAD
 =======
   status: "incomplete" | "current" | "complete"
   label: string
@@ -31,6 +38,13 @@ export function Step({
           "opacity-60": status === "incomplete"}
         className
       )}
+=======
+  className?: string;
+}
+
+export function Step({ status, label, description, className }: StepProps) {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div
         className={cn(
@@ -67,10 +81,18 @@ export function Step({
   )
 }
 interface StepsProps {
+<<<<<<< HEAD
   currentStep: number
   className?: string
   children: React.ReactNode
 }
+=======
+  currentStep: number;
+  className?: string;
+  children: React.ReactNode;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
   return (
@@ -96,6 +118,13 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }/> </div> </div> </div>)
 }"}
+=======
+  );
+
+}/> </div> </div> </div>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

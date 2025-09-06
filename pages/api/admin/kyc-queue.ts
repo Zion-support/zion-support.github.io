@@ -3,13 +3,19 @@ import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
+=======
+
+const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
+<<<<<<< HEAD
 =======
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
@@ -18,13 +24,16 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   } catch {
-    return {}
+    return {};
   }
 }
 function save(db: Record<string, KycProfile>) {
 <<<<<<< HEAD
   fs.mkdirSync(DATA_DIR, { recursive: true });
+<<<<<<< HEAD
 =======
 fs.mkdirSync(DATA_DIR, { recursive: true })
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -37,9 +46,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const profiles = Object.values(db);
     return res.status(200).json({ ok: true, profiles });
+=======
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const db = load();
+  if (req.method === 'GET') {
+    const queue = Object.values(db).filter((p) => 
+      p.status === 'submitted' || p.status === 'needs_more_info'
+    );
+    return res.status(200).json({ ok: true, queue });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   
   if (req.method === 'POST') {
+<<<<<<< HEAD
     const { id, status } = req.body;
     if (!id || !status) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -86,3 +108,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    const { userId, action, reason } = req.body as { 
+      userId?: string; 
+      action?: 'approve' | 'reject' | 'needs_more_info'; 
+      reason?: string; 
+    };
+    if (!userId || !action) {
+      return res.status(400).json({ error: 'Missing userId or action' });
+    }
+    const profile = db[userId];
+    if (!profile) return res.status(404).json({ error: 'Profile not found' });
+
+    const now = new Date().toISOString();
+    if (action === 'approve') profile.status = 'approved';
+    if (action === 'reject') profile.status = 'rejected';
+    if (action === 'needs_more_info') profile.status = 'needs_more_info';
+    profile.lastUpdatedAt = now;
+    profile.auditTrail.push({
+      at: now,
+      by: 'admin',
+      action: `admin_${action}`,
+      details: reason ? { reason } : undefined,
+    });
+
+    db[userId] = profile;
+    save(db);
+    return res.status(200).json({ ok: true, profile });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

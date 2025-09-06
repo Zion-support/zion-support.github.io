@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ClientHirePage() {
@@ -8,6 +9,24 @@ export default function ClientHirePage() {
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
   const [agreementUrl, setAgreementUrl] = useState("");
+=======
+import { useState } from 'react';
+import FeedbackModal from '../../components/ui/FeedbackModal';
+}
+
+export default function ClientHirePage() {
+  const [talentSlug, setTalentSlug] = useState('ava-chen');
+  const [startDateIso, setStartDateIso] = useState<string>(
+    new Date().toISOString().slice(0, 10)
+  );
+  const [scopeSummary, setScopeSummary] = useState(
+    'Build AI-enabled reporting module'
+  );
+  const [termsType, setTermsType] = useState('hourly');
+  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
+  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
+  const [agreementUrl, setAgreementUrl] = useState('');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false);
@@ -15,10 +34,13 @@ export default function ClientHirePage() {
     setLoading(true);
     setResult(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const paymentTerms = null;
       setShowFeedback(true)
     }
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const paymentTerms =
       termsType === 'hourly'
         ? { type: 'hourly', hourlyRateUsd }
@@ -46,8 +68,13 @@ export default function ClientHirePage() {
       alert(json.error |'Failed to send offer');
     } else {
       setResult(json.offer);
+<<<<<<< HEAD
       setShowFeedback(true);    }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      setShowFeedback(true);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
@@ -113,8 +140,15 @@ export default function ClientHirePage() {
               value={fixedAmountUsd}
               onChange={e => setFixedAmountUsd(Number(e.target.value))}
               className='w-full border rounded px-3 py-2'
+<<<<<<< HEAD
             />          </div>
         )}
+=======
+            />
+          </div>
+        )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div>
           <label className='block text-sm font-medium'>
             Agreement URL (optional)
@@ -132,13 +166,23 @@ export default function ClientHirePage() {
             disabled={loading}
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
+<<<<<<< HEAD
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
+=======
+            {loading ? 'Sending…' : 'Send Offer to Confirm'}
+          </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
       {result && (
         <div className='border rounded p-4 bg-emerald-50'>
           <div className='font-medium'>Offer sent</div>
+<<<<<<< HEAD
           <div className='text-sm'>Offer ID: {result.id}</div>        </div>
+=======
+          <div className='text-sm'>Offer ID: {result.id}</div>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       )}
       <FeedbackModal
         isOpen={showFeedback}
@@ -153,4 +197,8 @@ export default function ClientHirePage() {
         }}
       />
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

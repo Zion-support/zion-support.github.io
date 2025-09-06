@@ -12,8 +12,14 @@ import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface WorkspaceHeaderProps {
+<<<<<<< HEAD
   company: Company
 }
+=======
+  company: Company;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className="space-y-6">

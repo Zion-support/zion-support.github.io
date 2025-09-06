@@ -17,9 +17,16 @@ type EnhancementType =
 export interface AIEnhancementOptions {
   enhancementType: EnhancementType;
   content?: string;
+<<<<<<< HEAD
   context?: string
   instructions?: string
 }
+=======
+  context?: string;
+  instructions?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useAIContentEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -59,9 +66,16 @@ export function useAIContentEnhancer() {
     }
   }
   return {
+<<<<<<< HEAD
     enhanceContent;
     isEnhancing;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     error
   }
 }
+=======
+    enhanceContent,
+    isEnhancing,
+    error,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

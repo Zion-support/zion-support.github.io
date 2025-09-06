@@ -5,9 +5,14 @@ import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from 
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 interface MobileBottomNavProps {
+<<<<<<< HEAD
   unreadCount?: number
 }
 <<<<<<< HEAD
+=======
+  unreadCount?: number;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function MobileBottomNav({ unreadCount;
 =======

@@ -1,4 +1,9 @@
 import { FormEvent, useState } from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
@@ -22,9 +27,15 @@ export default function VendorRegisterPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           slug: String(payload.slug)
           name: String(payload.name)
           servicesOffered: String(payload.servicesOffered |'')
+=======
+          slug: String(payload.slug),
+          name: String(payload.name),
+          servicesOffered: String(payload.servicesOffered || '')
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             .split(',')
             .map(s => s.trim())
             .filter(Boolean)
@@ -44,6 +55,7 @@ export default function VendorRegisterPage() {
     } catch (err: any) {
       setMessage(err.message);
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
   }
   return (            .map(s => s.trim())
@@ -64,6 +76,9 @@ export default function VendorRegisterPage() {
       setMessage(err.message)
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -133,5 +148,9 @@ export default function VendorRegisterPage() {
       {message && <div className='text-sm'>{message}</div>}
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

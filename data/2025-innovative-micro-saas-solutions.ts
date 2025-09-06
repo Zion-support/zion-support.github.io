@@ -3,8 +3,13 @@ export const innovativeMicroSaasSolutions2025 = null;
 =======
 export const innovativeMicroSaasSolutions2025 = [
   {
+<<<<<<< HEAD
     id: 'ai-powered-customer-feedback-analyzer'
     name: 'AI-Powered Customer Feedback Analyzer'
+=======
+    id: 'ai-powered-customer-feedback-analyzer',
+    name: 'AI-Powered Customer Feedback Analyzer',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.'
       'Multi-channel feedback collection (email, social media, surveys, reviews)'
@@ -417,6 +422,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization'
     ]
     integrations: [
+<<<<<<< HEAD
       'CRM systems'
       'E-commerce platforms'
       'Analytics tools'
@@ -432,3 +438,14 @@ export const innovativeMicroSaasSolutions2025 = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'CRM systems',
+      'E-commerce platforms',
+      'Analytics tools',
+      'Social media platforms',
+      'Marketing tools',
+    ],
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

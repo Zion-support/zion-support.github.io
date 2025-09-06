@@ -20,8 +20,14 @@ import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
+<<<<<<< HEAD
   talent?: TalentProfile
 }
+=======
+  talent?: TalentProfile;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
     <>

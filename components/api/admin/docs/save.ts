@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -18,30 +19,58 @@ function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })
   }
+=======
+const ts = new Date () .toISOString ()
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method Not Allowed' })
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
   }
+=======
+    return res.status(405).json({ error: 'Method Not Allowed' });
+ 
+}
+
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+ 
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
     const body = req.body;
+<<<<<<< HEAD
     const jsonString =
       typeof body === 'string' ? body : JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+=======
+
+    const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const ts = new Date()
       .toISOString()
       .replace(/[-:T.Z]/g, '')
       .slice(0, 14);
     fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     res.status(200).json({ ok: true, version: ts });
   } catch (e) {
     res.status(500).json({ error: 'Failed to save content' });
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } catch (e) {
     res.status(500).json({ error: 'Failed to save content' })
@@ -49,3 +78,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Failed to save content' })
   }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

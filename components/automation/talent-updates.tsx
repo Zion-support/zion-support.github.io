@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
@@ -39,3 +40,7 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
     </div>
 );
 }
+=======
+ </div>) )
+}</div> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -94,6 +94,7 @@ self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background
 // "Notification": click;
 self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+<<<<<<< HEAD
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB; "return": []}
 });
 // Check if request is for a static asset;
@@ -149,3 +150,8 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+=======
+async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+;
+  "return": []};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

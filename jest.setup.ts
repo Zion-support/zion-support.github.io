@@ -2,12 +2,23 @@
 import '@testing-library/jest-dom';
 // Mock global objects that might not be available in test environment
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
+<<<<<<< HEAD
   observe: jest.fn()
   unobserve: jest.fn()
   disconnect: jest.fn(),}));}));
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
+=======
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   value: jest.fn().mockImplementation(query => ({
     matches: false
     media: query
@@ -37,7 +48,12 @@ beforeAll(() => {
       return;
     }
     originalConsoleError.call(console, ...args);
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   console.warn = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
@@ -51,4 +67,8 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

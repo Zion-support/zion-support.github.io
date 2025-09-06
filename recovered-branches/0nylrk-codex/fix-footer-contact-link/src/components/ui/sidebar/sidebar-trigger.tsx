@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import * as React from 'react';
+import { PanelLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import { useSidebar } from './sidebar-context';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import * as React from &quot;react&quot;
 import { PanelLeft } from &quot;lucide-react&quot;

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type EnterpriseITSolution = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type EnterpriseITSolution = {
   id: string;
   name: string;
@@ -24,7 +27,13 @@ export type EnterpriseITSolution = {
   realService?: boolean;
   rating?: number;
   launchDate?: string;
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
   {
     id: 'zero-trust-network-architecture'
@@ -176,6 +185,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 ];
 realService: true;
 launchDate: '2025-11-01'
+<<<<<<< HEAD
 }
 link: 'https://ziontechgroup.com/services/platform-engineering-foundation';
 realService: true;
@@ -303,3 +313,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	}
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+link: 'https://ziontechgroup.com/services/platform-engineering-foundation';
+realService: true;
+rating: 4.8
+};
+link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
+realService: true
+}];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

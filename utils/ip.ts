@@ -1,4 +1,9 @@
 import type { NextApiRequest } from 'next';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
   const ip =
@@ -8,6 +13,7 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (!ip) return null;
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
+<<<<<<< HEAD
 }
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
@@ -17,3 +23,5 @@ export function getClientIp(req: any): string {
   }
   return remoteAddress |'unknown';
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

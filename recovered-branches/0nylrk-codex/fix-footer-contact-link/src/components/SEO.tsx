@@ -12,8 +12,14 @@ interface SEOProps {
   ogImage?: string;
   ogUrl?: string;
   canonical?: string;
+<<<<<<< HEAD
   noindex?: boolean
 }
+=======
+  noindex?: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SEO({
   title;
   description;
@@ -51,5 +57,9 @@ export function SEO({
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

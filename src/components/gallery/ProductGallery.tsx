@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import { Dialog;
   DialogContent;
@@ -31,18 +30,34 @@ const ModelViewer = React.lazy(async () => {
   }
 })
 interface ProductGalleryProps {
+<<<<<<< HEAD
   images: string[]
   videoUrl?: string
   modelUrl?: string
+=======
+  images: string[];
+  videoUrl?: string;
+  modelUrl?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProductGallery({
   images
   videoUrl
   modelUrl
 }: ProductGalleryProps) {
+<<<<<<< HEAD
   const [selected, setSelected] = useState(0)
   const [zoomOpen, setZoomOpen] = useState(false)
   const [zoomed, setZoomed] = useState(false)
   const poster = images[0]
+=======
+  const [selected, setSelected] = useState(0);
+  const [zoomOpen, setZoomOpen] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
+  const poster = images[0];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       onOpenChange={o => {
         setZoomOpen(o)
         if (!o) setZoomed(false)
@@ -144,6 +159,10 @@ export function ProductGallery({
         </DialogContent>
       )}
     </Dialog>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

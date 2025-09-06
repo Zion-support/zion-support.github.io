@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
@@ -28,6 +29,36 @@ import { Label } from '@/components/ui/label'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Slider } from '@/components/ui/slider';
+import { Switch } from '@/components/ui/switch';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { X, Filter } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetFooter,
+  SheetTrigger,;
+} from '@/components/ui/sheet';
+import { Badge } from '@/components/ui/badge';
+import { Label } from '@/components/ui/label';
+
+interface BrowseFiltersProps {
+  type: 'jobs' | 'talents';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const addFilter = null;
@@ -256,5 +287,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

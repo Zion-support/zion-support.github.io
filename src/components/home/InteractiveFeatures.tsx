@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Card
   CardContent
@@ -13,7 +17,11 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 interface InteractiveFeaturesProps {
   className?: string;
+<<<<<<< HEAD
   style?: React.CSSProperties
+=======
+  style?: React.CSSProperties;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
@@ -131,6 +139,13 @@ export function InteractiveFeatures({
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 export default InteractiveFeatures
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+}
+
+export default InteractiveFeatures;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -20,6 +20,7 @@ interface TemplateListProps {
   templates: ContractTemplate[];
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
+<<<<<<< HEAD
 =======
   templates: ContractTemplate[]
   isLoading: boolean
@@ -27,6 +28,11 @@ interface TemplateListProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onEdit: (template: ContractTemplate) => void
 }
+=======
+  onEdit: (template: ContractTemplate) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TemplateList({
   templates;
   isLoading;

@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnhancedNewsletterForm() {
 <<<<<<< HEAD
 
@@ -122,5 +133,9 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

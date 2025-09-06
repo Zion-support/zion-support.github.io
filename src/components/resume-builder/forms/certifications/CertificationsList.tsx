@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -25,6 +26,25 @@ interface CertificationsListProps {
   onDelete: (id: string) => void
 }
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+=======
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Edit, Trash2 } from 'lucide-react';
+import { format } from 'date-fns';
+
+interface CertificationsListProps {
+  certifications: Certification[];
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;
+}
+
+export function CertificationsList({
+  certifications,
+  onEdit,
+  onDelete,
+}: CertificationsListProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (certifications.length === 0) {
     return null
   }
@@ -52,6 +72,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                       · Expires:{' '}
                       {typeof cert.expiration_date === 'string'
                         ? cert.expiration_date
+<<<<<<< HEAD
                         : format(cert.expiration_date, 'MMM yyyy')}                    </>
                   )}
                 </p>
@@ -71,6 +92,9 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                     <> · Expires: {typeof cert.expiration_date === 'string'
                       ? cert.expiration_date
                       : format(cert.expiration_date, 'MMM yyyy')}
+=======
+                        : format(cert.expiration_date, 'MMM yyyy')}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </>
                   )}
                 </p>
@@ -91,11 +115,17 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   variant='ghost'
                   size='icon'
                   onClick={() => onDelete(cert.id!)}
+<<<<<<< HEAD
                   aria-label='Delete certification'                >
                   <Trash2 className='h-4 w-4' />                </Button>
               </div>
             </div>
             {cert.credential_url && (                  <Trash2 className="h-4 w-4" />
+=======
+                  aria-label='Delete certification'
+                >
+                  <Trash2 className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               </div>
             </div>
@@ -105,12 +135,17 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   href={cert.credential_url}
                   target='_blank'
                   rel='noopener noreferrer'
+<<<<<<< HEAD
                   className='text-primary hover:underline'                >              <p className="text-xs mt-2">
                 <a
                   href = {cert.credential_url,}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
+=======
+                  className='text-primary hover:underline'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   View credential
                 </a>
               </p>
@@ -119,5 +154,9 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

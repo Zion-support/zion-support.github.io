@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type PersonaConfig = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
   cloneStyleText?: string;
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
     voice: 'Visionary'
@@ -17,6 +27,7 @@ export default function StudioHostPage() {
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+<<<<<<< HEAD
   );}
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
@@ -24,6 +35,10 @@ export default function StudioHostPage() {
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+=======
+  );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
@@ -32,8 +47,13 @@ export default function StudioHostPage() {
     setGenerating(true);
     try {
       const res = await fetch('/api/podcast/generate', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           persona
           invitee: { name: inviteeName, bio: inviteeBio }
@@ -47,6 +67,7 @@ export default function StudioHostPage() {
       console.error(e);
       alert('Failed to generate episode');
     } finally {
+<<<<<<< HEAD
       setGenerating(false);    }      const data = await res.json();
       setEpisode(data.episode)
     } catch (e) {
@@ -54,6 +75,9 @@ export default function StudioHostPage() {
       alert('Failed to generate episode')
     } finally {
       setGenerating(false)
+=======
+      setGenerating(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   const handleSynthesize = async () => {
@@ -61,9 +85,15 @@ export default function StudioHostPage() {
     setSynthesizing(true);
     try {
       const res = await fetch('/api/podcast/synthesize', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ episodeId: episode.id, persona })
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ episodeId: episode.id, persona }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setEpisode(data.episode);
@@ -71,6 +101,7 @@ export default function StudioHostPage() {
       console.error(e);
       alert('Failed to synthesize audio');
     } finally {
+<<<<<<< HEAD
       setSynthesizing(false);    }      const data = await res.json();
       setEpisode(data.episode)
     } catch (e) {
@@ -78,6 +109,9 @@ export default function StudioHostPage() {
       alert('Failed to synthesize audio')
     } finally {
       setSynthesizing(false)
+=======
+      setSynthesizing(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   const handlePublishRss = async () => {
@@ -91,6 +125,7 @@ export default function StudioHostPage() {
       console.error(e);
       alert('Failed to update RSS');
     } finally {
+<<<<<<< HEAD
       setPublishing(false);    }
   }
   return (
@@ -102,6 +137,9 @@ export default function StudioHostPage() {
       alert('Failed to update RSS')
     } finally {
       setPublishing(false)
+=======
+      setPublishing(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -147,6 +185,7 @@ export default function StudioHostPage() {
               onChange={e =>
                 setPersona({ ...persona, cloneStyleText: e.target.value })
               }
+<<<<<<< HEAD
             />          </div>
         </div>
       </section>
@@ -155,6 +194,13 @@ export default function StudioHostPage() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>
         </div>
       </section>
+=======
+            />
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>Episode Generator</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -197,6 +243,7 @@ export default function StudioHostPage() {
           className='px-4 py-2 bg-blue-600 text-white rounded'
           onClick={handleGenerate}
           disabled={generating}
+<<<<<<< HEAD
         >          {generating ? 'Generating…' : 'Generate Episode'}
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">AI Persona</h2>
@@ -241,6 +288,9 @@ export default function StudioHostPage() {
           </div>
         </div>
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+=======
+        >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
@@ -252,6 +302,7 @@ export default function StudioHostPage() {
             <h3 className='text-lg font-bold'>{episode.title}</h3>
             <div>
               <h4 className='font-semibold'>Questions</h4>
+<<<<<<< HEAD
               <ol className='list-decimal list-inside space-y-1'>                {episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
@@ -260,6 +311,10 @@ export default function StudioHostPage() {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
+=======
+              <ol className='list-decimal list-inside space-y-1'>
+                {episode.questions?.map((q: string, idx: number) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <li key={idx}>{q}</li>
                 ))}
               </ol>
@@ -300,6 +355,7 @@ export default function StudioHostPage() {
                 className='px-4 py-2 bg-gray-800 text-white rounded'
                 onClick={handlePublishRss}
                 disabled={publishing}
+<<<<<<< HEAD
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
@@ -324,6 +380,9 @@ export default function StudioHostPage() {
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>
               <button className="px-4 py-2 bg-gray-800 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
+=======
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
@@ -352,14 +411,22 @@ export default function StudioHostPage() {
                   >
                     Download MP4
                   </a>
+<<<<<<< HEAD
                 )}              </div>              <div className="flex gap-3">
                 {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
                 {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
                 {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+=======
+                )}
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             )}
           </div>
         </section>
       )}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

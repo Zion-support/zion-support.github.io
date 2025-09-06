@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Search, Sliders } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -6,8 +13,12 @@ import { Input } from "@/components/ui/input";
 interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
+<<<<<<< HEAD
   setIsMobileFilterOpen: (isOpen: boolean) => void
 <<<<<<< HEAD
+=======
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function MobileFilterBar({ 
@@ -47,5 +58,9 @@ export function MobileFilterBar({
         </p>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

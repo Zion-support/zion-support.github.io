@@ -27,6 +27,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void;
   toggleArchive: (id: string, isArchived: boolean) => void;
   deleteQuote: (id: string) => void;
+<<<<<<< HEAD
 =======
   quotes: QuoteRequest[]
   isArchived?: boolean;
@@ -37,6 +38,11 @@ interface QuotesTableProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onViewDetails: (quote: QuoteRequest) => void
 }
+=======
+  onViewDetails: (quote: QuoteRequest) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes;
 <<<<<<< HEAD

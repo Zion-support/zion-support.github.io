@@ -19,9 +19,14 @@ interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
+<<<<<<< HEAD
   userDetails?: UserProfile
 }
 <<<<<<< HEAD
+=======
+  userDetails?: UserProfile;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
   const handleClose = null;

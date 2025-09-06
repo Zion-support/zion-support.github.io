@@ -1,5 +1,9 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
   const abs = path.resolve(__dirname, '....', relPath);
@@ -43,6 +47,7 @@ exports.handler = async () => {
   );
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath)
@@ -77,3 +82,8 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  return { statusCode: 200, body: logs.join('\n') };
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -39,7 +39,14 @@ const MobileLaunchPage: React.FC = () => {
       <MobileEmailCapture />
       <AppStoreBanner />
     </AppLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default MobileLaunchPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

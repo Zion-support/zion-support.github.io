@@ -24,12 +24,18 @@ interface PaymentTermsFieldsProps {
 <<<<<<< HEAD
   form: UseFormReturn<ContractFormValues>;
   talent: TalentProfile;
+<<<<<<< HEAD
 =======
   form: UseFormReturn<ContractFormValues>
   talent: TalentProfile
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
+=======
+  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PaymentTermsFields({
   form;
   talent;

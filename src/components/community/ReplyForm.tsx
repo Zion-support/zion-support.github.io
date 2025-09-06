@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,;
+} from '@/components/ui/form';
+import { Card, CardContent } from '@/components/ui/card';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -25,8 +40,12 @@ interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 interface ReplyFormValues {
+<<<<<<< HEAD
   content: string
 <<<<<<< HEAD
+=======
+  content: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ReplyForm = null;
@@ -75,7 +94,15 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 export default ReplyForm
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default ReplyForm;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

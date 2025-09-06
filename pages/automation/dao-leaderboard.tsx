@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/dao-leaderboard.json';
 export default function DaoLeaderboardPage() {
@@ -27,3 +28,7 @@ export default function DaoLeaderboardPage() {
     </EnhancedLayout>
   )
 }
+=======
+// @ts-ignore </li>) )
+}</ul> </div> </EnhancedLayout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

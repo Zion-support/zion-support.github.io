@@ -3,7 +3,13 @@ import { Button  } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
 interface SocialShareButtonsProps {
+<<<<<<< HEAD
   title: string
+=======
+  title: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 <<<<<<< HEAD
   const shareUrl = null;
@@ -75,6 +81,10 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
         </Button>
       ))}
     </div>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

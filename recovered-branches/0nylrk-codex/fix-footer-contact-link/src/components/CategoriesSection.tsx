@@ -41,9 +41,18 @@ const specialServices = [
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface CategoriesSectionProps {
+<<<<<<< HEAD
   showTitle?: boolean
 }
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+=======
+  showTitle?: boolean;
+}
+
+export function CategoriesSection({
+  showTitle = true,
+}: CategoriesSectionProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">

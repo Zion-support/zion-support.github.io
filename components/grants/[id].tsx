@@ -2,6 +2,7 @@ import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
+<<<<<<< HEAD
 export default function GrantDetailPage() {
 <<<<<<< HEAD
   const router = null;
@@ -10,6 +11,13 @@ export default function GrantDetailPage() {
   const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id: string }
+=======
+}
+
+export default function GrantDetailPage() {
+  const router = useRouter();
+  const { id } = router.query as { id: string };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
@@ -19,12 +27,20 @@ export default function GrantDetailPage() {
     fetch(`/api/grants/${id}`)
       .then(r => r.json())
       .then(d => setItem(d.record))
+<<<<<<< HEAD
       .finally(() => setLoading(false));  }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
+=======
+      .finally(() => setLoading(false));
+  }, [id]);
+
+  const addUpdate = async () => {
+    if (!id || !updateContent.trim()) return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const resp = await fetch(`/api/grants/${id}/updates`, {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -104,6 +120,7 @@ export default function GrantDetailPage() {
                         {l}
                       </a>
                     </li>
+<<<<<<< HEAD
                   ))}                </ul>              <div className="mt-2">
                 <div className="text-sm font-medium">Supporting Links</div>
                 <ul className="list-disc list-inside text-sm">
@@ -111,6 +128,14 @@ export default function GrantDetailPage() {
               </div>
             )}
           </section>
+=======
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h2 className='font-medium mb-2'>Updates</h2>
             <div className='space-y-3'>
@@ -141,6 +166,7 @@ export default function GrantDetailPage() {
                   className='mt-2 px-3 py-2 bg-gray-900 text-white rounded'
                 >
                   Add Update
+<<<<<<< HEAD
                 </button>              </div>          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h2 className="font-medium mb-2">Updates</h2>
             <div className="space-y-3">
@@ -157,6 +183,14 @@ export default function GrantDetailPage() {
             </div>
           </section>
         </div>
+=======
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <aside className='space-y-4'>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h3 className='font-medium mb-2'>Milestones</h3>
@@ -196,6 +230,7 @@ export default function GrantDetailPage() {
           </section>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h3 className='font-medium mb-2'>Team</h3>
+<<<<<<< HEAD
             <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>          </section>                  <div>
                     <div className="font-medium">{m.title}</div>
                     {m.description && <div className="text-gray-600">{m.description}</div>}
@@ -211,9 +246,16 @@ export default function GrantDetailPage() {
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
+=======
+            <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </section>
         </aside>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

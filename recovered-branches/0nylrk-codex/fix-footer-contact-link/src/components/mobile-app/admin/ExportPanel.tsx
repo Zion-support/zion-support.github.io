@@ -8,6 +8,7 @@ import { toast } from "sonner";
 interface ExportPanelProps {
 <<<<<<< HEAD
   platform: AppPlatform;
+<<<<<<< HEAD
 =======
   platform: AppPlatform
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -17,6 +18,15 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 <<<<<<< HEAD
   const handleExport = null;
 =======
+=======
+  metadata: AppMetadataValues;
+}
+
+export const ExportPanel: React.FC<ExportPanelProps> = ({
+  platform,
+  metadata,
+}) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleExport = (format: 'json' | 'csv') => {
     try {
       let content: string

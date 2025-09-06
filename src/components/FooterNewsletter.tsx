@@ -1,9 +1,19 @@
 import React, { useState, useRef } from 'react';
+<<<<<<< HEAD
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
 import { useToast  } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FooterNewsletter(): React.ReactElement {
 <<<<<<< HEAD
   const [email, setEmail] = useState('');
@@ -82,8 +92,14 @@ export function FooterNewsletter(): React.ReactElement {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
       >
+=======
+  };
+
+    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <label htmlFor='newsletter-email' className='sr-only'>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
         Email address for newsletter subscription
@@ -123,7 +139,11 @@ export function FooterNewsletter(): React.ReactElement {
         )}
       </Button>
     </form>
+<<<<<<< HEAD
   )
 }
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

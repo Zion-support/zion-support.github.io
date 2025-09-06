@@ -14,10 +14,24 @@ interface AIEnhancementButtonProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   buttonText?: string;
   className?: string;
+<<<<<<< HEAD
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number
 }
+=======
+  variant?:
+    | 'default'
+    | 'destructive'
+    | 'outline'
+    | 'secondary'
+    | 'ghost'
+    | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  contentLength?: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementButton({
   options;
   onEnhanced;
@@ -124,5 +138,17 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+<Button type="button" variant="ghost" size="sm" onClick= {
+  handleAccept 
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) 
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) 
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) 
+}</Button>) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

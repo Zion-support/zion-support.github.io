@@ -11,6 +11,8 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
+}
+
 export function useConversations(
   user: UserWithProfile;
   setConversations: (conversations: Conversation[]) => void;

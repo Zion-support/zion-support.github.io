@@ -33,6 +33,7 @@ const workExperienceSchema = z.object({
   location: z.string().optional()})
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 interface WorkExperienceFormProps {
+<<<<<<< HEAD
   resumeId: string
   workExperiences: WorkExperience[]
   onComplete: () => void
@@ -40,6 +41,26 @@ interface WorkExperienceFormProps {
 }
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
+=======
+  resumeId: string;
+  workExperiences: WorkExperience[];
+  onComplete: () => void;
+  onBack: () => void;
+}
+
+export function WorkExperienceForm({
+  resumeId,
+  workExperiences,
+  onComplete,
+  onBack,
+}: WorkExperienceFormProps) {
+  const {
+    addWorkExperience,
+    updateWorkExperience,
+    deleteWorkExperience,
+    isLoading,
+  } = useResume();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   // Helper function to format dates to string

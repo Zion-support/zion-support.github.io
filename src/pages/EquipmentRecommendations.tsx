@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { ProductListingCard  } from '@/components/ProductListingCard';
 import { useAuth  } from '@/hooks/useAuth';
@@ -35,6 +36,31 @@ export default function EquipmentRecommendations() {
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
+=======
+import { useEffect, useState } from 'react';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { useAuth } from '@/hooks/useAuth';
+import { fetchRecommendations } from '@/api/recommendations';
+import type { ProductListing } from '@/types/listings';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import Link from 'next/link';
+import { ErrorState } from '@/components/jobs/applications';
+}
+
+export default function EquipmentRecommendations() {
+  const { isAuthenticated, user } = useAuth();
+  const [listings, setListings] = useState<ProductListing[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
 export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth()
@@ -48,18 +74,26 @@ export default function EquipmentRecommendations() {
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
+<<<<<<< HEAD
         .finally(() => setLoading(false)) }        .catch((,) => setError(true))
         .finally((,) => setLoading(false))
         .finally(() => setLoading(false))
+=======
+        .finally(() => setLoading(false));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }, [isAuthenticated, user])
   if (!isAuthenticated) {
     return (
       <Dialog open>
+<<<<<<< HEAD
         <DialogContent className='bg-zion-blue border-zion-blue-light text-white'>          <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+=======
+        <DialogContent className='bg-zion-blue border-zion-blue-light text-white'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
@@ -70,8 +104,12 @@ export default function EquipmentRecommendations() {
           >
             <Link href='/auth/login?returnTo=/equipment/recommendations'>
               Sign In
+<<<<<<< HEAD
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
+=======
+            </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
         </DialogContent>
       </Dialog>
@@ -89,13 +127,22 @@ export default function EquipmentRecommendations() {
       {error && <ErrorState error='Failed to load recommendations.' />}
       <div className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4'>
         {listings.map(listing => (
+<<<<<<< HEAD
           <div key={listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {listings.map((listing,) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
+=======
+          <div key={listing.id} className='break-inside-avoid mb-4'>
+            <ProductListingCard listing={listing} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

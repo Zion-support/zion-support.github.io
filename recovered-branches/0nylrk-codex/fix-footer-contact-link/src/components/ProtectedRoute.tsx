@@ -12,8 +12,14 @@ export interface ProtectedRouteProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
+<<<<<<< HEAD
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
+=======
+  requiredUserType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children;
 <<<<<<< HEAD

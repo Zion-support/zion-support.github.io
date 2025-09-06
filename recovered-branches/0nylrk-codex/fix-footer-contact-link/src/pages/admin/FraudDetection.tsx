@@ -10,11 +10,20 @@ import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
   FraudStatsCards;
   FraudFilters;
   FraudFlagsTable;
   FraudTabContent
 } from "@/components/admin/fraud-detection",
+=======
+  FraudStatsCards,
+  FraudFilters,
+  FraudFlagsTable,
+  FraudTabContent,;
+} from '@/components/admin/fraud-detection';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";

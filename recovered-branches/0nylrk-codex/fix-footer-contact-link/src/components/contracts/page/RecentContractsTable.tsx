@@ -10,8 +10,14 @@ interface Contract {
 }
 interface RecentContractsTableProps {
   contracts: Contract[];
+<<<<<<< HEAD
   onViewContract: (contractId: string) => void
 }
+=======
+  onViewContract: (contractId: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RecentContractsTable({
   contracts
   onViewContract

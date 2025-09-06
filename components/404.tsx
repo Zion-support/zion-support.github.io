@@ -1,4 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function NotFoundPage() {
   return (
     <div className='container mx-auto px-4 py-20 text-center'>
@@ -7,6 +12,7 @@ export default function NotFoundPage() {
         Sorry, we couldn’t find that page.
       </p>
     </div>
+<<<<<<< HEAD
   );export default function NotFoundPage() {
   return (
     <div className="container mx-auto px-4 py-20 text-center">
@@ -15,3 +21,6 @@ export default function NotFoundPage() {
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

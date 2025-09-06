@@ -6,13 +6,18 @@ body: JSON.stringify ({
 timestamp: new Date () .toISOString ();
 fallback: true
 })
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
   statusCode: 500;
 body: JSON.stringify ({
   error: 'Fallback execution failed';
+<<<<<<< HEAD
 <<<<<<< HEAD
 message: error.message 
 }) 
@@ -64,3 +69,9 @@ message: error.message
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+message: error.message
+})
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
@@ -25,6 +26,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as {
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { getDemoUser } from '../../../utils/marketplace/auth';
+import { getProjectById, saveProject } from '../../../utils/marketplace/store';
+import {
+  Project,
+  ProjectDocument,
+  ProjectNote,;
+} from '../../../utils/marketplace/types';
+
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({ ok: false, error: message });
+
+}
+
+function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
+  if (user.role === 'client' && user.id === project.clientId) return true;
+  if (user.role === 'talent' && user.talentSlug === project.talentSlug)
+    return true;
+  return false;
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const user = getDemoUser(req);
+    const { id } = (req.method === 'GET' ? req.query : req.body) as {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       id?: string;
     }
     if (!id) return bad(res, "Missing project id");
@@ -71,6 +100,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project);
         return res.json({ ok: true, project });
       }
+<<<<<<< HEAD
       if (action === "mark_completed") {
         project.status = "COMPLETED";
         saveProject(project);
@@ -87,3 +117,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }
+=======
+
+      if (action === 'mark_completed') {
+        project.status = 'COMPLETED';
+        saveProject(project);
+        return res.json({ ok: true, project });
+      }
+
+      return bad(res, 'Unknown action');
+    }
+
+    return bad(res, 'Method not allowed', 405);
+  } catch (e: any) {
+    const status = e?.statusCode || 500;
+    return res
+      .status(status)
+      .json({ ok: false, error: e?.message || 'Server error' });
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

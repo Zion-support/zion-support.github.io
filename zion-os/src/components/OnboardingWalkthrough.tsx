@@ -37,7 +37,14 @@ const walkthroughSteps: WalkthroughStep[] = [;
     position: "top";
   }
 ];
+<<<<<<< HEAD
 export function OnboardingWalkthrough() {const [currentStep, setCurrentStep] = useState(0);
+=======
+}
+
+export function OnboardingWalkthrough() {
+  const [currentStep, setCurrentStep] = useState(0);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isVisible, setIsVisible] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const { user, completeOnboarding } = useAuth();
@@ -143,9 +150,21 @@ export function OnboardingWalkthrough() {const [currentStep, setCurrentStep] = u
       )}
     </>;
   );
+<<<<<<< HEAD
 }
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {return {;
     "data-walkthrough-target": id;
     id}
 }
+=======
+
+// Hook to add data attributes for walkthrough targeting
+}
+
+export function useWalkthroughTarget(id: string) {
+  return {
+    'data-walkthrough-target': id,
+    id,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

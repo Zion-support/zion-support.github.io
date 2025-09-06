@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 <<<<<<< HEAD
 import { Slider } from "@/components/ui/slider";
@@ -7,6 +8,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 =======
 import { Slider } from '@/components/ui/slider'
 import { ExperienceFilterProps } from '@/types/filters'
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from '@/components/ui/slider';
+import { ExperienceFilterProps } from '@/types/filters';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ExperienceFilter({
   experienceRange
   setExperienceRange
@@ -31,6 +39,7 @@ export function ExperienceFilter({
       </button>
       {expanded && (
         <div className='mt-6'>
+<<<<<<< HEAD
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
@@ -61,21 +70,36 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+=======
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
           <Slider
+<<<<<<< HEAD
             aria-label='Experience range'            aria-label="Experience range"
+=======
+            aria-label='Experience range'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
             className='mt-6'          />            className="mt-6"
             className="mt-6"
+=======
+            className='mt-6'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

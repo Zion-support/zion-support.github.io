@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 export function ReferralGuide() {

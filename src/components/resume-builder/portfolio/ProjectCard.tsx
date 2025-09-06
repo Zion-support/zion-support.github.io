@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -51,6 +52,45 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             className='object-cover'
             loading='lazy'    <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
+=======
+import { useState } from 'react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,;
+} from '@/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
+import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
+
+interface ProjectCardProps {
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void;
+}
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  };
+
+  return (
+    <Card className='h-full flex flex-col'>
+      <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {project.image_url ? (
           <Image
             src={project.image_url}
@@ -74,6 +114,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
+<<<<<<< HEAD
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
           />
         ) : (
@@ -92,6 +133,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+                <Badge key={index} variant='secondary' className='text-xs'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {tech}
                 </Badge>
               ))}
@@ -99,6 +143,10 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
       </CardContent>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className='flex gap-2'>
           {project.github_url && (
@@ -127,15 +175,23 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               aria-label='Live demo'
               title='Live demo'            >
               <Button variant='ghost' size='icon' aria-label='Live demo link'>
+<<<<<<< HEAD
                 <Link className='h-4 w-4' />              </Button>
             </a>
           )}
         </div>              <Button variant="ghost" size="icon" aria-label="Live demo link">
                 <Link className="h-4 w-4" />
+=======
+                <Link className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Button>
             </a>
           )}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='flex gap-2'>
           <Button
             variant='ghost'
@@ -154,12 +210,17 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
               Are you sure you want to delete this project? This action cannot
+<<<<<<< HEAD
               be undone.            </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -168,6 +229,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.
+=======
+              be undone.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -175,12 +239,20 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
+<<<<<<< HEAD
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+=======
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

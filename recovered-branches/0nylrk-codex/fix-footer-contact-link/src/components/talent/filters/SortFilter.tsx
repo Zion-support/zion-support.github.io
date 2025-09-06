@@ -1,5 +1,6 @@
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
   Select;
   SelectContent;
   SelectItem;
@@ -14,6 +15,17 @@ import {
 } from "@/components/ui/select";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { SortFilterProps } from "@/types/filters";
+=======
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { SortFilterProps } from '@/types/filters';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">

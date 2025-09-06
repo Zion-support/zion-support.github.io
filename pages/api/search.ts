@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter';
+<<<<<<< HEAD
 import { parseQueryToFilters } from '[^']*';
 import { searchAll, suggestDidYouMean } from '[^']*';
 
@@ -10,6 +11,12 @@ import type { AccessLevel } from "../../utils/search/filter";
 import { parseQueryToFilters } from "../../utils/search/parser";
 import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import { parseQueryToFilters } from '../../utils/search/parser';
+import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -46,4 +53,7 @@ export default async function handler(
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

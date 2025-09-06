@@ -2,7 +2,12 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+<<<<<<< HEAD
 import { ImageIcon } from 'lucide-react'
+=======
+import { ImageIcon } from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface SafeImageProps {
   src: string
   alt: string;  width?: number;interface SafeImageProps {
@@ -18,6 +23,7 @@ interface SafeImageProps {
   fallbackSrc?: string;
   priority?: boolean;
   sizes?: string;
+<<<<<<< HEAD
   quality?: number
 export function SafeImage({
   src;
@@ -77,9 +83,48 @@ export function SafeImage({
   );        aria-label={alt}
       >
         <ImageIcon className="w-6 h-6" />
+=======
+  quality?: number;
+}
+
+export function SafeImage({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  fallbackSrc,
+  priority = false,
+  sizes,
+  quality = 75,
+}: SafeImageProps) {
+  const [hasError, setHasError] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(src);
+
+  const handleError = () => {
+    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
+      setCurrentSrc(fallbackSrc);
+      setHasError(true);
+    } else if (!hasError && src.startsWith('/')) {
+      // Try serving the image directly through our custom API route
+      const fallbackUrl = `/api/image${src}`;
+      setCurrentSrc(fallbackUrl);
+      setHasError(true);
+    } else if (!hasError) {
+      setHasError(true);
+    }
+  };
+
+  // If we have an error and no fallback, show a placeholder
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
+
+      >
+        <ImageIcon className='w-6 h-6' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
     )
   }
+<<<<<<< HEAD
     />
   ); return (
     <Image
@@ -95,3 +140,8 @@ export function SafeImage({
     />
   )
 }
+=======
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

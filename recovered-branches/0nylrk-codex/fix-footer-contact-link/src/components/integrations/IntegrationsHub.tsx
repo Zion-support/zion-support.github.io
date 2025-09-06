@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge",
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
@@ -25,6 +26,23 @@ import { Badge } from "@/components/ui/badge";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+=======
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { IntegrationCards } from './IntegrationCards';
+import { ZapierIntegration } from './ZapierIntegration';
+import { Badge } from '@/components/ui/badge';
+import { WebhookManager } from './WebhookManager';
+import { IntegrationsSyncLog } from './IntegrationsSyncLog';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace");
   return (

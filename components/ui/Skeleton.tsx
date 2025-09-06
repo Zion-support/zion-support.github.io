@@ -1,14 +1,23 @@
 import React from 'react';
 export type SkeletonProps = {
   className?: string;
+<<<<<<< HEAD
 }
 export default function Skeleton({ className = '' }: SkeletonProps) {
+=======
+};
+}
+
+export default function Skeleton({ className = '' }: SkeletonProps) {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
       <style jsx global>{`
         @keyframes shimmer {
           100% {
             transform: translateX(100%);
+<<<<<<< HEAD
           }        }
       `}</style>
     </div>
@@ -24,10 +33,14 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
       <style jsx global>{`
         @keyframes shimmer {
           100% { transform: translateX(100%) }
+=======
+          }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       `}</style>
     </div>
   );
+<<<<<<< HEAD
 import React from "react";
 interface SkeletonProps {
   className?: string;
@@ -70,3 +83,5 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 }
 export default Component
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

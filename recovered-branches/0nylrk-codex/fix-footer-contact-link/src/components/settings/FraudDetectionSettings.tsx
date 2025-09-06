@@ -14,6 +14,7 @@ import {
 import { toast  } from '@/hooks/use-toast';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 =======
   Card
   CardContent
@@ -35,6 +36,10 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FraudDetectionSettings() {
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);

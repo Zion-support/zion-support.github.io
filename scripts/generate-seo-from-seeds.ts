@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -28,3 +29,16 @@ async function main() {
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+/* eslint-disable no-console */ 
+}const seeds = JSON.parse (fs.readFileSync (seedsPath, 'utf8') ) as Array< {
+  prompt: string, region?: string, service?: string 
+}>;
+const outDir = path.join (process.cwd (), 'datapage-metadataseo');
+fs.mkdirSync (outDir, {
+  recursive: true 
+});
+/api/seo/generate`, s);
+if (gen?.slug && gen?.payload) {
+  
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

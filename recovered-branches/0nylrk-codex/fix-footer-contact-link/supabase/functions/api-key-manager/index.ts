@@ -287,4 +287,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       headers: { 'Content-Type': 'application/json' }})
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

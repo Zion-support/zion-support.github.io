@@ -12,6 +12,7 @@ interface FraudFlagsTableProps {
   isLoading: boolean;
   hasFilters: boolean;
   resetFilters: () => void;
+<<<<<<< HEAD
 =======
   flags: FraudFlag[]
   isLoading: boolean
@@ -20,6 +21,14 @@ interface FraudFlagsTableProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+=======
+  onAction: (
+    flagId: string,
+    action: 'warning' | 'suspension' | 'ban' | 'ignore'
+  ) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;

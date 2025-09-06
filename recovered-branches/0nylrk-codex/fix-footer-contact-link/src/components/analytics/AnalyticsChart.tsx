@@ -18,8 +18,14 @@ interface AnalyticsChartProps {
   dataKeys: string[]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   timeRange?: string;
+<<<<<<< HEAD
   onTimeRangeChange?: (range: string) => void
 }
+=======
+  onTimeRangeChange?: (range: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AnalyticsChart({
   title;
 <<<<<<< HEAD

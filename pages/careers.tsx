@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
@@ -146,6 +147,13 @@ const values = [
       "We conduct business with honesty, transparency, and ethical practices."
   }
 ];
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CareersPage() {
   return (
     <MainLayout

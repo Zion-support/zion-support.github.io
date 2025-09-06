@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
@@ -29,6 +30,13 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+  //Wait for page to be fully loaded if (document.readyState === 'complete') {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 })
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
@@ -38,13 +46,23 @@ if (newMetrics.loadTime > 3000) {
 if (ms < 1000) return `$ {
   Math.round (ms)
 }ms`;
+<<<<<<< HEAD
 }
+=======
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
 case 'tablet': return Tablet;
 default: return Laptop;
+<<<<<<< HEAD
 }
+=======
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const getPerformanceScore = () => {
   let score = 0;
 let totalMetrics = 0;
@@ -72,7 +90,12 @@ if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 else score += 25
+<<<<<<< HEAD
 }
+=======
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -89,11 +112,20 @@ else score += 25
   getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Helper functions const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
+<<<<<<< HEAD
 }
 export default PerformanceMonitor;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

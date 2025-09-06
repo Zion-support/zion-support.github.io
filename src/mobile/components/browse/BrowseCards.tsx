@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {
+  Bookmark,
+  BookmarkCheck,
+  ChevronRight,
+  MapPin,
+  Clock,
+  DollarSign,;
+} from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -34,8 +50,15 @@ interface BrowseItem {
   timePosted?: string
 interface BrowseCardsProps {
   items: BrowseItem[];
+<<<<<<< HEAD
   type: "jobs" | "talents";
   onViewDetails: (id: string) => void
+=======
+  type: 'jobs' | 'talents';
+  onViewDetails: (id: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]),
   
@@ -88,6 +111,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   <Badge
                     key={index}
                     variant='outline'
+<<<<<<< HEAD
                     className='text-xs font-normal'                  >                      <AvatarImage src={item.image} alt={item.title} />
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
@@ -118,10 +142,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
+=======
+                    className='text-xs font-normal'
+                  >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {badge}
                   </Badge>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
                 {item.location && (
@@ -143,6 +175,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>
                 )}
                 {item.match && (
+<<<<<<< HEAD
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -163,15 +196,23 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
                 {item.match && (
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
+=======
+                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
                 onClick={() => onViewDetails(item.id)}
+<<<<<<< HEAD
                 className='gap-1'              >
                 View Details <ChevronRight className='h-4 w-4' />              </Button>
                 View Details <ChevronRight className="h-4 w-4" />
@@ -179,11 +220,20 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 className="gap-1"
               >
                 View Details <ChevronRight className="h-4 w-4" />
+=======
+                className='gap-1'
+              >
+                View Details <ChevronRight className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Button>
             </div>
           </CardContent>
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

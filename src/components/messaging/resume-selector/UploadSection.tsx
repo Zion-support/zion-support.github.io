@@ -1,10 +1,22 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Upload, FileText } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
+<<<<<<< HEAD
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+=======
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function UploadSection({
   customFile
   onFileUpload
@@ -23,6 +35,7 @@ export function UploadSection({
           <input
             type='file'
             className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
+<<<<<<< HEAD
             accept='.pdf'            onChange={onFileUpload}
           />
         </Button>
@@ -34,6 +47,14 @@ export function UploadSection({
           />
         </Button>
       </div>
+=======
+            accept='.pdf'
+            onChange={onFileUpload}
+          />
+        </Button>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {customFile && (
         <div className='p-3 bg-zion-blue-dark/30 rounded-md'>
           <div className='flex items-center justify-between'>
@@ -43,6 +64,7 @@ export function UploadSection({
             </div>
             <span className='text-xs text-zion-slate'>
               {Math.round(customFile.size / 1024)} KB
+<<<<<<< HEAD
             </span>          </div>      {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -51,9 +73,16 @@ export function UploadSection({
               <span className="text-white">{customFile.name}</span>
             </div>
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
+=======
+            </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

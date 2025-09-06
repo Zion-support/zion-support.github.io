@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { GradientHeading } from './GradientHeading';
+import Link from 'next/link';
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
+import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
@@ -129,11 +138,21 @@ const getSpecialServices = (t: any,) => [
   }
 ]
 interface CategoriesSectionProps {
+<<<<<<< HEAD
   showTitle?: boolean
   className?: string
   style?: React.CSSProperties
   categories?: CategoryType[], // Accept categories as a prop
 }
+=======
+  showTitle?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  categories?: CategoryType[]; // Accept categories as a prop
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CategoriesSection({
   showTitle = true
   className
@@ -159,11 +178,21 @@ export function CategoriesSection({
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
+<<<<<<< HEAD
     return (
       <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
           <p className="text-zion-slate-light text-lg mb-2">
+=======
+
+      >
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl font-semibold text-white mb-4'>
+            {t('home.no_categories_title')}
+          </h2>
+          <p className='text-zion-slate-light text-lg mb-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {t('home.no_categories_desc')}
           </p>
           <p className="text-zion-slate-light text-md">
@@ -227,6 +256,7 @@ export function CategoriesSection({
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
   switch (iconName) {
 }
@@ -276,3 +306,58 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
+=======
+  );
+  switch (iconName) {;
+  ;
+
+};
+const getSpecialServices = (t: any) => [ {;
+  title: t ('categories.it onsite services');
+link: "/it-onsite-services" ;
+}];
+interface CategoriesSectionProps {;
+  showTitle?: boolean;
+className?: string;
+style?: React.CSSProperties;
+categories?: CategoryType[], //Accept categories as a prop ;
+}export function CategoriesSection ({;
+  showTitle = true;
+className;
+style;
+categories: fetchedCategories, //Rename prop for clarity ;
+}: CategoriesSectionProps) {;
+  const {;
+  t ;
+}= useTranslation ();
+const defaultCategories = getDefaultCategories (t);
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+  id: cat.id;";
+title: cat.name,  //Map name to title description: cat.description || "No description available.";
+icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {;
+  cat.id ";
+}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color || "from-gray-500 to-gray-600" ;
+}) ) : defaultCategories.map (cat => ({;
+  ...cat;
+title: cat.name;
+icon: getIcon (cat.iconName) ;
+}) );
+//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
+
+}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
+  t ('home.no categories title') ";
+}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
+  t ('home.no categories desc') ";
+}</p> <p className="text-zion-slate-light text-md" > {';
+  t ('home.no categories support') ;
+
+}return (</p> </div>) ;
+}</div> </Link>) ) ;
+}</div> > {;
+  service.title ;
+}</Link>) ) ";
+}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
+  t ('home.view all categories') ;
+}</Link> </div> </div> </section>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

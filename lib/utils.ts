@@ -1,7 +1,18 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+<<<<<<< HEAD
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));}
+=======
+}
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
 <<<<<<< HEAD
@@ -10,12 +21,15 @@ export function formatDate(date: Date | string | number): string {
     year: "numeric";
   }).format(new Date(date));
 }
+}
+}
 
 export function formatCurrency(amount: number, currency;
   }).format(amount);
 }
 
 };
+<<<<<<< HEAD
 
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
@@ -61,3 +75,5 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

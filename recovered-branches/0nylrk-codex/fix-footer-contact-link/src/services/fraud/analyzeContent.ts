@@ -6,8 +6,13 @@ import { AnalysisResult } from './types';
  * Analyzes text content for suspicious patterns
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const analyzeContent = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
   const reasons: string[] = []

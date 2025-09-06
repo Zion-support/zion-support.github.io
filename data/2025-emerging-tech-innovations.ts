@@ -1,5 +1,9 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface EmergingTechInnovation {
 =======
 export interface EmergingTechInnovationService {
@@ -50,6 +54,7 @@ export interface EmergingTechInnovationService {
   benefits: string[];
   capabilities: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   marketAdvantage: string
 }
 
@@ -70,6 +75,23 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
   {
     id: 'quantum-internet-protocol-stack'
     name: 'Quantum Internet Protocol Stack'
+=======
+  marketAdvantage: string;
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+export const emergingTechInnovations: EmergingTechInnovation[] = [
+  // Quantum Internet & Communication Services
+  {
+    id: 'quantum-internet-protocol-stack',
+    name: 'Quantum Internet Protocol Stack',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     tagline:
       'Next-generation quantum internet infrastructure for unbreakable communication'
     price: '$6,999'
@@ -727,6 +749,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Threat hunting'
     ]
     marketAdvantage:
+<<<<<<< HEAD
       'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
@@ -735,3 +758,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Only quantum-powered cybersecurity platform with proven AI integration',
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

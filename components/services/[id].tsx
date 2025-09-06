@@ -5,13 +5,24 @@ import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServiceDetailPage() {
 <<<<<<< HEAD
   const router = null;
 =======
   const router = useRouter();
   const { id } = router.query;
+<<<<<<< HEAD
   if (!id |typeof id !== 'string') {
+=======
+
+  if (!id || typeof id !== 'string') {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
         <div className='text-center'>
@@ -22,19 +33,31 @@ export default function ServiceDetailPage() {
             The requested service could not be found.
           </p>
           <Button href='/services' variant='primary'>
+<<<<<<< HEAD
             <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
           <p className="text-gray-400 mb-6">The requested service could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
+=======
+            <ArrowLeft className='w-4 h-4 mr-2' />
+            Back to Services
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
         </div>
       </div>
     );
   }
+<<<<<<< HEAD
   const service = getServiceById(id);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+const service = getServiceById(id);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
@@ -46,6 +69,7 @@ export default function ServiceDetailPage() {
             The requested service "{id}" could not be found.
           </p>
           <Button href='/services' variant='primary'>
+<<<<<<< HEAD
             <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services
           </Button>
         </div>
@@ -60,6 +84,14 @@ export default function ServiceDetailPage() {
         </div>
       </div>
     );    )
+=======
+            <ArrowLeft className='w-4 h-4 mr-2' />
+            Back to Services
+          </Button>
+        </div>
+      </div>
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return (
     <>
@@ -84,6 +116,7 @@ export default function ServiceDetailPage() {
                 size='sm'
                 className='text-gray-400 hover:text-white'
               >
+<<<<<<< HEAD
                 <ArrowLeft className='w-4 h-4 mr-2' />                Back to Services
               </Button>
               <Button
@@ -103,15 +136,22 @@ export default function ServiceDetailPage() {
                 className="text-gray-400 hover:text-white"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
+=======
+                <ArrowLeft className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Back to Services
               </Button>
               <Button
                 href={service.website}
                 variant='primary'
                 size='sm'
+<<<<<<< HEAD
                 icon={<ExternalLink className='w-4 h-4' />}                variant="primary"
                 size="sm"
                 icon={<ExternalLink className="w-4 h-4" />}
+=======
+                icon={<ExternalLink className='w-4 h-4' />}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Visit Service
               </Button>
@@ -134,13 +174,19 @@ export default function ServiceDetailPage() {
                 href='/services'
                 variant='primary'
                 size='lg'
+<<<<<<< HEAD
                 className='shadow-2xl shadow-blue-500/25'              >
+=======
+                className='shadow-2xl shadow-blue-500/25'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 View All Services
               </Button>
               <Button
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='border-white/20 text-white hover:border-white/40'              >                href="/services"
                 variant="primary"
                 size="lg"
@@ -155,6 +201,10 @@ export default function ServiceDetailPage() {
                 variant="outline"
                 size="lg"
                 className="border-white/20 text-white hover:border-white/40"
+=======
+                className='border-white/20 text-white hover:border-white/40'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Get Custom Solution
               </Button>
             </div>
@@ -163,4 +213,7 @@ export default function ServiceDetailPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

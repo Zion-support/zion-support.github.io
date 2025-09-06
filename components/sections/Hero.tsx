@@ -67,6 +67,7 @@ const Hero: React.FC<HeroProps> = ({
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
             {title}
           </h1>
+<<<<<<< HEAD
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string
     href: string
@@ -118,10 +119,17 @@ const Hero: React.FC<HeroProps> = ({
             {title}
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+=======
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {subtitle}
           </p>
           {/* Action Buttons */}
+<<<<<<< HEAD
           {(primaryAction |secondaryAction) && (
+=======
+          {(primaryAction || secondaryAction) && (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
                 <Button
@@ -131,6 +139,7 @@ const Hero: React.FC<HeroProps> = ({
                   style={{ animationDelay: '0.2s' }}
                 >
                   {primaryAction.text}
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
                 <Button
                   href={primaryAction.href}
@@ -140,6 +149,9 @@ const Hero: React.FC<HeroProps> = ({
                 >
                   {primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               )}
               {secondaryAction && (
@@ -150,12 +162,17 @@ const Hero: React.FC<HeroProps> = ({
                   className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                   style={{ animationDelay: '0.4s' }}
                 >
+<<<<<<< HEAD
                   <Play className='w-5 h-5 mr-2' />                  {secondaryAction.text}                  variant="outline"
                   size="lg"
                   className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
                   style={{ animationDelay: '0.4s' }}
                 >
                   <Play className="w-5 h-5 mr-2" />
+=======
+                  <Play className='w-5 h-5 mr-2' />
+                  {secondaryAction.text}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               )}
             </div>
@@ -177,6 +194,7 @@ const Hero: React.FC<HeroProps> = ({
                   </div>
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
+<<<<<<< HEAD
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}            {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative">
@@ -186,6 +204,9 @@ const Hero: React.FC<HeroProps> = ({
                   <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
+=======
+                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {stat.label}
                 </div>
               </div>
@@ -212,8 +233,12 @@ const Hero: React.FC<HeroProps> = ({
               <span>10,000+ Developers</span>
             </div>
             <div className='flex items-center gap-2'>
+<<<<<<< HEAD
               <Star className='w-4 h-4 text-yellow-400' />              <span>99.9% Uptime</span>            <div className="flex items-center gap-2">
               <Star className="w-4 h-4 text-yellow-400" />
+=======
+              <Star className='w-4 h-4 text-yellow-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <span>99.9% Uptime</span>
             </div>
           </div>
@@ -222,11 +247,15 @@ const Hero: React.FC<HeroProps> = ({
       {/* Scroll Indicator */}
       <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce'>
         <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
+<<<<<<< HEAD
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
       </div>
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
+=======
+          <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
       {/* Decorative Elements */}
@@ -240,6 +269,13 @@ const Hero: React.FC<HeroProps> = ({
         style={{ animationDelay: '2s' }}
       />
   );
+<<<<<<< HEAD
 }
 export default Hero;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Hero;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

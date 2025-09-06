@@ -97,6 +97,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ];
     features: [
+<<<<<<< HEAD
       "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
@@ -154,6 +155,25 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     returnPolicy: "21-day return policy for items in original condition"
   }
 }
+=======
+      '32-channel digital mixer with 24 premium mic preamps',
+      '16 motorized faders with touch-sensitive control',
+      '7-inch high-resolution color touchscreen',
+      'Comprehensive routing matrix',
+      'Onboard multi-track recording to USB',
+      'iOS and Android remote control app',
+      'Configurable user layers',
+      '8 DCA groups and 6 mute groups',
+      'Integrated WiFi for wireless control',
+    ],
+    warranty: '3 years manufacturer warranty',
+    returnPolicy: '21-day return policy for items in original condition',
+  },
+};
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string }
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -177,7 +197,13 @@ export default function EquipmentDetail() {
       </>
     )
   }
+<<<<<<< HEAD
   const handleAddToCart = () => {
+=======
+}
+
+const handleAddToCart = () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setIsAdding(true);
     // Simulate API call
     setTimeout(() => {

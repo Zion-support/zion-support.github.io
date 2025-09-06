@@ -56,6 +56,11 @@ const talentSchema = z.object({
     ).optional().default([]);
     cv: z.any().optional()})})
 type TalentFormValues = z.infer<typeof talentSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentOnboardingForm() {
   const { user } = useAuth();
   const navigate = useNavigate();

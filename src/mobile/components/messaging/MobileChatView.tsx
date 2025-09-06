@@ -1,4 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Send,
+  PaperclipIcon,
+  ChevronLeft,
+  MoreVertical,
+  Video,
+  Phone,;
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useRouter } from 'next/router';
+import { toast } from 'sonner';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
@@ -42,8 +60,12 @@ interface MobileChatViewProps {
   },
   messages: Message[];
   onBack: () => void;
+<<<<<<< HEAD
   onSendMessage: (content: string) => void
 <<<<<<< HEAD
+=======
+  onSendMessage: (content: string) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -192,5 +214,9 @@ export function MobileChatView({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

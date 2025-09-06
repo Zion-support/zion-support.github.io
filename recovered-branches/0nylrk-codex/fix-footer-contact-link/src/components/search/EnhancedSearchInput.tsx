@@ -13,8 +13,15 @@ interface EnhancedSearchInputProps {
   onChange: (value: string) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   placeholder?: string;
+<<<<<<< HEAD
   searchSuggestions: SearchSuggestion[]
 }
+=======
+  searchSuggestions: SearchSuggestion[];
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnhancedSearchInput({
   value;
 <<<<<<< HEAD
@@ -36,7 +43,13 @@ export function EnhancedSearchInput({
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
     }
+<<<<<<< HEAD
     const filtered = searchSuggestions.filter(suggestion =>
+=======
+}
+
+const filtered = searchSuggestions.filter(suggestion =>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       suggestion.text.toLowerCase().includes(value.toLowerCase())
     );
     // Sort suggestions to prioritize those that start with the search term

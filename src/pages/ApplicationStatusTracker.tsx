@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO'
 import { ApplicationsTracker } from '@/components/jobs/applications'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Briefcase, Inbox } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
+=======
+import { SEO } from '@/components/SEO';
+import { ApplicationsTracker } from '@/components/jobs/applications';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Briefcase, Inbox } from 'lucide-react';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { useIsMobile } from '@/hooks/use-mobile';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function ApplicationStatusTrackerContent() {
   const isMobile = null;
   return (
@@ -37,12 +47,22 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

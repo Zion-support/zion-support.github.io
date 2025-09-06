@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 import { mkdirSync, existsSync  } from 'node: fs';
 import { resolve  } from 'node: path';
@@ -26,3 +27,6 @@ for (const size of sizes) {
   // eslint-disable-next-line no-console
   console.log('generated', out)
 }
+=======
+#!/usr/bin/env node
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

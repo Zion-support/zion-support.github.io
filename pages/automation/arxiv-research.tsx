@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/arxiv-research.json';
 export default function ArxivResearchPage() {
@@ -27,3 +28,7 @@ export default function ArxivResearchPage() {
     </EnhancedLayout>
   )
 }
+=======
+// @ts-ignore </li>) )
+}</ul> </div> </EnhancedLayout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

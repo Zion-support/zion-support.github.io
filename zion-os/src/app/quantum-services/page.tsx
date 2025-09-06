@@ -1,9 +1,28 @@
+<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
 export default function QuantumServicesPage() {return (;
     <div className="min-h-screen">;
+=======
+import Link from 'next/link';
+}
+
+export const metadata = {
+  title:
+    'Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions',
+  description:
+    "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
+  keywords:
+    'quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services',
+};
+}
+
+export default function QuantumServicesPage() {
+  return (
+    <div className='min-h-screen'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;

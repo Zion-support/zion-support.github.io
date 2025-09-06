@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +12,14 @@ interface ActionButtonsProps {
 <<<<<<< HEAD
   flagId: string;
   status: string;
+<<<<<<< HEAD
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+=======
+  onAction: (
+    flagId: string,
+    action: 'warning' | 'suspension' | 'ban' | 'ignore'
+  ) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -68,8 +81,12 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
       {status === 'pending' && (
         <Button
           variant='ghost'
+<<<<<<< HEAD
           size='sm'          onClick={() => onAction(flagId, 'ignore')}          variant="ghost"
           size="sm"
+=======
+          size='sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           onClick={() => onAction(flagId, 'ignore')}
           onClick = {(,) => onAction(flagId, 'ignore'),}
         >
@@ -77,9 +94,15 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         </Button>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 '"}
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

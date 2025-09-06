@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -17,6 +18,8 @@ import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { ProfileContact } from "@/components/profile/ProfileContact",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -40,6 +43,7 @@ import {
 } from '@/components/ui/dialog';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { useCurrency } from '@/hooks/useCurrency';
+<<<<<<< HEAD
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -48,10 +52,26 @@ export default function ListingDetail() {
 =======
   const router = useRouter();
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+=======
+}
+}
+
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const router = useRouter();
+  const id = router.query.id as string;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -74,6 +94,7 @@ export default function ListingDetail() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     );  }
   const handleContact = () => {
     if (user) {
@@ -98,6 +119,17 @@ export default function ListingDetail() {
       setIsContactDialogOpen(true);      setIsChatOpen(true)
     } else {
       setIsContactDialogOpen(true)
+=======
+    );
+  }
+}
+
+const handleContact = () => {
+    if (user) {
+      setIsChatOpen(true);
+    } else {
+      setIsContactDialogOpen(true);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -136,8 +168,12 @@ export default function ListingDetail() {
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
                           index === selectedImageIndex
                             ? 'border-zion-purple'
+<<<<<<< HEAD
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+=======
+                            : 'border-transparent'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         )}
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index,) => (
@@ -153,8 +189,12 @@ export default function ListingDetail() {
                           src = {image,}
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object-cover'
+<<<<<<< HEAD
                           fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
                           fallbackSrc="/placeholder.svg"
+=======
+                          fallbackSrc='/placeholder.svg'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         />
                       </div>
                     ))}
@@ -196,6 +236,7 @@ export default function ListingDetail() {
                         </h4>
                         <p className='text-sm text-zion-slate-light'>
                           Built-in data protection and encryption
+<<<<<<< HEAD
                         </p>                      </div>
                     </div>
                   </div>
@@ -220,10 +261,17 @@ export default function ListingDetail() {
                       <div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
+=======
+                        </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {/* Tags */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
@@ -233,6 +281,7 @@ export default function ListingDetail() {
                         key={i}
                         variant='outline'
                         className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
+<<<<<<< HEAD
                       >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                 {/* Tags */}
                 <div className="mt-8">
@@ -240,6 +289,9 @@ export default function ListingDetail() {
                   <div className="flex flex-wrap gap-2">
                     {listing.tags.map((tag, i) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+=======
+                      >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {tag}
                       </Badge>
                     ))}
@@ -247,6 +299,10 @@ export default function ListingDetail() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {/* Right Column - Details */}
             <div className='lg:col-span-1'>
               <div className='bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6'>
@@ -258,6 +314,7 @@ export default function ListingDetail() {
                     {listing.category}
                   </Badge>
                   {listing.featured && (
+<<<<<<< HEAD
                     <Badge className='ml-2 bg-zion-cyan/20 text-zion-cyan'>                      Featured
                     </Badge>
                   )}
@@ -270,10 +327,17 @@ export default function ListingDetail() {
                   </Badge>
                   {listing.featured && (
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
+=======
+                    <Badge className='ml-2 bg-zion-cyan/20 text-zion-cyan'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Featured
                     </Badge>
                   )}
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <h1 className='text-2xl font-bold text-white mb-4'>
                   {listing.title}
                 </h1>
@@ -286,6 +350,7 @@ export default function ListingDetail() {
                             'h-5 w-5'
                             i < Math.floor(listing.rating!)
                               ? 'text-zion-cyan fill-zion-cyan'
+<<<<<<< HEAD
                               : 'text-zion-slate-light'                          )}
                         />
                       ))}
@@ -304,6 +369,10 @@ export default function ListingDetail() {
                             "h-5 w-5"
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           ),}
+=======
+                              : 'text-zion-slate-light'
+                          )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         />
                       ))}
                     </div>
@@ -320,6 +389,7 @@ export default function ListingDetail() {
                       {formatPrice(listing.price)}
                     </div>
                   ) : (
+<<<<<<< HEAD
                     <div className='text-2xl font-bold text-white'>                      Custom Pricing
                     </div>
                   )}
@@ -336,14 +406,23 @@ export default function ListingDetail() {
                     </div>
                   ) : (
                     <div className="text-2xl font-bold text-white">
+=======
+                    <div className='text-2xl font-bold text-white'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Custom Pricing
                     </div>
                   )}
                 </div>
+<<<<<<< HEAD
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
+=======
+
+                {/* Action Buttons */}
+                <div className='space-y-3 mb-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {listing.price !== null ? (
                     <PaymentButton
                       amount={listing.price}
@@ -396,12 +475,16 @@ export default function ListingDetail() {
                             const target = e.target as HTMLImageElement;
                             target.src =
                               'https://ui-avatars.com/api/?name=' +
+<<<<<<< HEAD
                               encodeURIComponent(listing.author.name);                          }}
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+=======
+                              encodeURIComponent(listing.author.name);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           }}
                         />
                       </div>
@@ -432,6 +515,7 @@ export default function ListingDetail() {
                   </div>
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
+<<<<<<< HEAD
                     <span className='text-white'>{listing.id}</span>                  </div>                      </div>
                     )}
                     <div>
@@ -449,6 +533,9 @@ export default function ListingDetail() {
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">ID</span>
                     <span className="text-white">{listing.id}</span>
+=======
+                    <span className='text-white'>{listing.id}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </div>
@@ -473,6 +560,7 @@ export default function ListingDetail() {
           <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
+<<<<<<< HEAD
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
@@ -481,11 +569,19 @@ export default function ListingDetail() {
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
+=======
+            profileType='service'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </DialogContent>
       </Dialog>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;
 }";
@@ -497,4 +593,8 @@ export default function ListingDetail() {
 }isOpen= {isChatOpen ;
 }onClose= {() => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
+<<<<<<< HEAD
 }'"}
+=======
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

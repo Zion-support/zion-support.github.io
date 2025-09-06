@@ -32,12 +32,25 @@ interface FraudDetectionContextType {
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const FraudDetectionContext = null;
 =======
 export const FraudDetectionContext = React.createContext(
   undefined as FraudDetectionContextType | undefined
 );
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+=======
+}
+
+export const FraudDetectionContext = React.createContext(
+  undefined as FraudDetectionContextType | undefined
+);
+}
+
+export const FraudDetectionMiddleware: React.FC<
+  FraudDetectionMiddlewareProps
+> = ({ children }) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
     userId: string
@@ -116,6 +129,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   )
 }
 // Hook to use the fraud detection context
+}
+
 export const useFraudDetection = () => {
   const context = React.useContext(FraudDetectionContext);
   if (context === undefined) {

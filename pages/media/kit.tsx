@@ -2,6 +2,7 @@ import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import DatePicker from 'react-datepicker';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = null;
@@ -16,13 +17,30 @@ import {
   buildPressRelease
   buildTimeline;
 } from '../../utils/mediaKit';
+=======
+import type {
+  MediaBundle,
+  MediaAsset,
+  PressReleaseType,;
+} from '../../utils/mediaKit';
+import {
+  getDefaultAssets,
+  buildPressRelease,
+  buildTimeline,;
+} from '../../utils/mediaKit';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const KitPage = () => {
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
+=======
+  const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     []
   );
   const assets: MediaAsset[] = useMemo(
@@ -30,7 +48,13 @@ const KitPage = () => {
     [bundle]
   );
   const onGenerateTimeline = useCallback(() => {
+<<<<<<< HEAD
     setTimeline(buildTimeline(startDate));  }, [startDate]);
+=======
+    setTimeline(buildTimeline(startDate));
+  }, [startDate]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const onDownloadZip = useCallback(async () => {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
@@ -38,7 +62,12 @@ const KitPage = () => {
      else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
+<<<<<<< HEAD
         zip.file(asset.filename, blob);      }
+=======
+        zip.file(asset.filename, blob);
+      }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
@@ -49,10 +78,18 @@ const KitPage = () => {
     });
     const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
     const prToken = buildPressRelease('token-sale', {
+<<<<<<< HEAD
       companyName
       date: nowStr
       tokenName
     });    zip.file('press-releases/seed-round.md', prSeed);
+=======
+      companyName,
+      date: nowStr,
+      tokenName,
+    });
+    zip.file('press-releases/seed-round.md', prSeed);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
     // Add timeline if generated
@@ -62,7 +99,13 @@ const KitPage = () => {
     }
     const blob = await zip.generateAsync({ type: 'blob' });
     const { saveAs } = await import('file-saver');
+<<<<<<< HEAD
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+=======
+    saveAs(blob, `zion-media-kit-${bundle}.zip`);
+  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const onGeneratePdf = useCallback(async () => {
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
@@ -133,7 +176,13 @@ const KitPage = () => {
           {text}
         </pre>
       </div>
+<<<<<<< HEAD
     );  }
+=======
+    );
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div>
       <Head>
@@ -225,10 +274,19 @@ const KitPage = () => {
                   <li key={t.label}>
                     <span className='font-medium'>{t.label}:</span> {t.date}
                   </li>
+<<<<<<< HEAD
                 ))}              </ul>
             )}
           </div>
         </section>
+=======
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
@@ -244,10 +302,19 @@ const KitPage = () => {
                   </a>
                 ) : (
                   <span className='text-gray-400 text-xs'>generated</span>
+<<<<<<< HEAD
                 )}              </li>
             ))}
           </ul>
         </section>
+=======
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -255,11 +322,23 @@ const KitPage = () => {
             <PressReleaseCard type='launch' title='Launch' />
             {bundle === 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
+<<<<<<< HEAD
             )}          </div>
+=======
+            )}
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </section>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default KitPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default KitPage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

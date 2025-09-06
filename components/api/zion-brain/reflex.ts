@@ -1,6 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
+=======
+import {
+  appendLog,
+  evaluateReflexes,
+  readState,
+  writeState,;
+} from '@/utils/zionBrain';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function isAuthorized(req: NextApiRequest): boolean {
   const token = null;
       return res.status(500).json({ error: 'Reflex failure' })
@@ -15,16 +25,23 @@ import {
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
+<<<<<<< HEAD
   return !superToken |token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
+=======
+  return !superToken || token === superToken;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req))
     return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
+<<<<<<< HEAD
     return res.status(200).json({ metrics: state.metrics |{} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
@@ -32,6 +49,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
   }
+=======
+    return res.status(200).json({ metrics: state.metrics || {} });
+ 
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (req.method === 'POST') {
     const started = Date.now();
     try {
@@ -42,6 +65,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state.lastTriggers = triggers;
       writeState(state);
       const latencyMs = Date.now() - started;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -50,13 +77,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         payload: { metrics, triggers }
       });
       return res.status(200).json({ triggers });
-    } catch (e: any) {
+   
+} catch (e: any) {
       appendLog({
         module: 'reflex'
         type: 'metrics'
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
+<<<<<<< HEAD
       return res.status(500).json({ error: 'Reflex failure' });    }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
@@ -66,6 +95,14 @@ return res.status(405).json({ error: 'Method not allowed' });
     } catch (e: any) {
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message |'unknown' } });
       return res.status(500).json({ error: 'Reflex failure' })
+=======
+      return res.status(500).json({ error: 'Reflex failure' });
+   
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

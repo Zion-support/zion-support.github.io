@@ -16,8 +16,14 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   buttonText?: string;
+<<<<<<< HEAD
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementButton({
   currentContent;
   enhancementType;

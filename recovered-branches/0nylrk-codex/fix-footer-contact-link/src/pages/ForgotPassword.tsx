@@ -24,6 +24,11 @@ const forgotPasswordSchema = null;
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")})
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);

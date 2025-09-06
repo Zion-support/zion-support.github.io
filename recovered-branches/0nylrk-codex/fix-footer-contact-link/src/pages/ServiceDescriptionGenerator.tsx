@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { ServiceDescriptionForm } from '@/components/services/ServiceDescriptionForm';
+import { GeneratedDescriptionDisplay } from '@/components/services/GeneratedDescriptionDisplay';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Navigate } from 'react-router-dom';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -32,8 +45,15 @@ export default function ServiceDescriptionGenerator() {
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
   }
+<<<<<<< HEAD
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
+=======
+}
+
+const handleDescriptionSave = (editedDescription: string) => {
+    setGeneratedDescription(editedDescription);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Here you could also save to database if needed
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

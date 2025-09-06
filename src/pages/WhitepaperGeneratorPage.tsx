@@ -11,9 +11,107 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface WhitepaperSection {
 <<<<<<< HEAD
   id: string;
+<<<<<<< HEAD
   title: string;
   content: string
 }
+=======
+title: string;
+content: string ;
+}interface DistributionItem {;
+  id: string;
+name: string;
+percentage: string ;
+}interface DistributionChartItem {;
+  name: string;
+value: number ;
+}const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00'];
+//Helper for slugifying filenames const slugify = (text: string) : string => {';
+  return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text ;
+};
+const WhitepaperGeneratorPage: React.FC = () => {';
+  const [tokenName, setTokenName] = useState ('My Awesome Token');';
+const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');';
+const [useCases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');';
+const [rewardsLogic, setRewardsLogic] = useState ('Users earn tokens by completing projects and participating in platform governance. A percentage of transaction fees is burned, creating a deflationary pressure. Staking rewards are distributed weekly.');';
+const [distributionBreakdown, setDistributionBreakdown] = useState ('');';
+const [governanceLogic, setGovernanceLogic] = useState ('Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.');';
+const [legalDisclaimers, setLegalDisclaimers] = useState ('This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.');
+const [distributionData, setDistributionData] = useState<DistributionItem[]> ([ {';
+  id: crypto.randomUUID (),  name: 'Team & Advisors', percentage: '15' ;
+};
+{';
+  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20' ;
+};
+{';
+  id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35' ;
+};
+{';
+  id: crypto.randomUUID (),  name: 'Community Rewards & Airdrops', percentage: '20' ;
+};
+{';
+  id: crypto.randomUUID (),  name: 'Public Sale Allocation', percentage: '10' ;
+}]);
+const [isDownloading, setIsDownloading] = useState (false);
+const [isSharing, setIsSharing] = useState (false);
+const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false);
+const [error, setError] = useState<string | null> (null);
+const [shareableLink, setShareableLink] = useState<string | null> (null);
+const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft, setRawDraft] = useState<string | null> (null);
+const [sections, setSections] = useState<WhitepaperSection[]> ([]);
+const [showRawDraft, setShowRawDraft] = useState (false);
+}return parsed;
+}, []);
+const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {;
+  return distributionData .map (item => ({;
+  ;
+}if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {;
+  setError (`Warning: Total distribution is $ {;
+  totalPercentage ;
+}%. Consider adjusting to sum to 100%.`) ;
+}else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some (d => d.name && d.percentage) ) {;
+  ;
+}try {;
+  const apiPayload: any = {;
+  tokenName;
+tokenSupply: tokenSupply.toString ();
+useCases;
+rewardsLogic;
+governanceLogic;
+legalDisclaimers;
+distributionBreakdown ;
+};
+if (processedDistData.length > 0) {;
+  apiPayload.distributionData = processedDistData ;
+}
+}
+
+const {;
+  data, error: funcError ';
+}= await supabase.functions.invoke ('generate-whitepaper', {;
+  body: apiPayload ;
+});
+if (funcError) {;
+  throw new Error (`Supabase function error: $ {;
+  funcError.message ;
+}`) ;
+}if (data && (data as any) .error) {;
+  throw new Error (`Generation error: $ {;
+  (data as any) .error ;
+}`) ;
+}if (!data || ! (data as any) .whitepaperDraft) {';
+  throw new Error ('No whitepaper draft received from the function.') ;
+}setRawDraft ( (data as any) .whitepaperDraft);
+setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) ) ;
+}catch (e: any) {;
+  logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined, {';
+  message: 'Error generating whitepaper' ;
+});';
+setError (e.message || 'An unexpected error occurred.');
+setSections ([]) ;
+}finally {;
+  setIsLoading (false) ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 interface DistributionItem {
   id: string;
@@ -320,8 +418,15 @@ const WhitepaperGeneratorPage: React.FC = () => {
       if (processedDistData.length > 0) {
         apiPayload.distributionData = processedDistData
       }
+<<<<<<< HEAD
       const { data, error: funcError } = await supabase.functions.invoke(
         'generate-whitepaper'
+=======
+}
+
+const { data, error: funcError } = await supabase.functions.invoke(
+        'generate-whitepaper',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {
           body: apiPayload
         }
@@ -354,13 +459,23 @@ const WhitepaperGeneratorPage: React.FC = () => {
       prevSections.map(section =>
         section.id === id ? { ...section, content: newContent } : section
       )
+<<<<<<< HEAD
     )
   }
+=======
+    );
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`
     mdContent += `**Total Supply:** ${tokenSupply}\n\n`
     sections.forEach(section => {
+<<<<<<< HEAD
       mdContent += `## ${section.title}\n\n${section.content}\n\n`
+=======
+      mdContent += `## ${section.title}\n\n${section.content}\n\n`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (section.title.toLowerCase().includes('token distribution')) {
         if (distributionChartData.length > 0) {
           mdContent += `### Distribution Details\n\n`
@@ -998,8 +1113,18 @@ const WhitepaperGeneratorPage: React.FC = () => {
           tokenSupply={tokenSupply}        />
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 export default WhitepaperGeneratorPage
 '"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+}
+
+export default WhitepaperGeneratorPage;
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

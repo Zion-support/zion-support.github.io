@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse

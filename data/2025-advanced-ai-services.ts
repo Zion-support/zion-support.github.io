@@ -3,8 +3,13 @@ export const advancedAIServices2025 = null;
 =======
 export const advancedAIServices2025 = [
   {
+<<<<<<< HEAD
     id: 'ai-powered-business-intelligence-suite'
     name: 'BusinessIntelligence AI Pro'
+=======
+    id: 'ai-powered-business-intelligence-suite',
+    name: 'BusinessIntelligence AI Pro',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -591,6 +596,7 @@ export const advancedAIServices2025 = [
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantage:
+<<<<<<< HEAD
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];      phone: '+1 302 464 0950';
@@ -602,3 +608,8 @@ export const advancedAIServices2025 = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

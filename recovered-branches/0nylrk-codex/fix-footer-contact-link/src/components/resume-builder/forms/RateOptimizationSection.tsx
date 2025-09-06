@@ -25,6 +25,7 @@ interface RateOptimizationSectionProps {
   yearsExperience: number
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   location?: string;
+<<<<<<< HEAD
   rateType: "hourly" | "fixed"
 }
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
@@ -41,6 +42,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   location
   rateType
 }) => {
+=======
+  rateType: 'hourly' | 'fixed';
+}
+
+export const RateOptimizationSection: React.FC<
+  RateOptimizationSectionProps
+> = ({ control, setValue, skills, yearsExperience, location, rateType }) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
   }

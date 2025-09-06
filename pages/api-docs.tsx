@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Link from 'next/link';
 import {
@@ -157,11 +158,18 @@ import Layout from '../components/Layout';
 export default function APIDocsPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function ApiDocsPage() {
+=======
+import Layout from '../components/Layout';
+}
+
+export default function APIDocsPage() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
         <meta name='description' content='API reference and guides.' />
+<<<<<<< HEAD
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
@@ -173,3 +181,19 @@ export default function ApiDocsPage() {
     </>
   )
 }
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+      </Head>
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+      </div>
+    </Layout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

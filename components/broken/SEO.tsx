@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -22,6 +23,9 @@ const SEO: React.FC<SEOProps> = ({
   title;
 =======
 {
+=======
+ {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   /* Robots Meta */
 }{
   noindex && <meta name="robots" content="noindex" />
@@ -79,6 +83,10 @@ const SEO: React.FC<SEOProps> = ({
   /* Structured Data */
 }<script
 }]
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions'
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.'
@@ -103,6 +111,7 @@ const SEO: React.FC<SEOProps> = ({
     : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http')
     ? image
+<<<<<<< HEAD
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -118,6 +127,10 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+=======
+    : `https://ziontechgroup.com${image}`;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -276,6 +289,7 @@ const SEO: React.FC<SEOProps> = ({
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
+<<<<<<< HEAD
             __html: JSON.stringify(structuredData),          }}
         />
       )}
@@ -283,13 +297,23 @@ const SEO: React.FC<SEOProps> = ({
   );
 }
 export default SEO;            __html: JSON.stringify(structuredData)
+=======
+            __html: JSON.stringify(structuredData),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
       )}
     </Head>
   );
+<<<<<<< HEAD
 }
 export default SEO;  )
 }
 export default SEO;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default SEO;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

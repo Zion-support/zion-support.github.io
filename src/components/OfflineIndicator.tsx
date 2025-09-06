@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 <<<<<<< HEAD
@@ -32,6 +33,45 @@ export const OfflineIndicator = () => {
     }
   }, [showOfflineAlert])
   if (!showOfflineAlert) return null
+=======
+import { useState, useEffect } from 'react';
+import { WifiOff, Wifi } from 'lucide-react';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+}
+
+export const OfflineIndicator = () => {
+  const [isOnline, setIsOnline] = useState(true);
+  const [showOfflineAlert, setShowOfflineAlert] = useState(false);
+
+  useEffect(() => {
+    const updateOnlineStatus = () => {
+      const online = navigator.onLine;
+      setIsOnline(online);
+
+      if (!online) {
+        setShowOfflineAlert(true);
+      } else if (showOfflineAlert) {
+        // Show brief "back online" message then hide
+        setTimeout(() => setShowOfflineAlert(false), 3000);
+      }
+    };
+
+    // Set initial status
+    updateOnlineStatus();
+
+    // Listen for online/offline events
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    return () => {
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+    };
+  }, [showOfflineAlert]);
+
+  if (!showOfflineAlert) return null;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>
       <Alert variant={isOnline ? 'default' : 'destructive'}>
@@ -43,6 +83,7 @@ export const OfflineIndicator = () => {
           <AlertDescription>
             {isOnline
               ? 'Connection restored'
+<<<<<<< HEAD
               : 'You are offline. Some features may not work.'}          </AlertDescription>            {isOnline ? (
               'Connection restored'
             ) : (
@@ -54,3 +95,12 @@ export const OfflineIndicator = () => {
   )
 } }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+              : 'You are offline. Some features may not work.'}
+          </AlertDescription>
+        </div>
+      </Alert>
+    </div>
+  );
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

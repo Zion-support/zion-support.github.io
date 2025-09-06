@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -9,6 +10,15 @@ type RequestBody = any;
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+=======
+
+
+}const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -19,8 +29,14 @@ type InsightResponse = {
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
+<<<<<<< HEAD
   gptRecommendation?: string;};  gptRecommendation?: string
 }
+=======
+  gptRecommendation?: string;
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
@@ -92,6 +108,7 @@ function buildTrend(
 async function maybeGetGptRecommendation(
   input: RequestBody
   stats: { median: number; min: number; max: number; country: string }
+<<<<<<< HEAD
 ) {  const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
@@ -136,11 +153,18 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
   return series;
 }
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
+=======
+) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
+<<<<<<< HEAD
     const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join();
+=======
+    const skillsStr = input.skills.join(', ');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -159,9 +183,16 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
   } catch {
     return undefined;
   }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<InsightResponse | { error: string }>
+<<<<<<< HEAD
 ) {  if (req.method !== 'POST') {  } catch {
     return undefined
   }
@@ -176,6 +207,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const country = extractCountry(region |'Global');
   // Score and filter candidate profiles  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
   const country = extractCountry(region |'Global');
+=======
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+ 
+}
+
+  const body: RequestBody = req.body;
+  const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
+    body;
+
+  const country = extractCountry(region || 'Global');
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Score and filter candidate profiles
   const scored = TALENT_PROFILES.map(p => ({
     profile: p
@@ -188,6 +233,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .slice(0, 20);
   const sample =
     scored.length > 0 ? scored.map(s => s.profile) : TALENT_PROFILES;
+<<<<<<< HEAD
   const rates = sample.map(p => p.hourlyRateUsd);  const baseMedian = median(rates);  const scored = TALENT_PROFILES.map((p) => ({
     profile: p;
     score: calculateSimilarityScore(skills |[], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
@@ -196,6 +242,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .slice(0, 20);
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
+=======
+  const rates = sample.map(p => p.hourlyRateUsd);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const baseMedian = median(rates);
   const min = Math.min(...rates);
   const max = Math.max(...rates);
@@ -229,6 +278,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const byRegion = groupBy(TALENT_PROFILES, p => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({
+<<<<<<< HEAD
       region: r
       medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd)))
     }))    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
@@ -248,6 +298,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
+=======
+      region: r,
+      medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),
+    }))
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
   // Tags
@@ -271,6 +326,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     country
   });
   const response: InsightResponse = {
+<<<<<<< HEAD
     recommendedHourlyUsd: recommendedHourly
     recommendedMonthlyUsd: recommendedMonthly
     medianHourlyUsd: Math.round(baseMedian)
@@ -285,3 +341,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 return res.status(200).json(response);  return res.status(200).json(response)
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    recommendedHourlyUsd: recommendedHourly,
+    recommendedMonthlyUsd: recommendedMonthly,
+    medianHourlyUsd: Math.round(baseMedian),
+    minHourlyUsd: Math.round(min),
+    maxHourlyUsd: Math.round(max),
+    confidence: Number(confidence.toFixed(2)),
+    trendMonthly: trend,
+    regionalComparison,
+    tags,
+    gptRecommendation,
+  };
+
+  return res.status(200).json(response);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

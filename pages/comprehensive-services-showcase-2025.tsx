@@ -2,6 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
@@ -38,6 +39,68 @@ const pricingRanges = [
   '$300 - $500'
   '$500 - $800'
   '$800+',];
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Award,
+  Zap,
+  Cloud,
+  Target,
+  Search,
+  Filter,
+  Grid,
+  List,
+  DollarSign,
+  Users,
+  Clock,
+  Eye,
+  Heart,;
+} from 'lucide-react';
+
+import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const categories = [
+  'All Services',
+  'AI & Machine Learning',
+  'Customer Success',
+  'Supply Chain',
+  'Financial Planning',
+  'Sales Intelligence',
+  'HR Analytics',
+  'Decision Intelligence',
+  'Content Marketing',
+  'CRM & Customer Intelligence',
+  'Business Intelligence',
+];
+
+const pricingRanges = [
+  'All Prices',
+  'Under $300',
+  '$300 - $500',
+  '$500 - $800',
+  '$800+',
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ComprehensiveServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
@@ -51,6 +114,10 @@ export default function ComprehensiveServicesShowcase2025() {
     const categoryMatch =
       selectedCategory === 'All Services' |
       service.category.includes(selectedCategory);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {
       const price = parseInt(service.price.replace('$', ''));
@@ -73,7 +140,14 @@ export default function ComprehensiveServicesShowcase2025() {
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
+<<<<<<< HEAD
     return categoryMatch && priceMatch && searchMatch;  });
+=======
+
+    return categoryMatch && priceMatch && searchMatch;
+  });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -83,12 +157,22 @@ export default function ComprehensiveServicesShowcase2025() {
         return (
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
+<<<<<<< HEAD
         );      case 'rating':
+=======
+        );
+      case 'rating':
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         return b.rating - a.rating;
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       default:
+<<<<<<< HEAD
         return 0;    }
+=======
+        return 0;
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   });
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
@@ -107,7 +191,13 @@ export default function ComprehensiveServicesShowcase2025() {
     const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
+<<<<<<< HEAD
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
+=======
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -490,7 +580,12 @@ export default function ComprehensiveServicesShowcase2025() {
                               <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
                               <span className='text-gray-300 text-sm'>
                                 {feature}
+<<<<<<< HEAD
                               </span>                            </div>
+=======
+                              </span>
+                            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           ))}
                         </div>
                       </div>
@@ -610,6 +705,12 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ComprehensiveServicesShowcase2025;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

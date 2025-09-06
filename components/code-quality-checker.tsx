@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 =======
 import {
@@ -18,6 +19,22 @@ import {
   TrendingUp;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Code,
+  CheckCircle,
+  AlertTriangle,
+  Zap,
+  BarChart3,
+  ArrowRight,
+  Play,
+  Shield,
+  Clock,
+  TrendingUp,;
+} from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -28,7 +45,12 @@ export default function CodeQualityCheckerPage() {
 =======
   const features = [
     {
+<<<<<<< HEAD
       icon: <Code className='w-8 h-8 text-white' />
+=======
+      icon: <Code className='w-8 h-8 text-white' />,
+      title: 'Multi-Language Support',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.'
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
@@ -86,6 +108,7 @@ export default function CodeQualityCheckerPage() {
       features: ['Golangci-lint', 'Go vet', 'Performance analysis']
     }
     {
+<<<<<<< HEAD
       name: 'PHP'
       icon: '🐘'
       features: ['PHPStan', 'PHP CS Fixer', 'Security analysis']
@@ -95,6 +118,14 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] }
     { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] }
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+=======
+      name: 'PHP',
+      icon: '🐘',
+      features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'],
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const pricing = [
     {
       name: 'Developer'
@@ -102,6 +133,7 @@ export default function CodeQualityCheckerPage() {
       period: '/month'
       description: 'Perfect for individual developers and small projects'
       features: [
+<<<<<<< HEAD
         '100 code analyses/month'
         'Basic quality metrics'
         '5 programming languages'
@@ -156,6 +188,56 @@ export default function CodeQualityCheckerPage() {
     }
   const handleAnalyzeCode = async () => {
     if (!codeInput.trim()) return;
+=======
+        '100 code analyses/month',
+        'Basic quality metrics',
+        '5 programming languages',
+        'Email support',
+        'Basic reporting',
+        'Community rules',
+      ],
+      popular: false,
+    },
+    {
+      name: 'Team',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for development teams and growing companies',
+      features: [
+        '500 code analyses/month',
+        'Advanced quality metrics',
+        'All programming languages',
+        'Priority support',
+        'Advanced reporting',
+        'Custom rules',
+        'Team collaboration',
+        'API access',
+      ],
+      popular: true,
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations with complex codebases',
+      features: [
+        'Unlimited analyses',
+        'Enterprise metrics',
+        'Custom language support',
+        '24/7 dedicated support',
+        'Custom reporting',
+        'White-label options',
+        'On-premise deployment',
+        'Custom integrations',
+      ],
+      popular: false,
+    },
+  ];
+
+  const handleAnalyzeCode = async () => {
+    if (!codeInput.trim()) return;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setIsAnalyzing(true);
     // Simulate code analysis
     setTimeout(() => {
@@ -178,6 +260,7 @@ export default function CodeQualityCheckerPage() {
             severity: 'low'
           }
           {
+<<<<<<< HEAD
             type: 'error'
             message: 'Missing semicolon at end of statement'
             line: 18
@@ -200,6 +283,31 @@ export default function CodeQualityCheckerPage() {
     }, 3000);  };      setIsAnalyzing(false)
     }, 3000)
   }
+=======
+            type: 'error',
+            message: 'Missing semicolon at end of statement',
+            line: 18,
+            severity: 'high',
+          },
+        ],
+        metrics: {
+          complexity: 'Medium',
+          maintainability: 'Good',
+          testCoverage: '85%',
+          securityScore: '92%',
+        },
+        recommendations: [
+          'Use const for immutable variables to improve code clarity',
+          'Break down large functions into smaller, more focused functions',
+          'Add proper error handling for better robustness',
+          'Consider adding JSDoc comments for better documentation',
+        ],
+      });
+      setIsAnalyzing(false);
+    }, 3000);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -251,6 +359,7 @@ export default function CodeQualityCheckerPage() {
             <Button
               onClick={handleAnalyzeCode}
               size='lg'
+<<<<<<< HEAD
               className='w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'              disabled={isAnalyzing |!codeInput.trim()}
             >
               {isAnalyzing ? (
@@ -294,28 +403,50 @@ export default function CodeQualityCheckerPage() {
               {isAnalyzing ? (
                 <>
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
+=======
+              className='w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'
+              disabled={isAnalyzing || !codeInput.trim()}
+            >
+              {isAnalyzing ? (
+                <>
+                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Analyzing Code...
                 </>
               ) : (
                 <>
+<<<<<<< HEAD
                   <Play className='w-5 h-5 mr-2' />                  <Play className="w-5 h-5 mr-2" />
+=======
+                  <Play className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Analyze Code Quality
                 </>
               )}
             </Button>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             <Button
               href='#pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl'            >
+=======
+              className='border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Pricing
             </Button>
             <Button
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'            >              href="#pricing"
               variant="outline"
               size="lg"
@@ -330,6 +461,10 @@ export default function CodeQualityCheckerPage() {
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
+=======
+              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Schedule Demo
             </Button>
           </div>
@@ -369,6 +504,7 @@ export default function CodeQualityCheckerPage() {
                     <h3 className='text-2xl font-bold mb-4 text-white'>
                       {feature.title}
                     </h3>
+<<<<<<< HEAD
                     <p className='text-gray-400 leading-relaxed'>                      {feature.description}              Powerful Analysis Features
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -394,6 +530,9 @@ export default function CodeQualityCheckerPage() {
                       {feature.title}
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
+=======
+                    <p className='text-gray-400 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature.description}
                     </p>
                   </div>
@@ -434,6 +573,7 @@ export default function CodeQualityCheckerPage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300 text-sm'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-4 h-4 text-teal-400 mr-3 flex-shrink-0' />                      {feature}              Multi-Language Support
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -455,6 +595,9 @@ export default function CodeQualityCheckerPage() {
                   {language.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-4 h-4 text-teal-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
                     </li>
                   ))}
@@ -524,6 +667,7 @@ export default function CodeQualityCheckerPage() {
                         <span className='text-gray-300 text-sm'>
                           {issue.message}
                         </span>
+<<<<<<< HEAD
                         <div className='text-xs text-gray-500 mt-1'>                          Line {issue.line} • Severity: {issue.severity}                Code Quality Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -565,6 +709,9 @@ export default function CodeQualityCheckerPage() {
                       <div>
                         <span className="text-gray-300 text-sm">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">
+=======
+                        <div className='text-xs text-gray-500 mt-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           Line {issue.line} • Severity: {issue.severity}
                         </div>
                       </div>
@@ -600,6 +747,7 @@ export default function CodeQualityCheckerPage() {
                     <span className='text-gray-400'>Security Score</span>
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
+<<<<<<< HEAD
                     </span>                  </div>                  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
@@ -612,6 +760,9 @@ export default function CodeQualityCheckerPage() {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Security Score</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.securityScore}</span>
+=======
+                    </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </Card>
@@ -625,6 +776,7 @@ export default function CodeQualityCheckerPage() {
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -632,6 +784,10 @@ export default function CodeQualityCheckerPage() {
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
+=======
+                    <span className='text-gray-300'>{rec}</span>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ))}
               </div>
             </Card>
@@ -650,6 +806,7 @@ export default function CodeQualityCheckerPage() {
               development needs.
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -657,6 +814,10 @@ export default function CodeQualityCheckerPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {pricing.map((plan, index) => (
               <Card
                 key={index}
@@ -665,15 +826,23 @@ export default function CodeQualityCheckerPage() {
               >
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                     <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
                     </span>
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+=======
+                    <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -692,6 +861,7 @@ export default function CodeQualityCheckerPage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
@@ -699,6 +869,9 @@ export default function CodeQualityCheckerPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
                     </li>
                   ))}
@@ -709,12 +882,17 @@ export default function CodeQualityCheckerPage() {
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
@@ -743,15 +921,24 @@ export default function CodeQualityCheckerPage() {
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
+=======
+              className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Schedule Demo
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

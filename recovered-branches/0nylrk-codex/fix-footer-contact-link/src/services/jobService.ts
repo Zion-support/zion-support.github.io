@@ -44,4 +44,7 @@ export async function getJobById(jobId: string) {
     toast.error("Failed to load job details");
     return null
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -47,9 +47,17 @@ const formSchema = z.object({
 type DisputeFormProps = {
   projectId: string
   milestoneId?: string;
+<<<<<<< HEAD
   onDisputeCreated?: (disputeId: string) => void
   onCancel?: () => void
 }
+=======
+  onDisputeCreated?: (disputeId: string) => void;
+  onCancel?: () => void;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DisputeForm({
   projectId
   milestoneId
@@ -199,5 +207,42 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+const removeFile = (index: number) => {
+  async function onSubmit (values: z.infer<typeof formSchema>) {
+  try {
+  setIsSubmitting (true);
+const dispute = await createDispute ({
+  project id: projectId;
+milestone id: milestoneId;
+reason code: values.reason code;
+description: values.description 
+});
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded toast.success ("Your dispute has been submitted");
+}finally {
+  setIsSubmitting (false) 
+
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+  value 
+}value= {
+  value 
+}> {
+  label 
+}</SelectItem>) ) 
+}</SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
+}</ul> </div>) 
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

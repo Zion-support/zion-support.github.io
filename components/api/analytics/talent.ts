@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
@@ -10,6 +11,14 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) |null
@@ -85,4 +94,7 @@ export default async function handler(
     });
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

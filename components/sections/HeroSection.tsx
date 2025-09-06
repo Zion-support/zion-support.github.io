@@ -14,10 +14,17 @@ import {motion} from 'framer-motion';
 import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
 const HeroSection: React.FC = () => {
   const stats = [
+<<<<<<< HEAD
     { icon: Users, value: '500+', label: 'Happy Clients' }
     { icon: Award, value: '50+', label: 'Awards Won' }
     { icon: Star, value: '99%', label: 'Client Satisfaction' }
     { icon: Zap, value: '24/7', label: 'Support Available' }
+=======
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: Award, value: '50+', label: 'Awards Won' },
+    { icon: Star, value: '99%', label: 'Client Satisfaction' },
+    { icon: Zap, value: '24/7', label: 'Support Available' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>
@@ -51,6 +58,7 @@ const HeroSection: React.FC = () => {
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
+<<<<<<< HEAD
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -83,12 +91,20 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
       <div className="relative container mx-auto px-4 text-center z-10">
+=======
+
+      <div className='relative container mx-auto px-4 text-center z-10'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Main Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           className='max-w-6xl mx-auto'        >          className="max-w-6xl mx-auto"
+=======
+          className='max-w-6xl mx-auto'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           {/* Badge */}
           <motion.div
@@ -100,10 +116,16 @@ const HeroSection: React.FC = () => {
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
+<<<<<<< HEAD
             </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
           >
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>
+=======
+            </span>
+          </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -112,10 +134,15 @@ const HeroSection: React.FC = () => {
             className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
           >
             Transform Your Business with
+<<<<<<< HEAD
             <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>              Cutting-Edge Technology            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
             Transform Your Business with
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+=======
+            <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+              Cutting-Edge Technology
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </span>
           </motion.h1>
           {/* Subtitle */}
@@ -127,10 +154,16 @@ const HeroSection: React.FC = () => {
           >
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
+<<<<<<< HEAD
             in the modern technology landscape.          </motion.p>            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             From AI development to cloud architecture, we help companies revolutionize their digital presence
             and achieve sustainable growth in the modern technology landscape.
+=======
+            in the modern technology landscape.
+          </motion.p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -149,6 +182,7 @@ const HeroSection: React.FC = () => {
               <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>
                 <Play className='w-6 h-6 ml-1' />
               </div>
+<<<<<<< HEAD
               <span className='text-lg font-medium'>Watch Demo</span>            </button>          >
             <Link
               href="/contact"
@@ -162,6 +196,9 @@ const HeroSection: React.FC = () => {
                 <Play className="w-6 h-6 ml-1" />
               </div>
               <span className="text-lg font-medium">Watch Demo</span>
+=======
+              <span className='text-lg font-medium'>Watch Demo</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </button>
           </motion.div>
           {/* Stats */}
@@ -169,7 +206,11 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -185,12 +226,16 @@ const HeroSection: React.FC = () => {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.value}
                 </div>
+<<<<<<< HEAD
                 <div className='text-gray-400 font-medium'>{stat.label}</div>              </motion.div>              >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
+=======
+                <div className='text-gray-400 font-medium'>{stat.label}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
             ))}
           </motion.div>
@@ -201,6 +246,7 @@ const HeroSection: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
+<<<<<<< HEAD
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'      >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -216,23 +262,41 @@ const HeroSection: React.FC = () => {
   );
 }
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
+        className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
           className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+=======
+          className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
             className='w-1 h-3 bg-white/60 rounded-full mt-2'            className="w-1 h-3 bg-white/60 rounded-full mt-2"
+=======
+            className='w-1 h-3 bg-white/60 rounded-full mt-2'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </motion.div>
       </motion.div>
     </section>
   );
+<<<<<<< HEAD
 }
 export default HeroSection;  )
 }
 export default HeroSection;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default HeroSection;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

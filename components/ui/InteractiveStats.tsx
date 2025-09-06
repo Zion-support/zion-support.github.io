@@ -3,6 +3,7 @@ function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     let start: number | null;
 =======
     let start: number | null = null;
@@ -16,11 +17,20 @@ function useCounter(target: number, durationMs: number) {
       if (start === null) start = ts
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
+=======
+    let start: number | null = null;
+    let raf: number;
+    const step = (ts: number) => {
+      if (start === null) start = ts;
+      const progress = Math.min(1, (ts - start) / durationMs);
+      setValue(Math.floor(progress * target));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
+<<<<<<< HEAD
   return value;}
     }
     raf = requestAnimationFrame(step);
@@ -28,6 +38,11 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
+=======
+  return value;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
@@ -70,4 +85,7 @@ function Stat({
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

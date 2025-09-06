@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
+import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",

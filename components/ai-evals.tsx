@@ -1,6 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
 import Card from '../components/ui/Card';
@@ -14,6 +15,22 @@ export default function AIEvalsPage() {
 				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
+=======
+import {
+  Check,
+  ShieldCheck,
+  TrendingUp,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,;
+} from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
 import {
@@ -172,6 +189,7 @@ export default function AIEvalsPage() {
         </div>
       </section>
     </QuantumHolographicMatrixBackground>
+<<<<<<< HEAD
   );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -188,3 +206,6 @@ export default function AIEvalsPage() {
 		</QuantumHolographicMatrixBackground>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

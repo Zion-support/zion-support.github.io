@@ -30,10 +30,21 @@ const services = [
     description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices"
     icon: <Recycle className="h-10 w-10" />}
   {
+<<<<<<< HEAD
     title: "Equipment Rentals"
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    title: 'Equipment Rentals',
+    description:
+      'Flexible rental options for temporary projects and scaling requirements',
+    icon: <Truck className='h-10 w-10' />,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">

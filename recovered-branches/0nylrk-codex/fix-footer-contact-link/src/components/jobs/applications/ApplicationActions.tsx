@@ -15,6 +15,7 @@ interface ApplicationActionsProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+<<<<<<< HEAD
 =======
   application: JobApplication
   processingId: string | null
@@ -22,6 +23,14 @@ interface ApplicationActionsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+=======
+  onStatusChange: (
+    applicationId: string,
+    newStatus: ApplicationStatus
+  ) => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplicationActions({
   application;
   processingId;

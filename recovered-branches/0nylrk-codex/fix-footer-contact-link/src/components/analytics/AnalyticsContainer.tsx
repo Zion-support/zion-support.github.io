@@ -8,6 +8,10 @@ import { useAuth } from "@/hooks/useAuth";
 interface AnalyticsContainerProps {
   children: React.ReactNode;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)

@@ -1,5 +1,9 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface AdvancedInnovativeService {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -49,6 +53,7 @@ export interface AdvancedInnovativeService {
   benefits: string[];
   capabilities: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   marketAdvantage: string
 }
 
@@ -69,6 +74,23 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
+=======
+  marketAdvantage: string;
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+export const advancedInnovativeServices: AdvancedInnovativeService[] = [
+  // Advanced AI & Machine Learning Services
+  {
+    id: 'ai-autonomous-devops-orchestrator',
+    name: 'AI Autonomous DevOps Orchestrator',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     tagline:
       'Self-healing DevOps with intelligent automation and predictive maintenance'
     price: '$1,299'
@@ -784,6 +806,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Custom model development'
     ]
     marketAdvantage:
+<<<<<<< HEAD
       'Most advanced AI climate prediction platform with research-grade accuracy'
   }
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
@@ -792,3 +815,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Most advanced AI climate prediction platform with research-grade accuracy',
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

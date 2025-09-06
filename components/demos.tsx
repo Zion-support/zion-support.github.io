@@ -7,6 +7,7 @@ import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
@@ -23,10 +24,26 @@ import {
   Code
   Play;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+=======
+import {
+  Mail,
+  Lock,
+  Link,
+  FileText,
+  CheckCircle,
+  Zap,
+  BarChart3,
+  Code,
+  Play,;
+} from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
+<<<<<<< HEAD
       id: 'email-validator'
       title: 'Email Validator Pro'
       description:
@@ -88,6 +105,43 @@ export default function DemosPage() {
       component: <TextAnalyzerDemo />
     },  ];      component: <TextAnalyzerDemo />
     }
+=======
+      id: 'email-validator',
+      title: 'Email Validator Pro',
+      description:
+        'Advanced email validation with domain checking and deliverability scoring',
+      icon: <Mail className='w-6 h-6' />,
+      color: 'from-blue-500 to-cyan-600',
+      component: <EmailValidatorDemo />,
+    },
+    {
+      id: 'password-strength',
+      title: 'Password Strength Analyzer',
+      description:
+        'Comprehensive password security analysis with entropy calculation',
+      icon: <Lock className='w-6 h-6' />,
+      color: 'from-green-500 to-emerald-600',
+      component: <PasswordStrengthDemo />,
+    },
+    {
+      id: 'url-shortener',
+      title: 'Smart URL Shortener',
+      description:
+        'Professional URL shortening with analytics and custom codes',
+      icon: <Link className='w-6 h-6' />,
+      color: 'from-purple-500 to-pink-600',
+      component: <UrlShortenerDemo />,
+    },
+    {
+      id: 'text-analyzer',
+      title: 'Text Analysis Suite',
+      description:
+        'Advanced text analysis with readability and sentiment analysis',
+      icon: <FileText className='w-6 h-6' />,
+      color: 'from-orange-500 to-red-600',
+      component: <TextAnalyzerDemo />,
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -155,6 +209,7 @@ export default function DemosPage() {
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                 style={{ animationDelay: '0.4s' }}
               >
+<<<<<<< HEAD
                 <Code className='w-5 h-5 mr-2' />                View All Services      </Head>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -200,6 +255,9 @@ export default function DemosPage() {
                 style={{ animationDelay: '0.4s' }}
               >
                 <Code className="w-5 h-5 mr-2" />
+=======
+                <Code className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 View All Services
               </Button>
             </div>
@@ -231,6 +289,7 @@ export default function DemosPage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
                 Instant
               </div>
+<<<<<<< HEAD
               <div className='text-gray-400 text-sm'>Results</div>            </div>                4
               </div>
               <div className="text-gray-400 text-sm">Live Demos</div>
@@ -252,6 +311,9 @@ export default function DemosPage() {
                 Instant
               </div>
               <div className="text-gray-400 text-sm">Results</div>
+=======
+              <div className='text-gray-400 text-sm'>Results</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -273,6 +335,7 @@ export default function DemosPage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+<<<<<<< HEAD
             {demos.map(demo => (              <button              Choose a Service to Test
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
@@ -281,6 +344,9 @@ export default function DemosPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {demos.map((demo) => (
+=======
+            {demos.map(demo => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(demo.id)}
@@ -303,6 +369,7 @@ export default function DemosPage() {
                 </p>
                 {activeDemo === demo.id && (
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>
+<<<<<<< HEAD
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo.icon}
                 </div>
                 <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -314,6 +381,9 @@ export default function DemosPage() {
                 {activeDemo === demo.id && (
                   <div className="mt-3 flex items-center text-blue-400 text-sm">
                     <CheckCircle className="w-4 h-4 mr-2" />
+=======
+                    <CheckCircle className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Active Demo
                   </div>
                 )}
@@ -333,6 +403,7 @@ export default function DemosPage() {
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               {activeDemoData?.title}
             </h2>
+<<<<<<< HEAD
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
             </p>
           </div>
@@ -350,6 +421,14 @@ export default function DemosPage() {
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">
             {activeDemoData?.component}
           </div>
+=======
+            <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
+              {activeDemoData?.description}
+            </p>
+          </div>
+
+          <div className='animate-fade-in'>{activeDemoData?.component}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </section>
       {/* Features */}
@@ -396,6 +475,7 @@ export default function DemosPage() {
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>
                 API Examples
               </h3>
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration
               </p>
             </Card>
@@ -405,6 +485,13 @@ export default function DemosPage() {
                 See exact request/response formats for easy integration
               </p>
             </Card>
+=======
+              <p className='text-gray-400 leading-relaxed'>
+                See exact request/response formats for easy integration
+              </p>
+            </Card>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />
@@ -412,6 +499,7 @@ export default function DemosPage() {
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'>
                 Detailed Results
               </h3>
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service
               </p>
             </Card>
@@ -425,6 +513,13 @@ export default function DemosPage() {
                 Get comprehensive analysis and insights from each service
               </p>
             </Card>
+=======
+              <p className='text-gray-400 leading-relaxed'>
+                Get comprehensive analysis and insights from each service
+              </p>
+            </Card>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Play className='w-8 h-8 text-cyan-400' />
@@ -432,6 +527,7 @@ export default function DemosPage() {
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300'>
                 Instant Testing
               </h3>
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                No signup required - start testing immediately
               </p>
             </Card>
@@ -445,6 +541,13 @@ export default function DemosPage() {
                 No signup required - start testing immediately
               </p>
             </Card>
+=======
+              <p className='text-gray-400 leading-relaxed'>
+                No signup required - start testing immediately
+              </p>
+            </Card>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-pink-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <CheckCircle className='w-8 h-8 text-pink-400' />
@@ -452,11 +555,15 @@ export default function DemosPage() {
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300'>
                 Production Ready
               </h3>
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                Same infrastructure that powers our production services              </div>
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300">
                 Production Ready
               </h3>
               <p className="text-gray-400 leading-relaxed">
+=======
+              <p className='text-gray-400 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Same infrastructure that powers our production services
               </p>
             </Card>
@@ -487,15 +594,24 @@ export default function DemosPage() {
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+=======
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Get Started
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

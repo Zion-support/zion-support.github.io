@@ -14,6 +14,7 @@ import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
 <<<<<<< HEAD
   projectId: string;
+<<<<<<< HEAD
   revieweeId: string;
   revieweeName: string;
   isOpen: boolean;
@@ -25,6 +26,34 @@ interface LeaveReviewModalProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClose: () => void
 }
+=======
+revieweeId: string;
+revieweeName: string;
+isOpen: boolean;
+onClose: () => void 
+}export function LeaveReviewModal ({
+  projectId;
+revieweeId;
+revieweeName;
+isOpen;
+onClose 
+}: LeaveReviewModalProps) {
+  const {
+  userReview, submitReview, updateReview, isSubmitting 
+}= useReviews (projectId);
+const [open, setOpen] = useState (isOpen);
+useEffect ( () => {
+  setOpen (isOpen) 
+}, [isOpen]);
+const handleOpenChange = (open: boolean) => {
+  setOpen (open);
+if (!open) {
+  onClose ()
+}
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function LeaveReviewModal({
   projectId;
   revieweeId;

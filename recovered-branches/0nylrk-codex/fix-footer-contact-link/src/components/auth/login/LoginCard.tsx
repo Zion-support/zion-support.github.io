@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { LoginForm } from './LoginForm';
+import { SocialLogin } from './SocialLogin';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Link } from "react-router-dom",
 import { LoginForm } from "./LoginForm";

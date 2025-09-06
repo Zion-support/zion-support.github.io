@@ -1,7 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type AdminNotesPanelProps = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
@@ -13,6 +17,7 @@ type Note = {
   text: string;
   authorId: string;
   createdAt: number;
+<<<<<<< HEAD
 }
 export default function AdminNotesPanel({
   targetType
@@ -27,6 +32,16 @@ type Note = {
   createdAt: number
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+=======
+};
+}
+}
+
+export default function AdminNotesPanel({
+  targetType,
+  targetId,
+}: AdminNotesPanelProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -46,6 +61,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         setNotes([]);
         return;
       }
+<<<<<<< HEAD
       const data = await res.json();
       setNotes(data.notes |[]);
     } finally {
@@ -60,17 +76,33 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setNotes(data.notes |[])
     } finally {
       setLoading(false)
+=======
+}
+
+const data = await res.json();
+      setNotes(data.notes || []);
+    } finally {
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   useEffect(() => {
+<<<<<<< HEAD
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+=======
+    if (isAdmin) fetchNotes();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [isAdmin, targetType, targetId]);
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
+<<<<<<< HEAD
         method: 'POST'
+=======
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Content-Type': 'application/json'
           'X-Admin': isAdmin ? 'true' : 'false'
@@ -85,6 +117,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       await fetchNotes();
     } finally {
+<<<<<<< HEAD
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
@@ -94,6 +127,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       await fetchNotes()
     } finally {
       setAdding(false)
+=======
+      setAdding(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   if (!isAdmin) {
@@ -162,15 +198,24 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
               <li key={n.id} className='rounded border p-2 text-sm'>
                 <div className='opacity-60 text-xs mb-1'>
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
+<<<<<<< HEAD
                 </div>                <div>{n.text}</div>          <ul className="space-y-2">
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+=======
+                </div>
+                <div>{n.text}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </li>
             ))}
           </ul>
         )}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

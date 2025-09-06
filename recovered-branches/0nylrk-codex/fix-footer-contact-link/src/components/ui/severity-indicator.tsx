@@ -10,10 +10,16 @@ interface SeverityIndicatorProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   showIcon?: boolean;
   showText?: boolean;
+<<<<<<< HEAD
   size?: "sm" | "md" | "lg";
   className?: string
 }
 <<<<<<< HEAD
+=======
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function SeverityIndicator({ 
   severity;

@@ -1,10 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = null;
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -37,4 +42,7 @@ export default async function handler(
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

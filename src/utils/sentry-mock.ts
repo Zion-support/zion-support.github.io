@@ -27,11 +27,22 @@ const mockSentry = {
   getCurrentHub: () => mockHub
   getClient: noopReturn
   // Transaction and performance monitoring
+<<<<<<< HEAD
   startTransaction: () => mockTransaction
   finishTransaction: noop,  // Error boundary and React integration
   ErrorBoundary: ({ children }: any,) => children
   withErrorBoundary: (component: any,) => component
   showReportDialog: noop
+=======
+  startTransaction: () => mockTransaction,
+  finishTransaction: noop,
+
+  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
+  showReportDialog: noop,
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Browser-specific methods
   onLoad: noop
   wrap: (fn: (...args: any[]) => any) => fn
@@ -138,6 +149,7 @@ const mockHub = {
   startTransaction: () => mockTransaction
 }
 // Export default mock that covers all Sentry packages
+<<<<<<< HEAD
 export default mockSentry
 // Named exports for compatibility
 export const init = mockSentry.init
@@ -172,7 +184,112 @@ export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
+=======
+}
+
+export default mockSentry;
+
+// Named exports for compatibility
+}
+
+export const init = mockSentry.init;
+}
+
+export const captureException = mockSentry.captureException;
+}
+
+export const captureMessage = mockSentry.captureMessage;
+}
+
+export const captureEvent = mockSentry.captureEvent;
+}
+
+export const addBreadcrumb = mockSentry.addBreadcrumb;
+}
+
+export const configureScope = mockSentry.configureScope;
+}
+
+export const withScope = mockSentry.withScope;
+}
+
+export const setUser = mockSentry.setUser;
+}
+
+export const setTag = mockSentry.setTag;
+}
+
+export const setTags = mockSentry.setTags;
+}
+
+export const setExtra = mockSentry.setExtra;
+}
+
+export const setExtras = mockSentry.setExtras;
+}
+
+export const setContext = mockSentry.setContext;
+}
+
+export const getCurrentHub = mockSentry.getCurrentHub;
+}
+
+export const getClient = mockSentry.getClient;
+}
+
+export const startTransaction = mockSentry.startTransaction;
+}
+
+export const ErrorBoundary = mockSentry.ErrorBoundary;
+}
+
+export const withErrorBoundary = mockSentry.withErrorBoundary;
+}
+
+export const showReportDialog = mockSentry.showReportDialog;
+}
+
+export const onLoad = mockSentry.onLoad;
+}
+
+export const wrap = mockSentry.wrap;
+}
+
+export const Handlers = mockSentry.Handlers;
+}
+
+export const withSentryConfig = mockSentry.withSentryConfig;
+}
+
+export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin;
+}
+
+export const Tracing = mockSentry.Tracing;
+}
+
+export const Integrations = mockSentry.Integrations;
+}
+
+export const makeBrowserOfflineTransport =
+  mockSentry.makeBrowserOfflineTransport;
+}
+
+export const makeFetchTransport = mockSentry.makeFetchTransport;
+}
+
+export const createTransport = mockSentry.createTransport;
+}
+
+export const SDK_VERSION = mockSentry.SDK_VERSION;
+}
+
+export const Severity = mockSentry.Severity;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

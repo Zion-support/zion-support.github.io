@@ -34,6 +34,9 @@ if (typeof globalThis !== 'undefined') {
 if (typeof (globalThis as any).process === 'undefined') {
   (globalThis as any).process = createProcessObject()
 // Export a safe environment accessor
+}
+}
+
 export const safeEnv = {
   NODE_ENV:
     (typeof (globalThis as any).process !== 'undefined' &&
@@ -53,6 +56,9 @@ export const safeEnv = {
     ''
 } as const
 // Safe environment getter function
+}
+}
+
 export function getEnv(key: string, defaultValue = ''): string {
   if (
     typeof (globalThis as any).process !== 'undefined' &&
@@ -63,16 +69,26 @@ export function getEnv(key: string, defaultValue = ''): string {
   }
   return defaultValue
 // Check if we're in development mode safely
+}
+}
+
 export function isDevelopment(): boolean {
   return getEnv('NODE_ENV') === 'development'
 // Check if we're in production mode safely
+}
+}
+
 export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 // Export the polyfilled process object
+}
+}
+
 export const processEnv =
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process.env
     : {
+<<<<<<< HEAD
         NODE_ENV: 'production'
         NEXT_PUBLIC_APP_URL: ''
         NEXT_PUBLIC_SUPABASE_URL: ''
@@ -83,3 +99,16 @@ export default safeEnv
 export default safeEnv
 export default safeEnv
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        NODE_ENV: 'production',
+        NEXT_PUBLIC_APP_URL: '',
+        NEXT_PUBLIC_SUPABASE_URL: '',
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+      };
+
+console.log('✅ Environment polyfill loaded successfully');
+}
+}
+
+export default safeEnv;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

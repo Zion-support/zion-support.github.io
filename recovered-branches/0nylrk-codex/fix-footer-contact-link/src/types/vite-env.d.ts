@@ -7,6 +7,7 @@ interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
   readonly url?: string;
+<<<<<<< HEAD
 }
 // Type declarations for modules used in Vite configuration;
 declare module 'vitest/config' {export { defineConfig } from 'vite';
@@ -21,6 +22,36 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
+=======
+
+// Type declarations for modules used in Vite configuration
+declare module 'vitest/config' {
+  export { defineConfig } from 'vite';
+
+declare module '@vitejs/plugin-react-swc' {
+  import { Plugin } from 'vite';
+}
+
+export default function reactSWC(): Plugin;
+
+declare module 'path' {
+}
+
+export function resolve(...paths: string[]): string;
+}
+
+export function join(...paths: string[]): string;
+}
+
+export function dirname(path: string): string;
+
+declare module 'lovable-tagger' {
+  import { Plugin } from 'vite';
+}
+
+export function componentTagger(): Plugin;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Add Node.js globals
   }
 }

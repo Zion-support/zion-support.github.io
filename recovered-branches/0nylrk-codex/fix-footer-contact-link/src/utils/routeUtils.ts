@@ -2,6 +2,7 @@
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const findRouteByPath = null;
 =======
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -12,7 +13,24 @@ export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path)
   return route?.requiredAuth === true
 }
+=======
+}
+
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path);
+};
+//Check if a route requires authentication
+}
+
+export const isProtectedRoute = (path: string) : boolean => {
+  const route = findRouteByPath (path);
+
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Check if a route is accessible by a specific user type
+}
+
 export const canAccessRoute = (
   path: string;
   isAuthenticated: boolean;
@@ -31,8 +49,18 @@ export const canAccessRoute = (
   return true
 }
 // Get breadcrumb items for a path
+<<<<<<< HEAD
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
   const breadcrumbs = [{label: 'Home', path: '/'}];
+=======
+}
+
+export const getBreadcrumbsForPath = (
+  path: string
+): Array<{ label: string; path: string }> => {
+  const breadcrumbs = [{ label: 'Home', path: '/' }];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (path === '/') return breadcrumbs;
   // Split the path into segments
   const segments = path.split('/').filter(Boolean);

@@ -4,8 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
+<<<<<<< HEAD
   isProcessing: boolean
 }
+=======
+  isProcessing: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EmptyMatchesCard({
   onRefresh
   isProcessing

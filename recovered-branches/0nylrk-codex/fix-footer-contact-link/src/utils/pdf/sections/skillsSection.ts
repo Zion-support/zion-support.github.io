@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { jsPDF } from 'jspdf';
+import { Skill } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';

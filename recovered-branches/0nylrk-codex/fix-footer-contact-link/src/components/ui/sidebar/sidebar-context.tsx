@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react"
 import type { CSSProperties } from "react"
 import {TooltipProvider} from "@/components/ui/tooltip"
@@ -5,6 +6,24 @@ import {useIsMobile} from "@/hooks/use-mobile"
 import {cn} from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 <<<<<<< HEAD
+=======
+import * as React from 'react';
+import type { CSSProperties } from 'react';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { cn } from '@/lib/utils';
+import type {
+  SidebarContext as SidebarContextType,
+  SidebarState,;
+} from '../sidebar.types';
+
+const SIDEBAR_COOKIE_NAME = 'sidebar:state';
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
+const SIDEBAR_KEYBOARD_SHORTCUT = 'b';
+
+const SidebarContext = React.createContext<SidebarContextType | null>(null);
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const SIDEBAR_COOKIE_NAME = null;
 =======
@@ -18,6 +37,7 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
+<<<<<<< HEAD
   return context as SidebarContextType
 }
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
@@ -25,6 +45,17 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean
   onOpenChange?: (open: boolean) => void
 }
+=======
+
+  return context as SidebarContextType;
+
+export interface SidebarProviderProps extends React.ComponentProps<'div'> {
+  defaultOpen?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarProvider = React.forwardRef<
   HTMLDivElement;
   SidebarProviderProps

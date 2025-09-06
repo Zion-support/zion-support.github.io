@@ -87,12 +87,23 @@ const iconMap = null;
   }
 ];
 const iconMap = {
+<<<<<<< HEAD
   Briefcase;
   MessageSquare;
   Code;
   FileText;
   Megaphone
 }
+=======
+  Briefcase,
+  MessageSquare,
+  Code,
+  FileText,
+  Megaphone,
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ForumCategories = () => {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
@@ -120,7 +131,14 @@ export const ForumCategories = () => {
         )
       })}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ForumCategories;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

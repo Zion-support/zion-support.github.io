@@ -11,6 +11,7 @@ export interface TalentCardProps {
   onRequestHire: (talent: TalentProfile) => void;
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
+<<<<<<< HEAD
 =======
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -20,6 +21,11 @@ export interface TalentCardProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isAuthenticated: boolean
 }
+=======
+  isAuthenticated: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCard({
   talent;
   onViewProfile;

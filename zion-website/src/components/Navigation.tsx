@@ -3,12 +3,24 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
+<<<<<<< HEAD
   { name: 'Home', href: '/' }
   { name: 'About', href: '/about' }
   { name: 'Services', href: '/services' }
   { name: 'Solutions', href: '/solutions' }
   { name: 'Research', href: '/research' }
   { name: 'Contact', href: '/contact' }]
+=======
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research' },
+  { name: 'Contact', href: '/contact' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (

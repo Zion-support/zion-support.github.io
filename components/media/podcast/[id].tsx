@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function EpisodePage() {
 <<<<<<< HEAD
   const router = null;
@@ -13,8 +18,12 @@ export default function EpisodePage() {
       const res = await fetch('/api/podcast/get?id=' + id);
       const data = await res.json();
       setEpisode(data.episode);
+<<<<<<< HEAD
     })();      setEpisode(data.episode)
     })()
+=======
+    })();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [id]);
   if (!episode) return <div>Loading…</div>;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -37,6 +46,7 @@ export default function EpisodePage() {
         </pre>
       </div>
     </div>
+<<<<<<< HEAD
   );      {episode.audio?.mp3Url && (
         <audio controls className="w-full">
           <source src={episode.audio.mp3Url} type="audio/mpeg" />
@@ -49,3 +59,6 @@ export default function EpisodePage() {
     </div>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

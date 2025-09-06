@@ -1,20 +1,35 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { CHAINS } from '../../../utils/chains';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body || {},
   const stake = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+  
+}
+
+const { region, stakeUsd } = req.body || {};
+  const stake = Number(stakeUsd || 0);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
@@ -47,6 +62,7 @@ export default async function handler(
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+<<<<<<< HEAD
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
     candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
@@ -59,3 +75,5 @@ export default async function handler(
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

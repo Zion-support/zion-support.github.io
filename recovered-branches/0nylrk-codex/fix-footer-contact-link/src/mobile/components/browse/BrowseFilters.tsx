@@ -9,8 +9,14 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
+<<<<<<< HEAD
   type: "jobs" | "talents"
 }
+=======
+  type: 'jobs' | 'talents';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 <<<<<<< HEAD

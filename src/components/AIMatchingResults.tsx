@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { MatchResultItem } from '@/lib/ai-matchmaking'
 import { Card, CardContent } from '@/components/ui/card'
@@ -7,12 +8,25 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+=======
+import { useState } from 'react';
+import { MatchResultItem } from '@/lib/ai-matchmaking';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from '@/components/ui/skeleton';
+import { cn } from '@/lib/utils';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface AIMatchingResultsProps {
 <<<<<<< HEAD
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
+<<<<<<< HEAD
 =======
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
@@ -26,6 +40,11 @@ interface AIMatchingResultsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   serviceType?: string
 }
+=======
+  serviceType?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIMatchingResults({
 <<<<<<< HEAD
   matches;
@@ -136,8 +155,15 @@ export function AIMatchingResults({
           <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
             {items.length > 0 ? (
               items.map(match => {
+<<<<<<< HEAD
                 const CategoryIcon = getCategoryIcon(match.category)
                     onClick={() => onSelectMatch && onSelectMatch(match)}                  >
+=======
+                const CategoryIcon = getCategoryIcon(match.category);
+
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='flex'>
                       <div
                         className={cn(
@@ -215,5 +241,9 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

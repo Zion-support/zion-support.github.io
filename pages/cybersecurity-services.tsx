@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud;
   CheckCircle, ArrowRight, Star, Clock, Target;
   Zap, Users, BarChart3, Settings, Database
@@ -20,11 +21,46 @@ const contactInfo = {
 const serviceHighlights = [
   {
     title: 'Zero Trust Security'
+=======
+import {
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Cpu,
+  Globe,
+  Cloud,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Target,
+  Zap,
+  Users,
+  BarChart3,
+  Settings,
+  Database,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const serviceHighlights = [
+  {
+    title: 'Zero Trust Security',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Never trust, always verify - Advanced zero trust implementation'
     icon: Shield
     color: 'from-red-500 to-pink-600'
     features: [
+<<<<<<< HEAD
       'Continuous verification'
       'Micro-segmentation'
       'Adaptive controls'
@@ -102,6 +138,95 @@ const benefits = [
     icon: BarChart3
     color: 'text-purple-400'
   },];
+=======
+      'Continuous verification',
+      'Micro-segmentation',
+      'Adaptive controls',
+      'Real-time monitoring',
+    ],
+  },
+  {
+    title: 'AI Threat Intelligence',
+    description: 'Predict and prevent cyber threats with AI intelligence',
+    icon: Eye,
+    color: 'from-indigo-500 to-purple-600',
+    features: [
+      'Real-time detection',
+      'Predictive analytics',
+      'Automated response',
+      'Global intelligence',
+    ],
+  },
+  {
+    title: 'Cloud Security Posture',
+    description:
+      'Secure your cloud infrastructure with comprehensive posture management',
+    icon: Cloud,
+    color: 'from-blue-500 to-cyan-600',
+    features: [
+      'Multi-cloud monitoring',
+      'Compliance automation',
+      'Risk management',
+      'Security analytics',
+    ],
+  },
+  {
+    title: 'DevSecOps Security',
+    description: 'Integrate security into your DevOps pipeline seamlessly',
+    icon: Cpu,
+    color: 'from-green-500 to-emerald-600',
+    features: [
+      'Automated testing',
+      'Vulnerability scanning',
+      'Compliance automation',
+      'Security metrics',
+    ],
+  },
+  {
+    title: 'IoT Security Platform',
+    description: 'Secure your IoT ecosystem with comprehensive protection',
+    icon: Globe,
+    color: 'from-purple-500 to-violet-600',
+    features: [
+      'Device authentication',
+      'Network monitoring',
+      'Threat detection',
+      'Automated response',
+    ],
+  },
+];
+
+const benefits = [
+  {
+    title: '99.99% Threat Detection',
+    description:
+      'Advanced AI algorithms detect threats before they become incidents',
+    icon: Shield,
+    color: 'text-red-400',
+  },
+  {
+    title: 'Zero False Positives',
+    description:
+      'AI-powered analysis eliminates false alarms and alert fatigue',
+    icon: CheckCircle,
+    color: 'text-green-400',
+  },
+  {
+    title: '24/7 Security Monitoring',
+    description: 'Round-the-clock protection with automated incident response',
+    icon: Clock,
+    color: 'text-blue-400',
+  },
+  {
+    title: 'Compliance Automation',
+    description: 'Automated compliance reporting and audit preparation',
+    icon: BarChart3,
+    color: 'text-purple-400',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CybersecurityServices() {
   return (
     <Layout>
@@ -164,7 +289,13 @@ export default function CybersecurityServices() {
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
+<<<<<<< HEAD
         <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
+=======
+
+        <div className='relative z-10 container mx-auto px-4 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -199,11 +330,20 @@ export default function CybersecurityServices() {
               <Link href='/contact' className='group'>
                 <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>
                   <span>Get Protected</span>
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
+=======
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>
           <div className='w-4 h-4 bg-red-400 rounded-full'></div>
@@ -218,14 +358,24 @@ export default function CybersecurityServices() {
           className='absolute bottom-40 left-20 opacity-25 animate-float'
           style={{ animationDelay: '2s' }}
         >
+<<<<<<< HEAD
           <div className='w-3 h-3 bg-purple-400 rounded-full'></div>        </div>
+=======
+          <div className='w-3 h-3 bg-purple-400 rounded-full'></div>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </section>
       {/* Service Highlights */}
       <section
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
+<<<<<<< HEAD
         <div className='container mx-auto px-4'>          <motion.div
+=======
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -243,7 +393,13 @@ export default function CybersecurityServices() {
               and ensure business continuity
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {serviceHighlights.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -269,7 +425,12 @@ export default function CybersecurityServices() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>
+=======
+                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />
+                      <span>{feature}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
                   ))}
                 </ul>
@@ -280,7 +441,12 @@ export default function CybersecurityServices() {
       </section>
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
+<<<<<<< HEAD
         <div className='container mx-auto px-4'>          <motion.div
+=======
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -299,7 +465,13 @@ export default function CybersecurityServices() {
               designed for modern enterprises
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025.map((service, index) => (
+=======
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {advancedCybersecurityServices2025.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -322,10 +494,19 @@ export default function CybersecurityServices() {
                       </div>
                     </div>
                     {service.popular && (
+<<<<<<< HEAD
                       <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>                        Popular
                       </span>
                     )}
                   </div>
+=======
+                      <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
+                        Popular
+                      </span>
+                    )}
+                  </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -385,7 +566,12 @@ export default function CybersecurityServices() {
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+<<<<<<< HEAD
                     >                      Get Protected
+=======
+                    >
+                      Get Protected
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </Link>
                   </div>
                 </div>
@@ -396,7 +582,12 @@ export default function CybersecurityServices() {
       </section>
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+<<<<<<< HEAD
         <div className='container mx-auto px-4'>          <motion.div
+=======
+        <div className='container mx-auto px-4'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -413,7 +604,13 @@ export default function CybersecurityServices() {
               Advanced protection that keeps your business safe and compliant
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {benefits.map((benefit, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -432,14 +629,24 @@ export default function CybersecurityServices() {
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>
+<<<<<<< HEAD
         <div className='container mx-auto px-4 text-center'>          <motion.div
+=======
+        <div className='container mx-auto px-4 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -488,10 +695,19 @@ export default function CybersecurityServices() {
               </div>
               <div>
                 <div className='text-3xl font-bold text-red-400 mb-2'>450%</div>
+<<<<<<< HEAD
                 <div className='text-gray-300'>ROI Improvement</div>              </div>
+=======
+                <div className='text-gray-300'>ROI Improvement</div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

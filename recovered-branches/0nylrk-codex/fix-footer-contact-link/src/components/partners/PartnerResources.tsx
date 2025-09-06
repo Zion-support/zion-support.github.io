@@ -9,6 +9,7 @@ interface ResourceItem {
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;
+<<<<<<< HEAD
 =======
   id: string
   title: string
@@ -18,6 +19,11 @@ interface ResourceItem {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   url: string
 }
+=======
+  url: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {

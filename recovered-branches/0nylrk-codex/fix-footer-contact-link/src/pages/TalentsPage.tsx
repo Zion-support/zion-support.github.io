@@ -117,6 +117,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     reviewCount: 21}]
 // Filter options specific to talents
 const TALENT_FILTERS = [
+<<<<<<< HEAD
   { label: 'Engineering', value: 'engineering' }
   { label: 'Data Science', value: 'data-science' }
   { label: 'DevOps', value: 'devops' }
@@ -124,6 +125,17 @@ const TALENT_FILTERS = [
   { label: 'Development', value: 'development' }
   { label: 'Consulting', value: 'consulting' }]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  { label: 'Engineering', value: 'engineering' },
+  { label: 'Data Science', value: 'data-science' },
+  { label: 'DevOps', value: 'devops' },
+  { label: 'Security', value: 'security' },
+  { label: 'Development', value: 'development' },
+  { label: 'Consulting', value: 'consulting' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TalentsPage() {
   return (
     <DynamicListingPage
@@ -134,5 +146,18 @@ export default function TalentsPage() {
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
     />
+<<<<<<< HEAD
   )
 }
+=======
+  );
+rating: 4.9;
+reviewCount: 21 
+}];
+//Filter options specific to talents
+}
+
+export default function TalentsPage () {
+  
+}/>) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

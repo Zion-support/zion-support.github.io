@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 =======
@@ -16,11 +17,27 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
+=======
+import React from 'react';
+import Link from 'next/link';
+import {
+  AlertTriangle,
+  ExternalLink,
+  RefreshCw,
+  Settings,
+  CheckCircle,;
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
+<<<<<<< HEAD
   showSetupButton?: boolean
 <<<<<<< HEAD
+=======
+  showSetupButton?: boolean;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton;
@@ -33,6 +50,7 @@ export function AuthConfigurationError({
     if (onRetry) {
       onRetry()
     } else {
+<<<<<<< HEAD
       window.location.reload() }
   }
   return (
@@ -44,6 +62,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
       onRetry()
     } else {
       window.location.reload()
+=======
+      window.location.reload();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -68,6 +89,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables
               are not configured. New users cannot sign up until this is
+<<<<<<< HEAD
               resolved.            </AlertDescription>
           </Alert>
           {/* Technical Details */}        {/* Main Error Card */}
@@ -88,6 +110,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.
               New users cannot sign up until this is resolved.
+=======
+              resolved.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </AlertDescription>
           </Alert>
           {/* Technical Details */}
@@ -95,9 +120,13 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <h3 className='font-semibold text-gray-900 mb-2'>
               Missing Configuration:
             </h3>
+<<<<<<< HEAD
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
+=======
+            <ul className='text-sm text-gray-700 space-y-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <li>• AUTH0_SECRET</li>
               <li>• AUTH0_BASE_URL</li>
               <li>• AUTH0_ISSUER_BASE_URL</li>
@@ -123,8 +152,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <Button
               onClick={handleRefresh}
               variant='outline'
+<<<<<<< HEAD
               className='flex-1'            >
               <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />
+=======
+              className='flex-1'
+            >
+              <RefreshCw className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Check Again
             </Button>
           </div>
@@ -154,6 +189,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   2
+<<<<<<< HEAD
                 </span>                <div>                <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -169,12 +205,19 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               </li>
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
+=======
+                </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div>
                   <strong>Create Application:</strong>
                   <br />
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   3
@@ -200,6 +243,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   <code className='bg-gray-100 px-1 rounded'>
                     npm run dev
                   </code>{' '}
+<<<<<<< HEAD
                   to apply changes                </div>                <div>
                   <strong>Configure Environment:</strong>
                   <br />
@@ -212,6 +256,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   <strong>Restart Application:</strong>
                   <br />
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
+=======
+                  to apply changes
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </li>
             </ol>
@@ -271,7 +318,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
             >
               <span>System Status</span>
+<<<<<<< HEAD
               <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
+=======
+              <ExternalLink className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Link>
           </div>
         </div>
@@ -286,11 +337,15 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <p className='text-sm text-green-600 mb-3'>
                 Run the setup script to configure Auth0 interactively:
               </p>
+<<<<<<< HEAD
               <code className='bg-green-100 text-green-800 px-3 py-1 rounded text-sm'>                npm run setup:auth0              </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
+=======
+              <code className='bg-green-100 text-green-800 px-3 py-1 rounded text-sm'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 npm run setup:auth0
               </code>
             </div>
@@ -304,19 +359,31 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               onClick={() =>
                 window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')
               }
+<<<<<<< HEAD
               className='text-blue-600 hover:underline'            >        <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
             <button
               onClick = {() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
               className="text-blue-600 hover: underline"
+=======
+              className='text-blue-600 hover:underline'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 export default AuthConfigurationError }
 export default AuthConfigurationError
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+}
+
+export default AuthConfigurationError;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -7,8 +7,14 @@ import { FlagResult } from './types';
  * Flag content for review
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const flagContent = null;
 =======
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;

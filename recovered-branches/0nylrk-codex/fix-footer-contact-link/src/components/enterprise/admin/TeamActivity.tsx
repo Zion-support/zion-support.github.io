@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { CalendarIcon, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import {

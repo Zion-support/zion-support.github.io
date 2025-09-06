@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link",
@@ -6,10 +7,23 @@ import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { useWishlist } from "@/hooks/useWishlist";
 import { useCart  } from '@/context/CartContext';
+=======
+import React from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { useWishlist } from '@/hooks/useWishlist';
+import { useCart } from '@/context/CartContext';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 interface MobileBottomNavProps {
+<<<<<<< HEAD
   unreadCount?: number
+=======
+  unreadCount?: number;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function MobileBottomNav({ unreadCount;
@@ -129,5 +143,9 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+import { formatDistanceToNow } from 'date-fns';
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,;
+} from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ForumReply } from '@/types/community';
+import { cn } from '@/lib/utils';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -12,7 +28,11 @@ interface ReplyCardProps {
   reply: ForumReply;
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ReplyCard = null;
@@ -23,6 +43,7 @@ export const ReplyCard = null;
   className?: string
 }
 export const ReplyCard = ({
+<<<<<<< HEAD
   reply
   onMarkAnswer
   canMarkAnswer = false
@@ -37,6 +58,20 @@ export const ReplyCard = ({
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
         <Avatar className="h-8 w-8">
+=======
+  reply,
+  onMarkAnswer,
+  canMarkAnswer = false,
+  className,
+}: ReplyCardProps) => {
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), {
+    addSuffix: true,
+  });
+
+    >
+      <CardHeader className='flex flex-row items-start gap-4 space-y-0'>
+        <Avatar className='h-8 w-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <AvatarImage src={reply.authorAvatar} alt={reply.authorName} />
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>
         </Avatar>
@@ -84,7 +119,16 @@ export const ReplyCard = ({
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
 export default ReplyCard
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default ReplyCard;
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

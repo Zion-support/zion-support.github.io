@@ -4,6 +4,10 @@ import { SeverityIndicator } from "@/components/ui/severity-indicator";
 interface SeverityDisplayProps {
   severity: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
   severity
 }) => {

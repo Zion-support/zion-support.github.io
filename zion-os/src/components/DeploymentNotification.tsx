@@ -36,6 +36,7 @@ interface DeploymentNotificationProps {updates: DeploymentUpdate[];
   onDismiss?: (id: string) => void;
   onAction?: (id: string, action: string) => void;
 }
+<<<<<<< HEAD
 export default function DeploymentNotification({updates;
   onDismiss;
   onAction;
@@ -48,6 +49,30 @@ export default function DeploymentNotification({updates;
       case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />;
       case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />;
       default: return <Rocket className="w-5 h-5 text-gray-400" />;
+=======
+
+export default function DeploymentNotification({
+  updates,
+  onDismiss,
+  onAction,
+}: DeploymentNotificationProps) {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const getUpdateIcon = (type: string) => {
+    switch (type) {
+      case 'deployment_started':
+        return <Activity className='w-5 h-5 text-blue-400' />;
+      case 'deployment_completed':
+        return <CheckCircle className='w-5 h-5 text-green-400' />;
+      case 'deployment_failed':
+        return <AlertCircle className='w-5 h-5 text-red-400' />;
+      case 'instance_ready':
+        return <Rocket className='w-5 h-5 text-purple-400' />;
+      case 'update_available':
+        return <Clock className='w-5 h-5 text-yellow-400' />;
+      default:
+        return <Rocket className='w-5 h-5 text-gray-400' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   const getUpdateColor = (type: string) => {switch (type) {;
@@ -190,6 +215,7 @@ export default function DeploymentNotification({updates;
       ))}
     </div>;
   );
+<<<<<<< HEAD
 }
 // Example usage with mock data;
 export function DeploymentNotificationExample() {const [updates, setUpdates] = useState<DeploymentUpdate[]>([;
@@ -223,6 +249,45 @@ export function DeploymentNotificationExample() {const [updates, setUpdates] = u
         { label: "Manage", action: "configure", href: "/admin/instances" }
       ];
     }
+=======
+
+// Example usage with mock data
+}
+
+export function DeploymentNotificationExample() {
+  const [updates, setUpdates] = useState<DeploymentUpdate[]>([
+    {
+      id: '1',
+      type: 'deployment_started',
+      title: 'Deployment Started',
+      message: 'Zion Health Network is now being deployed to production',
+      timestamp: new Date().toISOString(),
+      instanceName: 'Zion Health Network',
+      vertical: 'HEALTH',
+      governanceType: 'DAO_FULL',
+      domain: 'health.zion.network',
+      progress: 25,
+      actions: [
+        { label: 'View Progress', action: 'view', href: '/admin/deployments' },
+        { label: 'Configure', action: 'configure', href: '/admin/instances' },
+      ],
+    },
+    {
+      id: '2',
+      type: 'instance_ready',
+      title: 'Instance Ready',
+      message: 'EduDAO Academy has been successfully deployed and is now live',
+      timestamp: new Date(Date.now() - 5 * 60 * 1000).toISOString(),
+      instanceName: 'EduDAO Academy',
+      vertical: 'EDUCATION',
+      governanceType: 'DAO_LITE',
+      domain: 'edu.zion.network',
+      actions: [
+        { label: 'View Instance', action: 'view', href: '/admin/instances' },
+        { label: 'Manage', action: 'configure', href: '/admin/instances' },
+      ],
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ]);
   const handleDismiss = (id: string) => {setUpdates(prev => prev.filter(update => update.id !== id));
   }

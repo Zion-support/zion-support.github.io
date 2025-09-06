@@ -20,10 +20,21 @@ const steps = [
     description: "Connect directly with matched providers and complete your transaction securely."
     icon: Handshake}
   {
+<<<<<<< HEAD
     title: "Done"
     description: "Enjoy hassle-free delivery and support for your technology solutions."
     icon: Check}]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    title: 'Done',
+    description:
+      'Enjoy hassle-free delivery and support for your technology solutions.',
+    icon: Check,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HowItWorksSection() {
   return (
     <section className="py-20 bg-zion-blue">

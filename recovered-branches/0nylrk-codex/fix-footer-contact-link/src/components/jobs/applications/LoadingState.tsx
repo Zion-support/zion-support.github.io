@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { Card, CardContent } from '@/components/ui/card';
+import { Loader2 } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";

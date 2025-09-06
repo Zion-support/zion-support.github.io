@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 =======
 import {
@@ -18,6 +19,22 @@ import {
   Trash2;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Link,
+  Copy,
+  BarChart3,
+  ArrowRight,
+  RefreshCw,
+  CheckCircle,
+  ExternalLink,
+  QrCode,
+  Settings,
+  Trash2,;
+} from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
@@ -31,6 +48,10 @@ export default function URLShortenerPage() {
   const [showQR, setShowQR] = useState<string | null>(null);
   const generateShortUrl = async () => {
     if (!longUrl.trim()) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -76,6 +97,7 @@ export default function URLShortenerPage() {
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
   }
   const getTotalUrls = () => {
+<<<<<<< HEAD
     return shortenedUrls.length;  };    setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -123,6 +145,11 @@ export default function URLShortenerPage() {
     return shortenedUrls.length
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    return shortenedUrls.length;
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -151,6 +178,7 @@ export default function URLShortenerPage() {
           </h1>
           <p className='text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed'>
             Transform long URLs into short, memorable links with our
+<<<<<<< HEAD
             professional shortening service. Track clicks, generate QR codes
             and manage your links efficiently with advanced analytics.          </p>      </Head>
       {/* Hero Section */}
@@ -168,6 +196,10 @@ export default function URLShortenerPage() {
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">
             Transform long URLs into short, memorable links with our professional shortening service.
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
+=======
+            professional shortening service. Track clicks, generate QR codes,
+            and manage your links efficiently with advanced analytics.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
       </section>
@@ -201,6 +233,7 @@ export default function URLShortenerPage() {
                     value={longUrl}
                     onChange={e => setLongUrl(e.target.value)}
                     placeholder='https://example.com/very-long-url-that-needs-shortening'
+<<<<<<< HEAD
                     className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'                  />              Create Short URLs Instantly
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -228,6 +261,9 @@ export default function URLShortenerPage() {
                     onChange={(e) => setLongUrl(e.target.value)}
                     placeholder="https://example.com/very-long-url-that-needs-shortening"
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+=======
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   />
                 </div>
                 {/* Custom Alias */}
@@ -247,6 +283,7 @@ export default function URLShortenerPage() {
                       className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-r-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                     />
                   </div>
+<<<<<<< HEAD
                   <p className='text-xs text-gray-400 mt-1'>                    Leave empty for auto-generated alias                    Custom Alias (Optional)
                   </label>
                   <div className="flex space-x-2">
@@ -262,16 +299,24 @@ export default function URLShortenerPage() {
                     />
                   </div>
                   <p className="text-xs text-gray-400 mt-1">
+=======
+                  <p className='text-xs text-gray-400 mt-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Leave empty for auto-generated alias
                   </p>
                 </div>
                 <Button
                   onClick={generateShortUrl}
+<<<<<<< HEAD
                   disabled={!longUrl.trim() |isShortening}
+=======
+                  disabled={!longUrl.trim() || isShortening}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
                 >
                   {isShortening ? (
                     <>
+<<<<<<< HEAD
                       <RefreshCw className='w-5 h-5 mr-2 animate-spin' />                      Creating Short URL...
                     </>
                   ) : (
@@ -281,16 +326,28 @@ export default function URLShortenerPage() {
                   {isShortening ? (
                     <>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+=======
+                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Creating Short URL...
                     </>
                   ) : (
                     <>
+<<<<<<< HEAD
                       <Link className='w-5 h-5 mr-2' />                      <Link className="w-5 h-5 mr-2" />
+=======
+                      <Link className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Create Short URL
                     </>
                   )}
                 </Button>
+<<<<<<< HEAD
                 <div className='text-sm text-gray-400'>                  <p>• Professional, branded short URLs</p>                <div className="text-sm text-gray-400">
+=======
+
+                <div className='text-sm text-gray-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <p>• Professional, branded short URLs</p>
                   <p>• Click tracking and analytics</p>
                   <p>• QR code generation</p>
@@ -316,6 +373,7 @@ export default function URLShortenerPage() {
                     <div className='text-3xl font-bold text-red-400 mb-2'>
                       {getTotalClicks()}
                     </div>
+<<<<<<< HEAD
                     <div className='text-sm text-gray-400'>Total Clicks</div>                  </div>
                 </div>
                 {shortenedUrls.length === 0 ? (                Your Statistics
@@ -333,6 +391,9 @@ export default function URLShortenerPage() {
                       {getTotalClicks()}
                     </div>
                     <div className="text-sm text-gray-400">Total Clicks</div>
+=======
+                    <div className='text-sm text-gray-400'>Total Clicks</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
                 {shortenedUrls.length === 0 ? (
@@ -359,8 +420,12 @@ export default function URLShortenerPage() {
                             </div>
                           </div>
                           <div className='text-right ml-3'>
+<<<<<<< HEAD
                             <div className='text-sm text-white font-medium'>                              {url.clicks} clicks                          <div className="text-right ml-3">
                             <div className="text-sm text-white font-medium">
+=======
+                            <div className='text-sm text-white font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               {url.clicks} clicks
                             </div>
                           </div>
@@ -382,6 +447,7 @@ export default function URLShortenerPage() {
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
                 Your Shortened URLs
               </h2>
+<<<<<<< HEAD
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>                Manage and track all your shortened URLs in one place.
               </p>
             </div>
@@ -394,6 +460,13 @@ export default function URLShortenerPage() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               </p>
             </div>
+=======
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                Manage and track all your shortened URLs in one place.
+              </p>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='space-y-4'>
               {shortenedUrls.map(url => (
                 <Card
@@ -420,6 +493,7 @@ export default function URLShortenerPage() {
                             <span>
                               Created:{' '}
                               {new Date(url.createdAt).toLocaleDateString()}
+<<<<<<< HEAD
                             </span>                            <span>Alias: {url.alias}</span>                    {/* URL Info */}
                     <div className="lg:col-span-2">
                       <div className="flex items-start justify-between mb-4">
@@ -437,6 +511,9 @@ export default function URLShortenerPage() {
                           </p>
                           <div className="flex items-center space-x-4 mt-3 text-sm text-gray-400">
                             <span>Created: {new Date(url.createdAt).toLocaleDateString()}</span>
+=======
+                            </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             <span>Alias: {url.alias}</span>
                           </div>
                         </div>
@@ -450,6 +527,7 @@ export default function URLShortenerPage() {
                         </div>
                         <div className='text-xs text-gray-400'>
                           Total Clicks
+<<<<<<< HEAD
                           {url.clicks}
                         </div>
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -474,11 +552,28 @@ export default function URLShortenerPage() {
                           Copy
                         </Button>
                         <Button
+=======
+                        </div>
+                      </div>
+
+                      <div className='flex space-x-2'>
+                        <Button
+                          onClick={() => copyToClipboard(url.shortUrl)}
+                          variant='outline'
+                          size='sm'
+                          className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600'
+                        >
+                          <Copy className='w-4 h-4 mr-2' />
+                          Copy
+                        </Button>
+                        <Button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           onClick={() => incrementClicks(url.id)}
                           variant='outline'
                           size='sm'
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600'
                         >
+<<<<<<< HEAD
                           <Copy className='w-4 h-4 mr-2' />                          Copy
                         </Button>
                         <Button
@@ -498,6 +593,13 @@ export default function URLShortenerPage() {
                           Visit
                         </Button>
                       </div>
+=======
+                          <ExternalLink className='w-4 h-4 mr-2' />
+                          Visit
+                        </Button>
+                      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <div className='flex space-x-2'>
                         <Button
                           onClick={() =>
@@ -507,6 +609,7 @@ export default function URLShortenerPage() {
                           size='sm'
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600'
                         >
+<<<<<<< HEAD
                           <QrCode className='w-4 h-4 mr-2' />                          QR Code
                         </Button>
                         <Button
@@ -517,6 +620,9 @@ export default function URLShortenerPage() {
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
                           <QrCode className="w-4 h-4 mr-2" />
+=======
+                          <QrCode className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           QR Code
                         </Button>
                         <Button
@@ -525,11 +631,16 @@ export default function URLShortenerPage() {
                           size='sm'
                           className='border-red-600 text-red-400 hover:bg-red-600 hover:text-white'
                         >
+<<<<<<< HEAD
                           <Trash2 className='w-4 h-4' />                        </Button>                          variant="outline"
                           size="sm"
                           className="border-red-600 text-red-400 hover:bg-red-600 hover:text-white"
                         >
                           <Trash2 className="w-4 h-4" />
+=======
+                          <Trash2 className='w-4 h-4' />
+                        </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                   </div>
@@ -541,6 +652,7 @@ export default function URLShortenerPage() {
                         alt='QR Code'
                         className='mx-auto mb-3 w-32 h-32'
                       />
+<<<<<<< HEAD
                       <p className='text-sm text-gray-400'>                        Scan this QR code to visit the shortened URL                    <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">
                       <img
                         src={url.qrCode}
@@ -548,6 +660,10 @@ export default function URLShortenerPage() {
                         className="mx-auto mb-3 w-32 h-32"
                       />
                       <p className="text-sm text-gray-400">
+=======
+                      <p className='text-sm text-gray-400'>
+                        Scan this QR code to visit the shortened URL
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </p>
                     </div>
                   )}
@@ -626,11 +742,16 @@ export default function URLShortenerPage() {
               </h3>
               <p className='text-gray-400'>
                 Simple dashboard to manage, edit, and delete your shortened URLs
+<<<<<<< HEAD
                 as needed.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
               <p className="text-gray-400">
                 Simple dashboard to manage, edit, and delete your shortened URLs as needed.
+=======
+                as needed.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Card>
           </div>
         </div>
@@ -657,6 +778,7 @@ export default function URLShortenerPage() {
                 Create trackable links for email marketing, social media
                 campaigns, and advertising to measure ROI and engagement.
               </p>
+<<<<<<< HEAD
               <ul className='space-y-2 text-gray-300'>                <li>• Track campaign performance</li>              Perfect For Every Business Need
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -671,11 +793,18 @@ export default function URLShortenerPage() {
                 Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
+=======
+              <ul className='space-y-2 text-gray-300'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>• Track campaign performance</li>
                 <li>• Measure click-through rates</li>
                 <li>• Optimize marketing strategies</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📱</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -685,6 +814,7 @@ export default function URLShortenerPage() {
                 Share concise, professional links on social platforms with
                 built-in analytics to understand audience engagement.
               </p>
+<<<<<<< HEAD
               <ul className='space-y-2 text-gray-300'>                <li>• Professional appearance</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
@@ -692,10 +822,18 @@ export default function URLShortenerPage() {
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
+=======
+              <ul className='space-y-2 text-gray-300'>
+                <li>• Professional appearance</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>• Engagement tracking</li>
                 <li>• Brand consistency</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📧</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -705,6 +843,7 @@ export default function URLShortenerPage() {
                 Include short, trackable URLs in newsletters and promotional
                 emails to monitor subscriber engagement.
               </p>
+<<<<<<< HEAD
               <ul className='space-y-2 text-gray-300'>                <li>• Clean email design</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📧</div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
@@ -712,10 +851,18 @@ export default function URLShortenerPage() {
                 Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
+=======
+              <ul className='space-y-2 text-gray-300'>
+                <li>• Clean email design</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>• Subscriber analytics</li>
                 <li>• A/B testing support</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🏢</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -725,6 +872,7 @@ export default function URLShortenerPage() {
                 Use short URLs in presentations, business cards, and printed
                 materials for easy access and tracking.
               </p>
+<<<<<<< HEAD
               <ul className='space-y-2 text-gray-300'>                <li>• Professional branding</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
@@ -732,6 +880,10 @@ export default function URLShortenerPage() {
                 Use short URLs in presentations, business cards, and printed materials for easy access and tracking.
               </p>
               <ul className="space-y-2 text-gray-300">
+=======
+              <ul className='space-y-2 text-gray-300'>
+                <li>• Professional branding</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>• Easy sharing</li>
                 <li>• Access tracking</li>
               </ul>
@@ -761,15 +913,24 @@ export default function URLShortenerPage() {
               href='/pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-orange-600'            >              href="/pricing"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-orange-600"
+=======
+              className='border-white text-white hover:bg-white hover:text-orange-600'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Pricing
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

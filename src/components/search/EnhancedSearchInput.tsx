@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -9,11 +10,39 @@ import { useDebounce } from "@/hooks/useDebounce",
 import { useRouter } from "next/router",
 import { slugify } from "@/lib/slugify",
 import { debounce } from "lodash";
+=======
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { SearchSuggestion } from '@/types/search';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useRouter } from 'next/router';
+import { slugify } from '@/lib/slugify';
+import { debounce } from 'lodash';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logInfo, logWarn } from '@/utils/productionLogger';
 interface EnhancedSearchInputProps {
   value: string;
+<<<<<<< HEAD
   onChange: (value: string) => void;
 =======
+=======
+onChange: (value: string) => void;
+}, 300);
+[]);
+//Fetch suggestions from API when input value changes useEffect ( () => {;
+  if (!debounced) {;
+  //Show recent suggestions provided via props when no query entered setFilteredSuggestions ( (searchSuggestions || []) .filter (s => s.type === 'recent') return () => controller.abort () ;
+}, [debounced, searchSuggestions]);
+//Handle clicks outside the component to close suggestions useEffect ( () => {;
+  function handleClickOutside (event: MouseEvent) {;
+  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {;
+  ;
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { logInfo, logWarn } from '@/utils/productionLogger'
 interface EnhancedSearchInputProps {
@@ -115,7 +144,13 @@ export function EnhancedSearchInput({
       setHighlightedIndex(-1)
       return
     }
+<<<<<<< HEAD
     const controller = new AbortController()
+=======
+}
+
+const controller = new AbortController();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
       signal: controller.signal
     })
@@ -289,6 +324,7 @@ export function EnhancedSearchInput({
         setEnterHandledPostFocus(false)
         break
     }
+<<<<<<< HEAD
   }
   return (
     <div
@@ -299,6 +335,14 @@ export function EnhancedSearchInput({
       aria-haspopup="listbox"
       aria-controls="autocomplete-suggestions-list" // Added aria-controls
       onClick = {(,) => inputRef.current?.focus(),}
+=======
+  };
+
+      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-haspopup='listbox'
+      aria-controls='autocomplete-suggestions-list' // Added aria-controls
+      onClick={() => inputRef.current?.focus()}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className="relative flex items-center w-full">
         <Search
@@ -424,5 +468,32 @@ break
         listId="autocomplete-suggestions-list"
       />
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+}setIsFocused (false);
+inputRef.current?.blur ();
+setHighlightedIndex (-1) ;
+};
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+  switch (e.key) {';
+  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
+  case 'Escape': e.preventDefault ();
+setIsFocused (false);
+setHighlightedIndex (-1);
+setValueOnFocus (null);
+inputRef.current?.blur ();
+break;
+default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
+break ;
+
+};
+> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
+  () => onChange ('') ";
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}</div> <AutocompleteSuggestions /> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

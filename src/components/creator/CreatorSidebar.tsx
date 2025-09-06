@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -35,6 +36,29 @@ import {
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
+=======
+import {
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,;
+} from 'lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenuItem,
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed;
+} from '@/components/ui/sidebar';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -62,6 +86,7 @@ export function AppSidebar() {
           <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
             <span>Profile</span>
           </SidebarMenuItem>
+<<<<<<< HEAD
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
@@ -84,10 +109,17 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
+=======
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

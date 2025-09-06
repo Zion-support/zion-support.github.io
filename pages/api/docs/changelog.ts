@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -15,6 +16,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(200).json(content);
     } catch (e: any) {
       res.status(500).json({ error: e?.message |"Failed to read changelog" });
+=======
+
+}
+
+export default function handler (req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {
+      const content = fs.existsSync(filePath)
+        ? JSON.parse(fs.readFileSync(filePath, 'utf8'))
+        : { content: '' };
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to read changelog' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     return;
   }
@@ -33,7 +48,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     return;
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

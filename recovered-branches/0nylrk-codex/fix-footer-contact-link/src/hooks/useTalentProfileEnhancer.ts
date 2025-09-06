@@ -26,11 +26,17 @@ export interface CategorizedSkills {
 export interface EnhancedProfile {
 <<<<<<< HEAD
   summary: string;
+<<<<<<< HEAD
 =======
   summary: string
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   categorizedSkills: CategorizedSkills
 }
+=======
+  categorizedSkills: CategorizedSkills;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false);
 <<<<<<< HEAD

@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 "use client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
 export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
+=======
+'use client';
+
+import { useAuth } from '@/contexts/AuthContext';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import Link from 'next/link';
+}
+
+export default function DashboardPage() {
+  const { user, isAuthenticated, isLoading } = useAuth();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const router = useRouter();
   useEffect(() => {if (!isLoading && !isAuthenticated) {;
       router.push("/auth/signin");

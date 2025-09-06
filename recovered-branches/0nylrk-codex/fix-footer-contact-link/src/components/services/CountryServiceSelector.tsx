@@ -13,8 +13,14 @@ import { PaymentSection } from "./PaymentSection";
 import { ServiceDetails } from "./ServiceDetails";
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
+<<<<<<< HEAD
   selectedCountry?: CountryPricing | null
 }
+=======
+  selectedCountry?: CountryPricing | null;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CountryServiceSelector({
   onCountryChange
   selectedCountry: initialCountry

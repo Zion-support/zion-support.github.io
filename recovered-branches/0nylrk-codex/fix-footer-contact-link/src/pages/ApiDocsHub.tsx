@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  ArrowRight,
+  BookOpen,
+  Code,
+  Webhook,
+  AlertCircle,
+  Zap,;
+} from 'lucide-react';
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Link } from "react-router-dom",
@@ -79,7 +94,13 @@ export function ApiDocsHub() {
         </div>
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ApiDocsHub;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -9,6 +10,19 @@ interface ProfileContactProps {
   profileName: string;
   profileType: 'service' | 'talent'
 <<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Mail, Send } from 'lucide-react';
+import { useState } from 'react';
+import { toast } from '@/hooks/use-toast';
+
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: 'service' | 'talent';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
@@ -50,15 +64,24 @@ export function ProfileContact({
           <span className='block'>Email: </span>
           <a
             href={`mailto:${email}`}
+<<<<<<< HEAD
             className='text-zion-cyan hover:underline truncate block'          >        <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
           <a
             href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
+=======
+            className='text-zion-cyan hover:underline truncate block'
+          >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {email}
           </a>
         </div>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <form onSubmit={handleSendMessage}>
         <div className='space-y-4'>
           <div>
@@ -66,6 +89,7 @@ export function ProfileContact({
               placeholder='Subject'
               value={subject}
               onChange={e => setSubject(e.target.value)}
+<<<<<<< HEAD
               className='bg-zion-blue border-zion-blue-light text-white'              required              className="bg-zion-blue border-zion-blue-light text-white"
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
@@ -75,6 +99,9 @@ export function ProfileContact({
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white"
+=======
+              className='bg-zion-blue border-zion-blue-light text-white'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               required
             />
           </div>
@@ -90,6 +117,7 @@ export function ProfileContact({
           <Button
             type='submit'
             className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
+<<<<<<< HEAD
             disabled={isSending}              required
             />
           </div>
@@ -103,13 +131,29 @@ export function ProfileContact({
           >
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
+=======
+            disabled={isSending}
+          >
+            <Send className='mr-2 h-4 w-4' />
+            {isSending ? 'Sending...' : 'Send Message'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
         </div>
       </form>
     </div>
+<<<<<<< HEAD
   )
   `mailto:$ {
   email
 }` "
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}
+=======
+  );
+
+  `mailto:$ {;
+  email ;
+}` ";
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -10,6 +10,7 @@ interface KanbanColumnProps {
   title: string;
   description: string;
   applications: JobApplication[];
+<<<<<<< HEAD
 =======
   id: string
   title: string
@@ -18,6 +19,11 @@ interface KanbanColumnProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   count: number
 }
+=======
+  count: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function KanbanColumn({
   id;
   title;

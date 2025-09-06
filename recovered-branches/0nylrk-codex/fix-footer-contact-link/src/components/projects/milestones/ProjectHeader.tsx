@@ -6,6 +6,10 @@ import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
   title: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 <<<<<<< HEAD
   const navigate = null;

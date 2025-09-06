@@ -3,6 +3,11 @@ import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
 <<<<<<< HEAD
@@ -42,10 +47,19 @@ export default function JobsListPage() {
                   subtitle={j.subtitle}
                   description={j.description}
                   footer={<span className='text-blue-600'>View Job →</span>}
+<<<<<<< HEAD
                 />              </a>
+=======
+                />
+              </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Link>
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

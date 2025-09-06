@@ -2,8 +2,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '[^']*';
 import type { Job } from '../../../utils/types';
+<<<<<<< HEAD
 import { rateLimit } from '[^']*';
 import { getRequestUserEmail, isAdminEmail } from '[^']*';
+=======
+import { rateLimit } from '../../../utils/rateLimit';
+import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';
+
+const FILE = 'jobs.json';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const FILE = null;
   res.status(405).end('Method Not Allowed')
@@ -19,9 +27,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
   const { id } = req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
+<<<<<<< HEAD
   const idx = jobs.findIndex((j) => j.id === id);
   if (idx === -1) {
     res.status(404).json({ error: "Job not found" });
+=======
+  const idx = jobs.findIndex(j => j.id === id);
+
+  if (idx === -1) {
+    res.status(404).json({ error: 'Job not found' });
+    return;
+  }
+
+  if (req.method === 'GET') {
+    res.status(200).json({ job: jobs[idx] });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     return;
   }
   if (req.method === "GET") {
@@ -33,10 +53,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
+<<<<<<< HEAD
       res.status(403).json({ error: "Forbidden" });
+=======
+      res.status(403).json({ error: 'Forbidden' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       return;
     }
     const {
+<<<<<<< HEAD
       title
       description
       category
@@ -49,6 +74,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (typeof title === "string") job.title = title;
     if (typeof description === "string") job.description = description;
     if (typeof category === "string") job.category = category;
+=======
+      title,
+      description,
+      category,
+      requiredSkills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+    } = req.body || {};
+
+    if (typeof title === 'string') job.title = title;
+    if (typeof description === 'string') job.description = description;
+    if (typeof category === 'string') job.category = category;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (Array.isArray(requiredSkills))
       job.requiredSkills = requiredSkills.map(String);
     if (typeof budgetMinUsd === "number" |budgetMinUsd === null)
@@ -57,14 +97,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === "string" |deliveryDeadlineIso === null)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
+<<<<<<< HEAD
     if (typeof status === "string") job.status = status as Job["status"];
+=======
+    if (typeof status === 'string') job.status = status as Job['status'];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job;
     writeJsonFile<Job[]>(FILE, jobs);
     res.status(200).json({ job });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  res.setHeader('Allow', 'GET, PATCH');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

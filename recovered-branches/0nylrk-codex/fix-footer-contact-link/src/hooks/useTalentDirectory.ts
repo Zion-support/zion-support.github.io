@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { useAuthStatus } from './talent/useAuthStatus';
+import { useTalentData } from './talent/useTalentData';
+import { useFilterTalents } from './talent/useFilterTalents';
+import { useUIState } from './talent/useUIState';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
@@ -87,6 +95,7 @@ export function useTalentDirectory() {
     userDetails;
     savedTalents;
     // Actions
+<<<<<<< HEAD
     toggleSkill;
     toggleAvailability;
     toggleRegion;
@@ -95,3 +104,12 @@ export function useTalentDirectory() {
     handleToggleSave
   }
 }
+=======
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave,
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

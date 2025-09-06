@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { Card } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card } from "@/components/ui/card",
 import { Skeleton } from "@/components/ui/skeleton";

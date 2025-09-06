@@ -17,12 +17,18 @@ interface TalentProfileProps {
 <<<<<<< HEAD
   profile: TalentProfileType;
   onRequestHire: () => void;
+<<<<<<< HEAD
 =======
   profile: TalentProfileType
   onRequestHire: () => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onMessageTalent?: () => void
 }
+=======
+  onMessageTalent?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentProfile({
   profile;
   onRequestHire;

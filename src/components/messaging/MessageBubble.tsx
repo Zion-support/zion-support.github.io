@@ -1,15 +1,29 @@
 import React from 'react';
+<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react'
 import { cn  } from '@/lib/utils';
+=======
+import { format } from 'date-fns';
+import { PaperclipIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
 <<<<<<< HEAD
   message: Message;
+<<<<<<< HEAD
 =======
   message: Message
   isUserMessage: boolean
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+=======
+  isUserMessage: boolean;
+}
+
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div
         className={cn(
@@ -30,6 +44,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             {message.attachment_name |'Attachment'}
           </a>
         )}
+<<<<<<< HEAD
         <div className='text-xs opacity-70 text-right mt-1'>          {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
@@ -72,9 +87,17 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           </a>
         )}
         <div className="text-xs opacity-70 text-right mt-1">
+=======
+
+        <div className='text-xs opacity-70 text-right mt-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

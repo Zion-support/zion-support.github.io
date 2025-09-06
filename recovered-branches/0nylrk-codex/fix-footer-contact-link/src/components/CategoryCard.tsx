@@ -19,9 +19,23 @@ interface CategoryCardProps {
    */
   color?: string;
   count?: number;
+<<<<<<< HEAD
   className?: string
 }
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+=======
+  className?: string;
+}
+
+export function CategoryCard({
+  title,
+  description,
+  icon,
+  color,
+  count,
+  className,
+}: CategoryCardProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Create a URL-friendly slug from the category title
 <<<<<<< HEAD
   const slug = null;

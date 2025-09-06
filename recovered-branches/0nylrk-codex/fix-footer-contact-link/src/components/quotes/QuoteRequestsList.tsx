@@ -7,6 +7,7 @@ import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestsListProps = any;
 =======
 type QuoteRequestsListProps = {
+<<<<<<< HEAD
   quotes: QuoteRequest[]
   isLoading: boolean
   isArchived: boolean
@@ -14,6 +15,17 @@ type QuoteRequestsListProps = {
   onMarkAsResponded: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
+=======
+  quotes: QuoteRequest[];
+isLoading: boolean;
+isArchived: boolean;
+onViewDetails: (quote: QuoteRequest) => void;
+onMarkAsResponded: (id: string) => void;
+onToggleArchive: (id: string, isArchived: boolean) => void 
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   quotes;
   isLoading;

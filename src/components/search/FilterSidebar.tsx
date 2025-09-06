@@ -1,10 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
 interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
+=======
+
+interface FilterSidebarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({
+  className,
+  children,
+}) => {
+  return <div className={`filter-sidebar ${className || ''}`}>{children}</div>;
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
   className;
   children 
@@ -83,3 +99,6 @@ export function FilterSidebar({
   )}
 '"`
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+export default FilterSidebar;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { Progress } from '@/components/ui/progress';
+import { ResumeProgressProps } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";

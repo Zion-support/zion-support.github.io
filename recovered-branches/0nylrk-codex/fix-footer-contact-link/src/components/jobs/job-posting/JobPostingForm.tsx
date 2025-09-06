@@ -14,8 +14,15 @@ import { useJobs } from "@/hooks/useJobs";
 import { JobSchemaType } from './validation';
 interface JobPostingFormProps {
   jobId?: string;
+<<<<<<< HEAD
   onSuccess?: () => void
 }
+=======
+  onSuccess?: () => void;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 <<<<<<< HEAD
   const navigate = null;

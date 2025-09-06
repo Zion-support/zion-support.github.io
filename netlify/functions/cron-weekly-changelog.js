@@ -1,5 +1,9 @@
 const { upsertFile } = require('./_lib/github');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function fetchJson(url, token) {
   const resp = await fetch(url, {
     headers: token ? { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' } : {}
@@ -35,17 +39,26 @@ exports.handler = async function () {
     const commitsUrl = `https://api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
     const commits = await fetchJson(commitsUrl, token);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const byAuthor = {},
     const messages = [],
     for (const c of commits) {
       const author = c.commit?.author?.name || c.author?.login || 'unknown',
       byAuthor[author] = (byAuthor[author] || 0) + 1;
       messages.push({ sha: c.sha, message: c.commit?.message || '' })
+=======
+
+    const byAuthor = {};
+    const messages = [];
+    );
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
     const summary = {
       updatedAt: Date.now();
       since,
       totalCommits: commits.length,
+<<<<<<< HEAD
 =======
     const byAuthor = {}
     const messages = [];
@@ -60,6 +73,8 @@ exports.handler = async function () {
       since
       totalCommits: commits.length
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       authors: Object.entries(byAuthor)
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count)
@@ -80,6 +95,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 }
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token })
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
@@ -91,3 +107,6 @@ exports.handler = async function () {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

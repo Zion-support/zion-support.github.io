@@ -10,6 +10,7 @@ import { cn  } from '@/lib/utils';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
 import { useNavigate  } from 'react-router-dom';
 import { Notification, NotificationType } from '@/context/notifications';
+<<<<<<< HEAD
 export const getTypeIcon = null;
 =======
 import {Check, Trash2, ChevronRight} from '@/components/icons';
@@ -20,6 +21,11 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -35,6 +41,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'system':
       return <span className="text-yellow-500">⚠️</span>
     default:
+<<<<<<< HEAD
       return <span className="text-gray-500">📣</span>
   }
 }
@@ -43,6 +50,17 @@ interface NotificationItemProps {
   onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
 }
+=======
+      return <span className='text-gray-500'>📣</span>;
+  };
+interface NotificationItemProps {
+  notification: Notification;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification
   onMarkAsRead

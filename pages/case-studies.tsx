@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -282,6 +283,14 @@ export default function CaseStudiesPage() {
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CaseStudiesPage() {
   return (
     <Layout>
@@ -303,6 +312,7 @@ export default function CaseStudiesPage() {
       </section>
     </Layout>
   );
+<<<<<<< HEAD
  </Head> </section> </Layout>
 	return (
 		<Layout>
@@ -318,3 +328,7 @@ export default function CaseStudiesPage() {
 		</Layout>
 	)
 }
+=======
+
+ </Head> </section> </Layout>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

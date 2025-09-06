@@ -92,7 +92,13 @@ const INSTANCES: Instance[] = [
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface FeedItem {
   id: number;
+<<<<<<< HEAD
   text: string
+=======
+  text: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GlobalMapPage() {
 <<<<<<< HEAD
   const [feed, setFeed] = useState<FeedItem[]>([]),
@@ -196,6 +202,10 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

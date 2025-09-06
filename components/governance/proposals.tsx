@@ -8,6 +8,12 @@ export async function getStaticProps() {
   } catch {
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Proposals({
   data
 }: {
@@ -42,6 +48,7 @@ export default function Proposals({
       </ul>
     </div>
   );
+<<<<<<< HEAD
 export async function getStaticProps(){
   try{
     const p = path.join(process.cwd(),'datagovernanceproposals.json')
@@ -69,3 +76,5 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
     </div>
 );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

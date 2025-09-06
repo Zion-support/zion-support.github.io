@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from 'react';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { InterviewCard } from '@/components/interviews/InterviewCard';
+import { Button } from '@/components/ui/button';
+import { Calendar, Clock, Video } from 'lucide-react';
+import { format, isAfter, parseISO, startOfDay } from 'date-fns';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -197,12 +210,22 @@ function InterviewsContent() {
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

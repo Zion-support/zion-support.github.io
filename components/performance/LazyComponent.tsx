@@ -1,6 +1,10 @@
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface LazyComponentProps {
   component: ComponentType<Record<string, unknown>>;
   fallback?: ReactNode;
@@ -22,6 +26,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       <Component {...props} />
     </Suspense>
   );
+<<<<<<< HEAD
 }
 export default LazyComponent;
 <<<<<<< HEAD
@@ -32,3 +37,9 @@ import React from 'react';
 import React from 'react';
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default LazyComponent;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

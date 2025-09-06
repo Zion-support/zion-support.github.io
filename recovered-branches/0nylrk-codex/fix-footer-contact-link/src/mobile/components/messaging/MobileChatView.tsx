@@ -33,6 +33,7 @@ interface MobileChatViewProps {
   },
   messages: Message[];
   onBack: () => void;
+<<<<<<< HEAD
 =======
     id: string
     name: string
@@ -49,6 +50,18 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 <<<<<<< HEAD
   const navigate = null;
 =======
+=======
+  onSendMessage: (content: string) => void;
+}
+
+export function MobileChatView({
+  contact,
+  messages,
+  onBack,
+  onSendMessage,
+}: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState('');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const navigate = useNavigate();
   const handleSend = () => {
     if (newMessage.trim() !== "") {

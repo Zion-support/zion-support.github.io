@@ -49,8 +49,14 @@ interface AddMilestoneFormProps {
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
+<<<<<<< HEAD
   projectType?: string
 }
+=======
+  projectType?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AddMilestoneForm({
   onSubmit;
   isSubmitting;

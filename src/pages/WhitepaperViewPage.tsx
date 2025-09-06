@@ -97,7 +97,14 @@ const WhitepaperViewPage: React.FC = () => {
       </div>
     )
   }
+<<<<<<< HEAD
   const { whitepaper_data: whitepaper } = sharedData
+=======
+}
+
+const { whitepaper_data: whitepaper } = sharedData;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
@@ -119,7 +126,17 @@ const WhitepaperViewPage: React.FC = () => {
         tokenSupply = {whitepaper.tokenSupply,}
       />
     </div>
+<<<<<<< HEAD
   )
 }
 export default WhitepaperViewPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+}
+
+export default WhitepaperViewPage;
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

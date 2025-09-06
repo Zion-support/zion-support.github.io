@@ -1,13 +1,18 @@
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type PaginationProps = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type PaginationProps = {
   page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
+<<<<<<< HEAD
 }
 export default function Pagination({
   page
@@ -21,6 +26,17 @@ export default function Pagination({
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+=======
+};
+}
+
+export default function Pagination({
+  page,
+  pageSize,
+  total,
+  onChange,
+}: PaginationProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -45,6 +61,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
+<<<<<<< HEAD
       >        Next
       </EnhancedButton>
     </div>
@@ -162,3 +179,10 @@ const Pagination: React.FC<PaginationProps> = ({currentPage
 }
 export default Pagination;
 }
+=======
+      >
+        Next
+      </EnhancedButton>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

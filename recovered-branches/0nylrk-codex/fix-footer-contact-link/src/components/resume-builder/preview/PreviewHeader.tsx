@@ -7,8 +7,14 @@ import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume;
+<<<<<<< HEAD
   onBack: () => void
 }
+=======
+  onBack: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);
 <<<<<<< HEAD

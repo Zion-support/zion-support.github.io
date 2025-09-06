@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { Education } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  formatDateForDB,
+  handleResumeError,
+  showSuccessToast,;
+} from './useResumeUtils';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -94,6 +107,7 @@ export function useEducation() {
     }
   }
   return {
+<<<<<<< HEAD
     isLoading;
     error;
     addEducation;
@@ -102,3 +116,50 @@ export function useEducation() {
     deleteEducation
   }
 }
+=======
+    isLoading,
+    error,
+    addEducation,
+    updateEducation,
+    deleteEducation,
+  };
+
+};
+const updateEducation = async (eduId: string, education: Education) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to update education');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('education') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not update education') 
+}finally {
+  setIsLoading (false) 
+
+};
+const deleteEducation = async (eduId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete education');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('education') .delete () .eq ('id', eduId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete education') 
+}finally {
+  setIsLoading (false) 
+
+};
+
+  isLoading;
+error;
+addEducation;
+updateEducation;
+deleteEducation 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

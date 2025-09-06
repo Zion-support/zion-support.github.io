@@ -17,6 +17,11 @@ import { ResumeStepContent  } from './ResumeStepContent';
 import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResumeWizard() {
   const { user } = useAuth();
   const {

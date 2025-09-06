@@ -33,9 +33,16 @@ const profileSchema = z.object({
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
 type ProfileFormValues = z.infer<typeof profileSchema>;
 interface ProfileSetupProps {
+<<<<<<< HEAD
   onComplete: (data: ProfileFormValues) => void
   userType: string
 }
+=======
+  onComplete: (data: ProfileFormValues) => void;
+  userType: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)

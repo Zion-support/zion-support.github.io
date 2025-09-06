@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 export default function SignInPage() {const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+=======
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
+}
+
+export default function SignInPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const { login } = useAuth();

@@ -32,6 +32,11 @@ export const mockNextRouter = () => ({
   domainLocales: []
   isPreview: false
 });
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const createMockProps = (overrides = {}) => ({
   ...overrides
 });

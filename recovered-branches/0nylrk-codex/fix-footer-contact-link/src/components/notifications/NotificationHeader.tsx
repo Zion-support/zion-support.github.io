@@ -3,8 +3,14 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
   unreadCount: number;
+<<<<<<< HEAD
   onMarkAllAsRead: () => Promise<void>
 }
+=======
+  onMarkAllAsRead: () => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 <<<<<<< HEAD
   unreadCount;

@@ -1,5 +1,9 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
   const abs = path.resolve(__dirname, '....', relPath);
@@ -27,6 +31,7 @@ exports.handler = async () => {
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
+<<<<<<< HEAD
     return status
   }
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
@@ -56,3 +61,13 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    return status;
+  }
+
+  logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, body: logs.join('\n') };
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

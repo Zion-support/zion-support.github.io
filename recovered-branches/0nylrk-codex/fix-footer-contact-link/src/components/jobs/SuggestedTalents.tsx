@@ -7,8 +7,14 @@ import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
 interface SuggestedTalentsProps {
   jobId: string;
+<<<<<<< HEAD
   jobTitle?: string
 }
+=======
+  jobTitle?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

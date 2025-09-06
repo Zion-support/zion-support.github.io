@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 import { MapPin } from 'lucide-react'
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
   selectedCountry: CountryPricing
+=======
+import { MapPin } from 'lucide-react';
+import { PaymentButton } from '@/components/transactions/PaymentButton';
+import { CountryPricing } from '@/data/onsiteServicePricing';
+import { toast } from '@/hooks/use-toast';
+
+interface PaymentSectionProps {
+  selectedCountry: CountryPricing;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 <<<<<<< HEAD
@@ -40,5 +52,11 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         billed separately.
       </p>
     </div>
+<<<<<<< HEAD
   )
 }"}
+=======
+  );
+
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

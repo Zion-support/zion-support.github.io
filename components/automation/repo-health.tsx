@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -58,3 +59,8 @@ export default function RepoHealth({ report }: Props) {
     </div>
 );
 }
+=======
+
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useEffect, useRef, useState } from "react";
 // Skip link component for keyboard navigation;
@@ -6,9 +7,28 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
     >;
+=======
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
+// Skip link component for keyboard navigation
+}
+
+export function SkipLink({
+  targetId,
+  children,
+}: {
+  targetId: string;
+  children: React.ReactNode;
+}) {
+  
+    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {children}
     </a>;
   );
+<<<<<<< HEAD
 }
 // Live region for screen reader announcements;
 export function LiveRegion({message;
@@ -24,14 +44,44 @@ export function LiveRegion({message;
       className="sr-only";
       aria-atomic="true";
     >;
+=======
+
+// Live region for screen reader announcements
+}
+
+export function LiveRegion({
+  message,
+  role = 'status',
+  'aria-live': ariaLive = 'polite',
+}: {
+  message: string;
+  role?: 'status' | 'alert' | 'log';
+  'aria-live'?: 'polite' | 'assertive' | 'off';
+}) {
+  
+    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {message}
     </div>;
   );
+<<<<<<< HEAD
 }
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
     if (!enabled |!containerRef.current) return;
+=======
+
+// Focus trap for modals and dialogs
+}
+
+export function useFocusTrap(enabled: boolean = true) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!enabled || !containerRef.current) return;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const container = containerRef.current;
     const focusableElements = container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -56,12 +106,29 @@ export function useFocusTrap(enabled: boolean = true) {const containerRef = useR
     return () => container.removeEventListener("keydown", handleKeyDown);
   }, [enabled]);
   return containerRef;
+<<<<<<< HEAD
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {const [selectedIndex, setSelectedIndex] = useState(-1);
   const handleKeyDown = (e: KeyboardEvent) => {;
     switch (e.key) {;
       case "ArrowDown": e.preventDefault();
+=======
+
+// Keyboard navigation hook
+}
+
+export function useKeyboardNavigation(
+  items: any[],
+  onSelect: (item: any) => void
+) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         setSelectedIndex(prev => (prev + 1) % items.length);
         break;
       case "ArrowUp":;
@@ -82,6 +149,7 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
   useEffect(() => {document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [items, selectedIndex, onSelect]);
+<<<<<<< HEAD
   return { selectedIndex, setSelectedIndex }
 }
 // Announcement component for screen readers;
@@ -92,6 +160,25 @@ export function Announcement({message;
 }) {const [announcements, setAnnouncements] = useState<string[]>([]);
   useEffect(() => {;
     if (message) {;
+=======
+
+  return { selectedIndex, setSelectedIndex };
+
+// Announcement component for screen readers
+}
+
+export function Announcement({
+  message,
+  priority = 'polite',
+}: {
+  message: string;
+  priority?: 'polite' | 'assertive';
+}) {
+  const [announcements, setAnnouncements] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (message) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       setAnnouncements(prev => [...prev, message]);
       // Clear announcement after a delay;
       const timer = setTimeout(() => {;
@@ -107,12 +194,25 @@ export function Announcement({message;
       ))}
     </div>;
   );
+<<<<<<< HEAD
 }
 // Progress indicator component;
 export function ProgressIndicator({value;
   max;
   label;
 }: {value: number;
+=======
+
+// Progress indicator component
+}
+
+export function ProgressIndicator({
+  value,
+  max,
+  label,
+}: {
+  value: number;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   max: number;
   label: string;
 }) {const percentage = Math.round((value / max) * 100);
@@ -135,12 +235,25 @@ export function ProgressIndicator({value;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 // Collapsible section component;
 export function CollapsibleSection({title;
   children;
   defaultExpanded = false;
 }: {title: string;
+=======
+
+// Collapsible section component
+}
+
+export function CollapsibleSection({
+  title,
+  children,
+  defaultExpanded = false,
+}: {
+  title: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   children: React.ReactNode;
   defaultExpanded?: boolean;
 }) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
@@ -171,12 +284,25 @@ export function CollapsibleSection({title;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 // Tooltip component with proper accessibility;
 export function Tooltip({children;
   content;
   position = "top";
 }: {children: React.ReactNode;
+=======
+
+// Tooltip component with proper accessibility
+}
+
+export function Tooltip({
+  children,
+  content,
+  position = 'top',
+}: {
+  children: React.ReactNode;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   content: string;
   position?: "top" | "bottom" | "left" | "right";
 }) {const [isVisible, setIsVisible] = useState(false);

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { AppSidebar } from '@/components/creator/CreatorSidebar';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
@@ -33,6 +34,14 @@ export default function PaymentCanceled() {
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import { XCircle } from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PaymentCanceled() {
   const router = useRouter(); // Changed from navigate
   return (
@@ -56,6 +65,7 @@ export default function PaymentCanceled() {
           <Button
             variant='outline'
             onClick={() => router.push('/dashboard')} // Changed to router.push
+<<<<<<< HEAD
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
             Return to Dashboard
           </Button>
@@ -63,12 +73,20 @@ export default function PaymentCanceled() {
       </div>
     </div>
   );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+=======
+            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             Return to Dashboard
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
   )
       </div>
   )
 }
+=======
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -2,6 +2,7 @@ import React from 'react',
 import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { real2036InnovativeServices  } from '../data/real-2036-innovative-services';
 import { real2036ITServices  } from '../data/real-2036-it-services';
 import { real2036AIServices  } from '../data/real-2036-ai-services';
@@ -18,6 +19,22 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036ITServices
     ...real2036AIServices,  ];
   const categories = [...new Set(allServices.map(service => service.category))]
+=======
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036ITServices } from '../data/real-2036-it-services';
+import { real2036AIServices } from '../data/real-2036-ai-services';
+import { motion } from 'framer-motion';
+
+const ComprehensiveServicesShowcase2036: React.FC = () => {
+  const allServices = [
+    ...real2036InnovativeServices,
+    ...real2036ITServices,
+    ...real2036AIServices,
+  ];
+
+  const categories = [...new Set(allServices.map(service => service.category))];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Layout>
       <SEO
@@ -57,7 +74,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg'>
                 Get Started Today
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                View Pricing
+=======
+              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+                View Pricing
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </button>
             </motion.div>
           </div>
@@ -77,10 +99,20 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our comprehensive portfolio spans the most advanced and
                 innovative technology domains, designed to transform businesses
+<<<<<<< HEAD
                 and drive the future forward.              </p>
+=======
+                and drive the future forward.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             {/* Category Cards */}
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories.map((category, index) => (
+=======
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+              {categories.map((category, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={category}
                   initial={{ opacity: 0, y: 30 }}
@@ -107,7 +139,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                         ...allServices
                           .filter(service => service.category === category)
                           .map(s => parseInt(s.price.replace(/[^0-9]/g, '')))
+<<<<<<< HEAD
                       )}                    </span>
+=======
+                      )}
+                    </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </motion.div>
               ))}
@@ -124,7 +161,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our most innovative and game-changing services that are
+<<<<<<< HEAD
                 reshaping industries and defining the future of technology.              </p>
+=======
+                reshaping industries and defining the future of technology.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             {/* Featured Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
@@ -196,7 +238,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Explore our entire collection of {allServices.length} innovative
+<<<<<<< HEAD
                 services across all technology domains.              </p>
+=======
+                services across all technology domains.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             {/* Services by Category */}
             {categories.map((category, categoryIndex) => (
@@ -210,7 +257,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 <h3 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
                   {category}
                 </h3>
+<<<<<<< HEAD
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                  {allServices
+=======
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                  {allServices
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     .filter(service => service.category === category)
                     .map((service, serviceIndex) => (
                       <motion.div
@@ -226,7 +278,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                         <div className='flex items-center justify-between mb-3'>
                           <span className='text-2xl'>{service.icon}</span>
                           {service.popular && (
+<<<<<<< HEAD
                             <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full'>                              Popular
+=======
+                            <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full'>
+                              Popular
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             </span>
                           )}
                         </div>
@@ -250,11 +307,21 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                               key={idx}
                               className='flex items-center text-xs text-gray-300'
                             >
+<<<<<<< HEAD
                               <span className='text-cyan-400 mr-2'>•</span>                              {feature}
                             </div>
                           ))}
                         </div>
                         <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm'>                          View Details
+=======
+                              <span className='text-cyan-400 mr-2'>•</span>
+                              {feature}
+                            </div>
+                          ))}
+                        </div>
+                        <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm'>
+                          View Details
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </button>
                       </motion.div>
                     ))}
@@ -279,7 +346,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
                   Contact Us Today
                 </button>
+<<<<<<< HEAD
                 <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                  Schedule Demo
+=======
+                <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+                  Schedule Demo
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
             </motion.div>
@@ -287,7 +359,15 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
   )
 }
 export default ComprehensiveServicesShowcase2036;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default ComprehensiveServicesShowcase2036;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

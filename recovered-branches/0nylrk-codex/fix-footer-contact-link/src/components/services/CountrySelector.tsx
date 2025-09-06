@@ -6,12 +6,22 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
 interface CountrySelectorProps {
 <<<<<<< HEAD
   onCountryChange: (country: CountryPricing | null) => void;
+<<<<<<< HEAD
 =======
   onCountryChange: (country: CountryPricing | null) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   selectedCountry: CountryPricing | null
 }
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
+=======
+  selectedCountry: CountryPricing | null;
+}
+
+export function CountrySelector({
+  onCountryChange,
+  selectedCountry,
+}: CountrySelectorProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
   // Set top/popular countries
   useEffect(() => {

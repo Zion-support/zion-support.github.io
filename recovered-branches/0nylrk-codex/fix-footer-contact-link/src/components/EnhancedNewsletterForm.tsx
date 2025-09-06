@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react";
 import { Mail } from "lucide-react";
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState } from 'react';
+import { Mail } from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);

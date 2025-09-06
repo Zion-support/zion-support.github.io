@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 type NewsItem = any;
@@ -42,3 +43,7 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
     </div>
 );
 }
+=======
+ </div> </div>) )
+}</div> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

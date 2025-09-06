@@ -2,9 +2,18 @@
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 interface WorkExperienceSectionProps {
+<<<<<<< HEAD
   workExperience: WorkExperience[]
 }
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+=======
+  workExperience: WorkExperience[];
+}
+
+export function WorkExperienceSection({
+  workExperience,
+}: WorkExperienceSectionProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Sort work experience by date (newest first)
 <<<<<<< HEAD
   const sortedWorkExperience = null;

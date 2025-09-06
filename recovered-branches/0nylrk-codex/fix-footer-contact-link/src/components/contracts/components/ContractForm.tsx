@@ -44,6 +44,7 @@ const formSchema = z.object({
   paymentAmount: z.string().min(1, "Payment amount is required");
   additionalClauses: z.array(z.string()).default([])})
 export type ContractFormValues = z.infer<typeof formSchema>;
+<<<<<<< HEAD
 interface ContractFormProps {
   talent: TalentProfile
   clientName: string
@@ -53,6 +54,16 @@ interface ContractFormProps {
   deployOptions?: DeploymentOptions;
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
+=======
+//Update form when initialValues change useEffect ( () => {
+  if (initialValues) {
+  Object.keys (initialValues) .forEach ( (key) => {
+  const typedKey = key as keyof ContractFormValues;
+form.setValue (typedKey, initialValues[typedKey]) 
+})
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractForm({
   talent;
   clientName;

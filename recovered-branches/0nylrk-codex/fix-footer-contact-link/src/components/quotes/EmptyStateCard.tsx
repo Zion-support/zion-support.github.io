@@ -6,10 +6,22 @@ import { MessageSquare, ArchiveIcon } from "lucide-react";
 type EmptyStateCardProps = any;
 =======
 type EmptyStateCardProps = {
+<<<<<<< HEAD
   type: "active" | "archived";
 }
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === "active";
+=======
+  type: 'active' | 'archived';
+};
+}
+
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({
+  type 
+}) => {
+  const isActive = type === 'active';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>

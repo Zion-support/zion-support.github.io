@@ -16,11 +16,21 @@ import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestCardProps = any;
 =======
 type QuoteRequestCardProps = {
+<<<<<<< HEAD
   quote: QuoteRequest
   onViewDetails: (quote: QuoteRequest) => void
   onMarkAsResponded?: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
+=======
+  quote: QuoteRequest;
+onViewDetails: (quote: QuoteRequest) => void;
+onMarkAsResponded?: (id: string) => void;
+onToggleArchive: (id: string, isArchived: boolean) => void 
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote;
   onViewDetails;

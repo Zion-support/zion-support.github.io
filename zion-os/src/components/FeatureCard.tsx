@@ -10,6 +10,7 @@ interface FeatureCardProps {id: number;
   isActive: boolean;
   onClick: () => void;
 }
+<<<<<<< HEAD
 export function FeatureCard({title;
   description;
   icon;
@@ -31,6 +32,30 @@ export function FeatureCard({title;
       } ${colorClasses[color as keyof typeof colorClasses]}`}
       onClick={onClick}
       onKeyDown={(e) => {if (e.key === 'Enter' |e.key === ' ') {;
+=======
+
+export function FeatureCard({
+  title,
+  description,
+  icon,
+  color,
+  href,
+  isActive,
+  onClick,
+}: FeatureCardProps) {
+  const colorClasses = {
+    blue: 'bg-blue-500/20 hover:bg-blue-500/30 border-blue-500/30',
+    purple: 'bg-purple-500/20 hover:bg-purple-500/30 border-purple-500/30',
+    green: 'bg-green-500/20 hover:bg-green-500/30 border-green-500/30',
+    red: 'bg-red-500/20 hover:bg-red-500/30 border-red-500/30',
+    yellow: 'bg-yellow-500/20 hover:bg-yellow-500/30 border-yellow-500/30',
+    indigo: 'bg-indigo-500/20 hover:bg-indigo-500/30 border-indigo-500/30',
+  };
+
+  
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           e.preventDefault();
           onClick();
         }

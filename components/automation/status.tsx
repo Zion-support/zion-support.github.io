@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 =======
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
@@ -27,3 +28,7 @@ export default function AutomationStatusPage() {
     </div>
 );
 }
+=======
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
+}</div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

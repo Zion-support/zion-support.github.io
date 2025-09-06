@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
@@ -12,6 +13,27 @@ import {
   DialogHeader;
   DialogTitle;
   DialogTrigger} from "@/components/ui/dialog",
+=======
+import React, { useState } from 'react';
+import { useWallet } from '@/hooks/useWallet';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,;
+} from '@/components/ui/dialog';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 type RewardOption = any;
 =======
@@ -53,6 +75,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     type: 'feature'
   }
   {
+<<<<<<< HEAD
     id: 'platform-credit'
     title: '$5 Platform Credit'
     description: 'Get $5 credit to use on any paid service'
@@ -60,6 +83,17 @@ const REWARD_OPTIONS: RewardOption[] = [
     type: 'credit'
   }
 ]
+=======
+    id: 'platform-credit',
+    title: '$5 Platform Credit',
+    description: 'Get $5 credit to use on any paid service',
+    cost: 100,
+    type: 'credit',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet()
   const [open, setOpen] = useState(false)
@@ -138,5 +172,9 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

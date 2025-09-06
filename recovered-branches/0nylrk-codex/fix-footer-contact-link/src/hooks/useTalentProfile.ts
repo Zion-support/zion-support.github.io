@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { TalentProfile as TalentProfileType } from '@/types/talent';
+import { ProfileData } from '@/types/profile';
+import { MOCK_TALENTS } from '@/data/mockTalents';
+import { MOCK_PROFILES } from '@/data/mockProfiles';
+import { convertProfileToTalentProfile } from '@/utils/profileConverter';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",

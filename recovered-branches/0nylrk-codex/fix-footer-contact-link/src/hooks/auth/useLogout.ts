@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { supabase } from '@/integrations/supabase/client';
+import { cleanupAuthState } from '@/utils/authUtils';
+import type { UserProfile } from '@/types/auth';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { supabase } from "@/integrations/supabase/client",
 import { cleanupAuthState } from "@/utils/authUtils";

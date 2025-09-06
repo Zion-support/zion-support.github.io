@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
+=======
+import React from 'react';
+import { BadgeCheck } from 'lucide-react';
+import { TalentCardAvatar } from './TalentCardAvatar';
+import { TalentCardAvailability } from './TalentCardAvailability';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface TalentCardHeaderProps {
   fullName: string;
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
+<<<<<<< HEAD
   yearsExperience: number
 <<<<<<< HEAD
+=======
+  yearsExperience: number;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function TalentCardHeader({ 
@@ -45,5 +57,9 @@ export function TalentCardHeader({
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

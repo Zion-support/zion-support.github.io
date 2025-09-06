@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
@@ -28,3 +29,11 @@ export default function AIPredictiveMaintenancePlatform() {
 		/>
 	)
 }
+=======
+}
+
+export default function AIPredictiveMaintenancePlatform() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -122,9 +122,17 @@ const ChartTooltipContent = React.forwardRef<
       if (hideLabel |!payload?.length) {
         return null
       }
+<<<<<<< HEAD
       const [item] = payload
       const key = `${labelKey |item.dataKey |item.name |"value"}`
       const itemConfig = getPayloadConfigFromPayload(config, item, key)
+=======
+}
+
+const [item] = payload;
+      const key = `${labelKey || item.dataKey || item.name || 'value'}`;
+      const itemConfig = getPayloadConfigFromPayload(config, item, key);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const value =
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label |label
@@ -151,6 +159,7 @@ const ChartTooltipContent = React.forwardRef<
     if (!active |!payload?.length) {
       return null
     }
+<<<<<<< HEAD
     const nestLabel = payload.length === 1 && indicator !== "dot"
     return (
       <div
@@ -159,6 +168,13 @@ const ChartTooltipContent = React.forwardRef<
           "grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl";
           className
         )}
+=======
+}
+
+const nestLabel = payload.length === 1 && indicator !== 'dot';
+
+    
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       >
         {!nestLabel ? tooltipLabel : null}
         <div className="grid gap-1.5">
@@ -293,9 +309,17 @@ function getPayloadConfigFromPayload(
   if (typeof payload !== "object" |payload === null) {
     return undefined
   }
+<<<<<<< HEAD
   const payloadPayload =
     "payload" in payload &&
     typeof payload.payload === "object" &&
+=======
+}
+
+const payloadPayload =
+    'payload' in payload &&
+    typeof payload.payload === 'object' &&
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     payload.payload !== null
       ? payload.payload
       : undefined

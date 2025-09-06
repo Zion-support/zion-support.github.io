@@ -6,9 +6,14 @@ import { MessageSquare } from "lucide-react";
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
+<<<<<<< HEAD
   className?: string
 }
 <<<<<<< HEAD
+=======
+  className?: string;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function MainNavigation({ isAdmin;
                 location.pathname === "/messages" || location.pathname === "/inbox"

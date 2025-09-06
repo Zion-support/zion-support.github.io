@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Link } from 'react-router-dom';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading";

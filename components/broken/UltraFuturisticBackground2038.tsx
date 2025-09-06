@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
+=======
+import { motion } from 'framer-motion';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface UltraFuturisticBackground2038Props {
   intensity?: 'low' | 'medium' | 'high',
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
@@ -20,6 +25,7 @@ import { motion } from 'framer-motion';
     | 'space'
     | 'consciousness';
   children?: React.ReactNode;
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2038({
   intensity = 'medium'
   theme = 'consciousness'
@@ -27,25 +33,49 @@ export default function UltraFuturisticBackground2038({
   intensity = 'medium';
   theme = 'consciousness';
   children
+=======
+}
+
+export default function UltraFuturisticBackground2038({
+  intensity = 'medium',
+  theme = 'consciousness',
+  children,
+}: UltraFuturisticBackground2038Props) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
     const intensityMultiplier =
+<<<<<<< HEAD
       intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
+=======
+      intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const resizeCanvas = () => {
       const rect = containerRef.current?.getBoundingClientRect();
       if (rect) {
+<<<<<<< HEAD
         canvas.width = rect.width * (window.devicePixelRatio |1);
         canvas.height = rect.height * (window.devicePixelRatio |1);
         ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);      }        ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1)
+=======
+        canvas.width = rect.width * (window.devicePixelRatio || 1);
+        canvas.height = rect.height * (window.devicePixelRatio || 1);
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     resizeCanvas();
@@ -254,6 +284,7 @@ export default function UltraFuturisticBackground2038({
               '#06b6d4'
             ]
             quantum: [
+<<<<<<< HEAD
               '#8b5cf6'
               '#06b6d4'
               '#ec4899'
@@ -267,6 +298,19 @@ export default function UltraFuturisticBackground2038({
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           }
     }
+=======
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+          };
+      }
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const colors = getThemeColors();
     // Enhanced particle system with consciousness and quantum effects
     let particles: Array<{
@@ -295,6 +339,7 @@ export default function UltraFuturisticBackground2038({
       frequency: number;
       entanglement: number[];
       consciousness: number;
+<<<<<<< HEAD
       quantumState: number;    }> = [];      x: number
       y: number
       vx: number
@@ -313,10 +358,19 @@ export default function UltraFuturisticBackground2038({
       entanglement: number[]
       consciousness: number
       quantumState: number
+=======
+      quantumState: number;
+    }> = [];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Initialize particles with enhanced consciousness and quantum effects
     const initParticles = () => {
       particles = [];
       const particleCount = Math.floor(50 * intensityMultiplier);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       for (let i = 0; i < particleCount; i++) {
         const type =
           Math.random() > 0.7
@@ -326,6 +380,7 @@ export default function UltraFuturisticBackground2038({
               : Math.random() > 0.3
                 ? 'hologram'
                 : 'particle';
+<<<<<<< HEAD
       for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'consciousness' :
                     Math.random() > 0.5 ? 'quantum-field' :
@@ -355,10 +410,41 @@ export default function UltraFuturisticBackground2038({
           quantumState: Math.random()
         })
     }
+=======
+
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          size: Math.random() * 4 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color:
+            colors.primary[Math.floor(Math.random() * colors.primary.length)],
+          type,
+          life: Math.random() * 100,
+          maxLife: 100,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.1,
+          phase: Math.random() * Math.PI * 2,
+          amplitude: Math.random() * 20 + 10,
+          frequency: Math.random() * 0.02 + 0.01,
+          entanglement: [Math.random(), Math.random()],
+          consciousness: Math.random(),
+          quantumState: Math.random(),
+        });
+      }
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
       if (prefersReducedMotion) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Create quantum field effects
       if (theme === 'consciousness' |theme === 'quantum') {
         const time = Date.now() * 0.001;
@@ -369,6 +455,7 @@ export default function UltraFuturisticBackground2038({
             const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
+<<<<<<< HEAD
               ctx.fillRect(x, y, 20, 20);            }      // Create quantum field effects
       if (theme === 'consciousness' |theme === 'quantum') {
         const time = Date.now() * 0.001;
@@ -379,6 +466,9 @@ export default function UltraFuturisticBackground2038({
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20)
+=======
+              ctx.fillRect(x, y, 20, 20);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }
           }
         }
@@ -399,8 +489,12 @@ export default function UltraFuturisticBackground2038({
             if (index !== otherIndex && Math.random() > 0.99) {
               const distance = Math.sqrt(
                 Math.pow(particle.x - otherParticle.x, 2) +
+<<<<<<< HEAD
                   Math.pow(particle.y - otherParticle.y, 2)              );                Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)
+=======
+                  Math.pow(particle.y - otherParticle.y, 2)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               );
               if (distance < 100) {
                 ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`;
@@ -411,31 +505,47 @@ export default function UltraFuturisticBackground2038({
                 ctx.stroke();
               }
             }
+<<<<<<< HEAD
           });        }
         // Consciousness wave effects
         if (particle.type === 'consciousness') {                ctx.stroke()
               }
             }
           })
+=======
+          });
+        }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Consciousness wave effects
         if (particle.type === 'consciousness') {
           const waveX =
             particle.x + Math.sin(particle.phase) * particle.amplitude;
           const waveY =
             particle.y + Math.cos(particle.phase) * particle.amplitude;
+<<<<<<< HEAD
           const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
           const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(waveX, waveY);
+<<<<<<< HEAD
           ctx.stroke();        }
         // Holographic effects
         if (particle.type === 'hologram') {
           const hologramSize =
             particle.size * (1 + Math.sin(particle.phase) * 0.3);          ctx.stroke()
         }
+=======
+          ctx.stroke();
+        }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Holographic effects
         if (particle.type === 'hologram') {
           const hologramSize =
@@ -446,6 +556,7 @@ export default function UltraFuturisticBackground2038({
             particle.x - hologramSize / 2
             particle.y - hologramSize / 2
             hologramSize
+<<<<<<< HEAD
             hologramSize
           );        }          ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
           ctx.lineWidth = 1;
@@ -455,16 +566,27 @@ export default function UltraFuturisticBackground2038({
             hologramSize
             hologramSize
           )
+=======
+          );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
         // Quantum field effects
         if (particle.type === 'quantum-field') {
           const fieldSize = particle.size * 3;
           const gradient = ctx.createRadialGradient(
+<<<<<<< HEAD
             particle.x
             particle.y
             0
             particle.x
             particle.y
+=======
+            particle.x,
+            particle.y,
+            0,
+            particle.x,
+            particle.y,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             fieldSize
           );
           gradient.addColorStop(
@@ -477,6 +599,7 @@ export default function UltraFuturisticBackground2038({
             particle.x - fieldSize / 2
             particle.y - fieldSize / 2
             fieldSize
+<<<<<<< HEAD
             fieldSize
           );        }
         // Standard particle rendering
@@ -494,6 +617,11 @@ export default function UltraFuturisticBackground2038({
             fieldSize
           )
         }
+=======
+          );
+        }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Standard particle rendering
         if (particle.type === 'particle') {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
@@ -516,6 +644,7 @@ export default function UltraFuturisticBackground2038({
             particle.y = Math.random() * canvas.height;
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width;
+<<<<<<< HEAD
             particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill()
@@ -529,6 +658,9 @@ export default function UltraFuturisticBackground2038({
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
+=======
+            particle.y = (particle.y + canvas.height) % canvas.height;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }
         }
         // Regenerate particles
@@ -540,10 +672,17 @@ export default function UltraFuturisticBackground2038({
           particle.quantumState = Math.random() * Math.PI * 2;
         }
       });
+<<<<<<< HEAD
       requestAnimationFrame(animate);    };          particle.quantumState = Math.random() * Math.PI * 2
         }
       });
       requestAnimationFrame(animate)
+=======
+
+      requestAnimationFrame(animate);
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     initParticles();
     animate();
     return () => {
@@ -576,6 +715,7 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20'
                 style={{
+<<<<<<< HEAD
                   left: `${(i * 5) % 100}%`
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
@@ -585,6 +725,19 @@ export default function UltraFuturisticBackground2038({
                   duration: 3 + i * 0.2
                   repeat: Infinity
                   ease: "easeInOut"
+=======
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,
+                }}
+                animate={{
+                  height: [32, 64, 32],
+                  opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                  duration: 3 + i * 0.2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 }}
                 animate={{
                   height: [32, 64, 32]
@@ -606,6 +759,7 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
                 style={{
+<<<<<<< HEAD
                   top: `${(i * 7) % 100}%`,            {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
@@ -618,6 +772,17 @@ export default function UltraFuturisticBackground2038({
                   duration: 4 + i * 0.3
                   repeat: Infinity
                   ease: "easeInOut"
+=======
+                  top: `${(i * 7) % 100}%`,
+                }}
+                animate={{
+                  opacity: [0.3, 0.8, 0.3],
+                }}
+                transition={{
+                  duration: 4 + i * 0.3,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -638,6 +803,7 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
                 style={{
+<<<<<<< HEAD
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
@@ -654,6 +820,19 @@ export default function UltraFuturisticBackground2038({
                   repeat: Infinity
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   ease: "easeInOut"
+=======
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,
+                }}
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -671,11 +850,22 @@ export default function UltraFuturisticBackground2038({
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 // Enhanced animation loop with consciousness and quantum effects
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
   particles.forEach ( (otherParticle, otherIndex) => {
   if (index !== otherIndex && Math.random () > 0.99) {
+=======
+
+};
+// Enhanced animation loop with consciousness and quantum effects
+
+}// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
+  particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex && Math.random () > 0.99) {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 })
 }// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
 particle.y - hologramSize / 2;
@@ -687,8 +877,13 @@ particle.y - fieldSize / 2;
 fieldSize;
 fieldSize)
 }// Standard particle rendering
+<<<<<<< HEAD
 }// Boundary wrapping with quantum tunneling effect if (particle.x < 0 |particle.x > canvas.width |requestAnimationFrame (animate)
 }
+=======
+}// Boundary wrapping with quantum tunneling effect if (particle.x < 0 || particle.x > canvas.width || requestAnimationFrame (animate)
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 initParticles ();
 animate ();
 />) )
@@ -699,5 +894,9 @@ animate ();
 }</div>)
 }</div> {
   children
+<<<<<<< HEAD
 }</div>)   )
 }
+=======
+}</div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

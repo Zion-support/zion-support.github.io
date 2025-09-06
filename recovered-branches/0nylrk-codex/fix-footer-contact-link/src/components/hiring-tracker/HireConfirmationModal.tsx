@@ -22,6 +22,7 @@ export interface HireConfirmationModalProps {
   candidateData?: TalentProfile;
   application?: JobApplication;
   onConfirm: () => void;
+<<<<<<< HEAD
 =======
   isOpen: boolean
   onClose: () => void
@@ -31,6 +32,11 @@ export interface HireConfirmationModalProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isSubmitting?: boolean
 }
+=======
+  isSubmitting?: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HireConfirmationModal({
   isOpen;
 <<<<<<< HEAD

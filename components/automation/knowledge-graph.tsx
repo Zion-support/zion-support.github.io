@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -47,3 +48,11 @@ export default function KnowledgeGraph({ report }: Props) {
     </div>
 );
 }
+=======
+
+
+};
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

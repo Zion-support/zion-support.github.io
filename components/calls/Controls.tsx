@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 =======
 type Props = {
@@ -10,6 +11,16 @@ type Props = {
   room: Room | null
   onLeave: () => void
   accent?: 'blue' | 'cyan'
+=======
+
+type Props = {
+  room: Room | null;
+  onLeave: () => void;
+  accent?: 'blue' | 'cyan';
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -19,6 +30,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
     if (!room) return;
     const enabled =
       await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+<<<<<<< HEAD
     setMicEnabled(enabled);  };    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   }
@@ -27,6 +39,17 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
     setCamEnabled(enabled);  };    setCamEnabled(enabled)
   }
+=======
+    setMicEnabled(enabled);
+  };
+
+  const toggleCam = async () => {
+    if (!room) return;
+    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
+    setCamEnabled(enabled);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const toggleScreenShare = async () => {
     if (!room) return;
     try {
@@ -34,6 +57,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
         await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {
+<<<<<<< HEAD
       console.warn('Screen share failed', e);    }
   }
   return (      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
@@ -42,6 +66,12 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       console.warn('Screen share failed', e)
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      console.warn('Screen share failed', e);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -68,5 +98,9 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
         Leave
       </button>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

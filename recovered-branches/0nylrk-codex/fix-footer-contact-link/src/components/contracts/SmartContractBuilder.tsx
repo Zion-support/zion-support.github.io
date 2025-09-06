@@ -18,6 +18,7 @@ interface SmartContractBuilderProps {
   talent: TalentProfile;
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
+<<<<<<< HEAD
 =======
   isOpen: boolean
   onClose: () => void
@@ -27,6 +28,11 @@ interface SmartContractBuilderProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onDeploy?: (contractContent: string) => void
 }
+=======
+  onDeploy?: (contractContent: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SmartContractBuilder({
   isOpen;
   onClose;

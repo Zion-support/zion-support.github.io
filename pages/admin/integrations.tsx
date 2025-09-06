@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Head from 'next/head';
 <<<<<<< HEAD
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
@@ -28,8 +32,15 @@ function StatusIcon({
     </span>
   );
 interface ConnectionMap {
+<<<<<<< HEAD
   [key: string]: boolean
 const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders] = useState<ProviderMeta[]>([]);
+=======
+  [key: string]: boolean;
+
+const AdminIntegrationsPage: React.FC = () => {
+  const [providers, setProviders] = useState<ProviderMeta[]>([]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
@@ -50,6 +61,10 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
   useEffect(() => {
     refresh();
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function connect(providerId: string) {
     setLoading(true)
     try {
@@ -68,7 +83,13 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
       await refresh();
     } finally {
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function disconnect(providerId: string) {
     setLoading(true)
     try {
@@ -80,7 +101,13 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
       await refresh();
     } finally {
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function resync(providerId: string) {
     setLoading(true)
     try {
@@ -113,7 +140,12 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
             </div>
             <div>
               <div className='font-semibold'>{p.name}</div>
+<<<<<<< HEAD
               <div className='text-xs text-gray-500'>{p.description}</div>            </div>
+=======
+              <div className='text-xs text-gray-500'>{p.description}</div>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           <StatusIcon status={conn.status} />
         </div>
@@ -148,11 +180,22 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                 className='px-3 py-1.5 rounded border text-sm'
               >
                 Disconnect
+<<<<<<< HEAD
               </button>            </>
           )}
         </div>
       </div>
     );  }
+=======
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   function RulesModal() {
     if (!selected) return null;
     const provider = providers.find(p => p.id === selected)!;
@@ -204,7 +247,12 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                         }
                       />{' '}
                       Manual only
+<<<<<<< HEAD
                     </label>                  </div>
+=======
+                    </label>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </>
             ) : (
@@ -257,7 +305,13 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     );  }
+=======
+    );
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -297,15 +351,29 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
+<<<<<<< HEAD
             </li>          </ul>
         </section>
         <section>
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />
+=======
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
+          <ManualOverrideForm />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </section>
       </main>
       <RulesModal />
     </>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function ManualOverrideForm() {
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
@@ -361,4 +429,8 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

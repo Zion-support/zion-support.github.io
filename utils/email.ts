@@ -19,8 +19,11 @@ export async function sendWarningEmail(
   await fs.ensureDir(logDir);
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress |'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
+<<<<<<< HEAD
 }
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console.log('Email would be sent:', options);
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

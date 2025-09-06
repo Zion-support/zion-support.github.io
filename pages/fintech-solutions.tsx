@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
 export default function FintechSolutions() {
 	return (
 		<ServiceLanding
@@ -27,3 +28,11 @@ export default function FintechSolutions() {
 		/>
 	)
 }
+=======
+}
+
+export default function FintechSolutions() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -27,10 +27,18 @@ interface EmptyStateProps {
     text: string
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     href?: string;
+<<<<<<< HEAD
     onClick?: () => void
   }
   className?: string
 }
+=======
+    onClick?: () => void;
+  };
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EmptyState({
   icon;
   title;

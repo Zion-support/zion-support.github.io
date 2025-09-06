@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
@@ -147,9 +151,17 @@ function PageErrorFallback({
     </div>
   )
 interface PageErrorBoundaryProps {
+<<<<<<< HEAD
   children: React.ReactNode
   pageName?: string
   fallback?: React.ComponentType<FallbackProps>
+=======
+  children: React.ReactNode;
+  pageName?: string;
+  fallback?: React.ComponentType<FallbackProps>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PageErrorBoundary({
   children
   pageName
@@ -175,15 +187,27 @@ export default function PageErrorBoundary({
     fallback |
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
+<<<<<<< HEAD
     ))
       onReset={() => {        // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    ));
+
+      onReset={() => {
+        // Reset any application state if needed
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }}
     >
       {children}
     </ErrorBoundary>
+<<<<<<< HEAD
   )
 }
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

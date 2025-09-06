@@ -2,6 +2,7 @@ import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
 =======
 import {
@@ -76,6 +77,70 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+=======
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Sparkles,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  CheckCircle,
+  Award,
+  Star,
+  Crown,
+  Gem,
+  Infinity,
+  Heart,
+  ShieldCheck,
+  Users,
+  Briefcase,
+  BookOpen,
+  Target,
+  Microscope,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Home,
+  Building,
+  DollarSign,
+  FileText,
+  MessageSquare,
+  MessageCircle,
+  Newspaper,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  ShoppingCart,
+  UserCheck,
+  BarChart,
+  Palette,
+  Video,
+  LockIcon,
+  GlobeIcon,
+  CpuIcon,;
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const serviceCategories = [
   {
     title: '🧠 Revolutionary AI Services'
@@ -97,6 +162,7 @@ const serviceCategories = [
         price: '$799/month'
       }
       {
+<<<<<<< HEAD
         name: 'AI Drug Discovery Platform'
         href: '/ai-drug-discovery-platform'
         price: '$3,999/month'
@@ -113,6 +179,17 @@ const serviceCategories = [
   }
     title: '⚛️ Quantum & Emerging Tech'
     icon: Atom
+=======
+        name: 'AI Drug Discovery Platform',
+        href: '/ai-drug-discovery-platform',
+        price: '$3,999/month',
+      },
+    ],
+  },
+  {
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: Atom,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Quantum Machine Learning'
@@ -130,6 +207,7 @@ const serviceCategories = [
         price: '$599/month'
       }
       {
+<<<<<<< HEAD
         name: 'AI Climate Modeling'
         href: '/ai-climate-modeling-platform'
         price: '$1,299/month'
@@ -146,6 +224,17 @@ const serviceCategories = [
   }
     title: '🏙️ Enterprise IT Solutions'
     icon: Cpu
+=======
+        name: 'AI Climate Modeling',
+        href: '/ai-climate-modeling-platform',
+        price: '$1,299/month',
+      },
+    ],
+  },
+  {
+    title: '🏙️ Enterprise IT Solutions',
+    icon: Cpu,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'API Security & Monitoring'
@@ -163,6 +252,7 @@ const serviceCategories = [
         price: '$179/month'
       }
       {
+<<<<<<< HEAD
         name: 'Project Management AI'
         href: '/project-management-ai-platform'
         price: '$199/month'
@@ -179,6 +269,17 @@ const serviceCategories = [
   }
     title: '🛒 Business Automation'
     icon: ShoppingCart
+=======
+        name: 'Project Management AI',
+        href: '/project-management-ai-platform',
+        price: '$199/month',
+      },
+    ],
+  },
+  {
+    title: '🛒 Business Automation',
+    icon: ShoppingCart,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'E-commerce Automation'
@@ -196,6 +297,7 @@ const serviceCategories = [
         price: '$349/month'
       }
       {
+<<<<<<< HEAD
         name: 'Legal Document Automation'
         href: '/legal-document-automation'
         price: '$399/month'
@@ -216,8 +318,28 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageSquare }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+=======
+        name: 'Legal Document Automation',
+        href: '/legal-document-automation',
+        price: '$399/month',
+      },
+    ],
+  },
+];
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case-studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageSquare },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const companyLinks = [
+<<<<<<< HEAD
   { name: 'About Us', href: '/about', icon: Users }
   { name: 'Careers', href: '/careers', icon: Briefcase }
   { name: 'News', href: '/news', icon: Newspaper }
@@ -262,8 +384,48 @@ const socialLinks = [
 ];
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
+=======
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Careers', href: '/careers', icon: Briefcase },
+  { name: 'News', href: '/news', icon: Newspaper },
+  { name: 'Partners', href: '/partners', icon: Handshake },
+  { name: 'Support', href: '/support', icon: LifeBuoy },
+  { name: 'Status', href: '/status', icon: Activity },
+];
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin,
+  },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram,
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: Youtube,
+  },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+];
+
+const certifications = [
+  'ISO 27001 Certified',
+  'SOC 2 Type II Compliant',
+  'GDPR Compliant',
+  'HIPAA Compliant',
+  'PCI DSS Level 1',
+  'FedRAMP Authorized',
+  'Quantum Security Certified',
+  'AI Ethics Compliant',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const stats = [
+<<<<<<< HEAD
   { label: 'Happy Customers', value: '50K+', icon: Users }
   { label: 'Services Delivered', value: '200+', icon: Rocket }
   { label: 'Countries Served', value: '45+', icon: Globe }
@@ -273,6 +435,15 @@ export default function UltraFuturisticFooter2034() {
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
 ];
+=======
+  { label: 'Happy Customers', value: '50K+', icon: Users },
+  { label: 'Services Delivered', value: '200+', icon: Rocket },
+  { label: 'Countries Served', value: '45+', icon: Globe },
+  { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticFooter2034() {
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
@@ -287,6 +458,7 @@ export default function UltraFuturisticFooter2034() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
             {/* Company Info */}
+<<<<<<< HEAD
             <div className='lg:col-span-1'>              <motion.div      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -299,6 +471,9 @@ export default function UltraFuturisticFooter2034() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-1">
+=======
+            <div className='lg:col-span-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -328,6 +503,7 @@ export default function UltraFuturisticFooter2034() {
                   innovative tools for the future.
                 </p>
                 {/* Stats */}
+<<<<<<< HEAD
                 <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
                 <div className="flex items-center space-x-3">
                   <div className="relative">
@@ -349,6 +525,9 @@ export default function UltraFuturisticFooter2034() {
                 </p>
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4">
+=======
+                <div className='grid grid-cols-2 gap-4'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {stats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
@@ -362,11 +541,16 @@ export default function UltraFuturisticFooter2034() {
                       <div className='text-lg font-bold text-white'>
                         {stat.value}
                       </div>
+<<<<<<< HEAD
                       <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
                     >
                       <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                       <div className="text-lg font-bold text-white">{stat.value}</div>
                       <div className="text-xs text-gray-400">{stat.label}</div>
+=======
+                      <div className='text-xs text-gray-400'>{stat.label}</div>
+                    </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </div>
                 {/* Contact Info */}
@@ -381,6 +565,7 @@ export default function UltraFuturisticFooter2034() {
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>
                     <MapPin className='w-4 h-4' />
+<<<<<<< HEAD
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
@@ -390,12 +575,19 @@ export default function UltraFuturisticFooter2034() {
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
+=======
+                    <span className='text-sm'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </motion.div>
             </div>
             {/* Services */}
+<<<<<<< HEAD
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
+=======
+            <div className='lg:col-span-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -406,10 +598,15 @@ export default function UltraFuturisticFooter2034() {
                 <h3 className='text-xl font-bold text-white mb-6'>
                   Our Services
                 </h3>
+<<<<<<< HEAD
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>                  {serviceCategories.map((category, index) => (                className="space-y-8"
               >
                 <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+=======
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                  {serviceCategories.map((category, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <motion.div
                       key={category.title}
                       initial={{ opacity: 0, x: -20 }}
@@ -434,6 +631,7 @@ export default function UltraFuturisticFooter2034() {
                             <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
                               {service.name}
                             </span>
+<<<<<<< HEAD
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}                    >
                       <div className="flex items-center space-x-2">
                         <category.icon className="w-5 h-5 text-cyan-400" />
@@ -450,6 +648,9 @@ export default function UltraFuturisticFooter2034() {
                               {service.name}
                             </span>
                             <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
+=======
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               {service.price}
                             </span>
                           </Link>
@@ -461,7 +662,11 @@ export default function UltraFuturisticFooter2034() {
               </motion.div>
             </div>
             {/* Quick Links & Social */}
+<<<<<<< HEAD
             <div className='lg:col-span-1'>              <motion.div            <div className="lg:col-span-1">
+=======
+            <div className='lg:col-span-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -482,6 +687,7 @@ export default function UltraFuturisticFooter2034() {
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+<<<<<<< HEAD
                         <span className='text-sm'>{link.name}</span>                      </Link>              >
                 {/* Quick Links */}
                 <div>
@@ -495,6 +701,9 @@ export default function UltraFuturisticFooter2034() {
                       >
                         <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
+=======
+                        <span className='text-sm'>{link.name}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </Link>
                     ))}
                   </div>
@@ -512,6 +721,7 @@ export default function UltraFuturisticFooter2034() {
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+<<<<<<< HEAD
                         <span className='text-sm'>{link.name}</span>                      </Link>                      <Link
                         key={link.name}
                         href={link.href}
@@ -519,6 +729,9 @@ export default function UltraFuturisticFooter2034() {
                       >
                         <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
+=======
+                        <span className='text-sm'>{link.name}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </Link>
                     ))}
                   </div>
@@ -537,6 +750,7 @@ export default function UltraFuturisticFooter2034() {
                         rel='noopener noreferrer'
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
+<<<<<<< HEAD
                         <social.icon className='w-5 h-5' />                      </Link>                      <Link
                         key={social.name}
                         href={social.href}
@@ -545,6 +759,9 @@ export default function UltraFuturisticFooter2034() {
                         className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
                       >
                         <social.icon className="w-5 h-5" />
+=======
+                        <social.icon className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </Link>
                     ))}
                   </div>
@@ -563,10 +780,15 @@ export default function UltraFuturisticFooter2034() {
             <h4 className='text-lg font-semibold text-white mb-6 text-center'>
               Certifications & Compliance
             </h4>
+<<<<<<< HEAD
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>              {certifications.map((cert, index) => (            className="mt-16 pt-8 border-t border-white/10"
           >
             <h4 className="text-lg font-semibold text-white mb-6 text-center">Certifications & Compliance</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+=======
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>
+              {certifications.map((cert, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={cert}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -578,10 +800,15 @@ export default function UltraFuturisticFooter2034() {
                   <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
                   <span className='text-xs text-gray-300 text-center'>
                     {cert}
+<<<<<<< HEAD
                   </span>                </motion.div>                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"
                 >
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span className="text-xs text-gray-300 text-center">{cert}</span>
+=======
+                  </span>
+                </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </div>
           </motion.div>
@@ -607,15 +834,21 @@ export default function UltraFuturisticFooter2034() {
               </div>
               <div className='flex items-center space-x-2 text-gray-400'>
                 <Heart className='w-4 h-4 text-red-400' />
+<<<<<<< HEAD
                 <span className='text-sm'>Made with ❤️ for the future</span>              </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <Heart className="w-4 h-4 text-red-400" />
                 <span className="text-sm">Made with ❤️ for the future</span>
+=======
+                <span className='text-sm'>Made with ❤️ for the future</span>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 );
 }
 import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
@@ -624,3 +857,6 @@ export default function UltraFuturisticFooter2034() {return (";
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
   )}"';
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

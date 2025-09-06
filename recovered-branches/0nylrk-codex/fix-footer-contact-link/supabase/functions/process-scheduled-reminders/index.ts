@@ -106,5 +106,31 @@ serve(async (req: Request) => {
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   }
+<<<<<<< HEAD
+=======
+}//Process pending reminder jobs .from ("scheduled jobs") .select ("id, payload") .eq ("job type", "onboarding reminder") .eq ("status", "pending") .lt ("scheduled for", new Date () .toISOString () );
+
+});
+{
+  status: 500;
+);
+}if (pendingJobs && pendingJobs.length > 0) {
+  else {
+  processedJobs.push (job.id) 
+
+}else {
+  //Update job status to failed scheduled jobs") .update ({
+  
+
+}return new Response (
+}catch (error) {
+  console.error (error);
+
+});
+{
+  status: 500;
+);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

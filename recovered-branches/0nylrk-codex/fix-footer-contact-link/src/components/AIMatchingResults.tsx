@@ -17,8 +17,14 @@ interface AIMatchingResultsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isLoading?: boolean;
   projectDescription?: string;
+<<<<<<< HEAD
   serviceType?: string
 }
+=======
+  serviceType?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIMatchingResults({
   matches;
   onSelectMatch;

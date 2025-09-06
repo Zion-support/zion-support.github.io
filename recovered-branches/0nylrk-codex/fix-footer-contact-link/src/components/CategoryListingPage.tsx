@@ -36,8 +36,13 @@ interface CategoryListingPageProps {
   title: string;
   description: string;
   listings: Listing[];
+<<<<<<< HEAD
   sortOptions?: { label: string, value: string }[],
   filterOptions?: { label: string, value: string }[]
+=======
+  sortOptions?: { label: string; value: string }[];
+  filterOptions?: { label: string; value: string }[];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function CategoryListingPage({ 

@@ -1,6 +1,7 @@
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 const STEPS = null;
 =======
@@ -10,8 +11,22 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
+=======
+import { useEffect, useState } from 'react';
+
+const STEPS = [
+  { key: 'profile', label: 'Profile completed' },
+  { key: 'skills', label: 'Skills added' },
+  { key: 'availability', label: 'Availability set' },
+  { key: 'match', label: 'First match received' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TalentDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
     profile: false
@@ -22,7 +37,12 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
+<<<<<<< HEAD
       if (raw) setCompleted(JSON.parse(raw));    } catch {}
+=======
+      if (raw) setCompleted(JSON.parse(raw));
+    } catch {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   useEffect(() => {
     try {
@@ -54,7 +74,12 @@ export default function TalentDashboard() {
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
+<<<<<<< HEAD
           />        </div>
+=======
+          />
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </EnhancedCard>
       <EnhancedCard>
         <h2 className='font-semibold mb-2'>Checklist</h2>
@@ -83,10 +108,19 @@ export default function TalentDashboard() {
                   className='text-xs py-1 px-2'
                 >
                   {s.key === 'skills' ? 'Add skills' : 'Mark done'}
+<<<<<<< HEAD
                 </EnhancedButton>              )}
+=======
+                </EnhancedButton>
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </li>
           ))}
         </ul>
       </EnhancedCard>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

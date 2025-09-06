@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = null;
@@ -9,6 +10,14 @@ import {
   getSessionFromReq
   isInternalAgentRequest;
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+=======
+import {
+  getSessionFromReq,
+  isInternalAgentRequest,;
+} from '../../../utils/adminAuth';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
@@ -20,4 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 res.status(200).json({ message: 'OK' });    return
   }
   res.status(200).json({ message: 'OK' });
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

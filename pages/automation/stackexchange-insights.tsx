@@ -1,4 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/stackexchange-insights.json';
 export default function StackExchangeInsightsPage() {
@@ -26,3 +27,7 @@ export default function StackExchangeInsightsPage() {
     </EnhancedLayout>
   )
 }
+=======
+// @ts-ignore </li>) )
+}</ul> </div> </EnhancedLayout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

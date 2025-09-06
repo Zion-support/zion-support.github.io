@@ -3,7 +3,12 @@ import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react'
+=======
+import { CheckCircle, ArrowRight } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export default function MockCheckoutPage() {
   const router = null;
@@ -42,21 +47,39 @@ export default function MockCheckoutPage() {
               <li>
                 • Mock session ID generated: cs_test_mock_session_id_
                 {Date.now()}
+<<<<<<< HEAD
               </li>              <li>• Cart items would be processed</li>
+=======
+              </li>
+              <li>• Cart items would be processed</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='space-y-4'>
             <div className='text-zion-slate-light text-sm'>
               <p>To test with real Stripe: </p>
               <ol className='list-decimal list-inside space-y-1 mt-2'>
                 <li>
                   Configure real Stripe test keys in environment variables
+<<<<<<< HEAD
                 </li>                <li>Set STRIPE_TEST_MODE=true for test environment</li>
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
+=======
+                </li>
+                <li>Set STRIPE_TEST_MODE=true for test environment</li>
+                <li>Use test card: 4242 4242 4242 4242</li>
+              </ol>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button
                 asChild
@@ -71,11 +94,20 @@ export default function MockCheckoutPage() {
               >
                 <Link href='/marketplace'>
                   Continue Shopping
+<<<<<<< HEAD
                   <ArrowRight className='h-4 w-4 ml-2' />                </Link>
+=======
+                  <ArrowRight className='h-4 w-4 ml-2' />
+                </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Button>
             </div>
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

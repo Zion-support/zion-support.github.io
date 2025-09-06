@@ -11,6 +11,7 @@ interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
+<<<<<<< HEAD
 =======
   suggestion: PricingSuggestion | null
   isLoading: boolean
@@ -18,6 +19,12 @@ interface PricingSuggestionBoxProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   rateType: "hourly" | "fixed"
 }
+=======
+  rateType: 'hourly' | 'fixed';
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
@@ -47,10 +54,21 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   if (!suggestion) {
     return null
   }
+<<<<<<< HEAD
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"
     Low: "bg-red-100 text-red-800"}[suggestion.confidence]
+=======
+}
+
+const confidenceColor = {
+    High: 'bg-green-100 text-green-800',
+    Medium: 'bg-yellow-100 text-yellow-800',
+    Low: 'bg-red-100 text-red-800',
+  }[suggestion.confidence];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
       <CardContent className="p-5 space-y-4">

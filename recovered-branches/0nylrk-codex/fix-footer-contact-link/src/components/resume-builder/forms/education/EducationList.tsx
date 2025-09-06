@@ -4,8 +4,14 @@ import { EducationItem } from './EducationItem';
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
+<<<<<<< HEAD
   onDelete: (id: string) => void
 }
+=======
+  onDelete: (id: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EducationList({
   educationEntries
   onEdit

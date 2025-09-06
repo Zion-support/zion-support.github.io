@@ -12,8 +12,15 @@ import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   description?: string;
   title?: string;
+<<<<<<< HEAD
   variant?: "default" | "destructive" | "success"
 }
+=======
+  variant?: 'default' | 'destructive' | 'success';
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useToast = useToastHook;
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
@@ -34,6 +41,8 @@ baseToast.success = (message: string) => {
   baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
+}
+
 export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void;
   description: (description: string) => void;

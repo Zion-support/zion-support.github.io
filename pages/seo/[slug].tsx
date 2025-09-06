@@ -3,15 +3,26 @@ import { useRouter  } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type LandingPayload = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type LandingPayload = {
   title: string;
   h1: string;
   bodyHtml: string;
   region?: string;
   service?: string;
+<<<<<<< HEAD
   faq: Array<{ q: string; a: string }>;}
+=======
+  faq: Array<{ q: string; a: string }>;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SEOLandingPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -27,6 +38,7 @@ export default function SEOLandingPage() {
     }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({
+<<<<<<< HEAD
       title: String(slug).replace(/-/g, ' ')
       h1: String(slug).replace(/-/g, ' ')
       bodyHtml: '<p>Localized marketplace landing page.</p>'
@@ -34,6 +46,17 @@ export default function SEOLandingPage() {
       service: undefined
       faq: []
     });  }, [router.isReady, slug]);
+=======
+      title: String(slug).replace(/-/g, ' '),
+      h1: String(slug).replace(/-/g, ' '),
+      bodyHtml: '<p>Localized marketplace landing page.</p>',
+      region: undefined,
+      service: undefined,
+      faq: [],
+    });
+  }, [router.isReady, slug]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!payload) return null;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -51,8 +74,17 @@ export default function SEOLandingPage() {
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
       />
       <div className='mt-8'>
+<<<<<<< HEAD
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
+=======
+        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>
+        <TalentGrid region={payload.region} service={payload.service} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
       <FAQ items={payload.faq} />
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

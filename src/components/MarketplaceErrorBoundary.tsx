@@ -1,6 +1,7 @@
 import React from 'react';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
+<<<<<<< HEAD
 import { mutate  } from 'swr';
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
@@ -36,6 +37,29 @@ function MarketplaceErrorFallback({
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
+=======
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface MarketplaceErrorFallbackProps extends FallbackProps {
+  // Additional props if needed
+
+function MarketplaceErrorFallback({
+  error,
+  resetErrorBoundary,
+}: MarketplaceErrorFallbackProps) {
+  const handleRetry = async () => {
+    try {
+      // Re-call SWR mutate('*') to refresh all cached data
+      await mutate(() => true, undefined, { revalidate: true });
+      resetErrorBoundary();
+    } catch (retryError) {
+      logErrorToProduction('Error during retry:', { data: retryError });
+      Sentry.captureException(retryError);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -56,6 +80,7 @@ function MarketplaceErrorFallback({
           <Button
             onClick={() => window.location.reload()}
             variant='outline'
+<<<<<<< HEAD
             className='w-full'          >
             Reload Page
           </Button>
@@ -64,28 +89,49 @@ function MarketplaceErrorFallback({
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
+=======
+            className='w-full'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             Reload Page
           </Button>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
+<<<<<<< HEAD
             className='text-primary hover:underline'          >
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
             className="text-primary hover:underline"
+=======
+            className='text-primary hover:underline'
+          >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             contact support
           </a>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
+=======
+  );
+
+interface MarketplaceErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MarketplaceErrorBoundary({
   children
 }: MarketplaceErrorBoundaryProps) {
@@ -97,6 +143,7 @@ export function MarketplaceErrorBoundary({
     Sentry.withScope(scope => {
       scope.setTag('errorBoundary', 'marketplace')
       scope.setContext('errorInfo', {
+<<<<<<< HEAD
         componentStack: errorInfo.componentStack |undefined
       })
       scope.setLevel('error')
@@ -117,3 +164,16 @@ export function MarketplaceErrorBoundary({
     </ErrorBoundary>
   )
 }
+=======
+        componentStack: errorInfo.componentStack || undefined,
+      });
+      scope.setLevel('error');
+      Sentry.captureException(error);
+    });
+  };
+
+    >
+      {children}
+    </ErrorBoundary>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

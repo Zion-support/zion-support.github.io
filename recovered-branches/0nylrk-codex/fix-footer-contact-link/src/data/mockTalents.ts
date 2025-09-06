@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+=======
+import { ProfileData } from '@/types/profile';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
+}
+
 export const MOCK_TALENTS: ProfileData[] = [
   {
 <<<<<<< HEAD
@@ -452,13 +458,18 @@ contactEmail: 'david.martinez@example.com'
 }
 hourlyRate: 150;
 contactEmail: "alexandra.chen@example.com"
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }];
 availability: {
   status: "limited";
 message: "Limited availability for short-term consulting projects and infrastructure assessments.";
 availableHours: [ {
   day: "Monday", hours: "1:00 PM - 5:00 PM"
+<<<<<<< HEAD
 }
 {
   day: "Wednesday", hours: "1:00 PM - 5:00 PM"
@@ -479,6 +490,29 @@ contactEmail: "james.wilson@example.com"
 }
 current: true
 }
+=======
+};
+{
+  day: "Wednesday", hours: "1:00 PM - 5:00 PM"
+};
+{
+  day: "Friday", hours: "1:00 PM - 5:00 PM"
+
+};
+hourlyRate: 135;
+contactEmail: "michael.reynolds@example.com"
+};
+hourlyRate: 145;
+contactEmail: "priya.sharma@example.com"
+};
+]
+};
+hourlyRate: 165;
+contactEmail: "james.wilson@example.com"
+};
+current: true
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: "e2";
 role: "Full-Stack Developer";
@@ -492,6 +526,7 @@ availability: {
 message: "Available for part-time projects only (up to 20 hours per week) .";
 availableHours: [ {
   day: "Tuesday", hours: "10:00 AM - 6:00 PM"
+<<<<<<< HEAD
 }
 {
   day: "Thursday", hours: "10:00 AM - 6:00 PM"
@@ -503,3 +538,16 @@ hourlyRate: 125;
 contactEmail: "david.martinez@example.com"
 }];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+{
+  day: "Thursday", hours: "10:00 AM - 6:00 PM"
+};
+{
+  day: "Saturday", hours: "12:00 PM - 4:00 PM"
+
+};
+hourlyRate: 125;
+contactEmail: "david.martinez@example.com"
+}];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

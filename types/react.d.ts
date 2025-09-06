@@ -18,18 +18,39 @@ declare module "react" {// Basic ReactElement stub (JSX trees ultimately compile
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {(props: P): ReactElement | null;
   }
+<<<<<<< HEAD
   // Common hooks we rely on.;
   export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+=======
+
+  // Common hooks we rely on.
+}
+
+export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   export type Key = string | number;
   // Default export so `import React from 'react'` keeps working even without;
   // the real react package being installed.;
   const React: {useMemo: typeof useMemo;
   } & Record<string, unknown>;
+<<<<<<< HEAD
   export default React;
 }
 declare namespace React {// Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
+=======
+}
+
+export default React;
+
+declare namespace React {
+  // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements"
+  // errors when `@types/react` is not present.
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  export interface IntrinsicElements {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     [elemName: string]: any;
   }
 }

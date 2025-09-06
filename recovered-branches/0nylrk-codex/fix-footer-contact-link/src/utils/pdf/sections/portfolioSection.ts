@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { jsPDF } from 'jspdf';
+import { PortfolioProject } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
@@ -74,5 +81,14 @@ export function addPortfolioSection(
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     yPos += 6
   }
+<<<<<<< HEAD
   return yPos + 5
 }
+=======
+
+  return yPos + 5;
+
+}yPos += 10, // Add space between projects 
+}// If there are more projects than we're displaying 
+}return yPos + 5 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

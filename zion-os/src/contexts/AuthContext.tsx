@@ -17,7 +17,14 @@ interface AuthContextType {user: User | null;
   completeOnboarding: () => Promise<void>;
 }
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+<<<<<<< HEAD
 export function AuthProvider({ children }: { children: React.ReactNode }) {const { data: session, status } = useSession();
+=======
+}
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const { data: session, status } = useSession();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
@@ -85,9 +92,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {const
     completeOnboarding}
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
+<<<<<<< HEAD
 export function useAuth() {const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
+=======
+
+export function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return context;
 }

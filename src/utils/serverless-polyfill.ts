@@ -257,6 +257,9 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
     }
   })
 // Export a verification function for testing
+}
+}
+
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined'
@@ -265,6 +268,7 @@ export const verifyPolyfills = () => {
       (typeof self !== 'undefined' &&
         typeof self.webpackChunk_N_E !== 'undefined')
     tsHelpersDefined:
+<<<<<<< HEAD
       typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   }
@@ -273,11 +277,31 @@ export const verifyPolyfills = () => {
 }
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {'
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {
+=======
+      typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null,
+  };
+
+  console.log('Serverless polyfill verification:', checks);
+  return Object.values(checks).every(Boolean);
+
+};
+//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+  ;
+}
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default {}; // Ensure this can be imported as a module
 }, // Ensure this can be imported as a module'"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
 }
 export default {}, // Ensure this can be imported as a module
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -16,6 +16,10 @@ import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
   stats: FraudStats;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
 <<<<<<< HEAD

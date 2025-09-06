@@ -39,10 +39,18 @@ export interface ChatAssistantProps {
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   conversationId?: string;
+<<<<<<< HEAD
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
+=======
+  initialMessages?: Message[];
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
+  contextHeader?: ReactNode;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ChatAssistant({
   isOpen;
   onClose;

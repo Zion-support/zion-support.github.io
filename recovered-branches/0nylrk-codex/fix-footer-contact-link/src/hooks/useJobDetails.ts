@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
@@ -32,6 +38,7 @@ export function useJobDetails(jobId: string | undefined) {
     loadJobDetails()
   }, [jobId]);
   return {
+<<<<<<< HEAD
     job;
     isLoading;
     error;
@@ -39,3 +46,13 @@ export function useJobDetails(jobId: string | undefined) {
   }
 }
 export default useJobDetails;
+=======
+    job,
+    isLoading,
+    error,
+    loadJobDetails,
+  };
+}
+
+export default useJobDetails;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

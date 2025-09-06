@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,24 @@ interface SortDropdownProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setSortOption: (option: string) => void
 }
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { SORT_OPTIONS } from '@/data/sortOptions';
+import { SortDesc, ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+
+interface SortDropdownProps {
+  sortOption: string;
+  setSortOption: (option: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   return (
     <DropdownMenu>
@@ -51,6 +70,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         align='start'
         className='w-[200px] bg-zion-blue-dark border-zion-blue-light'
       >
+<<<<<<< HEAD
         {SORT_OPTIONS.map(option => (          <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
@@ -77,11 +97,20 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
         {SORT_OPTIONS.map((option) => (
+=======
+        {SORT_OPTIONS.map(option => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+=======
+              sortOption === option.value
+                ? 'bg-zion-purple/20 text-zion-purple'
+                : ''
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }`}
           >
             {option.label}
@@ -89,5 +118,9 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

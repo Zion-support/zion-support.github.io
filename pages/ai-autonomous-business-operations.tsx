@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousBusinessOperations() {
 	return (
@@ -27,3 +28,13 @@ export default function AIAutonomousBusinessOperations() {
 		/>
 	)
 }
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+}
+
+export default function AIAutonomousBusinessOperations() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

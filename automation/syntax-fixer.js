@@ -132,6 +132,14 @@ this.log("=" * 50)
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {
   const fixer = new SyntaxFixer()
   fixer.run().catch(console.error)
+<<<<<<< HEAD
 }
 export default SyntaxFixer
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+};
+,
+}
+
+export default SyntaxFixer,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

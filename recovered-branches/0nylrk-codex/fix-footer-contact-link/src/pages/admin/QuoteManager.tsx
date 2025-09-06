@@ -16,10 +16,18 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { ExportToCSV } from "@/components/quotes/ExportToCSV";
 import {
+<<<<<<< HEAD
   QuoteStatusCards;
   QuotesFilter;
   QuotesTable
 } from "@/components/admin/quotes",
+=======
+  QuoteStatusCards,
+  QuotesFilter,
+  QuotesTable,;
+} from '@/components/admin/quotes';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export default function QuoteManager() {
   const { user } = useAuth();

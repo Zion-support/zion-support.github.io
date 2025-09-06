@@ -2,13 +2,25 @@
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+<<<<<<< HEAD
 export function securityMiddleware(request) {
   const response = NextResponse.next();
+=======
+}
+
+export function securityMiddleware(request) {
+  const response = NextResponse.next();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Add security headers
   const headers = getSecurityHeaders();
   headers.forEach(({ key, value }) => {
     response.headers.set(key, value);
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Add HSTS header for HTTPS
   if (request.nextUrl.protocol === 'https:') {
     response.headers.set(
@@ -16,6 +28,7 @@ export function securityMiddleware(request) {
       'max-age=31536000; includeSubDomains; preload'
     );
   }
+<<<<<<< HEAD
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
@@ -30,3 +43,7 @@ export function securityHeaders(req, res, next) {
   });
   next();
 }
+=======
+
+  return response;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

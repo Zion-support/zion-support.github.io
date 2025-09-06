@@ -39,6 +39,11 @@ const partnerFormSchema = z.object({
   payout_method: z.string()
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)})
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();

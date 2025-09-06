@@ -10,8 +10,14 @@ import { StatusBadge } from "./StatusBadge",
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {
+<<<<<<< HEAD
   application: JobApplication
 }
+=======
+  application: JobApplication;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
 <<<<<<< HEAD

@@ -5,7 +5,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 interface VerifiedBadgeProps {
 <<<<<<< HEAD
   verified: boolean;
+<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg'
+=======
+  size?: 'sm' | 'md' | 'lg';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function VerifiedBadge({ verified, size;

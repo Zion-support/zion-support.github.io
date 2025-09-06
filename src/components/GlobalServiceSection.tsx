@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { GradientHeading } from './GradientHeading';
+import {
+  Server,
+  HardDrive,
+  Network,
+  Clock,
+  Recycle,
+  Truck,;
+} from 'lucide-react';
+import { Button } from './ui/button';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "./GradientHeading";
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
@@ -49,11 +62,20 @@ const services = [
   {
     title: 'Equipment Rentals'
     description:
+<<<<<<< HEAD
       'Flexible rental options for temporary projects and scaling requirements'
     icon: <Truck className='h-10 w-10' />
   }
 ]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Flexible rental options for temporary projects and scaling requirements',
+    icon: <Truck className='h-10 w-10' />,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function GlobalServiceSection() {
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>
@@ -77,6 +99,7 @@ export function GlobalServiceSection() {
               </h3>
               <p className='text-zion-slate-light mb-4'>
                 {service.description}
+<<<<<<< HEAD
               </p>            </div>
           ))}
         </div>
@@ -94,10 +117,23 @@ export function GlobalServiceSection() {
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
+=======
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className='flex justify-center mt-12'>
+          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Get Your Free Commercial Proposal
           </Button>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

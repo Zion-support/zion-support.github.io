@@ -24,8 +24,14 @@ interface DateFieldsProps {
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
+<<<<<<< HEAD
   setEndDate: (date: Date | undefined) => void
 }
+=======
+  setEndDate: (date: Date | undefined) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DateFields({
   startDate
   setStartDate

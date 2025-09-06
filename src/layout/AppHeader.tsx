@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import Link from 'next/link';
@@ -17,6 +16,11 @@ import { useSelector  } from 'react-redux';
 import type { RootState } from '@/store';
 import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AppHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -137,6 +141,7 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
       setActiveNav(null)
       setServicesDropdownOpen(false)
       setSolutionsDropdownOpen(false)
@@ -726,3 +731,35 @@ export function AppHeader() {
       </AnimatePresence>
     </header>  )
 }
+=======
+  );
+
+}';
+}> {';';
+  t ('auth.login') ;';
+}</Link> <Link > {';';
+  t ('auth.signup') ;
+}</Link> </div>) ;";
+}<UserMenu /> </div>) ";";
+}</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;";
+  () => setMobileMenuOpen (false) ";";
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+  unreadCount ;
+}onClose= {;
+  () => setMobileMenuOpen (false) ;
+}openLoginModal= {;
+  openLoginModal ;
+}/> </div> </div>) ;
+}{;
+  /* Mobile Bottom Navigation */ ;
+}{;
+  isMobile && <MobileBottomNav unreadCount= {;
+  unreadCount ;
+}/> ;
+}<LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

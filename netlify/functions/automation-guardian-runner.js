@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
@@ -58,3 +59,6 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

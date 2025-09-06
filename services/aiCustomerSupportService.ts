@@ -565,5 +565,10 @@ class AICustomerSupportService {
     return this.analytics
   }
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const aiCustomerSupportService = new AICustomerSupportService();
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

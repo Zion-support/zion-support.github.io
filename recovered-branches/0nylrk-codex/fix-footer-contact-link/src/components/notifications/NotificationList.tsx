@@ -12,6 +12,7 @@ interface NotificationListProps {
   notifications: Notification[];
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
+<<<<<<< HEAD
 =======
   loading: boolean
   error: string | null
@@ -21,6 +22,11 @@ interface NotificationListProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onRetry: () => void
 }
+=======
+  onRetry: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading;
   error;

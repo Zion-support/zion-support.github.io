@@ -4,8 +4,14 @@ import { Link  } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 interface MainNavigationProps {
+<<<<<<< HEAD
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
 <<<<<<< HEAD

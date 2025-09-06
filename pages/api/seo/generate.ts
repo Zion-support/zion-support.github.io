@@ -1,22 +1,39 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 const openai = null;
     return res.status(500).json({ error: 'Failed to generate landing page' })
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |"" });
+=======
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "POST") {
     res.setHeader("AllowPOST");
     return res.status(405).json({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
+=======
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+ 
+}
+  const { prompt, region, service } = req.body || {};
+  if (!prompt) return res.status(400).json({ error: 'Missing prompt' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const system = `You generate conversion-focused, SEO-optimized landing pages in HTML. Include:
 - A compelling H1
@@ -32,12 +49,22 @@ Tone: professional, modern, trustworthy`;
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini"
       messages: [
+<<<<<<< HEAD
         { role: "system", content: system }
         { role: "user", content: user }
       ]
       temperature: 0.7
     });
     const content = response.choices?.[0]?.message?.content |"";
+=======
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+      temperature: 0.7,
+    });
+
+    const content = response.choices?.[0]?.message?.content || '';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const title = `Zion Marketplace — ${prompt}`;
     // FAQ generation
     const faqResp = await openai.chat.completions.create({
@@ -77,9 +104,16 @@ Tone: professional, modern, trustworthy`;
         faq
       }
     });
-  } catch (e) {
+ 
+} catch (e) {
     console.error(e);
+<<<<<<< HEAD
     return res.status(500).json({ error: "Failed to generate landing page" });
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }
+=======
+    return res.status(500).json({ error: 'Failed to generate landing page' });
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

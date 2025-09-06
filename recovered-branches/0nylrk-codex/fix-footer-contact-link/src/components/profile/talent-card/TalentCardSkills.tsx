@@ -5,6 +5,9 @@ interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function TalentCardSkills({ skills;
 =======

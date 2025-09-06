@@ -156,8 +156,16 @@ const NotificationCard: React.FC<{
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function NotificationsPage() {
   const {
     filteredNotifications;

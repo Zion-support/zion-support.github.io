@@ -5,8 +5,14 @@ import { cn } from "@/lib/utils";
 import { badgeVariants } from "@/components/ui/badge-variants";
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
+<<<<<<< HEAD
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
+=======
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ClickableBadge({
   children;
   className;

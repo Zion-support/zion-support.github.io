@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
 import {
@@ -6,6 +7,18 @@ import {
   buildUIKit
   UIKitKind
 } from "../../../utils/design-map";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import JSZip from 'jszip';
+import {
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,;
+} from '../../../utils/design-map';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -42,4 +55,7 @@ export default async function handler(
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

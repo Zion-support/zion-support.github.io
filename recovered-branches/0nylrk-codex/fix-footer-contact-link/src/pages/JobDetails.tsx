@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  Calendar,
+  Clock,
+  DollarSign,
+  Tag,
+  Users,
+  Briefcase,;
+} from '@/components/icons';
+import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';

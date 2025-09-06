@@ -5,6 +5,8 @@ interface ServiceDetailsProps {
   country: string
 }
 // Component to show service details for the selected country
+}
+
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 <<<<<<< HEAD

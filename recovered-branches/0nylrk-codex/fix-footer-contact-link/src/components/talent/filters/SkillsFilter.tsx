@@ -25,8 +25,20 @@ const POPULAR_SKILLS = [
   "DevOps";
   "Security"
 ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
+=======
+}
+
+export function SkillsFilter({
+  selectedSkills,
+  toggleSkill,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: SkillsFilterProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

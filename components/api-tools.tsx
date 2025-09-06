@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code;
   Database;
   Globe;
@@ -54,6 +55,33 @@ export default function ApiToolsPage() {
   const apiTools = [
     {
       icon: <Code className='w-8 h-8 text-white' />
+=======
+import {
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Zap,
+  Bot,
+  BarChart3,
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  ExternalLink,
+  Play,
+  BookOpen,
+  Github,
+  Terminal,;
+} from 'lucide-react';
+}
+
+export default function ApiToolsPage() {
+  const apiTools = [
+    {
+      icon: <Code className='w-8 h-8 text-white' />,
+      title: 'CodeGen API - AI-Powered Code Generation',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Generate production-ready code in multiple languages using natural language descriptions and AI.'
       features: [
@@ -64,6 +92,7 @@ export default function ApiToolsPage() {
         'Code review and optimization suggestions'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '100 requests/month'
         pro: '$49/month'
         enterprise: 'Custom'
@@ -80,6 +109,54 @@ export default function ApiToolsPage() {
     {
       icon: <Database className='w-8 h-8 text-white' />
       title: 'DataSync API - Real-time Data Synchronization'
+=======
+        free: '100 requests/month',
+        pro: '$49/month',
+        enterprise: 'Custom',
+      },
+      category: 'Development',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500',
+      website: 'https://codegen.api',
+      docs: 'https://docs.codegen.api',
+      github: 'https://github.com/codegen-api',
+      status: 'Live',
+      users: '15,000+',
+      rating: 4.8,
+      responseTime: '<100ms',
+    },
+    {
+      icon: <Database className='w-8 h-8 text-white' />,
+      title: 'DataSync API - Real-time Data Synchronization',
+      description:
+        'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
+      features: [
+        'Multi-database support (PostgreSQL, MySQL, MongoDB)',
+        'Real-time change detection and propagation',
+        'Conflict resolution and data validation',
+        'Webhook support for custom integrations',
+        'Comprehensive audit logging and monitoring',
+      ],
+      pricing: {
+        free: '1,000 syncs/month',
+        pro: '$79/month',
+        enterprise: 'Custom',
+      },
+      category: 'Data',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500',
+      website: 'https://datasync.api',
+      docs: 'https://docs.datasync.api',
+      github: 'https://github.com/datasync-api',
+      status: 'Live',
+      users: '8,500+',
+      rating: 4.9,
+      responseTime: '<50ms',
+    },
+    {
+      icon: <Globe className='w-8 h-8 text-white' />,
+      title: 'GeoAPI - Advanced Geospatial Services',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.'
       features: [
@@ -90,6 +167,7 @@ export default function ApiToolsPage() {
         'Comprehensive audit logging and monitoring'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '1,000 syncs/month'
         pro: '$79/month'
         enterprise: 'Custom'
@@ -106,6 +184,26 @@ export default function ApiToolsPage() {
     {
       icon: <Globe className='w-8 h-8 text-white' />
       title: 'GeoAPI - Advanced Geospatial Services'
+=======
+        free: '10,000 requests/month',
+        pro: '$99/month',
+        enterprise: 'Custom',
+      },
+      category: 'Location',
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      gradient: 'from-purple-400 to-pink-500',
+      website: 'https://geo.api',
+      docs: 'https://docs.geo.api',
+      github: 'https://github.com/geo-api',
+      status: 'Live',
+      users: '12,000+',
+      rating: 4.7,
+      responseTime: '<75ms',
+    },
+    {
+      icon: <Shield className='w-8 h-8 text-white' />,
+      title: 'AuthGuard API - Enterprise Authentication',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.'
       features: [
@@ -116,6 +214,7 @@ export default function ApiToolsPage() {
         'Spatial data analysis and clustering'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '10,000 requests/month'
         pro: '$99/month'
         enterprise: 'Custom'
@@ -132,6 +231,26 @@ export default function ApiToolsPage() {
     {
       icon: <Shield className='w-8 h-8 text-white' />
       title: 'AuthGuard API - Enterprise Authentication'
+=======
+        free: '1,000 users/month',
+        pro: '$149/month',
+        enterprise: 'Custom',
+      },
+      category: 'Security',
+      color: 'bg-gradient-to-br from-red-500 to-orange-600',
+      gradient: 'from-red-400 to-orange-500',
+      website: 'https://authguard.api',
+      docs: 'https://docs.authguard.api',
+      github: 'https://github.com/authguard-api',
+      status: 'Live',
+      users: '6,800+',
+      rating: 4.9,
+      responseTime: '<25ms',
+    },
+    {
+      icon: <Zap className='w-8 h-8 text-white' />,
+      title: 'WebhookHub - Intelligent Webhook Management',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Secure, scalable authentication and authorization system with advanced security features.'
       features: [
@@ -142,6 +261,7 @@ export default function ApiToolsPage() {
         'Compliance with SOC2, GDPR, and HIPAA'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '1,000 users/month'
         pro: '$149/month'
         enterprise: 'Custom'
@@ -158,6 +278,26 @@ export default function ApiToolsPage() {
     {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'WebhookHub - Intelligent Webhook Management'
+=======
+        free: '5,000 webhooks/month',
+        pro: '$39/month',
+        enterprise: 'Custom',
+      },
+      category: 'Integration',
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+      gradient: 'from-yellow-400 to-orange-500',
+      website: 'https://webhookhub.api',
+      docs: 'https://docs.webhookhub.api',
+      github: 'https://github.com/webhookhub-api',
+      status: 'Live',
+      users: '9,200+',
+      rating: 4.8,
+      responseTime: '<30ms',
+    },
+    {
+      icon: <Bot className='w-8 h-8 text-white' />,
+      title: 'NLP API - Natural Language Processing',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Reliable webhook delivery, retry logic, and event processing for modern applications.'
       features: [
@@ -168,6 +308,7 @@ export default function ApiToolsPage() {
         'Integration with popular platforms'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '5,000 webhooks/month'
         pro: '$39/month'
         enterprise: 'Custom'
@@ -184,6 +325,26 @@ export default function ApiToolsPage() {
     {
       icon: <Bot className='w-8 h-8 text-white' />
       title: 'NLP API - Natural Language Processing'
+=======
+        free: '5,000 requests/month',
+        pro: '$69/month',
+        enterprise: 'Custom',
+      },
+      category: 'AI/ML',
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+      gradient: 'from-indigo-400 to-purple-500',
+      website: 'https://nlp.api',
+      docs: 'https://docs.nlp.api',
+      github: 'https://github.com/nlp-api',
+      status: 'Live',
+      users: '11,500+',
+      rating: 4.7,
+      responseTime: '<200ms',
+    },
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+      title: 'Analytics API - Business Intelligence',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Advanced text analysis, sentiment detection, and language understanding capabilities.'
       features: [
@@ -194,6 +355,7 @@ export default function ApiToolsPage() {
         'Custom model training and fine-tuning'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '5,000 requests/month'
         pro: '$69/month'
         enterprise: 'Custom'
@@ -210,6 +372,26 @@ export default function ApiToolsPage() {
     {
       icon: <BarChart3 className='w-8 h-8 text-white' />
       title: 'Analytics API - Business Intelligence'
+=======
+        free: '10,000 events/month',
+        pro: '$89/month',
+        enterprise: 'Custom',
+      },
+      category: 'Analytics',
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      gradient: 'from-teal-400 to-cyan-500',
+      website: 'https://analytics.api',
+      docs: 'https://docs.analytics.api',
+      github: 'https://github.com/analytics-api',
+      status: 'Live',
+      users: '7,800+',
+      rating: 4.8,
+      responseTime: '<150ms',
+    },
+    {
+      icon: <Lock className='w-8 h-8 text-white' />,
+      title: 'EncryptAPI - Data Encryption Services',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Comprehensive analytics and reporting APIs for data-driven decision making.'
       features: [
@@ -220,6 +402,7 @@ export default function ApiToolsPage() {
         'Scheduled reports and alerts'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '10,000 events/month'
         pro: '$89/month'
         enterprise: 'Custom'
@@ -258,6 +441,23 @@ export default function ApiToolsPage() {
       users: '4,200+'
       responseTime: '<20ms'
     }
+=======
+        free: '1,000 operations/month',
+        pro: '$119/month',
+        enterprise: 'Custom',
+      },
+      category: 'Security',
+      color: 'bg-gradient-to-br from-gray-500 to-slate-600',
+      gradient: 'from-gray-400 to-slate-500',
+      website: 'https://encrypt.api',
+      docs: 'https://docs.encrypt.api',
+      github: 'https://github.com/encrypt-api',
+      status: 'Live',
+      users: '4,200+',
+      rating: 4.9,
+      responseTime: '<20ms',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const categories = [
     'All'
@@ -274,12 +474,16 @@ export default function ApiToolsPage() {
     selectedCategory === 'All'
       ? apiTools
       : apiTools.filter(tool => tool.category === selectedCategory);
+<<<<<<< HEAD
   return (
     <>
       <Head>  const filteredTools = selectedCategory === 'All'
     ? apiTools
     : apiTools.filter(tool => tool.category === selectedCategory);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -319,6 +523,7 @@ export default function ApiToolsPage() {
             reliability, and ease of integration.
           </p>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
+<<<<<<< HEAD
             {categories.map(category => (              <button      </Head>
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
@@ -337,6 +542,9 @@ export default function ApiToolsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
+=======
+            {categories.map(category => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -397,15 +605,23 @@ export default function ApiToolsPage() {
                             {tool.rating}
                           </span>
                         </div>
+<<<<<<< HEAD
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>                          {tool.status}
                         </span>
                       </div>
                     </div>
                     <p className='text-gray-400 leading-relaxed mb-6'>                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
+=======
+                        <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {tool.status}
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
@@ -451,6 +667,7 @@ export default function ApiToolsPage() {
                         size='sm'
                         className='bg-indigo-600 hover:bg-indigo-700'
                       >
+<<<<<<< HEAD
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API
                       </Button>
                       <Button
@@ -486,6 +703,9 @@ export default function ApiToolsPage() {
                         className="bg-indigo-600 hover:bg-indigo-700"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
+=======
+                        <ExternalLink className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         Visit API
                       </Button>
                       <Button
@@ -494,6 +714,7 @@ export default function ApiToolsPage() {
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'
                       >
+<<<<<<< HEAD
                         <BookOpen className='w-4 h-4 mr-2' />                        Documentation
                       </Button>
                       <Button
@@ -502,6 +723,10 @@ export default function ApiToolsPage() {
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
+=======
+                        <BookOpen className='w-4 h-4 mr-2' />
+                        Documentation
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </Button>
                       <Button
                         href={tool.github}
@@ -509,11 +734,16 @@ export default function ApiToolsPage() {
                         size='sm'
                         className='text-gray-400 hover:text-indigo-400'
                       >
+<<<<<<< HEAD
                         <Github className='w-4 h-4 mr-2' />                        GitHub                        variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
                       >
                         <Github className="w-4 h-4 mr-2" />
+=======
+                        <Github className='w-4 h-4 mr-2' />
+                        GitHub
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </Button>
                     </div>
                   </div>
@@ -580,7 +810,11 @@ export default function ApiToolsPage() {
               </p>
               <Button href='/sdk' variant='outline' size='sm'>
                 Browse SDKs
+<<<<<<< HEAD
                 <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
+=======
+                <ArrowRight className='w-4 h-4 ml-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Button>
             </Card>
           </div>
@@ -610,15 +844,24 @@ export default function ApiToolsPage() {
               href='/docs'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/docs"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
+=======
+              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Documentation
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

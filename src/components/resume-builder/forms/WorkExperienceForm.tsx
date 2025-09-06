@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -7,6 +8,16 @@ import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
 import { Input  } from '@/components/ui/input';
 import { Checkbox  } from '@/components/ui/checkbox';
+=======
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { format } from 'date-fns';
 import { Form;
   FormControl;
@@ -55,10 +66,19 @@ const workExperienceSchema = z.object({
 })
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>
 interface WorkExperienceFormProps {
+<<<<<<< HEAD
   resumeId: string
   workExperiences: WorkExperience[]
   onComplete: () => void
   onBack: () => void
+=======
+  resumeId: string;
+  workExperiences: WorkExperience[];
+  onComplete: () => void;
+  onBack: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function WorkExperienceForm({
   resumeId
   workExperiences
@@ -122,14 +142,24 @@ export function WorkExperienceForm({
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!)
     form.reset({
+<<<<<<< HEAD
       start_date: formatDateValue(work.start_date)
+=======
+      ...work,
+      start_date: formatDateValue(work.start_date),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       end_date:
         work.end_date && !work.is_current
           ? formatDateValue(work.end_date)
@@ -383,6 +413,7 @@ export function WorkExperienceForm({
         </Form>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }> {'
   editingId ? 'Cancel': 'Back'
@@ -390,3 +421,12 @@ export function WorkExperienceForm({
 }</div> </div> </form> </Form> </div> </div>)
 }'"  )
 }
+=======
+  );
+
+}> {';
+  editingId ? 'Cancel': 'Back' ;
+}</Button> Next </Button>) ;
+}</div> </div> </form> </Form> </div> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

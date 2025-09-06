@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { JobMatch } from '@/types/jobs';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -69,6 +77,7 @@ export function useJobMatches(jobId: string) {
     fetchMatches()
   }, [jobId]);
   return {
+<<<<<<< HEAD
     matches;
     isLoading;
     isProcessing;
@@ -76,3 +85,35 @@ export function useJobMatches(jobId: string) {
     triggerAIMatching
   }
 }
+=======
+    matches,
+    isLoading,
+    isProcessing,
+    triggerAIMatching,
+  };
+
+};
+const triggerAIMatching = async () => {
+  setIsProcessing (true);
+try {
+  const response = await supabase.functions.invoke ('job-talent-matcher', {
+  body: {
+  jobId 
+
+});
+// Refresh the matches list await fetchMatches () 
+}catch (error) {
+  
+}finally {
+  setIsProcessing (false) 
+
+};
+useEffect ( () => {
+  fetchMatches () 
+}, [jobId]);
+
+  matches;
+isLoading;
+isProcessing;
+triggerAIMatching 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

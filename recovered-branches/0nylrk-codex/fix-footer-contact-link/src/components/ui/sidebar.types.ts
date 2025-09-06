@@ -3,8 +3,13 @@ import React from 'react';
 // This file fixes the ref type issues in sidebar components
 // Export a placeholder to ensure the file is recognized as a module
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const SIDEBAR_REF_TYPE_FIX = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SIDEBAR_REF_TYPE_FIX = true;
 // Define a type that makes the ref forwards compatible
 export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<

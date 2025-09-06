@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import * as React from 'react';
+import { Toaster as SonnerToaster } from 'sonner';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import * as React from "react";
 import { Toaster as SonnerToaster } from "sonner";

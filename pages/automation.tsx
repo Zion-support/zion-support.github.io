@@ -1,6 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
 export default function AutomationPage() {
   const features = null;
@@ -45,6 +46,52 @@ export default function AutomationPage() {
     'Real-time monitoring'
     'Custom integration support',  ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  RefreshCw,
+  Zap,
+  Bot,
+  Workflow,
+  ArrowRight,
+  Check,
+  BarChart3,;
+} from 'lucide-react';
+}
+
+export default function AutomationPage() {
+  const features = [
+    {
+      icon: <Workflow className='w-8 h-8 text-white' />,
+      title: 'Workflow Automation',
+      description: 'Create complex workflows with drag-and-drop interface',
+    },
+    {
+      icon: <Bot className='w-8 h-8 text-white' />,
+      title: 'AI-Powered Bots',
+      description: 'Intelligent automation agents that learn and adapt',
+    },
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+      title: 'Process Analytics',
+      description: 'Real-time insights into your automation performance',
+    },
+    {
+      icon: <Zap className='w-8 h-8 text-white' />,
+      title: 'Smart Triggers',
+      description: 'Automated responses based on events and conditions',
+    },
+  ];
+
+  const benefits = [
+    'Reduce manual tasks by 80%',
+    'Improve process accuracy',
+    'Scale operations efficiently',
+    '24/7 automated operations',
+    'Real-time monitoring',
+    'Custom integration support',
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -83,7 +130,12 @@ export default function AutomationPage() {
               <a
                 href='/contact'
                 className='border-white/20 hover:border-white/40'
+<<<<<<< HEAD
               >                View Demo
+=======
+              >
+                View Demo
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             </div>
           </div>
@@ -95,9 +147,17 @@ export default function AutomationPage() {
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
                 Automation Features
               </h2>
+<<<<<<< HEAD
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>                Powerful tools to automate any business process
               </p>
             </div>
+=======
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                Powerful tools to automate any business process
+              </p>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {features.map((feature, index) => (
                 <div
@@ -110,7 +170,12 @@ export default function AutomationPage() {
                   <h3 className='text-xl font-bold text-white mb-4'>
                     {feature.title}
                   </h3>
+<<<<<<< HEAD
                   <p className='text-gray-400 leading-relaxed'>                    {feature.description}
+=======
+                  <p className='text-gray-400 leading-relaxed'>
+                    {feature.description}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </p>
                 </div>
               ))}
@@ -131,10 +196,19 @@ export default function AutomationPage() {
                       <div className='w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1'>
                         <Check className='w-4 h-4 text-blue-500' />
                       </div>
+<<<<<<< HEAD
                       <span className='text-gray-300 text-lg'>{benefit}</span>                    </div>
                   ))}
                 </div>
               </div>
+=======
+                      <span className='text-gray-300 text-lg'>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='relative'>
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>
                   <div className='text-center'>
@@ -147,7 +221,12 @@ export default function AutomationPage() {
                       business needs
                     </p>
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>
+<<<<<<< HEAD
                       <Zap className='w-4 h-4 mr-2' />                      AI-powered optimization
+=======
+                      <Zap className='w-4 h-4 mr-2' />
+                      AI-powered optimization
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </div>
@@ -174,11 +253,20 @@ export default function AutomationPage() {
               <a
                 href='/contact'
                 className='border-white text-white hover:bg-white hover:text-blue-600'
+<<<<<<< HEAD
               >                Schedule Demo
+=======
+              >
+                Schedule Demo
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             </div>
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

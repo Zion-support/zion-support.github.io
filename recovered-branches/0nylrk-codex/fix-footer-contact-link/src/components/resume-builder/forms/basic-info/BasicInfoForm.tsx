@@ -20,8 +20,14 @@ export interface BasicInfoFormProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   skills?: string[];
   yearsExperience?: number;
+<<<<<<< HEAD
   onComplete?: () => void
 }
+=======
+  onComplete?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BasicInfoForm({
   resumeId;
 <<<<<<< HEAD

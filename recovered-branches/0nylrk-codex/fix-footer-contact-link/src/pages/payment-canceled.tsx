@@ -3,6 +3,11 @@ import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate  } from 'react-router-dom';
 import { XCircle } from 'lucide-react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PaymentCanceled() {
 <<<<<<< HEAD
   const navigate = null;

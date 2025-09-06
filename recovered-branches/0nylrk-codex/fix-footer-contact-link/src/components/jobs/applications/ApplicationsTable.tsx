@@ -24,7 +24,11 @@ interface ApplicationsTableProps {
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+<<<<<<< HEAD
   onViewScore: (application: JobApplication) => void
+=======
+  onViewScore: (application: JobApplication) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ApplicationsTable({ 

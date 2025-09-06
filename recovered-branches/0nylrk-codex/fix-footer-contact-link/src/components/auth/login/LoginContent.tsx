@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { LoginCard } from './LoginCard';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { LoginCard } from "./LoginCard";
 export function LoginContent() {

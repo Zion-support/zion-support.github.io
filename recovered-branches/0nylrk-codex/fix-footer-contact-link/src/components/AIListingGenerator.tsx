@@ -27,6 +27,7 @@ interface GeneratedContent {
 interface AIListingGeneratorProps {
 <<<<<<< HEAD
   onApplyGenerated?: (content: GeneratedContent) => void;
+<<<<<<< HEAD
 =======
   onApplyGenerated?: (content: GeneratedContent) => void
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -38,6 +39,14 @@ interface AIListingGeneratorProps {
   }
 }
 <<<<<<< HEAD
+=======
+initialValues?: {
+  title?: string;
+category?: string;
+keyFeatures?: string;
+targetAudience?: string
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======

@@ -1,12 +1,18 @@
 import React from 'react';
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ComposePage() {
 <<<<<<< HEAD
   const router = null;
 =======
   const router = useRouter();
   const {
+<<<<<<< HEAD
     type
     recipientId
     recipientName
@@ -15,13 +21,32 @@ export default function ComposePage() {
     talentId
     talentName
   } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
+=======
+    type,
+    recipientId,
+    recipientName,
+    jobId,
+    jobTitle,
+    talentId,
+    talentName,
+  } = router.query as Record<string, string>;
+  const { user, loading } = useCurrentUser();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
   React.useEffect(() => {
+<<<<<<< HEAD
     if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
   if (!user) return null;
+=======
+    if (!loading && !user) router.replace('/auth');
+  }, [loading, user, router]);
+
+  if (!user) return null;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const headerTitle =
     type === 'invite'
       ? `Invite ${recipientName |talentName |'Talent'}`
@@ -33,20 +58,36 @@ export default function ComposePage() {
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply'
         ? { type: 'application', jobId, jobTitle }
+<<<<<<< HEAD
         : { type: 'general' }
+=======
+        : { type: 'general' };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const onSend = async () => {
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
     setSending(true);
+<<<<<<< HEAD
     let attachmentBase64: string | undefined;    if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
       const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
+=======
+    let attachmentBase64: string | undefined;
+    if (file) {
+      const buff = await file.arrayBuffer();
+      const base64 = Buffer.from(buff).toString('base64');
+      const mime = file.type || 'application/octet-stream';
+      attachmentBase64 = `data:${mime};base64,${base64}`;
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
+<<<<<<< HEAD
         recipientId: recipientId |talentId
         body: message
         linkUrl: linkUrl |undefined
@@ -54,6 +95,15 @@ export default function ComposePage() {
         attachmentName: file?.name
         context
       })
+=======
+        recipientId: recipientId || talentId,
+        body: message,
+        linkUrl: linkUrl || undefined,
+        attachmentBase64,
+        attachmentName: file?.name,
+        context,
+      }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     const data = await res.json();
     setSending(false);
@@ -106,8 +156,17 @@ export default function ComposePage() {
               className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'
             >
               {sending ? 'Sending...' : 'Send'}
+<<<<<<< HEAD
             </button>          </div>
         </div>
       </div>
     </div>
 );
+=======
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

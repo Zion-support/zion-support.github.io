@@ -5,6 +5,7 @@ interface ReviewStatsProps {
 <<<<<<< HEAD
   averageRating: number;
   totalReviews: number;
+<<<<<<< HEAD
 =======
   averageRating: number
   totalReviews: number
@@ -12,6 +13,16 @@ interface ReviewStatsProps {
   ratingDistribution?: Record<number, number>
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+=======
+  ratingDistribution?: Record<number, number>;
+}
+
+export function ReviewStats({
+  averageRating,
+  totalReviews,
+  ratingDistribution,
+}: ReviewStatsProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Format the average rating to one decimal place
 <<<<<<< HEAD
   const formattedRating = null;

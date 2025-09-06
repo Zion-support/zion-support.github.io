@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -110,6 +111,92 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+=======
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,;
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const serviceCategories = [
   {
     title: '🚀 2031 Revolutionary AI Services'
@@ -136,6 +223,7 @@ const serviceCategories = [
         price: '$5,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'AI Dream Interpreter Platform'
         href: '/ai-dream-interpreter-platform'
         description: 'Dream analysis with AI psychology'
@@ -152,6 +240,20 @@ const serviceCategories = [
     icon: AtomIcon
     color: 'from-indigo-600 via-blue-600 to-cyan-600'
     description: 'Quantum computing and beyond'
+=======
+        name: 'AI Dream Interpreter Platform',
+        href: '/ai-dream-interpreter-platform',
+        description: 'Dream analysis with AI psychology',
+        price: '$299/month',
+      },
+    ],
+  },
+  {
+    title: '⚛️ 2031 Quantum & Emerging Tech',
+    icon: AtomIcon,
+    color: 'from-indigo-600 via-blue-600 to-cyan-600',
+    description: 'Quantum computing and beyond',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Quantum Internet Security Gateway'
@@ -172,6 +274,7 @@ const serviceCategories = [
         price: '$35,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'Quantum Creativity Studio'
         href: '/quantum-creativity-studio'
         description: 'Quantum-enhanced creativity'
@@ -188,6 +291,20 @@ const serviceCategories = [
     icon: CpuIcon
     color: 'from-blue-600 via-cyan-600 to-teal-600'
     description: 'Autonomous enterprise infrastructure'
+=======
+        name: 'Quantum Creativity Studio',
+        href: '/quantum-creativity-studio',
+        description: 'Quantum-enhanced creativity',
+        price: '$1,999/month',
+      },
+    ],
+  },
+  {
+    title: '🏙️ 2031 Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from-blue-600 via-cyan-600 to-teal-600',
+    description: 'Autonomous enterprise infrastructure',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Autonomous DevOps Platform'
@@ -208,6 +325,7 @@ const serviceCategories = [
         price: '$449/month'
       }
       {
+<<<<<<< HEAD
         name: 'AI-Powered IT Operations Center'
         href: '/ai-it-operations-center'
         description: 'Intelligent IT operations'
@@ -224,6 +342,20 @@ const serviceCategories = [
     icon: Rocket
     color: 'from-teal-600 via-emerald-600 to-green-600'
     description: 'Space exploration and digital reality'
+=======
+        name: 'AI-Powered IT Operations Center',
+        href: '/ai-it-operations-center',
+        description: 'Intelligent IT operations',
+        price: '$699/month',
+      },
+    ],
+  },
+  {
+    title: '🌌 2031 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from-teal-600 via-emerald-600 to-green-600',
+    description: 'Space exploration and digital reality',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Space Mining Automation Platform'
@@ -244,6 +376,7 @@ const serviceCategories = [
         price: '$7,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'AI Autonomous Business Manager'
         href: '/ai-autonomous-business-manager'
         description: 'Fully autonomous business operations'
@@ -260,6 +393,20 @@ const serviceCategories = [
     icon: Target
     color: 'from-green-600 via-yellow-600 to-orange-600'
     description: 'Cutting-edge micro solutions'
+=======
+        name: 'AI Autonomous Business Manager',
+        href: '/ai-autonomous-business-manager',
+        description: 'Fully autonomous business operations',
+        price: '$12,999/month',
+      },
+    ],
+  },
+  {
+    title: '🎯 2031 Innovative Micro SAAS',
+    icon: Target,
+    color: 'from-green-600 via-yellow-600 to-orange-600',
+    description: 'Cutting-edge micro solutions',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'AI Business Intelligence Suite'
@@ -280,6 +427,7 @@ const serviceCategories = [
         price: '$199/month'
       }
       {
+<<<<<<< HEAD
         name: 'Blockchain Supply Chain Transparency'
         href: '/blockchain-supply-chain-transparency'
         description: 'End-to-end traceability'
@@ -296,6 +444,20 @@ const serviceCategories = [
     icon: Microscope
     color: 'from-orange-600 via-red-600 to-pink-600'
     description: 'Breakthrough research solutions'
+=======
+        name: 'Blockchain Supply Chain Transparency',
+        href: '/blockchain-supply-chain-transparency',
+        description: 'End-to-end traceability',
+        price: '$399/month',
+      },
+    ],
+  },
+  {
+    title: '🔬 2031 Research & Development',
+    icon: Microscope,
+    color: 'from-orange-600 via-red-600 to-pink-600',
+    description: 'Breakthrough research solutions',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Neuromorphic Computing Platform'
@@ -316,6 +478,7 @@ const serviceCategories = [
         price: '$699/month'
       }
       {
+<<<<<<< HEAD
         name: 'Swarm Robotics Orchestration'
         href: '/swarm-robotics-orchestration'
         description: 'Coordinate robot swarms'
@@ -345,6 +508,36 @@ const mainNavigation = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
   { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: '/resources', icon: BookOpen }
 ];
+=======
+        name: 'Swarm Robotics Orchestration',
+        href: '/swarm-robotics-orchestration',
+        description: 'Coordinate robot swarms',
+        price: '$449/month',
+      },
+    ],
+  },
+];
+
+const mainNavigation = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  {
+    name: '2030 Services',
+    href: '/services/2030-futuristic-services',
+    icon: Rocket,
+  },
+  { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+  { name: 'IT Solutions', href: '/it-services', icon: Cpu },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticNavigation2031() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -354,11 +547,17 @@ export default function UltraFuturisticNavigation2031() {
       setScrolled(window.scrollY > 50);
     }
     window.addEventListener('scroll', handleScroll);
+<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       {/* Top Contact Bar */}
@@ -376,6 +575,7 @@ export default function UltraFuturisticNavigation2031() {
           </div>
           <div className='flex items-center space-x-2'>
             <MapPin className='w-4 h-4 text-pink-400' />
+<<<<<<< HEAD
             <span className='text-xs'>{contactInfo.address}</span>          </div>              <span>{contactInfo.mobile}</span>
             </div>
             <div className="flex items-center space-x-2">
@@ -386,6 +586,9 @@ export default function UltraFuturisticNavigation2031() {
           <div className="flex items-center space-x-2">
             <MapPin className="w-4 h-4 text-pink-400" />
             <span className="text-xs">{contactInfo.address}</span>
+=======
+            <span className='text-xs'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
       </div>
@@ -398,6 +601,7 @@ export default function UltraFuturisticNavigation2031() {
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='flex justify-between items-center h-20'>            {/* Logo */}      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'
@@ -405,6 +609,10 @@ export default function UltraFuturisticNavigation2031() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
+=======
+          <div className='flex justify-between items-center h-20'>
+            {/* Logo */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -418,6 +626,7 @@ export default function UltraFuturisticNavigation2031() {
                 <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </h1>
+<<<<<<< HEAD
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>
             </motion.div>
             {/* Desktop Navigation */}
@@ -430,10 +639,17 @@ export default function UltraFuturisticNavigation2031() {
                   Zion Tech Group
                 </h1>
                 <p className="text-xs text-gray-400">2031 Future Technology</p>
+=======
+                <p className='text-xs text-gray-400'>2031 Future Technology</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>            <div className="hidden lg:flex items-center space-x-8">
+=======
+            <div className='hidden lg:flex items-center space-x-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {mainNavigation.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -450,6 +666,7 @@ export default function UltraFuturisticNavigation2031() {
                     <span>{item.name}</span>
                   </Link>
                   {/* Hover effect */}
+<<<<<<< HEAD
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
                   <Link
                     href={item.href}
@@ -460,20 +677,31 @@ export default function UltraFuturisticNavigation2031() {
                   </Link>
                   {/* Hover effect */}
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+=======
+                  <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
             {/* CTA Buttons */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >            <div className="hidden lg:flex items-center space-x-4">
+=======
+            <div className='hidden lg:flex items-center space-x-4'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
+<<<<<<< HEAD
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+=======
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Get Started
               </motion.button>
@@ -481,13 +709,21 @@ export default function UltraFuturisticNavigation2031() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
+<<<<<<< HEAD
                 className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >                className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+=======
+                className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Contact Us
               </motion.button>
             </div>
             {/* Mobile menu button */}
+<<<<<<< HEAD
             <div className='lg:hidden'>              <motion.button            <div className="lg:hidden">
+=======
+            <div className='lg:hidden'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -499,9 +735,13 @@ export default function UltraFuturisticNavigation2031() {
                   <X className='w-6 h-6' />
                 ) : (
                   <Menu className='w-6 h-6' />
+<<<<<<< HEAD
                 )}              </motion.button>                className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+=======
+                )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.button>
             </div>
           </div>
@@ -509,9 +749,13 @@ export default function UltraFuturisticNavigation2031() {
         {/* Service Categories Bar */}
         <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
             <div className='flex items-center justify-center space-x-8 py-3'>              {serviceCategories.map((category, index) => (        <div className="hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-center space-x-8 py-3">
+=======
+            <div className='flex items-center justify-center space-x-8 py-3'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
@@ -527,10 +771,16 @@ export default function UltraFuturisticNavigation2031() {
                     <span className='text-sm font-medium'>
                       {category.title.split(' ')[0]}
                     </span>
+<<<<<<< HEAD
                     <ChevronDown className='w-3 h-3 transition-transform duration-200 group-hover:rotate-180' />                  </button>                  <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400">
                     <category.icon className="w-4 h-4" />
                     <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
                     <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
+=======
+                    <ChevronDown className='w-3 h-3 transition-transform duration-200 group-hover:rotate-180' />
+                  </button>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeCategory === category.title && (
@@ -550,6 +800,7 @@ export default function UltraFuturisticNavigation2031() {
                               {category.description}
                             </p>
                           </div>
+<<<<<<< HEAD
                           <div className='space-y-3'>                            {category.services.map((service, serviceIndex) => (                      >
                         <div className="p-4">
                           <div className="mb-3">
@@ -557,6 +808,9 @@ export default function UltraFuturisticNavigation2031() {
                             <p className="text-sm text-gray-400">{category.description}</p>
                           </div>
                           <div className="space-y-3">
+=======
+                          <div className='space-y-3'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             {category.services.map((service, serviceIndex) => (
                               <motion.div
                                 key={service.name}
@@ -584,6 +838,7 @@ export default function UltraFuturisticNavigation2031() {
                                     <div className='text-right'>
                                       <span className='text-sm font-semibold text-cyan-400'>
                                         {service.price}
+<<<<<<< HEAD
                                       </span>                                    </div>                              >
                                 <Link
                                   href={service.href}
@@ -598,6 +853,9 @@ export default function UltraFuturisticNavigation2031() {
                                     </div>
                                     <div className="text-right">
                                       <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
+=======
+                                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                     </div>
                                   </div>
                                 </Link>
@@ -635,6 +893,7 @@ export default function UltraFuturisticNavigation2031() {
                 </button>
               </div>
               <div className='space-y-6'>
+<<<<<<< HEAD
                 {mainNavigation.map(item => (                  <Link
                     key={item.name}
                     href={item.href}
@@ -652,6 +911,9 @@ export default function UltraFuturisticNavigation2031() {
               </div>
               <div className="space-y-6">
                 {mainNavigation.map((item) => (
+=======
+                {mainNavigation.map(item => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <Link
                     key={item.name}
                     href={item.href}
@@ -667,6 +929,7 @@ export default function UltraFuturisticNavigation2031() {
                     <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
                       Get Started
                     </button>
+<<<<<<< HEAD
                     <button className='w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200'>                      Contact Us                  >
                     <item.icon className="w-5 h-5" />
                     <span className="text-lg">{item.name}</span>
@@ -678,6 +941,9 @@ export default function UltraFuturisticNavigation2031() {
                       Get Started
                     </button>
                     <button className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200">
+=======
+                    <button className='w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Contact Us
                     </button>
                   </div>
@@ -690,7 +956,11 @@ export default function UltraFuturisticNavigation2031() {
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
+<<<<<<< HEAD
 );      <div className="h-32 lg: h-40"></div>
     </>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

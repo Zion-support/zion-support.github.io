@@ -7,8 +7,16 @@ import { User, Mail, Calendar, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
+<<<<<<< HEAD
 interface PrivatePageProps {user: SupabaseUser;
 }
+=======
+
+interface PrivatePageProps {
+  user: SupabaseUser;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (
     <>
@@ -91,9 +99,20 @@ export default function PrivatePage({ user }: PrivatePageProps) {
         </Card>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
+=======
+  );
+}
+
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const supabase = createServerSideClient(context);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const { data, error } = await supabase.auth.getUser();
   if (error |!data?.user) {return {;
       redirect: {;

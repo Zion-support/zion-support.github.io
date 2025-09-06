@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ShieldAlert } from 'lucide-react';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -9,7 +17,13 @@ interface ProjectActionsProps {
   isUnderDispute: boolean;
   disputeId?: string;
   isTalent: boolean;
+<<<<<<< HEAD
   onAddMilestone: () => void
+=======
+  onAddMilestone: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectActions({
 <<<<<<< HEAD
   projectId;
@@ -29,11 +43,15 @@ export function ProjectActions({
       {isUnderDispute && disputeId ? (
         <Button variant='outline' asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
+<<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
+=======
+            <ShieldAlert className='h-4 w-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             View Active Dispute
           </Link>
         </Button>
@@ -43,6 +61,7 @@ export function ProjectActions({
         <Button onClick={onAddMilestone}>Add Milestone</Button>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
       )}
@@ -54,3 +73,6 @@ export function ProjectActions({
     </div>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

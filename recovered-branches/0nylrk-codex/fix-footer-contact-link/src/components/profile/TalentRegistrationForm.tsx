@@ -46,9 +46,16 @@ interface CategorizedSkills {
   other: string[]
 }
 interface EnhancedProfile {
+<<<<<<< HEAD
   summary: string
   categorizedSkills: CategorizedSkills
 }
+=======
+  summary: string;
+  categorizedSkills: CategorizedSkills;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
   const { user } = useAuth();
@@ -703,5 +710,117 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+});
+availability: z.enum (["available", "limited", "unavailable"]);
+enhancedProfile: z.boolean () .default (true) 
+});
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+
+};
+//Handle removing skill tags const handleRemoveSkill = (skill: string) => {
+  setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
+};
+//Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
+  
+
+};
+//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0];
+if (file) {
+  const reader = new FileReader ();
+reader.onloadend = () => {
+  setUploadedAvatar (reader.result as string) 
+};
+reader.readAsDataURL (file) 
+
+};
+//Generate enhanced profile with AI return;
+}//Call the Supabase Edge Function const {
+  data, error 
+}= await supabase.functions.invoke ('talent-profile-enhancer', {
+  body: {
+  talentData: {
+  name: formData.name, title: formData.title, bio: formData.bio, skills: skillTags, location: formData.location 
+
+});
+setGeneratedContent (data as EnhancedProfile);
+}finally {
+  setIsGenerating (false) 
+
+};
+//Apply generated content to form const applyGeneratedContent = () => {
+  if (generatedContent) {
+  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills;
+const newSkills: string[] = [];
+if (Array.isArray (categorySkills) ) {
+  categorySkills.forEach (skill => {
+  if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
+  
+
+});
+
+};
+//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {
+  try {
+  await supabase.functions.invoke ('send-email', {
+  body: {
+  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, ">© $ {
+  new Date () .getFullYear () 
+}Zion Marketplace</p> 
+
+};
+if (skillTags.length === 0) {
+  toast ({
+  return;
+}setIsSubmitting (true);
+try {
+  //For actual implementation with Supabase if (!user?.id) {
+  try {
+  const {
+  data: aiData 
+}= await supabase.functions.invoke ('talent-profile-enhancer', {
+  body: {
+  talentData: {
+  name: values.name, title: values.title, bio: values.bio, skills: skillTags, location: values.location 
+
+});
+//Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {
+  if (Array.isArray (categorySkills) ) {
+  categorySkills.forEach (skill => {
+  if (typeof skill === 'string'&& skill) {
+  
+
+});
+//Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ] 
+
+}else if (generatedContent) {
+  finalSummary = generatedContent.summary 
+}//Get user email for notification const {
+  data: userData 
+}= await supabase.auth.getUser ();
+const userEmail = userData.user?.email;
+//Create the talent profile //In a real implementation, this would save to Supabase setTimeout ( () => {
+  toast ({
+  //Send notification email if we have user email if (userEmail && values.enhancedProfile) {
+  sendEnhancementNotification (user.id, userEmail) 
+
+}, 1500);
+//Here would be the actual code to save the profile to Supabase /* const {
+  error 
+}= await supabase .from ('talent profiles') .insert ({
+  user id: user.id, name: values.name, title: values.title, bio: values.bio, summary: finalSummary, location: values.location, skills: finalSkills.map (name => ({
+  name, level: 4 
+}) ), //Default skill level hourly rate: Number (values.hourlyRate);
+availability status: values.availability;
+//Other fields would be handled here 
+});
+if (error) throw error;
+*/ setIsSubmitting (false);
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

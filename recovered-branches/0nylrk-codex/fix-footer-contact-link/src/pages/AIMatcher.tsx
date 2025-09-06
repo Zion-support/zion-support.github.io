@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { GradientHeading } from '@/components/GradientHeading';
+import { AIMatchmaker } from '@/components/AIMatchmaker';
+import {
+  Select,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,;
+} from '@/components/ui/select';
+import { toast } from '@/hooks/use-toast';
+import { MatchResult } from '@/lib/ai-matchmaking';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",

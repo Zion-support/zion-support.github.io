@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Calendar, ArrowRight } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -61,6 +68,7 @@ export function EnterpriseCTA() {
                     <div className='h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0'>
                       <span className='text-primary text-sm font-medium'>
                         4
+<<<<<<< HEAD
                       </span>                    </div>
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -114,6 +122,9 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                     <p>Free consultation on implementation</p>
                   </li>
@@ -124,5 +135,9 @@ export function EnterpriseCTA() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

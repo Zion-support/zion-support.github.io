@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  MessageSquare,
+  FileText,
+  Video,
+  Calendar,
+  Users,
+  Settings,
+  X,;
+} from 'lucide-react';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { toast } from 'sonner';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';

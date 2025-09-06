@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { Job, JobStatus } from '@/types/jobs';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Loader2, Edit, X, Eye } from 'lucide-react';
+import { format } from 'date-fns';
+import Link from 'next/link';
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -13,7 +34,36 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
 <<<<<<< HEAD
   filter?: JobStatus;
+<<<<<<< HEAD
   onSelectJob?: (jobId: string, jobTitle: string) => void
+=======
+onSelectJob?: (jobId: string, jobTitle: string) => void ;
+}export function JobsList ({;
+  filter, onSelectJob ;
+}: JobsListProps) {;
+  const {;
+  user ;
+}= useAuth ();
+const [jobs, setJobs] = useState<Job[]> ([]);
+const [isLoading, setIsLoading] = useState (true);
+useEffect ( () => {;
+  const fetchJobs = async () => {;
+  if (!user) return;
+try {;
+  let query = supabase ;
+}const {;
+  data, error ;
+}= await query;
+if (error) throw error;
+setJobs (data as Job[]) ;
+}catch (error) {;
+  logErrorToProduction ('Error fetching jobs:', {;
+  data: error ;
+}) ;
+}finally {;
+  setIsLoading (false) ;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
@@ -41,9 +91,18 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         if (filter) {
           query = query.eq("status", filter)
         }
+<<<<<<< HEAD
         const { data, error } = await query
         if (error) throw error
         setJobs(data as Job[])
+=======
+}
+
+const { data, error } = await query;
+
+        if (error) throw error;
+        setJobs(data as Job[]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       } catch (error) {
         logErrorToProduction('Error fetching jobs:', { data: error })
       } finally {
@@ -152,6 +211,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
   )
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {
@@ -174,3 +234,28 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
 }</div>)
 }'"}
+=======
+  );
+
+};";
+return (<div className="grid gap-6 md:grid-cols-2" > {;
+  jobs.map ( (job) => (<Card key= {;
+  job.id ;
+}className= {;
+  `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {";
+  onSelectJob ? "cursor-pointer" : "" ;
+}` ;
+}onClick={;
+  () => onSelectJob?. (job.id, job.title) ;
+}job.description ;
+}</p> + {;
+  job.skills.length - 3 ;
+}more </Badge>) ";
+}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {;
+  job.budget.min ;
+}- $ {;
+  job.budget.max ";
+}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) ;
+}</div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

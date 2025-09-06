@@ -24,14 +24,31 @@ const defaultContext: NotificationContextType = {
 const NotificationContext = createContext(
   defaultContext as NotificationContextType
 );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useNotifications = (): NotificationContextType => {
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
   }
+<<<<<<< HEAD
   return context
 }
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+=======
+  return context;
+};
+}
+
+export const NotificationProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}): JSX.Element => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const { user } = useAuth();
   const notificationOps = useNotificationOperations(user?.id);
   // Load notifications when user changes

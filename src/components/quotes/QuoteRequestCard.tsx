@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -28,6 +29,36 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
+=======
+import React from 'react';
+import { format } from 'date-fns';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { QuoteStatusBadge } from '@/components/quotes/QuoteStatusBadge';
+import {
+  Eye,
+  MessageSquare,
+  ArchiveIcon,
+  RefreshCw,
+  CalendarIcon,;
+} from 'lucide-react';
+import type { QuoteRequest } from '@/types/quotes';
+
+type QuoteRequestCardProps = {
+  quote: QuoteRequest;
+onViewDetails: (quote: QuoteRequest) => void;
+onMarkAsResponded?: (id: string) => void;
+onToggleArchive: (id: string, isArchived: boolean) => void ;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote
   onViewDetails
@@ -41,11 +72,19 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
   }
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
+=======
+  };
+
+    >
+      <CardHeader className='pb-2'>
+        <div className='flex justify-between items-start'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div>
             <CardTitle className="text-white">{quote.project_name}</CardTitle>
             <CardDescription className="text-zion-slate-light">
@@ -103,8 +142,14 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 "}
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

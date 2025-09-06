@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
+=======
+import { Package, RefreshCw } from 'lucide-react';
+import { Button } from './button';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface EmptyStateProps {
   text?: string;
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
+<<<<<<< HEAD
   icon?: React.ReactNode
 <<<<<<< HEAD
 }
@@ -36,10 +43,22 @@ export function EmptyState({
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false
   icon
+=======
+  icon?: React.ReactNode;
+}
+
+export function EmptyState({
+  text = 'No items available',
+  description,
+  onRetry,
+  showRetry = false,
+  icon,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }: EmptyStateProps) {
   return (
     <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>
       <div className='mb-4 text-gray-400'>
+<<<<<<< HEAD
         {icon |<Package className='h-16 w-16' />}
       </div>
       <h3 className='text-xl font-semibold text-white mb-2'>{text}</h3>
@@ -61,10 +80,18 @@ export function EmptyState({
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">
           {description}
         </p>
+=======
+        {icon || <Package className='h-16 w-16' />}
+      </div>
+      <h3 className='text-xl font-semibold text-white mb-2'>{text}</h3>
+      {description && (
+        <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       )}
       {showRetry && onRetry && (
         <Button
           onClick={onRetry}
+<<<<<<< HEAD
           variant="outline"
           className="flex items-center gap-2"
         >
@@ -74,3 +101,14 @@ export function EmptyState({
     </div>
   )
 }
+=======
+          variant='outline'
+          className='flex items-center gap-2'
+        >
+          <RefreshCw className='h-4 w-4' />
+          Try Again
+        </Button>
+      )}
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

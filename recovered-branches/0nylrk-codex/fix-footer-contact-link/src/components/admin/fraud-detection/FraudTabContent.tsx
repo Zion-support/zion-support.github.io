@@ -2,10 +2,21 @@
 import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface FraudTabContentProps {
+<<<<<<< HEAD
   tabValue: string
 }
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
+=======
+  tabValue: string;
+}
+}
+
+export const FraudTabContent: React.FC<FraudTabContentProps> = ({
+  tabValue,
+}) => {
+  switch (tabValue) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     case 'pending':
       return (
 <<<<<<< HEAD

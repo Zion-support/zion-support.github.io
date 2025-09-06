@@ -4,6 +4,10 @@ import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

@@ -18,8 +18,14 @@ interface AIEnhancementPanelProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
   initialContent?: string
 }
+=======
+  initialContent?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementPanel({
   title;
   defaultOptions;

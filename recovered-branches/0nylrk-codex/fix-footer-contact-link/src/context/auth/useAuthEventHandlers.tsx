@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 /**
  * Custom hook for auth event handling
  */
+}
+
 export function useAuthEventHandlers(
 <<<<<<< HEAD
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>;

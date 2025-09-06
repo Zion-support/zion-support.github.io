@@ -1,5 +1,10 @@
 import React from 'react';
 import SEO from '../components/SEO';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AISustainabilityPlatformPage() {
   return (
     <div className="min-h-[60vh] px-6 py-24">

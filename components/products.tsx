@@ -1,5 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -17,6 +22,7 @@ export default function Placeholder() {
         </Link>
       </div>
     </main>
+<<<<<<< HEAD
   );export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
@@ -32,3 +38,6 @@ export default function Placeholder() {
     </main>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

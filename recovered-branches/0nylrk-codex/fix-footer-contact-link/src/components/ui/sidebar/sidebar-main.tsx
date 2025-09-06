@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
@@ -81,18 +82,42 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
         <div
           data-sidebar=&quot;sidebar"
           className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow&quot;
+=======
+export interface SidebarProps extends React.ComponentProps<'div'> {
+  side?: 'left' | 'right';
+  variant?: 'sidebar' | 'floating' | 'inset';
+  collapsible?: 'offcanvas' | 'icon' | 'none';
+}
+
+export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
+  (props, ref) => {
+    const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
+
+    if (props.collapsible === 'none') {
+      
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           {props.children}
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   )
 })
 Sidebar.displayName = &quot;Sidebar&quot;
+=======
+    );
+  }
+);
+Sidebar.displayName = 'Sidebar';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<&quot;button&quot;>
 >((props, ref) => {
+<<<<<<< HEAD
   const { toggleSidebar } = useSidebar()
   return (
     <button
@@ -102,6 +127,23 @@ export const SidebarRail = React.forwardRef<
       tabIndex={-1}
       onClick={toggleSidebar}
       title=&quot;Toggle Sidebar"
+=======
+  const { toggleSidebar } = useSidebar();
+
+  
+    />
+  );
+});
+SidebarRail.displayName = 'SidebarRail';
+}
+
+export const SidebarInset = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<'main'>
+>((props, ref) => {
+  
+      ref={ref as SafeRef<HTMLDivElement>}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       className={cn(
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
         &quot;[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize&quot;

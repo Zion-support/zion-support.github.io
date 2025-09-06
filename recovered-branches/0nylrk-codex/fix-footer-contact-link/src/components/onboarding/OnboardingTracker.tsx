@@ -25,8 +25,14 @@ interface OnboardingTrackerProps {
   steps: OnboardingStep[]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   title?: string;
+<<<<<<< HEAD
   className?: string
 }
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function OnboardingTracker({
   steps;
 <<<<<<< HEAD

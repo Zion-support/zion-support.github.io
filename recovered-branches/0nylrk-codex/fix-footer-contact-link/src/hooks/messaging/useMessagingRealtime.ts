@@ -9,6 +9,11 @@ import { toast } from '@/hooks/use-toast';
 type UserWithProfile = any;
 =======
 type UserWithProfile = UserProfile | UserDetails | null;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useMessagingRealtime(
   user: UserWithProfile;
   activeConversation: Conversation | null;

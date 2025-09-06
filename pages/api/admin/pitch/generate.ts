@@ -7,6 +7,7 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || 'mock-key'
 });
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
@@ -56,6 +57,31 @@ export default async function handler(
     "Roadmap"
     "Token Strategy"
     "Ask & Call to Action"
+=======
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method Not Allowed' });
+
+  const { operatorPrompt, inputs, metrics } = req.body || {};
+
+  const seed = [
+    'Problem & Opportunity',
+    'Solution & Product',
+    'Market Size (TAM/SAM/SOM)',
+    'Traction & Metrics',
+    'Business Model',
+    'Go-To-Market',
+    'Team',
+    'Roadmap',
+    'Token Strategy',
+    'Ask & Call to Action',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   try {
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
@@ -92,20 +118,36 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     const version = `v${new Date().toISOString()}`;
     res.status(200).json({ slides, version });
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ error: e?.message |"Generation failed" });
   }
 }
+=======
+    res.status(500).json({ error: e?.message || 'Generation failed' });
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
+<<<<<<< HEAD
   const lines = body.split("\n");
   const matchIdx = lines.findIndex((l) =>
+=======
+  const lines = body.split('\n');
+  const matchIdx = lines.findIndex(l =>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     l.toLowerCase().includes(title.toLowerCase())
   );
   if (matchIdx >= 0) {
     const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet.trim();
   }
+<<<<<<< HEAD
   return "";
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  return '';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

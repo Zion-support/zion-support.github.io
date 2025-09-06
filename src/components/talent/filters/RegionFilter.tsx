@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 <<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
@@ -14,6 +15,22 @@ const REGION_OPTIONS = [
   { id: 'Australia', label: 'Australia' }
   { id: 'Africa', label: 'Africa' }
 ]
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
+import { RegionFilterProps } from '@/types/filters';
+
+const REGION_OPTIONS = [
+  { id: 'North America', label: 'North America' },
+  { id: 'Europe', label: 'Europe' },
+  { id: 'Asia', label: 'Asia' },
+  { id: 'South America', label: 'South America' },
+  { id: 'Australia', label: 'Australia' },
+  { id: 'Africa', label: 'Africa' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RegionFilter({
   selectedRegions
   toggleRegion
@@ -36,6 +53,7 @@ export function RegionFilter({
       {expanded && (
         <div className='mt-4 space-y-2'>
           {REGION_OPTIONS.map(region => (
+<<<<<<< HEAD
             <div key={region.id} className='flex items-center'>              <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
@@ -70,10 +88,14 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
             <div key={region.id} className="flex items-center">
+=======
+            <div key={region.id} className='flex items-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
+<<<<<<< HEAD
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`region-${region.id}`}
@@ -82,12 +104,22 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                htmlFor="input-
                 {region.label}
               ">
+=======
+                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+              />
+              <label
+                htmlFor={`region-${region.id}`}
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >
+                {region.label}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </label>
             </div>
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
   toggleSection
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
@@ -100,3 +132,18 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }</div>)
 }</div>)
 }"}
+=======
+  );
+
+  toggleSection ;
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}</button> {;
+  REGION OPTIONS.map (region => (<div key= {;
+  region.id ";
+}className="flex items-center" > <Checkbox > {;
+  region.label ;
+}</label> </div>) ) ;
+}</div>) ;
+}</div>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

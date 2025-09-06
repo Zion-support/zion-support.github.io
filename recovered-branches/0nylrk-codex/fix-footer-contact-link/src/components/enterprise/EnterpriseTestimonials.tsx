@@ -43,7 +43,12 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnterpriseTestimonials() {
   return (
     <section className="py-20 px-4 md:px-6">

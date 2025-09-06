@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
@@ -13,7 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: false
     });
     return res.status(200).json(offerings);
-  }
+ 
+}
   if (req.method === 'POST') {
     const body = req.body |{}
     const offerings = {
@@ -23,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     writeJsonFile('deal/offerings.json', offerings);
     return res.status(200).json(offerings);
+<<<<<<< HEAD
   }
   return res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -39,3 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+ 
+}
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

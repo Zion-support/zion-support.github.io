@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Web3Login } from "./Web3Login",
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
+=======
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api/authSocial';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
   const handleGoogle = null;
@@ -75,5 +85,9 @@ export function SocialLogin() {
         <Web3Login />
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

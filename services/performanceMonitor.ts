@@ -237,6 +237,8 @@ export class PerformanceMonitorService {
   }
 }
 // Pricing tiers for the Performance Monitor
+}
+
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
@@ -259,9 +261,50 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
     features: [
+<<<<<<< HEAD
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support'
       'SLA guarantee'
     ]
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Monitor unlimited URLs',
+      'Real-time monitoring',
+      'All performance metrics',
+      'Multiple notification channels',
+      '1-year data retention',
+      'Custom dashboards',
+      'White-label reporting',
+      'Priority support',
+      'SLA guarantee',
+    ],
+  },
+};
+}async setMonitoringConfig (config: MonitoringConfig) : Promise<void> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/performance/config`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (config) 
+});
+
+};
+trends: {
+  loadTime: loadTimes, performanceScore: performanceScores, dates 
+};
+recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources' ] 
+
+}return data 
+}private generateMockAlerts (url?: string) : PerformanceAlert[] {
+  const alerts: PerformanceAlert[] = [ {
+  return url ? alerts.filter (a => a.url === url) : alerts 
+
+}// Pricing tiers for the Performance Monitor 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

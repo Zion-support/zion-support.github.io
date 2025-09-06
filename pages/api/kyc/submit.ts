@@ -5,22 +5,36 @@ import { getAmlProvider } from '[^']*';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const DATA_DIR = null;
   res.status(200).json({ ok: true, profile, aml: amlResult })
 }
 =======
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+=======
+
+const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
   } catch {
+<<<<<<< HEAD
     return {}
   }
+=======
+    return {};
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
 }
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -32,6 +46,32 @@ export default async function handler(
   const profile = db[userId];
   if (!profile) return res.status($1).json({$2});
   const validation = validateKycSubmission(profile);
+=======
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  
+}
+
+const { userId } = req.body as { userId?: string };
+  if (!userId) return res.status(400).json({ error: 'Missing userId' });
+
+  
+}
+
+const db = load();
+  const profile = db[userId];
+  if (!profile) return res.status(404).json({ error: 'Profile not found.' });
+
+  
+}
+
+const validation = validateKycSubmission(profile);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!validation.ok)
     return res
       .status(400)
@@ -55,6 +95,10 @@ export default async function handler(
       : amlResult.status === 'match'
         ? 'match'
         : 'review';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Flags and risk scoring
   const flags = new Set<string>(profile.flags |[]);
   if (amlResult.status !== 'clear') flags.add('aml_alert');
@@ -79,7 +123,13 @@ export default async function handler(
         a => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip
       )
     ).length;
+<<<<<<< HEAD
     if (sameIpCount >= 2) flags.add('duplicate_ip');  }
+=======
+    if (sameIpCount >= 2) flags.add('duplicate_ip');
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags.has('aml_alert')) riskScore += 50;
@@ -97,8 +147,16 @@ export default async function handler(
     action: 'kyc_submitted'
     details: { aml: amlResult, ip }
   });
+<<<<<<< HEAD
   db[userId] = profile;
   save(db);
 res.status(200).json({ ok: true, profile, aml: amlResult });
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  db[userId] = profile;
+  save(db);
+
+  res.status(200).json({ ok: true, profile, aml: amlResult });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

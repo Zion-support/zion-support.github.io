@@ -1,8 +1,12 @@
 import { useEffect, useMemo, useState  } from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Member = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 type Member = {
   id: string;
   name: string;
@@ -16,6 +20,7 @@ type Invoice = {
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
+<<<<<<< HEAD
   status: string
 }
 const COMPANY_ID = 'cmp_acme';
@@ -23,6 +28,19 @@ export default function CompanyAdmin() {
   const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members'
   );  const [members, setMembers] = useState<Member[]>([]);
+=======
+  status: string;
+};
+
+const COMPANY_ID = 'cmp_acme';
+}
+
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
+    'members'
+  );
+  const [members, setMembers] = useState<Member[]>([]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
@@ -38,7 +56,13 @@ export default function CompanyAdmin() {
       .then(setActivity);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
+<<<<<<< HEAD
       .then(setInvoices);  }, []);
+=======
+      .then(setInvoices);
+  }, []);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const seatsUsed = members.length;
   return (
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -52,7 +76,12 @@ export default function CompanyAdmin() {
       >
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
+<<<<<<< HEAD
           <Link href='/workspace/acme'>Go to Workspace</Link>        </div>
+=======
+          <Link href='/workspace/acme'>Go to Workspace</Link>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
@@ -68,7 +97,12 @@ export default function CompanyAdmin() {
             }}
           >
             {t}
+<<<<<<< HEAD
           </button>        ))}
+=======
+          </button>
+        ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </nav>
       {tab === 'members' && (
         <MembersTab members={members} setMembers={setMembers} />
@@ -76,6 +110,10 @@ export default function CompanyAdmin() {
       {tab === 'usage' && usage && (
         <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {tab === 'activity' && <ActivityTab events={activity} />}
       {tab === 'billing' && <BillingTab invoices={invoices} />}
     </main>
@@ -86,7 +124,12 @@ function MembersTab({
 }: {
   members: Member[];
   setMembers: (m: Member[]) => void;
+<<<<<<< HEAD
 }) {  const [name, setName] = useState('');
+=======
+}) {
+  const [name, setName] = useState('');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
   const add = async () => {
@@ -114,7 +157,13 @@ function MembersTab({
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ memberId: id, role: newRole })
     });
+<<<<<<< HEAD
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  }
+=======
+    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section>
       <h2>Team members</h2>
@@ -140,7 +189,13 @@ function MembersTab({
         </select>
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
           Add
+<<<<<<< HEAD
         </button>      </div>
+=======
+        </button>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -179,7 +234,12 @@ function MembersTab({
               }}
             >
               Actions
+<<<<<<< HEAD
             </th>          </tr>
+=======
+            </th>
+          </tr>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </thead>
         <tbody>
           {members.map(m => (
@@ -215,7 +275,12 @@ function MembersTab({
                   style={{ color: '#b91c1c' }}
                 >
                   Remove
+<<<<<<< HEAD
                 </button>              </td>
+=======
+                </button>
+              </td>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </tr>
           ))}
         </tbody>
@@ -241,8 +306,14 @@ function UsageTab({
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
     });
+<<<<<<< HEAD
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    setUsage({ monthlyJobPosts, budgetCapUsd });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section>
       <h2>Usage limits</h2>
@@ -286,6 +357,10 @@ function UsageTab({
       </div>
     </section>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
@@ -295,12 +370,21 @@ function ActivityTab({ events }: { events: any[] }) {
           <li key={e.id}>
             <span style={{ color: '#6b7280' }}>
               {new Date(e.timestampIso).toLocaleString()} —{' '}
+<<<<<<< HEAD
             </span>            <strong>{e.actorEmail}</strong> {e.action}
+=======
+            </span>
+            <strong>{e.actorEmail}</strong> {e.action}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </li>
         ))}
       </ul>
     </section>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
     <section>
@@ -352,7 +436,12 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               }}
             >
               Actions
+<<<<<<< HEAD
             </th>          </tr>
+=======
+            </th>
+          </tr>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </thead>
         <tbody>
           {invoices.map(inv => (
@@ -394,10 +483,19 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
                   rel='noreferrer'
                 >
                   Download PDF
+<<<<<<< HEAD
                 </a>              </td>
+=======
+                </a>
+              </td>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </tr>
           ))}
         </tbody>
       </table>
     </section>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

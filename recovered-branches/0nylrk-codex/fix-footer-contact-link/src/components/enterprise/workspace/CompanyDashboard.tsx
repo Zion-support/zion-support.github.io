@@ -29,6 +29,10 @@ export interface Company {
 interface CompanyDashboardProps {
   company: Company;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">

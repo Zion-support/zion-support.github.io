@@ -8,6 +8,11 @@ export interface DevIdentity {
   roles: DevRole[];
   userId?: string;
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
     const gitDir = path.join(process.cwd(), '.git');
@@ -22,6 +27,11 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
     return { connected: false }
   }
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
@@ -29,8 +39,15 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
   }
+<<<<<<< HEAD
   return { isAuthenticated: false, roles: [] }
 }
+=======
+  return { isAuthenticated: false, roles: [] };
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -47,4 +64,7 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

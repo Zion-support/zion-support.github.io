@@ -4,9 +4,14 @@ import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
   hasFilters: boolean;
+<<<<<<< HEAD
   onResetFilters: () => void
 }
 <<<<<<< HEAD
+=======
+  onResetFilters: () => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals";
@@ -31,6 +32,24 @@ interface RewardsCardProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isLoading: boolean
 }
+=======
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { ReferralReward } from '@/types/referrals';
+import { formatDate } from '@/utils/referralUtils';
+import { BadgeDollarSign, Badge } from 'lucide-react';
+
+interface RewardsCardProps {
+  rewards: ReferralReward[];
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
     return (
@@ -50,6 +69,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     ) }            Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -61,6 +81,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardContent>
       </Card>
     )
+=======
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   if (rewards.length === 0) {
     return (
@@ -77,6 +100,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         <CardContent>
           <div className='flex flex-col items-center justify-center p-4 text-center'>
             <p className='text-muted-foreground'>No rewards yet</p>
+<<<<<<< HEAD
             <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -85,12 +109,19 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
+=======
+            <p className='text-sm text-muted-foreground mt-1'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Refer users to earn rewards once they complete onboarding
             </p>
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     ) }    )
+=======
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return (
     <Card>
@@ -122,7 +153,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
                   ) : (
                     <Badge className='h-4 w-4 text-blue-600' />
                   )}
+<<<<<<< HEAD
                   <p className='font-medium'>                    {reward.reward_type === 'credit'                  <p className="font-medium">
+=======
+                  <p className='font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {reward.reward_type === 'credit'
                       ? `$${reward.amount?.toFixed(2)} Credit`
                       : 'Visibility Boost'}
@@ -132,11 +167,16 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
                   Earned on {formatDate(reward.created_at)}
                 </p>
                 {reward.expires_at && (
+<<<<<<< HEAD
                   <p className='text-xs text-muted-foreground'>                    Expires on {formatDate(reward.expires_at)}                <p className="text-xs text-muted-foreground mt-1">
                   Earned on {formatDate(reward.created_at)}
                 </p>
                 {reward.expires_at && (
                   <p className="text-xs text-muted-foreground">
+=======
+                  <p className='text-xs text-muted-foreground'>
+                    Expires on {formatDate(reward.expires_at)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </p>
                 )}
               </div>
@@ -145,5 +185,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

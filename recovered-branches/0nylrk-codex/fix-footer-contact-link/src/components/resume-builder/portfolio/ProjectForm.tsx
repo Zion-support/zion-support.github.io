@@ -35,10 +35,22 @@ const projectSchema = z.object({
 type ProjectFormValues = z.infer<typeof projectSchema>;
 interface ProjectFormProps {
   project?: PortfolioProject;
+<<<<<<< HEAD
   onSuccess: () => void
   onCancel: () => void
 }
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+=======
+  onSuccess: () => void;
+  onCancel: () => void;
+}
+
+export function ProjectForm({
+  project,
+  onSuccess,
+  onCancel,
+}: ProjectFormProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);

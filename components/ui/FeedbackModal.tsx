@@ -1,9 +1,16 @@
 import { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type FeedbackContext = any;
     onClose(true)
 =======
 export type FeedbackContext = { actionType?: string; metadata?: any }
+=======
+
+export type FeedbackContext = { actionType?: string; metadata?: any };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FeedbackModal({
   isOpen
   onClose
@@ -15,6 +22,7 @@ export default function FeedbackModal({
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
+<<<<<<< HEAD
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal({
   isOpen;
   onClose;
@@ -26,6 +34,9 @@ export default function FeedbackModal({
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>
+=======
+  userHeaders?: Record<string, string>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }) {
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
@@ -38,8 +49,13 @@ export default function FeedbackModal({
     setLoading(true);
     try {
       await fetch('/api/feedback', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           rating
           comment
@@ -56,11 +72,16 @@ export default function FeedbackModal({
       <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
         <div className='text-lg font-medium'>Was this helpful?</div>
         <div className='flex gap-2'>
+<<<<<<< HEAD
           {[1, 2, 3, 4, 5].map(n => (            <button    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
+=======
+          {[1, 2, 3, 4, 5].map(n => (
+            <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -125,6 +146,7 @@ export default function FeedbackModal({
             className='px-3 py-2 rounded bg-gray-900 text-white'
           >
             {loading ? 'Submitting…' : 'Submit'}
+<<<<<<< HEAD
           </button>        </div>
       </div>
     </div>
@@ -153,3 +175,10 @@ export default function FeedbackModal({
     </div>
 );
 }
+=======
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,9 @@
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SiteHealth() {
   return (
 <<<<<<< HEAD
@@ -42,6 +47,7 @@ export default function SiteHealth() {
             </Link>
             <Link href='/reports/ai-trends'>
               <a>AI Trends</a>
+<<<<<<< HEAD
             </Link>          </div>
         </nav>
       </header>
@@ -52,6 +58,13 @@ export default function SiteHealth() {
             <Link href="/reports/ai-trends"><a>AI Trends</a></Link>
         </nav>
       </header>
+=======
+            </Link>
+          </div>
+        </nav>
+      </header>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center'>
           <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
@@ -110,15 +123,24 @@ export default function SiteHealth() {
                   <p className='mt-1 text-sm text-white/75'>{card.desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Open →
+<<<<<<< HEAD
                   </div>                </a>                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{card.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open →</div>
+=======
+                  </div>
+                </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Artifacts
@@ -160,6 +182,7 @@ export default function SiteHealth() {
                 className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
               >
                 View Pipelines
+<<<<<<< HEAD
               </a>            </div>        <section className="mx-auto max-w-7xl px-6 pb-24">
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
             <h3 className="text-2xl font-bold">Keep quality high — continuously</h3>
@@ -167,9 +190,16 @@ export default function SiteHealth() {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <a href="/site-health" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Pipelines</a>
+=======
+              </a>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </section>
       </main>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

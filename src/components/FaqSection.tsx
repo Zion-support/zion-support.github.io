@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { GradientHeading } from './GradientHeading';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,;
+} from '@/components/ui/accordion';
+import { FileText } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { GradientHeading } from "./GradientHeading";
 import {
@@ -54,9 +65,17 @@ const faqs = [
   {
     question: 'How do I contact support?'
     answer:
+<<<<<<< HEAD
       'Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.'
   }
 ]
+=======
+      'Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FaqSection() {
   return (
     <section className='py-20 bg-zion-blue' id='faq'>
@@ -86,6 +105,7 @@ const faqs = null;
               >
                 <AccordionTrigger className='text-white hover:text-zion-cyan'>                  {faq.question}
                 </AccordionTrigger>
+<<<<<<< HEAD
                 <AccordionContent className='text-zion-slate-light'>                  {faq.answer}
                 <AccordionContent className="text-zion-slate-light">
 import {
@@ -150,6 +170,9 @@ export function FaqSection() {
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
+=======
+                <AccordionContent className='text-zion-slate-light'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -158,5 +181,9 @@ export function FaqSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

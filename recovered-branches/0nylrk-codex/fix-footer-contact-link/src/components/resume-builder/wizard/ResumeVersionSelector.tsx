@@ -37,9 +37,14 @@ import { useResume } from "@/hooks/useResume";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
+<<<<<<< HEAD
   onResumeChange: (resumeId: string) => void
 }
 <<<<<<< HEAD
+=======
+  onResumeChange: (resumeId: string) => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
 =======

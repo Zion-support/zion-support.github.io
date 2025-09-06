@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Download, Mail, BarChart3 } from 'lucide-react';
+import Link from 'next/link';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -27,6 +35,7 @@ export function BillingHeader() {
           </Button>
           <Button variant='outline' size='sm' className='gap-1' asChild>
             <Link href='/dashboard/client/analytics'>
+<<<<<<< HEAD
               <BarChart3 className='h-4 w-4' />              Analytics
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
@@ -52,6 +61,9 @@ export function BillingHeader() {
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
+=======
+              <BarChart3 className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Analytics
             </Link>
           </Button>
@@ -62,9 +74,13 @@ export function BillingHeader() {
         methods.
       </p>
     </div>
+<<<<<<< HEAD
   ) <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface PracticalBusinessSolution2029 {
   id: string;
   name: string;
@@ -42,6 +46,7 @@ export interface PracticalBusinessSolution2029 {
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number
 }
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
@@ -51,6 +56,18 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     id: 'ai-business-intelligence-suite';
     name: 'AI Business Intelligence Suite';
     tagline: 'Intelligent insights and predictive analytics for business growth';
+=======
+  reviews: number;
+}
+
+export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
+  // AI-Powered Business Intelligence
+  {
+    id: 'ai-business-intelligence-suite',
+    name: 'AI Business Intelligence Suite',
+    tagline:
+      'Intelligent insights and predictive analytics for business growth',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     price: '$2,499',
     period: '/month';
     description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
@@ -686,6 +703,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
     },
+<<<<<<< HEAD
     realImplementation: true;
     implementationDetails: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',
     launchDate: '2025-02-01';
@@ -694,6 +712,18 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 198
   }
 ],
+=======
+    realImplementation: true,
+    implementationDetails:
+      'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',
+    launchDate: '2025-02-01',
+    customers: 134,
+    rating: 4.9,
+    reviews: 198,
+  },
+];
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const getPopularPracticalBusinessSolutions2029 = null;
 =======
@@ -1180,14 +1210,26 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular);
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
   return practicalBusinessSolutions2029.filter(
     service => service.category === category
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -1196,6 +1238,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
   {id: "ai-business-intelligence-suite"
@@ -1593,3 +1636,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   })
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

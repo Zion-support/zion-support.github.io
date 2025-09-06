@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { useHireRequestForm, FormValues } from './useHireRequestForm'
 import { Button } from '@/components/ui/button'
@@ -9,6 +10,20 @@ import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
+=======
+import React from 'react';
+import { useHireRequestForm, FormValues } from './useHireRequestForm';
+import { Button } from '@/components/ui/button';
+import { DialogFooter } from '@/components/ui/dialog';
+import { Form } from '@/components/ui/form';
+import { Loader2 } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { PersonalInfoFields } from './PersonalInfoFields';
+import { ProjectDetailsField } from './ProjectDetailsField';
+import { TimelineField } from './TimelineField';
+import { BudgetFields } from './BudgetFields';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface HireRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
@@ -16,9 +31,17 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string;
     email?: string;
+<<<<<<< HEAD
     id?: string
   }
   onSubmitSuccess?: () => void
+=======
+    id?: string;
+  };
+  onSubmitSuccess?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HireRequestForm({
   talent
   onClose
@@ -48,6 +71,7 @@ export function HireRequestForm({
             type='button'
             variant='outline'
             onClick={onClose}
+<<<<<<< HEAD
             className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}
           >
             Cancel
@@ -93,6 +117,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             variant="outline"
             onClick={onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+=======
+            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             disabled={isSubmitting}
         <DialogFooter className="pt-4">
           <Button
@@ -106,15 +133,23 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           </Button>
           <Button
             type='submit'
+<<<<<<< HEAD
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+=======
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             disabled={isSubmitting}
             disabled = {isSubmitting,}
           >
             {isSubmitting ? (
               <>
+<<<<<<< HEAD
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+=======
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Submitting...
               </>
             ) : (
@@ -124,5 +159,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

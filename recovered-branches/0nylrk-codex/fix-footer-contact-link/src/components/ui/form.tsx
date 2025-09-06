@@ -34,7 +34,14 @@ const useFormField = () => {
   if (!itemContext) {
     throw new Error('useFormField should be used within <FormItem>');
   }
+<<<<<<< HEAD
   const { id } = itemContext as FormItemContextValue;
+=======
+}
+
+const { id } = itemContext as FormItemContextValue;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return {
     id
     name: fieldContext.name

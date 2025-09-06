@@ -18,7 +18,16 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       height = {size,}
     />
   )
+<<<<<<< HEAD
 )
 Spinner.displayName = 'Spinner'
 export default Spinner;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+);
+Spinner.displayName = 'Spinner';
+}
+
+export default Spinner;
+'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

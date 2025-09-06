@@ -4,8 +4,14 @@ import { cn } from "@/lib/utils";
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   title?: string;
+<<<<<<< HEAD
   children?: React.ReactNode
 }
+=======
+  children?: React.ReactNode;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SidebarSection({
   className
   title

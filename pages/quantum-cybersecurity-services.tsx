@@ -4,10 +4,16 @@ import { motion  } from 'framer-motion';
 import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function QuantumCybersecurityServices() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security Solutions</title>
         <meta name="description" content="Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 302 464 0950" />
         <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
@@ -32,6 +38,53 @@ export default function QuantumCybersecurityServices() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
+=======
+        <title>
+          Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security
+          Solutions
+        </title>
+        <meta
+          name='description'
+          content='Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 302 464 0950'
+        />
+        <meta
+          name='keywords'
+          content='quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group'
+        />
+        <meta name='author' content='ZionTech Group' />
+        <meta name='robots' content='index, follow' />
+
+        {/* Open Graph */}
+        <meta
+          property='og:title'
+          content='Quantum Cybersecurity Services - ZionTech Group'
+        />
+        <meta
+          property='og:description'
+          content='Unbreakable security powered by quantum computing and advanced AI algorithms.'
+        />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/quantum-cybersecurity-services'
+        />
+        <meta property='og:site_name' content='ZionTech Group' />
+
+        {/* Contact Information */}
+        <meta name='contact:phone' content='+1 302 464 0950' />
+        <meta name='contact:email' content='kleber@ziontechgroup.com' />
+        <meta
+          name='contact:address'
+          content='364 E Main St STE 1008 Middletown DE 19709'
+        />
+        <meta name='contact:website' content='https://ziontechgroup.com' />
+      </Head>
+
+      <UltraFuturisticBackground2026 intensity='high' theme='cyberpunk'>
+        {/* Hero Section */}
+        <section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'>
+          <div className='text-center z-10 max-w-6xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -42,6 +95,10 @@ export default function QuantumCybersecurityServices() {
                 Quantum Cybersecurity
               </span>
             </motion.h1>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -49,7 +106,13 @@ export default function QuantumCybersecurityServices() {
               className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'
             >
               Unbreakable security powered by quantum computing and advanced AI
+<<<<<<< HEAD
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
+=======
+              algorithms. Protect your business from tomorrow's threats today.
+            </motion.p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,12 +121,22 @@ export default function QuantumCybersecurityServices() {
             >
               <a
                 href='#services'
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-indigo-500/25'              >
+=======
+                className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-indigo-500/25'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 View Services
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
                 className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'              >
+=======
+                className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Get Started
               </a>
             </motion.div>
@@ -101,13 +174,23 @@ export default function QuantumCybersecurityServices() {
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Instant threat response and automated incident resolution.
+<<<<<<< HEAD
                 </p>              </div>
+=======
+                </p>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
           </div>
         </section>
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -123,7 +206,13 @@ export default function QuantumCybersecurityServices() {
                 technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {quantumCybersecurityServices.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
@@ -134,7 +223,12 @@ export default function QuantumCybersecurityServices() {
                   <UltraFuturisticServiceCard2026
                     service={service}
                     variant='premium'
+<<<<<<< HEAD
                     theme='cyberpunk'                  />
+=======
+                    theme='cyberpunk'
+                  />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -142,18 +236,34 @@ export default function QuantumCybersecurityServices() {
         </section>
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Why Quantum Security?
                 </span>
               </h2>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
+=======
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
+                  Why Quantum Security?
+                </span>
+              </h2>
+            </motion.div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -167,7 +277,12 @@ export default function QuantumCybersecurityServices() {
                   Quantum computers will eventually break current encryption
                   standards, making traditional security obsolete.
                 </p>
+<<<<<<< HEAD
                 <ul className='text-gray-400 space-y-2'>                  <li>• RSA encryption will be vulnerable</li>
+=======
+                <ul className='text-gray-400 space-y-2'>
+                  <li>• RSA encryption will be vulnerable</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <li>• Current SSL/TLS certificates at risk</li>
                   <li>• Blockchain security compromised</li>
                   <li>• Financial systems exposed</li>
@@ -187,7 +302,12 @@ export default function QuantumCybersecurityServices() {
                   We provide quantum-resistant security that protects against
                   both current and future threats.
                 </p>
+<<<<<<< HEAD
                 <ul className='text-gray-400 space-y-2'>                  <li>• Post-quantum cryptography</li>
+=======
+                <ul className='text-gray-400 space-y-2'>
+                  <li>• Post-quantum cryptography</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <li>• Quantum key distribution</li>
                   <li>• AI-enhanced threat detection</li>
                   <li>• Future-proof security architecture</li>
@@ -198,18 +318,34 @@ export default function QuantumCybersecurityServices() {
         </section>
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Advanced Security Features
                 </span>
               </h2>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
+=======
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
+                  Advanced Security Features
+                </span>
+              </h2>
+            </motion.div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -222,7 +358,13 @@ export default function QuantumCybersecurityServices() {
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Never trust, always verify approach to security.
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -236,7 +378,13 @@ export default function QuantumCybersecurityServices() {
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   24/7 threat detection and response.
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -250,7 +398,13 @@ export default function QuantumCybersecurityServices() {
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Automated threat response and incident resolution.
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -264,19 +418,33 @@ export default function QuantumCybersecurityServices() {
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Comprehensive security insights and reporting.
+<<<<<<< HEAD
                 </p>              </motion.div>
+=======
+                </p>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </section>
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>
+=======
+              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
                   Secure Your Future Today
                 </span>
@@ -317,6 +485,7 @@ export default function QuantumCybersecurityServices() {
                   </h3>
                   <p className='text-gray-300 text-sm'>
                     364 E Main St STE 1008
+<<<<<<< HEAD
                     <br />                    Middletown DE 19709
                   </p>
                 </div>
@@ -325,11 +494,29 @@ export default function QuantumCybersecurityServices() {
                 <a
                   href='mailto:kleber@ziontechgroup.com'
                   className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                >
+=======
+                    <br />
+                    Middletown DE 19709
+                  </p>
+                </div>
+              </div>
+
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <a
+                  href='mailto:kleber@ziontechgroup.com'
+                  className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Start Your Security Assessment
                 </a>
                 <a
                   href='https://ziontechgroup.com'
+<<<<<<< HEAD
                   className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                >
+=======
+                  className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Visit Our Website
                 </a>
               </div>
@@ -338,4 +525,8 @@ export default function QuantumCybersecurityServices() {
         </section>
       </UltraFuturisticBackground2026>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

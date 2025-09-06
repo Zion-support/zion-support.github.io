@@ -11,6 +11,11 @@ const AVAILABILITY_OPTIONS = [
   { id: "part_time", label: "Part-time" }
   { id: "project", label: "Project-based" }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AvailabilityFilter({
   selectedAvailability
   toggleAvailability

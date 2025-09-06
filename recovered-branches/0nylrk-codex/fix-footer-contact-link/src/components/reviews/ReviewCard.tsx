@@ -28,8 +28,14 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
   review: Review;
+<<<<<<< HEAD
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
+=======
+  onReport: (reviewId: string, reason: string) => Promise<boolean>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);

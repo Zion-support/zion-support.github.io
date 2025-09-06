@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type InnovativeMicroSaas = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type InnovativeMicroSaas = {
   id: string;
   name: string;
@@ -24,7 +27,13 @@ export type InnovativeMicroSaas = {
   realService?: boolean;
   rating?: number;
   launchDate?: string;
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
   {
     id: 'podcast-transcription-seo-suite'
@@ -87,6 +96,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     id: 'candidate-screening-copilot'
     name: 'Candidate Screening Copilot'
     description:
+<<<<<<< HEAD
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     category: 'Human Resources'
     pricing: { starter: '$69/mo' }
@@ -173,3 +183,15 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	}
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+    category: 'Human Resources',
+    pricing: { starter: '$69/mo' },
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+    integrations: ['Greenhouse', 'Lever'],
+    useCases: ['Faster hiring', 'Bias reduction'],
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
+    realService: true,
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

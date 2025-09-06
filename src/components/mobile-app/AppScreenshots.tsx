@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useRef } from "react";
@@ -7,16 +8,33 @@ import React, { useRef } from "react"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button";
+=======
+import React, { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // These would be replaced with actual screenshots
 <<<<<<< HEAD
 const mockScreenshots = null;
 =======
 const mockScreenshots = [
+<<<<<<< HEAD
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
   { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" }
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" }
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
+=======
+  { id: 1, alt: 'Dashboard screen', src: '/placeholder.svg' },
+  { id: 2, alt: 'Talent matching screen', src: '/placeholder.svg' },
+  { id: 3, alt: 'Resume builder screen', src: '/placeholder.svg' },
+  { id: 4, alt: 'Messaging screen', src: '/placeholder.svg' },
+  { id: 5, alt: 'Profile screen', src: '/placeholder.svg' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const scroll = (direction: "left" | "right",) => {
@@ -77,8 +95,14 @@ export const AppScreenshots: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 '"}
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

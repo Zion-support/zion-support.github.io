@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { AdminDashboard } from '@/components/enterprise/admin/AdminDashboard';
+import { useAuth } from '@/hooks/useAuth';
+import { Navigate } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Header } from "@/components/Header",

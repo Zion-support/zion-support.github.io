@@ -149,6 +149,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
   }
 }
 // Pricing tiers for the AI Content Generator
+}
+
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
@@ -171,8 +173,47 @@ export const AI_CONTENT_PRICING = {
     price: 299;
     period: '/month'
     features: [
+<<<<<<< HEAD
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Unlimited content generations',
+      'Custom templates',
+      'Advanced analytics',
+      'Dedicated support',
+      'Highest quality',
+      'White-label options',
+      'Custom integrations',
+      'SLA guarantee',
+    ],
+  },
+};
+body: JSON.stringify (request) 
+});
+}async getTemplates () : Promise<ContentTemplate[]> {
+  return [ {
+  
+}private generateMockContent (request: ContentGenerationRequest) : ContentGenerationResponse {
+  const mockContent = `# $ {
+  request.topic 
+}This is a $ {
+  request.length 
+}$ {
+  request.type 
+}about $ {
+  request.topic 
+}. The content is written in a $ {
+  request.tone 
+}tone to engage the target audience. ## Key Points - Point 1: $ {
+  request.topic 
+}is essential for modern businesses - Point 2: Implementing $ {
+  request.topic 
+}can improve efficiency - Point 3: Best practices for $ {
+  request.topic 
+}implementation ## Conclusion 
+
+}// Pricing tiers for the AI Content Generator 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

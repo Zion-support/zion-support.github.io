@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { forwardRef } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
+=======
+import React, { forwardRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { SafeRef } from '@/types/ref-types';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   icon?: React.ReactNode;
@@ -25,7 +33,12 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     }
     ref
   ) => {
+<<<<<<< HEAD
     const [expanded, setExpanded] = React.useState(defaultExpanded)
+=======
+    const [expanded, setExpanded] = React.useState(defaultExpanded);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >
@@ -51,7 +64,14 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
       </div>
     )
   }
+<<<<<<< HEAD
 )
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+);
+
+SidebarGroup.displayName = 'SidebarGroup';
+export { SidebarGroup };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

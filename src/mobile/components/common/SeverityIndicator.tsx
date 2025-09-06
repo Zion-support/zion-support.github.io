@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+=======
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous";
   showIcon?: boolean;
   showText?: boolean;
+<<<<<<< HEAD
   size?: "sm" | "md" | "lg";
   className?: string
 }
@@ -43,3 +50,43 @@ export function SeverityIndicator({
     </div>
   )
 }
+=======
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+export function SeverityIndicator({
+  severity,
+  showIcon = true,
+  showText = true,
+  size = 'md',
+  className,
+}: SeverityIndicatorProps) {
+  const getSeverityIcon = () => {
+    switch (severity) {
+      case 'dangerous':
+
+          />
+        );
+      case 'suspicious':
+
+          />
+        );
+      default:
+
+          />
+        );
+    }
+  };
+
+  return (
+    <div className={cn('flex items-center gap-1', className)}>
+      {showIcon && getSeverityIcon()}
+      {showText && <span className='capitalize text-sm'>{severity}</span>}
+    </div>
+  );
+
+};
+return (</div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

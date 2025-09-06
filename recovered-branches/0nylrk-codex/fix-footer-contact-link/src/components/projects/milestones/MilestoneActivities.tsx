@@ -34,12 +34,19 @@ interface Activity {
   created_by_profile: {
 <<<<<<< HEAD
     display_name: string;
+<<<<<<< HEAD
 =======
     display_name: string
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     avatar_url: string | null
   }
 }
+=======
+    avatar_url: string | null;
+  };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   const [activities, setActivities] = useState<Activity[]>([]),
   const [isLoading, setIsLoading] = useState(true);

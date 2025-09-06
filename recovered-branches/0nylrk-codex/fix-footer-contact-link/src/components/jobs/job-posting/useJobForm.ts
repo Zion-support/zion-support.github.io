@@ -9,9 +9,14 @@ import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
 export interface JobPostingProps {
   jobId?: string;
+<<<<<<< HEAD
   onSuccess?: () => void
 }
 <<<<<<< HEAD
+=======
+  onSuccess?: () => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const useJobForm = null;
 =======

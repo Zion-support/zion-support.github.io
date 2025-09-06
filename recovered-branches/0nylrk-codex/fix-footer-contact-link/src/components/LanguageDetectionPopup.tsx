@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useTranslation } from 'react-i18next';
+<<<<<<< HEAD
 import { AlertDialog;
   AlertDialogAction;
   AlertDialogCancel;
@@ -15,6 +16,24 @@ export function LanguageDetectionPopup() {
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),
+=======
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,;
+} from '../components/ui/alert-dialog';
+import {
+  useLanguage,
+  SupportedLanguage,
+  LanguageContextType,;
+} from '../context/LanguageContext';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
   useEffect(() => {
     // Check if this is first visit

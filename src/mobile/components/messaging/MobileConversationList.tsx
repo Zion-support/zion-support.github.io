@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -5,6 +6,16 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+=======
+import React from 'react';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface Conversation {
 <<<<<<< HEAD
   id: string;
@@ -19,7 +30,13 @@ interface Conversation {
 interface MobileConversationListProps {
   conversations: Conversation[];
   activeConversation?: string;
+<<<<<<< HEAD
   onSelectConversation: (id: string) => void
+=======
+  onSelectConversation: (id: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileConversationList({
   conversations;
   activeConversation;
@@ -84,14 +101,22 @@ export function MobileConversationList({
                 <AvatarImage
                   src={conversation.avatar}
                   alt={conversation.name}
+<<<<<<< HEAD
                 />                <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+=======
+                />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
                   <h3 className='font-medium truncate'>{conversation.name}</h3>
@@ -107,17 +132,29 @@ export function MobileConversationList({
                     )}
                   </p>
                   {conversation.unreadCount > 0 && (
+<<<<<<< HEAD
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+=======
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {conversation.unreadCount}
                     </Badge>
                   )}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
+=======
+            <div className='border-t border-border ml-12'></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

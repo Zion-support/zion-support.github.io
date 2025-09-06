@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatAssistant } from '@/components/ChatAssistant';
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -58,5 +67,25 @@ export function ChatAssistantTrigger() {
         />
       )}
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
+  isOpen && (<ChatAssistant isOpen= {;
+  isOpen ;
+}onClose= {;
+  () => setIsOpen (false) ;
+}recipient= {;
+  {';
+  id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;
+
+}onSendMessage= {;
+  handleSendMessage ;
+}/>) ;
+}</>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

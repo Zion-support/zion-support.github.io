@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -5,6 +6,17 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+=======
+import React, { useEffect } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function IntegrationsFeature() {
 <<<<<<< HEAD
   const schema = null;
@@ -81,13 +93,21 @@ export default function IntegrationsFeature() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
+<<<<<<< HEAD
               <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
+=======
+              <Link href='/developers'>Learn More</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

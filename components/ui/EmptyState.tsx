@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
@@ -11,9 +14,17 @@ export type EmptyStateProps = {
   title: string;
   description?: string;
   icon?: React.ReactNode;
+<<<<<<< HEAD
   primaryAction?: { label: string; href: string }
   secondaryAction?: { label: string; href: string }
 }
+=======
+  primaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string };
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function EmptyState({
   title
   description
@@ -33,6 +44,7 @@ export default function EmptyState({
           {primaryAction && (
             <Link href={primaryAction.href}>
               <a>
+<<<<<<< HEAD
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
   title: string
   description?: string;
@@ -53,6 +65,9 @@ export default function EmptyState({ title, description, icon, primaryAction, se
             <Link href={primaryAction.href}>
               <a>
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
+=======
+                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             </Link>
           )}
@@ -61,7 +76,11 @@ export default function EmptyState({ title, description, icon, primaryAction, se
               <a>
                 <EnhancedButton variant='secondary' size='md'>
                   {secondaryAction.label}
+<<<<<<< HEAD
                 </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
+=======
+                </EnhancedButton>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </a>
             </Link>
           )}
@@ -69,4 +88,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
       )}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

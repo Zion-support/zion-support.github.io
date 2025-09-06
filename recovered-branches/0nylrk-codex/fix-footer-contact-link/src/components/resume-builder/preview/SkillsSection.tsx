@@ -3,6 +3,10 @@ import { Skill } from '@/types/resume';
 interface SkillsSectionProps {
   skills: Skill[];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
 <<<<<<< HEAD

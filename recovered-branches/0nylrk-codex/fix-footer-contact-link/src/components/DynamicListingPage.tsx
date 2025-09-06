@@ -21,6 +21,7 @@ interface PriceRange {
 interface DynamicListingPageProps {
 <<<<<<< HEAD
   title: string;
+<<<<<<< HEAD
   description: string;
   categorySlug: string;
   listings: ProductListing[];
@@ -34,6 +35,25 @@ interface DynamicListingPageProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   initialPrice?: PriceRange
 }
+=======
+description: string;
+categorySlug: string;
+listings: ProductListing[];
+categoryFilters: {
+  label: string, value: string 
+}[];
+initialPrice?: PriceRange 
+}export function DynamicListingPage ({
+  title;
+description;
+categorySlug;
+listings: allListings;
+categoryFilters;
+initialPrice = {
+  min: 0, max: 10000
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DynamicListingPage({
   title;
   description;

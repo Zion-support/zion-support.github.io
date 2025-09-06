@@ -7,8 +7,14 @@ export interface MessageTabProps {
   message: string;
   setMessage: (message: string) => void;
   proposalLink: string;
+<<<<<<< HEAD
   setProposalLink: (link: string) => void
 }
+=======
+  setProposalLink: (link: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MessageTab({
   message
   setMessage

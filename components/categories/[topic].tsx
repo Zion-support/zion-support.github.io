@@ -6,9 +6,15 @@ import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 =======
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
+=======
+
+type Props = { topic: string; posts: BlogPost[] };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
@@ -65,10 +71,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const topic = String(ctx.params?.topic |'');
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+<<<<<<< HEAD
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>
@@ -99,3 +112,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 }
 export default TopicPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  return { props: { topic, posts } };
+};
+}
+
+export default TopicPage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

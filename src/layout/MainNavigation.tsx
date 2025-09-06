@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -11,11 +12,39 @@ import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-r
 import { LanguageSelector  } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
 import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
+=======
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { useTranslation } from 'react-i18next';
+import { useFavorites } from '@/hooks/useFavorites';
+import { useCart } from '@/context/CartContext';
+import {
+  Heart,
+  MessageSquare,
+  CreditCard,
+  ShoppingCart,
+  Wallet,;
+} from 'lucide-react';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,;
+} from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { LoginModal } from '@/components/auth/LoginModal';
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function MainNavigation({ isAdmin;
@@ -451,5 +480,9 @@ export default function Page() { [])
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
   );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

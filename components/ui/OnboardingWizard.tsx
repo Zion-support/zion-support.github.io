@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from 'react',
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OnboardingWizard() {
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
   useEffect(() => {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const has = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const has =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_has_onboarded')
           : 'true';
       if (!has) {
+<<<<<<< HEAD
         setOpen(true);      const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {
         setOpen(true)
+=======
+        setOpen(true);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     } catch {}
   }, []);
@@ -26,10 +38,16 @@ export default function OnboardingWizard() {
         window.localStorage.setItem('zion_has_onboarded', '1');
       }
     } catch {}
+<<<<<<< HEAD
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
     setOpen(false)
+=======
+    setOpen(false);
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!open) return null;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -65,6 +83,7 @@ export default function OnboardingWizard() {
           {role === 'client' ? (
             <div className='space-y-2'>
               <div className='text-base font-medium'>Next steps</div>
+<<<<<<< HEAD
               <ul className='list-disc pl-5 space-y-1 text-sm'>                <li>Post your first job and get matched in minutes</li>
                 <li>Invite talent you already know to apply</li>
                 <li>We can suggest matches based on your job description</li>
@@ -79,6 +98,9 @@ export default function OnboardingWizard() {
             <div className="space-y-2">
               <div className="text-base font-medium">Next steps</div>
               <ul className="list-disc pl-5 space-y-1 text-sm">
+=======
+              <ul className='list-disc pl-5 space-y-1 text-sm'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>Post your first job and get matched in minutes</li>
                 <li>Invite talent you already know to apply</li>
                 <li>We can suggest matches based on your job description</li>
@@ -97,6 +119,7 @@ export default function OnboardingWizard() {
           ) : (
             <div className='space-y-2'>
               <div className='text-base font-medium'>Next steps</div>
+<<<<<<< HEAD
               <ul className='list-disc pl-5 space-y-1 text-sm'>                <li>Complete your profile and set availability</li>
                 <li>Get AI suggestions for roles that fit your skills</li>
                 <li>Apply to jobs and get instant updates</li>
@@ -109,6 +132,10 @@ export default function OnboardingWizard() {
             <div className="space-y-2">
               <div className="text-base font-medium">Next steps</div>
               <ul className="list-disc pl-5 space-y-1 text-sm">
+=======
+              <ul className='list-disc pl-5 space-y-1 text-sm'>
+                <li>Complete your profile and set availability</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <li>Get AI suggestions for roles that fit your skills</li>
                 <li>Apply to jobs and get instant updates</li>
               </ul>
@@ -120,12 +147,16 @@ export default function OnboardingWizard() {
                 </Link>
                 <Link href='/talent'>
                   <a className='px-3 py-1.5 rounded-md border'>Browse Jobs</a>
+<<<<<<< HEAD
                 </Link>              </div>
             </div>
           )}
         </div>              <div className="flex gap-2 pt-2">
                 <Link href="/dashboard"><a className="px-3 py-1.5 rounded-md bg-blue-600 text-white">Go to Dashboard</a></Link>
                 <Link href="/talent"><a className="px-3 py-1.5 rounded-md border">Browse Jobs</a></Link>
+=======
+                </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           )}
@@ -136,6 +167,7 @@ export default function OnboardingWizard() {
             className='px-3 py-1.5 rounded-md border'
           >
             Done
+<<<<<<< HEAD
           </button>        </div>
       </div>
     </div>
@@ -147,3 +179,10 @@ export default function OnboardingWizard() {
     </div>
 );
 }
+=======
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,8 +1,13 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TrustBadge({
   type
 }: {
@@ -15,10 +20,19 @@ export function TrustBadge({
     'Top Rated':
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
   } as const;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <span className='leading-none'>{type}</span>
     </span>
   );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MicroTestimonial({
   quote
   author
@@ -33,6 +47,7 @@ export function MicroTestimonial({
         — {author}
       </figcaption>
     </figure>
+<<<<<<< HEAD
   );  const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const
@@ -51,3 +66,6 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     </figure>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

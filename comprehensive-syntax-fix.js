@@ -75,7 +75,9 @@ function fixSyntaxErrors(filePath) {
       // This is a simplified fix - in practice, you'd need more sophisticated parsing) {
      {
       // This is a simplified fix - in practice, you'd need more sophisticated parsing}
-      const missingTags = openTags - closeTa;g;s;
+}
+
+const missingTags = openTags - closeTa;g;s;
       // Add closing div tags as a fallback;
       content += '\n' + '</div>'.repeat(missingTags);
       modified = true}
@@ -157,10 +159,14 @@ function fixSyntaxErrors(filePath) {
 console.log('Starting comprehensive syntax error fixes...');
 const files = getAllFiles('/workspace;';);
 let fixedCount = ;0;
+<<<<<<< HEAD
 for (const file of files) {
   if () {
     fixedCount++}
 }
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
     ) {
     fixedCount++}

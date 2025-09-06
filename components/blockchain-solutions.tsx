@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function BlockchainSolutionsPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -7,6 +12,7 @@ export default function BlockchainSolutionsPage() {
         Content coming soon.
       </p>
     </div>
+<<<<<<< HEAD
   );export default function BlockchainSolutionsPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -15,3 +21,6 @@ export default function BlockchainSolutionsPage() {
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

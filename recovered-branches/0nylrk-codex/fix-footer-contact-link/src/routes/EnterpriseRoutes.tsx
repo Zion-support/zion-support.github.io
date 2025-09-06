@@ -21,7 +21,14 @@ const EnterpriseRoutes = () => {
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />
       <Route path="/hire-ai" element={<ZionHireAI />} />
     </Routes>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default EnterpriseRoutes;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

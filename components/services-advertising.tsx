@@ -1,6 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ext = null;
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
               ].map((o) => (
@@ -11,6 +12,10 @@ const ext = null;
                 </a>
               ))}
 =======
+=======
+
+const ext = (url: string) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   <a
     className='text-cyan-400 underline'
     href={`/out?u=${encodeURIComponent(url)}`}
@@ -20,6 +25,11 @@ const ext = null;
     {url.replace('https://', '')}
   </a>
 );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServicesAdvertisingPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -3094,6 +3104,10 @@ export default function ServicesAdvertisingPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   /* Quick contact */
 }<div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800" > <a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white" >Email kleber@ziontechgroup.com</a> <a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300" >View Pricing</a> <div className="text-slate-400 text-sm" > <span className="block md:inline" >Address: 364 E Main St STE 1008 Middletown DE 19709</span> <span className="hidden md:inline mx-2" >·</span> <a className="text-cyan-400 underline" href="https://ziontechgroup.com" target="blank" rel="noopener noreferrer" >ziontechgroup.com</a> </div> </div> </ul> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Resume & Cover Letter Builder</h2> <p className="text-slate-300" >ATS-optimized resumes and tailored cover letters with role-aware keywording and metric suggestions.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $8–$25/mo</li> </ul> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Document Summarizer</h2> <p className="text-slate-300" >Concise summaries with citations for PDFs, docs, and URLs with export options.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $10–$30/mo + usage</li> </ul> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >Subscription Manager Hub</h2> <p className="text-slate-300" >Track subscriptions, detect renewals from receipts, and get savings recommendations.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $5–$15/mo</li> </ul> </section> <section> </a>) )
 }</div> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >API Performance Testing</h2> <p className="text-slate-300" >Load, latency and regression testing with CI gates and dashboards.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $30–$150/mo</li> </ul> </section> <section> </ul> <div className="text-sm text-slate-400 mt-3" >Typical: $99–$500/month + commissions.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical: $9–$59/month.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical: $15–$99/agent/month.</div> </div> </div> </section> <section> </a>) )
@@ -3669,6 +3683,7 @@ export default function ServicesAdvertisingPage() {
   ext ('https://dmarcian.com/pricing')
 }, {
   ext ('https://valimail.com/pricing/')
+<<<<<<< HEAD
 }</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a> 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Employee Scheduling Suite</h2>
 					<p className="text-slate-300">Shift planning with availability, time-off, swap requests, and notifications.</p>
@@ -4752,3 +4767,6 @@ export default function ServicesAdvertisingPage() {
 		</div>
 	)
 }
+=======
+}</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

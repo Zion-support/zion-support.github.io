@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useUser } from '../../providers/UserProvider'
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useUser } from '../../providers/UserProvider';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AvatarDropdown() {
   const { user, logout } = useUser()
   const [open, setOpen] = useState(false)

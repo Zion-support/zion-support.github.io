@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -38,6 +39,31 @@ export function FeaturesGuideSection() {
     {
       id: 'ai-matcher'
       title: 'AI Matcher'
+=======
+import Link from 'next/link';
+import { GradientHeading } from './GradientHeading';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from './ui/button';
+import { fireEvent } from '@/lib/analytics';
+import {
+  Users,
+  Zap,
+  Settings,
+  MessageSquare,
+  Sparkles,
+  ArrowRight,
+  BarChart3,
+  Plus,
+  HelpCircle,;
+} from 'lucide-react';
+}
+
+export function FeaturesGuideSection() {
+  const features = [
+    {
+      id: 'ai-matcher',
+      title: 'AI Matcher',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Find the perfect match for your project needs with our intelligent AI-powered matching system.'
       icon: <Sparkles className='h-10 w-10 text-zion-cyan' />
@@ -173,6 +199,7 @@ export function FeaturesGuideSection() {
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
@@ -301,6 +328,9 @@ export function FeaturesGuideSection() {
                 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+=======
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 {feature.title}
               </TabsTrigger>
@@ -311,12 +341,16 @@ export function FeaturesGuideSection() {
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+=======
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 {feature.title}
               </TabsTrigger>
@@ -336,6 +370,7 @@ export function FeaturesGuideSection() {
                     {feature.description}
                   </p>
                   <Button
+<<<<<<< HEAD
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'                    asChild
                   >
                     <Link href={feature.link}>
@@ -344,6 +379,10 @@ export function FeaturesGuideSection() {
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+=======
+                    className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
+                    asChild
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
@@ -358,6 +397,7 @@ export function FeaturesGuideSection() {
                   <ol className='list-decimal list-inside space-y-3 pl-4'>
                     {feature.instructions.map((instruction, idx) => (
                       <li key={idx} className='text-zion-slate-light'>
+<<<<<<< HEAD
                         <span className='text-zion-cyan mr-2'>{idx + 1}.</span>                        {instruction}
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
@@ -365,6 +405,10 @@ export function FeaturesGuideSection() {
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
+=======
+                        <span className='text-zion-cyan mr-2'>{idx + 1}.</span>
+                        {instruction}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </li>
                     ))}
                   </ol>
@@ -373,6 +417,10 @@ export function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mt-12 text-center'>
           <Button
             variant='outline'
@@ -380,18 +428,30 @@ export function FeaturesGuideSection() {
             asChild
           >
             <Link
+<<<<<<< HEAD
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
               onClick = {() => fireEvent('explore_marketplace_click'),}
             >
               Explore Full Marketplace
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
+=======
+              href='/marketplace'
+              onClick={() => fireEvent('explore_marketplace_click')}
+            >
+              Explore Full Marketplace
+              <ArrowRight className='ml-2 h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Link>
           </Button>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

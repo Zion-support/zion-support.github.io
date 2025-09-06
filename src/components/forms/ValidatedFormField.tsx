@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage  } from '@/components/ui/form';
 import { Input  } from '@/components/ui/input';
@@ -45,7 +44,13 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
+<<<<<<< HEAD
   debounceMs?: number
+=======
+  debounceMs?: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ValidatedFormField({
 <<<<<<< HEAD
   name;
@@ -238,6 +243,10 @@ export function ValidatedFormField({
     }
   }
   if (type === 'checkbox') {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         render={() => (
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
             <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
@@ -257,6 +266,10 @@ export function ValidatedFormField({
       />
     )
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       render={() => (
         <FormItem>
           <FormLabel className='text-sm font-medium'>
@@ -283,6 +296,8 @@ export function ValidatedFormField({
     />
   )
 // Validation helpers for common patterns
+}
+
 export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/
   phone: /^[\+]?[1-9][\d]{0,15}$/
@@ -291,6 +306,8 @@ export const validationPatterns = {
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/
 }
 // Pre-configured validation rules
+}
+
 export const commonValidations = {
   required: { required: true }
   email: {
@@ -319,6 +336,7 @@ export const commonValidations = {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number'
       }
+<<<<<<< HEAD
       return null
     }
   }
@@ -328,3 +346,9 @@ export const commonValidations = {
     }
   }}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      return null;
+    },
+  },
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

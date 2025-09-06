@@ -5,6 +5,11 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-rea
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function QuantumAIBCIPage() {
   const service = null;
 =======

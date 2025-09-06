@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
+import { Eye, ChevronDown, Loader2 } from 'lucide-react';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import Link from "next/link";
 import { 
@@ -25,7 +38,14 @@ interface ApplicationActionsProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+<<<<<<< HEAD
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+=======
+  onStatusChange: (
+    applicationId: string,
+    newStatus: ApplicationStatus
+  ) => Promise<void>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ApplicationActions({
@@ -103,6 +123,7 @@ export function ApplicationActions({
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => onStatusChange(application.id, 'rejected')}
+<<<<<<< HEAD
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
           >
             Hire
@@ -110,20 +131,33 @@ export function ApplicationActions({
           <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
+=======
+            className='text-red-600'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
       <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
       <Button
         variant="default"
         size="sm"
         asChild
       >
+=======
+
+      <Button variant='default' size='sm' asChild>
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           Contact
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

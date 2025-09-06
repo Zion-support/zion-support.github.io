@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { X } from 'lucide-react'
 <<<<<<< HEAD
 import { cn } from "@/lib/utils"
+=======
+import * as React from 'react';
+import * as ToastPrimitives from '@radix-ui/react-toast';
+import { cva, type VariantProps } from 'class-variance-authority';
+import { X } from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logInfo } from '@/utils/productionLogger';
 const ToastProvider = null;
 =======
@@ -49,10 +57,19 @@ const Toast = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
 >(({ className, variant, ...props }, ref) => {
+<<<<<<< HEAD
       />
   )
 })
 Toast.displayName = ToastPrimitives.Root.displayName
+=======
+
+    />
+  );
+});
+Toast.displayName = ToastPrimitives.Root.displayName;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const ToastAction = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Action>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Action>
@@ -116,7 +133,10 @@ export {
   ToastAction
 }
 // Add useToast hook export
-// export function useToast() {
+//
+}
+
+export function useToast() {
 //   return {
 //     // Accept a loosely typed props object to allow custom fields like `description`
 //     toast: (props: any,) => {
@@ -125,4 +145,8 @@ export {
 //     }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 //   }
+<<<<<<< HEAD
 // }
+=======
+// }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

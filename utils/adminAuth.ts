@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export interface Session {
   userId: string;
@@ -26,3 +27,18 @@ export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
+=======
+// Stub admin auth utility - placeholder for missing functionality
+}
+
+export const requireAdminAuth = () => {
+  // Placeholder implementation
+  return true;
+};
+}
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -8,10 +8,35 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
   userId: string;
+<<<<<<< HEAD
   averageRating?: number;
   ratingCount?: number
 }
 <<<<<<< HEAD
+=======
+averageRating?: number;
+ratingCount?: number 
+}export function ProfileRatings ({
+  userId, averageRating = 0, ratingCount = 0 
+}: ProfileRatingsProps) {
+  const {
+  reviews, isLoading, fetchUserReviews, reportReview 
+}= useReviews ();
+const [ratingDistribution, setRatingDistribution] = useState<Record<number number>> ({
+  
+});
+//Calculate rating distribution useEffect ( () => {
+  if (reviews.length > 0) {
+  const distribution: Record<number number> = {
+  1: 0, 2: 0, 3: 0, 4: 0, 5: 0 
+};
+reviews.forEach ( (review) => {
+  if (review.rating >= 1 && review.rating <= 5) {
+  distribution[review.rating] = (distribution[review.rating] || 0) + 1
+}
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ProfileRatings({ userId, averageRating;
 =======

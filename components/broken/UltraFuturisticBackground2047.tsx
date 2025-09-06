@@ -1,12 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const UltraFuturisticBackground2047: React.FC;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const UltraFuturisticBackground2047: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
     setIsClient(true);    setIsClient(true)
+=======
+    setIsClient(true);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   if (!isClient) {
     return (
@@ -46,6 +54,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
             ease: 'linear'
           }}
         >
+<<<<<<< HEAD
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>
         {/* Floating Circles */}
         <motion.div
@@ -73,6 +82,9 @@ const UltraFuturisticBackground2047: React.FC = () => {
           }}
         >
           <div className="w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon" />
+=======
+          <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </motion.div>
         {/* Floating Circles */}
         <motion.div
@@ -122,6 +134,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
                 />
               </pattern>
             </defs>
+<<<<<<< HEAD
             <rect width='100%' height='100%' fill='url(#grid)' />          </svg>          animate={{
             y: [0, -30, 0];
             x: [0, 20, 0]}}
@@ -155,6 +168,9 @@ const UltraFuturisticBackground2047: React.FC = () => {
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
+=======
+            <rect width='100%' height='100%' fill='url(#grid)' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </svg>
         </div>
         {/* Floating Data Streams */}
@@ -175,6 +191,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
                 key={i}
                 className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent'
                 animate={{
+<<<<<<< HEAD
                   height: [32, 64, 32]
                   opacity: [0.3, 1, 0.3]
                 }}                transition={{
@@ -202,6 +219,16 @@ const UltraFuturisticBackground2047: React.FC = () => {
                   repeat: Infinity as any
                   delay: i * 0.1
                   ease: 'easeInOut',                  ease: "easeInOut"
+=======
+                  height: [32, 64, 32],
+                  opacity: [0.3, 1, 0.3],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+                  ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 }}
               />
             ))}
@@ -212,11 +239,18 @@ const UltraFuturisticBackground2047: React.FC = () => {
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
         </div>
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>
+<<<<<<< HEAD
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>
+=======
+          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />
+        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Scanning Lines */}
         <motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
           animate={{
+<<<<<<< HEAD
             y: [0, 1000],        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
         </div>
@@ -242,6 +276,14 @@ const UltraFuturisticBackground2047: React.FC = () => {
             duration: 8
             repeat: Infinity as any
             ease: "linear"
+=======
+            y: [0, 1000],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity as any,
+            ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         {/* Pulse Rings */}
@@ -287,6 +329,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
             delay: 2
           }}
         >
+<<<<<<< HEAD
           <div className='w-full h-full border-2 border-purple-400 rounded-full' />        </motion.div>          animate={{
             scale: [1, 20];
             opacity: [1, 0]}}
@@ -325,6 +368,9 @@ const UltraFuturisticBackground2047: React.FC = () => {
           }}
         >
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />
+=======
+          <div className='w-full h-full border-2 border-purple-400 rounded-full' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </motion.div>
       </div>
       {/* CSS for hexagon clip */}
@@ -342,6 +388,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
       `}</style>
     </>
   );
+<<<<<<< HEAD
 }
 export default UltraFuturisticBackground2047;        }
       `}</style>
@@ -350,3 +397,9 @@ export default UltraFuturisticBackground2047;        }
 }
 export default UltraFuturisticBackground2047;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraFuturisticBackground2047;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

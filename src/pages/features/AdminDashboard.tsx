@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -21,6 +22,26 @@ export default function AdminDashboard() {
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+}
+
+export default function AdminDashboard() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Admin Dashboard',
+    description:
+      'Monitor marketplace activity, manage listings and view analytics in one place.',
+    url: 'https://app.ziontechgroup.com/features/admin-dashboard',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <SEO
@@ -52,6 +73,7 @@ export default function AdminDashboard() {
             />
           </div>
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
+<<<<<<< HEAD
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>            <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
@@ -77,6 +99,9 @@ export default function AdminDashboard() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+=======
+          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
@@ -100,6 +125,7 @@ export default function AdminDashboard() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
+<<<<<<< HEAD
               <Link href='/admin'>View Dashboard</Link>            </Button>            <div>
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
@@ -112,10 +138,17 @@ export default function AdminDashboard() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/admin">View Dashboard</Link>
+=======
+              <Link href='/admin'>View Dashboard</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -29,6 +29,7 @@ interface BrowseItem {
 interface BrowseCardsProps {
 <<<<<<< HEAD
   items: BrowseItem[];
+<<<<<<< HEAD
   type: "jobs" | "talents";
 =======
   items: BrowseItem[]
@@ -36,6 +37,12 @@ interface BrowseCardsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onViewDetails: (id: string) => void
 }
+=======
+  type: 'jobs' | 'talents';
+  onViewDetails: (id: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
 <<<<<<< HEAD

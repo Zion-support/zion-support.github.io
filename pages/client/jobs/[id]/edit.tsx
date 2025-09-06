@@ -1,11 +1,19 @@
 import { useRouter  } from 'next/router';
 import useSWR from 'swr';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 const fetcher = null;
 =======
 import {useEffect, useState} from 'react';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+=======
+import { useEffect, useState } from 'react';
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function EditJobPage() {
   const router = useRouter();
   const { id } = router.query;
@@ -16,17 +24,34 @@ export default function EditJobPage() {
   const [category, setCategory] = useState('');
   useEffect(() => {
     if (job) {
+<<<<<<< HEAD
       setTitle(job.title |'');
       setDescription(job.description |'');
       setCategory(job.category |'');    }
+=======
+      setTitle(job.title || '');
+      setDescription(job.description || '');
+      setCategory(job.category || '');
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
+<<<<<<< HEAD
       method: 'PATCH'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ title, description, category })
     });
     router.push('/client/dashboard');  }
+=======
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, description, category }),
+    });
+    router.push('/client/dashboard');
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!job) return <div>Loading…</div>;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -66,4 +91,8 @@ export default function EditJobPage() {
         </button>
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

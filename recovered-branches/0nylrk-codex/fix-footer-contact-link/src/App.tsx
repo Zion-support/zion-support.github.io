@@ -95,6 +95,12 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default App;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

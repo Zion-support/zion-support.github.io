@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { Job, JobStatus } from '@/types/jobs';
+import { toast } from 'sonner';
+import { useAuth } from './useAuth';
+import { createJob, updateJob, getJobById } from '@/services/jobService';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
@@ -35,7 +46,14 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       if (status) {
         query = query.eq("status", status)
       }
+<<<<<<< HEAD
       const { data, error: fetchError } = await query;
+=======
+}
+
+const { data, error: fetchError } = await query;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (fetchError) throw fetchError;
       setJobs(data as Job[]);
       setError(null)

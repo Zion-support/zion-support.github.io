@@ -9,11 +9,33 @@ import { toast } from "@/hooks/use-toast";
 interface SummaryStepProps {
 <<<<<<< HEAD
   formData: QuoteFormData;
+<<<<<<< HEAD
 =======
   formData: QuoteFormData
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
+=======
+updateFormData: (data: Partial<QuoteFormData>) => void 
+}export function SummaryStep ({
+  formData, updateFormData 
+}: SummaryStepProps) {
+  const [isMatching, setIsMatching] = useState (false);
+const [matches, setMatches] = useState<MatchResult[]> ([]);
+//Run AI matching when the component mounts useEffect ( () => {
+  const runMatching = async () => {
+  if (!formData.projectDescription) return;
+try {
+  //Create a query string from the form data const queryString = ` $ {
+  formData.projectName 
+}//Get AI matches const results = await findMatches (queryString;
+formData.serviceType;
+3);
+}finally {
+  setIsMatching (false)
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);
 <<<<<<< HEAD

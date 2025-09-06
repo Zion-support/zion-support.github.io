@@ -6,7 +6,11 @@ import { Menu, X } from "lucide-react",
 import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {

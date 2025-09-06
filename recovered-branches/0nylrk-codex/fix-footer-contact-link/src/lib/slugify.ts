@@ -21,7 +21,13 @@ export function slugify(title: string, separator = "-"): string {
  * This simply splits the slug on the separator and
  * capitalizes each word.
  */
+<<<<<<< HEAD
 export function unslugify(slug: string, separator = "-"): string {
+=======
+}
+
+export function unslugify(slug: string, separator = '-'): string {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return slug
     .split(separator)
     .filter(Boolean)

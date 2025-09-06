@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true
@@ -25,3 +26,11 @@ const nextConfig = {
   distDir: '.next'
 }
 module.exports = nextConfig;
+=======
+  };
+};
+,
+}
+
+export default nextConfig,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

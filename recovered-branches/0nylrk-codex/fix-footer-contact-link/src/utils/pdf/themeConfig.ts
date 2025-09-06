@@ -8,11 +8,17 @@ export interface PdfThemeColors {
   heading: string;
 <<<<<<< HEAD
   subheading: string;
+<<<<<<< HEAD
 =======
   subheading: string
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   accent: string
 }
+=======
+  accent: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
 <<<<<<< HEAD
   return theme;

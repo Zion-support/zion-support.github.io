@@ -29,9 +29,19 @@ const faqs = [
     question: "What is Zion's Green IT and recycling program?"
     answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."}
   {
+<<<<<<< HEAD
     question: "Are there any fees for listing my products or services?"
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    question: 'Are there any fees for listing my products or services?',
+    answer:
+      'No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached.',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">

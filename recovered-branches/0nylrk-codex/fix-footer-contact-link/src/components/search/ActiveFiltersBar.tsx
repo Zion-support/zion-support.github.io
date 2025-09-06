@@ -11,6 +11,7 @@ interface ActiveFiltersBarProps {
   searchQuery: string;
   onRemoveFilter: (filterType: string, value: string) => void;
   onRemoveRating: () => void;
+<<<<<<< HEAD
 =======
   selectedProductTypes: string[]
   selectedLocations: string[]
@@ -22,6 +23,11 @@ interface ActiveFiltersBarProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClearSearch: () => void
 }
+=======
+  onClearSearch: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ActiveFiltersBar({
   selectedProductTypes;
   selectedLocations;

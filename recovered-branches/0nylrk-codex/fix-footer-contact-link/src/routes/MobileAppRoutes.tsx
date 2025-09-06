@@ -14,7 +14,14 @@ const MobileAppRoutes = () => {
       <Route path="/mobile-launch" element={<MobileLaunchPage />} />
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default MobileAppRoutes;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

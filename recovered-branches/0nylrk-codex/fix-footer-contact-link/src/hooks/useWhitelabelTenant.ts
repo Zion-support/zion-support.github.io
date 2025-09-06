@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
@@ -30,6 +31,24 @@ export interface WhitelabelTenant {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   email_template_override: Record<string, any> | null
 }
+=======
+ // If running in the browser, bail out early when offline if (typeof navigator !== 'undefined' && !navigator.onLine) {
+  // Build the query parameters const params = externalSubdomain ? `?subdomain=$ {
+  encodeURIComponent (externalSubdomain) 
+}` const {
+  data, error: functionError 
+}= await supabase.functions.invoke (`$ {
+  functionName 
+}$ {
+  params 
+}`;
+{
+  headers: {
+  'Content-Type': 'application/json'
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
   const [isLoading, setIsLoading] = useState(true);
@@ -102,6 +121,9 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
   return { tenant, isLoading, error }
 }
 // Hook to check if current user is a tenant admin
+}
+}
+
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -118,7 +140,13 @@ export function useTenantAdminStatus(tenantId?: string) {
           setIsAdmin(false);
           return
         }
+<<<<<<< HEAD
         const userId = sessionData.session.user.id;
+=======
+}
+
+const userId = sessionData.session.user.id;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         const { data, error } = await supabase
           .from('tenant_administrators')
           .select('*')

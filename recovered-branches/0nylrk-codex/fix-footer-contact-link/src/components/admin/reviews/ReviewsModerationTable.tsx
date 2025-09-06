@@ -139,9 +139,18 @@ export function ReviewsModerationTable({
       </div>
     )
   }
+<<<<<<< HEAD
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
   }
+=======
+}
+
+const handleApprove = (reviewId: string) => {
+    updateReviewStatus({ reviewId, status: 'approved' });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   }

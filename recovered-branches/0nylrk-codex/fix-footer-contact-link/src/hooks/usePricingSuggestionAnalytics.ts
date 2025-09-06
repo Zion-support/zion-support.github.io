@@ -22,7 +22,11 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[],
   isLoading: boolean;
+<<<<<<< HEAD
   error: string | null
+=======
+  error: string | null;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function usePricingSuggestionAnalytics(days;

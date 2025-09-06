@@ -1,6 +1,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2  } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
@@ -124,12 +125,142 @@ import {
   Target as TargetIcon
   Zap as ZapIcon2;
 } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import {
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  ChevronRight,
+  Crown,
+  Infinity,
+  Check,
+  X,
+  AlertTriangle,
+  Info,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Users as UsersIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon,
+  Cloud as CloudIcon,
+  Smartphone as SmartphoneIcon,
+  Palette as PaletteIcon,
+  Search as SearchIcon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  Calendar as CalendarIcon,
+  CreditCard as CreditCardIcon,
+  BarChart3 as BarChart3Icon,
+  Settings as SettingsIcon,
+  Code as CodeIcon,
+  BookOpen as BookIcon,
+  Activity as ActivityIcon,
+  Database as DatabaseIcon2,
+  Play as PlayIcon,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPin as MapPinIcon,
+  Filter as FilterIcon,
+  Grid as GridIcon,
+  List as ListIcon,
+  ChevronDown as ChevronDownIcon,
+  ChevronUp as ChevronUpIcon,
+  Sparkles as SparklesIcon,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Globe2 as Globe2Icon,
+  Bot as BotIcon,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  Heart,
+  Share2,
+  Download,
+  Bookmark,
+  ThumbsUp,
+  MessageCircle,
+  Share,
+  Users as UsersIcon2,
+  Target as TargetIcon,
+  Zap as ZapIcon2,;
+} from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+<<<<<<< HEAD
 import { revolutionaryAI2025Services  } from '../data/revolutionary-2025-ai-services';
 import { revolutionaryITInfrastructure2025Services  } from '../data/revolutionary-2025-it-infrastructure';
 import { revolutionary2025MicroSaasServices  } from '../data/revolutionary-2025-micro-saas';
+=======
+import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
+import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
+import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Revolutionary2025Pricing() {
 <<<<<<< HEAD
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
@@ -138,6 +269,7 @@ export default function Revolutionary2025Pricing() {
 =======
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
+<<<<<<< HEAD
   );  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -149,6 +281,25 @@ export default function Revolutionary2025Pricing() {
     ...revolutionaryAI2025Services
     ...revolutionaryITInfrastructure2025Services
     ...revolutionary2025MicroSaasServices,  ];
+=======
+  );
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+  // Combine all revolutionary services
+  const allRevolutionaryServices = [
+    ...revolutionaryAI2025Services,
+    ...revolutionaryITInfrastructure2025Services,
+    ...revolutionary2025MicroSaasServices,
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Service categories
   const serviceCategories = [
     {
@@ -202,7 +353,13 @@ export default function Revolutionary2025Pricing() {
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
+<<<<<<< HEAD
     return basePrice;  }
+=======
+    return basePrice;
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -212,6 +369,7 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
         'Access to 25+ Core Services'
         'Basic AI Integration'
         'Standard Support (24/7)'
@@ -284,6 +442,85 @@ export default function Revolutionary2025Pricing() {
     timeToValue: '< 30 days'
     globalReach: '150+ countries',  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        'Access to 25+ Core Services',
+        'Basic AI Integration',
+        'Standard Support (24/7)',
+        '30-Day Free Trial',
+        'Basic Analytics Dashboard',
+        'Email Support',
+        '99.5% Uptime Guarantee',
+        'Standard Security Features',
+      ],
+      icon: <Sparkles className='w-8 h-8' />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaVariant: 'secondary' as const,
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 299 : 239,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+        'Access to 50+ Services',
+        'Advanced AI Integration',
+        'Priority Support (24/7)',
+        '60-Day Free Trial',
+        'Advanced Analytics Dashboard',
+        'Phone & Email Support',
+        '99.9% Uptime Guarantee',
+        'Advanced Security Features',
+        'Custom Integrations',
+        'Performance Monitoring',
+      ],
+      icon: <Rocket className='w-8 h-8' />,
+      variant: 'ai-futuristic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaVariant: 'primary' as const,
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 999 : 799,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+        'Access to ALL Services',
+        'Full AI & Quantum Integration',
+        'Dedicated Support Team',
+        '90-Day Free Trial',
+        'Enterprise Analytics Suite',
+        '24/7 Dedicated Support',
+        '99.99% Uptime Guarantee',
+        'Enterprise Security Features',
+        'Custom Development',
+        'White-label Solutions',
+        'API Access',
+        'SLA Guarantees',
+      ],
+      icon: <Crown className='w-8 h-8' />,
+      variant: 'quantum-futuristic' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      ctaVariant: 'primary' as const,
+    },
+  ];
+
+  // Market analysis
+  const marketAnalysis = {
+    totalMarketSize: '$150B+',
+    growthRate: '250% annually',
+    customerSatisfaction: '98%',
+    averageROI: '500%',
+    timeToValue: '< 30 days',
+    globalReach: '150+ countries',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className='min-h-screen'>
@@ -318,11 +555,22 @@ export default function Revolutionary2025Pricing() {
           <link
             rel='canonical'
             href='https://ziontechgroup.com/revolutionary-2025-pricing'
+<<<<<<< HEAD
           />        </Head>
+=======
+          />
+        </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <UltraAdvancedNavigation />
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -343,7 +591,12 @@ export default function Revolutionary2025Pricing() {
                     setBillingCycle(
                       billingCycle === 'monthly' ? 'yearly' : 'monthly'
                     )
+<<<<<<< HEAD
                   }                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
+=======
+                  }
+                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
                 >
@@ -423,14 +676,24 @@ export default function Revolutionary2025Pricing() {
                   <div className='text-2xl font-bold text-pink-400'>
                     {marketAnalysis.globalReach}
                   </div>
+<<<<<<< HEAD
                   <div className='text-xs text-gray-400'>Global Reach</div>                </motion.div>
+=======
+                  <div className='text-xs text-gray-400'>Global Reach</div>
+                </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </div>
         </section>
         {/* Pricing Tiers */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -445,7 +708,13 @@ export default function Revolutionary2025Pricing() {
                 include our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
+=======
+
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+              {pricingTiers.map((tier, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={tier.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -454,15 +723,29 @@ export default function Revolutionary2025Pricing() {
                   viewport={{ once: true }}
                   className={`relative ${
                     tier.popular
+<<<<<<< HEAD
                       ? 'scale-105 border-2 border-blue-500'                      : 'border border-gray-700'
+=======
+                      ? 'scale-105 border-2 border-blue-500'
+                      : 'border border-gray-700'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
                 >
                   {tier.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold'>                        Most Popular
                       </div>
                     </div>
                   )}
+=======
+                      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold'>
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <div className='text-center mb-8'>
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4'>
                       {tier.icon}
@@ -478,18 +761,37 @@ export default function Revolutionary2025Pricing() {
                       <span className='text-gray-400'>{tier.period}</span>
                     </div>
                     {tier.savings && (
+<<<<<<< HEAD
                       <div className='text-green-400 text-sm font-semibold mb-6'>                        {tier.savings}
                       </div>
                     )}
                   </div>
+=======
+                      <div className='text-green-400 text-sm font-semibold mb-6'>
+                        {tier.savings}
+                      </div>
+                    )}
+                  </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <ul className='space-y-4 mb-8'>
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-start gap-3'>
                         <Check className='w-5 h-5 text-green-400 mt-0.5 flex-shrink-0' />
+<<<<<<< HEAD
                         <span className='text-gray-300'>{feature}</span>                      </li>
                     ))}
                   </ul>
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
+=======
+                        <span className='text-gray-300'>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>
+                    {tier.cta}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </button>
                 </motion.div>
               ))}
@@ -498,7 +800,12 @@ export default function Revolutionary2025Pricing() {
         </section>
         {/* Service Pricing Grid */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -509,12 +816,22 @@ export default function Revolutionary2025Pricing() {
                 Individual Service Pricing
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+<<<<<<< HEAD
                 Choose individual services or bundle them for maximum savings.                All services include free trials and comprehensive support.
+=======
+                Choose individual services or bundle them for maximum savings.
+                All services include free trials and comprehensive support.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </p>
             </motion.div>
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
+<<<<<<< HEAD
               {serviceCategories.map(category => (                <button
+=======
+              {serviceCategories.map(category => (
+                <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
@@ -525,14 +842,24 @@ export default function Revolutionary2025Pricing() {
                 >
                   <category.icon className='w-5 h-5' />
                   {category.name}
+<<<<<<< HEAD
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}
+=======
+                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
+                    {category.count}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </span>
                 </button>
               ))}
             </div>
             {/* Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<<<<<<< HEAD
               {filteredServices.map(service => (                <motion.div
+=======
+              {filteredServices.map(service => (
+                <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -555,7 +882,12 @@ export default function Revolutionary2025Pricing() {
                     </div>
                     {service.popular && (
                       <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>
+<<<<<<< HEAD
                         <Star className='w-3 h-3' />                        Popular
+=======
+                        <Star className='w-3 h-3' />
+                        Popular
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     )}
                   </div>
@@ -576,7 +908,12 @@ export default function Revolutionary2025Pricing() {
                       <span className='text-white'>{service.rating}</span>
                       <span className='text-gray-400 text-sm'>
                         ({service.reviews})
+<<<<<<< HEAD
                       </span>                    </div>
+=======
+                      </span>
+                    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                   {/* Key Features */}
                   <div className='mb-4'>
@@ -589,11 +926,21 @@ export default function Revolutionary2025Pricing() {
                           key={idx}
                           className='flex items-center gap-2 text-sm text-gray-400'
                         >
+<<<<<<< HEAD
                           <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>                          {feature}
                         </div>
                       ))}
                       {service.features.length > 3 && (
                         <div className='text-xs text-gray-500 mt-1'>                          +{service.features.length - 3} more features
+=======
+                          <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
+                          {feature}
+                        </div>
+                      ))}
+                      {service.features.length > 3 && (
+                        <div className='text-xs text-gray-500 mt-1'>
+                          +{service.features.length - 3} more features
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                       )}
                     </div>
@@ -614,17 +961,32 @@ export default function Revolutionary2025Pricing() {
                       Learn More
                     </button>
                     <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
+<<<<<<< HEAD
                       <Phone className='w-4 h-4' />                    </button>
                   </div>
                   {/* Hover Effects */}
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>                </motion.div>
+=======
+                      <Phone className='w-4 h-4' />
+                    </button>
+                  </div>
+
+                  {/* Hover Effects */}
+                  <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>
+                </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </div>
           </div>
         </section>
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -671,7 +1033,12 @@ export default function Revolutionary2025Pricing() {
                   Get Custom Quote
                 </button>
                 <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
+<<<<<<< HEAD
                   <BookOpen className='w-5 h-5 mr-2' />                  Download Pricing Guide
+=======
+                  <BookOpen className='w-5 h-5 mr-2' />
+                  Download Pricing Guide
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
             </motion.div>
@@ -679,4 +1046,8 @@ export default function Revolutionary2025Pricing() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

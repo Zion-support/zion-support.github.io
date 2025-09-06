@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 interface ResultsHeaderProps {
   isLoading: boolean
   resultCount: number
+=======
+import { Loader2 } from 'lucide-react';
+
+interface ResultsHeaderProps {
+  isLoading: boolean;
+  resultCount: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className='flex items-center mb-6 text-zion-slate-light'>
       {isLoading ? (
         <div className='flex items-center'>
+<<<<<<< HEAD
           <Loader2 className='h-4 w-4 animate-spin mr-2' />          <span>Loading talents...</span>
         </div>
       ) : (
@@ -34,12 +45,16 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       {isLoading ? (
         <div className="flex items-center">
           <Loader2 className="h-4 w-4 animate-spin mr-2" />
+=======
+          <Loader2 className='h-4 w-4 animate-spin mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <span>Loading talents...</span>
         </div>
       ) : (
         <span>
           {resultCount === 0
             ? 'No talents found. Try adjusting your filters.'
+<<<<<<< HEAD
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
           ) : (
@@ -51,3 +66,10 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   )
 }
 }
+=======
+            : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}
+        </span>
+      )}
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

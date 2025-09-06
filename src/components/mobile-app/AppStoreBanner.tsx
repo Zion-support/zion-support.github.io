@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+import { X } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage";
@@ -55,8 +63,14 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 '"}
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,5 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const isClient = typeof window !== 'undefined';
 <<<<<<< HEAD
 type Web3LoginModalProps = any;
@@ -11,19 +15,29 @@ type Web3LoginModalProps = {
     address: string;
     chain: 'evm' | 'sol';
     displayName?: string;
+<<<<<<< HEAD
   }) => void;};const isClient = typeof window !== 'undefined';
 type Web3LoginModalProps = {
   isOpen: boolean
   onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 }
+=======
+  }) => void;
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!isOpen) {
       setError(null);
+<<<<<<< HEAD
       setLoading(false);    }      setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }, [isOpen]);
   const handleEvmConnect = useCallback(async () => {
@@ -33,18 +47,32 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const Web3ModalCtor = (await import('web3modal')).default;
       const WalletConnectProvider = (
         await import('@walletconnect/web3-provider')
+<<<<<<< HEAD
       ).default;      const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
+=======
+      ).default;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const web3Modal = new Web3ModalCtor({
         cacheProvider: false
         providerOptions: {
           walletconnect: {
             package: WalletConnectProvider
             options: {
+<<<<<<< HEAD
               rpc: { 1: 'https://cloudflare-eth.com' }
             }
           }
         }
       });              rpc: { 1: 'https://cloudflare-eth.com' }}}}})
+=======
+              rpc: { 1: 'https://cloudflare-eth.com' },
+            },
+          },
+        },
+      });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
@@ -57,11 +85,21 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const origin = window.location.origin;
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
+<<<<<<< HEAD
       const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`
+=======
+      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const signature = await signer.signMessage(siweMessage);
       const verifyRes = await fetch('/api/auth/verify-evm', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           message: siweMessage
           signature
@@ -76,6 +114,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       console.error(e);
       setError(e?.message |'Wallet connection failed');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify signature');
       onLoggedIn?.({ address, chain: 'evm' })
       onClose()
@@ -84,6 +123,9 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setError(e?.message |'Wallet connection failed')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }, [onClose, onLoggedIn]);
   const handlePhantomConnect = useCallback(async () => {
@@ -91,11 +133,18 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     setLoading(true);
     try {
       const provider = (window as any)?.solana;
+<<<<<<< HEAD
       if (!provider |!provider.isPhantom) {
+=======
+      if (!provider || !provider.isPhantom) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         throw new Error('Phantom not found. Install the Phantom extension');
       }
-      const resp = await provider.connect();
+}
+
+const resp = await provider.connect();
       const publicKey: string = resp.publicKey.toString();
+<<<<<<< HEAD
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
       const statement =
@@ -110,12 +159,26 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`
+=======
+
+      const nonceRes = await fetch('/api/auth/nonce');
+      const { nonce } = await nonceRes.json();
+
+      const statement =
+        'Sign in to Zion with your Solana wallet. No gas required.';
+      const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const encodedMessage = new TextEncoder().encode(message);
       const { signature } = await provider.signMessage(encodedMessage, 'utf8');
       const bs58 = (await import('bs58')).default;
       const verifyRes = await fetch('/api/auth/verify-sol', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           message
           signature: bs58.encode(signature)
@@ -129,6 +192,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       console.error(e);
       setError(e?.message |'Phantom connection failed');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
       onLoggedIn?.({ address: publicKey, chain: 'sol' })
       onClose()
@@ -137,6 +201,9 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -181,6 +248,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       </div>
     </div>
   );
+<<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
@@ -207,3 +275,11 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return <ModalInner {...props} />
 }
+=======
+}
+}
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {
+  if (!isClient) return null;
+  return <ModalInner {...props} />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -18,8 +18,14 @@ interface ProfileHeroProps {
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+<<<<<<< HEAD
   profileType: 'service' | 'talent'
 }
+=======
+  profileType: 'service' | 'talent';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileHero({
   name;
   title;

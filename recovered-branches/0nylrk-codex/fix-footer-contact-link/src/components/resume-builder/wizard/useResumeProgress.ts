@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { Resume } from '@/types/resume';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect  } from 'react';
 import { Resume } from '@/types/resume';
@@ -14,7 +21,14 @@ export const useResumeProgress = (resume: Resume | null) => {
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
     let completed = 0;
+=======
+}
+
+let completed = 0;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Basic info is always considered (1 point)
     completed += 1;
     // Work experience (1 point if at least one entry)
@@ -33,7 +47,13 @@ export const useResumeProgress = (resume: Resume | null) => {
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
     const progressPercentage = (completed / 5) * 100;
+=======
+}
+
+const progressPercentage = (completed / 5) * 100;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setProgress(progressPercentage);
   }, [resume]);
   return progress;

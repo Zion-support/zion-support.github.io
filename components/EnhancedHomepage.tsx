@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -22,6 +23,9 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard',
 import PerformanceMonitor from './PerformanceMonitor',
 =======
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+=======
+ //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -36,6 +40,7 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0
+<<<<<<< HEAD
 }
 visible: {
   opacity: 1, transition: {
@@ -498,3 +503,22 @@ const EnhancedHomepage: React.FC = () => {
 }
 export default EnhancedHomepage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+visible: {
+  opacity: 1, transition: {
+  duration: 0.8, staggerChildren: 0.1
+
+};
+
+};
+
+};
+
+};
+
+};
+}
+
+export default EnhancedHomepage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

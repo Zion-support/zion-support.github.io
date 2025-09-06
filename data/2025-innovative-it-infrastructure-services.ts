@@ -3,8 +3,13 @@ export const innovativeITInfrastructureServices2025 = null;
 =======
 export const innovativeITInfrastructureServices2025 = [
   {
+<<<<<<< HEAD
     id: 'quantum-edge-computing-orchestrator'
     name: 'Quantum Edge Computing Orchestrator'
+=======
+    id: 'quantum-edge-computing-orchestrator',
+    name: 'Quantum Edge Computing Orchestrator',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
@@ -428,6 +433,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'
     ]
     compliance: [
+<<<<<<< HEAD
       'SOC2'
       'ISO 27001'
       'Uptime Institute'
@@ -442,3 +448,13 @@ export const innovativeITInfrastructureServices2025 = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'SOC2',
+      'ISO 27001',
+      'Uptime Institute',
+      'Energy Star',
+      'Industry-specific regulations',
+    ],
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
@@ -15,10 +16,22 @@ export type PdfExportButtonProps = {
   theme?: 'light' | 'dark'
 }
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {
+=======
+ html2pdf () .set (opt) .from (element) .save ()
+};
+}
+
+export default function PdfExportButton({
+  targetRef,
+  fileName = 'resume.pdf',
+}: PdfExportButtonProps) {
+  const onClick = async () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!targetRef.current) return;
     const element = targetRef.current;
     const html2pdf = (await import('html2pdf.js')).default;
     const opt = {
+<<<<<<< HEAD
       margin: [10, 10, 10, 10]
       image: { type: 'jpeg', quality: 0.98 }
       html2canvas: { scale: 2, useCORS: true }
@@ -40,3 +53,19 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     </button>
 );
 }
+=======
+      margin: [10, 10, 10, 10],
+      filename: fileName,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    } as any;
+
+    html2pdf().set(opt).from(element).save();
+  };
+
+    >
+      Download as PDF
+    </button>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

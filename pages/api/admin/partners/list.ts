@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
+<<<<<<< HEAD
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const usingPlaceholder = true; // Mock implementation
@@ -9,6 +10,9 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -38,7 +42,11 @@ export default async function handler(
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
+<<<<<<< HEAD
       .from("partners")
+=======
+      .from('partners')
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       .select(
         "code, name, status, commission_rate, payout_method, niche, socials, created_at"
       )
@@ -49,4 +57,8 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

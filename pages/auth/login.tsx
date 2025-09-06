@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+import Link from 'next/link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Head from 'next/head';
 <<<<<<< HEAD
 import { signIn  } from 'next-auth/react';
@@ -37,6 +44,10 @@ import {
   CardHeader
   CardTitle;
 } from '@/components/ui/card';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const LoginPage = () => {
   const router = useRouter();
   const { t } = useTranslation();
@@ -46,7 +57,12 @@ const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false); // For login form submission
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true); // For initial session check
+<<<<<<< HEAD
   const [sessionChecked, setSessionChecked] = useState(false); // New state: true after initial getSession completes  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
+=======
+  const [sessionChecked, setSessionChecked] = useState(false); // New state: true after initial getSession completes
+  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
@@ -58,23 +74,41 @@ const LoginPage = () => {
     type: 'success' | 'error';
     text: string
   } | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
+<<<<<<< HEAD
     logInfo('LoginPage: Initial session check effect runs.')
+=======
+    logInfo('LoginPage: Initial session check effect runs.');
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const sessionTimeoutId = setTimeout(() => {
       if (mounted) {
         logWarn('LoginPage: Session check timeout after 5 seconds');
         setSessionCheckTimedOut(true);
         setIsCheckingSession(false); // Allow form to render if timeout
+<<<<<<< HEAD
         setSessionChecked(true); // Mark check as complete even on timeout      }
+=======
+        setSessionChecked(true); // Mark check as complete even on timeout
+      }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }, 5000);
     const checkSessionAndListen = async () => {
       if (!mounted) return;
       setIsCheckingSession(true);
       try {
+<<<<<<< HEAD
         logInfo('LoginPage: Calling supabase.auth.getSession()')
+=======
+        logInfo('LoginPage: Calling supabase.auth.getSession()');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         const {
           data: { session }
           error: sessionError
@@ -97,17 +131,31 @@ const LoginPage = () => {
           logErrorToProduction('LoginPage: Exception during getSession:', {
             data: e
           });
+<<<<<<< HEAD
           clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
+=======
+          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too
+        }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       } finally {
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
+<<<<<<< HEAD
           );        }
+=======
+          );
+        }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       // Listener for auth state changes
+<<<<<<< HEAD
       logInfo('LoginPage: Setting up onAuthStateChange listener.')
+=======
+      logInfo('LoginPage: Setting up onAuthStateChange listener.');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const { data: authListener } = supabase.auth.onAuthStateChange(
         (event: AuthChangeEvent, session: Session | null) => {
           if (!mounted) return
@@ -130,7 +178,13 @@ const LoginPage = () => {
         // Cleanup for listener
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
         authListener?.subscription?.unsubscribe();
+<<<<<<< HEAD
       };    }
+=======
+      };
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const unsubscribePromise = checkSessionAndListen();
     return () => {
       mounted = false;
@@ -176,6 +230,10 @@ const LoginPage = () => {
       logInfo(
         `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
@@ -197,12 +255,22 @@ const LoginPage = () => {
       } as AuthError);
       return;
     }
+<<<<<<< HEAD
     setIsResendingVerification(true);
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ email })
+=======
+
+    setIsResendingVerification(true);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       if (response.ok) {
         setVerificationEmailSent(true);
@@ -220,8 +288,15 @@ const LoginPage = () => {
         message: 'Failed to resend verification email. Please try again.'
       } as AuthError);
     } finally {
+<<<<<<< HEAD
       setIsResendingVerification(false);    }
   }
+=======
+      setIsResendingVerification(false);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleProactiveResendVerification = async (e: FormEvent) => {
     e.preventDefault()
     if (!proactiveResendEmail) {
@@ -229,14 +304,28 @@ const LoginPage = () => {
         type: 'error'
         text: 'Please enter your email address.'
       });
+<<<<<<< HEAD
       return;    }
+=======
+      return;
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
     try {
       const response = await fetch('/api/resend-verification-email', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ email: proactiveResendEmail }),      });
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: proactiveResendEmail }),
+      });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const data = await response.json();
       if (response.ok) {
         setProactiveResendMessage({
@@ -255,14 +344,26 @@ const LoginPage = () => {
         text: 'An unexpected error occurred. Please try again.'
       });
     } finally {
+<<<<<<< HEAD
       setIsProactivelyResending(false);    }
   }
+=======
+      setIsProactivelyResending(false);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
     setIsEmailUnverified(false);
+<<<<<<< HEAD
     setVerificationEmailSent(false)
+=======
+    setVerificationEmailSent(false);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     try {
       logInfo('Attempting Supabase login with email:', { data: email });
       const { data, error: signInError } =
@@ -327,7 +428,12 @@ const LoginPage = () => {
         }
       } else if (data.user) {
         logInfo('Supabase sign-in successful, user:', { data: data.user });
+<<<<<<< HEAD
         setUser(data.user); // setUser to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook
+=======
+        setUser(data.user); // setUser to trigger useEffect for redirection
+        // Redirection is now handled by the useEffect hook
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       } else {
         // Should not happen if signInError is null and data.user is null
         logWarn('Supabase sign-in returned no error but no user.');
@@ -358,8 +464,15 @@ const LoginPage = () => {
         message: exceptionMessage
       } as AuthError);
     } finally {
+<<<<<<< HEAD
       setIsLoading(false);    }
   }
+=======
+      setIsLoading(false);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Auto-redirect to verification status page for unverified users after showing message
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
@@ -368,7 +481,13 @@ const LoginPage = () => {
       }, 3000);
       return () => clearTimeout(timer);
     }
+<<<<<<< HEAD
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+=======
+    return undefined; // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -383,7 +502,13 @@ const LoginPage = () => {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
     );  }
+=======
+    );
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
@@ -396,7 +521,13 @@ const LoginPage = () => {
           <p className='text-gray-600 mb-4'>Redirecting to your dashboard...</p>
         </div>
       </div>
+<<<<<<< HEAD
     );  }
+=======
+    );
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
   logInfo(
@@ -408,7 +539,13 @@ const LoginPage = () => {
     logWarn(
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
     );
+<<<<<<< HEAD
     return null; // Or a minimal loader/empty div  }
+=======
+    return null; // Or a minimal loader/empty div
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -419,7 +556,12 @@ const LoginPage = () => {
         />
       </Head>
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
         <Card className='w-full max-w-md'>          <CardHeader>
+=======
+        <Card className='w-full max-w-md'>
+          <CardHeader>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -440,10 +582,19 @@ const LoginPage = () => {
                   id='email'
                   type='email'
                   value={email}
+<<<<<<< HEAD
                   onChange={e => setEmail(e.target.value)}                  required
                   disabled={isLoading}
                 />
               </div>
+=======
+                  onChange={e => setEmail(e.target.value)}
+                  required
+                  disabled={isLoading}
+                />
+              </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='space-y-2'>
                 <label htmlFor='password' className='text-sm font-medium'>
                   Password
@@ -452,10 +603,19 @@ const LoginPage = () => {
                   id='password'
                   type='password'
                   value={password}
+<<<<<<< HEAD
                   onChange={e => setPassword(e.target.value)}                  required
                   disabled={isLoading}
                 />
               </div>
+=======
+                  onChange={e => setPassword(e.target.value)}
+                  required
+                  disabled={isLoading}
+                />
+              </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Button
                 type='submit'
                 className='w-full'
@@ -474,7 +634,12 @@ const LoginPage = () => {
                 <Link
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
+<<<<<<< HEAD
                 >                  Sign up
+=======
+                >
+                  Sign up
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Link>
               </p>
             </div>
@@ -482,6 +647,14 @@ const LoginPage = () => {
         </Card>
       </div>
     </>
+<<<<<<< HEAD
 );
 };export default LoginPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default LoginPage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

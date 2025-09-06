@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Skill } from '@/types/resume';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useResume } from '@/hooks/useResume';
+import { SkillsFormProps } from './types';
+import { SkillsList } from './SkillsList';
+import { AddSkillForm } from './AddSkillForm';
+import { BulkAddSkills } from './BulkAddSkills';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { Skill  } from '@/types/resume';

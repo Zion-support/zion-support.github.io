@@ -107,6 +107,11 @@ const trustedCompanies = [
     alt: "Thomson Reuters logo"
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TrustedBySection() {
   // Use state to track logos that failed to load
   const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});

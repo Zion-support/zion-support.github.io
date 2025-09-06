@@ -8,6 +8,11 @@ const useTheme = () => ({
   theme: "dark"
   setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
 });
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

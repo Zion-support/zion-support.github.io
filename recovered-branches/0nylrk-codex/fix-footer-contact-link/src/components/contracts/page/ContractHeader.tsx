@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
   onCreateClick: () => void;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
   return (
     <div className="flex justify-between items-center mb-8">

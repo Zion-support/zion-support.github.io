@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { MilestoneActivity } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import { useAuth  } from '@/hooks/useAuth';

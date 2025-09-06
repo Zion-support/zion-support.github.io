@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react';
+import { useMessaging } from '@/context/MessagingContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import {
+  ConversationsList,
+  ConversationDetailView,;
+} from '@/components/messaging';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video  } from 'lucide-react';
@@ -45,7 +62,13 @@ export default function MessagingInbox() {
       toast.error("Please select a conversation first");
       return
     }
+<<<<<<< HEAD
     const roomId = `msg-${activeConversation.id}`;
+=======
+}
+
+const roomId = `msg-${activeConversation.id}`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setActiveCall(roomId);
     // Show toast notification
     toast.success("Starting video call", {

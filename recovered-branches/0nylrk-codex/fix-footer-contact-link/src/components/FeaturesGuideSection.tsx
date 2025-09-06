@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -14,6 +15,24 @@ import {
   Plus;
   HelpCircle
 } from "lucide-react",
+=======
+import { Link } from 'react-router-dom';
+import { GradientHeading } from './GradientHeading';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from './ui/button';
+import {
+  Users,
+  Zap,
+  Settings,
+  MessageSquare,
+  Sparkles,
+  ArrowRight,
+  BarChart3,
+  Plus,
+  HelpCircle,;
+} from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function FeaturesGuideSection() {
   const features = null;

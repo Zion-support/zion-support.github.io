@@ -1,7 +1,19 @@
 import type { BookProject } from '../book/bookTypes';
+<<<<<<< HEAD
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+=======
+}
+
+export function buildPrintableHtml(project: BookProject): string {
+  const { meta, chapters, visuals } = project;
+  const quotesHtml = visuals.quoteCallouts
+    .map(
+      q =>
+        `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`
+    )
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     .join('\n');
   const chapterHtml = chapters;
     .map(;

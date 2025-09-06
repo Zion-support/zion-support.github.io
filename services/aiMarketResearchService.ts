@@ -237,5 +237,13 @@ export class AIMarketResearchService {
     }
   }
 }
+<<<<<<< HEAD
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+export const aiMarketResearchService = new AIMarketResearchService(
+  process.env.MARKET_RESEARCH_API_KEY || 'demo-key'
+);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

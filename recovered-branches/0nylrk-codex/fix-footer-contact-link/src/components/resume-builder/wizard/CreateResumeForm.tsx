@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { CreateResumeFormProps } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import { useState } from "react",

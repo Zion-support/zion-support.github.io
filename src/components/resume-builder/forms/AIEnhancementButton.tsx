@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -9,7 +16,13 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementButton({
 <<<<<<< HEAD
   currentContent;
@@ -41,6 +54,7 @@ export function AIEnhancementButton({
     if (enhancedContent) {
       onEnhanced(enhancedContent)
     }
+<<<<<<< HEAD
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -51,6 +65,10 @@ export function AIEnhancementButton({
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {isEnhancing ? (
         <Loader2 className='h-3 w-3 animate-spin' />
@@ -59,6 +77,7 @@ export function AIEnhancementButton({
       )}
       <span className='text-xs'>{buttonText}</span>
     </Button>
+<<<<<<< HEAD
   );      onClick={handleEnhance}
       disabled={isEnhancing}
     >
@@ -71,3 +90,6 @@ export function AIEnhancementButton({
     </Button>
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

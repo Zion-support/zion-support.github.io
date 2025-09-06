@@ -1,5 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticBackground2035() {
 <<<<<<< HEAD
   const canvasRef = null;
@@ -9,16 +15,32 @@ export default function UltraFuturisticBackground2035() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+<<<<<<< HEAD
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+=======
+
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
+<<<<<<< HEAD
       ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
     let animationFrameId: number;
+=======
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+    }
+}
+
+let animationFrameId: number;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     let particles: Array<{
       x: number;
       y: number;
@@ -26,6 +48,7 @@ export default function UltraFuturisticBackground2035() {
       vy: number;
       size: number;
       opacity: number;
+<<<<<<< HEAD
       color: string;    }> = [];      x: number
       y: number
       vx: number
@@ -33,6 +56,11 @@ export default function UltraFuturisticBackground2035() {
       size: number
       opacity: number
       color: string
+=======
+      color: string;
+    }> = [];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Initialize particles
     const initParticles = () => {
       particles = [];
@@ -44,6 +72,7 @@ export default function UltraFuturisticBackground2035() {
           : 100;
       for (let i = 0; i < particleCount; i++) {
         particles.push({
+<<<<<<< HEAD
           x: (Math.random() * canvas.width) / (window.devicePixelRatio |1)
           y: (Math.random() * canvas.height) / (window.devicePixelRatio |1),          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4
@@ -65,6 +94,18 @@ export default function UltraFuturisticBackground2035() {
           ]
         });          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
         })
+=======
+          x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
+          y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1),
+          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
+          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
+          size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
+          opacity: Math.random() * 0.35 + 0.08,
+          color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
+            Math.floor(Math.random() * 4)
+          ],
+        });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     // Update and draw particles
@@ -79,12 +120,19 @@ export default function UltraFuturisticBackground2035() {
         if (particle.x > canvas.width / (window.devicePixelRatio |1))
           particle.x = 0;
         if (particle.y < 0)
+<<<<<<< HEAD
           particle.y = canvas.height / (window.devicePixelRatio |1);
         if (particle.y > canvas.height / (window.devicePixelRatio |1))
           particle.y = 0;        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio |1);
         if (particle.x > canvas.width / (window.devicePixelRatio |1)) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio |1);
         if (particle.y > canvas.height / (window.devicePixelRatio |1)) particle.y = 0;
+=======
+          particle.y = canvas.height / (window.devicePixelRatio || 1);
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1))
+          particle.y = 0;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -96,7 +144,11 @@ export default function UltraFuturisticBackground2035() {
           ? 0
           : window.innerWidth < 768
             ? 90
+<<<<<<< HEAD
             : 140;        if (maxDistance > 0) {        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
+=======
+            : 140;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
@@ -114,6 +166,7 @@ export default function UltraFuturisticBackground2035() {
                 ctx.stroke();
               }
             }
+<<<<<<< HEAD
           });        }
       });
       if (!prefersReducedMotion) {
@@ -122,10 +175,17 @@ export default function UltraFuturisticBackground2035() {
               }
             }
           })
+=======
+          });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       });
       if (!prefersReducedMotion) {
+<<<<<<< HEAD
         animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles)
+=======
+        animationFrameId = requestAnimationFrame(updateParticles);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     initParticles();
@@ -135,21 +195,33 @@ export default function UltraFuturisticBackground2035() {
       canvas.height = window.innerHeight * (window.devicePixelRatio |1);
       if (ctx) {
         ctx.setTransform(1, 0, 0, 1, 0, 0);
+<<<<<<< HEAD
         ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
       }
       initParticles();    };        ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1)
       }
       initParticles()
     }
+=======
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+      }
+      initParticles();
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
+<<<<<<< HEAD
     };  }, []);        cancelAnimationFrame(animationFrameId)
       }
     }
+=======
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   return (
     <>
@@ -168,6 +240,7 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full'
           animate={{
+<<<<<<< HEAD
             scale: [1, 1.15, 1]
             rotate: [0, 180, 360]
             opacity: [0.22, 0.45, 0.22],          }}
@@ -203,9 +276,34 @@ export default function UltraFuturisticBackground2035() {
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
+=======
+            scale: [1, 1.15, 1],
+            rotate: [0, 180, 360],
+            opacity: [0.22, 0.45, 0.22],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45'
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [45, 225, 405],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
+<<<<<<< HEAD
           className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45'
           animate={{
             scale: [1, 1.3, 1]
@@ -239,6 +337,18 @@ export default function UltraFuturisticBackground2035() {
             duration: 12
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
+=======
+          className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full'
+          animate={{
+            scale: [1, 1.4, 1],
+            y: [0, -20, 0],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         {/* Neon Glow Effects */}
@@ -256,6 +366,7 @@ export default function UltraFuturisticBackground2035() {
             `
               backgroundSize: '50px 50px'
             }}
+<<<<<<< HEAD
           />        </div>
         {/* Animated Grid Lines */}
         <div className="absolute inset-0 opacity-10">
@@ -266,6 +377,9 @@ export default function UltraFuturisticBackground2035() {
             `;
             backgroundSize: '50px 50px'
           }} />
+=======
+          />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
@@ -277,6 +391,7 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`
             }}
             animate={{
+<<<<<<< HEAD
               y: [0, -30, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}            style={{
@@ -293,6 +408,17 @@ export default function UltraFuturisticBackground2035() {
               repeat: Infinity
               delay: Math.random() * 2
               ease: 'easeInOut',            }}              ease: "easeInOut"
+=======
+              y: [0, -30, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
           />
         ))}
@@ -300,16 +426,28 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent'
           animate={{
+<<<<<<< HEAD
             scaleX: [0, 1, 0]
             opacity: [0, 1, 0],          }}
           transition={{
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',          }}
+=======
+            scaleX: [0, 1, 0],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         />
         <motion.div
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
+<<<<<<< HEAD
             scaleX: [0, 1, 0]
             opacity: [0, 1, 0],          }}          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
           animate={{
@@ -335,6 +473,16 @@ export default function UltraFuturisticBackground2035() {
             repeat: Infinity
             delay: 2
             ease: 'easeInOut',          }}            ease: "easeInOut"
+=======
+            scaleX: [0, 1, 0],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            delay: 2,
+            ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         {/* Quantum Dots */}
@@ -347,6 +495,7 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`
             }}
             animate={{
+<<<<<<< HEAD
               scale: [0, 1, 0]
               opacity: [0, 0.8, 0]
               rotate: [0, 360],            }}            style={{
@@ -363,6 +512,17 @@ export default function UltraFuturisticBackground2035() {
               repeat: Infinity
               delay: Math.random() * 5
               ease: 'easeInOut',            }}              ease: "easeInOut"
+=======
+              scale: [0, 1, 0],
+              opacity: [0, 0.8, 0],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
           />
         ))}
@@ -389,6 +549,7 @@ export default function UltraFuturisticBackground2035() {
               r='3'
               fill='url(#neuralGradient)'
               animate={{
+<<<<<<< HEAD
                 r: [3, 6, 3]
                 opacity: [0.3, 0.8, 0.3],              }}          <defs>
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -413,6 +574,16 @@ export default function UltraFuturisticBackground2035() {
                 repeat: Infinity
                 delay: i * 0.5
                 ease: 'easeInOut',              }}                ease: "easeInOut"
+=======
+                r: [3, 6, 3],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+                ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }}
             />
           ))}
@@ -422,6 +593,7 @@ export default function UltraFuturisticBackground2035() {
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
             animate={{
+<<<<<<< HEAD
               scale: [1, 1.1, 1]
               rotate: [0, 90, 180, 270, 360]
               opacity: [0.1, 0.3, 0.1],            }}
@@ -439,11 +611,22 @@ export default function UltraFuturisticBackground2035() {
               duration: 20
               repeat: Infinity
               ease: 'linear'
+=======
+              scale: [1, 1.1, 1],
+              rotate: [0, 90, 180, 270, 360],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
           />
           <motion.div
             className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full'
             animate={{
+<<<<<<< HEAD
               scale: [1, 1.2, 1]
               rotate: [360, 270, 180, 90, 0]
               opacity: [0.1, 0.4, 0.1],            }}
@@ -463,6 +646,16 @@ export default function UltraFuturisticBackground2035() {
               duration: 15
               repeat: Infinity
               ease: 'linear',              ease: "linear"
+=======
+              scale: [1, 1.2, 1],
+              rotate: [360, 270, 180, 90, 0],
+              opacity: [0.1, 0.4, 0.1],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
           />
         </div>
@@ -477,6 +670,7 @@ export default function UltraFuturisticBackground2035() {
                 top: `${i * 5}%`
               }}
               animate={{
+<<<<<<< HEAD
                 height: [8, 32, 8]
                 opacity: [0.3, 1, 0.3],              }}          {[...Array(20)].map((_, i) => (
             <motion.div
@@ -496,11 +690,25 @@ export default function UltraFuturisticBackground2035() {
                 delay: Math.random() * 2
                 ease: 'easeInOut',              }}                ease: "easeInOut"
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+                height: [8, 32, 8],
+                opacity: [0.3, 1, 0.3],
+              }}
+              transition={{
+                duration: 2 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }}
             />
           ))}
         </div>
       </div>
     </>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

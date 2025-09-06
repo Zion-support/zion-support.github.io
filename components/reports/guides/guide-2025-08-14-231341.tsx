@@ -1,4 +1,9 @@
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -34,6 +39,7 @@ export default function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
   );export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -52,3 +58,6 @@ export default function Page() {
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

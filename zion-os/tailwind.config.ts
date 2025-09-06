@@ -20,6 +20,20 @@ const config: Config = {
       backdropBlur: {
         xs: '2px'}
       backgroundImage: {
+<<<<<<< HEAD
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'}}}
   plugins: []}
 export default config;
+=======
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+    },
+  },
+  plugins: [],
+};
+}
+
+export default config;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

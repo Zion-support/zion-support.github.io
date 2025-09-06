@@ -30,6 +30,11 @@ const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required");
   password: z.string().min(6, "Password must be at least 6 characters")});
 type LoginFormValues = z.infer<typeof loginSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function LoginForm() {
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);

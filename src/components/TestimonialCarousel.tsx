@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Carousel;
@@ -39,6 +40,26 @@ import Link from "next/link"
 import Image from "next/image"
 import { CASE_STUDIES } from "@/data/case-studies"
 const testimonials = CASE_STUDIES
+=======
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,;
+} from '@/components/ui/carousel';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Avatar } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Quote } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { CASE_STUDIES } from '@/data/case-studies';
+
+const testimonials = CASE_STUDIES;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TestimonialCarousel() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -67,12 +88,17 @@ export function TestimonialCarousel() {
                   <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
                     <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
                       <div className='flex-shrink-0 flex flex-col items-center'>
+<<<<<<< HEAD
                         <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
+=======
+                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>
+                          <Image
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -89,6 +115,7 @@ export function TestimonialCarousel() {
                         </div>
                       </div>
                       <div className='flex-1'>
+<<<<<<< HEAD
                         <div className='flex items-center gap-3 mb-4'>                          <Image
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
@@ -101,6 +128,9 @@ export function TestimonialCarousel() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
+=======
+                        <div className='flex items-center gap-3 mb-4'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           <Image
                             src={testimonial.companyLogo}
                             alt={`${testimonial.company} logo`}
@@ -126,6 +156,7 @@ export function TestimonialCarousel() {
                       >
                         <Link href={`/case-studies/${testimonial.slug}`}>
                           Read Case Study →
+<<<<<<< HEAD
                         </Link>                      </Button>
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
@@ -140,6 +171,9 @@ export function TestimonialCarousel() {
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
                         <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
+=======
+                        </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </Button>
                     </CardFooter>
                   </Card>
@@ -148,13 +182,21 @@ export function TestimonialCarousel() {
             </CarouselContent>
             <div className='flex justify-center mt-8 gap-2'>
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
+<<<<<<< HEAD
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+=======
+              <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </Carousel>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

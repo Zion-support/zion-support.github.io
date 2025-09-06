@@ -1,7 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Star
   Quote
@@ -20,8 +23,12 @@ interface Testimonial {
   rating: number;
   avatar: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   category: string
 }
+=======
+  category: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const EnhancedTestimonialsSection: React.FC;
 =======
@@ -37,6 +44,7 @@ const EnhancedTestimonialsSection: React.FC;
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
+<<<<<<< HEAD
       id: '1'
       name: 'Dr. Sarah Chen'
       title: 'CTO'
@@ -126,6 +134,80 @@ const EnhancedTestimonialsSection: React.FC = () => {
     { number: '50+', label: 'Enterprise Clients', icon: Users }
     { number: '99.9%', label: 'Client Satisfaction', icon: Award }
     { number: '4.9/5', label: 'Average Rating', icon: Star },  ];    { number: '4.9/5', label: 'Average Rating', icon: Star }
+=======
+      id: '1',
+      name: 'Dr. Sarah Chen',
+      title: 'CTO',
+      company: 'Quantum Dynamics Inc.',
+      content:
+        'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.',
+      rating: 5,
+      avatar: 'SC',
+      category: 'AI & Security',
+    },
+    {
+      id: '2',
+      name: 'Marcus Rodriguez',
+      title: 'VP of Engineering',
+      company: 'SpaceTech Ventures',
+      content:
+        'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.',
+      rating: 5,
+      avatar: 'MR',
+      category: 'Space Technology',
+    },
+    {
+      id: '3',
+      name: 'Dr. Emily Watson',
+      title: 'Research Director',
+      company: 'NeuralLink Research',
+      content:
+        "Zion Tech Group's neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn't considered. The team's expertise is unmatched.",
+      rating: 5,
+      avatar: 'EW',
+      category: 'Emerging Tech',
+    },
+    {
+      id: '4',
+      name: 'James Thompson',
+      title: 'CEO',
+      company: 'EdgeFlow Systems',
+      content:
+        'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.',
+      rating: 5,
+      avatar: 'JT',
+      category: 'Infrastructure',
+    },
+    {
+      id: '5',
+      name: 'Dr. Lisa Park',
+      title: 'Chief Innovation Officer',
+      company: 'FutureTech Labs',
+      content:
+        "Zion Tech Group's quantum AI neural networks are cutting-edge. We've achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.",
+      rating: 5,
+      avatar: 'LP',
+      category: 'Quantum AI',
+    },
+    {
+      id: '6',
+      name: 'Robert Kim',
+      title: 'Head of Digital Transformation',
+      company: 'Global Innovations Corp',
+      content:
+        "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.",
+      rating: 5,
+      avatar: 'RK',
+      category: 'AI & Analytics',
+    },
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
+    { number: '50+', label: 'Enterprise Clients', icon: Users },
+    { number: '99.9%', label: 'Client Satisfaction', icon: Award },
+    { number: '4.9/5', label: 'Average Rating', icon: Star },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -154,6 +236,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
           </h2>
           <p className='text-xl text-white/70 max-w-3xl mx-auto leading-relaxed'>
             Discover why leading companies trust Zion Tech Group to transform
+<<<<<<< HEAD
             their business with cutting-edge technology solutions          </p>
         </div>
         {/* Stats Section */}
@@ -175,6 +258,9 @@ const EnhancedTestimonialsSection: React.FC = () => {
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             Discover why leading companies trust Zion Tech Group to transform their business with cutting-edge technology solutions
+=======
+            their business with cutting-edge technology solutions
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
         {/* Stats Section */}
@@ -187,6 +273,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <div className='text-3xl font-bold text-white mb-2'>
                 {stat.number}
               </div>
+<<<<<<< HEAD
               <p className='text-blue-300 font-medium'>{stat.label}</p>            </div>          {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">
@@ -194,6 +281,9 @@ const EnhancedTestimonialsSection: React.FC = () => {
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <p className="text-blue-300 font-medium">{stat.label}</p>
+=======
+              <p className='text-blue-300 font-medium'>{stat.label}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           ))}
         </div>
@@ -211,6 +301,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
               {/* Content */}
               <div className='p-8'>
                 {/* Rating */}
+<<<<<<< HEAD
                 <div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
                 </div>
                 {/* Testimonial Text */}
@@ -228,10 +319,17 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <div className="p-8">
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-4">
+=======
+                <div className='flex items-center gap-1 mb-4'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {renderStars(testimonial.rating)}
                 </div>
                 {/* Testimonial Text */}
+<<<<<<< HEAD
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
+=======
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -248,6 +346,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
                     </div>
                     <div className='text-xs text-blue-400'>
                       {testimonial.company}
+<<<<<<< HEAD
                     </div>                  </div>
                 </div>
                 {/* Category Badge */}
@@ -256,17 +355,29 @@ const EnhancedTestimonialsSection: React.FC = () => {
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-white/70">{testimonial.title}</div>
                     <div className="text-xs text-blue-400">{testimonial.company}</div>
+=======
+                    </div>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
                 {/* Category Badge */}
                 <div className='mt-4'>
+<<<<<<< HEAD
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+=======
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {testimonial.category}
                   </span>
                 </div>
               </div>
               {/* Hover Effect */}
+<<<<<<< HEAD
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+=======
+              <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           ))}
         </div>
@@ -284,6 +395,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
+<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'              >
                 Start Your Success Story
               </a>
@@ -299,13 +411,20 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+=======
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Start Your Success Story
               </a>
               <a
                 href='tel:+13024640950'
+<<<<<<< HEAD
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+=======
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Schedule a Call
               </a>
@@ -329,8 +448,12 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <span>Proven ROI</span>
             </div>
             <div className='flex items-center gap-2'>
+<<<<<<< HEAD
               <Users className='w-4 h-4 text-purple-400' />              <span>Global support</span>            <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-purple-400" />
+=======
+              <Users className='w-4 h-4 text-purple-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <span>Global support</span>
             </div>
           </div>
@@ -338,8 +461,15 @@ const EnhancedTestimonialsSection: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default EnhancedTestimonialsSection;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

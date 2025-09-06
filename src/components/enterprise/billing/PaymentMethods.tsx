@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,6 +21,21 @@ import React from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+=======
+import React from 'react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { CreditCard, Plus, Trash } from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PaymentMethods() {
   // Mock payment methods
 <<<<<<< HEAD
@@ -27,6 +43,7 @@ export function PaymentMethods() {
 =======
   const paymentMethods = [
     {
+<<<<<<< HEAD
       id: 'pm-1'
       type: 'credit_card'
       brand: 'Visa'
@@ -45,6 +62,27 @@ export function PaymentMethods() {
     }
   ]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      id: 'pm-1',
+      type: 'credit_card',
+      brand: 'Visa',
+      last4: '4242',
+      expMonth: 12,
+      expYear: 2025,
+      isDefault: true,
+    },
+    {
+      id: 'pm-2',
+      type: 'credit_card',
+      brand: 'Mastercard',
+      last4: '8888',
+      expMonth: 4,
+      expYear: 2026,
+      isDefault: false,
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Card>
       <CardHeader>
@@ -72,6 +110,7 @@ export function PaymentMethods() {
                 <p className='font-medium'>
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+<<<<<<< HEAD
                     <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
                     </span>
                   )}
@@ -81,11 +120,18 @@ export function PaymentMethods() {
               </div>
             </div>
             <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+=======
+                    <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Default
                     </span>
                   )}
                 </p>
+<<<<<<< HEAD
                 <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
+=======
+                <p className='text-sm text-muted-foreground'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
@@ -97,11 +143,15 @@ export function PaymentMethods() {
                 </Button>
               )}
               <Button size='sm' variant='ghost' className='text-destructive'>
+<<<<<<< HEAD
                 <Trash className='h-4 w-4' />              </Button>              {!method.isDefault && (
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
+=======
+                <Trash className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Button>
             </div>
           </div>
@@ -109,11 +159,19 @@ export function PaymentMethods() {
       </CardContent>
       <CardFooter>
         <Button className='gap-1'>
+<<<<<<< HEAD
           <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">
           <Plus className="h-4 w-4" />
+=======
+          <Plus className='h-4 w-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -27,18 +27,39 @@ const LoadingSkeleton = () =>
   )
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
+<<<<<<< HEAD
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart')
 //   {//     loading: LoadingSkeleton
 //     ssr: false
 //   }
 // )
+=======
+//
+}
+
+export const DynamicChart = dynamic(
+//   () => import('../components/charts/Chart'),
+//   {
+//     loading: LoadingSkeleton,
+//     ssr: false
+//   }
+// );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const DynamicPieChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.PieChart }))
   {    loading: LoadingSkeleton
     ssr: false
   }
+<<<<<<< HEAD
 )
+=======
+);
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const DynamicBarChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.BarChart }))
   {    loading: LoadingSkeleton
@@ -46,6 +67,7 @@ export const DynamicBarChart = dynamic(
   }
 )
 // TODO: Uncomment when these components are available
+<<<<<<< HEAD
 // export const DynamicPDFGenerator = dynamic(
 //   () => import('../components/pdf/PDFGenerator')
 //   {//     loading: LoadingSpinner
@@ -67,10 +89,54 @@ export const DynamicBarChart = dynamic(
 // export const DynamicRichEditor = dynamic(
 //   () => import('../components/editor/RichTextEditor')
 //   {//     loading: LoadingSpinner
+=======
+//
+}
+
+export const DynamicPDFGenerator = dynamic(
+//   () => import('../components/pdf/PDFGenerator'),
+//   {
+//     loading: LoadingSpinner,
+//     ssr: false
+//   }
+// );
+
+//
+}
+
+export const DynamicVideoPlayer = dynamic(
+//   () => import('../components/video/VideoPlayer'),
+//   {
+//     loading: LoadingSkeleton,
+//     ssr: false
+//   }
+// );
+
+//
+}
+
+export const DynamicModelViewer = dynamic(
+//   () => import('../components/ar/ModelViewer'),
+//   {
+//     loading: LoadingSpinner,
+//     ssr: false
+//   }
+// );
+
+//
+}
+
+export const DynamicRichEditor = dynamic(
+//   () => import('../components/editor/RichTextEditor'),
+//   {
+//     loading: LoadingSpinner,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 //     ssr: false
 //   }
 // )
 // Virtual list for large datasets
+}
+
 export const DynamicVirtualList = dynamic(
   () => import('react-window').then(mod => ({ default: mod.FixedSizeList }))
   {    loading: LoadingSkeleton
@@ -78,8 +144,13 @@ export const DynamicVirtualList = dynamic(
   }
 )
 // Usage examples:
+<<<<<<< HEAD
 // Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 // Usage examples: // Replace: import Chart from '../components/charts/Chart'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+// Replace: import Chart from '../components/charts/Chart';
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

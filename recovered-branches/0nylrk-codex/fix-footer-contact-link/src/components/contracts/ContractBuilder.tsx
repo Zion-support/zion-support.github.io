@@ -15,6 +15,7 @@ interface ContractBuilderProps {
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
+<<<<<<< HEAD
 =======
   isOpen: boolean
   onClose: () => void
@@ -23,6 +24,11 @@ interface ContractBuilderProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onContractGenerated?: (contractContent: string) => void
 }
+=======
+  onContractGenerated?: (contractContent: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractBuilder({
   isOpen;
   onClose;

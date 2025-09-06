@@ -1,7 +1,17 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
+=======
+}
+
+export default function AccountSettingsPage() {
+  const [user, setUser] = useState<{
+    address: string;
+    chain: 'evm' | 'sol';
+  } | null>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
@@ -14,10 +24,13 @@ export default function AccountSettingsPage() {
   const [status, setStatus] = useState<string | null>(null),
 
   useEffect(() => {
+<<<<<<< HEAD
     const saved = null;
 =======
   const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const saved =
       typeof window !== 'undefined'
         ? window.localStorage.getItem('zion-web3-user')
@@ -27,11 +40,23 @@ export default function AccountSettingsPage() {
       typeof window !== 'undefined'
         ? window.localStorage.getItem('zion-web3-display')
         : null;
+<<<<<<< HEAD
     setDisplayWeb3(pref === 'true');  }, []);
   const saveDisplayPref = (val: boolean) => {
     setDisplayWeb3(val)
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-display', String(val));  }
+=======
+    setDisplayWeb3(pref === 'true');
+  }, []);
+
+  const saveDisplayPref = (val: boolean) => {
+    setDisplayWeb3(val);
+    if (typeof window !== 'undefined')
+      window.localStorage.setItem('zion-web3-display', String(val));
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const linkDID = async () => {
     if (!user) return;
     setLinking(true);
@@ -67,24 +92,43 @@ export default function AccountSettingsPage() {
             'utf8'
           );
           const bs58 = (await import('bs58')).default;
+<<<<<<< HEAD
           signature = bs58.encode(sig);        }
+=======
+          signature = bs58.encode(sig);
+        }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       } catch {}
       const res = await fetch('/api/did/link', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ payload, message: msg, signature })
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ payload, message: msg, signature }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       if (!res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully');
     } catch (e: any) {
       setStatus(e?.message |'Linking failed');
     } finally {
+<<<<<<< HEAD
       setLinking(false);    }
   }
+=======
+      setLinking(false);
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const doBackup = async () => {
     setStatus(null);
     try {
       const profile = {
+<<<<<<< HEAD
         user
         preferences: { displayWeb3 }
         did: { ens, lens, ceramic, farcaster }
@@ -92,6 +136,15 @@ export default function AccountSettingsPage() {
         projects: []
         reviews: []
       }
+=======
+        user,
+        preferences: { displayWeb3 },
+        did: { ens, lens, ceramic, farcaster },
+        resume: {},
+        projects: [],
+        reviews: [],
+      };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const res = await fetch('/api/backup/upload', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -102,19 +155,34 @@ export default function AccountSettingsPage() {
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
     } catch (e: any) {
+<<<<<<< HEAD
       setStatus(e?.message |'Backup failed');    }
   }
+=======
+      setStatus(e?.message || 'Backup failed');
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const doRestore = async () => {
     setStatus(null);
     try {
       const res = await fetch(
+<<<<<<< HEAD
         `/api/backup/restore?cid=${encodeURIComponent(restoreCid |backupCid)}`
       );      const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Restore failed');
+=======
+        `/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`
+      );
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Restore failed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
+<<<<<<< HEAD
         setEns(did.ens |'');
         setLens(did.lens |'');
         setCeramic(did.ceramic |'');
@@ -125,6 +193,19 @@ export default function AccountSettingsPage() {
       setStatus(e?.message |'Restore failed');    }
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        setEns(did.ens || '');
+        setLens(did.lens || '');
+        setCeramic(did.ceramic || '');
+        setFarcaster(did.farcaster || '');
+      }
+      setStatus('Profile restored from backup');
+    } catch (e: any) {
+      setStatus(e?.message || 'Restore failed');
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -154,10 +235,19 @@ export default function AccountSettingsPage() {
               <span className='relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner'>
                 <span
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}
+<<<<<<< HEAD
                 ></span>              </span>
             </label>
           </div>
         </section>
+=======
+                ></span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -231,4 +321,8 @@ export default function AccountSettingsPage() {
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,11 +5,17 @@ interface TryItProps {
 =======
   path: string; // full URL or relative
   requiresAuth: boolean;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TryItConsole({
   method
   path
   requiresAuth
 }: TryItProps) {
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   path: string, // full URL or relative
@@ -18,6 +24,9 @@ export default function TryItConsole({
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 <<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
+=======
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [token, setToken] = useState('');
 =======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
@@ -30,7 +39,11 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 =======
   const url = useMemo(() => {
     if (path.startsWith('http')) return path;
+<<<<<<< HEAD
     return baseUrl.replace(/\/$/, '') + path;  }, [baseUrl, path]);    return baseUrl.replace(/\/$/, '') + path
+=======
+    return baseUrl.replace(/\/$/, '') + path;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [baseUrl, path]);
   async function onSend() {
     setLoading(true);
@@ -53,6 +66,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
     } catch (e: any) {
       setResponse(String(e?.message |e));
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
   }
   return (
@@ -69,6 +83,9 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -97,6 +114,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
             value={method}
             readOnly
+<<<<<<< HEAD
           />        </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
@@ -111,6 +129,9 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         <div>
           <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
+=======
+          />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
@@ -137,5 +158,9 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         </pre>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

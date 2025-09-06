@@ -10,8 +10,14 @@ interface BadgeEarnedProps {
   size?: number;
   showName?: boolean;
   showDesc?: boolean;
+<<<<<<< HEAD
   earnedDate?: string
 }
+=======
+  earnedDate?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   badge;
 <<<<<<< HEAD

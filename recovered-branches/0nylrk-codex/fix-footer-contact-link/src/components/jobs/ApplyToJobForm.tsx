@@ -16,11 +16,17 @@ import { toast } from "sonner";
 interface ApplyToJobFormProps {
 <<<<<<< HEAD
   job: Job;
+<<<<<<< HEAD
 =======
   job: Job
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onSuccess?: () => void
 }
+=======
+  onSuccess?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();

@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+import { useState } from 'react';
+import { PartnerRegistrationForm } from '@/components/partners/PartnerRegistrationForm';
+import { PartnerReferralLinks } from '@/components/partners/PartnerReferralLinks';
+import { PartnerDashboard } from '@/components/partners/PartnerDashboard';
+import { PartnerLeaderboard } from '@/components/partners/PartnerLeaderboard';
+import { PartnerResources } from '@/components/partners/PartnerResources';
+import { useAuth } from '@/hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",

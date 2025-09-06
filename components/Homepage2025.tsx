@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import { innovativeRealMicroSaasServices2025 
  } from '../data/2025-innovative-real-micro-saas-services';
@@ -25,10 +26,13 @@ interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { motion, AnimatePresence } from 'framer-motion';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
+<<<<<<< HEAD
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
   innovativeRealMicroSaasServices2025
 } from '../data/2025-innovative-real-micro-saas-services';
@@ -41,6 +45,10 @@ import {
 import {
   emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
+=======
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
@@ -67,10 +75,15 @@ import {
 interface Homepage2025Props {
   showInternalNav?: boolean;
 const Homepage2025: React.FC<Homepage2025Props> = ({
+<<<<<<< HEAD
   showInternalNav = true
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 interface Homepage2025Props { showInternalNav?: boolean }
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
+=======
+  showInternalNav = true,
+}) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -82,23 +95,32 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         prev => (prev + 1) % innovativeRealMicroSaasServices2025.length
       );
     }, 5000);
+<<<<<<< HEAD
     return () => clearInterval(interval);  }, []);      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000);
     return () => clearInterval(interval)
+=======
+    return () => clearInterval(interval);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
+<<<<<<< HEAD
       setIsMobileMenuOpen(false);    }
   }
   const allServices = [      element.scrollIntoView({ behavior: 'smooth' })
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false)
+=======
+      setIsMobileMenuOpen(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   const allServices = [
+<<<<<<< HEAD
     ...innovativeRealMicroSaasServices2025
     ...innovativeAIServicesEnhanced2025
     ...innovativeITServicesEnhanced2025
@@ -108,10 +130,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...innovativeMicroSaasServices2026
     ...specializedITSolutions2026
     ...emergingTechServices2026
+=======
+    ...innovativeRealMicroSaasServices2025,
+    ...innovativeAIServicesEnhanced2025,
+    ...innovativeITServicesEnhanced2025,
+    ...emergingTechServicesEnhanced2025,
+    ...advancedAIAutomationServices,
+    ...quantumCybersecurityServices,
+    ...innovativeMicroSaasServices2026,
+    ...specializedITSolutions2026,
+    ...emergingTechServices2026,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const featuredServices = allServices
     .filter(service => service.popular)
     .slice(0, 12);
+<<<<<<< HEAD
     ...innovativeRealMicroSaasServices2025;
     ...innovativeAIServicesEnhanced2025;
     ...innovativeITServicesEnhanced2025;
@@ -134,9 +168,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'contact', label: 'Contact', icon: '📞' },  ];
   const features = [
     {    { id: 'contact', label: 'Contact', icon: '📞' }
+=======
+
+  const navigationSections = [
+    { id: 'hero', label: 'Home', icon: '🏠' },
+    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
+    { id: 'ai', label: 'AI Services', icon: '🧠' },
+    { id: 'automation', label: 'AI Automation', icon: '⚡' },
+    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
+    { id: 'it', label: 'IT Solutions', icon: '💻' },
+    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
+    { id: 'contact', label: 'Contact', icon: '📞' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const features = [
     {
+<<<<<<< HEAD
       title: 'AI-Powered Innovation'
       description:
         'Cutting-edge artificial intelligence solutions that transform business operations and drive growth'
@@ -168,14 +215,55 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
   }
+=======
+      title: 'AI-Powered Innovation',
+      description:
+        'Cutting-edge artificial intelligence solutions that transform business operations and drive growth',
+      icon: Brain,
+    },
+    {
+      title: 'Quantum Computing',
+      description:
+        'Next-generation quantum solutions for complex problem-solving and advanced cryptography',
+      icon: Atom,
+    },
+    {
+      title: 'Cybersecurity Excellence',
+      description:
+        'Enterprise-grade security solutions with AI-powered threat detection and response',
+      icon: Shield,
+    },
+    {
+      title: 'Process Automation',
+      description:
+        'Intelligent automation that streamlines operations and enhances productivity',
+      icon: Zap,
+    },
+  ];
+
+  const itemVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const staggerContainer = {
     initial: {}
     animate: {
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     }
   }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>
       {showInternalNav && (
@@ -196,6 +284,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </motion.div>
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>
+<<<<<<< HEAD
                   {navigationSections.map(section => (                    <button  }
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
@@ -216,6 +305,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
+=======
+                  {navigationSections.map(section => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <button
                       key={section.id}
                       onClick={() => scrollToSection(section.id)}
@@ -238,6 +330,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 >
                   <a
                     href='tel:+13024640950'
+<<<<<<< HEAD
                     className='text-cyan-400 hover:text-cyan-300 transition-colors text-sm'                  >
                     +1 302 464 0950
                   </a>
@@ -248,13 +341,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <a
                     href="tel:+13024640950"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+=======
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors text-sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     +1 302 464 0950
                   </a>
                   <a
                     href='mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
                     className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm'                    href="mailto:kleber@ziontechgroup.com"
                     className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm"
+=======
+                    className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     Contact Us
                   </a>
@@ -275,11 +375,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       strokeLinejoin='round'
                       strokeWidth={2}
                       d='M4 6h16M4 12h16M4 18h16'
+<<<<<<< HEAD
                     />                  </svg>                  className="lg:hidden text-white p-2"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+=======
+                    />
+                  </svg>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
               {/* Mobile Navigation Menu */}
@@ -292,10 +397,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
+<<<<<<< HEAD
                       {navigationSections.map(section => (                        <button                    className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
                       {navigationSections.map((section) => (
+=======
+                      {navigationSections.map(section => (
+                        <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -311,17 +421,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       <div className='pt-4 border-t border-white/10'>
                         <a
                           href='tel:+13024640950'
+<<<<<<< HEAD
                           className='flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300'                        >                      <div className="pt-4 border-t border-white/10">
                         <a
                           href="tel:+13024640950"
                           className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
+=======
+                          className='flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300'
+                        >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           <span>📱</span>
                           <span>+1 302 464 0950</span>
                         </a>
                         <a
                           href='mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
                           className='flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300'                        >                          href="mailto:kleber@ziontechgroup.com"
                           className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
+=======
+                          className='flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         >
                           <span>✉️</span>
                           <span>kleber@ziontechgroup.com</span>
@@ -340,6 +459,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         id='hero'
         className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'
       >
+<<<<<<< HEAD
         <div className='text-center z-10 max-w-6xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -350,16 +470,27 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               transition={{ duration: 2, repeat: Infinity }}
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
+=======
+        <div className='text-center z-10 max-w-6xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className='text-center max-w-6xl mx-auto relative z-10'            className="text-center max-w-6xl mx-auto relative z-10"
+=======
+            className='text-center max-w-6xl mx-auto relative z-10'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
+=======
+              className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -396,6 +527,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </Link>
                 <Link href='/get-started'>
+<<<<<<< HEAD
                   <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
                   </button>
                 </Link>
@@ -429,10 +561,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </Link>
                 <Link href="/get-started">
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+=======
+                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Get Started
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -457,8 +596,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <span>Global Reach</span>
                 </div>
                 <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                   <TrendingUp className='w-4 h-4 text-purple-400' />                  <span>Proven Results</span>                <div className="flex items-center space-x-2">
                   <TrendingUp className="w-4 h-4 text-purple-400" />
+=======
+                  <TrendingUp className='w-4 h-4 text-purple-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>Proven Results</span>
                 </div>
               </motion.div>
@@ -468,8 +611,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
       {/* Features Section */}
       <section className='py-20 px-4 relative'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
+=======
+        <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -489,6 +636,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {features.map((feature, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Technology Solutions
@@ -502,6 +650,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -518,6 +669,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </h3>
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
+<<<<<<< HEAD
                   </p>                </div>                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-3 mb-6">
@@ -525,6 +677,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+=======
+                  </p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
             ))}
           </div>
@@ -534,10 +690,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+=======
+            className='text-center mb-16'
+            initial={{ opacity: 0, y: 40 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -600,6 +761,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             ].map((service, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -622,6 +784,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -647,18 +812,27 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'
                   >
                     <span className='text-sm font-medium'>Explore Service</span>
+<<<<<<< HEAD
                     <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                  </a>                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
                   <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Explore Service</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+=======
+                    <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </motion.div>
             ))}
           </div>
           {/* Call to Action for Services Showcase */}
           <motion.div
+<<<<<<< HEAD
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+=======
+            className='text-center mt-16'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -670,10 +844,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             >
               <Rocket className='w-5 h-5 mr-2' />
               View All 2026 Services
+<<<<<<< HEAD
               <ArrowRight className='w-5 h-5 ml-2' />            </a>            >
               <Rocket className="w-5 h-5 mr-2" />
               View All 2026 Services
               <ArrowRight className="w-5 h-5 ml-2" />
+=======
+              <ArrowRight className='w-5 h-5 ml-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </a>
           </motion.div>
         </div>
@@ -682,10 +860,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+=======
+            className='text-center mb-16'
+            initial={{ opacity: 0, y: 40 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -730,6 +913,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </h3>
               <p className='text-gray-300 text-sm'>
                 Round-the-clock assistance
+<<<<<<< HEAD
               </p>            </div>
           </div>
           <motion.div
@@ -760,10 +944,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
+=======
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
           <motion.div
+<<<<<<< HEAD
             className='text-center'            className="text-center"
+=======
+            className='text-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -772,6 +963,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'              >
                 Email Us
               </a>
@@ -781,13 +973,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+=======
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Email Us
               </a>
               <a
                 href='tel:+13024640950'
+<<<<<<< HEAD
                 className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950"
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
+=======
+                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Call Us
               </a>
@@ -821,6 +1020,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <a
               href='https://ziontechgroup.com'
               className='text-cyan-400 hover:text-cyan-300 transition-colors'
+<<<<<<< HEAD
             >              Website            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
             <p className="mt-2">
               Address: 364 E Main St STE 1008 Middletown DE 19709
@@ -836,6 +1036,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               2025 Services
             </a>
             <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+=======
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Website
             </a>
           </div>
@@ -843,8 +1046,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </footer>
     </UltraFuturisticBackground2026>
   );
+<<<<<<< HEAD
 }
 export default Homepage2025;  )
 }
 export default Homepage2025;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Homepage2025;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

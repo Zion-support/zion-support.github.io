@@ -16,9 +16,14 @@ import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
+<<<<<<< HEAD
   searchQuery: string
 }
 <<<<<<< HEAD
+=======
+  searchQuery: string;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
   const category = null;
@@ -88,5 +93,8 @@ function formatDate(date: string): string {
     month: "long"
     day: "numeric"
   });
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

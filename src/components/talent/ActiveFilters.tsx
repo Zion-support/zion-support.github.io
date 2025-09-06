@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ClickableBadge } from '@/components/ui/clickable-badge';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
@@ -15,6 +22,7 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
+<<<<<<< HEAD
 =======
   selectedSkills: string[]
   toggleSkill: (skill: string) => void
@@ -40,6 +48,11 @@ interface ActiveFiltersProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   clearFilters: () => void
 }
+=======
+  clearFilters: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ActiveFilters({
 <<<<<<< HEAD
   selectedSkills;
@@ -138,5 +151,9 @@ export function ActiveFilters({
         Clear All
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

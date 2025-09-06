@@ -18,6 +18,7 @@ interface MilestoneCardProps {
   status: string;
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
+<<<<<<< HEAD
 =======
   id: string
   projectId: string
@@ -30,6 +31,11 @@ interface MilestoneCardProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onReject?: (id: string) => Promise<void>
 }
+=======
+  onReject?: (id: string) => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MilestoneCard({
   id;
   projectId;

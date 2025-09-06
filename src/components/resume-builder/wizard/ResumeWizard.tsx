@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -17,6 +29,11 @@ import { ResumeStepContent  } from './ResumeStepContent';
 import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResumeWizard() {
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -96,11 +113,17 @@ export function ResumeWizard() {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   if (showNewResumeForm) {
+<<<<<<< HEAD
     return (
       <CreateResumeForm
         onCreateResume = {handleCreateNewResume,}
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
+=======
+
+        onCancel={() => setShowNewResumeForm(false)}
+        isLoading={isLoading}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       />
     )
   }
@@ -145,6 +168,7 @@ export function ResumeWizard() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
 }
@@ -178,3 +202,42 @@ export function ResumeWizard() {
 }/>)
 }</Tabs> </CardContent> </Card> </div>)
 }'"}
+=======
+  );
+
+};
+
+};
+<AlertTitle>Error</AlertTitle> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ;
+
+}if (showNewResumeForm) {;
+
+  () => setShowNewResumeForm (false) ;
+}isLoading= {;
+  isLoading ;
+}/>) ;
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
+  activeTab ;
+}onValueChange= {;
+  setActiveTab ;
+}> <ResumeSteps steps= {;
+  RESUME STEPS ;
+}activeTab= {;
+  activeTab ;
+}onChange= {;
+  setActiveTab ;
+}/> {;
+  resume && (<ResumeStepContent activeTab= {;
+  activeTab ;
+}resume= {;
+  resume as Resume ;
+}onNextStep= {;
+  nextStep ;
+}onPrevStep= {;
+  prevStep ;
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,5 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
@@ -20,6 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'Content-Disposition'
     'attachment; filename="ipo-metrics.csv"'
   );
+<<<<<<< HEAD
   res.status(200).send(csv);    ['MetricValueTrend%'];
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
@@ -31,3 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   res.status(200).send(csv)
 }
+=======
+  res.status(200).send(csv);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

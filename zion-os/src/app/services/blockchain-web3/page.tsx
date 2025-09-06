@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 export default function BlockchainWeb3Page() {return (;
     <div className="space-y-8">;
@@ -7,6 +8,22 @@ export default function BlockchainWeb3Page() {return (;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
         </p>;
       </div>;
+=======
+'use client';
+}
+
+export default function BlockchainWeb3Page() {
+  return (
+    <div className='space-y-8'>
+      <div className='text-center space-y-4'>
+        <h1 className='text-4xl font-bold'>Blockchain & Web3 Solutions</h1>
+        <p className='text-xl opacity-80 max-w-3xl mx-auto'>
+          Enterprise-grade blockchain infrastructure and Web3 integration
+          services for the future of decentralized business
+        </p>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Service Overview */}
       <div className="bg-gradient-to-r from-orange-600 to-purple-600 rounded-lg p-6 text-white">;
         <h2 className="text-2xl font-bold mb-4">Why Choose Blockchain & Web3?</h2>;

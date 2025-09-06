@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
@@ -28,7 +27,13 @@ interface LoadingSpinnerProps {
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
   showText?: boolean;
+<<<<<<< HEAD
   text?: string
+=======
+  text?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 <<<<<<< HEAD
   size;
@@ -64,6 +69,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <span className='text-sm text-muted-foreground'>{text}</span>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 //Progressive loading component useEffect ( () => {
@@ -76,6 +82,22 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }initial= {
   {
   opacity: 0, x: -20
+=======
+  );
+};
+//Progressive loading component useEffect ( () => {;
+  if (currentStep !== undefined) {;
+  /> </div>) ;
+}<motion.div key= {;
+  step.id ;
+}className= {;
+  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50') ;
+}initial= {;
+  {;
+  opacity: 0, x: -20 ;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   steps
   currentStep = 0
@@ -135,10 +157,19 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
 }
 // Enhanced skeleton loader
 interface SkeletonProps {
+<<<<<<< HEAD
   className?: string
   variant?: 'text' | 'circular' | 'rectangular' | 'card'
   animation?: 'pulse' | 'wave' | 'none'
   lines?: number
+=======
+  className?: string;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card';
+  animation?: 'pulse' | 'wave' | 'none';
+  lines?: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const Skeleton: React.FC<SkeletonProps> = ({
   className
   variant = 'rectangular'
@@ -174,6 +205,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       </div>
     )
   }
+<<<<<<< HEAD
       />
   )
 }
@@ -184,6 +216,21 @@ const getErrorConfig = () => {
   switch (variant) {'
   case 'network': return {'
   icon: isOnline ? Wifi : WifiOff,  title: title |(isOnline ? 'Connection Error' : 'No Internet Connection'), description: description |(isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.'
+=======
+
+    />
+  );
+};
+//Enhanced error state component ;
+}return undefined;
+}, []);
+const getErrorConfig = () => {;
+  switch (variant) {';
+  case 'network': return {';
+  icon: isOnline ? Wifi : WifiOff,  title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'), description: description || (isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.' ;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ErrorState: React.FC<ErrorStateProps> = ({
   error
   title
@@ -309,11 +356,21 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
         </motion.div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 <motion.div initial= {
   {
   scale: 0.8, opacity: 0
+=======
+  );
+};
+<motion.div initial= {;
+  {;
+  scale: 0.8, opacity: 0 ;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8
   columns = 4
@@ -371,10 +428,19 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 }
 // Performance indicator
 interface PerformanceIndicatorProps {
+<<<<<<< HEAD
   isLoading?: boolean
   loadTime?: number
   itemCount?: number
   className?: string
+=======
+  isLoading?: boolean;
+  loadTime?: number;
+  itemCount?: number;
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false
   loadTime
@@ -394,6 +460,10 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       </Badge>
     )
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {loadTime && (
         <Badge variant='outline' className={getPerformanceColor(loadTime)}>
@@ -403,8 +473,13 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       )}
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
+<<<<<<< HEAD
   )
 }
 }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -15,8 +15,17 @@ export type ToastContextValue = {toasts: Toast[];
   clearToasts: () => void;
 }
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
+<<<<<<< HEAD
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
   const removeToast = useCallback((id: string) => {;
+=======
+}
+
+export function ToastProvider({ children }: { children: React.ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([]);
+
+  const removeToast = useCallback((id: string) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
@@ -65,7 +74,13 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {cons
     </ToastContext.Provider>;
   );
 }
+<<<<<<< HEAD
 export function useToast() {const ctx = useContext(ToastContext);
+=======
+
+export function useToast() {
+  const ctx = useContext(ToastContext);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!ctx) throw new Error('useToast must be used within ToastProvider');
   return ctx;
 }

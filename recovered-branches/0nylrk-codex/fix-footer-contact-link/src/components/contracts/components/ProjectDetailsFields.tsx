@@ -38,6 +38,10 @@ import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>

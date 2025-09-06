@@ -5,8 +5,15 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import Link from 'next/link';
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import { useState, useEffect } from 'react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OfflinePage() {
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');

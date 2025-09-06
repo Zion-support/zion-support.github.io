@@ -5,6 +5,11 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function JobDetailsPage() {
 <<<<<<< HEAD
   const router = null;
@@ -14,6 +19,10 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
@@ -44,7 +53,12 @@ export default function JobDetailsPage() {
               {!isMobile && (
                 <EnhancedButton onClick={onApply} variant='primary'>
                   Apply Now
+<<<<<<< HEAD
                 </EnhancedButton>              )}
+=======
+                </EnhancedButton>
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </EnhancedCard>
           <EnhancedCard>
@@ -56,7 +70,12 @@ export default function JobDetailsPage() {
           </EnhancedCard>
           <EnhancedCard>
             <h2 className='font-semibold mb-2'>Requirements</h2>
+<<<<<<< HEAD
             <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>              <li>3+ years with Python or TypeScript</li>
+=======
+            <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>
+              <li>3+ years with Python or TypeScript</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
@@ -69,8 +88,17 @@ export default function JobDetailsPage() {
           <div className='container mx-auto px-2'>
             <EnhancedButton onClick={onApply} variant='primary' fullWidth>
               Apply Now
+<<<<<<< HEAD
             </EnhancedButton>          </div>
         </div>
       )}
     </div>
 );
+=======
+            </EnhancedButton>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

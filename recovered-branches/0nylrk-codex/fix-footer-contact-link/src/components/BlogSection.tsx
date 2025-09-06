@@ -15,6 +15,11 @@ const recentPosts = [...BLOG_POSTS]
     );
   })
   .slice(0, 3);
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BlogSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="blog">

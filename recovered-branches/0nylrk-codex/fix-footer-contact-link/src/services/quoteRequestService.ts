@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { supabase } from '@/integrations/supabase/client';
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { supabase } from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";

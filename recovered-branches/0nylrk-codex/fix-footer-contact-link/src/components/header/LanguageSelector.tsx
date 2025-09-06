@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button';
+import { Globe } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react';
 import { useTranslation  } from 'react-i18next';

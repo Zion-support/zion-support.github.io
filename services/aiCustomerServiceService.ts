@@ -317,5 +317,13 @@ export class AICustomerServiceService {
     }
   }
 }
+<<<<<<< HEAD
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+export const aiCustomerServiceService = new AICustomerServiceService(
+  process.env.CUSTOMER_SERVICE_API_KEY || ''
+);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

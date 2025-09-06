@@ -1,19 +1,45 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
   Shield, Database, Globe, ArrowRight, CheckCircle, Star
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+=======
+import {
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Target,
+  Zap,
+  Shield,
+  Database,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AIBusinessIntelligencePage() {
 <<<<<<< HEAD
   const features = null;
 =======
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain
       title: 'Predictive Analytics'
+=======
+      icon: Brain,
+      title: 'Predictive Analytics',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.'
       color: 'from-purple-500 to-pink-500'
@@ -56,6 +82,7 @@ export default function AIBusinessIntelligencePage() {
   ];
 const AIBusinessIntelligence: React.FC = () => {
   const benefits = [
+<<<<<<< HEAD
     'Increase revenue by 25-40% through data-driven insights'
     'Reduce operational costs by 15-30% with process optimization'
     'Improve customer retention by 20-35% with predictive analytics'
@@ -65,9 +92,23 @@ const AIBusinessIntelligence: React.FC = () => {
   const useCases = [
     {
       industry: 'Retail & E-commerce'
+=======
+    'Increase revenue by 25-40% through data-driven insights',
+    'Reduce operational costs by 15-30% with process optimization',
+    'Improve customer retention by 20-35% with predictive analytics',
+    'Accelerate decision-making by 60% with real-time data',
+    'Reduce manual reporting time by 80% with automation',
+    'Achieve 99.9% data accuracy with AI-powered validation',
+  ];
+
+  const useCases = [
+    {
+      industry: 'Retail & E-commerce',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Customer segmentation, inventory optimization, and demand forecasting'
       results:
+<<<<<<< HEAD
         '35% increase in conversion rates, 25% reduction in inventory costs'
     }
     {
@@ -95,6 +136,37 @@ const AIBusinessIntelligence: React.FC = () => {
       price: '$499'
       period: '/month'
       description: 'Perfect for small businesses getting started with AI'
+=======
+        '35% increase in conversion rates, 25% reduction in inventory costs',
+    },
+    {
+      industry: 'Financial Services',
+      description:
+        'Risk assessment, fraud detection, and portfolio optimization',
+      results: '40% improvement in risk prediction, 60% faster fraud detection',
+    },
+    {
+      industry: 'Healthcare',
+      description:
+        'Patient outcome prediction, resource allocation, and treatment optimization',
+      results:
+        '30% improvement in patient outcomes, 20% reduction in operational costs',
+    },
+    {
+      industry: 'Manufacturing',
+      description:
+        'Predictive maintenance, quality control, and supply chain optimization',
+      results: '45% reduction in downtime, 35% improvement in product quality',
+    },
+  ];
+
+  const pricing = [
+    {
+      plan: 'Starter',
+      price: '$499',
+      period: '/month',
+      description: 'Perfect for small businesses getting started with AI',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       features: [
         'Basic predictive analytics'
         '5 customizable dashboards'
@@ -162,11 +234,22 @@ const AIBusinessIntelligence: React.FC = () => {
         <meta
           property='og:url'
           content='https://ziontechgroup.com/ai-business-intelligence'
+<<<<<<< HEAD
         />      </Head>
+=======
+        />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <EnhancedNavigation />
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-6'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -188,20 +271,38 @@ const AIBusinessIntelligence: React.FC = () => {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='/contact'
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'              >
+=======
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Get Started Today
               </a>
               <a
                 href='#demo'
+<<<<<<< HEAD
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
+=======
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Watch Demo
               </a>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
+=======
+
+      {/* Features */}
+      <section className='py-20 bg-white'>
+        <div className='max-w-7xl mx-auto px-6'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -221,7 +322,13 @@ const AIBusinessIntelligence: React.FC = () => {
               <li>• Market trend analysis</li>
             </ul>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -239,6 +346,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 </h3>
                 <p className='text-slate-600 leading-relaxed'>
                   {feature.description}
+<<<<<<< HEAD
                 </p>              </motion.div>
             ))}
           </div>
@@ -247,6 +355,19 @@ const AIBusinessIntelligence: React.FC = () => {
       <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion.div
+=======
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+      {/* Benefits */}
+      <section className='py-20 bg-slate-50'>
+        <div className='max-w-7xl mx-auto px-6'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -260,7 +381,12 @@ const AIBusinessIntelligence: React.FC = () => {
                 reduced costs, see the difference data-driven decisions can
                 make.
               </p>
+<<<<<<< HEAD
               <div className='space-y-4'>                {benefits.map((benefit, index) => (
+=======
+              <div className='space-y-4'>
+                {benefits.map((benefit, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
@@ -269,7 +395,12 @@ const AIBusinessIntelligence: React.FC = () => {
                     className='flex items-center space-x-3'
                   >
                     <CheckCircle className='w-6 h-6 text-green-500 flex-shrink-0' />
+<<<<<<< HEAD
                     <span className='text-slate-700'>{benefit}</span>                  </motion.div>
+=======
+                    <span className='text-slate-700'>{benefit}</span>
+                  </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ))}
               </div>
             </motion.div>
@@ -299,7 +430,12 @@ const AIBusinessIntelligence: React.FC = () => {
                   <div className='text-4xl font-bold text-purple-600 mb-2'>
                     80%
                   </div>
+<<<<<<< HEAD
                   <div className='text-slate-600'>Time Saved on Reporting</div>                </div>
+=======
+                  <div className='text-slate-600'>Time Saved on Reporting</div>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </div>
@@ -307,7 +443,12 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
       {/* Use Cases */}
       <section className='py-20 bg-white'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-6'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -321,7 +462,13 @@ const AIBusinessIntelligence: React.FC = () => {
               to transform their operations.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {useCases.map((useCase, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -338,14 +485,27 @@ const AIBusinessIntelligence: React.FC = () => {
                 <div className='bg-green-50 border border-green-200 rounded-lg p-4'>
                   <p className='text-green-800 font-medium'>
                     Results: {useCase.results}
+<<<<<<< HEAD
                   </p>                </div>
+=======
+                  </p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       {/* Pricing */}
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
+=======
+
+      {/* Pricing */}
+      <section className='py-20 bg-slate-900'>
+        <div className='max-w-7xl mx-auto px-6'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -359,7 +519,13 @@ const AIBusinessIntelligence: React.FC = () => {
               our core AI features.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {pricing.map((plan, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 20 }}
@@ -390,12 +556,22 @@ const AIBusinessIntelligence: React.FC = () => {
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
+<<<<<<< HEAD
                       <span className='text-slate-700'>{feature}</span>                    </li>
+=======
+                      <span className='text-slate-700'>{feature}</span>
+                    </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </ul>
                 <a
                   href='/contact'
+<<<<<<< HEAD
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >
+=======
+                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Get Started
                 </a>
               </motion.div>
@@ -405,7 +581,12 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
+=======
+        <div className='max-w-4xl mx-auto px-6 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -420,12 +601,22 @@ const AIBusinessIntelligence: React.FC = () => {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='/contact'
+<<<<<<< HEAD
                 className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'              >
+=======
+                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Start Free Trial
               </a>
               <a
                 href='/contact'
+<<<<<<< HEAD
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
+=======
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Schedule Demo
               </a>
             </div>
@@ -434,4 +625,8 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

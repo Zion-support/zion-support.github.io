@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { ChatBotPanel } from './ChatBotPanel';
+import { MessageSquare, Info, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useTheme } from '@/hooks/useTheme';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",

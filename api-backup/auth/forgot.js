@@ -1,5 +1,6 @@
 import React from "react";
 (" ");
+<<<<<<< HEAD
 export default function ForgotPassword() {
   return (
     <div>
@@ -8,3 +9,5 @@ export default function ForgotPassword() {
     </div>
   );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

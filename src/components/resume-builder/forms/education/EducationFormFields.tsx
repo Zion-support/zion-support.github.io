@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+} from '@/components/ui/form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -40,6 +64,7 @@ import { EducationFormFieldsProps } from './types'
 import { Education } from '@/types/resume'
 // Define schema for form validation
 const educationSchema = z.object({
+<<<<<<< HEAD
   institution: z.string().min(1, 'Institution is required')
   degree: z.string().min(1, 'Degree is required')
   field_of_study: z.string().optional()
@@ -50,6 +75,21 @@ const educationSchema = z.object({
   location: z.string().optional()
 })
 type EducationFormValues = z.infer<typeof educationSchema>
+=======
+  institution: z.string().min(1, 'Institution is required'),
+  degree: z.string().min(1, 'Degree is required'),
+  field_of_study: z.string().optional(),
+  start_date: z.string().min(1, 'Start date is required'),
+  end_date: z.string().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional(),
+});
+
+type EducationFormValues = z.infer<typeof educationSchema>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EducationFormFields({
   isEditing
   onSubmit
@@ -219,5 +259,9 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

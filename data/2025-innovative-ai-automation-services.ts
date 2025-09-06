@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string;
@@ -44,18 +45,26 @@ export interface InnovativeAIAutomationService {
 const contact = null;
 =======
 realImplementation: true;
+=======
+ realImplementation: true;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 customers: 156;
 rating: 4.7;
 reviews: 89
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
 customers: 234;
 rating: 4.8;
 reviews: 167
+<<<<<<< HEAD
 }];    features: [
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
@@ -313,3 +322,6 @@ reviews: 167
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

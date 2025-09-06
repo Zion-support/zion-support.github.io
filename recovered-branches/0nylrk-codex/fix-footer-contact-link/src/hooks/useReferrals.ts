@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import {
+  ReferralCode,
+  ReferralStats,
+  Referral,
+  ReferralReward,;
+} from '@/types/referrals';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
@@ -202,6 +216,71 @@ export function useReferrals() {
     fetchReferralStats;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     fetchReferrals, // Added this method for refreshing referrals
+<<<<<<< HEAD
     fetchRewards,   // Added this method for refreshing rewards
   }
 }
+=======
+    fetchRewards, // Added this method for refreshing rewards
+  };
+
+}, [user]);
+const fetchReferralCode = async () => {
+  try {
+  setIsLoading (true);
+const {
+  data, error 
+}= await supabase 
+}setReferralCode (data) 
+}catch (error) {
+  
+}finally {
+  setIsLoading (false) 
+
+};
+const fetchReferrals = async () => {
+  try {
+  if (!user) return;
+data, error 
+}= await supabase .from ('referrals') .select ('*') .eq ('referrer id', user.id) if (error) throw error;
+
+};
+const fetchRewards = async () => {
+  try {
+  if (!user) return;
+data, error 
+}= await supabase .from ('referral rewards') .select ('*') .eq ('user id', user.id) if (error) throw error;
+
+};
+const fetchReferralStats = async () => {
+  try {
+  if (!user) return;
+data: referrals, error: refError 
+}= await supabase .from ('referrals') .select ('id, status') .eq ('referrer id', user.id);
+if (refError) throw refError;
+//Get rewards const {
+  data: rewards, error: rewardsError 
+}= await supabase .from ('referral rewards') .select ('amount') .eq ('user id', user.id);
+if (rewardsError) throw rewardsError;
+//Calculate stats 
+
+};
+try {
+  if (!user) {
+  toast ({
+  return;
+}if (error) throw error;
+
+};
+//Get the referral link for the current user const baseUrl = window.location.origin;
+
+};
+//Copy the referral link to clipboard const copyReferralLink = () => {
+  const link = getReferralLink ();
+navigator.clipboard.writeText (link);
+toast ({
+  
+
+};
+//Share on social media platforms return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

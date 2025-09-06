@@ -8,8 +8,14 @@ import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
+<<<<<<< HEAD
   isLoading: boolean
 }
+=======
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResumePreviewCard({
   resume
   onDownload

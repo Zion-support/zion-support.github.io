@@ -18,6 +18,7 @@ export interface ApiKey {
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
+<<<<<<< HEAD
   expires_at: string | null
   is_active: boolean
 }
@@ -30,6 +31,28 @@ export interface ApiLog {
   ip_address?: string
   response_time_ms?: number
 }
+=======
+  expires_at: string | null;
+  is_active: boolean;
+  //Using optional chaining ensures this function works both in the browser // (where import.meta.env is injected by Vite) and in Node environments //such as tests or server side rendering. setLoading (true);
+setError (null);
+try {
+  
+}getApiUrl () 
+}/keys`, {
+  method: 'GET', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+
+});
+}finally {
+  setLoading (false)
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useApiKeys() {
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
@@ -58,8 +81,15 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getApiUrl()}/keys`, {
         method: 'GET'
+=======
+}
+
+const response = await fetch(`${getApiUrl()}/keys`, {
+        method: 'GET',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -93,8 +123,15 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getApiUrl()}/create`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -140,8 +177,15 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getApiUrl()}/regenerate`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getApiUrl()}/regenerate`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -184,8 +228,15 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(`${getApiUrl()}/revoke`, {
         method: 'POST'
+=======
+}
+
+const response = await fetch(`${getApiUrl()}/revoke`, {
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -226,8 +277,15 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+<<<<<<< HEAD
       const response = await fetch(
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`
+=======
+}
+
+const response = await fetch(
+        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {
           method: 'GET'
           headers: {
@@ -255,6 +313,7 @@ export function useApiKeys() {
     }
   }
   return {
+<<<<<<< HEAD
     keys;
     logs;
     totalLogs;
@@ -270,3 +329,106 @@ export function useApiKeys() {
     clearNewApiKey: () => setNewApiKey(null)
   }
 }
+=======
+    keys,
+    logs,
+    totalLogs,
+    loading,
+    error,
+    newApiKey,
+    fetchApiKeys,
+    createApiKey,
+    regenerateApiKey,
+    revokeApiKey,
+    fetchApiLogs,
+    clearNewApiKey: () => setNewApiKey(null),
+  };
+
+};
+//Regenerate API key const regenerateApiKey = async (keyId: string) => {
+  if (!user) return;
+setError (null);
+setNewApiKey (null);
+try {
+  
+}getApiUrl () 
+}/regenerate`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+//Store the new key value setNewApiKey (result.key);
+return result;
+}catch (err) {
+  console.error ('Error regenerating API key:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+
+};
+//Revoke API key const revokeApiKey = async (keyId: string) => {
+  if (!user) return;
+setError (null);
+try {
+  
+}getApiUrl () 
+}/revoke`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+return result;
+}catch (err) {
+  console.error ('Error revoking API key:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+
+};
+//Fetch API usage logs const fetchApiLogs = async (limit = 50, offset = 0) => {
+  if (!user) return;
+setError (null);
+try {
+  
+}getApiUrl () 
+}/logs?limit=$ {
+  limit 
+}&offset=$ {
+  offset 
+}`;
+{
+  method: 'GET', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+
+});
+setLogs (result.logs || []);
+setTotalLogs (result.count || 0);
+}finally {
+  setLoading (false) 
+
+};
+
+  keys;
+logs;
+totalLogs;
+loading;
+error;
+newApiKey;
+fetchApiKeys;
+createApiKey;
+regenerateApiKey;
+revokeApiKey;
+fetchApiLogs;
+clearNewApiKey: () => setNewApiKey (null) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

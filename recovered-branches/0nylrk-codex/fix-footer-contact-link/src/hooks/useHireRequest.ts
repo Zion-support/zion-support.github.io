@@ -5,6 +5,7 @@ import { toast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
 export interface HireRequestData {
   talent: {
+<<<<<<< HEAD
     id: string;
     full_name: string;
 <<<<<<< HEAD
@@ -34,6 +35,25 @@ export interface HireRequestData {
     budgetMax: number
   }
 }
+=======
+  id: string;
+full name: string;
+professional title: string;
+email?: string 
+};
+requester: {
+  name: string;
+email: string;
+id?: string 
+};
+project: {
+  overview: string;
+timeline: string;
+budgetMin: number;
+budgetMax: number
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useHireRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
@@ -72,9 +92,25 @@ export function useHireRequest() {
     }
   }
   return {
+<<<<<<< HEAD
     submitHireRequest;
     isSubmitting;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     error
   }
 }
+=======
+    submitHireRequest,
+    isSubmitting,
+    error,
+  };
+
+}finally {
+  setIsSubmitting (false) 
+
+};
+
+  submitHireRequest;
+isSubmitting;
+error 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

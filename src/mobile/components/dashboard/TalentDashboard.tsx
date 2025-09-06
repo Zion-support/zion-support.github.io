@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {
+  ChevronRight,
+  FileText,
+  Image,
+  Clock,
+  Zap,
+  BookOpen,;
+} from 'lucide-react';
+import Link from 'next/link';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -106,14 +129,22 @@ export function TalentDashboard() {
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
                   View Details
+<<<<<<< HEAD
                 </Button>              </div>              <div className="flex gap-2 mt-3">
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
+=======
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section>
         <h2 className='text-lg font-medium mb-4'>Application Tracker</h2>
         <Card>
@@ -140,6 +171,7 @@ export function TalentDashboard() {
                 <div className='text-xs text-muted-foreground'>Jobs Viewed</div>
               </div>
             </div>
+<<<<<<< HEAD
             <Button variant='outline' className='w-full mt-4'>              View All Applications      <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -163,11 +195,18 @@ export function TalentDashboard() {
               </div>
             </div>
             <Button variant="outline" className="w-full mt-4">
+=======
+            <Button variant='outline' className='w-full mt-4'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View All Applications
             </Button>
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section>
         <h2 className='text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4'>
@@ -200,6 +239,7 @@ export function TalentDashboard() {
             className='h-auto py-4 flex flex-col gap-1'
             aria-label='AI Resume Boost'
           >
+<<<<<<< HEAD
             <Zap className='h-5 w-5 mb-1' aria-hidden='true' />            <span>AI Resume Boost</span>
           </Button>
         </div>
@@ -232,10 +272,14 @@ export function TalentDashboard() {
           </Button>
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
+=======
+            <Zap className='h-5 w-5 mb-1' aria-hidden='true' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <span>AI Resume Boost</span>
           </Button>
         </div>
       </section>
+<<<<<<< HEAD
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Learning Hub</h2>
@@ -247,6 +291,14 @@ export function TalentDashboard() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
           <Button variant="ghost" size="sm" className="h-8">
+=======
+
+      <section>
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Learning Hub</h2>
+          <Button variant='ghost' size='sm' className='h-8'>
+            View all
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
         </div>
         <Card>
@@ -262,6 +314,7 @@ export function TalentDashboard() {
                 <h3 className='font-medium'>Improve your profile visibility</h3>
                 <p className='text-sm text-muted-foreground'>
                   5 tips for getting noticed by clients
+<<<<<<< HEAD
                 </p>              </div>          <CardContent className="p-4">
             <div className="flex items-center gap-3">
               <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
@@ -270,10 +323,18 @@ export function TalentDashboard() {
               <div>
                 <h3 className="font-medium">Improve your profile visibility</h3>
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
+=======
+                </p>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </CardContent>
         </Card>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

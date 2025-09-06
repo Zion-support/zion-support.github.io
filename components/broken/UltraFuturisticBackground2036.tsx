@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
@@ -5,6 +6,36 @@ interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 
 export default function UltraFuturisticBackground2036({variant = 'default';
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+ let animationFrameId: number;
+let particles: Particle[] = [];
+const connections: Connection[] = [];
+//Particle system //Update and draw particles particles.forEach ( (particle, index) => {
+  //Update position particle.x += particle.vx;
+particle.y += particle.vy;
+//Wrap around edges if (particle.x < 0) particle.x = canvas.width;
+if (particle.x > canvas.width) particle.x = 0;
+if (particle.y < 0) particle.y = canvas.height;
+if (particle.y > canvas.height) particle.y = 0;
+//Draw particle with glow effect ctx.save ();
+//Create glow effect ctx.fillStyle = glowGradient;
+ctx.beginPath ();
+ctx.arc (particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
+ctx.fill ();
+//Draw core particle ctx.fillStyle = particle.color;
+ctx.beginPath ();
+ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
+ctx.fill ();
+ctx.restore ();
+//Draw connections between nearby particles
+}
+
+export default function UltraFuturisticBackground2036({
+  variant = 'default',
+  intensity = 'medium',
+}: UltraFuturisticBackground2036Props) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const animationRef = useRef<number | undefined>(undefined);
   useEffect(() => {;
     if (typeof window === 'undefined') return;
@@ -264,4 +295,9 @@ export default function UltraFuturisticBackground2036({variant = 'default';
     </div>;
   );
 }
+<<<<<<< HEAD
 export default UltraFuturisticBackground2036;
+=======
+
+export default UltraFuturisticBackground2036;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

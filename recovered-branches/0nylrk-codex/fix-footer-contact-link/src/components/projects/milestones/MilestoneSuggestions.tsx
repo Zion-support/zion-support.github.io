@@ -13,6 +13,7 @@ interface MilestoneSuggestionsProps {
   startDate: Date;
   endDate?: Date;
   projectType: string;
+<<<<<<< HEAD
 =======
   projectName: string
   scopeSummary: string
@@ -22,6 +23,11 @@ interface MilestoneSuggestionsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
+=======
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MilestoneSuggestions({
   projectName;
   scopeSummary;

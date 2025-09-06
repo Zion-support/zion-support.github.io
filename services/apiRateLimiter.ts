@@ -391,6 +391,8 @@ export class APIRateLimiterService {
   }
 }
 // Pricing tiers for the API Rate Limiter service
+}
+
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter';
@@ -414,9 +416,114 @@ export const API_RATE_LIMITER_PRICING = {
     price: 199;
     period: '/month';
     features: [
+<<<<<<< HEAD
       'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
       'SLA guarantee'
     ]
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Unlimited rate limit rules',
+      'Enterprise-grade rate limiting',
+      'Advanced security features',
+      'Multiple notification channels',
+      '1-year data retention',
+      'Custom integrations',
+      'White-label options',
+      'Priority support',
+      'SLA guarantee',
+    ],
+  },
+};
+body: JSON.stringify (rule) 
+});
+
+}`;
+createdAt: new Date ();
+updatedAt: new Date () 
+
+}return [ {
+  id: 'rule 1', name: 'API Endpoints', pattern: '/api/**', method: 'ALL', config: {
+  requestsPerMinute: 100, requestsPerHour: 1000, requestsPerDay: 10000, burstLimit: 50, windowSize: 60 
+};
+enabled: true;
+createdAt: new Date ();
+updatedAt: new Date () 
+};
+{
+  id: 'rule 2', name: 'Authentication', pattern: '/auth/**', method: 'POST', config: {
+  requestsPerMinute: 10, requestsPerHour: 100, requestsPerDay: 1000, burstLimit: 5, windowSize: 60 
+};
+enabled: true;
+createdAt: new Date ();
+updatedAt: new Date () 
+}] 
+
+}async updateRateLimitRule (id: string, updates: Partial<RateLimitRule>) : Promise<RateLimitRule> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/rate-limiter/rules/$ {
+  id 
+}`, {
+  method: 'PATCH', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (updates) 
+});
+
+};
+{
+  endpoint: '/api/auth/login', method: 'POST', totalRequests: 8920, blockedRequests: 156, averageResponseTime: 120, lastRequest: new Date (), currentUsage: {
+  minute: 8, hour: 95, day: 650 
+
+}] 
+
+}async createAPIKey (name: string, permissions: string[], rateLimit: RateLimitConfig) : Promise<APIKey> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/rate-limiter/api-keys`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+
+}`;
+name;
+key: `zion $ {
+  Math.random () .toString (36) .substr (2, 9) 
+}`;
+permissions;
+rateLimit;
+createdAt: new Date ();
+lastUsed: new Date ();
+isActive: true 
+
+}createdAt: new Date ();
+lastUsed: new Date ();
+isActive: true 
+};
+{
+  id: 'key 2', name: 'Mobile App', key: 'zion mobile456', permissions: ['read'], rateLimit: {
+  requestsPerMinute: 50, requestsPerHour: 500, requestsPerDay: 5000, burstLimit: 25, windowSize: 60 
+};
+createdAt: new Date ();
+lastUsed: new Date ();
+isActive: true 
+}] 
+
+}return {
+  overview: {
+  totalRequests, blockedRequests, activeRules: rules.filter (r => r.enabled) .length, activeAPIKeys: apiKeys.filter (k => k.isActive) .length 
+};
+topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice (0, 5) 
+
+}// Pricing tiers for the API Rate Limiter service 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

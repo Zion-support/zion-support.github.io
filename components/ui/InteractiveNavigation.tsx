@@ -71,6 +71,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
       </ul>
     </nav>
   );
+<<<<<<< HEAD
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
@@ -85,3 +86,10 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
+=======
+
+};
+}
+
+export default InteractiveNavigation;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

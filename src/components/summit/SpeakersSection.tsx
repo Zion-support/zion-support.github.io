@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import Image from "next/image";
 import { Twitter, Linkedin } from 'lucide-react'
+=======
+import Image from 'next/image';
+import { Twitter, Linkedin } from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface Speaker {
   name: string
   title: string
@@ -14,6 +20,7 @@ interface Speaker {
   title: string;
   avatar: string;
   twitter?: string;
+<<<<<<< HEAD
 =======
   name: string
   title: string
@@ -30,6 +37,20 @@ const speakers: Speaker[] = [
     avatar: 'https://placehold.co/100x100';
     twitter: '#';
     linkedin: '#'}],
+=======
+  linkedin?: string;
+
+const speakers: Speaker[] = [
+  {
+    name: 'Alex Zion',
+    title: 'Founder & CEO',
+    avatar: 'https://placehold.co/100x100',
+    twitter: '#',
+    linkedin: '#',
+  },
+];
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
     name: 'Alex Zion'
@@ -47,12 +68,17 @@ export function SpeakersSection() {
         <h2 className='text-3xl font-bold mb-8 text-center'>Speakers</h2>
         <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
           {speakers.map(sp => (
+<<<<<<< HEAD
             <div key={sp.name} className='text-center space-y-2'>              <Image    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
           {speakers.map((sp,) => (
             <div key={sp.name} className="text-center space-y-2">
+=======
+            <div key={sp.name} className='text-center space-y-2'>
+              <Image
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -69,6 +95,7 @@ export function SpeakersSection() {
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center'
+<<<<<<< HEAD
                     href = {sp.twitter,}
                     aria-label="Twitter"
                     target="_blank"
@@ -78,6 +105,11 @@ export function SpeakersSection() {
                     <Twitter className='h-4 w-4' aria-hidden='true' />
                     <span className='sr-only'>Twitter</span>                  </a>                    <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
+=======
+                  >
+                    <Twitter className='h-4 w-4' aria-hidden='true' />
+                    <span className='sr-only'>Twitter</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </a>
                 )}
                 {sp.linkedin && (
@@ -89,6 +121,7 @@ export function SpeakersSection() {
                     className='flex items-center'
                   >
                     <Linkedin className='h-4 w-4' aria-hidden='true' />
+<<<<<<< HEAD
                     <span className='sr-only'>LinkedIn</span>                  </a>                    aria-label="LinkedIn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,6 +129,10 @@ export function SpeakersSection() {
                   >
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
+=======
+                    <span className='sr-only'>LinkedIn</span>
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 )}
               </div>
             </div>
@@ -103,5 +140,9 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

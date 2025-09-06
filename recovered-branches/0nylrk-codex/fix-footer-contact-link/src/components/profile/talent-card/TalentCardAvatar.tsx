@@ -3,8 +3,14 @@ import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface TalentCardAvatarProps {
   profilePicture?: string;
+<<<<<<< HEAD
   fullName: string
 }
+=======
+  fullName: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCardAvatar({
   profilePicture
   fullName

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import React, { useState } from "react",

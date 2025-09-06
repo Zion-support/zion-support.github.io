@@ -7,6 +7,11 @@ import type { SitemapItem } from '@/config/sitemap';
 type UserType = any;
 =======
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useSitemap() {
   const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access

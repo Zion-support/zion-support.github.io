@@ -172,5 +172,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
 export default Sidebar;
+=======
+};
+}
+
+export default Sidebar;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

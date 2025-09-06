@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect, useRef } from 'react';
+import { format } from 'date-fns';
+import { MessageSquare } from 'lucide-react';
+import { useMessaging } from '@/context/MessagingContext';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useAuth } from '@/hooks/useAuth';
+import { MessageBubble } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';

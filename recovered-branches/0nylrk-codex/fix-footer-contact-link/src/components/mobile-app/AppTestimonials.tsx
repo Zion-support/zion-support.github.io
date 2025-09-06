@@ -31,6 +31,11 @@ const testimonials = [
     avatar: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">

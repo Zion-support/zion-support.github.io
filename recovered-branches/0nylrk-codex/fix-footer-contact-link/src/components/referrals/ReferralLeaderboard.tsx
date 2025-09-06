@@ -14,8 +14,14 @@ import { Award } from "lucide-react";
 interface LeaderboardEntry {
   rank: number;
   name: string;
+<<<<<<< HEAD
   referrals: number
 }
+=======
+  referrals: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data

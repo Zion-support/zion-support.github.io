@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
     <Card className="bg-muted/30 border border-dashed">

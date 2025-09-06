@@ -44,7 +44,14 @@ serve(async (req) => {
     if (data.error) {
       throw new Error(data.error.message)
     }
+<<<<<<< HEAD
     const assistantMessage = data.choices[0].message.content;
+=======
+}
+
+const assistantMessage = data.choices[0].message.content;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');

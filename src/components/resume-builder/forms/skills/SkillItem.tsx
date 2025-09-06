@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react';
+import { SkillItemProps } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
@@ -8,12 +16,16 @@ export const SkillItem = null;
 =======
 import { SkillItemProps } from './types'
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
+<<<<<<< HEAD
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
     <Badge
       key = {skill.id,}
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {skill.name}
       {skill.proficiency && (
@@ -32,6 +44,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   )
 }
 "
+<<<<<<< HEAD
 import {Badge} from '@/components/ui/badge'
 import {Button} from '@/components/ui/button'
 import {Trash2} from 'lucide-react'
@@ -61,3 +74,5 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 } }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

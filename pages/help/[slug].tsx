@@ -3,6 +3,7 @@ import { useState  } from 'react';
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getStaticPaths: GetStaticPaths;
     setVoted(helpful)
 =======
@@ -18,13 +19,40 @@ export const getStaticProps: GetStaticProps = async ctx => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find(a => a.slug === slug) |null;
   return { props: { article } };}
+=======
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return {
+    paths: articles.map(a => ({ params: { slug: a.slug } })),
+    fallback: false,
+  };
+};
+}
+
+export const getStaticProps: GetStaticProps = async ctx => {
+  const slug = ctx.params?.slug as string;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  const article = articles.find(a => a.slug === slug) || null;
+  return { props: { article } };
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
+<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ articleId: article.id, helpful }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     setVoted(helpful);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -56,4 +84,8 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
         </div>
       </div>
     </article>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

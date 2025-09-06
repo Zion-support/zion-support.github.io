@@ -7,6 +7,10 @@ import { FileText } from "lucide-react";
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

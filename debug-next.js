@@ -20,8 +20,29 @@ if (fs.existsSync('pages')) {const pages = fs.readdirSync('pages');
 // Check for any problematic files;
 console.log('🔍 Checking for problematic files...');
 const problematicFiles = [];
+<<<<<<< HEAD
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']);
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8');
     if (content.includes('') |content.includes('
+=======
+const allFiles = getAllFiles ('.', ['.tsx.ts.jsx.js']);
+catch (error) {
+  //Skip files that can't be read 
+
+}console.log ('⚠️ Files with merge conflicts:', problematicFiles.length);
+if (problematicFiles.length > 0) {
+  console.log ('Files:', problematicFiles.slice (0, 10) ) 
+}//Function to get all files recursively function getAllFiles (dir, extensions) {
+  let files = [];
+try {
+  const items = fs.readdirSync (dir);
+else if (extensions.some (ext => item.endsWith (ext) ) ) {
+  files.push (fullPath) 
+
+}catch (error) {
+  // Skip directories that can't be read 
+}return files;
+}console.log ('✅ Debug completed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

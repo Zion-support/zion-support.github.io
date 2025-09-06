@@ -40,10 +40,21 @@ const team = [
     bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.'
     image: '/images/team/elena-petrov.jpg'}
   {
+<<<<<<< HEAD
     name: 'James Kim'
     role: 'Chief Operations Officer'
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
+=======
+    name: 'James Kim',
+    role: 'Chief Operations Officer',
+    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
+    image: '/images/team/james-kim.jpg',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AboutPage() {
   return (
     <div className=&quot;bg-black&quot;>

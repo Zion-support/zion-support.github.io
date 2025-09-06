@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import { Button } from './ui/button'
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast";
 import { useTranslation } from 'react-i18next';
+=======
+import { Button } from './ui/button';
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
+import { toast } from './ui/use-toast';
+import { useTranslation } from 'react-i18next';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
@@ -116,4 +125,7 @@ export function SocialShareSection() {
 }
 }</div> </div> </div> </section>)
 }'"
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

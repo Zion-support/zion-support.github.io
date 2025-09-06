@@ -1,5 +1,9 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface InnovativeMicroSaasService2026 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -52,11 +56,21 @@ const contact = null;
 =======
   reviews: number;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
   [
     // AI-Powered Business Intelligence & Analytics
@@ -692,16 +706,32 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       reviews: 18
     }
   ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
 ) => {
   return innovativeMicroSaasServices2026.filter(
     service => service.category === category
   );
+<<<<<<< HEAD
 }
 export const getPopularInnovativeMicroSaasServices2026 = () => {
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
+=======
+};
+}
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -710,7 +740,11 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
   })
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

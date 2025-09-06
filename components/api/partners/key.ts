@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest
@@ -8,6 +11,11 @@ import {
   saveApiKeys;
 } from '../../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -15,9 +23,11 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
-  }
+ 
+}
   const auth = await authenticateRequest(req);
   if (!auth) {
+<<<<<<< HEAD
     return res.status(401).json({ error: 'Unauthorized' });  }
   const { apiKey } = auth;
   const keys = await listApiKeys();
@@ -44,10 +54,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const keys = await listApiKeys();
   // Deactivate old key
   const existing = keys.find(k => k.id === apiKey.id);  const existing = keys.find((k) => k.id === apiKey.id);
+=======
+    return res.status(401).json({ error: 'Unauthorized' });
+ 
+}
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
   const newKey = {
+<<<<<<< HEAD
     id: uuidv4()
     partnerId: auth.partner.id
     key: uuidv4()
@@ -68,3 +88,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return res.status(201).json({ apiKey: newKey.key })
 }
+=======
+    id: uuidv4(),
+    partnerId: auth.partner.id,
+    key: uuidv4(),
+    active: true,
+    createdAt: now,
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60,
+  };
+  keys.push(newKey as any);
+  await saveApiKeys(keys);
+  return res.status(201).json({ apiKey: newKey.key });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

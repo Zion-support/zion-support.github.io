@@ -1,10 +1,21 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+<<<<<<< HEAD
 export default defineConfig({
   plugins: [react()]
   server: {
     port: 3000
     open: true
+=======
+;
+}
+
+export default defineConfig({,
+  plugins: [react()],
+  server: {,
+    port: 3000,
+    open: true,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     host: true
   }
   build: {

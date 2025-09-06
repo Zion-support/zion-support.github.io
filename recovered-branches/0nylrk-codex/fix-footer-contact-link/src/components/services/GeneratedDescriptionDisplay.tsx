@@ -20,9 +20,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
 interface GeneratedDescriptionDisplayProps {
   description: string;
+<<<<<<< HEAD
   onSave: (editedDescription: string) => void
 }
 <<<<<<< HEAD
+=======
+  onSave: (editedDescription: string) => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function GeneratedDescriptionDisplay({ 
   description;

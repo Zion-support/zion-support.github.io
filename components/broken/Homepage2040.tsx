@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy, useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link';
@@ -21,6 +22,21 @@ visible: {
 }
 }
 }
+=======
+ //Enhanced animation variants for better performance const containerVariants = {
+  hidden: {
+  opacity: 0
+};
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1, delayChildren: 0.2
+
+};
+
+};
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {
   Math.random () * 100
 }%`;
@@ -30,12 +46,24 @@ top: `$ {
 animationDelay: `$ {
   Math.random () * 3
 }s`
+<<<<<<< HEAD
 }animate= {
   {
   scale: [0, 1, 0], opacity: [0, 1, 0]
 }transition= {
   {
   duration: 3, repeat: Infinity, delay: Math.random () * 3
+=======
+
+}animate= {
+  {
+  scale: [0, 1, 0], opacity: [0, 1, 0]
+
+}transition= {
+  {
+  duration: 3, repeat: Infinity, delay: Math.random () * 3
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }/>) )
 }</div> </div> <div className="text-center max-w-6xl mx-auto relative z-10" > <motion.div > {
   /* Enhanced Company Badge */
@@ -68,6 +96,7 @@ animationDelay: `$ {
   /* View All Services Button */
 }<motion.div > <Link href="/innovative-2040-futuristic-services-showcase" className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg" > View All 2040 Services <ArrowRight className="w-6 h-6 ml-3" /> </a> </motion.div>) )
 }</motion.div> </div> </section> > Ready to Transform Your Business? </motion.h2> <motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion.p> <motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion.div> <motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span>Proven Results</span> </div> </motion.div> </motion.div> </div> </section> </main> </Layout>)
+<<<<<<< HEAD
 }
 export default Homepage2040;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -558,3 +587,9 @@ const Homepage2040: React.FC = () => {
 }
 export default Homepage2040;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Homepage2040;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

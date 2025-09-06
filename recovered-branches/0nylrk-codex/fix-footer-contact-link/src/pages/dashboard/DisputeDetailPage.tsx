@@ -22,7 +22,13 @@ function DisputeDetailPage() {
         <Footer />
       </>
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default DisputeDetailPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

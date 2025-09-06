@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
 <<<<<<< HEAD
+=======
+import { defineConfig, devices } from "@playwright/test";
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default defineConfig({
   testDir: 'tests/e2e';
   use: {
@@ -13,6 +19,7 @@ export default defineConfig({
         channel: 'chrome'}
     },
     {
+<<<<<<< HEAD
       name: 'Desktop Firefox';
 =======
 import { defineConfig, devices } from '@playwright/test';
@@ -110,6 +117,38 @@ import { defineConfig, devices } from '@playwright/test';
 <<<<<<< HEAD
     ['list'];
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+=======
+      name: "Desktop Firefox",
+      use: {
+        browserName: 'firefox',
+      },
+    },
+    {
+      name: "Desktop Safari",
+      use: {
+        browserName: 'webkit',
+      },
+    },
+    {
+      name: "Mobile Chrome",
+      use: {
+        browserName: 'chromium',
+        ...devices['Pixel 5'],
+      },
+    },
+    {
+      name: "Mobile Safari",
+      use: {
+        browserName: 'webkit',
+        ...devices['iPhone 12'],
+      },
+    },
+  ],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
+  ],
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 =======
     ['list']

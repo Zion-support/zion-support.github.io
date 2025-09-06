@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "AI Consciousness Evolution - Zion Tech Group";
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.";
@@ -5,6 +6,24 @@ export const metadata = {title: "AI Consciousness Evolution - Zion Tech Group";
 export default function AIConsciousnessEvolutionPage() {return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
+=======
+import Link from 'next/link';
+}
+
+export const metadata = {
+  title: 'AI Consciousness Evolution - Zion Tech Group',
+  description:
+    'Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.',
+  keywords:
+    'AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group',
+};
+}
+
+export default function AIConsciousnessEvolutionPage() {
+  return (
+    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Hero Section */}
         <div className="text-center mb-16">;
           <h1 className="text-4xl md:text-6xl font-bold mb-6">;

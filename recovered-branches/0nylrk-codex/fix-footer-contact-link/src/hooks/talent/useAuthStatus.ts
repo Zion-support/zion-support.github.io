@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from 'react';
 export function useAuthStatus() {
@@ -37,6 +42,7 @@ export function useAuthStatus() {
     setIsAuthenticated(prev => !prev)
   }
   return {
+<<<<<<< HEAD
     isAuthenticated;
     userDetails;
     savedTalents;
@@ -45,3 +51,22 @@ export function useAuthStatus() {
     toggleAuth
   }
 }
+=======
+    isAuthenticated,
+    userDetails,
+    savedTalents,
+    handleToggleSave,
+    toggleAuth,
+  };
+
+};
+//For demo purposes, let's provide a login/logout toggle const toggleAuth = () => {
+  setIsAuthenticated (prev => !prev) 
+};
+
+  isAuthenticated;
+userDetails;
+savedTalents;
+handleToggleSave;
+toggleAuth 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

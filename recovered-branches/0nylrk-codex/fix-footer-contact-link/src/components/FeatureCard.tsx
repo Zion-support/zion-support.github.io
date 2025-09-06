@@ -6,8 +6,14 @@ interface FeatureCardProps {
   description: string;
   icon: React.ReactNode;
   className?: string;
+<<<<<<< HEAD
   key?: string | number, // Added key prop
 }
+=======
+  key?: string | number; // Added key prop
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FeatureCard({
   title
   description

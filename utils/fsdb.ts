@@ -1,5 +1,32 @@
+<<<<<<< HEAD
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import crypto from 'crypto';
+import { DisputeCase } from '../types/disputes';
+
+const mkdir = promisify(fs.mkdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
+
+const ROOT = path.join(process.cwd(), 'data');
+const DISPUTES_FILE = path.join(ROOT, 'disputes.json');
+const UPLOADS_ROOT = path.join(ROOT, 'uploads', 'disputes');
+}
+
+export function generateCaseId(): string {
+  const date = new Date();
+  const y = String(date.getFullYear());
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  const suffix = crypto.randomBytes(3).toString('hex').toUpperCase();
+  return `DSP-${y}${m}${d}-${suffix}`;
+
+async function ensureBaseFiles() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const fs = require('fs')
     if (fs.existsSync(filePath)) {
@@ -29,6 +56,10 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
   all.push(dispute);
   await writeAllDisputes(all);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId);
 }
@@ -36,4 +67,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

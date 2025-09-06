@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -45,6 +46,86 @@ const serviceCategories = [
   {
     title: 'AI Development Tools'
     description: 'Advanced AI-powered development and testing automation'
+=======
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Users,
+  Globe,
+  Cpu,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Target as TargetIcon,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Search,
+  Code,
+  TestTube,
+  Server,
+  Database,
+  Network,
+  Shield as SecurityIcon,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+
+const heroStats = [
+  {
+    label: 'AI Services Delivered',
+    value: '200+',
+    icon: <Brain className='w-5 h-5' />,
+  },
+  {
+    label: 'Happy AI Clients',
+    value: '500+',
+    icon: <Users className='w-5 h-5' />,
+  },
+  {
+    label: 'AI Success Rate',
+    value: '99.8%',
+    icon: <Award className='w-5 h-5' />,
+  },
+  {
+    label: 'AI ROI Average',
+    value: '500%',
+    icon: <TrendingUp className='w-5 h-5' />,
+  },
+];
+
+const serviceCategories = [
+  {
+    title: 'AI Development Tools',
+    description: 'Advanced AI-powered development and testing automation',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI Development Tools'
     )
@@ -95,6 +176,7 @@ const serviceCategories = [
     icon: Database
     color: 'from-cyan-500 to-blue-600'
     features: [
+<<<<<<< HEAD
       'Pipeline Management'
       'Quality Assurance'
       'Governance Automation'
@@ -156,6 +238,77 @@ const testimonials = [
     avatar: '👨‍🔒'
   },];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Pipeline Management',
+      'Quality Assurance',
+      'Governance Automation',
+    ],
+  },
+];
+
+const heroFeatures = [
+  {
+    title: 'AI-Powered Automation',
+    description:
+      'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+    icon: Brain,
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+  },
+  {
+    title: 'Intelligent Optimization',
+    description:
+      'AI-driven optimization that continuously improves performance, security, and efficiency.',
+    icon: Sparkles,
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600',
+  },
+  {
+    title: 'Autonomous Operations',
+    description:
+      'Self-managing systems that operate independently with minimal human intervention.',
+    icon: Settings,
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600',
+  },
+  {
+    title: 'Predictive Analytics',
+    description:
+      'AI-powered insights that predict issues before they occur and optimize performance.',
+    icon: BarChart3,
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Dr. Michael Chen',
+    role: 'CTO, TechFlow Solutions',
+    company: 'TechFlow Solutions',
+    content:
+      "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
+    rating: 5,
+    avatar: '👨‍💻',
+  },
+  {
+    name: 'Sarah Rodriguez',
+    role: 'DevOps Director, CloudScale Inc.',
+    company: 'CloudScale Inc.',
+    content:
+      'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
+    rating: 5,
+    avatar: '👩‍💼',
+  },
+  {
+    name: 'David Kim',
+    role: 'Security Manager, SecureNet Corp.',
+    company: 'SecureNet Corp.',
+    content:
+      'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
+    rating: 5,
+    avatar: '👨‍🔒',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>
@@ -190,7 +343,12 @@ export default function AdvancedAIAutomationServices() {
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
+<<<<<<< HEAD
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+=======
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -202,7 +360,12 @@ export default function AdvancedAIAutomationServices() {
               Transform your development, testing, DevOps, and security
               operations with revolutionary AI automation that works 24/7
             </p>
+<<<<<<< HEAD
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
+=======
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>
+              {heroStats.map((stat, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -230,14 +393,27 @@ export default function AdvancedAIAutomationServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
               >
+<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Get Started
+=======
+                <Phone className='mr-2 w-5 h-5' />
+                Get Started
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+      {/* Features Section */}
+      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -253,7 +429,13 @@ export default function AdvancedAIAutomationServices() {
               operations
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {heroFeatures.map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -273,16 +455,29 @@ export default function AdvancedAIAutomationServices() {
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
+<<<<<<< HEAD
                       <p className='text-gray-300'>{feature.description}</p>                    </div>
+=======
+                      <p className='text-gray-300'>{feature.description}</p>
+                    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+      {/* Services Section */}
+      <section id='services' className='py-20 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -297,7 +492,13 @@ export default function AdvancedAIAutomationServices() {
               modern technology operations
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
+=======
+
+          <div className='space-y-16'>
+            {serviceCategories.map((category, categoryIndex) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
@@ -319,7 +520,13 @@ export default function AdvancedAIAutomationServices() {
                     {category.description}
                   </p>
                 </div>
+<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
+=======
+
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+                  {category.services.map((service, serviceIndex) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -333,7 +540,12 @@ export default function AdvancedAIAutomationServices() {
                           <div className='flex items-center justify-between mb-4'>
                             <span className='text-3xl'>{service.icon}</span>
                             {service.popular && (
+<<<<<<< HEAD
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>                                Popular
+=======
+                              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
+                                Popular
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               </span>
                             )}
                           </div>
@@ -377,7 +589,12 @@ export default function AdvancedAIAutomationServices() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
+<<<<<<< HEAD
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'                            >
+=======
+                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
+                            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               Get Started
                             </Link>
                           </div>
@@ -393,7 +610,12 @@ export default function AdvancedAIAutomationServices() {
       </section>
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -408,7 +630,13 @@ export default function AdvancedAIAutomationServices() {
               operations with our AI automation services
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {testimonials.map((testimonial, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -433,7 +661,12 @@ export default function AdvancedAIAutomationServices() {
                 <div className='flex items-center'>
                   <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
+<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
+=======
+                      <Star key={i} className='w-4 h-4 fill-current' />
+                    ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </motion.div>
@@ -443,7 +676,12 @@ export default function AdvancedAIAutomationServices() {
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+=======
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -461,7 +699,12 @@ export default function AdvancedAIAutomationServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
               >
+<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
+=======
+                <Phone className='mr-2 w-5 h-5' />
+                Call Now: {contactInfo.mobile}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
@@ -473,9 +716,18 @@ export default function AdvancedAIAutomationServices() {
             </div>
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
+<<<<<<< HEAD
               <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>
+=======
+              <p className='text-gray-300'>🌐 {contactInfo.website}</p>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

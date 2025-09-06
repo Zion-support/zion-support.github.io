@@ -3,12 +3,21 @@ import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
 interface ProfileAvailabilityProps {
+<<<<<<< HEAD
   availability: Availability
 }
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
 <<<<<<< HEAD
   const getStatusColor = null;
 =======
+=======
+  availability: Availability;
+}
+
+export function ProfileAvailability({
+  availability,
+}: ProfileAvailabilityProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {
       case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';

@@ -16,6 +16,7 @@ interface UserTypeOption {
 }
 interface UserTypeSelectionProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
 =======
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void
@@ -23,6 +24,16 @@ interface UserTypeSelectionProps {
   selectedType: string | null
 }
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+=======
+  onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
+  selectedType: string | null;
+}
+
+export function UserTypeSelection({
+  onSelect,
+  selectedType,
+}: UserTypeSelectionProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const userTypes: UserTypeOption[] = [
     {
 <<<<<<< HEAD

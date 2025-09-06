@@ -16,12 +16,23 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 const timeRangeToInterval = {
+<<<<<<< HEAD
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
 }
+=======
+  '1d': { days: 1, interval: 'hour' },
+  '7d': { days: 7, interval: 'day' },
+  '30d': { days: 30, interval: 'day' },
+  '90d': { days: 90, interval: 'week' },
+  '365d': { days: 365, interval: 'month' },
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
   const { data: pageViews, isLoading } = useQuery({

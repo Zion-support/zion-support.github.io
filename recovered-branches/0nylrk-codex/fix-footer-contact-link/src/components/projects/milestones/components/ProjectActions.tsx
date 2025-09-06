@@ -10,6 +10,7 @@ interface ProjectActionsProps {
   isUnderDispute: boolean;
   disputeId?: string;
   isTalent: boolean;
+<<<<<<< HEAD
 =======
   projectId: string
   isUnderDispute: boolean
@@ -18,6 +19,11 @@ interface ProjectActionsProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onAddMilestone: () => void
 }
+=======
+  onAddMilestone: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectActions({
   projectId;
   isUnderDispute;

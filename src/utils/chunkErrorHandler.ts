@@ -199,6 +199,7 @@ class ChunkErrorHandler {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+<<<<<<< HEAD
           background: #0070f3
           color: white
           border: none
@@ -217,6 +218,27 @@ class ChunkErrorHandler {
           border-radius: 0.5rem
           font-size: 1rem
           cursor: pointer
+=======
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
+          margin-right: 1rem;
+        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         ">
           Go Home
         </button>
@@ -258,6 +280,7 @@ class ChunkErrorHandler {
     this.errorStats.delete(sessionKey)
   }
 // Create and export singleton instance
+<<<<<<< HEAD
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
 export default chunkErrorHandler
@@ -268,3 +291,13 @@ export default chunkErrorHandler
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+export const chunkErrorHandler = new ChunkErrorHandler();
+
+// Export for manual usage
+}
+
+export default chunkErrorHandler;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

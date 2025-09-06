@@ -6,6 +6,10 @@ import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 <<<<<<< HEAD
@@ -44,4 +48,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       </p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

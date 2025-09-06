@@ -32,7 +32,20 @@ class MockAmlProvider implements AmlProvider {
     }
     return { status: 'clear' }
   }
+<<<<<<< HEAD
 }
 export function getAmlProvider(): AmlProvider {
   return new MockAmlProvider();
 }
+=======
+
+let provider: AmlProvider = new MockAmlProvider();
+}
+
+export function setAmlProvider(custom: AmlProvider) {
+  provider = custom;
+}
+
+export function getAmlProvider(): AmlProvider {
+  return provider;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

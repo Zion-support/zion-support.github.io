@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import type {
   RemoteParticipant
   LocalParticipant
@@ -13,6 +16,7 @@ type Props = {
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+<<<<<<< HEAD
 }
 export default function ParticipantTile({
   participant
@@ -25,6 +29,16 @@ type Props = {
   displayName?: string
 }
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+=======
+};
+}
+
+export default function ParticipantTile({
+  participant,
+  isLocal,
+  displayName,
+}: Props) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
@@ -33,13 +47,20 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track.attach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
+<<<<<<< HEAD
         track.attach(audioRef.current);      }
     }
+=======
+        track.attach(audioRef.current);
+      }
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
         track.detach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
+<<<<<<< HEAD
         track.detach(audioRef.current);      }        track.attach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
@@ -59,6 +80,15 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
     participant.tracks.forEach(pub => {
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
+=======
+        track.detach(audioRef.current);
+      }
+    };
+
+    participant.tracks.forEach(pub => {
+      const track = pub.track;
+      if (track) handleTrackSubscribed(pub, track);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
@@ -83,6 +113,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
           (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
+<<<<<<< HEAD
   );  }, [participant]);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -95,3 +126,6 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
     </div>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

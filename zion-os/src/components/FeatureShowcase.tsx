@@ -61,7 +61,14 @@ const features: Feature[] = [;
     ];
   }
 ];
+<<<<<<< HEAD
 export function FeatureShowcase() {const [activeFeature, setActiveFeature] = useState<string | null>(null);
+=======
+}
+
+export function FeatureShowcase() {
+  const [activeFeature, setActiveFeature] = useState<string | null>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {;
     setIsVisible(true);

@@ -3,6 +3,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
@@ -13,6 +14,17 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+=======
+
+const categories: GrantCategory[] = [
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ApplyGrantPage() {
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
@@ -23,7 +35,11 @@ export default function ApplyGrantPage() {
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
+<<<<<<< HEAD
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -38,6 +54,7 @@ export default function ApplyGrantPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           program
           projectName
           teamInfo
@@ -45,6 +62,15 @@ export default function ApplyGrantPage() {
           timeline
           budgetAmount: Number(budgetAmount |0)
           budgetCurrency
+=======
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           supportingLinks: supportingLinks
             .split('\n')
             .map(s => s.trim())
@@ -61,6 +87,7 @@ export default function ApplyGrantPage() {
     } catch (e: any) {
       setError(e.message);
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
           budgetCurrency;
           supportingLinks: supportingLinks
@@ -78,6 +105,9 @@ export default function ApplyGrantPage() {
       setError(e.message)
     } finally {
       setLoading(false)
+=======
+      setLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -212,6 +242,7 @@ export default function ApplyGrantPage() {
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
+<<<<<<< HEAD
           </button>        </div>
       </div>
     </EnhancedLayout>
@@ -266,3 +297,10 @@ export default function ApplyGrantPage() {
     </EnhancedLayout>
 );
 }
+=======
+          </button>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

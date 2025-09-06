@@ -3,6 +3,10 @@ import { ResumeBasicInfo } from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResumeBasicInfoSection({
   basicInfo
 }: ResumeBasicInfoSectionProps) {

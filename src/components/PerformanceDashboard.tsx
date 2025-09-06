@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -268,9 +267,17 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default PerformanceDashboard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

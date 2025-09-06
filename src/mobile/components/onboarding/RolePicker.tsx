@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Briefcase, Users, Check } from 'lucide-react';
+
+type UserRole = 'talent' | 'client' | null;
+
+interface RolePickerProps {
+  onSelect: (role: UserRole) => void;
+}
+
+export function RolePicker({ onSelect }: RolePickerProps) {
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+
+  const handleSelect = (role: UserRole) => {
+    setSelectedRole(role);
+    onSelect(role);
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 type UserRole = any;
   return (
@@ -64,5 +85,9 @@ type UserRole = any;
         </Card>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

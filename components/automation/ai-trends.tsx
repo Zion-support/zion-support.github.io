@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
@@ -49,3 +50,7 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
     </div>
 );
 }
+=======
+ </div> </div>) )
+}</div> </div>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -7,9 +7,14 @@ export interface ResumeTabProps {
   onSelectResume?: (resumeId: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
   onApply?: () => Promise<void>;
+<<<<<<< HEAD
   isSubmitting?: boolean
 }
 <<<<<<< HEAD
+=======
+  isSubmitting?: boolean;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting;
 =======

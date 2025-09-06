@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
@@ -32,7 +31,14 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
   dangerous?: boolean
+=======
+  dangerous?: boolean;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function QuickActions() {
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -44,8 +50,16 @@ export function QuickActions() {
   if (!isAllowed) {
     return null
   }
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
+=======
+}
+
+const [isVisible, setIsVisible] = useState(false);
+  const [isProcessing, setIsProcessing] = useState<string | null>(null);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const executeAction = async (actionId: string, action: () => void) => {
     setIsProcessing(actionId);    try {
       await action()
@@ -283,7 +297,11 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

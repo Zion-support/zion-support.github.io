@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ProfileProject } from '@/types/profile';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { FileText } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -5,7 +13,13 @@ import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from 'lucide-react'
 interface ProfileProjectsProps {
+<<<<<<< HEAD
   projects: ProfileProject[]
+=======
+  projects: ProfileProject[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
@@ -45,6 +59,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                       key={i}
                       variant='outline'
                       className='text-xs border-zion-slate-dark text-zion-slate-light'
+<<<<<<< HEAD
                     >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
         {projects.map((project) => (
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
@@ -69,13 +84,21 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+=======
+                    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {tag}
                     </Badge>
                   ))}
                 </div>
               )}
+<<<<<<< HEAD
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
               <div className="text-xs text-zion-slate-light mt-2">
+=======
+
+              <div className='text-xs text-zion-slate-light mt-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {project.date}
               </div>
             </CardContent>
@@ -83,5 +106,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

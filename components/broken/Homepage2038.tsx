@@ -4,6 +4,7 @@ import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, Star;
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
@@ -35,13 +36,41 @@ import {
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  ArrowRight,
+  Star,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  TrendingUp,
+  Globe,
+  Rocket,
+  Target,
+  Cpu,
+  Cloud,
+  Lock,
+  Users,
+  Award,
+  CheckCircle,
+  Sparkles,
+  Infinity,
+  Zap as Lightning,;
+} from 'lucide-react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Import new services
 import { innovative2038MicroSaasServices  } from '../data/innovative-2038-micro-saas-services';
 import { innovative2038ITServices  } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Homepage2038: React.FC;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = innovative2038MicroSaasServices
@@ -53,6 +82,7 @@ const Homepage2038: React.FC = () => {
   const featuredAI = innovative2038AIServices
     .filter(s => s.popular)
     .slice(0, 3);
+<<<<<<< HEAD
   return (
     <Layout>
       {/* Main Content */}
@@ -61,6 +91,9 @@ const Homepage2038: React.FC = () => {
   const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3);
   const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3);
   const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3);
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Layout>
       {/* Main Content */}
@@ -75,6 +108,7 @@ const Homepage2038: React.FC = () => {
             <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500'></div>
             <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500'></div>
           </div>
+<<<<<<< HEAD
           <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,11 +124,19 @@ const Homepage2038: React.FC = () => {
             <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500"></div>
           </div>
           <div className="text-center max-w-5xl mx-auto relative z-10">
+=======
+
+          <div className='text-center max-w-5xl mx-auto relative z-10'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className='space-y-8'              className="space-y-8"
+=======
+              className='space-y-8'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               {/* Company Badge */}
               <motion.div
@@ -130,6 +172,7 @@ const Homepage2038: React.FC = () => {
                 </Link>
                 <Link href='/services'>
                   <motion.button
+<<<<<<< HEAD
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm'                    whileHover={{ scale: 1.05 }}              >
                 <Star className="w-4 h-4" />
                 <span>Innovation Leader 2038</span>
@@ -158,6 +201,9 @@ const Homepage2038: React.FC = () => {
                 <Link href="/services">
                   <motion.button
                     className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm"
+=======
+                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -165,6 +211,10 @@ const Homepage2038: React.FC = () => {
                   </motion.button>
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -197,8 +247,12 @@ const Homepage2038: React.FC = () => {
                   <span>Proven Results</span>
                 </div>
                 <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                   <Award className='w-5 h-5 text-yellow-400' />                  <span>Industry Leader</span>                <div className="flex items-center space-x-2">
                   <Award className="w-5 h-5 text-yellow-400" />
+=======
+                  <Award className='w-5 h-5 text-yellow-400' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>Industry Leader</span>
                 </div>
               </motion.div>
@@ -208,9 +262,13 @@ const Homepage2038: React.FC = () => {
         {/* Company Stats */}
         <section className='py-24 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto relative z-10'>            <motion.div        <section className="py-24 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-7xl mx-auto relative z-10">
+=======
+          <div className='max-w-7xl mx-auto relative z-10'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -268,6 +326,7 @@ const Homepage2038: React.FC = () => {
                 </div>
                 <div className='text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
                   Unlimited potential
+<<<<<<< HEAD
                 </div>              </motion.div>            >
               <motion.div
                 className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
@@ -300,14 +359,21 @@ const Homepage2038: React.FC = () => {
                 <div className="text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors">∞</div>
                 <div className="text-gray-300 text-lg">Future Possibilities</div>
                 <div className="text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Unlimited potential</div>
+=======
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
             </motion.div>
           </div>
         </section>
         {/* Featured AI Services */}
         <section className='py-24 px-4'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
+=======
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -323,6 +389,7 @@ const Homepage2038: React.FC = () => {
                 our consciousness evolution and quantum AI platforms
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Revolutionary AI Services
@@ -332,6 +399,10 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {featuredAI.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -342,11 +413,16 @@ const Homepage2038: React.FC = () => {
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
+<<<<<<< HEAD
                     variant='consciousness'                  />                    variant="consciousness"
+=======
+                    variant='consciousness'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   />
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
             <div className='text-center'>
               <Link href='/ai-services'>
                 <motion.button
@@ -354,6 +430,14 @@ const Homepage2038: React.FC = () => {
               <Link href="/ai-services">
                 <motion.button
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+=======
+
+            <div className='text-center'>
+              <Link href='/ai-services'>
+                <motion.button
+                  className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
+                  whileHover={{ scale: 1.05 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   whileTap={{ scale: 0.95 }}
                 >
                   View All AI Services
@@ -364,8 +448,12 @@ const Homepage2038: React.FC = () => {
         </section>
         {/* Featured Micro SAAS Services */}
         <section className='py-24 px-4 bg-black/20'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
+=======
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -381,6 +469,7 @@ const Homepage2038: React.FC = () => {
                 solutions designed for the future
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                 Innovative Micro SAAS
@@ -390,6 +479,10 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {featuredMicroSaas.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -400,11 +493,16 @@ const Homepage2038: React.FC = () => {
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
+<<<<<<< HEAD
                     variant='automation'                  />                    variant="automation"
+=======
+                    variant='automation'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   />
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
             <div className='text-center'>
               <Link href='/services'>
                 <motion.button
@@ -412,6 +510,14 @@ const Homepage2038: React.FC = () => {
               <Link href="/services">
                 <motion.button
                   className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+=======
+
+            <div className='text-center'>
+              <Link href='/services'>
+                <motion.button
+                  className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
+                  whileHover={{ scale: 1.05 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore All Services
@@ -422,8 +528,12 @@ const Homepage2038: React.FC = () => {
         </section>
         {/* Featured IT Services */}
         <section className='py-24 px-4'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
+=======
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -439,6 +549,7 @@ const Homepage2038: React.FC = () => {
                 AI-powered DevOps automation
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                 Advanced IT Infrastructure
@@ -448,6 +559,10 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+=======
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -458,11 +573,16 @@ const Homepage2038: React.FC = () => {
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
+<<<<<<< HEAD
                     variant='quantum'                  />                    variant="quantum"
+=======
+                    variant='quantum'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   />
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
             <div className='text-center'>
               <Link href='/it-services'>
                 <motion.button
@@ -470,6 +590,14 @@ const Homepage2038: React.FC = () => {
               <Link href="/it-services">
                 <motion.button
                   className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+=======
+
+            <div className='text-center'>
+              <Link href='/it-services'>
+                <motion.button
+                  className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
+                  whileHover={{ scale: 1.05 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   whileTap={{ scale: 0.95 }}
                 >
                   View All IT Services
@@ -480,8 +608,12 @@ const Homepage2038: React.FC = () => {
         </section>
         {/* Why Choose Us */}
         <section className='py-24 px-4 bg-black/30'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
+=======
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -537,6 +669,7 @@ const Homepage2038: React.FC = () => {
                   icon: <Award className='w-12 h-12' />
                   title: 'Proven Results'
                   description:
+<<<<<<< HEAD
                     'Track record of delivering transformative solutions to leading organizations'
                   color: 'from-yellow-500 to-orange-500'
                 },              ].map((feature, index) => (                  icon: <Award className="w-12 h-12" />
@@ -544,6 +677,12 @@ const Homepage2038: React.FC = () => {
                   description: "Track record of delivering transformative solutions to leading organizations"
                   color: "from-yellow-500 to-orange-500"
                 }
+=======
+                    'Track record of delivering transformative solutions to leading organizations',
+                  color: 'from-yellow-500 to-orange-500',
+                },
+              ].map((feature, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -563,6 +702,7 @@ const Homepage2038: React.FC = () => {
                   </h3>
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
+<<<<<<< HEAD
                   </p>                </motion.div>                  whileHover={{ scale: 1.05 }}
                 >
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -572,6 +712,9 @@ const Homepage2038: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+=======
+                  </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </div>
@@ -579,8 +722,12 @@ const Homepage2038: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className='py-24 px-4'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -610,6 +757,7 @@ const Homepage2038: React.FC = () => {
                 </Link>
                 <Link href='/services'>
                   <motion.button
+<<<<<<< HEAD
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                    whileHover={{ scale: 1.05 }}            >
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Ready to Shape the Future?
@@ -634,6 +782,9 @@ const Homepage2038: React.FC = () => {
                 <Link href="/services">
                   <motion.button
                     className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+=======
+                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -647,8 +798,15 @@ const Homepage2038: React.FC = () => {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
 }
 export default Homepage2038;  )
 }
 export default Homepage2038;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Homepage2038;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

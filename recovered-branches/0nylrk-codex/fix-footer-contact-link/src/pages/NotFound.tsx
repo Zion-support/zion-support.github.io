@@ -23,7 +23,14 @@ const NotFound = () => {
         </a>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default NotFound;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

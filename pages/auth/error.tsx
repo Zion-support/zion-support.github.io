@@ -4,9 +4,20 @@ import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
+<<<<<<< HEAD
 const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 }
+=======
+
+const errorMessages: Record<string, string> = {
+  OAuthSignin:
+    'The authentication provider is temporarily unavailable. Please try again later.',
+  default: 'There was an issue with your authentication request.',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] |errorMessages.default

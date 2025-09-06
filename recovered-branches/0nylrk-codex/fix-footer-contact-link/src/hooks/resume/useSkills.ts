@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { Skill } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+import { handleResumeError, showSuccessToast } from './useResumeUtils';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -59,6 +68,7 @@ export function useSkills() {
     }
   }
   return {
+<<<<<<< HEAD
     isLoading;
     error;
     addSkill;
@@ -66,3 +76,33 @@ export function useSkills() {
     deleteSkill
   }
 }
+=======
+    isLoading,
+    error,
+    addSkill,
+    deleteSkill,
+  };
+
+};
+const deleteSkill = async (skillId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete skills');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('resume skills') .delete () .eq ('id', skillId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete skill') 
+}finally {
+  setIsLoading (false) 
+
+};
+
+  isLoading;
+error;
+addSkill;
+deleteSkill 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

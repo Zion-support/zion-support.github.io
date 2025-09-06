@@ -10,7 +10,11 @@ const statusConfig: Record<QuoteStatus, { label: string, className: string }> = 
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" };
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }};
 interface QuoteStatusBadgeProps {
+<<<<<<< HEAD
   status: QuoteStatus
+=======
+  status: QuoteStatus;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const QuoteStatusBadge = null;

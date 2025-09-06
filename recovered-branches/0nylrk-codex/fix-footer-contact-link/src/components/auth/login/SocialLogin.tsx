@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Facebook, Twitter } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
+import { Web3Login } from './Web3Login';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",

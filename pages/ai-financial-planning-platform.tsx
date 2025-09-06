@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiFinancialPlanningPlatform() {
 	return (
@@ -28,3 +29,13 @@ export default function AiFinancialPlanningPlatform() {
 		/>
 	)
 }
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+}
+
+export default function AiFinancialPlanningPlatform() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

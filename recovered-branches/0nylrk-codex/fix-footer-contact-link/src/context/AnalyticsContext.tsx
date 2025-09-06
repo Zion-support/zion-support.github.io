@@ -42,6 +42,11 @@ export interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AnalyticsProvider({ children }: { children: ReactNode }) {
   const [pageViews, setPageViews] = useState(0);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);

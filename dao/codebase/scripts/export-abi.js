@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 function main() {
@@ -53,3 +54,10 @@ main();
 =======
 }main ();main()
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+}else {
+  console.warn ('Missing artifact for', name)
+
+}main ();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

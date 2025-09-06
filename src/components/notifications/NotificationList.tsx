@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import Skeleton from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Bell } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
@@ -14,6 +25,7 @@ interface NotificationListProps {
   notifications: Notification[];
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
+<<<<<<< HEAD
 =======
   loading: boolean
   error: string | null
@@ -23,6 +35,11 @@ interface NotificationListProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onRetry: () => void
 }
+=======
+  onRetry: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const NotificationList: React.FC<NotificationListProps> = ({
 <<<<<<< HEAD
   loading;
@@ -86,4 +103,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   )
 }
 "
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

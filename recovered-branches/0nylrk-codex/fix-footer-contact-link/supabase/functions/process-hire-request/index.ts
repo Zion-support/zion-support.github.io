@@ -122,7 +122,14 @@ serve(async (req) => {
     if (adminError) {
       console.error("Error fetching admin users:", adminError)
     }
+<<<<<<< HEAD
     let adminId: string | undefined = undefined;
+=======
+}
+
+let adminId: string | undefined = undefined;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id

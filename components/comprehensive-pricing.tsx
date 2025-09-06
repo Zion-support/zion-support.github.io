@@ -1,6 +1,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
 import Button from '../components/ui/Button',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -8,6 +9,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services';
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Check
   Star
@@ -85,6 +88,7 @@ import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
+<<<<<<< HEAD
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories;
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
@@ -94,6 +98,15 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,;
+} from '../data/revolutionary-micro-saas-services';
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
@@ -105,6 +118,7 @@ export default function ComprehensivePricingPage() {
   const allServices = null;
 =======
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+<<<<<<< HEAD
   const allServices = [
     ...revolutionaryMicroSaasServices
     ...enhancedMicroSaasServices
@@ -126,6 +140,30 @@ export default function ComprehensivePricingPage() {
     { value: 'popularity', label: 'Most Popular' }
     { value: 'category', label: 'Category' }
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+=======
+
+  const allServices = [
+    ...revolutionaryMicroSaasServices,
+    ...enhancedMicroSaasServices,
+  ];
+
+  const priceRanges = [
+    { value: 'All', label: 'All Prices' },
+    { value: '0-100', label: '$0 - $100' },
+    { value: '101-500', label: '$101 - $500' },
+    { value: '501-1000', label: '$501 - $1,000' },
+    { value: '1001-2500', label: '$1,001 - $2,500' },
+    { value: '2501-5000', label: '$2,501 - $5,000' },
+    { value: '5001+', label: '$5,001+' },
+  ];
+
+  const sortOptions = [
+    { value: 'price', label: 'Price Low-High' },
+    { value: 'name', label: 'Name A-Z' },
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+    { value: 'roi', label: 'Highest ROI' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   // Filter and sort services
   let filteredServices = allServices;
@@ -133,9 +171,13 @@ export default function ComprehensivePricingPage() {
   if (selectedCategory !== 'All') {
     filteredServices = filteredServices.filter(
       service => service.category === selectedCategory
+<<<<<<< HEAD
     );  }
   // Price range filter
   if (priceRange !== 'All') {    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
+=======
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   // Price range filter
   if (priceRange !== 'All') {
@@ -144,6 +186,7 @@ export default function ComprehensivePricingPage() {
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(',', ''));
+<<<<<<< HEAD
       return price >= min && (max === Infinity |price <= max);
     });  }
   // Search filter
@@ -152,10 +195,17 @@ export default function ComprehensivePricingPage() {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
     })
+=======
+      return price >= min && (max === Infinity || price <= max);
+    });
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(
       service =>
+<<<<<<< HEAD
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -164,6 +214,13 @@ export default function ComprehensivePricingPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
+=======
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   // Sort services
   filteredServices.sort((a, b) => {
@@ -172,7 +229,11 @@ export default function ComprehensivePricingPage() {
         return (
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
+<<<<<<< HEAD
         );      case 'popularity':        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+=======
+        );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -182,15 +243,28 @@ export default function ComprehensivePricingPage() {
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] |'0');
         return bRoi - aRoi;
       default:
+<<<<<<< HEAD
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
+=======
+        return a.name.localeCompare(b.name);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   });
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Pricing tiers
   const pricingTiers = [
     {
@@ -199,6 +273,7 @@ export default function ComprehensivePricingPage() {
       period: '/month'
       description: 'Perfect for small businesses and startups'
       features: [
+<<<<<<< HEAD
         'Basic service access'
         'Email support'
         'Standard features'
@@ -302,27 +377,118 @@ export default function ComprehensivePricingPage() {
       icon: <TrendingUp className='w-6 h-6' />
     },      icon: <TrendingUp className="w-6 h-6" />
     }
+=======
+        'Basic service access',
+        'Email support',
+        'Standard features',
+        'Community forum access',
+        'Basic analytics',
+      ],
+      icon: <Star className='w-6 h-6' />,
+      color: 'from-blue-500 to-cyan-600',
+      popular: false,
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
+      features: [
+        'Advanced service access',
+        'Priority support',
+        'Advanced features',
+        'API access',
+        'Advanced analytics',
+        'Custom integrations',
+      ],
+      icon: <Gem className='w-6 h-6' />,
+      color: 'from-purple-500 to-pink-600',
+      popular: true,
+    },
+    {
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: [
+        'Full service access',
+        '24/7 dedicated support',
+        'All features',
+        'Custom development',
+        'Enterprise analytics',
+        'White-label options',
+        'SLA guarantees',
+      ],
+      icon: <Crown className='w-6 h-6' />,
+      color: 'from-yellow-500 to-orange-600',
+      popular: false,
+    },
+  ];
+
+  // Market statistics
+  const marketStats = [
+    {
+      metric: '$15.2B',
+      label: 'Total Market Size',
+      description: 'Combined market value of all services',
+      icon: <ChartBar className='w-6 h-6' />,
+    },
+    {
+      metric: '400+',
+      label: 'Services Available',
+      description: 'Comprehensive micro SaaS portfolio',
+      icon: <Database className='w-6 h-6' />,
+    },
+    {
+      metric: '99.99%',
+      label: 'Uptime Guarantee',
+      description: 'Enterprise-grade reliability',
+      icon: <Shield className='w-6 h-6' />,
+    },
+    {
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+      icon: <TrendingUp className='w-6 h-6' />,
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
       }
     }
   }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     }
+=======
+        duration: 0.5,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>
       <div className='min-h-screen'>
@@ -363,6 +529,7 @@ export default function ComprehensivePricingPage() {
           <div className='container mx-auto px-4 text-center'>
             <div className='max-w-5xl mx-auto'>
               <motion.h1
+<<<<<<< HEAD
                 className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -372,6 +539,10 @@ export default function ComprehensivePricingPage() {
             <div className="max-w-5xl mx-auto">
               <motion.h1
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+=======
+                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'
+                initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
@@ -382,6 +553,7 @@ export default function ComprehensivePricingPage() {
                 <span className='text-white'>Pricing & Plans</span>
               </motion.h1>
               <motion.p
+<<<<<<< HEAD
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -395,6 +567,9 @@ export default function ComprehensivePricingPage() {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+=======
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -405,10 +580,14 @@ export default function ComprehensivePricingPage() {
               </motion.p>
               {/* Market Stats */}
               <motion.div
+<<<<<<< HEAD
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion.p>
               {/* Market Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -421,19 +600,28 @@ export default function ComprehensivePricingPage() {
                     <div className='text-gray-400 text-sm'>{stat.label}</div>
                     <div className='text-gray-500 text-xs'>
                       {stat.description}
+<<<<<<< HEAD
                     </div>                  </div>                  <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
+=======
+                    </div>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 ))}
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
+<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -459,7 +647,11 @@ export default function ComprehensivePricingPage() {
                   }
                 >
                   Browse All Services
+<<<<<<< HEAD
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />
+=======
+                  <Search className='ml-2 w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
               </motion.div>
             </div>
@@ -479,11 +671,16 @@ export default function ComprehensivePricingPage() {
                 <MapPin className='w-5 h-5 text-green-400' />
                 <span className='text-white'>{contactInfo.address}</span>
                 <Globe className='w-5 h-5 text-blue-400' />
+<<<<<<< HEAD
                 <span className='text-white'>{contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-green-400" />
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
+=======
+                <span className='text-white'>{contactInfo.website}</span>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </section>
@@ -491,10 +688,15 @@ export default function ComprehensivePricingPage() {
         <section id='pricing-tiers' className='py-20'>
           <div className='container mx-auto px-4'>
             <motion.div
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 20 }}        <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
+=======
+              className='text-center mb-16'
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -515,6 +717,7 @@ export default function ComprehensivePricingPage() {
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
               variants={containerVariants}
               initial='hidden'
+<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
                 </span>
                 <br />
@@ -529,6 +732,9 @@ export default function ComprehensivePricingPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+=======
+              whileInView='visible'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               viewport={{ once: true }}
             >
               {pricingTiers.map((tier, index) => (
@@ -546,6 +752,7 @@ export default function ComprehensivePricingPage() {
                   >
                     {tier.popular && (
                       <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                         <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold'>                          Most Popular
                         </div>
                       </div>
@@ -559,6 +766,14 @@ export default function ComprehensivePricingPage() {
                         </div>
                       </div>
                     )}
+=======
+                        <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold'>
+                          Most Popular
+                        </div>
+                      </div>
+                    )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='text-center mb-8'>
                       <div
                         className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}
@@ -582,6 +797,7 @@ export default function ComprehensivePricingPage() {
                           <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                           <span className='text-sm text-gray-300'>
                             {feature}
+<<<<<<< HEAD
                           </span>                        </div>
                       ))}
                     </div>
@@ -600,6 +816,13 @@ export default function ComprehensivePricingPage() {
                         </div>
                       ))}
                     </div>
+=======
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='text-center'>
                       <Button
                         variant={tier.popular ? 'futuristic' : 'primary'}
@@ -613,6 +836,7 @@ export default function ComprehensivePricingPage() {
                         className='w-full'
                       >
                         Get Started
+<<<<<<< HEAD
                         <ArrowRight className='ml-2 w-4 h-4' />                      </Button>                    <div className="text-center">
                                              <Button
                          variant={tier.popular ? 'futuristic' : 'primary'}
@@ -622,6 +846,10 @@ export default function ComprehensivePricingPage() {
                        >
                         Get Started
                         <ArrowRight className="ml-2 w-4 h-4" />
+=======
+                        <ArrowRight className='ml-2 w-4 h-4' />
+                      </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
@@ -634,11 +862,16 @@ export default function ComprehensivePricingPage() {
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
+<<<<<<< HEAD
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
+=======
+              className='mb-8'
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -691,23 +924,36 @@ export default function ComprehensivePricingPage() {
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
                     />
                   </div>
+<<<<<<< HEAD
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <Grid className='w-4 h-4' />                    </button>
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
+=======
+
+                  <div className='flex border border-gray-600 rounded-lg overflow-hidden'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
+<<<<<<< HEAD
                       <Grid className='w-4 h-4' />                      <Grid className="w-4 h-4" />
+=======
+                      <Grid className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
+<<<<<<< HEAD
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
+=======
+                      <List className='w-4 h-4' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 </div>
@@ -722,6 +968,7 @@ export default function ComprehensivePricingPage() {
               }
               variants={containerVariants}
               initial='hidden'
+<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
@@ -730,6 +977,10 @@ export default function ComprehensivePricingPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+=======
+              whileInView='visible'
+              viewport={{ once: true }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -738,7 +989,11 @@ export default function ComprehensivePricingPage() {
                   whileHover={{ y: -5 }}
                 >
                   <UltraFuturisticCard
+<<<<<<< HEAD
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -765,6 +1020,7 @@ export default function ComprehensivePricingPage() {
                               className='flex items-center gap-2 text-sm'
                             >
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+<<<<<<< HEAD
                               <span className='text-gray-300'>{feature}</span>                            </div>
                           ))}
                         </div>
@@ -781,6 +1037,13 @@ export default function ComprehensivePricingPage() {
                               <span className="text-gray-300">{feature}</span>
                           ))}
                         </div>
+=======
+                              <span className='text-gray-300'>{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         <div className='text-center space-y-2'>
                           <Button
                             variant='primary'
@@ -804,6 +1067,7 @@ export default function ComprehensivePricingPage() {
                           >
                             Get Pricing
                             <DollarSign className='ml-2 w-4 h-4' />
+<<<<<<< HEAD
                           </Button>                        </div>
                       </div>
                     ) : (
@@ -826,6 +1090,10 @@ export default function ComprehensivePricingPage() {
                              Get Pricing
                              <DollarSign className="ml-2 w-4 h-4" />
                            </Button>
+=======
+                          </Button>
+                        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     ) : (
                       // List View
@@ -916,6 +1184,7 @@ export default function ComprehensivePricingPage() {
                             >
                               Get Pricing
                               <DollarSign className='ml-2 w-4 h-4' />
+<<<<<<< HEAD
                             </Button>                          </div>
                           <div className="flex gap-2">
                                                          <Button
@@ -934,6 +1203,10 @@ export default function ComprehensivePricingPage() {
                                Get Pricing
                                <DollarSign className="ml-2 w-4 h-4" />
                              </Button>
+=======
+                            </Button>
+                          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </div>
                       </div>
                     )}
@@ -943,11 +1216,15 @@ export default function ComprehensivePricingPage() {
             </motion.div>
             {filteredServices.length === 0 && (
               <motion.div
+<<<<<<< HEAD
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >              <motion.div
                 className="text-center py-16"
+=======
+                className='text-center py-16'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -968,6 +1245,7 @@ export default function ComprehensivePricingPage() {
                   }}
                 >
                   Clear Filters
+<<<<<<< HEAD
                 </Button>              </motion.div>                <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
@@ -982,6 +1260,10 @@ export default function ComprehensivePricingPage() {
                  >
                    Clear Filters
                  </Button>
+=======
+                </Button>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             )}
           </div>
         </section>
@@ -989,10 +1271,15 @@ export default function ComprehensivePricingPage() {
         <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
+<<<<<<< HEAD
               className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-4xl mx-auto"
+=======
+              className='max-w-4xl mx-auto'
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -1046,6 +1333,7 @@ export default function ComprehensivePricingPage() {
                   <div className='text-white font-semibold'>
                     {contactInfo.address}
                   </div>
+<<<<<<< HEAD
                   <div className='text-gray-400 text-sm'>Visit our office</div>                </div>                Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1084,6 +1372,9 @@ export default function ComprehensivePricingPage() {
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
+=======
+                  <div className='text-gray-400 text-sm'>Visit our office</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
@@ -1091,5 +1382,9 @@ export default function ComprehensivePricingPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

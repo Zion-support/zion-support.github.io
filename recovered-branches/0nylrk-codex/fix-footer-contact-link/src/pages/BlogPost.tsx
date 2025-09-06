@@ -8,7 +8,13 @@ import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
+<<<<<<< HEAD
 import { BLOG_POSTS } from "@/data/blog-posts";
+=======
+import { BLOG_POSTS } from '@/data/blog-posts';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function BlogPost() {
 <<<<<<< HEAD
   const { slug } = useParams() as { slug: string };

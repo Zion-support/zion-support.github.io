@@ -3,8 +3,16 @@ import OpenAI from 'openai';
 type OpenAIClient = any;
 =======
 type OpenAIClient = OpenAI;
+<<<<<<< HEAD
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey });
+=======
+}
+
+export function createOpenAIClient(apiKey: string): OpenAIClient {
+  return new OpenAI({ apiKey });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export async function generateJobPost(
   openai: OpenAIClient
   role: string
@@ -16,6 +24,7 @@ Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
+<<<<<<< HEAD
     model: 'gpt-4o-mini'
     input: prompt
   });
@@ -28,3 +37,9 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return completion.output_text
 }
+=======
+    model: 'gpt-4o-mini',
+    input: prompt,
+  });
+  return completion.output_text;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

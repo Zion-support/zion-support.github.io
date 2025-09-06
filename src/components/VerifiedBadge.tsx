@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { CheckCircle } from 'lucide-react'
 <<<<<<< HEAD
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+=======
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */
+<<<<<<< HEAD
   label?: string
 }
 
@@ -49,11 +62,33 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  label?: string;
+}
+
+export function VerifiedBadge({
+  verified,
+  size = 'sm',
+  label = 'Verified talent',
+}: VerifiedBadgeProps) {
+  if (!verified) return null;
+
+  const sizeClasses = {
+    sm: 'h-3.5 w-3.5',
+    md: 'h-4 w-4',
+    lg: 'h-5 w-5',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
+<<<<<<< HEAD
           <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
+=======
+          <span className='inline-flex text-blue-500'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
@@ -62,5 +97,9 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

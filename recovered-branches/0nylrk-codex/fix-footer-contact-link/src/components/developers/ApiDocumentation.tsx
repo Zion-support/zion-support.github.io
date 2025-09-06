@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { BookOpen, Code, Copy, Terminal } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
+
+import CodeBlock from './CodeBlock';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",

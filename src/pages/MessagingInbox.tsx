@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
@@ -6,6 +7,8 @@ import { MessageSquare, Video } from 'lucide-react'
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -16,7 +19,13 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
+<<<<<<< HEAD
 =======
+=======
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
@@ -69,7 +78,13 @@ export default function MessagingInbox() {
       toast.error("Please select a conversation first");
       return
     }
+<<<<<<< HEAD
     const roomId = `msg-${activeConversation.id}`;
+=======
+}
+
+const roomId = `msg-${activeConversation.id}`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setActiveCall(roomId);
     // Show toast notification
     toast.success("Starting video call", {
@@ -144,4 +159,8 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }/>) ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
+<<<<<<< HEAD
 }'"}
+=======
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

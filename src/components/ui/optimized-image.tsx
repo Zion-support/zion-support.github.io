@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react',
+=======
+import React, { useState, useRef, useEffect } from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Image from 'next/image';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ImageIcon, AlertTriangle } from 'lucide-react'
@@ -28,6 +32,7 @@ interface OptimizedImageProps {
   blurDataURL?: string;
   loading?: 'lazy' | 'eager',
   style?: React.CSSProperties;
+<<<<<<< HEAD
   objectPosition?: string
 }
 
@@ -36,6 +41,9 @@ interface ImageMetrics {
   fileSize: number;
   format: string;
   wasOptimized: boolean
+=======
+  objectPosition?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -209,8 +217,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       placeholder === 'color' && 'bg-gray-200'
     )
     if (placeholder === 'color') {
+<<<<<<< HEAD
               />
       )
+=======
+
+        />
+      );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     return (
       <div className={placeholderClassName}>
@@ -221,11 +235,20 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio:
+<<<<<<< HEAD
       aspectRatio |(width && height ? `${width}/${height}` : undefined)
     width: width ? `${width}px` : undefined
     height: height ? `${height}px` : undefined
   }
       >
+=======
+      aspectRatio || (width && height ? `${width}/${height}` : undefined),
+    width: width ? `${width}px` : undefined,
+    height: height ? `${height}px` : undefined,
+  };
+
+    >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <AnimatePresence>
         {/* Placeholder */}
         {(isLoading |!isInView) && !hasError && (
@@ -284,6 +307,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </AnimatePresence>
     </div>
+<<<<<<< HEAD
   )
 }
 //Container styles
@@ -322,6 +346,48 @@ isLoading ? 'opacity-0' : 'opacity-100')
 }initial= {
   {
   opacity: 0
+=======
+  );
+};
+//Container styles
+}> <AnimatePresence> {;
+  /* Placeholder */ ;
+}{;
+  (isLoading || !isInView) && !hasError && (<motion.div > {;
+  generatePlaceholder () ;
+}/> </div>) ;
+}</motion.div>) ;
+}{;
+  /* Error state */ ;
+}{;
+  hasError && (<motion.div) ;
+}</motion.div>) ;
+}{;
+  /* Actual image */ ;
+}{;
+  isInView && !hasError && (<motion.img src= {;
+  optimizedSrc ;
+}srcSet= {;
+  srcSet ;
+}alt= {;
+  alt ;
+}loading= {';
+  priority ? 'eager' : 'lazy' ;
+}onLoad= {;
+  handleLoad ;
+}onError= {;
+  handleError ;
+}className= {';
+  cn ('w-full h-full transition-opacity duration-300', `object-$ {;
+  objectFit ;
+}`;';
+isLoading ? 'opacity-0' : 'opacity-100') ;
+}initial= {;
+  {;
+  opacity: 0 ;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images
   columns = 3
@@ -372,6 +438,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 //Gallery component with optimized loading </span> </div> <div className= {
@@ -381,6 +448,19 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   gridTemplateColumns: `repeat ($ {
   columns
 }, 1fr) `
+=======
+  );
+};
+//Gallery component with optimized loading </span> </div> <div className= {;
+  `grid gap-4` ;
+}style= {;
+  {;
+  gridTemplateColumns: `repeat ($ {;
+  columns ;
+}, 1fr) ` ;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   src
   alt
@@ -400,7 +480,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       .map(n => n[0])
       .join('')
       .toUpperCase()
+<<<<<<< HEAD
       .slice(0, 2)
+=======
+      .slice(0, 2);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {src ? (
         <OptimizedImage
@@ -419,8 +504,13 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

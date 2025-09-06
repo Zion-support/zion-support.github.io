@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+import { X, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { useIsMobile } from '@/hooks/use-mobile';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -9,8 +17,14 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
   delay?: number, // Delay in milliseconds before showing the banner
 }
+=======
+  delay?: number; // Delay in milliseconds before showing the banner
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
   appName;
@@ -83,4 +97,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   )
 }
 '"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {
 <<<<<<< HEAD
   nodes: TreeNode[];
   status: { gitConnected: boolean, gitBranch?: string }
+=======
+import React, { useEffect, useState } from 'react';
+import Tree, { TreeNode } from '../../components/ui/Tree';
+
+interface ApiResponse {
+  nodes: TreeNode[];
+status: {
+  gitConnected: boolean, gitBranch?: string
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 =======
@@ -33,16 +43,31 @@ export default function DevTreePage() {
       setNodes(data.nodes);
       setGit(data.status);
     } catch (e: any) {
+<<<<<<< HEAD
       setError(e.message |'Failed to load');    }
   }
   useEffect(() => {
     const stored = localStorage.getItem('ADMIN_TOKEN') |'';
+=======
+      setError(e.message || 'Failed to load');
+    }
+  };
+
+  useEffect(() => {
+    const stored = localStorage.getItem('ADMIN_TOKEN') || '';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setAdminToken(stored);
     fetchTree(stored);
   }, []);
   const handleSaveToken = () => {
     localStorage.setItem('ADMIN_TOKEN', adminToken);
+<<<<<<< HEAD
     fetchTree(adminToken);  }
+=======
+    fetchTree(adminToken);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const onDeploy = async (p: string) => {
     try {
       const resp = await fetch('/api/dev/source-map', {
@@ -59,9 +84,16 @@ export default function DevTreePage() {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
+<<<<<<< HEAD
       setError(e.message |'Deploy failed');    }
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      setError(e.message || 'Deploy failed');
+    }
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='p-6 max-w-5xl mx-auto'>
       <div className='flex items-center gap-4 mb-4'>
@@ -84,16 +116,34 @@ export default function DevTreePage() {
           <button
             className='px-3 py-1 text-sm bg-blue-600 text-white rounded'
             onClick={handleSaveToken}
+<<<<<<< HEAD
           >            Save Token
           </button>
         </div>
       </div>
+=======
+          >
+            Save Token
+          </button>
+        </div>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
       {nodes ? (
+<<<<<<< HEAD
         <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />
+=======
+        <div className='rounded border p-3 bg-white'>
+          <Tree nodes={nodes} onDeploy={onDeploy} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       ) : (
         <div>Loading...</div>
       )}
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

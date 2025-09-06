@@ -23,7 +23,14 @@ const AppMetadataManager: React.FC = () => {
         <MetadataManager />
       </div>
     </AppLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default AppMetadataManager;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

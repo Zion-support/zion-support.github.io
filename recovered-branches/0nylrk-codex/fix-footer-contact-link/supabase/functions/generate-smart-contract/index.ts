@@ -77,12 +77,28 @@ serve(async (req) => {
     if (!response.ok) {
       throw new Error(data.error?.message |'Failed to generate smart contract')
     }
+<<<<<<< HEAD
     const solidityCode = data.choices[0].message.content.trim();
     return new Response(JSON.stringify({
       success: true
       solidityCode
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+=======
+}
+
+const solidityCode = data.choices[0].message.content.trim();
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        solidityCode,
+      }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   } catch (error) {
     console.error('Error generating smart contract:', error);
     return new Response(

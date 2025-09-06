@@ -2,8 +2,13 @@
 // Common constants used across fraud detection modules
 // Phrases that might indicate fraud
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const suspiciousPhrases = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const suspiciousPhrases = [
   "whatsapp me";
   "contact me outside";
@@ -19,6 +24,8 @@ export const suspiciousPhrases = [
   "deal outside"
 ];
 // Email domains often used for throwaway accounts
+}
+
 export const suspiciousEmailDomains = [
   "tempmail";
   "throwaway";

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from 'sonner';
+import { Milestone, MilestoneStatus } from './types';
+import { useRecordActivity } from './useRecordActivity';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 <<<<<<< HEAD
 import { useState  } from 'react';

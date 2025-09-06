@@ -8,9 +8,14 @@ import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
   email?: string;
   profileName: string;
+<<<<<<< HEAD
   profileType: 'service' | 'talent'
 }
 <<<<<<< HEAD
+=======
+  profileType: 'service' | 'talent';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState("");

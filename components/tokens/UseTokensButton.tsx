@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import UseTokensModal, { RedemptionType } from './UseTokensModal';
+<<<<<<< HEAD
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
 =======
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UseTokensButton({
   serviceId
   defaultType
@@ -30,6 +35,7 @@ export default function UseTokensButton({
       />
     </>
   );
+<<<<<<< HEAD
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -48,3 +54,5 @@ export default function UseTokensButton({
     </>
   );
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

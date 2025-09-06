@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps;
 =======
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -14,3 +15,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function LaunchRedirect() {
   return null;
 }
+=======
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/academy/founder-course',
+      permanent: false,
+    },
+  };
+};
+}
+
+export default function LaunchRedirect() {
+  return null;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

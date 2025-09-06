@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface UltraFuturisticBackground2026Props {
   children: React.ReactNode;
   className?: string
@@ -18,6 +19,17 @@ const UltraFuturisticBackground2026: React.FC<
   children;
   className = ''
 }) => {
+=======
+
+interface UltraFuturisticBackground2026Props {
+  children: React.ReactNode;
+  className?: string;
+
+const UltraFuturisticBackground2026: React.FC<
+  UltraFuturisticBackground2026Props
+> = ({ children, className = '' }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const animationRef = useRef<number | undefined>(undefined);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -35,6 +47,7 @@ const UltraFuturisticBackground2026: React.FC<
       color: string;
       alpha: number;
       life: number;
+<<<<<<< HEAD
       maxLife: number;    }> = [];      x: number
       y: number
       vx: number
@@ -44,6 +57,11 @@ const UltraFuturisticBackground2026: React.FC<
       alpha: number
       life: number
       maxLife: number
+=======
+      maxLife: number;
+    }> = [];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const colors = [
       '#00ffff', // Cyan
       '#ff00ff', // Magenta
@@ -52,7 +70,11 @@ const UltraFuturisticBackground2026: React.FC<
       '#ff0080', // Pink
       '#8000ff', // Purple
       '#0080ff', // Blue
+<<<<<<< HEAD
       '#ff8000', // Orange    ];      '#ff8000'  // Orange
+=======
+      '#ff8000', // Orange
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ];
     const createParticle = () => {
       const side = Math.floor(Math.random() * 4);
@@ -84,6 +106,7 @@ const UltraFuturisticBackground2026: React.FC<
           break;
       }
       return {
+<<<<<<< HEAD
         x
         y
         vx
@@ -112,6 +135,24 @@ const UltraFuturisticBackground2026: React.FC<
       for (let i = 0; i < 100; i++) {
         particles.push(createParticle());      for (let i = 0, i < 100, i++) {
         particles.push(createParticle())
+=======
+        x,
+        y,
+        vx,
+        vy,
+        size: Math.random() * 3 + 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: Math.random() * 0.8 + 0.2,
+        life: 0,
+        maxLife: Math.random() * 200 + 100,
+      };
+    };
+
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < 100; i++) {
+        particles.push(createParticle());
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     const animate = () => {
@@ -121,6 +162,10 @@ const UltraFuturisticBackground2026: React.FC<
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life++;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         if (
           particle.life > particle.maxLife |
           particle.x < -20 |
@@ -128,10 +173,16 @@ const UltraFuturisticBackground2026: React.FC<
           particle.y < -20 |
           particle.y > canvas.height + 20
         ) {
+<<<<<<< HEAD
           particles[index] = createParticle();        }        if (particle.life > particle.maxLife |
             particle.x < -20 |particle.x > canvas.width + 20 |
             particle.y < -20 |particle.y > canvas.height + 20) {
           particles[index] = createParticle()
+=======
+          particles[index] = createParticle();
+        }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.alpha;
@@ -141,6 +192,7 @@ const UltraFuturisticBackground2026: React.FC<
         ctx.fill();
         // Draw glow effect
         const gradient = ctx.createRadialGradient(
+<<<<<<< HEAD
           particle.x
           particle.y
           0
@@ -148,6 +200,14 @@ const UltraFuturisticBackground2026: React.FC<
           particle.y
           particle.size * 3        );          particle.x, particle.y, 0;
           particle.x, particle.y, particle.size * 3
+=======
+          particle.x,
+          particle.y,
+          0,
+          particle.x,
+          particle.y,
+          particle.size * 3
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         );
         gradient.addColorStop(0, particle.color);
         gradient.addColorStop(1, 'transparent');
@@ -155,7 +215,11 @@ const UltraFuturisticBackground2026: React.FC<
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
         ctx.restore();      });        ctx.restore()
+=======
+        ctx.restore();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
@@ -164,8 +228,12 @@ const UltraFuturisticBackground2026: React.FC<
         particles.slice(i + 1).forEach(particle2 => {
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) +
+<<<<<<< HEAD
               Math.pow(particle1.y - particle2.y, 2)          );            Math.pow(particle1.x - particle2.x, 2) +
             Math.pow(particle1.y - particle2.y, 2)
+=======
+              Math.pow(particle1.y - particle2.y, 2)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           );
           if (distance < 100) {
             ctx.beginPath();
@@ -173,9 +241,13 @@ const UltraFuturisticBackground2026: React.FC<
             ctx.lineTo(particle2.x, particle2.y);
             ctx.stroke();
           }
+<<<<<<< HEAD
         });      });            ctx.stroke()
           }
         })
+=======
+        });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Draw grid pattern
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.05)';
@@ -193,6 +265,7 @@ const UltraFuturisticBackground2026: React.FC<
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
+<<<<<<< HEAD
       animationRef.current = requestAnimationFrame(animate);    }
     const handleResize = () => {
       canvas.width = window.innerWidth;
@@ -213,6 +286,17 @@ const UltraFuturisticBackground2026: React.FC<
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;      canvas.height = window.innerHeight
     }
+=======
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
@@ -221,9 +305,13 @@ const UltraFuturisticBackground2026: React.FC<
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
+<<<<<<< HEAD
     };  }, []);        cancelAnimationFrame(animationRef.current)
       }
     }
+=======
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -241,6 +329,7 @@ const UltraFuturisticBackground2026: React.FC<
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20'
           animate={{
+<<<<<<< HEAD
             rotate: 360
             scale: [1, 1.2, 1]
             opacity: [0.3, 0.6, 0.3],          }}
@@ -261,11 +350,22 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 8
             repeat: Infinity
             ease: 'linear'
+=======
+            rotate: 360,
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full'
           animate={{
+<<<<<<< HEAD
             y: [0, -20, 0]
             opacity: [0.2, 0.5, 0.2],          }}
           transition={{
@@ -283,11 +383,21 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
+=======
+            y: [0, -20, 0],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45'
           animate={{
+<<<<<<< HEAD
             rotate: [0, 180, 360]
             scale: [1, 1.1, 1],          }}
           transition={{
@@ -305,11 +415,21 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 12
             repeat: Infinity
             ease: 'linear'
+=======
+            rotate: [0, 180, 360],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12'
           animate={{
+<<<<<<< HEAD
             rotate: [0, -180, -360]
             opacity: [0.4, 0.7, 0.4],          }}
           transition={{
@@ -327,6 +447,15 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 10
             repeat: Infinity
             ease: 'linear',            ease: "linear"
+=======
+            rotate: [0, -180, -360],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
       </div>
@@ -335,6 +464,7 @@ const UltraFuturisticBackground2026: React.FC<
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
           animate={{
+<<<<<<< HEAD
             x: ['-100%', '100%'],          }}
           transition={{
             duration: 15
@@ -348,11 +478,20 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 15
             repeat: Infinity
             ease: 'linear'
+=======
+            x: ['-100%', '100%'],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent'
           animate={{
+<<<<<<< HEAD
             y: ['-100%', '100%'],          }}
           transition={{
             duration: 20
@@ -368,6 +507,14 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 20
             repeat: Infinity
             ease: 'linear',            ease: "linear"
+=======
+            y: ['-100%', '100%'],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
       </div>
@@ -380,6 +527,7 @@ const UltraFuturisticBackground2026: React.FC<
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraFuturisticBackground2026;
       {/* Holographic Overlay */}
@@ -392,3 +540,9 @@ export default UltraFuturisticBackground2026;
 }
 export default UltraFuturisticBackground2026;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraFuturisticBackground2026;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

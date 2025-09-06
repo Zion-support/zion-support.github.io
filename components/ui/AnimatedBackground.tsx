@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
@@ -23,6 +28,7 @@ export default function AnimatedBackground() {
         }
       `}</style>
     </div>
+<<<<<<< HEAD
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Gradient Background */}
@@ -82,3 +88,6 @@ export default function AnimatedBackground() {
   );
 }
 export default AnimatedBackground;
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

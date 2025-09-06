@@ -169,8 +169,14 @@ function TalentDashboardContent() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>

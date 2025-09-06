@@ -19,6 +19,7 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+<<<<<<< HEAD
 =======
   searchQuery: string
   setSearchQuery: (value: string) => void
@@ -31,6 +32,11 @@ interface QuotesFilterProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onReset: () => void
 }
+=======
+  onReset: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
   setSearchQuery;

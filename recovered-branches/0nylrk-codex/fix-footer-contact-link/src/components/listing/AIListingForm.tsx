@@ -8,6 +8,7 @@ import { Sparkles } from "lucide-react";
 interface AIListingFormProps {
   onSubmit: (formData: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: string;
     category: string;
     keyFeatures: string;
@@ -30,6 +31,20 @@ interface AIListingFormProps {
   }
 }
 <<<<<<< HEAD
+=======
+  title: string;
+category: string;
+keyFeatures: string;
+targetAudience: string 
+}) => void;
+isLoading: boolean;
+initialValues?: {
+  title?: string;
+category?: string;
+keyFeatures?: string;
+targetAudience?: string
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function AIListingForm({ onSubmit, isLoading, initialValues;
 =======

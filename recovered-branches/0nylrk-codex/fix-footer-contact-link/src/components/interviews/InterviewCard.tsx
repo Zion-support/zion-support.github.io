@@ -15,11 +15,48 @@ import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
 <<<<<<< HEAD
   interview: Interview;
+<<<<<<< HEAD
 =======
   interview: Interview
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onRefresh: () => Promise<void>
 }
+=======
+onRefresh: () => Promise<void> 
+}export function InterviewCard ({
+  interview, onRefresh 
+}: InterviewCardProps) {
+  const {
+  user 
+}= useAuth ();
+const {
+  respondToInterview, cancelInterview 
+}= useInterviews ();
+const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
+const [isLoading, setIsLoading] = useState (false);
+const isClient = user?.id === interview.client id;
+const isTalent = user?.id === interview.talent id;
+//Format interview date and time const interviewDate = parseISO (interview.scheduled date);
+const formattedDate = format (interviewDate, 'EEEE, MMMM d');
+const formattedTime = format (interviewDate, 'h: mm a');
+//Calculate when interview ends const endTime = new Date (interviewDate);
+endTime.setMinutes (endTime.getMinutes () + interview.duration minutes);
+const formattedEndTime = format (endTime, 'h: mm a');
+const isInterviewPending = interview.status === 'requested';
+const isInterviewConfirmed = interview.status === 'confirmed';
+const isInterviewLive = isInterviewConfirmed && !isPast (interviewDate) && isPast (new Date (interviewDate.getTime () - 5 * 60000) ), //5 minutes before const isInterviewPast = isPast (interviewDate);
+const getRelativeTime = () => {
+  if (isPast (interviewDate) ) {
+  return `Took place $ {
+  formatDistanceToNow (interviewDate) 
+}ago` 
+}else {
+  return `Starts in $ {
+  formatDistanceToNow (interviewDate) 
+}`
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();

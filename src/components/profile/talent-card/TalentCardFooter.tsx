@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -6,11 +7,22 @@ import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
+=======
+import React, { useState } from 'react';
+import { Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { HireRequestModal } from '@/components/profile/hire-request';
+import { useAuthStatus } from '@/hooks/talent';
+import type { UserProfile } from '@/types/auth';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
 <<<<<<< HEAD
   profile: TalentProfile;
   onViewProfile: (id: string) => void;
+<<<<<<< HEAD
   onRequestHire?: (profile: TalentProfile) => void
 =======
   profile: TalentProfile
@@ -20,6 +32,16 @@ interface TalentCardFooterProps {
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
 <<<<<<< HEAD
+=======
+  onRequestHire?: (profile: TalentProfile) => void;
+}
+
+export function TalentCardFooter({
+  profile,
+  onViewProfile,
+  onRequestHire,
+}: TalentCardFooterProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const router = null;
@@ -110,5 +132,31 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails = {userProfile,}
       />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
+  e.stopPropagation ();';
+profile.id || '' ;
+}`);
+//Also call the onViewProfile callback if provided <div> {;
+  profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;
+  profile.hourly rate ;
+}/hr</div> </div>) : (</div>) ";
+}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
+  /* Hire Request Modal */ ;
+}<HireRequestModal talent= {;
+  profile ;
+}isOpen= {;
+  isHireModalOpen ;
+}onClose= {;
+  () => setIsHireModalOpen (false) ;
+}userDetails= {;
+  userProfile ;
+}/> </>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type IntegrationCategory = any;
   events: ZapierEvent[]
 }
@@ -19,6 +20,12 @@ export interface IntegrationProviderMeta {
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
+=======
+export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface SyncRules {
   // CRM rules
   autoCreateContacts?: boolean;
@@ -28,7 +35,13 @@ export interface SyncRules {
   autoUploadResumes?: boolean;
 export interface ProviderConnection {
   providerId: IntegrationProviderId;
+<<<<<<< HEAD
   status: SyncStatus;  accessToken?: string;  refreshToken?: string;
+=======
+  status: SyncStatus;
+  accessToken?: string;
+  refreshToken?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
@@ -54,6 +67,10 @@ export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
+<<<<<<< HEAD
   events: ZapierEvent[];  events: ZapierEvent[]
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  events: ZapierEvent[];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

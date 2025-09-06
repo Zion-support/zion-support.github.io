@@ -1,4 +1,8 @@
 const { upsertFile } = require('./_lib/github');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function fetchHtml(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -62,6 +66,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };async function fetchHtml(url) {
   const resp = await fetch(url)
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
@@ -140,3 +145,6 @@ exports.handler = async function() {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

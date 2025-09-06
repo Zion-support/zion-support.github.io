@@ -13,7 +13,14 @@ const ErrorRoutes = () => {
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ErrorRoutes;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

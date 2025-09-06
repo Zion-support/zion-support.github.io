@@ -5,11 +5,17 @@ import { formatDate } from "@/utils/referralUtils";
 interface ReferralTableProps {
 <<<<<<< HEAD
   referrals: Referral[];
+<<<<<<< HEAD
 =======
   referrals: Referral[]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isLoading: boolean
 }
+=======
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 <<<<<<< HEAD

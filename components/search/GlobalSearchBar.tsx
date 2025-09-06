@@ -1,5 +1,10 @@
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GlobalSearchBar() {
 <<<<<<< HEAD
   const router = null;
@@ -12,7 +17,11 @@ export default function GlobalSearchBar() {
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
+<<<<<<< HEAD
       return;      return
+=======
+      return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -27,6 +36,7 @@ export default function GlobalSearchBar() {
       } catch {}
     }
     const id = setTimeout(run, 150);
+<<<<<<< HEAD
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true)
@@ -34,6 +44,9 @@ export default function GlobalSearchBar() {
     }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
+=======
+    return () => clearTimeout(id);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -44,6 +57,7 @@ export default function GlobalSearchBar() {
       body: JSON.stringify({ q: query })
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
+<<<<<<< HEAD
     setOpen(false);  }
   const startVoice = () => {
     if (typeof window === 'undefined') return;
@@ -58,15 +72,34 @@ export default function GlobalSearchBar() {
     const Speech: any =
       (window as any).SpeechRecognition |
       (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition
+=======
+    setOpen(false);
+  };
+
+  const startVoice = () => {
+    if (typeof window === 'undefined') return;
+    const Speech: any =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
+<<<<<<< HEAD
       const transcript = e.results?.[0]?.[0]?.transcript |'';
+=======
+      const transcript = e.results?.[0]?.[0]?.transcript || '';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
     }
     rec.start();
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <input
         value={query}
@@ -104,6 +137,7 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
+<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
   }
@@ -135,6 +169,9 @@ export default function GlobalSearchBar() {
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+=======
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   {s}
                 </button>
@@ -144,5 +181,9 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

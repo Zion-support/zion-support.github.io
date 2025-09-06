@@ -41,6 +41,7 @@ export interface SpecializedITSolution2026 {
   customers: number;
   rating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   reviews: number
 }
 
@@ -61,6 +62,23 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   {
     id: 'cloud-infrastructure-automation'
     name: 'Cloud Infrastructure Automation Platform'
+=======
+  reviews: number;
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+    id: 'cloud-infrastructure-automation',
+    name: 'Cloud Infrastructure Automation Platform',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     tagline:
       'Automate cloud infrastructure deployment and management with intelligent orchestration'
     price: '$399'
@@ -608,14 +626,30 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 33
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category
   );
+<<<<<<< HEAD
 }
 export const getPopularSpecializedITSolutions2026 = () => {
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
+=======
+};
+}
+
+export const getPopularSpecializedITSolutions2026 = () => {
+  return specializedITSolutions2026.filter(solution => solution.popular);
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -624,7 +658,11 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
   })
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -12,7 +12,13 @@ import type {
   Session
 } from '@supabase/supabase-js'
 interface UserProfileProps {
+<<<<<<< HEAD
   onUserChange?: (user: SupabaseUser | null) => void
+=======
+  onUserChange?: (user: SupabaseUser | null) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)

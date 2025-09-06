@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
@@ -28,6 +34,7 @@ export function EnterpriseTrustBadges() {
           </div>
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
             <CheckCircle className='h-5 w-5 text-primary' />
+<<<<<<< HEAD
             <span className='font-medium'>HIPAA Compliant</span>          </div>
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
@@ -56,9 +63,16 @@ export function EnterpriseTrustBadges() {
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
+=======
+            <span className='font-medium'>HIPAA Compliant</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

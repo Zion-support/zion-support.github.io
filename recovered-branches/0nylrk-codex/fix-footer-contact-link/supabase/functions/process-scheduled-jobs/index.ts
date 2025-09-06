@@ -213,4 +213,35 @@ async function processContentGeneration(supabase, contentType) {
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error)
   }
+<<<<<<< HEAD
 }
+=======
+
+}async function processContentGeneration (supabase, contentType) {
+  try {
+  //Call the content generation function const response = await fetch (`$ {
+  Deno.env.get (" SUPABASE URL") 
+}/functions/v1/generate-content`;
+{
+  method: " POST";
+headers: {
+  " Content-Type": " application/json";
+" Authorization": `Bearer $ {
+  Deno.env.get (" SUPABASE ANON KEY") 
+}` 
+};
+body: JSON.stringify ({
+  contentType;
+autoPublish: contentType === 'blog' ? true : false;
+includeImage: contentType === 'blog' ? true : false 
+}) 
+});
+if (!response.ok) {
+  const errorData = await response.json ();
+throw new Error (`Content generation failed: $ {
+  JSON.stringify (errorData) 
+}`) 
+}// Get admin email from profiles const {
+  data: adminProfiles 
+}= await supabase .from ('profiles') .select ('email') .eq ('roleadmin') .limit (1);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

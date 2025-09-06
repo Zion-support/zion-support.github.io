@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import HelpCenter from '@/components/support/HelpCenter';
+import { SEO } from '@/components/SEO';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import HelpCenter from "@/components/support/HelpCenter";

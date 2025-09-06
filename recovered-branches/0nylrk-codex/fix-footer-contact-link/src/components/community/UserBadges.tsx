@@ -10,6 +10,7 @@ interface UserBadgesProps {
 const iconMap = null;
 =======
 const iconMap = {
+<<<<<<< HEAD
   Trophy;
   Award;
   BadgeCheck;
@@ -17,6 +18,19 @@ const iconMap = {
   MessageSquare
 }
 export const UserBadges = ({ badges }: UserBadgesProps) => {
+=======
+  Trophy,
+  Award,
+  BadgeCheck,
+  Star,
+  MessageSquare,
+};
+}
+
+export const UserBadges = ({
+  badges 
+}: UserBadgesProps) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!badges?.length) return null;
   return (
     <div className="flex flex-wrap gap-2">
@@ -48,7 +62,14 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
         )
       })}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default UserBadges;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

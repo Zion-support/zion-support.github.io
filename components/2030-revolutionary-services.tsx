@@ -1,6 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
@@ -25,10 +26,25 @@ import {
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Award,
+  Phone,
+  Mail,
+  MapPin,;
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
+<<<<<<< HEAD
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -36,6 +52,18 @@ export default function Revolutionary2030ServicesPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
   }
+=======
+}
+
+export default function Revolutionary2030ServicesPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -109,6 +137,7 @@ export default function Revolutionary2030ServicesPage() {
                 email: 'kleber@ziontechgroup.com'
               }
               address: {
+<<<<<<< HEAD
                 '@type': 'PostalAddress'
                 streetAddress: '364 E Main St STE 1008'
                 addressLocality: 'Middletown'
@@ -136,17 +165,33 @@ export default function Revolutionary2030ServicesPage() {
                 "https://github.com/Zion-Holdings"
               ]
             })
+=======
+                '@type': 'PostalAddress',
+                streetAddress: '364 E Main St STE 1008',
+                addressLocality: 'Middletown',
+                addressRegion: 'DE',
+                postalCode: '19709',
+                addressCountry: 'US',
+              },
+              sameAs: ['https://github.com/Zion-Holdings'],
+            }),
+          }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         />
       </Head>
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
+=======
+        <div className='max-w-7xl mx-auto text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -155,11 +200,16 @@ export default function Revolutionary2030ServicesPage() {
           >
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6'>
               <Zap className='w-4 h-4 text-cyan-400 mr-2' />
+<<<<<<< HEAD
               <span className='text-cyan-400 text-sm font-medium'>                2030 Revolutionary Technology Services            className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">
+=======
+              <span className='text-cyan-400 text-sm font-medium'>
+                2030 Revolutionary Technology Services
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </span>
             </div>
           </motion.div>
@@ -173,12 +223,16 @@ export default function Revolutionary2030ServicesPage() {
               2030 Revolutionary
             </span>
             <br />
+<<<<<<< HEAD
             <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>              Technology Services          >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2030 Revolutionary
             </span>
             <br />
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+=======
+            <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Technology Services
             </span>
           </motion.h1>
@@ -190,10 +244,16 @@ export default function Revolutionary2030ServicesPage() {
           >
             Experience the next generation of revolutionary technology services.
             From AI consciousness and quantum computing to space mining and DNA
+<<<<<<< HEAD
             computing, we're building the future today.          </motion.p>            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness
             and quantum computing to space mining and DNA computing, we're building the future today.
+=======
+            computing, we're building the future today.
+          </motion.p>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -204,12 +264,17 @@ export default function Revolutionary2030ServicesPage() {
               Schedule Consultation
               <ArrowRight className='w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform' />
             </button>
+<<<<<<< HEAD
             <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>              View Pricing          >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
               Schedule Consultation
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
+=======
+
+            <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Pricing
             </button>
           </motion.div>
@@ -217,8 +282,12 @@ export default function Revolutionary2030ServicesPage() {
       </section>
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+<<<<<<< HEAD
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
+=======
+        <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -237,9 +306,15 @@ export default function Revolutionary2030ServicesPage() {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover our comprehensive range of cutting-edge 2030 technology
               services that will transform your business and propel you into the
+<<<<<<< HEAD
               future.            </p>
+=======
+              future.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
           {/* Services Grid */}
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our comprehensive range of cutting-edge 2030 technology services that will
@@ -247,6 +322,9 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
           {/* Services Grid */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+=======
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {innovative2030Services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -274,6 +352,7 @@ export default function Revolutionary2030ServicesPage() {
                       </div>
                     </div>
                     {service.popular && (
+<<<<<<< HEAD
                       <div className='px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black'>                        Popular              >
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm">
                   {/* Service Header */}
@@ -289,6 +368,9 @@ export default function Revolutionary2030ServicesPage() {
                     </div>
                     {service.popular && (
                       <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black">
+=======
+                      <div className='px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         Popular
                       </div>
                     )}
@@ -335,6 +417,7 @@ export default function Revolutionary2030ServicesPage() {
                       <Award className='w-4 h-4 text-cyan-400' />
                       <span className='text-gray-300'>
                         {service.innovationLevel}
+<<<<<<< HEAD
                       </span>                    </div>
                   </div>
                   {/* Price and CTA */}
@@ -365,6 +448,9 @@ export default function Revolutionary2030ServicesPage() {
                     <div className="flex items-center space-x-2">
                       <Award className="w-4 h-4 text-cyan-400" />
                       <span className="text-gray-300">{service.innovationLevel}</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                   {/* Price and CTA */}
@@ -379,6 +465,7 @@ export default function Revolutionary2030ServicesPage() {
                     </div>
                     <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group'>
                       Learn More
+<<<<<<< HEAD
                       <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />                    </button>                    <div>
                       <div className="text-3xl font-bold text-white">{service.price}</div>
                       <div className="text-gray-400 text-sm">{service.period}</div>
@@ -386,6 +473,9 @@ export default function Revolutionary2030ServicesPage() {
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
+=======
+                      <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 </div>
@@ -413,6 +503,7 @@ export default function Revolutionary2030ServicesPage() {
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
                   Schedule Consultation
                 </button>
+<<<<<<< HEAD
                 <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                  Contact Us          >
             <div className="p-12 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 backdrop-blur-sm">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -427,6 +518,9 @@ export default function Revolutionary2030ServicesPage() {
                   Schedule Consultation
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
+=======
+                <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Contact Us
                 </button>
               </div>
@@ -436,8 +530,12 @@ export default function Revolutionary2030ServicesPage() {
       </section>
       {/* Contact Section */}
       <section className='py-24 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+=======
+        <div className='max-w-4xl mx-auto text-center'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -460,6 +558,7 @@ export default function Revolutionary2030ServicesPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
                 Schedule Consultation
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing
               </button>
             </div>
@@ -482,6 +581,13 @@ export default function Revolutionary2030ServicesPage() {
                 View Pricing
               </button>
             </div>
+=======
+              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>
+                View Pricing
+              </button>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
               <div className='flex items-center justify-center space-x-2'>
                 <Phone className='w-5 h-5 text-cyan-400' />
@@ -493,6 +599,7 @@ export default function Revolutionary2030ServicesPage() {
               </div>
               <div className='flex items-center justify-center space-x-2'>
                 <MapPin className='w-5 h-5 text-pink-400' />
+<<<<<<< HEAD
                 <span className='text-sm'>{contactInfo.address}</span>              </div>                <span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
@@ -502,6 +609,9 @@ export default function Revolutionary2030ServicesPage() {
               <div className="flex items-center justify-center space-x-2">
                 <MapPin className="w-5 h-5 text-pink-400" />
                 <span className="text-sm">{contactInfo.address}</span>
+=======
+                <span className='text-sm'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </motion.div>
@@ -510,5 +620,9 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

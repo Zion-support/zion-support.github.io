@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 =======
@@ -14,6 +15,15 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
   content: string | null
   generatedAt: string | null
 }
+=======
+
+type Props = {
+  content: string | null;
+  generatedAt: string | null;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>
@@ -26,6 +36,7 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
           {content}
         </pre>
       ) : (
+<<<<<<< HEAD
         <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>          No changelog generated yet.      {generatedAt && (
         <p className="mt-2 text-sm text-gray-600">Generated: {generatedAt}</p>
       )}
@@ -35,17 +46,25 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
         </pre>
       ) : (
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
+=======
+        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           No changelog generated yet.
         </div>
       )}
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export async function getStaticProps() {
   try {
     const file = path.join(process.cwd(), 'CHANGELOG.md');
     const content = fs.readFileSync(file, 'utf8');
     return {
+<<<<<<< HEAD
       props: { content, generatedAt: new Date().toISOString() }
       revalidate: 300
     }
@@ -57,3 +76,11 @@ export async function getStaticProps() {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
+=======
+      props: { content, generatedAt: new Date().toISOString() },
+      revalidate: 300,
+    };
+  } catch {
+    return { props: { content: null, generatedAt: null }, revalidate: 300 };
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

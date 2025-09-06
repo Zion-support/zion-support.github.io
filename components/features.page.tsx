@@ -1,5 +1,10 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>
@@ -23,6 +28,7 @@ export default function FeaturesPage() {
           <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>
           <p className='mt-1 text-sm opacity-80'>
             Track deliverables and approvals anywhere.
+<<<<<<< HEAD
           </p>        </div>
       </div>
     </EnhancedLayout>
@@ -35,3 +41,10 @@ export default function FeaturesPage() {
     </EnhancedLayout>
   );
 }
+=======
+          </p>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

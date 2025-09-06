@@ -7,8 +7,13 @@ import { SignupCheckResult } from './types';
  * Check for suspicious signup patterns
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const checkSignupPatterns = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const checkSignupPatterns = async (
   email: string;
   ipAddress?: string

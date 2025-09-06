@@ -100,12 +100,28 @@ serve(async (req) => {
     if (!response.ok) {
       throw new Error(data.error?.message |'Failed to generate contract')
     }
+<<<<<<< HEAD
     const contract = data.choices[0].message.content.trim();
     return new Response(JSON.stringify({
       success: true
       contract
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+=======
+}
+
+const contract = data.choices[0].message.content.trim();
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        contract,
+      }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   } catch (error) {
     console.error('Error generating contract:', error);
     return new Response(

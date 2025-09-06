@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 =======
 import {
@@ -18,6 +19,22 @@ import {
   Zap;
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Search,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Target,
+  BarChart3,
+  Globe,
+  Smartphone,
+  Zap,;
+} from 'lucide-react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -28,7 +45,12 @@ export default function SEOAnalyzerToolPage() {
 =======
   const features = [
     {
+<<<<<<< HEAD
       icon: <Search className='w-8 h-8 text-white' />
+=======
+      icon: <Search className='w-8 h-8 text-white' />,
+      title: 'Comprehensive SEO Analysis',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.'
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
@@ -54,15 +76,25 @@ export default function SEOAnalyzerToolPage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'AI-Powered Insights'
       description:
+<<<<<<< HEAD
         'Get intelligent recommendations and actionable insights to improve your search rankings.'
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
       gradient: 'from-orange-400 to-red-500'
     }
   ];      gradient: 'from-orange-400 to-red-500'}]
+=======
+        'Get intelligent recommendations and actionable insights to improve your search rankings.',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      gradient: 'from-orange-400 to-red-500',
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const seoFactors = [
     {
       category: 'On-Page SEO'
       factors: [
+<<<<<<< HEAD
         'Title tags optimization'
         'Meta descriptions'
         'Header structure (H1, H2, H3)'
@@ -138,6 +170,57 @@ export default function SEOAnalyzerToolPage() {
       color: 'text-orange-400'
     },  ];      color: 'text-orange-400'
     }
+=======
+        'Title tags optimization',
+        'Meta descriptions',
+        'Header structure (H1, H2, H3)',
+        'Content quality and length',
+        'Internal linking structure',
+        'Image optimization (alt tags)',
+      ],
+      icon: '📝',
+      color: 'text-green-400',
+    },
+    {
+      category: 'Technical SEO',
+      factors: [
+        'Page load speed',
+        'Mobile responsiveness',
+        'XML sitemap',
+        'Robots.txt configuration',
+        'SSL certificate',
+        'Core Web Vitals',
+      ],
+      icon: '⚙️',
+      color: 'text-blue-400',
+    },
+    {
+      category: 'Content SEO',
+      factors: [
+        'Keyword density',
+        'Content relevance',
+        'Readability scores',
+        'Content freshness',
+        'Multimedia optimization',
+        'Schema markup',
+      ],
+      icon: '📊',
+      color: 'text-purple-400',
+    },
+    {
+      category: 'Local SEO',
+      factors: [
+        'Google My Business',
+        'Local citations',
+        'Review management',
+        'Local keyword targeting',
+        'Location-based content',
+        'Local link building',
+      ],
+      icon: '📍',
+      color: 'text-orange-400',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const pricing = [
     {
@@ -146,6 +229,7 @@ export default function SEOAnalyzerToolPage() {
       period: '/month'
       description: 'Perfect for small businesses and bloggers'
       features: [
+<<<<<<< HEAD
         '10 website analyses/month'
         'Basic SEO metrics'
         'Keyword research (100 keywords)'
@@ -200,6 +284,56 @@ export default function SEOAnalyzerToolPage() {
     }
   const handleAnalyzeSEO = async () => {
     if (!url.trim()) return;
+=======
+        '10 website analyses/month',
+        'Basic SEO metrics',
+        'Keyword research (100 keywords)',
+        'On-page SEO analysis',
+        'Email support',
+        'Basic reporting',
+      ],
+      popular: false,
+    },
+    {
+      name: 'Professional',
+      price: '$89',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      features: [
+        '50 website analyses/month',
+        'Advanced SEO metrics',
+        'Keyword research (500 keywords)',
+        'Competitive analysis',
+        'Priority support',
+        'Advanced reporting',
+        'API access',
+        'Team collaboration',
+      ],
+      popular: true,
+    },
+    {
+      name: 'Enterprise',
+      price: '$249',
+      period: '/month',
+      description: 'For large organizations and SEO agencies',
+      features: [
+        'Unlimited analyses',
+        'Enterprise SEO metrics',
+        'Unlimited keyword research',
+        'Advanced competitive analysis',
+        '24/7 dedicated support',
+        'Custom reporting',
+        'White-label options',
+        'Custom integrations',
+      ],
+      popular: false,
+    },
+  ];
+
+  const handleAnalyzeSEO = async () => {
+    if (!url.trim()) return;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -248,6 +382,7 @@ export default function SEOAnalyzerToolPage() {
         ]
       });
       setIsAnalyzing(false);
+<<<<<<< HEAD
     }, 4000);  };        recommendations: [
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ];
@@ -260,6 +395,11 @@ export default function SEOAnalyzerToolPage() {
       setIsAnalyzing(false)
     }, 4000)
   }
+=======
+    }, 4000);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -313,6 +453,7 @@ export default function SEOAnalyzerToolPage() {
               <Button
                 onClick={handleAnalyzeSEO}
                 size='lg'
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing |!url.trim()}
               >
                 {isAnalyzing ? (
@@ -358,29 +499,51 @@ export default function SEOAnalyzerToolPage() {
                 {isAnalyzing ? (
                   <>
                     <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
+=======
+                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'
+                disabled={isAnalyzing || !url.trim()}
+              >
+                {isAnalyzing ? (
+                  <>
+                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Analyzing...
                   </>
                 ) : (
                   <>
+<<<<<<< HEAD
                     <Search className='w-5 h-5 mr-2' />                    <Search className="w-5 h-5 mr-2" />
+=======
+                    <Search className='w-5 h-5 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Analyze SEO
                   </>
                 )}
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             <Button
               href='#pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'            >
+=======
+              className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Pricing
             </Button>
             <Button
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'            >              href="#pricing"
               variant="outline"
               size="lg"
@@ -395,6 +558,10 @@ export default function SEOAnalyzerToolPage() {
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
+=======
+              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Schedule Demo
             </Button>
           </div>
@@ -434,6 +601,7 @@ export default function SEOAnalyzerToolPage() {
                     <h3 className='text-2xl font-bold mb-4 text-white'>
                       {feature.title}
                     </h3>
+<<<<<<< HEAD
                     <p className='text-gray-400 leading-relaxed'>                      {feature.description}              Powerful SEO Features
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -459,6 +627,9 @@ export default function SEOAnalyzerToolPage() {
                       {feature.title}
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
+=======
+                    <p className='text-gray-400 leading-relaxed'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature.description}
                     </p>
                   </div>
@@ -499,6 +670,7 @@ export default function SEOAnalyzerToolPage() {
                       key={factorIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />                      {factor}              Comprehensive SEO Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -520,6 +692,9 @@ export default function SEOAnalyzerToolPage() {
                   {category.factors.map((factor, factorIndex) => (
                     <li key={factorIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {factor}
                     </li>
                   ))}
@@ -598,6 +773,7 @@ export default function SEOAnalyzerToolPage() {
                     <span className='text-gray-400'>Mobile SEO</span>
                     <span className='font-bold text-green-400'>
                       {analysisResults.mobileScore}/100
+<<<<<<< HEAD
                     </span>                  </div>                SEO Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -642,6 +818,9 @@ export default function SEOAnalyzerToolPage() {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Mobile SEO</span>
                     <span className="font-bold text-green-400">{analysisResults.mobileScore}/100</span>
+=======
+                    </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </Card>
@@ -664,6 +843,7 @@ export default function SEOAnalyzerToolPage() {
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
+<<<<<<< HEAD
                         </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
@@ -676,6 +856,9 @@ export default function SEOAnalyzerToolPage() {
                       <div>
                         <span className="text-gray-300">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+=======
+                        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                   ))}
@@ -692,6 +875,7 @@ export default function SEOAnalyzerToolPage() {
                   {analysisResults.recommendations.map((rec, index) => (
                     <div key={index} className='flex items-start space-x-3'>
                       <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
                       <span className='text-gray-300'>{rec}</span>                    </div>            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
@@ -703,6 +887,14 @@ export default function SEOAnalyzerToolPage() {
                   ))}
                 </div>
               </Card>
+=======
+                      <span className='text-gray-300'>{rec}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
                   Keyword Opportunities
@@ -732,6 +924,7 @@ export default function SEOAnalyzerToolPage() {
                                 ? 'bg-yellow-500/20 text-yellow-400'
                                 : 'bg-red-500/20 text-red-400'
                           }`}
+<<<<<<< HEAD
                         >                          {keyword.difficulty}                      <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-400">Difficulty: {keyword.difficulty}</span>
                         <span className={`px-2 py-1 rounded text-xs ${
@@ -739,6 +932,10 @@ export default function SEOAnalyzerToolPage() {
                           keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'
                         }`}>
+=======
+                        >
+                          {keyword.difficulty}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </span>
                       </div>
                     </div>
@@ -761,6 +958,7 @@ export default function SEOAnalyzerToolPage() {
               and goals.
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -768,6 +966,10 @@ export default function SEOAnalyzerToolPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {pricing.map((plan, index) => (
               <Card
                 key={index}
@@ -776,15 +978,23 @@ export default function SEOAnalyzerToolPage() {
               >
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+<<<<<<< HEAD
                     <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
                     </span>
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+=======
+                    <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -803,6 +1013,7 @@ export default function SEOAnalyzerToolPage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
+<<<<<<< HEAD
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
@@ -810,6 +1021,9 @@ export default function SEOAnalyzerToolPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+=======
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
                     </li>
                   ))}
@@ -820,12 +1034,17 @@ export default function SEOAnalyzerToolPage() {
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
@@ -854,15 +1073,24 @@ export default function SEOAnalyzerToolPage() {
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
+=======
+              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Schedule Demo
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

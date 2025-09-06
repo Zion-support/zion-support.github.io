@@ -34,9 +34,14 @@ interface Integration {
 interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
+<<<<<<< HEAD
   integration: Integration
 }
 <<<<<<< HEAD
+=======
+  integration: Integration;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false);

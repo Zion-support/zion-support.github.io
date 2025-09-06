@@ -217,6 +217,7 @@ const servicePricing: ServicePricing[] = [;
     ];
   }
 ];
+<<<<<<< HEAD
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
 export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState("All");
   const filteredServices = selectedCategory === "All";
@@ -230,6 +231,36 @@ export default function PricingPage() {const [selectedCategory, setSelectedCateg
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
+=======
+
+const categories = [
+  'All',
+  'Core Platform',
+  'AI Services',
+  'IT Services',
+  'E-commerce & Services',
+];
+}
+
+export default function PricingPage() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const filteredServices =
+    selectedCategory === 'All'
+      ? servicePricing
+      : servicePricing.filter(service => service.category === selectedCategory);
+
+  return (
+    <div className='space-y-8'>
+      <div className='text-center space-y-4'>
+        <h1 className='text-4xl font-bold'>Pricing & Plans</h1>
+        <p className='text-xl opacity-80 max-w-3xl mx-auto'>
+          Choose the perfect plan for your business needs. All plans include our
+          core features with transparent pricing and no hidden fees.
+        </p>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Category Filter */}
       <div className="flex justify-center">;
         <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">;

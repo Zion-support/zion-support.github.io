@@ -8,11 +8,21 @@ import { format  } from 'date-fns';
 import { EducationFormProps  } from './types';
 import { EducationList  } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
+<<<<<<< HEAD
 export function EducationForm({ 
   resumeId;
   educationEntries;
   onComplete;
   onBack 
+=======
+}
+
+export function EducationForm({
+  resumeId,
+  educationEntries,
+  onComplete,
+  onBack,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }: EducationFormProps) {
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null),

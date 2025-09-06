@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,8 +11,21 @@ import React from 'react'
 interface PaymentSummaryProps {
 <<<<<<< HEAD
   milestones: Milestone[];
+<<<<<<< HEAD
   paymentTerms: string | null
 }
+=======
+  paymentTerms: string | null;
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
+  milestones,
+  paymentTerms,
+}) => {
+  const totalPayment = milestones
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = null;
@@ -59,4 +75,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   )
 }
 '"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -2,10 +2,13 @@ import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import type {
   GrantApplication
   GrantCategory
@@ -24,7 +27,12 @@ const statuses: GrantStatus[] = [
   'Approved'
   'Rejected'
 ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
@@ -33,11 +41,15 @@ export default function GrantsPage() {
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
 <<<<<<< HEAD
     const params = null;
@@ -49,12 +61,17 @@ export default function GrantsPage() {
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
       .then(r => r.json())
+<<<<<<< HEAD
       .then(d => setItems(d.items |[]))
       .catch(() => setItems([]));  }, [filters]);
   return (
     <EnhancedLayout>      .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
+=======
+      .then(d => setItems(d.items || []))
+      .catch(() => setItems([]));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [filters]);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -167,5 +184,9 @@ export default function GrantsPage() {
         )}
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { AppStoreButtons } from './AppStoreButtons';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import Link from "next/link",
@@ -53,4 +62,7 @@ export const MobileAppHero: React.FC = () => {
   )
 }
 "
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
   active?: boolean
 }
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
@@ -19,6 +20,18 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
         className
       )}
       {...props}
+=======
+  active?: boolean;
+}
+
+export function SidebarItem({
+  className,
+  children,
+  active,
+  ...props
+}: SidebarItemProps) {
+  
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {children}
     </div>

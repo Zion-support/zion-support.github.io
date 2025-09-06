@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Smartphone } from 'lucide-react'
@@ -10,6 +11,16 @@ export const MobileLaunchHero: React.FC;
 import { Button } from '@/components/ui/button'
 import { AppStoreButtons } from './AppStoreButtons'
 import { Card, CardContent } from '@/components/ui/card'
+=======
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Smartphone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { AppStoreButtons } from './AppStoreButtons';
+import { Card, CardContent } from '@/components/ui/card';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = '#'; // Replace with actual App Store URL
@@ -30,6 +41,7 @@ export const MobileLaunchHero: React.FC = () => {
               mobile app.
             </p>
             <div className='mb-8'>
+<<<<<<< HEAD
               <AppStoreButtons                appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -39,12 +51,21 @@ export const MobileLaunchHero: React.FC = () => {
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
+=======
+              <AppStoreButtons
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+              />
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='flex flex-wrap gap-4'>
               <Link href='/open-app'>
                 <Button
                   variant='outline'
                   size='lg'
                   className='flex gap-2 border-white text-white hover:bg-white/10'
+<<<<<<< HEAD
                 >                  Open App
                   <ArrowRight size={20} />
                 </Button>
@@ -55,19 +76,35 @@ export const MobileLaunchHero: React.FC = () => {
                   <ArrowRight size={20} />
                 </Button>
               </Link>
+=======
+                >
+                  Open App
+                  <ArrowRight size={20} />
+                </Button>
+              </Link>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Link href='#features'>
                 <Button
                   variant='ghost'
                   size='lg'
                   className='text-white hover:bg-white/10'
+<<<<<<< HEAD
                 >                  See Features
               <Link href="#features">
                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
+=======
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   See Features
                 </Button>
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='flex-1 flex justify-center md:justify-end'>
             <div className='relative'>
               {/* Phone mockup with glow effect */}
@@ -75,11 +112,16 @@ export const MobileLaunchHero: React.FC = () => {
               <Card className='relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3'>
                 <CardContent className='p-0'>
                   <div className='w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center'>
+<<<<<<< HEAD
                     <Smartphone className='w-40 h-40 text-white opacity-40' />                    {/* In production, replace with actual app screenshot */}              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+=======
+                    <Smartphone className='w-40 h-40 text-white opacity-40' />
+                    {/* In production, replace with actual app screenshot */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </CardContent>
               </Card>
@@ -88,8 +130,14 @@ export const MobileLaunchHero: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 "  )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from 'react',
 import { Button } from "@/components/ui/button";
@@ -13,6 +21,7 @@ export function BackToDirectoryButton() {
           href='/talents'
           className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
         >
+<<<<<<< HEAD
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory    <div className="container mx-auto px-4 md: px-6 mb-12">
       <Button variant="outline" asChild className="my-8">
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
@@ -24,3 +33,11 @@ export function BackToDirectoryButton() {
 }
   )
 }
+=======
+          <ArrowLeft className='mr-2 h-4 w-4' />
+          Back to Talent Directory
+        </Link>
+      </Button>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

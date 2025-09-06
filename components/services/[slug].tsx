@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../../components/layout/Layout';
@@ -17,14 +18,24 @@ import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-
 type Service = any;
 export default ServiceDetail
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
   paths: Array.from (slugs) .map ( (slug) => ({
   params: {
   slug
+<<<<<<< HEAD
 }) );
 fallback: false
+=======
+
+}) );
+fallback: false
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }export default function ServiceDetailPage ({
   service
 }: {
@@ -33,9 +44,16 @@ fallback: false
   return (<Layout> <Head> <title> {
   service.name
 }| Zion Tech Group</title>
+<<<<<<< HEAD
 }
 null;
 2)
+=======
+};
+null;
+2)
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }/> </Head> </li>) )
 }</ul> </div>) )
 }</ul> </div> <div>) )
@@ -72,8 +90,15 @@ null;
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 export default ServiceDetail
 export default ServiceDetail
 }
+=======
+};
+}
+
+export default ServiceDetail
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

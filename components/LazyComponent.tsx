@@ -12,5 +12,12 @@ const LazyComponent: React.FC<LazyComponentProps> = ({component;
       <LazyLoadedComponent {...props} />;
     </Suspense>;
   );
+<<<<<<< HEAD
 }
 export default LazyComponent;
+=======
+};
+}
+
+export default LazyComponent;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

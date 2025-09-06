@@ -33,8 +33,14 @@ function PortfolioBuilderContent() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PortfolioBuilder() {
   return (
     <ProtectedRoute>

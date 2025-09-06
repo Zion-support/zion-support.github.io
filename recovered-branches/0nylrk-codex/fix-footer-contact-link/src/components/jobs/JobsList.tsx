@@ -11,8 +11,37 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 interface JobsListProps {
   filter?: JobStatus;
+<<<<<<< HEAD
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
+=======
+onSelectJob?: (jobId: string, jobTitle: string) => void 
+}export function JobsList ({
+  filter, onSelectJob 
+}: JobsListProps) {
+  const {
+  user 
+}= useAuth ();
+const [jobs, setJobs] = useState<Job[]> ([]);
+const [isLoading, setIsLoading] = useState (true);
+useEffect ( () => {
+  const fetchJobs = async () => {
+  if (!user) return;
+try {
+  let query = supabase 
+}const {
+  data, error 
+}= await query;
+if (error) throw error;
+setJobs (data as Job[]) 
+}catch (error) {
+  
+}finally {
+  setIsLoading (false)
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
@@ -32,7 +61,14 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         if (filter) {
           query = query.eq("status", filter)
         }
+<<<<<<< HEAD
         const { data, error } = await query;
+=======
+}
+
+const { data, error } = await query;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         if (error) throw error;
         setJobs(data as Job[])
       } catch (error) {

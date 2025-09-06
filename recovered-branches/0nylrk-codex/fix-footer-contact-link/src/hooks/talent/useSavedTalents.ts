@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { TalentProfile } from '@/types/talent';
+import { toast } from '@/hooks/use-toast';
+import { useAuthStatus } from '@/hooks/talent';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",

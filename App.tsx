@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { JSX } from 'react';
 <<<<<<< HEAD
+=======
+import React, { JSX } from 'react',
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
   useEffect(() => {
     const timer = setTimeout(() => {

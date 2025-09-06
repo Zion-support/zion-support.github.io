@@ -17,6 +17,11 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
   const { data: behaviorData, isLoading } = useQuery({

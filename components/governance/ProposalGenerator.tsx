@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = any;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type ProposalType =
   | 'Workforce Dev'
   | 'AI Ethics'
@@ -16,6 +20,7 @@ export type ProposalForm = {
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
+<<<<<<< HEAD
   customPrompt?: string;};export type ProposalForm = {
   targetInstitution: string
   type: ProposalType
@@ -25,6 +30,12 @@ export type ProposalForm = {
   language?: string;
   customPrompt?: string
 }
+=======
+  customPrompt?: string;
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
     targetInstitution: 'UNDP'
@@ -34,7 +45,11 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
+<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+=======
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -49,6 +64,7 @@ export default function ProposalGenerator() {
     key: K
     value: ProposalForm[K]
   ) {
+<<<<<<< HEAD
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
@@ -56,15 +72,24 @@ export default function ProposalGenerator() {
   const [statusMessage, setStatusMessage] = useState('');
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
+=======
+    setForm(prev => ({ ...prev, [key]: value }));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function handleGenerate() {
     setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
       const res = await fetch('/api/proposals/generate', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(form)
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setDraftMarkdown(data.markdown |'');
@@ -74,6 +99,7 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
+<<<<<<< HEAD
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
@@ -83,6 +109,9 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
+=======
+      setIsGenerating(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   async function handleExport() {
@@ -92,10 +121,17 @@ export default function ProposalGenerator() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           markdown: draftMarkdown
           json: draftJson
           meta: form
         })
+=======
+          markdown: draftMarkdown,
+          json: draftJson,
+          meta: form,
+        }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setExportLinks({
@@ -106,20 +142,29 @@ export default function ProposalGenerator() {
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
+<<<<<<< HEAD
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
+=======
+      setStatusMessage('Export failed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           markdown: draftMarkdown
           json: draftJson
@@ -132,6 +177,7 @@ export default function ProposalGenerator() {
       );
     } catch (e) {
       console.error(e);
+<<<<<<< HEAD
       setStatusMessage('Submission failed');    }
   }
   return (
@@ -143,6 +189,9 @@ export default function ProposalGenerator() {
       console.error(e);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       setStatusMessage('Submission failed')
+=======
+      setStatusMessage('Submission failed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
@@ -167,6 +216,7 @@ export default function ProposalGenerator() {
               value={form.type}
               onChange={e =>
                 handleChange('type', e.target.value as ProposalType)
+<<<<<<< HEAD
               }            >          <div>
             <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
             <input
@@ -182,6 +232,9 @@ export default function ProposalGenerator() {
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
+=======
+              }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -245,6 +298,7 @@ export default function ProposalGenerator() {
           </div>
           <div className='flex gap-2'>
             <button
+<<<<<<< HEAD
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
@@ -292,20 +346,31 @@ export default function ProposalGenerator() {
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+=======
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={handleGenerate}
               disabled={isGenerating}
             >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
+<<<<<<< HEAD
               className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
+=======
+              className='px-4 py-2 bg-emerald-600 text-white rounded'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={handleExport}
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
+<<<<<<< HEAD
               className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
+=======
+              className='px-4 py-2 bg-purple-600 text-white rounded'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
@@ -326,6 +391,7 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     PDF
+<<<<<<< HEAD
                   </a>                </div>
               )}
               {exportLinks.mdUrl && (
@@ -334,6 +400,9 @@ export default function ProposalGenerator() {
               {exportLinks.pdfUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
+=======
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
               {exportLinks.mdUrl && (
@@ -345,10 +414,14 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     Markdown
+<<<<<<< HEAD
                   </a>                </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
+=======
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
               {exportLinks.jsonUrl && (
@@ -360,7 +433,11 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     JSON
+<<<<<<< HEAD
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
+=======
+                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
             </div>
@@ -371,13 +448,21 @@ export default function ProposalGenerator() {
           <textarea
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
+<<<<<<< HEAD
             onChange={e => setDraftMarkdown(e.target.value)}          />          <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
             onChange={(e) => setDraftMarkdown(e.target.value)}
+=======
+            onChange={e => setDraftMarkdown(e.target.value)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

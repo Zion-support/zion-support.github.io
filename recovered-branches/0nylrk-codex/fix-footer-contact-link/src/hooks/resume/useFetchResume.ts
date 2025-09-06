@@ -2,6 +2,11 @@ import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useFetchResume() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);

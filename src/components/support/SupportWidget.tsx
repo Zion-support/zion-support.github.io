@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
@@ -5,6 +6,17 @@ import { ChatBotPanel } from './ChatBotPanel'
 import { MessageSquare, Info, X } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
+=======
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { Button } from '@/components/ui/button';
+import { ChatBotPanel } from './ChatBotPanel';
+import { MessageSquare, Info, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useTheme } from '@/hooks/useTheme';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SupportWidget() {
 <<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
@@ -75,5 +87,9 @@ export function SupportWidget() {
         </div>
       )}
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -13,6 +13,7 @@ import { NotificationFilter;
   NotificationFooter 
  } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
+<<<<<<< HEAD
 export const NotificationCenter: React.FC;
 =======
 import {Bell} from '@/components/icons';
@@ -22,6 +23,10 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const NotificationCenter: React.FC = () => {
   const {
     filteredNotifications

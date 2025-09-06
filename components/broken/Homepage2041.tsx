@@ -2,6 +2,7 @@ import React, { useState } from 'react',
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight;
   Star;
 =======
@@ -49,22 +50,56 @@ import {
   Clock
  } from 'lucide-react';
 import Link from 'next/link',
+=======
+import {
+  ArrowRight,
+  Star,
+  Search,
+  Shield,
+  Globe,
+  TrendingUp,
+  Brain,
+  Atom,
+  Zap,
+  Cpu,
+  Cloud,
+  BarChart3,
+  Lock,
+  Rocket,
+  Eye,
+  Sparkles,
+  Target,
+  Users,
+  Award,
+  Clock,;
+} from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices  } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Homepage2041: React.FC;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchQuery.trim()) {
+<<<<<<< HEAD
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
+=======
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   const featuredServices = [
+<<<<<<< HEAD
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3)
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2)
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1),  ];
@@ -72,12 +107,23 @@ const Homepage2041: React.FC = () => {
     {    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
+=======
+    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
+    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
+    ...innovative2041AIServices.filter(s => s.popular).slice(0, 1),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const testimonials = [
     {
+<<<<<<< HEAD
       name: 'Dr. Sarah Chen'
       role: 'Chief AI Officer, FutureTech Inc.'
       company: 'FutureTech Inc.'
+=======
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Officer, FutureTech Inc.',
+      company: 'FutureTech Inc.',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       content:
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
       avatar: '👩‍💼'
@@ -96,6 +142,7 @@ const Homepage2041: React.FC = () => {
       role: 'Research Director, SpaceLabs'
       company: 'SpaceLabs'
       content:
+<<<<<<< HEAD
         "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency."
       rating: 5
       avatar: '👩‍🔬'
@@ -109,6 +156,21 @@ const Homepage2041: React.FC = () => {
     { number: "50+", label: "Quantum Solutions", icon: Atom }
     { number: "1000x", label: "Performance Boost", icon: Zap }
     { number: "24/7", label: "AI Operations", icon: Brain }
+=======
+        "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
+      rating: 5,
+      avatar: '👩‍🔬',
+    },
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Revolutionary Services', icon: Rocket },
+    { number: '50+', label: 'Quantum Solutions', icon: Atom },
+    { number: '1000x', label: 'Performance Boost', icon: Zap },
+    { number: '24/7', label: 'AI Operations', icon: Brain },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Layout>
       {/* Main Content */}
@@ -129,6 +191,7 @@ const Homepage2041: React.FC = () => {
                   key={i}
                   className='absolute w-2 h-2 bg-cyan-400/40 rounded-full'
                   animate={{
+<<<<<<< HEAD
                     x: [0, 60, 0]
                     y: [0, -60, 0]
                     opacity: [0, 0.7, 0]
@@ -153,11 +216,33 @@ const Homepage2041: React.FC = () => {
                   style={{
                     left: `${Math.random() * 100}%`
                     top: `${Math.random() * 100}%`}}
+=======
+                    x: [0, 60, 0],
+                    y: [0, -60, 0],
+                    opacity: [0, 0.7, 0],
+                    scale: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 5 + i * 0.3,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                  }}
+                />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </div>
           </div>
           {/* Hero Content */}
+<<<<<<< HEAD
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
+=======
+          <div className='text-center max-w-7xl mx-auto relative z-10'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -180,6 +265,7 @@ const Homepage2041: React.FC = () => {
               </p>
               {/* Search Bar */}
               <motion.div
+<<<<<<< HEAD
                 className='max-w-3xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -200,6 +286,9 @@ const Homepage2041: React.FC = () => {
               {/* Search Bar */}
               <motion.div
                 className="max-w-3xl mx-auto mb-12"
+=======
+                className='max-w-3xl mx-auto mb-12'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -214,6 +303,7 @@ const Homepage2041: React.FC = () => {
                   />
                   <button
                     type='submit'
+<<<<<<< HEAD
                     className='absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold'                  >                  <input
                     type="text"
                     placeholder="Search revolutionary 2041 services..."
@@ -224,6 +314,9 @@ const Homepage2041: React.FC = () => {
                   <button
                     type="submit"
                     className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold"
+=======
+                    className='absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     Explore Future
                   </button>
@@ -231,8 +324,12 @@ const Homepage2041: React.FC = () => {
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
+<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-6 justify-center items-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+=======
+                className='flex flex-col sm:flex-row gap-6 justify-center items-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -249,6 +346,7 @@ const Homepage2041: React.FC = () => {
                   href='/contact'
                   className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
                 >
+<<<<<<< HEAD
                   <Users className='w-6 h-6' />                  Start Your Journey                >
                   <Rocket className="w-6 h-6" />
                   Explore 2041 Services
@@ -259,6 +357,9 @@ const Homepage2041: React.FC = () => {
                   className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3"
                 >
                   <Users className="w-6 h-6" />
+=======
+                  <Users className='w-6 h-6' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Start Your Journey
                 </Link>
               </motion.div>
@@ -269,10 +370,15 @@ const Homepage2041: React.FC = () => {
         <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
               className='grid grid-cols-2 md:grid-cols-4 gap-8'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-8"
+=======
+              className='grid grid-cols-2 md:grid-cols-4 gap-8'
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -280,7 +386,11 @@ const Homepage2041: React.FC = () => {
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
+<<<<<<< HEAD
                   className='text-center'                  initial={{ opacity: 0, y: 20 }}                  className="text-center"
+=======
+                  className='text-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -292,11 +402,16 @@ const Homepage2041: React.FC = () => {
                   <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
                     {stat.number}
                   </div>
+<<<<<<< HEAD
                   <div className='text-gray-400'>{stat.label}</div>                </motion.div>                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
+=======
+                  <div className='text-gray-400'>{stat.label}</div>
+                </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ))}
             </motion.div>
           </div>
@@ -305,10 +420,15 @@ const Homepage2041: React.FC = () => {
         <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+              className='text-center mb-16'
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -323,6 +443,7 @@ const Homepage2041: React.FC = () => {
               </p>
             </motion.div>
             <motion.div
+<<<<<<< HEAD
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -331,6 +452,9 @@ const Homepage2041: React.FC = () => {
             </motion.div>
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -348,9 +472,15 @@ const Homepage2041: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
+<<<<<<< HEAD
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div
               className="text-center mt-12"
+=======
+
+            <motion.div
+              className='text-center mt-12'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -362,10 +492,14 @@ const Homepage2041: React.FC = () => {
               >
                 <Eye className='w-5 h-5' />
                 View All 2041 Services
+<<<<<<< HEAD
                 <ArrowRight className='w-5 h-5' />              </Link>              >
                 <Eye className="w-5 h-5" />
                 View All 2041 Services
                 <ArrowRight className="w-5 h-5" />
+=======
+                <ArrowRight className='w-5 h-5' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </motion.div>
           </div>
@@ -374,10 +508,15 @@ const Homepage2041: React.FC = () => {
         <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+              className='text-center mb-16'
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -391,6 +530,7 @@ const Homepage2041: React.FC = () => {
               </p>
             </motion.div>
             <motion.div
+<<<<<<< HEAD
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Leading the Future
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -399,6 +539,9 @@ const Homepage2041: React.FC = () => {
             </motion.div>
             <motion.div
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
+=======
+              className='grid grid-cols-1 md:grid-cols-3 gap-8'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -407,7 +550,11 @@ const Homepage2041: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
+<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
+=======
+                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -431,6 +578,7 @@ const Homepage2041: React.FC = () => {
                   <div className='text-cyan-400'>{testimonial.role}</div>
                   <div className='text-gray-500 text-sm'>
                     {testimonial.company}
+<<<<<<< HEAD
                   </div>                </motion.div>                    {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
@@ -438,6 +586,9 @@ const Homepage2041: React.FC = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400">{testimonial.role}</div>
                   <div className="text-gray-500 text-sm">{testimonial.company}</div>
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
               ))}
             </motion.div>
@@ -447,10 +598,15 @@ const Homepage2041: React.FC = () => {
         <section className='py-20 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
+<<<<<<< HEAD
               className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
+=======
+              className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -475,6 +631,7 @@ const Homepage2041: React.FC = () => {
                   href='/2041-futuristic-services-showcase'
                   className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3'
                 >
+<<<<<<< HEAD
                   <Target className='w-6 h-6' />                  Explore Services                Ready to Shape the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
@@ -494,6 +651,9 @@ const Homepage2041: React.FC = () => {
                   className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3"
                 >
                   <Target className="w-6 h-6" />
+=======
+                  <Target className='w-6 h-6' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Explore Services
                 </Link>
               </div>
@@ -503,22 +663,44 @@ const Homepage2041: React.FC = () => {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
 }
 Math.random () * 100
+=======
+};
+
+  Math.random () * 100
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }%`;
 top: `$ {
   Math.random () * 100
 }%`
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }/>) )
 }</div> </div> <motion.div initial= {
   {
   opacity: 0, y: 50
+<<<<<<< HEAD
 }animate= {
   {
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.8
+=======
+
+}animate= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.8
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h1 id="hero-heading" className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > 2041 </span> <br /> <span className="text-white" > Future is Now </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed" > Experience the revolution of technology with our cutting-edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
   /* Search Bar */
 }<motion.div /> <button type="submit" className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold" > Explore Future </button> </form> </motion.div> {
@@ -533,6 +715,7 @@ top: `$ {
 }initial= {
   {
   opacity: 0, y: 30
+<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -542,6 +725,21 @@ top: `$ {
 }viewport= {
   {
   once: true
+=======
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+
+}transition= {
+  {
+  duration: 0.5, delay: 0.4 + index * 0.1
+
+}viewport= {
+  {
+  once: true
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <UltraFuturisticServiceCard2026 service= {
   service
 }/> </motion.div>) )
@@ -550,8 +748,15 @@ top: `$ {
   testimonial.name
 }</motion.div>) )
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>)
+<<<<<<< HEAD
 }
 export default Homepage2041;  )
 }
 export default Homepage2041;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default Homepage2041;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

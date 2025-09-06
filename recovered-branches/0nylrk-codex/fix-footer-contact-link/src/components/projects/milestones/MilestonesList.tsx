@@ -21,6 +21,7 @@ interface MilestonesListProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>;
   isSubmitting: boolean;
   onApprove?: (id: string) => Promise<void>;
+<<<<<<< HEAD
 =======
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -35,6 +36,11 @@ interface MilestonesListProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onReject?: (id: string) => Promise<void>
 }
+=======
+  onReject?: (id: string) => Promise<void>;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const MilestonesList: React.FC<MilestonesListProps> = ({
   milestones;
   activities;

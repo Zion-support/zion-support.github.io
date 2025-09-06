@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 'use client'
+=======
+'use client';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, {
   Suspense
   lazy
@@ -131,6 +136,8 @@ const useNetworkStatus = () => {
   return isOnline
 }
 // Advanced Dynamic Component Loader
+}
+
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn
   fallback
@@ -221,6 +228,10 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     if (loadingComponent) {
       return React.createElement(loadingComponent)
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       >
         <EnhancedLoading
           progress={progress}
@@ -237,7 +248,12 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         retry
       })
     }
+<<<<<<< HEAD
           >
+=======
+
+      >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <EnhancedError
           error = {loadingState.error,}
           retry = {retry,}
@@ -269,6 +285,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   return null
 }
 // HOC for creating dynamic components easily
+}
+
 export const createDynamicComponent = <T extends ComponentType<any>>(
   importFn: (,) => Promise<{ default: T }>
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
@@ -283,8 +301,17 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 }
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
+<<<<<<< HEAD
 // export const DynamicChartComponent = createDynamicComponent(
 //   (,) => import('recharts').then(module => ({ default: module.LineChart }))
+=======
+
+//
+}
+
+export const DynamicChartComponent = createDynamicComponent(
+//   () => import('recharts').then(module => ({ default: module.LineChart })),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -294,9 +321,18 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //     prefetch: true
 //   }
 // )
+<<<<<<< HEAD
 // export const DynamicThreeComponent = createDynamicComponent(
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+//
+}
+
+export const DynamicThreeComponent = createDynamicComponent(
+//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -305,4 +341,10 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //     )
 //   }
 // )
+<<<<<<< HEAD
 export default DynamicComponentLoader; export default DynamicComponentLoader
+=======
+}
+
+export default DynamicComponentLoader;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

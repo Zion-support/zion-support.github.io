@@ -7,9 +7,17 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
+=======
+
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
@@ -19,12 +27,19 @@ export const useAccessibility = () => {
   }
   return context;
 }
+<<<<<<< HEAD
 interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   children
 }) => {
+=======
+}
+}
+
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -48,5 +63,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       </div>
     </AccessibilityContext.Provider>
   );
+<<<<<<< HEAD
 }
+=======
+};
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default AccessibilityProvider;

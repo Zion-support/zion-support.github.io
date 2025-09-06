@@ -19,10 +19,24 @@ interface RaiseDisputeButtonProps {
   projectId: string
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   milestoneId?: string;
+<<<<<<< HEAD
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
 }
+=======
+  variant?:
+    | 'default'
+    | 'outline'
+    | 'secondary'
+    | 'destructive'
+    | 'ghost'
+    | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  className?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RaiseDisputeButton({
   projectId;
 <<<<<<< HEAD

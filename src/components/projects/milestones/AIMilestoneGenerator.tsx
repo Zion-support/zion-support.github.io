@@ -1,4 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,;
+} from '@/components/ui/accordion';
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
+import { format, parseISO } from 'date-fns';
+import {
+  MilestoneInput,
+  GeneratedMilestone,
+  useMilestoneGenerator,;
+} from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -35,7 +55,14 @@ interface AIMilestoneGeneratorProps {
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
   onAddMilestone: (milestone: GeneratedMilestone) => void
+=======
+  onAddMilestone: (milestone: GeneratedMilestone) => void;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIMilestoneGenerator({
 <<<<<<< HEAD
   scope;
@@ -73,6 +100,7 @@ export function AIMilestoneGenerator({
     if (!scope |!startDate |!projectType) {
       return
     }
+<<<<<<< HEAD
     const input: MilestoneInput = {
       scope
       startDate
@@ -80,6 +108,18 @@ export function AIMilestoneGenerator({
       projectType
     }
     await generateMilestones(input)
+=======
+}
+
+const input: MilestoneInput = {
+      scope,
+      startDate,
+      endDate,
+      projectType,
+    };
+
+    await generateMilestones(input);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Initially select all milestones
     const initialSelection: Record<number, boolean> = {}
     generatedMilestones.forEach((_, index: number) => {
@@ -207,5 +247,9 @@ export function AIMilestoneGenerator({
         </Card>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -7,7 +7,11 @@ interface ProductListingCardProps {
 <<<<<<< HEAD
   listing: ProductListing;
   view?: 'grid' | 'list';
+<<<<<<< HEAD
   onRequestQuote?: (id: string) => void
+=======
+  onRequestQuote?: (id: string) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ProductListingCard({ 
@@ -152,5 +156,11 @@ export function ProductListingCard({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

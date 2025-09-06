@@ -17,6 +17,10 @@ import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

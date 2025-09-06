@@ -47,12 +47,17 @@ const TalentCardComponent = ({
     }
   }
   // Extract skills - limit to 5 for display
+<<<<<<< HEAD
   const skills = talent.skills?.slice(0, 5) |[]
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick = {handleViewProfile,}
       tabIndex = {0,}
+=======
+  const skills = talent.skills?.slice(0, 5) || [];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -160,6 +165,7 @@ const TalentCardComponent = ({
         </div>
       </div>
     </Card>
+<<<<<<< HEAD
   )
 }
 export const TalentCard = React.memo(TalentCardComponent)
@@ -167,3 +173,8 @@ TalentCard.displayName = 'TalentCard'
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

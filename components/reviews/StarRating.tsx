@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 type Props = any;
 =======
@@ -19,16 +20,37 @@ type Props = {
   readOnly?: boolean
 }
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+=======
+ > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)
+})
+}</div>)
+};
+}
+
+export const StarRating: React.FC<Props> = ({
+  value,
+  onChange,
+  size = 24,
+  readOnly,
+}) => {
+  const [hovered, setHovered] = useState<number | null>(null);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const stars = [1, 2, 3, 4, 5];
   return (
     <div className='flex items-center gap-1'>
       {stars.map(star => {
         const active = (hovered ?? value) >= star;
+<<<<<<< HEAD
                     onMouseEnter={() => !readOnly && setHovered(star)}        return (
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+=======
+
+            onMouseEnter={() => !readOnly && setHovered(star)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
@@ -52,6 +74,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
       })}
     </div>
   );
+<<<<<<< HEAD
 }
 export default StarRating;              width={size}
               height={size}
@@ -73,3 +96,9 @@ export default StarRating;              width={size}
 }
 export default StarRating;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default StarRating;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

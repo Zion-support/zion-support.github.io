@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+import {
+  useAIContentEnhancer,
+  AIEnhancementOptions,;
+} from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -10,6 +21,7 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string;
+<<<<<<< HEAD
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number
@@ -28,6 +40,19 @@ interface AIEnhancementButtonProps {
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
+=======
+  variant?:
+    | 'default'
+    | 'destructive'
+    | 'outline'
+    | 'secondary'
+    | 'ghost'
+    | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  contentLength?: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIEnhancementButton({
 <<<<<<< HEAD
   options;
@@ -120,6 +145,7 @@ export function AIEnhancementButton({
       </div>
     )
   }
+<<<<<<< HEAD
   return (
     <Button
       type="button"
@@ -128,6 +154,9 @@ export function AIEnhancementButton({
       className={`gap-1 ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -136,6 +165,7 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
+<<<<<<< HEAD
   )
 };"
 <Button type="button" variant="ghost" size="sm" onClick={
@@ -145,3 +175,15 @@ export function AIEnhancementButton({
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)
 }</Button>)
 }"}
+=======
+  );
+
+};";
+<Button type="button" variant="ghost" size="sm" onClick={;
+  handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
+}</Button>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

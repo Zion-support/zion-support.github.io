@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -7,6 +8,31 @@ interface PromptCardProps {
 export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
   const handleCopy = null;
+=======
+import { useState } from 'react';
+import { Copy, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
+
+interface PromptCardProps {
+  prompt: Prompt;
+}
+
+export function PromptCard({ prompt }: PromptCardProps) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(prompt.text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleSend = () => {
+    const encoded = encodeURIComponent(prompt.text);
+    window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
@@ -25,6 +51,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
           onClick={handleSend}
           aria-label='Send to ZionGPT'
         >
+<<<<<<< HEAD
           <Send className='w-4 h-4' />        </Button>
       </div>
     </div>
@@ -36,3 +63,10 @@ export function PromptCard({ prompt }: PromptCardProps) {
     </div>
   )
 }
+=======
+          <Send className='w-4 h-4' />
+        </Button>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

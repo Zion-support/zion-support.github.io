@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { useState, useCallback } from 'react';
+import { PortfolioProject } from '@/types/resume';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState, useCallback  } from 'react';
 import { PortfolioProject  } from '@/types/resume';

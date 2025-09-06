@@ -20,9 +20,14 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
+<<<<<<< HEAD
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 <<<<<<< HEAD
+=======
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false);

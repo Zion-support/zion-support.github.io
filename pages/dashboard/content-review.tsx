@@ -4,12 +4,19 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fetcher = null;
     mutate()
   }
 
 =======
 const fetcher = (url: string) => fetch(url).then(r => r.json())
+=======
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
     (acc: any, part: string) => {
@@ -24,16 +31,29 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest';
   } catch {}
   if (role !== 'admin')
+<<<<<<< HEAD
     return { redirect: { destination: '/', permanent: false } }
   return { props: {} }
 }
+=======
+    return { redirect: { destination: '/', permanent: false } };
+  return { props: {} };
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{
     status?: string;
     reason?: string;
     userEmail?: string;
     contentType?: string;
+<<<<<<< HEAD
   }>({ status: 'pending' });  const query = useMemo(() => {
+=======
+  }>({ status: 'pending' });
+  const query = useMemo(() => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
@@ -44,8 +64,16 @@ export default function ContentReviewPage() {
   const { data, mutate } = useSWR(
     `/api/admin/moderation/flags${query ? `?${query}` : ''}`
     fetcher
+<<<<<<< HEAD
   );  const flags = data?.flags |[];
   const [selected, setSelected] = useState<any | null>(null);
+=======
+  );
+  const flags = data?.flags || [];
+
+  const [selected, setSelected] = useState<any | null>(null);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function handleAction(
     action: 'approve' | 'remove' | 'warn' | 'ban'
     adminNotes?: string
@@ -60,8 +88,14 @@ export default function ContentReviewPage() {
       }
     );
     setSelected(null);
+<<<<<<< HEAD
     mutate();  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    mutate();
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <EnhancedLayout>
       <div className='max-w-7xl mx-auto'>
@@ -136,7 +170,12 @@ export default function ContentReviewPage() {
                 <th className='text-left px-3 py-2'>AI Scores</th>
                 <th className='text-left px-3 py-2'>Created</th>
                 <th className='text-left px-3 py-2'>Status</th>
+<<<<<<< HEAD
                 <th className='text-left px-3 py-2'>Actions</th>              </tr>
+=======
+                <th className='text-left px-3 py-2'>Actions</th>
+              </tr>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </thead>
             <tbody>
               {flags.map((f: any) => (
@@ -162,7 +201,12 @@ export default function ContentReviewPage() {
                       className='px-2 py-1 rounded border'
                     >
                       Review
+<<<<<<< HEAD
                     </button>                  </td>
+=======
+                    </button>
+                  </td>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </tr>
               ))}
               {flags.length === 0 && (
@@ -173,7 +217,12 @@ export default function ContentReviewPage() {
                   >
                     No results
                   </td>
+<<<<<<< HEAD
                 </tr>              )}
+=======
+                </tr>
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </tbody>
           </table>
         </div>
@@ -186,4 +235,8 @@ export default function ContentReviewPage() {
         />
       )}
     </EnhancedLayout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

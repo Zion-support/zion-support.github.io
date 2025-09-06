@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { WorkExperience } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  formatDateForDB,
+  handleResumeError,
+  showSuccessToast,;
+} from './useResumeUtils';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -92,6 +105,7 @@ export function useWorkExperience() {
     }
   }
   return {
+<<<<<<< HEAD
     isLoading;
     error;
     addWorkExperience;
@@ -100,3 +114,50 @@ export function useWorkExperience() {
     deleteWorkExperience
   }
 }
+=======
+    isLoading,
+    error,
+    addWorkExperience,
+    updateWorkExperience,
+    deleteWorkExperience,
+  };
+
+};
+const updateWorkExperience = async (workId: string, work: WorkExperience) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to update work experience');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('work history') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not update work experience') 
+}finally {
+  setIsLoading (false) 
+
+};
+const deleteWorkExperience = async (workId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete work experience');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('work history') .delete () .eq ('id', workId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete work experience') 
+}finally {
+  setIsLoading (false) 
+
+};
+
+  isLoading;
+error;
+addWorkExperience;
+updateWorkExperience;
+deleteWorkExperience 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

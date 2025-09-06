@@ -1,5 +1,10 @@
 import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function WhitepaperPreview() {
 <<<<<<< HEAD
   const router = null;
@@ -31,4 +36,8 @@ export default function WhitepaperPreview() {
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

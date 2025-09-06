@@ -196,6 +196,12 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
     iconExports[alias] = createIconComponent(alias, 'HelpCircle')
   }
 });
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const {
   LayoutGrid;
   List;

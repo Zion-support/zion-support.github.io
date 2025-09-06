@@ -38,7 +38,15 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+<<<<<<< HEAD
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
+=======
+}
+
+const { contentType, prompt, topic, autoPublish, includeImage } =
+      (await req.json()) as ContentGenerationRequest;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Default topic if none provided
     const contentTopic = topic |"AI freelancing marketplace trends";
     // Build the prompt based on content type
@@ -112,7 +120,14 @@ serve(async (req) => {
       if (!supabaseUrl |!supabaseKey) {
         throw new Error("Supabase credentials are not set in environment variables")
       }
+<<<<<<< HEAD
       const supabase = createClient(supabaseUrl, supabaseKey);
+=======
+}
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Create slug from title
       const slug = generatedContent.title
         .toLowerCase()

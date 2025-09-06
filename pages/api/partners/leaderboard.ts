@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '[^']*';
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -7,29 +8,53 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
+=======
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
+      'placeholder-key';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
+<<<<<<< HEAD
           { code: "aihub", profile_completions: 9 }
           { code: "modelmasters", profile_completions: 7 }
           { code: "promptpro", profile_completions: 5 }
         ]
       });
     }
+=======
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+          { code: 'promptpro', profile_completions: 5 },
+        ],
+      });
+   
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
     const { data, error } = await supabase
+<<<<<<< HEAD
       .from("referral_events")
       .select("partner_code, event, created_at")
       .gte("created_at", startOfMonth.toISOString());
@@ -39,14 +64,39 @@ export default async function handler(
       if (row.event !== "profile_completed") continue;
       const key = row.partner_code as string;
       map.set(key, (map.get(key) |0) + 1);
+=======
+      .from('referral_events')
+      .select('partner_code, event, created_at')
+      .gte('created_at', startOfMonth.toISOString());
+    if (error) return res.status(500).json({ error: error.message });
+
+    
+}
+
+const map = new Map<string, number>();
+    for (const row of data || []) {
+      if (row.event !== 'profile_completed') continue;
+      const key = row.partner_code as string;
+      map.set(key, (map.get(key) || 0) + 1);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10);
+<<<<<<< HEAD
     return res.status(200).json({ leaders });
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
 }
+=======
+
+    return res.status(200).json({ leaders });
+ 
+} catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

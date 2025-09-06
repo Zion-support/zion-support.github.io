@@ -27,6 +27,10 @@ import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
 <<<<<<< HEAD

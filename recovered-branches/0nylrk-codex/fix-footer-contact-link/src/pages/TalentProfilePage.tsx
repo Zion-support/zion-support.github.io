@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { TalentProfile } from '@/components/profile/TalentProfile';
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import { BackToDirectoryButton } from '@/components/profile/BackToDirectoryButton';
+import { useTalentProfile } from '@/hooks/useTalentProfile';
+import { HireRequestModal } from '@/components/profile/hire-request';
+import { useAuthStatus } from '@/hooks/talent';
+import { MessageTalentModal } from '@/components/messaging/MessageTalentModal';
+import { StickyAction } from '@/components/ui/sticky-action';
+import { Handshake, MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
+import { UserProfile } from '@/types/auth';
+import { toast } from '@/hooks/use-toast';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",

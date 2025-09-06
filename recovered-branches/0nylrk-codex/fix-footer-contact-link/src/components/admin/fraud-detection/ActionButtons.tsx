@@ -12,8 +12,13 @@ interface ActionButtonsProps {
     flagId: string
     action: "warning" | "suspension" | "ban" | "ignore"
   ) => void;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
   flagId
   status

@@ -1,6 +1,11 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+export interface MarketValidatedService {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   id: string;
   name: string;
   tagline: string;
@@ -22,11 +27,21 @@ import { ServiceVariant } from '../types/service-variants';
     website?: string;
   }
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const marketValidatedServices: MarketValidatedService[] = [
   // AI and Assistants
   {
@@ -502,6 +517,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
     description:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     features: [
+<<<<<<< HEAD
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
@@ -932,3 +948,20 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		contactInfo
 	}];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Managed vector DB',
+      'Ingestion pipelines',
+      'Metadata filters',
+      'Access controls',
+    ],
+    category: 'AI & Search',
+    link: 'https://ziontechgroup.com/vector-search-starter',
+    variant: 'quantum',
+    rating: 4.6,
+    customers: 410,
+    trialDays: 14,
+    setupTime: '2 hours',
+    contactInfo,
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

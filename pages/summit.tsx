@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import React from 'react';
 type Speaker = any;
@@ -9,6 +10,14 @@ const partners: Partner[] = [ {
 {
   name: 'Venture Partner'
 }
+=======
+ const partners: Partner[] = [ {
+  name: 'Gov Partner'
+};
+{
+  name: 'Venture Partner'
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   name: 'University Partner'
 }];
@@ -21,7 +30,11 @@ try {
   method: 'POST';
 headers: {
   'Content-Type': 'application/json'
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 body: JSON.stringify ({
   ...form, source: 'summit-page'
 })
@@ -36,10 +49,19 @@ setForm ({
 })
 }catch (err: any) {
   setResult ({
+<<<<<<< HEAD
   error: err?.message |'Unexpected error'
 })
 }finally {
   setSubmitting (false)
+=======
+  error: err?.message || 'Unexpected error'
+})
+}finally {
+  setSubmitting (false)
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter'
@@ -58,6 +80,7 @@ export default function SummitPage() {
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name'
@@ -79,21 +102,57 @@ export default function SummitPage() {
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.'
       twitter: 'https://twitter.com'
     }
+=======
+
+  const speakers: Speaker[] = [
+    {
+      name: 'Featured Speaker: Your Name',
+      title: 'Founder, Zion',
+      avatarUrl: '/favicon.svg',
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+      twitter: 'https://twitter.com',
+      linkedin: 'https://www.linkedin.com',
+      highlight: true,
+    },
+    {
+      name: 'Alex Rivera',
+      title: 'Head of Protocol Engineering',
+      avatarUrl: '/favicon.svg',
+      bio: 'Leading the architecture of ZionDAO and trust rails.',
+    },
+    {
+      name: 'Jordan Lee',
+      title: 'Zion Alumni | AI Fellow',
+      avatarUrl: '/favicon.svg',
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+      twitter: 'https://twitter.com',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const partners: Partner[] = [
     { name: 'Gov Partner' }
     { name: 'Venture Partner' }
     { name: 'University Partner' }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setResult(null)
     try {
       const res = await fetch('/api/summit/register', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ ...form, source: 'summit-page' })
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'summit-page' }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed');
@@ -102,20 +161,42 @@ export default function SummitPage() {
     } catch (err: any) {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
+<<<<<<< HEAD
       setSubmitting(false);    }
   }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
+=======
+      setSubmitting(false);
+    }
+  };
+
+  const livestreamEmbed = () => {
+    if (platform === 'youtube') {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         />
       );
     }
     if (platform === 'twitch') {
+<<<<<<< HEAD
         />
       );
     }
       />
     );  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+        />
+      );
+    }
+
+      />
+    );
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -155,16 +236,29 @@ export default function SummitPage() {
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
+<<<<<<< HEAD
             </a>          </div>
         </div>
       </section>
+=======
+            </a>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='grid md:grid-cols-3 gap-6 mt-8'>
         <section
           id='agenda'
           className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
+<<<<<<< HEAD
           <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
+=======
+          <ol className='space-y-3 list-decimal list-inside'>
+            <li>Opening Keynote — Launching Zion Protocol</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
@@ -187,9 +281,17 @@ export default function SummitPage() {
             <li>
               <span className='font-medium'>Tagline:</span> AI, Talent, Trust —
               Globalized
+<<<<<<< HEAD
             </li>          </ul>
         </section>
       </div>
+=======
+            </li>
+          </ul>
+        </section>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -233,11 +335,20 @@ export default function SummitPage() {
                   >
                     LinkedIn
                   </a>
+<<<<<<< HEAD
                 )}              </div>
+=======
+                )}
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           ))}
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -261,10 +372,19 @@ export default function SummitPage() {
                 <img src={p.logoUrl} alt={p.name} className='max-h-12' />
               ) : (
                 p.name
+<<<<<<< HEAD
               )}            </div>
           ))}
         </div>
       </section>
+=======
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section
         id='livestream'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -366,10 +486,19 @@ export default function SummitPage() {
             )}
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
+<<<<<<< HEAD
             )}          </div>
         </form>
       </section>
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
+=======
+            )}
+          </div>
+        </form>
+      </section>
+
+      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
         </h2>
@@ -378,4 +507,8 @@ export default function SummitPage() {
         </p>
       </section>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

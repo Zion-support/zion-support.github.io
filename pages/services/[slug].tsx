@@ -4,6 +4,7 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 import Button from '../../components/ui/Button',
 import Card from '../../components/ui/Card';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices  } from '../../data/extra-services';
@@ -14,6 +15,14 @@ type Service = any;
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
+=======
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../../data/extra-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { newRealServices } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
@@ -55,6 +64,10 @@ function extractServiceSlugFromLink(link: string): string | null {
 export async function getStaticPaths() {
   const services = getAllServices();
   const slugs = new Set<string>();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Fall back to normalized id or name to provide a stable URL under /services/*
     if (s.id) slugs.add(toSlug(s.id));
     else if (s.name) slugs.add(toSlug(s.name));
@@ -83,8 +96,15 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     return { notFound: true }
   }
   return {
+<<<<<<< HEAD
     props: { service }
   }
+=======
+    props: { service },
+  };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServiceDetailPage({ service }: { service: Service }) {
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -196,4 +216,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

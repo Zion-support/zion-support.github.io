@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
@@ -39,11 +44,20 @@ const features = [
   {
     title: 'Global Access'
     description:
+<<<<<<< HEAD
       'Connect with talent across multiple regions with localized interfaces.'
     icon: Globe
   }
 ]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Connect with talent across multiple regions with localized interfaces.',
+    icon: Globe,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnterpriseFeatures() {
   return (
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>
@@ -66,6 +80,7 @@ export function EnterpriseFeatures() {
                 <feature.icon className='h-6 w-6 text-primary' />
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
+<<<<<<< HEAD
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
@@ -80,10 +95,17 @@ export function EnterpriseFeatures() {
               </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
+=======
+              <p className='text-muted-foreground'>{feature.description}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           ))}
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

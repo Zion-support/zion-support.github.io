@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Search } from 'lucide-react'
 <<<<<<< HEAD
 import { Input  } from '@/components/ui/input';
+=======
+import { useState, useEffect } from 'react';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Button } from '@/components/ui/button';
 import { Pagination;
   PaginationContent;
@@ -33,7 +39,13 @@ interface CountryTabsProps {
   handleCountrySelect: (country: CountryPricing) => void;
   onQuote?: (country: CountryPricing) => void;
   searchQuery: string;
+<<<<<<< HEAD
   setSearchQuery: (query: string) => void
+=======
+  setSearchQuery: (query: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function CountryTabs({
 <<<<<<< HEAD
   popularCountries;
@@ -140,8 +152,12 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
+<<<<<<< HEAD
   )
   )
 }
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

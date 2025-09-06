@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Navigate } from 'react-router-dom';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
+import { Switch } from '@/components/ui/switch';
+}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -48,7 +80,13 @@ export default function TenantOnboarding() {
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
+<<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+=======
+}
+
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
   }

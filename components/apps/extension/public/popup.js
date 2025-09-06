@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const API_BASE = 'http: //localhost:4000',
 =======
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
@@ -110,3 +111,6 @@ document.getElementById('signIn').addEventListener('click', async () => {
 document.getElementById('result').textContent = 'Signed in (local).';
 })
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+const API BASE = 'http: //localhost:4000';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

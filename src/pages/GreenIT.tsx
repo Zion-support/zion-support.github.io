@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Leaf, Server, Cloud } from 'lucide-react';
+import Link from 'next/link';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -65,6 +74,7 @@ export default function GreenIT() {
                     your carbon footprint.
                   </p>
                   <div className='mt-8'>
+<<<<<<< HEAD
                     <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions
                     </Button>
                   </div>
@@ -123,6 +133,9 @@ export default function GreenIT() {
                   </p>
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+=======
+                    <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Explore Green IT Solutions
                     </Button>
                   </div>
@@ -131,6 +144,7 @@ export default function GreenIT() {
                   <img
                     src='https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
                     alt='Green IT sustainability'
+<<<<<<< HEAD
                     className='object-cover'                  />
                 </div>
               </div>
@@ -142,6 +156,14 @@ export default function GreenIT() {
                 </div>
               </div>
             </div>
+=======
+                    className='object-cover'
+                  />
+                </div>
+              </div>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='mb-16'>
               <h2 className='text-2xl font-bold text-white mb-8'>
                 Our Green IT Solutions
@@ -778,6 +800,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 ""
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {solution.description}
+<<<<<<< HEAD
                     </p>                  </div>
                 ))}
               </div>
@@ -791,10 +814,17 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                     </div>
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
+=======
+                    </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='mb-16'>
               <h2 className='text-2xl font-bold text-white mb-6'>
                 Why Choose Green IT?
@@ -827,6 +857,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                     </li>
                     <li>
                       • Compliance with emerging environmental regulations
+<<<<<<< HEAD
                     </li>                    <li>• Improved operational efficiency and performance</li>                    <li>• Lower energy consumption and resource utilization</li>
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
@@ -838,12 +869,19 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                     <li>• Significant cost savings on energy and cooling</li>
                     <li>• Enhanced brand reputation and stakeholder relations</li>
                     <li>• Compliance with emerging environmental regulations</li>
+=======
+                    </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <li>• Improved operational efficiency and performance</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
               Ready to implement Green IT solutions?
@@ -856,6 +894,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
               className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
               asChild
             >
+<<<<<<< HEAD
               <Link href='/contact'>Contact Our Team</Link>            </Button>
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
@@ -864,10 +903,15 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
             </p>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
               <Link href="/contact">Contact Our Team</Link>
+=======
+              <Link href='/contact'>Contact Our Team</Link>
+            </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 "                    {expandedSection === solution.id && (
                       <motion.div
@@ -1078,3 +1122,8 @@ export { GreenIT }
 export { GreenIT }
 export { GreenIT, GreenIT }
 }
+=======
+  );
+
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

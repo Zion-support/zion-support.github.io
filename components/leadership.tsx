@@ -1,5 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function LeadershipPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -48,6 +53,7 @@ export default function LeadershipPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -73,3 +79,6 @@ export default function LeadershipPage() {
 		</div>
 	)
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

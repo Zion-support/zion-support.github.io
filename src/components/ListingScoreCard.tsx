@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { StarIcon } from 'lucide-react'
+=======
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { StarIcon } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
@@ -17,8 +24,12 @@ interface ListingScoreCardProps {
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
+<<<<<<< HEAD
   className?: string
 <<<<<<< HEAD
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ListingScoreCard({ 
@@ -50,8 +61,14 @@ export function ListingScoreCard({
   reviewCount = 0
   className
 }: ListingScoreCardProps) {
+<<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
+=======
+  const [mainImageError, setMainImageError] = useState(false);
+  const [authorImageError, setAuthorImageError] = useState(false);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {image && !mainImageError && (
         <div className='h-48 w-full overflow-hidden relative'>
@@ -156,5 +173,9 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

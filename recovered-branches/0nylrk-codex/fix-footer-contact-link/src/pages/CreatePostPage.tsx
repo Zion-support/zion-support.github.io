@@ -12,6 +12,7 @@ interface PostFormValues {
   title: string;
   content: string;
   categoryId: ForumCategory;
+<<<<<<< HEAD
 =======
   title: string
   content: string
@@ -19,6 +20,11 @@ interface PostFormValues {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   tags: string
 }
+=======
+  tags: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CreatePostPage() {
 <<<<<<< HEAD
   const navigate = null;

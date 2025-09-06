@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { MobileHeader } from '../components/common/MobileHeader';
+import { BottomNavigation } from '../components/common/BottomNavigation';
+import { ClientDashboard } from '../components/dashboard/ClientDashboard';
+import { TalentDashboard } from '../components/dashboard/TalentDashboard';
+import { useAuth } from '@/hooks/useAuth';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",

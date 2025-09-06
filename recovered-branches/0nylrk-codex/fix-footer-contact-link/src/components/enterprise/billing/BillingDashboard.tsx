@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { BillingHeader } from './BillingHeader';
+import { CurrentSubscription } from './CurrentSubscription';
+import { PaymentMethods } from './PaymentMethods';
+import { InvoiceHistory } from './InvoiceHistory';
+import { UsageOverview } from './UsageOverview';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { BillingHeader } from "./BillingHeader",

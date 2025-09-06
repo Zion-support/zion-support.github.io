@@ -1,11 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { computeTrustScore  } from '../../../utils/trust/compute';
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = null;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
   TrustMetricInputs
@@ -29,6 +32,7 @@ async function analyzeWithGPT(
           ? 'High Trust'
           : 'Moderate Trust';
     return {
+<<<<<<< HEAD
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
     };  }import { supabase } from '../../../utils/supabase/client';
@@ -38,6 +42,11 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     // Fallback heuristic
     const heuristic = inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
+=======
+      riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],
+      reasonSummary: 'Heuristic classification (no OpenAI key set).',
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   try {
     const { OpenAI } = await import('openai');
@@ -69,13 +78,25 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
     }
   }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { userId } = req.query;
+<<<<<<< HEAD
   if (!userId |Array.isArray(userId))
     return res.status(400).json({ error: 'Invalid userId' });  if (!userId |Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
+=======
+  if (!userId || Array.isArray(userId))
+    return res.status(400).json({ error: 'Invalid userId' });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (req.method === 'GET') {
     try {
       const analyze = req.query.analyze === 'true';
@@ -87,13 +108,18 @@ export default async function handler(
           .select('*')
           .eq('userId', userId)
           .single();
+<<<<<<< HEAD
         if (data) inputs = data.values as TrustMetricInputs;      } catch {}
       if (!inputs) {
         inputs = {        const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data.values as TrustMetricInputs
+=======
+        if (data) inputs = data.values as TrustMetricInputs;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       } catch {}
       if (!inputs) {
         inputs = {
+<<<<<<< HEAD
           completionRate: 0.88
           onboardingCompletionRate: 0.9
           feedbackAverage: 4.7
@@ -106,11 +132,28 @@ export default async function handler(
           endorsements: 8
           flags: 0
         }
+=======
+          completionRate: 0.88,
+          onboardingCompletionRate: 0.9,
+          feedbackAverage: 4.7,
+          feedbackQualityScore: 0.8,
+          averageResponseHours: 6,
+          accountAgeDays: 420,
+          sentimentScore: 0.4,
+          disputeFlags: 0,
+          verifiedReviewRatio: 0.7,
+          endorsements: 8,
+          flags: 0,
+        };
+      }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       let reasonSummary: string | undefined;
       let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;
+<<<<<<< HEAD
         riskLevelOverride = analysis.riskLevel;      }
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
@@ -123,6 +166,18 @@ export default async function handler(
         ...breakdown
         riskLevel: riskLevelOverride |breakdown.riskLevel
       }
+=======
+        riskLevelOverride = analysis.riskLevel;
+      }
+}
+
+const breakdown = await computeTrustScore(inputs, { reasonSummary });
+      const result: TrustScoreBreakdown = {
+        ...breakdown,
+        riskLevel: riskLevelOverride || breakdown.riskLevel,
+      };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Persist latest score when possible
       try {
         await supabase
@@ -133,9 +188,11 @@ export default async function handler(
           );
       } catch {}
       return res.status(200).json(result);
-    } catch (e: any) {
+   
+} catch (e: any) {
       return res
         .status(500)
+<<<<<<< HEAD
         .json({ error: e?.message |'Failed to compute trust score' });
     }  }
       // Persist latest score when possible
@@ -145,13 +202,24 @@ export default async function handler(
       return res.status(200).json(result)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message |'Failed to compute trust score' })
+=======
+        .json({ error: e?.message || 'Failed to compute trust score' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   if (req.method === 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
+<<<<<<< HEAD
       const inputs = body as TrustMetricInputs;
+=======
+
+      
+}
+
+const inputs = body as TrustMetricInputs;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const breakdown = await computeTrustScore(inputs);
       try {
         await supabase
@@ -165,13 +233,15 @@ export default async function handler(
           );
       } catch {}
       return res.status(200).json(breakdown);
-    } catch (e: any) {
+   
+} catch (e: any) {
       return res
         .status(500)
         .json({ error: e?.message |'Failed to save trust inputs' });
     }
   }
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
@@ -182,3 +252,6 @@ export default async function handler(
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return res.status(405).json({ error: 'Method not allowed' })
 }
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

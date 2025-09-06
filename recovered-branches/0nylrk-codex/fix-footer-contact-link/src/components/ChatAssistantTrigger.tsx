@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatAssistant } from '@/components/ChatAssistant';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",

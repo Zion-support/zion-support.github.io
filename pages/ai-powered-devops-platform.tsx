@@ -1,6 +1,12 @@
 import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
+=======
+import Layout from '../components/layout/Layout';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AIPoweredDevOpsPlatformPage() {
 <<<<<<< HEAD
 	return (
@@ -50,4 +56,7 @@ export default function AIPoweredDevOpsPlatformPage() {
       />
     </>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -62,4 +62,10 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ErrorBoundary;

@@ -36,7 +36,11 @@ interface PostFormProps {
 <<<<<<< HEAD
   initialValues?: Partial<PostFormValues>,
   onSubmit: (values: PostFormValues) => void;
+<<<<<<< HEAD
   isEditing?: boolean
+=======
+  isEditing?: boolean;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const PostForm = null;
@@ -149,7 +153,14 @@ export const PostForm = ({
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default PostForm;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

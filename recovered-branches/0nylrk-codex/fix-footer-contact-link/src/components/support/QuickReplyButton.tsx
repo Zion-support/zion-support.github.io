@@ -4,8 +4,14 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 interface QuickReplyButtonProps {
   text: string;
+<<<<<<< HEAD
   onClick: () => void
 }
+=======
+  onClick: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
   return (
     <Button

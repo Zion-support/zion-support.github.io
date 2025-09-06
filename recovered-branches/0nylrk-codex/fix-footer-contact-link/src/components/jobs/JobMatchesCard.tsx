@@ -25,9 +25,14 @@ interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
+<<<<<<< HEAD
   showApplied?: boolean
 }
 <<<<<<< HEAD
+=======
+  showApplied?: boolean;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
 =======

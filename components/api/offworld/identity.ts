@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { address } = req.query as { address?: string };
@@ -9,6 +10,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -25,7 +30,13 @@ export default async function handler(
     const { address } = req.query as { address?: string }
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
-  } catch (e: any) {
+ 
+} catch (e: any) {
     return res.status(500).json({ error: e.message });
+<<<<<<< HEAD
   }
 }
+=======
+ 
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { Textarea } from '@/components/ui/textarea';
 import { Dialog;
   DialogContent;
@@ -31,7 +38,11 @@ interface GuestCheckoutModalProps {
 <<<<<<< HEAD
   open: boolean;
   onOpenChange: (open: boolean) => void;
+<<<<<<< HEAD
   onSubmit: (details: { email: string, address: string }) => void
+=======
+  onSubmit: (details: { email: string; address: string }) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export default function GuestCheckoutModal({
@@ -151,6 +162,10 @@ export default function GuestCheckoutModal({
         </form>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

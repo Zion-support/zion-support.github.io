@@ -11,6 +11,7 @@ function ensureDir() {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 function grantPath(id: string) {
+<<<<<<< HEAD
   return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
@@ -19,6 +20,10 @@ function grantPath(id: string) {
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
+=======
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 <<<<<<< HEAD
@@ -33,17 +38,27 @@ function writeGrant(record: GrantApplication) {
     grantPath(record.id)
     JSON.stringify(record, null, 2)
     'utf8'
+<<<<<<< HEAD
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
   ensureDir()
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
+<<<<<<< HEAD
     return;  }    return
+=======
+    return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   if (req.method === 'GET') {
     const g = readGrant(id);
@@ -52,10 +67,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     res.status(200).json({ record: g });
+<<<<<<< HEAD
     return;  }      return
     }
     res.status(200).json({ record: g });
     return
+=======
+    return;
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (req.method === 'PUT') {
     const existing = readGrant(id);
     if (!existing) {
@@ -64,6 +85,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const payload = req.body as UpdateGrantPayload;
     const next: GrantApplication = {
+<<<<<<< HEAD
       ...existing
       ...payload,    }
     const payload = req.body as UpdateGrantPayload;
@@ -80,13 +102,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed');
       status: payload.submit ? 'Submitted' : existing.status
       updatedAt: new Date().toISOString()
+=======
+      ...existing,
+      ...payload,
+      status: payload.submit ? 'Submitted' : existing.status,
+      updatedAt: new Date().toISOString(),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     } as GrantApplication;
     writeGrant(next);
     res.status(200).json({ record: next });
     return;
   }
+<<<<<<< HEAD
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');  res.setHeader('AllowGET, PUT');
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   res.status(405).end('Method Not Allowed')
 }
+=======
+
+  res.setHeader('Allow', 'GET, PUT');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

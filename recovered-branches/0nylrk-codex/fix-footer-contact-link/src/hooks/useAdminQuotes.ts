@@ -5,8 +5,13 @@ import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const useAdminQuotes = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useAdminQuotes = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();

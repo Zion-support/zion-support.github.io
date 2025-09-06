@@ -9,9 +9,19 @@ type ThemeProviderState = {theme: Theme;
   setTheme: (theme: Theme) => void;
 }
 const initialState: ThemeProviderState = {
+<<<<<<< HEAD
   theme: &quot;system&quot;
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
+=======
+  theme: 'system',
+  setTheme: () => null,
+};
+
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ThemeProvider({
   children
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
@@ -43,6 +53,10 @@ export function ThemeProvider({
     </ThemeProviderContext.Provider>;
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
   if (context === undefined)

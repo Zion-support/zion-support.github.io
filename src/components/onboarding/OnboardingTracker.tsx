@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
@@ -28,7 +36,11 @@ interface OnboardingTrackerProps {
 <<<<<<< HEAD
   steps: OnboardingStep[];
   title?: string;
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function OnboardingTracker({ 
@@ -44,6 +56,7 @@ export function OnboardingTracker({
   title = "Complete Your Profile"
   className
 }: OnboardingTrackerProps) {
+<<<<<<< HEAD
   const completedSteps = steps.filter(step => step.completed).length
   const progress = Math.round((completedSteps / steps.length) * 100)
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -52,6 +65,17 @@ export function OnboardingTracker({
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
+=======
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progress = Math.round((completedSteps / steps.length) * 100);
+
+    >
+      <div className='flex items-center justify-between mb-4'>
+        <h3 className='text-lg font-medium text-white'>{title}</h3>
+        <div className='text-sm font-medium text-zion-cyan'>
+          {progress}% Complete
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
@@ -90,6 +114,7 @@ export function OnboardingTracker({
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }></div> </div> {
   /* Steps list */ "
@@ -105,3 +130,21 @@ export function OnboardingTracker({
 }</div>) )
 }</div> </div>)
 }"}
+=======
+  );
+
+}></div> </div> {;
+  /* Steps list */ ";
+}<div className="space-y-3" > {;
+  steps.map ( (step) => (<div key= {;
+  step.id ";
+}className="flex items-center" > <div className="mr-3" > {";
+  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) ;
+}</div> </div> {";
+  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {;
+  step.link ;
+}> </Link> </Button>) ;
+}</div>) ) ;
+}</div> </div>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

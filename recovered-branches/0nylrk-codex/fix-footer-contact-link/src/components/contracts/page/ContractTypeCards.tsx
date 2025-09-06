@@ -16,8 +16,14 @@ import {
 import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
+<<<<<<< HEAD
   onSmartClick: () => void
 }
+=======
+  onSmartClick: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractTypeCards({
   onStandardClick
   onSmartClick

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { ChevronRight } from 'lucide-react'
@@ -10,6 +11,14 @@ const Breadcrumb = null;
 ;
 =======
 import { cn } from '@/lib/utils'
+=======
+import * as React from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { ChevronRight } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const Breadcrumb = React.forwardRef<
   HTMLElement
   React.ComponentPropsWithoutRef<'nav'> & {
@@ -20,6 +29,7 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label='breadcrumb'
     className={cn(
+<<<<<<< HEAD
       'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
     )}
     {...props}
@@ -37,6 +47,18 @@ Breadcrumb.displayName = 'Breadcrumb'
 ))
 Breadcrumb.displayName = 'Breadcrumb'
   HTMLOListElement
+=======
+      'inline-flex items-center gap-1 text-sm text-zion-slate-light',
+      className
+    )}
+    {...props}
+  />
+));
+Breadcrumb.displayName = 'Breadcrumb';
+
+const BreadcrumbList = React.forwardRef<
+  HTMLOListElement,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   React.ComponentPropsWithoutRef<'ol'>
 >(({ className, ...props }, ref) => (
   <ol
@@ -61,11 +83,21 @@ const BreadcrumbLink = React.forwardRef<
     asChild?: boolean
   }
 >(({ className, asChild = false, ...props }, ref) => {
+<<<<<<< HEAD
   const Comp = asChild ? Slot : 'a'
       />
   )
 })
 BreadcrumbLink.displayName = 'BreadcrumbLink'
+=======
+  const Comp = asChild ? Slot : 'a';
+
+    />
+  );
+});
+BreadcrumbLink.displayName = 'BreadcrumbLink';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const BreadcrumbSeparator = ({
   children
   className
@@ -86,6 +118,7 @@ const BreadcrumbEllipsis = ({
 }: React.ComponentProps<'span'>) => (  <span
     role='presentation'
     aria-hidden='true'
+<<<<<<< HEAD
     className={cn('flex h-9 w-9 items-center justify-center', className)}    {...props}
   >
     &#8230
@@ -111,10 +144,14 @@ const BreadcrumbEllipsis = ({
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
+=======
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {...props}
   >
     &#8230
   </span>
+<<<<<<< HEAD
 )
 BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis'
 export {
@@ -134,3 +171,16 @@ export {
   BreadcrumbSeparator
   BreadcrumbEllipsis}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+);
+BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

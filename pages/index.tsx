@@ -4,7 +4,13 @@ import { useState, useEffect, Suspense  } from 'react';
 import { ContactInfo, AnimationState  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner';
+<<<<<<< HEAD
 // import PerformanceMonitor from '../components/PerformanceMonitor';
+=======
+import PerformanceMonitor from '../components/PerformanceMonitor';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
 <<<<<<< HEAD

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -22,6 +23,41 @@ import {
   Globe
 } from "lucide-react",
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
+=======
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { SEO } from '@/components/SEO';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  MapPin,
+  Clock,
+  Link as LinkIcon,
+  Github,
+  Twitter,
+  Linkedin,
+  CheckCircle2,
+  Mail,
+  Phone,
+  Globe,;
+} from 'lucide-react';
+import { HireNowCTA } from '@/components/profile/HireNowCTA';
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -45,10 +81,19 @@ export default function ProfileDetail() {
           setError("Profile ID is missing.");
           return
         }
+<<<<<<< HEAD
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+=======
+}
+
+const { data, error } = await supabase
+          .from('talent_profiles')
+          .select('*')
+          .eq('id', profileId)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           .single();
         if (error) {
           throw new Error(error.message)

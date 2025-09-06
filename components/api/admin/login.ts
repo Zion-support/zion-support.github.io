@@ -1,10 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { setSessionCookie } from '../../../utils/adminAuth';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return
 <<<<<<< HEAD
+=======
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method Not Allowed' });
+    return;
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
   const { username, password } = req.body || {};
   const envUser = null;
@@ -19,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     res.status(401).json({ error: 'Invalid credentials' });
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } else {
     res.status(401).json({ error: 'Invalid credentials' })
@@ -26,3 +37,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Invalid credentials' })
   }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

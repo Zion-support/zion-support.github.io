@@ -5,9 +5,14 @@ import { useAuth  } from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 <<<<<<< HEAD
 import { useToast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 export const useTalentQuotes = null;
 =======
 import {useToast} from '@/hooks/use-toast';
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useTalentQuotes = () => {
   const { user } = useAuth();
   const { toast } = useToast();

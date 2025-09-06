@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 },
 ,
 export default usePerformanceMonitor;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface PerformanceMetrics {
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
 }
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function usePerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
@@ -75,4 +84,7 @@ export function usePerformanceMonitor() {
   }, []);
   return { metrics, isSupported }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

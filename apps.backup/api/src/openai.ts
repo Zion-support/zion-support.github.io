@@ -5,6 +5,11 @@ type OpenAIClient = any;
 }
 =======
 type OpenAIClient = OpenAI;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey })
 }

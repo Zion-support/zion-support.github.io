@@ -18,8 +18,14 @@ import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface JobApplicationsTableProps {
+<<<<<<< HEAD
   jobId: string
 }
+=======
+  jobId: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 <<<<<<< HEAD
   const { 

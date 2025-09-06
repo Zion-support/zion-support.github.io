@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -21,6 +22,26 @@ export default function Ecommerce() {
     "url": "https://app.ziontechgroup.com/features/e-commerce"
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+}
+
+export default function Ecommerce() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'E-commerce Platform',
+    description:
+      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
+    url: 'https://app.ziontechgroup.com/features/e-commerce',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <SEO
@@ -84,6 +105,7 @@ export default function Ecommerce() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
+<<<<<<< HEAD
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -124,10 +146,17 @@ export default function Ecommerce() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
+=======
+              <Link href='/marketplace'>Start Shopping</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,8 +5,12 @@ import { revolutionary2025MicroSaasServices  } from '../../data/revolutionary-20
 import { emergingTech2025Services  } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const RevolutionaryServicesShowcase: React.FC;
 =======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
@@ -48,6 +52,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       count: enterpriseIT2025Services.length
     }
     {
+<<<<<<< HEAD
       id: 'revolutionary'
       name: 'Revolutionary'
       count: revolutionary2025MicroSaasServices.length
@@ -66,32 +71,83 @@ const RevolutionaryServicesShowcase: React.FC = () => {
   const loadMore = () => {
     setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
   }
+=======
+      id: 'revolutionary',
+      name: 'Revolutionary',
+      count: revolutionary2025MicroSaasServices.length,
+    },
+  ];
+
+  const allServices = [
+    ...revolutionary2025MicroSaasServices,
+    ...emergingTech2025Services,
+    ...enterpriseIT2025Services,
+  ];
+
+  const filteredServices =
+    activeCategory === 'all'
+      ? allServices
+      : allServices.filter(service => {
+          if (activeCategory === 'ai') return service.category.includes('AI');
+          if (activeCategory === 'quantum')
+            return service.category.includes('Quantum');
+          if (activeCategory === 'emerging')
+            return emergingTech2025Services.includes(service);
+          if (activeCategory === 'enterprise')
+            return enterpriseIT2025Services.includes(service);
+          if (activeCategory === 'revolutionary')
+            return revolutionary2025MicroSaasServices.includes(service);
+          return true;
+        });
+
+  const loadMore = () => {
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
       }
     }
   }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     }
   }
+=======
+        duration: 0.5,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <motion.div
+<<<<<<< HEAD
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -99,6 +155,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div
           className="text-center mb-16"
+=======
+          className='text-center mb-16'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -114,6 +173,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future with our cutting-edge AI, quantum computing
             and emerging technology solutions. Transform your business with
+<<<<<<< HEAD
             services that were once science fiction.          </p>
         </motion.div>
         {/* Category Filter */}
@@ -126,27 +186,42 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions.
             Transform your business with services that were once science fiction.
+=======
+            services that were once science fiction.
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </motion.div>
         {/* Category Filter */}
         <motion.div
+<<<<<<< HEAD
           className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
+=======
+          className='flex flex-wrap justify-center gap-4 mb-12'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
           {categories.map(category => (            <button
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id);
                 setVisibleServices(12);              }}          {categories.map((category) => (
+=======
+          {categories.map(category => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <button
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id);
+<<<<<<< HEAD
                 setVisibleServices(12);                setVisibleServices(12)
+=======
+                setVisibleServices(12);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category.id
@@ -155,7 +230,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               }`}
             >
               {category.name}
+<<<<<<< HEAD
               <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
+=======
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {category.count}
               </span>
             </button>
@@ -166,10 +245,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
           variants={containerVariants}
           initial='hidden'
+<<<<<<< HEAD
           whileInView='visible'          viewport={{ once: true }}          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+=======
+          whileInView='visible'
+          viewport={{ once: true }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           {filteredServices.slice(0, visibleServices).map((service, index) => (
             <motion.div
@@ -183,6 +267,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                 {/* Background Effects */}
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+<<<<<<< HEAD
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>
                 {/* Popular Badge */}
                 {service.popular && (
@@ -195,12 +280,19 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+=======
+                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
+<<<<<<< HEAD
                     <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
                     <Star className="w-3 h-3 inline mr-1" />
+=======
+                    <Star className='w-3 h-3 inline mr-1' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     POPULAR
                   </div>
                 )}
@@ -224,6 +316,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       </div>
                       <div className='text-gray-400 text-sm'>
                         {service.period}
+<<<<<<< HEAD
                       </div>                    </div>
                   </div>
                   {/* Description */}
@@ -239,6 +332,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white">{service.price}</div>
                       <div className="text-gray-400 text-sm">{service.period}</div>
+=======
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                   {/* Description */}
@@ -269,6 +365,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <Shield className='w-4 h-4 text-blue-400' />
                       <span className='text-gray-300'>
                         {service.trialDays} day trial
+<<<<<<< HEAD
                       </span>                    </div>
                   </div>
                   {/* Action Buttons */}
@@ -290,6 +387,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     <div className="flex items-center space-x-2 text-sm">
                       <Shield className="w-4 h-4 text-blue-400" />
                       <span className="text-gray-300">{service.trialDays} day trial</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                   {/* Action Buttons */}
@@ -303,6 +403,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <span>Get Started</span>
                       <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300' />
                     </a>
+<<<<<<< HEAD
                     <button className='px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5'>                      Learn More                    <a
                       href={service.link}
                       target="_blank"
@@ -313,6 +414,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </a>
                     <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5">
+=======
+                    <button className='px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Learn More
                     </button>
                   </div>
@@ -338,12 +442,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   <div
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
                     style={{ left: '80%', top: '70%' }}
+<<<<<<< HEAD
                   ></div>                </div>                <div className="absolute inset-0 pointer-events-none overflow-hidden">
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>
+=======
+                  ></div>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           ))}
@@ -351,8 +460,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div
+<<<<<<< HEAD
             className='text-center'            initial={{ opacity: 0 }}          <motion.div
             className="text-center"
+=======
+            className='text-center'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -360,7 +473,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           >
             <button
               onClick={loadMore}
+<<<<<<< HEAD
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+=======
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               Load More Revolutionary Services
             </button>
@@ -368,8 +485,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         )}
         {/* Call to Action */}
         <motion.div
+<<<<<<< HEAD
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+=======
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -392,6 +513,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </a>
             <a
               href='/pricing'
+<<<<<<< HEAD
               className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'            >            Ready to Experience the Future?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -408,6 +530,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <a
               href="/pricing"
               className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+=======
+              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               View Pricing
             </a>
@@ -416,8 +541,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 export default RevolutionaryServicesShowcase;  )
 }
 export default RevolutionaryServicesShowcase;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default RevolutionaryServicesShowcase;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

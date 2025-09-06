@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { useFetchResume } from './useFetchResume';
+import { useResumeActions } from './useResumeActions';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export default function UNBridge() {
   const [form, setForm] = useState({
 <<<<<<< HEAD
@@ -10,6 +11,22 @@ export default function UNBridge() {
     supportingMultiverses: 'Digital Labor, AI Ethics',
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en'});
+=======
+}
+
+export default function UNBridge() {
+  const [form, setForm] = useState({
+    title: 'Zion DAO x Digital Labor Initiative',
+    targetInstitution: 'UN Development Programme',
+    type: 'Workforce Dev',
+    regionalScope: 'Global South',
+    budgetOrResolution: 'USD 3M over 24 months',
+    supportingMultiverses: 'Digital Labor, AI Ethics',
+    promptAssist:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en',
+  });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null),
   const [translated, setTranslated] = useState<string>(''),
@@ -30,13 +47,23 @@ export default function UNBridge() {
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const onChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     const { name, value } = e.target;
+<<<<<<< HEAD
     setForm(f => ({ ...f, [name]: value }));  }
+=======
+    setForm(f => ({ ...f, [name]: value }));
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function generate() {
     setLoading(true);
     try {
@@ -44,7 +71,11 @@ export default function UNBridge() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           ...form
+=======
+          ...form,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           supportingMultiverses: form.supportingMultiverses
             .split(',')
             .map(s => s.trim())
@@ -55,29 +86,53 @@ export default function UNBridge() {
       setResult(data);
     } finally {
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return;
     setLoading(true)
     try {
       const res = await fetch('/api/proposals/translate', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ markdown: result.markdown, targetLanguage })
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setTranslated(data.translated);
     } finally {
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function exportArtifacts() {
     if (!result?.meta?.id) return;
     setLoading(true);
     try {
       await fetch('/api/proposals/export', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ id: result.meta.id })
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: result.meta.id }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Refresh meta
       const list = await fetch('/api/proposals/list');
@@ -86,15 +141,27 @@ export default function UNBridge() {
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {
       setLoading(false);
+<<<<<<< HEAD
     }  }
+=======
+    }
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
     setLoading(true)
     try {
       const res = await fetch('/api/proposals/submit', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ id: result.meta.id, channels })
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: result.meta.id, channels }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setResult((r: any) => ({ ...r, meta: data.meta }));
@@ -133,7 +200,12 @@ export default function UNBridge() {
               value={form.type}
               onChange={onChange}
               className='w-full border rounded p-2'
+<<<<<<< HEAD
             >              <option>Workforce Dev</option>
+=======
+            >
+              <option>Workforce Dev</option>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
@@ -265,17 +337,31 @@ export default function UNBridge() {
                   >
                     PDF
                   </a>
+<<<<<<< HEAD
                 </div>              )}
+=======
+                </div>
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {result.meta.artifacts?.ipfsCid && (
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
               )}
               {result.meta.artifacts?.signature && (
                 <div>
                   Signature: {result.meta.artifacts.signature.slice(0, 30)}…
+<<<<<<< HEAD
                 </div>              )}
+=======
+                </div>
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           )}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

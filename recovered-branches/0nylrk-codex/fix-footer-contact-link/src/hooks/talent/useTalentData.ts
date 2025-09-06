@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { TalentProfile } from '@/types/talent';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState  } from 'react';
 import { TALENT_PROFILES  } from '@/data/talentData';

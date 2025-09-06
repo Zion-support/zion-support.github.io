@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { CalendarIcon, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import {
@@ -162,6 +179,7 @@ export function TeamActivity() {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 const getCategoryBadge = (category: string) => {
@@ -171,3 +189,16 @@ const getCategoryBadge = (category: string) => {
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
 }"}
+=======
+  );
+
+};
+const getCategoryBadge = (category: string) => {;
+  ;
+};";
+  activities.map ( (activity) => (<TableRow key= {;
+  activity.id ;
+}> </TableCell> </TableRow>) ) ";
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

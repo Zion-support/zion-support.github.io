@@ -19,8 +19,14 @@ import {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface SortDropdownProps {
   sortOption: string;
+<<<<<<< HEAD
   setSortOption: (option: string) => void
 }
+=======
+  setSortOption: (option: string) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   return (
     <DropdownMenu>

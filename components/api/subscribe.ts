@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../utils/supabase/client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
   const { email } = req.body || {},
@@ -9,17 +10,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Basic validation
     const normalized = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+<<<<<<< HEAD
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
   const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
+=======
+  const { email } = req.body || {};
+  if (!email || typeof email !== 'string')
+    return res.status(400).send('Invalid email');
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     // Basic validation
     const normalized = email.trim().toLowerCase();
@@ -30,6 +42,7 @@ export default async function handler(
       (process.env.NEXT_PUBLIC_SUPABASE_URL |'').includes('placeholder') |
       (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'').includes('placeholder');
     if (isPlaceholder) {
+<<<<<<< HEAD
       return res.status(200).json({ ok: true, simulated: true });    }
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL |'').includes('placeholder') |(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'').includes('placeholder');
@@ -43,16 +56,36 @@ export default async function handler(
         source: 'mobile-launch'
         created_at: new Date().toISOString()
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+=======
+      return res.status(200).json({ ok: true, simulated: true });
+   
+}
+
+    const { data, error } = await supabase
+      .from('email_signups')
+      .insert({
+        email: normalized,
+        source: 'mobile-launch',
+        created_at: new Date().toISOString(),
+      })
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       .select('*')
       .single();
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     if (error) {
       if (error.message && error.message.includes('duplicate')) {
         return res.status(200).json({ ok: true, duplicate: true });
+<<<<<<< HEAD
       }
       return res.status(500).send(error.message |'Database error');
+=======
+     
+}
+      return res.status(500).send(error.message || 'Database error');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     return res.status(200).json({ ok: true, data });
+<<<<<<< HEAD
   } catch (e: any) {
     return res.status(500).send(e?.message |'Unexpected error');
   }      }
@@ -63,3 +96,9 @@ export default async function handler(
     return res.status(500).send(e?.message |'Unexpected error')
 }
 }
+=======
+ 
+} catch (e: any) {
+    return res.status(500).send(e?.message || 'Unexpected error');
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

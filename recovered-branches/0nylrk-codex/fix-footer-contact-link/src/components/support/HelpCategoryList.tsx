@@ -16,8 +16,14 @@ import { HelpCategory } from "./types";
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
+<<<<<<< HEAD
   searchQuery: string
 }
+=======
+  searchQuery: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HelpCategoryList({
   categories
   onCategorySelect

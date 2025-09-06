@@ -8,6 +8,11 @@ import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   articleId: string;
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 <<<<<<< HEAD
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
@@ -34,6 +39,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   if (!article) {
     return <div>Article not found</div>;
   }
+<<<<<<< HEAD
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     (setFeedbackGiven(type)
       // In a real implementation, this would send feedback to the server
@@ -45,6 +51,23 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             : "We'll work on improving this article."
       }));
   }
+=======
+}
+
+const handleFeedback = (type: 'helpful' | 'not-helpful') => {
+    setFeedbackGiven(type);
+
+    // In a real implementation, this would send feedback to the server
+    toast({
+      title: 'Thank you for your feedback!',
+      description:
+        type === 'helpful'
+          ? "We're glad this article was helpful."
+          : "We'll work on improving this article.",
+    });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div>
       <Card className="p-6">
@@ -118,5 +141,8 @@ function formatDate(date: string): string {
     month: "long"
     day: "numeric"
   });
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

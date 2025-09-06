@@ -1,4 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {
+  ArrowRight,
+  Briefcase,
+  PenTool,
+  BarChart3,
+  Users,
+  Shield,
+  Globe,;
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import Link from 'next/link';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -101,10 +128,15 @@ export default function ZionHireAI() {
                   src='https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI'
                   alt='Zion Hire AI Dashboard'
                   className='relative z-10 rounded-lg shadow-xl'
+<<<<<<< HEAD
                   loading='lazy'                />                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
+=======
+                  loading='lazy'
+                />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -148,13 +180,21 @@ export default function ZionHireAI() {
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Template
+<<<<<<< HEAD
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>Industry-specific templates</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <PenTool className='h-10 w-10 text-zion-purple mb-2' />
@@ -181,11 +221,20 @@ export default function ZionHireAI() {
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Custom
+<<<<<<< HEAD
                       </span>                      <span>Customizable scoring criteria</span>
+=======
+                      </span>
+                      <span>Customizable scoring criteria</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Users className='h-10 w-10 text-zion-purple mb-2' />
@@ -212,11 +261,20 @@ export default function ZionHireAI() {
                     <li className='flex items-center'>
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
+<<<<<<< HEAD
                       </span>                      <span>Performance tracking</span>
+=======
+                      </span>
+                      <span>Performance tracking</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Globe className='h-10 w-10 text-zion-purple mb-2' />
@@ -243,6 +301,7 @@ export default function ZionHireAI() {
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Code
+<<<<<<< HEAD
                       </span>                      <span>Simple JavaScript snippet</span>                <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Resume Screener</CardTitle>
@@ -316,11 +375,18 @@ export default function ZionHireAI() {
                         Code
                       </span>                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>Simple JavaScript snippet</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <BarChart3 className='h-10 w-10 text-zion-purple mb-2' />
@@ -346,13 +412,21 @@ export default function ZionHireAI() {
                     <li className='flex items-center'>
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
+<<<<<<< HEAD
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>Cost per hire analysis</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
@@ -379,6 +453,7 @@ export default function ZionHireAI() {
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Access
+<<<<<<< HEAD
                       </span>                      <span>Team roles & permissions</span>                <CardHeader>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>White-Labeled Platform</CardTitle>
@@ -398,6 +473,9 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
+=======
+                      </span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>Team roles & permissions</span>
                     </li>
                   </ul>
@@ -422,6 +500,7 @@ export default function ZionHireAI() {
               className='bg-zion-purple hover:bg-zion-purple-light text-white'
               asChild
             >
+<<<<<<< HEAD
               <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
             <Button
               size="lg"
@@ -431,10 +510,17 @@ export default function ZionHireAI() {
               <Link href="/enterprise/demo">
                 Schedule a Demo
               </Link>
+=======
+              <Link href='/enterprise/demo'>Schedule a Demo</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </section>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

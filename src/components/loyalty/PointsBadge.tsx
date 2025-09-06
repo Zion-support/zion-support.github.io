@@ -4,10 +4,24 @@ import { Gift, RefreshCw } from 'lucide-react'
 import { usePoints  } from '@/hooks/usePoints';
 import { useAuth  } from '@/hooks/useAuth';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
 import { LoginModal  } from '@/components/auth/LoginModal';
 import { Button  } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+import { LoginModal } from '@/components/auth/LoginModal';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PointsBadge() {
 
   const { isAuthenticated } = useAuth();
@@ -139,6 +153,10 @@ export function PointsBadge() {
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       )}
     </TooltipProvider>
+<<<<<<< HEAD
   )
 }
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

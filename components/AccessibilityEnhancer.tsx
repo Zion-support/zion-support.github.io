@@ -98,6 +98,7 @@ if (typeof document !== 'undefined') {
   styleSheet.textContent = focusStyles;
   document.head.appendChild(styleSheet);
 }
+<<<<<<< HEAD
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
@@ -197,4 +198,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </>
   );
 }
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default AccessibilityEnhancer;

@@ -2,6 +2,10 @@ import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function useFavorites() {
 <<<<<<< HEAD
   const storageKey = null;
@@ -11,23 +15,43 @@ function useFavorites() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
+<<<<<<< HEAD
       if (raw) setFavorites(JSON.parse(raw));    } catch {}
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
   return { favorites, remove }
 }
+=======
+      if (raw) setFavorites(JSON.parse(raw));
+    } catch {}
+  }, []);
+  const remove = (slug: string) =>
+    setFavorites(prev => prev.filter(s => s !== slug));
+  return { favorites, remove };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
+<<<<<<< HEAD
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
           <ol className='flex items-center gap-2'>
@@ -42,6 +66,7 @@ export default function FavoritesPage() {
               aria-current='page'
             >
               Favorites
+<<<<<<< HEAD
             </li>          </ol>
         </nav>
       </div>
@@ -53,6 +78,13 @@ export default function FavoritesPage() {
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
         </nav>
       </div>
+=======
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
       {profiles.length === 0 ? (
         <div className='rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center'>
@@ -111,16 +143,25 @@ export default function FavoritesPage() {
                     <a className='px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600'>
                       Request to Hire
                     </a>
+<<<<<<< HEAD
                   </Link>                </div>              <div className="mt-4 flex items-center justify-between text-sm">
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>
                 <div className="flex items-center gap-3">
                   <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
+=======
+                  </Link>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
+import { Wallet } from '@/components/icons';
+import { toast } from 'sonner';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",

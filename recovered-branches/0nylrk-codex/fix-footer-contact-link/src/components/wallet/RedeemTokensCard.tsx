@@ -51,6 +51,11 @@ const REWARD_OPTIONS: RewardOption[] = [
     type: 'credit'
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);

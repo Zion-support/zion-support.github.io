@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",

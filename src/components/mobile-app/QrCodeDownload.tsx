@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { QrCode } from 'lucide-react';
+import { AppStoreButtons } from './AppStoreButtons';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react";
 import { QrCode } from 'lucide-react'
@@ -52,4 +59,7 @@ export const QrCodeDownload: React.FC = () => {
   )
 }
 "
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

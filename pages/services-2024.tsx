@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, Filter, Star, Users, TrendingUp;
   Brain, Atom, Cpu, Shield, Database, Cloud;
   ArrowRight, CheckCircle, Zap, Sparkles
@@ -28,10 +29,33 @@ import {
   CheckCircle
   Zap
   Sparkles;} from 'lucide-react';
+=======
+import {
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  Brain,
+  Atom,
+  Cpu,
+  Shield,
+  Database,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Sparkles,;
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -67,10 +91,21 @@ const Services2024Page: React.FC = () => {
           service.variant.includes('project')) |
         (selectedCategory === 'customer' &&
           service.variant.includes('customer'));
+<<<<<<< HEAD
       return matchesSearch && matchesCategory;    });
     // Sort services
     filtered.sort((a, b) => {
       let aValue: any, bValue: any;
+=======
+
+      return matchesSearch && matchesCategory;
+    });
+
+    // Sort services
+    filtered.sort((a, b) => {
+      let aValue: any, bValue: any;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       switch (sortBy) {
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
@@ -146,11 +181,21 @@ const Services2024Page: React.FC = () => {
       count: allServices.filter(s => s.variant.includes('project')).length
     }
     {
+<<<<<<< HEAD
       id: 'customer'
       name: 'Customer Success'
       icon: CheckCircle
       count: allServices.filter(s => s.variant.includes('customer')).length
     },  ];
+=======
+      id: 'customer',
+      name: 'Customer Success',
+      icon: CheckCircle,
+      count: allServices.filter(s => s.variant.includes('customer')).length,
+    },
+  ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -160,7 +205,13 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return TrendingUp;
     if (variant.includes('project')) return Users;
     if (variant.includes('customer')) return CheckCircle;
+<<<<<<< HEAD
     return Sparkles;  }
+=======
+    return Sparkles;
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -170,7 +221,13 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+<<<<<<< HEAD
     return 'from-gray-500 to-slate-500';  }
+=======
+    return 'from-gray-500 to-slate-500';
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -189,7 +246,12 @@ const Services2024Page: React.FC = () => {
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -236,7 +298,12 @@ const Services2024Page: React.FC = () => {
                   <div className='text-3xl font-bold text-green-400 mb-2'>
                     1000+
                   </div>
+<<<<<<< HEAD
                   <div className='text-gray-400'>Happy Customers</div>                </div>
+=======
+                  <div className='text-gray-400'>Happy Customers</div>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </div>
@@ -255,7 +322,12 @@ const Services2024Page: React.FC = () => {
                       placeholder='Search services by name, features, or description...'
                       value={searchQuery}
                       onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
                       className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />
+=======
+                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
+                    />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
                 {/* Category Filter */}
@@ -265,7 +337,12 @@ const Services2024Page: React.FC = () => {
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
                   >
+<<<<<<< HEAD
                     {categories.map(category => (                      <option key={category.id} value={category.id}>
+=======
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {category.name} ({category.count})
                       </option>
                     ))}
@@ -288,7 +365,12 @@ const Services2024Page: React.FC = () => {
                       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
                     }
                     className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'
+<<<<<<< HEAD
                   >                    {sortOrder === 'asc' ? '↑' : '↓'}
+=======
+                  >
+                    {sortOrder === 'asc' ? '↑' : '↓'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </button>
                 </div>
               </div>
@@ -309,7 +391,12 @@ const Services2024Page: React.FC = () => {
                 </p>
               </div>
             ) : (
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (
+=======
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {filteredServices.map((service, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -332,13 +419,23 @@ const Services2024Page: React.FC = () => {
                           <div className='text-2xl font-bold text-cyan-400'>
                             {service.price}
                           </div>
+<<<<<<< HEAD
                           <div className='text-sm text-gray-400'>per month</div>                        </div>
+=======
+                          <div className='text-sm text-gray-400'>per month</div>
+                        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
                         {service.name}
                       </h3>
+<<<<<<< HEAD
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service.tagline}
+=======
+                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                        {service.tagline}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </p>
                       {/* Features */}
                       <div className='mb-6'>
@@ -360,7 +457,12 @@ const Services2024Page: React.FC = () => {
                               </div>
                             ))}
                           {service.features.length > 3 && (
+<<<<<<< HEAD
                             <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features
+=======
+                            <div className='text-sm text-cyan-400'>
+                              +{service.features.length - 3} more features
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             </div>
                           )}
                         </div>
@@ -386,7 +488,12 @@ const Services2024Page: React.FC = () => {
                           <div className='text-sm font-semibold text-white mb-1'>
                             {service.launchDate}
                           </div>
+<<<<<<< HEAD
                           <div className='text-xs text-gray-400'>Launched</div>                        </div>
+=======
+                          <div className='text-xs text-gray-400'>Launched</div>
+                        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
@@ -400,7 +507,12 @@ const Services2024Page: React.FC = () => {
                         <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
                           {service.variant
                             .replace('-futuristic', '')
+<<<<<<< HEAD
                             .replace('-', ' ')}                        </div>
+=======
+                            .replace('-', ' ')}
+                        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                   </motion.div>
@@ -411,7 +523,12 @@ const Services2024Page: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
+=======
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -439,14 +556,27 @@ const Services2024Page: React.FC = () => {
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'
                 >
                   <span>View Pricing Plans</span>
+<<<<<<< HEAD
                   <ArrowRight className='w-4 h-4' />                </Link>
+=======
+                  <ArrowRight className='w-4 h-4' />
+                </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
 export default Services2024Page;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+
+export default Services2024Page;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

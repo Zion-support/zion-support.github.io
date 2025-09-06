@@ -2,8 +2,14 @@
 import { Loader2 } from "lucide-react";
 interface ResultsHeaderProps {
   isLoading: boolean;
+<<<<<<< HEAD
   resultCount: number
 }
+=======
+  resultCount: number;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">

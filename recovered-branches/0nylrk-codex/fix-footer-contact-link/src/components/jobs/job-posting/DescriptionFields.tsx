@@ -20,8 +20,14 @@ import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
+<<<<<<< HEAD
   editorContent: string
 }
+=======
+  editorContent: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function DescriptionFields({
   control
   handleEditorChange

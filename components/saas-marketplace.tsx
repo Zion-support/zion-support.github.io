@@ -3,6 +3,7 @@ import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Zap;
   Shield;
   BarChart3;
@@ -63,6 +64,38 @@ export default function SaaSMarketplacePage() {
       rating: 4.8
       users: '2M+'
       icon: <Zap className='w-8 h-8 text-orange-400' />
+=======
+import {
+  Zap,
+  Shield,
+  BarChart3,
+  Globe,
+  Users,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+  Cloud,
+  ArrowRight,
+  Star,
+  Check,
+  ExternalLink,;
+} from 'lucide-react';
+}
+
+export default function SaaSMarketplacePage() {
+  const microSaasServices = [
+    {
+      name: 'Zapier',
+      description:
+        'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
+      category: 'Automation',
+      pricing: 'Free - $19.99/month',
+      rating: 4.8,
+      users: '2M+',
+      icon: <Zap className='w-8 h-8 text-orange-400' />,
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       features: [
         '5000+ app integrations'
         'Visual workflow builder'
@@ -172,6 +205,7 @@ export default function SaaSMarketplacePage() {
     {
       name: 'Mixpanel'
       description:
+<<<<<<< HEAD
         'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics'
       pricing: 'Free - $25/month'
       rating: 4.5
@@ -191,6 +225,24 @@ export default function SaaSMarketplacePage() {
         'Mobile analytics'
       ]
       website: 'https://mixpanel.com'
+=======
+        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
+      category: 'Analytics',
+      pricing: 'Free - $25/month',
+      rating: 4.5,
+      users: '26K+',
+      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      features: [
+        'User behavior tracking',
+        'Funnel analysis',
+        'A/B testing',
+        'Real-time data',
+        'Custom events',
+        'Mobile analytics',
+      ],
+      website: 'https://mixpanel.com',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       useCase:
         'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
       pros: [
@@ -204,6 +256,7 @@ export default function SaaSMarketplacePage() {
     {
       name: 'MongoDB Atlas'
       description:
+<<<<<<< HEAD
         'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database'
       pricing: 'Free - $57/month'
       rating: 4.7
@@ -223,6 +276,24 @@ export default function SaaSMarketplacePage() {
         'Monitoring & alerting'
       ]
       website: 'https://mongodb.com/atlas'
+=======
+        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
+      category: 'Database',
+      pricing: 'Free - $57/month',
+      rating: 4.7,
+      users: '35K+',
+      icon: <Database className='w-8 h-8 text-green-400' />,
+      color: 'bg-gradient-to-br from-green-500 to-teal-600',
+      features: [
+        'Fully managed MongoDB',
+        'Global clusters',
+        'Auto-scaling',
+        'Backup & recovery',
+        'Security & compliance',
+        'Monitoring & alerting',
+      ],
+      website: 'https://mongodb.com/atlas',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       useCase:
         'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
       pros: [
@@ -260,6 +331,7 @@ export default function SaaSMarketplacePage() {
     {
       name: 'Linear'
       description:
+<<<<<<< HEAD
         'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management'
       pricing: 'Free - $8/month'
       rating: 4.9
@@ -279,6 +351,24 @@ export default function SaaSMarketplacePage() {
         'Mobile apps'
       ]
       website: 'https://linear.app'
+=======
+        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
+      category: 'Project Management',
+      pricing: 'Free - $8/month',
+      rating: 4.9,
+      users: '10K+',
+      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      features: [
+        'Issue tracking',
+        'Roadmap planning',
+        'Team collaboration',
+        'Git integration',
+        'Automated workflows',
+        'Mobile apps',
+      ],
+      website: 'https://linear.app',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
@@ -307,10 +397,15 @@ export default function SaaSMarketplacePage() {
       ? microSaasServices
       : microSaasServices.filter(
           service => service.category === selectedCategory
+<<<<<<< HEAD
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -366,10 +461,15 @@ export default function SaaSMarketplacePage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+=======
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                style={{ animationDelay: '0.4s' }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Get Recommendations
               </Button>
@@ -402,6 +502,7 @@ export default function SaaSMarketplacePage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
                 100K+
               </div>
+<<<<<<< HEAD
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
               </div>
               <div className="text-gray-400 text-sm">Curated Services</div>
@@ -423,6 +524,9 @@ export default function SaaSMarketplacePage() {
                 100K+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
+=======
+              <div className='text-gray-400 text-sm'>Total Users</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -431,10 +535,15 @@ export default function SaaSMarketplacePage() {
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
+<<<<<<< HEAD
             {categories.map(category => (              <button      <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
+=======
+            {categories.map(category => (
+              <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -534,10 +643,15 @@ export default function SaaSMarketplacePage() {
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {service.useCase}
+<<<<<<< HEAD
                         </div>                      </div>
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{service.useCase}</div>
+=======
+                        </div>
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </div>
@@ -571,15 +685,24 @@ export default function SaaSMarketplacePage() {
               href='/services'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+=======
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Our Services
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

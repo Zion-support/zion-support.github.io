@@ -2,6 +2,11 @@ import React from 'react',
 import SEO from '../components/SEO',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ResourcesPage() {
   return (
 <<<<<<< HEAD
@@ -64,6 +69,7 @@ export default function ResourcesPage() {
               <div className='text-sm text-gray-400'>Resource</div>
               <h3 className='text-xl font-semibold text-white'>{it.name}</h3>
               <p className='mt-1 text-gray-300'>{it.blurb}</p>
+<<<<<<< HEAD
               <div className='mt-3 text-cyan-300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' }
             { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' }
@@ -76,11 +82,21 @@ export default function ResourcesPage() {
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
+=======
+              <div className='mt-3 text-cyan-300'>Open →</div>
+            </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );  )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ResourcesPage;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

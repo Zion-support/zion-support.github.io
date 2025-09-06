@@ -22,6 +22,10 @@ import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AdditionalClausesFields({
   form
 }: AdditionalClausesFieldsProps) {

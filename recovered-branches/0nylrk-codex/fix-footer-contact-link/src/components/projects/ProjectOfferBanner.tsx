@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Bell, Calendar, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { useProjects } from '@/hooks/useProjects';
+import { Project } from '@/types/projects';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",

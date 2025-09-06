@@ -1,4 +1,8 @@
 const { upsertFile } = require('./_lib/github');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
   endpoint.searchParams.set('url', url);
@@ -45,6 +49,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed')
   endpoint.searchParams.set('url', url)
@@ -107,3 +112,6 @@ exports.handler = async function() {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

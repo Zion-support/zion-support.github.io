@@ -17,6 +17,10 @@ import { BasicInfoFormData } from "./schema";
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

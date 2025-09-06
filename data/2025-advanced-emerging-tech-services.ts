@@ -3,8 +3,13 @@ export const advancedEmergingTechServices2025 = null;
 =======
 export const advancedEmergingTechServices2025 = [
   {
+<<<<<<< HEAD
     id: 'space-mining-operations-platform'
     name: 'SpaceMining Operations'
+=======
+    id: 'space-mining-operations-platform',
+    name: 'SpaceMining Operations',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
       'Asteroid mining operations'
@@ -634,6 +639,7 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
+<<<<<<< HEAD
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];      phone: '+1 302 464 0950';
@@ -645,3 +651,8 @@ export const advancedEmergingTechServices2025 = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

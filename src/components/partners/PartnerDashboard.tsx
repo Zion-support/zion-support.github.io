@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,37 @@ export function PartnerDashboard() {
     totalRevenue: 850.0
     pendingRevenue: 200.0
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {
+  BarChart,
+  DollarSign,
+  LineChart,
+  TrendingUp,
+  Users,;
+} from 'lucide-react';
+}
+
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className='space-y-6'>
       {/* Stats Overview */}
@@ -65,6 +97,7 @@ export function PartnerDashboard() {
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>{stats.conversionRate}%</div>
+<<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              Of clicks that convert to sign-ups
             </p>
           </CardContent>
@@ -82,10 +115,17 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>
             <p className="text-xs text-zion-slate-light">
+=======
+            <p className='text-xs text-zion-slate-light'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Of clicks that convert to sign-ups
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -95,6 +135,7 @@ export function PartnerDashboard() {
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
+<<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -104,10 +145,15 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
+=======
+            <p className='text-xs text-zion-slate-light'>
+              ${stats.pendingRevenue} pending payout
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </p>
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
       {/* Performance Chart */}      {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -122,6 +168,10 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
       {/* Recent Referrals */}
+=======
+
+      {/* Performance Chart */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -140,6 +190,7 @@ export function PartnerDashboard() {
       </Card>
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
+<<<<<<< HEAD
         <CardHeader className='flex flex-row items-center justify-between'>          <div>
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
@@ -149,6 +200,9 @@ export function PartnerDashboard() {
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
+=======
+        <CardHeader className='flex flex-row items-center justify-between'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div>
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
@@ -161,14 +215,23 @@ export function PartnerDashboard() {
           <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg'>
             <Users className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
             <p className='text-zion-slate-light mb-4'>No referrals yet</p>
+<<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              Start sharing your referral links to earn rewards          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
+=======
+            <p className='text-xs text-zion-slate-light'>
+              Start sharing your referral links to earn rewards
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </p>
           </div>
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

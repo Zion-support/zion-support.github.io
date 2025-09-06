@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = any;
@@ -26,6 +27,17 @@ export type ReviewFormValues = {
 }
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+=======
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
+  submitting ? 'Submitting...' : 'Submit Review'
+}</button> </form>)
+};
+
+type Props = {
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -45,12 +57,21 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           projectId: initial.projectId
           fromRole: initial.fromRole
           fromId: initial.fromId
           rating
           text
           anonymous
+=======
+          projectId: initial.projectId,
+          fromRole: initial.fromRole,
+          fromId: initial.fromId,
+          rating,
+          text,
+          anonymous,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           categories: {
             communication
             qualityOfWork
@@ -65,6 +86,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
     } catch (err: any) {
       setMessage(err.message);
     } finally {
+<<<<<<< HEAD
       setSubmitting(false);    }
   }
   return (
@@ -85,14 +107,21 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       setMessage(err.message)
     } finally {
       setSubmitting(false)
+=======
+      setSubmitting(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
+<<<<<<< HEAD
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
+=======
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
@@ -101,6 +130,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
           value={text}
+<<<<<<< HEAD
           onChange={e => setText(e.target.value)}          required
         />
       </div>
@@ -112,6 +142,13 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           required
         />
       </div>
+=======
+          onChange={e => setText(e.target.value)}
+          required
+        />
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='flex items-center gap-3'>
         <input
           id='anonymous'
@@ -160,6 +197,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
               onChange={e => setWouldWorkWithAgain(e.target.checked)}
             />
           </div>
+<<<<<<< HEAD
           <span className='pill'>Optional</span>        </div>
       </div>
       <button
@@ -171,10 +209,20 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         type='submit'
         className='enhanced-button enhanced-button-primary'        type="submit"
         className="enhanced-button enhanced-button-primary"
+=======
+          <span className='pill'>Optional</span>
+        </div>
+      </div>
+
+      <button
+        type='submit'
+        className='enhanced-button enhanced-button-primary'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         disabled={submitting}
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
+<<<<<<< HEAD
       {message && <p className='text-sm'>{message}</p>}
     </form>
   );
@@ -184,3 +232,13 @@ export default ReviewForm;    </form>
 }
 export default ReviewForm;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+      {message && <p className='text-sm'>{message}</p>}
+    </form>
+  );
+};
+}
+
+export default ReviewForm;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -3,8 +3,13 @@ export const advancedITServices2025 = null;
 =======
 export const advancedITServices2025 = [
   {
+<<<<<<< HEAD
     id: 'quantum-cloud-infrastructure-platform'
     name: 'QuantumCloud Infrastructure'
+=======
+    id: 'quantum-cloud-infrastructure-platform',
+    name: 'QuantumCloud Infrastructure',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.'
       'Quantum-enhanced computing resources'
@@ -615,6 +620,7 @@ export const advancedITServices2025 = [
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
+<<<<<<< HEAD
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];      phone: '+1 302 464 0950';
@@ -626,3 +632,8 @@ export const advancedITServices2025 = [
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

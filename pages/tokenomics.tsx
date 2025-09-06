@@ -1,10 +1,20 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type DistributionItem = any;
 =======
 type DistributionItem = { label: string; percent: number }
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+=======
+
+type DistributionItem = { label: string; percent: number };
+
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TokenomicsWhitepaperBuilder() {
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
@@ -16,6 +26,7 @@ export default function TokenomicsWhitepaperBuilder() {
   );
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
+<<<<<<< HEAD
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([
     { label: 'Ecosystem & Rewards', percent: 35 }
     { label: 'Community Treasury', percent: 20 }
@@ -23,6 +34,16 @@ export default function TokenomicsWhitepaperBuilder() {
     { label: 'Investors', percent: 15 }
     { label: 'Liquidity & Market Making', percent: 10 }
     { label: 'Advisors & Partnerships', percent: 5 }
+=======
+  );
+  const [distribution, setDistribution] = useState<DistributionItem[]>([
+    { label: 'Ecosystem & Rewards', percent: 35 },
+    { label: 'Community Treasury', percent: 20 },
+    { label: 'Team & Contributors', percent: 15 },
+    { label: 'Investors', percent: 15 },
+    { label: 'Liquidity & Market Making', percent: 10 },
+    { label: 'Advisors & Partnerships', percent: 5 },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ]);
   const [governance, setGovernance] = useState<string>(
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
@@ -35,8 +56,15 @@ export default function TokenomicsWhitepaperBuilder() {
     () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
     [distribution]
   );
+<<<<<<< HEAD
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
+=======
+
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [activeSection, setActiveSection] =
     useState<string>('Executive Summary');
   const previewMarkdown = useMemo(() => {
@@ -64,11 +92,19 @@ export default function TokenomicsWhitepaperBuilder() {
     jurisdiction
     legalReview
   ]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function handleGenerate() {
     try {
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
+<<<<<<< HEAD
         method: 'POST'
+=======
+        method: 'POST',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Content-Type': 'application/json'
           'X-Admin': isAdmin ? 'true' : 'false'
@@ -92,30 +128,52 @@ export default function TokenomicsWhitepaperBuilder() {
       console.error(e);
       alert('Generation failed');
     } finally {
+<<<<<<< HEAD
       setIsGenerating(false);    }
+=======
+      setIsGenerating(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
       const blob = new Blob([previewMarkdown], {
+<<<<<<< HEAD
         type: 'text/markdown;charset=utf-8'
       });      const url = URL.createObjectURL(blob);
+=======
+        type: 'text/markdown;charset=utf-8',
+      });
+      const url = URL.createObjectURL(blob);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const a = document.createElement('a');
       a.href = url;
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
+<<<<<<< HEAD
       URL.revokeObjectURL(url);    } else {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ markdown: previewMarkdown, tokenName })
+=======
+      URL.revokeObjectURL(url);
+    } else {
+      const res = await fetch('/api/whitepaper/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       if (!res.ok) {
         alert('PDF export failed');
         return;
       }
-      const { url } = await res.json();
+}
+
+const { url } = await res.json();
       window.open(url, '_blank');
     }
   }
@@ -124,8 +182,14 @@ export default function TokenomicsWhitepaperBuilder() {
     key: keyof DistributionItem
     value: string
   ) {
+<<<<<<< HEAD
     setDistribution(prev => {      const copy = [...prev];
       const item = { ...copy[index] }
+=======
+    setDistribution(prev => {
+      const copy = [...prev];
+      const item = { ...copy[index] };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
@@ -136,18 +200,31 @@ export default function TokenomicsWhitepaperBuilder() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
   }
   function removeDistributionItem(index: number) {
+<<<<<<< HEAD
     setDistribution(prev => prev.filter((_, i) => i !== index));  }
   async function handleShareableLink() {
     const res = await fetch('/api/whitepaper/share', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
+=======
+    setDistribution(prev => prev.filter((_, i) => i !== index));
+  }
+
+  async function handleShareableLink() {
+    const res = await fetch('/api/whitepaper/share', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     if (!res.ok) {
       alert('Failed to create share link');
       return;
     }
-    const { url } = await res.json();
+}
+
+const { url } = await res.json();
     await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
   }
@@ -160,6 +237,10 @@ export default function TokenomicsWhitepaperBuilder() {
     'Governance Model'
     'Risks + Disclaimers'
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -265,9 +346,17 @@ export default function TokenomicsWhitepaperBuilder() {
                   />
                   <label htmlFor='legalReview' className='text-sm'>
                     Submit to Counsel
+<<<<<<< HEAD
                   </label>                </div>
               </div>
             </div>
+=======
+                  </label>
+                </div>
+              </div>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Distribution</h3>
               <div className='space-y-2'>
@@ -311,9 +400,17 @@ export default function TokenomicsWhitepaperBuilder() {
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='mt-3'>                <DistributionDonut data={distribution} />
               </div>
             </div>
+=======
+              <div className='mt-3'>
+                <DistributionDonut data={distribution} />
+              </div>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Operator Prompt</h3>
               <textarea
@@ -352,9 +449,17 @@ export default function TokenomicsWhitepaperBuilder() {
                   className='px-3 py-2 rounded-md border'
                 >
                   Download PDF
+<<<<<<< HEAD
                 </button>              </div>
             </div>
           </div>
+=======
+                </button>
+              </div>
+            </div>
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='rounded-lg border p-4'>
             <div className='flex items-center justify-between mb-3'>
               <div className='flex gap-2 overflow-x-auto'>
@@ -373,7 +478,12 @@ export default function TokenomicsWhitepaperBuilder() {
             <MarkdownPreview
               markdown={previewMarkdown}
               activeSection={activeSection}
+<<<<<<< HEAD
             />          </div>
+=======
+            />
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
     </>
@@ -395,6 +505,10 @@ function buildLocalMarkdown(input: {
     ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`
     : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function jurisdictionalNote(j: string) {
   switch (j) {
     case 'US':
@@ -408,6 +522,10 @@ function jurisdictionalNote(j: string) {
     default:
       return 'Intended strictly for utility use.';
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) |1;
@@ -434,7 +552,12 @@ function MarkdownPreview({
 }: {
   markdown: string;
   activeSection: string;
+<<<<<<< HEAD
 }) {  // Very lightweight section filter: split by headings
+=======
+}) {
+  // Very lightweight section filter: split by headings
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
@@ -443,6 +566,7 @@ function MarkdownPreview({
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
     });
+<<<<<<< HEAD
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -451,3 +575,15 @@ function MarkdownPreview({
       {content |markdown}
     </pre>
   );
+=======
+    return map;
+  }, [markdown]);
+
+  const content = parts[activeSection] || '';
+
+  return (
+    <pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content || markdown}
+    </pre>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

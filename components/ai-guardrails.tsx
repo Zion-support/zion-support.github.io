@@ -1,6 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Card from '../components/ui/Card';
@@ -14,6 +15,22 @@ export default function AIGuardrailsPage() {
 				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
+=======
+import {
+  Check,
+  Shield,
+  ShieldAlert,
+  Lock,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,;
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
 import {
@@ -167,6 +184,7 @@ export default function AIGuardrailsPage() {
         </div>
       </section>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
   );					<div className="bg-black/20 border border-rose-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -183,3 +201,6 @@ export default function AIGuardrailsPage() {
 		</UltraAdvancedFuturisticBackground>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

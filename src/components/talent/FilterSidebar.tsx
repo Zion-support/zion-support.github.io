@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Filter } from 'lucide-react'
@@ -29,6 +30,40 @@ export function FilterSidebar({
   setSortOption;
   clearFilters;
   isMobileFilterOpen
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Filter } from 'lucide-react';
+import { SearchFilter } from './filters/SearchFilter';
+import { SortFilter } from './filters/SortFilter';
+import { SkillsFilter } from './filters/SkillsFilter';
+import { AvailabilityFilter } from './filters/AvailabilityFilter';
+import { RegionFilter } from './filters/RegionFilter';
+import { ExperienceFilter } from './filters/ExperienceFilter';
+import { PriceFilter } from './filters/PriceFilter';
+import { FilterSidebarProps } from '@/types/filters';
+}
+
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+  isMobileFilterOpen,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }: FilterSidebarProps) {
 =======
   searchTerm
@@ -85,6 +120,7 @@ export function FilterSidebar({
           variant='ghost'
           size='sm'
           onClick={clearFilters}
+<<<<<<< HEAD
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'        >
           Clear All
         </Button>
@@ -97,10 +133,17 @@ export function FilterSidebar({
           size="sm"
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+=======
+          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           Clear All
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -195,12 +238,23 @@ export function FilterSidebar({
       />
       {isMobileFilterOpen && (
         <Button
+<<<<<<< HEAD
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+=======
+          onClick={() =>
+            window.dispatchEvent(new CustomEvent('closeMobileFilter'))
+          }
+          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           Apply Filters
         </Button>
       )}
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

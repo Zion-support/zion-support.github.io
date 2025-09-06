@@ -19,6 +19,7 @@ function readAllGrants(): GrantApplication[] {
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
@@ -43,6 +44,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
+=======
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    const { status, sector, region, program } = req.query;
+    const list = readAllGrants().filter(g => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
@@ -51,10 +60,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       );
     });
     res.status(200).json({ items: list });
+<<<<<<< HEAD
     return;  }      )
     });
     res.status(200).json({ items: list });
     return
+=======
+    return;
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;
@@ -66,14 +81,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         !payload.timeline
       ) {
         res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
         return;      }      if (!payload |!payload.projectName |!payload.teamInfo |!payload.proposalSummary |!payload.timeline) {
         res.status(400).json({ error: 'Missing required fields' });
         return
+=======
+        return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       ensureDir();
       const id = uuidv4();
       const now = new Date().toISOString();
       const record: GrantApplication = {
+<<<<<<< HEAD
         id
         program: payload.program |'grant'
         projectName: payload.projectName
@@ -94,6 +114,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updates: []
         votes: []
       }
+=======
+        id,
+        program: payload.program || 'grant',
+        projectName: payload.projectName,
+        teamInfo: payload.teamInfo,
+        proposalSummary: payload.proposalSummary,
+        timeline: payload.timeline,
+        budgetAmount: payload.budgetAmount || 0,
+        budgetCurrency: payload.budgetCurrency || 'USDC',
+        supportingLinks: payload.supportingLinks || [],
+        pitchDeckUrl: payload.pitchDeckUrl,
+        region: payload.region,
+        sector: payload.sector,
+        status: payload.submit ? 'Submitted' : 'Draft',
+        createdAt: now,
+        updatedAt: now,
+        milestones: [],
+        fundsReleased: 0,
+        updates: [],
+        votes: [],
+      };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`)
         JSON.stringify(record, null, 2)
@@ -106,6 +148,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message |'Failed to create grant' })
     }
@@ -115,3 +158,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   res.status(405).end('Method Not Allowed')
 }
+=======
+  res.status(405).end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

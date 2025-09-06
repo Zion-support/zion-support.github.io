@@ -1,5 +1,9 @@
 import { ServiceVariant } from '../types/service-variants';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export interface SpecializedEmergingTechService {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -56,11 +60,21 @@ const contact = null;
 =======
   marketAdvantage: string;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
   [
     // AR/VR & Metaverse Services
@@ -578,6 +592,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Custom algorithms'
       ]
       marketAdvantage:
+<<<<<<< HEAD
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
     }
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
@@ -605,3 +620,8 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
   }
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    },
+  ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

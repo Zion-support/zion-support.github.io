@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type CuttingEdgeAIService = any;
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type CuttingEdgeAIService = {
   id: string;
   name: string;
@@ -22,7 +25,13 @@ export type CuttingEdgeAIService = {
   rating?: number;
   launchDate?: string;
   realService?: boolean;
+<<<<<<< HEAD
 }
+=======
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
     id: 'ai-emotional-support-agent'
@@ -68,6 +77,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity'
     pricing: { starter: '$149/mo' }
     features: [
+<<<<<<< HEAD
       'Brand kit'
       'Image & video gen'
       'Review & approvals'
@@ -138,3 +148,16 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	}
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      'Brand kit',
+      'Image & video gen',
+      'Review & approvals',
+      'Rights management',
+    ],
+    integrations: ['Canva', 'Figma'],
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

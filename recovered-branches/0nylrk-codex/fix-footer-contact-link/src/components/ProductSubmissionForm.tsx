@@ -35,6 +35,11 @@ const productSchema = z.object({
   tags: z.string().optional()})
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProductSubmissionForm() {
   const { user } = useAuth();
   const { toast } = useToast();

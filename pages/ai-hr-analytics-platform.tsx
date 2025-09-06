@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AiHrAnalyticsPlatform() {
 	return (
@@ -27,3 +28,14 @@ export default function AiHrAnalyticsPlatform() {
 		/>
 	)
 }
+=======
+import ServicePage, {
+  getStaticProps as getSlugStaticProps,;
+} from './services/[slug]';
+}
+
+export default function AiHrAnalyticsPlatform() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

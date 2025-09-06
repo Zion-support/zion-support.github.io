@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Smartphone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { AppStoreButtons } from './AppStoreButtons';
+import { Card, CardContent } from '@/components/ui/card';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Link } from "react-router-dom",

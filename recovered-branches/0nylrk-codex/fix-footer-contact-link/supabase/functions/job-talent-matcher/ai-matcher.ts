@@ -136,6 +136,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
+<<<<<<< HEAD
 export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
   const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase());
   return talents.map(talent => {
@@ -160,3 +161,62 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
   .sort((a, b) => b.score - a.score) // Sort by score (highest first)
   .slice(0, 5), // Get top 5 matches
 }
+=======
+}
+
+export function performBasicSkillMatching(
+  jobDetails: any,
+  talents: TalentProfile[]
+): MatchResult[] {
+  const requiredSkills = jobDetails.skills.map((skill: string) =>
+    skill.toLowerCase()
+  );
+
+  return talents
+    .map(talent => {
+      const talentSkills = Array.isArray(talent.skills)
+        ? talent.skills.map((skill: string) => skill.toLowerCase())
+        : [];
+
+      // Find matching skills
+      const matchedSkills = requiredSkills.filter((skill: string) =>
+        talentSkills.some(
+          (talentSkill: string) =>
+            talentSkill.includes(skill) || skill.includes(talentSkill)
+        )
+      );
+
+      // Calculate a basic match score
+      const matchScore = Math.round(
+        (matchedSkills.length / requiredSkills.length) * 100
+      );
+
+      return {
+        talentId: talent.id,
+        score: matchScore,
+        matchedSkills: matchedSkills,
+        reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`,
+      };
+    })
+    .filter(match => match.score > 30) // Only include matches with at least 30% score
+    .sort((a, b) => b.score - a.score) // Sort by score (highest first)
+    .slice(0, 5); // Get top 5 matches
+
+}/** * Uses AI to find the best talent matches for a job * @param jobDetails The job details to match against * @param talents Array of talent profiles * @returns Array of matches with scores and reasons */export async function findBestMatches (jobDetails: unknown, talents: TalentProfile[]) : Promise<MatchResult[]> {
+  try {
+  //Convert job details to string format for AI prompt const jobDetailsText = `Job Title: $ {
+  jobDetails.title 
+}`;
+}) .join (" \n\n");
+  
+}) 
+});
+}//Parse the AI response const aiResponse = JSON.parse (data.choices[0].message.content);
+//Check if the response is in the expected format if (!Array.isArray (aiResponse) ) {
+  
+}return aiResponse;
+}catch (error) {
+  //If AI matching fails, perform a basic skill matching return performBasicSkillMatching (jobDetails, talents) 
+
+}/** * Fallback method that uses basic string matching to find talent matches * @param jobDetails The job to match * @param talents Array of talent profiles * @returns Array of matches with scores */ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

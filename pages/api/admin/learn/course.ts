@@ -2,12 +2,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
+=======
+
+const coursesPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 =======
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,12 +21,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   try {
 <<<<<<< HEAD
     const body = req.body || {};
     const raw = fs.readFileSync(coursesPath, 'utf-8');
     const courses = JSON.parse(raw);
+<<<<<<< HEAD
     
     const newCourse = {
       id: Date.now().toString(),
@@ -30,12 +39,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     };
     
     courses.push(newCourse);
+=======
+
+    const existingIndex = courses.findIndex((c: any) => c.id === body.id);
+    if (existingIndex >= 0) {
+      courses[existingIndex] = { ...courses[existingIndex], ...body };
+    } else {
+      courses.push(body);
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2));
     
     res.status(200).json({ ok: true, course: newCourse });
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to save course' });
   }
+<<<<<<< HEAD
 }
 =======
     const body = req.body |{}
@@ -54,3 +74,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

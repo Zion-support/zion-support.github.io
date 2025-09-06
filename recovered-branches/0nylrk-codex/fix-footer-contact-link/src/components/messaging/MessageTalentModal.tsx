@@ -19,6 +19,7 @@ export interface MessageTalentModalProps {
   talent: TalentProfile;
   isOpen: boolean;
   onClose: () => void;
+<<<<<<< HEAD
 =======
   talent: TalentProfile
   isOpen: boolean
@@ -26,6 +27,11 @@ export interface MessageTalentModalProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   jobTitle?: string
 }
+=======
+  jobTitle?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MessageTalentModal({
   talent;
   isOpen;

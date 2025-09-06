@@ -1,10 +1,23 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { type Company } from './CompanyDashboard';
+import { Bell, Users, Settings } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
+<<<<<<< HEAD
   company: Company
+=======
+  company: Company;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>
@@ -21,6 +34,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             <h1 className='text-3xl font-bold tracking-tight'>
               {company.name} Workspace
             </h1>
+<<<<<<< HEAD
             <p className='text-muted-foreground'>              {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
@@ -46,10 +60,17 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
+=======
+            <p className='text-muted-foreground'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='flex items-center gap-2'>
           <Button variant='outline' size='icon' aria-label='Notifications'>
             <Bell className='h-4 w-4' />
@@ -79,6 +100,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div className='text-sm text-muted-foreground'>
             Interviews Scheduled
           </div>
+<<<<<<< HEAD
           <div className='text-2xl font-medium'>12</div>        </div>
       </div>
     </div>
@@ -109,3 +131,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
     </div>
   )
 }
+=======
+          <div className='text-2xl font-medium'>12</div>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -12,6 +12,7 @@ interface TalentCardFooterProps {
 <<<<<<< HEAD
   profile: TalentProfile;
   onViewProfile: (id: string) => void;
+<<<<<<< HEAD
 =======
   profile: TalentProfile
   onViewProfile: (id: string) => void
@@ -19,6 +20,16 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile) => void
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+=======
+  onRequestHire?: (profile: TalentProfile) => void;
+}
+
+export function TalentCardFooter({
+  profile,
+  onViewProfile,
+  onRequestHire,
+}: TalentCardFooterProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
 <<<<<<< HEAD

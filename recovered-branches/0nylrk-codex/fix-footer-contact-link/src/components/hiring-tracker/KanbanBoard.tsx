@@ -53,8 +53,14 @@ const COLUMNS = [
     title: "Rejected"
     description: "Not moving forward"}]
 interface KanbanBoardProps {
+<<<<<<< HEAD
   jobId?: string
 }
+=======
+  jobId?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});

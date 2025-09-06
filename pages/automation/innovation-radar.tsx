@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
 export default function InnovationRadarPage() {
@@ -28,3 +29,7 @@ export default function InnovationRadarPage() {
     </EnhancedLayout>
   )
 }
+=======
+ </li>) )
+}</ul> </div> </EnhancedLayout>)
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

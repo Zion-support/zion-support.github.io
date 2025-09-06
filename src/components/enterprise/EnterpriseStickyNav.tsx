@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { Menu } from 'lucide-react'
 <<<<<<< HEAD
@@ -5,6 +6,15 @@ import Link from "next/link";
 =======
 import Link from 'next/link'
   const [ open, setOpen ] = useState(false)
+=======
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+}
+
+export function EnterpriseStickyNav() {
+  const [open, setOpen] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <nav className='sticky top-16 z-40 bg-card border-b border-border'>
       <div className='container mx-auto px-4 md:px-6'>
@@ -49,6 +59,7 @@ import Link from 'next/link'
                 className='text-sm font-medium hover:text-primary'
               >
                 Contact Us
+<<<<<<< HEAD
               </Link>            </li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -78,10 +89,17 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
+=======
+              </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </li>
           </ul>
         </div>
       </div>
     </nav>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

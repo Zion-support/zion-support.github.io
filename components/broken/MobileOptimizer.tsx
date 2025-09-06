@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -27,6 +28,9 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   showDebugInfo;
 =======
 setIsMobile (isMobileDevice);
+=======
+ setIsMobile (isMobileDevice);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -38,15 +42,28 @@ window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {
   if (e.touches.length === 1) {
   touchStartRef.current = {
+<<<<<<< HEAD
 }
 const handleTouchMove = (e: TouchEvent) => {
   if (e.touches.length === 1 && touchStartRef.current) {
   touchMoveRef.current = {
+=======
+
+};
+const handleTouchMove = (e: TouchEvent) => {
+  if (e.touches.length === 1 && touchStartRef.current) {
+  touchMoveRef.current = {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 const handleTouchEnd = (e: TouchEvent) => {
   if (touchStartRef.current && touchMoveRef.current) {
   touchStartRef.current = null;
 touchMoveRef.current = null
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 //Optimize fonts for high DPI fonts.forEach (font => {
   font.setAttribute ('crossoriginanonymous')
@@ -60,10 +77,19 @@ if (currentTime - lastTimeRef.current >= 1000) {
 frameCountRef.current = 0;
 lastTimeRef.current = currentTime;
 //Update performance metrics setPerformanceMetrics (prev => ({
+<<<<<<< HEAD
 }animationFrameId = requestAnimationFrame (measurePerformance)
 }
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage
+=======
+
+}animationFrameId = requestAnimationFrame (measurePerformance)
+};
+animationFrameId = requestAnimationFrame (measurePerformance);
+//Monitor memory usage
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {
   (navigator as any) .getBattery () .then ( (battery: unknown) => {
@@ -76,14 +102,27 @@ connection.addEventListener ('change', updateNetworkSpeed);
 }//Minimum distance and duration thresholds if (distance < 50 |duration < 100) return null;
 //Determine direction if (Math.abs (deltaX) > Math.abs (deltaY) ) {
   return {
+<<<<<<< HEAD
 }
+=======
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const handleGestureAction = (gesture: TouchGesture) => {
   switch (gesture.type) {
   case 'swipe': if (gesture.direction === 'left') {
   //Navigate forward if (window.history.length > 1) {
+<<<<<<< HEAD
 }break;
 case 'longPress': //Show context menu or additional options break;
 }
+=======
+
+}break;
+case 'longPress': //Show context menu or additional options break;
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 if (viewport) {
   viewport.setAttribute ('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 }//Add touch-action CSS const style = document.createElement ('style');
@@ -100,7 +139,11 @@ min-width: 44px
   font-size: 16px, /* Prevents zoom on iOS */
 }`;
 document.head.appendChild (style)
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const enableMobilePerformanceMode = () => {
   //Reduce animations on mobile document.documentElement.classList.add ('mobile-performance-mode');
 //Optimize images const images = document.querySelectorAll ('img');
@@ -110,7 +153,12 @@ img.decoding = 'async'
 });
 //Reduce motion for better performance if (window.matchMedia (' (prefers-reduced-motion: reduce) ') .matches) {
   document.documentElement.classList.add ('reduced-motion')
+<<<<<<< HEAD
 }
+=======
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const applyLandscapeOptimizations = () => {
   //Landscape-specific optimizations document.documentElement.classList.add ('landscape-mode');
 //Adjust layout for landscape const style = document.createElement ('style');
@@ -119,10 +167,17 @@ style.textContent = `.landscape-mode .mobile-panel {
 height: 100vh
 }`;
 document.head.appendChild (style)
+<<<<<<< HEAD
 }
 const applyPortraitOptimizations = () => {
   //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode')
 }
+=======
+};
+const applyPortraitOptimizations = () => {
+  //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode')
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const optimizeForMobile = useCallback ( () => {
   if (!isMobile) return;
 //Optimize images const images = document.querySelectorAll ('img');
@@ -134,10 +189,18 @@ if (!img.decoding) img.decoding = 'async'
   font.setAttribute ('crossoriginanonymous')
 });
 //Add mobile-specific event listeners document.addEventListener ('touchstart', () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, {
   passive: true
 });
 document.addEventListener ('touchmove', () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, {
   passive: true
 })
@@ -152,12 +215,23 @@ window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
+<<<<<<< HEAD
 }
 if (!showPanel |!isVisible) return null;
 }
 const getStatusIcon = (status: string) => {
   switch (status) {
 }
+=======
+};
+if (!showPanel || !isVisible) return null;
+
+};
+const getStatusIcon = (status: string) => {
+  switch (status) {
+
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 children
 }{
   /* Mobile Optimization Panel */
@@ -170,9 +244,19 @@ children
   /* Global Mobile Styles */
 }<style jsx global> {
   `.mobile-optimized * {
+<<<<<<< HEAD
 }`
 }</style> </>)
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+}`
+}</style> </>)
+};
+}
+
+export default MobileOptimizer;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

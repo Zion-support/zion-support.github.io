@@ -1,5 +1,10 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -36,6 +41,7 @@ export default function ServicesPage() {
           <p className='mt-1 text-sm opacity-80'>
             Copilots, agents, vector search, and automation tailored to your
             product.
+<<<<<<< HEAD
           </p>        </section>
       </div>
     </EnhancedLayout>
@@ -48,3 +54,10 @@ export default function ServicesPage() {
     </EnhancedLayout>
   );
 }
+=======
+          </p>
+        </section>
+      </div>
+    </EnhancedLayout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

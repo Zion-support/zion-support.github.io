@@ -12,6 +12,7 @@ import { useAuth } from '@/hooks/useAuth';
 const mockTalent: TalentProfile;
 =======
 const mockTalent: TalentProfile = {
+<<<<<<< HEAD
   id: 'talent-123'
   user_id: 'user-abc-123'
   full_name: 'Alex Chen'
@@ -19,6 +20,18 @@ const mockTalent: TalentProfile = {
   hourly_rate: 85
   profile_picture_url: ''
   skills: ['ReactNode.jsSmart Contracts']}
+=======
+  id: 'talent-123',
+  user_id: 'user-abc-123',
+  full_name: 'Alex Chen',
+  professional_title: 'Full Stack Developer',
+  hourly_rate: 85,
+  profile_picture_url: '',
+  skills: ['React', 'Node.js', 'Smart Contracts'],
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractBuilderContent() {
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');

@@ -24,6 +24,7 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
       error
       errorInfo
@@ -39,6 +40,12 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   handleReload = () => {
@@ -163,6 +170,7 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {;
     super(props);
     this.state = { hasError: false }
@@ -221,4 +229,9 @@ class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {
     return this.props.children;
 }
 }
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ErrorBoundary;

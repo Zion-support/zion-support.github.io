@@ -1,8 +1,11 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { motion } from 'framer-motion';
 import {
   Star
@@ -62,6 +65,7 @@ interface QuantumHolographicCardProps {
     customers: number;
     rating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
     reviews: number
   },
   className?: string
@@ -118,18 +122,72 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         ease: "easeInOut" as const
       }
     }
+=======
+    reviews: number;
+  };
+  className?: string;
+
+const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
+  service,
+  className = '',
+}) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut' as const,
+      },
+    },
+    hover: {
+      y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut' as const,
+      },
+    },
+  };
+
+  const glowVariants = {
+    initial: { opacity: 0.5, scale: 1 },
+    animate: {
+      opacity: [0.5, 1, 0.5],
+      scale: [1, 1.05, 1],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: 'easeInOut' as const,
+      },
+    },
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
       opacity: 1
       x: 0
       transition: {
+<<<<<<< HEAD
         delay: i * 0.1
         duration: 0.5
         ease: 'easeOut' as const
       }
     })
   }
+=======
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    }),
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {/* Holographic glow effect */}
       <motion.div
@@ -165,6 +223,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
   return (
     <motion.div
@@ -208,6 +267,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 whileTap={{ scale: 0.95 }}
               >
                 <Star className="w-3 h-3 fill-current" />
+=======
+                <Star className='w-3 h-3 fill-current' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span>Popular</span>
               </motion.div>
             )}
@@ -221,6 +283,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <span className='text-gray-400'>{service.period}</span>
             </div>
             <div className='flex items-center space-x-2 text-sm text-gray-300'>
+<<<<<<< HEAD
               <Clock className='w-4 h-4' />              <span>{service.trialDays} days free</span>          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -228,6 +291,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
+=======
+              <Clock className='w-4 h-4' />
+              <span>{service.trialDays} days free</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
           {/* Description */}
@@ -252,6 +319,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               </div>
               <div className='text-xl font-bold text-white'>
                 {service.rating}/5.0
+<<<<<<< HEAD
               </div>            </div>
           </div>
           {/* Features */}
@@ -273,6 +341,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 <span>Rating</span>
               </div>
               <div className="text-xl font-bold text-white">{service.rating}/5.0</div>
+=======
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
           {/* Features */}
@@ -292,6 +363,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                   whileInView='visible'
                   viewport={{ once: true }}
                 >
+<<<<<<< HEAD
                   <Check className='w-3 h-3 text-green-400 flex-shrink-0' />                  <span>{feature}</span>              <span>Key Features</span>
             </h4>
             <div className="space-y-2">
@@ -306,6 +378,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                   viewport={{ once: true }}
                 >
                   <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+=======
+                  <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>{feature}</span>
                 </motion.div>
               ))}
@@ -326,12 +401,17 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <span className='text-cyan-300'>{service.marketSize}</span>
               <span className='text-green-300'>
                 {service.growthRate} growth
+<<<<<<< HEAD
               </span>            </div>
           </div>
           {/* ROI and competitors */}            <p className="text-xs text-gray-300 leading-relaxed">{service.marketPosition}</p>
             <div className="flex items-center justify-between mt-2 text-xs">
               <span className="text-cyan-300">{service.marketSize}</span>
               <span className="text-green-300">{service.growthRate} growth</span>
+=======
+              </span>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {/* ROI and competitors */}
           <div className='grid grid-cols-2 gap-4 mb-6'>
@@ -345,10 +425,15 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <div className='text-sm font-semibold text-orange-300 mb-1'>
                 Competitors
               </div>
+<<<<<<< HEAD
               <div className='text-xs text-gray-300'>                {service.competitors.slice(0, 2).join(', ')}
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
               <div className="text-xs text-gray-300">
+=======
+              <div className='text-xs text-gray-300'>
+                {service.competitors.slice(0, 2).join(', ')}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -369,6 +454,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               </div>
               <div className='flex items-center space-x-2'>
                 <span className='text-purple-400'>📍</span>
+<<<<<<< HEAD
                 <span className='text-xs'>{service.contactInfo.address}</span>              </div>              <span>Contact & Support</span>
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
@@ -383,6 +469,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+=======
+                <span className='text-xs'>{service.contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -405,6 +494,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
             >
               <span>Learn more about {service.name}</span>
+<<<<<<< HEAD
               <ExternalLink className='w-3 h-3' />            </a>            whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -421,14 +511,24 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             >
               <span>Learn more about {service.name}</span>
               <ExternalLink className="w-3 h-3" />
+=======
+              <ExternalLink className='w-3 h-3' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </a>
           </div>
         </div>
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 }
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default QuantumHolographicCard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

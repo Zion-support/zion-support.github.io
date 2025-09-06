@@ -10,6 +10,7 @@ interface SelectResumeSectionProps {
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
+<<<<<<< HEAD
 =======
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -18,6 +19,11 @@ interface SelectResumeSectionProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isLoading: boolean
 }
+=======
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SelectResumeSection({
   resumeOptions;
   selectedResume;

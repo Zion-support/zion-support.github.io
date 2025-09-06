@@ -1,7 +1,14 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(false);
+=======
+}
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {;
     const handleScroll = () => {;

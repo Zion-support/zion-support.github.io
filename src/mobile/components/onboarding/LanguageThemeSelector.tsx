@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { useTheme } from '@/hooks/useTheme';
+import { Moon, Sun, Check } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -9,12 +17,23 @@ interface Language {
   name: string;
   flag: string
 const languages: Language[] = [
+<<<<<<< HEAD
   { code: 'en', name: 'English', flag: '🇺🇸' }
   { code: 'es', name: 'Español', flag: '🇪🇸' }
   { code: 'fr', name: 'Français', flag: '🇫🇷' }
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
   { code: 'zh', name: '中文', flag: '🇨🇳' }
 ]
+=======
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
@@ -48,6 +67,7 @@ export function LanguageThemeSelector() {
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
+<<<<<<< HEAD
                   <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
             <Card
               key={language.code}
@@ -65,12 +85,19 @@ export function LanguageThemeSelector() {
                 </div>
                 {selectedLanguage === language.code && (
                   <Check className="h-4 w-4 text-primary" />
+=======
+                  <Check className='h-4 w-4 text-primary' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 )}
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='space-y-2'>
         <h2 className='text-xl font-medium'>Choose theme</h2>
         <p className='text-muted-foreground'>
@@ -104,6 +131,7 @@ export function LanguageThemeSelector() {
               <Moon className='h-8 w-8 mb-2' />
               <span>Dark</span>
               {theme === 'dark' && (
+<<<<<<< HEAD
                 <Check className='h-4 w-4 text-primary mt-2' />              )}              )}
             </CardContent>
           </Card>
@@ -124,11 +152,18 @@ export function LanguageThemeSelector() {
               <span>Dark</span>
               {theme === 'dark' && (
                 <Check className="h-4 w-4 text-primary mt-2" />
+=======
+                <Check className='h-4 w-4 text-primary mt-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               )}
             </CardContent>
           </Card>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

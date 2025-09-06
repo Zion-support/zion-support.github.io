@@ -1,5 +1,10 @@
 import { useState  } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OffworldConsole() {
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
@@ -10,8 +15,17 @@ export default function OffworldConsole() {
   async function sendChat() {
     setStatus('Sending chat...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     const res = null;
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+=======
+    const res = await fetch('/api/offworld/orbit?action=chat', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ from: 'anon', text: chat }),
+    });
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
 
 =======
@@ -30,10 +44,14 @@ export default function OffworldConsole() {
       headers: { 'content-type': 'application/json' }
       body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice })
     });
+<<<<<<< HEAD
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
   async function syncProfile() {
     setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) })
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
+=======
+    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function syncProfile() {
     setStatus('Pinning profile...');
@@ -45,11 +63,15 @@ export default function OffworldConsole() {
       })
     });
     const data = await res.json();
+<<<<<<< HEAD
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
   async function broadcast() {
     setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) })
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
+=======
+    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
@@ -137,5 +159,9 @@ export default function OffworldConsole() {
       </section>
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

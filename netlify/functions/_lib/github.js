@@ -33,6 +33,7 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
   }
   return resp.json();
+<<<<<<< HEAD
 module.exports = { upsertFile };async function getFile(owner, repo, path, token) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`
   const resp = await fetch(url, {
@@ -100,3 +101,7 @@ module.exports = { upsertFile };
 =======
 module.exports = { upsertFile }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+module.exports = { upsertFile };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

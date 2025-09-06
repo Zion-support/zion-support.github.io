@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -36,12 +37,45 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 0, x: -50 }
       default:
         return { opacity: 0, y: 50 };    }        return { opacity: 0, y: 50 }
+=======
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up':
+}
+
+export const LazySection: React.FC<LazySectionProps> = ({
+  children,
+  className = '',
+  threshold = 0.1,
+  delay = 0,
+  direction = 'up',
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { threshold, once: true });
+
+  const getInitialPosition = () => {
+    switch (direction) {
+      case 'up':
+        return { opacity: 0, y: 50 };
+      case 'down':
+        return { opacity: 0, y: -50 };
+      case 'left':
+        return { opacity: 0, x: 50 };
+      case 'right':
+        return { opacity: 0, x: -50 };
+      default:
+        return { opacity: 0, y: 50 };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
+<<<<<<< HEAD
         return { opacity: 1, y: 0 }
+=======
+        return { opacity: 1, y: 0 };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       case 'down':
         return { opacity: 1, y: 0 }
       case 'left':
@@ -51,11 +85,17 @@ export const LazySection: React.FC<LazySectionProps> = ({
       default:
         return { opacity: 1, y: 0 }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       {children}
     </motion.div>
   );
+<<<<<<< HEAD
 }
 export default LazySection;      case 'down':
         return { opacity: 1, y: 0 }
@@ -81,3 +121,9 @@ export default LazySection;      case 'down':
 }
 export default LazySection;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default LazySection;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

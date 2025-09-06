@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
@@ -33,6 +34,30 @@ interface UltraFuturisticNavigationProps {
   className?: string
 }
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,;
+} from 'lucide-react';
+
+interface UltraFuturisticNavigationProps {
+  className?: string;
+}
+
+export default function UltraFuturisticNavigation({
+  className = '',
+}: UltraFuturisticNavigationProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -41,10 +66,16 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       setIsScrolled(window.scrollY > 20);
     }
     window.addEventListener('scroll', handleScroll);
+<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
+=======
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const navigationItems = [
     {
       name: 'Services'
@@ -76,6 +107,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           color: 'from-green-500 to-emerald-600'
         }
         {
+<<<<<<< HEAD
           name: 'View All Services'
           href: '/services'
           icon: Rocket
@@ -113,6 +145,31 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+=======
+          name: 'View All Services',
+          href: '/services',
+          icon: Rocket,
+          color: 'from-gray-500 to-gray-600',
+        },
+      ],
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+  ];
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  };
+
+    >
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between h-20'>
+          {/* Logo */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -128,6 +185,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               </div>
               <div className='text-xs text-gray-400 -mt-1'>
                 Revolutionary Technology
+<<<<<<< HEAD
               </div>            </div>
           </motion.div>
           {/* Desktop Navigation */}
@@ -142,14 +200,21 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 Zion Tech Group
               </div>
               <div className="text-xs text-gray-400 -mt-1">Revolutionary Technology</div>
+=======
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </motion.div>
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
+<<<<<<< HEAD
               <div key={item.name} className='relative group'>          <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
+=======
+              <div key={item.name} className='relative group'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {item.hasDropdown ? (
                   <div
                     onMouseEnter={() => setActiveDropdown(item.name)}
@@ -158,9 +223,14 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                     <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>
                       <span>{item.name}</span>
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
+<<<<<<< HEAD
                     </button>                      <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
+=======
+                    </button>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -172,6 +242,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                           className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden'
                         >
                           <div className='p-4'>
+<<<<<<< HEAD
                             <div className='grid gap-3'>                              {item.dropdownItems?.map((dropdownItem, idx) => (
                                 <Link
                                   key={dropdownItem.name}
@@ -180,6 +251,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                         >
                           <div className="p-4">
                             <div className="grid gap-3">
+=======
+                            <div className='grid gap-3'>
+                              {item.dropdownItems?.map((dropdownItem, idx) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
@@ -198,6 +273,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                       'View All Services' && (
                                       <div className='text-xs text-gray-400'>
                                         Explore our complete portfolio
+<<<<<<< HEAD
                                       </div>                                    )}                                >
                                   <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>
                                     <dropdownItem.icon className="w-5 h-5 text-white" />
@@ -208,6 +284,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                     </div>
                                     {dropdownItem.name === 'View All Services' && (
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>
+=======
+                                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                     )}
                                   </div>
                                 </Link>
@@ -221,7 +300,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 ) : (
                   <Link
                     href={item.href}
+<<<<<<< HEAD
                     className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'                  >                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+=======
+                    className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     {item.name}
                   </Link>
@@ -234,11 +317,16 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
             {/* Contact Info */}
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
               <div className='flex items-center space-x-2'>
+<<<<<<< HEAD
                 <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">
             {/* Contact Info */}
             <div className="flex items-center space-x-4 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
+=======
+                <Phone className='w-4 h-4 text-cyan-400' />
+                <span>{contactInfo.mobile}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
             {/* CTA Button */}
@@ -247,11 +335,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'
               >
+<<<<<<< HEAD
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30"
               >
                 <Rocket className="w-4 h-4 mr-2" />
+=======
+                <Rocket className='w-4 h-4 mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Get Started
               </Link>
             </motion.div>
@@ -266,11 +358,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
+<<<<<<< HEAD
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+=======
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </button>
           </div>
         </div>
@@ -287,6 +383,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           >
             <div className='px-4 py-6 space-y-4'>
               {/* Mobile Navigation Items */}
+<<<<<<< HEAD
               {navigationItems.map(item => (                <div key={item.name}>
                   {item.hasDropdown ? (
                     <div>
@@ -294,6 +391,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Navigation Items */}
               {navigationItems.map((item) => (
+=======
+              {navigationItems.map(item => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div key={item.name}>
                   {item.hasDropdown ? (
                     <div>
@@ -311,6 +411,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                           }`}
                         />
                       </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
@@ -331,6 +435,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                               >
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
+<<<<<<< HEAD
                               <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
                           {item.dropdownItems?.map((dropdownItem) => (
                             <Link
@@ -343,6 +448,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                 <dropdownItem.icon className="w-4 h-4 text-white" />
                               </div>
                               <span className="text-gray-300 hover:text-white transition-colors">
+=======
+                              <span className='text-gray-300 hover:text-white transition-colors'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                 {dropdownItem.name}
                               </span>
                             </Link>
@@ -353,7 +461,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   ) : (
                     <Link
                       href={item.href}
+<<<<<<< HEAD
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
+=======
+                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -373,6 +485,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <MapPin className='w-4 h-4 text-green-400' />
+<<<<<<< HEAD
                   <span className='text-sm'>{contactInfo.address}</span>                </div>
               </div>
               {/* Mobile CTA */}
@@ -385,6 +498,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin className="w-4 h-4 text-green-400" />
                   <span className="text-sm">{contactInfo.address}</span>
+=======
+                  <span className='text-sm'>{contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
               {/* Mobile CTA */}
@@ -394,12 +510,16 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   className='block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
                   onClick={() => setIsOpen(false)}
                 >
+<<<<<<< HEAD
                   <Rocket className='w-5 h-5 inline mr-2' />                  Get Started                <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   <Rocket className="w-5 h-5 inline mr-2" />
+=======
+                  <Rocket className='w-5 h-5 inline mr-2' />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Get Started
                 </Link>
               </div>
@@ -408,5 +528,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

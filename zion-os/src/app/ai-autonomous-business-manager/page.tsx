@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Group";
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.";
@@ -5,6 +6,24 @@ export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Grou
 export default function AIBusinessManagerPage() {return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
+=======
+import Link from 'next/link';
+}
+
+export const metadata = {
+  title: 'AI Autonomous Business Manager - Zion Tech Group',
+  description:
+    'Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.',
+  keywords:
+    'AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group',
+};
+}
+
+export default function AIBusinessManagerPage() {
+  return (
+    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Hero Section */}
         <div className="text-center mb-16">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;

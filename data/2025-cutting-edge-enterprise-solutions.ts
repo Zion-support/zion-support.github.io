@@ -1,5 +1,6 @@
 import { UnifiedService } from '../types/unified-service-types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const contact = null;
 =======
 const contact = {
@@ -25,6 +26,31 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       setupTime: '2-3 weeks'
       enterprise: 'Custom enterprise pricing available'
     }
+=======
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
+  // ENTERPRISE SOLUTIONS
+  {
+    id: 'ai-powered-enterprise-risk-management',
+    name: 'AI-Powered Enterprise Risk Management',
+    tagline: 'Intelligent risk assessment and mitigation for enterprise',
+    price: {
+      monthly: 899,
+      yearly: 8990,
+      currency: 'USD',
+      trialDays: 30,
+      setupTime: '2-3 weeks',
+      enterprise: 'Custom enterprise pricing available',
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.'
     features: [
@@ -264,6 +290,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     ]
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.'
     competitors: [
+<<<<<<< HEAD
       'Microsoft SharePoint'
       'Confluence'
       'Notion'
@@ -300,5 +327,20 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 41
     contactInfo: contact
   }
+=======
+      'Microsoft SharePoint',
+      'Confluence',
+      'Notion',
+      'Slack',
+      'Box',
+    ],
+    marketSize: '$15.2B enterprise content management market',
+    growthRate: '28% annual growth',
+    customers: 29,
+    rating: 4.6,
+    reviews: 41,
+    contactInfo: contact,
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

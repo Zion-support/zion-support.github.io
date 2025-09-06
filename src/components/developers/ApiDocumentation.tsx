@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { BookOpen, Terminal } from 'lucide-react'
 <<<<<<< HEAD
@@ -6,6 +7,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock";
+=======
+import { useState } from 'react';
+import { BookOpen, Terminal } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
+
+import CodeBlock from './CodeBlock';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logInfo } from '@/utils/productionLogger';
 interface EndpointParam {
   name: string;
@@ -16,12 +33,42 @@ interface EndpointParam {
 
 interface EndpointSectionProps {
   method: string;
+<<<<<<< HEAD
   endpoint: string;
   description: string;
   note?: string;
   params?: EndpointParam[];
   codeExamples?: Record<string, string>,
   responseExamples?: { success: string }
+=======
+endpoint: string;
+description: string;
+note?: string;
+params?: EndpointParam[];
+codeExamples?: Record<string string>;
+responseExamples?: {;
+  success: string ;
+
+}export function ApiDocumentation () {;
+  return (<Card className="bg-zinc-900 border-zinc-800 text-white" > text-xl flex items-center"> <BookOpen className=" mr-2"size= {;
+  20 ";
+}/> API Documentation </CardTitle> <CardDescription className=" text-zinc-400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg-blue-900/30 border-blue-800 mb-6"> <Terminal className=" h-4 w-4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs defaultValue=" jobs"className=" space-y-4"> <TabsList className=" bg-zinc-800 border-zinc-700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) ` ;
+
+}responseExamples= {;
+  {;
+  success: ` {";
+  " data": [ {;
+  ;
+}` ;
+
+}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com/v1/jobs/\$ {;
+  jobId ;
+}\`, {;
+  method: 'GET';
+headers: {';
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' ;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function ApiDocumentation() {
@@ -790,15 +837,30 @@ function verifyWebhookSignature(payload, signature, secret) {
   )
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
+<<<<<<< HEAD
   const signature = req.headers['x-zion-signature']
   const payload = req.body.toString()
   const webhookSecret = process.env.WEBHOOK_SECRET
+=======
+  const signature = req.headers['x-zion-signature'];
+  const payload = req.body.toString();
+  const webhookSecret = process.env.WEBHOOK_SECRET;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature')
   }
+<<<<<<< HEAD
   // Process the webhook event
   const event = JSON.parse(payload)
   logInfo('Received valid webhook:', { data: event })
+=======
+
+  // Process the webhook event
+  const event = JSON.parse(payload);
+  logInfo('Received valid webhook:', { data: event });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
 });`}
@@ -1151,5 +1213,9 @@ function EndpointSection({
           <CodeBlock code={responseExamples.success} language='json' />        </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -13,12 +13,23 @@ import type { QuoteStatus } from "@/types/quotes";
 type RequestsHeaderProps = any;
 =======
 type RequestsHeaderProps = {
+<<<<<<< HEAD
   unreadCount: number
   statusFilter: QuoteStatus | 'all'
   setStatusFilter: (value: QuoteStatus | 'all') => void
   archiveFilter: 'active' | 'archived' | 'all'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 }
+=======
+  unreadCount: number;
+statusFilter: QuoteStatus | 'all';
+setStatusFilter: (value: QuoteStatus | 'all') => void;
+archiveFilter: 'active' | 'archived' | 'all';
+setArchiveFilter: (value: 'active' | 'archived' | 'all') => void 
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
   statusFilter;

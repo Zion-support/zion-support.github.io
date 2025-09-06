@@ -12,9 +12,16 @@ interface HireNowCTAProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     full_name?: string;
     professional_title?: string;
+<<<<<<< HEAD
     hourly_rate?: number
   }
 }
+=======
+    hourly_rate?: number;
+  };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false);
 <<<<<<< HEAD

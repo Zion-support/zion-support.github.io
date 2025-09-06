@@ -22,10 +22,21 @@ const benefits = [
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
     icon: <Clock className="w-8 h-8" />}
   {
+<<<<<<< HEAD
     title: "Cost Reduction"
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."
     icon: <TrendingDown className="w-8 h-8" />}]
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    title: 'Cost Reduction',
+    description:
+      'Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.',
+    icon: <TrendingDown className='w-8 h-8' />,
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BenefitsSection() {
   return (
     <section className="py-20 bg-zion-blue-light">

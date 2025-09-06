@@ -3,6 +3,7 @@ import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useCurrentUser } from '../../utils/auth';
 const fetcher = null;
     mutate()
@@ -11,6 +12,13 @@ const fetcher = null;
 =======
 import {useCurrentUser} from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+=======
+import { useCurrentUser } from '../../utils/auth';
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function DisputeDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id?: string }
@@ -19,17 +27,32 @@ export default function DisputeDetailPage() {
   const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<
     'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
+<<<<<<< HEAD
   >('Overview');  const [message, setMessage] = useState('');
+=======
+  >('Overview');
+  const [message, setMessage] = useState('');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [resolutionSummary, setResolutionSummary] = useState('');
   async function sendMessage() {
+<<<<<<< HEAD
     if (!message.trim() |!id) return;
+=======
+    if (!message.trim() || !id) return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     await fetch(`/api/disputes/${id}/message`, {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ body: message })
     });
     setMessage('');
+<<<<<<< HEAD
     mutate();  }
+=======
+    mutate();
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
     if (!id) return;
     await fetch(`/api/disputes/${id}/resolve`, {
@@ -38,8 +61,14 @@ export default function DisputeDetailPage() {
       body: JSON.stringify({ resolutionSummary, status })
     });
     setResolutionSummary('');
+<<<<<<< HEAD
     mutate();  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    mutate();
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <EnhancedLayout>
       {!dispute ? (
@@ -78,8 +107,15 @@ export default function DisputeDetailPage() {
                 className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}
               >
                 {t}
+<<<<<<< HEAD
               </button>            ))}
           </div>
+=======
+              </button>
+            ))}
+          </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {activeTab === 'Overview' && (
             <div className='space-y-6'>
               <div className='p-4 border rounded'>
@@ -120,7 +156,12 @@ export default function DisputeDetailPage() {
                       <time className='text-xs text-gray-500'>
                         {new Date(dispute.resolvedAt).toLocaleString()}
                       </time>
+<<<<<<< HEAD
                       <div className='text-sm'>Case resolved</div>                    </li>
+=======
+                      <div className='text-sm'>Case resolved</div>
+                    </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   )}
                 </ol>
               </div>
@@ -139,7 +180,12 @@ export default function DisputeDetailPage() {
                           {m.authorRole} •{' '}
                           {new Date(m.createdAt).toLocaleString()}
                         </div>
+<<<<<<< HEAD
                         <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>
+=======
+                        <div className='whitespace-pre-wrap'>{m.body}</div>
+                      </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ))}
                   </ul>
                 )}
@@ -157,7 +203,12 @@ export default function DisputeDetailPage() {
                     className='px-3 py-2 rounded bg-blue-600 text-white'
                   >
                     Send
+<<<<<<< HEAD
                   </button>                </div>
+=======
+                  </button>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               )}
             </div>
           )}
@@ -183,7 +234,12 @@ export default function DisputeDetailPage() {
                         href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}
                       >
                         Download
+<<<<<<< HEAD
                       </a>                    </li>
+=======
+                      </a>
+                    </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </ul>
               )}
@@ -216,7 +272,12 @@ export default function DisputeDetailPage() {
                       className='px-3 py-2 rounded bg-green-600 text-white'
                     >
                       Resolve
+<<<<<<< HEAD
                     </button>                  </div>
+=======
+                    </button>
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
             </div>
@@ -224,4 +285,8 @@ export default function DisputeDetailPage() {
         </div>
       )}
     </EnhancedLayout>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

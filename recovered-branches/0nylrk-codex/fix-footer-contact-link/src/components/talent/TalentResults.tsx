@@ -41,9 +41,16 @@ interface TalentResultsProps {
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
+<<<<<<< HEAD
     clearFilters: () => void
   }
 }
+=======
+    clearFilters: () => void;
+  };
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentResults({
   filteredTalents;
   isLoading;

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Briefcase, Star, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react";
 import { Briefcase, Star, User } from 'lucide-react'
@@ -8,8 +14,15 @@ interface UserTypeOption {
   description: string;
   icon: React.ElementType
 interface UserTypeSelectionProps {
+<<<<<<< HEAD
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
   selectedType: string | null
+=======
+  onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
+  selectedType: string | null;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function UserTypeSelection({
   onSelect
   selectedType
@@ -70,9 +83,15 @@ export function UserTypeSelection({
       </div>
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
+<<<<<<< HEAD
           const Icon = type.icon
           const isSelected = selectedType === type.id
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+          const Icon = type.icon;
+          const isSelected = selectedType === type.id;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={() => onSelect(type.id)}
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
@@ -98,5 +117,9 @@ export function UserTypeSelection({
         })}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

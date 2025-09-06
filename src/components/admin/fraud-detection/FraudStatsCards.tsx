@@ -1,12 +1,31 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
+import { FraudStats } from '@/types/fraud';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
+<<<<<<< HEAD
   stats: FraudStats
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
+=======
+  stats: FraudStats;
+}
+
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
 <<<<<<< HEAD
     <div className;
@@ -61,4 +80,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   )
 }
 "
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

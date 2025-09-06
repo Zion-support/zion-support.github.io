@@ -104,10 +104,21 @@ const academicPartners = [
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
+<<<<<<< HEAD
     name: 'University of Tokyo'
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
     collaboration: 'Robotic learning and human-robot interaction'}]
+=======
+    name: 'University of Tokyo',
+    location: 'Tokyo, Japan',
+    focus: 'Robotics & Autonomous Systems',
+    collaboration: 'Robotic learning and human-robot interaction',
+  },
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ResearchPage() {
   return (
     <div className=&quot;bg-black&quot;>

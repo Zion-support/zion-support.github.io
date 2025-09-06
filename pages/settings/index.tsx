@@ -4,5 +4,10 @@ export default function SettingsPage() {
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Settings</h2>
       <p className=&quot;opacity-80&quot;>Manage your account preferences.</p>
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
 export default function RetailTechnologySolutions() {
 	return (
 		<ServiceLanding
@@ -27,3 +28,11 @@ export default function RetailTechnologySolutions() {
 		/>
 	)
 }
+=======
+}
+
+export default function RetailTechnologySolutions() {
+
+    />
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -17,6 +17,7 @@ interface AIMilestoneGeneratorProps {
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
 =======
   scope: string
   startDate: string
@@ -26,6 +27,12 @@ interface AIMilestoneGeneratorProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
+=======
+  onAddMilestone: (milestone: GeneratedMilestone) => void;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function AIMilestoneGenerator({
   scope;
   startDate;
@@ -45,12 +52,24 @@ export function AIMilestoneGenerator({
     if (!scope |!startDate |!projectType) {
       return
     }
+<<<<<<< HEAD
     const input: MilestoneInput = {
       scope;
       startDate;
       endDate
       projectType
     }
+=======
+}
+
+const input: MilestoneInput = {
+      scope,
+      startDate,
+      endDate,
+      projectType,
+    };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     await generateMilestones(input);
     // Initially select all milestones
     const initialSelection = {}

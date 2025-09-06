@@ -19,6 +19,10 @@ import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (
     <FormField

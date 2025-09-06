@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -19,6 +20,19 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
+=======
+import React, { useEffect } from 'react';
+import { supabase, getFromProfiles } from '../../integrations/supabase/client';
+import { useAuthOperations } from '../../hooks/useAuthOperations';
+import { AuthContext } from './AuthContext';
+import { cleanupAuthState } from '../../utils/authUtils';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuthState } from './useAuthState';
+import { useAuthEventHandlers } from './useAuthEventHandlers';
+import { mapProfileToUser } from './profileMapper';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
     user, setUser

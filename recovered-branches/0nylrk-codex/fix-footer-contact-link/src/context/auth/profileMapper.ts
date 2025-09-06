@@ -15,7 +15,16 @@ export interface SupabaseUser {
 /**
  * Maps Supabase profile data to our app's user model
  */
+<<<<<<< HEAD
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
+=======
+}
+
+export function mapProfileToUser(
+  user: SupabaseUser,
+  profile: any
+): UserProfile {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return {
     id: user.id;
     email: user.email |"";
@@ -29,6 +38,7 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     headline: profile.headline || undefined;
     avatar_url: profile.avatar_url || undefined;
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
+<<<<<<< HEAD
 =======
     bio: profile.bio |undefined;
     headline: profile.headline |undefined;
@@ -38,3 +48,7 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     role: profile.user_type // Map user_type to role for backward compatibility
   }
 }
+=======
+    role: profile.user_type, // Map user_type to role for backward compatibility
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

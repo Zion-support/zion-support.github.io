@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns';
+import Link from 'next/link';
+import { ApplicationStatus } from '@/types/jobs';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -100,5 +113,22 @@ export function MyApplications() {
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+<p> {;
+  error ;
+}</p> </div>) ";
+}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
+  getStatusBadge (application.status) ;
+}</div> {;
+  application.cover letter ;
+}</p>) ";
+}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
+}</div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -5,7 +5,11 @@ import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
 <<<<<<< HEAD
   quotes: QuoteRequest[];
+<<<<<<< HEAD
   filename?: string
+=======
+  filename?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ExportToCSV = null;

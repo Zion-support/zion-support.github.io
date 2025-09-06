@@ -2,9 +2,18 @@
 import React from "react";
 import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
+<<<<<<< HEAD
   availabilityType: string
 }
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+=======
+  availabilityType: string;
+}
+
+export function TalentCardAvailability({
+  availabilityType,
+}: TalentCardAvailabilityProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Format availability status
 <<<<<<< HEAD
   const getAvailabilityColor = null;

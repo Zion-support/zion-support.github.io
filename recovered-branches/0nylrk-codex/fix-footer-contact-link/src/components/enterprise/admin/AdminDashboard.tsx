@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { AdminHeader } from './AdminHeader';
+import { TeamManagement } from './TeamManagement';
+import { UsageStats } from './UsageStats';
+import { RoleManagement } from './RoleManagement';
+import { TeamActivity } from './TeamActivity';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { AdminHeader } from "./AdminHeader",

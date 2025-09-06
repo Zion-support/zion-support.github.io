@@ -5,8 +5,14 @@ import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface ApiDocsLayoutProps {
+<<<<<<< HEAD
   children: React.ReactNode
 }
+=======
+  children: React.ReactNode;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 <<<<<<< HEAD
   const location = null;
@@ -63,7 +69,13 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
         {children}
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ApiDocsLayout;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

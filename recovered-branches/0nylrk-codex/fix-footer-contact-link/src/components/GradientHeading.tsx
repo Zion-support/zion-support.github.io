@@ -5,7 +5,11 @@ interface GradientHeadingProps {
 <<<<<<< HEAD
   children: React.ReactNode;
   className?: string;
+<<<<<<< HEAD
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+=======
+  level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function GradientHeading({ children, className, level;

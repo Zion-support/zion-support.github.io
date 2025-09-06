@@ -25,7 +25,14 @@ import {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface FavoriteButtonProps {
   itemId: string;
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
 <<<<<<< HEAD
   const { isWishlisted, toggle } = useWishlist();
@@ -44,8 +51,16 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       setLoginOpen(true)
       return
     }
+<<<<<<< HEAD
     const wasWishlisted = isWishlisted(itemId)
     toggle(itemId)
+=======
+}
+
+const wasWishlisted = isWishlisted(itemId);
+    toggle(itemId);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Provide feedback
     toast({
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist'
@@ -84,6 +99,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       </TooltipProvider>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
   )
 }
       // Add to favorites`
@@ -110,3 +126,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

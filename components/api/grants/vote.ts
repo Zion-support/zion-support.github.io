@@ -3,16 +3,25 @@ import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 import type { GrantApplication, VotePayload } from '../../../types/grants';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
 function grantPath(id: string) {
+<<<<<<< HEAD
   return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
 }
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
+=======
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 <<<<<<< HEAD
@@ -28,6 +37,12 @@ function writeGrant(record: GrantApplication) {
     JSON.stringify(record, null, 2)
     'utf8'
   );
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -37,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return;
+<<<<<<< HEAD
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
@@ -49,11 +65,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const payload = req.body as VotePayload;
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
+=======
+  }
+}
+
+const payload = req.body as VotePayload;
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     res.status(400).json({ error: 'Missing fields' });
     return;
   }
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
+<<<<<<< HEAD
   const vote = {
     id: uuidv4()
     voter: payload.voter
@@ -73,3 +97,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   res.status(200).json({ record: g })
 }
+=======
+  
+}
+
+const vote = {
+    id: uuidv4(),
+    voter: payload.voter,
+    choice: payload.choice,
+    createdAt: new Date().toISOString(),
+  };
+  g.votes = [...(g.votes || []), vote];
+  g.updatedAt = new Date().toISOString();
+  writeGrant(g);
+  res.status(200).json({ record: g });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

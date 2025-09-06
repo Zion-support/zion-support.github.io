@@ -3,6 +3,10 @@ import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {
   application: JobApplication;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ScoreBadge({ application }: ScoreBadgeProps) {
 <<<<<<< HEAD
   const score = null;
@@ -20,4 +24,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
       {score ? `${score}%` : "Not scored"}
     </span>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

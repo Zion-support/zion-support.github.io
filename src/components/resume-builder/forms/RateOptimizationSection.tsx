@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Control, UseFormSetValue } from 'react-hook-form';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { TalentRateRecommender } from '@/components/pricing/TalentRateRecommender';
+import { Card, CardContent } from '@/components/ui/card';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react";
 import { Control, UseFormSetValue } from "react-hook-form";
@@ -19,6 +35,7 @@ interface RateOptimizationSectionProps {
   skills: string[];
   yearsExperience: number;
   location?: string;
+<<<<<<< HEAD
 =======
   control: Control<any>
   setValue: UseFormSetValue<any>
@@ -49,6 +66,18 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   const handleSuggestionApplied = (rate: number,) => {
     setValue("hourlyRate", rate)
   }
+=======
+  rateType: 'hourly' | 'fixed';
+}
+
+export const RateOptimizationSection: React.FC<
+  RateOptimizationSectionProps
+> = ({ control, setValue, skills, yearsExperience, location, rateType }) => {
+  const handleSuggestionApplied = (rate: number) => {
+    setValue('hourlyRate', rate);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <div className="space-y-4">
       <FormField
@@ -84,8 +113,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
 "}
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

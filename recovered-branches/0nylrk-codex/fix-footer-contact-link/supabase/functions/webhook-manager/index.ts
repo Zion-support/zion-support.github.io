@@ -354,4 +354,7 @@ function createTestPayload(eventType: string) {
         }
       }
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

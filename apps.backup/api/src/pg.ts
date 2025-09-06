@@ -1,6 +1,14 @@
 import { Pool, PoolClient } from 'pg';
+<<<<<<< HEAD
 let pool:Pool | null = null;
 export function getPool():Pool {
+=======
+
+let pool: Pool | null = null;
+}
+
+export function getPool(): Pool {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!pool) {
 <<<<<<< HEAD
     pool;

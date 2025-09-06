@@ -16,9 +16,14 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {
   data: Array<Record<string, any>>;
   timeRange: string;
+<<<<<<< HEAD
   onTimeRangeChange: (range: string) => void
 }
 <<<<<<< HEAD
+=======
+  onTimeRangeChange: (range: string) => void;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = null;

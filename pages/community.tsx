@@ -1,5 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CommunityPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -89,4 +94,8 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

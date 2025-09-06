@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
+import Link from 'next/link';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -65,6 +75,7 @@ export function ClientDashboard() {
                 </div>
                 <Button size='sm' variant='outline'>
                   View Details
+<<<<<<< HEAD
                 </Button>              </div>import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function ClientDashboard() {
@@ -113,11 +124,18 @@ export function ClientDashboard() {
                   </div>
                 </div>
                 <Button size="sm" variant="outline">View Details</Button>
+=======
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Suggested Talents</h2>
@@ -191,6 +209,7 @@ export function ClientDashboard() {
                 </Badge>
                 <Badge variant='outline' className='text-xs'>
                   AWS
+<<<<<<< HEAD
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
@@ -199,6 +218,15 @@ export function ClientDashboard() {
               <div className="flex gap-2 mt-3">
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
+=======
+                </Badge>
+              </div>
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>View Profile</Button>
+                <Button size='sm' variant='outline'>
+                  Message
+                </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>View Profile</Button>
@@ -209,6 +237,10 @@ export function ClientDashboard() {
           </Card>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Recent Updates</h2>
@@ -241,6 +273,7 @@ export function ClientDashboard() {
             </div>
             <Button variant='outline' className='w-full'>
               View All Notifications
+<<<<<<< HEAD
             </Button>          </CardContent>      <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
@@ -270,9 +303,16 @@ export function ClientDashboard() {
               </div>
             </div>
             <Button variant="outline" className="w-full">View All Notifications</Button>
+=======
+            </Button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </CardContent>
         </Card>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

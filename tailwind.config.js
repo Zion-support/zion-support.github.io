@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         primary: {
 <<<<<<< HEAD
           50: '#eff6ff',
@@ -214,3 +215,12 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ]
 }
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+    },
+  },
+  plugins: [],
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

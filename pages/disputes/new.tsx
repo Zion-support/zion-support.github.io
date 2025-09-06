@@ -2,6 +2,7 @@ import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = null;
     reader.readAsDataURL(file)
@@ -9,6 +10,10 @@ const REASONS = null;
 }
 =======
 import {useCurrentUser} from '../../utils/auth';
+=======
+import { useCurrentUser } from '../../utils/auth';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const REASONS = [
   'Scope Disagreement'
   'Quality Issues'
@@ -18,6 +23,7 @@ const REASONS = [
   'Other'
 ] as const;
 type ReasonType = (typeof REASONS)[number];
+<<<<<<< HEAD
 export default function NewDisputePage() {
   const router = useRouter();
   const {
@@ -28,16 +34,37 @@ export default function NewDisputePage() {
     clientId
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
+=======
+}
+
+export default function NewDisputePage() {
+  const router = useRouter();
+  const {
+    projectId: qProjectId,
+    entityType,
+    entityId,
+    talentId,
+    clientId,
+  } = router.query as Record<string, string>;
+  const user = useCurrentUser();
+
+  const [projectId, setProjectId] = useState(qProjectId || '');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
   const [talentUserId, setTalentUserId] = useState(talentId |'');
+=======
+  const [talentUserId, setTalentUserId] = useState(talentId || '');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [clientUserId, setClientUserId] = useState(
     clientId |(user.role === 'client' ? user.id : '')
   );
   const [submitting, setSubmitting] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
     if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -58,10 +85,37 @@ export default function NewDisputePage() {
           description
         })
       });      if (!res.ok) throw new Error('Failed to create');
+=======
+    if (qProjectId) setProjectId(qProjectId);
+  }, [qProjectId]);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!projectId || !description || !clientUserId || !talentUserId)
+      return alert('Please fill required fields');
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/disputes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          projectId,
+          entityType,
+          entityId,
+          clientUserId,
+          talentUserId,
+          reason,
+          reasonDetails,
+          description,
+        }),
+      });
+      if (!res.ok) throw new Error('Failed to create');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const { dispute } = await res.json();
       if (files.length > 0) {
         const filePayload = await Promise.all(
           files.map(async f => ({
+<<<<<<< HEAD
             fileName: f.name
             mimeType: f.type
             base64: await toBase64(f)
@@ -70,13 +124,29 @@ export default function NewDisputePage() {
           method: 'POST'
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({ files: filePayload })
+=======
+            fileName: f.name,
+            mimeType: f.type,
+            base64: await toBase64(f),
+          }))
+        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ files: filePayload }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         });
       }
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
     } catch (e: any) {
       alert(e.message |'Error');
     } finally {
+<<<<<<< HEAD
       setSubmitting(false);    }
+=======
+      setSubmitting(false);
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return (
     <EnhancedLayout>
@@ -165,11 +235,20 @@ export default function NewDisputePage() {
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'
             >
               {submitting ? 'Submitting...' : 'Submit Dispute'}
+<<<<<<< HEAD
             </button>          </div>
+=======
+            </button>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </form>
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
 const reader = new FileReader();
@@ -177,4 +256,7 @@ const reader = new FileReader();
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

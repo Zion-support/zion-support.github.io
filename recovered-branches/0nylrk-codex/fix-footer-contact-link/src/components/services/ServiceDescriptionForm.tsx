@@ -21,9 +21,18 @@ const formSchema = z.object({
   targetAudience: z.string()})
 type FormData = z.infer<typeof formSchema>;
 interface ServiceDescriptionFormProps {
+<<<<<<< HEAD
   onDescriptionGenerated: (description: string) => void
 }
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
+=======
+  onDescriptionGenerated: (description: string) => void;
+}
+
+export function ServiceDescriptionForm({
+  onDescriptionGenerated,
+}: ServiceDescriptionFormProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<FormData>({

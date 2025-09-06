@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import React, { useMemo } from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+=======
+import React, { useMemo } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
+<<<<<<< HEAD
   timestamp: Date
+=======
+  timestamp: Date;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const ChatMessage: React.FC<ChatMessageProps> = ({
 <<<<<<< HEAD
   message;
@@ -108,7 +121,13 @@ function formatMessageWithLinks(message: string): string {
   formattedMessage = formattedMessage.replace(
     helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+<<<<<<< HEAD
   )
   return formattedMessage; return formattedMessage
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+
+  return formattedMessage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

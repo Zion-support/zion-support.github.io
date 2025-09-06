@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus } from 'lucide-react';
+import { EmptyResumeProps } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",

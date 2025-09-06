@@ -28,7 +28,11 @@ interface VideoCallRoomProps {
   onToggleMute?: (isMuted: boolean) => void;
   onToggleVideo?: (isEnabled: boolean) => void;
   onToggleScreenShare?: (isSharing: boolean) => void;
+<<<<<<< HEAD
   className?: string
+=======
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 

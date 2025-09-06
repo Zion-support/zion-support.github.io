@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from '[^']*';
 import { readJsonFile, writeJsonFile } from '[^']*';
@@ -14,6 +15,18 @@ import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 const FILE = "jobs.json";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db';
+import type { Job } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+
+const FILE = 'jobs.json';
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -26,6 +39,7 @@ export default async function handler(
   }
   if (req.method === "POST") {
     const {
+<<<<<<< HEAD
       title
       description
       category
@@ -37,14 +51,35 @@ export default async function handler(
     } = req.body |{}
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
+=======
+      title,
+      description,
+      category,
+      requiredSkills = [],
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      clientEmail,
+    } = req.body || {};
+
+    if (!title || !description || !clientEmail) {
+      res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       return;
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
+<<<<<<< HEAD
       id: uuidv4()
       title: String(title)
       description: String(description)
       category: String(category |"")
+=======
+      id: uuidv4(),
+      title: String(title),
+      description: String(description),
+      category: String(category || ''),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       requiredSkills: Array.isArray(requiredSkills)
         ? requiredSkills.map(String)
         : []
@@ -78,16 +113,31 @@ export default async function handler(
             s.includes("terraform")
         )
       )
+<<<<<<< HEAD
         job.category = "Cloud";
       else job.category = "General";
     }
     const jobs = readJsonFile<Job[]>(FILE, []);
+=======
+        job.category = 'Cloud';
+      else job.category = 'General';
+    }
+}
+
+const jobs = readJsonFile<Job[]>(FILE, []);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
     res.status(201).json({ job });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

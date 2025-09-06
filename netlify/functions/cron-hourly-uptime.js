@@ -1,4 +1,8 @@
 const { upsertFile } = require('./_lib/github');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 exports.handler = async function () {
   try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
@@ -68,6 +72,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };  try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const endpoints = [
@@ -146,3 +151,6 @@ exports.handler = async function () {
 =======
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

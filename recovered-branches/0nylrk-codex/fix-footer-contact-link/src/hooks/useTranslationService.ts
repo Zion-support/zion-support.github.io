@@ -11,8 +11,14 @@ import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
+<<<<<<< HEAD
   error?: string
 }
+=======
+  error?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function useTranslationService() {
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();

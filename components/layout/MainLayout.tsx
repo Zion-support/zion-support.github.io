@@ -55,6 +55,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
 </>
   );
+<<<<<<< HEAD
+=======
+
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default MainLayout;
   title = 'Zion Tech Group - Leading Technology Solutions Provider'
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'

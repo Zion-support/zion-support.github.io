@@ -16,6 +16,7 @@ import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {
 <<<<<<< HEAD
   id: string;
+<<<<<<< HEAD
   user_id: string;
   name: string;
   status: 'pending' | 'approved' | 'rejected';
@@ -39,6 +40,23 @@ interface PartnerProfile {
   fraud_flags?: number;
   commission_rate?: number
 }
+=======
+user id: string;
+name: string;
+status: 'pending' | 'approved' | 'rejected';
+created at: string;
+niche: string;
+audience size: string;
+social media?: Record<string string>;
+website?: string;
+bio?: string;
+payout method?: string;
+fraud flags?: number;
+commission rate?: number 
+}export default function PartnerManager () {
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),

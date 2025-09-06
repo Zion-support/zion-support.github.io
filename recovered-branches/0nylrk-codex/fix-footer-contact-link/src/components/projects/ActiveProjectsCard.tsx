@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { BriefcaseIcon, Clock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { useProjects } from '@/hooks/useProjects';
+import { Project } from '@/types/projects';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",

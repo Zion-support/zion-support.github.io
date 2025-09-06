@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+<<<<<<< HEAD
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
   ssr: false
 });const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false })
+=======
+
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
+  ssr: false,
+});
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function resolveDisplayName(addr: string): Promise<string | null> {
   try {
 <<<<<<< HEAD
@@ -10,16 +18,28 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
 =======
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
     const { data } = await r.json();
+<<<<<<< HEAD
     const did = data?.payload |{}
     return did.lens |did.ens |null;
   } catch {
     return null;
   }
+=======
+    const did = data?.payload || {};
+    return did.lens || did.ens || null;
+  } catch {
+    return null;
+  }
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Web3LoginButton() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{
     address: string;
     chain: 'evm' | 'sol';
+<<<<<<< HEAD
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {    return did.lens |did.ens |null
@@ -28,6 +48,9 @@ export default function Web3LoginButton() {
 export default function Web3LoginButton() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null)
+=======
+  } | null>(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
@@ -40,12 +63,18 @@ export default function Web3LoginButton() {
       typeof window !== 'undefined'
         ? window.localStorage.getItem('zion-web3-display')
         : null;
+<<<<<<< HEAD
     setDisplayWeb3(pref === 'true');  }, []);
   useEffect(() => {
     (async () => {    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
     setDisplayWeb3(pref === 'true')
+=======
+    setDisplayWeb3(pref === 'true');
+  }, []);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     (async () => {
       if (user && displayWeb3)
@@ -54,10 +83,16 @@ export default function Web3LoginButton() {
     })();
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
     window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
+<<<<<<< HEAD
     setUser(u);  }
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');    setUser(u)
   }
+=======
+    setUser(u);
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');
     try {
@@ -90,9 +125,13 @@ export default function Web3LoginButton() {
           />
         )}
       </div>
+<<<<<<< HEAD
     );  }
   return (
     <>    )
+=======
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return (
     <>
@@ -110,8 +149,12 @@ export default function Web3LoginButton() {
         />
       )}
     </>
+<<<<<<< HEAD
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

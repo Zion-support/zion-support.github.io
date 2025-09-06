@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link',
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -635,11 +636,14 @@ export default function ITServicesPage() {
                 <motion.div
                   key={index}
 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Server
   Shield
   Cloud
@@ -676,6 +680,44 @@ import {
   ShoppingCart
   BookOpen
   Rocket
+=======
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Code,
+  Settings,
+  CheckCircle,
+  Users,
+  DollarSign,
+  Brain,
+  Cpu,
+  Wifi,
+  Monitor,
+  AlertTriangle,
+  TrendingUp,
+  Lock,
+  Globe,
+  HardDrive,
+  Smartphone,
+  Building,
+  BarChart3,
+  Package,
+  GraduationCap,
+  Atom,
+  Leaf,
+  Link as LinkIcon,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Zap,
+  Search,
+  ShoppingCart,
+  BookOpen,
+  Rocket,
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   Laptop;
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -725,11 +767,17 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const timer = null;
 =======
@@ -752,6 +800,33 @@ export default function ITServices() {
     {
       id: 1
       name: 'Quantum Computing Consulting'
+=======
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
+  };
+
+  const categories = [
+    { id: 'all', name: 'All IT Services', count: 100 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 25 },
+    { id: 'security', name: 'Cybersecurity', count: 20 },
+    { id: 'devops', name: 'DevOps & Automation', count: 15 },
+    { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },
+    { id: 'quantum', name: 'Quantum Computing', count: 10 },
+    { id: 'enterprise', name: 'Enterprise Solutions', count: 15 },
+  ];
+
+  const services = [
+    {
+      id: 1,
+      name: 'Quantum Computing Consulting',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Expert guidance on quantum computing implementation and optimization for enterprise applications.'
       category: 'quantum'
@@ -1028,7 +1103,12 @@ export default function ITServices() {
           {/* Hero Section */}
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
+<<<<<<< HEAD
               <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+=======
+              <h1
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 IT Services
               </h1>
@@ -1043,14 +1123,24 @@ export default function ITServices() {
                 Transform your business with our enterprise-grade IT services.
                 From cloud infrastructure to quantum computing, we provide
                 cutting-edge technology solutions that scale with your business
+<<<<<<< HEAD
                 and drive innovation.              </p>
+=======
+                and drive innovation.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </section>
           {/* Category Filter */}
           <section className='py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
               <div className='flex flex-wrap justify-center gap-4 mb-8'>
+<<<<<<< HEAD
                 {categories.map(category => (                  <button
+=======
+                {categories.map(category => (
+                  <button
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -1070,7 +1160,12 @@ export default function ITServices() {
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
+<<<<<<< HEAD
                   <div                    key={service.id}
+=======
+                  <div
+                    key={service.id}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
@@ -1090,11 +1185,20 @@ export default function ITServices() {
                       <ul className='text-slate-400 text-sm space-y-1'>
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
+<<<<<<< HEAD
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
+=======
+                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
+                            {feature}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                         Benefits:
@@ -1104,11 +1208,20 @@ export default function ITServices() {
                           <span
                             key={benefitIndex}
                             className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+<<<<<<< HEAD
                           >                            {benefit}
+=======
+                          >
+                            {benefit}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </span>
                         ))}
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
                         {service.price}
@@ -1117,7 +1230,13 @@ export default function ITServices() {
                         {service.category.replace('-', ' ')}
                       </span>
                     </div>
+<<<<<<< HEAD
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
+=======
+
+                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
+                      Learn More
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </div>
                 ))}
@@ -1219,7 +1338,12 @@ export default function ITServices() {
                   <h3 className='text-xl font-bold mb-2'>Blockchain</h3>
                   <p className='text-slate-400'>
                     Smart contracts and decentralized applications
+<<<<<<< HEAD
                   </p>                </div>
+=======
+                  </p>
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </section>
@@ -1250,7 +1374,12 @@ export default function ITServices() {
                 </a>
                 <a
                   href={`mailto:${contact.email}`}
+<<<<<<< HEAD
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
+=======
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Email Us
                 </a>
               </div>
@@ -1286,9 +1415,20 @@ whileHover={{ y: -5 }} ">
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
+<<<<<<< HEAD
                   <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
                       {service.category}
                     </span>
+=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.pricing}</span>
+                    {service.marketPrice && (
+                      <span className="text-gray-500 ml-2">(Market: {service.marketPrice})</span>
+                    )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
@@ -1559,6 +1699,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </address>
             </motion.div>
           </div>
+<<<<<<< HEAD
           <motion.div
             className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -1591,3 +1732,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
   )
 }
 }
+=======
+        </section>
+      </div>
+    </Layout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

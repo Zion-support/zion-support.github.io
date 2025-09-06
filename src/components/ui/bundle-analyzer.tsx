@@ -16,7 +16,14 @@ interface ChunkInfo {
   name: string;
   size: number;
   loadTime: number;
+<<<<<<< HEAD
   cached: boolean
+=======
+  cached: boolean;
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function BundleAnalyzer() {
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -28,12 +35,24 @@ export function BundleAnalyzer() {
   if (!isAllowed) {
     return null
   }
+<<<<<<< HEAD
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
   const [chunks, setChunks] = useState<ChunkInfo[]>([])
   const [isVisible, setIsVisible] = useState(false)
   const [isCollecting, setIsCollecting] = useState(false)
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
+=======
+}
+
+const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
+  const [chunks, setChunks] = useState<ChunkInfo[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isCollecting, setIsCollecting] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
+
+  useEffect(() => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' |
@@ -57,6 +76,7 @@ export function BundleAnalyzer() {
           (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
       )
       // Calculate bundle information
+<<<<<<< HEAD
       let totalSize = 0
       let totalLoadTime = 0
       const chunkData: ChunkInfo[] = []
@@ -66,6 +86,20 @@ export function BundleAnalyzer() {
         const loadTime = entry.responseEnd - entry.requestStart
         const cached = entry.transferSize === 0
         totalLoadTime += loadTime
+=======
+      let totalSize = 0;
+      let totalLoadTime = 0;
+      const chunkData: ChunkInfo[] = [];
+
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize || entry.encodedBodySize || 0;
+        const loadTime = entry.responseEnd - entry.requestStart;
+        const cached = entry.transferSize === 0;
+
+        totalSize += size;
+        totalLoadTime += loadTime;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
           size
@@ -240,5 +274,9 @@ export function BundleAnalyzer() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

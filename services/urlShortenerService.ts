@@ -168,5 +168,10 @@ class UrlShortenerService {
     this.clicks = new Map(data.clicks)
   }
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const urlShortenerService = new UrlShortenerService();
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

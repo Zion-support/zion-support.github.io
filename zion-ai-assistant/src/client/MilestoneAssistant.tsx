@@ -6,7 +6,14 @@ export interface MilestoneAssistantProps {scopeOfWork: string;
   projectType: ProjectType;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
 }
+<<<<<<< HEAD
 export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false);
+=======
+}
+
+export function MilestoneAssistant(props: MilestoneAssistantProps) {
+  const [loading, setLoading] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [error, setError] = useState<string | null>(null);
   const [autoAdd, setAutoAdd] = useState(true);
   const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
@@ -30,7 +37,9 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
       if (!res.ok) {const t = await res.text();
         throw new Error(t |"Failed to generate");
       }
-      const data = await res.json();
+}
+
+const data = await res.json();
       setItems(Array.isArray(data?.milestones) ? data.milestones : []);
       setExpandedIdx(0);
     } catch (e: any) {setError(e?.message |"Unexpected error");
@@ -124,4 +133,10 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
     </div>;
   );
 }
+<<<<<<< HEAD
 export default MilestoneAssistant;
+=======
+}
+
+export default MilestoneAssistant;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import { SkillCategoryProps } from "./types";
 import { SkillItem } from "./SkillItem";
+=======
+import { SkillCategoryProps } from './types';
+import { SkillItem } from './SkillItem';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const SkillCategory = ({
   category
   skills

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
@@ -29,6 +30,20 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+=======
+
+}
+
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  return {
+    props: {
+      docs: content as DocsContent,
+    },
+  };
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -50,6 +65,7 @@ export default function PrintDocs({ docs }: PageProps) {
                 >
                   {c.content}
                 </pre>
+<<<<<<< HEAD
               ))}          </section>  }, []);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -63,9 +79,16 @@ export default function PrintDocs({ docs }: PageProps) {
             {s.code && s.code.map((c, i) => (
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}
+=======
+              ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </section>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

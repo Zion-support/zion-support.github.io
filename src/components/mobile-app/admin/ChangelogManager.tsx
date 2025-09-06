@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Plus, Trash2 } from 'lucide-react';
+import { AppPlatform } from './MetadataManager';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -14,6 +24,7 @@ interface ChangelogManagerProps {
 type ChangelogEntry = any;
 =======
 type ChangelogEntry = {
+<<<<<<< HEAD
   id: string
   version: string
   date: string
@@ -21,6 +32,53 @@ type ChangelogEntry = {
 }
     })
   }
+=======
+  id: string;
+version: string;
+date: string;
+changes: string ;
+};
+}
+
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
+  platform,
+}) => {
+  const [entries, setEntries] = useState<ChangelogEntry[]>([
+    {
+      id: '1',
+      version: '1.0.0',
+      date: '2025-05-15',
+      changes: 'Initial release of the Zion AI Marketplace app.',
+    },
+  ]);
+
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, 'id'>>({
+    version: '',
+    date:
+      new Date().toISOString().split('T')[0] ||
+      new Date().toLocaleDateString('en-CA'),
+    changes: '',
+  });
+
+  const handleAddEntry = () => {
+    if (!newEntry.version || !newEntry.changes) return;
+
+    const entry: ChangelogEntry = {
+      ...newEntry,
+      id: Math.random().toString(36).substring(2, 9),
+    };
+
+    setEntries([entry, ...entries]);
+    setNewEntry({
+      version: '',
+      date:
+        new Date().toISOString().split('T')[0] ||
+        new Date().toLocaleDateString('en-CA'),
+      changes: '',
+    });
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
@@ -99,6 +157,25 @@ type ChangelogEntry = {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+setEntries ([entry, ...entries]);
+setNewEntry ({;
+  version: "";
+date: new Date () .toISOString () .split ('T') [0] || new Date () .toLocaleDateString ('en-CA');
+};";
+  handleAddEntry ;
+}disabled= {;
+  !newEntry.version || !newEntry.changes ";
+}> <Plus className=" mr-2 h-4 w-4"/> Add </Button> </div> <Textarea key= {;
+  entry.id ";
+}className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>) ;
+}</div> </div> </CardContent> </Card>) ;
+};
+'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

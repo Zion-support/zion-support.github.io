@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus } from 'lucide-react';
+import { EmptyResumeProps } from './types';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -19,6 +27,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
             Create a professional resume to showcase your skills and experience
           </p>
           <Button onClick={onCreateClick} className='gap-2'>
+<<<<<<< HEAD
             <FilePlus className='h-4 w-4' />            Create Resume    <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="py-8">
         <div className="text-center">
@@ -29,13 +38,23 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" />
+=======
+            <FilePlus className='h-4 w-4' />
+            Create Resume
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 "}
   )
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -1657,6 +1658,27 @@ export default function Services() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
+=======
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
+}
+
+export default function Services() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </section>
@@ -1769,6 +1791,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Services() {
   const serviceCategories = [
     {
@@ -1778,6 +1805,7 @@ export default function Services() {
       count: '150+'
       color: 'blue'
       services: [
+<<<<<<< HEAD
         'AI-Powered Video Clip Maker'
         'Smart Contract Analyzer'
         'Cybersecurity Threat Intelligence'
@@ -1846,6 +1874,82 @@ export default function Services() {
       }
     }
     return colors[color as keyof typeof colors] |colors.blue;  }
+=======
+        'AI-Powered Video Clip Maker',
+        'Smart Contract Analyzer',
+        'Cybersecurity Threat Intelligence',
+        'Multi-Language Website Translator',
+        'Predictive Inventory Optimizer',
+        'Real-Time Analytics Dashboard',
+        'Automated Customer Support',
+        'Blockchain Transaction Monitor',
+      ],
+      href: '/micro-saas',
+    },
+    {
+      title: 'AI Services',
+      description:
+        'Advanced artificial intelligence solutions for enterprise needs',
+      count: '100+',
+      color: 'purple',
+      services: [
+        'Autonomous AI Agents',
+        'AI-Powered Financial Trading',
+        'AI Legal Document Analysis',
+        'AI-Powered Voice Analytics',
+        'AI-Powered Search & Discovery',
+        'Machine Learning Model Training',
+        'Natural Language Processing',
+        'Computer Vision Solutions',
+      ],
+      href: '/ai-services',
+    },
+    {
+      id: 'it-services',
+      name: 'IT & Cloud Services',
+      description: 'Comprehensive IT solutions for enterprise-grade operations',
+      services: [
+        'Quantum Computing Consulting',
+        'Blockchain & Web3 Solutions',
+        'DevSecOps & Security Automation',
+        'Enterprise Data Platform',
+        'High-Performance Computing',
+        'Cloud Migration Services',
+        'Infrastructure as Code',
+        'Disaster Recovery Solutions',
+      ],
+      href: '/it-services',
+    },
+  ];
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      blue: {
+        bg: 'bg-blue-600',
+        hover: 'hover:bg-blue-700',
+        text: 'text-blue-400',
+        border: 'border-blue-500/40',
+        ring: 'focus:ring-blue-500',
+      },
+      purple: {
+        bg: 'bg-purple-600',
+        hover: 'hover:bg-purple-700',
+        text: 'text-purple-400',
+        border: 'border-purple-500/40',
+        ring: 'focus:ring-purple-500',
+      },
+      green: {
+        bg: 'bg-green-600',
+        hover: 'hover:bg-green-700',
+        text: 'text-green-400',
+        border: 'border-green-500/40',
+        ring: 'focus:ring-green-500',
+      },
+    };
+    return colors[color as keyof typeof colors] || colors.blue;
+  };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -1882,7 +1986,12 @@ export default function Services() {
               >
                 From cutting-edge AI services to comprehensive IT solutions and
                 specialized micro SaaS products, we provide everything your
+<<<<<<< HEAD
                 business needs to thrive in the digital age.              </p>
+=======
+                business needs to thrive in the digital age.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </section>
           {/* Service Categories */}
@@ -1891,26 +2000,48 @@ export default function Services() {
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                     >
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
+=======
+
+                    >
+                      <div className='flex items-center justify-between mb-6'>
+                        <h3 className={`text-2xl font-bold ${colors.text}`}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {category.title}
                         </h3>
                         <span className={`text-3xl font-bold ${colors.text}`}>
                           {category.count}
                         </span>
                       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <p className='text-slate-300 mb-6'>
                         {category.description}
                       </p>
                       <ul className='text-slate-400 space-y-2 mb-8'>
                         {category.services.map((service, serviceIndex) => (
                           <li key={serviceIndex} className='flex items-center'>
+<<<<<<< HEAD
                             <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
                           </li>
                         ))}
                       </ul>
                       <Link                        href={category.href}
+=======
+                            <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>
+                            {service}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Link
+                        href={category.href}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >
                         View All {category.title}
@@ -2024,10 +2155,19 @@ export default function Services() {
                   <h3 className='text-xl font-bold mb-2'>24/7 Support</h3>
                   <p className='text-slate-400'>
                     Round-the-clock technical support and maintenance
+<<<<<<< HEAD
                   </p>                </div>
               </div>
             </div>
           </section>
+=======
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -2054,7 +2194,12 @@ export default function Services() {
                 </a>
                 <a
                   href={`mailto:${contact.email}`}
+<<<<<<< HEAD
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
+=======
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'
+                >
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Email Us
                 </a>
               </div>
@@ -2086,5 +2231,8 @@ export default function Services() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

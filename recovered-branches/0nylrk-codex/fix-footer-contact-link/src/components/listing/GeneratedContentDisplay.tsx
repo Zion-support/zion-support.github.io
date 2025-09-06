@@ -31,8 +31,14 @@ interface GeneratedContent {
 }
 interface GeneratedContentDisplayProps {
   content: GeneratedContent;
+<<<<<<< HEAD
   onApply: () => void
 }
+=======
+  onApply: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function GeneratedContentDisplay({
   content
   onApply

@@ -41,6 +41,7 @@ export interface EmergingTechService2026 {
   customers: number;
   rating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   reviews: number
 }
 
@@ -61,6 +62,23 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
   {
     id: 'quantum-computing-as-a-service'
     name: 'Quantum Computing as a Service (QCaaS)'
+=======
+  reviews: number;
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+}
+
+export const emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services
+  {
+    id: 'quantum-computing-as-a-service',
+    name: 'Quantum Computing as a Service (QCaaS)',
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     tagline:
       'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999'
@@ -567,14 +585,30 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 29
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category
   );
+<<<<<<< HEAD
 }
 export const getPopularEmergingTechServices2026 = () => {
   return emergingTechServices2026.filter(service => service.popular);
 }
+=======
+};
+}
+
+export const getPopularEmergingTechServices2026 = () => {
+  return emergingTechServices2026.filter(service => service.popular);
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -583,7 +617,11 @@ export const getEmergingTechServices2026ByPriceRange = (
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
   })
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

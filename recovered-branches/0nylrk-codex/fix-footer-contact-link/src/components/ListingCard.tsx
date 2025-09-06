@@ -19,8 +19,14 @@ interface ListingCardProps {
   author?: string;
   authorImage?: string;
   className?: string;
+<<<<<<< HEAD
   profileType?: 'service' | 'talent'
 }
+=======
+  profileType?: 'service' | 'talent';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ListingCard({
   id;
 <<<<<<< HEAD

@@ -1,21 +1,45 @@
+<<<<<<< HEAD
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { ChatMessage, ChatInput  } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
+=======
+import { useState, useRef, useEffect } from 'react';
+import { MessageSquare, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface Msg {
+  id: string;
+  role: 'user' | 'assistant';
+  message: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 // Fallback responses when API is unavailable
 <<<<<<< HEAD
 const FALLBACK_RESPONSES = null;
 =======
 const FALLBACK_RESPONSES = [
+<<<<<<< HEAD
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly."
   'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.'
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support."
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
 ]
+=======
+  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
+  "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
+  'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.',
+  "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+  'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
+];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SupportChatbot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Msg[]>([])
@@ -164,6 +188,10 @@ export function SupportChatbot() {
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (!open) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         onClick={() => setOpen(true)}
         size='icon'
         variant='outline'
@@ -206,6 +234,7 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
+<<<<<<< HEAD
   )
 }catch () {
   //ignore parse errors
@@ -243,3 +272,45 @@ setTyping (false)
 }'"
 }
 }
+=======
+  );
+
+}catch () {;
+  //ignore parse errors ;
+
+}';
+}buffer = lines[lines.length - 1] || '' ;
+
+}catch (err) {';
+  logErrorToProduction ('Chatbot error:', {;
+  data: err ;
+});
+//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {';
+  id: Date.now () .toString () + '-e';';
+role: 'assistant';
+message: fallbackResponse ;
+};
+setMessages (prev => [...prev, errorMsg]) ;
+}finally {;
+  setLoading (false);
+setTyping (false) ;
+
+};
+
+  () => setOpen (true) ";
+}> <MessageSquare className="h-5 w-5" /> </Button>) '";
+}> <X className="h-5 w-5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />) ;
+}{;
+  messages.map (m => (<ChatMessage key= {;
+  m.id ;
+}role= {;
+  m.role ;
+}message= {;
+  m.message ;
+}/>) ) ;
+}) ;
+}<div ref= {;
+  endRef ;
+}/> </div> </div> </div>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

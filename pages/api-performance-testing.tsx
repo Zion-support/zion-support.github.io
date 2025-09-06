@@ -1,6 +1,7 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
 export default function ApiPerformanceTestingPage() {
 <<<<<<< HEAD
 	const features = null;
@@ -11,6 +12,18 @@ export default function ApiPerformanceTestingPage() {
 							</div>
 						))}
 					</div>
+=======
+}
+
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    'k6/Gatling-compatible test runner',
+    'SLO-aware latency reports',
+    'Regression baselines per endpoint',
+    'CI checks and PR annotations',
+    'Synthetic traffic for staging',
+  ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
   const features = [
@@ -154,4 +167,8 @@ export default function ApiPerformanceTestingPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

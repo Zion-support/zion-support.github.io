@@ -101,6 +101,11 @@ const recentPosts: ForumPost[] = [
     isAnswered: true
   }
 ];
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");

@@ -6,8 +6,13 @@ import type { UserDetails } from "@/types/auth";
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const cleanupAuthState = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const cleanupAuthState = () => {
   // Remove standard auth tokens
   localStorage.removeItem('supabase.auth.token');
@@ -27,6 +32,8 @@ export const cleanupAuthState = () => {
 /**
  * Utility function to check new user registration and schedule welcome emails
  */
+}
+
 export const checkNewRegistration = async (user: UserDetails) => {
   try {
     // Check if user has received welcome email already

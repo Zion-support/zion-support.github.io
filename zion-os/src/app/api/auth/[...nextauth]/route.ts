@@ -14,15 +14,32 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
       async authorize(credentials) {if (!credentials?.email |!credentials?.password) {;
           return null;
         }
+<<<<<<< HEAD
         const user = await prisma.user.findUnique({where: {;
             email: credentials.email;
           }
+=======
+}
+
+const user = await prisma.user.findUnique({
+          where: {
+            email: credentials.email,
+          },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         });
         if (!user |!user.password) {return null;
         }
+<<<<<<< HEAD
         const isPasswordValid = await bcrypt.compare(;
           credentials.password;
           user.password;
+=======
+}
+
+const isPasswordValid = await bcrypt.compare(
+          credentials.password,
+          user.password
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         );
         if (!isPasswordValid) {return null;
         }

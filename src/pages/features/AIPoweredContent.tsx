@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -6,6 +7,18 @@ import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+=======
+import React, { useEffect } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useFeatureUsage } from '@/hooks/useFeatureUsage';
+import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AIPoweredContent() {
 <<<<<<< HEAD
   useFeatureUsage('ZionGPT');
@@ -96,13 +109,21 @@ export default function AIPoweredContent() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
+<<<<<<< HEAD
               <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
+=======
+              <Link href='/open-app'>Try ZionGPT Now</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

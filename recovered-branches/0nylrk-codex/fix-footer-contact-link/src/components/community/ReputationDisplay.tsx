@@ -4,7 +4,11 @@ import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
 <<<<<<< HEAD
   reputation: number;
+<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg'
+=======
+  size?: 'sm' | 'md' | 'lg';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const ReputationDisplay = null;
@@ -50,7 +54,14 @@ export const ReputationDisplay = ({
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ReputationDisplay;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

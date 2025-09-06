@@ -1,9 +1,19 @@
 import React, {
+<<<<<<< HEAD
   createContext
   useContext
   useEffect
   useMemo
   useState;} from 'react';} from 'react';
+=======
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,;
+} from 'react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type UserRole = 'client' | 'talent';
 export type User = {
   id: string;
@@ -16,15 +26,34 @@ export type UserContextValue = {
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
+<<<<<<< HEAD
   completeOnboarding: () => void;};}
+=======
+  completeOnboarding: () => void;
+};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 const DEFAULT_USER: User = {
+<<<<<<< HEAD
   id: 'u_001'
   name: 'Jordan Lee'
   role: 'client'
   onboardingCompleted: false
 }
 export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);  const [user, setUser] = useState<User | null>(null);
+=======
+  id: 'u_001',
+  name: 'Jordan Lee',
+  role: 'client',
+  onboardingCompleted: false,
+};
+}
+
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     try {
       const raw = localStorage.getItem('zion.user');
@@ -41,13 +70,20 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
+<<<<<<< HEAD
     } catch {}  }, [user]);  }, [user]);
+=======
+    } catch {}
+  }, [user]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const value = useMemo<UserContextValue>(
     () => ({
       user
       setUser
       logout: () => setUser(null)
       completeOnboarding: () =>
+<<<<<<< HEAD
         setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    })
     [user]
   );
@@ -56,3 +92,17 @@ export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+=======
+        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
+    }),
+    [user]
+  );
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+}
+
+export function useUser() {
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

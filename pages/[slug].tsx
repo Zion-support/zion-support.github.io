@@ -50,6 +50,7 @@ const service = useMemo(() => {
   if (!slug) return undefined;
   const all: any[] = ([] as any[])
       .concat(
+<<<<<<< HEAD
         enhancedRealMicroSaasServices as any
         extraServices as any
         additionalEnhancedServices as any
@@ -74,6 +75,33 @@ const service = useMemo(() => {
         augmentedServicesBatch3 as any
         real2025Q3Additions as any
         realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+=======
+        enhancedRealMicroSaasServices as any,
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
+        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       );
     const byLink = all.find(s => {
       try {
@@ -117,10 +145,18 @@ function getAllServices(): Service[] {
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 function getExistingRootPageSlugs(): Set<string> {
+<<<<<<< HEAD
 	const pagesDir = path.join(process.cwd(), 'pages')
 	const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
 	const reserved = new Set<string>(['apireportsservices'])
 	const slugs = new Set<string>()
+=======
+	const pagesDir = path.join(process.cwd(), 'pages'),
+	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
+	const reserved = new Set<string>(['apireportsservices']),
+	const slugs = new Set<string>(),
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 		}
 		// Directories at root (folder routes);
 		if (entry.isDirectory()) {slugs.add(entry.name);
@@ -140,7 +176,17 @@ export async function getStaticProps() {
 	}
 	return {props: { service }
 	}
+<<<<<<< HEAD
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
+=======
+
+;
+}
+
+export default function RootServiceDetailPage({ service }: { service: Service }) {;
+	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
+	return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -151,6 +197,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
+<<<<<<< HEAD
 								"@context": "https://schema.org"
 								"@type": "Service",								name: service.name
 								description: service.tagline |service.description
@@ -158,17 +205,34 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								provider: {
 									"@type": "Organization"
 									name: "Zion Tech Group"
+=======
+								"@context": "https://schema.org",
+								"@type": "Service",
+								name: service.name,
+								description: service.tagline || service.description,
+								url: canonical,
+								provider: {
+									"@type": "Organization",
+									name: "Zion Tech Group",
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 									url: "https://ziontechgroup.com"
 								}
 								offers: {
+<<<<<<< HEAD
 									"@type": "Offer"
 									price: (service.price |'').replace(/[^0-9.]/g, ''),									priceCurrency: "USD"
+=======
+									"@type": "Offer",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									priceCurrency: "USD",
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 									availability: "https://schema.org/InStock"
 								}
 							}
 							null;
 							2;
 							);}
+<<<<<<< HEAD
 				/>;			</Head>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
           {/* Service Details */}
@@ -206,6 +270,26 @@ export default function RootServiceDetailPage({ service }: { service: Service })
               </ul>
             </Card>
           </div>
+=======
+				/>;
+			</Head>
+
+			<div className="container mx-auto px-4 py-16">
+				<div className="text-center mb-10">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+						{service.name}
+					</h1>
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+				</div>
+
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+					<div className="lg:col-span-2 space-y-6">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+						</Card>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -236,7 +320,12 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								</Link>
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
+<<<<<<< HEAD
 								</Link>								<div className="flex items-start gap-2 text-gray-300">
+=======
+								</Link>
+								<div className="flex items-start gap-2 text-gray-300">
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -244,14 +333,23 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
+<<<<<<< HEAD
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 						</Card>
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 );
+=======
+	);
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

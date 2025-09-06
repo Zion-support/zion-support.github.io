@@ -13,6 +13,7 @@ interface TemplateManagerProps {
   isOpen: boolean;
   onClose: () => void;
   onSelectTemplate: (template: ContractFormValues) => void;
+<<<<<<< HEAD
 =======
   isOpen: boolean
   onClose: () => void
@@ -20,6 +21,11 @@ interface TemplateManagerProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   currentValues?: ContractFormValues
 }
+=======
+  currentValues?: ContractFormValues;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TemplateManager({
   isOpen;
   onClose;

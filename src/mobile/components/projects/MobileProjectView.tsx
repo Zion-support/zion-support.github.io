@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import {
+  CheckCircle,
+  ChevronRight,
+  FileText,
+  MessageSquare,
+  Video,;
+} from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+import { SeverityIndicator } from '../common/SeverityIndicator';
+import { useRouter } from 'next/router';
+import { toast } from 'sonner';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -48,9 +67,17 @@ interface ProjectViewProps {
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD
     description: string
   }
   milestones: Milestone[]
+=======
+    description: string;
+  };
+  milestones: Milestone[];
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 <<<<<<< HEAD
   const router = null;
@@ -195,5 +222,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

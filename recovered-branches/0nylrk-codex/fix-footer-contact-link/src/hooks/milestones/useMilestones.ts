@@ -7,6 +7,7 @@ import { useUpdateMilestone  } from './useUpdateMilestone';
 import { useDeleteMilestone  } from './useDeleteMilestone';
 import { useUploadDeliverable  } from './useUploadDeliverable';
 import { MilestoneStatus } from './types';
+<<<<<<< HEAD
 export const useMilestones = null;
 =======
 import {useState} from 'react';
@@ -16,6 +17,10 @@ import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
 import {MilestoneStatus} from './types';
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const useMilestones = (projectId?: string) => {
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId);
   const { createMilestone, isSubmitting: isCreating } = useCreateMilestone(projectId);

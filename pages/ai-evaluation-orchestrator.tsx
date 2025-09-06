@@ -1,9 +1,12 @@
 import React from 'react',
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Button from '../components/ui/Button';
 export default function AIEvaluationOrchestratorPage() {
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Layout from '../components/layout/Layout';
 const AIEvaluationOrchestrator: React.FC = () => {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -64,4 +67,8 @@ const AIEvaluationOrchestrator: React.FC = () => {
         </div>
       </main>
     </Layout>
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

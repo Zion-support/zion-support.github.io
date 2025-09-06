@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head';
 import { getBadgeLabels  } from '../utils/kyc';
 import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
+<<<<<<< HEAD
 import { VerifiedBadge  } from '../components/ui/VerifiedBadge';
 export default function VerifyPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
@@ -9,6 +10,21 @@ export default function VerifyPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
+=======
+import { VerifiedBadge } from '../components/ui/VerifiedBadge';
+}
+
+export default function VerifyPage() {
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [role, setRole] = useState<KycRole>('client');
+  const [profile, setProfile] = useState<KycProfile | null>(null);
+  const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>(
+    []
+  );
+  const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>(
+    []
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
@@ -23,7 +39,11 @@ export default function VerifyPage() {
   const [message, setMessage] = useState<string>('');
   const progress = useMemo(() => {
     if (!profile) return 0;
+<<<<<<< HEAD
     const uploaded = new Set((profile.documents |[]).map(d => d.kind));
+=======
+    const uploaded = new Set((profile.documents || []).map(d => d.kind));
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const required = requiredDocs.length;
     const have = Array.from(uploaded).filter(k =>
       requiredDocs.includes(k as any)
@@ -31,11 +51,18 @@ export default function VerifyPage() {
     const base = required > 0 ? Math.round((have / required) * 80) : 0; // up to 80%
     const submitted = profile.status === 'submitted' ? 90 : 0;
     const approved = profile.status === 'approved' ? 100 : 0;
+<<<<<<< HEAD
     return Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
+=======
+    return Math.max(base, submitted, approved);
+  }, [profile, requiredDocs]);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function start() {
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
+<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
@@ -46,6 +73,19 @@ export default function VerifyPage() {
         businessRegistrationNumber: businessReg
       })
     });    const data = await res.json();
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userId,
+        role,
+        fullLegalName,
+        businessName,
+        businessRegistrationNumber: businessReg,
+      }),
+    });
+    const data = await res.json();
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (data.ok) {
       setProfile(data.profile);
       setRequiredDocs(data.requiredDocuments);
@@ -53,15 +93,27 @@ export default function VerifyPage() {
     } else {
       setMessage(data.error |'Failed to start');
     }
+<<<<<<< HEAD
     setBusy(false);  }
+=======
+    setBusy(false);
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) |'';
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {
+<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, kind, filename })
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, kind, filename }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     const data = await res.json();
     if (data.ok) {
@@ -69,6 +121,7 @@ export default function VerifyPage() {
     } else {
       setMessage(data.error |'Upload failed');
     }
+<<<<<<< HEAD
     setBusy(false);  }
   async function submit() {
     setBusy(true);
@@ -76,6 +129,17 @@ export default function VerifyPage() {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId })
+=======
+    setBusy(false);
+  }
+
+  async function submit() {
+    setBusy(true);
+    const res = await fetch('/api/kyc/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     const data = await res.json();
     if (data.ok) {
@@ -84,8 +148,16 @@ export default function VerifyPage() {
     } else {
       setMessage(data.error |'Submit failed');
     }
+<<<<<<< HEAD
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
+=======
+    setBusy(false);
+  }
+
+  const labels = getBadgeLabels(profile || undefined);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -102,9 +174,17 @@ export default function VerifyPage() {
           Guided step-by-step KYC/AML verification with progress tracking.
         </p>
         {labels.length > 0 && (
+<<<<<<< HEAD
           <div className='mb-4'>            <VerifiedBadge labels={labels} />
           </div>
         )}
+=======
+          <div className='mb-4'>
+            <VerifiedBadge labels={labels} />
+          </div>
+        )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>User ID</label>
@@ -132,7 +212,12 @@ export default function VerifyPage() {
               className='mt-1 w-full border rounded px-3 py-2'
               value={fullLegalName}
               onChange={e => setFullLegalName(e.target.value)}
+<<<<<<< HEAD
             />          </div>
+=======
+            />
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {role === 'enterprise' && (
             <>
               <div>
@@ -153,10 +238,19 @@ export default function VerifyPage() {
                   className='mt-1 w-full border rounded px-3 py-2'
                   value={businessReg}
                   onChange={e => setBusinessReg(e.target.value)}
+<<<<<<< HEAD
                 />              </div>
             </>
           )}
         </div>
+=======
+                />
+              </div>
+            </>
+          )}
+        </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mb-6'>
           <button
             disabled={busy}
@@ -180,7 +274,12 @@ export default function VerifyPage() {
                 <div
                   className='bg-blue-600 h-3'
                   style={{ width: `${progress}%` }}
+<<<<<<< HEAD
                 />              </div>
+=======
+                />
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
             <section>
               <h2 className='font-semibold mb-2'>Required documents</h2>
@@ -189,6 +288,10 @@ export default function VerifyPage() {
                   const hasIt = (profile.documents |[]).some(
                     d => d.kind === k
                   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     >
                       <div>
                         <div className='text-sm font-medium'>{k}</div>
@@ -204,7 +307,12 @@ export default function VerifyPage() {
                         {hasIt ? 'Replace' : 'Upload'}
                       </button>
                     </div>
+<<<<<<< HEAD
                   );                })}
+=======
+                  );
+                })}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </section>
             {optionalDocs.length > 0 && (
@@ -215,6 +323,10 @@ export default function VerifyPage() {
                     const hasIt = (profile.documents |[]).some(
                       d => d.kind === k
                     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       >
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                         <div>
@@ -231,7 +343,12 @@ export default function VerifyPage() {
                           {hasIt ? 'Replace' : 'Upload'}
                         </button>
                       </div>
+<<<<<<< HEAD
                     );                  })}
+=======
+                    );
+                  })}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </section>
             )}
@@ -248,8 +365,18 @@ export default function VerifyPage() {
                 Submit for review
               </button>
             </div>
+<<<<<<< HEAD
             {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
         )}
       </main>
     </>
 );
+=======
+
+            {message && <div className='text-sm text-blue-700'>{message}</div>}
+          </div>
+        )}
+      </main>
+    </>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

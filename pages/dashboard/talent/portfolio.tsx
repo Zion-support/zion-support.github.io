@@ -15,12 +15,18 @@ import ResumePreview, {
   ResumeData;
 } from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
   const data: ResumeData = {
     name: 'Your Name'
     contact: {
+<<<<<<< HEAD
       email: 'you@example.com'
       phone: '+1 555-123-4567'
       location: 'City, Country'
@@ -28,6 +34,15 @@ export default function TalentPortfolio() {
     summary: 'AI talent focused on LLM apps and marketplaces.'
     skills: ['AI', 'TypeScript', 'Next.js']
     technologies: ['OpenAI', 'Supabase']
+=======
+      email: 'you@example.com',
+      phone: '+1 555-123-4567',
+      location: 'City, Country',
+    },
+    summary: 'AI talent focused on LLM apps and marketplaces.',
+    skills: ['AI', 'TypeScript', 'Next.js'],
+    technologies: ['OpenAI', 'Supabase'],
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     experience: [
       {
         title: 'AI Engineer'
@@ -68,12 +83,22 @@ export default function TalentPortfolio() {
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async () => {
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.()
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
+<<<<<<< HEAD
 return { props: {} }
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  return { props: {} };
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

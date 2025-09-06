@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 =======
 import {
@@ -43,6 +44,40 @@ import Link from 'next/link';
 <<<<<<< HEAD
 const UltraAdvancedNavigation: React.FC;
 =======
+=======
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,
+  Code,;
+} from 'lucide-react';
+import Link from 'next/link';
+
+const UltraAdvancedNavigation: React.FC = () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -51,6 +86,7 @@ const UltraAdvancedNavigation: React.FC;
       setIsScrolled(window.scrollY > 50);
     }
     window.addEventListener('scroll', handleScroll);
+<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll);
@@ -62,6 +98,17 @@ const UltraAdvancedNavigation: React.FC;
       icon: null
     },    {      icon: null
     }
+=======
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: null,
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'AI Services'
       href: '#'
@@ -69,6 +116,7 @@ const UltraAdvancedNavigation: React.FC;
       description: 'Cutting-edge AI solutions'
       dropdown: [
         {
+<<<<<<< HEAD
           name: 'AI Agent Orchestrator'
           href: '/ai-agents'
           icon: Bot
@@ -291,8 +339,191 @@ const UltraAdvancedNavigation: React.FC;
       icon: null
     },  ];      icon: null
     }
+=======
+          name: 'AI Agent Orchestrator',
+          href: '/ai-agents',
+          icon: Bot,
+          description: 'Multi-agent workflow automation',
+          price: '$2,999/month',
+        },
+        {
+          name: 'AI Cybersecurity',
+          href: '/security',
+          icon: Shield,
+          description: 'AI-powered threat detection',
+          price: '$4,999/month',
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          href: '/ai-data-analytics',
+          icon: Dna,
+          description: 'Patient outcome prediction',
+          price: '$3,999/month',
+        },
+        {
+          name: 'AI Supply Chain',
+          href: '/quantum-logistics',
+          icon: Package,
+          description: 'End-to-end optimization',
+          price: '$2,499/month',
+        },
+        {
+          name: 'AI Financial Risk',
+          href: '/ai-financial-risk',
+          icon: DollarSign,
+          description: 'Advanced risk management',
+          price: '$5,999/month',
+        },
+      ],
+    },
+    {
+      name: 'Quantum Computing',
+      href: '#',
+      icon: Atom,
+      description: 'Quantum-powered solutions',
+      dropdown: [
+        {
+          name: 'Quantum AI Supercomputer',
+          href: '/quantum-ai-cognitive',
+          icon: Cpu,
+          description: 'Enterprise quantum computing',
+          price: '$15,999/month',
+        },
+        {
+          name: 'Quantum Internet Security',
+          href: '/quantum-internet-security-platform',
+          icon: Lock,
+          description: 'Future-proof encryption',
+          price: '$8,999/month',
+        },
+        {
+          name: 'Quantum Drug Discovery',
+          href: '/biotech-ai',
+          icon: Dna,
+          description: 'Accelerated drug development',
+          price: '$12,999/month',
+        },
+        {
+          name: 'Quantum Financial Trading',
+          href: '/quantum-financial-trading',
+          icon: DollarSign,
+          description: 'Nanosecond precision trading',
+          price: '$19,999/month',
+        },
+        {
+          name: 'Quantum IoT Platform',
+          href: '/quantum-iot',
+          icon: Wifi,
+          description: 'Quantum-secured IoT',
+          price: '$4,999/month',
+        },
+      ],
+    },
+    {
+      name: 'Space Technology',
+      href: '#',
+      icon: Rocket,
+      description: 'Space mission management',
+      dropdown: [
+        {
+          name: 'Space Mission Control',
+          href: '/space-technology',
+          icon: Rocket,
+          description: 'Complete mission management',
+          price: '$25,999/month',
+        },
+        {
+          name: 'Space Debris Cleanup',
+          href: '/space-technology',
+          icon: Package,
+          description: 'AI-powered debris removal',
+          price: '$35,999/month',
+        },
+      ],
+    },
+    {
+      name: 'Enterprise IT',
+      href: '#',
+      icon: Building2,
+      description: 'Enterprise solutions',
+      dropdown: [
+        {
+          name: 'Cloud Migration',
+          href: '/cloud-platform',
+          icon: Cloud,
+          description: 'Zero-downtime migration',
+          price: '$8,999/month',
+        },
+        {
+          name: 'DevOps Automation',
+          href: '/automation',
+          icon: Code,
+          description: 'AI-powered automation',
+          price: '$5,999/month',
+        },
+        {
+          name: 'Data Analytics',
+          href: '/ai-data-analytics',
+          icon: Database,
+          description: 'AI-powered insights',
+          price: '$6,999/month',
+        },
+        {
+          name: 'Security Operations',
+          href: '/security',
+          icon: Shield,
+          description: '24/7 security monitoring',
+          price: '$12,999/month',
+        },
+        {
+          name: 'API Management',
+          href: '/api-observability',
+          icon: Code,
+          description: 'Complete lifecycle management',
+          price: '$4,999/month',
+        },
+        {
+          name: 'Digital Transformation',
+          href: '/solutions',
+          icon: Zap,
+          description: 'AI-powered transformation',
+          price: '$15,999/month',
+        },
+        {
+          name: 'IoT Management',
+          href: '/it-asset-discovery-agent',
+          icon: Wifi,
+          description: 'AI-powered device management',
+          price: '$7,999/month',
+        },
+      ],
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/services',
+      icon: Monitor,
+      description: '300+ micro SaaS services',
+    },
+    {
+      name: 'Market Pricing',
+      href: '/market-pricing',
+      icon: DollarSign,
+      description: 'Benchmarks & vendor references',
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: null,
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: null,
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -307,6 +538,17 @@ const UltraAdvancedNavigation: React.FC;
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  };
+
+    >
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-20'>
+          {/* Logo */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -323,6 +565,7 @@ const UltraAdvancedNavigation: React.FC;
                 </div>
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology
+<<<<<<< HEAD
                 </div>              </div>          >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -333,6 +576,9 @@ const UltraAdvancedNavigation: React.FC;
                   Zion Tech Group
                 </div>
                 <div className="text-xs text-gray-400">Revolutionary Technology</div>
+=======
+                </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </Link>
           </motion.div>
@@ -355,6 +601,7 @@ const UltraAdvancedNavigation: React.FC;
                       className={`w-4 h-4 transition-transform duration-300 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`}
+<<<<<<< HEAD
                     />                  </button>
                 ) : (
                   <Link
@@ -373,15 +620,22 @@ const UltraAdvancedNavigation: React.FC;
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
+=======
+                    />
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </button>
                 ) : (
                   <Link
                     href={item.href}
                     className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
                   >
+<<<<<<< HEAD
                     {item.icon && <item.icon className='w-4 h-4' />}                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
+=======
+                    {item.icon && <item.icon className='w-4 h-4' />}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <span>{item.name}</span>
                   </Link>
                 )}
@@ -417,7 +671,11 @@ const UltraAdvancedNavigation: React.FC;
                                   <div className='text-sm text-gray-400'>
                                     {dropdownItem.description}                                  </div>
                                 </div>
+<<<<<<< HEAD
                                 <div className='text-sm font-semibold text-cyan-400'>                                  {dropdownItem.price}                                <div className="text-sm font-semibold text-cyan-400">
+=======
+                                <div className='text-sm font-semibold text-cyan-400'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                   {dropdownItem.price}
                                 </div>
                               </Link>
@@ -453,6 +711,7 @@ const UltraAdvancedNavigation: React.FC;
               href='/contact'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
               className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'            >              </a>
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
                 <Mail className="w-4 h-4" />
@@ -464,6 +723,9 @@ const UltraAdvancedNavigation: React.FC;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+=======
+              className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               Get Started
             </motion.a>
@@ -478,11 +740,15 @@ const UltraAdvancedNavigation: React.FC;
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
+<<<<<<< HEAD
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+=======
+              )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </button>
           </div>
         </div>
@@ -498,6 +764,7 @@ const UltraAdvancedNavigation: React.FC;
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
           >
             <div className='px-4 py-6 space-y-4'>
+<<<<<<< HEAD
               {navigationItems.map(item => (                <div key={item.name}>
                   {item.dropdown ? (
                     <div>
@@ -505,6 +772,10 @@ const UltraAdvancedNavigation: React.FC;
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
+=======
+              {navigationItems.map(item => (
+                <div key={item.name}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {item.dropdown ? (
                     <div>
                       <button
@@ -526,17 +797,25 @@ const UltraAdvancedNavigation: React.FC;
                       </button>
                       {activeDropdown === item.name && (
                         <div className='ml-8 mt-2 space-y-2'>
+<<<<<<< HEAD
                           {item.dropdown.map(dropdownItem => (                            <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
                               className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                            >                        <div className="ml-8 mt-2 space-y-2">
                           {item.dropdown.map((dropdownItem) => (
+=======
+                          {item.dropdown.map(dropdownItem => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                               className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
+=======
+                              className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             >
                               {dropdownItem.name}
                             </Link>
@@ -550,14 +829,22 @@ const UltraAdvancedNavigation: React.FC;
                       onClick={() => setIsOpen(false)}
                       className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
                     >
+<<<<<<< HEAD
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                     >
                       {item.icon && <item.icon className="w-5 h-5" />}
+=======
+                      {item.icon && <item.icon className='w-5 h-5' />}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>{item.name}</span>
                     </Link>
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-gray-800/50'>
                 <div className='space-y-3 text-sm text-gray-400'>
@@ -584,6 +871,7 @@ const UltraAdvancedNavigation: React.FC;
                   href='/contact'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'                >              {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-800/50">
                 <div className="space-y-3 text-sm text-gray-400">
@@ -605,6 +893,9 @@ const UltraAdvancedNavigation: React.FC;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+=======
+                  className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Get Started
                 </motion.a>
@@ -615,8 +906,15 @@ const UltraAdvancedNavigation: React.FC;
       </AnimatePresence>
     </nav>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedNavigation;  )
 }
 export default UltraAdvancedNavigation;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+};
+}
+
+export default UltraAdvancedNavigation;
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

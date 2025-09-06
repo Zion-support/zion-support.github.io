@@ -6,8 +6,13 @@ import { EmailAnalysisResult } from './types';
  * Analyzes email for suspicious patterns
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const analyzeEmail = null;
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const analyzeEmail = (email: string): EmailAnalysisResult => {
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []

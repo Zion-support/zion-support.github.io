@@ -7,8 +7,14 @@ interface AppStoreButtonsProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
+<<<<<<< HEAD
   onGooglePlayClick?: () => void
 }
+=======
+  onGooglePlayClick?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
 <<<<<<< HEAD

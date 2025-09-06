@@ -1,5 +1,10 @@
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -18,6 +23,7 @@ export default function IncubatorPage() {
           </Link>
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}>
             <a className='px-4 py-2 border rounded'>View Incubator Projects</a>
+<<<<<<< HEAD
           </Link>        </div>
       </div>
     </EnhancedLayout>
@@ -32,3 +38,10 @@ export default function IncubatorPage() {
     </EnhancedLayout>
   );
 }
+=======
+          </Link>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -14,6 +14,7 @@ interface ApplicationRowProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+<<<<<<< HEAD
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
 =======
   application: JobApplication
@@ -23,6 +24,15 @@ interface ApplicationRowProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onViewScore: (application: JobApplication) => void
 }
+=======
+  onStatusChange: (
+    applicationId: string,
+    newStatus: ApplicationStatus
+  ) => Promise<void>;
+  onViewScore: (application: JobApplication) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ApplicationRow({
   application;
   processingId;

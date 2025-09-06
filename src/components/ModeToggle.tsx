@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+=======
+import { Moon, Sun } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Tooltip
   TooltipContent
@@ -20,9 +25,17 @@ import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
+<<<<<<< HEAD
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
+=======
+import { useTheme } from '@/components/ThemeProvider';
+import { logIssue } from '@/utils/logIssue';
+import { useEffect, useState } from 'react';
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme();
@@ -42,6 +55,7 @@ export function ModeToggle() {
         ? 'dark'
         : 'light'
     }
+<<<<<<< HEAD
     return theme
   })()
   const isDarkMode = resolvedTheme === 'dark'
@@ -55,6 +69,20 @@ export function ModeToggle() {
       // Determine the new theme we are switching TO
       const newTheme = isDarkMode ? 'light' : 'dark'
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`)
+=======
+    return theme;
+  })();
+
+  const isDarkMode = resolvedTheme === 'dark';
+
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+      const newTheme = isDarkMode ? 'light' : 'dark';
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Apply the new theme via ThemeProvider
       toggleTheme()
       // Show user feedback with a developer-centric message
@@ -94,6 +122,10 @@ export function ModeToggle() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
       >
         <div className='h-5 w-5 bg-muted rounded animate-pulse' />{' '}
         {/* Changed to bg-muted for theme consistency */}
@@ -149,6 +181,7 @@ export function ModeToggle() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
+<<<<<<< HEAD
   )
 }
 if (!isClient) {"
@@ -165,3 +198,22 @@ if (!isClient) {"
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>)
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>)
 }'"}
+=======
+  );
+
+};
+if (!isClient) {";
+  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
+  /* Changed to bg-muted for theme consistency */ ";
+}<span className="sr-only" >Loading theme toggle</span> </Button>) ";
+}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />) ;
+}{;
+  /* Enhanced visual indicator */ ;
+}<div className= {;
+  `absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {';
+  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400' ;
+}opacity-70 group-hover:opacity-100` ;
+}/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
+}</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
+}'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

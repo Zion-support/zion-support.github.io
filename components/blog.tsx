@@ -1,6 +1,11 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -20,6 +25,7 @@ export default function BlogPage() {
         </p>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -31,3 +37,6 @@ export default function BlogPage() {
     </UltraFuturisticBackground>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

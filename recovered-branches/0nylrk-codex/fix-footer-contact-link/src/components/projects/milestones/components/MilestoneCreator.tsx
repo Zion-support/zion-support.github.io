@@ -14,8 +14,14 @@ interface MilestoneCreatorProps {
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
+<<<<<<< HEAD
   projectType?: string
 }
+=======
+  projectType?: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MilestoneCreator({
   onSubmit;
   isSubmitting;

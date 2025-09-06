@@ -27,6 +27,11 @@ declare global {
     // appinstalled: Event
   }
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const InstallPrompt: React.FC = () => {
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null)
   const [visible, setVisible] = useState(false)
@@ -109,7 +114,17 @@ export const InstallPrompt: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
 export default InstallPrompt;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  );
+};
+}
+}
+
+export default InstallPrompt;
+'
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

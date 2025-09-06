@@ -16,8 +16,14 @@ interface IntegrationCardProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   status?: "connected" | "disconnected" | "pending";
   href?: string;
+<<<<<<< HEAD
   onConnect?: () => void
 }
+=======
+  onConnect?: () => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function IntegrationCard({
   title;
   description;
@@ -67,8 +73,14 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">

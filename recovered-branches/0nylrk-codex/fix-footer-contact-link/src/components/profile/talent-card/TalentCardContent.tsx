@@ -6,9 +6,14 @@ interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+<<<<<<< HEAD
   skills: string[] | undefined
 }
 <<<<<<< HEAD
+=======
+  skills: string[] | undefined;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
 =======

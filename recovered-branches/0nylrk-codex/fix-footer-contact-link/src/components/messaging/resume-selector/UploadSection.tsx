@@ -4,8 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {
   customFile: File | null;
+<<<<<<< HEAD
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
+=======
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function UploadSection({
   customFile
   onFileUpload

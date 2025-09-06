@@ -1,7 +1,12 @@
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Page(){
 =======
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Page() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
@@ -38,6 +43,7 @@ export default function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
   );  return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -55,3 +61,6 @@ export default function Page() {
     </div>
   );
 }
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b

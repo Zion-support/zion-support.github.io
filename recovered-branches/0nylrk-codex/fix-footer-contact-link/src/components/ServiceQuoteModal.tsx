@@ -18,9 +18,49 @@ import { supabase } from "@/integrations/supabase/client";
 interface ServiceQuoteModalProps {
 <<<<<<< HEAD
   open: boolean;
+<<<<<<< HEAD
   onOpenChange: (open: boolean) => void;
   service: ProductListing | null
 }
+=======
+onOpenChange: (open: boolean) => void;
+service: ProductListing | null 
+}const BUDGET RANGES = [
+}
+
+export function ServiceQuoteModal ({
+  open, onOpenChange, service 
+}: ServiceQuoteModalProps) {
+  const [formData, setFormData] = useState ({
+  description: '';
+email: '';
+budget: BUDGET RANGES[0].value;
+timeframe: TIMELINE OPTIONS[0].value 
+});
+const [startDate, setStartDate] = useState<Date | undefined> (new Date () );
+const [endDate, setEndDate] = useState<Date | undefined> (undefined);
+const [currentStep, setCurrentStep] = useState<'details'| 'timeline'| 'contact'> ('details');
+const [isSubmitting, setIsSubmitting] = useState (false);
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const {
+  name, value 
+}= e.target;
+setFormData (prev => ({
+  ...prev, [name]: value 
+}) ) 
+};
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault ();
+setIsSubmitting (true);
+//Call Supabase function to process the quote const {
+  data, error 
+}= await supabase.functions.invoke ('process-quote', {
+  body: {
+  service: service ? {
+  id: service.id, title: service.title, category: service.category 
+}: null, quoteDetails: {
+  ...formData, startDate: startDate?.toISOString (), endDate: endDate?.toISOString () 
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 const BUDGET_RANGES = null;
 =======
@@ -35,11 +75,26 @@ const BUDGET_RANGES = [
   { label: "$25,000 - $50,000", value: "25000-50000" }
   { label: "$50,000+", value: "50000+" }]
 const TIMELINE_OPTIONS = [
+<<<<<<< HEAD
   { label: "Less than 1 month", value: "lt-1month" }
   { label: "1-3 months", value: "1-3months" }
   { label: "3-6 months", value: "3-6months" }
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
+=======
+  { label: 'Less than 1 month', value: 'lt-1month' },
+  { label: '1-3 months', value: '1-3months' },
+  { label: '3-6 months', value: '3-6months' },
+  { label: '6+ months', value: '6+months' },
+];
+}
+
+export function ServiceQuoteModal({
+  open,
+  onOpenChange,
+  service,
+}: ServiceQuoteModalProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [formData, setFormData] = useState({
     description: ''
     email: ''

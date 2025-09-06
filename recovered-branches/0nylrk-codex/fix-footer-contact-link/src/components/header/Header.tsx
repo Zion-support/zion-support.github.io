@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 export interface HeaderProps {
   hideLogin?: boolean;
+<<<<<<< HEAD
   customLogo?: string;
   customTheme?: {
 <<<<<<< HEAD
@@ -20,6 +21,13 @@ export interface HeaderProps {
     backgroundColor: string;
     textColor: string
   }
+=======
+customLogo?: string;
+customTheme?: {
+  primaryColor: string;
+backgroundColor: string;
+textColor: string
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export function Header({ hideLogin;

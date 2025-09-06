@@ -138,7 +138,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       }
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
+         
         console.log('Performance Metrics:', performanceData);
       }
     }
@@ -153,6 +153,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     }
   }, [onPerformanceData]);
   return null;
+<<<<<<< HEAD
 }
 export default PerformanceMonitor;
 import React, { useEffect, useState } from 'react;
@@ -229,4 +230,10 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'              setMe
     </div>;
   );
 }
+=======
+};
+}
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default PerformanceMonitor;
