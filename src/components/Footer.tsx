@@ -1,12 +1,13 @@
 import { FooterNewsletter } from '@/components/FooterNewsletter';
-import {  Twitter,
+import { 
+  Twitter,
   Linkedin,
   Facebook,
   Instagram,
   Github,
-  ChevronUp,;
+  ChevronUp,
 } from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
+import { Link } from 'react-router-dom';
 import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
@@ -296,4 +297,5 @@ export function Footer() {
     </footer>
   );
 }
-}
+
+export default Footer;

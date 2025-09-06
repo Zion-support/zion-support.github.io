@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-// Mock admin auth utility
-export function getSessionFromReq(req: any): any {
-  // Mock implementation - in a real app, this would parse JWT or session
-  return null;
-}
-
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
+// Note: This is a Vite project, not Next.js
+// Using a generic request type instead of NextApiRequest
+type ApiRequest = {
+  headers: Record<string, string | string[] | undefined>;
+  [key: string]: any;
 };
-=======
-import type { NextApiRequest } from 'next';
 
 export interface Session {
   userId: string;
@@ -18,7 +11,7 @@ export interface Session {
   role: 'admin' | 'user' | 'guest';
 }
 
-export function getSessionFromReq(req: NextApiRequest): Session | null {
+export function getSessionFromReq(req: ApiRequest): Session | null {
   // Mock implementation - replace with actual session logic
   const authHeader = req.headers.authorization;
   if (!authHeader) {
@@ -33,11 +26,16 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
 }
 
-export function isInternalAgentRequest(req: NextApiRequest): boolean {
+export function isInternalAgentRequest(req: ApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] || '';
+  const userAgentString = Array.isArray(userAgent) ? userAgent[0] : userAgent;
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   
-  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+  return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-e3be
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+};

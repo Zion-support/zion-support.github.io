@@ -1,22 +1,37 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/layout/Footer';
-import { Sidebar } from './components/layout/Sidebar';
-import { ErrorBoundary } from './components/ErrorBoundary';
 import React from 'react';
-import {BrowserRouter, as, Router, Routes, Route} from 'react-router-dom';
-import {Header} from './components/Header';
-import {Footer} from './components/layout/Footer';
-import {Sidebar} from './components/layout/Sidebar';
-import {ErrorBoundary} from './components/ErrorBoundary';
-;
-// Import pages;
-import HomePage from '../pages/index';
-import AboutPage from '../pages/about';
-import ContactPage from '../pages/contact';
-import ServicesPage from '../pages/services';
-import PricingPage from '../pages/pricing';
-;
-export default function App() {; return (; <ErrorBoundary>; <Router>; <div className = "min-h-screen bg-gray-50">; <Header />; <Sidebar />; <main className = "flex-1 lg: ml-80">, <Routes>, <Route path = "/" element = {<HomePage />} />; <Route path = "/about" element = {<AboutPage />} />; <Route path = "/contact" element = {<ContactPage />} />; <Route path = "/services" element = {<ServicesPage />} />; <Route path = "/pricing" element = {<PricingPage />} />; </Routes>; </main>; <Footer />; </div>; </Router>; </ErrorBoundary>; )};};
-};
-};
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-blue-600 text-white p-4">
+        <h1 className="text-xl font-bold">Zion Tech Group</h1>
+      </header>
+      
+      <main className="p-8">
+        <h1 className="text-3xl font-bold mb-4">Welcome to Zion Tech Group</h1>
+        <p className="text-gray-600 mb-6">Your trusted partner in technology solutions.</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-semibold mb-2">AI Services</h2>
+            <p className="text-gray-600">Cutting-edge AI solutions for your business needs.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-semibold mb-2">IT Services</h2>
+            <p className="text-gray-600">Comprehensive IT solutions and support.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-semibold mb-2">Cloud Solutions</h2>
+            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>
+          </div>
+        </div>
+      </main>
+      
+      <footer className="bg-gray-800 text-white p-4 mt-auto">
+        <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}

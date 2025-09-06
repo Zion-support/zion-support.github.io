@@ -20,7 +20,7 @@ import {
   Globe,;
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();

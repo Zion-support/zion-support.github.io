@@ -1,7 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-import type { NextApiRequest, NextApiResponse } from 'next';
+// Note: This is a Vite project, not Next.js
+// Using generic request/response types instead of Next.js types
+type ApiRequest = {
+  headers: Record<string, string | string[] | undefined>;
+  [key: string]: any;
+};
+
+type ApiResponse = {
+  status: (code: number) => ApiResponse;
+  json: (data: any) => void;
+  [key: string]: any;
+};
 
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
 
@@ -9,6 +20,7 @@ export interface DevIdentity {
   isAuthenticated: boolean;
   roles: DevRole[];
   userId?: string;
+}
 
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
@@ -24,7 +36,7 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
     return { connected: false };
   }
 
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
+export function getDevIdentity(req: ApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers['x-dev-token'] || req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
@@ -34,8 +46,8 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {
   return { isAuthenticated: false, roles: [] };
 
 export function requireRoles(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: ApiRequest,
+  res: ApiResponse,
   allowed: DevRole[]
 ): DevIdentity | undefined {
   const identity = getDevIdentity(req);
@@ -49,3 +61,4 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+}
