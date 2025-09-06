@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,20 +38,6 @@ export const metadata: Metadata = {
   themeColor: '#000000',
 };
 
-=======
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI-Powered Solutions',
-  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-  keywords: 'AI solutions, business automation, digital transformation, software development, tech consulting',
-}
-
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 export default function RootLayout({
   children,
 }: {
@@ -63,17 +46,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-<<<<<<< HEAD
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-=======
         {children}
       </body>
     </html>
-  )
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+  );
 }

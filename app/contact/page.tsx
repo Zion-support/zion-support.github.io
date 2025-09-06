@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -14,12 +13,7 @@ import {
 export const metadata = {
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
-=======
-export const metadata = {
-  title: "Contact | Zion Tech Group",
-  description: "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
-  keywords: "contact, support, AI services, micro SaaS, IT services, consulting"
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+  keywords: 'contact, support, AI services, micro SaaS, IT services, consulting'
 };
 
 export default function ContactPage() {
@@ -93,7 +87,6 @@ export default function ContactPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 py-20">
@@ -119,19 +112,6 @@ export default function ContactPage() {
                 Ready to transform your business with AI, micro SaaS, or IT solutions?
                 We'd love to hear from you and discuss how we can help.
               </p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology? Let's
-            discuss how we can help you achieve your goals.
-          </p>
-        </div>
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
