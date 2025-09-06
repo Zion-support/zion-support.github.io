@@ -15,7 +15,7 @@ export type GenerateServiceDescriptionResponse = {
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -52,20 +52,16 @@ Requirements:
 - End with a short call to action`;
 
     // Using Responses API for modern SDK
-    const response = await openai.responses.create({
-      model: 'gpt-4o-mini';
-      input: prompt;
-      temperature: 0.7});
+    const response = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a professional copywriter specializing in service descriptions for tech companies.' },
+        { role: 'user', content: prompt }
+      ],
+      temperature: 0.7
+    });
 
-    let description = '';
-    const output = response.output?.[0];
-    if (output && output.type === 'message') {
-      // Aggregate all text parts from the first message
-      description = output.content
-        .filter((c) => c.type === 'output_text')
-        .map((c: any) => c.text)
-        .join('\n')
-    }
+    const description = response.choices?.[0]?.message?.content || '';
 
     if (!description) {
       // Fallback to top-level text if available

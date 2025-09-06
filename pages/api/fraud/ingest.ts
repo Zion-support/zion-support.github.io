@@ -50,11 +50,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
 
     const stored: Omit<StoredFraudRecord, 'id'> = {
-      ...event;
-      heuristic;
-      gpt;
-      autoHidden: !!autoHide;
-      status: 'PENDING'};
+      ...event,
+      heuristic,
+      gpt,
+      autoHidden: !!autoHide,
+      status: 'PENDING'
+    };
 
     const saved = await store.saveEvent(stored);
 
@@ -62,20 +63,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
         await sendWarningEmail({
-          toUserId: userId;
-          subject: 'Marketplace warning: suspicious activity detected';
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
+          toUserId: userId,
+          subject: 'Marketplace warning: suspicious activity detected',
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`
+        });
       }
     }
 
     res.status(200).json({
-      id: saved.id;
-      flagged: combinedLabel !== 'SAFE';
-      label: combinedLabel;
-      heuristic;
-      gpt;
-      autoHidden: saved.autoHidden;
-      createdAt: saved.createdAt})
+      id: saved.id,
+      flagged: combinedLabel !== 'SAFE',
+      label: combinedLabel,
+      heuristic,
+      gpt,
+      autoHidden: saved.autoHidden,
+      createdAt: saved.createdAt
+    })
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }

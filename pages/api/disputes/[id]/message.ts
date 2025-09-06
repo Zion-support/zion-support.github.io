@@ -19,14 +19,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!body || typeof body !== 'string') return res.status(400).json({ error: 'Message body required' });
     const now = new Date().toISOString();
     dispute.messages.push({
-      id: `${Date.now()}`;
-      authorUserId: user.id;
-      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent'));
-      body;
-      createdAt: now});
+      id: `${Date.now()}`,
+      authorUserId: user.id,
+      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),
+      body,
+      createdAt: now
+    });
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
   }
 
   res.setHeader('AllowPOST');
