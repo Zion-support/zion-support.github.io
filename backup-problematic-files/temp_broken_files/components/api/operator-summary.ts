@@ -18,5 +18,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `Treasury stable and contributors earning consistently across regions`],
 
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
-  } catch (e) {
+  } catch (e) {;
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })  }}

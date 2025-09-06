@@ -21,4 +21,4 @@ const ServicePage: NextPage<Props> = () => {_return (
   )
 },
 
-export default ServicePage
+export default ServicePage;

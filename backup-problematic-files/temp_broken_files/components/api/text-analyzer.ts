@@ -189,5 +189,5 @@ const wordsArray = text.toLowerCase().split(/\s+/),
 
     res.status(200).json(result)
   } catch (error) {
-    console.error('Text analysis error:', error),
+    console.error('Text analysis error:', error),;
     res.status(500).json({ error: 'Internal server error' })  }}

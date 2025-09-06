@@ -43,5 +43,5 @@ export default function Button({
       disabled={_disabled}
     >
       {_children}
-    </button>
+    </button>;
   )}

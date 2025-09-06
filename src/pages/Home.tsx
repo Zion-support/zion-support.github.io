@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { GradientHeading } from '../components/GradientHeading';
@@ -18,14 +17,12 @@ import ScrollAnimation from '../components/ScrollAnimation';
 import ParallaxSection from '../components/ParallaxSection';
 import TypingAnimation from '../components/TypingAnimation';
 import ParticleBackground from '../components/ParticleBackground';
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
 import { 
   ArrowRight, 
   CheckCircle, 
   Star, 
   Users, 
   Award, 
-<<<<<<< HEAD
   Globe,
   Lightbulb,
   Shield,
@@ -39,7 +36,6 @@ import {
   Database,
   Smartphone,
   Cloud
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
 } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -204,7 +200,6 @@ const Home: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Header onMenuClick={() => {}} />
       
@@ -570,7 +565,6 @@ const Home: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
@@ -12,7 +11,6 @@ import { motion } from 'framer-motion';
 const Contact: React.FC = () => {
   const { toast } = useToast();
   const { addNotification } = useNotifications();
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,7 +28,6 @@ const Contact: React.FC = () => {
     });
   };
 
-<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
@@ -92,7 +89,6 @@ const Contact: React.FC = () => {
         description: "Thank you for your message. We'll get back to you within 24 hours.",
       });
       
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
       setFormData({
         name: '',
         email: '',
@@ -101,7 +97,6 @@ const Contact: React.FC = () => {
         service: '',
         message: ''
       });
-<<<<<<< HEAD
     }, 3000);
 =======
     } catch (error) {
@@ -121,7 +116,6 @@ const Contact: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
   };
 
   const contactInfo = [

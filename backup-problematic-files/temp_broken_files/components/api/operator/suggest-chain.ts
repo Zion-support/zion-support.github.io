@@ -21,5 +21,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']
   }
 
-  const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] })),
+  const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] })),;
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })}

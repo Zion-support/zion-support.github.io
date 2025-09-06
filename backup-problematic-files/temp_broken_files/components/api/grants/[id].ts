@@ -60,5 +60,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ record: next }),
     return  }
 
-  res.setHeader('AllowGET, PUT'),
+  res.setHeader('AllowGET, PUT'),;
   res.status(405).end('Method Not Allowed')}

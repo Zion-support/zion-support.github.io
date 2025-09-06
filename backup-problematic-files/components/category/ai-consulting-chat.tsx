@@ -18,4 +18,4 @@ const AiConsultingChat: NextPage = () => {
   )
 },
 
-export default AiConsultingChat,
+export default AiConsultingChat,;

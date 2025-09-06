@@ -18,4 +18,4 @@ const BusinessIntelligenceChat: NextPage = () => {
   )
 },
 
-export default BusinessIntelligenceChat,
+export default BusinessIntelligenceChat,;

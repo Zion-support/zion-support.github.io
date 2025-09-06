@@ -21,5 +21,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const targetPath = path.join(targetDir, file.originalFilename || path.basename(file.filepath)),
     fs.copyFileSync(file.filepath, targetPath),
     appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) }),
-    res.status(200).json({ ok: true })
+    res.status(200).json({ ok: true });
   })}

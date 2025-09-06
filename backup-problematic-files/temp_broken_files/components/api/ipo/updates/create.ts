@@ -10,5 +10,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const updates = readJsonFile('updates.json', [] as any[]),
   const update = { id: uuidv4(), title, date: date || new Date().toISOString().slice(0,10), summary: summary || '', kpis: kpis || '', opens: 0 },
   updates.unshift(update),
-  writeJsonFile('updates.json', updates),
+  writeJsonFile('updates.json', updates),;
   res.status(200).json(update)}

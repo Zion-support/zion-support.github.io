@@ -18,4 +18,4 @@ const DataPipelineEngineeringChat: NextPage = () => {
   )
 },
 
-export default DataPipelineEngineeringChat,
+export default DataPipelineEngineeringChat,;

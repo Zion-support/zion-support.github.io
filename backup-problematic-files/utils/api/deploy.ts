@@ -180,5 +180,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     assets,
     logs,
     summary,
-    version}
+    version};
 }

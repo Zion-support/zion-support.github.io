@@ -731,4 +731,4 @@ export const real2026Q2Additions = [{
     roi:,
   Reduce mean-time-to-repair by 35% and manual toil by 50%',
     "link": 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops
-]}
+]};

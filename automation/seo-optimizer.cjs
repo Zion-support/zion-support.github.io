@@ -8,15 +8,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-    "status"
-/**
- * SEO Optimizer
- * Automatically optimizes SEO for the application
- */
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
@@ -149,4 +140,4 @@ module.exports = SEOOptimizer;
 
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
-optimizer.optimizeSEO().catch(console.error);
+optimizer.optimize().catch(console.error);

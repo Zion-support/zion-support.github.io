@@ -42,5 +42,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() },
   g.votes = [...(g.votes || []), vote],
   g.updatedAt = new Date().toISOString(),
-  writeGrant(g),
+  writeGrant(g),;
   res.status(200).json({ record: g })}

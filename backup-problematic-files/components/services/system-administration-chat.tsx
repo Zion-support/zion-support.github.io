@@ -18,4 +18,4 @@ const SystemAdministrationChat: NextPage = () => {
   )
 },
 
-export default SystemAdministrationChat,
+export default SystemAdministrationChat,;

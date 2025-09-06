@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { 
   Brain, 
   Shield, 
@@ -284,13 +283,11 @@ const Services = () => {
       title: "Data Science",
       description: "Advanced data science solutions for complex business problems.",
       href: "/services/data-science"
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
     }
   ];
 
   const processSteps = [
     {
-<<<<<<< HEAD
       step: '01',
       title: 'Discovery & Analysis',
       description: 'We analyze your business requirements and current systems to understand your needs.'
@@ -338,12 +335,10 @@ const Services = () => {
       step: "04",
       title: "Deployment & Support",
       description: "We deploy your solution and provide ongoing maintenance and support."
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
     }
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <SEOHead 
         title="Our Services - AI, Cybersecurity & Cloud Solutions | Zion Tech Group"
@@ -568,7 +563,6 @@ const Services = () => {
                 View Pricing Plans
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
             </div>
           </motion.div>
         </div>
