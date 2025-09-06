@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
 
 interface Props {
   children: ReactNode;
