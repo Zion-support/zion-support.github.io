@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -10,18 +9,6 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
-=======
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Button from './components/Button'
-import Card from './components/Card'
-import ServiceCard from './components/ServiceCard'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import About from './pages/About'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));

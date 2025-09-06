@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -52,292 +51,157 @@ const Services = () => {
     },
     {
       name: 'Cloud Migration',
-      description: 'Seamlessly migrate to the cloud with our expert guidance.',
+      description: 'Seamlessly migrate to the cloud with expert guidance and support.',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       features: [
-        'AWS Migration',
-        'Azure Migration',
-        'GCP Migration',
-        'Hybrid Cloud Solutions',
-        'Cost Optimization',
-        'Security Implementation'
+        'Cloud Strategy Planning',
+        'Infrastructure Migration',
+        'Data Migration',
+        'Security Implementation',
+        'Performance Optimization',
+        'Ongoing Support'
       ],
       price: '$10,000 - $100,000',
       href: '/services/cloud-migration'
     },
     {
       name: 'DevOps & SRE',
-      description: 'Streamline your development and operations with modern DevOps practices.',
-      icon: Server,
+      description: 'Streamline development with modern DevOps practices and site reliability engineering.',
+      icon: Zap,
       color: 'from-green-500 to-teal-500',
       features: [
         'CI/CD Pipeline Setup',
         'Infrastructure as Code',
         'Monitoring & Alerting',
-        'Container Orchestration',
-        'Site Reliability Engineering',
-        'Performance Optimization'
+        'Automated Testing',
+        'Performance Optimization',
+        'Disaster Recovery'
       ],
       price: '$8,000 - $80,000',
       href: '/services/devops'
     },
     {
       name: 'Mobile Development',
-      description: 'Create powerful mobile applications for iOS and Android platforms.',
+      description: 'Build powerful mobile applications for iOS and Android platforms.',
       icon: Smartphone,
       color: 'from-indigo-500 to-purple-500',
       features: [
-        'Native iOS Apps',
-        'Native Android Apps',
+        'Native iOS Development',
+        'Native Android Development',
         'Cross-Platform Solutions',
         'UI/UX Design',
         'App Store Optimization',
-        'Maintenance & Support'
+        'Maintenance & Updates'
       ],
       price: '$15,000 - $150,000',
       href: '/services/mobile-development'
     },
     {
       name: 'Data Analytics',
-      description: 'Unlock insights from your data with advanced analytics solutions.',
+      description: 'Unlock insights from your data with advanced analytics and business intelligence.',
       icon: BarChart3,
       color: 'from-yellow-500 to-orange-500',
       features: [
-        'Business Intelligence',
         'Data Warehousing',
+        'Business Intelligence',
+        'Predictive Modeling',
         'Real-time Analytics',
-        'Machine Learning Models',
         'Data Visualization',
-        'Predictive Modeling'
+        'Custom Dashboards'
       ],
       price: '$7,000 - $70,000',
       href: '/services/data-analytics'
-    },
-    {
-      name: 'Blockchain',
-      description: 'Leverage blockchain technology for secure and transparent solutions.',
-      icon: Lock,
-      color: 'from-gray-600 to-gray-800',
-      features: [
-        'Smart Contracts',
-        'DeFi Applications',
-        'NFT Platforms',
-        'Supply Chain Solutions',
-        'Digital Identity',
-        'Tokenization'
-      ],
-      price: '$20,000 - $200,000',
-      href: '/services/blockchain'
-    },
-    {
-      name: 'IT Support',
-      description: 'Comprehensive IT support and maintenance services.',
-      icon: Cpu,
-      color: 'from-emerald-500 to-green-500',
-      features: [
-        '24/7 Technical Support',
-        'System Maintenance',
-        'Network Management',
-        'Hardware Support',
-        'Software Updates',
-        'Troubleshooting'
-      ],
-      price: '$2,000 - $20,000',
-      href: '/services/it-support'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-=======
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-extrabold text-white mb-6">
+              Our Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Comprehensive technology solutions designed to transform your business and drive growth. 
+              From AI and cybersecurity to cloud migration and mobile development.
+            </p>
+          </div>
+        </div>
+      </section>
 
-const Services: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 hover:bg-slate-700/50 p-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-300"
+              >
+                <div className="flex items-start mb-6">
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-6 flex-shrink-0`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <Link
+                  to={service.href}
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+                >
+                  Learn More
+                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Contact us today to discuss your project requirements and get a customized quote.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
             >
-              Get Free Consultation
+              Get Free Quote
             </Link>
             <Link
               to="/pricing"
-              className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
             >
-              View Pricing
+              View Pricing Plans
             </Link>
           </div>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div
-                key={service.name}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                
-                <div className="mb-4">
-                  <div className="text-lg font-bold text-blue-400 mb-1">{service.price}</div>
-                  <div className="text-xs text-gray-400">Starting Price</div>
-                </div>
-
-                <ul className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <Zap className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                  {service.features.length > 3 && (
-                    <li className="text-sm text-gray-400">
-                      +{service.features.length - 3} more features
-                    </li>
-                  )}
-                </ul>
-
-                <Link
-                  to={service.href}
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-all duration-200 group-hover:shadow-lg group-hover:shadow-blue-500/25"
-                >
-                  Learn More
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Why Choose Us Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Zion Tech Group?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Global Expertise</h3>
-              <p className="text-gray-300">Serving clients worldwide with cutting-edge technology solutions.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Code className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Custom Solutions</h3>
-              <p className="text-gray-300">Tailored solutions designed specifically for your business needs.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
-              <p className="text-gray-300">Rapid development and deployment with agile methodologies.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-=======
-        </div>
-
-        {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
-          />
-          <ServiceCard
-            title="DevOps & Automation"
-            description="Streamline your development and operations with continuous integration, delivery, and automated workflows."
-            icon="⚙️"
-          />
-          <ServiceCard
-            title="Blockchain Solutions"
-            description="Leverage decentralized technologies for secure transactions, smart contracts, and transparent operations."
-            icon="🔗"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and data visualization."
-            icon="📊"
-          />
-        </div>
-
-        {/* Why Choose Our Services */}
-        <div className="mt-16 text-center">
-          <h2 className="text-4xl font-bold mb-8">Why Choose Zion Tech Group for Your Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card title="Expert Team" description="Our specialists are leaders in their respective fields." />
-            <Card title="Tailored Solutions" description="Custom services designed to meet your unique business needs." />
-            <Card title="Innovation Driven" description="Always at the forefront of technological advancements." />
-            <Card title="Reliable Support" description="Dedicated 24/7 support to ensure seamless operations." />
-            <Card title="Scalable & Secure" description="Solutions built for growth and robust security." />
-            <Card title="Proven Track Record" description="Successful implementations across diverse industries." />
-          </div>
-        </div>
-
-        {/* Call to Action */}
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
-        <div className="text-center mt-16">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today for a free consultation and discover how we can help you achieve your goals.
-          </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
-            >
-              Get Started Today
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Call: +1 302 464 0950
-            </a>
-          </div>
-=======
-          <Button variant="primary" size="large" onClick={() => alert('Get a Free Consultation!')}>
-            Get a Free Consultation
-          </Button>
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
