@@ -3,14 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-=======
-    "dev": "vite",
-    "build": "vite build",
->>>>>>> pr-12243
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -135,13 +130,8 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
-=======
-    "typescript": "^5.7.2",
-    "vite": "^6.0.7",
->>>>>>> pr-12243
     "web-vitals": "^5.1.0"
   },
   "engines": {
