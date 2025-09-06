@@ -1,48 +1,152 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
+import Button from '../components/Button';
 
 const Services: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const serviceCategories = [
+    { id: 'all', name: 'All Services', icon: '🌟' },
+    { id: 'ai', name: 'AI & ML', icon: '🤖' },
+    { id: 'cloud', name: 'Cloud', icon: '☁️' },
+    { id: 'security', name: 'Security', icon: '🔒' },
+    { id: 'development', name: 'Development', icon: '💻' }
+  ];
+
+  const services = [
+    {
+      id: 'ai',
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge AI solutions to automate processes, gain insights, and drive intelligent decision-making.',
+      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Chatbots & Virtual Assistants'],
+      price: 'From $5,000/month'
+    },
+    {
+      id: 'cloud',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions that grow with your business and ensure maximum uptime and security.',
+      features: ['AWS/Azure/GCP Migration', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
+      price: 'From $3,000/month'
+    },
+    {
+      id: 'security',
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your data, systems, and digital assets from threats.',
+      features: ['Penetration Testing', 'Security Audits', 'Threat Monitoring', 'Compliance Management'],
+      price: 'From $2,500/month'
+    },
+    {
+      id: 'development',
+      title: 'Custom Development',
+      description: 'Bespoke software development solutions designed specifically for your unique requirements.',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      price: 'From $4,000/month'
+    },
+    {
+      id: 'ai',
+      title: 'Data Analytics',
+      description: 'Advanced analytics and business intelligence solutions to unlock insights from your data.',
+      features: ['Data Visualization', 'Real-time Dashboards', 'Machine Learning Models', 'Data Warehousing'],
+      price: 'From $3,500/month'
+    },
+    {
+      id: 'cloud',
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your business processes and operations.',
+      features: ['Process Automation', 'Legacy System Migration', 'Change Management', 'Training & Support'],
+      price: 'From $6,000/month'
+    }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.id === selectedCategory);
+
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl font-extrabold mb-6">
             Our Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive technology solutions designed to transform your business 
             and drive innovation across all sectors.
           </p>
-        </div>
+        </motion.div>
+
+        {/* Category Filter */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {serviceCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-blue-500 text-white shadow-lg'
+                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+              }`}
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+            </button>
+          ))}
+        </motion.div>
 
         {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <Card
-            title="AI & Machine Learning"
-            description="Cutting-edge AI solutions to automate processes, gain insights, and drive intelligent decision-making."
-          />
-          <Card
-            title="Cloud Infrastructure"
-            description="Scalable cloud solutions that grow with your business and ensure maximum uptime and security."
-          />
-          <Card
-            title="Cybersecurity"
-            description="Comprehensive security solutions to protect your data, systems, and digital assets from threats."
-          />
-          <Card
-            title="Digital Transformation"
-            description="End-to-end digital transformation services to modernize your business processes and operations."
-          />
-          <Card
-            title="Custom Development"
-            description="Bespoke software development solutions designed specifically for your unique requirements."
-          />
-          <Card
-            title="Data Analytics"
-            description="Advanced analytics and business intelligence solutions to unlock insights from your data."
-          />
-        </div>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          layout
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="h-full hover:shadow-2xl transition-all duration-300">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold mb-2 text-blue-400">Key Features:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-bold text-green-400">{service.price}</span>
+                    <Button variant="outline" size="sm">
+                      Learn More
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Industry Focus */}
         <div className="text-center mb-16">
