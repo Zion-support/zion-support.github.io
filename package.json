@@ -365,11 +365,6 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@babel/preset-env": "^7.28.3",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
-=======
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
@@ -378,7 +373,6 @@
     "@babel/preset-typescript": "^7.27.1",
     "@esbuild/linux-x64": "^0.25.9",
     "@eslint/eslintrc": "^3.3.1",
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
     "@eslint/js": "^9.35.0",
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^13.5.6",
