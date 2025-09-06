@@ -13,15 +13,8 @@ export default function QuantumAICognitivePage() {;
   const contactInfo = service.contactInfo,
 
   return (
-<<<<<<< HEAD:pages/quantum-ai-cognitive.tsx.backup.1755991995
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground intensity="high">
-=======
-    <UltraAdvancedFuturisticBackground variant="quantum-holographic">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ee3d
-=======
     <UltraAdvancedFuturisticBackground>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/quantum-ai-cognitive.tsx
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />

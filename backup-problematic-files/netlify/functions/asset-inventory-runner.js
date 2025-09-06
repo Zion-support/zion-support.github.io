@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
 const path = require('path'),;
@@ -26,8 +25,6 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -56,7 +53,6 @@ exports.handler = async () => {
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-<<<<<<< HEAD
 :netlify/functions/asset-inventory-runner.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -111,5 +107,3 @@ main:netlify/functions/asset-inventory-runner.js
 }
 main:netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -94,7 +94,6 @@ onClose: onSubmitSuccess || onClose;
 initialJobTitle;
 userDetails 
 });
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx
 return (<Form {;
   ...form ;
 }> <form onSubmit= {;
@@ -112,5 +111,3 @@ return (<Form {;
 }</Button> </DialogFooter> </form> </Form>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/hire-request/HireRequestForm.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx

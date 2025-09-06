@@ -67,7 +67,6 @@ export const MobileLaunchHero:React.FC = () => {;
       </div>;
     </section>;
   ),;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/mobile-app/MobileLaunchHero.tsx
 },; relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24"> <div className=" container mx-auto px-4 lg:px-8"> <div className=" flex flex-col md:flex-row items-center gap-8 md:gap-16"> <div className=" flex-1 text-white"> <h1 className=" text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"> The Power of <span className=" text-zion-cyan">Zion</span><br /> In Your Pocket </h1> </p> <div className=" mb-8"> <AppStoreButtons appStoreUrl= {;
   appStoreUrl ;
 :temp_broken_files/mobile-app/MobileLaunchHero.tsx
@@ -81,5 +80,3 @@ export const MobileLaunchHero:React.FC = () => {;
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/MobileLaunchHero.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/MobileLaunchHero.tsx

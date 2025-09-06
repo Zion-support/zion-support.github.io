@@ -2,22 +2,11 @@
 import {FormEvent, useState} from 'react';
 
 export default function VendorRegisterPage() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
 import {FormEvent, useState} from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-import {FormEvent, useState} from 'react';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [loading, setLoading] = useState(false);
 
   const [message, setMessage] = useState<string | null>(null);
@@ -26,11 +15,7 @@ import {FormEvent, useState} from 'react';
     e && e.preventDefault();
     setLoading(true);
     setMessage(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const form = e && e.currentTarget;
     const formData = new FormData(form);
     const payload = Object && Object.fromEntries(formData && formData.entries()),;
@@ -56,11 +41,7 @@ import {FormEvent, useState} from 'react';
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -71,67 +52,11 @@ import {FormEvent, useState} from 'react';
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
-<<<<<<< HEAD
             .map(s => s.trim())
             .filter(Boolean);
           caseStudies: []})}),
-=======
-          slug: String(payload.slug),
-          name: String(payload.name),
-          servicesOffered: String(payload.servicesOffered || '')
-            .split()
-            .map(s => s.trim())
-.filter(Boolean);
-          teamSize: Number(payload.teamSize || 0),
-          about: String(payload.about || ''),
-          verificationDocs: String(payload.verificationDocs || '')
-            .split()
-            .map(s => s.trim())
-.filter(Boolean);
-          caseStudies: []})}),
-import { FormEvent, useState } from 'react';
-import {FormEvent, useState} from 'react';
-
-export default function VendorRegisterPage() {
-export default function VendorRegisterPage() {;
-  const [loading, setLoading] = useState(false);
-
-  const [message, setMessage] = useState<string | null>(null);
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    setMessage(null);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries())
-    try {
-      const res = await fetch('/api/vendors/register', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          slug: String(payload.slug)
-          name: String(payload.name)
-          servicesOffered: String(payload.servicesOffered |'')
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-          teamSize: Number(payload.teamSize |0)
-          about: String(payload.about |'')
-          verificationDocs: String(payload.verificationDocs |'')
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-          caseStudies: []
-        })
-      });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setMessage('Application submitted. Await approval.');
       form && form.reset();
     } catch (err: any) {;
@@ -153,13 +78,6 @@ export default function VendorRegisterPage() {;
       setMessage('Application submitted. Await approval.');
 
       form.reset()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
@@ -204,16 +122,6 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      setLoading(false);    }
-  }
-
-  return (
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (            .map(s => s.trim())
             .filter(Boolean);
@@ -229,36 +137,13 @@ function on_submit() {
       setMessage('Application submitted. Await approval.');
 
       form.reset()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } catch (err: any) {
       setMessage(err.message)
     } finally {
-<<<<<<< HEAD
       set_loading (false);    }
   }
-<<<<<<< HEAD
 
 
-=======
-  return (            .map (string => s.trim ());
-            .filter (Boolean);
-          team_size: Number (payload.team_size || 0),
-          about: String (payload.about || ''),
-          verification_docs: String (payload.verification_docs || '');
-            .split ();
-            .map (string => s.trim ());
-            .filter (Boolean);
-          case_studies: []})}),
-      const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed to submit')) {
-  $2
-}
-      set_message ('Application submitted. Await approval.');
-      form.reset ();
-    } catch (err: any) {
-      set_message (err.message);
-    } finally {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (            .map(s => s && s.trim());
             .filter(Boolean);
           teamSize: Number(payload && payload.teamSize || 0),;
@@ -276,15 +161,12 @@ function on_submit() {
       setMessage(err && err.message);
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
 
 
-=======
     }
   }
 
@@ -327,11 +209,8 @@ function on_submit() {
       {message && <div className="text-sm">{message}</div>}
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_loading (false);
     }
   }
@@ -403,23 +282,15 @@ function on_submit() {
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
-=======
       setLoading(false)
     }
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className='max-w-2xl mx-auto space-y-6'>
@@ -626,9 +497,6 @@ function on_submit() {
     }
   }
   return (
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     <div className='max - w-2xl mx - auto space - y-6'>;
       <h1 className='text - 2xl font - semibold'>;
         Apply to become a Vendor Partner;
@@ -698,4 +566,3 @@ function on_submit() {
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

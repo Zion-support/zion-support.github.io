@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import { ServiceVariant } from '../types/service-variants';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -37,14 +29,10 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
     website: string;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -52,7 +40,6 @@ import { ServiceVariant } from '../types/service-variants';
   rating: number;
   reviews: number;
 ;
-<<<<<<< HEAD
 
 const contact = {
 
@@ -70,22 +57,6 @@ const contact = {
   ];
 
 
-=======
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
-;
-export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =;
-  [;
-    // AI - Powered Business Intelligence & Analytics;
-=======
-  customers: number;
-  rating: number;
-  reviews: number;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 'ai-business-intelligence-suite'
       name: 'AI Business Intelligence Suite'
@@ -708,53 +679,28 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   return innovativeMicroSaasServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
 }
 export const getPopularInnovativeMicroSaasServices2026 = () => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-<<<<<<< HEAD
-=======
-};
-
-export const getPopularInnovativeMicroSaasServices2026 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
   ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   })
 }
 
-=======
-=======
-  return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
-  })
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1054,14 +1000,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service && service.price.replace('$', ''));
   return innovativeMicroSaasServices2026.filter(service => {
@@ -1076,9 +1016,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 }
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -1097,15 +1034,11 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }    return price >= min_price && price <= max_price;
   });
 }
@@ -1516,6 +1449,3 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 };    return price >= minPrice && price <= maxPrice
   })
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -4,24 +4,12 @@ interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'hi
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-:components/broken/UltraFuturisticBackground2037.tsx
-export default function UltraFuturisticBackground2037({intensity = 'medium';
-  theme = 'quantum-neon';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
@@ -664,17 +652,10 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
               ctx.stroke()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           });
         });
@@ -703,19 +684,7 @@ ref={canvasRef}
         style={{
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-:components/broken/UltraFuturisticBackground2037.tsx
-        }}
-      />;
-      {children}
-    </div>;
-  );
-}
-export default UltraFuturisticBackground2037;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }}      />
       {children}
     </div>
@@ -723,12 +692,6 @@ export default UltraFuturisticBackground2037;
 },
 
 export default UltraFuturisticBackground2037,
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

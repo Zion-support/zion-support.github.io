@@ -121,7 +121,6 @@ function main() {};
 }
 };
         fixedCount++}
-<<<<<<< HEAD
     } catch (error) {_;
   
       errorCount++}
@@ -136,5 +135,3 @@ function main() {};
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

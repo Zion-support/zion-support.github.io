@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,9 +25,6 @@ class ErrorBoundary extends React.Component {
 pricingAnalysis: {;
   lowEnd: '$0 && 0.005 per 1K tokens', midRange: '$0 && 0.015 per 1K tokens', highEnd: '$0 && 0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {;
   marketSize: '$45 && 45.2B', growthRate: '+28 && 28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -39,14 +32,6 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
   Globe, Zap, Shield, Crown, Brain, Atom
  } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import {motion} from 'framer-motion';
-import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function MarketPricing() {;
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
@@ -168,12 +153,6 @@ export default function MarketPricing() {;
       pricingAnalysis: {
         lowEnd: '$300 per user/month'
         midRange: '$750 per user/month'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const markets = [;
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },;
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },;
@@ -292,18 +271,11 @@ export default function MarketPricing() {;
       pricingAnalysis: {;
         lowEnd: '$300 per user/month',;
         midRange: '$750 per user/month',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         highEnd: '$1,200 per user/month';
         ourPosition: 'Competitive pricing with AI advantages';
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
     'enterprise-it': {;
       marketSize: '$1 && 1.2T',;
@@ -341,27 +313,15 @@ export default function MarketPricing() {;
         midRange: '$40 per user/month',;
         highEnd: '$100 per user/month',;
         ourPosition: 'Competitive pricing with AI advantages';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   const currentMarket = marketData[selectedMarket as keyof typeof marketData];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getGrowthIcon = (trend: string) => {;
     return trend === 'up' ? ;
       <TrendingUp className="w-5 h-5 text-green-400" /> : ;
@@ -378,7 +338,6 @@ export default function MarketPricing() {;
   };
 
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>Market Pricing & Competitor References | Zion Tech Group</title>;
@@ -538,12 +497,7 @@ export default function MarketPricing() {;
             </div>;
           </div>;
           <motion&& motion.div
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -560,37 +514,19 @@ export default function MarketPricing() {;
           </motion && motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
       {/* Competitive Analysis Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Competitive Analysis;
           </motion && motion.h2>;
@@ -599,21 +535,12 @@ export default function MarketPricing() {;
             {currentMarket && currentMarket.competitors.map((competitor, index) => (;
               <motion&& motion.div
                 key={competitor && competitor.name}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row gap-6">;
                   <div className="flex-1">;
@@ -643,17 +570,11 @@ export default function MarketPricing() {;
                           {competitor && competitor.strengths.map((strength, idx) => (;
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">;
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-<<<<<<< HEAD
 
                               {strength}
                             </li>;
                           ))}
 
-=======
-                              {strength}
-                            </li>;
-                          ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </ul>;
                       </div>;
 
@@ -663,25 +584,16 @@ export default function MarketPricing() {;
                           {competitor && competitor.weaknesses.map((weakness, idx) => (;
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">;
                               <div className="w-3 h-3 bg-red-400 rounded-full flex-shrink-0" />;
-<<<<<<< HEAD
 
                               {weakness}
                             </li>;
                           ))}
 
-=======
-                              {weakness}
-                            </li>;
-                          ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </ul>;
                       </div>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {competitor && competitor.name === 'Zion Tech Group' && (;
                     <div className="lg:w-48 flex-shrink-0">;
                       <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-center">;
@@ -690,21 +602,12 @@ export default function MarketPricing() {;
                         <p className="text-xs text-gray-300 mt-1">Competitive advantage in AI consciousness and pricing</p>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
 
           <div className="space-y-6">;
@@ -819,8 +722,6 @@ export default function MarketPricing() {;
             </div>;
           </div>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* New categories with verified links */}
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">;
@@ -965,24 +866,13 @@ export default function MarketPricing() {;
       </section>;
 
       {/* Pricing Analysis Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
-<<<<<<< HEAD
 
-=======
 
           <motion.h2 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-          <motion.h2 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -991,11 +881,6 @@ export default function MarketPricing() {;
             ].map((tier, index) => (
               <motion.div
                 key={tier.label}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Pricing Analysis;
           </motion && motion.h2>;
@@ -1009,9 +894,6 @@ export default function MarketPricing() {;
             ].map((tier, index) => (;
               <motion&& motion.div
                 key={tier && tier.label}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -1024,27 +906,15 @@ export default function MarketPricing() {;
                 <p className="text-2xl font-bold text-cyan-400">{tier && tier.price}</p>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           </div>;
           <motion&& motion.div
 
-=======
-          </div>;
-          <motion&& motion.div
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.5 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="text-center">;
             <h3 className="text-2xl font-bold mb-4">Strategic Advantages</h3>;
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
@@ -1060,12 +930,7 @@ export default function MarketPricing() {;
                 {;
                   title: 'Enterprise Focus',;
                   description: 'Built specifically for enterprise needs with security, scalability, and compliance features.';
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }
               ].map((advantage, index) => (;
                 <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">;
@@ -1082,49 +947,26 @@ export default function MarketPricing() {;
           </motion && motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
       {/* Market Trends Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Market Trends & Opportunities;
           </motion && motion.h2>;
 
           <div className="grid md:grid-cols-2 gap-8">;
             <motion&& motion.div
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1140,20 +982,11 @@ export default function MarketPricing() {;
                     <span className="text-gray-300">{driver}</span>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               </ul>;
             </motion && motion.div>;
             <motion&& motion.div
 
-=======
-              </ul>;
-            </motion && motion.div>;
-            <motion&& motion.div
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1169,29 +1002,17 @@ export default function MarketPricing() {;
                     <span className="text-gray-300">{opportunity}</span>;
                   </li>;
                 ))}
-<<<<<<< HEAD
 
               </ul>;
             </motion && motion.div>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -1260,26 +1081,13 @@ export default MarketPricing;export default MarketPricing;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default MarketPricing;export default MarketPricing;
 
 
-=======
-export default MarketPricing;
-
-=======
-=======
-export default MarketPricing;
-
-export default MarketPricing;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -2121,35 +1929,20 @@ pricing_analysis: {
 }
 export default MarketPricing;export default MarketPricing;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
-=======
-=======
 
 };
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
 
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   const _marketData = {_'ai-consciousness': {
       marketSize: '$45.2B', _growthRate: '+28.4%', _growthTrend: 'up', _description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', _competitors: [
@@ -3176,6 +2969,3 @@ export default MarketPricing;export default MarketPricing;
 }
 }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

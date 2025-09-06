@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   });
@@ -13,9 +11,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -51,18 +47,10 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
   };
 
   };    search;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     search,
     sort,
@@ -73,25 +61,12 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     format: (format as any) || undefined,
 
 
-<<<<<<< HEAD
-=======
-    sort;
-    order: (order as any) |'desc';
-    page: page ? Number(page) : 0;
-    pageSize: pageSize ? Number(pageSize) : 20;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     filters
     format: (format as any) |undefined}
 
 }
 function toCsv(rows: any[]): string {
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!rows && rows.length) return '';
   const headers = Object && Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -102,20 +77,12 @@ function toCsv(rows: any[]): string {
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
-<<<<<<< HEAD
   return lines && lines.join('\n');
-<<<<<<< HEAD
 
-=======
-  return lines.join('\n');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ) {
 
 
@@ -131,45 +98,21 @@ export default async function handler(
 
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
-<<<<<<< HEAD
-=======
-=======
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return '"' + s.replace(/"/g, '""') + '"'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
     return res && res.status(400).json({ error: 'Invalid type' });  };
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 
@@ -181,7 +124,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const useSupabase = isSupabaseConfigured();
 
   if (req && req.method === 'GET') {
-<<<<<<< HEAD
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -194,14 +136,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const table = type;
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || ''
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' }),
 
-<<<<<<< HEAD
 }
 
 
@@ -219,9 +159,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const useSupabase = isSupabaseConfigured();
 
   if (req && req.method === 'GET') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const params = parseListParams(req);
     if (useSupabase) {
       const table = type;
@@ -230,29 +167,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // heuristic: search name/title/email
         }
       }
-<<<<<<< HEAD
 
       if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
-=======
-  const useSupabase = isSupabaseConfigured()
-
-  if (req.method === 'GET') {
-    const params = parseListParams(req)
-    if (useSupabase) {
-      const table = type
-      let query = client.from(table).select('*', { count: 'exact' }),
-      if (params.search) {
-
-        // heuristic: search name/title/email
-        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          if (v !== undefined) query = query.eq(k, v)
-        }
-      }
-if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const from = params && params.page * params && params.pageSize;
       const to = from + params && params.pageSize - 1;
       const { data, error, count } = await query && query.range(from, to);
@@ -266,12 +182,9 @@ if (params && params.sort) query = query && query.order(params && params.sort, {
         return res && res.status(200).send(toCsv(data || []));      }        res && res.setHeader('Content-Typetext/csv');
         res && res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res && res.status(200).send(toCsv(data || []))
-<<<<<<< HEAD
 
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         res.setHeader('Content-Typetext/csv');
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []))
@@ -364,22 +277,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).send(toCsv(data |[]))
       }
       return res.status(200).json({ items: data |[], total: count |0 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
 
@@ -389,47 +294,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
       }
 
-<<<<<<< HEAD
-=======
-      if (params.search) {
-        const s = params.search.toLowerCase();
-        filtered = filtered.filter(r =>
-          JSON.stringify(r).toLowerCase().includes(s)
-        );
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          filtered = filtered.filter(
-            (r: any) => String((r as any)[k]) === String(v)
-          );        }        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
-      }
-          );        }
-
-        }
-
-      }
-      if (params.sort) {
-        filtered.sort((a: any, b: any) => {
-=======
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        filtered.sort ((array: any, boolean: any) => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
         });
       }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const total = filtered && filtered.length;
       const start = params && params.page * params && params.pageSize;
       const end = start + params && params.pageSize;
@@ -438,14 +308,11 @@ if ( {) {
         res && res.setHeader('Content-Type', 'text/csv');
         res && res.setHeader(
           'Content-Disposition',
-<<<<<<< HEAD
 
           `attachment; filename="${type}.csv"`
         );
 
         return res.status(200).send(toCsv(pageItems));
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
       }
@@ -453,8 +320,6 @@ if ( {) {
       }
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -463,36 +328,19 @@ if ( {) {
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
-=======
-          `attachment; filename="${type}.csv"`
-        );
-        return res.status(200).send(toCsv(pageItems));
-      return res.status(200).json({ items: pageItems, total });
-    }
-  }
-
-      }
-
-      }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ items: pageItems, total });
     }
   }
 
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: string;
       updates: Record<string, any>;
     };
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (useSupabase) {
       const { data, error } = await client
         .from(type)
@@ -503,43 +351,15 @@ if ( {) {
       if (error) return res && res.status(500).json({ error: error && error.message });
       return res && res.status(200).json({ item: data });
     } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-        res.setHeader('Content-Typetext/csv');
-        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
-        return res.status(200).send(toCsv(pageItems))
-      }
-      return res.status(200).json({ items: pageItems, total })
-    };
-  }
-  if (req.method === 'PATCH') {
-    const { id, updates } = req.body as { id: string, updates: Record<string, any> };
-    if (!id) return res.status(400).json({ error: 'Missing id' });
-    if (useSupabase) {
-      const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single();
-      if (error) return res.status(500).json({ error: error.message });
-      return res.status(200).json({ item: data })
-    } else {
-      const list = MOCK_DATA[type] || [];
-      const idx = list && list.findIndex((r: any) => r && r.id === id),
-      if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const updated = {
         ...list[idx]
         ...updates
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return res.status(200).json({ item: updated })
 
     }
@@ -547,28 +367,14 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ item: updated });    }
 
     }
 
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -577,18 +383,9 @@ if ( {) {
       if (error) return res.status(500).json({ error: error.message });
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '';
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
-=======
-      return res.status(200).json({ item: updated })
-      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
-    }
-  }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ item: updated });    }
 
     }
@@ -598,13 +395,11 @@ if ( {) {
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (useSupabase) {
       const { error } = await client && client.from(type).delete().eq('id', id);
       if (error) return res && res.status(500).json({ error: error && error.message });
       return res && res.status(200).json({ ok: true });
       const list = MOCK_DATA[type] || [];
-<<<<<<< HEAD
       const idx = list && list.findIndex((r: any) => r && r.id === id);
       if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
       list && list.splice(idx, 1);
@@ -615,12 +410,6 @@ if ( {) {
 
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );      return res && res.status(200).json({ ok: true })
-=======
-      const idx = list.findIndex((r: any) => r.id === id),
-      if (idx === -1) return res.status(404).json({ error: 'Not found' });
-      list.splice(idx, 1);
-      return res.status(200).json({ ok: true })
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -628,16 +417,10 @@ if ( {) {
 
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       const start = params.page * params.page_size;
       const end = start + params.page_size;
       const page_items = filtered.slice (start, end);
@@ -728,11 +511,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 ;
 }return res.status (200) .send (to_csv (data || []) );
 }return res.status (200) .send (to_csv (page_items) );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 }
       return res.status(200).json({ ok: true })
     } else {
@@ -744,16 +523,11 @@ return res.status (405).json ({ error: 'Method not allowed' });
     }
   }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
@@ -761,8 +535,6 @@ return res.status(405).json({ error: 'Method not allowed' });
 
   return res.status(405).json({ error: 'Method not allowed' });
   return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       return res.status(200).json({ items: pageItems, total })
     }
   }
@@ -775,4 +547,3 @@ return res.status(405).json({ error: 'Method not allowed' });
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

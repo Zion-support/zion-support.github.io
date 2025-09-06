@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/cron-weekly-dao.js
 :backup-problematic-files/netlify/functions/cron-weekly-dao.js
 const fs = require('fs'),;
@@ -25,8 +24,6 @@ exports.handler = async function() {;
 },;
 :backup-problematic-files/netlify/functions/cron-weekly-dao.js
 :backup-problematic-files/netlify/functions/cron-weekly-dao.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
@@ -71,18 +68,14 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
     }
-<<<<<<< HEAD
 
 :netlify/functions/cron-weekly-dao.js
 
 :backup-problematic-files/netlify/functions/cron-weekly-dao.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
 
 :netlify/functions/cron-weekly-dao.js
@@ -95,5 +88,3 @@ main:netlify/functions/cron-weekly-dao.js
 :netlify/functions/cron-weekly-dao.js
 main:netlify/functions/cron-weekly-dao.js
 :backup-problematic-files/netlify/functions/cron-weekly-dao.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

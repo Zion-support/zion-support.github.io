@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -67,26 +65,13 @@ class PerformanceOptimizer {
     }
     return recommendations;
   }
-<<<<<<< HEAD
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.analyzeBundle();
   optimizer.generateReport();
-=======
-}
-if (require && require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer && optimizer.analyzeBundle();
-  optimizer && optimizer.generateReport();
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 #!/usr/bin/env node
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 class ErrorBoundary extends React.Component {
   constructor(props) {

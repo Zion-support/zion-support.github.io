@@ -1,49 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 });''
 
-=======
-
-
-=======
-=======
-describe('community category listing', () => {
-  it('displays posts in Getting Hired category', () => {
-    cy.visit('/community/getting-hired');
-    cy.get('[data-testid="post-card"]')
-      .its('length')
-      .should('be.greaterThan', 0)})});
-describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})});
-describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired"); cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})});'"'"
-describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}
-});''
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });''
 });''
 });''
 });''
-<<<<<<< HEAD
 
 
 
 });''
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
 });''
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 describe ('community category listing', () => {
   it ('displays posts in Getting Hired category', () => {
     cy.visit ('/community / getting - hired');
@@ -55,8 +27,6 @@ describe ("community category listing", () => { it ("displays posts in Getting H
 describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired'); cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})}
 });'';
 });'';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 });''
 });''
@@ -76,8 +46,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 });''
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 });''
 });''
 });''
@@ -85,4 +53,3 @@ origin/automation-improvements-final
 });''
 });''
 });''
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

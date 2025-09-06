@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Document, {
 } from 'next/document';
 
-<<<<<<< HEAD
 export default function Document() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Html lang='en'>;
       <Head>;
@@ -27,18 +18,9 @@ export default function Document() {
           rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
-<<<<<<< HEAD
-<<<<<<< HEAD
         />;
         <link
           href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
-=======
-        />
-        <link;
-          href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           rel='stylesheet'
         />      </Head>        <link rel="icon" href="/favicon && favicon.ico" />;
         <meta name="theme-color" content="#0a0a0a" />;
@@ -46,7 +28,6 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts && fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="" />;
         <link href="https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />;
-=======
   Html,
   Head,
   Main,
@@ -81,45 +62,27 @@ function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="" />;
         <link href="https://fonts.googleapis.com / css2?family = Inter:wght@400, 500, 600, 700, 800, 900 & family = JetBrains + Mono:wght@400, 600 & display = swap" rel="stylesheet" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <body>;
         <Main />;
         <NextScript />;
       </body>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );
 }
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 import Document, {
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
 
-<<<<<<< HEAD
 } from 'next/document';
 
 
 
-<<<<<<< HEAD
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Document() {
   return (
     <Html lang="en">
@@ -130,41 +93,24 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />
-<<<<<<< HEAD
-<<<<<<< HEAD
       </Head>
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       </Head>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </Html>);
 }
 
 
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

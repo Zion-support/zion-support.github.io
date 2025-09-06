@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
 
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
 }</span>) )
@@ -38,44 +31,6 @@ import React from 'react';
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>)
 }
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
- </Head> <QuickNavigation /> > Research Reports </motion && motion.h1> <motion && motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion && motion.p> <motion && motion.div </span> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion && motion.div> {;
-  reports && reports.filter (report => report && report.featured) .map ( (report, index) => (<motion&& motion.div key= {
-  index 
-}</span>) ) ;
-}</div> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <Download className="w-5 h-5" /> <span>Download Full Report</span> </button> <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2" > <Eye className="w-5 h-5" /> <span>Preview Report</span> </button> </div> </motion && motion.div>) ) ;
-}</div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > All Reports </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our comprehensive research across different technology domains </p> </motion && motion.div> {;
-  /* Category Pills */ ;
-}<motion && motion.div > {;
-  categories && categories.map ( (category, index) => (<buttonkey= {
-  index 
-=======
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
 
@@ -89,7 +44,6 @@ import React from 'react';
 }<motion.div > {
   categories.map ( (category, index) => (<button key= {
   index
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }className= {
   `px-6 py-3 rounded-full font-medium transition-all duration-200 $ {
   category && category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' 
@@ -108,25 +62,14 @@ import React from 'react';
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) ;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReportsPage;import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React from 'react';
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 import React from 'react';
 
 import React from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FileText;
@@ -147,7 +90,6 @@ import { FileText;
   Award
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-<<<<<<< HEAD
 
 
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision - making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > Featured Report </h2> </motion.div> {
@@ -184,28 +126,10 @@ import {motion} from 'framer-motion';
 import {FileText, Download, Calendar, User, Tag, ArrowRight, TrendingUp, BarChart3, Brain, Atom, Globe, Shield, Zap, Eye, Clock, Award} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const ReportsPage: React.FC = () => {
   const reports = [;
     {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-const ReportsPage: React.FC = () => {
-  const reports = [;
-    {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: 'The Future of Quantum Computing in Enterprise: 2024 - 2030',
       excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
       date: '2024 - 01 - 15',
@@ -216,15 +140,8 @@ const ReportsPage: React.FC = () => {
       downloads: 1247,
       views: 5678,
       featured: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Atom className="w - 8 h - 8" />,
-=======
-icon: <Atom className="w - 8 h - 8" />,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       icon: <Atom className="w - 8 h - 8" />,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       color: 'from - purple - 500 to - pink - 500';
     }
     {
@@ -238,15 +155,8 @@ icon: <Atom className="w - 8 h - 8" />,
       downloads: 892,
       views: 3456,
       featured: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Brain className="w - 8 h - 8" />,
-=======
-icon: <Brain className="w - 8 h - 8" />,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       icon: <Brain className="w - 8 h - 8" />,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       color: 'from - blue - 500 to - cyan - 500';
     }
     {
@@ -260,29 +170,17 @@ icon: <Brain className="w - 8 h - 8" />,
       downloads: 1567,
       views: 6789,
       featured: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Shield className="w - 8 h - 8" />,
       color: 'from - red - 500 to - orange - 500';
 
-=======
-icon: <Shield className="w - 8 h - 8" />,
-      color: 'from - red - 500 to - orange - 500';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       icon: <Shield className="w - 8 h - 8" />,
       color: 'from - red - 500 to - orange - 500';
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     {
       title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding'
       excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       date: '2024 - 01 - 05',
       author: 'Market Research Team',
       category: 'Market Analysis',
@@ -291,11 +189,7 @@ icon: <Shield className="w - 8 h - 8" />,
       downloads: 734,
       views: 2890,
       featured: false,
-<<<<<<< HEAD
       icon: <TrendingUp className="w - 8 h - 8" />,
-=======
-icon: <TrendingUp className="w - 8 h - 8" />,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - green - 500 to - emerald - 500';
     }
     {
@@ -309,25 +203,14 @@ icon: <TrendingUp className="w - 8 h - 8" />,
       downloads: 623,
       views: 2345,
       featured: false,
-<<<<<<< HEAD
       icon: <Zap className="w - 8 h - 8" />,
       color: 'from - yellow - 500 to - orange - 500';
 
-=======
-icon: <Zap className="w - 8 h - 8" />,
-      color: 'from - yellow - 500 to - orange - 500';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact'
       excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const ReportsPage: React.FC = () => {;
   const reports = [;
     {;
@@ -413,10 +296,7 @@ const ReportsPage: React.FC = () => {;
       featured: false,;
       icon: <Globe className="w-8 h-8" />,;
       color: 'from-teal-500 to-green-500';
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   ];
   return (
@@ -427,8 +307,6 @@ const ReportsPage: React.FC = () => {;
 
             <motion.div
             <motion.div 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -441,11 +319,6 @@ const ReportsPage: React.FC = () => {;
             </motion.div>
             {reports.filter(report => report.featured).map((report, index) => (
               <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
@@ -457,20 +330,6 @@ const ReportsPage: React.FC = () => {;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {categories && categories.map((category) => (;
-<<<<<<< HEAD
-=======
-    <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
-          <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
-        </Head>
-        <QuickNavigation />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link
               key={category && category.name}
               href={category && category.href}
@@ -522,16 +381,11 @@ const ReportsPage: React.FC = () => {;
 
             {reports && reports.filter(report => report && report.featured).map((report, index) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       date: '2024 - 01 - 01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
@@ -611,12 +465,7 @@ const ReportsPage: React.FC = () => {;
                 className="bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20 border border - cyan - 400 / 20 rounded - 3xl p - 12 hover:border - cyan - 400 / 40 transition - all duration - 300";
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >;
@@ -692,14 +541,7 @@ const ReportsPage: React.FC = () => {;
               </p>
             </motion.div>
             {/* Category Pills */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                          {tag}
-                        </span>;
-                      ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>;
                   </div>;
                 </div>;
@@ -735,25 +577,15 @@ const ReportsPage: React.FC = () => {;
                 Explore our comprehensive research across different technology domains;
               </p>;
             </motion && motion.div>;
-<<<<<<< HEAD
 
             {/* Category Pills */}
             <motion&& motion.div 
 
-=======
-
-            <motion.div 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
             <motion.div 
 
             {/* Category Pills */}
             <motion&& motion.div 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -770,7 +602,6 @@ const ReportsPage: React.FC = () => {;
                   {category && category.name} ({category && category.count});
                 </button>;
               ))}
-<<<<<<< HEAD
 
             </motion && motion.div>;
 
@@ -778,14 +609,7 @@ const ReportsPage: React.FC = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </motion && motion.div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
@@ -794,11 +618,7 @@ const ReportsPage: React.FC = () => {;
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </span>;
                       <span className="text - gray - 400 text - sm flex items - center space - x-1">;
                         <Calendar className="w - 4 h - 4" />;
@@ -891,22 +711,13 @@ const ReportsPage: React.FC = () => {;
                   className="bg - black / 40 backdrop - blur - sm border border - cyan - 400 / 20 rounded - 2xl p - 8 hover:border - cyan - 400 / 40 transition - all duration - 300 hover:transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >;
                   <div className={`w - 16 h - 16 bg - gradient - to - br ${report.color} rounded - xl flex items - center justify - center text - white mb - 6`}>;
                     {report.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <div className={`w-16 h-16 bg-gradient-to-br ${report && report.color} rounded-xl flex items-center justify-center text-white mb-6`}>;
@@ -952,22 +763,11 @@ const ReportsPage: React.FC = () => {;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -992,11 +792,7 @@ const ReportsPage: React.FC = () => {;
                 </a>;
                 <a
                   href="/services"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200">;
                   View Research Services;
                 </a>;
@@ -1008,20 +804,11 @@ const ReportsPage: React.FC = () => {;
     </UltraAdvancedFuturisticBackground>;
   );
 };
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default ReportsPage;
 
-<<<<<<< HEAD
 
-=======
-=======
-
-export default ReportsPage;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>;
                   <div className="flex items - center space - x-4 mb - 4">;
                     <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
@@ -1098,19 +885,11 @@ export default ReportsPage;
 ;
 export default ReportsPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ReportsPage;
 
 
 export default ReportsPage;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         </Head>
 
         <QuickNavigation />
@@ -1366,6 +1145,3 @@ export default ReportsPage;
 export default ReportsPage;
 
 export default ReportsPage;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,62 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedITInfrastructureService {
 
         'Hybrid quantum-classical computing',
-<<<<<<< HEAD
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedITInfrastructureService {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   customers: number;
   rating: number;
   reviews: number;
@@ -75,12 +22,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Revolutionary cloud infrastructure that combines classical computing with quantum processing capabilities, enabling unprecedented computational power for complex simulations and AI workloads.',
       features: [;
         'Hybrid quantum - classical computing',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Quantum algorithm optimization',
         'Advanced AI model training',
         'Real - time quantum simulation',
@@ -92,29 +34,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Global edge computing network',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '☁️',
-<<<<<<< HEAD
 
         'Quantum computing, Kubernetes, Docker, React, Node && Node.js, PostgreSQL, Redis',
       ],
 
-=======
-        'Quantum computing, Kubernetes, Docker, React, Node && Node.js, PostgreSQL, Redis',
-      ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       integrations: [
         'AWS, Azure, GCP, IBM Quantum, Google Quantum, Microsoft Quantum'
       ]
       useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud - infrastructure',
@@ -138,31 +67,17 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'AWS, Azure, GCP, IBM Quantum, Google Quantum, Microsoft Quantum',
       ],
       use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'AI model training, Scientific simulations, Financial modeling, Drug discovery, Cryptography',
       ],
       roi: 'Organizations report 2000% ROI through quantum - accelerated computations and reduced processing time.',
       competitors: ['AWS, Azure, GCP, IBM Cloud, Google Cloud'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$45.2B cloud computing market',
       growth_rate: '50% annual growth',
       variant: 'quantum - cloud - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -176,12 +91,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.9,
       reviews: 15,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Autonomous Edge Computing Network;
     {
       id: 'autonomous - edge - computing - network',
@@ -193,12 +103,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Advanced edge computing network that automatically optimizes data processing, reduces latency, and provides real - time insights at the edge of the network.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Autonomous edge node management',
         'Real - time data processing',
         'Intelligent load balancing',
@@ -211,19 +116,11 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Global edge presence',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🌐',
-<<<<<<< HEAD
 
         'Kubernetes, Docker, React, Node && Node.js, PostgreSQL, Redis, TensorFlow',
       ],
 
-=======
-        'Kubernetes, Docker, React, Node && Node.js, PostgreSQL, Redis, TensorFlow',
-      ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       integrations: [
         'AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices'
       ]
@@ -232,18 +129,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       roi: 'Organizations report 500% ROI through reduced latency, improved performance, and lower operational costs.'
       competitors: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry',
       ],
       marketSize: '$12 && 12.8B edge computing market',
       growthRate: '45% annual growth',
       variant: 'edge-computing-enterprise',
       contactInfo: {
-=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / autonomous - edge - computing - network',
@@ -277,12 +169,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       growth_rate: '45% annual growth',
       variant: 'edge - computing - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -296,12 +183,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.8,
       reviews: 28,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Zero - Trust Security Architecture;
     {
       id: 'zero - trust - security - architecture',
@@ -312,12 +194,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Advanced zero - trust security architecture that continuously verifies every user, device, and network connection, providing comprehensive protection against modern cyber threats.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Continuous identity verification',
         'Device trust scoring',
         'Network segmentation',
@@ -330,29 +207,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Security reporting',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🔒',
-<<<<<<< HEAD
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
       ],
 
-=======
-        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-      ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       integrations: [
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'
       ]
       useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - red - 600 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture',
@@ -376,31 +240,17 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls',
       ],
       use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Identity management, Network security, Access control, Threat detection, Compliance',
       ],
       roi: 'Organizations report 600% ROI through reduced security incidents, improved compliance, and automated security.',
       competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$22.5B cybersecurity market',
       growth_rate: '40% annual growth',
       variant: 'zero - trust - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -419,29 +269,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Security reporting',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🔒',
-<<<<<<< HEAD
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
       ],
 
-=======
-        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-      ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       integrations: [
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'
       ]
       useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - red - 600 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture',
@@ -465,31 +302,17 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls',
       ],
       use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Identity management, Network security, Access control, Threat detection, Compliance',
       ],
       roi: 'Organizations report 600% ROI through reduced security incidents, improved compliance, and automated security.',
       competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$22.5B cybersecurity market',
       growth_rate: '40% annual growth',
       variant: 'zero - trust - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -503,13 +326,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.9,
       reviews: 56,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'AI-powered infrastructure management',
-=======
     // Autonomous Data Center Platform;
     {
       id: 'autonomous - data - center - platform',
@@ -521,12 +339,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Revolutionary data center platform that uses AI to automatically manage infrastructure, optimize performance, and ensure maximum uptime while reducing operational costs.',
       features: [;
         'AI - powered infrastructure management',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Automated capacity planning',
         'Intelligent power management',
         'Predictive maintenance',
@@ -538,14 +351,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Real - time analytics',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🏢',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -564,12 +372,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       real_service: true,
       technology: [;
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ],
       integrations: ['VMware, Hyper - V, OpenStack, AWS, Azure, GCP'],
       use_cases: [;
@@ -577,21 +380,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Organizations report 800% ROI through reduced operational costs, improved reliability, and automated management.',
       competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite, QTS'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$35.8B data center market',
       growth_rate: '35% annual growth',
       variant: 'data - center - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -610,14 +404,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Real - time analytics',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🏢',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -636,12 +425,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       real_service: true,
       technology: [;
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ],
       integrations: ['VMware, Hyper - V, OpenStack, AWS, Azure, GCP'],
       use_cases: [;
@@ -649,21 +433,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Organizations report 800% ROI through reduced operational costs, improved reliability, and automated management.',
       competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite, QTS'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$35.8B data center market',
       growth_rate: '35% annual growth',
       variant: 'data - center - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -677,12 +452,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.8,
       reviews: 22,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Quantum Networking Platform;
     {
       id: 'quantum - networking - platform',
@@ -694,12 +464,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Advanced quantum networking platform that provides unbreakable encryption, quantum key distribution, and intelligent network optimization for ultra - secure communications.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Quantum key distribution',
         'Unbreakable encryption',
         'Intelligent routing',
@@ -712,29 +477,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced reporting',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🌐',
-<<<<<<< HEAD
 
         'Quantum computing, Python, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
       ],
 
-=======
-        'Quantum computing, Python, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-      ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       integrations: [
         'Cisco, Juniper, Arista, VMware, OpenStack, SDN controllers'
       ]
       useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - networking - platform',
@@ -758,26 +510,17 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Cisco, Juniper, Arista, VMware, OpenStack, SDN controllers',
       ],
       use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Secure communications, Network optimization, Quantum encryption, Government networks, Financial networks',
       ],
       roi: 'Organizations report 1000% ROI through unbreakable security, improved performance, and quantum optimization.',
       competitors: ['Cisco, Juniper, Arista, Huawei, Nokia'],
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$28.5B networking market',
       growth_rate: '55% annual growth',
       variant: 'quantum - networking - enterprise',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -791,11 +534,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.9,
       reviews: 12,
     },
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // New Advanced IT Infrastructure Services for 2025;
     {
       id: 'quantum - cloud - infrastructure - platform',
@@ -806,10 +545,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Revolutionary quantum cloud infrastructure platform that combines quantum computing capabilities with traditional cloud services, providing unprecedented computational power and security for next - generation applications.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Quantum computing integration and optimization',
         'Hybrid quantum - classical computing',
         'Quantum - secured cloud services',
@@ -823,11 +559,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
       icon: '☁️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
@@ -879,10 +611,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       growth_rate: '600%+ annual growth',
       variant: 'quantum - cloud',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -896,11 +625,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 5 && 5.0,
       reviews: 4,
     },
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Edge Computing Orchestration Platform;
     {
       id: 'edge - computing - orchestration - platform',
@@ -911,10 +636,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and provides seamless edge - to - cloud integration for modern applications.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Intelligent edge resource orchestration',
         'Real - time performance optimization',
         'Edge - to - cloud seamless integration',
@@ -928,11 +650,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
       icon: '🌐',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration - platform',
@@ -976,27 +694,18 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'IoT companies report 450% ROI with 70% reduction in latency and 55% improvement in edge computing efficiency.',
       competitors: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'AWS Greengrass',
         'Azure IoT Edge',
         'Google Cloud IoT Edge',
         'Kubernetes Edge',
       ],
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$12.5B edge computing market',
       growth_rate: '35% annual growth',
       variant: 'edge - computing',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1010,11 +719,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.8,
       reviews: 16,
     },
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Zero Trust Security Architecture Platform;
     {
       id: 'zero - trust - security - architecture - platform',
@@ -1025,10 +730,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Comprehensive zero trust security architecture platform that implements advanced security principles, continuous verification, and least - privilege access controls for modern enterprise environments.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Zero trust architecture implementation',
         'Continuous identity verification',
         'Least - privilege access controls',
@@ -1042,11 +744,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
       icon: '🛡️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - red - 500 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture - platform',
@@ -1064,10 +762,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       category: 'Zero Trust Security',
       real_service: true,
       technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Zero Trust Security',
         'Identity Management',
         'Access Control',
@@ -1076,11 +771,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'React',
         'Node && Node.js',
       ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       integrations: [;
         'Active Directory',
         'LDAP',
@@ -1091,10 +782,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Cloud platforms',
       ],
       use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Identity verification',
         'Access control',
         'Threat prevention',
@@ -1103,18 +791,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Large enterprises report 550% ROI with 85% reduction in security incidents and 75% improvement in compliance scores.',
       competitors: ['Okta', 'Ping Identity', 'ForgeRock', 'CyberArk'],
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$12.8B zero trust security market',
       growth_rate: '40% annual growth',
       variant: 'zero - trust',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1128,11 +810,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.9,
       reviews: 12,
     },
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Autonomous Data Center Platform;
     {
       id: 'autonomous - data - center - platform',
@@ -1143,10 +821,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Revolutionary autonomous data center platform that uses AI and machine learning to automatically manage, optimize, and maintain data center infrastructure without human intervention.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Fully autonomous data center management',
         'AI - powered infrastructure optimization',
         'Predictive maintenance and optimization',
@@ -1160,11 +835,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
       icon: '🏢',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - indigo - 500 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -1210,10 +881,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       growth_rate: '500%+ annual growth',
       variant: 'autonomous - infrastructure',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1227,11 +895,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 5 && 5.0,
       reviews: 6,
     },
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Quantum Networking Infrastructure;
     {
       id: 'quantum - networking - infrastructure',
@@ -1242,12 +906,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       description:;
         'Revolutionary quantum networking infrastructure that provides unbreakable communication channels, quantum key distribution, and future - proof network infrastructure for secure communications.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Quantum key distribution (QKD)',
         'Quantum - secured communication channels',
         'Post - quantum cryptography implementation',
@@ -1260,13 +919,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         '24 / 7 quantum network operations',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🌐',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / quantum - networking - infrastructure',
@@ -1311,12 +965,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       growth_rate: '700%+ annual growth',
       variant: 'quantum - networking',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1330,13 +979,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 5 && 5.0,
       reviews: 3,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'AI-powered infrastructure automation',
-=======
     // AI - Powered Infrastructure Management;
     {
       id: 'ai - powered - infrastructure - management',
@@ -1348,12 +992,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced AI - powered infrastructure management platform that provides intelligent automation, optimization, and monitoring for modern IT infrastructure, enabling efficient and reliable operations.',
       features: [;
         'AI - powered infrastructure automation',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Intelligent resource provisioning',
         'Automated scaling and optimization',
         'Infrastructure monitoring and analytics',
@@ -1365,13 +1004,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Comprehensive infrastructure management',
       ],
       popular: false,
-<<<<<<< HEAD
       icon: '🤖',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - purple - 500 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - powered - infrastructure - management',
@@ -1407,12 +1041,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'OpenStack',
       ],
       use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Infrastructure automation',
         'Resource provisioning',
         'Scaling optimization',
@@ -1421,21 +1050,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Infrastructure teams report 480% ROI with 65% reduction in provisioning time and 55% improvement in resource utilization.',
       competitors: ['Terraform', 'Ansible', 'Chef', 'Puppet'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$12.8B infrastructure management market',
       growth_rate: '32% annual growth',
       variant: 'ai - infrastructure',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1449,18 +1069,10 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.8,
       reviews: 18,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Multi-cloud orchestration and management',
-=======
     // Hybrid Cloud Orchestration Platform;
     {
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 'hybrid - cloud - orchestration - platform',
       name: 'Hybrid Cloud Orchestration Platform',
       tagline: 'Seamless multi - cloud and hybrid cloud management',
@@ -1471,11 +1083,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       features: [;
         'Multi - cloud orchestration and management',
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Hybrid cloud integration and optimization',
         'Intelligent workload placement',
         'Cross - cloud resource optimization',
@@ -1488,13 +1095,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
       icon: '☁️',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Multi-cloud management',
-=======
       color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / hybrid - cloud - orchestration - platform',
@@ -1530,10 +1132,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       use_cases: [;
         'Multi - cloud management',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Hybrid cloud integration',
         'Workload optimization',
         'Cloud migration',
@@ -1541,18 +1140,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Multi - cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.',
       competitors: ['Terraform', 'Kubernetes', 'Cloud Foundry', 'OpenShift'],
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       market_size: '$15.2B hybrid cloud market',
       growth_rate: '28% annual growth',
       variant: 'hybrid - cloud',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1568,17 +1161,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       customers: 32,
       rating: 4 && 4.7,
       reviews: 24,
-<<<<<<< HEAD
 
     },;
 
 
   ];    features: [
 
-=======
-=======
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1616,34 +1204,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     features: [
       'Hybrid quantum-classical computingQuantum algorithm optimizationAdvanced AI model trainingReal-time quantum simulationMulti-cloud orchestrationQuantum-secure encryptionAutonomous resource scalingPerformance monitoring';
       'Cost optimizationGlobal edge computing network'
-<<<<<<< HEAD
-=======
-      id: 'hybrid-cloud-orchestration-platform'
-      name: 'Hybrid Cloud Orchestration Platform'
-      tagline: 'Seamless multi-cloud and hybrid cloud management'
-      price: '$9,500'
-      period: '/month'
-      description:
-        'Advanced hybrid cloud orchestration platform that provides seamless management, optimization, and integration across multiple cloud providers and on-premises infrastructure.'
-      features: [
-        'Multi-cloud orchestration and management'
-        'Hybrid cloud integration and optimization'
-        'Intelligent workload placement'
-        'Cross-cloud resource optimization'
-        'Unified monitoring and analytics'
-        'Automated cloud migration'
-        'Custom cloud workflows'
-        'Integration with cloud platforms'
-        'Advanced cloud analytics'
-        'Comprehensive cloud management'
-      ]
-      popular: true
-      icon: '☁️'
-      color: 'from-blue-500 to-indigo-600'
-      textColor: 'text-blue-400'
-      link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       marketPosition:
         'Advanced hybrid cloud orchestration platform with seamless multi-cloud management and comprehensive optimization capabilities.'
       targetAudience: [
@@ -1684,7 +1244,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
     popular: true, icon: '☁️',
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
@@ -1929,7 +1488,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     variant: 'quantum-cloud',
     contactInfo: {
       
-=======
   ];    features: [;
       'Multi - cloud orchestration and management_hybrid cloud integration and optimization_intelligent workload placement_cross - cloud resource optimization_unified monitoring and analytics_automated cloud migration_custom cloud workflows_integration with cloud platforms';
       'Advanced cloud analytics_comprehensive cloud management';
@@ -1945,23 +1503,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     market_size: '$15.2B hybrid cloud market', growth_rate: '28% annual growth',
     variant: 'hybrid - cloud',
     contact_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     popular: true, icon: '☁️',
     color: 'from-blue-500 to-indigo-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/hybrid-cloud-orchestration-platform', marketPosition: 'Advanced hybrid cloud orchestration platform with seamless multi-cloud management and comprehensive optimization capabilities.',
@@ -1983,12 +1531,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
     launchDate: '2025-05-01', customers: 32,
     rating: 4 && 4.7,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 24
   }];
     popular: true;
@@ -2000,7 +1543,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     targetAudience: ['Cloud architectsDevOps teamsIT operationsTechnology companiesMulti-cloud organizations'];
     trialDays: 30;
     setupTime: '6-8 weeks';
-=======
     real_implementation: true,
     implementation_details: 'Comprehensive hybrid cloud orchestration platform with seamless multi - cloud management, optimization, and comprehensive cloud platform integration.',
     launch_date: '2025 - 05 - 01', customers: 32,
@@ -2016,7 +1558,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     target_audience: ['Cloud architectsDevOps teamsIT operations_technology companies_multi - cloud organizations'];
     trial_days: 30;
     setup_time: '6 - 8 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Hybrid Cloud Management';
     real_service: true;
     technology: ['Cloud ComputingMulti - Cloud ManagementContainer OrchestrationKubernetesPythonTerraformReact'];
@@ -2024,16 +1565,11 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     use_cases: ['Multi - cloud management_hybrid cloud integration_workload optimization_cloud migration_resource optimization'];
     roi: 'Multi - cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.';
     competitors: ['TerraformKubernetesCloud FoundryOpenShift'];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     market_size: '$15.2B hybrid cloud market';
     growth_rate: '28% annual growth';
     variant: 'hybrid - cloud';
     contact_info: {
-<<<<<<< HEAD
 
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -2042,31 +1578,15 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
-=======
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true;
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.';
     launchDate: '2025-05-01';
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -2145,11 +1665,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -2158,22 +1674,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
   }
 ];
@@ -2810,8 +2317,5 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     reviews: 24;
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

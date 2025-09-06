@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
 const path = require('path'),;
@@ -26,8 +25,6 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -65,7 +62,6 @@ exports.handler = async () => {
     body: logs.join('\n')
   }
 };function runNode(relPath, args = []) {
-<<<<<<< HEAD
 :netlify/functions/og-image-scheduler.js
   const abs = path.resolve(__dirname, '....', relPath)
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
@@ -119,5 +115,3 @@ main:netlify/functions/og-image-scheduler.js
 }
 main:netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

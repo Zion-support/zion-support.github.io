@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import React from 'react';
 
 
 
 
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -26,8 +18,6 @@ describe('LoadingSpinnerdynamic'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner.dynamic"; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId("loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling"
 import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -58,22 +48,16 @@ describe('LoadingSpinner', () => {
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
   });
 });
-<<<<<<< HEAD
 origin/main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import LoadingSpinnerdynamic from '../components/LoadingSpinner && LoadingSpinner.dynamic'
 describe('LoadingSpinnerdynamic'
   test('renders without crashing'
-<<<<<<< HEAD
 
 });
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     expect(screen && screen.getByTestId('loadingspinner ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner ; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen && screen.getByTestId("loadingspinner && loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling"
 
 describe('LoadingSpinner', () => {
@@ -108,9 +92,6 @@ describe ('LoadingSpinner', () => {
   test ('displays loading text', () => {
     expect (screen.getByText ('Loading...')).toBeInTheDocument ();
 });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     expect(screen.getByTestId('loadingspinner.dynamic'
   test('displays correct content'
   test('handles user interactions'
@@ -118,6 +99,3 @@ describe ('LoadingSpinner', () => {
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner.dynamic"; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId("loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling"
 origin/automation-improvements-final
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -85,7 +85,6 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
 }`;
 document.head.appendChild (style);
 //Trigger print dialog window.print ();
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/resume-builder/preview/PreviewHeader.tsx
 //Remove the temporary style element after printing return (<div className= {;
   `flex $ {;
   isMobile ? 'flex-col' : 'justify-between' ;
@@ -105,5 +104,3 @@ document.head.appendChild (style);
 }/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx

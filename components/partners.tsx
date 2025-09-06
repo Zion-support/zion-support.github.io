@@ -22,29 +22,20 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default function PartnersPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PartnersPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function PartnersPage() {;
 import React from 'react';
 import Head from 'next/head';
 
 export default function PartnersPage() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 export default function PartnersPage() {
 
 export default function PartnersPage() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -52,11 +43,7 @@ export default function PartnersPage() {
         <meta
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />;
       </Head>;
@@ -75,7 +62,6 @@ export default function PartnersPage() {
           <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>;
         </ul>;
         <div className='pt-4 text-slate-300'>;
-<<<<<<< HEAD
 
           Partner with us:{' '}
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
@@ -89,20 +75,6 @@ export default function PartnersPage() {
 export default function PartnersPage() {
 	return (
 
-=======
-          Partner with us:{' '}
-          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
-            kleber@ziontechgroup.com
-          </a>
-        </div>
-      </div>
-    </div>;
-  );	return (
-export default function PartnersPage() {
-	return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -118,8 +90,6 @@ export default function PartnersPage() {
 					<li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
 					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
 				</ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
@@ -145,13 +115,6 @@ export default function PartnersPage() {
 	),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 export default /**
  * PartnersPage - Function description
@@ -208,19 +171,10 @@ function PartnersPage() {
   </div>;
   </div>),
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 	),
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
@@ -229,6 +183,3 @@ function PartnersPage() {
 }
 	),
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

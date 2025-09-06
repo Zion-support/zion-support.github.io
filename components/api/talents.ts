@@ -10,17 +10,12 @@ const TALENTS_FILE = path.join(
   'data'
   'talents'
   'talents.json'
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const TALENTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'talents',
   'talents && talents.json'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 export default async function handler(
   req: NextApiRequest
@@ -41,25 +36,16 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
   const { name, email, skills, programTrack, certificationStatus } =
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     req && req.body || {};
   if (!name || !email) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
   const records = (await fs && fs.pathExists(TALENTS_FILE))
     ? await fs && fs.readJSON(TALENTS_FILE)
-=======
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -109,20 +95,12 @@ if ( {) {
   await fs.ensure_dir (path.dirname (TALENTS_FILE));
   const records = (await fs.path_exists (TALENTS_FILE));
     ? await fs.readJSON (TALENTS_FILE);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     : [];
-<<<<<<< HEAD
   const now = new Date ().toISOString ();
   const record = {
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     id: uuidv4(),
     name,
     email,
@@ -138,17 +116,10 @@ if ( {) {
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -189,13 +160,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id })
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: uuidv4 (),
     name,
     email,
@@ -210,14 +175,7 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -293,6 +251,3 @@ createdAt: now,
   return res.status(201).json({ id: record.id });  return res.status(201).json({ id: record.id })
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

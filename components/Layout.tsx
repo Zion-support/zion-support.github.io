@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,29 +23,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Head from 'next/head';
@@ -67,15 +46,10 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 origin/main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LayoutProps {
   children: React.ReactNode;
-=======
 interface LayoutProps {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -85,12 +59,8 @@ interface LayoutProps {;
   og_image?: string;
   no_index?: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const Layout: React.FC<LayoutProps> = ({;
   children,;
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
@@ -124,16 +94,10 @@ const Layout: React.FC<LayoutProps> = ({;
       email: "kleber@ziontechgroup && ziontechgroup.com",;
     },;
   };
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="min-h-screen bg-white">;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -170,28 +134,14 @@ const Layout: React.FC < LayoutProps> = ({
 ;
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-
-=======
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { ReactNode } from "react";
-=======
         <meta property="og:title" content={ogTitle || title} />;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta
           property="og:description"
           content={ogDescription || description}
@@ -212,23 +162,16 @@ import React, { ReactNode } from "react";
         {/* JSON-LD */}
         <script
           type="application/ld+json"
-<<<<<<< HEAD
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
@@ -237,9 +180,6 @@ import React, { ReactNode } from "react";
       <Footer />
     </div>
 import React, { ReactNode } from "react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface LayoutProps {
   children: ReactNode,
@@ -250,19 +190,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
 export default Layout;
-=======
-=======
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -273,7 +208,6 @@ interface LayoutProps {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -303,7 +237,6 @@ interface LayoutProps {
       <Footer />;
     </div>);
 }
-<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -328,17 +261,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
     </main>
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   );
 };
 export default Layout;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -356,8 +284,6 @@ interface LayoutProps {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -383,7 +309,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

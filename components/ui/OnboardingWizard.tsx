@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,8 +24,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {;
@@ -39,17 +35,11 @@ export default function OnboardingWizard() {
         setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {;
         setOpen(true);
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {
         setOpen(true)
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
@@ -59,7 +49,6 @@ export default function OnboardingWizard() {
     try {;
       if (typeof window !== 'undefined') {;
         window && window.localStorage.setItem('zion_has_onboarded', '1');
-=======
       }
     } catch {}
   }, []);
@@ -90,7 +79,6 @@ export default function OnboardingWizard() {;
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_has_onboarded', '1');
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   function completeOnboarding() {;
     try {;
@@ -98,11 +86,9 @@ export default function OnboardingWizard() {;
         window && window.localStorage.setItem('zion_has_onboarded', '1');
 
         window.localStorage.setItem('zion_has_onboarded1')
-=======
       }
     } catch {}
   }, []);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } catch {}
     setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
@@ -111,17 +97,11 @@ export default function OnboardingWizard() {;
 
 
 
-<<<<<<< HEAD
     setOpen(false);  }
 
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!open) return null;
 
   return (
@@ -243,8 +223,6 @@ export default function OnboardingWizard() {;
 }
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_role } from '../context / RoleContext';
 export default /**
@@ -325,7 +303,6 @@ if (return null) {
             Done;
           </button>        </div>;
       </div>;
-<<<<<<< HEAD
     </div>);
 }        <div className="p - 4 border - t border - gray - 200 dark:border - gray - 800 flex justify - end">;
           <button on_click={complete_onboarding} className="px - 3 py - 1.5 rounded - md border">Done</button>;
@@ -333,14 +310,9 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   if (!open) return null;
 
@@ -467,6 +439,3 @@ if (return null) {
 );
 }
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

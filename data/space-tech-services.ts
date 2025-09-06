@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   {
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface SpaceTechService {
   id: string;
   name: string;
@@ -47,7 +42,6 @@ export interface SpaceTechService {
     realService: true
     technology: [
   {
-<<<<<<< HEAD
     id: 'space - mission - management - platform',
     name: 'Space Mission Management Platform',
     tagline: 'Complete space mission planning and execution platform',
@@ -125,9 +119,7 @@ export interface SpaceTechService {
     reviews: 12,
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Multi-satellite coordination',
-=======
     id: 'satellite - constellation - management',
     name: 'Satellite Constellation Management System',
     tagline: 'Manage large satellite networks with AI - powered optimization',
@@ -137,12 +129,7 @@ export interface SpaceTechService {
       'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
     features: [;
       'Multi - satellite coordination',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -155,12 +142,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🛰️',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / satellite - constellation',
@@ -173,10 +155,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Optimization',
       'Satellite Networks',
       'Machine Learning',
@@ -185,11 +164,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Real - time Systems',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Satellite networks',
       'Ground stations',
@@ -211,10 +186,7 @@ export interface SpaceTechService {
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -228,14 +200,9 @@ export interface SpaceTechService {
     rating: 4 && 4.9,
     reviews: 20,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Real-time debris tracking',
-=======
     id: 'space - debris - monitoring - system',
     name: 'Space Debris Monitoring & Avoidance System',
     tagline: 'Protect satellites from space debris with AI - powered monitoring',
@@ -245,10 +212,7 @@ export interface SpaceTechService {
       'Advanced space debris monitoring system that tracks orbital debris and provides collision avoidance recommendations. Protect your satellites and ensure safe space operations.',
     features: [;
       'Real - time debris tracking',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Collision risk assessment',
       'Avoidance maneuver planning',
       'Debris catalog management',
@@ -261,11 +225,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🛡️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / space - debris - monitoring',
@@ -278,10 +238,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Risk Assessment',
       'Debris Tracking',
       'Machine Learning',
@@ -290,11 +247,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Real - time Data',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Satellite networks',
       'Tracking systems',
@@ -316,10 +269,7 @@ export interface SpaceTechService {
     growth_rate: '250% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -333,13 +283,8 @@ export interface SpaceTechService {
     rating: 4 && 4.9,
     reviews: 30,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'space - weather - forecasting',
     name: 'Space Weather Forecasting & Alert System',
     tagline: 'Predict space weather events that impact satellite operations',
@@ -348,10 +293,7 @@ export interface SpaceTechService {
     description:;
       'Advanced space weather forecasting system that predicts solar storms, radiation events, and other space weather phenomena that can impact satellite operations and communications.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Solar storm prediction',
       'Radiation event forecasting',
       'Geomagnetic storm alerts',
@@ -365,11 +307,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '☀️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / space - weather - forecasting',
@@ -382,10 +320,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Forecasting',
       'Space Weather',
       'Machine Learning',
@@ -394,11 +329,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Real - time Monitoring',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Solar observatories',
       'Satellite networks',
@@ -420,10 +351,7 @@ export interface SpaceTechService {
     growth_rate: '200% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -437,13 +365,8 @@ export interface SpaceTechService {
     rating: 4 && 4.8,
     reviews: 40,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'orbital - launch - coordination',
     name: 'Orbital Launch Coordination Platform',
     tagline: 'Coordinate complex orbital launches with precision timing',
@@ -452,10 +375,7 @@ export interface SpaceTechService {
     description:;
       'Advanced orbital launch coordination platform that manages complex launch sequences, orbital insertions, and mission timing. Coordinate launches like SpaceX and NASA with precision.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Launch sequence management',
       'Orbital insertion planning',
       'Timing optimization',
@@ -469,11 +389,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🎯',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / orbital - launch - coordination',
@@ -486,10 +402,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Launch Coordination',
       'Orbital Mechanics',
       'Precision Timing',
@@ -498,11 +411,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Real - time Systems',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Launch vehicles',
       'Ground stations',
@@ -524,10 +433,7 @@ export interface SpaceTechService {
     growth_rate: '180% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -541,13 +447,8 @@ export interface SpaceTechService {
     rating: 4 && 4.9,
     reviews: 18,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ground - station - network - management',
     name: 'Ground Station Network Management System',
     tagline: 'Manage global ground station networks for satellite operations',
@@ -556,10 +457,7 @@ export interface SpaceTechService {
     description:;
       'Advanced ground station network management system that coordinates global networks of ground stations for satellite communications, tracking, and control.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Global station coordination',
       'Network optimization',
       'Traffic routing',
@@ -573,11 +471,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🌍',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / ground - station - management',
@@ -590,10 +484,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Network Management',
       'Global Coordination',
       'AI Optimization',
@@ -602,11 +493,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Real - time Systems',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Ground stations',
       'Satellite networks',
@@ -628,10 +515,7 @@ export interface SpaceTechService {
     growth_rate: '220% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -645,13 +529,8 @@ export interface SpaceTechService {
     rating: 4 && 4.8,
     reviews: 25,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'space - research - data - platform',
     name: 'Space Research Data & Analytics Platform',
     tagline: 'Access and analyze space research data with AI - powered insights',
@@ -660,10 +539,7 @@ export interface SpaceTechService {
     description:;
       'Comprehensive space research data platform that provides access to satellite imagery, space weather data, and research findings with AI - powered analysis and insights.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Satellite imagery access',
       'Space weather data',
       'Research database',
@@ -677,11 +553,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🔬',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / space - research - data',
@@ -694,10 +566,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Data Analytics',
       'AI Analysis',
       'Satellite Data',
@@ -706,11 +575,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Machine Learning',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Satellite networks',
       'Research databases',
@@ -732,10 +597,7 @@ export interface SpaceTechService {
     growth_rate: '180% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -749,13 +611,8 @@ export interface SpaceTechService {
     rating: 4 && 4.9,
     reviews: 100,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'space - commerce - platform',
     name: 'Space Commerce & Trading Platform',
     tagline: 'Trade space assets and services in a secure marketplace',
@@ -764,10 +621,7 @@ export interface SpaceTechService {
     description:;
       'Revolutionary space commerce platform that enables trading of satellite capacity, launch services, and space assets in a secure, blockchain - powered marketplace.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Asset trading platform',
       'Smart contracts',
       'Secure payments',
@@ -781,11 +635,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '💎',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / space - commerce',
@@ -798,10 +648,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Blockchain',
       'Smart Contracts',
       'Trading Platform',
@@ -810,11 +657,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Security',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Payment systems',
       'Blockchain networks',
@@ -836,10 +679,7 @@ export interface SpaceTechService {
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -853,13 +693,8 @@ export interface SpaceTechService {
     rating: 5 && 5.0,
     reviews: 15,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'space - education - platform',
     name: 'Space Education & Training Platform',
     tagline: 'Learn space technology and operations with interactive courses',
@@ -868,10 +703,7 @@ export interface SpaceTechService {
     description:;
       'Comprehensive space education platform that provides interactive courses, simulations, and training for space technology, operations, and careers.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Interactive courses',
       'Space simulations',
       'Virtual training',
@@ -885,11 +717,7 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🎓',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - indigo - 600 to - blue - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / space - education',
@@ -902,10 +730,7 @@ export interface SpaceTechService {
     category: 'Space Technology',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Interactive Learning',
       'Virtual Reality',
       'AI Tutoring',
@@ -914,11 +739,7 @@ export interface SpaceTechService {
       'PostgreSQL',
       'Simulation Engine',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Educational platforms',
       'VR systems',
@@ -940,10 +761,7 @@ export interface SpaceTechService {
     growth_rate: '200% annual growth',
     variant: 'space - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -959,11 +777,7 @@ export interface SpaceTechService {
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1017,7 +831,6 @@ export const spaceTechServices: SpaceTechService[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1029,31 +842,17 @@ export const spaceTechServices: SpaceTechService[] = [
 
   }
 
-=======
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface SpaceTechService {;
 
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
   }
 ];
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
@@ -1327,7 +1126,6 @@ export interface SpaceTechService {;
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1362,8 +1160,6 @@ export interface SpaceTechService {;
   }
 ];
 export interface SpaceTechService {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   name: string,;
   tagline: string,;
@@ -1447,12 +1243,8 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500;
     rating: 4.9,
     reviews: 250;
-<<<<<<< HEAD
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

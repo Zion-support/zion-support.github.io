@@ -113,7 +113,6 @@ onViewDetails: (quote: QuoteRequest) => void;
 onMarkAsResponded?: (id: string) => void;
 onToggleArchive: (id: string, isArchived: boolean) => void 
 };
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/quotes/QuoteRequestCard.tsx
 quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
 }) => {;
   //Format date for display const formatDate = (dateString: string) => {;
@@ -127,5 +126,3 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteRequestCard.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/QuoteRequestCard.tsx

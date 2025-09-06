@@ -1,21 +1,11 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import Head from "next/head";
 
 
 export default function LocationsPage() {
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,10 +32,6 @@ import React from "react";
 import Head from "next/head";
 
 export default function LocationsPage() {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -76,7 +62,6 @@ export default function LocationsPage() {;
           or email{" "}
           <a className="text-cyan-400" href="mailto:kleber@ziontechgroup && ziontechgroup.com">;
             kleber@ziontechgroup && ziontechgroup.com;
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -113,16 +98,11 @@ function LocationsPage() {
           or email{" "}
           <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </a>;
           .;
         </p>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>);
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -154,23 +134,13 @@ function LocationsPage() {
           or email{" "}
           <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </a>;
           .;
         </p>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -187,25 +157,14 @@ function LocationsPage() {
 				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel: +13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
 			</div>
 		</div>
-<<<<<<< HEAD
 	);
 
-=======
-);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 
@@ -290,8 +249,5 @@ export default function LocationsPage() {
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

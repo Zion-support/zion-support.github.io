@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -328,9 +323,6 @@ export const real2036ITServices = [
       'Reduced recovery time'
     ]
     useCases: [
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'Data center recovery'
       'Cloud recovery'
       'Application recovery'
@@ -1021,7 +1013,6 @@ export const real2036ITServices = [;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1029,41 +1020,16 @@ export const real2036ITServices = [
   {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'Data center recovery'
-      'Cloud recovery'
-      'Application recovery'
-      'Business continuity'
-    ]
-  }
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
-    ]
-  }
-];
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
       'Business continuity',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const real2036ITServices = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1084,7 +1050,6 @@ export const real2036ITServices = [;
     ],;
     useCases: [;
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
-<<<<<<< HEAD
     ];
   },;
   {;
@@ -1275,21 +1240,14 @@ export const real2036ITServices = [;
     useCases: [;
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
     ];
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   }
 ];
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const real2036ITServices = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1502,7 +1460,3 @@ export const real2036ITServices = [;
     ];
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

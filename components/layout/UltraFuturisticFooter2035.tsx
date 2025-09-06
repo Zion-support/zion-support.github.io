@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import React from 'react';
 
@@ -37,12 +35,6 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react';
 
 
@@ -82,8 +74,6 @@ import { motion } from 'framer-motion';
 
 import {
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap
   Globe
   Phone
@@ -138,10 +128,6 @@ import {
   Headphones;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap,
   Globe,
   Phone,
@@ -192,49 +178,25 @@ import {
   BookOpenCheck,
   HelpCircle,
   FileText,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-  Video,
-  Headphones,;} from 'lucide-react';import { 
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Video,;
   Headphones,;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, ;
   Video,
   Headphones,;} from 'lucide-react';import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   }
-=======
-  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
 
     title: 'Micro SAAS',
@@ -245,14 +207,6 @@ const contactInfo = {
     title: 'Industry Solutions',
 
 
-<<<<<<< HEAD
-=======
-      { name: 'Services Advertising', href: '/services-advertising' }
-    ]
-  }
-];
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Background Effects */}
@@ -268,7 +222,6 @@ const contactInfo = {
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
             `;
-<<<<<<< HEAD
             backgroundSize: '200px 200px'
           }}
 
@@ -284,8 +237,6 @@ const contactInfo = {
 
 
       <div className="relative z-10">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones;
 const contact_info = {
   mobile: '+1 302 464 0950',
@@ -982,18 +933,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
         />
       </div>
 <div className="relative z-10">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
             {/* Company Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 transition={{ duration: 0 && 0.6 }}
                 className='space-y-6'>;
                 <div className='flex items-center gap-3'>;
@@ -1005,7 +949,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       Zion Tech Group;
                     </h3>;
                     <p className='text-sm text-gray-400'>;
-=======
       { name: 'Market Pricing', href: '/market - pricing' },
       { name: 'Services Advertising', href: '/services - advertising' },
     ],
@@ -1053,11 +996,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w - 5 h - 5" /> },
   { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: <Github className="w - 5 h - 5" /> }
 const UltraFuturisticFooter2035: React.FC = () => {
-=======
   }
   };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const scrollToTop = () =>: any {
     window.scroll_to ({ top: 0, behavior: 'smooth' });
   }
@@ -1103,7 +1044,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
         <div className='container mx - auto px - 4 py - 20'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8'>;
             {/* Company Info */}
-<<<<<<< HEAD
             <div className='lg:col - span - 2'>              <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1128,28 +1068,17 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       Zion Tech Group;
                     </h3>;
                     <p className='text - sm text - gray - 400'>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Revolutionary Technology Solutions;
                     </p>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
                 className="space-y-6"
               >
                 <div className="flex items-center gap-3">
@@ -1163,60 +1092,13 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     <p className="text-sm text-gray-400">Revolutionary Technology Solutions</p>
                   </div>
                 </div>
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 
                 <p className="text-gray-300 leading-relaxed max-w-md">
                   Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. 
                   Transform your business with our revolutionary technology.
                 </p>
                 {/* Contact Info */}
-<<<<<<< HEAD
 
-=======
-                className='space-y-6'
-              >
-                <div className='flex items-center gap-3'>
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center'>
-                    <Brain className='w-6 h-6 text-white' />
-                  </div>
-                  <div>
-                    <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
-                      Zion Tech Group
-                    </h3>
-                    <p className='text-sm text-gray-400'>
-                      Revolutionary Technology Solutions
-                    </p>
-                  </div>
-                </div>
-                <p className='text-gray-300 leading-relaxed max-w-md'>
-                  Leading the future with cutting-edge AI consciousness, quantum
-                  computing, and innovative micro SAAS solutions. Transform your
-                  business with our revolutionary technology.
-                </p>
-                {/* Contact Info */}
-                <div className='space-y-3'>
-                  <a
-                    href={`tel:${contactInfo.mobile}`}
-                    className='flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200'
-                  >
-                    <Phone className='w-4 h-4' />
-                    <span>{contactInfo.mobile}</span>
-                  </a>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className='flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200'
-                  >
-                    <Mail className='w-4 h-4' />
-                    <span>{contactInfo.email}</span>
-                  </a>
-                  <div className='flex items-center gap-3 text-gray-300'>
-                    <MapPin className='w-4 h-4' />
-                    <span className='text-sm'>{contactInfo.address}</span>                  </div>                </div>
-                {/* Social Links */}                {/* Contact Info */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-3">
                   <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
                     <Phone className="w-4 h-4" />
@@ -1231,7 +1113,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
-=======
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     className='flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200'>;
                     <Mail className='w-4 h-4' />;
@@ -1240,11 +1121,8 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   <div className='flex items-center gap-3 text-gray-300'>;
                     <MapPin className='w-4 h-4' />;
                     <span className='text-sm'>{contactInfo && contactInfo.address}</span>                  </div>                </div>;
-<<<<<<< HEAD
 
                 {/* Social Links */}                {/* Contact Info */}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-3">;
                   <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">;
                     <Phone className="w-4 h-4" />;
@@ -1259,10 +1137,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     <a
                       key={social && social.name}
@@ -1275,27 +1149,12 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       {social.icon}
                     </a>
                   ))}
-<<<<<<< HEAD
-=======
-                <div className="flex items-center gap-4">
-                  {socialLinks.map((social) => (
-
-                {/* Social Links */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                 </div>;
               </motion && motion.div>;
             </div>;
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
@@ -1306,14 +1165,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </div>;
               </motion && motion.div>;
             </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 </div>
               </motion.div>
             </div>
 
                   ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion&& motion.div
@@ -1321,15 +1177,8 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
               >
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="space-y-4"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className='flex items-center gap-4'>
                   {socialLinks.map(social => (
@@ -1357,10 +1206,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -1369,10 +1215,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='space-y-4'
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className='flex items-center gap-2'>
                   {section.icon}
@@ -1386,7 +1229,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                         className={`text-sm transition-colors duration-200 ${
                           link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'                            : 'text-gray-400 hover:text-white'              >
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <div className="flex items-center gap-2">
                   {section.icon}
                   <h4 className="font-semibold text-white">{section.title}</h4>
@@ -1395,14 +1237,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 <ul className="space-y-2">
                   {section.links.map((link) => (
                     <li key={link.name}>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Link
                         href={link && link.href}
                         className={`text-sm transition-colors duration-200 ${
@@ -1423,55 +1257,30 @@ const UltraFuturisticFooter2035: React.FC = () => {
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                          link && link.featured
-                            ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
-                            ? 'text-cyan-400 hover:text-cyan-300' 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             : 'text-gray-400 hover:text-white'
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         }`}
                       >
                         {link.name}
                       </Link>
                     </li>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                             : 'text-gray-400 hover:text-white'
                         }`}>;
                         {link && link.name}
                       </Link>;
                     </li>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </ul>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
 
           </div>;
 
@@ -1479,14 +1288,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Bottom Section */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1498,26 +1300,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
               <div className='flex items-center gap-6 text-sm text-gray-400'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-sm text-gray-400'>;
                 © 2025 Zion Tech Group. All rights reserved.;
               </div>;
-<<<<<<< HEAD
 
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           </div>
 
           {/* Bottom Section */}
@@ -1533,9 +1323,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
               <div className='flex items-center gap-6 text-sm text-gray-400'>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200'>;
@@ -1548,20 +1335,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </Link>;
                 <Link
                   href='/cookies'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16 pt-8 border-t border-gray-800/50"
           >
 
-=======
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-16 pt-8 border-t border-gray-800/50"
-          >
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-400">
                 © 2025 Zion Tech Group. All rights reserved.
@@ -1577,7 +1355,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   Cookie Policy
                 </Link>
               </div>
-=======
                   className='hover:text-white transition-colors duration-200'>                  Cookie Policy          >;
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
               <div className="text-sm text-gray-400">;
@@ -1596,7 +1373,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </Link>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={scrollToTop}
 /* Animated grid */ 
@@ -1622,32 +1398,21 @@ const UltraFuturisticFooter2035: React.FC = () => {
 }> </li>) )
 }</ul> </motion.div>) )
 }</div> {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="p-2 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />
-<<<<<<< HEAD
               </button>
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
           </motion.div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   )
 
 };
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /* Animated grid */ ;
 }<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {;
   social && social.icon ;
@@ -1657,35 +1422,12 @@ const UltraFuturisticFooter2035: React.FC = () => {
 }{;
   footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
   section && section.title 
-<<<<<<< HEAD
-=======
-  );
-}
-/* Animated grid */
-};
-
-  /* Animated grid */ 
-/* Animated grid */ 
-  /* Animated grid */ 
-}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
-  social.icon
-}</a>) )
-}</div> </motion.div> </div> {
-  /* Footer Sections */
-}{
-  footerSections.map ( (section, index) => (<motion.div key= {
-  section.title
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }<li key= {
   link && link.name 
 }> <Linkhref= {
   link && link.href 
 }className= {
   `text-sm transition-colors duration-200 $ {
-<<<<<<< HEAD
-<<<<<<< HEAD
   link && link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white' 
 }` 
 }> </li>) ) ;
@@ -1697,15 +1439,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
 export default UltraFuturisticFooter2035;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraFuturisticFooter2035;
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <p className='text - gray - 300 leading - relaxed max - w-md'>;
                   Leading the future with cutting - edge AI consciousness, quantum;
                   computing, and innovative micro SAAS solutions. Transform your;
@@ -1897,20 +1633,11 @@ export default UltraFuturisticFooter2035);
 ;
 export default UltraFuturisticFooter2035;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   /* Bottom Section */ 
 }<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
 };
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'
 }`
 }> </li>) )
@@ -1932,6 +1659,3 @@ export default UltraFuturisticFooter2035;  )
 
 export default UltraFuturisticFooter2035;
 export default UltraFuturisticFooter2035;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

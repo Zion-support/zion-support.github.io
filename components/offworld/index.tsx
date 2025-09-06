@@ -1,32 +1,17 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
 
 
 import Head from 'next/head';
 
 
-<<<<<<< HEAD
-=======
-import { useState  } from 'react';
-import {useState} from 'react';
-import Head from 'next/head';
-export default function OffworldConsole() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
@@ -46,36 +31,19 @@ export default function OffworldConsole() {;
 
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
 
-=======
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
     setStatus('Pinning profile...');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
 
-=======
-    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-    setStatus('Broadcasting manifesto...');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   async function sendChat() {;
     setStatus('Sending chat...');
     const res = await fetch('/api/offworld/orbit?action=chat', {;
@@ -125,20 +93,10 @@ export default function OffworldConsole() {;
       method: 'POST',;
       headers: { 'content-type': 'application/json' },;
       body: JSON && JSON.stringify({ message: 'We build beyond platforms.' }),;
-<<<<<<< HEAD
 
-=======
-    setStatus('Broadcasting manifesto...');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
 
-<<<<<<< HEAD
-=======
-    });
-    setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className='min-h-screen p-8 space-y-8'>;
       <Head>;
         <title>Zion Offworld Console</title>;
@@ -147,13 +105,8 @@ export default function OffworldConsole() {;
 
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Chat</h2>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <input
           className='border p-2 w-full'
           placeholder='Type message'
@@ -162,11 +115,7 @@ export default function OffworldConsole() {;
         />;
         <button
           className='px-3 py-2 bg-black text-white rounded'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           onClick={sendChat}>;
           Send;
         </button>;
@@ -174,12 +123,7 @@ export default function OffworldConsole() {;
 
       <section className='space-y-2'>;
         <h2 className='font-semibold'>DAO Voting</h2>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <input
           className='border p-2 w-full'
           placeholder='Proposal ID'
@@ -190,7 +134,6 @@ export default function OffworldConsole() {;
           className='border p-2'
           value={voteChoice}
           onChange={e => setVoteChoice(e && e.target.value)}
-=======
 import {useState} from 'react';
 import Head from 'next / head';
 export default /**
@@ -302,17 +245,12 @@ function broadcast() {
           className='border p - 2';
           value={vote_choice}
           on_change={e => setVoteChoice (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         >;
           <option value='yes'>Yes</option>;
           <option value='no'>No</option>;
           <option value='abstain'>Abstain</option>;
         </select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           onClick={castVote}>;
           Vote;
         </button>;
@@ -320,12 +258,7 @@ function broadcast() {
 
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Talent Profile Sync</h2>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <input
           className='border p-2 w-full'
           placeholder='Name'
@@ -340,34 +273,19 @@ function broadcast() {
         />;
         <button
           className='px-3 py-2 bg-black text-white rounded'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           onClick={syncProfile}>;
           Pin Profile to IPFS;
         </button>;
       </section>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     setStatus('Broadcasting manifesto...');
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
@@ -381,15 +299,8 @@ function broadcast() {
     </div>
 );
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -429,11 +340,7 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   async function sendChat() {
     setStatus('Sending chat...');
 
@@ -565,6 +472,3 @@ function broadcast() {
 
 }
     setStatus('Broadcasting manifesto...');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

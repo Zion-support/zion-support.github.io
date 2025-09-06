@@ -5,7 +5,6 @@ import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Trending
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { DollarSign, 
   Brain, 
   Shield, 
@@ -16,8 +15,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   DollarSign,
   Brain,
@@ -29,20 +26,14 @@ import {
   Lock,
   CreditCard,
   Database,
-<<<<<<< HEAD
   FileText,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
     title: 'Blockchain Solutions,',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -238,7 +229,6 @@ export default function FinancePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
 ];
 export default function FinancePage() {
   return (
@@ -286,18 +276,13 @@ export default function FinancePage() {
             </motion.div>
           </div>
         </section>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Section */}
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -310,13 +295,10 @@ export default function FinancePage() {
                 Comprehensive fintech solutions designed for banks, financial institutions, ;
                 and fintech startups.;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -423,10 +405,7 @@ export default function FinancePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -439,13 +418,10 @@ export default function FinancePage() {
                 Our financial technology solutions deliver enhanced security, improved efficiency, ;
                 and regulatory compliance for financial institutions.;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -512,10 +488,7 @@ export default function FinancePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Financial Services?;
@@ -561,11 +534,4 @@ export default function FinancePage() {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Finance;
-=======
-export default Finance;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

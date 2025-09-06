@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 ];      phone: '+1 302 464 0950';
 
-=======
-export interface ComprehensiveService {;
-export interface ComprehensiveService {
-export interface ComprehensiveService {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -31,42 +23,24 @@ export interface ComprehensiveService {;
 
 
 ];      phone: '+1 302 464 0950';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
     trial_days: 60;
     setup_time: '4 - 6 weeks';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     rating: 4 && 4.9,
 
-=======
-    rating: 4 && 4.9,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 520
   }
 ];
-=======
   id: string, name: string,
   tagline: string, description: string,
   price: string, period: string,
@@ -98,7 +72,6 @@ export interface ComprehensiveService {;
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
-<<<<<<< HEAD
 
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',
@@ -120,8 +93,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       address: '364 E Main St STE 1008 Middletown DE 19709'
     
     },
@@ -399,16 +370,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
-<<<<<<< HEAD
       
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
-=======
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       address: '364 E Main St STE 1008 Middletown DE 19709'
     
     },
@@ -416,33 +379,15 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 520;
 
 export interface ComprehensiveService {;
 
   }
-<<<<<<< HEAD
 ];
 
 ;
 
-=======
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trialDays: 60,
-    setupTime: '4-6 weeks',
-    competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation'],
-    roi: 'Average customer sees 600% ROI through operational improvements',
-    launchDate: '2024-01-10',
-    customers: 950,
-    rating: 4.9,
-    reviews: 520,
-  },;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -857,9 +802,6 @@ export interface ComprehensiveService {;
 
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     phone: string;
     email: string;
 
@@ -1792,4 +1734,3 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
   }
 ];
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

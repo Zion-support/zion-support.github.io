@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   {
 
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface BiotechAIService {
   id: string;
   name: string;
@@ -61,8 +55,6 @@ export interface BiotechAIService {
     reviews: 60,
   },
   {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - genetic - engineering - suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -71,12 +63,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI - powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'AI gene editing algorithms',
       'Synthetic biology design',
       'CRISPR optimization',
@@ -90,12 +77,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '🔬',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - genetic - engineering',
@@ -108,10 +90,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Gene Editing',
       'Synthetic Biology',
       'Machine Learning',
@@ -120,11 +99,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Bioinformatics',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Laboratory systems',
       'DNA sequencing',
@@ -146,10 +121,7 @@ export interface BiotechAIService {
     growth_rate: '300% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -163,13 +135,8 @@ export interface BiotechAIService {
     rating: 5 && 5.0,
     reviews: 40,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - protein - design - platform',
     name: 'AI Protein Design Platform',
     tagline: 'Design novel proteins with AI - powered algorithms',
@@ -178,10 +145,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI platform that designs novel proteins for therapeutic, industrial, and research applications. Create proteins with specific functions and properties.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI protein design algorithms',
       'Structure prediction',
       'Function optimization',
@@ -195,11 +159,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '🧪',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - protein - design',
@@ -212,10 +172,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Protein Design',
       'Machine Learning',
       'Bioinformatics',
@@ -224,11 +181,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Cloud Computing',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Laboratory systems',
       'Protein databases',
@@ -250,10 +203,7 @@ export interface BiotechAIService {
     growth_rate: '280% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -267,13 +217,8 @@ export interface BiotechAIService {
     rating: 4 && 4.9,
     reviews: 75,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - clinical - trial - optimization',
     name: 'AI Clinical Trial Optimization Platform',
     tagline: 'Optimize clinical trials with AI - powered insights',
@@ -282,10 +227,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI platform that optimizes clinical trial design, patient recruitment, and data analysis. Reduce trial costs by 40% and accelerate completion by 60%.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Trial design optimization',
       'Patient recruitment AI',
       'Data analysis automation',
@@ -299,11 +241,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '🏥',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - clinical - trials',
@@ -316,10 +254,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Optimization',
       'Clinical Trials',
       'Machine Learning',
@@ -328,11 +263,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Analytics',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Clinical trial systems',
       'Patient databases',
@@ -354,10 +285,7 @@ export interface BiotechAIService {
     growth_rate: '220% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -371,13 +299,8 @@ export interface BiotechAIService {
     rating: 4 && 4.9,
     reviews: 100,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - biomarker - discovery',
     name: 'AI Biomarker Discovery Platform',
     tagline: 'Discover biomarkers with AI - powered analysis',
@@ -386,10 +309,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10x.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI biomarker discovery',
       'Multi - omics analysis',
       'Validation algorithms',
@@ -403,11 +323,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '🔍',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / ai - biomarker - discovery',
@@ -420,10 +336,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Discovery',
       'Biomarkers',
       'Machine Learning',
@@ -432,11 +345,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Bioinformatics',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Laboratory systems',
       'Clinical databases',
@@ -458,10 +367,7 @@ export interface BiotechAIService {
     growth_rate: '240% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -475,13 +381,8 @@ export interface BiotechAIService {
     rating: 4 && 4.8,
     reviews: 90,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - personalized - medicine',
     name: 'AI Personalized Medicine Platform',
     tagline: 'Enable personalized medicine with AI - powered genomics',
@@ -490,10 +391,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI platform that enables personalized medicine through genomic analysis, drug response prediction, and treatment optimization. Transform healthcare with precision medicine.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Genomic analysis AI',
       'Drug response prediction',
       'Treatment optimization',
@@ -507,11 +405,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '👤',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - personalized - medicine',
@@ -524,10 +418,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Genomics',
       'Personalized Medicine',
       'Machine Learning',
@@ -536,11 +427,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Healthcare',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Healthcare systems',
       'Genomic databases',
@@ -562,10 +449,7 @@ export interface BiotechAIService {
     growth_rate: '260% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -579,13 +463,8 @@ export interface BiotechAIService {
     rating: 5 && 5.0,
     reviews: 60,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - drug - repurposing',
     name: 'AI Drug Repurposing Platform',
     tagline: 'Discover new uses for existing drugs with AI',
@@ -594,10 +473,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI platform that discovers new therapeutic uses for existing drugs. Accelerate drug development by finding new applications for approved medications.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI drug repurposing',
       'Target identification',
       'Efficacy prediction',
@@ -611,11 +487,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '💊',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - drug - repurposing',
@@ -628,10 +500,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Repurposing',
       'Drug Discovery',
       'Machine Learning',
@@ -640,11 +509,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Bioinformatics',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Drug databases',
       'Clinical databases',
@@ -666,10 +531,7 @@ export interface BiotechAIService {
     growth_rate: '200% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -683,14 +545,9 @@ export interface BiotechAIService {
     rating: 4 && 4.9,
     reviews: 80,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Multi-omics analysis',
-=======
     id: 'ai - bioinformatics - platform',
     name: 'AI Bioinformatics Platform',
     tagline: 'Advanced bioinformatics with AI - powered analysis',
@@ -700,10 +557,7 @@ export interface BiotechAIService {
       'Comprehensive AI - powered bioinformatics platform that analyzes genomic, proteomic, and metabolomic data. Accelerate biological research with advanced computational tools.',
     features: [;
       'Multi - omics analysis',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI data processing',
       'Statistical analysis',
       'Data visualization',
@@ -716,11 +570,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '📊',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - teal - 600 to - cyan - 700',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / ai - bioinformatics',
@@ -733,10 +583,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Bioinformatics',
       'Multi - omics',
       'Machine Learning',
@@ -745,11 +592,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'Cloud Computing',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Laboratory systems',
       'Research databases',
@@ -771,10 +614,7 @@ export interface BiotechAIService {
     growth_rate: '230% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -788,13 +628,8 @@ export interface BiotechAIService {
     rating: 4 && 4.8,
     reviews: 150,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - biomanufacturing - optimization',
     name: 'AI Biomanufacturing Optimization Platform',
     tagline: 'Optimize biomanufacturing with AI - powered insights',
@@ -803,10 +638,7 @@ export interface BiotechAIService {
     description:;
       'Advanced AI platform that optimizes biomanufacturing processes, improves yield, and reduces costs. Transform bioproduction with intelligent optimization.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Process optimization AI',
       'Yield improvement',
       'Quality control',
@@ -820,11 +652,7 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '🏭',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - gray - 600 to - slate - 700',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / ai - biomanufacturing',
@@ -837,10 +665,7 @@ export interface BiotechAIService {
     category: 'Biotech AI',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI Optimization',
       'Biomanufacturing',
       'Machine Learning',
@@ -849,11 +674,7 @@ export interface BiotechAIService {
       'PostgreSQL',
       'IoT Integration',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Manufacturing systems',
       'Laboratory systems',
@@ -875,10 +696,7 @@ export interface BiotechAIService {
     growth_rate: '210% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -894,11 +712,7 @@ export interface BiotechAIService {
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -951,7 +765,6 @@ export const biotechAIServices: BiotechAIService[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -963,31 +776,17 @@ export const biotechAIServices: BiotechAIService[] = [
 
   }
 
-=======
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface BiotechAIService {;
 
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
   }
 ];
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true
     implementationDetails:
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -1261,7 +1060,6 @@ export interface BiotechAIService {;
     growthRate: '210% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1296,8 +1094,6 @@ export interface BiotechAIService {;
   }
 ];
 export interface BiotechAIService {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   name: string,;
   tagline: string,;
@@ -1381,12 +1177,8 @@ export const biotechAIServices: BiotechAIService[] = [;
     customers: 90;
     rating: 4.9,
     reviews: 45;
-<<<<<<< HEAD
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,68 +1,30 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-import Head from 'next/head';
-import { useRouter  } from 'next/router';
-import Link from 'next/link';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-import equipment from '@/data/equipment.json';
 
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const item = items.find((e) => e.slug === slug);
 
 
-=======
-  const item = items.find((e) => e.slug === slug);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!item) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-<<<<<<< HEAD
 
 export default EquipmentDetail;
 
-<<<<<<< HEAD
-=======
-  }
-        <div className='space-y-4'>
-          <h1 className='text-xl font-semibold'>Equipment not found</h1>
-          <Link href='/products'>
-            <a className='text-blue-600 hover:underline'>Back to Equipment</a>
-          </Link>
-        </div>
-      </EnhancedLayout>
-    );  }        <div className="space-y-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import equipment from '@/data/equipment ;
@@ -92,9 +54,6 @@ const EquipmentDetail: NextPage = () => {;
       </EnhancedLayout>;
     );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <EnhancedLayout>;
       <Head>;
@@ -275,9 +234,6 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   return (
     <EnhancedLayout>
       <Head>
@@ -313,6 +269,3 @@ export default EquipmentDetail;
 export default EquipmentDetail;
 export default EquipmentDetail;
 export default EquipmentDetail;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

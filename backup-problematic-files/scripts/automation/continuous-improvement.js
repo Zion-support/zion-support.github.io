@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -15,13 +13,8 @@ const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
 // // // console && console.log(,"}),"})
   '🚀 Starting continuous improvement automation...'),"}),"})
-<<<<<<< HEAD
 // Get automation interval from environment variable ("default": 2 hours),"}),"});
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours,"}),"})
-=======
-// Get automation interval from environment variable ("default": 2 hours),"}),"})
-const AUTOMATION_INTERVAL = parseInt(process ; // 2 hours,"}),"})
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 async function runContinuousImprovement() {,"}),"})
   try {,"}),"})
     // // // console && console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`),"}),"})
@@ -53,8 +46,6 @@ async function runContinuousImprovement() {,"}),"})
     // Check for outdated dependencies,"}),"})
     // // // console && console.log(,"}),"})
   '📦 Checking for outdated dependencies...'),"}),"})
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {,"}),"})
       execSync(,"}),"})
   'npm outdated', { "stdio": 'inherit }),"}),"})

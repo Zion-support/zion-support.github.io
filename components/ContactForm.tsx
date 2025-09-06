@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,8 +24,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   name: string, email: string,
   company: string, phone: string,
   service: string,
@@ -40,21 +36,14 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
     message: '',
 
-=======
-message: '',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   });
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submit_status, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>: any {
     const { name, value } = e.target;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface FormData {;
   name: string, email: string,;
   company: string, phone: string,;
@@ -96,13 +85,8 @@ const ContactForm: React.FC = () => {;
         service: '',;
         message: '',;
       });
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -111,11 +95,7 @@ const ContactForm: React.FC = () => {;
     }
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">;
       <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">;
         Get In Touch;
@@ -139,10 +119,7 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">;
               Name *;
             </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <input
               type="text"
               id="name"
@@ -151,10 +128,7 @@ const ContactForm: React.FC = () => {;
               onChange={handleInputChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </div>;
 
@@ -162,10 +136,7 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
               Email *;
             </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <input
               type="email"
               id="email"
@@ -174,10 +145,7 @@ const ContactForm: React.FC = () => {;
               onChange={handleInputChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </div>;
         </div>;
@@ -187,10 +155,7 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
               Company;
             </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <input
               type="text"
               id="company"
@@ -198,10 +163,7 @@ const ContactForm: React.FC = () => {;
               value={formData && formData.company}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </div>;
 
@@ -209,10 +171,7 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
               Phone;
             </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <input
               type="tel"
               id="phone"
@@ -220,10 +179,7 @@ const ContactForm: React.FC = () => {;
               value={formData && formData.phone}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </div>;
         </div>;
@@ -232,26 +188,19 @@ const ContactForm: React.FC = () => {;
           <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
             Service Interest;
           </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <select
             id="service"
             name="service"
             value={formData && formData.service}
             onChange={handleInputChange}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">;
             <option value="">Select a service</option>;
             <option value="web-development">Web Development</option>;
             <option value="mobile-development">Mobile Development</option>;
             <option value="ai-services">AI Services</option>;
             <option value="cloud-solutions">Cloud Solutions</option>;
-=======
     setFormData (prev => ({
       ...prev,
       [name]: value,
@@ -272,52 +221,7 @@ const ContactForm: React.FC = () => {;
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
         message: '',
-=======
-message: '',
-import React, { useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-interface FormData {
-  name: string, email: string
-  company: string, phone: string
-  service: string
-  message: string
-}
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: ''
-    email: ''
-    company: ''
-    phone: ''
-    service: ''
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev
-      [name]: value
-    }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: ''
-        email: ''
-        company: ''
-        phone: ''
-        service: ''
-        message: ''
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       });
 ;
       setSubmitStatus ('success');
@@ -416,29 +320,16 @@ const ContactForm: React.FC = () => {
             <option value="mobile - development">Mobile Development</option>;
             <option value="ai - services">AI Services</option>;
             <option value="cloud - solutions">Cloud Solutions</option>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           />;
         </div>;
 
 
-=======
-          />;
-        </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <button
           type="submit"
           disabled={isSubmitting}
@@ -455,9 +346,7 @@ const ContactForm: React.FC = () => {
       </form>;
     </div>;
   );
-<<<<<<< HEAD
 
-<<<<<<< HEAD
         <div>;
           <label html_for="message" className="block text - sm font - medium text - gray - 700 mb - 2">;
             Message *;
@@ -490,18 +379,11 @@ const ContactForm: React.FC = () => {
 }
 ;
 
-=======
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContactForm;
-=======
 export default ContactForm;
 export default ContactForm;
 };
@@ -511,6 +393,3 @@ export default ContactForm;
 };
 
 export default ContactForm;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

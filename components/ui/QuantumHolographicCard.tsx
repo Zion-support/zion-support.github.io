@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -32,9 +30,6 @@ import { motion } from 'framer-motion';
 
 interface QuantumHolographicCardProps {
   service: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import React from 'react';
@@ -42,8 +37,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
 import {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star
   Zap
   Shield
@@ -62,15 +55,11 @@ import {
   ExternalLink,
   Check,
   Users,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   Clock,;
   DollarSign,;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {
   service: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Star,;
   Zap,;
@@ -85,19 +74,12 @@ import {;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {;
   service: {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   Clock,;
   DollarSign,;
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
   service: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: string;
     name: string;
     tagline: string;
@@ -108,8 +90,6 @@ interface QuantumHolographicCardProps {
     popular: boolean;
     icon: string;
     color: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
     text_color: string;
     link: string;
     market_position: string;
@@ -129,19 +109,13 @@ interface QuantumHolographicCardProps {
 
     contact_info: {
 
-=======
-    contact_info: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: string;
       email: string;
       address: string;
 
       website: string;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     reviews: number;
   };
@@ -175,10 +149,6 @@ interface QuantumHolographicCardProps {
         ease: 'easeInOut' as const
       }
     },  };      opacity: [0.5, 1, 0.5];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -231,40 +201,17 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: { 
-=======
     real_implementation: boolean;
     implementation_details: string;
     launch_date: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-=======
-    textColor: string;
-    link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
-    category: string;
-    realService: boolean;
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    roi: string;
-    competitors: string[];
-    marketSize: string;
-    growthRate: string;
-    variant: string;
-    contactInfo: {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: string;
       email: string;
       address: string;
 
       website: string;
     }
-<<<<<<< HEAD
 
     realImplementation: boolean;
     implementationDetails: string;
@@ -275,7 +222,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   };
   className?: string;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviews: number;
   }
   class_name?: string;
@@ -287,31 +233,17 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
   const card_variants = {
     hidden: { opacity: 0, coordinate_y: 50, scale: 0.9 },
     visible: {      opacity: 1,    visible: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       opacity: 1,
       coordinate_y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         ease: 'ease_out' as const,
       },
     },    hover: {        ease: "ease_out" as const;
 
-=======
-        ease: 'ease_out' as const,
-      },
-    },    hover: {        ease: "ease_out" as const;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     hover: {
@@ -319,20 +251,11 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       scale: 1.02,
       transition: {
         duration: 0.3,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         ease: 'easeInOut' as const,
       },
     },  }        ease: "easeInOut" as const;
 
-=======
-        ease: 'easeInOut' as const,
-      },
-    },  }        ease: "easeInOut" as const;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   }
@@ -340,17 +263,10 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
   const glow_variants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   };
 
 
-=======
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
@@ -371,14 +287,8 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       }
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const glowVariants = {;
     initial: { opacity: 0 && 0.5, scale: 1 },;
     animate: {;
@@ -410,15 +320,10 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       },;
     }),;
   };
-<<<<<<< HEAD
 
 
     >;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 
         delay: i * 0.1
         duration: 0.5
@@ -426,10 +331,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       }
     })
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         delay: i * 0.1,
         duration: 0.5,
         ease: 'easeOut' as const,
@@ -438,25 +340,16 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     >
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     >
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Holographic glow effect */}
       <motion&& motion.div
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl'
         variants={glowVariants}
         initial='initial'
         animate='animate'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
 
@@ -464,29 +357,13 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       {/* Main card */}
       <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
         {/* Quantum particle effect background */}
-=======
-      />;
-      {/* Main card */}
-      <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
-        {/* Quantum particle effect background */}
-    }
-  },
-
-  const glowVariants = {
-    initial: { opacity: 0.5, scale: 1 },
-    animate: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       opacity: [0.5, 1, 0.5],
       scale: [1, 1.05, 1],
       transition: {
         duration: 3,
         repeat: Infinity,
-<<<<<<< HEAD
         ease: 'easeInOut' as const,
-=======
-ease: 'easeInOut' as const,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
     },  }      opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
@@ -526,12 +403,7 @@ ease: 'easeInOut' as const,
           <div className='absolute bottom - 6 left - 8 w - 1.5 h - 1.5 bg - pink - 400 rounded - full animate - bounce' />;
           <div className='absolute bottom - 8 right - 4 w - 1 h - 1 bg - yellow - 400 rounded - full animate - pulse' />;
         </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Header */}
         <div className='relative z - 10'>;
           <div className='flex items - start justify - between mb - 4'>;
@@ -540,7 +412,6 @@ ease: 'easeInOut' as const,
               <div>;
                 <h3 className='text - xl font - bold text - white mb - 1'>;
                   {service.name}
-<<<<<<< HEAD
 
         <div className='absolute inset-0 opacity-10'>;
           <div className='absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse' />;
@@ -548,20 +419,8 @@ ease: 'easeInOut' as const,
           <div className='absolute bottom-6 left-8 w-1 && 1.5 h-1 && 1.5 bg-pink-400 rounded-full animate-bounce' />;
           <div className='absolute bottom-8 right-4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse' />;
         </div>;
-=======
-        delay: i * 0.1,
-        duration: 0.5,
-        ease: "easeOut" as const
-      }
-    })
-  };
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Header */}
         <div className='relative z-10'>;
           <div className='flex items-start justify-between mb-4'>;
@@ -578,26 +437,16 @@ ease: 'easeInOut' as const,
             {service && service.popular && (;
               <motion&& motion.div
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -612,8 +461,6 @@ ease: 'easeInOut' as const,
         variants={glowVariants}
         initial="initial"
         animate="animate"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
 
@@ -622,12 +469,6 @@ ease: 'easeInOut' as const,
       <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">;
         {/* Quantum particle effect background */}
 
-=======
-      />;
-      {/* Main card */}
-      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">;
-        {/* Quantum particle effect background */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="absolute inset-0 opacity-10">;
           <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
           <div className="absolute top-8 right-6 w-1 h-1 bg-purple-400 rounded-full animate-ping" />;
@@ -648,36 +489,22 @@ ease: 'easeInOut' as const,
 
             {service && service.popular && (;
               <motion&& motion.div
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className="w-3 h-3 fill-current" />;
                 <span>Popular</span>;
               </motion && motion.div>;
-<<<<<<< HEAD
 
             )}
-<<<<<<< HEAD
 
             )}
           </div>
-<<<<<<< HEAD
 {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
-=======
-=======
-<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -691,31 +518,14 @@ ease: 'easeInOut' as const,
           </div>
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>Popular</span>
 
               </motion.div>
             )}
           </div>
 
-<<<<<<< HEAD
-=======
-
-            )}
-          </div>
-
-            )}
-          </div>
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Price and trial */}
-<<<<<<< HEAD
           <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
               <span className='text-3xl font-bold text-white'>
@@ -725,17 +535,12 @@ ease: 'easeInOut' as const,
             </div>
             <div className='flex items-center space-x-2 text-sm text-gray-300'>
               <Clock className='w-4 h-4' />              <span>{service.trialDays} days free</span>          <div className="flex items-center justify-between mb-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">{service.period}</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <span>{service.trialDays} days free</span>
 
@@ -743,12 +548,6 @@ ease: 'easeInOut' as const,
           </div>
           {/* Description */}
 
-=======
-              <span>{service.trialDays} days free</span>
-            </div>
-          </div>
-          {/* Description */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
 
           {/* Price and trial */}
@@ -774,16 +573,10 @@ ease: 'easeInOut' as const,
           <p className='text-gray-300 mb-6 leading-relaxed'>;
             {service && service.description}
           </p>;
-=======
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             </div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -806,17 +599,12 @@ ease: 'easeInOut' as const,
               </div>            </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Features */}
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
           {/* Key metrics */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="grid grid-cols-2 gap-4 mb-6">;
             <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50">;
               <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1">;
@@ -834,14 +622,10 @@ ease: 'easeInOut' as const,
               <div className="text-xl font-bold text-white">{service && service.rating}/5 && 5.0</div>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
 
           {/* Features */}
 
-=======
-          {/* Features */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </h3>;
                 <p className='text - gray - 300 text - sm'>{service.tagline}</p>;
               </div>;
@@ -971,26 +755,11 @@ ease: 'easeInOut' as const,
             <div className='space - y-2'>;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
-<<<<<<< HEAD
 
                   key={index}
                   className='flex items - center space - x-2 text - sm text - gray - 300';
                   custom={index}
 
-=======
-=======
-          <div className='mb-6'>
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
-              <Zap className='w-4 h-4 text-yellow-400' />
-              <span>Key Features</span>
-            </h4>
-            <div className='space-y-2'>
-              {service.features.slice(0, 4).map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className='flex items - center space - x-2 text - sm text - gray - 300';
-                  custom={index}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="mb-6">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-400" />
@@ -999,11 +768,7 @@ ease: 'easeInOut' as const,
             <div className="space-y-2">
               {service.features.slice(0, 4).map((feature, index) => (
                 <motion.div
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   variants={feature_variants}
                   initial='hidden';
                   whileInView='visible';
@@ -1014,28 +779,20 @@ ease: 'easeInOut' as const,
             <div className="space - y-2">;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   className="flex items - center space - x-2 text - sm text - gray - 300";
                   custom={index}
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </motion.div>
               ))}
-<<<<<<< HEAD
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Market data */}
 
-=======
 
 
 
@@ -1055,26 +812,21 @@ ease: 'easeInOut' as const,
 
                 </motion.div>
               ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             </div>
           </div>
 
           {/* Market data */}
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
               <TrendingUp className="w-4 h-4 text-green-400" />
             </div>
-<<<<<<< HEAD
             <p className="text-xs text-gray-300 leading-relaxed">{service.marketPosition}</p>
             <div className="flex items-center justify-between mt-2 text-xs">
               <span className="text-cyan-300">{service.marketSize}</span>
               <span className="text-green-300">{service.growthRate} growth</span>
             </div>
-<<<<<<< HEAD
 
           </div>
           {/* ROI and competitors */}
@@ -1094,64 +846,15 @@ ease: 'easeInOut' as const,
             </div>
           </div>
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Shield className="w-4 h-4 text-blue-400" />
               <span>Contact & Support</span>
 
-<<<<<<< HEAD
-=======
-          </div>
-
-          {/* Market data */}
-          <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
-            <div className='flex items-center justify-between mb-2'>
-              <span className='text-sm font-semibold text-blue-300'>
-                Market Position
-              </span>
-              <TrendingUp className='w-4 h-4 text-green-400' />
-            </div>
-            <p className='text-xs text-gray-300 leading-relaxed'>
-              {service.marketPosition}
-            </p>
-            <div className='flex items-center justify-between mt-2 text-xs'>
-              <span className='text-cyan-300'>{service.marketSize}</span>
-              <span className='text-green-300'>
-                {service.growthRate} growth
-              </span>            </div>
-          </div>
-          {/* ROI and competitors */}            <p className="text-xs text-gray-300 leading-relaxed">{service.marketPosition}</p>
-            <div className="flex items-center justify-between mt-2 text-xs">
-              <span className="text-cyan-300">{service.marketSize}</span>
-              <span className="text-green-300">{service.growthRate} growth</span>
-          </div>
-          {/* ROI and competitors */}
-          <div className='grid grid-cols-2 gap-4 mb-6'>
-            <div className='bg-green-900/20 rounded-lg p-3 border border-green-700/30'>
-              <div className='text-sm font-semibold text-green-300 mb-1'>
-                ROI
-              </div>
-              <div className='text-xs text-gray-300'>{service.roi}</div>
-            </div>
-            <div className='bg-orange-900/20 rounded-lg p-3 border border-orange-700/30'>
-              <div className='text-sm font-semibold text-orange-300 mb-1'>
-                Competitors
-              </div>
-              <div className='text-xs text-gray-300'>                {service.competitors.slice(0, 2).join(', ')}
-            <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
-              <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
-              <div className="text-xs text-gray-300">
-=======
-          </div>
-          {/* ROI and competitors */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
           </div>
           {/* Contact information */}
-<<<<<<< HEAD
           <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
               <Shield className='w-4 h-4 text-blue-400' />
@@ -1169,9 +872,6 @@ ease: 'easeInOut' as const,
               <div className='flex items-center space-x-2'>
                 <span className='text-purple-400'>📍</span>
                 <span className='text-xs'>{service.contactInfo.address}</span>              </div>              <span>Contact & Support</span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
@@ -1185,31 +885,15 @@ ease: 'easeInOut' as const,
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
             </div>
           </div>
-=======
-            </div>;
-          </div>;
-
-=======
-
-          {/* ROI and competitors */}
-
-              </div>
-            </div>
-          </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               </div>
             </div>
           </div>
             </div>;
           </div>;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>;
             <div className='flex items-center justify-between mb-2'>;
@@ -1289,16 +973,8 @@ ease: 'easeInOut' as const,
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           {/* ROI and competitors */}
@@ -1315,14 +991,7 @@ ease: 'easeInOut' as const,
 
 
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -1331,22 +1000,7 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />
           </motion.a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-
-          {/* ROI and competitors */}
-
-              </div>
-            </div>
-          </div>
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* CTA Button */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             whileHover={{ scale: 1 && 1.02 }}
             whileTap={{ scale: 0 && 0.98 }}>;
             <span className='mr-2'>Get Started</span>;
@@ -1355,32 +1009,20 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion && motion.a>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Learn more link */}
           <div className='text-center mt-4'>;
             <a
-<<<<<<< HEAD
 
           <motion.a
             href={service.link}
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
             whileHover={{ scale: 1.02 }}
 
-=======
-          <motion.a
-            href={service.link}
-            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-
-            whileHover={{ scale: 1.02 }}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           {/* CTA Button */}
           {/* Learn more link */}
           <div className='text-center mt-4'>;
             <a
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             whileTap={{ scale: 0.98 }}
           >
             <span className="mr-2">Get Started</span>
@@ -1388,11 +1030,7 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               href={service && service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'>;
               <span>Learn more about {service && service.name}</span>;
@@ -1405,7 +1043,6 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />;
           </motion && motion.a>;
-<<<<<<< HEAD
 
 
           {/* Learn more link */}
@@ -1422,26 +1059,12 @@ ease: 'easeInOut' as const,
     </motion && motion.div>;
   );
 
-=======
-
-
-=======
-  );
-=======
-export default QuantumHolographicCard;  )
-}
-export default QuantumHolographicCard;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default QuantumHolographicCard;
 export default QuantumHolographicCard;
 };
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           {/* Learn more link */}
           <div className="text-center mt-4">;
             <a
@@ -1450,9 +1073,7 @@ export default QuantumHolographicCard;
 
   );
 
-=======
 export default QuantumHolographicCard;  );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export default QuantumHolographicCard;
@@ -1471,11 +1092,7 @@ export default QuantumHolographicCard);
 }
 ;
 export default QuantumHolographicCard;
-<<<<<<< HEAD
 
 export default QuantumHolographicCard;
 export default QuantumHolographicCard;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

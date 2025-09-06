@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/cron-weekly-sitemap.js
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
 const { upsertFile } = require('./_lib/github'),;
@@ -24,8 +23,6 @@ exports.handler = async function() {;
 },;
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -80,18 +77,14 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
-<<<<<<< HEAD
 
 :netlify/functions/cron-weekly-sitemap.js
 
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
 
 :netlify/functions/cron-weekly-sitemap.js
@@ -104,5 +97,3 @@ main:netlify/functions/cron-weekly-sitemap.js
 :netlify/functions/cron-weekly-sitemap.js
 main:netlify/functions/cron-weekly-sitemap.js
 :backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

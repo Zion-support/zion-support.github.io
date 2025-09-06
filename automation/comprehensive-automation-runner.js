@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-=======
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
-class ComprehensiveAutomationRunner {; constructor() {; this && this.logFile = path && path.join(__dirname, "logs", "comprehensive-automation && automation.log"); this && this.resultsFile = path && path.join(__dirname, "reports", "comprehensive-results && results.json"); this && this.ensureDirectories(); this && this.results = {; timestamp: new Date().toISOString(),
-    tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: { status: "unknown", score: 0 }}}})};
-; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console && console.log(`[${level}] ${message}`); fs && fs.appendFileSync(this && this.logFile, logMessage)};
-; async runCommand(command, description) {; try {; this && this.log(`Running: ${description}`); const startTime = Date && Date.now(); const output = execSync(command, {; stdio: 'pipe', cwd: process && process.cwd(), timeout: 300000 // 5 minutes}); const duration = Date && Date.now() - startTime; this && this.log(`✓ ${description} completed in ${duration}ms`); return { success: true, output: output && output.toString(), duration }} catch (error) {; this && this.log(`✗ ${description} failed: ${error && error.message}`, "ERROR"); return {; success: false, error: error && error.message, output: error && error.stdout?.toString() || error && error.stderr?.toString() || ""}}};
-; async runBuildTests() {; this && this.log(" = = = RUNNING BUILD TESTS = = = ");
-; const buildTests = [
-    ; { cmd:"npm run build", desc: "Production build" }; { cmd:"npm run lint", desc: "Linting check" }; { cmd:"npm run type-check", desc: "TypeScript type checking" },
-#!/usr/bin/env node;
-import fs from "fs";
-import path from "path";
-import {execSync, spawn} from "child_process";
-import {fileURLToPath} from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-class ComprehensiveAutomationRunner {constructor() {; this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"); this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString()
-    tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: { status: "unknown", score: 0 }}}})}; log(message, level = "INFO") {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)}; async runCommand(command, description) {try {; this.log(`Running: ${description}`); const startTime = Date.now(); const output = execSync(command, {stdio: 'pipe', cwd: process.cwd(), timeout: 300000 // 5 minutes}); const duration = Date.now() - startTime; this.log(`✓ ${description} completed in ${duration}ms`); return { success: true, output: output.toString(), duration }} catch (error) {this.log(`✗ ${description} failed: ${error.message}`, "ERROR"); return {success: false, error: error.message, output: error.stdout?.toString() |error.stderr?.toString() |""}}}; async runBuildTests() {this.log(" = = = RUNNING BUILD TESTS = = = "); const buildTests = [
-    ; { cmd:"npm run build", desc: "Production build" }; { cmd:"npm run lint", desc: "Linting check" }; { cmd:"npm run type-check", desc: "TypeScript type checking" }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { cmd:"npm run test: smoke", desc: "Smoke tests" }
   ];
 ; for (const test of build_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.builds[test.desc] = result}}
@@ -437,10 +412,8 @@ class ComprehensiveAutomationRunner {,;
       await this.saveResults(),
 ,
       this.log("=" * 50),
-<<<<<<< HEAD
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import fs from './fs';
 import path from './path';
 import { exec_sync, spawn } from './child_process';
@@ -525,16 +498,8 @@ if ( {) {
 ;
 export default ComprehensiveAutomationRunner;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),
       this.log("📊 Detailed results saved to reports/comprehensive-results.json"),
 ,
@@ -609,8 +574,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default ComprehensiveAutomationRunner;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

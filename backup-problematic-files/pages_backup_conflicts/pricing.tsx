@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface PricingProps {
   className?: string;
 }
@@ -15,5 +13,3 @@ const Pricing: React.FC<PricingProps> = ({ className }) => {
 }
 }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

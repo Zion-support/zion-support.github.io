@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,16 +24,11 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect } from 'react';
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
     { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
@@ -44,8 +37,6 @@ import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users
     { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
   const company = [
@@ -275,13 +266,6 @@ const EnhancedNavigation: React.FC = () => {;
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
@@ -487,16 +471,11 @@ const EnhancedNavigation: React.FC = () => {
                   className="block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - semibold transition - colors";
                   on_click={closeAllDropdowns}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </motion.div>)}
       </div>;
     </nav>);
@@ -505,19 +484,6 @@ const EnhancedNavigation: React.FC = () => {
 export default EnhancedNavigation;
 ;
 
-<<<<<<< HEAD
-=======
-
-export default EnhancedNavigation;
-
-=======
-export default EnhancedNavigation;
-=======
-export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export default EnhancedNavigation;
 
@@ -780,9 +746,6 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

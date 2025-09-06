@@ -44,7 +44,6 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }className=" flex"> <div className=" mr-4"> <div className=" h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center"> <Briefcase className=" h-5 w-5 text-zion-purple" /> </div> </div> <div> </div> </div>) ) 
 }</div> </div>) 
 }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/ProfileExperience.tsx
  import {;
   {;
   {;
@@ -64,5 +63,3 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }</div> </div>);
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileExperience.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx

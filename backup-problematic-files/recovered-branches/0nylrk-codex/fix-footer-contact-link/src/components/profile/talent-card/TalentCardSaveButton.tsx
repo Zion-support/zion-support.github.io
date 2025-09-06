@@ -74,7 +74,6 @@ isAuthenticated: boolean
 profileName;
 isSaved;
 onToggleSave;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
 isAuthenticated ;
 }: TalentCardSaveButtonProps) {;
   const { ;
@@ -94,5 +93,3 @@ const router = useRouter ();
 }/> </button>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx

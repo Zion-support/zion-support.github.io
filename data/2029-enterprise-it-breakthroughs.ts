@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import { ServiceVariant } from '../types / service - variants';
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 import { ServiceVariant } from '../types / service - variants';
 ;
 
@@ -24,23 +16,17 @@ export interface EnterpriseITBreakthroughService2029 {
   implementation_details: string;
   launch_date: string;
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface EnterpriseITBreakthroughService2029 {
 
 export interface EnterpriseITBreakthroughService2029 {;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import { ServiceVariant } from '../types / service - variants';
 ;
 
 export interface EnterpriseITBreakthroughService2029 {
 
 export interface EnterpriseITBreakthroughService2029 {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -75,20 +61,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     website: string;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   customers: number;
   rating: number;
   reviews: number;
@@ -104,12 +76,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       description:;
         'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Autonomous infrastructure management',
         'AI - powered deployment automation',
         'Self - healing systems',
@@ -122,15 +89,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Analytics dashboard',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '⚙️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - devops - platform',
@@ -159,13 +119,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       growth_rate: '280% annual growth',
       variant: 'enterprise - futuristic',
       contact_info: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -179,16 +133,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       rating: 4 && 4.8,
       reviews: 178,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         'Quantum-enhanced performance',
         'Quantum-resistant security',
-=======
       id: 'quantum - cloud - infrastructure',
       name: 'Quantum Cloud Infrastructure',
       tagline: 'Quantum - enhanced cloud performance and security',
@@ -199,12 +147,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       features: [;
         'Quantum - enhanced performance',
         'Quantum - resistant security',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Advanced scalability',
         'Quantum encryption',
         'Performance optimization',
@@ -215,13 +158,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Training and support',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '☁️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -250,12 +188,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       growth_rate: '500% annual growth',
       variant: 'quantum - futuristic',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -269,14 +202,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       rating: 4 && 4.9,
       reviews: 42,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: 'ai - powered - enterprise - security',
       name: 'AI - Powered Enterprise Security',
       tagline: 'AI - driven threat detection and response automation',
@@ -285,12 +212,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       description:;
         'Advanced AI - powered enterprise security platform that provides real - time threat detection, automated response, and comprehensive security management using machine learning and behavioral analysis.',
       features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'AI threat detection',
         'Automated response systems',
         'Behavioral analysis',
@@ -303,13 +225,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Training and support',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🛡️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - red - 500 via - pink - 500 to - rose - 500',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / ai - powered - enterprise - security',
@@ -338,12 +255,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       growth_rate: '320% annual growth',
       variant: 'ai - futuristic',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -357,25 +269,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       rating: 4 && 4.8,
       reviews: 156,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      id: 'autonomous - it - operations - center',
-      name: 'Autonomous IT Operations Center',
-      tagline: 'Self - managing IT infrastructure with AI operations',
-      price: '$14, 999',
-      period: '/month',
-      description:;
-        'Revolutionary autonomous IT operations center that uses AI to automatically manage, monitor, and optimize entire IT infrastructure without human intervention, ensuring maximum uptime and performance.',
-      features: [;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Autonomous IT management',
         'Self - healing infrastructure',
         'Predictive maintenance',
@@ -388,13 +283,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Analytics dashboard',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🏢',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       color: 'from - slate - 600 via - gray - 600 to - zinc - 600',
       text_color: 'text - slate - 400',
       link: 'https://ziontechgroup.com / autonomous - it - operations - center',
@@ -423,12 +313,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       growth_rate: '350% annual growth',
       variant: 'enterprise - futuristic',
       contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -443,21 +328,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       customers: 180,
       rating: 4 && 4.9,
       reviews: 95,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     },;
   ];    features: [
 
-<<<<<<< HEAD
-=======
-=======
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -478,7 +352,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     website: string
   
     },
-<<<<<<< HEAD
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -493,10 +366,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
     features: [
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       id: 'autonomous-it-operations-center'
       name: 'Autonomous IT Operations Center'
       tagline: 'Self-managing IT infrastructure with AI operations'
@@ -566,19 +436,12 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       reviews: 95,
     },;
   ];    features: [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
-=======
   ];    features: [;
       'Autonomous infrastructure managementAI - powered deployment automation_self - healing systems_predictive scaling_automated monitoring_intelligent incident response_performance optimization_security automation';
       'Compliance monitoring_analytics dashboard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     popular: true, icon: '⚙️',
 
@@ -597,132 +460,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   }
 ];
 
-=======
-    popular: true, icon: '⚙️',
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600', text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / autonomous - devops - platform', market_position: 'First - to - market autonomous DevOps platform. Competes with traditional DevOps tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
-    target_audience: 'Enterprise businesses, Technology companies, Cloud providers, DevOps teams, IT operations, System administrators',
-    trial_days: 30, setup_time: '2 - 4 weeks',
-    category: 'Enterprise IT & DevOps', real_service: true,
-    technology: ['AI, Machine Learning, DevOps Automation, Cloud Computing, Infrastructure as Code, Monitoring Tools'];
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker, Jenkins, GitLab, Monitoring platforms'];
-    use_cases: ['Infrastructure automation, Deployment management, System monitoring, Performance optimization, Security automation, Compliance management'];
-    roi: 'Enterprise customers see 400% ROI within 6 months through reduced operational costs and improved system reliability.',
-    competitors: ['Traditional DevOps tools, Basic automation platforms, Manual operations'];
-    market_size: '$18B market', growth_rate: '280% annual growth',
-    variant: 'enterprise - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    },
-    real_implementation: true,
-    implementation_details: 'Advanced autonomous DevOps platform with AI - powered automation, self - healing systems, and comprehensive infrastructure management. Includes security automation and compliance monitoring.',
-    launch_date: '2025 - 01 - 20', customers: 320,
-    rating: 4.8,
-    reviews: 178;
-  }
-  {
-    id: 'quantum - cloud - infrastructure', name: 'Quantum Cloud Infrastructure',
-    tagline: 'Quantum - enhanced cloud performance and security',
-    price: '$18, 999',
-    period: '/month',
-    description: 'Advanced quantum - enhanced cloud infrastructure that provides unprecedented performance, security, and scalability using quantum computing principles and quantum - resistant encryption.',    features: [;
-      'Quantum - enhanced performance_quantum - resistant security_advanced scalability_quantum encryption_performance optimization_security monitoring_compliance frameworks_analytics dashboard';
-      'Integration capabilities_training and support';
-    ];
-    popular: true, icon: '☁️',
-    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600', text_color: 'text - indigo - 400',
-    link: 'https://ziontechgroup.com / quantum - cloud - infrastructure', market_position: 'First - to - market quantum - enhanced cloud infrastructure. Competes with traditional cloud providers but offers quantum - level performance and security. Pricing reflects quantum technology costs.',
-    target_audience: 'Enterprise businesses, Government agencies, Financial institutions, Healthcare organizations, Research institutions, Technology companies',
-    trial_days: 60, setup_time: '4 - 8 weeks',
-    category: 'Quantum & Cloud Infrastructure', real_service: true,
-    technology: ['Quantum Computing, Cloud Infrastructure, Quantum Encryption, Advanced Security, Performance Optimization, Scalability'];
-    integrations: ['Enterprise systems, Government platforms, Financial systems, Healthcare platforms, Research networks'];
-    use_cases: ['High - performance computing, Secure data storage, Government operations, Financial transactions, Healthcare data, Research computing'];
-    roi: 'Government and financial customers see 800% ROI through quantum - level security and performance. Enterprise customers see value in competitive advantage.',
-    competitors: ['Traditional cloud providers, Basic infrastructure, Standard security'];
-    market_size: '$25B market', growth_rate: '500% annual growth',
-    variant: 'quantum - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    },
-    real_implementation: true,
-    implementation_details: 'Advanced quantum - enhanced cloud infrastructure with quantum performance, quantum - resistant security, and comprehensive compliance. Includes advanced analytics and integration capabilities.',
-    launch_date: '2025 - 01 - 10', customers: 85,
-    rating: 4.9,
-    reviews: 42;
-  }
-  {
-    id: 'ai - powered - enterprise - security', name: 'AI - Powered Enterprise Security',
-    tagline: 'AI - driven threat detection and response automation',
-    price: '$9, 999',
-    period: '/month',
-    description: 'Advanced AI - powered enterprise security platform that provides real - time threat detection, automated response, and comprehensive security management using machine learning and behavioral analysis.',    features: [;
-      'AI threat detection_automated response systems_behavioral analysis_real - time monitoring_threat intelligence_incident automation_compliance monitoring_security analytics';
-      'Integration frameworks_training and support';
-    ];
-    popular: true, icon: '🛡️',
-    color: 'from - red - 500 via - pink - 500 to - rose - 500', text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / ai - powered - enterprise - security', market_position: 'Leading edge AI - powered enterprise security. Competes with traditional security tools but offers AI automation and intelligent threat detection. Pricing reflects enterprise security value.',
-    target_audience: 'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Security teams',
-    trial_days: 45, setup_time: '3 - 6 weeks',
-    category: 'AI & Enterprise Security', real_service: true,
-    technology: ['AI, Machine Learning, Threat Detection, Security Automation, Behavioral Analysis, Advanced Analytics'];
-    integrations: ['Security platforms, SIEM systems, Network monitoring, Endpoint protection, Compliance tools'];
-    use_cases: ['Threat detection, Incident response, Security monitoring, Compliance management, Risk assessment, Security automation'];
-    roi: 'Enterprise customers see 500% ROI within 6 months through improved security posture and reduced incident response time.',
-    competitors: ['Traditional security tools, Basic threat detection, Manual security processes'];
-    market_size: '$22B market', growth_rate: '320% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    },
-    real_implementation: true,
-    implementation_details: 'Advanced AI - powered enterprise security platform with intelligent threat detection, automated response, and comprehensive security management. Includes compliance monitoring and analytics.',
-    launch_date: '2025 - 01 - 25', customers: 280,
-    rating: 4.8,
-    reviews: 156;
-  }
-  {
-    id: 'autonomous - it - operations - center', name: 'Autonomous IT Operations Center',
-    tagline: 'Self - managing IT infrastructure with AI operations',
-    price: '$14, 999',
-    period: '/month',
-    description: 'Revolutionary autonomous IT operations center that uses AI to automatically manage, monitor, and optimize entire IT infrastructure without human intervention, ensuring maximum uptime and performance.',    features: [;
-      'Autonomous IT management_self - healing infrastructure_predictive maintenance_performance optimization_automated monitoring_intelligent alerting_capacity planning_cost optimization';
-      'Compliance automation_analytics dashboard';
-    ];
-    popular: true, icon: '🏢',
-    color: 'from - slate - 600 via - gray - 600 to - zinc - 600', text_color: 'text - slate - 400',
-    link: 'https://ziontechgroup.com / autonomous - it - operations - center', market_position: 'First - to - market autonomous IT operations center. Competes with traditional IT management tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
-    target_audience: 'Enterprise businesses, Data centers, Cloud providers, IT operations teams, System administrators, Technology companies',
-    trial_days: 45, setup_time: '4 - 8 weeks',
-    category: 'Enterprise IT & Operations', real_service: true,
-    technology: ['AI, Machine Learning, IT Automation, Infrastructure Management, Monitoring Tools, Predictive Analytics'];
-    integrations: ['IT management platforms, Monitoring systems, Cloud platforms, Network devices, Storage systems'];
-    use_cases: ['IT infrastructure management, System monitoring, Performance optimization, Capacity planning, Cost optimization, Compliance management'];
-    roi: 'Enterprise customers see 600% ROI within 8 months through reduced operational costs and improved system reliability.',
-    competitors: ['Traditional IT management, Basic monitoring tools, Manual operations'];
-    market_size: '$28B market', growth_rate: '350% annual growth',
-    variant: 'enterprise - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    },
-    real_implementation: true,
-    implementation_details: 'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
-    launch_date: '2025 - 01 - 15', customers: 180,
-    rating: 4.9,
-    reviews: 95;
-  }
-];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - slate - 600 via - gray - 600 to - zinc - 600';
     text_color: 'text - slate - 400';
     link: 'https://ziontechgroup.com / autonomous - it - operations - center';
@@ -730,12 +467,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     target_audience: 'Enterprise businesses, Data centers, Cloud providers, IT operations teams, System administrators, Technology companies';
     trial_days: 45;
     setup_time: '4 - 8 weeks';
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Enterprise IT & Operations';
     real_service: true;
     technology: ['AI, Machine Learning, IT Automation, Infrastructure Management, Monitoring Tools, Predictive Analytics'];
@@ -750,33 +482,18 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true;
     implementationDetails: 'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
     launchDate: '2025-01-15';
     customers: 180;
     rating: 4 && 4.9;
     reviews: 95
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -785,8 +502,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     customers: 180;
     rating: 4.9;
     reviews: 95;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -796,16 +511,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   }
 ];
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 ];
-=======
   }
 ];
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {;
   id: string,;
@@ -1058,7 +768,3 @@ export interface EnterpriseITBreakthroughService2029 {;
     reviews: 95;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

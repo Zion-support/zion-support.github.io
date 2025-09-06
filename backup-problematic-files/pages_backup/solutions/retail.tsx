@@ -30,7 +30,6 @@ const features = [;
     icon: Package,;
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -47,8 +46,6 @@ import {
 const features = [
   {
     icon: ShoppingCart,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -176,7 +173,6 @@ const benefits = [;
   'Streamlined operations',;
   'Mobile-first customer engagement';
 ];
-<<<<<<< HEAD
 export default function RetailSolutions() {
     icon: Smartphone,
     title: 'Mobile Commerce',
@@ -185,8 +181,6 @@ export default function RetailSolutions() {
 ];
 
 export default function RetailSolutionsPage() {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -494,7 +488,6 @@ export default function RetailSolutions() {
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
-<<<<<<< HEAD
                 </ul>;
               </div>;
             </div>;
@@ -538,8 +531,6 @@ export default function RetailSolutions() {
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </section>
@@ -568,17 +559,9 @@ export default function RetailSolutions() {
     </Layout>
     </Layout>
     </>
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
     </Layout>
   );
 };
 
-<<<<<<< HEAD
 export default Retail;
-=======
-export default Retail;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

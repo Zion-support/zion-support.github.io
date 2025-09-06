@@ -1,29 +1,5 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
-id: uuidv4(),
-    partnerId: auth && auth.partner.id,
-    key: uuidv4(),
-    active: true,
-    createdAt: now,
-    rateLimitPerMinute: apiKey && apiKey.rateLimitPerMinute ?? 60,
-  };
-  keys && keys.push(newKey as any);
-  await saveApiKeys(keys);
-  return res && res.status(201).json({ apiKey: newKey && newKey.key });    id: uuidv4();
-    partnerId: auth && auth.partner.id;
-    key: uuidv4();
-    active: true;
-    createdAt: now;
-    rateLimitPerMinute: apiKey && apiKey.rateLimitPerMinute ?? 60};
-  keys && keys.push(newKey as any);
-  await saveApiKeys(keys);
-  return res && res.status(201).json({ apiKey: newKey && newKey.key })
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
@@ -52,11 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   authenticate_request,
   listApiKeys,
   saveApiKeys,
@@ -139,14 +110,9 @@ if (existing.active = false) {
   await saveApiKeys (keys);
   return res.status (201).json ({ api_key: new_key.key });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   authenticateRequest
   listApiKeys
   saveApiKeys;
@@ -225,8 +191,4 @@ if ( {) {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
   const newKey = {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

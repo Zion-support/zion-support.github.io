@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
@@ -328,9 +323,6 @@ export const real2036AIServices = [
       'Predictive maintenance'
     ]
     useCases: [
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'Autonomous vehicles'
       'Fleet management'
       'Traffic optimization'
@@ -1021,7 +1013,6 @@ export const real2036AIServices = [;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1029,41 +1020,16 @@ export const real2036AIServices = [
   {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'Autonomous vehicles'
-      'Fleet management'
-      'Traffic optimization'
-      'Safety systems'
-    ]
-  }
-];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
-    ]
-  }
-];
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
       'Safety systems',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -1084,7 +1050,6 @@ export const real2036AIServices = [;
     ],;
     useCases: [;
       'Customer serviceMental health supportEducation technologyHuman resources';
-<<<<<<< HEAD
     ];
   },;
   {;
@@ -1275,21 +1240,14 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   }
 ];
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -1502,7 +1460,3 @@ export const real2036AIServices = [;
     ];
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

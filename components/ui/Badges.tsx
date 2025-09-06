@@ -1,7 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   quote: string;
   author: string;
@@ -12,17 +10,11 @@ import React from 'react';
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export /**
  * TrustBadge - Function description
@@ -53,16 +45,12 @@ function MicroTestimonial() {
     </figure>);  const color_map = {
     Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
       <span className="leading - none">{type}</span>;
     </span>);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </figcaption>;
     </figure>;
   );  const colorMap = {;
@@ -74,11 +62,7 @@ function MicroTestimonial() {
     </span>;
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export /**
  * MicroTestimonial - Function description
  */
@@ -89,28 +73,15 @@ function MicroTestimonial() {
       <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
     </figure>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </figure>
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (
@@ -132,8 +103,6 @@ export function TrustBadge({
 }: {
   type,
 }: {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -191,9 +160,5 @@ function MicroTestimonial() {
     </figure>
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

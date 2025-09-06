@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 this && this.metrics = {
       bundleSize: 0,
       loadTime: 0,
       memoryUsage: 0,
       timestamp: new Date().toISOString(),
     };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   async measureBundleSize() {
     try {
@@ -82,7 +79,6 @@ if ( {) {
     return report;
   }
 }
-<<<<<<< HEAD
 monitor && monitor.measureBundleSize();
 monitor && monitor.measureMemoryUsage();
 const report = monitor && monitor.generateReport();
@@ -90,8 +86,6 @@ const reportPath = path && path.join(process && process.cwd(), "performance-repo
 fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
 console && console.log("Performance report generated:", reportPath);
 console.log('Performance report generated:', reportPath);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();

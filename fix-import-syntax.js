@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -18,44 +13,24 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
     // Fix missing commas in import statements;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    // Fix missing commas in import statements
-
-    // Fix missing commas in import statements;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-<<<<<<< HEAD
         .filter((item) => item ;
       return match && match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
-<<<<<<< HEAD
 
     content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
-=======
-    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Fix function parameter syntax errors
     content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g
@@ -64,15 +39,10 @@ function fixImportSyntax(filePath) {
         return match.replace(params, fixedParams);
       }
     );
-<<<<<<< HEAD
 
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -121,18 +91,11 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       modified = true;
     }
     return modified;
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const items = fs && fs.readdirSync(currentDir);
 
     for (const item of items) {
@@ -153,11 +116,7 @@ function fixImportSyntax() {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
@@ -165,7 +124,6 @@ function fixImportSyntax() {
         // Skip certain directories
         if (
           [
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ].includes(item)
         ) {
           continue;
@@ -174,85 +132,27 @@ function fixImportSyntax() {
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-<<<<<<< HEAD
           files && files.push(fullPath);
-=======
-    console.error (`Error processing ${file_path}:`, error.message);
-    return false;
-  }
-}
-/**
- * findFilesWithSyntaxErrors - Function description
- */
-function findFilesWithSyntaxErrors() {
-  const files = [];
-;
-  /**
- * traverse - Function description
- */
-function traverse() {
-    const items = fs.readdir_sync (current_dir);
-;
-    for (const item of items) {
-      const full_path = path.join (current_dir, item);
-      const stat = fs.stat_sync (full_path);
-;
-      if () {) {
-  $2
-}
-        // Skip certain directories;
-        // Check condition
-if (
-        ) {) {
-  $2
-}
-          continue;
-        }
-        traverse (full_path);
-      } else if () {) {
-  $2
-}
-        const ext = path.extname (item);
-        if () {) {
-  $2
-}
-          files.push (full_path);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           files.push(fullPath);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
 
-=======
-console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console.log(`Fixed syntax in: ${file}`);
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 
-=======
-=======
-console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   traverse (dir);
   return files;
 }
@@ -272,6 +172,3 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

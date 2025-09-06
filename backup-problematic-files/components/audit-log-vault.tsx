@@ -16,16 +16,9 @@ export default function AuditLogVaultPage() {
     'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
   ],
 
-<<<<<<< HEAD:pages/audit-log-vault.tsx.backup.1755991722
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="holographic" intensity="high">
-=======
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
-=======
   return (_<UltraAdvancedFuturisticBackground>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/audit-log-vault.tsx
       <Head>
         <title>Audit Log Vault | Zion Tech Group</title>
         <meta name="description" content="Immutable, indexed, long-term audit trails for compliance and forensics with search, exports and cryptographic attestations." />

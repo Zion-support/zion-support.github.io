@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import SEOHeaddynamic from '../components/SEOHead && SEOHead.dynamic'
 describe('SEOHeaddynamic'
   test('renders without crashing'
-<<<<<<< HEAD
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -22,14 +15,6 @@ import '@testing-library/jest-dom';
 import SEOHead from '../components/SEOHead.dynamic';
 
 describe('SEOHead', () => {
-<<<<<<< HEAD
-=======
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import SEOHead from '../components/SEOHead.dynamic';'
-describe('SEOHead', () => {'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   test('renders without crashing', () => {
     render(<SEOHead />);
     expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument();
@@ -49,26 +34,13 @@ describe('SEOHead', () => {'
     render(<SEOHead />);
     // Add styling tests here
   });
-<<<<<<< HEAD
 });
 
-=======
-=======
-});'
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import SEOHeaddynamic from '../components/SEOHead.dynamic'
-describe('SEOHeaddynamic'
-  test('renders without crashing'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     expect(screen.getByTestId('seohead.dynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe('SEOHeaddynamic', () => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling"
-<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOHeaddynamic from '../components/SEOHead.dynamic'; describe('SEOHeaddynamic',() => { test('renders without crashing',() => { render(<SEOHeaddynamic />); expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOHeaddynamic />)}); test('handles user interactions',() => { render(<SEOHeaddynamic />)}); test('applies correct styling',() => { render(<SEOHeaddynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
@@ -90,20 +62,13 @@ describe('SEOHeaddynamic', () => {
     render(<SEOHeaddynamic />);
   });
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     expect(screen.getByTestId('seohead.dynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
 
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe('SEOHeaddynamic', () => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe("SEOHeaddynamic",() => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling",() => { render(<SEOHeaddynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOHeaddynamic from '../components/SEOHead.dynamic'; describe('SEOHeaddynamic',() => { test('renders without crashing',() => { render(<SEOHeaddynamic />); expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOHeaddynamic />)}); test('handles user interactions',() => { render(<SEOHeaddynamic />)}); test('applies correct styling',() => { render(<SEOHeaddynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOHeaddynamic from '../components/SEOHead.dynamic'; describe('SEOHeaddynamic',() => { test('renders without crashing',() => { render(<SEOHeaddynamic />); expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOHeaddynamic />)}); test('handles user interactions',() => { render(<SEOHeaddynamic />)}); test('applies correct styling',() => { render(<SEOHeaddynamic />)})});
@@ -112,6 +77,3 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe('SEOHeaddynamic', () => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

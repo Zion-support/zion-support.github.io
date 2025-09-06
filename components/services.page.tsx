@@ -1,28 +1,14 @@
-<<<<<<< HEAD
 
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 
 export default function ServicesPage() {;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default function ServicesPage() {;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 
 export default function ServicesPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Services</h1>;
@@ -59,15 +45,9 @@ export default function ServicesPage() {
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD
 
   );
 }
-=======
-import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -99,14 +79,6 @@ export default function ServicesPage() {
     </EnhancedLayout>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 export default /**
@@ -158,11 +130,6 @@ function ServicesPage() {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 
 export default function ServicesPage() {_return (
     <EnhancedLayout>
@@ -233,29 +200,18 @@ export default function ServicesPage() {
       </div>
     </EnhancedLayout>;
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <BadgeCheck className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">AI Integrations</div>
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   );
 
   );
 }
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

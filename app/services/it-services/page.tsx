@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const metadata = { title: 'IT Services | Zion Tech Group' };
-=======
-export const metadata = { 
-  title: 'IT Services | Zion Tech Group',
-  description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function ITServicesPage() {
   return (
@@ -58,7 +50,6 @@ export default function ITServicesPage() {
         />
       </div>
 
-<<<<<<< HEAD
       <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our IT Service Expertise</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -82,186 +73,20 @@ export default function ITServicesPage() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
             <p className="text-gray-600">Round-the-clock monitoring and incident response</p>
           </div>
-=======
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our IT Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ITServiceCard
-            title="Cloud Migration & Architecture"
-            description="Complete cloud migration with modern architecture patterns"
-            features={["Multi-cloud strategy", "Container orchestration", "Serverless architecture", "Cost optimization", "Disaster recovery"]}
-            price="$15k–$50k"
-            icon="☁️"
-          />
-          <ITServiceCard
-            title="DevOps & CI/CD Automation"
-            description="End-to-end DevOps implementation with automated pipelines"
-            features={["CI/CD pipelines", "Infrastructure as Code", "Automated testing", "Deployment automation", "Environment management"]}
-            price="$10k–$35k"
-            icon="🔄"
-          />
-          <ITServiceCard
-            title="Site Reliability Engineering (SRE)"
-            description="Proactive monitoring and reliability engineering"
-            features={["SLO/SLI definition", "Error budget management", "Incident response", "Capacity planning", "Performance optimization"]}
-            price="$20k–$60k"
-            icon="📊"
-          />
-          <ITServiceCard
-            title="Cybersecurity & Compliance"
-            description="Comprehensive security hardening and compliance management"
-            features={["Security assessment", "Zero Trust architecture", "Vulnerability management", "Compliance auditing", "Security monitoring"]}
-            price="$12k–$40k"
-            icon="🔒"
-          />
-          <ITServiceCard
-            title="Database & Data Management"
-            description="Database optimization and data pipeline management"
-            features={["Database migration", "Performance tuning", "Data backup & recovery", "Data pipeline automation", "Data governance"]}
-            price="$8k–$25k"
-            icon="🗄️"
-          />
-          <ITServiceCard
-            title="Network & Infrastructure"
-            description="Network design, optimization, and infrastructure management"
-            features={["Network architecture", "Load balancing", "CDN implementation", "VPN & connectivity", "Infrastructure monitoring"]}
-            price="$10k–$30k"
-            icon="🌐"
-          />
-          <ITServiceCard
-            title="API Development & Management"
-            description="RESTful and GraphQL API development with comprehensive management"
-            features={["API design", "Documentation", "Rate limiting", "Authentication", "Monitoring", "Version control"]}
-            price="$12k–$35k"
-            icon="🔌"
-          />
-          <ITServiceCard
-            title="Microservices Architecture"
-            description="Modern microservices implementation with container orchestration"
-            features={["Service design", "Container orchestration", "Service mesh", "API gateway", "Monitoring", "Scaling"]}
-            price="$25k–$70k"
-            icon="🏗️"
-          />
-          <ITServiceCard
-            title="Data Center & Colocation"
-            description="Physical infrastructure management and data center optimization"
-            features={["Hardware management", "Power optimization", "Cooling systems", "Physical security", "Uptime monitoring", "Disaster recovery"]}
-            price="$15k–$45k"
-            icon="🏢"
-          />
-          <ITServiceCard
-            title="IT Service Management (ITSM)"
-            description="Complete IT service delivery and support management"
-            features={["Service desk", "Incident management", "Change management", "Asset management", "Knowledge base", "SLA management"]}
-            price="$18k–$50k"
-            icon="🎯"
-          />
-          <ITServiceCard
-            title="Cloud Cost Optimization"
-            description="Intelligent cloud spending optimization and cost management"
-            features={["Cost analysis", "Resource optimization", "Reserved instances", "Auto-scaling", "Budget alerts", "Cost forecasting"]}
-            price="$8k–$25k"
-            icon="💰"
-          />
-          <ITServiceCard
-            title="Disaster Recovery & Business Continuity"
-            description="Comprehensive disaster recovery planning and implementation"
-            features={["Backup strategies", "Recovery testing", "RTO/RPO planning", "Failover systems", "Documentation", "Training"]}
-            price="$20k–$60k"
-            icon="🔄"
-          />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>
       </div>
 
-<<<<<<< HEAD
       <PricingSection />
       
-=======
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">IT Service Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item 
-            title="Cloud & Infrastructure" 
-            details={[
-              "AWS, GCP, Azure multi-cloud strategies",
-              "Kubernetes orchestration and management",
-              "Serverless architecture implementation",
-              "Infrastructure as Code (Terraform, CloudFormation)",
-              "Auto-scaling and load balancing",
-              "Disaster recovery and backup solutions"
-            ]} 
-          />
-          <Item 
-            title="DevOps & SRE" 
-            details={[
-              "CI/CD pipeline design and implementation",
-              "Comprehensive observability and monitoring",
-              "Automated testing and quality gates",
-              "Chaos engineering and resilience testing",
-              "Incident response and post-mortem processes",
-              "Performance optimization and capacity planning"
-            ]} 
-          />
-          <Item 
-            title="Security & Compliance" 
-            details={[
-              "Security hardening and vulnerability management",
-              "Zero Trust network architecture",
-              "Compliance auditing (SOC2, ISO27001, GDPR)",
-              "Security monitoring and threat detection",
-              "Identity and access management (IAM)",
-              "Data protection and encryption"
-            ]} 
-          />
-        </div>
-      </section>
-
-      <Pricing />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <ContactSection />
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function FeatureCard({ title, features, icon }: { title: string; features: string[]; icon: string }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
-=======
-function ITServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2">
         {features.map((feature, index) => (
@@ -389,7 +214,6 @@ function ContactSection() {
           Email Us
         </a>
       </div>
-<<<<<<< HEAD
       <div className="mt-6 text-sm text-gray-500">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
@@ -397,10 +221,3 @@ function ContactSection() {
     </div>
   );
 }
-=======
-    </section>
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

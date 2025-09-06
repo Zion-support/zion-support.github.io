@@ -1,38 +1,14 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import Head from 'next/head';
 
 
-<<<<<<< HEAD
-=======
-import React from 'react',
-import Head from 'next/head',
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  Code
-  Database
-  Globe
-  Shield
-  Zap
-  Bot
-  BarChart3
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -65,17 +41,11 @@ import React from 'react';
   Zap, ;
   Bot, ;
   BarChart3, ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   Lock
   ArrowRight
   CheckCircle
@@ -85,9 +55,6 @@ import {
   BookOpen
   Github
   Terminal;} from 'lucide-react';import {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Code,
   Database,
   Globe,
@@ -102,18 +69,9 @@ import {
   ExternalLink,
   Play,
   BookOpen,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-  Github,
-  Terminal,;} from 'lucide-react';import { 
-  Github,;
-  Terminal,;} from 'lucide-react';import { ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   Code;
   Database
   Globe
@@ -124,7 +82,6 @@ import {
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Code;
   Database,
   Globe,
@@ -132,7 +89,6 @@ import {
   Zap,
   Bot,
   BarChart3,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Lock;
   ArrowRight;
   CheckCircle;
@@ -157,13 +113,7 @@ import {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
@@ -188,15 +138,6 @@ import {
     'Analytics'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  Terminal
-} from 'lucide-react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ApiToolsPage() {;
   const apiTools = [;
     {;
@@ -408,7 +349,6 @@ export default function ApiToolsPage() {;
   ]
 
   const categories = [
-=======
   Terminal;
 export default /**
  * ApiToolsPage - Function description
@@ -624,7 +564,6 @@ function ApiToolsPage() {
   ];
 ;
   const categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     'All',
     'Development',
     'Data',
@@ -633,23 +572,13 @@ function ApiToolsPage() {
     'Integration',
     'AI / ML',
     'Analytics',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>;
       <Head>  const filteredTools = selectedCategory === 'All' ;
     ? apiTools ;
     : apiTools && apiTools.filter(tool => tool && tool.category === selectedCategory);
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   const [selected_category, setSelectedCategory] = React.useState ('All');
 ;
@@ -658,18 +587,7 @@ function ApiToolsPage() {
       ? api_tools;
       : api_tools.filter (tool => tool.category === selected_category);
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-    <>;
-      <Head>  const filtered_tools = selected_category === 'All';
-    ? api_tools;
-    : api_tools.filter (tool => tool.category === selected_category);
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <Head>;
@@ -677,7 +595,6 @@ function ApiToolsPage() {
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for;
           Modern Applications;
         </title>;
-<<<<<<< HEAD
       icon: <Code className="w-8 h-8 text-white" />,
 
 export default function ApiToolsPage() {_const _apiTools = [
@@ -907,7 +824,6 @@ rating: 4.9,
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       {/* Hero Section */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]' />
@@ -926,10 +842,6 @@ rating: 4.9,
           </p>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (              <button      </Head>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
@@ -1149,8 +1061,6 @@ rating: 4.9,
       </Head>
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
@@ -1168,11 +1078,7 @@ rating: 4.9,
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -1183,8 +1089,6 @@ rating: 4.9,
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0 && 0.15),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0 && 0.1),transparent_50%)]' />;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>;
             <Terminal className='w-4 h-4 mr-2' />;
@@ -1198,13 +1102,10 @@ rating: 4.9,
             collection of developer APIs. Each tool is designed for performance,;
             reliability, and ease of integration.;
           </p>;
-<<<<<<< HEAD
 
           <div className='flex flex-wrap justify-center gap-4 mb-8'>;
             {categories && categories.map(category => (              <button      </Head>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0 && 0.15),transparent_50%)]" />;
@@ -1221,21 +1122,13 @@ rating: 4.9,
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.;
           </p>;
-<<<<<<< HEAD
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">;
             {categories && categories.map((category) => (;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
-=======
-=======
               <button
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>
       <Head>
 
@@ -1243,17 +1136,10 @@ rating: 4.9,
               <button
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               <button
 
               <button
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -1263,19 +1149,8 @@ rating: 4.9,
                 }`}
               >;
                 {category}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </button>;
             ))}
-=======
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* API Tools Grid */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1284,15 +1159,11 @@ rating: 4.9,
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           </div>;
         </div>;
       </section>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1300,14 +1171,6 @@ rating: 4.9,
       {/* API Tools Grid */}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -1317,21 +1180,6 @@ rating: 4.9,
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-<<<<<<< HEAD
-=======
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-              {filteredTools && filteredTools.length} APIs available. Each tool is;
-              production-ready with comprehensive documentation, SDKs, and;
-              support.;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {filteredTools && filteredTools.map((tool, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'
@@ -1343,11 +1191,7 @@ rating: 4.9,
                       {tool && tool.icon}
                     </div>;
                     <div
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <meta;
           name='description';
           content='Discover powerful APIs and developer tools for building modern applications. From AI - powered code generation to real - time data synchronization, we provide the building blocks you need.';
@@ -1448,12 +1292,7 @@ rating: 4.9,
                   <div className='flex - 1'>;
                     <div className='flex items - center justify - between mb - 3'>;
                       <h3 className='text - 2xl font - bold text - white group - hover:text - indigo - 400 transition - colors duration - 300'>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {tool.title}
                       </h3>;
                       <div className='flex items - center space - x-2'>;
@@ -1461,11 +1300,7 @@ rating: 4.9,
                           <Star className='w - 4 h - 4 fill - current' />;
                           <span className='ml - 1 text - sm font - medium'>;
                             {tool.rating}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1502,26 +1337,14 @@ rating: 4.9,
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
-<<<<<<< HEAD
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
 
-=======
-                        <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>                          {tool.status}
-                        </span>
-                      </div>
-                    </div>
-                    <p className='text-gray-400 leading-relaxed mb-6'>                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           {tool.status}
                         </span>
                       </div>
                     </div>
 
                           </span>;
-<<<<<<< HEAD
-=======
-</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </div>;
                         <span className='px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full font - medium'>                          {tool.status}
                         </span>;
@@ -1538,18 +1361,7 @@ rating: 4.9,
                     <div className='grid grid - cols - 3 gap - 4 mb - 6'>;
                       <div className='text - center p - 3 bg - gray - 800 / 50 rounded - lg'>;
                         <div className='text - lg font - bold text - indigo - 400'>;
-<<<<<<< HEAD
 
-=======
-                    <p className='text-gray-400 leading-relaxed mb-6'>
-                      {tool.description}
-                    </p>
-                    <div className='grid grid-cols-3 gap-4 mb-6'>
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
-                        <div className='text-lg font-bold text-indigo-400'>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {tool.users}
                         </div>;
                         <div className='text - xs text - gray - 500'>Users</div>;
@@ -1566,11 +1378,7 @@ rating: 4.9,
                         </div>;
                         <div className='text - lg font - bold text - green - 400'>;
                           {tool.pricing.free}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -1628,12 +1436,7 @@ rating: 4.9,
                       {tool && tool.features;
                         .slice(0, 3);
                         .map((feature, featureIndex) => (;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <li
                             key={featureIndex}
                             className='flex items-center text-gray-300 text-sm'>;
@@ -1641,18 +1444,10 @@ rating: 4.9,
                             {feature}
                           </li>;
                         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     </ul>;
                     <div className='flex flex-wrap gap-3'>;
 
-=======
-                    </ul>;
-                    <div className='flex flex-wrap gap-3'>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -1661,12 +1456,8 @@ rating: 4.9,
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
                       </Button>;
                       <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         href={tool && tool.docs}                      {tool && tool.description}
                     </p>;
 
@@ -1689,8 +1480,6 @@ rating: 4.9,
                       {tool && tool.features.slice(0, 3).map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           {feature}
                         </li>;
                       ))}
@@ -1702,7 +1491,6 @@ rating: 4.9,
                         href={tool && tool.website}
                         variant="primary"
                         size="sm"
-=======
                     <p className="text-gray-400 leading-relaxed mb-6">
                       {tool.description}
                     </p>
@@ -1731,23 +1519,17 @@ rating: 4.9,
                         href={tool && tool.website}
                     </ul>
                     <div className="flex flex-wrap gap-3">
-=======
                           {feature}
                         </li>;
                       ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         href={tool.website}
                         variant="primary"
                         size="sm"
-<<<<<<< HEAD
                         className="bg-indigo-600 hover:bg-indigo-700"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                         Visit API
                       </Button>
@@ -1756,26 +1538,16 @@ rating: 4.9,
                         Visit API;
                       </Button>;
                       <Button
-<<<<<<< HEAD
                         href={tool.docs}
-<<<<<<< HEAD
                         variant="outline"
-=======
-=======
-                        href={tool && tool.docs}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         variant='outline'
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'>;
                         <BookOpen className='w-4 h-4 mr-2' />                        Documentation;
                       </Button>;
                       <Button
-<<<<<<< HEAD
                         href={tool.github}                        variant="outline"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                         href={tool && tool.github}                        variant="outline"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
                       >
@@ -1783,42 +1555,30 @@ rating: 4.9,
                         Documentation
                       </Button>
                       <Button
-<<<<<<< HEAD
                         href={tool.github}
                         variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
                       >
                         <Github className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
                         GitHub
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Button>
                     </div>
                   </div>
                 </div>
               </Card>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-=======
             ))}
           </div>
         </div>
       </section>
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -1826,14 +1586,7 @@ rating: 4.9,
       {/* Developer Resources */}
 
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1887,11 +1640,6 @@ rating: 4.9,
               <Button href='/sdk' variant='outline' size='sm'>
                 Browse SDKs
                 <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1943,33 +1691,14 @@ rating: 4.9,
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          </div>;
-=======
-          </div>;
         </div>;
       </section>;
 
-</div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        </div>;
-      </section>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1978,12 +1707,7 @@ rating: 4.9,
               Developer Resources;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </div>;
                       </div>;
                     </div>;
@@ -2084,124 +1808,50 @@ rating: 4.9,
               Developer Resources;
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Everything you need to get started and build amazing applications;
               with our APIs.;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-            <Card className='text - center border border - gray - 700 hover:border - indigo - 500 / 30'>;
-              <div className='w - 16 h - 16 bg - indigo - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 6'>;
-                <BookOpen className='w - 8 h - 8 text - indigo - 400' />;
-              </div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Comprehensive Documentation;
-              </h3>;
-              <p className='text - gray - 400 mb - 6'>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Detailed API references, code examples, and integration guides;
                 for every service.;
               </p>;
               <Button href='/docs' variant='outline' size='sm'>;
                 Explore Docs;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-                <ArrowRight className='w - 4 h - 4 ml - 2' />              </Button>;
-            </Card>;
-            <Card className='text - center border border - gray - 700 hover:border - indigo - 500 / 30'>;
-              <div className='w - 16 h - 16 bg - indigo - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 6'>;
-                <Play className='w - 8 h - 8 text - indigo - 400' />;
-              </div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Interactive Playground;
-              </h3>;
-              <p className='text - gray - 400 mb - 6'>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Test APIs directly in your browser with our interactive testing;
                 environment.;
               </p>;
               <Button href='/playground' variant='outline' size='sm'>;
                 Try Playground;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-                <ArrowRight className='w - 4 h - 4 ml - 2' />;
-              </Button>;
-            </Card>;
-            <Card className='text - center border border - gray - 700 hover:border - indigo - 500 / 30'>;
-              <div className='w - 16 h - 16 bg - indigo - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 6'>;
-                <Github className='w - 8 h - 8 text - indigo - 400' />;
-              </div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Open Source SDKs;
-              </h3>;
-              <p className='text - gray - 400 mb - 6'>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Official SDKs and client libraries for popular programming;
                 languages and frameworks.;
               </p>;
               <Button href='/sdk' variant='outline' size='sm'>;
                 Browse SDKs;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-                <ArrowRight className='w - 4 h - 4 ml - 2' />              </Button>                <ArrowRight className="w - 4 h - 4 ml - 2" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </Card>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               View Documentation;
             </Button>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
 
 
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -2273,8 +1923,6 @@ rating: 4.9,
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </>);
 }
   );
@@ -2282,4 +1930,3 @@ rating: 4.9,
 }
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

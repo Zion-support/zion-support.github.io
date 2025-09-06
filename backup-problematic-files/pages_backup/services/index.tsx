@@ -638,15 +638,12 @@ export default function ServicesIndex() {
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
-<<<<<<< HEAD
                 </ul>
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
 
       <div className="min-h-screen bg-gray-50">
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -689,12 +686,9 @@ export default function ServicesIndex() {
                     ))}
                   </div>;
                   <Link
-<<<<<<< HEAD
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Learn More
                   </Link>
                 </div>
@@ -721,7 +715,6 @@ export default function ServicesIndex() {
   );
 };
 export default ServicesIndex;
-<<<<<<< HEAD
 export default ServicesIndex;
       </div>
     </>
@@ -731,5 +724,3 @@ export default ServicesIndex;
     </>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

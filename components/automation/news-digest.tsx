@@ -1,76 +1,48 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
-=======
-
-</div> </div>) )
- </div> </div>) ) 
-=======
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
-import path from 'path';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
-<<<<<<< HEAD
 </div> </div>) ) 
  </div> </div>) ) 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   let items: NewsItem[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     const json = JSON && JSON.parse(raw);
     items = json && json.items || [];
     generatedAt = json && json.generatedAt || '';
-=======
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const raw = fs.readFileSync (file, 'utf - 8');
     const json = JSON.parse (raw);
     items = json.items || [];
     generated_at = json.generated_at || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {}
   return { props: { items, generated_at } }
 }
 
 
-=======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
     items = json.items |[];
@@ -79,22 +51,13 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { items, generated_at } }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">;
@@ -113,37 +76,18 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
 
 
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      </div>;
-    </div>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * NewsDigestPage - Function description
  */
@@ -166,11 +110,7 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
@@ -202,6 +142,3 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -117,7 +117,6 @@ location;
 rating;
 reviewCount;
 aiScore;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/ProfileHero.tsx
 profileType ;
 }: ProfileHeroProps) {;
   return (<div className="w-full overflow-hidden" > <div className="relative" > <AspectRatio ratio= {;"  3/1 ";"}className="bg-zion-blue-light" > {;
@@ -140,5 +139,3 @@ profileType ;
 }</div> </div> </div> </div> </div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileHero.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx

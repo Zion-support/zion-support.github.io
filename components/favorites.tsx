@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
@@ -10,7 +6,6 @@ import Head from 'next/head';
 
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
-=======
 export default function FavoritesPage() {
 
 export default function FavoritesPage() {;
@@ -19,7 +14,6 @@ export default function FavoritesPage() {;
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const storageKey = 'zion_favorites';
@@ -39,45 +33,21 @@ export default function FavoritesPage() {;
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
-<<<<<<< HEAD
 
 
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
 
-<<<<<<< HEAD
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
-=======
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head',
-import {useEffect, useMemo, useState} from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../data/talent';
-function useFavorites() {
-
-  const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(storageKey);
-      if (raw) setFavorites(JSON.parse(raw));    } catch {}
-  }, []);
-  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
-  return { favorites, remove }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   const remove = (slug: string) => setFavorites((prev) => prev && prev.filter((s) => s !== slug)),;
   return { favorites, remove };
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
@@ -126,7 +96,6 @@ export default function FavoritesPage() {;
           <div className='mt-4'>;
             <Link href='/talent'>;
               <a className='px-4 py-2 rounded-md bg-indigo-600 text-white'>;
-=======
 export default /**
  * FavoritesPage - Function description
  */
@@ -175,24 +144,16 @@ function FavoritesPage() {
           <div className='mt - 4'>;
             <Link href='/talent'>;
               <a className='px - 4 py - 2 rounded - md bg - indigo - 600 text - white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Browse Talent;
               </a>;
             </Link>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (
             <div;
               key={t.slug}
-<<<<<<< HEAD
               className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 5 bg - white / 70 dark:bg - black / 40';
             >;
               <div className='flex items - center justify - between'>;
@@ -205,44 +166,26 @@ function FavoritesPage() {
                 <button;
                   on_click={() => remove (t.slug)}
                   className='text - xs text - pink - 600 border border - pink - 600 rounded px - 2 py - 1';
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 >;
                   Remove;
                 </button>;
               </div>;
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
           </ol>
         </nav>
       </div>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     </div>;
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
               <div className='mt - 3 flex flex - wrap gap - 2'>;
                 {t.skills.slice (0, 4).map (string => (
@@ -275,12 +218,6 @@ function FavoritesPage() {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           </ol>
         </nav>
       </div>
@@ -431,6 +368,3 @@ export default function FavoritesPage() {;
           </ol>
         </nav>
       </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

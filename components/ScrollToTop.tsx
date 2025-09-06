@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,8 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -33,8 +29,6 @@ import React, { useState, useEffect } from 'react';
 
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 const ScrollToTop: React.FC = () => {
@@ -49,7 +43,6 @@ const ScrollToTop: React.FC = () => {
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-<<<<<<< HEAD
 
 
         setIsVisible(true);
@@ -62,12 +55,6 @@ const ScrollToTop: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-=======
 
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
@@ -80,23 +67,14 @@ const ScrollToTop: React.FC = () => {
     const _toggleVisibility = () => {
 
       if (window.pageYOffset > 300) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setIsVisible(true)
       } else {
         setIsVisible(false)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
-<<<<<<< HEAD
     }
     window.addEventListener('scroll', toggleVisibility);
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
 
@@ -122,18 +100,8 @@ const ScrollToTop: React.FC = () => {
 
       behavior: 'smooth'
     });
-<<<<<<< HEAD
-=======
-=======
-    return () => window.removeEventListener('scroll', toggleVisibility)
-  }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       behavior: 'smooth'
     });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
 
     window && window.addEventListener('scroll', toggleVisibility);
@@ -146,33 +114,17 @@ const ScrollToTop: React.FC = () => {
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      behavior: 'smooth'})
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const scrollToTop = () => {;
     window && window.scrollTo({;
       top: 0,;
       behavior: 'smooth',;
     });  };      behavior: 'smooth'});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      behavior: 'smooth'})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       behavior: 'smooth'})
   };
 
@@ -197,7 +149,6 @@ const ScrollToTop: React.FC = () => {
       {isVisible && (;
         <button
           onClick={scrollToTop}
-<<<<<<< HEAD
           className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group"
           aria-label="Scroll to top"
         >
@@ -318,7 +269,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
       behavior: 'smooth'
     });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   if (!isVisible) {
@@ -338,10 +288,6 @@ origin/main
     </button>
   );
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     });  };      behavior: 'smooth'})
   }
@@ -356,20 +302,9 @@ origin/automation-improvements-final
       {isVisible && (
         <button
           onClick={scrollToTop}
-<<<<<<< HEAD
 
 
-=======
-          className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
-          aria-label='Scroll to top'
-
-
-
-        >
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           aria-label='Scroll to top'>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -379,21 +314,12 @@ origin/automation-improvements-final
               strokeLinecap='round'
               strokeLinejoin='round'
               strokeWidth={2}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group"
           aria-label="Scroll to top"
         >
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               d='M5 10l7-7m0 0l7 7m-7-7v18'            />        >
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <svg
             className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
             fill="none"
@@ -406,7 +332,6 @@ origin/automation-improvements-final
               strokeLinejoin="round"
               strokeWidth={2}
               d="M5 10l7-7m0 0l7 7m-7-7v18"
-<<<<<<< HEAD
 
 
 };
@@ -414,21 +339,14 @@ origin/automation-improvements-final
 export default ScrollToTop;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ScrollToTop;
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
             />
           </svg>
         </button>
       )}
     </>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               d='M5 10l7-7m0 0l7 7m-7-7v18'            />        >
           <svg
             className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
@@ -448,13 +366,7 @@ export default ScrollToTop;
       )}
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 export default ScrollToTop;
@@ -474,19 +386,9 @@ origin/main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default ScrollToTop;
 export default ScrollToTop;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default /**
  * ScrollToTop - Function description
@@ -565,16 +467,8 @@ export default ScrollToTop);
 }
 ;
 export default ScrollToTop;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-export default ScrollToTop;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default ScrollToTop;
 
 
@@ -648,6 +542,3 @@ origin/automation-improvements-final
 
 export default ScrollToTop;
 export default ScrollToTop;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

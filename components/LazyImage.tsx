@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface LazyImageProps {
-=======
-=======
 interface LazyImageProps {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -30,7 +19,6 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-<<<<<<< HEAD
 
 
 export default function LazyImage(): any ({;
@@ -49,37 +37,7 @@ export default function LazyImage(): any ({;
   onLoad,;
   onError,;
 }: LazyImageProps) {;
-<<<<<<< HEAD
 
-=======
-export default function LazyImage({
-
-=======
-export default function LazyImage({
-
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-export default function LazyImage({
-  src
-  alt
-  width
-  height
-  className = ""
-  priority = false
-  placeholder = "empty"
-  blurDataURL
-  sizes
-  quality = 75
-  fill = false
-  style
-  onLoad
-  onError
-}: LazyImageProps) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   src,
   alt,
   width,
@@ -95,41 +53,24 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (priority) return;
 
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
-<<<<<<< HEAD
 
           setIsInView(true);
           observer && observer.disconnect();
         }
 
-=======
-          setIsInView(true);
-          observer && observer.disconnect();
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },;
       {;
         threshold: 0 && 0.1,;
@@ -154,12 +95,7 @@ export default function LazyImage({
     onError?.();
   };
   if (hasError) {;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div
         ref={imgRef}
@@ -179,19 +115,11 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
       {isInView && (;
 
-=======
-      {isInView && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -269,7 +197,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}
@@ -285,16 +212,8 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />)}
     </div>);
 
-=======
-        />)}
-    </div>);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

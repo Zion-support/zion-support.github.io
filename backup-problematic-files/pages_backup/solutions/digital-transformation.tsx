@@ -96,12 +96,9 @@ const industries = [;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
-<<<<<<< HEAD
 export default function DigitalTransformation() {
 import React from 'react';
 import React from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -143,15 +140,12 @@ export default function DigitalTransformationPage() {;
       description="Complete digital transformation solutions to modernize your business and drive innovation."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :pages/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -185,10 +179,7 @@ export default function DigitalTransformationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -261,7 +252,6 @@ export default function DigitalTransformationPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -275,8 +265,6 @@ export default function DigitalTransformationPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {transformationSteps.map((step, index) => {
                 const IconComponent = step.icon;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 return (
                   <motion&& motion.div
                     key={index}
@@ -400,7 +388,6 @@ export default function DigitalTransformationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -435,8 +422,6 @@ export default function DigitalTransformationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -476,16 +461,8 @@ export default function DigitalTransformationPage() {;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
     </Layout>;
-<<<<<<< HEAD
   );
 };
 
-<<<<<<< HEAD
 export default Digital-transformation;
-=======
-export default Digital-transformation;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

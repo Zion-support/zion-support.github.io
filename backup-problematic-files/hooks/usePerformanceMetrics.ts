@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
@@ -45,8 +44,6 @@ import { PerformanceMetrics } from "../types";
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
 export function usePerformanceMetrics() {
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -72,14 +69,11 @@ export function usePerformanceMetrics() {
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
-<<<<<<< HEAD
 
 :hooks/usePerformanceMetrics.ts
 
 main:hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -87,7 +81,6 @@ main:hooks/usePerformanceMetrics.ts
         cumulativeLayoutShift: cls
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
-<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
     };
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
@@ -107,15 +100,12 @@ export function usePerformanceMetrics() {;
     if (typeof window === 'undefined' || !('performance' in window)) {;
       return;
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
 }
 
@@ -131,5 +121,3 @@ main:hooks/usePerformanceMetrics.ts
 }
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

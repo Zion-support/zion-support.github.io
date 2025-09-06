@@ -23,8 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   );
@@ -32,16 +30,6 @@ import { v4 as uuidv4 } from 'uuid';
     if (!rating) {;
       setError('Please choose 👍 or 👎');
 
-=======
-
-export type FeedbackWidgetProps = {;
-  responseId?: string;
-  aiModel?: string;
-}
-export default function FeedbackWidget({
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   responseId
   aiModel
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
@@ -62,29 +50,19 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return;    }  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
 
   const submit = async () => {;
     if (!rating) {;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setError('Please choose 👍 or 👎');
       return;      return;
-=======
       return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     setError(null);
     setSubmitting(true);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {;
       const res = await fetch('/api/feedback/submit', {;
         method: 'POST',;
@@ -103,7 +81,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       });
       if (!res && res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
-<<<<<<< HEAD
 
     } catch (e: any) {;
       setError(e?.message || 'Something went wrong');
@@ -111,23 +88,11 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 
       setSubmitting(false);    }
 
-=======
-    } catch (e: any) {;
-      setError(e?.message || 'Something went wrong');
-    } finally {;
-      setSubmitting(false);    }
-  }
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           responseId: effectiveResponseId,
           rating;
           comment: comment.trim(),
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const effectiveResponseId = useMemo(
     () => responseId |uuidv4()
     [responseId]
@@ -144,7 +109,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const submit = async () => {;
     if (!rating) {;
       setError('Please choose 👍 or 👎');
-<<<<<<< HEAD
       return;    }  const effectiveResponseId = useMemo(() => responseId |uuidv4(), [responseId]);
   const submit = async () => {
     if (!rating) {
@@ -179,9 +143,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim()
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
@@ -189,8 +150,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>;
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment && comment.trim(),;
@@ -203,32 +162,11 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     } finally {;
       setSubmitting(false);
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
 
   return (
 
-<<<<<<< HEAD
-=======
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
-      {submitted ? (
-=======
-    }
-  }
-  return (
-=======
-    }
-  }
-  };
-
-  return (
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
@@ -255,27 +193,17 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         <div className='space-y-3'>;
           <div className='flex items-center gap-2'>;
             <button
-<<<<<<< HEAD
               type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
       ) : (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >;
               <span>👍</span>;
               <span>Yes</span>;
@@ -283,11 +211,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             <button
 
 
-=======
-              type="button"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -297,55 +220,24 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             </button>;
           </div>;
           <textarea
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-            placeholder="Optional feedback (what worked, what didn’t)"
-            value={comment}
-            onChange={(e) => setComment(e.target.value.slice(0, 2000))}
-            className="w-full rounded-md border px-3 py-2 text-sm"
-            rows={3}
-          />;
-          {error && <div className="text-xs text-red-600">{error}</div>}
-          <div>
-            <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {submitting ? 'Submitting…' : 'Submit feedback'}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </button>;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   );
 
 }
-=======
-
-}
-=======
-=======
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;
@@ -484,10 +376,7 @@ if ( {) {
           </div>;
         </div>)}
     </div>);
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const _submit = async () => {
     if (!rating) {
@@ -548,16 +437,9 @@ if ( {) {
         </div>
       )}
     </div>
-<<<<<<< HEAD
 );
   );
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

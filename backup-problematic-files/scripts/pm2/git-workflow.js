@@ -26,11 +26,7 @@ class GitWorkflow {,;
 ,;
   async checkGitStatus() {,;
     try {,;
-<<<<<<< HEAD
       this.log('📋 Checking git status...'),;
-=======
-      this.log(' Checking git status...'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,;
       const status = execSync('git status --porcelain', {,;
         cw:d:this.projectRoot,;
@@ -68,11 +64,7 @@ class GitWorkflow {,;
 ,;
   async checkBranchHealth() {,;
     try {,;
-<<<<<<< HEAD
       this.log('🌿 Checking branch health...'),;
-=======
-      this.log(' Checking branch health...'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,;
       const branches = execSync('git branch -r', {,;
         cw:d:this.projectRoot,;
@@ -122,11 +114,7 @@ class GitWorkflow {,;
 ,;
   async checkMergeConflicts() {,;
     try {,;
-<<<<<<< HEAD
       this.log('🔀 Checking for merge conflicts...'),;
-=======
-      this.log(' Checking for merge conflicts...'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,;
       const status = execSync('git status --porcelain', {,;
         cw:d:this.projectRoot,;
@@ -155,11 +143,7 @@ class GitWorkflow {,;
 ,;
   async checkStaleBranches() {,;
     try {,;
-<<<<<<< HEAD
       this.log('🍂 Checking for stale branches...'),;
-=======
-      this.log(' Checking for stale branches...'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,;
       const branches = execSync('git branch -r', {,;
         cw:d:this.projectRoot,;
@@ -287,11 +271,7 @@ class GitWorkflow {,;
   };
 ,;
   async run() {,;
-<<<<<<< HEAD
     this.log('🌿 Starting Git Workflow Monitor...'),;
-=======
-    this.log(' Starting Git Workflow Monitor...'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     this.log(`Project:root:${this.projectRoot}`),;
 ,;
     try {,;
@@ -308,11 +288,7 @@ class GitWorkflow {,;
       const staleInfo = await this.checkStaleBranches(),;
 ,;
       // Generate report,;
-<<<<<<< HEAD
       this.log('📊 Generating git workflow report...'),;
-=======
-      this.log(' Generating git workflow report...'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo),;
 ,;
       // Save report,;
@@ -321,11 +297,7 @@ class GitWorkflow {,;
       const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
-<<<<<<< HEAD
       this.log('\n📊 Git Workflow:Summary:'),;
-=======
-      this.log('\n Git Workflow:Summary:'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log(`Current:branch:${report.summary.currentBranch}`),;
       this.log(`Has:changes:${report.summary.hasChanges ? 'Yes' :'No'}`),;
       this.log(`Total:branches:${report.summary.totalBranches}`),;
@@ -335,29 +307,17 @@ class GitWorkflow {,;
       this.log(`Duratio:n:${duration}ms`),;
 ,;
       if (report.recommendations.length > 0) {,;
-<<<<<<< HEAD
         this.log('\n💡 Recommendation:s:'),;
-=======
-        this.log('\n Recommendation:s:'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
-<<<<<<< HEAD
         this.log('\n✨ Git workflow is healthy!'),;
       };
 ,;
     } catch (error) {,;
       this.log(`❌ Error running git workflow:monitor:${error.message}`),;
-=======
-        this.log('\n Git workflow is healthy!'),;
-      };
-,;
-    } catch (error) {,;
-      this.log(` Error running git workflow:monitor:${error.message}`),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       process.exit(1),;
     };
   };
@@ -663,11 +623,7 @@ class GitWorkflow {;
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-<<<<<<< HEAD
       this.log('\n📊 Git Workflow Summary: ');
-=======
-      this.log('\n Git Workflow Summary: ');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log(`Current branch: ${report.summary.currentBranch}`);
       this.log(`Has changes: ${report.summary.hasChanges ? 'Yes' : 'No'}`);
       this.log(`Total branches: ${report.summary.totalBranches}`);
@@ -677,11 +633,7 @@ class GitWorkflow {;
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-<<<<<<< HEAD
         this.log('\n💡 Recommendations: ');
-=======
-        this.log('\n Recommendations: ');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
@@ -929,19 +881,11 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
           this.log(`    Action: ${rec.action}`)
         })
       } else {,
-<<<<<<< HEAD
         this.log('\n✨ Git workflow is healthy!')
       };
 
     } catch (error) {,
       this.log(`❌ Error running git workflow monitor: ${error.message}`),
-=======
-        this.log('\n Git workflow is healthy!')
-      };
-
-    } catch (error) {,
-      this.log(` Error running git workflow monitor: ${error.message}`),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       process.exit(1)
     };
   };

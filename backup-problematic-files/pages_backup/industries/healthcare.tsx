@@ -5,7 +5,6 @@ import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone,
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Heart, 
   Brain, 
   Shield, 
@@ -17,8 +16,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Heart,
   Brain,
@@ -33,20 +30,14 @@ import {
   Stethoscope,
   Activity,
   Database,
-<<<<<<< HEAD
   Camera,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   FileText;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -158,12 +149,9 @@ const benefits = [;
 ;];
 const caseStudies = [;
   {}
-<<<<<<< HEAD
     title: 'AI Diagnostic System Implementation,',
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
 const caseStudies = [;
   {;
@@ -268,7 +256,6 @@ export default function HealthcarePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
 ];
 export default function HealthcarePage() {
   return (
@@ -316,18 +303,13 @@ export default function HealthcarePage() {
             </motion.div>
           </div>
         </section>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Section */}
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -340,13 +322,10 @@ export default function HealthcarePage() {
                 Comprehensive technology solutions designed specifically for healthcare organizations, ;
                 from hospitals to private practices.;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -453,10 +432,7 @@ export default function HealthcarePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -469,13 +445,10 @@ export default function HealthcarePage() {
                 Our healthcare technology solutions deliver measurable improvements in patient care, ;
                 operational efficiency, and regulatory compliance.,;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -542,10 +515,7 @@ export default function HealthcarePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -558,13 +528,10 @@ export default function HealthcarePage() {
                 Real results from healthcare organizations that have transformed their operations;
                 with our technology solutions.;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
               {caseStudies.map((study, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -659,10 +626,7 @@ export default function HealthcarePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Healthcare?;
@@ -708,11 +672,4 @@ export default function HealthcarePage() {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Healthcare;
-=======
-export default Healthcare;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

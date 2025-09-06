@@ -134,7 +134,6 @@ amount;
 status;
 dueDate;
 onApprove;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
 onReject ;
 }: MilestoneCardProps) {;
   const { ;
@@ -156,5 +155,3 @@ case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className
 }</div> </CardFooter> </Card>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx

@@ -1,29 +1,16 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 export type Trend = {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   id: string,
   date: string,
   title: string,
   highlights: string[],
   summary: string,
   tags: string[];
-=======
-tags: string[];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 export async /**
@@ -31,24 +18,13 @@ export async /**
  */
 function getServerSideProps() {
   const file = path.join (process.cwd (), 'dataai - trends.json');
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync (file, 'utf - 8');
     items = JSON.parse (raw);
   } catch {}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -79,14 +55,6 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-</div> </div>) )
- </div> </div>) ) 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -98,11 +66,8 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
-<<<<<<< HEAD
 </div> </div>) ) 
  </div> </div>) ) 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -119,16 +84,12 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
@@ -152,8 +113,6 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
@@ -177,39 +136,23 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
 
 
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
 }
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }
@@ -238,11 +181,7 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
@@ -272,6 +211,3 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

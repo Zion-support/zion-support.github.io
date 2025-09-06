@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export function middleware(request: NextRequest) {;
@@ -9,7 +7,6 @@ export function middleware(request: NextRequest) {;
   const response = NextResponse.next();
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -25,9 +22,7 @@ export function middleware(request: NextRequest) {;
 
 }
 
-=======
   
-=======
 export function middleware(request: NextRequest) {
 
 export function middleware(request: NextRequest) {;
@@ -135,9 +130,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   
   
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -149,19 +141,13 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     'Content-Security-Policy',
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
-<<<<<<< HEAD
   
   return response;
-<<<<<<< HEAD
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return response;
     return response;
 }
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -171,9 +157,6 @@ origin/automation-improvements-final
 ursor/fix-lint-push-and-merge-to-main-ae4e
 }
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -185,9 +168,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
   return response;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 return response;
 }
   matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)"],
@@ -196,23 +176,16 @@ export const config = {
   matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
 }
 ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-=======
 return response;
 }
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export const config = {
 
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
 
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -224,6 +197,3 @@ export const config = {
 }
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

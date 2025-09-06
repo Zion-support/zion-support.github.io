@@ -16,24 +16,15 @@ export default function AIGuardrailsPage() {
 		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detectionPII/PHI detection and redactionToxicity, bias and safety classifiersHuman handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
 	],
 
-<<<<<<< HEAD:pages/ai-guardrails.tsx.backup.1755991774
 	return (
-<<<<<<< HEAD
 		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
-=======
-		<UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
-=======
 	return (_<UltraAdvancedFuturisticBackground>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/ai-guardrails.tsx
 			<Head>
 				<title>AI Guardrails Suite | Zion Tech Group</title>
 				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
 
-<<<<<<< HEAD:pages/ai-guardrails.tsx.backup.1755991774
-<<<<<<< HEAD
 			<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
 				<div className="text-center max-w-4xl mx-auto mb-12">
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Guardrails</h1>
@@ -41,18 +32,11 @@ export default function AIGuardrailsPage() {
 					<div className="mt-6 flex justify-center gap-3">
 						<Button href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl"><Rocket className="w-4 h-4 mr-2" />Request a Demo</Button>
 						<Button href="/resources" variant="outline" className="border-gray-600 text-gray-200">Explore Docs</Button>
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/ai-guardrails.tsx
 			<section className="min-h-screen pt-28 pb-20 px-4">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-rose-400 via-red-500 to-orange-500 bg-clip-text text-transparent">AI Guardrails Suite</h1>
 						<p className="mt-4 text-xl text-gray-300">Safety and governance for LLM apps with minimal integration and strong guarantees.</p>
-<<<<<<< HEAD:pages/ai-guardrails.tsx.backup.1755991774
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/ai-guardrails.tsx
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
       "Immersive experiences";
@@ -12,14 +10,9 @@
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 export interface MetaverseDigitalRealityService2026 {;
 export interface MetaverseDigitalRealityService2026 {
 export interface MetaverseDigitalRealityService2026 {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -71,7 +64,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     },
   ];    features: [
 
-<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -102,7 +94,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Advanced graphics",
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface MetaverseDigitalRealityService2026 {;
 
@@ -119,20 +110,13 @@ export interface MetaverseDigitalRealityService2026 {;
 
 ];
 
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
     }
   }
 ];
-=======
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MetaverseDigitalRealityService2026 {;
   };
 
@@ -202,7 +186,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -213,9 +196,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     }
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

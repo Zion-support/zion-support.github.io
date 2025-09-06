@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,35 +26,20 @@ import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
 
-=======
-import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-const EnhancedLayout = ({ children }) => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min - h-screen flex flex - col">;
       <EnhancedNavigation />;
       <main className="flex - 1">;
         {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </main>;
       <EnhancedFooter />;
     </div>);
 },
 export default EnhancedLayout;
 ;
-<<<<<<< HEAD
       <EnhancedNavigation />
       <main className="flex-1">
         {children}
@@ -68,7 +51,6 @@ export default EnhancedLayout;
 }
 export default EnhancedLayout;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </main>;
       <EnhancedFooter />;
     </div>);
@@ -76,9 +58,3 @@ export default EnhancedLayout;
 export default EnhancedLayout;
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

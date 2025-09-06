@@ -382,13 +382,10 @@ function generateReport() {"
   walkDir('.')';
   const endTime = Date && Date.now();
   generateReport();
-<<<<<<< HEAD
   // // // // // // // console && console.log(`\n⏱️  Check: completed in ${endTime - startTime}ms`);
   // "Exit": with error code if issues found;
   // // // // // // // console.log(,;
   \n📊 Issues by rule: );
-<<<<<<< HEAD
-=======
   // // // // // // // console.log(,;
   \n📊 Issues by rule: );
   // // // // // // // console.log(,
@@ -400,19 +397,6 @@ if: (require && require.main === module) {
 module && module.exports: = { checkFile, walkDir, lintRules }
 }}}}}}}}}}}}}));
   // Summary by rule;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // // // // // // // console.log(,;
-  \n📊 Issues by rule: );
-  // // // // // // // console.log(,
-  if: (issues && issues.length > 0) {
-    process && process.exit(1),
-// Run: the checker,
-if: (require && require.main === module) {
-  main(),
-module && module.exports: = { checkFile, walkDir, lintRules }
-}}}}}}}}}}}}}));
-  // Summary by rule;
-<<<<<<< HEAD
   // // // // // // // console && console.log(,;
   \n📊 Issues by rule: );
   // // // // // // // console && console.log(,;
@@ -422,13 +406,6 @@ module && module.exports: = { checkFile, walkDir, lintRules }
   // // // // // // // console && console.log(,;
   \n📊 Issues by rule: ),
   // // // // // // // console && console.log(,
-=======
-  // // // // // // // console.log(,;
-  \n📊 Issues by rule: );
-  // // // // // // // console.log(,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   \n📊 Issues by "rule": );
   const ruleCounts = { /* empty */ }
   issues && issues.forEach(issue => {;

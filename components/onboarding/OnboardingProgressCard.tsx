@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,17 +28,7 @@ import Link from 'next/link';
 
 
 
-=======
-import React from 'react',
-import React from 'react';
-import Link from 'next/link';
-
-import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type OnboardingStep = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   label: string;
   completed: boolean;
@@ -77,12 +65,6 @@ function computePercentage(steps: OnboardingStep[]): number {
   const allDone = percentage === 100;
   const firstIncomplete = steps.find(
     s => !s.completed && s.ctaHref && s.ctaLabel
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
   return (
     <div className='rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'>
@@ -99,7 +81,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
   const allDone = percentage === 100;
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export type OnboardingProgressCardProps = {;
@@ -135,28 +116,19 @@ export default function OnboardingProgressCard(): any ({;
 
   const firstIncomplete = steps && steps.find(;
     s => !s && s.completed && s && s.ctaHref && s && s.ctaLabel;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className='rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'>;
       <div className='flex items-center justify-between'>;
         <h3 className='text-lg font-semibold'>{title}</h3>;
         <div className='text-sm opacity-75'>{percentage}% complete</div>;
       </div>;
-=======
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export type OnboardingStep = {
   id: string,
   label: string,
@@ -174,40 +146,18 @@ function computePercentage(steps: OnboardingStep[]): number {
   const completedCount = steps.filter((s) => s.completed).length;
   return Math.round((completedCount / steps.length) * 100)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
         <div
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-export default function OnboardingProgressCard(): any ({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
-  const percentage = computePercentage(steps)
-  const allDone = percentage === 100
-  const firstIncomplete = steps && steps.find((s) => !s && s.completed && s && s.ctaHref && s && s.ctaLabel);
-  return (
-    <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">;
-      <div className="flex items-center justify-between">;
-        <h3 className="text-lg font-semibold">{title}</h3>;
-        <div className="text-sm opacity-75">{percentage}% complete</div>;
-      </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
         <div
-=======
   cta_label?: string;
   cta_href?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
 export type OnboardingProgressCardProps = {
@@ -219,26 +169,6 @@ function compute_percentage (steps: OnboardingStep[]): number {
   // Check condition
 if (return 0) {
   $2
-=======
-  ctaLabel?: string;
-  ctaHref?: string;
-}
-;
-export type OnboardingProgressCardProps = {
-};
-
-export type OnboardingProgressCardProps = {;
-  title: string;
-  steps: OnboardingStep[];
-  highlightColorClass?: string;}
-function computePercentage(steps: OnboardingStep[]): number {
-  if (!steps |steps.length === 0) return 0;
-  const completedCount = steps.filter(s => s.completed).length;
-  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
-  ctaHref?: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   const completed_count = steps.filter (string => s.completed).length;
   return Math.round ((completed_count / steps.length) * 100);  cta_label?: string;
@@ -250,8 +180,6 @@ export type OnboardingProgressCardProps = {
   steps: OnboardingStep[],
   highlightColorClass?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 function compute_percentage (steps: OnboardingStep[]): number {
   // Check condition
@@ -271,13 +199,6 @@ function OnboardingProgressCard() {
   const first_incomplete = steps.find (
     string => !s.completed && s.cta_href && s.cta_label);
 ;
-=======
-  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
-  ctaHref?: string
-};
-  return Math.round((completedCount / steps.length) * 100);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export type OnboardingProgressCardProps = {
   title: string,
@@ -289,7 +210,6 @@ function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
-<<<<<<< HEAD
 export default function OnboardingProgressCard({
   title
   steps
@@ -299,14 +219,11 @@ export default function OnboardingProgressCard({
   steps,
   highlightColorClass = 'from-neon-green to-neon-blue',
 }: OnboardingProgressCardProps) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find(
     s => !s.completed && s.ctaHref && s.ctaLabel
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 70 dark:bg - black / 40 p - 5 shadow - sm'>;
       <div className='flex items - center justify - between'>;
@@ -314,8 +231,6 @@ export default function OnboardingProgressCard({
         <div className='text - sm opacity - 75'>{percentage}% complete</div>;
       </div>;
       {/* Progress Bar */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='mt - 3 h - 2 w - full rounded - full bg - gray - 200 dark:bg - gray - 800 overflow - hidden'>;
         <div;
           className={`h - 2 rounded - full bg - gradient - to - r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
@@ -337,7 +252,6 @@ function OnboardingProgressCard() {
       {/* Progress Bar */}
       <div className="mt - 3 h - 2 w - full rounded - full bg - gray - 200 dark:bg - gray - 800 overflow - hidden">;
         <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           className={
             `h - 2 rounded - full bg - gradient - to - r ${highlightColorClass}`;
           }
@@ -345,13 +259,10 @@ function OnboardingProgressCard() {
 
         <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
 
-=======
         <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed — great job!</span>
         </div>
-=======
         />;
       </div>;
 
@@ -361,24 +272,13 @@ function OnboardingProgressCard() {
           <span className='text-sm'>All steps completed — great job!</span>        </div>;
       ) : null}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">;
           <PartyPopper size={18} />;
           <span className="text-sm">All steps completed — great job!</span>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ) : null}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-      {/* Checklist */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <ul className="mt-4 space-y-2">
         {steps.map((step) => (
           <li key={step.id} className="flex items-center justify-between">
@@ -409,31 +309,16 @@ function OnboardingProgressCard() {
                   {step.ctaLabel}
                 </a>
               </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </li>;
         ))}
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       </ul>;
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Primary CTA for next step */}
 
 
@@ -444,28 +329,16 @@ function OnboardingProgressCard() {
   );
 
 }
-<<<<<<< HEAD
-=======
-}
-=======
-
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 }
 
   );
 }
-=======
             ) : null}
           </li>;
         ))}
       </ul>
 
       {/* Checklist */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ) : null}
           </li>;
         ))}
@@ -492,10 +365,6 @@ function OnboardingProgressCard() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
       </div>;
       {all_done ? (
@@ -538,13 +407,9 @@ function OnboardingProgressCard() {
               {first_incomplete.cta_label}
             </a>;
           </Link>;
-<<<<<<< HEAD
         </div>) : null}
     </div>);
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         <div
           className={_`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
           }
@@ -589,8 +454,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps || steps.length === 0) return 0;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
@@ -617,10 +480,7 @@ function computePercentage(steps: OnboardingStep[]): number {
           <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
-<<<<<<< HEAD
       {/* Checklist */}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <ul className='mt-4 space-y-2'>
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
@@ -640,11 +500,8 @@ function computePercentage(steps: OnboardingStep[]): number {
               <Link href={step.ctaHref}>
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
-<<<<<<< HEAD
       {/* Checklist */}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -652,18 +509,12 @@ function computePercentage(steps: OnboardingStep[]): number {
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
 
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>              {firstIncomplete.ctaLabel}        <div className="mt-5">
-=======
-      {/* Primary CTA for next step */}
-      {!allDone && firstIncomplete ? (
-        <div className="mt-5">
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link href={firstIncomplete.ctaHref!}>
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
               {firstIncomplete.ctaLabel}
@@ -676,12 +527,8 @@ function computePercentage(steps: OnboardingStep[]): number {
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   )
 
 }
   );
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

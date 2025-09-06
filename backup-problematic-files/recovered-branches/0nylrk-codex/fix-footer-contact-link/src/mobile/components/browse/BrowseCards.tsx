@@ -147,7 +147,6 @@ timePosted?: string
   items, type, onViewDetails 
 }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]> ([]);
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/mobile/components/browse/BrowseCards.tsx
 setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) </Avatar>) : (<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center" > <span className="text-primary font-semibold" >JOB</span> </div>) ";"}<div> </div> </div> <button) : (<Bookmark className="h-5 w-5 text-muted-foreground" />) ;
 }</button> </div> <Badge key= {;"  index ";"}variant="outline" className="text-xs font-normal" >{;
   badge ;
@@ -171,5 +170,3 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/browse/BrowseCards.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseCards.tsx

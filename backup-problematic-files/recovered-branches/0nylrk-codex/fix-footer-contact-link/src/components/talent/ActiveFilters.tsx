@@ -126,7 +126,6 @@ clearFilters: () => void
 }: ActiveFiltersProps) {
   //Check if any filters are active const hasActiveFilters = selectedSkills.length > 0 || selectedAvailability.length > 0 || selectedRegions.length > 0 || experienceRange[0] !== 0 || experienceRange[1] !== 15 || priceRange[0] !== 50 || priceRange[1] !== 200;
 if (!hasActiveFilters) return null;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx
 {;
   selectedSkills.map (skill => (<ClickableBadge key= {;
   skill ;
@@ -146,5 +145,3 @@ if (!hasActiveFilters) return null;
 }<Button ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ActiveFilters.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx

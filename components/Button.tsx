@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 export default function Button(): any ({;
@@ -37,32 +32,19 @@ export default function Button(): any ({;
 
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
       {children}
     </button>;
   );
-<<<<<<< HEAD
 
 }  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
 
 
-=======
-import React from 'react';
-      >;
-      {children}
-    </button>;
-  );
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
-=======
-=======
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   class_name?: string;
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -101,24 +83,14 @@ function Button() {
 }  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       type={type}
       className={classes}
       on_click={on_click}
       disabled={disabled}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-=======
-    </button>;
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       {children}
     </button>
 );
@@ -127,31 +99,15 @@ function Button() {
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       {children}
     </button>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </button>);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 interface ButtonProps {
 
@@ -217,9 +173,6 @@ export default function Button({
       {children}
     </button>
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
     </button>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

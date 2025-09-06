@@ -127,7 +127,6 @@ export default function CybersecurityPage() {;
       </div>;
     </Layout>;
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
   {
@@ -180,8 +179,6 @@ export default function CybersecurityServices() {
 export default function CybersecurityPage() {
 
 export default function CybersecurityPage() {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -499,10 +496,7 @@ export default function CybersecurityServices() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -512,14 +506,11 @@ export default function CybersecurityServices() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -551,7 +542,6 @@ export default function CybersecurityServices() {
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
@@ -590,22 +580,12 @@ export default function CybersecurityServices() {
           </div>
         </section>
       </div>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Layout>
     </Layout>
     </>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
   );
 };
 
-<<<<<<< HEAD
 export default Cybersecurity;
-=======
-export default Cybersecurity;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

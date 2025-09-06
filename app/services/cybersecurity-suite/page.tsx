@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 export const metadata = { 
   title: 'Cybersecurity Suite | Zion Tech Group',
   description: 'Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, and 24/7 security monitoring to protect your business.'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export default function CybersecuritySuitePage() {
   return (
-<<<<<<< HEAD
     <section>
       <h1 style={{fontSize: 26, fontWeight: 800}}>Cybersecurity Suite</h1>
       <p style={{marginTop: 8, color: '#374151'}}>Protect your business with enterprise-grade cybersecurity solutions that detect, prevent, and respond to threats in real-time.</p>
@@ -72,14 +68,10 @@ function Item({ title, details }: { title: string; details: string[] }) {
     <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
       <h3 style={{fontWeight: 700}}>{title}</h3>
       <ul style={{paddingLeft: 18, color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul>
-=======
-      </div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
-<<<<<<< HEAD
 function Pricing() {
   return (
     <div style={{marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'}}>
@@ -129,11 +121,6 @@ function Plan({ name, price, features }: { name: string; price: string; features
       <div style={{color: '#111827', fontWeight: 800, marginTop: 4, fontSize: 18}}>{price}</div>
       <ul style={{paddingLeft: 18, color: '#4b5563', marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul>
       <a href="tel:+13024640950" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Call +1 302 464 0950</a>
-=======
-          </li>
-        ))}
-      </ul>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }

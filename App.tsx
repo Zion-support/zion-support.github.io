@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import { Header } from './src/components/Header';
 import Sidebar from './src/components/layout/Sidebar';
-<<<<<<< HEAD
 import Footer from './src/components/Footer';
-=======
-import { Footer } from './src/components/Footer';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import HomePage from './src/pages/Home';
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
@@ -17,15 +12,12 @@ import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
 export default function App() {
-<<<<<<< HEAD
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
   const handleMenuClick = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <ErrorBoundary>
       <Router>
@@ -47,5 +39,3 @@ export default function App() {
     </ErrorBoundary>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

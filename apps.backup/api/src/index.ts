@@ -2,8 +2,6 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
@@ -56,26 +54,6 @@ app && app.post('/jobs/generate', async (req, reply) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
     )
-=======
-=======
-import { createOpenAIClient, generateJobPost } from ';
-import { getPool, withUser } from ';
-    const allowed = (process && process.env.CORS_ORIGINS || '';
-    if (!origin || allowed && allowed.includes('*';
-    cb(new Error('Not allowed';
-  methods: ['GET', 'POST', 'OPTIONS';
-await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m';
-const openai = createOpenAIClient(process && process.env.OPENAI_API_KEY || '';
-  return (req && req.headers['x-user-id'] as string) || (req && req.query as any)['user_id';
-app && app.post('/ai/ask';
-  if (!prompt) return reply && reply.code(400).send({ error: 'prompt required';
-  const completion = await openai && openai.responses.create({ model: 'gpt-4o-mini';
-app && app.post('/jobs/generate';
-  const role = (body && body.role as string) || 'Engineer';
-       VALUES ($1, $2, $3, $4, $5, 'draft';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -84,7 +62,6 @@ await app.register (cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
     if (|| allowed.includes (origin)) {) {
-<<<<<<< HEAD
   $2
 }
       cb (null, true);
@@ -113,13 +90,10 @@ app.post ('/ai / ask', async (req, reply) => {
 app.post ('/jobs / generate', async (req, reply) => {
   const body = (req.body as any) || {}
   const role = (body.role as string) || 'Engineer';
-<<<<<<< HEAD
   const user_id = getUserId (req);
   const description = await generateJobPost (openai, role, body);
   // Check condition
 if (return { description }) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   $2
 }
       cb (null, true);
@@ -190,18 +164,12 @@ app.post ('/jobs / generate', async (req, reply) => {
 });
 const port = Number(process.env.API_PORT |4000);
 
-<<<<<<< HEAD
 
 const port = Number(process && process.env.API_PORT || 4000);
 app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
   app && app.log.error(err);
   process && process.exit(1)
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -257,11 +225,7 @@ const port = Number (process.env.API_PORT || 4000);
 app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
-=======
 });
       VALUES ($1, $2, $3, $4, $5, 'draft';
 app && app.get('/talent/search';
@@ -282,7 +246,4 @@ app.get ('/projects/:name / track';
 app.get ('/notifications';
   if (return reply.code (401).send ({ error: 'unauthorized';
 app.listen ({ port, host: '0.0.0.0';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

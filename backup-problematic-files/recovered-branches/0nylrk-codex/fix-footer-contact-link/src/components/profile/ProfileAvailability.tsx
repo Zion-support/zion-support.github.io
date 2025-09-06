@@ -66,7 +66,6 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
       )}
     </div>;
   ),;}
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/ProfileAvailability.tsx
  import {;
   {;
   {;
@@ -89,5 +88,3 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
 }</div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileAvailability.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileAvailability.tsx

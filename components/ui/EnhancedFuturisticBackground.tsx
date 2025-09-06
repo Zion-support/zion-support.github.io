@@ -1,17 +1,10 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +26,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
@@ -42,14 +34,8 @@ interface EnhancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
   particleCount?: number;
-<<<<<<< HEAD
   animationSpeed?: number
 
-=======
-animationSpeed?: number
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import React from 'react';
  const colorSchemes = {;
@@ -78,15 +64,8 @@ const EnhancedFuturisticBackground: React.FC<;
   colorScheme = 'quantum',;
   particleCount = 100,;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   font_size;
 }px monospace`;
 ;
@@ -99,10 +78,6 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   children;
   class_name = '';
   intensity = 'medium';
@@ -120,9 +95,6 @@ const EnhancedFuturisticBackground: React.FC<;
 
       x: number;
       y: number;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       background: 'rgba (10, 10, 30, 0.9)',
       particles: [;
         '#ff6b6b',
@@ -171,9 +143,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   children;
   class_name = '';
   intensity = 'medium';
@@ -348,81 +317,31 @@ const EnhancedFuturisticBackground: React.FC<
     class Particle {
       x: number;
       y: number;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number;
       vy: number;
       size: number;
       color: string;
       opacity: number;
       life: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     // Enhanced particle system
     class Particle {
       x: number,
       y: number,
-=======
-      max_life: number;      coordinate_x: number,
-      coordinate_y: number,
-
-=======
-      max_life: number;      coordinate_x: number,
-      coordinate_y: number,
-
-max_life: number;      coordinate_x: number,
-      coordinate_y: number,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number,
       vy: number,
       size: number,
       color: string,
       opacity: number,
       life: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
-=======
-this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         this.opacity = Math.random() * settings.opacity;
         this.life = Math.random() * 100;
         this.maxLife = 100
       }
-<<<<<<< HEAD
 
 
-=======
-      maxLife: number;      x: number
-      y: number
-      vx: number
-      vy: number
-      size: number
-      color: string
-      opacity: number
-      life: number
-      maxLife: number
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.size = Math.random() * settings.size + 1;
-        this.color =
-          colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.opacity = Math.random() * settings.opacity;
-        this.life = Math.random() * 100;
-        this.maxLife = 100;      }        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.opacity = Math.random() * settings.opacity;
-        this.life = Math.random() * 100;
-        this.maxLife = 100
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -444,53 +363,23 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         }
       }
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
 
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          this.opacity *= 0.95;        }          this.opacity *= 0.95
-          this.opacity *= 0.95;        }
-
-        }
-      }
-
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = this.opacity;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
-<<<<<<< HEAD
-<<<<<<< HEAD
         
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         
 
@@ -498,10 +387,6 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
       }
       isDead() {
 
-=======
-        ctx.restore();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01;      }
@@ -511,11 +396,7 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
       }
       isDead() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return this.life <= 0 || this.opacity < 0.01
       }
 
@@ -528,25 +409,13 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
-<<<<<<< HEAD
 
 
     // Connection lines between particles
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -590,22 +459,14 @@ if ( {) {
 }
           this.opacity *= 0.95;        }          this.opacity *= 0.95;
         }
-<<<<<<< HEAD
-=======
-        return this.life <= 0 || this.opacity < 0.01
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
     }
-<<<<<<< HEAD
     // Connection lines between particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     class Connection {
 
-=======
 
     // Connection lines between particles
     class Connection {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       p1: Particle,
       p2: Particle,
       opacity: number,
@@ -618,14 +479,9 @@ if ( {) {
       draw() {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       }
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         );
         if (distance < 150) {
           ctx.save();
@@ -636,11 +492,7 @@ if ( {) {
           ctx.moveTo(this.p1.x, this.p1.y);
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -755,25 +607,11 @@ if ( {) {
           ctx && ctx.lineTo(this && this.p2.x, this && this.p2.y);
           ctx && ctx.stroke();
           ctx && ctx.restore();        }
-<<<<<<< HEAD
-=======
-          ctx.restore()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       }
     }
           ctx && ctx.restore();
-<<<<<<< HEAD
 
-=======
-          ctx.restore()
-
-=======
-=======
-          ctx.restore()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -810,58 +648,25 @@ if ( {) {
       }
     }
           ctx.restore ();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      }
-    }
-
-    let particles: Particle[] = []
-    let connections: Connection[] = []
-    // Initialize particles
-    for (let i = 0, i < settings.particleCount, i++) {
-      particles.push(new Particle())
-    }
-    // Matrix rain effect
-    const matrixRain = () => {
-      const characters =
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas && canvas.width / fontSize;
       const drops: number[] = [];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
-<<<<<<< HEAD
 
       for (let i = 0, i < columns, i++) {
 
-=======
-      for (let i = 0, i < columns, i++) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         drops[i] = 1
       }
       const drawMatrix = () => {
@@ -869,12 +674,8 @@ if ( {) {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       for (let i = 0; i < columns; i++) {;
         drops[i] = 1;      }      for (let i = 0, i < columns, i++) {;
         drops[i] = 1;
@@ -893,13 +694,7 @@ if ( {) {
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -941,12 +736,10 @@ if ( {) {
 if (> 0.975) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             drops[i] = 0;
           }
           drops[i]++;
         }
-<<<<<<< HEAD
 
 
         for (let i = 0, i < drops.length, i++) {
@@ -957,38 +750,24 @@ if (> 0.975) {) {
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         for (let i = 0, i < drops.length, i++) {
           const text = characters[Math.floor(Math.random() * characters.length)];
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       };
 
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
           drops[i]++;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     };
 
 
-=======
-    };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -1000,25 +779,14 @@ if (> 0.975) {) {
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         particle.draw()
 
-=======
-        particle.draw()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       };
 
       return drawMatrix;
@@ -1046,41 +814,23 @@ if (> 0.975) {) {
       while (particles && particles.length < settings && settings.particleCount) {;
         particles && particles.push(new Particle());      }
       // Create connections between nearby particles;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
       // Create connections between nearby particles;
 
-=======
-      // Create connections between nearby particles;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         particles.push(new Particle())
-=======
       }
 ;
       return draw_matrix;    }          ctx.fill_text (text, i * font_size, drops[i] * font_size);
@@ -1094,7 +844,6 @@ if (> 0.975) {) {
           drops[i]++;
         }
       }
-<<<<<<< HEAD
 ;
       return draw_matrix;
     }
@@ -1130,28 +879,16 @@ if (> 0.975) {) {
       connections = [];
 
 
-=======
-      }
-      // Create connections between nearby particles;
-      connections = [];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
             Math && Math.pow(particles[i].y - particles[j].y, 2);
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           );
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));
-=======
             connections.push(new Connection(particles[i], particles[j]))
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
         }
       }
@@ -1162,8 +899,6 @@ if (> 0.975) {) {
       }
       // Create connections between nearby particles
       connections = [];
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -1183,22 +918,13 @@ if (> 0.975) {) {
 
         
 
-<<<<<<< HEAD
-=======
-          }
-        }
-      }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-<<<<<<< HEAD
 
         
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -1206,10 +932,7 @@ if (> 0.975) {) {
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       for (let index = 0; i < particles.length; i++) {
         for (let inner_index = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt (
@@ -1258,19 +981,13 @@ if (< 0.5) {) {
           ctx.line_to (x + size, y + size);
           ctx.close_path ();
           ctx.stroke ();
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         } else {
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Draw connections;
       connections && connections.forEach(connection => connection && connection.draw());
 
@@ -1296,36 +1013,11 @@ if (< 0.5) {) {
         } else {;
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-<<<<<<< HEAD
-=======
-          ctx.stroke()
-        } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
-
-        }
-
-        ctx && ctx.restore();
-=======
-        for (let i = 0, i < drops.length, i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)]
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
-
-      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0
-          }
-          drops[i]++
-        }
-        }
-ctx && ctx.restore();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
 
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia(;
         '(prefers-reduced-motion: reduce)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ).matches;
       if (prefersReduced) {;
         // Slow down updates;
@@ -1337,21 +1029,9 @@ ctx && ctx.restore();
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
-<<<<<<< HEAD
 
 
         ctx && ctx.restore();
-=======
-
-      }
-
-=======
-
-      }
-
-        ctx && ctx.restore();
-      }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
       if (prefersReduced) {;
@@ -1361,15 +1041,12 @@ ctx && ctx.restore();
         }, 100);
       } else {;
         animationRef && animationRef.current = requestAnimationFrame(animate);
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     animate();
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
@@ -1377,7 +1054,6 @@ ctx && ctx.restore();
   }, [colorScheme, intensity, particleCount, animationSpeed]);
 
 
-=======
       }
     }
     animate();
@@ -1418,9 +1094,7 @@ ctx && ctx.restore();
       }
       // Create connections between nearby particles
       connections = [];
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
@@ -1470,7 +1144,6 @@ ctx && ctx.restore();
 
         ctx && ctx.restore();
       }
-<<<<<<< HEAD
       // Respect reduced motion
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       if (prefersReduced) {
@@ -1482,13 +1155,9 @@ ctx && ctx.restore();
         animationRef.current = requestAnimationFrame(animate)
       }
 }, [colorScheme, intensity, particleCount, animationSpeed]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return () => {;
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
@@ -1499,103 +1168,20 @@ ctx && ctx.restore();
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-        ctx.restore ();
-      }
-      // Respect reduced motion;
-      const prefers_reduced = window.match_media (
-        '(prefers - reduced - motion: reduce)').matches;
-      // Check condition
-if ( {) {
-  $2
-}
-        // Slow down updates;
-        set_timeout (() => {
-          animation_ref.current = requestAnimationFrame (animate);
-        }, 100);
-      } else {
-        animation_ref.current = requestAnimationFrame (animate);      }        } else {
-          // Draw square;
-          ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
-        }
-        ctx.restore ();
-      }
-      // Respect reduced motion;
-      const prefers_reduced = window.match_media ('(prefers - reduced - motion: reduce)').matches,
-      // Check condition
-if ( {) {
-  $2
-}
-        // Slow down updates;
-        set_timeout (() => {
-          animation_ref.current = requestAnimationFrame (animate);
-        }, 100);
-      } else {
-        animation_ref.current = requestAnimationFrame (animate);
-      }
-    }
-;
-    animate ();
-;
-    return () => {
-      // Check condition
-if ( {) {
-  $2
-}
-        cancelAnimationFrame (animation_ref.current);
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }  }, [color_scheme, intensity, particle_count, animation_speed]);        cancelAnimationFrame (animation_ref.current);
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }
-  return (
-    <div className={`relative min - h-screen ${class_name}`}>;
-      <canvas;
-        ref={canvas_ref}
-        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
         style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'transparent' }}
-      />
-      {/* Overlay gradient */}
-      <div
-        className='fixed inset-0 pointer-events-none z-0'
-        style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-        }}
-      />
-{/* Content */}
-      <div className='relative z-10'>{children}</div>
-    </div>
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
-        }}
-      />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default EnhancedFuturisticBackground;
@@ -1603,12 +1189,6 @@ export default EnhancedFuturisticBackground;
 
 export default EnhancedFuturisticBackground;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -1619,13 +1199,7 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

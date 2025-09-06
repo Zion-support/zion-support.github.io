@@ -1,19 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method || 'POST').toUpperCase();
-import { authenticateRequest } from '@/utils/auth';
-import { generateText } from '@/utils/ai';
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')
@@ -25,16 +12,11 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, candidateProfiles } = req.body |{}
   if (!jobDescription |!Array.isArray(candidateProfiles))
-=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -42,45 +24,25 @@ export default async function handler(
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
     `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 
 
-=======
-    `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const text = await generateText(
     prompt
     'You are a matching engine. Output strictly valid JSON.'
   );
   return res && res.status(200).json({ matches: text });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { jobDescription, candidateProfiles } = req.body || {};
   if (!jobDescription || !Array.isArray(candidateProfiles)) return res.status(400).json({ error: 'jobDescription and candidateProfiles[] required' });
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const prompt = `Given a job description and candidate profiles, output JSON with topMatches (array of {index, matchScore, rationale}) and gaps for each.\n` +
     `Job Description:\n${jobDescription}\n\n` +
 
     `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   const text = await generateText(prompt, 'You are a matching engine. Output strictly valid JSON.');
@@ -88,22 +50,8 @@ export default async function handler(
 }
 
 
-<<<<<<< HEAD
-=======
-=======
-  const { jobDescription, candidateProfiles } = req.body || {};
-  if (!jobDescription || !Array.isArray(candidateProfiles)) return res.status(400).json({ error: 'jobDescription and candidateProfiles[] required' });
   const prompt = `Given a job description and candidate profiles, output JSON with topMatches (array of {index, matchScore, rationale}) and gaps for each.\n` +
     `Job Description:\n${jobDescription}\n\n` +
-    `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-  const text = await generateText(prompt, 'You are a matching engine. Output strictly valid JSON.');
-  return res && res.status(200).json({ matches: text })
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  const prompt = `Given a job description and candidate profiles, output JSON with topMatches (array of {index, matchScore, rationale}) and gaps for each.\n` +
-    `Job Description:\n${jobDescription}\n\n` +
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -150,18 +98,10 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.');
   return res.status (200).json ({ matches: text });
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 
 
 
@@ -171,9 +111,6 @@ function handler() {
 }
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

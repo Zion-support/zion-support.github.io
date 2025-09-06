@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/cron-hourly-uptime.js
 :backup-problematic-files/netlify/functions/cron-hourly-uptime.js
 const { upsertFile } = require('./_lib/github'),;
@@ -50,8 +49,6 @@ exports.handler = async function() {;
 },;
 :backup-problematic-files/netlify/functions/cron-hourly-uptime.js
 :backup-problematic-files/netlify/functions/cron-hourly-uptime.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -120,7 +117,6 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, count: results.length })
     }
   } catch (e) {
-<<<<<<< HEAD
 :netlify/functions/cron-hourly-uptime.js
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
@@ -166,13 +162,10 @@ exports.handler = async function () {
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
 }
 
@@ -233,5 +226,3 @@ main:netlify/functions/cron-hourly-uptime.js
 :netlify/functions/cron-hourly-uptime.js
 main:netlify/functions/cron-hourly-uptime.js
 :backup-problematic-files/netlify/functions/cron-hourly-uptime.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

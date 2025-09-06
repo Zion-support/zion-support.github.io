@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,35 +13,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res && res.status(200).json({
       summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   const fallback = () => res && res.status(200).json({
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-<<<<<<< HEAD
-=======
-  const fallback = () => res.status(200).json({
 
-    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export default async /**
  * handler - Function description
@@ -82,10 +63,7 @@ function handler() {
     const completion = await client.chat.completions.create ({
       model: 'gpt - 4o - mini',
       messages: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {
           role: 'system'
           content: 'You are a concise, practical course assistant.'
@@ -94,35 +72,26 @@ function handler() {
       ]
       temperature: 0.3
     });
-<<<<<<< HEAD
 
 ;
 
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
     return fallback ();
   }
     const text = completion.choices?.[0]?.message?.content ?? '';
-<<<<<<< HEAD
 
 
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (err) {
     return fallback()
 }
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
@@ -130,10 +99,6 @@ function handler() {
 
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -146,15 +111,11 @@ function handler() {
   } catch (err) {
     return fallback()
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
     return fallback ();
 }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -181,8 +142,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           role: 'system'
           content: 'You are a concise, practical course assistant.'
@@ -206,9 +165,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   }
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

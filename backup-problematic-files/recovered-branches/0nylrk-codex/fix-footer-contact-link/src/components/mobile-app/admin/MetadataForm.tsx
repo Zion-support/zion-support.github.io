@@ -166,7 +166,6 @@ if (value && !keywords.includes (value) ) {
   
 }
 };
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/mobile-app/admin/MetadataForm.tsx
 }/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {;
   longDescription.length ;
@@ -180,5 +179,3 @@ if (value && !keywords.includes (value) ) {
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/MetadataForm.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx

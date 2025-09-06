@@ -1,103 +1,48 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
-=======
-  "timestamp": "2025-09-06T10:44:46.097Z",
-  "totalDuration": 76866,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
       "duration": 7037,
-=======
-      "duration": 22421,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
       "duration": 27333,
-=======
-      "duration": 27631,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
       "duration": 1719,
-=======
-      "duration": 1683,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
       "duration": 6250,
-=======
-      "duration": 6198,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "errors": [],
       "warnings": []
     },
     "seoOptimization": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "success": false,
       "duration": 39,
 "errors": [],
-=======
-      "success": true,
-      "duration": 43,
-      "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd
-=======
       "success": true,
       "duration": 46,
       "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
       "success": true,
       "duration": 46,
       "errors": [],
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
       "duration": 9508,
-=======
-      "duration": 9692,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "errors": [],
       "warnings": []
     },
@@ -108,19 +53,9 @@
     },
     "deployment": {
       "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
       "duration": 1612,
-=======
-      "duration": 2037,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "errors": [],
       "warnings": []
     }
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

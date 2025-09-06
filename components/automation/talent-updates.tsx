@@ -1,23 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -39,17 +27,11 @@ export async function getServerSideProps() {;
     const json = JSON && JSON.parse(raw);
     generatedAt = json && json.generatedAt || '';
     summaries = json && json.summaries || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch {}
   return { props: { generatedAt, summaries } }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
   } catch {}
@@ -76,15 +58,8 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-  } catch {}
-  return { props: { generatedAt, summaries } }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
   const map = new Map(summaries && summaries.map(s => [s && s.slug, s && s.summary]));
   return (
@@ -103,13 +78,7 @@ export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { 
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -144,12 +113,7 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 
 </div>) )
  </div>) ) 
@@ -177,14 +141,10 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { generatedAt, summaries } }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
@@ -208,6 +168,3 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

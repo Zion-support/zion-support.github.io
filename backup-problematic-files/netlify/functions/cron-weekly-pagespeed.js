@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
 const { upsertFile } = require('./_lib/github'),;
@@ -44,8 +43,6 @@ exports.handler = async function() {;
 },;
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -90,7 +87,6 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {
-<<<<<<< HEAD
 :netlify/functions/cron-weekly-pagespeed.js
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
@@ -127,8 +123,6 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
     const content = JSON.stringify({ updatedAt: Date.now(), results }, null, 2)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
@@ -137,7 +131,6 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
 }
 
@@ -192,5 +185,3 @@ main:netlify/functions/cron-weekly-pagespeed.js
 :netlify/functions/cron-weekly-pagespeed.js
 main:netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

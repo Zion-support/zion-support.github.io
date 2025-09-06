@@ -61,12 +61,9 @@ isLoading: boolean
   icon: <Award className="h-5 w-5 text-muted-foreground" />;
 description: "Credits earned from referrals" 
 }];
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/referrals/ReferralStats.tsx
 }</CardContent> </Card>) ) ;
 :temp_broken_files/referrals/ReferralStats.tsx
 }</div>) ;"}'"
 }</div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/referrals/ReferralStats.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralStats.tsx

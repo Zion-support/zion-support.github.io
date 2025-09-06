@@ -83,7 +83,6 @@ setValue: (name: string, value: unknown) => void;
 skills: string[];
 yearsExperience: number;
 location?: string;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
 return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="hourlyRate" render= {;
   ({;
   field ;
@@ -105,5 +104,3 @@ return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/RateOptimizationSection.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx

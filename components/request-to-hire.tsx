@@ -23,13 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useRouter } from 'next/router';
-import { TALENT_PROFILES } from '../data/talent';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function RequestToHirePage() {
 
 
@@ -40,60 +33,19 @@ export default function RequestToHirePage() {;
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
   const [form, setForm] = useState({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { use_router } from 'next / router';
-import { TALENT_PROFILES } from '../data / talent';
-;
-export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (
-    () => TALENT_PROFILES.find (t => t.slug === talent),
-    [talent]);export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
-  const [form, set_form] = useState ({
-
-=======
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-  const [form, setForm] = useState({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: '',
     email: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -118,36 +70,27 @@ export default function RequestToHirePage() {;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
 
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setError(null),;
 
     if (!form && form.name || !form && form.email || !form && form.description) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError('Please fill in name, email, and description.');
       return;    }      return;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setError(null);
 
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
           ...form;
           budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
 
-=======
     }
           ...form;
           budget: normalizedBudget,
@@ -192,11 +135,8 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false);    }          budget: normalizedBudget
           talentSlug: selected?.slug |null})})
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       setError('Please fill in name, email, and description.');
       return;    }      return;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -204,7 +144,6 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-<<<<<<< HEAD
 
     }
 
@@ -240,14 +179,8 @@ export default function RequestToHirePage() {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -321,37 +254,18 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    }
-  };
-
-=======
-    }
-  };
-
-    }
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (result) {
     return (
       <div className="max-w-xl mx-auto py-12">
         <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
         <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-<<<<<<< HEAD
       </div>
     )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 </div>
     )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -378,32 +292,18 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
           {submitting ? 'Submitting…' : 'Submit Request'}
 
-=======
-        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
-          {submitting ? 'Submitting…' : 'Submit Request'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </button>;
       </form>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     description: '',
   });
   const [submitting, set_submitting] = useState (false);
@@ -561,17 +461,11 @@ if ( {) {
         </button>;
       </form>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       </div>
     )
   }
@@ -716,6 +610,3 @@ if ( {) {
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

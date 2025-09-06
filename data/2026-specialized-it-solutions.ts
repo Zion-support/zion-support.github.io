@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface SpecializedITSolution2026 {;
-export interface SpecializedITSolution2026 {
-export interface SpecializedITSolution2026 {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -35,9 +27,6 @@ export interface SpecializedITSolution2026 {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -57,18 +46,13 @@ export interface SpecializedITSolution2026 {;
     mobile: string;
     email: string;
     address: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
-=======
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
@@ -682,11 +666,9 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-=======
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
@@ -704,9 +686,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category;
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 export const getPopularSpecializedITSolutions2026 = () => {
 };
@@ -714,7 +693,6 @@ export const getPopularSpecializedITSolutions2026 = () => {
 export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 ];
@@ -723,45 +701,19 @@ export const getPopularSpecializedITSolutions2026 = () => {;
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-export const getPopularSpecializedITSolutions2026 = () => {
-};
-
-export const getPopularSpecializedITSolutions2026 = () => {;
-  return specializedITSolutions2026.filter(solution => solution.popular);
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution && solution.price.replace('$', ''));
-=======
-  return specializedITSolutions2026.filter(solution => {;
-    const price = parseInt(solution.price.replace('$', ''));
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -787,10 +739,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.8,
     reviews: 45
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Cybersecurity & Threat Intelligence
   {
     id: 'ai-cybersecurity-threat-intelligence', name: 'AI Cybersecurity Threat Intelligence Platform',
@@ -818,10 +767,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.7,
     reviews: 78
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Data Engineering & Analytics
   {
     id: 'ai-data-engineering-platform', name: 'AI Data Engineering Platform',
@@ -849,10 +795,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.6,
     reviews: 34
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // API Management & Integration
   {
     id: 'ai-api-management-platform', name: 'AI API Management Platform',
@@ -880,10 +823,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.5,
     reviews: 22
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Network Monitoring & Management
   {
     id: 'ai-network-monitoring-suite', name: 'AI Network Monitoring Suite',
@@ -911,10 +851,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.4,
     reviews: 39
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Database Management & Optimization
   {
     id: 'ai-database-optimization-platform', name: 'AI Database Optimization Platform',
@@ -942,10 +879,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.3,
     reviews: 28
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // IT Service Management
   {
     id: 'ai-itsm-platform', name: 'AI IT Service Management Platform',
@@ -973,10 +907,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.5,
     reviews: 45
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Backup & Disaster Recovery
   {
     id: 'ai-backup-disaster-recovery', name: 'AI Backup & Disaster Recovery Platform',
@@ -1003,7 +934,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
     reviews: 33
-<<<<<<< HEAD
   }
 ];
 
@@ -1022,8 +952,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
 
   })
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
@@ -1041,38 +969,22 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     const price = parse_int (solution.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }    return price >= min_price && price <= max_price;
   });
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface SpecializedITSolution2026 {;
-=======
     website: string;
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   })
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface SpecializedITSolution2026 {;
   id: string,;
@@ -1133,7 +1045,3 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 export interface SpecializedITSolution2026 {;
 
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

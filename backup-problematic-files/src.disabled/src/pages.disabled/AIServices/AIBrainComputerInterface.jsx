@@ -9,7 +9,4 @@ const AIBrainComputerInterface = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default AIBrainComputerInterface;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { ServiceVariant } from '../types/service-variants';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -37,33 +30,20 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
     website: string;
   }
-<<<<<<< HEAD
 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   market_advantage: string;
 ;
 const contact = {
@@ -71,17 +51,11 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -89,12 +63,7 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface AdvancedInnovativeService {
   id: string, name: string,
   tagline: string, price: string,
@@ -127,22 +96,15 @@ const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
     tagline:
@@ -1183,7 +1145,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 
     ];
-<<<<<<< HEAD
     popular: true, icon: '🤖',
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-autonomous-devops-orchestrator', marketPosition: 'Next-generation DevOps platform with autonomous operations and AI-driven optimization',
@@ -1557,10 +1518,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'Custom model development'
     ]
     marketAdvantage:
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -2081,18 +2039,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -2116,4 +2066,3 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   }
 ];
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

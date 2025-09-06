@@ -3,31 +3,16 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems
   {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-autonomous-business-agent',
-=======
     website: string;
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     name: 'AI Autonomous Business Agent',
     tagline: 'Fully autonomous AI agent that runs your business operations',
     price: '$2, 999',
     period: '/month',
-<<<<<<< HEAD
 
 
-=======
-    description:;
-      'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24 / 7 business operations with intelligent automation.',
-    features: [;
-      'Autonomous decision - making engine',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Natural language business communication',
       'Multi - platform task execution',
       'Real - time market analysis',
@@ -36,77 +21,30 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Supply chain optimization',
       'Predictive analytics',
       'Risk assessment and mitigation',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     features: [
       'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analytics',
       'Risk assessment and mitigationPerformance optimization'
     ],
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🤖',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
-    marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI & Autonomous Systems',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      'Performance optimization',    ],    description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24 / 7 business operations with intelligent automation.',
-    features: [;
-      'Autonomous decision - making engine_natural language business communication_multi - platform task execution_real - time market analysis_automated customer service_financial decision automation_supply chain optimization_predictive analytics',
-      'Risk assessment and mitigation_performance optimization';
-    popular: true,
-    icon: '🤖',
-    color: 'from - blue - 600 to - purple - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / ai - autonomous - business - agent',
-    market_position:;
-      'First - to - market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
-    target_audience:;
-      'Enterprise businesses, Startups, E - commerce companies, Service providers, Manufacturing companies',    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'AI & Autonomous Systems',
-    real_service: true,    market_position: 'First - to - market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
-    target_audience: 'Enterprise businesses, Startups, E - commerce companies, Service providers, Manufacturing companies',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'AI & Autonomous Systems',
-    real_service: true,
-    technology: [;
-      'GPT - 4 Turbo',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Claude 3 Opus',
       'Custom AI models',
       'Python',
@@ -135,42 +73,24 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     competitors: [;
       'No direct competitors',
       'Partial solutions: UiPath, Automation Anywhere',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
-
-    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
     technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
+
+    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
+
     integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace'],
     useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations'],
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
     competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$50B autonomous systems market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$50B autonomous systems market',    technology: ['GPT - 4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
     integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace'],
     use_cases: ['Business process automation_customer service management_financial operations_supply chain management_marketing automationHR operations'],
@@ -179,22 +99,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '400% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
     launchDate: '2024-12-01',
@@ -202,13 +113,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.9,
     reviews: 89
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export interface NextGenerationAIService {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface NextGenerationAIService {;
   id: string;
   name: string;
@@ -242,7 +147,6 @@ export interface NextGenerationAIService {;
     address: string;
 
 
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -317,10 +221,7 @@ export interface NextGenerationAIService {;
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-autonomous-business-agent'
     name: 'AI Autonomous Business Agent'
     tagline: 'Fully autonomous AI agent that runs your business operations'
@@ -414,11 +315,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-12-01'
     customers: 150
     rating: 4.9
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface NextGenerationAIService {;
 
@@ -429,8 +325,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems
   {
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-autonomous-business-agent',
     name: 'AI Autonomous Business Agent',
     tagline: 'Fully autonomous AI agent that runs your business operations',
@@ -438,15 +332,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analytics',
-      'Risk assessment and mitigationPerformance optimization'
-    ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Autonomous decision-making engine',
       'Natural language business communication',
       'Multi-platform task execution',
@@ -463,23 +349,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analytics',
       'Risk assessment and mitigationPerformance optimization'
     ],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🤖',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
     targetAudience:
@@ -488,23 +364,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'AI & Autonomous Systems',
     realService: true,    marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
     marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI & Autonomous Systems',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'GPT-4 Turbo',
       'Claude 3 Opus',
@@ -537,60 +403,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Partial solutions: UiPath, Automation Anywhere',
     ],    marketSize: '$50B autonomous systems market',    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
     technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace'],
     useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations'],
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
     competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$50B autonomous systems market',
-    marketSize: '$50B autonomous systems market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 89
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 89
   },
     reviews: 89,  },    },
@@ -599,28 +439,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 89
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 89
   }
   // Quantum AI Computing Platform
   {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'quantum-ai-computing-platform',
-=======
     real_implementation: true,
     implementation_details: 'Advanced AI system with autonomous decision - making capabilities, natural language processing, and multi - platform integration. Includes safety protocols and human oversight options.',
     launch_date: '2024 - 12 - 01',
@@ -631,25 +458,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Quantum AI Computing Platform;
   {
     id: 'quantum - ai - computing - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Quantum AI Computing Platform',
     tagline: 'Quantum - powered AI computing for breakthrough discoveries',
     price: '$15, 999',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    description:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [;
       'Quantum AI algorithm optimization',
@@ -662,87 +477,37 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum optimization algorithms',
       'Quantum chemistry simulations',
       'Quantum financial modeling',    ],    description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [
       'Quantum AI algorithm optimizationHybrid quantum-classical computingQuantum machine learning modelsReal-time quantum simulationsQuantum cryptography integrationAdvanced quantum error correctionQuantum neural networksQuantum optimization algorithms',
       'Quantum chemistry simulationsQuantum financial modeling'
     ],
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '⚛️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    features: [;
-      'Quantum AI algorithm optimization_hybrid quantum - classical computing_quantum machine learning models_real - time quantum simulations_quantum cryptography integration_advanced quantum error correction_quantum neural networks_quantum optimization algorithms',
-      'Quantum chemistry simulations_quantum financial modeling';
-    popular: true,
-    icon: '⚛️',
-    color: 'from - purple - 600 to - indigo - 700',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / quantum - ai - computing - platform',
-    market_position:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
     target_audience:;
       'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Technology companies',    trial_days: 14,
     setup_time: '4 weeks',
     category: 'Quantum AI & Computing',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/quantum-ai-computing-platform',
-    marketPosition: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     link: 'https://ziontechgroup.com/quantum-ai-computing-platform',
     marketPosition: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
 
     link: 'https://ziontechgroup.com/quantum-ai-computing-platform',
     marketPosition: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Technology companies',
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'Quantum AI & Computing',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    real_service: true,    market_position: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
-    target_audience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Technology companies',
-    trial_days: 14,
-    setup_time: '4 weeks',
-    category: 'Quantum AI & Computing',
-    real_service: true,
-    technology: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum computing hardware',
       'Custom quantum algorithms',
       'Python',
@@ -771,37 +536,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Google Quantum AI',
       'Microsoft Azure Quantum',
       'Amazon Braket',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
 
     technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Jupyter notebooksPython librariesCloud platformsResearch toolsData visualization tools'],
     useCases: ['Drug discoveryFinancial modelingClimate modelingMaterial scienceCryptographyOptimization problems'],
     roi: 'Research institutions report 1000%+ ROI through breakthrough discoveries and accelerated research timelines.',
     competitors: ['IBM QuantumGoogle Quantum AIMicrosoft Azure QuantumAmazon Braket'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$1.5B quantum computing market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '500% annual growth',
     variant: 'quantum-advanced',
     contactInfo: {
-=======
     ],    market_size: '$1.5B quantum computing market',    technology: ['Quantum computing hardware_custom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
     integrations: ['Jupyter notebooks_python libraries_cloud platforms_research tools_data visualization tools'],
     use_cases: ['Drug discovery_financial modeling_climate modeling_material scienceCryptographyOptimization problems'],
@@ -810,20 +557,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '500% annual growth',
     variant: 'quantum - advanced',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
     launchDate: '2024-11-15',
@@ -831,12 +569,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.8,
     reviews: 45
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum-ai-computing-platform'
     name: 'Quantum AI Computing Platform'
     tagline: 'Quantum-powered AI computing for breakthrough discoveries'
@@ -929,14 +662,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-11-15'
     customers: 75
     rating: 4.8
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum-ai-computing-platform',
     name: 'Quantum AI Computing Platform',
     tagline: 'Quantum-powered AI computing for breakthrough discoveries',
@@ -944,15 +669,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      'Quantum AI algorithm optimizationHybrid quantum-classical computingQuantum machine learning modelsReal-time quantum simulationsQuantum cryptography integrationAdvanced quantum error correctionQuantum neural networksQuantum optimization algorithms',
-      'Quantum chemistry simulationsQuantum financial modeling'
-    ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum AI algorithm optimization',
       'Hybrid quantum-classical computing',
       'Quantum machine learning models',
@@ -969,23 +686,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum AI algorithm optimizationHybrid quantum-classical computingQuantum machine learning modelsReal-time quantum simulationsQuantum cryptography integrationAdvanced quantum error correctionQuantum neural networksQuantum optimization algorithms',
       'Quantum chemistry simulationsQuantum financial modeling'
     ],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '⚛️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-computing-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
     targetAudience:
@@ -994,23 +701,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Quantum AI & Computing',
     realService: true,    marketPosition: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
     marketPosition: 'Leading quantum AI computing platform. Competes with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Technology companies',
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'Quantum AI & Computing',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'Quantum computing hardware',
       'Custom quantum algorithms',
@@ -1042,60 +739,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Amazon Braket',
     ],    marketSize: '$1.5B quantum computing market',    technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
     technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Jupyter notebooksPython librariesCloud platformsResearch toolsData visualization tools'],
     useCases: ['Drug discoveryFinancial modelingClimate modelingMaterial scienceCryptographyOptimization problems'],
     roi: 'Research institutions report 1000%+ ROI through breakthrough discoveries and accelerated research timelines.',
     competitors: ['IBM QuantumGoogle Quantum AIMicrosoft Azure QuantumAmazon Braket'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$1.5B quantum computing market',
-    marketSize: '$1.5B quantum computing market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '500% annual growth',
     variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 45
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 45
   },
     reviews: 45,  },    },
@@ -1104,28 +775,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 45
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 45
   }
   // Neural Interface Development Platform
   {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'neural-interface-development-platform',
-=======
     real_implementation: true,
     implementation_details: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
     launch_date: '2024 - 11 - 15',
@@ -1136,27 +794,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Neural Interface Development Platform;
   {
     id: 'neural - interface - development - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Neural Interface Development Platform',
     tagline: 'Build next - generation brain - computer interfaces',
     price: '$8, 999',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    description:;
-      'Revolutionary platform for developing neural interfaces and brain - computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
-    features: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Neural signal processing',
       'Brain - computer interface SDK',
       'Real - time neural data analysis',
@@ -1166,73 +810,26 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Neural data visualization',
       'API for custom applications',
       'Compliance with medical standards',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     features: [
       'Neural signal processingBrain-computer interface SDKReal-time neural data analysisMachine learning for neural patternsSafety protocols and testingMulti-modal interface supportNeural data visualizationAPI for custom applications',
       'Compliance with medical standards24/7 neural interface support'
     ],
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🧠',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    link: 'https://ziontechgroup.com/neural-interface-development-platform',
-    marketPosition: 'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL-labs.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Medical device companies, Research institutions, Gaming companies, Accessibility developers, Rehabilitation centers',
     trialDays: 21,
     setupTime: '6 weeks',
     category: 'Neural Interface & BCI',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      '24 / 7 neural interface support',    ],    description: 'Revolutionary platform for developing neural interfaces and brain - computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
-    features: [;
-      'Neural signal processing_brain - computer interface SDKReal - time neural data analysis_machine learning for neural patterns_safety protocols and testing_multi - modal interface support_neural data visualizationAPI for custom applications',
-      'Compliance with medical standards24 / 7 neural interface support';
-    popular: true,
-    icon: '🧠',
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / neural - interface - development - platform',
-    market_position:;
-      'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL - labs.',
-    target_audience:;
-      'Medical device companies, Research institutions, Gaming companies, Accessibility developers, Rehabilitation centers',    trial_days: 21,
-    setup_time: '6 weeks',
-    category: 'Neural Interface & BCI',
-    real_service: true,    market_position: 'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL - labs.',
-    target_audience: 'Medical device companies, Research institutions, Gaming companies, Accessibility developers, Rehabilitation centers',
-    trial_days: 21,
-    setup_time: '6 weeks',
-    category: 'Neural Interface & BCI',
-    real_service: true,
-    technology: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Custom neural processing',
       'Machine learning',
       'Signal processing',
@@ -1257,37 +854,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Cognitive enhancement',
     ],
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
 
     technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Medical devicesResearch toolsGaming platformsAccessibility softwareRehabilitation systems'],
     useCases: ['Medical diagnosticsAssistive technologyGaming and entertainmentResearch and developmentRehabilitation therapyCognitive enhancement'],
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
     competitors: ['NeuralinkKernelCTRL-labsParadromics'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$2.5B brain-computer interface market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
     contactInfo: {
-=======
     competitors: ['Neuralink', 'Kernel', 'CTRL - labs', 'Paradromics'],    market_size: '$2.5B brain - computer interface market',    technology: ['Custom neural processing_machine learning_signal processingPythonC++Real - time systems_medical device standards'],
     integrations: ['Medical devices_research tools_gaming platforms_accessibility software_rehabilitation systems'],
     use_cases: ['Medical diagnostics_assistive technology_gaming and entertainment_research and development_rehabilitation therapy_cognitive enhancement'],
@@ -1296,20 +875,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '350% annual growth',
     variant: 'neural - quantum',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced neural interface platform with real-time signal processing, machine learning capabilities, and comprehensive safety protocols. Includes medical device compliance and testing tools.',
     launchDate: '2024-10-01',
@@ -1317,12 +887,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.7,
     reviews: 67
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'neural-interface-development-platform'
     name: 'Neural Interface Development Platform'
     tagline: 'Build next-generation brain-computer interfaces'
@@ -1411,14 +976,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-10-01'
     customers: 120
     rating: 4.7
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'neural-interface-development-platform',
     name: 'Neural Interface Development Platform',
     tagline: 'Build next-generation brain-computer interfaces',
@@ -1426,15 +983,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      'Neural signal processingBrain-computer interface SDKReal-time neural data analysisMachine learning for neural patternsSafety protocols and testingMulti-modal interface supportNeural data visualizationAPI for custom applications',
-      'Compliance with medical standards24/7 neural interface support'
-    ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Neural signal processing',
       'Brain-computer interface SDK',
       'Real-time neural data analysis',
@@ -1451,23 +1000,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Neural signal processingBrain-computer interface SDKReal-time neural data analysisMachine learning for neural patternsSafety protocols and testingMulti-modal interface supportNeural data visualizationAPI for custom applications',
       'Compliance with medical standards24/7 neural interface support'
     ],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🧠',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/neural-interface-development-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL-labs.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL-labs.',
     targetAudience:
@@ -1476,23 +1015,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Neural Interface & BCI',
     realService: true,    marketPosition: 'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL-labs.',
     marketPosition: 'Leading neural interface development platform. Competes with Neuralink, Kernel, and CTRL-labs.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Medical device companies, Research institutions, Gaming companies, Accessibility developers, Rehabilitation centers',
     trialDays: 21,
     setupTime: '6 weeks',
     category: 'Neural Interface & BCI',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'Custom neural processing',
       'Machine learning',
@@ -1520,60 +1049,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Paradromics'],    marketSize: '$2.5B brain-computer interface market',    technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
     technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Medical devicesResearch toolsGaming platformsAccessibility softwareRehabilitation systems'],
     useCases: ['Medical diagnosticsAssistive technologyGaming and entertainmentResearch and developmentRehabilitation therapyCognitive enhancement'],
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
     competitors: ['NeuralinkKernelCTRL-labsParadromics'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$2.5B brain-computer interface market',
-    marketSize: '$2.5B brain-computer interface market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced neural interface platform with real-time signal processing, machine learning capabilities, and comprehensive safety protocols. Includes medical device compliance and testing tools.',
     launchDate: '2024-10-01',
     customers: 120,
     rating: 4.7,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 67
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 67
   },
     reviews: 67,  },    },
@@ -1582,48 +1085,17 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-10-01',
     customers: 120,
     rating: 4.7,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 67
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 67
   }
   // AI-Powered Space Exploration Platform
   {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    id: 'ai-space-exploration-platform',
-    name: 'AI-Powered Space Exploration Platform',
-
-=======
 
     id: 'ai-space-exploration-platform',
     name: 'AI-Powered Space Exploration Platform',
 
-    id: 'ai-space-exploration-platform',
-    name: 'AI-Powered Space Exploration Platform',
-    real_implementation: true,
-    implementation_details: 'Advanced neural interface platform with real - time signal processing, machine learning capabilities, and comprehensive safety protocols. Includes medical device compliance and testing tools.',
-    launch_date: '2024 - 10 - 01',
-    customers: 120,
-    rating: 4.7,
-    reviews: 67;
-  },
-  // AI - Powered Space Exploration Platform;
-  {
-    id: 'ai - space - exploration - platform',
-    name: 'AI - Powered Space Exploration Platform',
-    tagline:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Autonomous AI systems for space exploration and satellite operations',
     price: '$25, 999',
     period: '/month',
@@ -1639,27 +1111,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Mission optimization algorithms',
       'Multi - satellite coordination',
       'Earth observation analytics',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     tagline: 'Autonomous AI systems for space exploration and satellite operations',
     price: '$25,999',
 
       'Space weather monitoring',    ],    price: '$25, 999',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     tagline: 'Autonomous AI systems for space exploration and satellite operations',
     price: '$25,999',
       'Space weather monitoring',    ],    price: '$25, 999',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'Space weather monitoring',    ],    price: '$25, 999',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision - making and real - time optimization.',
     features: [;
@@ -1667,62 +1127,27 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Earth observation analytics_space weather monitoring';
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🚀',
-<<<<<<< HEAD
 
 
-=======
-    color: 'from - indigo - 600 to - blue - 700',
-    text_color: 'text - indigo - 400',
-    link: 'https://ziontechgroup.com / ai - space - exploration - platform',
-    market_position:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
     target_audience:;
       'Space agencies, Satellite companies, Aerospace companies, Research institutions, Government agencies',    trial_days: 14,
     setup_time: '8 weeks',
     category: 'Space Technology & AI',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/ai-space-exploration-platform',
-    marketPosition: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     link: 'https://ziontechgroup.com/ai-space-exploration-platform',
     marketPosition: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
 
     link: 'https://ziontechgroup.com/ai-space-exploration-platform',
     marketPosition: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Space agencies, Satellite companies, Aerospace companies, Research institutions, Government agencies',
     trialDays: 14,
     setupTime: '8 weeks',
     category: 'Space Technology & AI',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    real_service: true,    market_position: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
-    target_audience: 'Space agencies, Satellite companies, Aerospace companies, Research institutions, Government agencies',
-    trial_days: 14,
-    setup_time: '8 weeks',
-    category: 'Space Technology & AI',
-    real_service: true,
-    technology: [;
-      'AI / ML algorithms',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Satellite communication',
       'Space systems',
       'Python',
@@ -1751,37 +1176,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Blue Origin',
       'Traditional space agencies',
       'Satellite companies',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
 
     technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Satellite systemsGround stationsMission control centersResearch databasesGovernment systems'],
     useCases: ['Satellite operationsSpace mission planningEarth observationSpace researchCommercial space operationsDefense applications'],
     roi: 'Space companies report 600% ROI through improved mission success rates and reduced operational costs.',
     competitors: ['SpaceXBlue OriginTraditional space agenciesSatellite companies'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$400B space economy',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '250% annual growth',
     variant: 'quantum-space',
     contactInfo: {
-=======
     ],    market_size: '$400B space economy',    technology: ['AI / ML algorithms_satellite communication_space systemsPythonC++Real - time processing_space - grade hardware'],
     integrations: ['Satellite systems_ground stations_mission control centers_research databases_government systems'],
     use_cases: ['Satellite operations_space mission planning_earth observation_space research_commercial space operations_defense applications'],
@@ -1790,20 +1197,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '250% annual growth',
     variant: 'quantum - space',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced AI space platform with autonomous decision-making, real-time optimization, and comprehensive space operations management. Includes safety protocols and mission planning tools.',
     launchDate: '2024-09-15',
@@ -1811,12 +1209,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.9,
     reviews: 28
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-space-exploration-platform'
     name: 'AI-Powered Space Exploration Platform'
     tagline:
@@ -1914,55 +1307,16 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-09-15'
     customers: 45
     rating: 4.9
-<<<<<<< HEAD
-=======
-
-    id: 'ai-space-exploration-platform',
-    name: 'AI-Powered Space Exploration Platform',
-
-=======
-
-    id: 'ai-space-exploration-platform',
-    name: 'AI-Powered Space Exploration Platform',
-
-    id: 'ai-space-exploration-platform',
-    name: 'AI-Powered Space Exploration Platform',
-    tagline: 'Autonomous AI systems for space exploration and satellite operations',
-    tagline:
-      'Autonomous AI systems for space exploration and satellite operations',
-    tagline: 'Autonomous AI systems for space exploration and satellite operations',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     tagline:
       'Autonomous AI systems for space exploration and satellite operations',
     tagline: 'Autonomous AI systems for space exploration and satellite operations',
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     price: '$25,999',
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
     features: [
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      'Autonomous satellite operations',
-      'AI-powered mission planning',
-      'Real-time space data analysis',
-      'Predictive maintenance for satellites',
-      'Autonomous navigation systems',
-      'Space debris tracking and avoidance',
-      'Mission optimization algorithms',
-      'Multi-satellite coordination',
-      'Earth observation analytics',
-      'Space weather monitoring',    ],    price: '$25,999',
-    period: '/month',
-    description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
-    features: [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Autonomous satellite operationsAI-powered mission planningReal-time space data analysisPredictive maintenance for satellitesAutonomous navigation systemsSpace debris tracking and avoidanceMission optimization algorithmsMulti-satellite coordination',
       'Earth observation analyticsSpace weather monitoring'
     ],
@@ -1971,14 +1325,8 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-space-exploration-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
     targetAudience:
@@ -1987,23 +1335,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Space Technology & AI',
     realService: true,    marketPosition: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
     marketPosition: 'Leading AI space exploration platform. Competes with SpaceX, Blue Origin, and traditional space agencies.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Space agencies, Satellite companies, Aerospace companies, Research institutions, Government agencies',
     trialDays: 14,
     setupTime: '8 weeks',
     category: 'Space Technology & AI',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'AI/ML algorithms',
       'Satellite communication',
@@ -2036,60 +1374,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Satellite companies',
     ],    marketSize: '$400B space economy',    technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
     technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Satellite systemsGround stationsMission control centersResearch databasesGovernment systems'],
     useCases: ['Satellite operationsSpace mission planningEarth observationSpace researchCommercial space operationsDefense applications'],
     roi: 'Space companies report 600% ROI through improved mission success rates and reduced operational costs.',
     competitors: ['SpaceXBlue OriginTraditional space agenciesSatellite companies'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$400B space economy',
-    marketSize: '$400B space economy',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '250% annual growth',
     variant: 'quantum-space',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI space platform with autonomous decision-making, real-time optimization, and comprehensive space operations management. Includes safety protocols and mission planning tools.',
     launchDate: '2024-09-15',
     customers: 45,
     rating: 4.9,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 28
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 28
   },
     reviews: 28,  },    },
@@ -2098,28 +1410,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-09-15',
     customers: 45,
     rating: 4.9,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 28
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 28
   }
   // Biotech AI Drug Discovery Platform
   {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'biotech-ai-drug-discovery',
-=======
     real_implementation: true,
     implementation_details: 'Advanced AI space platform with autonomous decision - making, real - time optimization, and comprehensive space operations management. Includes safety protocols and mission planning tools.',
     launch_date: '2024 - 09 - 15',
@@ -2130,25 +1429,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Biotech AI Drug Discovery Platform;
   {
     id: 'biotech - ai - drug - discovery',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Biotech AI Drug Discovery Platform',
     tagline: 'AI - powered drug discovery and pharmaceutical research',
     price: '$19, 999',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    description:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     features: [;
       'AI molecular modeling',
@@ -2161,88 +1448,37 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Personalized medicine algorithms',
       'Drug interaction prediction',
       'Regulatory compliance tools',    ],    description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     features: [
       'AI molecular modelingDrug target identificationPredictive toxicity analysisMolecular docking simulationsDrug repurposing algorithmsClinical trial optimizationBiomarker discoveryPersonalized medicine algorithms',
       'Drug interaction predictionRegulatory compliance tools'
     ],
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    features: [;
-      'AI molecular modeling_drug target identification_predictive toxicity analysis_molecular docking simulations_drug repurposing algorithms_clinical trial optimization_biomarker discovery_personalized medicine algorithms',
-      'Drug interaction prediction_regulatory compliance tools';
-    popular: true,
-    icon: '🧬',
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 400',
-    link: 'https://ziontechgroup.com / biotech - ai - drug - discovery',
-    market_position:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
     target_audience:;
       'Pharmaceutical companies, Biotech startups, Research institutions, Medical device companies, Healthcare providers',    trial_days: 30,
     setup_time: '10 weeks',
     category: 'Biotech & Healthcare AI',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
-    marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
     marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
 
     link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
     marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Medical device companies, Healthcare providers',
     trialDays: 30,
     setupTime: '10 weeks',
     category: 'Biotech & Healthcare AI',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    real_service: true,    market_position: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
-    target_audience: 'Pharmaceutical companies, Biotech startups, Research institutions, Medical device companies, Healthcare providers',
-    trial_days: 30,
-    setup_time: '10 weeks',
-    category: 'Biotech & Healthcare AI',
-    real_service: true,
-    technology: [;
-      'AI / ML algorithms',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Molecular modeling',
       'Bioinformatics',
       'Python',
@@ -2271,37 +1507,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'BenevolentAI',
       'Atomwise',
       'Recursion Pharmaceuticals',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
 
     technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Laboratory systemsClinical databasesResearch toolsRegulatory systemsHealthcare platforms'],
     useCases: ['Drug discoveryClinical trialsPersonalized medicineDrug repurposingBiomarker researchRegulatory compliance'],
     roi: 'Pharmaceutical companies report 800% ROI through accelerated drug development and improved success rates.',
     competitors: ['Insilico MedicineBenevolentAIAtomwiseRecursion Pharmaceuticals'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$50B AI drug discovery market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$50B AI drug discovery market',    technology: ['AI / ML algorithms_molecular modelingBioinformaticsPythonRCloud computing_high - performance computing'],
     integrations: ['Laboratory systems_clinical databases_research tools_regulatory systems_healthcare platforms'],
     use_cases: ['Drug discovery_clinical trials_personalized medicine_drug repurposing_biomarker research_regulatory compliance'],
@@ -2310,20 +1528,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '400% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
     launchDate: '2024-08-01',
@@ -2331,12 +1540,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.8,
     reviews: 52
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'biotech-ai-drug-discovery'
     name: 'Biotech AI Drug Discovery Platform'
     tagline: 'AI-powered drug discovery and pharmaceutical research'
@@ -2430,14 +1634,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-08-01'
     customers: 85
     rating: 4.8
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'biotech-ai-drug-discovery',
     name: 'Biotech AI Drug Discovery Platform',
     tagline: 'AI-powered drug discovery and pharmaceutical research',
@@ -2445,15 +1641,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      'AI molecular modelingDrug target identificationPredictive toxicity analysisMolecular docking simulationsDrug repurposing algorithmsClinical trial optimizationBiomarker discoveryPersonalized medicine algorithms',
-      'Drug interaction predictionRegulatory compliance tools'
-    ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'AI molecular modeling',
       'Drug target identification',
       'Predictive toxicity analysis',
@@ -2470,23 +1658,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'AI molecular modelingDrug target identificationPredictive toxicity analysisMolecular docking simulationsDrug repurposing algorithmsClinical trial optimizationBiomarker discoveryPersonalized medicine algorithms',
       'Drug interaction predictionRegulatory compliance tools'
     ],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
     targetAudience:
@@ -2495,23 +1673,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Biotech & Healthcare AI',
     realService: true,    marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
     marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Medical device companies, Healthcare providers',
     trialDays: 30,
     setupTime: '10 weeks',
     category: 'Biotech & Healthcare AI',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'AI/ML algorithms',
       'Molecular modeling',
@@ -2544,60 +1712,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Recursion Pharmaceuticals',
     ],    marketSize: '$50B AI drug discovery market',    technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
     technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Laboratory systemsClinical databasesResearch toolsRegulatory systemsHealthcare platforms'],
     useCases: ['Drug discoveryClinical trialsPersonalized medicineDrug repurposingBiomarker researchRegulatory compliance'],
     roi: 'Pharmaceutical companies report 800% ROI through accelerated drug development and improved success rates.',
     competitors: ['Insilico MedicineBenevolentAIAtomwiseRecursion Pharmaceuticals'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$50B AI drug discovery market',
-    marketSize: '$50B AI drug discovery market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
     launchDate: '2024-08-01',
     customers: 85,
     rating: 4.8,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 52
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 52
   },
     reviews: 52,  },    },
@@ -2606,28 +1748,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-08-01',
     customers: 85,
     rating: 4.8,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 52
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 52
   }
   // Quantum Financial Trading Platform
   {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'quantum-financial-trading-platform',
-=======
     real_implementation: true,
     implementation_details: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
     launch_date: '2024 - 08 - 01',
@@ -2638,27 +1767,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Quantum Financial Trading Platform;
   {
     id: 'quantum - financial - trading - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum - powered algorithmic trading and financial optimization',
     price: '$12, 999',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    description:;
-      'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum - powered algorithms and real - time market analysis.',
-    features: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum algorithmic trading',
       'Real - time risk assessment',
       'Portfolio optimization algorithms',
@@ -2668,88 +1783,37 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Regulatory compliance tools',
       'Performance analytics dashboard',
       'API for broker integration',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     features: [
       'Quantum algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsQuantum cryptography for securityMulti-asset trading supportRegulatory compliance toolsPerformance analytics dashboard',
       'API for broker integration24/7 trading operations'
     ],
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      '24 / 7 trading operations',    ],    description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum - powered algorithms and real - time market analysis.',
-    features: [;
-      'Quantum algorithmic trading_real - time risk assessment_portfolio optimization algorithms_market prediction models_quantum cryptography for security_multi - asset trading support_regulatory compliance tools_performance analytics dashboard',
-      'API for broker integration24 / 7 trading operations';
-    popular: true,
-    icon: '💰',
-    color: 'from - yellow - 600 to - orange - 700',
-    text_color: 'text - yellow - 400',
-    link: 'https://ziontechgroup.com / quantum - financial - trading - platform',
-    market_position:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
     target_audience:;
       'Investment firms, Hedge funds, Banks, Trading companies, Financial institutions, Individual traders',    trial_days: 14,
     setup_time: '4 weeks',
     category: 'Quantum Finance & Trading',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
-    marketPosition: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
     marketPosition: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
 
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
     marketPosition: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Investment firms, Hedge funds, Banks, Trading companies, Financial institutions, Individual traders',
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'Quantum Finance & Trading',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    real_service: true,    market_position: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
-    target_audience: 'Investment firms, Hedge funds, Banks, Trading companies, Financial institutions, Individual traders',
-    trial_days: 14,
-    setup_time: '4 weeks',
-    category: 'Quantum Finance & Trading',
-    real_service: true,
-    technology: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum computing',
       'AI / ML algorithms',
       'Financial modeling',
@@ -2778,37 +1842,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Traditional trading platforms',
       'Quantitative trading firms',
       'Quantum computing companies',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
 
     technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Trading platformsBroker APIsMarket data feedsRisk management systemsRegulatory reporting'],
     useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysisQuantitative researchCompliance reporting'],
     roi: 'Investment firms report 400% ROI through improved trading performance and risk management.',
     competitors: ['Traditional trading platformsQuantitative trading firmsQuantum computing companies'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$15B algorithmic trading market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
     contactInfo: {
-=======
     ],    market_size: '$15B algorithmic trading market',    technology: ['Quantum computingAI / ML algorithms_financial modelingPythonC++Real - time systems_quantum algorithms'],
     integrations: ['Trading platforms_broker APIsMarket data feeds_risk management systems_regulatory reporting'],
     use_cases: ['Algorithmic trading_risk management_portfolio optimization_market analysis_quantitative research_compliance reporting'],
@@ -2817,20 +1863,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '300% annual growth',
     variant: 'quantum - advanced',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced quantum trading platform with real-time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
     launchDate: '2024-07-15',
@@ -2838,12 +1875,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.7,
     reviews: 58
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum-financial-trading-platform'
     name: 'Quantum Financial Trading Platform'
     tagline: 'Quantum-powered algorithmic trading and financial optimization'
@@ -2936,14 +1968,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-07-15'
     customers: 95
     rating: 4.7
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum-powered algorithmic trading and financial optimization',
@@ -2951,15 +1975,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      'Quantum algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsQuantum cryptography for securityMulti-asset trading supportRegulatory compliance toolsPerformance analytics dashboard',
-      'API for broker integration24/7 trading operations'
-    ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum algorithmic trading',
       'Real-time risk assessment',
       'Portfolio optimization algorithms',
@@ -2976,23 +1992,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsQuantum cryptography for securityMulti-asset trading supportRegulatory compliance toolsPerformance analytics dashboard',
       'API for broker integration24/7 trading operations'
     ],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
     targetAudience:
@@ -3001,23 +2007,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Quantum Finance & Trading',
     realService: true,    marketPosition: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
     marketPosition: 'Leading quantum financial trading platform. Competes with traditional trading platforms and quantum computing companies.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Investment firms, Hedge funds, Banks, Trading companies, Financial institutions, Individual traders',
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'Quantum Finance & Trading',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'Quantum computing',
       'AI/ML algorithms',
@@ -3049,60 +2045,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum computing companies',
     ],    marketSize: '$15B algorithmic trading market',    technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
     technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Trading platformsBroker APIsMarket data feedsRisk management systemsRegulatory reporting'],
     useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysisQuantitative researchCompliance reporting'],
     roi: 'Investment firms report 400% ROI through improved trading performance and risk management.',
     competitors: ['Traditional trading platformsQuantitative trading firmsQuantum computing companies'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$15B algorithmic trading market',
-    marketSize: '$15B algorithmic trading market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum trading platform with real-time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
     launchDate: '2024-07-15',
     customers: 95,
     rating: 4.7,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 58
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 58
   },
     reviews: 58,  },    },
@@ -3111,50 +2081,17 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-07-15',
     customers: 95,
     rating: 4.7,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 58
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 58
   }
   // AI-Powered Metaverse Development Platform
   {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    id: 'ai-metaverse-development-platform',
-    name: 'AI-Powered Metaverse Development Platform',
-
-=======
 
     id: 'ai-metaverse-development-platform',
     name: 'AI-Powered Metaverse Development Platform',
 
-    id: 'ai-metaverse-development-platform',
-    name: 'AI-Powered Metaverse Development Platform',
-    real_implementation: true,
-    implementation_details: 'Advanced quantum trading platform with real - time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
-    launch_date: '2024 - 07 - 15',
-    customers: 95,
-    rating: 4.7,
-    reviews: 58;
-  },
-  // AI - Powered Metaverse Development Platform;
-  {
-    id: 'ai - metaverse - development - platform',
-    name: 'AI - Powered Metaverse Development Platform',
-    tagline:;
-      'Create immersive metaverse experiences with AI - driven content and interactions',
-    price: '$6, 999',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     period: '/month',
     description:;
       'Revolutionary platform for building AI - powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
@@ -3168,27 +2105,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'VR / AR integration',
       'Blockchain integration',
       'Performance optimization',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
     price: '$6,999',
 
       'Analytics and insights',    ],    price: '$6, 999',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
     price: '$6,999',
       'Analytics and insights',    ],    price: '$6, 999',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'Analytics and insights',    ],    price: '$6, 999',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     period: '/month',
     description: 'Revolutionary platform for building AI - powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     features: [;
@@ -3196,62 +2121,27 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Performance optimization_analytics and insights';
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🌐',
-<<<<<<< HEAD
 
 
-=======
-    color: 'from - pink - 600 to - rose - 700',
-    text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / ai - metaverse - development - platform',
-    market_position:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
     target_audience:;
       'Gaming companies, VR / AR developers, Educational institutions, Marketing agencies, Entertainment companies',    trial_days: 21,
     setup_time: '6 weeks',
     category: 'Metaverse & AI',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/ai-metaverse-development-platform',
-    marketPosition: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     link: 'https://ziontechgroup.com/ai-metaverse-development-platform',
     marketPosition: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
 
     link: 'https://ziontechgroup.com/ai-metaverse-development-platform',
     marketPosition: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Gaming companies, VR/AR developers, Educational institutions, Marketing agencies, Entertainment companies',
     trialDays: 21,
     setupTime: '6 weeks',
     category: 'Metaverse & AI',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    real_service: true,    market_position: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
-    target_audience: 'Gaming companies, VR / AR developers, Educational institutions, Marketing agencies, Entertainment companies',
-    trial_days: 21,
-    setup_time: '6 weeks',
-    category: 'Metaverse & AI',
-    real_service: true,
-    technology: [;
-      'AI / ML algorithms',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       '3D graphics engines',
       'VR / AR technology',
       'Unity',
@@ -3276,37 +2166,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Social platforms',
     ],
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
 
     technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['VR headsetsAR devicesGaming platformsSocial mediaBlockchain networksPayment systems'],
     useCases: ['Virtual reality gamesAugmented reality applicationsVirtual eventsEducational simulationsVirtual real estateSocial platforms'],
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
     competitors: ['UnityUnreal EngineRobloxMeta Platforms'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$800B metaverse market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Meta Platforms'],    market_size: '$800B metaverse market',    technology: ['AI / ML algorithms3D graphics enginesVR / AR technologyUnityUnreal EnginePythonC#'],
     integrations: ['VR headsetsAR devices_gaming platforms_social media_blockchain networks_payment systems'],
     use_cases: ['Virtual reality games_augmented reality applications_virtual events_educational simulations_virtual real estate_social platforms'],
@@ -3315,20 +2187,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced metaverse platform with AI-powered content generation, intelligent interactions, and comprehensive development tools. Includes VR/AR integration and performance optimization.',
     launchDate: '2024-06-01',
@@ -3336,12 +2199,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.6,
     reviews: 95
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-metaverse-development-platform'
     name: 'AI-Powered Metaverse Development Platform'
     tagline:
@@ -3435,55 +2293,16 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-06-01'
     customers: 180
     rating: 4.6
-<<<<<<< HEAD
-=======
-
-    id: 'ai-metaverse-development-platform',
-    name: 'AI-Powered Metaverse Development Platform',
-
-=======
-
-    id: 'ai-metaverse-development-platform',
-    name: 'AI-Powered Metaverse Development Platform',
-
-    id: 'ai-metaverse-development-platform',
-    name: 'AI-Powered Metaverse Development Platform',
-    tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
-    tagline:
-      'Create immersive metaverse experiences with AI-driven content and interactions',
-    tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     tagline:
       'Create immersive metaverse experiences with AI-driven content and interactions',
     tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     features: [
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      'AI-powered NPC generation',
-      'Dynamic content creation',
-      'Real-time environment adaptation',
-      'Natural language interactions',
-      'Emotional AI responses',
-      'Multi-user synchronization',
-      'VR/AR integration',
-      'Blockchain integration',
-      'Performance optimization',
-      'Analytics and insights',    ],    price: '$6,999',
-    period: '/month',
-    description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
-    features: [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'AI-powered NPC generationDynamic content creationReal-time environment adaptationNatural language interactionsEmotional AI responsesMulti-user synchronizationVR/AR integrationBlockchain integration',
       'Performance optimizationAnalytics and insights'
     ],
@@ -3492,14 +2311,8 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-metaverse-development-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
     targetAudience:
@@ -3508,23 +2321,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Metaverse & AI',
     realService: true,    marketPosition: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
     marketPosition: 'Leading AI metaverse development platform. Competes with Unity, Unreal Engine, and Roblox.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Gaming companies, VR/AR developers, Educational institutions, Marketing agencies, Entertainment companies',
     trialDays: 21,
     setupTime: '6 weeks',
     category: 'Metaverse & AI',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'AI/ML algorithms',
       '3D graphics engines',
@@ -3553,60 +2356,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
     competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Meta Platforms'],    marketSize: '$800B metaverse market',    technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
     technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['VR headsetsAR devicesGaming platformsSocial mediaBlockchain networksPayment systems'],
     useCases: ['Virtual reality gamesAugmented reality applicationsVirtual eventsEducational simulationsVirtual real estateSocial platforms'],
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
     competitors: ['UnityUnreal EngineRobloxMeta Platforms'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$800B metaverse market',
-    marketSize: '$800B metaverse market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced metaverse platform with AI-powered content generation, intelligent interactions, and comprehensive development tools. Includes VR/AR integration and performance optimization.',
     launchDate: '2024-06-01',
     customers: 180,
     rating: 4.6,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 95
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 95
   },
     reviews: 95,  },    },
@@ -3615,50 +2392,17 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-06-01',
     customers: 180,
     rating: 4.6,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 95
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 95
   }
   // Autonomous Vehicle AI Platform
   {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    id: 'autonomous-vehicle-ai-platform',
-    name: 'Autonomous Vehicle AI Platform',
-
-=======
 
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
 
-    id: 'autonomous-vehicle-ai-platform',
-    name: 'Autonomous Vehicle AI Platform',
-    real_implementation: true,
-    implementation_details: 'Advanced metaverse platform with AI - powered content generation, intelligent interactions, and comprehensive development tools. Includes VR / AR integration and performance optimization.',
-    launch_date: '2024 - 06 - 01',
-    customers: 180,
-    rating: 4.6,
-    reviews: 95;
-  },
-  // Autonomous Vehicle AI Platform;
-  {
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline:;
-      'Next - generation AI for autonomous vehicles and transportation systems',
-    price: '$18, 999',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     period: '/month',
     description:;
       'Revolutionary AI platform for autonomous vehicles with advanced perception, decision - making, and safety systems. Enable fully autonomous transportation with industry - leading safety and performance.',
@@ -3672,27 +2416,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Fleet management',
       'Safety monitoring',
       'Regulatory compliance',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
     price: '$18,999',
 
       'Performance analytics',    ],    price: '$18, 999',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
     price: '$18,999',
       'Performance analytics',    ],    price: '$18, 999',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'Performance analytics',    ],    price: '$18, 999',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision - making, and safety systems. Enable fully autonomous transportation with industry - leading safety and performance.',
     features: [;
@@ -3700,61 +2432,27 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Regulatory compliance_performance analytics';
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🚗',
-<<<<<<< HEAD
 
 
-=======
-    color: 'from - gray - 600 to - slate - 700',
-    text_color: 'text - gray - 400',
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
-    market_position:;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
     target_audience:;
       'Automotive manufacturers, Transportation companies, Logistics companies, Government agencies, Research institutions',    trial_days: 30,
     setup_time: '12 weeks',
     category: 'Autonomous Vehicles & AI',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
-    marketPosition: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     marketPosition: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
 
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     marketPosition: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Automotive manufacturers, Transportation companies, Logistics companies, Government agencies, Research institutions',
     trialDays: 30,
     setupTime: '12 weeks',
     category: 'Autonomous Vehicles & AI',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    real_service: true,    market_position: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
-    target_audience: 'Automotive manufacturers, Transportation companies, Logistics companies, Government agencies, Research institutions',
-    trial_days: 30,
-    setup_time: '12 weeks',
-    category: 'Autonomous Vehicles & AI',
-    real_service: true,
-    technology: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Computer vision',
       'AI / ML algorithms',
       'Sensor fusion',
@@ -3784,37 +2482,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Waymo',
       'Cruise',
       'Traditional automotive companies',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
 
     technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Vehicle systemsTraffic infrastructureFleet managementInsurance systemsRegulatory databases'],
     useCases: ['Passenger vehiclesCommercial trucksDelivery vehiclesPublic transportationLogistics operationsResearch and testing'],
     roi: 'Transportation companies report 600% ROI through reduced accidents and improved operational efficiency.',
     competitors: ['TeslaWaymoCruiseTraditional automotive companies'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$100B autonomous vehicle market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$100B autonomous vehicle market',    technology: ['Computer visionAI / ML algorithms_sensor fusionPythonC++Real - time systems_safety protocols'],
     integrations: ['Vehicle systems_traffic infrastructure_fleet management_insurance systems_regulatory databases'],
     use_cases: ['Passenger vehicles_commercial trucks_delivery vehicles_public transportation_logistics operations_research and testing'],
@@ -3823,20 +2503,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '400% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with comprehensive safety systems, real-time decision-making, and regulatory compliance. Includes fleet management and performance analytics.',
     launchDate: '2024-05-15',
@@ -3844,12 +2515,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.8,
     reviews: 42
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'autonomous-vehicle-ai-platform'
     name: 'Autonomous Vehicle AI Platform'
     tagline:
@@ -3947,55 +2613,16 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-05-15'
     customers: 65
     rating: 4.8
-<<<<<<< HEAD
-=======
-
-    id: 'autonomous-vehicle-ai-platform',
-    name: 'Autonomous Vehicle AI Platform',
-
-=======
-
-    id: 'autonomous-vehicle-ai-platform',
-    name: 'Autonomous Vehicle AI Platform',
-
-    id: 'autonomous-vehicle-ai-platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
-    tagline:
-      'Next-generation AI for autonomous vehicles and transportation systems',
-    tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     tagline:
       'Next-generation AI for autonomous vehicles and transportation systems',
     tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     price: '$18,999',
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and window.window.window.performance.',
     features: [
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      'Advanced computer vision',
-      'Real-time decision making',
-      'Predictive safety systems',
-      'Multi-sensor fusion',
-      'Behavioral prediction',
-      'Traffic optimization',
-      'Fleet management',
-      'Safety monitoring',
-      'Regulatory compliance',
-      'Performance analytics',    ],    price: '$18,999',
-    period: '/month',
-    description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
-    features: [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Advanced computer visionReal-time decision makingPredictive safety systemsMulti-sensor fusionBehavioral predictionTraffic optimizationFleet managementSafety monitoring',
       'Regulatory compliancePerformance analytics'
     ],
@@ -4004,14 +2631,8 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
     targetAudience:
@@ -4020,23 +2641,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Autonomous Vehicles & AI',
     realService: true,    marketPosition: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
     marketPosition: 'Leading autonomous vehicle AI platform. Competes with Tesla, Waymo, and Cruise.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Automotive manufacturers, Transportation companies, Logistics companies, Government agencies, Research institutions',
     trialDays: 30,
     setupTime: '12 weeks',
     category: 'Autonomous Vehicles & AI',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'Computer vision',
       'AI/ML algorithms',
@@ -4069,60 +2680,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Traditional automotive companies',
     ],    marketSize: '$100B autonomous vehicle market',    technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
     technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Vehicle systemsTraffic infrastructureFleet managementInsurance systemsRegulatory databases'],
     useCases: ['Passenger vehiclesCommercial trucksDelivery vehiclesPublic transportationLogistics operationsResearch and testing'],
     roi: 'Transportation companies report 600% ROI through reduced accidents and improved operational efficiency.',
     competitors: ['TeslaWaymoCruiseTraditional automotive companies'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$100B autonomous vehicle market',
-    marketSize: '$100B autonomous vehicle market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with comprehensive safety systems, real-time decision-making, and regulatory compliance. Includes fleet management and performance analytics.',
     launchDate: '2024-05-15',
     customers: 65,
     rating: 4.8,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 42
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 42
   },
     reviews: 42,  },    },
@@ -4131,28 +2716,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-05-15',
     customers: 65,
     rating: 4.8,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 42
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 42
   }
   // Quantum Internet Security Platform
   {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'quantum-internet-security-platform',
-=======
     real_implementation: true,
     implementation_details: 'Advanced autonomous vehicle platform with comprehensive safety systems, real - time decision - making, and regulatory compliance. Includes fleet management and performance analytics.',
     launch_date: '2024 - 05 - 15',
@@ -4163,27 +2735,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Quantum Internet Security Platform;
   {
     id: 'quantum - internet - security - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum - secured internet infrastructure',
     price: '$22, 999',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    description:;
-      'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post - quantum cryptography. Secure the future of internet communications.',
-    features: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum key distribution (QKD)',
       'Post - quantum cryptography',
       'Quantum entanglement security',
@@ -4192,74 +2750,26 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Government compliance',
       'Quantum network monitoring',
       'API for enterprise integration',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     features: [
       'Quantum key distribution (QKD)Post-quantum cryptographyQuantum entanglement securityReal-time threat detectionMulti-node quantum networkGovernment complianceQuantum network monitoringAPI for enterprise integration',
       '24/7 quantum security operationsUnhackable communication channels'
     ],
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform',
-    marketPosition: 'First-to-market quantum internet security platform. No direct competitors in quantum internet security.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Technology companies',
     trialDays: 14,
     setupTime: '8 weeks',
     category: 'Quantum Internet & Security',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      '24 / 7 quantum security operations',
-      'Unhackable communication channels',    ],    description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post - quantum cryptography. Secure the future of internet communications.',
-    features: [;
-      'Quantum key distribution (QKD)Post - quantum cryptography_quantum entanglement security_real - time threat detection_multi - node quantum network_government compliance_quantum network monitoringAPI for enterprise integration',
-      '24 / 7 quantum security operations_unhackable communication channels';
-    popular: true,
-    icon: '🔒',
-    color: 'from - red - 600 to - pink - 700',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / quantum - internet - security - platform',
-    market_position:;
-      'First - to - market quantum internet security platform. No direct competitors in quantum internet security.',
-    target_audience:;
-      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Technology companies',    trial_days: 14,
-    setup_time: '8 weeks',
-    category: 'Quantum Internet & Security',
-    real_service: true,    market_position: 'First - to - market quantum internet security platform. No direct competitors in quantum internet security.',
-    target_audience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Technology companies',
-    trial_days: 14,
-    setup_time: '8 weeks',
-    category: 'Quantum Internet & Security',
-    real_service: true,
-    technology: [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum computing',
       'Quantum cryptography',
       'Network security',
@@ -4287,37 +2797,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     competitors: [;
       'No direct competitors',
       'Traditional cybersecurity companies',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
 
     technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Network infrastructureSecurity systemsGovernment databasesFinancial systemsHealthcare platforms'],
     useCases: ['Government communicationsFinancial transactionsHealthcare dataDefense communicationsCritical infrastructureResearch networks'],
     roi: 'Government agencies report 1000% ROI through enhanced security and reduced cyber threats.',
     competitors: ['No direct competitorsTraditional cybersecurity companies'],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    marketSize: '$150B cybersecurity market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
     contactInfo: {
-=======
     ],    market_size: '$150B cybersecurity market',    technology: ['Quantum computing_quantum cryptography_network securityPythonC++Quantum hardware_security protocols'],
     integrations: ['Network infrastructure_security systems_government databases_financial systems_healthcare platforms'],
     use_cases: ['Government communications_financial transactions_healthcare data_defense communications_critical infrastructure_research networks'],
@@ -4326,20 +2818,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '400% annual growth',
     variant: 'quantum - cyberpunk',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-      website: 'https://ziontechgroup.com'
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true,
     implementationDetails: 'Advanced quantum security platform with quantum key distribution, post-quantum cryptography, and comprehensive security tools. Includes government compliance and monitoring systems.',
     launchDate: '2024-04-01',
@@ -4347,12 +2830,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4 && 4.9,
     reviews: 33
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum-internet-security-platform'
     name: 'Quantum Internet Security Platform'
     tagline: 'Unhackable quantum-secured internet infrastructure'
@@ -4444,14 +2922,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-04-01'
     customers: 55
     rating: 4.9
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum-secured internet infrastructure',
@@ -4459,15 +2929,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      'Quantum key distribution (QKD)Post-quantum cryptographyQuantum entanglement securityReal-time threat detectionMulti-node quantum networkGovernment complianceQuantum network monitoringAPI for enterprise integration',
-      '24/7 quantum security operationsUnhackable communication channels'
-    ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
       'Quantum entanglement security',
@@ -4484,23 +2946,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum key distribution (QKD)Post-quantum cryptographyQuantum entanglement securityReal-time threat detectionMulti-node quantum networkGovernment complianceQuantum network monitoringAPI for enterprise integration',
       '24/7 quantum security operationsUnhackable communication channels'
     ],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-internet-security-platform',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketPosition: 'First-to-market quantum internet security platform. No direct competitors in quantum internet security.',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition:
       'First-to-market quantum internet security platform. No direct competitors in quantum internet security.',
     targetAudience:
@@ -4509,23 +2961,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'Quantum Internet & Security',
     realService: true,    marketPosition: 'First-to-market quantum internet security platform. No direct competitors in quantum internet security.',
     marketPosition: 'First-to-market quantum internet security platform. No direct competitors in quantum internet security.',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Technology companies',
     trialDays: 14,
     setupTime: '8 weeks',
     category: 'Quantum Internet & Security',
     realService: true,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: [
       'Quantum computing',
       'Quantum cryptography',
@@ -4556,60 +2998,34 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Traditional cybersecurity companies',
     ],    marketSize: '$150B cybersecurity market',    technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
     technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Network infrastructureSecurity systemsGovernment databasesFinancial systemsHealthcare platforms'],
     useCases: ['Government communicationsFinancial transactionsHealthcare dataDefense communicationsCritical infrastructureResearch networks'],
     roi: 'Government agencies report 1000% ROI through enhanced security and reduced cyber threats.',
     competitors: ['No direct competitorsTraditional cybersecurity companies'],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    marketSize: '$150B cybersecurity market',
-    marketSize: '$150B cybersecurity market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum security platform with quantum key distribution, post-quantum cryptography, and comprehensive security tools. Includes government compliance and monitoring systems.',
     launchDate: '2024-04-01',
     customers: 55,
     rating: 4.9,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     reviews: 33
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 33
   },
     reviews: 33,  },    },
@@ -4618,32 +3034,20 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-04-01',
     customers: 55,
     rating: 4.9,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 33
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 33
   }
   // AI-Powered Manufacturing Platform
   {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4 && 4.0 with intelligent automation and real-time optimization.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     features: [
       'Predictive maintenanceQuality control automationProcess optimizationSupply chain optimizationEnergy efficiency managementReal-time monitoringPerformance analyticsPredictive analytics'
       'Automation workflowsCompliance management'
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
     id: 'ai-manufacturing-platform',
@@ -4657,47 +3061,28 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
 
       'Predictive maintenanceQuality control automationProcess optimizationSupply chain optimizationEnergy efficiency managementReal-time monitoringPerformance analyticsPredictive analytics',
       'Automation workflowsCompliance management'
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'Automation workflowsCompliance management'
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ],
     popular: true,
     icon: '🏭',
     color: 'from-orange-600 to-amber-700',
     textColor: 'text-orange-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
     marketPosition:
       'Leading AI manufacturing platform. Competes with Siemens, GE Digital, and PTC.'
     targetAudience:
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Manufacturing companies, Industrial companies, Automotive manufacturers, Aerospace companies, Consumer goods companies',    trialDays: 21,
     setupTime: '8 weeks',
     category: 'AI Manufacturing & Industry 4 && 4.0',
     realService: true,    marketPosition: 'Leading AI manufacturing platform. Competes with Siemens, GE Digital, and PTC.',
-<<<<<<< HEAD
 
-=======
-    link: 'https://ziontechgroup.com/ai-manufacturing-platform',
-    marketPosition: 'Leading AI manufacturing platform. Competes with Siemens, GE Digital, and PTC.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Manufacturing companies, Industrial companies, Automotive manufacturers, Aerospace companies, Consumer goods companies',
     trialDays: 21,
     setupTime: '8 weeks',
     category: 'AI Manufacturing & Industry 4 && 4.0',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
     technology: [
@@ -4727,10 +3112,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.'
     competitors: [
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     tagline:
       'Intelligent manufacturing with AI-driven optimization and automation',
     tagline: 'Intelligent manufacturing with AI-driven optimization and automation',
@@ -4758,7 +3139,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     icon: '🏭',
     link: 'https://ziontechgroup.com/ai-manufacturing-platform',
     marketPosition:
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Compliance management',    ],    price: '$9, 999',
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real - time optimization.',
@@ -4816,28 +3196,15 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     ],
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.',
     competitors: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Siemens',
       'GE Digital',
       'PTC',
       'Traditional manufacturing software',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     technology: ['AI/ML algorithmsIoT integrationIndustrial automationPythonC++Real-time systemsPredictive analytics'],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     link: 'https://ziontechgroup.com/ai-manufacturing-platform',
 
 
@@ -4847,33 +3214,18 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     category: 'AI Manufacturing & Industry 4.0',
     realService: true,
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     technology: ['AI/ML algorithmsIoT integrationIndustrial automationPythonC++Real-time systemsPredictive analytics'],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Manufacturing systemsERP systemsIoT devicesQuality control systemsSupply chain platforms'],
     useCases: ['Predictive maintenanceQuality controlProcess optimizationSupply chain managementEnergy managementCompliance reporting'],
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.',
     competitors: ['SiemensGE DigitalPTCTraditional manufacturing software'],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    marketSize: '$200B Industry 4.0 market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$200B Industry 4.0 market',    technology: ['AI / ML algorithmsIoT integration_industrial automationPythonC++Real - time systems_predictive analytics'],
     integrations: ['Manufacturing systemsERP systemsIoT devices_quality control systems_supply chain platforms'],
     use_cases: ['Predictive maintenance_quality control_process optimization_supply chain management_energy management_compliance reporting'],
@@ -4882,311 +3234,21 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     growth_rate: '250% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    color: "from - purple - 600 to - indigo - 700",
-    text_color: "text - purple - 400",
-    link: "https://ziontechgroup.com / quantum - ai - brain - computer - interface",
-    market_position: "First - to - market quantum BCI solution. Competes with Neuralink ($10, 000+/month) and Kernel ($50, 000+/month) with superior quantum processing capabilities.",
-    target_audience: "Research institutions, Medical centers, Defense contractors, Neuroscience labs, AI research companies, Healthcare providers",
-    trial_days: 30,
-    setup_time: "2 weeks",
-    category: "Quantum AI & Neuroscience",
-    real_service: true,
-    technology["Quantum Computing", "Neural Networks", "Brain - Computer Interface", "Quantum Encryption", "Machine Learning", "Signal Processing"],
-    integrations["Research databases", "Medical imaging systems", "AI platforms", "Cloud computing", "Security systems", "Analytics platforms"],
-    use_cases["Cognitive research", "Medical diagnosis", "Neural rehabilitation", "AI training", "Security authentication", "Performance optimization"],
-    roi: "Average customer sees 1000% ROI within 6 months through breakthrough discoveries and research acceleration.",
-    competitors["Neuralink", "Kernel", "Paradromics", "Synchron", "Blackrock Neurotech"],
-    market_size: "$1.5B BCI market",
-    growth_rate: "300% annual growth",
-    variant: "quantum - neural - advanced",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";,
-},
-    real_implementation: true,
-    implementation_details: "Fully functional quantum BCI platform with FDA approval pathway, quantum encryption, real - time neural processing, and comprehensive research tools.",
-    launch_date: "2024 - 06 - 01",
-    customers: 150,
-    rating: 4 && 4.9,
-    reviews: 89;,
-},
-  {
-    id: "autonomous - ai - venture - capital",
-    name: "Autonomous AI Venture Capital Platform",
-    tagline: "AI - powered investment decisions with quantum precision",
-    price: "$15, 999",
-    period: "/month",
-    description: "Revolutionary AI platform that autonomously analyzes, invests, and manages venture capital portfolios with quantum - level precision and market prediction accuracy.",
-    features[ "Autonomous investment decision making",
-      "Quantum market prediction algorithms",
-      "Real - time portfolio optimization",
-      "AI - driven due diligence",
-      "Risk assessment automation",
-      "Market trend analysis",
-      "Portfolio rebalancing",
-      "Performance tracking",
-      "Regulatory compliance",
-      "Multi - fund management" ],
-    popular: true,
-    icon: "💰",
-    color: "from - yellow - 600 to - orange - 700",
-    text_color: "text - yellow - 400",
-    link: "https://ziontechgroup.com / autonomous - ai - venture - capital",
-    market_position: "First autonomous VC platform. Competes with traditional VC firms and hedge funds, offering 24 / 7 autonomous operation with superior returns.",
-    target_audience: "Venture capital firms, Investment banks, Family offices, Institutional investors, Angel investors, Fund managers",
-    trial_days: 14,
-    setup_time: "1 month",
-    category: "AI Finance & Investment",
-    real_service: true,
-    technology["Quantum AI", "Machine Learning", "Natural Language Processing", "Blockchain", "Big Data Analytics", "Predictive Modeling"],
-    integrations["Bloomberg Terminal", "Reuters", "Crunchbase", "PitchBook", "SEC filings", "Market data feeds"],
-    use_cases["Startup evaluation", "Portfolio management", "Market analysis", "Risk assessment", "Investment timing", "Exit strategy planning"],
-    roi: "Average customer sees 500% ROI within 12 months through superior investment decisions and automated portfolio optimization.",
-    competitors["Sequoia Capital", "Andreessen Horowitz", "Y Combinator", "SoftBank Vision Fund", "Tiger Global"],
-    market_size: "$300B venture capital market",
-    growth_rate: "200% annual growth",
-    variant: "quantum - financial - advanced",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";,
-},
-    real_implementation: true,
-    implementation_details: "Fully autonomous AI platform with SEC compliance, real - time market analysis, automated investment execution, and comprehensive reporting.",
-    launch_date: "2024 - 05 - 15",
-    customers: 75,
-    rating: 4 && 4.8,
-    reviews: 156;,
-},
-  {
-    id: "quantum - ai - drug - discovery",
-    name: "Quantum AI Drug Discovery Platform",
-    tagline: "Accelerate drug development by 100x with quantum precision",
-    price: "$25, 999",
-    period: "/month",
-    description: "Revolutionary quantum AI platform that accelerates drug discovery by analyzing molecular interactions at quantum scales, reducing development time from years to months.",
-    features[ "Quantum molecular simulation",
-      "AI drug candidate screening",
-      "Protein folding prediction",
-      "Drug interaction modeling",
-      "Clinical trial optimization",
-      "Regulatory pathway guidance",
-      "Collaborative research tools",
-      "Real - time analytics",
-      "API for research integration",
-      "Multi - omics data analysis" ],
-    popular: true,
-    icon: "🧬",
-    color: "from - emerald - 600 to - teal - 700",
-    text_color: "text - emerald - 400",
-    link: "https://ziontechgroup.com / quantum - ai - drug - discovery",
-    market_position: "First quantum AI drug discovery platform. Competes with Insitro ($100M+ funding) and Recursion ($2B+ funding) with quantum - level precision.",
-    target_audience: "Pharmaceutical companies, Biotech startups, Research institutions, Medical centers, Drug development labs, Healthcare companies",
-    trial_days: 30,
-    setup_time: "2 months",
-    category: "Quantum AI & Healthcare",
-    real_service: true,
-    technology["Quantum Computing", "AI / ML", "Molecular Dynamics", "Bioinformatics", "Cloud Computing", "High - Performance Computing"],
-    integrations["PubChem", "ChEMBL", "PDB", "Clinical trial databases", "FDA systems", "Research platforms"],
-    use_cases["Drug discovery", "Target identification", "Lead optimization", "Clinical trial design", "Regulatory compliance", "Research collaboration"],
-    roi: "Average customer sees 1000% ROI within 18 months through accelerated drug development and reduced research costs.",
-    competitors["Insitro", "Recursion", "Atomwise", "BenevolentAI", "Exscientia"],
-    market_size: "$150B AI in healthcare market",
-    growth_rate: "250% annual growth",
-    variant: "quantum - biotech - advanced",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";,
-},
-    real_implementation: true,
-    implementation_details: "Fully functional quantum AI platform with FDA collaboration, real - time molecular simulation, automated drug screening, and comprehensive research tools.",
-    launch_date: "2024 - 04 - 01",
-    customers: 45,
-    rating: 4 && 4.9,
-    reviews: 234;,
-},
-  {
-    id: "quantum - ai - space - mission - control",
-    name: "Quantum AI Space Mission Control",
-    tagline: "Autonomous space mission management with quantum precision",
-    price: "$45, 999",
-    period: "/month",
-    description: "Revolutionary quantum AI platform that autonomously manages space missions, satellite operations, and interplanetary exploration with unprecedented accuracy and reliability.",
-    features[ "Autonomous mission planning",
-      "Quantum orbital calculations",
-      "Real - time satellite control",
-      "Space weather prediction",
-      "Launch vehicle optimization",
-      "Ground station management",
-      "Space debris tracking",
-      "Mission analytics",
-      "Regulatory compliance",
-      "Multi - mission coordination" ],
-    popular: true,
-    icon: "🚀",
-    color: "from - cyan - 600 to - blue - 700",
-    text_color: "text - cyan - 400",
-    link: "https://ziontechgroup.com / quantum - ai - space - mission - control",
-    market_position: "First autonomous space mission control platform. Competes with SpaceX ($99 / month) and OneWeb ($50 / month) with complete mission management capabilities.",
-    target_audience: "Space companies, Satellite operators, Government agencies, Research institutions, Aerospace companies, Defense contractors",
-    trial_days: 14,
-    setup_time: "3 months",
-    category: "Quantum AI & Space Technology",
-    real_service: true,
-    technology["Quantum Computing", "AI / ML", "Orbital Mechanics", "Satellite Technology", "Space Weather", "Mission Control Systems"],
-    integrations["NASA systems", "ESA platforms", "SpaceX APIs", "Satellite networks", "Ground stations", "Weather services"],
-    use_cases["Satellite operations", "Mission planning", "Launch optimization", "Space exploration", "Defense operations", "Research missions"],
-    roi: "Average customer sees 800% ROI within 24 months through autonomous operations and mission success optimization.",
-    competitors["SpaceX", "OneWeb", "Blue Origin", "Virgin Galactic", "Rocket Lab"],
-    market_size: "$469B space economy",
-    growth_rate: "400% annual growth",
-    variant: "quantum - space - advanced",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";,
-},
-    real_implementation: true,
-    implementation_details: "Fully autonomous space mission control platform with regulatory compliance, real - time mission management, automated operations, and comprehensive analytics.",
-    launch_date: "2024 - 03 - 15",
-    customers: 25,
-    rating: 4 && 4.9,
-    reviews: 67;,
-},
-  {
-    id: "quantum - ai - cybersecurity - fortress",
-    name: "Quantum AI Cybersecurity Fortress",
-    tagline: "Unbreakable quantum encryption with AI threat detection",
-    price: "$8, 999",
-    period: "/month",
-    description: "Revolutionary quantum AI cybersecurity platform that provides unbreakable encryption, real - time threat detection, and autonomous security response with quantum - level protection.",
-    features[ "Quantum encryption algorithms",
-      "AI threat detection",
-      "Autonomous incident response",
-      "Zero - trust architecture",
-      "Real - time monitoring",
-      "Threat intelligence",
-      "Compliance automation",
-      "Security analytics",
-      "API protection",
-      "Multi - cloud security" ],
-    popular: true,
-    icon: "🛡️",
-    color: "from - red - 600 to - pink - 700",
-    text_color: "text - red - 400",
-    link: "https://ziontechgroup.com / quantum - ai - cybersecurity - fortress",
-    market_position: "First quantum AI cybersecurity platform. Competes with CrowdStrike ($8.99 / month) and Palo Alto Networks ($50+/month) with quantum - level security.",
-    target_audience: "Enterprises, Government agencies, Financial institutions, Healthcare organizations, Technology companies, Critical infrastructure",
-    trial_days: 30,
-    setup_time: "2 weeks",
-    category: "Quantum AI & Cybersecurity",
-    real_service: true,
-    technology["Quantum Computing", "AI / ML", "Quantum Encryption", "Zero - Trust Security", "Threat Intelligence", "Incident Response"],
-    integrations["SIEM systems", "EDR platforms", "Cloud providers", "Identity providers", "Network devices", "Security tools"],
-    use_cases["Threat detection", "Incident response", "Data protection", "Compliance management", "Security monitoring", "Risk assessment"],
-    roi: "Average customer sees 400% ROI within 12 months through threat prevention and security automation.",
-    competitors["CrowdStrike", "Palo Alto Networks", "SentinelOne", "Cylance", "Darktrace"],
-    market_size: "$200B cybersecurity market",
-    growth_rate: "180% annual growth",
-    variant: "quantum - cyberpunk - advanced",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";,
-},
-    real_implementation: true,
-    implementation_details: "Fully functional quantum cybersecurity platform with regulatory compliance, real - time threat detection, automated response, and comprehensive security analytics.",
-    launch_date: "2024 - 02 - 01",
-    customers: 320,
-    rating: 4 && 4.9,
-    reviews: 456;,
-},
-  {
-    id: "quantum - ai - logistics - orchestrator",
-    name: "Quantum AI Logistics Orchestrator",
-    tagline: "Autonomous supply chain optimization with quantum precision",
-    price: "$12, 999",
-    period: "/month",
-    description: "Revolutionary quantum AI platform that autonomously optimizes global supply chains, logistics operations, and transportation networks with quantum - level efficiency.",
-    features[ "Autonomous route optimization",
-      "Quantum demand forecasting",
-      "Real - time tracking",
-      "Inventory optimization",
-      "Supplier management",
-      "Cost optimization",
-      "Sustainability analytics",
-      "Risk assessment",
-      "Compliance management",
-      "Multi - modal transport" ],
-    popular: true,
-    icon: "🚛",
-    color: "from - green - 600 to - emerald - 700",
-    text_color: "text - green - 400",
-    link: "https://ziontechgroup.com / quantum - ai - logistics - orchestrator",
-    market_position: "First quantum AI logistics platform. Competes with Flexport ($1000+/month) and Convoy ($500+/month) with autonomous optimization capabilities.",
-    target_audience: "Logistics companies, Supply chain managers, E - commerce businesses, Manufacturing companies, Retail chains, Transportation providers",
-    trial_days: 30,
-    setup_time: "1 month",
-    category: "Quantum AI & Logistics",
-    real_service: true,
-    technology["Quantum Computing", "AI / ML", "Supply Chain Optimization", "Route Planning", "Demand Forecasting", "Real - time Analytics"],
-    integrations["ERP systems", "WMS platforms", "Transportation APIs", "Weather services", "Customs systems", "Financial platforms"],
-    use_cases["Route optimization", "Inventory management", "Demand forecasting", "Supplier optimization", "Cost reduction", "Sustainability tracking"],
-    roi: "Average customer sees 600% ROI within 18 months through operational efficiency and cost optimization.",
-    competitors["Flexport", "Convoy", "Uber Freight", "C.H. Robinson", "DHL"],
-    market_size: "$15T global logistics market",
-    growth_rate: "150% annual growth",
-    variant: "quantum - logistics - advanced",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";,
-},
-    real_implementation: true,
-    implementation_details: "Fully autonomous logistics platform with real - time optimization, automated decision making, comprehensive analytics, and regulatory compliance.",
-    launch_date: "2024 - 01 - 15',
-    customers: 180,
-    rating: 4 && 4.8,
-    reviews: 298;
-]}}
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     real_implementation: true,
     implementation_details: 'Advanced manufacturing platform with AI - powered optimization, predictive analytics, and comprehensive automation tools. Includes IoT integration and compliance management.',
     launch_date: '2024 - 03 - 15',
     customers: 220,
-<<<<<<< HEAD
 
 ],
 
-=======
-    rating: 4.7,
-    reviews: 125;
-  }
-],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
 ],
     rating: 4.7,
     reviews: 125;
@@ -5278,44 +3340,28 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     competitors: ['SiemensGE DigitalPTCTraditional manufacturing software'],
     marketSize: '$200B Industry 4.0 market',
     marketSize: '$200B Industry 4.0 market',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      website: 'https://ziontechgroup.com'
-      website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Advanced manufacturing platform with AI-powered optimization, predictive analytics, and comprehensive automation tools. Includes IoT integration and compliance management.',
     launchDate: '2024-03-15',
     customers: 220,
     rating: 4.7,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     reviews: 125,
   },;
 ];export const nextGenerationAIServices: NextGenerationAIService[] = [;
@@ -5622,8 +3668,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     reviews: 125
   }
 ],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 125
 ;
 export const nextGenerationAIServices: NextGenerationAIService[] = [;
@@ -6068,8 +4112,4 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     reviews: 125;
   }
 ];
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

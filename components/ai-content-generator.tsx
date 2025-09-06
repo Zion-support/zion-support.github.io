@@ -1,286 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {;
-  Brain,;
-  Zap,;
-  Shield,;
-  BarChart3,;
-  Users,;
-  Clock,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Play,;
-  Download,;
-  Code,;
-  Globe,;
-  Lock,;
-  Sparkles,;
-} from 'lucide-react';
-  const features = [;
-    {;
-      icon: <Brain className='w-8 h-8 text-white' />,;
-      title: 'AI-Powered Content Creation',;
-      description:;
-        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
-      gradient: 'from-purple-400 to-indigo-500',;
-    },;
-    {;
-      icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Real-time Generation',;
-      description:;
-        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',;
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',;
-      gradient: 'from-yellow-400 to-orange-500',;
-    },;
-    {;
-      icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Plagiarism-Free Content',;
-      description:;
-        'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-      gradient: 'from-green-400 to-emerald-500',;
-    },;
-    {;
-      icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'SEO Optimization',;
-      description:;
-        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',;
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;
-      gradient: 'from-blue-400 to-cyan-500',;
-    },;
-    {;
-      icon: <Users className='w-8 h-8 text-white' />,;
-      title: 'Multi-Language Support',;
-      description:;
-        'Generate content in 50+ languages with native-level fluency and cultural understanding.',;
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',;
-      gradient: 'from-red-400 to-pink-500',;
-    },;
-    {;
-      icon: <Clock className='w-8 h-8 text-white' />,;
-      title: '24/7 Availability',;
-      description:;
-        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',;
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600',;
-      gradient: 'from-teal-400 to-blue-500',;
-    },;
-  ];      gradient: 'from-teal-400 to-blue-500'}],;
-  const pricingPlans = [;
-    {;
-      name: 'Starter',;
-      price: '$29',;
-      period: '/month',;
-      description: 'Perfect for individuals and small blogs',;
-      features: [;
-        '1,000 words per month',;
-        '5 content templates',;
-        'Basic SEO optimization',;
-        'Email support',;
-        'API access (100 calls/month)',;
-        'Content analytics dashboard',;
-      ],;
-      popular: false,;
-      color: 'border-gray-600',;
-      buttonColor: 'bg-gray-600 hover:bg-gray-700',;
-    },    {        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard';
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap, Star } from 'lucide-react';
-export default function AIContentGeneratorPage() {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-white" />,
-      title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
-    color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'},
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-    {
-      icon: <Brain className=&quot;w-8 h-8 text-white&quot; />,
-      title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'},
-    {
-      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
-
-      title: 'Real-time Generation',
-      description: 'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-      gradient: 'from-yellow-400 to-orange-500'},
-    {
-icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Plagiarism-Free Content',
-      description: 'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'SEO Optimization',
-      description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
-    color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500'},
-    {
-      icon: <Users className="w-8 h-8 text-white" />,
-      title: 'Multi-Language Support',
-      description: 'Generate content in 50+ languages with native-level fluency and cultural understanding.',
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      gradient: 'from-red-400 to-pink-500'},
-    {
-icon: <Clock className="w-8 h-8 text-white" />,
-      title: '24/7 Availability',
-      description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
-    color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500'}],
-  const pricingPlans = [
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import {
-  Brain,
-  Zap,
-  Shield,
-  BarChart3,
-  Users,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Play,
-  Download,
-  Code,
-  Globe,
-  Lock,;
-  Sparkles,;
-} from 'lucide-react';
-
-import {
-  Brain
-  Zap
-  Shield
-  BarChart3
-  Users
-  Clock
-  CheckCircle
-  Star
-  ArrowRight
-  Play
-  Download
-  Code
-  Globe
-  Lock
-  Sparkles;
-} from 'lucide-react';
-  const features = [
-    {
-      icon: <Brain className='w-8 h-8 text-white' />
-      title: 'AI-Powered Content Creation'
-      description:
-        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Real-time Generation'
-      description:
-        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.'
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
-      gradient: 'from-yellow-400 to-orange-500'
-    }
-    {
-      icon: <Shield className='w-8 h-8 text-white' />
-      title: 'Plagiarism-Free Content'
-      description:
-        'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'SEO Optimization'
-      description:
-        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
-    }
-    {
-      icon: <Users className='w-8 h-8 text-white' />
-      title: 'Multi-Language Support'
-      description:
-        'Generate content in 50+ languages with native-level fluency and cultural understanding.'
-      color: 'bg-gradient-to-br from-red-500 to-pink-600'
-      gradient: 'from-red-400 to-pink-500'
-    }
-    {
-      icon: <Clock className='w-8 h-8 text-white' />
-      title: '24/7 Availability'
-      description:
-        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'
-    }
-  ];      gradient: 'from-teal-400 to-blue-500'}]
-  const pricingPlans = [
-    {
-      name: 'Starter'
-      price: '$29'
-      period: '/month'
-      description: 'Perfect for individuals and small blogs'
-      features: [
-        '1,000 words per month'
-        '5 content templates'
-        'Basic SEO optimization'
-        'Email support'
-        'API access (100 calls/month)'
-        'Content analytics dashboard'
-      ]
-      popular: false
-      color: 'border-gray-600'
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    },    {        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
-      ];
-      popular: false
-      color: 'border-gray-600'
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    }
-      name: 'Professional'
-      price: '$99'
-      period: '/month'
-      description: 'Ideal for growing businesses and agencies'
-      features: [
-        '10,000 words per month'
-        '25+ content templates'
-        'Advanced SEO tools'
-        'Priority support'
-        'API access (1,000 calls/month)'
-        'Advanced analytics'
-        'Team collaboration'
-        'Custom branding'
-      ]
-      popular: true
-      color: 'border-blue-500'
-      buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    },    {        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
-      ];
-      popular: true
-      color: 'border-blue-500'
-      buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    }
-      name: 'Enterprise'
-      price: '$299'
-      period: '/month'
-      description: 'For large organizations and enterprises'
-      features: [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
     },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
@@ -332,8 +50,6 @@ import {
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const useCases = [
     {
       title: 'Blog Writing'
@@ -457,32 +173,7 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
 
-<<<<<<< HEAD
       features: [;
-<<<<<<< HEAD
-=======
-        'Unlimited words'
-        'All templates + custom'
-        'Full SEO suite'
-        'Dedicated support'
-        'Unlimited API access'
-        'Advanced analytics'
-        'White-label solution'
-        'Custom integrations'
-        'SLA guarantee'
-      ]
-      popular: false
-      color: 'border-purple-600'
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
-    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
-        'SLA guarantee'
-      ];
-      popular: false
-      color: 'border-purple-600'
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       ];
       popular: false,;
       color: 'border-gray-600',;
@@ -541,27 +232,17 @@ import {
       description: 'For large organizations and enterprises',
       ];
       features: [;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
         'Dedicated support',
         'Unlimited API access',
         'Advanced analytics',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'White - label solution',
-=======
-        'White-label solution',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Custom integrations',
         'SLA guarantee',
       ],
       popular: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: 'border - purple - 600',
       button_color: 'bg - purple - 600 hover:bg - purple - 700',
     },  ];        'Unlimited words_all templates + custom_full SEO suite_dedicated support_unlimited API access_advanced analytics_white - label solution_custom integrations';
@@ -639,54 +320,31 @@ import {
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   ];
 
   ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <Head>;
         <title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
 
-=======
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
         <div className='absolute inset-0'>;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0 && 0.08),transparent_50%)]' />;
         </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-8'>;
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6'>;
@@ -694,10 +352,7 @@ import {
               AI-Powered Content Generation;
             </div>;
           </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'>;
             AI Content Generator;
           </h1>;
@@ -705,26 +360,13 @@ import {
             Create engaging, SEO-optimized content in seconds with the world's;
             most advanced AI writing assistant;
           </p>;
-<<<<<<< HEAD
 
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
 
-=======
-          <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
-            <Button
-              href='#pricing'
-              size='lg'
-              className='bg-purple-600 hover:bg-purple-700 shadow-2xl shadow-purple-500/25'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='#demo'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
   ];
   const useCases = [
     {
@@ -891,7 +533,6 @@ icon: '📝',
             most advanced AI writing assistant
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Button
               href='#pricing'
               size='lg'
@@ -904,36 +545,8 @@ icon: '📝',
               href='#demo'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
 
 
-=======
-              className='border-white/20 hover:border-white/40 hover:bg-white/5'
-            >
-              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Content Generation
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">
-            AI Content Generator
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
-            Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
 
@@ -958,12 +571,8 @@ icon: '📝',
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">;
             Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant;
           </p>;
-<<<<<<< HEAD
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href="#pricing"
               size="lg"
@@ -975,57 +584,8 @@ icon: '📝',
               href="#demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400">50+</div>
-              <div className="text-gray-400">Languages</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>
-              <div className="text-gray-400">Words Generated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">99.9%</div>
-              <div className="text-gray-400">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">24/7</div>
-              <div className="text-gray-400">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Powerful Features
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to create exceptional content at scale
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-
-
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -1043,25 +603,6 @@ icon: '📝',
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Use Cases
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -1076,12 +617,6 @@ icon: '📝',
                 </p>;
               </Card>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Everything you need to create exceptional content at scale
             </p>
           </div>
@@ -1089,7 +624,6 @@ icon: '📝',
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
-=======
           AI Content Generator | Zion Tech Group - Advanced AI - Powered Content;
           Creation;
         </title>;
@@ -1259,13 +793,7 @@ icon: '📝',
                 </h3>;
                 <p className='text - gray - 400 leading - relaxed'>                  {feature.description}            {features.map ((feature, index) => (
               <Card;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
@@ -1280,8 +808,6 @@ icon: '📝',
                 </h3>;
                 <p className="text - gray - 400 leading - relaxed">;
                   {feature.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -1289,23 +815,18 @@ icon: '📝',
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </p>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
-=======
       <section className="py-24 bg-black relative overflow-hidden">
                 style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
               >
@@ -1340,16 +861,12 @@ icon: '📝',
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -1378,16 +895,7 @@ icon: '📝',
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
-<<<<<<< HEAD
 
-=======
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {useCases.map((useCase, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1422,12 +930,7 @@ icon: '📝',
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               Versatile content creation for every industry and purpose
             </p>
           </div>
@@ -1451,107 +954,54 @@ icon: '📝',
                       {useCase.examples.map((example, exampleIndex) => (
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {example}
                         </div>;
-=======
 
 
                           {example}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                           {example}
 
                           {example}
 
                         </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                           {example}
                         </div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          </div>
-        </div>
-      </section>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-      {/* Pricing Section */}
-      <section
-        id='pricing'
-        className='py-24 bg-gray-900 relative overflow-hidden'
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Simple, Transparent Pricing
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your content creation needs
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               Choose the plan that fits your content creation needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {pricingPlans.map((plan, index) => (
-=======
           </div>;
         </div>;
       </section>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -1574,17 +1024,12 @@ icon: '📝',
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </p>;
               </Card>))}
           </div>;
@@ -1696,26 +1141,16 @@ icon: '📝',
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -1732,13 +1167,6 @@ icon: '📝',
                 )}
 
 
-<<<<<<< HEAD
-=======
-              <Card
-                key={index}
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1749,7 +1177,6 @@ icon: '📝',
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
-<<<<<<< HEAD
 
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
@@ -1772,10 +1199,6 @@ icon: '📝',
                 </ul>;
 
 
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -1797,11 +1220,7 @@ icon: '📝',
                       {feature}
                     </li>;
                   ))}
-<<<<<<< HEAD
                 </ul>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -1815,26 +1234,13 @@ icon: '📝',
                 </Button>;
               </Card>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      {feature}
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </li>
                   ))}
                 </ul>
@@ -1842,87 +1248,34 @@ icon: '📝',
                 <Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      {feature}
-
-                      {feature}
-
-                      {feature}
-
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  href='/contact'
-                  className={`w-full ${plan.buttonColor} text-white`}
-                  size='lg'
-                >
-                  Get Started
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-=======
             ))}
           </div>
         </div>
       </section>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-      {/* Integrations Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Seamless Integrations
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
-            </p>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -1951,16 +1304,7 @@ icon: '📝',
 
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
-<<<<<<< HEAD
 
-=======
-            </p>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
-            {integrations.map((integration, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1982,12 +1326,7 @@ icon: '📝',
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -2005,21 +1344,11 @@ icon: '📝',
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               </Card>
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             ))}
 
           </div>;
@@ -2031,16 +1360,6 @@ icon: '📝',
 
 
       {/* CTA Section */}
-<<<<<<< HEAD
-=======
-
-              </Card>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             ))}
           </div>
@@ -2050,25 +1369,14 @@ icon: '📝',
             ))}
       {/* CTA Section */}
       {/* CTA Section */}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -2076,12 +1384,6 @@ icon: '📝',
             every day with AI-powered content generation.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
@@ -2093,24 +1395,18 @@ icon: '📝',
             every day with AI-powered content generation.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
-<<<<<<< HEAD
               className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
               Start Free Trial;
               <ArrowRight className='w-5 h-5 ml-2' />;
             </Button>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='#demo'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?;
           </h2>;
@@ -2119,32 +1415,17 @@ icon: '📝',
           </p>;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Content Creation?
-<<<<<<< HEAD
-=======
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
-            >
-              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </h2>
           <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of content creators who are already saving hours every day with AI-powered content generation.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href="/contact"
               variant="secondary"
@@ -2157,161 +1438,16 @@ icon: '📝',
               href="#demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-                    <span className='text - lg text - gray - 400'>{plan.period}</span>;
-                  </div>;
-                  <p className='text - gray - 400'>{plan.description}</p>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center text - gray - 300';
-                    >;
-                      <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                  </div>;
-                  <p className="text - gray - 400">{plan.description}</p>;
-                </div>;
-                <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-                <Button;
-                  href='/contact';
-                  className={`w - full ${plan.button_color} text - white`}
-                  size='lg';
-                >;
-                  Get Started;
-                  <ArrowRight className='w - 5 h - 5 ml - 2' />                </Button>                  className={`w - full ${plan.button_color} text - white`}
-                  size="lg";
-                >;
-                  Get Started;
-                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
-                </Button>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Integrations Section */}
-      <section className='py - 24 bg - black relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Seamless Integrations;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Connect with your favorite tools and platforms;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6'>      <section className="py - 24 bg - black relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
-              Seamless Integrations;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6'>;
-            {integrations.map ((integration, index) => (
-              <Card;
-                key={index}
-                className='text - center group border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300';
-              >;
-                <div className='text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300'>;
-                  {integration.icon}
-                </div>;
-                <h3 className='font - semibold text - white mb - 2'>;
-                  {integration.name}
-                </h3>;
-                <p className='text - sm text - gray - 400'>;
-                  {integration.description}
-                </p>              </Card>            {integrations.map ((integration, index) => (
-              <Card;
-                key={index}
-                className="text - center group border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300";
-              >;
-                <div className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">;
-                  {integration.icon}
-                </div>;
-                <h3 className="font - semibold text - white mb - 2">{integration.name}</h3>;
-                <p className="text - sm text - gray - 400">{integration.description}</p>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py - 24 bg - gradient - to - r from - purple - 600 to - blue - 600 relative overflow - hidden'>;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10'>;
-          <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 8'>;
-            Ready to Transform Your Content Creation?;
-          </h2>;
-          <p className='text - xl text - purple - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
-            Join thousands of content creators who are already saving hours;
-            every day with AI - powered content generation.;
-          </p>;
-          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
-            <Button;
-              href='/contact';
-              variant='secondary';
-              size='lg';
-              className='bg - white text - purple - 600 hover:bg - gray - 100 shadow - 2xl';
-            >;
-              Start Free Trial;
-              <ArrowRight className='w - 5 h - 5 ml - 2' />;
-            </Button>;
-            <Button;
-              href='#demo';
-              variant='outline';
-              size='lg';
-              className='border - white text - white hover:bg - white hover:text - purple - 600 shadow - 2xl';
-            >;
-              <Play className='w - 5 h - 5 mr - 2' />              Watch Demo            Ready to Transform Your Content Creation?;
-          </h2>;
-          <p className="text - xl text - purple - 100 mb - 12 max - w-4xl mx - auto leading - relaxed">;
-            Join thousands of content creators who are already saving hours every day with AI - powered content generation.;
-          </p>;
-          <div className="flex flex - col sm:flex - row gap - 6 justify - center">;
-            <Button;
-              href="/contact";
-              variant="secondary";
-              size="lg";
-              className="bg - white text - purple - 600 hover:bg - gray - 100 shadow - 2xl";
-            >;
-              Start Free Trial;
-              <ArrowRight className="w - 5 h - 5 ml - 2" />;
-            </Button>;
-            <Button;
-              href="#demo";
-              variant="outline";
-              size="lg";
-              className="border - white text - white hover:bg - white hover:text - purple - 600 shadow - 2xl";
-            >;
-              <Play className="w - 5 h - 5 mr - 2" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -2321,19 +1457,12 @@ icon: '📝',
         </div>
       </section>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );
 
     </>);
 }
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>);
 }
 
@@ -2344,8 +1473,6 @@ icon: '📝',
 }
 ;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
 }
@@ -2357,4 +1484,3 @@ icon: '📝',
 
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

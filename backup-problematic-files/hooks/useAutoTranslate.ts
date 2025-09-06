@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import { useEffect, useMemo, useState } from 'react';
@@ -54,14 +53,11 @@ import { translateTextViaAI } from '../utils/translation';
 
 export type UseAutoTranslateResult = {
 export type UseAutoTranslateResult = {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
-<<<<<<< HEAD
   text: string
   targets: string[]
   debounceMs = 600
@@ -70,8 +66,6 @@ export function useAutoTranslate(
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -104,7 +98,6 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error }
-<<<<<<< HEAD
 :hooks/useAutoTranslate.ts
     }
   }, [key, debounceMs]);
@@ -113,5 +106,3 @@ export function useAutoTranslate(
 }
 main:hooks/useAutoTranslate.ts
 :backup-problematic-files/hooks/useAutoTranslate.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

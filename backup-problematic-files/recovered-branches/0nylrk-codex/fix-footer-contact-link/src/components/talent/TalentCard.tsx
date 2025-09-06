@@ -189,7 +189,6 @@ isAuthenticated
 //Navigate directly to the talent profile navigate (`/talent/$ {
   talent.id 
 }`);
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/talent/TalentCard.tsx
 //Also call the onViewProfile callback if provided </div>) ;
 }</div> <span >{;
   talent.availability type ;
@@ -216,5 +215,3 @@ isAuthenticated
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/TalentCard.tsx

@@ -166,7 +166,4 @@ const baseItems = [ {';
   item.name ;
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -45,7 +45,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
   setPriceRange ([values[0], values[1]]) 
 };
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/talent/filters/PriceFilter.tsx
 mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;
 }</button> <span>$ {;
   priceRange[0] ;
@@ -57,5 +56,3 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/PriceFilter.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx

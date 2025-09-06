@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -48,45 +47,10 @@ import {;
   Factory,;
   Car,;
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 
-<<<<<<< HEAD
-=======
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu
-  X
-  ChevronDown
-  Search
-  User
-  Settings
-  LogOut
-  Bell
-  Globe
-  Zap
-  Brain
-  Rocket
-  Dna
-  DollarSign
-  Lock
-  Wifi
-  Truck
-  Gamepad2
-  Bot
-  Factory
-  Car
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu,
   X,
   ChevronDown,
@@ -108,11 +72,7 @@ import {
   Bot,
   Factory,
   Car,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -138,9 +98,6 @@ Menu
   Factory
   Car
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -229,23 +186,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
-        { name: "Quantum Computing", href: "/services?category=quantum" }
-        { name: "Space Technology", href: "/services?category=space" }
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
-        { name: "Financial Services", href: "/services?category=finance" }
-        { name: "Cybersecurity", href: "/services?category=security" }
-        { name: "Edge Computing", href: "/services?category=edge" }
-        { name: "Blockchain", href: "/services?category=blockchain" }
-        { name: "View All Services", href: "/services" }
-      ]
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
         { name: "Quantum Computing", href: "/services?category=quantum" },
         { name: "Space Technology", href: "/services?category=space" },
@@ -257,13 +199,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Solutions"
       href: "/solutions"
@@ -287,11 +224,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
@@ -309,13 +241,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
 
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
-=======
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
@@ -505,8 +434,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   ];
 
   ];
@@ -538,7 +465,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
                   Zion Tech Group;
                 </div>;
                 <div className="text-xs text-cyan-400">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",
@@ -563,14 +489,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="flex items - center space - x-3";
-=======
-className="flex items - center space - x-3";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             <Link href="/" className="flex items - center space - x-3 group">;
               <div className="relative">;
@@ -584,22 +503,12 @@ className="flex items - center space - x-3";
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - cyan - 400">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       />;
                     </button>;
 
@@ -607,12 +516,7 @@ className="flex items - center space - x-3";
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
                           initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }}
@@ -633,34 +537,19 @@ className="flex items - center space - x-3";
                   </div>;
                 ) : (;
                   <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
                     href={item && item.href}
-=======
-href={item && item.href}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">;
                     {item && item.name}
                   </Link>;
                 )}
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>;
-=======
-</div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
           </motion.div>;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
@@ -721,9 +610,7 @@ href={item && item.href}
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
@@ -734,21 +621,13 @@ href={item && item.href}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
             </motion && motion.button>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
             >;
               <Search className="w - 5 h - 5" />;
@@ -756,9 +635,7 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             {/* Notifications */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
@@ -767,14 +644,6 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             </motion && motion.button>;
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
@@ -789,9 +658,6 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -805,39 +671,20 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <motion&& motion.button
-=======
-<motion&& motion.button
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, scale: 0 && 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           </motion && motion.button>;
         </div>;
       </div>;
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
@@ -847,25 +694,10 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
           </motion && motion.button>;
         </div>;
       </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -879,27 +711,17 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
                   type="text"
                   placeholder="Search services..."
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 />;
               </div>;
 
 
-=======
-                />;
-              </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Navigation Items */}
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="space-y-2">;
                   <Link
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
                   >;
@@ -910,25 +732,11 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
                     <div className="ml-4 space-y-1">;
                       {item && item.dropdownItems.map((dropdownItem) => (;
 
-=======
-className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
-                  >;
-                    {item && item.name}
-                  </Link>;
-                  {item && item.hasDropdown && item && item.dropdownItems && (;
-                    <div className="ml-4 space-y-1">;
-                      {item && item.dropdownItems.map((dropdownItem) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
                           className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
@@ -937,11 +745,6 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -959,14 +762,8 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-30
 
               {/* Contact Info */}
 
-<<<<<<< HEAD
-=======
-{/* Contact Info */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               {/* Contact Info */}
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="pt-4 border-t border-cyan-500/20">;
                 <div className="space-y-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2">;
@@ -979,26 +776,16 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-30
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
               <Bell className="w - 5 h - 5" />;
@@ -1092,101 +879,25 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-30
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Get Started Today;
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
 }
 export default EnhancedNavigation;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      </AnimatePresence>
-    </nav>
-
-};
-
-=======
-      </AnimatePresence>
-    </nav>
-  );
-};
 
 export default EnhancedNavigation;
 
-);
 };
-
-
-export default EnhancedNavigation;
-
-
-              {/* Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20">
-                <div className="space-y-2 text-sm text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <Globe className="w-4 h-4" />
-                    <span>{contactInfo.website}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <User className="w-4 h-4" />
-                    <span>{contactInfo.email}</span>
-                  </div>
-                </div>
-              </div>
-              {/* Mobile CTA */}
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
-                >
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-}
-export default EnhancedNavigation;
-
-};
-export default EnhancedNavigation;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default EnhancedNavigation;
-=======
-
-};
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 };
 export default EnhancedNavigation;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default EnhancedNavigation;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

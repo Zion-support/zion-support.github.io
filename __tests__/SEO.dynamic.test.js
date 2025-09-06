@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -14,15 +12,7 @@ describe ('SEO', () => {
 
   });
 });
-=======
 
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -32,7 +22,6 @@ describe('SEOdynamic'
 
     expect(screen && screen.getByTestId('seo ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOdynamic from "./components/SEO ; describe('SEOdynamic', () => { test("renders without crashing",() => { render(<SEOdynamic />); expect(screen && screen.getByTestId("seo && seo.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOdynamic />)}); test("handles user interactions",() => { render(<SEOdynamic />)}); test("applies correct styling"
 
-=======
 
 describe('SEO', () => {
   test('renders without crashing', () => {
@@ -55,12 +44,7 @@ describe('SEO', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
@@ -71,6 +55,3 @@ describe("SEO", () => {
     expect(screen.getByTestId("seo")).toBeInTheDocument();
   });
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

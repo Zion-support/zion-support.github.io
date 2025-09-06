@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const real2026Q2Additions = [
   {
@@ -22,7 +18,6 @@ export const real2026Q2Additions = [
     price: '$2, 500',
     period: '/month',
 
-<<<<<<< HEAD
     trial_days: 14,
     setup_time: 'Fast',
     market_position: 'Strong enterprise traction with compliance - led buyers',
@@ -30,14 +25,9 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -79,7 +69,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'
   }
   {
-<<<<<<< HEAD
     id: 'ai-synthetic-data-factory'
     name: 'AI Synthetic Data Factory'
     category: 'AI & Data'
@@ -370,9 +359,6 @@ export const real2026Q2Additions = [
   },
   {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -414,20 +400,14 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
 
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
   {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
@@ -444,9 +424,7 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
-=======
   {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support',
@@ -459,17 +437,12 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
   {
 
 export const real2026Q2Additions = [
@@ -535,7 +508,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - analytics - observability - kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
@@ -557,12 +529,7 @@ export const real2026Q2Additions = [
       'Cost governance',
     ],
     integrations: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'OpenAI',
       'Azure OpenAI',
       'Vertex AI',
@@ -577,21 +544,15 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
@@ -607,12 +568,7 @@ export const real2026Q2Additions = [
       'Tag hygiene and unused resource cleanup',
     ],
     use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'FinOps guardrails',
       'Cost regression prevention',
       'Unit economics tracking',
@@ -625,21 +581,15 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Proven ROI for cloud - native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'secure - pdf - signing - api',
     name: 'Secure PDF Signing API',
     category: 'Developer Tools',
@@ -654,12 +604,7 @@ export const real2026Q2Additions = [
       'LTV and certificate validation',
     ],
     use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Contract workflows',
       'Internal approvals',
       'Customer onboarding',
@@ -668,27 +613,18 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign API', 'HelloSign API'],
     price: '$149',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     trial_days: 14,
     setup_time: 'Fast',
     market_position: 'SMB to mid - market developer teams',
     roi: 'Accelerate time - to - sign by 50% and cut manual errors by 70%',
     link: 'https://ziontechgroup.com / services / secure - pdf - signing - api',
-<<<<<<< HEAD
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'status - slo - plus',
     name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
@@ -704,12 +640,7 @@ export const real2026Q2Additions = [
       'Custom domains and branding',
     ],
     use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Public trust for SaaS',
       'B2B vendor requirements',
       'Platform reliability communications',
@@ -722,23 +653,17 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Great value with SLO - first approach',
     roi: 'Improve uptime communications and reduce churn risk',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / services / status - slo - plus',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Third-party risk programs',
-=======
-=======
     link: 'https://ziontechgroup.com / services / status - slo - plus',
   },
   {
       'Third-party risk programs',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'vendor - risk - automation - pro',
     name: 'Vendor Risk Automation Pro',
     category: 'Quality & Monitoring',
@@ -755,12 +680,7 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
       'Third - party risk programs',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Sales security reviews',
       'Procurement diligence',
     ],
@@ -772,21 +692,15 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Sales - assisted and security - led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'ai - docs - search - answers',
     name: 'AI Docs Search & Answers',
     category: 'Developer Tools',
@@ -801,12 +715,7 @@ export const real2026Q2Additions = [
       'Multi - tenant and SSO support',
     ],
     use_cases: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Developer portals',
       'Internal knowledge bases',
       'Customer docs',
@@ -815,27 +724,18 @@ export const real2026Q2Additions = [
     competitors: ['Algolia Answers', 'Vectara'],
     price: '$249',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     trial_days: 14,
     setup_time: 'Fast',
     market_position: 'High adoption for self - serve docs',
     roi: 'Reduce tickets by 30% and improve time - to - answer',
     link: 'https://ziontechgroup.com / services / ai - docs - search - answers',
-<<<<<<< HEAD
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-=======
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'msp - remote - device - ops',
     name: 'MSP Remote Device Ops',
     category: 'Cloud & FinOps',
@@ -852,13 +752,6 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -866,7 +759,6 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
-<<<<<<< HEAD
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
@@ -1140,7 +1032,6 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -1148,9 +1039,6 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
@@ -1159,12 +1047,6 @@ export const real2026Q2Additions = [
 
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
@@ -1180,11 +1062,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops',
   },
 ];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     period: '/device/month',
     trialDays: 14,
     setupTime: 'Fast',
@@ -1193,15 +1070,11 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
     price: '$4';
-<<<<<<< HEAD
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
@@ -1210,14 +1083,6 @@ export const real2026Q2Additions = [
 ];
 
 
-<<<<<<< HEAD
-=======
-=======
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
-  }
-];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     period: '/device / month';
     trial_days: 14;
     setup_time: 'Fast';
@@ -1433,11 +1298,6 @@ export const real2026Q2Additions = [;
   }
 ];
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
@@ -1651,9 +1511,6 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 ];
 
@@ -1873,4 +1730,3 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
   }
 ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

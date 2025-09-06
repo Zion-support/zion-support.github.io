@@ -168,7 +168,6 @@ onDismiss ;
 }) : 'Just now' ;
 }</p> {;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
-<<<<<<< HEAD
 :temp_broken_files/notifications/NotificationItem.tsx
   handleClick ;"}> </Button>) ";"}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };"'"
@@ -178,5 +177,3 @@ onDismiss ;
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

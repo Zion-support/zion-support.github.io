@@ -5,7 +5,6 @@ import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChar
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { BookOpen, 
   Brain, 
   Users, 
@@ -15,8 +14,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   BookOpen,
   Brain,
@@ -27,20 +24,14 @@ import {
   BarChart3,
   FileText,
   Video,
-<<<<<<< HEAD
   Globe,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Database;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -236,7 +227,6 @@ export default function EducationPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
 ];
 export default function EducationPage() {
   return (
@@ -284,18 +274,13 @@ export default function EducationPage() {
             </motion.div>
           </div>
         </section>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Section */}
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -308,13 +293,10 @@ export default function EducationPage() {
                 Comprehensive edtech solutions designed for schools, universities, ;
                 and corporate training programs.;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -421,10 +403,7 @@ export default function EducationPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -437,13 +416,10 @@ export default function EducationPage() {
                 Our education technology solutions deliver measurable improvements in learning outcomes, ;
                 student engagement, and educational efficiency.,;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -510,10 +486,7 @@ export default function EducationPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Education?;
@@ -559,11 +532,4 @@ export default function EducationPage() {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Education;
-=======
-export default Education;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

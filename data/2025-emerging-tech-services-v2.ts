@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   {
@@ -8,12 +6,6 @@
     ],
     realImplementation: true,
 
-=======
-export interface EmergingTechService {;
-export interface EmergingTechService {
-export interface EmergingTechService {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -72,13 +64,9 @@ export interface EmergingTechService {;
     reviews: 45,
   },
   {
-<<<<<<< HEAD
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -96,15 +84,10 @@ export interface EmergingTechService {;
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
-=======
     id: 'quantum - bio - computing - platform',
     name: 'Quantum Bio - Computing Platform',
     tagline: 'Quantum computing meets biological systems',
@@ -175,13 +158,8 @@ export interface EmergingTechService {;
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🧬',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -191,22 +169,12 @@ export interface EmergingTechService {;
     market_size: '$12B quantum bio - computing market',
     growth_rate: '65% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
 
-=======
-      'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
-    ],
-    realImplementation: true,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -224,15 +192,10 @@ export interface EmergingTechService {;
     support:
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
-=======
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Direct neural interface for human - computer interaction',
@@ -303,13 +266,8 @@ export interface EmergingTechService {;
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com / brain - computer - interface - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🧠',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -319,22 +277,12 @@ export interface EmergingTechService {;
     market_size: '$18B BCI market',
     growth_rate: '55% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
 
-=======
-      'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
-    ],
-    realImplementation: true,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -352,15 +300,10 @@ export interface EmergingTechService {;
     support:
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
-=======
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
@@ -431,13 +374,8 @@ export interface EmergingTechService {;
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup.com / quantum - energy - platform',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '⚡',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -447,22 +385,12 @@ export interface EmergingTechService {;
     market_size: '$25B quantum energy market',
     growth_rate: '45% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
 
-=======
-      'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
-    ],
-    realImplementation: true,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -480,35 +408,7 @@ export interface EmergingTechService {;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Advanced AI for self - driving vehicles and transportation',
-    description:;
-      'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision - making, and safety systems for the future of transportation.',
-    category: 'Emerging Tech',
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
-    ]
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
-    icon: '🚗'
-    color: 'from-red-500 to-pink-600'
-    popular: true
-    launchDate: '2024-01-25'
-    customers: 180
-    rating: 4.9
-    reviews: 65
-    marketSize: '$35B autonomous vehicle market'
-    growthRate: '75% annually'
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -522,13 +422,6 @@ export interface EmergingTechService {;
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
     ];
@@ -575,8 +468,6 @@ export interface EmergingTechService {;
       setup_time: '12 hours',
       enterprise: 2999,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
     features: [;
       'Advanced computer vision',
       'Real - time decision making',
@@ -634,10 +525,6 @@ export interface EmergingTechService {;
     ],
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -648,12 +535,7 @@ export interface EmergingTechService {;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -678,38 +560,19 @@ export interface EmergingTechService {;
   reviews: number, marketSize: string,
   growthRate: string
 }
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
-<<<<<<< HEAD
 
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
 
-=======
-=======
-    ];
-    ];
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
-    support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -717,8 +580,6 @@ export interface EmergingTechService {;
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually';
@@ -727,11 +588,6 @@ export interface EmergingTechService {;
 
 ];
 
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
     features: [
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';
       'Custom biological modelsAPI for research'
@@ -910,9 +766,7 @@ export interface EmergingTechService {;
   }
 ];
 export interface EmergingTechService {;
-=======
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   name: string,;
   tagline: string,;
@@ -951,7 +805,6 @@ export interface EmergingTechService {;
   growthRate: string;
 }
 ;
-<<<<<<< HEAD
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {;
     id: 'space-mining-platform',;
@@ -1188,8 +1041,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface EmergingTechService {;
   id: string,;
@@ -1230,17 +1081,11 @@ export interface EmergingTechService {;
   growthRate: string;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface EmergingTechService {;
 
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {;
     id: 'space-mining-platform',;
@@ -1480,9 +1325,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 ];
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 ];
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

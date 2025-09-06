@@ -1,17 +1,10 @@
 // Contact information
 export interface ContactInfo {
-<<<<<<< HEAD
 export interface ContactInfo {;
 export interface ContactInfo {
   phone: string, email: string,
   address: string, site: string,
 export interface Service {;
-=======
-  phone: string;
-  email: string;
-  address: string;
-  site: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 // Service interfaces
@@ -44,7 +37,6 @@ export interface ServiceCategory {
 
 // SEO and performance
 export interface SEOProps {
-<<<<<<< HEAD
   title?: string;
   description?: string;
   title: string;
@@ -123,8 +115,6 @@ export interface AnimationState {,
   isLoaded: boolean,
   hasError: boolean,
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export interface PerformanceMetrics {
@@ -315,10 +305,7 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
-<<<<<<< HEAD
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -326,7 +313,6 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
-<<<<<<< HEAD
     }
   }
   activity: {
@@ -342,8 +328,6 @@ export interface User {
     end_date: Date;
     features: string[];
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export interface UserPreferences {
@@ -389,10 +373,7 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
-<<<<<<< HEAD
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
@@ -454,34 +435,25 @@ export interface Project {
 
 // Component props
 export interface BaseComponentProps {
-<<<<<<< HEAD
   class_name?: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-<<<<<<< HEAD
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
 export interface InputProps {
   class_name?: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-<<<<<<< HEAD
   on_click?: () => void;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
   on_change?: (value: string) => void;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   error?: string;
   required?: boolean;
 }
@@ -493,7 +465,4 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
-<<<<<<< HEAD
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

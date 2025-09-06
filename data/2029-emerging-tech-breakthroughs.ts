@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
       "Emerging tech breakthroughs";
@@ -12,14 +10,9 @@
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 export interface EmergingTechBreakthrough2029 {;
 export interface EmergingTechBreakthrough2029 {
 export interface EmergingTechBreakthrough2029 {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -71,7 +64,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     },
   ];    features: [
 
-<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -102,7 +94,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Advanced features",
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface EmergingTechBreakthrough2029 {;
 
@@ -119,20 +110,13 @@ export interface EmergingTechBreakthrough2029 {;
 
 ];
 
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
     }
   }
 ];
-=======
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface EmergingTechBreakthrough2029 {;
   };
 
@@ -202,7 +186,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -213,9 +196,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     }
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

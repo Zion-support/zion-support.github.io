@@ -62,7 +62,6 @@ const handleSubmit = async () => {
   if (!newResumeTitle.trim () ) return;
 await onCreateResume (newResumeTitle) 
 };
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/resume-builder/wizard/CreateResumeForm.tsx
 w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={;
   handleSubmit ;
 }disabled= {;
@@ -73,5 +72,3 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/wizard/CreateResumeForm.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/CreateResumeForm.tsx

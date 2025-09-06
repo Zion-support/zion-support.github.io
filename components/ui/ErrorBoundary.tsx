@@ -1,25 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {AlertTriangle, RefreshCw} from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Props {
   children: ReactNode,  fallback?: ReactNode;
 }
 interface State {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface Props {;
   children: ReactNode,  fallback?: ReactNode;
 }
@@ -50,12 +39,7 @@ class ErrorBoundary extends Component<Props, State> {;
     if (this && this.state.hasError) {;
       if (this && this.props.fallback) {;
         return this && this.props.fallback;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
@@ -85,24 +69,14 @@ class ErrorBoundary extends Component<Props, State> {;
                 </pre>;
               </details>;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
       ),;
     }
 
     return this && this.props.children;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   has_error: boolean,
   error?: Error;
 }
@@ -164,7 +138,6 @@ if ( {) {
         </div>),
     }
     return this.props.children;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 export default ErrorBoundary;

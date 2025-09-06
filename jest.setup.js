@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import "@testing-library/jest-dom";
 
 
 
-=======
-import "@testing-library/jest-dom";
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
       route: "/"
       pathname: "/"
       query: {}
@@ -37,8 +27,6 @@ import "@testing-library/jest-dom";
 jest && jest.mock("next/router", () => ({
   useRouter() {
     return {
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       route: "/",
       pathname: "/",
       query: {},
@@ -62,7 +50,6 @@ jest && jest.mock("next/router", () => ({
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   const React = require("react");
-<<<<<<< HEAD
   return function MockImage({ src, alt, ...props }) {
 
 
@@ -74,13 +61,6 @@ jest && jest.mock("next/link", () => {
         {children}
       </a>
     );
-=======
-    return React.createElement("a", { href, ...props }, children);
-
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });
 
 // Mock IntersectionObserver
@@ -101,19 +81,12 @@ global.ResizeObserver = class ResizeObserver {
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();
-<<<<<<< HEAD
 
 
 
 });
 
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
 });
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 });
 
 
@@ -140,7 +113,6 @@ addEventListener: jest.fn(),
 }),
 // Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {constructor() {}});
-=======
   return function MockedImage({ src, alt, ...props }) {
     return React.createElement("img", { src, alt, ...props });
   };
@@ -171,20 +143,10 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: jest.fn(),
   })),
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
-<<<<<<< HEAD
-=======
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
@@ -192,7 +154,6 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
-<<<<<<< HEAD
 // Global test setup,
 beforeEach(() => {
   // Reset all mocks before each test,
@@ -204,13 +165,8 @@ beforeEach(() => {
 
 });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Global test setup
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

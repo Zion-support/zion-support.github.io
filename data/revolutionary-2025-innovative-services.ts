@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-export interface Revolutionary2025Service {;
-export interface Revolutionary2025Service {
-export interface Revolutionary2025Service {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -163,10 +155,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
     trial_days: 30;
     setup_time: '4 hours';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'AI Consciousness & Emotional Intelligence';
     real_service: true;
     technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing'];
@@ -178,11 +166,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '1000%+ annual growth expected';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -192,17 +176,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-01-15';
     customers: 25;
     rating: 5 && 5.0,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 15
   }
 
   // 🧬 DNA Computing & Biotech Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -215,7 +193,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🧬 DNA Computing & Biotech Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'dna - computing - platform';
     name: 'DNA Computing & Biotech Platform';
@@ -227,24 +204,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       'DNA - based parallel processing_biological problem solving_unlimited computational power_biological data analysisDNA storage solutions_biotech research tools_genetic algorithm optimization_biological computing APIs';
     ];
     popular: true;
-<<<<<<< HEAD
     icon: '🧬';
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform';
     marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform';
-    marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     color: 'from - green - 600 to - emerald - 700';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / dna - computing - platform';
@@ -252,7 +220,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'DNA Computing & Biotechnology';
     real_service: true;
     technology: ['DNA ComputingBiotechnologyMolecular BiologyPythonBioinformaticsCloud Computing'];
@@ -264,40 +231,23 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '800% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true;
     implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.';
     launchDate: '2025-01-20';
     customers: 15;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     rating: 4 && 4.9,
 
-=======
-    rating: 4 && 4.9,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 8
   }
 
   // 🚀 Space Technology & Satellite Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -309,31 +259,21 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     reviews: 8;
   }
 ;
-<<<<<<< HEAD
   // 🚀 Space Technology & Satellite Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'space - tech - orchestrator';
     name: 'Space Technology Orchestrator';
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator';
     marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator';
-    marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   {
     id: 'space - tech - orchestrator';
     name: 'Space Technology Orchestrator';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
 
     trialDays: 30;
     setupTime: '12 hours';
-=======
     tagline: 'Complete Space Mission Management & Satellite Operations Platform',
     price: '$1, 299';
     period: '/month',
@@ -350,7 +290,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
     trial_days: 30;
     setup_time: '12 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Space Technology & Satellite Operations';
     real_service: true;
     technology: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs'];
@@ -362,11 +301,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '1000%+ annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -376,17 +311,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-01-25';
     customers: 8;
     rating: 5 && 5.0,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 5
   }
 
   // 🌐 Quantum Internet & Communication Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -399,29 +328,19 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🌐 Quantum Internet & Communication Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - internet - platform';
     name: 'Quantum Internet & Communication Platform';
     tagline: 'Unhackable Quantum Internet with Instant Global Communication';
     price: '$599';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform';
     marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform';
-    marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.';
     features: [;
@@ -436,7 +355,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quantum Internet & Communication';
     real_service: true;
     technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs'];
@@ -448,11 +366,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '1500% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -462,17 +376,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-02-01';
     customers: 35;
     rating: 4 && 4.9,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 22
   }
 
   // 🏥 Advanced Healthcare AI Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -485,41 +393,24 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🏥 Advanced Healthcare AI Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'healthcare - ai - revolution';
     name: 'Healthcare AI Revolution Platform';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     tagline: 'AI - Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization';
 
-=======
-    tagline: 'AI - Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     price: '$399';
 
     period: '/month'
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/healthcare-ai-revolution';
     marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/healthcare-ai-revolution';
-    marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
 
     trialDays: 30;
     setupTime: '10 hours';
-=======
     features: [;
       '99.9% diagnosis accuracy_personalized treatment plans_genomic medicine integration_drug interaction analysis_predictive health monitoring_medical image analysis_patient outcome prediction_healthcare workflow automation';
     ];
@@ -532,7 +423,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
     trial_days: 30;
     setup_time: '10 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Healthcare AI & Medical Technology';
     real_service: true;
     technology: ['AI / MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs'];
@@ -544,11 +434,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '600% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -558,17 +444,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-02-05';
     customers: 120;
     rating: 4 && 4.9,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 89
   }
 
   // 🏦 Financial Technology Revolution Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -581,29 +461,19 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🏦 Financial Technology Revolution Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'fintech - revolution - platform';
     name: 'FinTech Revolution Platform';
     tagline: 'Next - Generation Financial Technology with AI - Powered Trading & Risk Management';
     price: '$699';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/fintech-revolution-platform';
     marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/fintech-revolution-platform';
-    marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     period: '/month',
     description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services.';
     features: [;
@@ -618,7 +488,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Financial Technology & Banking';
     real_service: true;
     technology: ['AI / MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing'];
@@ -630,11 +499,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '700% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -644,17 +509,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4 && 4.8,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 67
   }
 
   // 🏭 Industrial IoT & Smart Manufacturing Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -667,24 +526,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🏭 Industrial IoT & Smart Manufacturing Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'industrial - iot - revolution';
     name: 'Industrial IoT Revolution Platform';
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance';
     price: '$299';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     period: '/month',
     description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.';
 
-=======
-    period: '/month',
-    description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
     ];
@@ -692,23 +542,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🏭';
     color: 'from-gray-600 to-slate-700';
     textColor: 'text-gray-400';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/industrial-iot-revolution';
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/industrial-iot-revolution';
-    marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     features: [;
       'Predictive maintenance_zero downtime manufacturing_real - time monitoring_smart automation_quality control AISupply chain optimization_energy efficiency management_safety monitoring systems';
     ];
@@ -721,7 +562,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Industrial IoT & Smart Manufacturing';
     real_service: true;
     technology: ['IoTAI / MLEdge ComputingPythonIndustrial APIsCloud Computing'];
@@ -733,11 +573,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '500% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -747,17 +583,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-02-15';
     customers: 200;
     rating: 4 && 4.8,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 156
   }
 
   // 🎓 Education Technology Revolution Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -770,7 +600,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🎓 Education Technology Revolution Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'edtech - revolution - platform';
     name: 'EdTech Revolution Platform';
@@ -779,23 +608,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     period: '/month'
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/edtech-revolution-platform';
     marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/edtech-revolution-platform';
-    marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
 
     trialDays: 30;
     setupTime: '4 hours';
-=======
     features: [;
       'AI - powered personalized learning_adaptive curriculum10x faster knowledge acquisition_virtual reality classroomsAI tutors and mentors_progress tracking_collaborative learning_skill assessment AI';
     ];
@@ -808,7 +628,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
     trial_days: 30;
     setup_time: '4 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Education Technology & Learning';
     real_service: true;
     technology: ['AI / MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing'];
@@ -820,11 +639,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '400% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -834,17 +649,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-02-20';
     customers: 300;
     rating: 4 && 4.9,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 234
   }
 
   // 🌱 Sustainability & Green Technology Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -857,7 +666,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🌱 Sustainability & Green Technology Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'sustainability - tech - platform';
     name: 'Sustainability Technology Platform';
@@ -866,23 +674,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     period: '/month'
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/sustainability-tech-platform';
     marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/sustainability-tech-platform';
-    marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     features: [;
       'Carbon footprint tracking_renewable energy optimization_sustainable supply chain_environmental monitoring_green building management_waste reduction AISustainability reporting_climate impact analysis';
     ];
@@ -895,7 +694,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Sustainability & Green Technology';
     real_service: true;
     technology: ['AI / MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing'];
@@ -907,11 +705,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '600% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -921,17 +715,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-02-25';
     customers: 75;
     rating: 4 && 4.9,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 58
   }
 
   // 🚛 Logistics & Supply Chain Revolution Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -944,12 +732,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ;
   // 🚛 Logistics & Supply Chain Revolution Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'logistics - revolution - platform';
     name: 'Logistics Revolution Platform';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     tagline: 'AI - Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste';
 
@@ -958,14 +743,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.';
 
-=======
-    tagline: 'AI - Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste';
-    price: '$499';
-    period: '/month',
-    description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       '99 && 99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
     ];
@@ -973,23 +750,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🚛';
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/logistics-revolution-platform';
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
 
-=======
-    link: 'https://ziontechgroup && ziontechgroup.com/logistics-revolution-platform';
-    marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     features: [;
       '99.9% delivery accuracy_zero waste supply chain_real - time tracking_predictive logistics_automated routing_inventory optimization_demand forecasting_supplier management';
     ];
@@ -1002,7 +770,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     target_audience: 'Logistics companies, E - commerce, Retail chains, Manufacturing companies, Distribution centers';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Logistics & Supply Chain';
     real_service: true;
     technology: ['AI / MLIoTBlockchainPythonLogistics APIsCloud Computing'];
@@ -1014,11 +781,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growth_rate: '500% annual growth';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1028,24 +791,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     launchDate: '2025-03-01';
     customers: 150;
     rating: 4 && 4.8,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reviews: 112
   }
 ];
 export default revolutionary2025Services;
     growthRate: '1000%+ annual growth expected'
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -1061,12 +814,7 @@ export default revolutionary2025Services;
 export default revolutionary2025Services;
     growth_rate: '1000%+ annual growth expected',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1080,13 +828,8 @@ export default revolutionary2025Services;
     rating: 5 && 5.0,
     reviews: 15,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'DNA-based parallel processing',
-=======
   // 🧬 DNA Computing & Biotech Services;
   {
     id: 'dna - computing - platform',
@@ -1098,12 +841,7 @@ export default revolutionary2025Services;
       "World's first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.",
     features: [;
       'DNA - based parallel processing',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Biological problem solving',
       'Unlimited computational power',
       'Biological data analysis',
@@ -1113,13 +851,8 @@ export default revolutionary2025Services;
       'Biological computing APIs',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🧬',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / dna - computing - platform',
@@ -1157,12 +890,7 @@ export default revolutionary2025Services;
     market_size: '$50B biotech computing market',
     growth_rate: '800% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1176,12 +904,7 @@ export default revolutionary2025Services;
     rating: 4 && 4.9,
     reviews: 8,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // 🚀 Space Technology & Satellite Services;
   {
     id: 'space - tech - orchestrator',
@@ -1193,12 +916,7 @@ export default revolutionary2025Services;
     description:;
       'Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Satellite mission planning',
       'Orbital trajectory optimization',
       'Space debris monitoring',
@@ -1209,13 +927,8 @@ export default revolutionary2025Services;
       'Space asset tracking',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🚀',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / space - tech - orchestrator',
@@ -1253,12 +966,7 @@ export default revolutionary2025Services;
     market_size: '$400B space economy',
     growth_rate: '1000%+ annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1272,12 +980,7 @@ export default revolutionary2025Services;
     rating: 5 && 5.0,
     reviews: 5,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // 🌐 Quantum Internet & Communication Services;
   {
     id: 'quantum - internet - platform',
@@ -1288,12 +991,7 @@ export default revolutionary2025Services;
     description:;
       'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum encryption',
       'Instant global communication',
       'Unhackable data transmission',
@@ -1304,13 +1002,8 @@ export default revolutionary2025Services;
       'Quantum messaging platform',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🌐',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - internet - platform',
@@ -1348,12 +1041,7 @@ export default revolutionary2025Services;
     market_size: '$100B quantum internet market',
     growth_rate: '1500% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1367,8 +1055,6 @@ export default revolutionary2025Services;
     rating: 4 && 4.9,
     reviews: 22,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       'AI-Powered Healthcare with 99 && 99.9% Diagnosis Accuracy & Treatment Optimization',
     price: '$399',
@@ -1378,16 +1064,7 @@ export default revolutionary2025Services;
       'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.'
     features: [
 
-=======
-      'AI-Powered Healthcare with 99 && 99.9% Diagnosis Accuracy & Treatment Optimization',
-    price: '$399',
-    period: '/month',
-    description:
-      'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.'
-    features: [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       '99 && 99.9% diagnosis accuracy',
-=======
   // 🏥 Advanced Healthcare AI Services;
   {
     id: 'healthcare - ai - revolution',
@@ -1400,12 +1077,7 @@ export default revolutionary2025Services;
       'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.',
     features: [;
       '99.9% diagnosis accuracy',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Personalized treatment plans',
       'Genomic medicine integration',
       'Drug interaction analysis',
@@ -1415,13 +1087,8 @@ export default revolutionary2025Services;
       'Healthcare workflow automation',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🏥',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / healthcare - ai - revolution',
@@ -1459,12 +1126,7 @@ export default revolutionary2025Services;
     market_size: '$500B healthcare AI market',
     growth_rate: '600% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1478,13 +1140,8 @@ export default revolutionary2025Services;
     rating: 4 && 4.9,
     reviews: 89,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI-powered trading algorithms',
-=======
   // 🏦 Financial Technology Revolution Services;
   {
     id: 'fintech - revolution - platform',
@@ -1497,12 +1154,7 @@ export default revolutionary2025Services;
       'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services.',
     features: [;
       'AI - powered trading algorithms',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum risk management',
       'Blockchain banking',
       'Predictive financial analytics',
@@ -1512,13 +1164,8 @@ export default revolutionary2025Services;
       'Regulatory compliance automation',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🏦',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / fintech - revolution - platform',
@@ -1556,12 +1203,7 @@ export default revolutionary2025Services;
     market_size: '$300B fintech market',
     growth_rate: '700% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1575,14 +1217,9 @@ export default revolutionary2025Services;
     rating: 4 && 4.8,
     reviews: 67,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.',
     features: [
-=======
   // 🏭 Industrial IoT & Smart Manufacturing Services;
   {
     id: 'industrial - iot - revolution',
@@ -1593,12 +1230,7 @@ export default revolutionary2025Services;
     description:;
       'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Predictive maintenance',
       'Zero downtime manufacturing',
       'Real - time monitoring',
@@ -1609,13 +1241,8 @@ export default revolutionary2025Services;
       'Safety monitoring systems',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🏭',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - gray - 600 to - slate - 700',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / industrial - iot - revolution',
@@ -1653,12 +1280,7 @@ export default revolutionary2025Services;
     market_size: '$200B industrial IoT market',
     growth_rate: '500% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1672,13 +1294,8 @@ export default revolutionary2025Services;
     rating: 4 && 4.8,
     reviews: 156,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI-powered personalized learning',
-=======
   // 🎓 Education Technology Revolution Services;
   {
     id: 'edtech - revolution - platform',
@@ -1691,12 +1308,7 @@ export default revolutionary2025Services;
       'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.',
     features: [;
       'AI - powered personalized learning',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Adaptive curriculum',
       '10x faster knowledge acquisition',
       'Virtual reality classrooms',
@@ -1706,13 +1318,8 @@ export default revolutionary2025Services;
       'Skill assessment AI',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🎓',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edtech - revolution - platform',
@@ -1750,12 +1357,7 @@ export default revolutionary2025Services;
     market_size: '$150B edtech market',
     growth_rate: '400% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1769,12 +1371,7 @@ export default revolutionary2025Services;
     rating: 4 && 4.9,
     reviews: 234,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // 🌱 Sustainability & Green Technology Services;
   {
     id: 'sustainability - tech - platform',
@@ -1786,12 +1383,7 @@ export default revolutionary2025Services;
     description:;
       'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Carbon footprint tracking',
       'Renewable energy optimization',
       'Sustainable supply chain',
@@ -1802,13 +1394,8 @@ export default revolutionary2025Services;
       'Climate impact analysis',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🌱',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / sustainability - tech - platform',
@@ -1846,12 +1433,7 @@ export default revolutionary2025Services;
     market_size: '$100B sustainability tech market',
     growth_rate: '600% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1865,11 +1447,7 @@ export default revolutionary2025Services;
     rating: 4 && 4.9,
     reviews: 58,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'AI-Powered Supply Chain with 99 && 99.9% Delivery Accuracy & Zero Waste',
     price: '$499',
     period: '/month',
@@ -1877,7 +1455,6 @@ export default revolutionary2025Services;
       'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.',
     features: [
       '99 && 99.9% delivery accuracy',
-=======
   // 🚛 Logistics & Supply Chain Revolution Services;
   {
     id: 'logistics - revolution - platform',
@@ -1890,12 +1467,7 @@ export default revolutionary2025Services;
       'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.',
     features: [;
       '99.9% delivery accuracy',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Zero waste supply chain',
       'Real - time tracking',
       'Predictive logistics',
@@ -1905,13 +1477,8 @@ export default revolutionary2025Services;
       'Supplier management',
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🚛',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / logistics - revolution - platform',
@@ -1949,12 +1516,7 @@ export default revolutionary2025Services;
     market_size: '$250B logistics tech market',
     growth_rate: '500% annual growth',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1968,11 +1530,9 @@ export default revolutionary2025Services;
     rating: 4 && 4.8,
     reviews: 112,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export default revolutionary2025Services;
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1997,7 +1557,6 @@ export default revolutionary2025Services;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
 }
 
 export const revolutionary2025Services: Revolutionary2025Service[] = [
@@ -2351,17 +1910,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ];
 ;
-<<<<<<< HEAD
-=======
-
-export interface Revolutionary2025Service {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default revolutionary2025Services;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export interface Revolutionary2025Service {;
 
@@ -2371,8 +1922,6 @@ export default revolutionary2025Services;
 export default revolutionary2025Services;
 
 export interface Revolutionary2025Service {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   name: string,;
   tagline: string,;
@@ -2487,9 +2036,5 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     reviews: 112
   }
 export default revolutionary2025Services;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default revolutionary2025Services;
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

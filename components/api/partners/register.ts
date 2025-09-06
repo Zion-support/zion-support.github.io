@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       req && req.body || {};
 
@@ -23,8 +21,6 @@
       return res && res.status(201).json({
         partner: {
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           id: partner && partner.id,
           name: partner && partner.name,
           status: partner && partner.status,
@@ -34,52 +30,17 @@
         },
         apiKey: apiKey && apiKey.key,
         dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
-<<<<<<< HEAD
 
     return res && res.status(500).json({ error: "Failed to create partner" });
-<<<<<<< HEAD
 
   }
 
 
-=======
-=======
-  }
-  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
-  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
-    return res.status(400).json({ error: "Missing required fields" });
-  }
-  try {
-    const { partner, apiKey } = await createPartner({
-      name;
-      entityType;
-      pointOfContact;
-      useCaseType;
-      brand});
-    return res.status(201).json({
-      partner: {
-        id: partner.id, name: partner.name,
-        status: partner.status, entityType: partner.entityType,
-        useCaseType: partner.useCaseType,
-        createdAt: partner.createdAt
-    },
-    apiKey: apiKey.key,
-      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to create partner" })
-  };
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
@@ -98,9 +59,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       return res.status (400).json ({ error: "Missing required fields" });
     }
@@ -129,16 +88,10 @@ if ( {) {
     }
     return res.status (500).json ({ error: "Failed to create partner" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   try {
     const { partner, apiKey } = await createPartner({
       name,
@@ -227,6 +180,3 @@ export default async function handler(
 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

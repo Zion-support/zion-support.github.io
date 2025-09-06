@@ -22,29 +22,20 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default function InvestorsPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function InvestorsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function InvestorsPage() {;
 import React from 'react';
 import Head from 'next/head';
 
 export default function InvestorsPage() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 export default function InvestorsPage() {
 
 export default function InvestorsPage() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -79,8 +70,6 @@ export default function InvestorsPage() {
         </div>;
         <div className='pt-4 text-slate-300'>;
           Contact IR:{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
           </a>;
@@ -92,19 +81,6 @@ export default function InvestorsPage() {
 export default function InvestorsPage() {
 	return (
 
-=======
-          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
-            kleber@ziontechgroup.com
-          </a>
-        </div>
-      </div>
-    </div>;
-  );	return (
-export default function InvestorsPage() {
-	return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -120,10 +96,8 @@ export default function InvestorsPage() {
 					<div className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className="text-2xl font-bold text-white">15+</div><div className="text-slate-400 text-sm">Years experience</div></div>
 				</div>
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
-<<<<<<< HEAD
 			</div>
 		</div>
-<<<<<<< HEAD
 
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
@@ -145,13 +119,6 @@ export default function InvestorsPage() {
 	),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
@@ -215,19 +182,10 @@ function InvestorsPage() {
   </div>;
   </div>),
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 	),
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 	),
 }
@@ -235,6 +193,3 @@ function InvestorsPage() {
 }
 	),
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

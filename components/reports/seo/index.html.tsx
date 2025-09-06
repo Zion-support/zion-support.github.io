@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
-export default function Placeholder() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Placeholder() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <main className='min-h-screen p-8'>
       <Head>
@@ -68,17 +59,9 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 
-=======
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -120,20 +103,11 @@ function Placeholder() {
       </div>;
     </main>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export default function Placeholder() {
   return (
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Placeholder() {
@@ -154,7 +128,6 @@ export default function Placeholder() {
 
 export default function Placeholder() {
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -165,12 +138,7 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
-<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </main>
   );
 }
@@ -188,6 +156,3 @@ export default function Placeholder() {
 }
 ;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

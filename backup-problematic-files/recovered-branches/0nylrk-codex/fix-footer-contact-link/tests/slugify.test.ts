@@ -2,11 +2,7 @@ import { slugify } from '@/lib/slugify',;
 import { unslugify } from '@/lib/slugify',;
 ;
 it('removes accents from strings', () => {;
-<<<<<<< HEAD
   expect(slugify('Crème Brûlée')).toBe('creme-brulee'),;
-=======
-  expect(slugify('Crme Brle')).toBe('creme-brulee'),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }),;
 ;
 it('treats underscores as spaces', () => {;

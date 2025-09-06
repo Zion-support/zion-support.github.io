@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,11 +26,6 @@ import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import {;
   Brain,;
@@ -63,8 +56,6 @@ import {;
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
 import { 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   Brain
   Atom
   Shield
@@ -94,7 +85,6 @@ import {
   MapPin;} from 'lucide-react';import {
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Brain,
   Atom,
   Shield,
@@ -120,213 +110,81 @@ import {
   List,
   ExternalLink,
   Phone,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
 
 
-=======
-  Mail,
-  MapPin,} from 'lucide-react';import {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
 
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
-<<<<<<< HEAD
 
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
 
-=======
-} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 } from 'lucide-react';
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
 } from 'lucide-react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
 
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
 } from 'lucide-react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
-import Layout from '../components / layout / Layout';
-import { cuttingEdgeAIServices2025 } from '../data / 2025 - cutting - edge - ai - services';
-import { cuttingEdgeQuantumServices2025 } from '../data / 2025 - cutting - edge - quantum - services';
-import { cuttingEdgeEnterpriseITServices2025 } from '../data / 2025 - cutting - edge - enterprise - it';
-import { cuttingEdgeMicroSaasServices2025 } from '../data / 2025 - cutting - edge - micro - saas';
-import { Zap, Star } from 'lucide-react';
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-];
-
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
-    count: cuttingEdgeAIServices2025.length
-};
-  website: 'https://ziontechgroup.com',
-}
-;
-const hero_stats = [;
-  {
-    label: 'Cutting - Edge Services',
-    value: '25+',
-    icon: <Star className='w - 5 h - 5' />,
-  },
-  {
-    label: 'Innovation Areas',
-    value: '8+',
-    icon: <Brain className='w - 5 h - 5' />,
-  },
-  {
-    label: 'Market Coverage',
-    value: '$500B+',
-    icon: <TrendingUp className='w - 5 h - 5' />,
-  },
-  {
-    label: 'Success Rate',
-    value: '99.9%',
-    icon: <Award className='w - 5 h - 5' />,
-  }, ];  { label: 'Cutting - Edge Services', value: '25+', icon: <Star className="w - 5 h - 5" /> },
-  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w - 5 h - 5" /> },
-  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w - 5 h - 5" /> },
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w - 5 h - 5" /> }
-const service_categories = [;
-  {
-    title: 'AI & Consciousness',
-    description:;
-      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from - violet - 500 to - purple - 600',
-    gradient: 'bg - gradient - to - r from - violet - 500 to - purple - 600',    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from - violet - 500 to - purple - 600',
-    gradient: 'bg - gradient - to - r from - violet - 500 to - purple - 600',
-    count: cuttingEdgeAIServices2025.length,
-  },
-  {
-    title: 'Quantum & Emerging Tech',
-    description:;
-      'Breakthrough quantum computing and space technology solutions',    services: cuttingEdgeQuantumServices2025,
-    icon: Atom,
-    color: 'from - indigo - 500 to - blue - 600',
-    gradient: 'bg - gradient - to - r from - indigo - 500 to - blue - 600',
-    count: cuttingEdgeQuantumServices2025.length,
-  },  {    count: cuttingEdgeAIServices2025.length;
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
     services: cuttingEdgeQuantumServices2025,
     icon: Atom,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     color: 'from - indigo - 500 to - blue - 600',
-=======
-color: 'from - indigo - 500 to - blue - 600',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     gradient: 'bg - gradient - to - r from - indigo - 500 to - blue - 600',
     count: cuttingEdgeQuantumServices2025.length,
   },    count: cuttingEdgeQuantumServices2025.length;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure and security solutions',
     services: cuttingEdgeEnterpriseITServices2025,
     icon: Shield,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     color: 'from - blue - 500 to - cyan - 600',
-=======
-color: 'from - blue - 500 to - cyan - 600',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     gradient: 'bg - gradient - to - r from - blue - 500 to - cyan - 600',
     count: cuttingEdgeEnterpriseITServices2025.length,
   },  {    count: cuttingEdgeEnterpriseITServices2025.length;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     color: 'from - teal - 500 to - emerald - 600',
     gradient: 'bg - gradient - to - r from - teal - 500 to - emerald - 600',
     count: cuttingEdgeMicroSaasServices2025.length,
   }, ];    count: cuttingEdgeMicroSaasServices2025.length;
 
-=======
-color: 'from - teal - 500 to - emerald - 600',
-    gradient: 'bg - gradient - to - r from - teal - 500 to - emerald - 600',
-    count: cuttingEdgeMicroSaasServices2025.length,
-  }, ];    count: cuttingEdgeMicroSaasServices2025.length;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
-<<<<<<< HEAD
 
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const allServices = [
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ...cuttingEdgeAIServices2025;
     ...cuttingEdgeQuantumServices2025;
     ...cuttingEdgeEnterpriseITServices2025;
@@ -336,30 +194,16 @@ color: 'from - teal - 500 to - emerald - 600',
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
     return matchesSearch && matchesCategory
-<<<<<<< HEAD
 
   });
 
 
-=======
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    return matchesSearch && matchesCategory
-  });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
 ;
 export default /**
  * CuttingEdgeServicesShowcase2025 - Function description
@@ -391,18 +235,11 @@ function CuttingEdgeServicesShowcase2025() {
     return matches_search && matches_category;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -525,18 +362,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
         staggerChildren: 0 && 0.1,;
       },;
     },  };        staggerChildren: 0 && 0.1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -546,27 +377,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
 ;
   const item_variants = {
     hidden: { coordinate_y: 20, opacity: 0 },
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     visible: {
       coordinate_y: 0,
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }
-=======
 
-=======
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
         <link rel='icon' href='/favicon && favicon.ico' />      </Head>;
@@ -877,21 +698,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
       }
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         duration: 0.5,
       },
     },  };
 
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
         <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
@@ -904,13 +716,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge Services
-<<<<<<< HEAD
                 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
                   Showcase 2025
                 </span>
               </motion.h1>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       }
     }
@@ -926,28 +736,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
   return (
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Showcase 2025
                 </span>
               </motion.h1>
@@ -958,28 +754,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  Showcase 2025
-                </span>
-              </motion.h1>
-              <motion.p
-              <motion.p 
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
@@ -1020,13 +800,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>;
-<<<<<<< HEAD
 
               {/* Hero Stats */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-=======
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
 
                 Discover revolutionary technology solutions that are reshaping
@@ -1045,30 +822,19 @@ From AI consciousness to space mining, experience the cutting edge of innovation
 
                 initial={{ opacity: 0, y: 20 }}
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                 initial={{ opacity: 0, y: 20 }}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               </motion && motion.div>;
 
               {/* CTA Buttons */}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div key={index} className='text-center'>
                     <div className='flex justify-center mb-2'>
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
@@ -1078,41 +844,14 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                       {stat.value}
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
-=======
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
-                        {stat.icon}
-                      </div>
-                    </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-white/70">{stat.label}</div>
-                  </div>
-                ))}
-              </motion && motion.div>;
-              {/* CTA Buttons */}
-              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
@@ -1121,17 +860,10 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
-<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 {heroStats && heroStats.map((stat, index) => (;
@@ -1155,14 +887,11 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                 ))}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
                 <a
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
                 <a
                   href="/contact"
@@ -1171,39 +900,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-=======
-                  href='#services'
-                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
-                >
-                  Explore Services
-                  <ArrowRight className='ml-2 w-5 h-5' />
-                </a>
-                <a
-                  href='/contact'
-                  className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'                >                >
-                  Explore Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </a>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Search and Filter Section */}
-        <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion.div
-              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">;
                   Get Started;
                 </a>;
@@ -1219,48 +915,30 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 
               initial={{ opacity: 0, y: 20 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               {/* Search */}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'                />;
               </div>;
@@ -1272,23 +950,14 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               <div className='relative flex-1 max-w-md'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   type='text'
                   placeholder='Search services...'
                   value={searchTerm}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'                />;
               </div>;
-=======
-              <div className='flex flex-wrap gap-2'>                <button                <input
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
@@ -1296,10 +965,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
                 <button
               <div className='flex flex-wrap gap-2'>                <button
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 />
               </div>
@@ -1314,7 +979,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
                   }`}
-<<<<<<< HEAD
                 >
                   All ({allServices.length})
                 </button>
@@ -1329,7 +993,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                   placeholder="Search services..."
                   value={searchTerm}
 
-<<<<<<< HEAD
                   onChange={(e) => setSearchTerm(e && e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300";
                 />;
@@ -1339,15 +1002,7 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
 
-=======
-
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-=======
-=======
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'                />
               </div>
@@ -1363,7 +1018,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               </div>
 
               {/* Category Filter */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               <div className='flex flex-wrap gap-2'>                <button
 
@@ -1375,72 +1029,40 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                 <button
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
                 <button
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                     selectedCategory === 'all';
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                   }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
                   <button
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 
-<<<<<<< HEAD
-=======
-                >
-                  All ({allServices.length})
-                </button>
-                {serviceCategories.map((category) => (
-                  <button
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category.title
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                     key={category && category.title}
                     onClick={() => setSelectedCategory(category && category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                       selectedCategory === category && category.title;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }`}
                   >;
                     {category && category.title} ({category && category.count});
                   </button>;
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               </div>;
 
@@ -1448,33 +1070,16 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
 
-=======
-              </div>
-=======
-=======
-              </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               </div>;
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
@@ -1482,33 +1087,18 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
                 <button
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                 <button
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-                >
-                  <Grid className="w-5 h-5" />
-                </button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
@@ -1516,8 +1106,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
                 >;
@@ -1528,16 +1116,12 @@ From AI consciousness to space mining, experience the cutting edge of innovation
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
 
-=======
         <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                 >
                   <List className='w-5 h-5' />                </button>                  <List className="w-5 h-5" />
                 </button>
@@ -1569,34 +1153,19 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                   : 'space-y-6'
               }            >            <motion.div
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   variants={itemVariants}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
                   }`}>;
                   {/* Service Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         duration: 0.5,
       },
     },  }        duration: 0.5;
@@ -1870,29 +1439,17 @@ From AI consciousness to space mining, experience the cutting edge of innovation
 
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
                           {service.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                           {service.name}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </h3>
                         <p className="text-white/70 text-sm leading-relaxed">
                           {service.description}
@@ -1904,7 +1461,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                         </div>
                       </div>
                     </div>
-=======
                     className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='flex-1'>;
@@ -1929,37 +1485,16 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Tags */}
-<<<<<<< HEAD
-=======
-                    <div className="flex flex-wrap gap-2 mb-4">
-                    <div className='flex flex-wrap gap-2 mb-4'>
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                     <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-=======
-                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
-<<<<<<< HEAD
                         >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
@@ -1977,35 +1512,19 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
-
-                        >
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {tag}
                         </span>;
                       ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>
-<<<<<<< HEAD
 
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                   {/* Service Details */}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>;
 
                     {/* Market Info */}
@@ -2019,22 +1538,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
 
                     {/* Pricing */}
 
-<<<<<<< HEAD
-=======
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">;
-                      <span>Market: {service && service.marketSize}</span>;
-                      <span className="text-cyan-400">{service && service.category}</span>;
-                    </div>;
-                  </div>;
-                  {/* Service Details */}
-                  <div
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>;
-                    <div className='mb-6'>;
-                      <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
-=======
-                  </div>
-                  {/* Service Details */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         Key Features;
                       </h4>;
                       <ul className='space-y-2'>;
@@ -2050,9 +1553,7 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                             </li>;
                           ))}                      </ul>;
                     </div>;
-<<<<<<< HEAD
                     {/* Pricing */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </p>;
                       </div>;
                       <div className='ml - 4'>;
@@ -2124,14 +1625,9 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                             <span>{feature}</span>;
                           </li>))}
                     </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
                     {/* Pricing */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Pricing */}
                     <div className='mb - 6'>;
                       <h4 className='text - sm font - semibold text - cyan - 400 mb - 3 uppercase tracking - wider'>;
@@ -2141,52 +1637,24 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                         ${service.pricing.starter.price}
                         <span className='text - sm font - normal text - white / 60'>;
                           /{service.pricing.starter.period}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">
                         Starting From
 
-=======
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">
-                        Starting From
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </h4>
                       <div className="text-2xl font-bold text-white">
                         ${service.pricing.starter.price}
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                  >
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     </div>
                   </div>
 
                   {/* Service Details */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                     </div>
-=======
                     </div>;
 
                     {/* Pricing */}
@@ -2200,14 +1668,9 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-<<<<<<< HEAD
 
                     {/* CTA */}
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <div className="flex items-center justify-between">
                       <a
                         href={service.website}
@@ -2216,55 +1679,24 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                         Learn More
                         <ExternalLink className="ml-1 w-4 h-4" />
                       </a>
-<<<<<<< HEAD
 
                       <a
                         href="/contact"
 
 
-=======
-                      <a
-                        href="/contact"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                         Get Started;
                         <ArrowRight className="ml-2 w-4 h-4" />;
                       </a>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                      >
-                        Get Started
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                  {/* Hover Effect Overlay */}
-                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </motion.div>
-              ))}
-            </motion.div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   {/* Hover Effect Overlay */}
 
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
@@ -2273,14 +1705,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
             </motion && motion.div>;
 
 
-<<<<<<< HEAD
-=======
-            </motion.div>
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               ))}
             </motion.div>
             </motion && motion.div>;
@@ -2291,26 +1715,13 @@ From AI consciousness to space mining, experience the cutting edge of innovation
               ))}
             </motion.div>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-                className="text-center py-20"
-              >
-                className='text-center py-20'
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -2319,39 +1730,22 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                 <p className='text-white/70 mb-6'>
                   Try adjusting your search terms or category filter
                 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
                 <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={() => {;
                     setSearchTerm('');
@@ -2362,7 +1756,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                 </button>;
               </motion && motion.div>;
             )}
-<<<<<<< HEAD
 
           </div>;
         </section>;
@@ -2371,40 +1764,12 @@ From AI consciousness to space mining, experience the cutting edge of innovation
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
-                <button
-                  onClick={() => {;
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                >
-                  Clear Filters
-                </button>
-              </motion.div>
-            )}
-          </div>
-        </section>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -2414,14 +1779,7 @@ From AI consciousness to space mining, experience the cutting edge of innovation
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -2433,12 +1791,7 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                 discuss how we can help you achieve your goals.;
               </p>;
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
@@ -2446,25 +1799,16 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                   <ArrowRight className='ml-2 w-5 h-5' />;
                 </a>;
                 <a
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
 
-=======
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.
                 Let's discuss how we can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-=======
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?;
@@ -2473,17 +1817,10 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. ;
                 Let's discuss how we can help you achieve your goals.;
               </p>;
-<<<<<<< HEAD
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
@@ -2491,32 +1828,16 @@ From AI consciousness to space mining, experience the cutting edge of innovation
                   <ArrowRight className="ml-2 w-5 h-5" />;
                 </a>;
                 <a
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
               {/* Contact Info */}
 
-=======
-                  href={`tel:${contactInfo && contactInfo.mobile}`}
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">;
-                  <Phone className="mr-2 w-5 h-5" />;
-                  Call Now;
-                </a>;
-              </div>;
-              {/* Contact Info */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
                     <Phone className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="text-white font-semibold">Phone</div>
                   <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     {contactInfo.mobile}
@@ -2546,14 +1867,6 @@ From AI consciousness to space mining, experience the cutting edge of innovation
     </>
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   hidden: {
   opacity: 0
 }
@@ -2567,13 +1880,8 @@ const itemVariants = {
 }
 visible: {
   y: 0, opacity: 1, transition: {
-<<<<<<< HEAD
 
                     href={`mailto:${contactInfo && contactInfo.email}`}
-<<<<<<< HEAD
-=======
-href={`mailto:${contactInfo && contactInfo.email}`}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
                   </a>;
@@ -2633,15 +1941,7 @@ visible: {;
   duration: 0 && 0.5 ;
 
 };}
-<<<<<<< HEAD
 
-=======
-=======
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
@@ -2836,18 +2136,6 @@ visible: {;
     </>);
 ;
   const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-);
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
-  );
-  );
-
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   hidden: {
   opacity: 0;
 }
@@ -2859,24 +2147,14 @@ const item_variants = {
   hidden: {
   coordinate_y: 20, opacity: 0;
 }
-<<<<<<< HEAD
 visible: {
-<<<<<<< HEAD
   coordinate_y: 0, opacity: 1, transition: {
   duration: 0.5;
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   duration: 0.5 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   y: 0, opacity: 1, transition: {
   duration: 0.5
 };}
@@ -2885,12 +2163,9 @@ visible: {
 };
 };}
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   duration: 0.5 
 
 };}
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

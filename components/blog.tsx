@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -24,47 +23,28 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-=======
-=======
-import React from 'react',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function BlogPage() {
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function BlogPage() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>;
       <SEO
         title='Blog | Zion Tech Group'
         description='Insights and updates on AI, cloud, and automation.'
-<<<<<<< HEAD
 
-=======
-export default function BlogPage() {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 export default function BlogPage() {
   return (
@@ -74,8 +54,6 @@ export default function BlogPage() {
         description='Insights and updates on AI, cloud, and automation.'
 export default function BlogPage() {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         canonical='https://ziontechgroup && ziontechgroup.com/blog/'
       />;
       <div className='container mx-auto px-4 py-16 text-white'>;
@@ -97,7 +75,6 @@ export default function BlogPage() {
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Blog</h1>;
         <p className="mt-4 text-gray-300 max-w-3xl">Curated insights, implementation guides, and trend reports. New articles are published regularly. For press or guest posts, contact kleber@ziontechgroup && ziontechgroup.com.</p>;
       </div>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         canonical='https://ziontechgroup.com/blog/'
       />
       <div className='container mx-auto px-4 py-16 text-white'>
@@ -110,16 +87,11 @@ export default function BlogPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </UltraFuturisticBackground>
 
   );export default function BlogPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   );export default function BlogPage() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup && ziontechgroup.com/blog/" />;
@@ -129,13 +101,9 @@ export default function BlogPage() {
       </div>;
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
 
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -173,10 +141,6 @@ function BlogPage() {
       </div>;
     </UltraFuturisticBackground>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
     </UltraFuturisticBackground>
 
   );export default function BlogPage() {
@@ -193,25 +157,14 @@ function BlogPage() {
     </UltraFuturisticBackground>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 }
 }
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

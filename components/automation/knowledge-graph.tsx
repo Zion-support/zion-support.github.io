@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default function KnowledgeGraph({ report }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -12,11 +8,7 @@ export default function KnowledgeGraph({ report }: Props) {
 export default function KnowledgeGraph(): any ({ report }: Props) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export default function KnowledgeGraph({ report }: Props) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 };
 ) ) 
 }</ul> </section> <section>) ) 
@@ -28,7 +20,6 @@ export default function KnowledgeGraph({ report }: Props) {;
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
 export default function KnowledgeGraph({ report }: Props) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (
@@ -58,20 +49,13 @@ export default function KnowledgeGraph({ report }: Props) {
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-<<<<<<< HEAD
 
         </ul>;
       </section>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ) );
 }</ul> </section> <section>) );
@@ -112,12 +96,7 @@ if (return <div > No knowledge graph yet.</div>) {
         </ul>;
       </section>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
   }
 },
 
@@ -136,14 +115,10 @@ export default function KnowledgeGraph({ report }: Props) {
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ) )
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
@@ -194,6 +169,3 @@ export default function KnowledgeGraph({ report }: Props) {
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

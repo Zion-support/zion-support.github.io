@@ -1,18 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-import type {
-  GrantApplication
-  UpdateGrantPayload;
-  GrantApplication,;
-  UpdateGrantPayload,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -35,18 +25,14 @@ function readGrant(id: string): GrantApplication | null {
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-<<<<<<< HEAD
 import type {
   GrantApplication,;
   UpdateGrantPayload,;
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
@@ -54,29 +40,18 @@ function grantPath(id: string) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
-<<<<<<< HEAD
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-<<<<<<< HEAD
 
   if (!fs && fs.existsSync(file)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication;
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     'utf8'
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
 
 
 
-<<<<<<< HEAD
-=======
-  if (!fs && fs.existsSync(file)) return null;
-  return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const file = grantPath(id);
@@ -84,9 +59,7 @@ function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function writeGrant(record: GrantApplication) {
 
@@ -96,118 +69,27 @@ function writeGrant(record: GrantApplication) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req && req.query as { id: string };
 
-=======
 function writeGrant(record: GrantApplication) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!id) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
 
-<<<<<<< HEAD
-=======
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
-=======
-  ensureDir(),
-
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-function writeGrant(record: GrantApplication) {
-
-function writeGrant(record: GrantApplication) {
-  ensureDir();
-  fs && fs.writeFileSync(
-    grantPath(record && record.id),
-    JSON && JSON.stringify(record, null, 2),
-    'utf8'
-  );  return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication
-}
-  ensureDir()
-
-function writeGrant(record: GrantApplication) {
-  ensureDir(),
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
-  ensureDir(),
-
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
     const g = readGrant(id);
     if (!g) {
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
-=======
-  if (!id) {
-    res && res.status(400).json({ error: 'Missing id' });
-    return;  }    return
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
-  const { id } = req.query as { id: string }
-  const { id } = req.query as { id: string };
-  if (!id) {
-    res.status(400).json({ error: 'Missing id' });
-    return
-  }
-  if (req && req.method === 'GET') {
-    const g = readGrant(id);
-    if (!g) {
-      res.status(404).json({ error: 'Not found' });
-      return
-    }
-    res && res.status(200).json({ record: g });
-    return
-  }
-  if (req.method === 'PUT') {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === 'PUT') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const existing = readGrant(id);
     if (!existing) {
-<<<<<<< HEAD
 
 
-=======
-=======
-      res && res.status(404).json({ error: 'Not found' });
-      return;
-    }
-    res && res.status(200).json({ record: g });
-    return;  }      return
-    }
-    res && res.status(200).json({ record: g });
-    return
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   GrantApplication,
   UpdateGrantPayload,
 } from '../../../types / grants';
@@ -307,10 +189,6 @@ if ( {) {
   $2
 }
       res.status (404).json ({ error: 'Not found' });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return;
     }
     const payload = req && req.body as UpdateGrantPayload;
@@ -318,60 +196,37 @@ if ( {) {
       ...existing
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       res.status(404).json({ error: 'Not found' });
       return
     }
     const payload = req.body as UpdateGrantPayload;
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const next: GrantApplication = {
       ...existing;
       ...payload;
 
 
-=======
     const next: GrantApplication = {
       ...existing;
       ...payload;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   res && res.setHeader('Allow', 'GET, PUT');
   res && res.status(405).end('Method Not Allowed');
       status: payload && payload.submit ? 'Submitted' : existing && existing.status,
       updatedAt: new Date().toISOString(),
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } as GrantApplication;
     writeGrant(next);
     res && res.status(200).json({ record: next });
     return;
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
   res && res.setHeader('Allow', 'GET, PUT');
   res && res.status(405).end('Method Not Allowed');  res && res.setHeader('AllowGET, PUT');
   res && res.status(405).end('Method Not Allowed')
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: payload.submit ? 'Submitted' : existing.status;
       updated_at: new Date ().toISOString ()} as GrantApplication;
     write_grant (next);
@@ -390,16 +245,10 @@ if ( {) {
   res.set_header ('Allow', 'GET, PUT');
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 
@@ -409,6 +258,3 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

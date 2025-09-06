@@ -1,9 +1,6 @@
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/settings/FraudDetectionSettings.tsx
 :temp_broken_files/settings/FraudDetectionSettings.tsx
  export function FraudDetectionSettings () {;
   const { ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -149,14 +146,11 @@ export function FraudDetectionSettings() {;
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/settings/FraudDetectionSettings.tsx
   ),; export function FraudDetectionSettings () {;
   const {;
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/settings/FraudDetectionSettings.tsx
   user ;
  } = useAuth ();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
 const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);
 const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true);
 const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState (true);

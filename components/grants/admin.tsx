@@ -1,56 +1,25 @@
 
-<<<<<<< HEAD
 
 export default function GrantsAdminPage() {;
-
-<<<<<<< HEAD
-=======
-
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
 export default function GrantsAdminPage() {;
-import { useEffect, useMemo, useState  } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication, Milestone } from '../../types/grants';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {useEffect, useMemo, useState} from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication, Milestone } from '../../types/grants';
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export default function GrantsAdminPage() {;
 
 export default function GrantsAdminPage() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default function GrantsAdminPage() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [token, setToken] = useState('');
 
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
 
 
-<<<<<<< HEAD
-=======
-  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
@@ -60,12 +29,8 @@ export default function GrantsAdminPage() {
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const headers = useMemo(;
     () =>;
       token;
@@ -81,10 +46,6 @@ export default function GrantsAdminPage() {
     fetch('/api/grants?status=Submitted');
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   const saveMilestones = async () => {
@@ -98,18 +59,13 @@ export default function GrantsAdminPage() {
     await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   useEffect(() => {;
     load();
   }, []);
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const setStatus = async (;
     id: string,;
     status: 'Under Review' | 'Approved' | 'Rejected';
@@ -126,14 +82,11 @@ export default function GrantsAdminPage() {
   const load = () => {;
     fetch('/api/grants?status=Submitted').then((r) => r && r.json()).then((d) => setItems(d && d.items || []));
   };
-<<<<<<< HEAD
 
   useEffect(() => {;
     load();
   }, []);
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {;
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON && JSON.stringify({ status }) }),;
     load();
@@ -268,20 +221,6 @@ if (return) {
             <input;
               className='border rounded p - 2';
               placeholder='Admin Token';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <EnhancedLayout>
-      <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
-      <div className='grid md:grid-cols-3 gap-6'>
-        <div className='md:col-span-2'>
-          <div className='mb-3 flex items-center gap-2'>
-            <input
-              className='border rounded p-2'
-              placeholder='Admin Token'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               value={token}
               on_change={e => set_token (e.target.value)}
             />;
@@ -321,22 +260,12 @@ if (return) {
                     <button;
                       className='px - 2 py - 1 border rounded';
                       on_click={() => set_selected (g)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >;
                       Milestones;
                     </button>                  </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
         <div>;
@@ -359,13 +288,7 @@ if (return) {
                             ? [...ms];
                             : [...(selected && selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e && e.target.value };
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>))}                  <div className="flex gap - 2">;
                     <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -398,16 +321,11 @@ if (return) {
                             ? [...ms];
                             : [...(selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e.target.value }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return copy;
                         });
                       }
                     />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       value={m && m.description || ''}
                       onChange={e =>;
                         setMilestones(ms => {;
@@ -418,13 +336,7 @@ if (return) {
                             ...copy[idx],;
                             description: e && e.target.value,;
                           };
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <textarea;
                       className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
@@ -438,16 +350,11 @@ if (return) {
                             ...copy[idx],
                             description: e.target.value,
                           }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return copy;
                         });
                       }
                     />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         value={m && m.dueDate || ''}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -458,13 +365,7 @@ if (return) {
                               ...copy[idx],;
                               dueDate: e && e.target.value,;
                             };
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;
                         className='border rounded p - 2';
@@ -479,16 +380,11 @@ if (return) {
                               ...copy[idx],
                               due_date: e.target.value,
                             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             return copy;
                           });
                         }
                       />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         value={m && m.trancheAmount || 0}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -499,13 +395,7 @@ if (return) {
                               ...copy[idx],;
                               trancheAmount: Number(e && e.target.value),;
                             };
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <input;
                         className='border rounded p - 2';
                         placeholder='Tranche (amount)';
@@ -520,37 +410,23 @@ if (return) {
                               ...copy[idx],
                               tranche_amount: Number (e.target.value),
                             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             return copy;
                           });
                         }
                       />;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <div className='mt - 2 flex items - center gap - 2'>;
                       <button;
                         className='px - 2 py - 1 border rounded';
                         on_click={() => mark_complete (m.id!)}
                         disabled={!m.id}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       >;
                         Mark Complete;
                       </button>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     onClick={() =>;
                       setMilestones(ms => [;
                         ...(ms && ms.length ? ms : selected && selected.milestones || []),;
@@ -561,13 +437,7 @@ if (return) {
                           trancheCurrency: 'USDC',;
                         } as any,;
                       ]);
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>))}
                 <div className='flex gap - 2 mt - 2'>;
                   <button;
@@ -582,16 +452,11 @@ if (return) {
                           tranche_currency: 'USDC',
                         } as any,
                       ]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     }
                   >;
                     Add Milestone;
                   </button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
       <div className="grid md:grid-cols-3 gap-6">
@@ -618,12 +483,7 @@ if (return) {
             ))}
             {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
         <div>
           <div className="border rounded p-3">
@@ -651,34 +511,16 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <EnhancedLayout>
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             )}
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             )}
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     onClick={saveMilestones}>;
                     Save Milestones;
@@ -721,24 +563,13 @@ if (return) {
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD
-=======
-=======
-                    onClick={saveMilestones}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -779,16 +610,9 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 );
   );
 }
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

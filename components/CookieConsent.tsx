@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default function CookieConsent() {;
-import React, { useState, useEffect } from "react";
-import { X, Cookie, Settings } from "lucide-react";
-export default function CookieConsent() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
 
 
 export default function CookieConsent() {;
@@ -32,7 +23,6 @@ export default function CookieConsent() {;
       marketing: true
       functional: true
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -58,19 +48,12 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
 
 
-=======
-    setPreferences(allAccepted);
-    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
-    setIsVisible(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
       // Add your analytics initialization code here;
@@ -96,31 +79,19 @@ export default function CookieConsent() {;
       marketing: false,;
       functional: false,;
     };
-<<<<<<< HEAD
 
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
 
-=======
-    setPreferences(onlyNecessary);
-    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
-    setIsVisible(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   if (!isVisible) {;
-<<<<<<< HEAD
 
     return null;
   }
   return (
 
-=======
-    return null;
-  }
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
@@ -132,7 +103,6 @@ export default function CookieConsent() {;
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text-sm text-gray-600">;
-=======
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
 ;
@@ -224,11 +194,7 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
@@ -238,21 +204,14 @@ if ( {) {
     return null;
   }
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="text-gray-400 hover:text-gray-600 transition-colors";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 <Settings className="w-4 h-4" />;
                 Cookie Settings;
@@ -268,7 +227,6 @@ if ( {) {
                 Accept All;
               </button>;
             </div>;
-<<<<<<< HEAD
 
             <div className="space-y-4 mb-6">;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
@@ -280,22 +238,13 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 />;
               </div>;
 
@@ -367,12 +316,7 @@ if ( {) {
               </div>;
             </div>;
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
@@ -389,7 +333,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
             <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
               <button;
                 on_click={() => setShowSettings (true)}
@@ -523,5 +466,4 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

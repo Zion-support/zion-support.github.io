@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,13 +21,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
-import type {;
-  RemoteParticipant,;
-  LocalParticipant,;
-  TrackPublication,;
-  Track,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect, useRef } from 'react';
 
 
@@ -40,14 +31,6 @@ import type {;
   Track,;
 } from 'livekit-client';
 
-<<<<<<< HEAD
-=======
-import React, { useEffect, useRef } from 'react';
-
-import type {
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   RemoteParticipant
   LocalParticipant
   TrackPublication
@@ -63,43 +46,26 @@ import type {;
   TrackPublication,;
   Track,;
 } from 'livekit-client';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
-=======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function ParticipantTile(): any ({;
   participant,;
   isLocal,;
   displayName,;
-<<<<<<< HEAD
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   isLocal?: boolean;
   displayName?: string;
 };
@@ -108,7 +74,6 @@ type Props = {
 
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-<<<<<<< HEAD
         track && track.attach(audioRef && audioRef.current);      }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
@@ -116,12 +81,8 @@ type Props = {
         track && track.detach(videoRef && videoRef.current);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 export default function ParticipantTile({
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   participant
   isLocal
   displayName
@@ -162,7 +123,6 @@ type Props = {;
       if (track && track.kind === 'video' && videoRef && videoRef.current) {;
         track && track.attach(videoRef && videoRef.current);
       }
-<<<<<<< HEAD
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current);      }
     }
@@ -176,15 +136,12 @@ type Props = {;
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);      }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
       if (track && track.kind === 'video' && videoRef && videoRef.current) {;
         track && track.detach(videoRef && videoRef.current);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
@@ -192,25 +149,12 @@ type Props = {;
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-    };
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
-      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
-        track && track.detach(videoRef && videoRef.current);
-        track.detach(videoRef.current)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
       }
@@ -219,8 +163,6 @@ type Props = {;
     participant.tracks.forEach(pub => {
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       }
     };
     participant.tracks.forEach(pub => {
@@ -240,18 +182,13 @@ type Props = {;
     participant.tracks.forEach(pub => {
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       }
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);
@@ -273,18 +210,6 @@ type Props = {;
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
-=======
-  }, [participant]);
-  return (
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    }
-  }, [participant]);
-  return (
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <video
         ref={videoRef}
         autoPlay
@@ -292,8 +217,6 @@ type Props = {;
         muted={Boolean(isLocal)}
         className='w-full h-48 object-cover bg-black'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       />;
       <audio ref={audioRef} autoPlay className='hidden' />;
       <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>;
@@ -302,19 +225,13 @@ type Props = {;
 
           (isLocal ? 'You' : 'Participant')}
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
     }
   }, [participant]);
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
 
-=======
 
   return (
 
@@ -326,7 +243,6 @@ type Props = {;
     }
   }, [participant]);
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">;
       <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />;
       <audio ref={audioRef} autoPlay className="hidden" />;
@@ -336,14 +252,8 @@ type Props = {;
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
@@ -470,21 +380,11 @@ if ( {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
     </div>
 
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       />
       <audio ref={audioRef} autoPlay className='hidden' />
       <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
@@ -501,14 +401,8 @@ if ( {) {
       <audio ref={audioRef} autoPlay className="hidden" />
       <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
         {displayName |(participant as any).name |(isLocal ? 'You' : 'Participant')}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </div>
 );
 }
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

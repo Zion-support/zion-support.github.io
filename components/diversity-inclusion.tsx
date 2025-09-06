@@ -1,21 +1,11 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import Head from "next/head";
 
 
 export default function DiversityInclusionPage() {
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,10 +32,6 @@ import React from "react";
 import Head from "next/head";
 
 export default function DiversityInclusionPage() {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -104,13 +90,8 @@ export default function DiversityInclusionPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -130,11 +111,7 @@ export default function DiversityInclusionPage() {;
 		</div>
 	);
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -198,15 +175,9 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 
@@ -285,6 +256,3 @@ export default function DiversityInclusionPage() {
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

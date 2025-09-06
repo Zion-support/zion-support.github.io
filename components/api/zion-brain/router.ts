@@ -2,66 +2,36 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!isAuthorized(req))
     return res && res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const token = req.headers["x-admin-token"] |req.query.token;
-    const superToken = process.env.SUPERADMIN_TOKEN;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const token = req && req.headers["x-admin-token"] || req && req.query.token;
     const superToken = process && process.env.SUPERADMIN_TOKEN;
     return !superToken || token === superToken;
   }
 
-<<<<<<< HEAD
-=======
-    return !superToken |token === superToken;
-    return !superToken || token === superToken;
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (req && req.method !== "POST")
       return res && res.status(405).json({ error: "Method not allowed" });
-=======
-    if (req.method !== "POST");
-      return res.status(405).json({ error: "Method not allowed" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const { text, payload } = req && req.body || {};
       const result = detectIntent(String(text || ""));
       const routed = await routeToChain(result && result.intent, payload || {});
       const latencyMs = Date && Date.now() - started;
 
       appendLog({
-=======
 export default async /**
  * handler - Function description
  */
@@ -99,58 +69,38 @@ function handler() {
       const latency_ms = Date.now () - started;
 ;
       append_log ({
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         module: "router",
         type: result && result.intent,
         status: "ok",
         latency_ms,
         payload: { text_length: String (text || "").length, routed },
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken
 }
-<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const started = Date.now();
   try {
     const { text, payload } = req.body || {};
     const result = detectIntent(String(text || ''));
     const routed = await routeToChain(result.intent, payload || {});
     const latencyMs = Date.now() - started;
-<<<<<<< HEAD
 
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } });
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {
     const latencyMs = Date.now() - started;
@@ -158,8 +108,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Router failure' })
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
       return res.status (200).json ({ ...result, routed });
     } catch (e: any) {
@@ -180,16 +128,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       latency_ms,
       payload: { error: e?.message || "unknown" },
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
     return res.status (500).json ({ error: "Router failure" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     return res.status(500).json({ error: "Router failure" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

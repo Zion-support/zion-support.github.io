@@ -3,46 +3,24 @@ import React from 'react';
 ;
 
 interface LoadingSpinnerProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-interface LoadingSpinnerProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
 import React from 'react';
 
 
 interface LoadingSpinnerProps {
 interface LoadingSpinnerProps {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 interface LoadingSpinnerProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
   full_screen?: boolean;
   class_name?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md',;
   text = 'Loading...',;
@@ -65,7 +43,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />;
       {text && (;
         <p className={`mt-2 text-sm ${colorClasses[color]}`}>;
-<<<<<<< HEAD
 
           {text}
         </p>;
@@ -74,18 +51,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
 
   if (fullScreen) {;
 
-=======
-          {text}
-        </p>;
-      )}
-    </div>
-  );
-  if (fullScreen) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </div>;
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">;
         {spinner}
@@ -94,7 +61,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   }
   return spinner;
 }
-=======
 const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
@@ -133,7 +99,6 @@ if ( {) {
   return spinner;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default LoadingSpinner;
 import React from 'react;
 import { Loader2 } from 'lucide-react;
@@ -149,45 +114,24 @@ const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
     <div className={`flex flex - col items - center justify - center ${class_name}}>      <Loader2 className={`${size_classes[size]} animate - spin text - blue - 600`} />`      {text && (
         <p className="mt - 2 text - sm text - gray - 600 animate - pulse>{text}</p>      )}"    </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',;
     md: 'w-8 h-8',;
     md: '    lg: 'w-12 h-12', };
   return (
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default LoadingSpinner;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
-=======
 export default LoadingSpinner;
 ;
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function LoadingSpinner() {
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -195,15 +139,8 @@ export default function LoadingSpinner() {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
         <p className="text-lg">Loading...</p>
       </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
   } catch (error) {
@@ -211,12 +148,8 @@ export default function LoadingSpinner() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -226,6 +159,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 };
 export default LoadingSpinner;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

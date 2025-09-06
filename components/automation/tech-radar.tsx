@@ -1,39 +1,18 @@
  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
  
 
 
-<<<<<<< HEAD
-=======
-
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = { source: string, name: string, url: string, description?: string, downloads?: number };
-type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getStaticProps: GetStaticProps<Props> = async () => {
-=======
 ;
 }
 type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
 export const getStaticProps: GetStaticProps < Props> = async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
-<<<<<<< HEAD
-<<<<<<< HEAD
     return {
       props: {
 
@@ -50,66 +29,29 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
         crates: data && data.ecosystems.crates || [],;
         github: data && data.ecosystems.github || {}},;
 
-=======
-=======
- 
 
- 
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
 
-
-}
-type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {;
-    const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
     return {
       props: {
-        pypi: data.ecosystems.pypi |[]
-        crates: data.ecosystems.crates |[]
-        github: data.ecosystems.github |{}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-        pypi: data.ecosystems.pypi || [],
-        crates: data.ecosystems.crates || [],
-        github: data.ecosystems.github || {}},
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        pypi: data.ecosystems.pypi || [],
-        crates: data.ecosystems.crates || [],
-        github: data.ecosystems.github || {}},
-        pypi: data.ecosystems.pypi || [],
-        crates: data.ecosystems.crates || [],
-        github: data.ecosystems.github || {}},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return {
-      props: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
-<<<<<<< HEAD
 
 
 };
 
 
 
-<<<<<<< HEAD
-=======
-}
-};
-
-export default function TechRadar({ pypi, crates, github }: Props) {
-export default function TechRadar({ pypi, crates, github }: Props) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const langs = Object.keys(github);
 
   return (
@@ -126,11 +68,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
@@ -150,22 +87,10 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
               <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
               {typeof it && it.downloads === 'number' && (;
                 <div className="text-xs text-gray-500">Downloads: {it && it.downloads.toLocaleString()}</div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </li>
           ))}
 
-<<<<<<< HEAD
-=======
-              )}
-            </li>;
-          ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </ul>;
       </section>;
 
@@ -190,33 +115,17 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
                 <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
                 {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
               </li>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </ul>
         </section>
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>;
   );
 }
 
-=======
-=======
-    </div>;
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export default /**
@@ -263,18 +172,12 @@ function TechRadar() {
           </ul>;
         </section>))}
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   }
 },
 
@@ -348,14 +251,8 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
           </ul>
         </section>
       ))}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

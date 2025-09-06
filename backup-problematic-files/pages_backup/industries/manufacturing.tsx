@@ -5,7 +5,6 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Settings, 
   Brain, 
   Shield, 
@@ -16,8 +15,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Settings,
   Brain,
@@ -29,20 +26,14 @@ import {
   Wrench,
   Activity,
   Database,
-<<<<<<< HEAD
   FileText,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -194,20 +185,14 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
 ];
-<<<<<<< HEAD
 export default function ManufacturingPage() {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-<<<<<<< HEAD
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -219,7 +204,6 @@ export default function ManufacturingPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -254,8 +238,6 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -594,11 +576,4 @@ export default function ManufacturingPage() {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Manufacturing;
-=======
-export default Manufacturing;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -10,36 +10,16 @@ const REDEMPTIONS_FILE = path.join(
   'data'
   'partners'
   'grant-redemptions.json'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-const REDEMPTIONS_FILE = path && path.join(
-  process && process.cwd(),
-  'data',
-  'partners',
-  'grant-redemptions && redemptions.json'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   try {
   const started = Date && Date.now();
   const auth = await authenticateRequest(req),
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -56,13 +36,7 @@ export default async function handler(
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -72,7 +46,6 @@ export default async function handler(
   if (!studentEmail |!grantCode |!courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -80,7 +53,6 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json");
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now();
   try {
@@ -124,21 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-}
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: "Missing required fields" })
   }
@@ -155,13 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now })
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -256,12 +208,7 @@ redeemed_at: now,
   await fs.writeJSON (REDEMPTIONS_FILE, records, { spaces: 2 });
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id, redeemed_at: now });  return res.status (201).json ({ id: record.id, redeemed_at: now });
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
@@ -347,28 +294,17 @@ redeemedAt: now
   return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-=======
 
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

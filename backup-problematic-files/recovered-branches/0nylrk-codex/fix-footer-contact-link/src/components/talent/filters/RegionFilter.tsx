@@ -49,7 +49,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>;
   ),;}
  ];
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/talent/filters/RegionFilter.tsx
 :temp_broken_files/talent/filters/RegionFilter.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
@@ -65,5 +64,3 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionF
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/RegionFilter.tsx

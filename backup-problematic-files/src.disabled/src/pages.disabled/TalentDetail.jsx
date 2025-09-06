@@ -9,7 +9,4 @@ const TalentDetail = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
 export default TalentDetail;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

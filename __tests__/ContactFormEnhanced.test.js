@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactFormEnhanced from "./components/ContactFormEnhanced" describe("ContactFormEnhanced",() => {" test("renders without crashing",() => {" render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactFormEnhanced / / />) }) test("handles user interactions",() => {" render(<ContactFormEnhanced / / />) }) test("applies correct styling",() => {" render(<ContactFormEnhanced / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
@@ -14,6 +8,3 @@ import _React from 'react"  import '@testing-library/jest-dom import ContactForm
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

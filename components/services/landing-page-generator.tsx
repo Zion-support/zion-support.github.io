@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import Link from 'next/link';
 export default function Placeholder() {;
   return (
 
     <main className="min-h-screen p-8">;
-<<<<<<< HEAD
       <Head>;
         <title>Services • Landing-page-generator - Placeholder</title>;
         <meta name="robots" content="noindex" />;
@@ -22,9 +17,6 @@ export default function Placeholder() {;
       </main>;
     </div>;
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </div>
 
@@ -34,14 +26,6 @@ export default function Placeholder() {;
 
 }
 
-<<<<<<< HEAD
-=======
-=======
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next / link';
 export default /**
  * Placeholder - Function description
@@ -60,13 +44,7 @@ function Placeholder() {
       </main>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
       <Head>
         <title>Services • Landing-page-generator - Placeholder</title>
@@ -102,6 +80,3 @@ export default function Placeholder() {
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

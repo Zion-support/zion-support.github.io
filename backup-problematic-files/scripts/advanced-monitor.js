@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -46,8 +45,6 @@ class AdvancedMonitor {
       fs && fs.appendFileSync(this && this.logPath, logEntry)} catch (error) {
       console && console.error("Memory check "error": ", error)}
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Start monitoring
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()

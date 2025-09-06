@@ -6,14 +6,8 @@
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-<<<<<<< HEAD
-<<<<<<< HEAD
         afterAll: 'readonly'
       }
-=======
-        afterAll: 'readonly',
-      },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -21,8 +15,6 @@
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'jsx-a11y': jsxA11y
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -36,14 +28,7 @@
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
-<<<<<<< HEAD
-<<<<<<< HEAD
       'react/react-in-jsx-scope': 'off'
-=======
-      'react/react-in-jsx-scope': 'off',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     settings: {
       react: {
@@ -63,7 +48,6 @@
       sourceType: 'script',
       globals: {
         ...globals.node,
-<<<<<<< HEAD
         console: 'readonly',
         process: 'readonly',
         require: 'readonly',
@@ -78,15 +62,7 @@
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-<<<<<<< HEAD
       'no-undef': 'error'
     }
   }
-=======
-      'no-undef': 'error',
-    },
-  },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

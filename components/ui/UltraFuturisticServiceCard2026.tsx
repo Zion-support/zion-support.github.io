@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -18,36 +16,21 @@ interface Service {;
     yearly?: number;
     currency?: string;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
     monthly?: number;
     yearly?: number;
     currency?: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setupTime?: string;
   };
-=======
     trial_days?: number;
     setup_time?: string;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 interface ServiceCardProps {
@@ -62,10 +45,6 @@ interface ServiceCardProps {
 }
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () => {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   category: string,
   icon: string,
   market_price?: string;
@@ -81,17 +60,13 @@ interface ServiceCardProps {
 }
 const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () =>: any {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (variant) {
       case 'ai':;
         return {
 
-=======
     switch (variant) {
       case 'ai':;
         return {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   integration?: string[];
   benefits?: string[];
 }
@@ -183,43 +158,13 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           textColor: 'text-gray-400',;
           iconBg: 'bg-gray-500/20',;
           iconBorder: 'border-gray-400/30';
-<<<<<<< HEAD
 
-=======
-import { motion  } from 'framer-motion';
-import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
-interface Service {
-
-  id: string
-  name: string
-  tagline: string
-  description: string
-
-  price?: string | {
-    monthly?: number;
-    yearly?: number;
-    currency?: string;
-    trialDays?: number;
-    setupTime?: string
-
-  }
-  period?: string;
-  pricing?: any;
-  features: string[]
-  popular?: boolean;
-  category: string
-  icon: string
-
-  marketPrice?: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
     switch (variant) {
       case 'ai':;
         return {
-<<<<<<< HEAD
           gradient: 'from-purple-600 via-pink-600 to-purple-700'
           borderColor: 'border-purple-400/30'
           textColor: 'text-purple-400'
@@ -297,15 +242,10 @@ interface Service {
           textColor: 'text-gray-400'
           iconBg: 'bg-gray-500/20'
           iconBorder: 'border-gray-400/30'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
     }
   }
   const styles = getVariantStyles();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   const getCategoryIcon = (category: string) => {;
@@ -319,11 +259,6 @@ interface Service {
   const CategoryIcon = getCategoryIcon(service && service.category);
 
 
-=======
-  const CategoryIcon = getCategoryIcon(service && service.category);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <motion&& motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -333,26 +268,14 @@ interface Service {
       className="group relative">;
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
 
 
-=======
-
-        
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
         
 
         <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -364,13 +287,7 @@ interface Service {
             Popular;
           </motion && motion.div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
           border_color: 'border - purple - 400 / 30',
           text_color: 'text - purple - 400',
@@ -489,36 +406,21 @@ interface Service {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-<<<<<<< HEAD
             className="absolute -top - 3 left - 6 px - 4 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full shadow - lg";
           >;
             <Star className="w - 4 h - 4 inline mr - 1" />;
             Popular;
           </motion.div>)}
-<<<<<<< HEAD
 
-=======
 
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-        
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
             {service.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Service Header */}
         <div className="text-center mb-8 relative z-10">;
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles && styles.iconBg} flex items-center justify-center border ${styles && styles.iconBorder} text-4xl backdrop-blur-sm`}>;
@@ -544,13 +446,8 @@ interface Service {
             <span>{service && service.category}</span>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Features List */}
         <div className="space-y-3 mb-8 relative z-10">;
           <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">;
@@ -579,11 +476,6 @@ interface Service {
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
 
         {/* Enhanced Market Information */}
@@ -598,15 +490,10 @@ interface Service {
               <div className="text-xs text-gray-500">;
                 Competes with: {service && service.competitors.slice(0, 2).join()}
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>
         )}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
         
 
@@ -623,10 +510,6 @@ interface Service {
                 <div className="text-gray-400 mb-2">Use Cases:</div>
                 <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
               </div>
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* Target Market & Use Cases */}
         {service && service.targetMarket && (;
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">;
@@ -640,7 +523,6 @@ interface Service {
                 <div className="text-gray-400 mb-2">Use Cases:</div>;
                 <div className="text-gray-300">{service && service.useCases.slice(0, 3).join()}</div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
         )}
@@ -649,12 +531,6 @@ interface Service {
 
         
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -672,17 +548,11 @@ interface Service {
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -706,16 +576,6 @@ UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
-};
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
-export default UltraFuturisticServiceCard2026;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Button */}
         <div className="relative z-10">;
           <motion&& motion.button
@@ -732,10 +592,6 @@ export default UltraFuturisticServiceCard2026;
     </motion && motion.div>;
   ),;
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
@@ -744,21 +600,12 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 
 export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -854,11 +701,6 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = (_{_service, _variant = 'default'}) => {_const _getVariantStyles = () => {
     switch (variant) {
@@ -1100,6 +942,3 @@ export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

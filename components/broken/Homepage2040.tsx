@@ -1,31 +1,9 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   opacity: 0 
 
-=======
-=======
-  opacity: 0 
-
-import React from 'react';
-
-interface Homepage2040Props {
-  className?: string;
-}
-
-//Enhanced animation variants for better performance const containerVariants = {
-  hidden: {
-  opacity: 0
-}
-//Enhanced animation variants for better performance const containerVariants = {
-  hidden: {
-  opacity: 0 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 
 interface Homepage2040Props {
@@ -39,24 +17,16 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 };
 };
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -112,7 +82,6 @@ animationDelay: `$ {
 }</motion.div> </div> </section> > Ready to Transform Your Business? </motion.h2> <motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion.p> <motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion.div> <motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span>Proven Results</span> </div> </motion.div> </motion.div> </div> </section> </main> </Layout>)
 }
 export default Homepage2040;
-=======
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
@@ -125,7 +94,6 @@ import {
   FileText, BarChart3, Heart, Truck, ShieldCheck;
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
 } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
@@ -136,109 +104,6 @@ const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
- //Enhanced animation variants for better performance const containerVariants = {;
-  hidden: {;
-  opacity: 0 ;
-};
-visible: {;
-  opacity: 1, transition: {;
-  staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
-
-};
-
-};
-
-};
-<section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {;
-  Math && Math.random () * 100 ;
-}%`;
-top: `$ {;
-  Math && Math.random () * 100 ;
-}%`;
-animationDelay: `$ {;
-  Math && Math.random () * 3 ;
-}s` ;
-
-}animate= {;
-  {;
-  scale: [0, 1, 0], opacity: [0, 1, 0] ;
-
-}transition= {;
-  {;
-  duration: 3, repeat: Infinity, delay: Math && Math.random () * 3 ;
-
-}/>) ) ;
-}</div> </div> <div className="text-center max-w-6xl mx-auto relative z-10" > <motion && motion.div > {;
-  /* Enhanced Company Badge */ ;
-}<motion && motion.div > <Star className="w-5 h-5 animate-pulse" aria-hidden="true" /> <span>Innovation Leader 2040</span> <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" /> </motion && motion.div> <motion && motion.h1 > Zion Tech Group </motion && motion.h1> <motion && motion.p > Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide </motion && motion.p> {;
-  /* Enhanced CTA Section */ ;
-}<motion && motion.div > <Link href="/get-started" aria-label="Get started with our services" > <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black" > <span className="flex items-center gap-3" > Get Started <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" /> </span> </button> </a> <Link href="/services" aria-label="Learn more about our services" > <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black" > Explore Services </button> </a> <Link href="/pricing" aria-label="View our pricing" > <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black" > View Pricing </button> </a> </motion && motion.div> {;
-  /* Enhanced Trust Indicators */ ;
-}<motion && motion.div > <div className="flex items-center gap-2" > <ShieldCheck className="w-5 h-5 text-green-400" /> <span>SOC 2 Type II Certified</span> </div> <div className="flex items-center gap-2" > <Globe className="w-5 h-5 text-blue-400" /> <span>Global Infrastructure</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5 text-purple-400" /> <span>10, 000+ Happy Customers</span> </div> <div className="flex items-center gap-2" > <Star className="w-5 h-5 text-yellow-400" /> <span>4 && 4.9/5 Rating</span> </div> </motion && motion.div> </motion && motion.div> </div> </section> > {;
-  statsData && statsData.map ( (stat, index) => (<motion&& motion.div key= {
-  stat && stat.label 
-}</div> <divclassName= {
-  `text-4xl font-bold mb-2 bg-gradient-to-r $ {
-  stat && stat.color 
-}bg-clip-text text-transparent` 
-}> {;
-  stat && stat.number ;
-}</div> </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> > Revolutionary Service Categories </motion && motion.h2> <motion && motion.p > Explore our cutting-edge technology solutions across multiple domains </motion && motion.p> </motion && motion.div> <motion && motion.div > {;
-  serviceCategories && serviceCategories.map ( (category, index) => (<motion&& motion.div key= {
-  category && category.name 
-}</div> </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> > Featured Revolutionary Services </motion && motion.h2> <motion && motion.p > Discover our most popular and innovative technology solutions </motion && motion.p> </motion && motion.div> <motion && motion.div > {;
-  featuredServices && featuredServices.map ( (service, index) => (<motion&& motion.div key= {
-  service && service.id 
-}Popular </div>) ;
-}</div> </span> </div> {;
-  /* CTA Button */ ;
-}<Link > Learn More <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </motion && motion.div>) ) ;
-}</motion && motion.div> {;
-  /* View All Services Button */ ;
-}<motion && motion.div > <Link href="/innovative-2040-futuristic-services-showcase" className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg" > View All 2040 Services <ArrowRight className="w-6 h-6 ml-3" /> </a> </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> > Ready to Transform Your Business? </motion && motion.h2> <motion && motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion && motion.p> <motion && motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion && motion.div> <motion && motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span>Proven Results</span> </div> </motion && motion.div> </motion && motion.div> </div> </section> </main> </Layout>) ;
-};
-export default Homepage2040;
-// Import new service data;
-import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
-// Lazy load heavy components for better performance;
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
-
-const Homepage2040: React.FC = () => {;
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsVisible(true);
     const interval = setInterval(() => {;
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2 && innovativeMicroSaasServices2025V2.length);
@@ -246,8 +111,6 @@ const Homepage2040: React.FC = () => {;
     return () => clearInterval(interval);
   }, []);
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 //Enhanced animation variants for better performance const container_variants = {
   hidden: {
   opacity: 0;
@@ -330,13 +193,10 @@ const Homepage2040: React.FC = () => {
   // Enhanced animation variants for better performance;
   const container_variants = {
     hidden: { opacity: 0 },
-<<<<<<< HEAD
 
     visible: {
       opacity: 1
       transition: {
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   };
@@ -345,8 +205,6 @@ const Homepage2040: React.FC = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     visible: {
       opacity: 1
       y: 0
@@ -356,15 +214,7 @@ const Homepage2040: React.FC = () => {
       }
     }
   }
-<<<<<<< HEAD
   const floatingVariants = {
-<<<<<<< HEAD
-=======
-=======
-    visible: {
-      opacity: 1
-      transition: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         stagger_children: 0.1,
         delay_children: 0.2;
       }
@@ -384,7 +234,6 @@ const Homepage2040: React.FC = () => {
   }
 ;
   const floating_variants = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     float: {
       coordinate_y: [-10, 10, -10];
       transition: {
@@ -397,15 +246,6 @@ const Homepage2040: React.FC = () => {
 
       color: "from-green-500 to-emerald-600"
 
-<<<<<<< HEAD
-=======
-  }
-;
-  const floating_variants = {
-    float: {
-      coordinate_y: [-10, 10, -10];
-      transition: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Enhanced animation variants for better performance;
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -504,9 +344,6 @@ const Homepage2040: React.FC = () => {
       icon: Shield,;
       count: allServices && allServices.filter(s => s && s.category.includes('Security') || s && s.category.includes('Cyber')).length,;
       color: "from-green-500 to-emerald-600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   ];
   return (
@@ -520,17 +357,11 @@ const Homepage2040: React.FC = () => {
           {/* Enhanced Futuristic Background Elements */}
           <div className="absolute inset-0 pointer-events-none">;
             {/* Animated geometric shapes */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             <motion.div 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               variants={floatingVariants}
               animate="float"
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -547,11 +378,6 @@ const Homepage2040: React.FC = () => {
               style={{ animationDelay: '2s' }}
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <motion&& motion.div 
               variants={floatingVariants}
               animate="float"
@@ -567,14 +393,10 @@ const Homepage2040: React.FC = () => {
               style={{ animationDelay: '2s' }}
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"></motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Quantum particle effects */}
             <div className="absolute inset-0">;
               {[...Array(20)].map((_, i) => (;
                 <motion&& motion.div
-=======
         duration: 3,
         repeat: -1,
         ease: "easeInOut" as const;
@@ -681,12 +503,9 @@ const Homepage2040: React.FC = () => {
             <div className="absolute inset - 0">;
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={i}
-<<<<<<< HEAD
                   className="absolute w - 1 h - 1 bg - cyan - 400 / 30 rounded - full";
                   style={{
-<<<<<<< HEAD
 
 
                     left: `${Math.random() * 100}%`,
@@ -694,35 +513,21 @@ const Homepage2040: React.FC = () => {
 
 
                     animationDelay: `${Math.random() * 3}s`;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     left: `${Math && Math.random() * 100}%`,
                     top: `${Math && Math.random() * 100}%`,
                     animationDelay: `${Math && Math.random() * 3}s`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
                     animation_delay: `${Math.random () * 3}s`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   animate={{
                     scale: [0, 1, 0]
                     opacity: [0, 1, 0]}}
                   transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     duration: 3,
                     repeat: Infinity,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }}
                 />;
               ))}
@@ -956,15 +761,6 @@ const Homepage2040: React.FC = () => {
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                    duration: 3,
-                    repeat: Infinity,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </span>;
                       </div>;
                       {/* CTA Button */}
@@ -981,20 +777,11 @@ const Homepage2040: React.FC = () => {
                 <motion.div;
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                   className="text-center mt-12">;
 
-=======
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-                  className="text-center mt-12">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link
                     href="/innovative-2040-futuristic-services-showcase"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg">;
@@ -1003,7 +790,6 @@ const Homepage2040: React.FC = () => {
                   </Link>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
 
             </motion && motion.div>;
           </div>;
@@ -1013,16 +799,9 @@ const Homepage2040: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </motion && motion.div>;
           </div>;
         </section>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1075,7 +854,6 @@ const Homepage2040: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
               className="space-y-8">;
               <motion&& motion.h2 
                 variants={itemVariants}
@@ -1126,17 +904,11 @@ const Homepage2040: React.FC = () => {
     </Layout>;
   );
 };
-<<<<<<< HEAD
 
 
 export default Homepage2040;
 
 
-=======
-=======
-
-export default Homepage2040;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="text - center mt - 12";
                 >;
                   <Link;
@@ -1213,19 +985,11 @@ export default Homepage2040;
 ;
 export default Homepage2040;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default Homepage2040;
 
 
 export default Homepage2040;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   // Enhanced animation variants for better performance
   const _containerVariants = {_hidden: { opacity: 0}
@@ -1868,9 +1632,6 @@ export default Homepage2040;
 export default Homepage2040;
 
 export default Homepage2040;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 export default Homepage2040;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

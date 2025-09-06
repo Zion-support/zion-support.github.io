@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next / link';
 import type { GetServerSideProps } from 'next';
 
@@ -10,46 +8,18 @@ import type { GetServerSideProps } from 'next';
         <h1 className='text-2xl font-semibold'>Vendors</h1>;
         <Link href='/vendors/register'>;
           <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-=======
-import type { Vendor } from '../../utils / vendor - types';
-;
-type Props = { vendors: Vendor[] }
-;
-export default /**
- * VendorsPage - Function description
- */
-function VendorsPage() {
-  return (
-    <div className='space - y-6'>;
-      <div className='flex items - center justify - between'>;
-        <h1 className='text - 2xl font - semibold'>Vendors</h1>;
-        <Link href='/vendors / register'>;
-          <a className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Apply as Vendor;
           </a>;
         </Link>;
       </div>;
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>;
                   <div className='text-xs text-gray-500'>;
                     Services: {v && v.servicesOffered?.join(', ') || '—'}
                   </div>                </div>export default function VendorsPage(): any ({ vendors }: Props) {;
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 type Props = { vendors: Vendor[] },
 export default function VendorsPage({ vendors }: Props) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -70,29 +40,8 @@ export default function VendorsPage({ vendors }: Props) {
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
-                </div>
-              </div>
-            </a>
-          </Link>
-                <div>;
-                  <div className="font-medium flex items-center gap-2">;
-                    {v && v.name}
-                    {v && v.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-green-100 text-green-700">Verified</span>}
-                  </div>;
-                  <div className="text-xs text-gray-500">Services: {v && v.servicesOffered?.join() || '—'}</div>;
-                </div>;
-              </div>;
-            </a>;
-          </Link>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ))}
     </div>
     </div>;
@@ -109,8 +58,6 @@ const { listVendors } = await import('../../utils/vendor-store');
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   );
@@ -122,16 +69,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendors } }
 };  return { props: { vendors } }
 
-=======
-=======
-        ))}
-      </div>
-      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
-    </div>
-  );
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
 const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
@@ -150,15 +87,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendors } }
 };  return { props: { vendors } }
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
@@ -234,19 +167,10 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }  return { props: { vendors } }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 };
 
@@ -395,6 +319,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

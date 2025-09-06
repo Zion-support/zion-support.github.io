@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   {
 
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface InnovativeITService {
   id: string;
   name: string;
@@ -43,7 +37,6 @@ export interface InnovativeITService {
     website: string;
   }
   {
-<<<<<<< HEAD
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Next - generation cybersecurity with zero trust architecture',
@@ -130,7 +123,6 @@ export interface InnovativeITService {
     reviews: 400,
   },
   {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'edge - computing - platform',
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -139,12 +131,7 @@ export interface InnovativeITService {
     description:;
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -158,12 +145,7 @@ export interface InnovativeITService {
     ],
     popular: true,
     icon: '🌐',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edge - computing - platform',
@@ -176,12 +158,7 @@ export interface InnovativeITService {
     category: 'IT & Edge Computing',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Edge Computing',
       'IoT',
       '5G',
@@ -192,12 +169,7 @@ export interface InnovativeITService {
       'Python',
       'AWS',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'AWS IoT',
       'Azure IoT',
@@ -228,10 +200,7 @@ export interface InnovativeITService {
     growth_rate: '180% annual growth',
     variant: 'quantum',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -245,13 +214,8 @@ export interface InnovativeITService {
     rating: 4 && 4.8,
     reviews: 750,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: 'quantum - computing - as - a-service',
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -260,10 +224,7 @@ export interface InnovativeITService {
     description:;
       'Cloud - based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.',
     features: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Quantum processor access',
       'Quantum algorithm library',
       'Hybrid quantum - classical computing',
@@ -277,11 +238,7 @@ export interface InnovativeITService {
     ],
     popular: true,
     icon: '⚛️',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - purple - 500 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - computing - as - a-service',
@@ -294,10 +251,7 @@ export interface InnovativeITService {
     category: 'IT & Quantum Computing',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Quantum Computing',
       'Quantum Algorithms',
       'Python',
@@ -307,11 +261,7 @@ export interface InnovativeITService {
       'Node && Node.js',
       'AWS',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Jupyter Notebooks',
       'Python',
@@ -342,10 +292,7 @@ export interface InnovativeITService {
     growth_rate: '250% annual growth',
     variant: 'quantum - advanced',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -359,14 +306,9 @@ export interface InnovativeITService {
     rating: 4 && 4.9,
     reviews: 150,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Multi-consensus algorithms',
-=======
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions',
@@ -376,10 +318,7 @@ export interface InnovativeITService {
       'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.',
     features: [;
       'Multi - consensus algorithms',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Smart contract development',
       'Enterprise security',
       'Scalability solutions',
@@ -392,11 +331,7 @@ export interface InnovativeITService {
     ],
     popular: true,
     icon: '🔗',
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -409,10 +344,7 @@ export interface InnovativeITService {
     category: 'IT & Blockchain',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -423,11 +355,7 @@ export interface InnovativeITService {
       'Kubernetes',
       'AWS',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'Ethereum',
       'Hyperledger',
@@ -459,10 +387,7 @@ export interface InnovativeITService {
     growth_rate: '160% annual growth',
     variant: 'quantum - blockchain',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -476,14 +401,9 @@ export interface InnovativeITService {
     rating: 4 && 4.8,
     reviews: 300,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'CI/CD pipelines',
-=======
     id: 'devops - automation - platform',
     name: 'DevOps Automation Platform',
     tagline: 'Complete DevOps automation and orchestration',
@@ -493,10 +413,7 @@ export interface InnovativeITService {
       'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.',
     features: [;
       'CI / CD pipelines',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Infrastructure as Code',
       'Container orchestration',
       'Monitoring and alerting',
@@ -509,12 +426,8 @@ export interface InnovativeITService {
     ],
     popular: true,
     icon: '🚀',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'CI/CD',
-=======
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / devops - automation - platform',
@@ -528,10 +441,7 @@ export interface InnovativeITService {
     real_service: true,
     technology: [;
       'CI / CD',
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'Kubernetes',
       'Docker',
       'Terraform',
@@ -541,11 +451,7 @@ export interface InnovativeITService {
       'Python',
       'AWS',
     ],
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     integrations: [;
       'GitHub',
       'GitLab',
@@ -577,10 +483,7 @@ export interface InnovativeITService {
     growth_rate: '130% annual growth',
     variant: 'cyberpunk',
     contact_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -596,11 +499,7 @@ export interface InnovativeITService {
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -654,7 +553,6 @@ export const innovativeITServices: InnovativeITService[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -666,31 +564,17 @@ export const innovativeITServices: InnovativeITService[] = [
 
   }
 
-=======
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface InnovativeITService {;
 
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
   }
 ];
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -890,7 +774,6 @@ export interface InnovativeITService {;
     growthRate: '130% annual growth'
     variant: 'cyberpunk'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -925,8 +808,6 @@ export interface InnovativeITService {;
   }
 ];
 export interface InnovativeITService {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   name: string,;
   tagline: string,;
@@ -1010,12 +891,8 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
-<<<<<<< HEAD
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

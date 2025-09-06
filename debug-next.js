@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
@@ -39,12 +35,6 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 
 
-<<<<<<< HEAD
-=======
-const fs = require('fs');
-const path = require('path');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 console.log('🔍 Debugging Next.js project structure...');
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd());
@@ -112,29 +102,18 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 const problematicFiles = [],;
 const problematicFiles = [];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     if (content.includes('') || content.includes('
 }
 }
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       problematicFiles.push(file);
     }
   } catch (error) {;
@@ -168,7 +147,3 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
