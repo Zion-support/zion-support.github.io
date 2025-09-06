@@ -1,3 +1,102 @@
+<<<<<<< HEAD
+module.exports = {;
+  apps:[;
+    {;
+      name:'error-fixer',;
+      script:'automation/lint-error-fixer.cjs',;
+      args:'continuous',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/error-fixer-error.log',;
+      out_file:'./logs/error-fixer-out.log',;
+      log_file:'./logs/error-fixer-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'intelligent-orchestrator',;
+      script:'automation/intelligent-orchestrator.cjs',;
+      args:'continuous',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/orchestrator-error.log',;
+      out_file:'./logs/orchestrator-out.log',;
+      log_file:'./logs/orchestrator-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'automation-dashboard',;
+      script:'automation/automation-dashboard.cjs',;
+      args:'start',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production',;
+        PORT:3001;
+      },;
+      error_file:'./logs/dashboard-error.log',;
+      out_file:'./logs/dashboard-out.log',;
+      log_file:'./logs/dashboard-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'code-quality-monitor',;
+      script:'automation/code-quality-monitor.cjs',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'512M',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/code-quality-error.log',;
+      out_file:'./logs/code-quality-out.log',;
+      log_file:'./logs/code-quality-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'performance-optimizer',;
+      script:'automation/performance-optimizer.cjs',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'512M',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/performance-error.log',;
+      out_file:'./logs/performance-out.log',;
+      log_file:'./logs/performance-combined.log',;
+      time:true;
+    }
+  ];
+};      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/performance-error.log',
+      out_file: './logs/performance-out.log',
+      log_file: './logs/performance-combined.log',
+      time: true
+    }
+  ]
+},
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   apps: [
     {
@@ -5,9 +104,9 @@ export default {
       script: 'npm',
       args: 'run preview',
       cwd: './',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
@@ -21,8 +120,8 @@ export default {
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
       cron_restart: '0 */6 * * *',
-      autorestart: 'true',
-      watch: 'false',
+      autorestart: true,
+      watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production'
@@ -36,8 +135,8 @@ export default {
       script: 'node',
       args: 'scripts/pm2/healthcheck.js',
       cron_restart: '*/5 * * * *',
-      autorestart: 'true',
-      watch: 'false',
+      autorestart: true,
+      watch: false,
       max_memory_restart: '128M',
       env: {
         NODE_ENV: 'production'
@@ -49,9 +148,9 @@ export default {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -67,9 +166,9 @@ export default {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -85,9 +184,9 @@ export default {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -103,9 +202,9 @@ export default {
     {
       name: 'performance-monitor',
       script: 'scripts/pm2/performance-monitor.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -119,70 +218,11 @@ export default {
       out_file: 'logs/pm2/performance-monitor-out.log',
     },
     {
-      name: 'test-automation',
-      script: 'scripts/pm2/test-automation.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'test-automation',
-        TEST_COVERAGE_THRESHOLD: '80',
-        AUTO_RETRY_FAILED: 'true',
-        PARALLEL_TESTS: 'true',
-      },
-      cron_restart: '0 */3 * * *',
-      log_file: 'logs/pm2/test-automation.log',
-      error_file: 'logs/pm2/test-automation-error.log',
-      out_file: 'logs/pm2/test-automation-out.log',
-    },
-    {
-      name: 'security-scanner',
-      script: 'scripts/pm2/security-scanner.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'security-scanner',
-        SCAN_DEPENDENCIES: 'true',
-        SCAN_CODE: 'true',
-        SCAN_CONFIGS: 'true',
-        ALERT_ON_CRITICAL: 'true',
-      },
-      cron_restart: '0 */12 * * *',
-      log_file: 'logs/pm2/security-scanner.log',
-      error_file: 'logs/pm2/security-scanner-error.log',
-      out_file: 'logs/pm2/security-scanner-out.log',
-    },
-    {
-      name: 'build-optimizer',
-      script: 'scripts/pm2/build-optimizer.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'build-optimizer',
-        OPTIMIZE_BUNDLES: 'true',
-        TREE_SHAKING: 'true',
-        CODE_SPLITTING: 'true',
-        MINIFICATION: 'true',
-      },
-      cron_restart: '0 0 * * *',
-      log_file: 'logs/pm2/build-optimizer.log',
-      error_file: 'logs/pm2/build-optimizer-error.log',
-      out_file: 'logs/pm2/build-optimizer-out.log',
-    },
-    {
       name: 'git-workflow',
-      script: 'scripts/pm2/git-workflow.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      script: 'scripts/pm2/git-workflow-automator.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -198,64 +238,66 @@ export default {
       out_file: 'logs/pm2/git-workflow-out.log',
     },
     {
-      name: 'health-monitor',
-      script: 'scripts/pm2/health-monitor.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      name: 'error-detection',
+      script: 'scripts/pm2/error-detection-service.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'health-monitor',
-        MONITOR_SYSTEM: 'true',
-        MONITOR_PROCESSES: 'true',
-        MONITOR_RESOURCES: 'true',
-        ALERT_THRESHOLD: '80',
+        PM2_PROCESS_NAME: 'error-detection',
+        AUTO_FIX_ENABLED: 'true',
+        MONITOR_FREQUENCY: '*/5 * * * *',
       },
-      cron_restart: '0 */1 * * *',
-      log_file: 'logs/pm2/health-monitor.log',
-      error_file: 'logs/pm2/health-monitor-error.log',
-      out_file: 'logs/pm2/health-monitor-out.log',
+      cron_restart: '*/5 * * * *',
+      log_file: 'logs/pm2/error-detection.log',
+      error_file: 'logs/pm2/error-detection-error.log',
+      out_file: 'logs/pm2/error-detection-out.log',
     },
     {
-      name: 'docs-generator',
-      script: 'scripts/pm2/docs-generator.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
+      name: 'syntax-fixer',
+      script: 'scripts/pm2/syntax-error-fixer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'docs-generator',
-        AUTO_GENERATE: 'true',
-        UPDATE_README: 'true',
-        API_DOCS: 'true',
-        COMPONENT_DOCS: 'true',
+        PM2_PROCESS_NAME: 'syntax-fixer',
+        AUTO_FIX_ENABLED: 'true',
+        MONITOR_FREQUENCY: '*/10 * * * *',
       },
-      cron_restart: '0 2 * * *',
-      log_file: 'logs/pm2/docs-generator.log',
-      error_file: 'logs/pm2/docs-generator-error.log',
-      out_file: 'logs/pm2/docs-generator-out.log',
-    },
-    {
-      name: 'seo-accessibility',
-      script: 'scripts/pm2/seo-accessibility.js',
-      instances: '1',
-      autorestart: 'true',
-      watch: 'false',
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'seo-accessibility',
-        CHECK_SEO: 'true',
-        CHECK_ACCESSIBILITY: 'true',
-        CHECK_PERFORMANCE: 'true',
-        LIGHTHOUSE_AUDIT: 'true',
-      },
-      cron_restart: '0 */4 * * *',
-      log_file: 'logs/pm2/seo-accessibility.log',
-      error_file: 'logs/pm2/seo-accessibility-error.log',
-      out_file: 'logs/pm2/seo-accessibility-out.log',
-    },
+      cron_restart: '*/10 * * * *',
+      log_file: 'logs/pm2/syntax-fixer.log',
+      error_file: 'logs/pm2/syntax-fixer-error.log',
+      out_file: 'logs/pm2/syntax-fixer-out.log',
+    }
   ],
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+module.exports = {
+  apps: [{
+    name: "ziontechgroup-site",
+    script: "npm",
+    args: "start",
+    instances: 1,
+    exec_mode: "fork",
+    env: {
+      NODE_ENV: "production",
+      PORT: 3000
+    },
+    env_production: {
+      NODE_ENV: "production",
+      PORT: 3000
+    },
+    max_memory_restart: "1G",
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
 };

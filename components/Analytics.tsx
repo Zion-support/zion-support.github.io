@@ -17,8 +17,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args),
       }
       window.gtag = gtag;
       gtag('js', new Date());
@@ -109,7 +109,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
                         name: 'load',
-                        value: Math.round(loadTime)
+                        value: Math.round(loadTime),
                       });
                     }
                   }

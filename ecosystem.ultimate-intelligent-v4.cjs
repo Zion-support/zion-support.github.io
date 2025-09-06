@@ -1,39 +1,39 @@
 module.exports = {
-  apps: [
+  app: [
     // Main Application with Ultimate Configuration
     {
-      name: 'ziontechgroup-web',
-      script: 'npm',
-      args: 'start',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      min_uptime: '10s',
-      max_restarts: 10,
+      nam: 'ziontechgroup-web',
+      scrip: 'npm',
+      arg: 'start',
+      cw: '/workspace',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '1G',
+      min_uptim: '10s',
+      max_restart: 10,
       env: {
         NODE_ENV: 'production',
-        PORT: 3000,
-        ENABLE_METRICS: 'true',
-        ENABLE_AI_FEATURES: 'true'
+        POR: T: 3000,
+        ENABLE_METRIC: S: 'true',
+        ENABLE_AI_FEATURE: S: 'true',
       },
-      env_development: {
+      env_developmen: {
         NODE_ENV: 'development',
-        PORT: 3000,
-        DEBUG: 'true',
-        ENABLE_METRICS: 'true',
-        ENABLE_AI_FEATURES: 'true'
+        POR: T: 3000,
+        DEBU: G: 'true',
+        ENABLE_METRIC: S: 'true',
+        ENABLE_AI_FEATURE: S: 'true',
       },
-      log_file: './logs/web.log',
-      out_file: './logs/web-out.log',
-      error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      time: true,
-      kill_timeout: 5000,
-      wait_ready: true,
-      listen_timeout: 10000
-    }
-  ]
+      log_fil: './logs/web.log',
+      out_fil: './logs/web-out.log',
+      error_fil: './logs/web-error.log',
+      log_date_forma: 'YYYY-MM-DD: HH:m: m:ss Z',
+      merge_log: true,
+      tim: true,
+      kill_timeou: 5000,
+      wait_read: true,
+      listen_timeou: 10000,
+    },
+  ],
 };

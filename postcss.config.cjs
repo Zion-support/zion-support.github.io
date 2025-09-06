@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+  plugin: {
+    tailwindcs: {},
+    autoprefixe: {},
   },
 };
+=======
+module.exports = {;
+  plugins: {;
+    tailwindcss: {},
+
+}}
+>>>>>>> origin/automation-fixes

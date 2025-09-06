@@ -1,10 +1,11 @@
 <<<<<<< HEAD
-    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     // Clean up any remaining conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, "");
-    content = content.replace(/^=======.*$/gm, "");
-    content = content.replace(/^>>>>>>> .*$/gm, "");
     
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
@@ -15,6 +16,14 @@
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
 }
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
@@ -86,7 +95,6 @@ function findFilesWithIssues(dir) {
         )) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
-            if (content.includes("<<<<<<<") || content.includes("=======") || content.includes(">>>>>>>")) {
               files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read
@@ -98,6 +106,11 @@ function findFilesWithIssues(dir) {
     }
   }
   
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   searchDirectory(dir);
   return files}
 
@@ -128,14 +141,8 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -152,3 +159,313 @@ console.log(" Starting lint error fixes...")
       if (line.includes('from "lucide-react"') || line.includes(')
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting comprehensive lint error fixes...');
+
+// Function to fix common parsing errors
+function fixParsingErrors(content) {
+  let fixed = content;
+  
+  // Fix destructuring with semicolons instead of commas
+  fixed = fixed.replace(/(\w+);\s*(\w+);\s*(\w+)/g, '$1, $2, $3');
+  fixed = fixed.replace(/(\w+);\s*(\w+)/g, '$1, $2');
+  
+  // Fix missing commas in function parameters
+  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+);\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4'),
+  // Fix missing semicolons after return statements
+  fixed = fixed.replace(/(\s+return\s+[^;]+)\n(\s*})/g, '$1;\n$2');
+  
+  // Fix missing commas in object destructuring
+  fixed = fixed.replace(/(\w+)\s*;\s*(\w+)\s*=\s*([^;]+);/g, '$1, $2 = $3;');
+  
+  // Fix missing commas in array destructuring
+  fixed = fixed.replace(/\[\s*(\w+)\s*;\s*(\w+)\s*\]/g, '[$1, $2]');
+  
+  // Fix missing commas in function calls
+  fixed = fixed.replace(/(\w+)\s*\(\s*([^,)]+)\s*;\s*([^,)]+)\s*\)/g, '$1($2, $3)');
+  
+  // Fix missing parentheses in function calls
+  fixed = fixed.replace(/(\w+)\s*\(\s*([^)]+)\s*;\s*([^)]+)\s*\)/g, '$1($2, $3)');
+  
+  // Fix missing commas in JSX props
+  fixed = fixed.replace(/(\w+)=\{([^}]+)\}\s*;\s*(\w+)=\{([^}]+)\}/g, '$1={$2} $3={$4}');
+  
+  // Fix missing commas in object literals
+  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*;\s*(\w+):\s*([^,}]+)/g, '$1: $2, $3: $4'), return fixed,
+}
+
+// Function to add missing imports
+function addMissingImports(content, filePath) {
+  let fixed = content;
+  const imports = [];
+  
+  // Check for missing UI component imports
+  if (content.includes('<Dialog') && !content.includes('import.*Dialog')) {
+    imports.push("import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';");
+  }
+  
+  if (content.includes('<Select') && !content.includes('import.*Select')) {
+    imports.push("import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';");
+  }
+  
+  if (content.includes('<Badge') && !content.includes('import.*Badge')) {
+    imports.push("import { Badge } from '@/components/ui/badge';");
+  }
+  
+  if (content.includes('<Card') && !content.includes('import.*Card')) {
+    imports.push("import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';");
+  }
+  
+  if (content.includes('<Breadcrumb') && !content.includes('import.*Breadcrumb')) {
+    imports.push("import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from '@/components/ui/breadcrumb';");
+  }
+  
+  if (content.includes('<Accordion') && !content.includes('import.*Accordion')) {
+    imports.push("import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';");
+  }
+  
+  if (content.includes('<DropdownMenu') && !content.includes('import.*DropdownMenu')) {
+    imports.push("import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';");
+  }
+  
+  // Add lucide-react imports for common icons
+  const lucideIcons = ['ChevronLeft', 'ChevronRight', 'Zap', 'Star', 'Calendar', 'UserCheck', 'BriefcaseIcon', 'PlusCircle', 'SendIcon', 'InboxIcon'];
+  const missingLucideIcons = lucideIcons.filter(icon => content.includes(icon) && !content.includes(`import.*${icon}`));
+  
+  if (missingLucideIcons.length > 0) {
+    imports.push(`import { ${missingLucideIcons.join(', ')} } from 'lucide-react';`);
+  }
+  
+  // Add imports at the top of the file
+  if (imports.length > 0) {
+    const lines = fixed.split('\n');
+    let insertIndex = 0;
+    
+    // Find the last import statement
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].startsWith('import ')) {
+        insertIndex = i + 1;
+      }
+    }
+    
+    // Insert new imports
+    lines.splice(insertIndex, 0, ...imports);
+    fixed = lines.join('\n');
+  }
+  
+  return fixed;
+}
+
+// Function to fix unescaped entities
+function fixUnescapedEntities(content) {
+  let fixed = content;
+  
+  // Fix unescaped quotes and apostrophes
+  fixed = fixed.replace(/([^\\])'([^']*[^\\])'/g, '$1&apos;$2&apos;');
+  fixed = fixed.replace(/([^\\])"([^"]*[^\\])"/g, '$1&quot;$2&quot;');
+  
+  // Fix common unescaped entities
+  fixed = fixed.replace(/'/g, '&apos;');
+  fixed = fixed.replace(/"/g, '&quot;');
+  
+  return fixed;
+}
+
+// Function to fix accessibility issues
+function fixAccessibilityIssues(content) {
+  let fixed = content;
+  
+  // Fix label accessibility issues
+  fixed = fixed.replace(/<label([^>]*)>([^<]*)<\/label>/g, '<label$1 htmlFor="input-$2">$2</label>');
+  
+  return fixed;
+=======
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+// Get all files with lint errors;
+const lintOutput = execSync("npm run lint 2>&1", { encoding: "utf8" });
+const errorLines = lintOutput.split("\n").filter(line => line.includes("Error: Parsing error"));
+// Extract file paths from error lines;
+const errorFiles = new Set();
+errorLines.forEach(line => {;
+  const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
+  if (match) {;
+  errorFiles.add(match[1]);,
+}
+});
+console.log(`Found ${errorFiles.size} files with lint errors`);
+// Function to fix common syntax errors;
+function fixFile(filePath) {;
+  try {;
+  let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix 1: Add missing semicolons after import statements;
+    if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from "")) {;
+  content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
+      modified = true;,
+}
+
+    // Fix 2: Fix malformed import statements;
+    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
+    // Fix 3: Fix missing semicolons after variable declarations;
+    content = content.replace(/(const|let|var)\s+(\w+)\s*=\s*([^]+)(?!)/g, "$1 $2 = $3;");
+    // Fix 4: Fix malformed JSX/TSX syntax;
+    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*([^}]+)\s*}/g, "export default function $1() {\n  $2\n}");
+    // Fix 5: Fix unterminated strings;
+    content = content.replace(/[""]([^""]*)\s*$/gm, "\"$1\";");
+    // Fix 6: Remove malformed characters and fix basic syntax;
+    content = content.replace(/<=/g, "");
+    content = content.replace(/=>/g, "=>");
+    content = content.replace(/""/g, "\"");
+    content = content.replace(/""/g, """);
+    // Fix 7: Fix malformed function declarations;
+    content = content.replace(/export\s*{\s*function\s*}\s*export\s+default/g, "export default");
+    // Fix 8: Fix malformed return statements;
+    content = content.replace(/return\s*\(\s*""/g, "return (\n    <div>");
+    content = content.replace(/return\s*\(\s*""/g, "return (\n    <div>");
+    // Fix 9: Fix malformed JSX attributes;
+    content = content.replace(/className\s*=\s*[""]([^""]*)\s*[""]/g, "className="$1"");
+    // Fix 10: Fix malformed array/object syntax;
+    content = content.replace(/\[\s*"([^"]*)"\s*\]/g, "[\"$1\"]");
+    content = content.replace(/{\s*"([^"]*)"\s*}/g, "{\"$1\"}");
+    if (modified) {;
+  fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;,
+}
+
+    return false;,
+} catch (error) {;
+  console.error(`Error fixing ${filePath}:`, error.message);
+    return false;,
+>>>>>>> origin/automation-fixes
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixed = content;
+    
+    // Apply fixes
+    fixed = fixParsingErrors(fixed);
+    fixed = addMissingImports(fixed, filePath);
+    fixed = fixUnescapedEntities(fixed);
+    fixed = fixAccessibilityIssues(fixed);
+    
+    // Only write if content changed
+    if (fixed !== content) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+<<<<<<< HEAD
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules, .next, and other build directories
+        if (!['node_modules', '.next', 'dist', 'build', 'out', 'coverage'].includes(item)) {
+          walkDir(fullPath);
+        }
+      } else if (item.match(/\.(ts|tsx|js|jsx)$/)) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  walkDir(dir);
+  return files;
+}
+
+// Main execution
+async function main() {
+  const srcDir = path.join(__dirname, 'src');
+  const componentsDir = path.join(__dirname, 'components');
+  
+  console.log('📁 Finding source files...');
+  const files = [
+    ...findSourceFiles(srcDir),
+    ...findSourceFiles(componentsDir)
+  ];
+  
+  console.log(`📊 Found ${files.length} files to process`);
+  
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (processFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`🎉 Fixed ${fixedCount} files`);
+  
+  // Run linter again to check remaining issues
+  console.log('🔍 Running linter to check remaining issues...');
+  try {
+    execSync('npm run lint', { stdio: 'inherit' });
+  } catch (error) {
+    console.log('⚠️  Some lint errors remain, but many have been fixed');
+  }
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+main().catch(console.error);
+=======
+<<<<<<< HEAD
+main().catch(console.error);
+=======
+main().catch(console.error);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+// Fix each file;
+let fixedCount = 0;
+errorFiles.forEach(filePath => {;
+  if (fixFile(filePath)) {;
+  fixedCount++;,
+}
+});
+console.log(`Fixed ${fixedCount} files`);
+// Run lint again to check remaining errors;
+console.log("\nRunning lint again to check remaining errors...");
+try {;
+  execSync("npm run lint", { stdio: "inherit" });
+  console.log("All lint errors fixed!");,
+} catch (error) {;
+  console.log("Some lint errors remain. Manual review may be needed.');,
+}))))
+>>>>>>> origin/automation-fixes
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
