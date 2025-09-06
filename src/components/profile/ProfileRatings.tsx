@@ -55,5 +55,8 @@ import { useReviews } from "@/hooks/useReviews",
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
+<<<<<<< HEAD
                 onReportReview={reportReview}
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

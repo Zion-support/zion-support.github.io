@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -16,7 +17,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-
+import Layout from '../../components/Layout';
+import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+const features = [;
+  {}
+    icon: Cloud,;
+    title: 'Cloud Migration,',;
+    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
+import Layout from '../../components/Layout';
+import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
   {
     icon: Cloud,
@@ -160,6 +172,7 @@ export default function CloudDevOpsPage() {;
       </div>;
     </Layout>;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   {
     icon: GitBranch,
     title: 'CI/CD Pipelines',
@@ -190,23 +203,94 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-
+    title: 'Infrastructure as Code',;
+    description: 'Automated infrastructure provisioning and management';
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',;
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability'];
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',;
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability'];
+    description: 'Seamless migration to cloud platforms with zero downtime';
+  },;
+  },;
+  {;
+    icon: GitBranch,;
+    title: 'CI/CD Pipelines',;
+    description: 'Automated build, test, and deployment processes';
+  },;
+  {;
+    icon: Shield,;
+    title: 'Security & Compliance',;
+    description: 'Enterprise-grade security and compliance frameworks';
+  },;
+  {;
+    icon: Zap,;
+    title: 'Performance Optimization',;
+    description: 'Optimized cloud resources for maximum performance';
+  },;
+  {;
+    icon: CheckCircle,;
+    title: 'Monitoring & Alerting',;
+    description: '24/7 monitoring and proactive alerting systems';
+  }
+];
+const benefits = [;
+  'Reduced infrastructure costs by up to 50%',;
+  'Improved deployment speed and reliability',;
+  'Enhanced security and compliance',;
+  'Automated scaling and resource management',;
+  'Better disaster recovery capabilities',;
+  'Faster time-to-market for applications';
+];
+export default function CloudDevOpsServices() {;
+const tools = [;
+  { name: 'AWS', description: 'Amazon Web Services cloud platform' },;
+  { name: 'Azure', description: 'Microsoft Azure cloud services' },;
+  { name: 'Google Cloud', description: 'Google Cloud Platform solutions' },;
+  { name: 'Docker', description: 'Containerization platform' },;
+  { name: 'Kubernetes', description: 'Container orchestration' },;
+  { name: 'Terraform', description: 'Infrastructure as code' },;
+  { name: 'Jenkins', description: 'CI/CD automation' },;
+  { name: 'Prometheus', description: 'Monitoring and alerting' }
+];
+const benefits = [
+  'Reduced infrastructure costs by up to 50%',
+  'Improved deployment speed and reliability',
+  'Enhanced security and compliance',
+  'Automated scaling and resource management',
+  'Better disaster recovery capabilities',
+  'Faster time-to-market for applications'
+];
+export default function CloudDevOpsServices() {
+export default function CloudDevOpsPage() {;
+const benefits = [;
+  'Reduced infrastructure costs by up to 50%',;
+  'Improved deployment speed and reliability',;
+  'Enhanced security and compliance',;
+  'Automated scaling and resource management',;
+  'Better disaster recovery capabilities',;
+  'Faster time-to-market for applications';
+];
+export default function CloudDevOpsServices() {;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     >
       <div className="min-h-screen bg-white">
       keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
             </div>
             </motion.div>
             </motion.div>
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -225,6 +309,7 @@ export default function CloudDevOpsServices() {
           </div>
         </section>
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -244,7 +329,22 @@ export default function CloudDevOpsServices() {
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
+=======
+                </ul>;
+              </div>;
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-700 p-8 rounded-xl text-white">;
+                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h3>;
+                <p className="text-lg mb-6">;
+                  Let our cloud and DevOps experts help you transform your infrastructure;
+                  and accelerate your development processes.;
+                </p>;
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
+                  Schedule Consultation;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </button>;
+              </div>;
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Tools Section */}
         <section className="py-16 bg-white">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -307,6 +407,7 @@ export default function CloudDevOpsServices() {
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -336,4 +437,5 @@ export default function CloudDevOpsServices() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
 

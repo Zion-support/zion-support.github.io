@@ -384,13 +384,6 @@ export function FeaturesGuideSection() {;
             ))}
           </TabsList>
 
-=======
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-
-            {features.slice(4).map(feature => (
-              <TabsTrigger
-                key={feature.id}
-                value={feature.id}
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (

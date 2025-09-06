@@ -23,19 +23,11 @@ interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 
-=======
-      content: '',;
-    },;
-  });
-  const handleSubmit = async (values: ReplyFormValues) => {;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
     }
   }
 

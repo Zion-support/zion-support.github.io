@@ -81,19 +81,65 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
           ) : (
             quotes.map(quote => (
 
-=======
-
-              <TableRow 
-                key={quote.id}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
+=======
+
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "@/components/ui/table"; import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
+import {formatDate} from "@/utils/dateUtils"
+interface QuotesTableProps {
+  quotes: QuoteRequest[]
+  isArchived?: boolean
+  isLoading: boolean
+  updateStatus: (id: string, status: QuoteStatus,) => void
+  toggleArchive: (id: string, isArchived: boolean,) => void
+  deleteQuote: (id: string,) => void
+  onViewDetails: (quote: QuoteRequest,) => void
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
+  Table,
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
+interface QuotesTableProps {
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  deleteQuote
+
+
+
+  deleteQuote,
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   quotes;
   is_archived = false;
 import React from './react';

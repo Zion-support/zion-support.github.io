@@ -73,12 +73,6 @@ function ProfileAvailability() {
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
 
-=======
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -113,8 +107,26 @@ function ProfileAvailability() {
           </div>
         </div>
 
+=======
+import { Availability } from '@/types/profile'
+import { Badge } from '@/components/ui/badge'
+
+import { Availability } from "@/types/profile";
+import { Badge } from "@/components/ui/badge";
+import { Availability } from "@/types/profile",;
+import { Badge } from "@/components/ui/badge",;
+import { Calendar, Clock, Check } from 'lucide-react';
+interface ProfileAvailabilityProps {;
+  availability: Availability;
+    </div>
+  )
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     </div>;
   );
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

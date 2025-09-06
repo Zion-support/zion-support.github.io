@@ -20,6 +20,11 @@ const fs = require("child_process")
 const path = require("path")
 
 =======
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
@@ -132,6 +137,10 @@ const { execSync } = require("child_process")
       const srcPath = path.join(this.projectRoot, "src")
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -411,6 +420,7 @@ class PerformanceMonitor {
   getRecommendations() {
     const recommendations = []
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -468,8 +478,7 @@ class PerformanceMonitor {
         "Reduce First Input Delay - minimize JavaScript execution time"
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
->>>>>>> origin/automation-improvements-final
+        "Optimize memory usage - check for memory leaks and optimize data structures"
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

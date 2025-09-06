@@ -76,6 +76,7 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
             {entries && entries.map((entry,) => (;
+<<<<<<< HEAD
               <div
                 key = {entry && entry.id,}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
@@ -100,3 +101,5 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

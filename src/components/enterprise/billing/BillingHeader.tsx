@@ -23,11 +23,9 @@ export function BillingHeader() {
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
-              Analytics
-            </Link>
-          </Button>
-        </div>
-      </div>
+import React from "react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
       <p className="text-muted-foreground">
 
@@ -35,7 +33,6 @@ export function BillingHeader() {
       </p>
     </div>
 <<<<<<< HEAD
-=======
 
 export function BillingHeader() {;
   return (
@@ -155,4 +152,7 @@ function BillingHeader() {
     </div>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,3 +1,22 @@
+=======
+import {  Carousel,
+  Carousel,
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious} from "@/components/ui/carousel",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Avatar } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Quote } from 'lucide-react'
+import Link from "next/link",
+import Image from "next/image",
+import { CASE_STUDIES } from "@/data/case-studies",
+onst testimonials = CASE_STUDIES,
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 const testimonials = CASE_STUDIES,
@@ -8,11 +27,6 @@ const testimonials = CASE_STUDIES,
                             width={80}
                             height={80}
 
-=======
-                            loading="lazy"
-                          />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>

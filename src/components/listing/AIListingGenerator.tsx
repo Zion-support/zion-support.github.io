@@ -1,15 +1,4 @@
 
-      toast({
-        title: "Content Generated"
-        description: "AI has created optimized listing content for you."
-      })
-    } catch (error) {
-      logErrorToProduction('Error generating content:', { data: error })
-      toast({
-        title: "Generation Failed"
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
-        variant: "destructive"
-      })
       // Check condition
 if (.error) {) {
   $2
@@ -120,6 +109,7 @@ try {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   throw new Error (error.message);
 }// Check condition
 if (.error) {) {
@@ -241,3 +231,5 @@ toast ({
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

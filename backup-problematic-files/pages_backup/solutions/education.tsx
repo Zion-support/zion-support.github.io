@@ -11,7 +11,45 @@ const features = [;
     icon: GraduationCap,;
     title: 'Learning Management Systems,',;
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+    description: 'Comprehensive LMS platforms that support online and blended learning environments.'',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {;
+    icon: GraduationCap,;
+    title: 'Learning Management System',;
+    description: 'Comprehensive LMS with course management and student tracking',;
+    benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments'];
+import Layout from '../../components/Layout';
+import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { GraduationCap, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: GraduationCap,;
+    title: 'Learning Management Systems,',;
+    description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+import Layout from '../../components/Layout';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import {GraduationCap,, Users,, BookOpen,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: GraduationCap,;
+    title: 'Learning Management Systems,',;
+    description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   },
   {}
     icon: Users,
@@ -31,6 +69,7 @@ const features = [;
   },;
   {}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -133,6 +172,7 @@ export default function EducationSolutions() {
 ];
 export default function EducationSolutionsPage() {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -185,6 +225,7 @@ export default function EducationSolutionsPage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
@@ -483,6 +524,7 @@ export default function EducationSolutionsPage() {;
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -512,4 +554,5 @@ export default function EducationSolutionsPage() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
 

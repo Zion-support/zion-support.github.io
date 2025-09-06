@@ -1,12 +1,6 @@
-
-<<<<<<< HEAD
 =======
-interface NewsletterSubscription.testProps {
-  className?: string;
-}
+export default function NewsletterSubscription.test({ }: NewsletterSubscription.testProps) {
 
-const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = ({ className }) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className={className || ''}>
       <h1>NewsletterSubscription.test</h1>
@@ -14,4 +8,6 @@ const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = 
     </div>
   );
 }
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

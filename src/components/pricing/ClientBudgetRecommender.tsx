@@ -133,10 +133,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         {!suggestion && !isLoading ? (
           <Button
 
-=======
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}
             disabled={!jobTitle || !category}
             className="w-full"
           >

@@ -4,6 +4,39 @@ function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
+=======
+import { useState, useEffect } from "react",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import Link from "next/link",
+import { SEO } from "@/components/SEO",
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
+import { useAuth } from "@/hooks/useAuth",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
+import { MyApplications } from "@/components/jobs/MyApplications",
+import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+function TalentDashboardContent() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("job-matches"),
+  const onboardingStatus = useOnboardingStatus(),
+  const showAdvanced =
+    onboardingStatus.profileCompleted &&
+    onboardingStatus.skillsAdded &&
+    onboardingStatus.availabilitySet &&
+    onboardingStatus.matchReceived,
+
+
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
   return (
     <>
@@ -42,15 +75,6 @@ function TalentDashboardContent() {
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
 
-=======
-
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </div>
                       )}
                     </Avatar>

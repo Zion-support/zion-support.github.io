@@ -14,6 +14,7 @@
 
             <span className="text-sm text-muted-foreground">
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
@@ -39,3 +40,5 @@
         </div>;
       )}
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

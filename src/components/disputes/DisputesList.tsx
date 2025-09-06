@@ -27,12 +27,6 @@ isLoading: boolean
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
 
-=======
-
-                <TableHead className="text-right">Actions</TableHead>
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -45,16 +39,32 @@ isLoading: boolean
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
 
+=======
+import Skeleton from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from 'lucide-react'
+import Link from "next/link",
+                <TableHead className='text-right'>Actions</TableHead>              </TableRow>                <TableHead className="text-right">Actions</TableHead>
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }
-
-  if (disputes && disputes.length === 0) {;
+  if (disputes.length === 0) {
     return (
 
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
-          No active disputes match the selected filter
+  if (disputes.length === 0) {
+    return (
+      <div className='text-center py-12 border rounded-md bg-muted/20'>
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
+        <h3 className='text-xl font-medium'>No disputes found</h3>
+        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+        <h3 className="text-xl font-medium">No disputes found</h3>
+        <p className="text-muted-foreground mt-2">
+ursor/fix-website-loading-errors-and-merge-6662
+  }
 
         </p>
       </div>

@@ -12,23 +12,3 @@
     logSupportEscalation()
   },
 
-  const logSupportEscalation = async () => {
-    try {
-      // Send the conversation to the backend for logging
-      // This would be implemented in a real system
-      logDebug("Support escalation triggered", {
-        conversationHistory: messages.map(m => ({
-          content: m.content,
-          sender: m.sender,
-          timestamp: m.timestamp
-        })),
-        component: 'ChatBotPanel'
-      })
-    } catch (error) {
-      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
-    }
-  },
-
-  const handleQuickReply = (text: string) => {
-    handleSendMessage(text)
-

@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -21,7 +22,9 @@ import { Cloud,
   Brain;
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const phases = [;
   {}
     title: 'Assessment & Planning,',;
@@ -138,7 +141,11 @@ const benefits = [;
     icon: Smartphone,;
   }
 ;];
-
+export default function CloudMigrationPage() {;
+  return (
+    <Layout)
+      title="Cloud Migration Solutions - Zion Tech Group""
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.""
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -192,7 +199,6 @@ const benefits = [;
                 A proven methodology that ensures successful cloud migration;
                 with minimal downtime and maximum security.;
               </p>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {phases && phases.map((phase, index) => (,;
                 <motion&& motion.div}),
@@ -205,6 +211,7 @@ const benefits = [;
                     <phase && phase.icon className="w-8 h-8 text-white" />";
                   </div>;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <ul className="space-y-2 text-left">";
                     {phase && phase.steps.map((step, stepIndex) => (,;
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">";
@@ -233,7 +240,10 @@ const benefits = [;
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
               </p>;
+=======
+            </motion && motion.div>;
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
@@ -249,6 +259,7 @@ const benefits = [;
                     <h3 className="text-2xl font-bold text-gray-900">{service && service.title}</h3>";
                   </div>;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;
                       {service && service.features.map((feature, featureIndex) => (,;
@@ -279,7 +290,6 @@ const benefits = [;
                 Our cloud migration services deliver measurable improvements in cost, ;
                 performance, and security.,;
               </p>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits && benefits.map((benefit, index) => (,;
                 <motion&& motion.div}),
@@ -306,6 +316,7 @@ const benefits = [;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;

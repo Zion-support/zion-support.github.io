@@ -63,17 +63,30 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     </>;
   );
 }
-      // Add to favorites`;
-      // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
-  return ();
+;
+export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
+  const { isWishlisted, toggle } = useWishlist(),;
+  const { isAuthenticated } = useAuth(),;
+  const [loginOpen, setLoginOpen] = React.useState(false),;
+  const handleClick = (e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    if (!isAuthenticated) {;
+      setLoginOpen(true),;
+      return;
+    }
+    
+    const wasWishlisted = isWishlisted(itemId),
+    toggle(itemId),
+    
+    // Provide feedback
+    toast({
+      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
+      description: wasWishlisted 
+        ? "Item has been removed from your wishlist" 
+        : "Item has been added to your wishlist"})
+  },
 
-    <button
-      onClick = {handleToggleFavorite}`
-      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
-          ? 'bg-red-500 hover:bg-red-600 text-white''
-          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
-} ${className}`}
-      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+  const active = isWishlisted(itemId),
 
      aria-label="Button">;
 

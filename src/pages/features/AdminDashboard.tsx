@@ -10,48 +10,8 @@ import { GradientHeading } from "@/components/GradientHeading",
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
-          <GradientHeading className="mb-4 text-center">Admin Dashboard</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Visualize user activity, manage orders and keep your marketplace running smoothly.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold.co/800x400"
-              alt="Screenshot of admin dashboard"
-              className="object-cover"
-            />
-          </div>
-
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Track sales and service metrics in real time.</li>
-            <li>Approve or remove listings with a few clicks.</li>
-            <li>Assign roles and permissions to your team.</li>
-          </ul>
-
-=======
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Can I export reports?</p>
-              <p className="text-zion-slate-light">Yes, you can export data to CSV for further analysis.</p>
-            </div>
-          </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/admin">View Dashboard</Link>
@@ -181,6 +141,7 @@ export default function AdminDashboard() {;
               <p className='font - semibold'>Who can access the dashboard?</p>;
               <p className='text - zion - slate - light'>;
 
+<<<<<<< HEAD
                 Only authorized admins and moderators with the proper roles.;
               </p>;
             </div>;
@@ -203,3 +164,5 @@ export default function AdminDashboard() {;
   );
 }
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

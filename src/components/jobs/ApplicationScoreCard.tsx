@@ -31,11 +31,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     switch (suggestion) {
 
       case "Recommended for Review":
-        return "bg-blue-100 text-blue-800"
-      case "Low Match":
-        return "bg-orange-100 text-orange-800"
-      default:
-        return "bg-gray-100 text-gray-800"
 
 =======
 
@@ -145,86 +140,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   },
 
 
-      setTimeout(checkScore, 3000);
 
-    } catch (error: any) {;
-      setIsScoring(false),;
-      toast && toast.error(`Failed to score resume: ${error && error.message}`);
-    }
-  },;
-
-  // Render the score result or button to score;
-  return (
-    <Card className="overflow-hidden">;
-      <CardHeader className="pb-3">;
-        <CardTitle className="text-lg font-medium flex items-center justify-between">;
-          Resume Match Score;
-          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
-            {hasScore ? "SCORED" : "NOT SCORED"}
-
-          </Badge>;
-        </CardTitle>;
-      </CardHeader>;
-
-      <CardContent>;
-        {hasScore ? (;
-          <div>;
-            {/* Score */}
-            <div className="flex items-center mb-4">;
-              <div className="p-2 bg-primary/10 rounded-full mr-3">;
-                <Star className="h-5 w-5 text-primary" />;
-              </div>;
-              <div>;
-                <div className="text-sm text-muted-foreground">Match Score</div>;
-                <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
-              </div>;
-            </div>;
-
-            {/* Summary */}
-            <div className="flex items-start mb-4">;
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
-                <BarChart2 className="h-5 w-5 text-primary" />;
-              </div>;
-              <div>;
-                <div className="text-sm text-muted-foreground">Summary</div>;
-                <div className="font-medium">{application && application.match_summary}</div>;
-              </div>;
-            </div>;
+                      </div>;
+                      </div>;
 
 
-            {/* Suggestion */}
-            <div className="flex items-start">;
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
-                <Lightbulb className="h-5 w-5 text-primary" />;
-              </div>;
-              <div>;
-                <div className="text-sm text-muted-foreground">Suggestion</div>;
-                <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
-                  {application && application.match_suggestion}
-                </Badge>;
-                {scoredDate && (;
-                  <div className="text-xs text-muted-foreground mt-1">;
-                    Scored on {scoredDate}
-                  </div>;
-                )}
-
-              </div>;
-            </div>;
-
-
-            {/* Breakdown (Collapsible) */}
-            {application && application.match_breakdown && (;
-              <div className="mt-4 pt-4 border-t">;
-                <details className="text-sm">;
-                  <summary className="font-medium cursor-pointer">;
-                    View detailed breakdown;
-                  </summary>;
-                  <div className="mt-2 space-y-2 text-muted-foreground">;
-                    {application && application.match_breakdown.skills_match && (;
-                      <div>;
-                        <p className="font-medium">Skills Match: {application && application.match_breakdown.skills_match && skills_match.score}/100</p>;
-                        {application && application.match_breakdown.skills_match && skills_match.matching && (;
-                          <p>Matching skills: {application && application.match_breakdown.skills_match && skills_match.matching.join(", ")}</p>;
+                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;

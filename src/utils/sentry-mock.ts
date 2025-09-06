@@ -97,13 +97,6 @@ const mock_sentry = {
       constructor () {}
     },
   },
-  // Transport;
-  makeBrowserOfflineTransport: noop_return,
-  makeFetchTransport: noop_return,
-  // Utils;
-  create_transport: noop_return,
-  SDK_VERSION: '7.0.0 - mock',
-  // Constants;
   Severity: {
     Fatal: 'fatal',
     Error: 'error',

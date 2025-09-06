@@ -50,3 +50,4 @@ const { execSync } = require("child_process")
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -18,7 +18,6 @@ export function ApplicationRow({
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
 
-=======
 
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';

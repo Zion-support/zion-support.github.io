@@ -427,6 +427,14 @@ const ServicesIndex: NextPage = () => {;
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
+=======
+interface IndexProps {
+  className?: string;
+}
+
+export default function ServicesIndex() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <>
       <Head>
@@ -434,7 +442,9 @@ import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRigh
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -635,6 +645,7 @@ import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRigh
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -678,6 +689,7 @@ import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRigh
                   </div>;
                   <Link
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                     Learn More
                   </Link>
                 </div>
@@ -705,3 +717,4 @@ import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRigh
 };
 export default ServicesIndex;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

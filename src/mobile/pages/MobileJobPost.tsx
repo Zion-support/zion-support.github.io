@@ -22,75 +22,8 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview")
 
-;
-import React, { useState } from './react';
-import { MobileHeader } from '@/mobile / components / common / MobileHeader';
-import { BottomNavigation } from '@/mobile / components / common / BottomNavigation';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Label } from '@/components / ui / label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import {Zap, ChevronLeft, ChevronRight} from 'lucide-react';
-import { Badge } from '@/components / ui / badge';
-import { Card, CardContent } from '@/components / ui / card';
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-export /**
- * MobileJobPost - Function description
- */
-function MobileJobPost() {
-  const [current_step, setCurrentStep] = useState < JobPostStep>("details");
-  const goToNextStep = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("requirements");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("budget");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("preview");
 
     }
-=======
-  }
-  const goToPrevStep = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("details");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("requirements");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("budget");
-    }
-  }
-  const renderStepContent = () =>: any {
-    switch (current_step) {
-      case "details": return <DetailsStep />;
-      case "requirements":;
-        return <RequirementsStep />;
-      case "budget":;
-        return <BudgetStep />;
-      case "preview":;
-        return <PreviewStep />;
-      default:;
-        return <DetailsStep />;
-    }
-  }
 
 import React, { useState } from "react";
 import {MobileHeader} from "@/mobile/components/common/MobileHeader";
@@ -201,11 +134,29 @@ export function MobileJobPost() {;
         </div>
       </main>
 
-      <BottomNavigation />
-    </div>
-  )
-}
-function DetailsStep() {
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+      
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+
+  ])
+  const [newSkill, setNewSkill] = useState("")
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill])
+      setNewSkill("")
+    }
+  }
+  const removeSkill = (skill: string,) => {
+    setSkills(skills.filter(s => s !== skill))
+  }
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Details</h2>

@@ -31,12 +31,6 @@
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 
-=======
-
-}: any) => (
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
 // Market insights component;
 const MarketplaceInsights = ({ stats }: { stats: any },) => (;
@@ -73,6 +67,17 @@ const MarketplaceFilterControls = ({;
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading;
 }: any,) => (;
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">;
+=======
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { useTranslation } from 'react-i18next',
+import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+}: any,) => (
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
 
     <div className="flex items-center gap-2">
@@ -799,51 +804,3 @@ if ( {) {
 
           )}
         </div>
-      )}
-
-      {hasMore && !loading && (;
-        <div className="text-center mt-8">;
-          {isFetching ? (;
-            <Spinner className="mx-auto h-6 w-6" />;
-          ) : (;
-            <Button onClick={loadMore} variant="outline" size="lg">;
-              Load More Products;
-            </Button>          )}
-          {total !== undefined && (;
-            <p className="mt-2 text-sm text-muted-foreground">;
-              Showing {products && products.length} of {total} items;
-            </p>;
-          )}
-        </div>;
-      )}
-
-
-      {!hasMore && products && products.length > 0 && (;
-        <motion && motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
-          <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>;
-          <div className="text-sm text-muted-foreground">Showing {products && products.length} marketplace items</div>;
-        </motion && motion.div>;
-      )}
-
-      <AnimatePresence>;
-        {showScrollTop && (;
-          <motion&& motion.button 
-
-            onClick = {scrollToTop,}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-
-            whileHover={{ scale: 1 && 1.1 }} 
-            whileTap={{ scale: 0 && 0.9 }}>;
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
-          </motion && motion.button>;
-
-        )}
-      </AnimatePresence>
-    </div>
-    </>
-  )
-}
-<<<<<<< HEAD

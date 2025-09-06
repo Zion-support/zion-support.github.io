@@ -13,19 +13,100 @@
               {status.replace('_ ')}
             </Badge>
 
-=======
-            
-            {isUnderDispute && disputeStatus && (
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
 
+=======
+import { Check, ArrowDown, X } from 'lucide-react'
+import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface MilestoneCardProps {
+
+  id: string
+  projectId: string
+  title: string
+  description?: string
+  amount: number
+  status: string
+  dueDate?: string;
+  onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>; import React from 'react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+interface MilestoneCardProps {
+  id: string
+  projectId: string
+  title: string
+  description?: string
+  amount: number
+  status: string
+  dueDate?: string
+  onApprove?: (id: string,) => Promise<void>
+  onReject?: (id: string,) => Promise<void>
+}
+export function MilestoneCard({
+  id
+  projectId
+  title
+  description
+  amount
+  status
+  dueDate
+  onApprove
+
+  onReject
+}: MilestoneCardProps) {
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+  function getStatusBadgeColor() {
+    switch (status) {
+      case 'completed':
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { format } from 'date-fns';
+import { Check, ArrowDown, X } from 'lucide-react';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+interface MilestoneCardProps {;
+  id: string,;
+  projectId: string,;
+  title: string,;
+  description?: string,;
+  amount: number,;
+  status: string,;
+  dueDate?: string,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+;
+export function MilestoneCard({;
+  id,;
+  projectId,;
+  title,;
+  description,;
+  amount,;
+  status,;
+  dueDate,;
+  onApprove,;
+  onReject;
+}: MilestoneCardProps) {;
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+
+
+
+        return 'bg-green-500';
+      case 'in_progress':;
+        return 'bg-blue-500',;
+      case 'pending':;
+        return 'bg-yellow-500';
+      case 'rejected':;
+        return 'bg-red-500';
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         </div>
       </CardContent>
       <CardFooter className='pt-2 flex justify-between'>
@@ -108,4 +189,7 @@
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

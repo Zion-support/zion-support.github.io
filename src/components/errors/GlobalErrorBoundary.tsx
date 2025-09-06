@@ -152,184 +152,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 
     }
 
-    this.setState({
-      errorInfo,
-      errorId,
 
-    });  }
-
-  componentWillUnmount() {
-    // Clear any pending retry timeouts
-
-  }
-
-  componentWillUnmount() {
-    // Clear any pending retry timeouts
-
-  }
-;
-  private generateErrorId(): string {;
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-;
-  private getUserId(): string | null {;
-    // Try to get user ID from various sources;
-    if (typeof window !== 'undefined') {;
-      try {;
-        // Check localStorage, sessionStorage, or cookies;
-        return localStorage.getItem('userId') ||;
-               sessionStorage.getItem('userId') ||;
-               null;
-      } catch {;
-        return null;
-      }
-    }
-    return null;
-  }
-;
-  private getBuildInfo() {;
-    return {;
-      version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
-      environment: process.env.NODE_ENV,;
-      buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown';
-    }
-    return null;  }
-
-  }
-;
-  private getErrorSeverity(error: Error): 'low' | 'medium' | 'high' | 'critical' {;
-    const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
-    // Critical errors;
-    if (message.includes('network') || message.includes('fetch')) {;
-      return 'medium';
-    }
-;
-    if (message.includes('chunk') || message.includes('loading')) {;
-      return 'medium';
-    }
-
-    if (stack.includes('auth') || stack.includes('payment')) {
-      return 'critical';
-    }
-
-    if (stack.includes('database') || stack.includes('api')) {
-      return 'high';
-    }
-
-    return 'low';
-  }
-;
-  private getErrorSuggestion(error: Error): string {;
-    const message = error.message.toLowerCase();
-    if (message.includes('network') || message.includes('fetch')) {;
-      return 'Please check your internet connection and try again.';
-    }
-;
-    if (message.includes('chunk')) {;
-      return 'The application was updated. Please refresh the page.';
-    }
-
-    if (message.includes('permission') || message.includes('unauthorized')) {
-      return 'You may need to log in again or check your permissions.';
-    }
-
-    return 'This appears to be a temporary issue. Please try again.';  }
-
-  private retry = () => {
-    if (this.state.retryCount >= (this.props.maxRetries || 3)) {
-
-  }
-;
-  private retry = () => {;
-    if (this.state.retryCount >= (this.props.maxRetries || 3)) {;
-      return;
-    }
-;
-    const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff;
-    const timeout = setTimeout(() => {;
-      this.setState({;
-        hasError: false,;
-        error: null,;
-        errorInfo: null,;
-        errorId: null,;
-        retryCount: this.state.retryCount + 1,;
-        showDetails: false;
-      });
-    }, retryDelay);
-    this.retryTimeouts.push(timeout);
-  }
-;
-  private copyErrorDetails = async () => {;
-    const errorDetails = {;
-      errorId: this.state.errorId,;
-      message: this.state.error?.message,;
-      stack: this.state.error?.stack,;
-      componentStack: this.state.errorInfo?.componentStack,;
-      timestamp: new Date().toISOString(),;
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',;
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown';
-    }
-;
-    try {;
-      await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2));
-      // Could show a toast notification here;
-    } catch (err) {;
-      logErrorToProduction('Failed to copy error details:', { data: err });
-    }
-  }
-;
-  private reportError = async () => {;
-    if (!this.state.error || !this.state.errorId) return;
-    try {;
-      // Report to your error reporting service;
-      const response = await fetch('/api/error-report', {;
-        method: 'POST',;
-        headers: {;
-          'Content-Type': 'application/json';
-        },;
-        body: JSON.stringify({;
-          errorId: this.state.errorId,;
-          error: {;
-            message: this.state.error.message,;
-            stack: this.state.error.stack,;
-            name: this.state.error.name;
-          },;
-          errorInfo: this.state.errorInfo,;
-          userFeedback: this.state.userFeedback,;
-          context: this.props.context;
-          timestamp: new Date().toISOString();
-        });
-      });
-      // Check condition
-if ( {) {
-  $2
-}
-        // Show success message;
-      }
-    } catch (err) {
-      logErrorToProduction ('Failed to report error:', { data: err });
-    }    }
-  }
-
-
-
-    }
-
-  };
-
-  private goHome = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/'
-    }
-  }
-
-
-
-  render() {
-    if (this.state.hasError && this.state.error) {
-      // Use custom fallback if provided
-      if (this.props.fallback) {
 
 =======
 
@@ -686,6 +509,7 @@ if ( {) {
   }
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
+<<<<<<< HEAD
 
   const [error, setError] = React.useState<Error | null>(null)
   React.useEffect((,) => {
@@ -718,3 +542,5 @@ export default GlobalErrorBoundary
   return WrappedComponent
 }
 export default GlobalErrorBoundary
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

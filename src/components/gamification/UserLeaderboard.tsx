@@ -29,20 +29,27 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
       </CardHeader>
       <CardContent>
 
-=======
-
-
-        <div className="space-y-2">
-          {entries.map((e, idx) => (
-            <div
-              key={e.name}
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
 <<<<<<< HEAD
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import {;
+    <Card>
+      <CardHeader>
+        <CardTitle className='flex items-center gap-2'>
+          <Trophy className='h-5 w-5' /> Leaderboard        </CardTitle>
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
+              key = {e.name,}
+          ))}
+        </div>
+      </CardContent>
+    </Card>;
+  );
+};
+}
+;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

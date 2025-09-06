@@ -21,6 +21,7 @@ class BuildTestAutomation {}
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.report.steps.push({})
       timestamp,
       type,
@@ -133,3 +134,4 @@ if ( {})
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

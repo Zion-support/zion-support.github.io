@@ -1,5 +1,6 @@
 
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -11,6 +12,7 @@ const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.ensureDirectories()
     this.results = {"buildSuccess": false,"testsPassed": false,"securityIssues": 0;
       performanceScore: 0}
@@ -90,7 +92,8 @@ const path = require("path")
     this.log(" Starting Final Automation Suite", "INFO")
     this.log("=".repeat(60), "INFO"
 =======
+<<<<<<< HEAD
       this.log("� Final Automation Suite completed!", "SUCCESS")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

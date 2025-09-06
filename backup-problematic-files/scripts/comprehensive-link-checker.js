@@ -70,6 +70,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           // Check extracted links;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             if (link && link.startsWith(this.baseUrl)) {;,"});,"})
               await this.checkUrl(link, url, depth + 1);,"});,"})
             if (link && link.startsWith(this && this.baseUrl)) {;,"});,"})
@@ -291,6 +292,7 @@ if (require && require.main === module) {;,"});,"})
 module && module.exports = ComprehensiveLinkChecker;,"});,"})
 ;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const axios = require(,,"}),"})
   axios'),"}),"})
 const cheerio = require(,"}),"})
@@ -364,6 +366,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
           // Check extracted links,"}),"})
           for (const link of links) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             }"}),"})
           }"}),"})
         }"}),"})
@@ -612,6 +615,7 @@ class ComprehensiveLinkChecker {;
   'Error loading sitemap:', error && error.message);
     }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         this.sitemapUrls.push(url)});
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
       console.error(
@@ -659,11 +663,13 @@ class ComprehensiveLinkChecker {;
           // Check extracted links
           for (const link of links) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           url,;
           status: response && response.status,;
           parent: parentUrl,;
           depth,;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           url,
           "status": response && response.status,
           "parent": parentUrl,
@@ -929,6 +935,7 @@ class ComprehensiveLinkChecker {;
   }
 }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         ]      })}
     return recommendations}
   async run() {
@@ -964,6 +971,7 @@ class ComprehensiveLinkChecker {;
   }
 }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       console.log(;)';\n📊 Link Check Complete!')      console.log(`Total URLs "checked": ${report.summary.totalUrls}`)';;      console.log(`Working "links": ${report.summary.workingLinks}`);`;      console.log(`Broken "links": ${report.summary.brokenLinks}`);`;      console.log(`Missing "pages": ${report.summary.missingPages}`);`;      if (report.recommendations.length > 0) {;
         console.log(;)';\n🔧 "Recommendations":')';;        report.recommendations.forEach((rec, index) => {;
           console.log(;);            `${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`)})}`;      console.log(,;);  \n📁 Reports saved "to": ')';;      console.log(;)';- reports/comprehensive-link-check-report.json')';;      console.log(;)';- reports/link-check-summary.json)} catch (error) {';      console.error(;)';❌ Error during link "check":', error.message)}';  }';}
@@ -974,3 +982,4 @@ class ComprehensiveLinkChecker {;
 if (require && require.main === module) {;
   const checker = new ComprehensiveLinkChecker();
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

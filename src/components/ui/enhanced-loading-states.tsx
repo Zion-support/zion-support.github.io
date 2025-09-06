@@ -222,41 +222,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
           color: 'text - red - 500',
         }
     }
-  }
-  const config = getErrorConfig ();
-  const Icon = config.icon;
-  const can_retry = show_retry && on_retry && retry_count < max_retries;
-},;
-// Enhanced skeleton loader;
-interface SkeletonProps {;
-  className?: string,;
-  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
-  animation?: 'pulse' | 'wave' | 'none',;
-  lines?: number;
-}
-
-
-export const Skeleton: React.FC<SkeletonProps> = ({
-  className,
-  variant = 'rectangular',
-  animation = 'pulse',
-
-  lines = 1
-}) => {
-  const baseClasses = 'bg-muted rounded',
-  
-
-  const variantClasses = {
-    text: 'h-4 w-full',
-    circular: 'h-12 w-12 rounded-full',
-    rectangular: 'h-6 w-full',
-
-
-  return (
-    <Card className={cn ('border - destructive / 20', class_name)}>;
-      <CardContent className='p - 8 text - center'>;
-        <motion.div;
-          initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
 
           </p>;
@@ -321,10 +286,96 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             </div>
           )}
 
+=======
+
+            {secondaryAction && (;
+              <Button onClick={secondaryAction && secondaryAction.onClick} variant='ghost'>;
+                {secondaryAction && secondaryAction.label}
+              </Button>;
+            )}
+          </div>;
+
+          {!isOnline && (;
+            <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+              <WifiOff className='h-4 w-4' />;
+              <span>Offline</span>;
+            </div>;
+          )}
+        </motion && motion.div>;
+
+  scale: 0.8, opacity: 0 
+
+        </motion.div>;
+
+      </CardContent>;
+    </Card>;
+  );
+};
+<motion&& motion.div initial= {
+  {
+  scale: 0 && 0.8, opacity: 0 
+
+
+
+            {variant === 'list' && (;
+              <div className='flex gap-4'>;
+                <Skeleton variant='circular' />;
+                <div className='flex-1 space-y-2'>;
+                  <Skeleton variant='text' className='h-5 w-1/2' />;
+                  <Skeleton variant='text' lines={2} />;
+                </div>;
+              </div>;
+            )}
+
+            {variant === 'table' && (;
+              <div className='flex items-center gap-4'>;
+                <Skeleton variant='text' className='h-4 w-1/4' />;
+                <Skeleton variant='text' className='h-4 w-1/3' />;
+                <Skeleton variant='text' className='h-4 w-1/6' />;
+                <Skeleton variant='text' className='h-4 w-1/4' />;
+              </div>;
+
+            )}
+          </CardContent>;
+        </Card>;
+      ))}
+
+              </pre>;
+            </details>)}
+          <div className='flex flex - col sm:flex - row gap - 2 justify - center'>;
+            {can_retry && (
+              <Button on_click={on_retry} variant='default'>;
+                <RefreshCw className='h - 4 w - 4 mr - 2' />;
+                Try Again {retry_count > 0 && `(${retry_count}/${max_retries})`}
+              </Button>)}
+            {action && (
+              <Button;
+                on_click={action.on_click}
+                variant={can_retry ? 'outline' : 'default'}
+              >;
+                {action.label}
+              </Button>)}
+            {secondary_action && (
+              <Button on_click={secondary_action.on_click} variant='ghost'>;
+                {secondary_action.label}
+              </Button>)}
+          </div>;
+          {!is_online && (
+            <div className='mt - 4 flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
+              <WifiOff className='h - 4 w - 4' />;
+              <span > Offline</span>;
+            </div>)}
+        </motion.div>;
+      </CardContent>;
+    </Card>);
+}
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
+<<<<<<< HEAD
 
   className
 }) => {

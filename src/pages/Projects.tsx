@@ -63,7 +63,6 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <p>You don't have any projects yet.</p>
         ) : (
 
-=======
           <div className="grid gap-6">
             {projects.map((project) => (
 
@@ -79,5 +78,5 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                   <CardTitle className="flex items-center gap-2">
                     <Briefcase className="h-5 w-5 text-primary" />
                     <span>{project.job?.title || "Project"}</span>
-<<<<<<< HEAD
 
+<<<<<<< HEAD

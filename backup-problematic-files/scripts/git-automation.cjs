@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {
       const { stdout, stderr } = await execAsync(command, {
         cwd: process.cwd(),
@@ -214,3 +215,4 @@ const path = require('path')
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

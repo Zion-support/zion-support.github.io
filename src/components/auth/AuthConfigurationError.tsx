@@ -81,12 +81,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </Alert>
           {/* Technical Details */}
 
-=======
-          <div className="bg-gray-50 rounded-lg p-4 mb-6">
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -96,6 +90,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
           <div className='text-center mb-6'>;

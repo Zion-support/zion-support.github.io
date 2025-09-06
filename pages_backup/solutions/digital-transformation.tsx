@@ -241,6 +241,14 @@ export default function DigitalTransformationPage() {;
 
         {/* Services Section */}
 
+=======
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-gray-50 rounded-lg p-6 text-center"
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
 

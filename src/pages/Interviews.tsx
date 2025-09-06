@@ -78,13 +78,36 @@ function InterviewsContent() {
           </div>
         </div>
 
-                  {upcomingInterviews.length}
-                </span>
-              )}
-            </TabsTrigger>
-            <TabsTrigger value="pending">
-              Pending
-              {pendingInterviews.length > 0 && (
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useEffect, useState } from 'react';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { InterviewCard } from '@/components/interviews/InterviewCard';
+import { Button } from '@/components/ui/button';
 
                   {pendingInterviews.length}
                 </span>

@@ -271,7 +271,6 @@ if (require.main === module) {
   });
 }
 
-<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = { runSimpleAutomation }) {
@@ -310,6 +309,15 @@ const { execSync } = require('child_process')
 
         "status"
         "status"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "status"
+=======
+        "status"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

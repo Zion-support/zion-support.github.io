@@ -264,97 +264,6 @@ if (return '0 B') {
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
 
-=======
-          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
-;
-    return vitals;
-  };
-
-  const collectChunkData = async (): Promise<BundleChunk[]> => {;
-    if (typeof window === 'undefined') return [];
-
-    const resourceEntries = performance && performance.getEntriesByType(;
-      'resource';
-    ) as PerformanceResourceTiming[];
-    const scriptEntries = resourceEntries && resourceEntries.filter(;
-      entry =>;
-        entry && entry.name.includes('/_next/static/') && entry && entry.name.endsWith('.js');
-    );
-
-    return scriptEntries;
-      .map(entry => ({;
-        name: entry && entry.name.split('/').pop()?.split('?')[0] || 'unknown',;
-        size: entry && entry.transferSize || entry && entry.encodedBodySize || 0,;
-        loadTime: entry && entry.responseEnd - entry && entry.requestStart,;
-        cached: entry && entry.transferSize === 0,;
-        type: categorizeChunk(entry && entry.name),;
-      }));
-      .sort((a, b) => b && b.size - a && a.size);
-  };
-  const categorizeChunk = (filename: string): string => {;
-    if (filename && filename.includes('framework')) return 'framework';
-    if (filename && filename.includes('vendor')) return 'vendor';
-    if (filename && filename.includes('pages')) return 'page';
-    if (filename && filename.includes('chunks')) return 'chunk';
-    return 'other';
-  };
-
-  const formatSize = (bytes: number): string => {;
-    if (bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k));
-    return parseFloat((bytes / Math && Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  };
-
-  const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  const getScoreIcon = (score: number) => {;
-    if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />;
-    if (score >= 70);
-      return <AlertTriangle className='w-4 h-4 text-yellow-600' />;
-    return <AlertTriangle className='w-4 h-4 text-red-600' />;
-  };
-
-  useEffect(() => {;
-    collectMetrics();
-    const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className='space-y-6'>;
-      {/* Header */}
-      <div className='flex items-center justify-between'>;
-        <div>;
-          <h2 className='text-2xl font-bold'>Performance Dashboard</h2>;
-          <p className='text-muted-foreground'>;
-  useEffect (() => {
-    collect_metrics ();
-    const interval = set_interval (collect_metrics, 30000); // Update every 30 seconds;
-    return () => clear_interval (interval);
-  }, []);
-  return (
-    <div className='space - y-6'>;
-      {/* Header */}
-      <div className='flex items - center justify - between'>;
-        <div>;
-          <h2 className='text - 2xl font - bold'>Performance Dashboard</h2>;
-          <p className='text - muted - foreground'>;
-            Monitor bundle size, performance metrics, and optimization;
-            opportunities;
-          </p>;
-        </div>;
-
-        <Button onClick={collectMetrics} disabled={isLoading}>;
-          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -600,6 +509,37 @@ if (return '0 B') {
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
+=======
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import {;
+  Activity,;
+  Zap,;
+  Package,;
+  TrendingUp,;
+  TrendingDown,;
+  AlertTriangle,;
+  CheckCircle,;
+  RefreshCw,;
+  BarChart3,;
+  Clock,;
+  Globe,;
+} from 'lucide-react';
+import { bundleMonitor } from '@/utils/bundleMonitor';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+interface PerformanceMetrics {;
+  bundleSize: number;
+  loadTime: number;
+  performanceScore: number;
+          <RefreshCw
+            className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
+          />
+                  Last updated: {lastUpdated.toLocaleString()}
+                </p>
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
@@ -612,37 +552,12 @@ if (return '0 B') {
               No chunk data available. Refresh to collect metrics.;
             </p>;
           )}
-        </CardContent>
-      </Card>
-      {/* Recommendations */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="w-5 h-5" />
-            Optimization Recommendations
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-3">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
               <div>
                 <p className="font-medium text-blue-900 dark:text-blue-100">
                   Bundle splitting implemented
                 </p>
                 <p className="text-sm text-blue-700 dark:text-blue-300">
                   Your bundle is properly split into framework, vendor, and application chunks
-                </p>
-              </div>
-            </div>
-
-              <div>
-                <p className='font-medium text-green-900 dark:text-green-100'>
-                  Performance monitoring active
-                </p>
-                <p className='text-sm text-green-700 dark:text-green-300'>
-                  Real-time performance tracking is helping optimize your
-                  application
                 </p>
               </div>
             </div>

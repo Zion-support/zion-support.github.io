@@ -77,3 +77,4 @@ const path = require("path")
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

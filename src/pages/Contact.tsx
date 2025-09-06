@@ -64,10 +64,8 @@
             </form>
 
           </div>
-        </section>
-      </main>
-
-      <Footer />
+        </div>
+      </div>
     </div>
   );
 };

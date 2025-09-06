@@ -16,6 +16,7 @@ const fixes = [
     replacement: 'import { $1 } from \'$2\';'
   },
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -25,6 +26,7 @@ const fixes = [
     replacement: 'import { $1 } from \'$2\';\n\nexport default function'
   },
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -36,6 +38,7 @@ const fixes = [
 
   // Fix unterminated string literals
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix unterminated string literals
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -47,6 +50,7 @@ const fixes = [
 
   // Fix malformed function declarations
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix malformed function declarations
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -58,6 +62,7 @@ const fixes = [
 
   // Fix missing closing brackets and parentheses
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix missing closing brackets and parentheses
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -69,6 +74,7 @@ const fixes = [
 
   // Fix malformed JSX attributes
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix malformed JSX attributes
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -78,6 +84,7 @@ const fixes = [
     replacement: 'const $1 = () => $2;'
   },
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -89,6 +96,7 @@ const fixes = [
 
   // Fix malformed return statements
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix malformed return statements
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -100,6 +108,7 @@ const fixes = [
 
   // Fix duplicated content (remove duplicate lines)
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix duplicated content (remove duplicate lines)
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -111,6 +120,7 @@ const fixes = [
 
   // Fix missing closing brackets in arrays
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix missing closing brackets in arrays
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -122,6 +132,7 @@ const fixes = [
 
   // Fix malformed JSX closing tags
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   // Fix malformed JSX closing tags
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -210,10 +221,87 @@ const fixes = [
     pattern: /import\s+([^;]+)\s*$/gm,
     replacement: 'import $1;'
   }
+=======
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+// Final targeted fixes for remaining syntax errors
+const fixes = [// Fix missing semicolons in import statements
+  {
+    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
+    "replacement": 'import { $1 } from \'$2\';'
+  },
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  // Fix malformed import statements
+  {
+    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
+    "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
+  },
+  // Fix missing semicolons after import statements
+  {
+    "pattern": /import\s+([^]+)\s*$/gm,
+    "replacement": 'import $1;'
+  },
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  // Fix unterminated string literals
+  {
+    "pattern": /'([^']*)\s*$/gm,
+    "replacement": '\'$1\';'
+  },
+  // Fix malformed function declarations
+  {
+    "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
+    "replacement": 'export default function $1() {\n  return ('
+  },
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  // Fix missing closing brackets and parentheses
+  {
+    "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
+    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
+  },
+  // Fix malformed JSX attributes
+  {
+    "pattern": /className="([^"]*);\s*"/g,
+    "replacement": 'className="$1"'
+  },
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  // Fix missing semicolons in object properties
+  {
+    "pattern": /(\w+):\s*'([^']*)',\s*;/g,
+    "replacement": '$1: \'$2\','
+  },
+  // Fix malformed return statements
+  {
+    "pattern": /return\s*\(\s*<div";"/g,
+    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
+  },
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  // Fix duplicated content (remove duplicate lines)
+  {
+    "pattern": /^(.*)\n\1$/gm,
+    "replacement": '$1'
+  },
+  // Fix missing closing brackets in arrays
+  {
+    "pattern": /(\[.*?);\s*\]\s*},/g,
+    "replacement": '$1\n  ]\n},'
+  },
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  // Fix malformed JSX closing tags
+  {
+    "pattern": /<\/div>\s*\)\s*}\s*$/gm,
+    "replacement": '    </div>\n  );\n}'
+  }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Final targeted fixes for remaining syntax errors
@@ -227,20 +315,6 @@ const fixes = [// Fix missing semicolons in import statements
     "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
   },
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-  // Fix missing semicolons after import statements
-  {
-    "pattern": /import\s+([^]+)\s*$/gm,
-    "replacement": 'import $1;'
-  },
-  // Fix unterminated string literals
-  {
-    "pattern": /'([^']*)\s*$/gm,
-    "replacement": '\'$1\';'
-  },
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   // Fix malformed function declarations
   {
     "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
@@ -365,13 +439,16 @@ const fixes = [// Fix missing semicolons in import statements
     "replacement": '    </div>\n  );\n}'
   }
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log('🔧 Fixing final syntax errors...');
 // Fix specific files with known issues
 const filesToFix = [
@@ -415,6 +492,9 @@ function fixFile(filePath) {
         content = newContent;
         modified = true}
     });
+=======
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
 
@@ -437,6 +517,10 @@ function fixFile(filePath) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return fixedCount}
     let fixes = 0;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
@@ -498,6 +582,7 @@ filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -509,6 +594,11 @@ if (totalFixes > 0) {
 }#!/usr/bin/env node;
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
+<<<<<<< HEAD
+}#!/usr/bin/env node;
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -518,6 +608,7 @@ if (totalFixes > 0) {
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Final targeted fixes for remaining syntax errorsconst fixes = [/ Fix missing semicolons in import statements {" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*$/gm,"" replacement: "import { $1 } from \"$2\";" }, / Fix malformed import statements {"" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*export\s*default\s*function/g,"" replacement: "import { $1 } from \"$2\";\n\nexport default function" }, / Fix missing semicolons after import statements {" pattern: /import\s+([^]+)\s*$/gm,"" replacement: "import $1;" }, / Fix unterminated string literals {"" pattern: /"([^"]*)\s*$/gm,"" replacement: "\"$1\";" }, / Fix malformed function declarations {" pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,"" replacement: "export default function $1() {\n return (" }, / Fix missing closing brackets and parentheses {" pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix malformed JSX attributes {" pattern: /className="([^"]*);\s*"/g,"" replacement: "className="$1"" }, / Fix missing semicolons in object properties {"" pattern: /(\w+):\s*"([^"]*)",\s*;/g,"" replacement: "$1: \"$2\"," }, / Fix malformed return statements {" pattern: /return\s*\(\s*<div";"/g,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix duplicated content (remove duplicate lines) {" pattern: /^(.*)\n\1$/gm,"" replacement: "$1" }, / Fix missing closing brackets in arrays {" pattern: /(\[.*?);\s*\]\s*},/g,"" replacement: "$1\n ]\n}," }, / Fix malformed JSX closing tags {" pattern: /<\/div>\s*\)\s*}\s*$/gm,"" replacement: " </div>\n );\n}" }];function fixFile(filePath) { if (!fs.existsSync(filePath)) {" console.log(` File not found: ${filePath}`); return; }" let content = fs.readFileSync(filePath, "utf8"); let modified = false; fixes.forEach(fix => { const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) { content = newContent; modified = true} }); if (modified) {" fs.writeFileSync(filePath, content, "utf8");"` console.log(`Fixed: ${filePath}`); return true} } catch (error) {` console.error(`Error fixing ${filePath}:`, error.message)} return false}function walkDirectory(dir) { let fixedCount = 0; try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) {" fixedCount += walkDirectory(filePath)} else if (file.endsWith(".tsx") | file.endsWith(".ts") | file.endsWith(".jsx") | file.endsWith(".js")) { if (fixFile(filePath)) { fixedCount++} } } } catch (error) {` console.error(`Error reading directory ${dir}:`, error.message)} return fixedCount}"console.log("\n Summary: ");`console.log(` Files processed: ${filesToFix.length}`);"`console.log(` Total fixes applied: ${totalFixes}`);if (totalFixes > 0) {" console.log("\n Final syntax error fixing completed!");} else {" console.log("\n No syntax errors found to fix.");}""`"`
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
         return;
     }
@@ -560,6 +651,7 @@ if (totalFixes > 0) {
 
 #!/usr/bin/env node;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node;

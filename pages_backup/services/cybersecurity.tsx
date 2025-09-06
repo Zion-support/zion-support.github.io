@@ -44,6 +44,29 @@ export default function CybersecurityPage() {
       description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."";
     >;
       <div className="min-h-screen bg-gray-50">";
+=======
+export default function CybersecurityPage() {;
+const benefits = [;
+  'Protection against cyber threats and attacks',;
+  'Compliance with industry regulations',;
+  'Reduced risk of data breaches',;
+  'Enhanced customer trust and confidence',;
+  'Lower insurance costs and liability',;
+  'Peace of mind with 24/7 monitoring';
+];
+export default function CybersecurityServices() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cybersecurity.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Layout
+      title="Cybersecurity Services - Zion Tech Group"
+      description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
+      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit"
+    >
+      <div className="min-h-screen bg-white">
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -208,7 +231,19 @@ export default function CybersecurityServices() {
 =======
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {securityServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -258,7 +293,6 @@ export default function CybersecurityServices() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,6 +328,7 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">

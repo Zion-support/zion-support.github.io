@@ -9,6 +9,86 @@
               )}
             </ErrorBoundary>
           </div>
+          {isAdmin && (
+            <Link
+              href="/create-talent-profile"
+              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
+            >
+              Add Talent
+            </Link>
+          )}
+        </div>;
+        {/* Main content */}
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Sidebar - Desktop */}
+          <div className="w-full lg:w-64 shrink-0 hidden lg:block">
+            <FilterSidebar
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              selectedSkills={selectedSkills}
+              toggleSkill={toggleSkill}
+              selectedAvailability={selectedAvailability}
+              toggleAvailability={toggleAvailability}
+              selectedRegions={selectedRegions}
+              toggleRegion={toggleRegion}
+              priceRange={priceRange}
+              setPriceRange={setPriceRange}
+              experienceRange={experienceRange}
+              setExperienceRange={setExperienceRange}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              sortOption={sortOption}
+              setSortOption={setSortOption}
+              clearFilters={clearFilters}
+            />;
+          </div>;
+          {/* Mobile filter button */}
+          <div className="lg:hidden mb-4">
+            <Button
+              onClick={() => setIsMobileFilterOpen(true)}
+              variant="outline"
+              className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
+            >
+              Filter & Sort
+            </Button>
+          </div>
+
+          {/* Results and Pagination Wrapper for ErrorBoundary */}
+          <div className="flex-1">
+            {' '}
+            {/* Added a wrapper div to contain Results and Pagination */}
+            <ErrorBoundary>;
+              <TalentResults;
+                talents={paginatedTalents}
+                totalCount={total}
+                isLoading={isLoading}
+                viewProfile={viewProfile}
+                handleRequestHire={handleRequestHire}
+                isAuthenticated={isAuthenticated}
+                activeFiltersProps={{;
+                  selectedSkills,;
+                  toggleSkill,;
+                  selectedAvailability,;
+                  toggleAvailability,;
+                  selectedRegions,;
+                  toggleRegion,;
+                  priceRange,;
+                  setPriceRange,;
+                  experienceRange,;
+                  setExperienceRange,;
+                  clearFilters}}
+              />
+
+              {totalPages > 1 && (
+                <div className="mt-6">
+                  <Pagination className="justify-center">
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious
+                          href={`?page=${currentPage - 1}`}
+                          onClick={(e) => {;
+                            e.preventDefault(),;
+                            setCurrentPage(Math.max(1, currentPage - 1));
 
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (

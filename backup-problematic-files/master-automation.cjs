@@ -11,7 +11,6 @@
 const fs = require('fs')
 const path = require('path')
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 class MasterAutomation {
   constructor() {
@@ -198,6 +197,7 @@ module.exports = MasterAutomation;
     this.log(`🧪 "Testing"`)
     this.log(`� "Git"`)
       this.log(`Master Automation "failed"`)
+<<<<<<< HEAD
 
     console.error('Master automation "failed")
     console.error('Master automation "failed")

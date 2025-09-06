@@ -12,13 +12,6 @@ export function PartnerLeaderboard() {
   const leaderboard: LeaderboardEntry[] = [
     {
 
-      id: "1"
-      rank: 1
-      name: "AI Tech Guru"
-      avatar: "", // URL would be here
-      referrals: 178
-      earnings: 4500
-      badges: ["gold", "trending"]
 
 =======
 

@@ -1,6 +1,88 @@
 =======
 
 
+=======
+console.log('🔧 Starting Comprehensive Automation Fixer...');
+
+class ComprehensiveAutomationFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixes = [];
+    this.improvements = [];
+    this.errors = [];
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type}] ${message}`;
+    console.log(logMessage);
+  }
+
+  // Fix critical files
+  fixCriticalFiles() {
+    this.log('🔧 Fixing critical files...');
+
+    // Fix index.html
+    this.fixIndexHtml();
+    
+    // Fix main.tsx
+    this.fixMainTsx();
+    
+    // Fix jest config
+    this.fixJestConfig();
+    
+    // Fix performance monitor
+    this.fixPerformanceMonitor();
+    
+    // Fix health monitor
+    this.fixHealthMonitor();
+    
+    // Fix sitemap generator
+    this.fixSitemapGenerator();
+    
+    // Fix search index generator
+    this.fixSearchIndexGenerator();
+    
+    // Fix enhanced orchestrator
+    this.fixEnhancedOrchestrator();
+    
+    // Fix AI code quality analyzer
+    this.fixAICodeQualityAnalyzer();
+  }
+
+  fixIndexHtml() {
+    try {
+      const indexPath = path.join(this.projectRoot, 'index.html');
+      if (fs.existsSync(indexPath)) {
+        let content = fs.readFileSync(indexPath, 'utf8');
+        
+        // Remove merge conflict markers
+        content = content.replace(/[\s\S]*?
+        content = content.replace(/
+        
+        // Ensure proper HTML structure
+        if (!content.includes('<!DOCTYPE html>')) {
+          content = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zion Tech Group</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>`;
+        }
+        
+        fs.writeFileSync(indexPath, content);
+        this.log('✅ Fixed index.html', 'SUCCESS');
+        this.fixes.push('index.html');
+      }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -38,6 +120,7 @@ const automationFiles = ['automation/dependency-fixer.cjs']
       .replace(/\(\s*\[\],/g, '([];')
       .replace(/\(\s*\{\},/g, '({};')
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
@@ -612,11 +695,21 @@ if (require.main === module) {
 module.exports = ComprehensiveAutomationFixer;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
+=======
+<<<<<<< HEAD
+      .replace(/['"]lucide-react;['"]/g, ")
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

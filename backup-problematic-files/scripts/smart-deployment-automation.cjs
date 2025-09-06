@@ -40,3 +40,4 @@ console.log(' Starting Smart Deployment Automation...')
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

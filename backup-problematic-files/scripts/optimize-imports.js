@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node,"}),"})
 /**,"}),"})
  * Import Optimizer,"}),"})
@@ -24,6 +25,7 @@ class ImportOptimizer {,"}),"})
   async optimizeImports() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const dirPath = path.join(this.projectRoot, dir),"}),"})
       if (fs.existsSync(dirPath)) {,"}),"})
         await this.processDirectory(dirPath),"}),"})
@@ -38,6 +40,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     const items = fs.readdirSync(dirPath),"}),"})
 ,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const itemPath = path.join(dirPath, item),"}),"})
       const stat = fs.statSync(itemPath),"}),"})
 ,"}),"})
@@ -117,6 +120,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     // Optimize framer-motion imports,"}),"})
     return content.replace(,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   ';\n","}),"})
     ),"}),"})
   }"}),"})
@@ -141,6 +145,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       groupedImports.forEach((components, packageName) => {,"}),"})
         optimizedImports += `import { ${Array.from(components).join(',,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   ';\n`,"}),"})
       }),"}),"})
 ,"}),"})
@@ -176,6 +181,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 const optimizer = new ImportOptimizer(),"}),"})
 optimizer.optimizeImports().catch(console.error),"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const __dirname = path.dirname(__filename);
 class ImportOptimizer {;
   constructor() {;
@@ -186,12 +192,14 @@ class ImportOptimizer {;
     console.log(';⚡ Optimizing imports to reduce bundle size...');
     const directories = [';pages', ';components', ';src'];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }
     console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);"
     console.log("📊 Total "optimizations": ${this.totalOptimizations}")}
   async processDirectory(dirPath) {;
     const items = fs.readdirSync(dirPath);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         await this.optimizeFile(itemPath)}
     }
   }
@@ -236,6 +244,7 @@ class ImportOptimizer {;
   ', ').map(icon => icon.trim())';
         icons.forEach("icon": => allIcons.add(icon))})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   ', ')} } from';';lucide-react';\n";
       "return": content.replace(lucidePattern, '';';).replace(/^/, optimizedImport)    }';
     "return": content}
@@ -299,6 +308,7 @@ class ImportOptimizer {;
   optimizeLucideImports(content) {
     // Convert individual icon imports to single import
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;
     const matches = [...content.matchAll(lucidePattern)];
       console.error("❌ Error optimizing file ${filePath}:", error.message)}
@@ -314,6 +324,7 @@ class ImportOptimizer {;
       ').map(icon => icon.trim());
         icons.forEach(icon => allIcons.add(icon));)
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   ', ')} } from';lucide-react';\n";"
       return content.replace(lucidePattern, '';).replace(/^/, optimizedImport)    }
   'lucide-react';\n";
@@ -333,6 +344,7 @@ class ImportOptimizer {;
         const components = match[1].split(', ').map(comp => comp.trim());
         optimizedImports += "import { ${Array.from(components).join(',
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   ';\n"})"
       return content.replace(radixPattern, '').replace(/^/, optimizedImports)}
         const packageName = match[2];
@@ -341,6 +353,7 @@ class ImportOptimizer {;
         components.forEach(comp => groupedImports.get(packageName).add(comp))});
       let optimizedImports = '';      groupedImports.forEach((components, packageName) => {;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   ';\n`});
       return content.replace(radixPattern, ').replace(/^/, optimizedImports)}
     return content}
@@ -385,3 +398,4 @@ class ImportOptimizer {;
       return true}).join(',
       '\n')  }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

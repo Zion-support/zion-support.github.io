@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 ;
@@ -107,6 +108,7 @@ function fixFile(filePath, description, fixFunction) {
     return content}
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -185,6 +187,8 @@ function fixSyntaxErrors(filePath) {
 
     // Fix missing semicolons at end of statements
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    // Fix missing semicolons at end of statements
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
@@ -404,6 +408,9 @@ async function main() {
     }
     if (totalFixes > 0) {
 
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'

@@ -733,9 +733,6 @@ if ( {) {
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 <<<<<<< HEAD
-=======
-
-
 ;
 
 

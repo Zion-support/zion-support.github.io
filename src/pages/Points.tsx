@@ -1,3 +1,22 @@
+=======
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import {
+
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle;
+} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+  CardDescription,;
+  CardHeader;
+  CardTitle;
+} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -101,10 +120,6 @@ if (return) {
     } finally {
       setRedeeming(false)
 
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
 
@@ -502,3 +517,6 @@ if (return) {
       </Card>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

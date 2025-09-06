@@ -1,3 +1,4 @@
+=======
 
 
 function run(cmd) {}
@@ -14,12 +15,6 @@ try {}
 	console.error('Auto-fix run "failed": ', e.message);
 
 	process.exit(1)};
-=======
-	process.exit(1)};
-=======
-	process.exit(1)};
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/main

@@ -33,7 +33,77 @@ import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } fro
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: Heart,;
+    title: 'Patient Data Management,',;
+    description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',;
+  },;
+  {}
+    icon: Shield,;
+    title: 'Healthcare Security,',;
+    description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'';
+  },;
+  {}
+    icon: Database,;
+    title: 'Electronic Health Records,',;
+    description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'';
+  },;
+  {}
+    icon: Users,;
+    title: 'Telemedicine Platforms,',;
+    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'';
+  },;
+  {}
+    icon: Activity,;
+    title: 'Health Analytics,',;
+    description: 'AI-powered analytics for population health management and predictive insights.'';
+import Layout from '../../components/Layout';
+import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+import Layout from '../../components/Layout';
+import {Heart,, Shield,, Database,, Users,, Activity} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: Heart,;
+    title: 'Patient Data Management,',;
+    description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',;
+  },;
+  {}
+    icon: Shield,;
+    title: 'Healthcare Security,',;
+    description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'',;
+  },;
+  {}
+    icon: Database,;
+    title: 'Electronic Health Records,',;
+    description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'',;
+  },;
+  {}
+    icon: Users,;
+    title: 'Telemedicine Platforms,',;
+    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'',;
+  },;
+  {}
+    icon: Activity,;
+    title: 'Health Analytics,',;
+    description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout',;
+import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: Heart,
@@ -168,6 +238,7 @@ const benefits = [;
   'Real-time health monitoring and alerts';
 ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -405,6 +476,7 @@ export default function HealthcareSolutions() {;
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
@@ -581,6 +653,7 @@ export default function HealthcareSolutions() {;
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -610,4 +683,5 @@ export default function HealthcareSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
 

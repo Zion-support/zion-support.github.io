@@ -42,11 +42,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // For now, we'll just show a toast
     toast({
 
-=======
 
-      title: 'Notes saved',
-      description: 'Your notes have been saved',
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
+import { toast } from '@/hooks/use-toast';
+import { HireConfirmationModal } from './HireConfirmationModal';
+import Image from 'next/image'; // Import next/image
 
+interface CandidateCardProps {
+  application: JobApplication;
+  index: number
+export function CandidateCard({ application, index }: CandidateCardProps) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     })

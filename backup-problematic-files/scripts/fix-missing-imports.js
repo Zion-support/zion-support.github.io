@@ -91,12 +91,14 @@ function fixMissingImports(content, filePath) {
         .match(/{([^}]*)}/)?.[1]
         ?.split(',')
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
     const newImport = `import { ${allIcons ;`;
     fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport);
     changes++} else {
     // Create new import statement
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     if (importIndex !== -1) {
       const nextLineIndex = fixedContent && fixedContent.indexOf('\n', importIndex);
       fixedContent =
@@ -118,6 +120,7 @@ function processFile(filePath) {
       console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}
     filesProcessed++} catch (error) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
@@ -136,6 +139,7 @@ function processFile(filePath) {
   for (const pattern of patterns) {
     const files = await glob(pattern, {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     for (const file of files) {
       processFile(file)}
   }

@@ -50,12 +50,6 @@ export default function ITSupportPage() {
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 <<<<<<< HEAD
-=======
-
-;
-}
-}
-
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -111,4 +105,7 @@ export default function ITSupportPage() {;
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -72,6 +72,7 @@ class AutomatedTestingSuite {}
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
@@ -96,3 +97,4 @@ if (require.main === module) {}
   suite.run();
 };
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,4 +1,38 @@
 
+import {useState} from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { SEO } from "@/components/SEO"
+import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'import { formatDistanceToNow, format } from "date-fns"
+import { ForumPost, ForumReply } from "@/types/community"
+import { useAuth } from "@/hooks/useAuth"
+import ReplyCard from "@/components/community/ReplyCard"
+import ReplyForm from "@/components/community/ReplyForm"
+import {useToast} from "@/hooks/use-toast"
+import { useState } from "react",
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
+import { formatDistanceToNow, format } from "date-fns",
+import { ForumPost, ForumReply } from "@/types/community",
+import { useAuth } from "@/hooks/useAuth",
+import ReplyCard from "@/components/community/ReplyCard",
+import ReplyForm from "@/components/community/ReplyForm";
+import { useToast } from "@/hooks/use-toast";
+// Mock data for a forum post
 
 import { useState } from "react",
 import Link from "next/link",
@@ -178,11 +212,14 @@ const mockReplies: ForumReply[] = [
 
   const handlePinPost = () => {
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setPost({ ...post, isPinned: !post.isPinned }),
 
+=======
+    if (!isAdminOrMod) return,
+    
+    setPost({ ...post, isPinned: !post.isPinned }),
+    
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})

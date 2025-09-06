@@ -56,16 +56,37 @@ export default function ProductPage() {;
           <div className="mb-4 relative w-full h-64">
             <Image
 
-=======
-              src = {product.images[0] |'/placeholder.svg',}
-              alt = {product.title,}
-
-
-              src={product.images[0] || '/placeholder.svg'}
-              alt={product.title}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="object-cover rounded-md"
+=======
+  }, [id]), // id is now from router && router.query;
+
+
+    return <div className="p-6 text-white">Product not found</div>
+  }, [id]), // id is now from router.query;
+
+  if (!product && !id) { // If no id from router yet, it might still be loading;
+    return <div className="p-6 text-white">Loading product details...</div>;
+  }
+;
+  if (!product) {;
+    return <div className="p-6 text-white">Product not found</div>;
+  }
+;
+  const inCart = items.some(i => i.id === product.id),;
+  const handleAdd = () => {;
+    if (inCart) return,;
+    setAdding(true),;
+    dispatch({;
+      type: 'ADD_ITEM',;
+      payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
+    });
+    toast && toast.success(`1× ${product && product.title} added`);
+    setTimeout(() => setAdding(false), 500);
+  };
+    setTimeout(() => setAdding(false), 500)
+  }
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             />
           </div>
         ) : null}
@@ -80,6 +101,7 @@ export default function ProductPage() {;
 //Only fetch if id is available (from router) ;
 
 }
+<<<<<<< HEAD
 
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
@@ -113,3 +135,5 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

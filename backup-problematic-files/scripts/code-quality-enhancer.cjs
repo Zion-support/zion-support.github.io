@@ -16,3 +16,4 @@ s*(w+)/g, '
       improvements.push('Semicolons added')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

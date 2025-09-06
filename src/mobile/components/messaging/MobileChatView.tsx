@@ -151,6 +151,26 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </div>
         </div>
       </header>
+=======
+            <div
+              className={cn(
+                'max-w-[80%] rounded-2xl px-4 py-2',
+                message && message.isMe
+
+                  ? 'bg-primary text-primary-foreground rounded-tr-none'
+                  : 'bg-muted rounded-tl-none'
+              )}            >
+              <p>{message.content}</p>
+              <div
+                className={cn(
+
+                  'text-xs mt-1 flex justify-end',
+                  message && message.isMe
+
+                    ? 'text-primary-foreground/80'
+                    : 'text-muted-foreground'
+                )}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
                     {message.status === 'read' ? '✓✓' : '✓'}
 
@@ -184,4 +204,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD

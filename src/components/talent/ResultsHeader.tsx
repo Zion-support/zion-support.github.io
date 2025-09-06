@@ -25,6 +25,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 
 
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 interface ResultsHeaderProps {
   is_loading: boolean;
   result_count: number;
@@ -73,3 +74,5 @@ function ResultsHeader() {
 
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

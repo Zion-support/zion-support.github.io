@@ -31,15 +31,11 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
       <div className='flex gap-2 mt-auto'>
-        <Button
-          variant='outline'
-          size='sm'
-          onClick={handleCopy}
-          aria-label='Copy prompt'
+          onClick={handleSend}
+          aria-label='Send to ZionGPT'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 
-<<<<<<< HEAD
         </Button>
         <Button
           variant='secondary'
@@ -47,66 +43,3 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           onClick={handleSend}
           aria-label='Send to ZionGPT'
         >
-          <Send className='w-4 h-4' />        </Button>
-      </div>
-    </div>
-  )
-
-}
-
-}
-
-import { useState } from 'react';
-import { Copy, Send } from 'lucide-react';
-import type { Prompt } from '@/types / prompts';
-import { Button } from '@/components / ui / button';
-interface PromptCardProps {
-  prompt: Prompt;
-export /**
- * PromptCard - Function description
- */
-function PromptCard() {
-  const [copied, set_copied] = useState (false);
-  const handle_copy = () =>: any {
-    navigator.clipboard.write_text (prompt.text);
-    set_copied (true);
-    set_timeout (() => set_copied (false), 2000) }
-  const handle_send = () =>: any {
-    const encoded = encodeURIComponent (prompt.text);
-    window.open (`/zion - gpt?prompt=${encoded}`, '_blank');
-    set_timeout (() => set_copied (false), 2000);
-    set_timeout (() => set_copied (false), 2000);
-  }
-  const handle_send = () =>: any {
-    const encoded = encodeURIComponent (prompt.text);
-    window.open (`/zion - gpt?prompt=${encoded}`, '_blank');
-  return (
-    <div className='p - 4 border rounded - md bg - background flex flex - col justify - between'>;
-      <p className='mb - 4 text - sm'>{prompt.text}</p>;
-      <div className='flex gap - 2 mt - auto'>;
-        <Button;
-          variant='outline';
-          size='sm';
-          on_click={handle_copy}
-          aria - label='Copy prompt';
-        >;
-          {copied ? 'Copied' : <Copy className='w - 4 h - 4' />}
-        </Button>;
-        <Button;
-          variant='secondary';
-          size='sm';
-          on_click={handle_send}
-          aria - label='Send to ZionGPT';
-        >;
-          <Send className='w - 4 h - 4' />        </Button>;
-      </div>;
-    </div>);
-}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
-          <Send className="w - 4 h - 4" />;
-        </Button>;
-      </div>;
-    </div>);
-}
-
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

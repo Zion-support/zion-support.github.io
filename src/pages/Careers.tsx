@@ -4,10 +4,16 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
+export default function Careers() {
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
   const applyEmail = 'careers@ziontechgroup.com'
   const jobs = CAREER_JOBS
   const whyWork =
+<<<<<<< HEAD
 
   // Benefits list
   const benefits = [
@@ -119,19 +125,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
                       </CardContent>
                     </Card>
 
-=======
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import Link from "next/link",;
-import { CAREER_JOBS } from "@/data/careersJobs",;
-export default function Careers() {;
-  const applyEmail = "careers@ziontechgroup.com",;
-  const jobs = CAREER_JOBS,;
-  const whyWork =;
-    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",;
   // Benefits list;
   const benefits = [;
     {;
@@ -267,7 +260,6 @@ export default function Careers() {;
                   ))}
                 </TabsContent>;
               ))}
-<<<<<<< HEAD
             </Tabs>
           </div>
 
@@ -281,6 +273,7 @@ export default function Careers() {;
             </p>
             <Button
               asChild
+<<<<<<< HEAD
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               <a href={`mailto:${applyEmail}`}>Send General Application</Link>

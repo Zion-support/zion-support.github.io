@@ -4,6 +4,7 @@ import React from 'react';
 interface ContractaiProps {
   // Add props here as needed
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export default function Contractai({ }: ContractaiProps) {
   return (
     <div className={className || ''}>
@@ -12,3 +13,4 @@ export default function Contractai({ }: ContractaiProps) {
     </div>
   );
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

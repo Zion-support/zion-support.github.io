@@ -190,3 +190,4 @@ const glob = require("glob")
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

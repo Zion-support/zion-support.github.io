@@ -25,8 +25,6 @@ export function ClickableBadge({
           <X className="h-3 w-3" />
         </button>
 
-=======
-
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -50,6 +48,7 @@ export function ClickableBadge({;
         "group flex items-center gap-1",;
         onRemove && "pl-2.5 pr-1.5 py-1";
         className;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       )}
@@ -62,3 +61,5 @@ export function ClickableBadge({;
             onRemove()
           }}
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

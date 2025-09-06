@@ -52,14 +52,16 @@ const filesToFix = [
   'components/layout/MainLayout.tsx'
 ];
 let totalFixed = 0;
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
-
+<<<<<<< HEAD
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixSpecificErrors(content);
@@ -74,3 +76,4 @@ for (const file of filesToFix) {
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

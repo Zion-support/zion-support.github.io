@@ -97,6 +97,78 @@ export function OptimizedImage({
       </svg>`
 
     ).toString('base64')}`
+=======
+  // Intersection Observer for lazy loading;
+  useEffect(() => {;
+    if (!lazy || priority || isInView) return;
+    const observer = new IntersectionObserver(;
+      ([entry],) => {;
+        if (entry && entry.isIntersecting) {;
+          setIsInView(true);
+          observer && observer.disconnect();
+        }
+      },;
+      {;
+        rootMargin: '50px', // Start loading 50px before the image enters viewport;
+      }
+    );
+
+    if (imgRef && imgRef.current) {;
+      observer && observer.observe(imgRef && imgRef.current);
+    }
+
+    return () => observer && observer.disconnect();
+  }, [lazy, priority, isInView]);
+
+  // Generate WebP-compatible src;
+  const getOptimizedSrc = (originalSrc: string,) => {;
+    // If it's already optimized or external, return as-is;
+    if (;
+      originalSrc && originalSrc.startsWith('http') ||;
+      originalSrc && originalSrc.includes('/_next/image');
+    ) {;
+      return originalSrc;
+    }
+
+    // For internal images, Next && Next.js will handle optimization;
+    return originalSrc;
+  },;
+  const handleLoad = () => {;
+    setIsLoading(false),;
+    onLoad?.();
+  },;
+  const handleError = () => {;
+    setHasError(true),;
+    setIsLoading(false),;
+    onError?.();
+  },;
+  // Generate blur placeholder;
+  const generateBlurDataURL = () => {;
+    if (blurDataURL) return blurDataURL,;
+    // Generate a simple gray blur placeholder;
+    return `data: image/svg+xml,base64,${Buffer.from(;
+      `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">;
+        <defs>;
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
+            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />;
+            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />;
+          </linearGradient>;
+        </defs>;
+        <rect width="100%" height="100%" fill="url(#grad)" />;
+      </svg>`;
+    ).toString('base64')}`;
+  },;
+  return (;
+    <div;
+      ref={imgRef}
+      className={cn('relative overflow-hidden', className)}
+      style={{ width, height }}
+    >;
+      {isInView && !hasError && (;
+
+        <Image;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
           src={getOptimizedSrc(src)}
   // Generate blur placeholder;
@@ -131,6 +203,7 @@ if (return blurDataURL) {
           onLoad={handleLoad}
           onError={handleError}
 
+<<<<<<< HEAD
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
 

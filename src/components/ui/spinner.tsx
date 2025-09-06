@@ -34,7 +34,6 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
-<<<<<<< HEAD
 
 }
 
@@ -44,6 +43,7 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       ref = {ref,}
       {...props}
 
+<<<<<<< HEAD
       className = {cn('animate-spin', className),}
       width = {size,}
       height = {size,}

@@ -1,4 +1,16 @@
 
+=======
+import React from 'react'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 import { CreditCard, Plus, Trash } from 'lucide-react'
 import React from "react"
@@ -12,24 +24,6 @@ export function PaymentMethods() {
   const paymentMethods = [
     {
 
-=======
-
-      id: 'pm-1',
-      type: 'credit_card',
-      brand: 'Visa',
-      last4: '4242',
-
-
-      id: "pm-1",
-      type: "credit_card",
-      brand: "Visa",
-      last4: "4242",
-      expMonth: 12,
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       expYear: 2025,
       isDefault: true},
     {
@@ -80,7 +74,6 @@ export function PaymentMethods() {
             </div>
           </div>
         ))}
-<<<<<<< HEAD
       </CardContent>
       <CardFooter>
 
@@ -114,63 +107,19 @@ export function PaymentMethods() {;
       expMonth: 4,;
       expYear: 2026;
       isDefault: false}
-  ];
-  return (;
-    <Card>;
-      <CardHeader>;
-        <CardTitle>Payment Methods</CardTitle>;
-        <CardDescription>Manage your payment methods for automatic billing</CardDescription>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
-        {paymentMethods.map((method) => (;
-          <div;
-            key={method.id}
-            className={`flex items-center justify-between p-4 rounded-lg border ${;
-              method.isDefault ? "bg-muted border-primary" : "border-border";
-            }`}
-          >
-            <div className='flex items-center space-x-4'>
-              <div className='h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background'>
-                <CreditCard className='h-5 w-5' />
-              </div>
-              <div>
-                <p className='font-medium'>
-                  {method.brand} •••• {method.last4}
-                  {method.isDefault && (
-                    <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
-                    </span>
-                  )}
-                </p>
+  ],
                 <p className='text-sm text-muted-foreground'>                  Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
-            <div className='flex gap-2'>
+            <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
 
-                      Default
-                    </span>
-                  )}
-                </p>
+        <Button className="gap-1">
 
-                  Expires {method.expMonth}/{method.expYear}
-                </p>
-              </div>
-            </div>
 
-              </Button>
+        <Button className="gap-1">
 
-            </div>
-          </div>
-        ))}
-      </CardContent>;
-      <CardFooter>;
-        <Button className='gap-1'>;
-          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
-          <Plus className="h-4 w-4" />;
-          Add Payment Method;
-        </Button>;
-      </CardFooter>;
-    </Card>;
-  );
+  )
 }
+<<<<<<< HEAD
 ;

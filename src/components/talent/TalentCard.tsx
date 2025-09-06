@@ -1,33 +1,29 @@
-
-
-export interface TalentCardProps {
-
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isAuthenticated: boolean
-
 =======
+import React from 'react';
+import { useRouter  } from 'next/router';
+import React from 'react',
+import { useRouter } from 'next/router',
 
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+
+
+export const TalentCard = React && React.memo(TalentCardComponent);
+TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",;
-import { TalentProfile } from "@/types/talent",;
-import { RatingStars } from '@/components/RatingStars',;
-import { useAuth } from '@/context/auth/AuthProvider',;
-import { useCart } from '@/context/CartContext',;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isAuthenticated: boolean;
+import { FavoriteButton } from "@/components/FavoriteButton";
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { TalentProfile } from "@/types/talent",
+import { RatingStars } from '@/components/RatingStars',
+import { useAuth } from '@/context/auth/AuthProvider',
+import { useCart } from '@/context/CartContext',
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+
+
 }
 const TalentCardComponent = ({
   talent
@@ -98,21 +94,6 @@ const TalentCardComponent = ({
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
 
-            {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{talent.location}</span>
-                </div>
-              )}
-              {talent.availability_type && (
-                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
-                </div>
-              )}
-
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -146,6 +127,7 @@ const TalentCardComponent = ({
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
+<<<<<<< HEAD
           </div>
 
           <div className="flex items-center gap-2">
@@ -368,3 +350,5 @@ if ( {) {
 },;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

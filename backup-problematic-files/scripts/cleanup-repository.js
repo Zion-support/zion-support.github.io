@@ -93,6 +93,7 @@ const KEEP_PATTERNS = [// Keep important config files
 function shouldKeepFile(filePath) {
   // Check if file matches keep patterns
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }
   return false}
 function shouldRemoveFile(filePath) {
@@ -101,6 +102,7 @@ function shouldRemoveFile(filePath) {
     return false}
   // Check if file matches cleanup patterns
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }
   return false}
 function removeFile(filePath) {
@@ -115,6 +117,7 @@ function removeFile(filePath) {
     console.error(`❌ Error removing ${filePath}:`, error.message);
     return false}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 function cleanScripts() {
   const scriptsDir = 'scripts';
   if (!fs.existsSync(scriptsDir)) {
@@ -122,6 +125,7 @@ function cleanScripts() {
   const scriptFiles = glob.sync('scripts/**/*', { "nodir": true });
   let cleanedCount = 0;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }
   }
   console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)}
@@ -129,6 +133,7 @@ function cleanRootFiles() {
   const rootFiles = glob.sync('*', { "nodir": true });
   let cleanedCount = 0;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }
   }
   console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)}
@@ -136,6 +141,7 @@ function cleanReportFiles() {
   const reportFiles = glob.sync('**/*-report.json', { "nodir": true });
   let cleanedCount = 0;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }
   }
   console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)}
@@ -150,6 +156,7 @@ function main() {
   // Clean disabled/backup directories
   let totalRemoved = 0;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       }
     }
   }
@@ -163,3 +170,4 @@ function main() {
   console.log('   4. Commit the changes')}
 main();
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

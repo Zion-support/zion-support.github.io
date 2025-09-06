@@ -131,6 +131,7 @@ const benefits = [;
     icon: Shield;
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
 ];
 const benefits = [
   {

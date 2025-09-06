@@ -5,6 +5,9 @@
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
       return
 
+  const { loginWithWeb3 } = useAuth()
+  const { isWalletSystemAvailable } = useAppWallet()
+  const [isLoading, setIsLoading] = useState(false)
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
@@ -52,7 +55,6 @@ if ( {) {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
     }
-<<<<<<< HEAD
 =======
     try {
       setIsLoading (true);
@@ -71,10 +73,6 @@ if ( {) {
       toast ("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
       logErrorToProduction ('Web3 login error:', { data: error });
-    } finally {
-      setIsLoading (false);
-    }
-
   const { loginWithWeb3 } = useAuth();
   const { isWalletSystemAvailable } = useAppWallet();
   const [isLoading, setIsLoading] = useState(false);
@@ -84,6 +82,7 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
   },
 
 

@@ -29,26 +29,14 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
 <<<<<<< HEAD
-=======
 
     </div>;
   );
 };
 };
 
-  },
-
-  const buttons = [
-    { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },
-    { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },
-    { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
-    { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
-
-  return (
-    <div className="mt-12 flex flex-wrap gap-2">
-      {buttons.map((btn) => (
-        <Button key={btn.label} variant="outline" size="sm" onClick={btn.onClick} aria-label={btn.label}>
 ;
+<<<<<<< HEAD
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   const shareUrl =;
     typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',;
@@ -90,3 +78,5 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

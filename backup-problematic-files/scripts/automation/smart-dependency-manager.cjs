@@ -136,3 +136,4 @@ console.log(" Applied ${updatesApplied} smart updates")
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

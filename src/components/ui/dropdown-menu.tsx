@@ -18,7 +18,6 @@ const DropdownMenuSubTrigger = React.forwardRef<
 import * as React from &quot;react & quot;
 import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
 ;
 const DropdownMenu = DropdownMenuPrimitive.Root;
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
@@ -79,28 +78,6 @@ DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
-    inset?: boolean;
-
-  }
->(({ className, inset, ...props }, ref) => (;
-  <DropdownMenuPrimitive.Item;
-    ref={ref}
-
-      className
-    )}
-    {...props}
-  />;
-));
-DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
-const DropdownMenuCheckboxItem = React.forwardRef<;
-
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
->(({ className, children, checked, ...props }, ref) => (;
-  <DropdownMenuPrimitive.CheckboxItem;
-    ref={ref}
-
-      className
-    )}
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -179,6 +156,7 @@ const DropdownMenuLabel = React.forwardRef<;
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
@@ -216,3 +194,5 @@ const DropdownMenuShortcut = ({
   );
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

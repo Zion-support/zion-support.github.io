@@ -6,24 +6,9 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
 
-=======
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-
-import { useRouter } from 'next/router'; // Changed from useNavigate
-
-import { XCircle } from 'lucide-react'
-
-export default function PaymentCanceled() {
-  const router = useRouter(); // Changed from navigate
-  
-
-
-  
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
         <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
           <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">

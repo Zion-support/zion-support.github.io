@@ -11,6 +11,18 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab",
 
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Loader2 } from 'lucide-react'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useMessaging } from "@/context/MessagingContext",
+import { toast } from "@/hooks/use-toast",
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { MessageTab } from "./MessageTab",
+import { ResumeTab } from "./ResumeTab",
+import { Job } from "./types";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,

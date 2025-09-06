@@ -88,15 +88,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
           ))}
 
-=======
-          <DropdownMenuSeparator />
-          <DropdownMenuItem 
-
-
-          <DropdownMenuSeparator />;
-          <DropdownMenuItem;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
           >
@@ -210,3 +201,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>);
 }
 <<<<<<< HEAD
+=======
+import { useResume } from '@/hooks/useResume';
+interface ResumeVersionSelectorProps {
+  currentResume: Resume;
+  onResumeChange: (resumeId: string) => void
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,4 +1,17 @@
 
+=======
+  talentId, 
+  name, 
+  title, 
+  company, 
+  avatar, 
+  location, 
+  category, 
+  matchPercent, 
+}
+}
+;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -20,3 +33,4 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
+<<<<<<< HEAD

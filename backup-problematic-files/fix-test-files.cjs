@@ -143,6 +143,7 @@ files.forEach(file => {})
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 
 =======
@@ -152,6 +153,7 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const { execSync } = require('child_process');
 class TestFileFixer {
   constructor() {

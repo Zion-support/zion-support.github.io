@@ -68,22 +68,6 @@ export function EnhancedSearchInput({
             if (Array.isArray(data)) {
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
 
-            }
-          } else {
-
-            // Silently fail for search suggestions - don't show error toast;
-            log_warn ('Search suggestions API error:', { data: response.status }),
-            setApiSuggestions ([]);
-          }
-        } catch (error) {
-          // Silently fail for search suggestions - don't show error toast;
-          log_warn ('Search suggestions fetch error:', { data: error }),
-          setApiSuggestions ([]);
-
-        } finally {
-          setLoading(false)
-        }
-
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
@@ -325,27 +309,6 @@ export function EnhancedSearchInput(): any ({;
   const router = useRouter();
 
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {;
-    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
-    onChange(suggestionObj && suggestionObj.text);
-    if (onSelectSuggestion) {;
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
-      onSelectSuggestion(suggestionObj);
-    } else {;
-      // Provide a sensible default navigation if the parent did not supply a handler;
-      logWarn('onSelectSuggestion callback not provided');
-      if (suggestionObj && suggestionObj.id) {;
-        router && router.push(`/marketplace/listing/${suggestionObj && suggestionObj.id}`);
-      } else if (suggestionObj && suggestionObj.type === 'doc' && suggestionObj && suggestionObj.slug?.startsWith('/')) {;
-        router && router.push(suggestionObj && suggestionObj.slug);
-      } else if (suggestionObj && suggestionObj.type === 'blog' && suggestionObj && suggestionObj.slug) {;
-        router && router.push(`/blog/${suggestionObj && suggestionObj.slug}`);
-      } else {;
-        router && router.push(`/search/${suggestionObj && suggestionObj.slug || slugify(suggestionObj && suggestionObj.text)}`);
-      }
-    }
-    setIsFocused(false);
-    inputRef && inputRef.current?.blur();
-    setHighlightedIndex(-1);
   };
 
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>,) => {;
@@ -527,6 +490,60 @@ if ( {) {
     }
   }
 
+=======
+    switch(e && e.key) {;
+      case 'ArrowDown':;
+        if (isFocused && filteredSuggestions.length > 0) {;
+          e.preventDefault(),;
+          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
+        }
+        break,;
+      case 'ArrowUp':;
+        if (isFocused && filteredSuggestions.length > 0) {;
+          e.preventDefault(),;
+          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
+        }
+        break,;
+      case 'Enter':;
+        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
+          e.preventDefault(), // Prevent form submission;
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
+        } else if (value.trim()) {;
+          // Manually trigger search navigation to ensure consistent behavior;
+          e.preventDefault(),;
+          logInfo('EnhancedSearchInput manual submit:', { data: value }),;
+          router.push(`/search?q=${encodeURIComponent(value)}`),;
+          setIsFocused(false),;
+          setHighlightedIndex(-1),;
+          inputRef.current?.blur();
+        } else {;
+          // Prevent empty form submission;
+          e.preventDefault();
+        }
+        break,;
+      case 'Escape':;
+        e.preventDefault(),;
+        setIsFocused(false),;
+        setHighlightedIndex(-1),;
+        setValueOnFocus(null),;
+        inputRef.current?.blur(),;
+        break,;
+      default:;
+        // For other keys (character input), reset enterHandledPostFocus;
+        setEnterHandledPostFocus(false),;
+        break;
+    }
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
+
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
 
       aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
@@ -547,6 +564,7 @@ if ( {) {
           name="search"
           value={value}
 
+<<<<<<< HEAD
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}

@@ -142,6 +142,16 @@ const FilterControls: React.FC<{
         ))}
       </select>
     </div>
+=======
+      <select
+
+        value={filterLocation}
+        onChange={(e) => setFilterLocation(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+      >
+        <option value="">All Locations</option>
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
@@ -516,6 +526,7 @@ const FilterControls: React.FC<{
                   <Star className='h-3 w-3 mr-1' />
                   Featured
                 </Badge>
+<<<<<<< HEAD
 
               )}
             </motion && motion.div>;
@@ -545,10 +556,10 @@ const FilterControls: React.FC<{
       )}
       {/* End of Results */}
 
-<<<<<<< HEAD
       )}
       {/* Scroll to Top Button */}
 
+<<<<<<< HEAD
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}

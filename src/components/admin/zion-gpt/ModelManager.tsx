@@ -13,8 +13,6 @@
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
-=======
-  },;
 
   },
 

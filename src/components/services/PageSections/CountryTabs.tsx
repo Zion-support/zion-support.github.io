@@ -22,18 +22,6 @@ export function CountryTabs({
   onQuote,
   searchQuery,
 
-=======
-  popularCountries,
-  filteredCountries,
-  handleCountrySelect,
-  onQuote,
-  searchQuery,
-  const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage,
-    currentPage * countriesPerPage
-  )
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -43,7 +31,6 @@ export function CountryTabs({
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
-<<<<<<< HEAD
 
   return (
     <Tabs defaultValue='featured' className='w-full'>;

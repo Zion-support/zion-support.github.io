@@ -395,226 +395,6 @@ if ( {) {
 
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
-import React, {;
-  useState,;
-  useEffect,;
-  useRef,;
-  ReactNode,;
-  useContext} from 'react',;
-import { AuthContext } from '../../context/auth/AuthContext';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
-export interface Message {;
-  id: string,;
-  role: 'user' | 'assistant',;
-  message: string,;
-  timestamp: Date,;
-  read?: boolean;
-}
-
-export interface ChatAssistantProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  recipient: {;
-    id: string,;
-    name: string,;
-    avatarUrl?: string,;
-    role?: string;
-  },;
-  conversationId?: string,;
-  initialMessages?: Message[],;
-  onSendMessage: (message: string, conversationId?: string,) => Promise<void>,;
-  contextHeader?: ReactNode,;
-  /** Optional canned questions shown when the chat is empty */;
-  starterQuestions?: string[];
-}
-
-export function ChatAssistant(): any ({;
-  isOpen,;
-  onClose,;
-  recipient,;
-  conversationId,;
-  initialMessages = [],;
-  onSendMessage,;
-  contextHeader,;
-  starterQuestions = []}: ChatAssistantProps) {;
-  const auth = useContext(AuthContext),;
-  const isGuest = !auth?.isAuthenticated,;
-
-  // Hooks called unconditionally at the top;
-  const localStorageKey = `chatHistory-${recipient && recipient.id}`, // Key is always generated;
-  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
-    Message[];
-  >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
-    []),;
-  const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]),;
-  const [loggedInMessages, setLoggedInMessages] =;
-    useState<Message[]>(initialMessages),;
-
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{;
-    message: string,;
-    conversationId?: string;
-  } | null>(null),;
-  const [showGuestModal, setShowGuestModal] = useState(false),;
-  const [guestMessage, setGuestMessage] = useState<string | null>(null),;
-
-  // Effect for guest user messages;
-  useEffect((,) => {;
-    if (isGuest) {;
-      // Priority: initialMessages prop > localStorage > empty array;
-      if (initialMessages && initialMessages.length > 0) {;
-        setDisplayGuestMessages(initialMessages),;
-        setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided;
-      } else {;
-        setDisplayGuestMessages(storedGuestMessages);
-      }
-    }
-  }, [;
-    isGuest,;
-    initialMessages,;
-    storedGuestMessages,;
-    setStoredGuestMessages,;
-    recipient && recipient.id]),;
-
-  // Effect for logged-in user messages;
-  useEffect((,) => {;
-    if (!isGuest) {;
-      // Update state if initialMessages prop changes (e && e.g. new conversation loaded);
-      setLoggedInMessages(initialMessages);
-    }
-  }, [isGuest, initialMessages, recipient && recipient.id]),;
-
-  // Determine currentMessages and setCurrentMessages based on isGuest;
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
-  const setCurrentMessages = (;
-    valueOrFn: Message[] | ((val: Message[],) => Message[]),;
-  ) => {;
-    if (isGuest) {;
-      const newMessages =;
-        valueOrFn instanceof Function;
-          ? valueOrFn(displayGuestMessages);
-          : valueOrFn,;
-      setDisplayGuestMessages(newMessages),;
-      setStoredGuestMessages(newMessages), // Always update localStorage for guests;
-    } else {;
-      const newMessages =;
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,;
-      setLoggedInMessages(newMessages);
-    }
-  },;
-
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
-
-  useEffect((,) => {;
-    if (debouncedApiCallParams) {;
-      onSendMessage(debouncedApiCallParams && debouncedApiCallParams.message,;
-        debouncedApiCallParams && debouncedApiCallParams.conversationId);
-    }
-  }, [debouncedApiCallParams, onSendMessage]),;
-
-  useEffect((,) => {;
-    scrollToBottom();
-  }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  },;
-
-  const handleSendMessage = async (messageContent: string,) => {;
-    if (!messageContent && messageContent.trim()) return,;
-
-    if (!isGuest) {;
-      // Logged-in user;
-      const newMessage: Message = {;
-        id: Date && Date.now().toString(),;
-        role: 'user',;
-        message: messageContent,;
-        timestamp: new Date()},;
-      setCurrentMessages((prev: Message[],) => [...prev, newMessage]),;
-      setPendingApiCallParams({ message: messageContent, conversationId });
-    } else {;
-      // Guest user;
-      setGuestMessage(messageContent),;
-      setShowGuestModal(true);
-    }
-  },;
-
-  const handleModalSendConfirm = () => {;
-    if (!guestMessage) return,;
-
-    const newMessage: Message = {;
-      id: Date && Date.now().toString(),;
-      role: 'user',;
-      message: guestMessage,;
-      timestamp: new Date()},;
-    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
-    setPendingApiCallParams({ message: guestMessage, conversationId }),;
-
-    setShowGuestModal(false),;
-    setGuestMessage(null);
-  },;
-
-  const handleModalCancel = () => {;
-    setShowGuestModal(false),;
-    setGuestMessage(null);
-  },;
-
-  useEffect((,) => {;
-    if (!isOpen) return,;
-    const handleKeyDown = (e: KeyboardEvent,) => {;
-      if (e && e.key === 'Escape') {;
-        e && e.preventDefault(),;
-        onClose();
-      }
-    },;
-    document && document.addEventListener('keydown', handleKeyDown),;
-    return () => document && document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose]),;
-
-  if (!isOpen) return null,;
-
-  return (
-    <div
-      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="chat-assistant-title">;
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
-        {/* Header */}
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
-          <div className="flex items-center space-x-3">;
-            <Avatar className="h-10 w-10 border border-zion-purple/20">;
-              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;
-              <AvatarFallback className="bg-zion-purple/20 text-white">;
-                {recipient && recipient.name.charAt(0).toUpperCase()}
-              </AvatarFallback>;
-            </Avatar>;
-            <div>;
-              <h2 id="chat-assistant-title" className="font-medium text-white">;
-                {recipient && recipient.name}
-              </h2>;
-              {recipient && recipient.role && (;
-                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
-              )}
-            </div>;
-          </div>;
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-
-=======
-
-            onClick={onClose}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -701,3 +481,22 @@ export function ChatAssistant(): any ({;
     </div>;
   );
 <<<<<<< HEAD
+=======
+  const isGuest = !auth?.isAuthenticated;
+            onClick = {onClose,}
+                      onClick = {(,) => handleSendMessage(q),}
+                    >
+                onClick = {handleModalSendConfirm,}
+      )}
+    </div>;
+  );
+
+
+
+        </div>)}
+    </div>);
+}
+}
+
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

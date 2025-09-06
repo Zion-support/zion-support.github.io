@@ -13,18 +13,11 @@ const RadioGroup = React.forwardRef<
 import * as React from &quot;react & quot;
 import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
 import { Circle } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
 ;
-const RadioGroup = React.forward_ref<;
-  React.ElementRef < typeof RadioGroupPrimitive.Root>,
-  React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
->(({ class_name, ...props }, ref) => {
+import { cn } from &quot;@/lib/utils&quot;
+import { cn } from &quot;@/lib/utils&quot;
 
-  return (
-    <RadioGroupPrimitive.Root;
-      className={cn (&quot;grid gap - 2&quot;, class_name)}
-  return (
-    <RadioGroupPrimitive.Root
+onst RadioGroup = React.forwardRef<
 
       {...props}
       ref={ref}

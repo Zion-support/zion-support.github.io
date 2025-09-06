@@ -41,3 +41,4 @@ const { execSync } = require('child_process')
 // console.log('\n "RECOMMENDATIONS")
     console.log('\n� Final report saved "to")
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

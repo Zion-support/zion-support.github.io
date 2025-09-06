@@ -2,6 +2,10 @@
 
     this.projectRoot = process.cwd();
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    this.projectRoot = process.cwd();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.reportsDir = path.join(this.projectRoot, 'security-reports');
     this.ensureDirectories()}
   ensureDirectories() {
@@ -167,6 +171,7 @@
   generateReport() {
     const report = {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "timestamp": new Date().toISOString(),
@@ -231,7 +236,9 @@
 }
 if (require.main === module) {
   const auditor = new SecurityAuditor();
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   auditor.run()
@@ -240,10 +247,10 @@ if (require.main === module) {
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
+<<<<<<< HEAD
 module.exports = SecurityAuditor;
 
-=======
-module.exports = SecurityAuditor;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -285,3 +292,5 @@ const { execSync } = require('child_process')
         "message"
         "impact"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -7,6 +7,26 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+=======
+import { Settings, 
+  Brain, 
+  Shield, 
+  BarChart3, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import {
   Settings,
   Brain,
@@ -18,13 +38,16 @@ import {
   Wrench,
   Activity,
   Database,
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -112,6 +135,7 @@ const benefits = [;
     description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 ];
 const benefits = [;
   {;
@@ -178,11 +202,13 @@ export default function ManufacturingPage() {;
         </section>;
 ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -195,6 +221,7 @@ export default function ManufacturingPage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -257,6 +284,7 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -310,6 +338,7 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>

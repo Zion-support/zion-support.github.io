@@ -77,20 +77,6 @@
     name: '',
     points: 0;
   }
-  // Handle loading error gracefully;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: 'Error loading profile',
-        description:;
-          'There was a problem loading this talent profile. Please try again.',
-        variant: 'destructive',
-      }) }        title: "Error loading profile",
-        description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive"});
     }
   }, [error])
   if (isLoading) {
@@ -158,6 +144,7 @@ if ( {) {
         profile={profile}
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
+<<<<<<< HEAD
       />;
       <BackToDirectoryButton />;
 
@@ -214,3 +201,5 @@ if ( {) {
     </>
   )
 }
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

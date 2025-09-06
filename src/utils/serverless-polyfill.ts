@@ -301,11 +301,15 @@ if (typeof window !== 'undefined') {;
     }
   }
 
+=======
+  const originalOnUnhandledRejection = window.onunhandledrejection
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
 
+<<<<<<< HEAD
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null

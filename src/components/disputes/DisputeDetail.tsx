@@ -133,12 +133,6 @@ export function DisputeDetail() {
       <div className="p-8 text-center">
         <p>Dispute not found</p>
 
-=======
-        <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
-          Back to Disputes
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </Button>
       </div>
     )
@@ -347,12 +341,142 @@ export function DisputeDetail() {
                           <span>Under review</span>
                         </li>
                       )}
+=======
+    } else {
+      toast.error ('Failed to resolve dispute');
+    }
+  }
+  const handleSendMessage = async () => {
+
+    if () return) {
+  $2
+}
+    setIsSending (true);
+
+    try {
+      const success = await addDisputeMessage (dispute_id, message, is_admin);
+      // Check condition
+if ( {) {
+  $2
+}
+        // Refresh messages;
+        const updated_messages = await getDisputeMessages (dispute_id);
+        set_messages (updated_messages);
+        set_message ('');
+      }
+    } catch (error) {
+      logErrorToProduction ('Error sending message:', { data: error });
+    } finally {
+      setIsSending (false);
+    }
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='p - 8 text - center'>;
+        <div className='w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full'></div>;
+        <p > Loading dispute details...</p>;
+      </div>);
+  }
+
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {;
+  Dispute,;
+  disputeReasonLabels,;
+  DisputeMessage,;
+  DisputeStatus,;
+  if (isLoading) {;
+
+      summary: resolution.summary,
+
+  if (isLoading) {
+
+        <Button
+          onClick={() => router.push('/dashboard/disputes')}
+          className='mt-4'
+        >          Back to Disputes
+      case 'closed':;
+        return 'outline';
+      default:;
+        return 'default';
+
+            {formatDistanceToNow(new Date(dispute?.created_at || ''), {;
+              addSuffix: true,;
+            })}
+          </p>;
+        </div>;
+
+        <div className='flex gap-2'>;
+
+          <Button
+            variant='outline'
+            onClick={() => router && router.push('/dashboard/disputes')}
+          >;
+            Back to List;
+          </Button>;
+          {isAdmin && dispute?.status === 'open' && (;
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
+            </Button>;
+
+
+  return (
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            onClick={() => router.push('/dashboard/disputes')}
+          >
+            Back to List
+          </Button>
+          {isAdmin && dispute?.status === 'open' && (
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            onClick={() => router.push('/dashboard/disputes')}
+          >
+            Back to List
+          </Button>
+          {isAdmin && dispute?.status === 'open' && (
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
+
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+
+      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+                  
+                  <div>
+                            className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
+                            {dispute && dispute.status !== 'open' ? '3' : '2'}
+                          </Badge>;
+                          <span>;
+                            Resolved on{' '}
+
+                            {format(;
+                              new Date(dispute && dispute.resolved_at),;
+                              "MMM d, yyyy 'at' h:mm a";
+
+                            )}
+                          </span>;
+                        </li>;
+
+                  
+                  <div>
+                    <h3 className="font-medium">Timeline</h3>
+                    <ul className="space-y-2 mt-2">
+                      <li className="flex gap-2 items-center">
+                        <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
+                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                      </li>
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
                       {dispute.resolved_at && (
-                        <li className="flex gap-2 items-center">
-                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
-                            {dispute.status !== "open" ? "3" : "2"}
-                          </Badge>
 
                         </li>
                       )}

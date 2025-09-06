@@ -53,7 +53,6 @@ import React from 'react';
   return (
     <>
       <header
-
         style={{ "--nav-height": "64px" } as React.CSSProperties}
 
 =======
@@ -158,7 +157,10 @@ import React from 'react';
             />;
           </div>;
         </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}

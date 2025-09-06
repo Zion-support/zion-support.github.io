@@ -314,6 +314,29 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
           </button>
         </div>
       </div>
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+      {/* Category Pills */}
+      <div>
+        <div className=&quot;flex flex-wrap gap-2&quot;>
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
+                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
+                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
+              }`}
+>
+              <category.icon className=&quot;w-4 h-4&quot; />
+              {category.name}
+              <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
+                {category.count}
+              </span>;
+            </button>;
+          ))}
+        </div>;
+      </div>;
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Results Summary */}

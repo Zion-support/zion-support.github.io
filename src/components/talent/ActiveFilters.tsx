@@ -1,3 +1,33 @@
+=======
+import React from 'react'
+import { ClickableBadge } from '@/components/ui/clickable-badge'
+import { Button } from '@/components/ui/button'
+
+  selectedSkills: string[]
+  toggleSkill: (skill: string) => void
+  selectedAvailability: string[]
+  toggleAvailability: (status: string) => void
+  selectedRegions: string[]
+  toggleRegion: (region: string) => void
+  priceRange: [number, number]
+  setPriceRange: (range: [number, number]) => void
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+  clearFilters: () => void;interface ActiveFiltersProps {
+  selectedSkills: string[]
+  toggleSkill: (skill: string,) => void
+  selectedAvailability: string[]
+  toggleAvailability: (status: string,) => void
+  selectedRegions: string[]
+  toggleRegion: (region: string,) => void
+  priceRange: [number, number]
+  setPriceRange: (range: [number, number],) => void
+  experienceRange: [number, number]
+  setExperienceRange: (range: [number, number],) => void
+
+  clearFilters: () => void
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 import React from "react",
@@ -8,14 +38,6 @@ import React from "react",
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
 
-=======
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     priceRange[1] !== 200,
 
   if (!hasActiveFilters) return null,
@@ -90,13 +112,6 @@ export function ActiveFilters({;
         >;
           {skill}
           <X className="h-3 w-3" />
-        </ClickableBadge>
-      ))}
-
-
-      {selectedAvailability && selectedAvailability.map(status => (;
-
-        <ClickableBadge
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}

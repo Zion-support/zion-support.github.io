@@ -6,43 +6,10 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
 
   const router = useRouter()
   const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { TUTORIALS } from '@/data/tutorials';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
-import type { Tutorial as TutorialType } from '@/types/tutorial';
-
-interface TutorialPageProps {;
-  tutorial?: TutorialType;
-
-export default function Tutorial(): any ({;
+  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+interface TutorialPageProps {
+  tutorial?: TutorialType
+export default function Tutorial({
   tutorial: initialTutorial,;
 }: TutorialPageProps) {;
   const router = useRouter();
@@ -82,23 +49,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
           {tutorial.author && (
 
 <<<<<<< HEAD
-=======
-}
-
-            <p className="mt-8 text-white font-semibold">
-import Link from "next/link",;
-import { useRouter } from "next/router",;
-import { TUTORIALS } from "@/data/tutorials",;
-import { SEO } from "@/components/SEO",;
-import { Button } from "@/components/ui/button",;
-import { ArrowLeft } from 'lucide-react';
-import ReactMarkdown from "react-markdown",;
-import type { Tutorial as TutorialType } from "@/types/tutorial",;
-interface TutorialPageProps {;
-  tutorial?: TutorialType;
-}
-export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {;
-  const router = useRouter(),;
   const slug = router.query.slug as string | undefined;
   const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
   if (!tutorial) {;
@@ -142,6 +92,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>;
     </>;
   );
+<<<<<<< HEAD
 }
 
 import Link from 'next / link';
@@ -213,3 +164,5 @@ if ( {) {
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

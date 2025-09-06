@@ -7,7 +7,9 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -17,6 +19,7 @@ class ErrorDetectionService {}
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -36,7 +39,6 @@ class ErrorDetectionService {}
       data,
       "service": 'error-detection-service'
     };
-
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -63,6 +65,7 @@ class ErrorDetectionService {}
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -77,7 +80,6 @@ class ErrorDetectionService {}
       'backups',
       'temp'
     ];
-
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -226,7 +228,6 @@ class ErrorDetectionService {}
         'vite.config.ts',
         'tailwind.config.js'
       ];
-
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -257,7 +258,6 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -296,7 +296,9 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -494,6 +496,7 @@ class ErrorDetectionService {}
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -643,3 +646,4 @@ service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

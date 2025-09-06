@@ -14,8 +14,7 @@ interface ContactProps {
   // Add props here as needed
 
 =======
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Contact({ }: ContactProps) {
   return (
@@ -24,12 +23,6 @@ export default function Contact({ }: ContactProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
-
-
-}
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 

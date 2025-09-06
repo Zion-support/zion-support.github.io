@@ -83,6 +83,7 @@ export function ProjectOfferBanner() {;
       const offers = projects && projects.filter(p => p && p.status === 'offer_sent');
       setPendingOffers(offers);
     }
+<<<<<<< HEAD
   }, [projects, isLoading]);
 
   const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
@@ -140,3 +141,5 @@ export function ProjectOfferBanner() {;
           </Card>
         ))}
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

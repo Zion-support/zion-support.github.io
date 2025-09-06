@@ -2,16 +2,6 @@
 import { Button } from './button';
 interface EmptyStateProps {;
 
-import { Package, RefreshCw } from 'lucide-react'
-import { Button } from './button';
-interface EmptyStateProps {
-
-  text?: string;
-  description?: string;
-  onRetry?: () => void;
-  showRetry?: boolean;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
 
   icon
 }: EmptyStateProps) {
@@ -21,6 +11,8 @@ interface EmptyStateProps {
         {icon |<Package className="h-16 w-16" />}
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button';
 interface EmptyStateProps {

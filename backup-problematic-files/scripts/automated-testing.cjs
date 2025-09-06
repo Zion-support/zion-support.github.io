@@ -10,3 +10,4 @@ console.log('🧪 Running Automated Tests...')
   execSync('npm run type-check', { "stdio"})
     execSync('npm audit --audit-level=moderate', { "stdio"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

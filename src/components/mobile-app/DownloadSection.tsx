@@ -112,22 +112,4 @@ export const DownloadSection: React.FC = () => {;
 };
 <<<<<<< HEAD
 =======
-
-";
-
-            
-            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
-
-              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
-                <QrCodeIcon className="w-full h-full p-2" />
-                {/* This would be replaced with an actual QR code in production */}
-              </div>
-              <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

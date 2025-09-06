@@ -13,6 +13,9 @@ const fs = require("fs"); const path = require("path"); function fixCorruptedFil
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const fs = require("fs");
 const path = require("path");
 // Function to fix corrupted TypeScript files
@@ -33,6 +36,7 @@ function fixCorruptedFile(filePath) {
       .replace(
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       .replace(;
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
@@ -44,6 +48,21 @@ function fixCorruptedFile(filePath) {
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
 
+=======
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
+=======
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         "import type { NextPage } from 'next'")
       // Fix component declarations
       .replace(
@@ -56,9 +75,6 @@ function fixCorruptedFile(filePath) {
       .replace(/(\w+),\s*(\w+),\s*(\w+)/g, "$1$2$3")
       .replace(/(\w+),\s*(\w+)/g, "$1$2")
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default $1;");
       // Fix return statements

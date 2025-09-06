@@ -79,6 +79,7 @@ function fixFile(filePath) {
     console && console.error(`Error fixing ${filePath}:`, error && error.message);
     return false}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 async function main() {
   const patterns = ['pages/**/*.tsx',
     'components/**/*.tsx',
@@ -87,6 +88,7 @@ async function main() {
   ];
   let totalFixed = 0;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     for (const file of files) {
       if (fixFile(file)) {
         totalFixed++}

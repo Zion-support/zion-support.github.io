@@ -21,17 +21,6 @@ interface LoadingState {;
   isOnline: boolean;
 
 interface DynamicLoaderProps {;
-  importFn: () => Promise<{ default: ComponentType<any> }>;
-  fallback?: React && React.ReactNode;
-  errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
-  loadingComponent?: React && React.ComponentType;
-  enableRetry?: boolean;
-  maxRetries?: number;
-  prefetch?: boolean;
-  className?: string;
-  children?: React && React.ReactNode;
-  [key: string]: any;
-
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
   progress?: number;

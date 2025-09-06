@@ -31,7 +31,82 @@ const features = [;
     icon: Package,;
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {;
+    icon: ShoppingCart,;
+import Layout from '../../components/Layout';
+import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: ShoppingCart,;
+    title: 'E-commerce Platforms,',;
+    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
+  },;
+  {}
+    icon: Users,;
+    title: 'Customer Analytics,',;
+    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'';
+  },;
+  {}
+    icon: BarChart,;
+    title: 'Inventory Management,',;
+    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'';
+  },;
+  {}
+    icon: Smartphone,;
+    title: 'Mobile Commerce,',;
+    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'';
+  },;
+  {}
+    icon: Package,;
+    title: 'Supply Chain Optimization,',;
+    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+import Layout from '../../components/Layout';
+import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: ShoppingCart,;
+    title: 'E-commerce Platforms,',;
+    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
+  },;
+  {}
+    icon: Users,;
+    title: 'Customer Analytics,',;
+    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;
+  },;
+  {}
+    icon: BarChart,;
+    title: 'Inventory Management,',;
+    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;
+  },;
+  {}
+    icon: Smartphone,;
+    title: 'Mobile Commerce,',;
+    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',;
+  },;
+  {}
+    icon: Package,;
+    title: 'Supply Chain Optimization,',;
+    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -160,6 +235,7 @@ const benefits = [;
   'Mobile-first customer engagement';
 ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -379,12 +455,14 @@ export default function RetailSolutions() {;
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -473,6 +551,7 @@ export default function RetailSolutions() {;
                 </ul>;
               </div>;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -502,4 +581,5 @@ export default function RetailSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
 

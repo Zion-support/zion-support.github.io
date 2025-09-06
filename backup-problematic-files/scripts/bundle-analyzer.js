@@ -22,6 +22,7 @@ import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>

@@ -1,9 +1,20 @@
 
+=======
+import Link from 'next/link'
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
 
+<<<<<<< HEAD
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -102,6 +113,7 @@ export function ApplicationActions({;
 
 
   );
+<<<<<<< HEAD
 }
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;
@@ -116,3 +128,5 @@ export function ApplicationActions({;
   );
 }
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

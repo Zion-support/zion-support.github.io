@@ -32,12 +32,6 @@
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
 
-=======
-                  </p>
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
               </TabsContent>
             </Tabs>
@@ -45,5 +39,4 @@
         </Card>
       </main>
     </>
-<<<<<<< HEAD
   )

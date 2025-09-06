@@ -24,14 +24,13 @@
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-<<<<<<< HEAD
 =======
           950: '#030712'
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -40,7 +39,7 @@
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
-        'spin-slow': 'spin 8s linear infinite'
+        'spin-slow': 'spin 8s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -63,10 +62,11 @@
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem'
+        '128': '32rem',
       },
       borderRadius: {
         '4xl': '2rem',
+<<<<<<< HEAD
         '5xl': '2.5rem'
       },
       boxShadow: {

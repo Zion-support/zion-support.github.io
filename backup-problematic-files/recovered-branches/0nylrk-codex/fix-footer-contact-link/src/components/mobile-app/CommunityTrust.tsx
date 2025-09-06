@@ -34,3 +34,26 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
         ;
         {/* Rating display */}
+=======
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
+          <div className="flex justify-center mb-4">;
+            {[1, 2, 3, 4, 5].map((star) => (;
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;
+            ))}
+          </div>;
+          <blockquote className="text-center text-lg text-white italic mb-4">;
+            "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className="text-center">;
+            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
+            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  ),;
+},; ];
+}</div>) ) 
+}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) 
+};
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

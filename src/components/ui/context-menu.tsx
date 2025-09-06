@@ -18,7 +18,6 @@ const ContextMenuSubTrigger = React.forwardRef<
 import * as React from &quot;react & quot;
 import * as ContextMenuPrimitive from &quot;@radix - ui / react - context - menu & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
 ;
 const ContextMenu = ContextMenuPrimitive.Root;
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
@@ -76,28 +75,6 @@ ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
 
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
-    inset?: boolean;
-
-  }
->(({ className, inset, ...props }, ref) => (;
-  <ContextMenuPrimitive.Item;
-    ref={ref}
-
-      className
-    )}
-    {...props}
-  />;
-));
-ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
-const ContextMenuCheckboxItem = React.forwardRef<;
-
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
->(({ className, children, checked, ...props }, ref) => (;
-  <ContextMenuPrimitive.CheckboxItem;
-    ref={ref}
-
-      className
-    )}
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -214,12 +191,3 @@ const ContextMenuShortcut = ({
   ...props;
 }: React.HTMLAttributes < HTMLSpanElement>) =>: any {
   return (
-    <span;
-      className={cn (
-        &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
-        class_name)}
-      {...props}
-    />;
-  );
-}
-<<<<<<< HEAD

@@ -83,15 +83,6 @@ export function PointsBadge() {
           <TooltipTrigger asChild>
             <Link
 
-=======
-              href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
-              <Gift className="h-4 w-4" aria-hidden="true" />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -146,6 +137,10 @@ export function PointsBadge() {
                   aria-hidden="true"
 
                 />
+=======
+    }
+  },
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               </Button>
             </TooltipTrigger>
             <TooltipContent>

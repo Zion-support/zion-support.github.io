@@ -10,3 +10,4 @@ console.log('� Running Health Check...')
     execSync('npm run lint', { "stdio"})
     execSync('npm run type-check', { "stdio"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,53 +1,26 @@
+=======
+          if (index < currentStep) status = "complete"
+          if (index === currentStep) status = "current"
+interface StepProps {
+  status: "incomplete" | "current" | "complete",
+  label: string,
+  description?: string
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
+import React from "react";
+import { cn } from "@/lib/utils";
+import { CheckIcon } from 'lucide-react'
 
   className?: string
 }
 export function Step({
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   className}: StepProps) {
   return (
     <li
 
       className={cn(
 
-        className
-      )}
-    >
-      <div
-        className={cn(
-
-            "bg-zion-purple border-zion-purple text-white":
-              status === "complete"}
-        )}
-      >
-        {status === "complete" ? (
-          <CheckIcon className="h-5 w-5" />
-        ) : (
-          <span>
-
-            {/* Step number would go here */}
-          </span>;
-        )}
-
-
-            "text-zion-slate-light": status === "incomplete",
-            "text-zion-slate-light": status === "incomplete",
-
-
-            "text-white": status === "current" || status === "complete"})}
-        >
-      </div>;
-
-      <div className="ml-4 min-w-0">;
-        <h3
-          className={cn("text-sm font-medium", {
-
-            "text-white": status === "current" || status === "complete"})}
-
-        >
           {label}
         </h3>
         {description && (

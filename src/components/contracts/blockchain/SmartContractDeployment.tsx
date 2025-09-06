@@ -117,32 +117,17 @@ export function SmartContractDeployment({
                 <Label>Select blockchain network</Label>
 
 =======
-
-                <RadioGroup 
-                  defaultValue={deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({;
-                    ...deploymentOptions,;
-                    network: value as BlockchainNetwork;
-
-
-                  onValueChange={(value) => setDeploymentOptions({;
-                    ...deploymentOptions,;
-                    network: value as BlockchainNetwork;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;                    walletAddress: e.target.value
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   })}
-                  className="flex flex-col space-y-1"
-                >
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="ethereum" id="ethereum" />
-                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="polygon" id="polygon" />
-                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
-                  </div>
-                </RadioGroup>
+                />
+              </div>
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  })}
+                />
               </div>
 
               <div className="space-y-2">

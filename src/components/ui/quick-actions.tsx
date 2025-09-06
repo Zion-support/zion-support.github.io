@@ -58,12 +58,9 @@ if ( {) {
       category: 'performance',
       action: () => {
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
@@ -72,87 +69,6 @@ if ( {) {
       action: () => {
 
     {
-      id: 'clear-cache',
-      label: 'Clear Cache',
-      description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
-      category: 'maintenance',
-      dangerous: true,
-
-    {
-      id: 'preload-critical-resources'
-      label: 'Preload Critical Resources'
-      description: 'Preload fonts, images, and critical assets'
-      icon: <Zap className='w-4 h-4' />
-      category: 'performance'
-      action: () => {
-        // Preload critical fonts
-        const criticalFonts = [
-
-        ]
-        criticalFonts.forEach(font => {
-          const link = document.createElement('link')
-          link.rel = 'preload'
-          link.as = 'font'
-          link.type = 'font/woff2'
-          link.crossOrigin = 'anonymous'
-          link.href = font
-          document.head.appendChild(link)
-        })
-        // Preload critical images
-        const criticalImages = ['/logos/zion-logo.png', '/images/hero-bg.webp']
-        criticalImages.forEach(img => {
-          const link = document.createElement('link')
-          link.rel = 'preload'
-          link.as = 'image'
-          link.href = img
-          document.head.appendChild(link)
-        })
-
-          '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
-        ],
-
-        criticalFonts.forEach(font => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'font',
-          link.type = 'font/woff2',
-          link.crossOrigin = 'anonymous',
-          link.href = font,
-          document.head.appendChild(link)
-        }),
-
-        // Preload critical images
-        const criticalImages = [
-          '/logos/zion-logo.png/images/hero-bg.webp'
-        ],
-
-        criticalImages.forEach(img => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'image',
-          link.href = img,
-          document.head.appendChild(link)
-        })
-      }},
-
-            colorDepth: screen.colorDepth
-          }
-        },
-
-        const blob = new Blob([JSON.stringify(metrics, null, 2)], {
-          type: 'application/json'
-        }),
-
-        const url = URL.createObjectURL(blob),
-        const a = document.createElement('a'),
-        a.href = url,
-        a.download = `performance-report-${Date.now()}.json`,
-        document.body.appendChild(a),
-        a.click(),
-        document.body.removeChild(a),
-        URL.revokeObjectURL(url)
-      }},
 
     {
       id: 'refresh-app',
@@ -168,6 +84,12 @@ if ( {) {
       <div className="fixed bottom-4 left-4 z-50">
         <Button
 
+=======
+
+          variant="outline"
+          size="sm"
+          onClick={() => setIsVisible(true)}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           Quick Actions
         </Button>
       </div>
@@ -194,4 +116,5 @@ if ( {) {
             </Button>
           </div>
         </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD

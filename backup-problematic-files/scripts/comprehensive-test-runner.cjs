@@ -9,3 +9,4 @@ console.log('🧪 Starting Comprehensive Test Runner...')
     runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
     addTest('Python Unit Tests', 'skipped', 0, { "reason"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

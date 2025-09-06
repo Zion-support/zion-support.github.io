@@ -16,17 +16,6 @@ export const QrCodeDownload: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
               </p>
-
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-
-=======
-              
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
@@ -97,3 +86,6 @@ export const QrCodeDownload: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

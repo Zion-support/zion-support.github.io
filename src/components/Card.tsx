@@ -25,7 +25,10 @@ const Card: React.FC<CardProps> = ({
     <div className={classes}>
       {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
       {description && <p className="text-gray-300 mb-4">{description}</p>}
+<<<<<<< HEAD
       {children}
     </div>
   );
 }
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

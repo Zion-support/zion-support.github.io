@@ -314,6 +314,7 @@ async function main() {,"}),"})
 }"}),"})
 // Start the dashboard,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   child_process';
 import fs from "fsfs';
 import path from "pathpath';
@@ -510,3 +511,4 @@ class AutomationDashboard {;
     console && console.log('');
     // Display recommendations;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

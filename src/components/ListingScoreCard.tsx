@@ -33,22 +33,18 @@ export function ListingScoreCard({
 
 =======
 
-            src={image} 
-            alt={title} 
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            onError={() => setMainImageError(true)}
-            priority={false}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
-          />
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export function ListingScoreCard({ 
+  title, 
+  description, 
+  image, 
+  category, 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         </div>
       )}
-      {(!image || mainImageError) && ( // Fallback if no image or error
-        <div className="h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center">
-          <span className="text-zion-slate-light text-sm">No Image</span>
+      {(!image |mainImageError) && ( // Fallback if no image or error
+        <div className='h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center'>
+          <span className='text-zion-slate-light text-sm'>No Image</span>
         </div>
       )}
 

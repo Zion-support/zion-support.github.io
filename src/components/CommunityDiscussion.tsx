@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+=======
+    id: 1,  time: string
+  title: string
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
@@ -12,6 +16,7 @@ interface DiscussionPost {
   author: string,
   avatar?: string,
   time: string,
+<<<<<<< HEAD
 
   title: string,
 
@@ -54,11 +59,6 @@ export const CommunityDiscussion: React.FC = () => {
       <div className="mb-4 flex justify-end">
         <Button
 
-=======
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
-          size="sm"
-          onClick={() => setShowNew((v) => !v)}
-        >
           {showNew ? "Cancel" : "New Post"}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

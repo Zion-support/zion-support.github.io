@@ -2,30 +2,16 @@ module.exports = {
   apps: [
     {
 
+<<<<<<< HEAD
       name: 'continuous-automation',
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
 
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      name: 'auto-fix',
-      script: 'scripts/pm2/auto-fix.js',
-
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/automation-error.log',
-      out_file: './logs/automation-out.log',
-      log_file: './logs/automation-combined.log',
-      time: true,    },
-    {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       script: 'npm',
       args: 'run build',
 
@@ -35,8 +21,10 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',

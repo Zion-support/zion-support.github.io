@@ -10,8 +10,6 @@
     isAuthenticated
     user
 <<<<<<< HEAD
-=======
-
 
 
       const redirectTo = options?.redirectTo || '/login';

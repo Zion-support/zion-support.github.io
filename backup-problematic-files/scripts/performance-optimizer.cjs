@@ -81,10 +81,15 @@ class PerformanceOptimizer {
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
   async optimizePerformance() {
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {
       this.log('Starting performance optimization...');
       // Analyze bundle size
@@ -149,7 +154,10 @@ class PerformanceOptimizer {
     });
     return files;
   }
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -326,6 +334,7 @@ optimizer.optimizePerformance().then(report => {
   console.error('Error running performance optimizer:', error.message);
   process.exit(1);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;

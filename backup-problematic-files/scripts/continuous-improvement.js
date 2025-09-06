@@ -246,6 +246,7 @@ ci && ci.analyze().then(() => {,"}),"})
   console && console.error(,"}),"})
   '❌ Continuous Improvement "Failed": ', error),"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -420,3 +421,4 @@ class ContinuousImprovement {;
 // "Run": the continuous improvement analysis;
 const ci = new ContinuousImprovement();
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

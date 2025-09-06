@@ -37,28 +37,24 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { Menu, X } from 'lucide-react'
-import { useTranslation  } from 'react-i18next';
-import { CartDrawer  } from '@/components/cart/CartDrawer';
-import { LoginModal } from '@/components/auth/LoginModal';
-
-import { useState } from 'react';
-import { log_debug, logErrorToProduction } from '@/utils / production_logger';
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import { Logo } from '@/components / header / Logo';
-import { PointsBadge } from '@/components / loyalty / PointsBadge';
-import { UserMenu } from '@/components / header / UserMenu';
-import { LanguageSelector } from '@/components / header / LanguageSelector';
-import { ModeToggle } from '@/components / ModeToggle';
-import { use_auth } from '@/hooks / use_auth';
-import { useIsMobile } from '@/hooks / use - mobile';
-import { use_messaging } from '@/context / MessagingContext';
-import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data / marketplace_data';
-import { slugify } from '@/lib / slugify';
-import { ResponsiveNavigation } from '@/components / navigation / ResponsiveNavigation';
-import { MobileMenu } from '@/components / header / MobileMenu';
-import { MobileBottomNav } from '@/components / header / MobileBottomNav';
+import { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Logo } from '@/components/header/Logo',;
+import { PointsBadge } from '@/components/loyalty/PointsBadge',;
+import { UserMenu } from '@/components/header/UserMenu',;
+import { LanguageSelector } from '@/components/header/LanguageSelector',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { generateSearchSuggestions } from '@/data/marketplaceData',;
+import { slugify } from '@/lib/slugify',;
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
 import { Menu, X } from 'lucide-react';
 import { use_translation } from 'react - i18next';
 import { CartDrawer } from '@/components / cart / CartDrawer';
@@ -167,95 +163,3 @@ if ( {) {
             {!isLoggedIn && (
               <Link
 
-                {t('auth.login')}
-              </Link>
-            )}
-            {isLoggedIn && <UserMenu />}
-
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-      </header>
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
-          <div
-
-}/>
-}<LoginModal isOpen= {
-  loginOpen
-}onOpenChange= {
-  setLoginOpen
-}/> </>)
-}'"  { opacity: 0
-  height: 0
-}}
-              animate = {
-  { opacity: 1
-  height: 'auto'
-}}
-              exit = {
-  { opacity: 0
-  height: 0
-<<<<<<< HEAD
-}}
-              transition={{ duration: 0.3 }}"
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
-              <div className="px-4 py-6 space-y-4">
-                {services.map((category, index) => (
-                  <div key={index}>"
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
-                      {category.category}
-                    </h3>"
-                    <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown
-                        <Link
-                          key={serviceIndex}
-                          to={service.path}"
-                          className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={( setIsOpen(false)}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                <div className="pt-4 border-t border-white/10 space-y-2">
-                  <Link                    to="/solutions"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Solutions
-                  </Link>
-                  <Link                    to="/about"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link                    to="/blog"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Blog
-                  </Link>
-                  <Link                    to="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </header>
-  )}
-'"`
-}

@@ -35,6 +35,7 @@ export default async function handler(
     // Send to external analytics services
     await sendToExternalServices(event);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
 async function sendToExternalServices("event": AnalyticsEven t) {
   try {
@@ -82,8 +83,10 @@ async function sendToExternalServices("event": AnalyticsEven t) {
         "body": JSO N && N.stringify(event)})}
   } catch (error) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
 // Get analytics data (for admin dashboard)
 export async function getAnalyticsData() {
   return analyticsData}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

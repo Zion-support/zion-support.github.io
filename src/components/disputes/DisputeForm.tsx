@@ -71,7 +71,6 @@ export function DisputeForm({
       }
     } catch (error) {
 
-=======
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
@@ -155,45 +154,3 @@ export function DisputeForm({
                   multiple;
                   on_change={handleFileChange}
                   className='cursor - pointer'                />;
-                {files.length > 0 && (
-                  <div className='space - y-2'>;
-                    <p className='text - sm font - medium'>Selected files:</p>;
-                    <ul className='space - y-1'>;
-                      {files.map ((file, index) => (
-                        <li;
-                          key={index}
-                          className='flex items - center justify - between text - sm bg - muted / 30 p - 2 rounded';
-                        >;
-                          <span>;
-                            {file.name} ({(file.size / 1024).to_fixed (1)} KB);
-                          </span>;
-                          <Button;
-                            type='button';
-                            variant='ghost';
-                            size='sm';
-                            on_click={() => remove_file (index)}                          >;
-                            Remove;
-                          </Button>;
-                        </li>))}
-                    </ul>;
-                  </div>)}
-              </div>;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-
-          <div className='flex justify - end space - x-2'>;
-            {on_cancel && (
-              <Button type='button' variant='outline' on_click={on_cancel}>;
-                Cancel;
-              </Button>)}
-            <Button type='submit' disabled={is_submitting}>;
-              {is_submitting ? 'Submitting...' : 'Submit Dispute'}
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-    </div>);
-
-}
-<<<<<<< HEAD

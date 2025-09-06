@@ -44,6 +44,29 @@ export default function DataAnalyticsPage() {
       description="Advanced data analytics solutions to unlock insights from your data and drive business growth."";
     >;
       <div className="min-h-screen bg-gray-50">";
+=======
+export default function DataAnalyticsPage() {;
+const benefits = [;
+  'Data-driven decision making',;
+  'Improved business performance',;
+  'Better customer insights',;
+  'Reduced operational costs',;
+  'Enhanced competitive advantage',;
+  'Automated reporting and analytics';
+];
+export default function DataAnalyticsServices() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Layout
+      title="Data Analytics Services - Zion Tech Group"
+      description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
+      keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights"
+    >
+      <div className="min-h-screen bg-white">
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -208,7 +231,19 @@ export default function DataAnalyticsServices() {
 =======
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {analyticsServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -258,7 +293,6 @@ export default function DataAnalyticsServices() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,6 +328,7 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">

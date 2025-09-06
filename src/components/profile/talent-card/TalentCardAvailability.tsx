@@ -5,12 +5,13 @@ interface TalentCardAvailabilityProps {
   availabilityType: string
 
 =======
-        return 'bg-blue-500/20 text-blue-400',;
-      default:;
-        return 'bg-gray-500/20 text-gray-400';
-    };
+import React from 'react'
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React from "react";
+  } return 'bg - gray - 500 / 20 text - gray - 400';
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }

@@ -8,11 +8,6 @@ interface ApplyToJobFormProps {
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -85,6 +80,14 @@ if ( {) {
       router.push (`/login?return_to=${encodeURIComponent (`/jobs/${job.id}`)}`);
       return;
     }
+=======
+import { useState } from "react";
+import { useRouter  } from 'next/router';
+import { useState } from "react",
+import { useRouter } from 'next/router',
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     if () {) {
   $2
 }

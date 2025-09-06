@@ -133,8 +133,6 @@ if () {) {
   /> {
   params.map ( (p) => (<Input key= {
 <<<<<<< HEAD
-=======
-
 
     </div>;
   );
@@ -171,12 +169,6 @@ if (contentType?.includes ('application/json') ) {;
 }</div>);
 }export default ApiPlayground;
 '";
-  p.name 
-}</div>) ;
-}export default ApiPlayground;
-'";
-}
-
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;

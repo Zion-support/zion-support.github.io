@@ -10,7 +10,10 @@ import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
 export default function App() {
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
   return (
     <ErrorBoundary>
       <Router>

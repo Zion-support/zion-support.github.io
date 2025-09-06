@@ -19,10 +19,9 @@
   className?: string
 }
 
-export function ProfileBadge({ type, className }: ProfileBadgeProps) {
-  const badgeConfig = {
-    verified: {
-      icon: BadgeCheck,
+};
+      text: "Top Rated",
+      colors: "bg-purple-500/20 text-purple-400"}},
 
 =======
 

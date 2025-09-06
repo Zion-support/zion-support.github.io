@@ -39,16 +39,6 @@ function MessagingInbox() {
       return
     }
 
-=======
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-
-    
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
@@ -74,6 +64,62 @@ function MessagingInbox() {
                 onClick={startVideoCall}
 
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+=======
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react';
+import { use_messaging } from '@/context / MessagingContext';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { ConversationsList, ConversationDetailView } from '@/components / messaging';
+import { useIsMobile } from '@/hooks / use - mobile';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+
+import { useRouter } from 'next/router', // Changed from react-router-dom;
+
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react'
+import { useMessaging  } from '@/context/MessagingContext';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { toast  } from 'sonner';
+import { Button  } from '@/components/ui/button';
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router', // Changed from react-router-dom
+  const {
+    conversations
+    activeConversation
+    setActiveConversation
+export default function MessagingInbox() {
+
+
+
+  const { ;
+    conversations;
+    activeConversation, ;
+    setActiveConversation, ;
+
+    markAsRead;
+    fetchConversations;
+    isLoading
+  } = useMessaging();
+
+  const isMobile = useIsMobile();
+  const router = useRouter(), // Changed from navigate
+  const [activeCall, setActiveCall] = useState<string | null>(null);
+
+      try {
+        await fetchConversations()
+      } catch (error) {
+
+
+    };
+    
+    loadData()
+  }, [fetchConversations]);
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               >
                 <Video className="h-4 w-4" />
                 Start Call

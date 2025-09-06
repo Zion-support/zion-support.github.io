@@ -114,6 +114,11 @@ if ( {) {
         </h3>
         <Button
 
+=======
+
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -135,6 +140,7 @@ if ( {) {
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
 
+<<<<<<< HEAD
                             AI Suggested
                           </Badge>
                         </div>
@@ -185,7 +191,10 @@ if ( {) {
               ))}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

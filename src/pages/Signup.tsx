@@ -431,79 +431,6 @@ if ( {) {
         if (sessionError) {
           console.error("Error setting session:", sessionError)
 
-=======
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage, ,
-} from '@/components / ui / form';
-// Form validation schema;
-const signup_schema = z;
-  .object ({
-    display_name: z.string ().min (2, "Name must be at least 2 characters"),
-    email: z.string ().email ("Please enter a valid email"),
-    password: z.string ();
-      .min (8, "Password must be at least 8 characters");
-      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");
-      .regex (/[a - z]/, "Password must contain at least one lowercase letter");
-      .regex (/[0 - 9]/, "Password must contain at least one number"),
-    confirm_password: z.string (),
-    terms_accepted: z.boolean ().refine (val => val === true, {
-      message: "You must accept the terms and conditions", ,
-}), ,
-});
-  .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"], ,
-});
-type SignupFormValues = z.infer < typeof signup_schema>;
-export default /**
- * Signup - Function description
- */
-function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
-  const navigate = use_navigate ();
-  const [show_password, setShowPassword] = useState (false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState (false);
-  // Track confirm password locally to prevent it from clearing on blur;
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState ("");
-  const password_value = form.watch ("password");
-  const [is_submitting, setIsSubmitting] = useState (false);
-  // Initialize react - hook - form;
-  const form = use_form ({
-    resolver: zod_resolver (signup_schema),
-    default_values: {
-      display_name: ",
-      email: ",
-      password: ",
-      confirm_password: ",
-      terms_accepted: false, ,
-}, ,
-}) as UseFormReturn < SignupFormValues>;
-  // Form submission handler;
-  const on_submit = async (data: SignupFormValues) => {
-    // Check condition
-if (return) {
-  $2
-} // Prevent multiple submissions;
-    setIsSubmitting (true);
-    try {
-      const { res, data: res_data } = await register (
-        data.display_name,
-        data.email,
-        data.password);
-      // Handle duplicate email error from API;
-      // Check condition
-if ( {) {
-  $2
-
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
-          return;
-
-
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -722,6 +649,7 @@ export default function Signup() {;
           console && console.error('Mailchimp subscription failed', err);
           // Non-critical error, don't block user flow;
 }
+<<<<<<< HEAD
       }
       // Toast and navigation are handled above if session is present;
       // If emailVerificationRequired, no toast/navigation here, message is shown;
@@ -787,3 +715,5 @@ const Signup = () => {;
     return <Navigate to="/" />;
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

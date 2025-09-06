@@ -132,7 +132,6 @@ export function ApiErrorCodes() {;
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
         </p>;
-<<<<<<< HEAD
 
         <div className="overflow-x-auto mb-8">;
           <table className="w-full border-collapse">;
@@ -155,4 +154,5 @@ export function ApiErrorCodes() {;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
+<<<<<<< HEAD
 

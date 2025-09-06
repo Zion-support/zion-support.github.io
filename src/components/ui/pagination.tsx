@@ -1,3 +1,11 @@
+=======
+import * as React from &quot;react & quot;
+const Pagination = ({ class_name, ...props }: React.ComponentProps<&quot;nav & quot;>) =>: any (
+  <nav;
+    role=&quot;navigation & quot;
+    aria - label=&quot;pagination & quot;
+    className={cn (&quot;mx - auto flex w - full justify - center & quot;, class_name)}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
@@ -27,13 +35,6 @@ interface PaginationButtonProps
 }
 const PaginationLink = ({
 
-=======
-
-  className,
-  isActive,
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -42,21 +43,6 @@ const PaginationLink = ({
       buttonVariants({
 
         size}),
-
-      className
-    )}
-    {...props}
-  />
-)
-
-const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
-  ({ page, isActive, className, ...props }, ref) => (
-    <button
-      ref={ref}
-      type="button"
-      aria-label={`Page ${page}`}
-      aria-current={isActive ? 'page' : undefined}
-      className={cn(;
 
         className;
       )}
@@ -111,3 +97,6 @@ const PaginationEllipsis = ({
   </span>
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

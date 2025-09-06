@@ -46,7 +46,14 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
-    icon: "FileText"
+    icon: "Briefcase"
+  }
+    id: "getting-hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.",
+    adminOnly: false,
+    icon: "Briefcase"
+  },
 
 =======
 
@@ -60,37 +67,6 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-import { log_info } from '@/utils / production_logger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
-// Mock category data;
-const categories_info: Record < string, ForumCategoryInfo> = {
-  "getting - hired": {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    admin_only: false,
-    icon: "Briefcase";
-  }
-
-  user}: {
-  categoryId: string
-  category: ForumCategoryInfo
-  IconComponent: React.ComponentType<any>
-  user: any
-}) {
-
-    ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) =>
-    // Remove duplicates by id
-    index === self.findIndex(p => p.id === post.id)
-
-  // Apply search filter
-  const filteredPosts = searchQuery
-    ? categoryPosts.filter(post =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
 
       return;
 

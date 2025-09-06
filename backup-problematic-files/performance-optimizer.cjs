@@ -117,7 +117,6 @@ const optimizer = new PerformanceOptimizer;(;);
 optimizer.generateOptimizationReport().then(report => {
   }).catch(error => {
   console.error('❌ Optimization "failed": ', error)});
-<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -139,11 +138,15 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+  console.error(' Optimization "failed")
+
+  console.error(' Optimization "failed")
 <<<<<<< HEAD
-  console.error(' Optimization "failed")
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   console.error(' Optimization "failed")
-
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   console.error(' Optimization "failed")
 #!/usr/bin/env node
 const fs = require('fs');
@@ -235,5 +238,9 @@ function optimizePerformance() {
   return report;
 }
 // Run performance optimization
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

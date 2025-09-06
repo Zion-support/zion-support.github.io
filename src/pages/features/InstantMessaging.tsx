@@ -47,10 +47,6 @@ import { GradientHeading } from "@/components/GradientHeading",
             </div>
           </div>
 
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
@@ -61,3 +57,5 @@ import { GradientHeading } from "@/components/GradientHeading",
     </>
   )
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

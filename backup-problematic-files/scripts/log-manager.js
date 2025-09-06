@@ -214,6 +214,7 @@ ${this && this.logsDir}/*.log {
         pm2 reloadLogs
     endscript
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 `;
       const configPath = path && path.join(this && this.logsDir, 'logrotate && logrotate.conf');
       fs && fs.writeFileSync(configPath, logrotateConfig);
@@ -316,9 +317,11 @@ ${this && this.logsDir}/*.log {
       throw error}
   }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run the log manager if called directly
 if (require && require.main === module) {
   const manager = new LogManager();
   manager && manager.run()
     .then(() => {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

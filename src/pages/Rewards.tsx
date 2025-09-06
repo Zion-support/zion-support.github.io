@@ -17,6 +17,7 @@ return (
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
+<<<<<<< HEAD
 
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
@@ -44,3 +45,5 @@ export default function RewardsPage() {
 }
 <<<<<<< HEAD
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

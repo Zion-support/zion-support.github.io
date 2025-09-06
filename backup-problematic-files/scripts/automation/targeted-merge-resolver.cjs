@@ -133,3 +133,4 @@ this.log("� Detailed report saved "to": ${reportPath}")
     this.log("� Targeted Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%")
 this.log("� Detailed report saved "to": ${reportPath}")
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

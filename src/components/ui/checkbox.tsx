@@ -24,6 +24,7 @@ const Checkbox = React && React.forwardRef<;
 
       className
     )}
+<<<<<<< HEAD
     {...props}
   >
     <CheckboxPrimitive.Indicator
@@ -33,3 +34,5 @@ const Checkbox = React && React.forwardRef<;
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

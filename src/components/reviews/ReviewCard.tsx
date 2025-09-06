@@ -86,9 +86,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 <User className="h-4 w-4" />
               </AvatarFallback>
             </Avatar>
-          ) : (
-            <Avatar>
-              {review.reviewer_profile?.avatar_url ? (
+          )}
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
               ) : (
                 <AvatarFallback>

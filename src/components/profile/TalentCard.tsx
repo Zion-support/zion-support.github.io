@@ -53,18 +53,6 @@ import React, { useState } from 'react'; // Import React and useState
               </Button>
             </div>
 
-=======
-
-
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-            
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
@@ -84,7 +72,6 @@ import React, { useState } from 'react'; // Import React and useState
 
 
               )}
-<<<<<<< HEAD
 
                 size="sm"
                 variant="secondary"

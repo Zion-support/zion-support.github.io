@@ -13,3 +13,4 @@ const glob = require('glob')
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
         this.log(`Remaining "errors"`)
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

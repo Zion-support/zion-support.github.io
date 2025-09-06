@@ -1,3 +1,6 @@
+=======
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
   onToggleArchive
@@ -81,13 +84,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <span>Timeline: {quote.timeline}</span>
         </div>
 
-=======
-    <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
-        
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"

@@ -322,10 +322,6 @@ if ( {) {
 
                     defaultValue={[0, priceRange.max]}
                     min={0}
-                    max={priceRange && priceRange.max}
-                    step={priceRange && priceRange.max / 100}
-                    value={currentPriceFilter}
-                    onValueChange={handleSliderChange}
 
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>

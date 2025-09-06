@@ -173,6 +173,8 @@ type=&quot;checkbox&quot;
                     <textarea,
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
+<<<<<<< HEAD:components/email-validator.tsx
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     )}
@@ -233,31 +235,6 @@ onClick={copyResults}
                           </span>;
                         </div>;
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
-=======
-                <div className=&quot;mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700&quot;>
-                  <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>                    <div>
-                      <span className=&quot;text-gray-400&quot;>Total:</span>
-                      <span className=&quot;ml-2 text-white font-medium&quot;>{stats.total}</span>
-                    </div>
-                    <div>
-                      <span className=&quot;text-gray-400&quot;>Valid:</span>
-                      <span className=&quot;ml-2 text-green-400 font-medium&quot;>{stats.valid}</span>
-                    </div>
-                    <div>
-                      <span className=&quot;text-gray-400&quot;>Invalid:</span>
-                      <span className=&quot;ml-2 text-red-400 font-medium&quot;>{stats.invalid}</span>
-                    </div>
-                    <div>
-                      <span className=&quot;text-gray-400&quot;>Avg Score:</span>
-                      <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>
-
-=======
-                        {stats.avgScore.toFixed(0)}                      </span>
-                    </div>
-                  </div>
-                </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               )}
 {validationResults.length > 0 ? (

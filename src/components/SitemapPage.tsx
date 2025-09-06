@@ -76,13 +76,6 @@ export const SitemapPage: React.FC = () => {;
                   </li>));
               }
 
-=======
-
-            </ul>;
-          </div>;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -168,6 +161,62 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+=======
+
+
+            </ul>;
+          </div>;
+
+
+            </ul>;
+          </div>;
+          {/* Client Routes */}
+          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
+            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Client Pages</h2>;
+            <p className="text - sm text - zion - slate mb - 4">Requires employer or buyer account</p>;
+            <ul className="space - y-2">;
+              {complete_sitemap;
+                .filter (route =>;
+                  route.required_roles?.includes ('employer') ||;
+                  route.required_roles?.includes ('buyer'));
+                .map (route => (
+                  <li key={route.path}>;
+                    <Link;
+                      href = {resolve_path (route.path), }
+                      className="flex items - center hover:text - zion - purple";
+                    >;
+                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
+
+
+            </ul>;
+          </div>;
+
+
+            </ul>;
+          </div>;
+          {/* Shared Routes */}
+          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
+            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Authenticated User Pages</h2>;
+            <p className="text - sm text - zion - slate mb - 4">Requires any account type</p>;
+            <ul className="space - y-2">;
+              {complete_sitemap;
+                .filter (route =>;
+                  route.required_auth &&;
+                  (!route.required_roles || route.required_roles.length === 0));
+                .map (route => (
+                  <li key={route.path}>;
+                    <Link;
+                      href = {resolve_path (route.path), }
+                      className="flex items - center hover:text - zion - purple";
+                    >;
+                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
+
+
+            </ul>;
+          </div>;
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </ul>;
           </div>;
           {/* Admin Routes */}

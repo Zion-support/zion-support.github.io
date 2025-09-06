@@ -162,6 +162,16 @@ const HighlightText: React.FC<{
           )}
         </div>
 
+=======
+
+        <p className="text-muted-foreground mb-3 line-clamp-2">
+          <HighlightText text={result.description} searchTerm={searchTerm} />
+        </p>
+
+        <div className="flex items-center justify-between">
+          <div className="flex gap-2 flex-wrap">
+            {result.category && (
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                 {result.category}
               </Badge>
             )}
@@ -216,15 +226,6 @@ const FilterSidebar: React.FC<{
           )}
             {result.tags?.slice(0, 3).map((tag, index) => (
 
-=======
-              <Badge key={index} variant="outline" className="text-xs">
-                <HighlightText text={tag} searchTerm={searchTerm} />
-              </Badge>
-            ))}
-          </div>
-          
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -293,21 +294,6 @@ const FilterSidebar: React.FC<{
       <Separator />
       <div>
 
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="0">Any Rating</SelectItem>
-            <SelectItem value="1">1+ Stars</SelectItem>
-            <SelectItem value="2">2+ Stars</SelectItem>
-            <SelectItem value="3">3+ Stars</SelectItem>
-            <SelectItem value="4">4+ Stars</SelectItem>
-            <SelectItem value="4.5">4.5+ Stars</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-    </div>
-  )
-
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -333,6 +319,24 @@ const FilterSidebar: React.FC<{
       </div>
     </div>
   )
+=======
+},
+
+// Main Search Results Page Component
+export const SearchResultsPage: React.FC = () => {
+  const router = useRouter(),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [totalCount, setTotalCount] = useState(0),
+  const [currentPage, setCurrentPage] = useState(1),
+  const [hasMore, setHasMore] = useState(false),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [showFilters, setShowFilters] = useState(false),
+  
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
@@ -375,6 +379,7 @@ const FilterSidebar: React.FC<{
               </p>
             </div>
 
+<<<<<<< HEAD
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -390,91 +395,6 @@ const FilterSidebar: React.FC<{
 
                 </Button>
               </div>
-                  onClick={() => setViewMode('list')}                >;
-                  <List className='h-4 w-4' />;
-                </Button>;
-              </div>;
-
-              {/* Mobile Filter Toggle */}
-
-              {/* View Mode Toggle */}
-              <div className='flex border rounded - md'>;
-                <Button;
-                  variant={view_mode === 'grid' ? 'default' : 'ghost'}
-                  size='sm';
-                  on_click={() => setViewMode ('grid')}                >;
-                  <GridIcon className='h - 4 w - 4' />;
-                </Button>;
-                <Button;
-                  variant={view_mode === 'list' ? 'default' : 'ghost'}
-                  size='sm';
-                  on_click={() => setViewMode ('list')}                >;
-                  <List className='h - 4 w - 4' />;
-                </Button>;
-              </div>;
-              {/* Mobile Filter Toggle */}
-              <Sheet open={show_filters} onOpenChange={setShowFilters}>;
-                <SheetTrigger as_child>;
-                  <Button variant='outline' className='lg:hidden'>;
-                    <Filter className='h - 4 w - 4 mr - 2' />;
-
-                    Filters{' '}
-                    {activeFiltersCount > 0 && `(${activeFiltersCount})`}
-                  </Button>;
-                </SheetTrigger>;
-
-                <SheetContent side='left' className='w - 80'>;
-                  <SheetHeader>;
-                    <SheetTitle > Search Filters</SheetTitle>;
-                  </SheetHeader>;
-                  <div className='mt - 6'>;
-                    <FilterSidebar;
-                      filters = {filters, }
-                      onFiltersChange = {handleFiltersChange, }
-                      available_categories = {available_categories, }
-
-              <Sheet open={showFilters} onOpenChange={setShowFilters}>
-                <SheetTrigger asChild>
-                  <Button variant="outline" className="lg:hidden">
-                    <Filter className="h-4 w-4 mr-2" />
-                    Filters {activeFiltersCount > 0 && `(${activeFiltersCount})`}
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="w-80">
-                  <SheetHeader>
-                    <SheetTitle>Search Filters</SheetTitle>
-                  </SheetHeader>
-                  <div className="mt-6">
-                    <FilterSidebar
-
-        )}
-
-      </div>;
-
-      {searchTerm && (;
-        <div className='flex gap-6'>;
-
-          {/* Desktop Filters Sidebar */}
-          <div className="hidden lg:block w-64 flex-shrink-0">
-            <div className="bg-card border rounded-lg p-4 sticky top-4">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="font-semibold">Filters</h2>
-                {activeFiltersCount > 0 && (
-                  <Button
-
-            {loading && results.length === 0 ? (
-              <div className="flex justify-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin" />
-              </div>
-            ) : results.length === 0 && searchTerm ? (
-
-                  ))}
-                </div>
-                {/* Load More Button */}
-                {hasMore && (
-
-                      {loading ? (
-                        <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                           Loading...
                         </>

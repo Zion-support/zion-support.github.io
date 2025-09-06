@@ -163,44 +163,6 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
       </main>
     </>
   )
-}
-
-        </div>;
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-          <div className="lg:col-span-2">;
-            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>;
-              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
-                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
-                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
-                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>;
-                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
-                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="all" className="mt-0">;
-                <JobsList onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="new" className="mt-0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="in_progress" className="mt-0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="filled" className="mt-0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="closed" className="mt-0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-
-          <div>;
-            <div className="sticky top-4 space-y-6">;
-
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
-;
 
           
           <div>
@@ -290,4 +252,7 @@ function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -154,7 +154,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardFooter className='flex flex-col space-y-2'>;
         <Button
 
-<<<<<<< HEAD
             {steps[currentStep]?.skipText}
           </Button>
         )}
+<<<<<<< HEAD

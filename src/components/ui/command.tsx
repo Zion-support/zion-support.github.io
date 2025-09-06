@@ -39,6 +39,9 @@ interface CommandDialogProps;
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 
+=======
+const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
 
     <Dialog {...props}>
@@ -47,6 +50,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
           <DialogTitle className="sr-only">Command Menu</DialogTitle>
         </DialogHeader>
 
+<<<<<<< HEAD
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>

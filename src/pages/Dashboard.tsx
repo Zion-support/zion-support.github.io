@@ -52,11 +52,6 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (loading) {
 );
 // Lazy load notification functions;
@@ -85,6 +80,51 @@ function Dashboard() {
 if ( {) {
   $2
 }
+=======
+
+
+  const userType = null;
+    userWithExtendedProps?.userType ||
+    user?.user_metadata?.userType ||
+    'talent'
+  const roleForTour = null;
+    userType === 'client' || userType === 'admin' ? 'client' : 'talent'
+import React from 'react',
+import dynamic from 'next/dynamic',
+import { useAuth } from "@/hooks/useAuth",
+import { useRequireAuth } from "@/hooks/useAuthGuard",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Badge } from "@/components/ui/badge",
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+import { useFavorites } from '@/hooks/useFavorites',
+import { useToast } from "@/hooks/use-toast",
+import { EmptyState } from "@/components/ui/empty-state",
+import Link from 'next/link',
+// Lazy load heavy components to prevent router abort
+const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
+  loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
+  ssr: false}),
+
+const PointsBadge = dynamic(() => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
+  loading: () => <span className="text-zion-cyan font-medium">Loading...</span>,
+  ssr: false}),
+
+const ApiKeysManager = dynamic(() => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
+  loading: () => <div className="h-24 bg-zion-blue-light rounded animate-pulse" />,
+  ssr: false}),
+
+const NotificationBell = dynamic(() => import("@/components/NotificationBell").then(mod => ({ default: mod.NotificationBell })), {
+  loading: () => <Bell size={16} className="text-zion-cyan" />,
+  ssr: false}),
+
+const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
+  ssr: false}),
+
+// Lazy load notification functions
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     return (
       <div className='min - h-screen flex items - center justify - center'>;
         <div className='text - center'>;
@@ -119,25 +159,6 @@ if ( {) {
               </div>
 
               {/* Stats & Metrics */}
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
-                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">Profile Completion</span>
-                    <span className="text-zion-cyan font-medium">65%</span>
-                  </div>
-                  <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
-                  </div>
-
-                    <PointsBadge />
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">ZION$ Balance</span>
-                    <span className="text-zion-cyan font-medium">
-                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
-                    </span>
-                  </div>
 
                         }
                       }}
@@ -211,7 +232,7 @@ if ( {) {
                       </ul>
                     )}
 
-<<<<<<< HEAD
                         ))}
                       </ul>
                     )}
+<<<<<<< HEAD

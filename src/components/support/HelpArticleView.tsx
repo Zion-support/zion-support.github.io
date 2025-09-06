@@ -28,7 +28,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
 <<<<<<< HEAD
-=======
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
@@ -39,26 +38,6 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
     month: "long",;
     day: "numeric", });
 };
-}
-
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
-  
-  // Find the article in all categories
-  let article,
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId),
-    if (found) {
-      article = found,
-      break
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleViewProps {;
-  articleId: string;
-}
 ;
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
@@ -282,4 +261,7 @@ function formatDate(date: string): string {;
 }
 
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

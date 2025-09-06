@@ -29,27 +29,6 @@ const { execSync } = require("child_process"); const fs = require("fs"); class $
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-const { execSync } = require("child_process");
-const fs = require("fs");
-class $1 {
-  constructor() {
-
-  this && this.buildSteps = ["npm run lint -- --fix || true",
-      "npm run type-check || true",
-      "npm run build || true"]}
-
-
-  async optimizedBuild() {
-  console && console.log("Starting optimized build process...");
-    for (const step of this && this.buildSteps) {
-  try {
-  console && console.log("""Executing": ${step}"");
-        execSync(step, { "stdio": "inherit" })} catch (error) {
-  console && console.warn(`Step failed but "continuing": ${step}`)}
-    }
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 =======
@@ -87,5 +66,5 @@ const { execSync } = require("child_process"); const fs = require("fs"); class $
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console && console.log("Starting optimized build process..."); for (const step of this && this.buildSteps) { try { console && console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console && console.warn(`Step failed but continuing: ${step}`)} } ; console && console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console && console.log("Starting optimized build process..."); for (const step of this && this.buildSteps) { try { console && console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console && console.warn(`Step failed but continuing: ${step}`)} } ; console && console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

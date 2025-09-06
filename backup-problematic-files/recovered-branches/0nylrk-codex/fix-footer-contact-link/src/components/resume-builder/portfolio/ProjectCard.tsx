@@ -39,12 +39,12 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
-<<<<<<< HEAD
 
               <Button variant="ghost" size="icon">;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
+<<<<<<< HEAD
 
         <div className="flex gap-2">;
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>;

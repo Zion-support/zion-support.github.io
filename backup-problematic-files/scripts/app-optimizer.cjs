@@ -19,3 +19,4 @@ console.log('\n App Optimization "Summary")
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

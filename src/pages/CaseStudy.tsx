@@ -14,7 +14,7 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils'
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
-  const study = CASE_STUDIES.find((s,) => s.slug === slug)
+  const study = CASE_STUDIES.find((s) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
 import { ArrowLeft } from 'lucide-react';
 import {  Breadcrumb,;
@@ -68,11 +68,6 @@ export default function CaseStudy() {;
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <Link href="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -113,3 +108,25 @@ export default function CaseStudy() {;
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
 <<<<<<< HEAD
+=======
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
+
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { getBreadcrumbsForPath } from '@/utils/routeUtils';
+export default function CaseStudy() {;
+  const router = useRouter(),;
+  const slug = router && router.query.slug as string,;
+  const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),;
+
+
+  const router = useRouter();
+  const slug = router.query.slug as string,
+  const study = CASE_STUDIES.find((s) => s.slug === slug),
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

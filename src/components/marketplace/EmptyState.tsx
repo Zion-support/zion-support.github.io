@@ -60,19 +60,12 @@ const defaultContent = {
         </Button>
       )}
 
-=======
-      
-
-
-      
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
 
-<<<<<<< HEAD
       {type === 'network' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>

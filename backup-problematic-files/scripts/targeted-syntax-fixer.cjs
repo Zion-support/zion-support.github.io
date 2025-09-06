@@ -17,6 +17,7 @@ console.log('===')
         if (inFunction && braceCount === 0 && trimmedLine === '}')
           const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : ''
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           if (nextLine === '' || nextLine.startsWith('export') || nextLine.startsWith('}')
@@ -33,8 +34,7 @@ console.log('===')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
-=======
 <<<<<<< HEAD
-    console.log('\n� Report saved "to")
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

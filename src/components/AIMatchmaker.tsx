@@ -13,18 +13,6 @@ interface AIMatchmakerProps {
   onMatchSelect?: (match: any,) => void
   className?: string
 }
-=======
-
-
-
-
-
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState(""),
-  const [isMatchmaking, setIsMatchmaking] = useState(false),
-  const [matches, setMatches] = useState([] as MatchResult[]),
-  const [hasSearched, setHasSearched] = useState(false),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
   const handleSearch = async () => {
@@ -32,6 +20,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+=======
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         variant: "destructive"}),
       return
@@ -118,20 +109,6 @@ function AIMatchmaker() {
         variant: 'destructive',
       });
       return;
-    }
-    setIsMatchmaking (true);
-    setHasSearched (true);
-    try {
-      log_info ('Starting AI matching', { data: { query, service_type } });
-      // Get AI matches;
-      const results = await find_matches (query, service_type, 3);
-      log_info ('AI matching results:', { data: results });
-      set_matches (results);
-      toast ({
-        title: 'Matches Found',
-        description: `Found ${results.length} matches based on your description.`,
-      });
-    } catch (error) {
       logErrorToProduction ('Error during AI matching:', { data: error });
       toast ({
         title: 'Matching Error',

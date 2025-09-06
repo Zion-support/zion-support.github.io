@@ -1,4 +1,21 @@
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -1495,3 +1512,4 @@ export default function Services() {;
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

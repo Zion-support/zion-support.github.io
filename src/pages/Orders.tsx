@@ -64,14 +64,6 @@ export default function OrdersPage() {
       ) : orders.length === 0 ? (
         <EmptyState
 
-=======
-
-          icon={<FileText className="h-10 w-10" />}
-          title="No Orders"
-          description="You haven't purchased anything yet."
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         />
       ) : (
         <Table>
@@ -127,3 +119,5 @@ export default function OrdersPage() {
               </TableRow>;
             ))}
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

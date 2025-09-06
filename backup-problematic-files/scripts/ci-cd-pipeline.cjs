@@ -65,3 +65,4 @@ console.log(' Starting CI/CD Pipeline...')
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,205 +1,132 @@
 import React, { useState } from 'react';
 import './ServicesPage.css';
-
-const ServicesPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'ai', name: 'AI & Machine Learning' },
-    { id: 'quantum', name: 'Quantum Computing' },
-    { id: 'autonomous', name: 'Autonomous Systems' },
-    { id: 'enterprise', name: 'Enterprise Solutions' },
-    { id: 'security', name: 'Cybersecurity' },
-  ];
-
-  const services = [
-    {
-      id: 1,
-      category: 'ai',
-      title: 'AI-Powered Analytics',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      features: ['Predictive Analytics', 'Real-time Processing', 'Custom Models', 'API Integration'],
-      price: 'Starting at $5,000/month',
-      icon: '🤖',
-    },
-    {
-      id: 2,
-      category: 'ai',
-      title: 'Natural Language Processing',
-      description: 'Build intelligent chatbots and language understanding systems for your business.',
-      features: ['Chatbot Development', 'Sentiment Analysis', 'Language Translation', 'Text Generation'],
-      price: 'Starting at $3,000/month',
-      icon: '💬',
-    },
-    {
-      id: 3,
-      category: 'quantum',
-      title: 'Quantum Algorithm Development',
-      description: 'Leverage quantum computing power for complex optimization and simulation problems.',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Simulation Services', 'Research Support'],
-      price: 'Starting at $10,000/month',
-      icon: '⚡',
-    },
-    {
-      id: 4,
-      category: 'quantum',
-      title: 'Quantum Security Solutions',
-      description: 'Implement quantum-resistant cryptography to future-proof your security infrastructure.',
-      features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Security Audits', 'Implementation Support'],
-      price: 'Starting at $8,000/month',
-      icon: '🔐',
-    },
-    {
-      id: 5,
-      category: 'autonomous',
-      title: 'Autonomous Business Operations',
-      description: 'Deploy self-managing systems that operate independently and adapt to changing conditions.',
-      features: ['Process Automation', 'Self-Healing Systems', 'Predictive Maintenance', 'Continuous Optimization'],
-      price: 'Starting at $7,000/month',
-      icon: '🤖',
-    },
-    {
-      id: 6,
-      category: 'autonomous',
-      title: 'Smart Infrastructure Management',
-      description: 'Monitor and manage your infrastructure with intelligent autonomous systems.',
-      features: ['Real-time Monitoring', 'Automated Responses', 'Resource Optimization', 'Performance Analytics'],
-      price: 'Starting at $4,000/month',
-      icon: '🏗️',
-    },
-    {
-      id: 7,
-      category: 'enterprise',
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation solutions that modernize your business processes.',
-      features: ['Process Modernization', 'Cloud Migration', 'System Integration', 'Change Management'],
-      price: 'Starting at $15,000/month',
-      icon: '🔄',
-    },
-    {
-      id: 8,
-      category: 'enterprise',
-      title: 'Enterprise Integration',
-      description: 'Seamlessly connect all your systems and applications for unified operations.',
-      features: ['API Development', 'Data Synchronization', 'Workflow Automation', 'Legacy System Integration'],
-      price: 'Starting at $6,000/month',
-      icon: '🔗',
-    },
-    {
-      id: 9,
-      category: 'security',
-      title: 'Advanced Threat Detection',
-      description: 'Protect your organization with AI-powered threat detection and response systems.',
-      features: ['Real-time Monitoring', 'Behavioral Analysis', 'Automated Response', 'Incident Management'],
-      price: 'Starting at $5,000/month',
-      icon: '🛡️',
-    },
-    {
-      id: 10,
-      category: 'security',
-      title: 'Compliance & Governance',
-      description: 'Ensure regulatory compliance with automated governance and audit systems.',
-      features: ['Compliance Monitoring', 'Audit Automation', 'Risk Assessment', 'Policy Management'],
-      price: 'Starting at $3,500/month',
-      icon: '📋',
-    },
-  ];
-
-  const filteredServices = activeCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === activeCategory);
-
-  return (
-    <div className="services-page">
-      {/* Hero Section */}
-      <section className="services-hero">
-        <div className="services-hero-content">
-          <h1 className="services-hero-title">Our Services</h1>
-          <p className="services-hero-subtitle">
-            Comprehensive technology solutions designed to transform your business and drive innovation.
+export default ServicesPage;
+=======
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions to help your business thrive in the digital age.
           </p>
         </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="category-filter">
-        <div className="category-filter-container">
-          <div className="category-buttons">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={`category-button ${activeCategory === category.id ? 'active' : ''}`}
-                onClick={() => setActiveCategory(category.id)}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="services-grid-section">
-        <div className="services-grid-container">
-          <div className="services-grid">
-            {filteredServices.map((service) => (
-              <div key={service.id} className="service-card">
-                <div className="service-card-header">
-                  <div className="service-icon">{service.icon}</div>
-                  <div className="service-price">{service.price}</div>
-                </div>
-                <div className="service-card-content">
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-description">{service.description}</p>
-                  <ul className="service-features">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="service-feature">
-                        <span className="feature-check">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="service-card-footer">
-                  <button className="service-button primary">
-                    Learn More
-                  </button>
-                  <button className="service-button secondary">
-                    Get Quote
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="services-cta">
-        <div className="services-cta-container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Get Started?</h2>
-            <p className="cta-subtitle">
-              Contact our experts to discuss your specific needs and find the perfect solution for your business.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+            <p className="text-gray-600 mb-6">
+              Cutting-edge artificial intelligence solutions including machine learning
+              natural language processing, and intelligent automation.
             </p>
-            <div className="cta-actions">
-              <button className="cta-button primary">
-                Schedule Consultation
-              </button>
-              <button className="cta-button secondary">
-                Download Brochure
-              </button>
-            </div>
+            <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
+              Learn More →
+            </a>
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+            <p className="text-gray-600 mb-6">
+              Comprehensive IT infrastructure, cloud migration, cybersecurity
+              and digital transformation solutions.
+            </p>
+            <a href="/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
+              Learn More →
+            </a>
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+            <p className="text-gray-600 mb-6">
+              Innovative, focused software solutions that solve specific business
+              problems with minimal overhead.
+            </p>
+            <a href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
+              Learn More →
+            </a>
           </div>
         </div>
-      </section>
+
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container py-8 text-center">
+        <h2 className="text-2xl font-bold mb-4">Error Loading Services</h2>
+        <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
+        <Button onClick={refresh}>Retry</Button>
+      </div>
+    )
+  }
+
+  return (
+    <div className="container py-8">
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          IT & AI Services
+        </h1>
+        <p className="text-muted-foreground text-lg">Professional services for digital transformation and technology innovation</p>
+      </motion.div>
+
+      {marketStats && (
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+          <ServicesMarketInsights stats={marketStats} />
+        </motion.div>
+      )}
+
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+        <ServiceFilterControls
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          categories={categories}
+          showRecommended={showRecommended}
+          setShowRecommended={setShowRecommended}
+          loading={isFetching}
+        />
+      </motion.div>
+
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {services.map((item, index) => (
+            <motion.div
+              key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
+            >
+              <ServiceCard service={item} onViewDetails={() => router.push(`/services/${item.id}`)} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      {(isFetching || loading) && (
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <ServicesLoadingGrid count={4} />
+        </motion.div>
+      )}
+
+      {!hasMore && services.length > 0 && (
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available services!</div>
+          <div className="text-sm text-muted-foreground">Showing {services.length} IT & AI services</div>
+        </motion.div>
+      )}
+
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+          >
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
-  );
-};
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  )
+}
+export default ServicesPage
+}
 export default ServicesPage;
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

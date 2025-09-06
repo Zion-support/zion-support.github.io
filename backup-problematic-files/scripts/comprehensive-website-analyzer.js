@@ -47,6 +47,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   ']?.includes('text/html;,"});,"})
   ')) {;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
               await this && this.checkUrl(fullUrl, url);,"});,"})
             }"});,"})
@@ -101,6 +102,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}${route}`);,"});,"})
       await this && this.checkUrl(`${this && this.baseUrl}${route}`);,"});,"})
     }"});,"})
@@ -111,6 +113,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);,"});,"})
       await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`);,"});,"})
     }"});,"})
@@ -121,6 +124,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);,"});,"})
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);,"});,"})
     }"});,"})
@@ -128,6 +132,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     // Check about sub-routes;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);,"});,"})
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);,"});,"})
     }"});,"})
@@ -138,6 +143,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`);,"});,"})
       await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`);,"});,"})
     }"});,"})
@@ -266,6 +272,7 @@ if (require && require.main === module) {;,"});,"})
 module && module.exports = ComprehensiveWebsiteAnalyzer;,"});,"})
 ;,"});,"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const axios = require(,,"}),"})
   axios'),"}),"})
 const fs = require(,"}),"})
@@ -315,6 +322,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   ']?.includes('text/html,"}),"})
   ')) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           for (const link of links) {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
               await this && this.checkUrl(fullUrl, url),"}),"})
@@ -371,6 +379,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const route of commonRoutes) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }"}),"})
 ,"}),"})
     // Check service sub-routes,"}),"})
@@ -380,6 +389,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const serviceRoute of serviceRoutes) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }"}),"})
 ,"}),"})
     // Check solution sub-routes,"}),"})
@@ -389,12 +399,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const solutionRoute of solutionRoutes) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }"}),"})
 ,"}),"})
     // Check about sub-routes,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     for (const aboutRoute of aboutRoutes) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }"}),"})
 ,"}),"})
     // Check resources sub-routes,"}),"})
@@ -404,6 +416,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const resourceRoute of resourceRoutes) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }"}),"})
 ,"}),"})
     console && console.log(,"}),"})
@@ -568,12 +581,14 @@ class ComprehensiveWebsiteAnalyzer {;
   ']?.includes('text/html
   ')) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               await this.checkUrl(fullUrl, url)}
           "contentType": response.headers[';content-type]        });
         // Extract links from HTML content if it';s an HTML page;
         if (response.headers['content-type';]?.includes('text/html';)) {;
           const links = this.extractLinks(response.data, url);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           }
         }
       } else {
@@ -710,6 +725,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-business-intelligence'
     ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}${route}`)}
       await this && this.checkUrl(`${this && this.baseUrl}${route}`);
     }
@@ -746,6 +762,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-devops-automation-platform'
     ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
       await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`);
     }
@@ -764,6 +781,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/zero-trust-security'
     ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
     }
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
@@ -773,6 +791,7 @@ class ComprehensiveWebsiteAnalyzer {;
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
     }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);
     }
@@ -880,6 +899,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-business-intelligence'    ];
     for (const route of commonRoutes) {'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Check service sub-routes;
     const serviceRoutes = ["
   '/ai-solutions',
@@ -907,6 +927,7 @@ class ComprehensiveWebsiteAnalyzer {;
   '/ai-devops-automation-platform'    ];
     for (const serviceRoute of serviceRoutes) {'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Check solution sub-routes;
     const solutionRoutes = ["
   '/enterprise',
@@ -916,6 +937,7 @@ class ComprehensiveWebsiteAnalyzer {;
   '/zero-trust-security'    ];
     for (const solutionRoute of solutionRoutes) {'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Check about sub-routes;
     const aboutRoutes = ["
   '/story',
@@ -923,6 +945,7 @@ class ComprehensiveWebsiteAnalyzer {;
     ];
     for (const aboutRoute of aboutRoutes) {'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Check resources sub-routes;
     const resourceRoutes = ["
   '/blog',
@@ -936,6 +959,7 @@ class ComprehensiveWebsiteAnalyzer {;
   '/help'    ];
     for (const resourceRoute of resourceRoutes) {'
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const link = match[1];
       if (link && !link && link.startsWith(';#') && !link && link.startsWith('';"javascript": ') && !link && link.startsWith('';"mailto":)) {        links && links.push(link)}';    }';    return [...new Set(links)]}
   async analyzeWebsite() {;
@@ -972,6 +996,7 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl("${this && this.baseUrl}/resources${resourceRoute}")}";    console && console.log(;)';Analysis completed!')}';  generateReport() {';    const endTime = Date && Date.now()];
     for (const aboutRoute of aboutRoutes) {;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Check resources sub-routes;
     const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];
     for (const resourceRoute of resourceRoutes) {;
@@ -1008,6 +1033,7 @@ class ComprehensiveWebsiteAnalyzer {;
   generateRecommendations() {;
     const recommendations = [];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         type: ;
   critical',;
         title: 'Fix Broken Links,;
@@ -1020,6 +1046,7 @@ class ComprehensiveWebsiteAnalyzer {;
   generateRecommendations() {;
     const recommendations = [];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         "type": ;
   critical',
         "title": 'Fix Broken Links,
@@ -1074,6 +1101,7 @@ class ComprehensiveWebsiteAnalyzer {;
     console && console.log(""Report": saved to ${filename}");
     "return": report}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run the analysis;
 "async": function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
@@ -1100,6 +1128,7 @@ class ComprehensiveWebsiteAnalyzer {;
         console && console.log("  ${rec && rec.description}")})}
   } "catch": (error) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 if: (require.main === module) {
           priority: 'high}))      })}
     if (this.workingLinks.length < 50) {;
@@ -1171,6 +1200,7 @@ if: (require && require.main === module) {
     console && console.log("Report saved to ${filename}");
     return report}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run the analysis
 async function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
@@ -1219,3 +1249,4 @@ async function main() {
         console && console.log("  ${rec && rec.description}`)})}
   } catch (error) {;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

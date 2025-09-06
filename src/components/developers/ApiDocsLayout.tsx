@@ -93,16 +93,3 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          key={item && item.path}
          href={item && item.path}
          className={cn(
-
-         {item.title}
-        </Link>
-       ))}
-
-      </nav>;
-     </div>;
-
-
-     {/* Main content */}
-     <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
-      {children}
-<<<<<<< HEAD

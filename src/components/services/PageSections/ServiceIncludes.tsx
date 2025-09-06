@@ -45,6 +45,10 @@
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
             </div>
@@ -267,4 +271,7 @@ function ServiceIncludes() {
 
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

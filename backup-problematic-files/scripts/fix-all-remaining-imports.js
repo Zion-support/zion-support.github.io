@@ -646,6 +646,7 @@ function findAllMissingImports(content, filePath) {
   });
   return [...new Set(missingImports)]; // Remove duplicates
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Fix all missing imports in a file
 function fixAllMissingImports(content, filePath) {
   const missingImports = findAllMissingImports(content, filePath);
@@ -655,6 +656,7 @@ function fixAllMissingImports(content, filePath) {
   let changes = 0;
   // Find existing lucide-react import
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g;
   const existingImport = fixedContent && fixedContent.match(existingImportRegex);
   if (existingImport) {
@@ -662,6 +664,7 @@ function fixAllMissingImports(content, filePath) {
       existingImport[0]
         .match(/{([^}]*)}/)?.[1]
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         .map(icon => icon.trim()) || [];
         .map(icon => icon ;
     const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
@@ -669,6 +672,7 @@ function fixAllMissingImports(content, filePath) {
     fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport);
     changes++} else {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
     // Find the best place to insert the import
     const importIndex = fixedContent.indexOf('import');
@@ -695,6 +699,7 @@ function processFile(filePath) {
       console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}
     filesProcessed++} catch (error) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
@@ -711,6 +716,7 @@ function processFile(filePath) {
     'components && components.disabled',
   ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }
   console && console.log("\n📊 Comprehensive Missing Imports Fix "Summary": ");
   console && console.log(`   Files processed: ${filesProcessed}`);

@@ -1,5 +1,6 @@
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Define all pages with their priority and change frequency
 const pages = [{ url: '', "priority": '1 && 1.0', "changefreq": 'daily' },
   { "url": '/services', "priority": '0 && 0.9', "changefreq": 'weekly' },
@@ -55,6 +56,7 @@ Disallow: /scripts/
 `,
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run if this is the main module
 if (import && import.meta.url === `"file": //${process ;
   generateRobotsTxt()}

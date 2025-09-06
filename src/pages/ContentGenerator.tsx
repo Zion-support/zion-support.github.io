@@ -26,7 +26,6 @@ import { useAuth } from "@/hooks/useAuth",
     )
   }
 
-const ContentGenerator = () => {
   return (
     <>
       <Header />
@@ -112,13 +111,6 @@ const ContentGenerator = () => {
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-
-                          checked={includeImage}
-                          onCheckedChange={setIncludeImage}
-                        />
-                      </div>
-                    </>
-                  )}
 
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
@@ -223,3 +215,7 @@ const ContentGenerator = () => {
     </>
   )
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

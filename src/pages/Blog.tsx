@@ -22,35 +22,6 @@ import { BLOG_POSTS } from '@/data/blog-posts'
 import { Search } from 'lucide-react'
 
 // Categories for filtering
-
-const CATEGORIES = [
-
-  // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
-    return () => {
-
-        setPosts(data)
-      } catch (err) {
-        logErrorToProduction ('Failed to fetch blog posts', { data: err });
-      } finally {
-        setIsLoading (false);
-      }
-
-  // Filter blog posts based on selected category only.
-  // Search filtering is handled server-side.
-  const filteredPosts = posts.filter(post => {
-    const matchesCategory =
-
-=======
-
-  // Filter blog posts based on selected category only.
-  // Search filtering is handled server-side.
-  const filteredPosts = posts.filter(post => {
-    const matchesCategory = null;
-      selectedCategory === 'All Categories' ||
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       post.category === selectedCategory
     return matchesCategory
   })
@@ -71,6 +42,194 @@ const CATEGORIES = [
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
+=======
+import { Search } from 'lucide-react'
+import { fetchWithRetry  } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { useState, useEffect } from "react",
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useDebounce } from "@/hooks/useDebounce",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog",
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
+import { BLOG_POSTS } from "@/data/blog-posts",
+import { Search } from 'lucide-react'
+import { fetchWithRetry } from '@/utils/fetchWithRetry',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
+  const query = useDebounce(searchQuery, 300),
+  const [isLoading, setIsLoading] = useState(false),
+  const router = useRouter(),
+
+
+        setPosts(data)
+      } catch (err) {
+
+
+    },
+
+    fetchPosts()
+  }, [query]),
+
+  // Filter blog posts based on selected category only.
+  // Search filtering is handled server-side.
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory =
+
+            )
+import { useState, useEffect } from "react",;
+import Link from "next/link",;
+import { useRouter } from "next/router",;
+import { useDebounce } from "@/hooks/useDebounce",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { BlogPost } from "@/types/blog",;
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",;
+import { BLOG_POSTS } from "@/data/blog-posts",;
+import { Search } from 'lucide-react';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from 'lucide-react';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+// Categories for filtering;
+const CATEGORIES = [;
+  'All Categories',;
+  'Trends',;
+  'Marketing',;
+  'Sustainability',;
+  'Ethics',;
+  'Recruitment',;
+  'Infrastructure',;
+];
+
+export interface BlogProps {;
+  posts?: BlogPost[];
+
+export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Categories');
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
+  const query = useDebounce(searchQuery, 300);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  // Reset state when navigating away to avoid cross-page leakage;
+  useEffect((,) => {;
+    return () => {;
+      setSearchQuery('');
+      setSelectedCategory('All Categories');
+      setPosts([...initialPosts]);
+    };
+  }, [router && router.asPath, initialPosts]);
+
+  // useEffect(() => {;
+  //   const interval = setInterval(() => {;
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
+  //   }, 120000); // every 2 minutes;
+  //   return () => clearInterval(interval);
+  // }, []);
+  useEffect((,) => {;
+    const fetchPosts = async () => {;
+      setIsLoading(true);
+      try {;
+        const data: BlogPost[] = await fetchWithRetry(;
+          `/api/blog?query=${encodeURIComponent(query)}`;
+        );
+        setPosts(data);
+      } catch (err) {;
+        logErrorToProduction('Failed to fetch blog posts', { data: err });
+      } finally {;
+        setIsLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, [query]);
+
+  // Filter blog posts based on selected category only.;
+  // Search filtering is handled server-side.;
+  const filteredPosts = posts && posts.filter(post => {;
+    const matchesCategory =;
+      selectedCategory === 'All Categories' ||;
+      post && post.category === selectedCategory;
+
+    return matchesCategory;
+  });
+
+  // Get featured posts;
+  const featuredPosts = posts && posts.filter(post => post && post.isFeatured);
+
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts });
+
+  return (
+    <>;
+      <SEO
+        title='Blog - Latest from Zion Tech Marketplace'
+        description='Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.'
+        keywords='AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT'
+
+    fetch_posts ();
+  }, [query]);
+  // Filter blog posts based on selected category only.;
+  // Search filtering is handled server - side.;
+  const filtered_posts = posts.filter (post => {
+    const matches_category =;
+      selected_category === 'All Categories' ||;
+      post.category === selected_category;
+    return matches_category;
+  });
+  // Get featured posts;
+  const featured_posts = posts.filter (post => post.is_featured);
+  log_info ('BlogPage filtered_posts:', { data: filtered_posts });
+  return (
+    <>;
+      <SEO;
+        title='Blog - Latest from Zion Tech Marketplace';
+        description='Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.';
+        keywords='AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT';
+        canonical='https://app.ziontechgroup.com / blog';
+      />;
+      <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>;
+        <h1 > Blog</h1>;
+        <div className='container mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <GradientHeading > AI & Tech Insights</GradientHeading>;
+            <p className='mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto'>;
+              Expert perspectives on artificial intelligence, tech innovation,
+              and digital transformation;
+            </p>;
+          </div>;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 &&
@@ -157,6 +316,119 @@ const CATEGORIES = [
                       />
                     </div>
 
+<<<<<<< HEAD
+=======
+                </div>);
+            })()}
+          {/* Filters and Search */}
+          <div className='bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light'>;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+              <div className='relative'>;
+                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate' />;
+                <Input;
+                  type='text';
+                  placeholder='Search articles...';
+                  value={search_query}
+                  on_change={e => setSearchQuery (e.target.value)}
+                  className='pl - 10 bg - zion - blue border border - zion - blue - light text - white'                />;
+              </div>;
+              <Select;
+                value={selected_category}
+                onValueChange={setSelectedCategory}
+              >;
+                <SelectTrigger;
+                  className='bg - zion - blue border border - zion - blue - light text - white';
+                  aria - label='Filter by category';
+                >;
+                  <SelectValue placeholder='Select Category' />;
+                </SelectTrigger>;
+                <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
+                  {CATEGORIES.map (category => (
+                    <SelectItem;
+                      key={category}
+                      value={category}
+                      className='text - white';
+                    >                      {category}
+                    </SelectItem>))}
+                </SelectContent>;
+              </Select>;
+            </div>;
+            {is_loading && (
+              <div className='text - center py - 4 text - white'>;
+                Loading articles...;
+              </div>)}
+          </div>;
+          {/* Blog Posts Grid */}
+          {!is_loading && filtered_posts.length > 0 ? (
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
+              {filtered_posts.map (post => (                <Card;
+                  key = {post.id, }
+                  as_child;
+                  className='bg - zion - blue - dark border border - zion - blue - light hover:border - zion - purple transition - all duration - 300 group - hover:shadow - lg';
+                >;
+                  <Link href={`/blog/${post.slug}`} className='block group'>;
+                    <div className='aspect-[16 / 9] relative overflow - hidden'>;
+                      <img;
+                        src={post.featured_image}
+                        alt={post.featuredImageAlt || post.title}
+                        className='object - cover w - full h - full hover:scale - 105 transition - transform duration - 300';
+                        on_error={e => {
+                          const target = e.current_target as HTMLImageElement;
+                          target.src = '/images / blog - placeholder.svg' }}
+                      />;
+                    </div>;
+                    <CardContent className='p - 6'>;
+                      <div className='flex items - center justify - between mb - 3'>;
+                        <span className='text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full'>;
+
+                          {post.category}
+                        </span>
+                        <div className='text-xs text-zion-slate-light'>
+                          {post.publishedDate} • {post.readTime}
+                        </div>
+                      </div>
+                      <h3 className='text-xl font-bold text-white mb-3'>
+                        {post.title}
+                      </h3>
+                      <p className='text-zion-slate-light mb-4 line-clamp-3'>
+                        {post.excerpt}
+
+                        src={post && post.featuredImage}
+                        alt={post && post.featuredImageAlt || post && post.title}
+                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
+                        onError={e => {;
+                          const target = e && e.currentTarget as HTMLImageElement;
+                          target && target.src = '/images/blog-placeholder && placeholder.svg';                        }}
+                      />;
+                    </div>;
+                    <CardContent className='p-6'>;
+                      <div className='flex items-center justify-between mb-3'>;
+                        <span className='text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full'>;
+                          {post && post.category}
+                        </span>;
+                        <div className='text-xs text-zion-slate-light'>;
+                          {post && post.publishedDate} • {post && post.readTime}
+                        </div>;
+                      </div>;
+                      <h3 className='text-xl font-bold text-white mb-3'>;
+                        {post && post.title}
+                      </h3>;
+                      <p className='text-zion-slate-light mb-4 line-clamp-3'>;
+                        {post && post.excerpt}
+                      </p>;
+                      <div className='flex items-center'>;
+
+                        <img
+                          src={post.author.avatarUrl}
+                          alt={post.author.name}
+                          className='w-8 h-8 rounded-full mr-2'
+
+                          onError={e => {;
+                            const target = e && e.currentTarget as HTMLImageElement;
+                            target && target.src = '/images/blog-placeholder && placeholder.svg';
+
+                          }}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               ))}
             </div>
           ) : null}
@@ -885,6 +1157,7 @@ key = "{post && post.id}
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
                     ))}
+<<<<<<< HEAD
 
                   </div>;
                 {/* comment */}";
@@ -1260,3 +1533,5 @@ key = "{post.id}
   )})))))))));
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

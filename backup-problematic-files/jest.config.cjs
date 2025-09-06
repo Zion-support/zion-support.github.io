@@ -27,6 +27,8 @@ module.exports = { preset: "ts-jest","" testEnvironment: "jsdom"," globals: {" "
 module.exports = {
   preset: 'ts-jest',
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -38,6 +40,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -66,6 +69,7 @@ const customJestConfig = {
   },
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
@@ -73,12 +77,18 @@ const customJestConfig = {
   verbose: true,
   collectCoverage: false,
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 =======
     '/node_modules/(?!(.*\.mjs$))'

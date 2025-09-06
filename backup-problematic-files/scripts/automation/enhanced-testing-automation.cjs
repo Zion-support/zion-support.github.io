@@ -174,3 +174,4 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

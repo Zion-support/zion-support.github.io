@@ -19,6 +19,8 @@ const testimonials = [
     rating: 5
     avatar: '/placeholder.svg'
   }
+const testimonials = [
+const testimonials = [
   {
 
   },]
@@ -63,11 +65,6 @@ export const AppTestimonials: React.FC = () => {
                   </div>
                   <div>
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                   </div>
@@ -75,3 +72,12 @@ export const AppTestimonials: React.FC = () => {
               </CardFooter>
             </Card>
 <<<<<<< HEAD
+=======
+    name: "Alex Johnson",
+    role: "AI Developer",
+    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
+    rating: 5,
+    avatar: "/placeholder.svg"
+  },
+const testimonials = [
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

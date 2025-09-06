@@ -20,12 +20,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
-=======
-
-      
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -78,7 +72,12 @@ import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
 import { FraudStats } from "@/types/fraud",;
 interface FraudStatsCardsProps {;
   stats: FraudStats;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
+import React from "react"
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud"
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {;
   return (

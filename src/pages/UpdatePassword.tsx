@@ -32,6 +32,7 @@ const updatePasswordSchema = z
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
+<<<<<<< HEAD
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
@@ -387,3 +388,5 @@ export default function UpdatePassword() {;
   );
 }
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

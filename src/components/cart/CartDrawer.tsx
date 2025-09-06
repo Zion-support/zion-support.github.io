@@ -4,7 +4,7 @@
   const [loginOpen, setLoginOpen] = React.useState(false)
   const handleClick = (e: React.MouseEvent,) => {
     if (!isAuthenticated) {
-      e.preventDefault();
+      e.preventDefault()
       setLoginOpen(true)
     }
   }
@@ -15,22 +15,10 @@
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
 <<<<<<< HEAD
-=======
 
 
 ;
 
-          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
-            {count}
-
-          </span>
-        )}
-
-      </Link>;
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  );
-}
 
   );
 }
@@ -53,4 +41,7 @@
     </>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

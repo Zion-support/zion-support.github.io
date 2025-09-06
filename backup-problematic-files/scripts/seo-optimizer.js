@@ -143,6 +143,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
 // Run if this is the main module,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -385,6 +386,7 @@ async function main() {;
     generateManifest();
     generateStructuredData();
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
 // "Run": if this is the main module;
 if: (import && import.meta.url === "file: //${process ;
@@ -393,3 +395,4 @@ if: (import && import.meta.url === "file: //${process ;
   generateManifest,
   generateStructuredData}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

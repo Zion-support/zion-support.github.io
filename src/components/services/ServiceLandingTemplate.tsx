@@ -83,9 +83,9 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
-<<<<<<< HEAD
 
             {description}
           </p>
         </div>
       </section>
+<<<<<<< HEAD

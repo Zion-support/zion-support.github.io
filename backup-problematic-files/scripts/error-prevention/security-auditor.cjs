@@ -18,11 +18,13 @@ class SecurityAuditor {}
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
       console.log('Running security audit...');
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const child = spawn('npm', ['audit'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -38,7 +40,9 @@ class SecurityAuditor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -57,11 +61,11 @@ class SecurityAuditor {}
     try {}
       console.log('Attempting to fix security issues...');
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const child = spawn('npm', ['audit', 'fix', '--force'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -100,4 +104,6 @@ if ( {})
 });
 
   auditor.start().catch(console.error)};
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

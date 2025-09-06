@@ -5,6 +5,10 @@
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react',;
 // Import our new 2025 V2 innovative services;
+  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
+} from 'lucide-react',;
+// Import our new 2025 V2 innovative services;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
@@ -291,7 +295,6 @@ function ComprehensiveServicesShowcase2025V2() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           >
             <div className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -329,7 +332,9 @@ function ComprehensiveServicesShowcase2025V2() {
                           Starting at {(service as any).pricing?.starter || service.price}
 
                         </div>;
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;

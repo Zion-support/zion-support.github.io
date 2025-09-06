@@ -7,56 +7,6 @@ Calendar,
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-  Briefcase;
-import {;
-  Calendar,;
-  Clock,;
-  DollarSign,;
-  Tag,;
-  Users,;
-  Briefcase,;
-} from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
-
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-import { JobDetailsSkeleton } from '@/components/jobs';
-interface Job {;
-import { use_router } from 'next / router'; // Changed from use_params, use_navigate;
-import { Header } from '@/components / Header';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import {
-  Calendar,
-  Clock,
-  DollarSign,
-  Tag,
-  Users,
-  Briefcase,
-} from 'lucide-react';import { formatDistanceToNow } from 'date - fns';
-import { toast } from 'sonner';
-import { use_auth } from '@/hooks / use_auth';
-import useJobDetails from '@/hooks / useJobDetails';
-import { ApplyToJobModal } from '@/components / messaging / job - application';
-import { SEO } from '@/components / SEO';
-import { use_whitelabel } from '@/context / WhitelabelContext';
-import { JobDetailsSkeleton } from '@/components / jobs';
-interface Job {
-  id: string;
-  title: string;
-  description: string;
-  company_name?: string;
-
-  budget: { min: number; max: number }
-
-  client_id: string;
-  skills?: string[];
-  created_at: string;
-  category: string;
 
   if (isLoading) {
     return <JobDetailsSkeleton />
@@ -77,8 +27,15 @@ interface Job {
       <SEO
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
-      />
-      <Header />
+      />;
+      <Header />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <Button;
+            variant="outline";
+            size="sm";
+            onClick={() => router.push('/careers')}
+          >;
 
             <Card>
               <CardHeader>
@@ -127,7 +84,6 @@ interface Job {
         <ApplyToJobModal
           job={{
 
-<<<<<<< HEAD
           }}
 
           isOpen={isApplyModalOpen}
@@ -209,6 +165,7 @@ const isOwnJob = user?.id === job.client id;
 }
 }
 
+<<<<<<< HEAD
             client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}

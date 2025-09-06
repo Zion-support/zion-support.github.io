@@ -164,26 +164,6 @@ const HealthDashboard: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
-  }
-
-  return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <h1 className="text-3xl font-bold">Health Dashboard</h1>
-          {getStatusBadge(healthData.status)}
-        </div>
-        <div className="flex items-center space-x-2">
-          <Button
-
-=======
-            variant="outline"
-            size="sm"
-            onClick={() => setAutoRefresh(!autoRefresh)}
-          >
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -332,6 +312,44 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
+=======
+        <TabsContent value='overview' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                      <li
+                        key={index}
+                        className='text-sm text-red-600 flex items-start'
+                      >
+                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
+                    ))}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='errors' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                          className='border-l-4 border-red-400 pl-3 py-1'>;
+                          <p className='text-sm font-medium'>;
+                            {error && error.description}
+                          </p>;
+                          <p className='text-xs text-gray-600'>;
+                            {error && error.occurrences} occurrences • {error && error.severity}
+                          </p>;
+                        </div>;
+                      ))}                  </div>;
+                ) : (;
+                  <p className='text-gray-600 text-sm'>No recurring errors</p>;
+
+                  <div className="space-y-2">
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
+                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
+                        <p className="text-sm font-medium">{error.description}</p>
+                        <p className="text-xs text-gray-600">
+                          {error.occurrences} occurrences • {error.severity}
+                        </p>;
+                      </div>;
+                    ))}
+                  </div>
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>

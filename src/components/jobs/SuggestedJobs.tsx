@@ -30,53 +30,6 @@ import { NoJobsCard } from "./NoJobsCard";
       </div>
     )
 
-=======
-
-import { useAuth } from "@/hooks/useAuth",;
-import { Loader2 } from 'lucide-react';
-import { Badge } from "@/components/ui/badge",;
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
-import { JobMatchesCard } from "./JobMatchesCard",;
-import { NoJobsCard } from "./NoJobsCard",;
-interface SuggestedJobsProps {;
-  talentId?: string;
-}
-
-export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
-  const { ;
-    isLoading,;
-    updateJobMatchStatus, ;
-    categorizedMatches: { ;
-      newMatches,;
-      viewedMatches,;
-      appliedMatches ;
-    } ;
-  } = useJobSuggestions(currentTalentId);
-
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
-  };
-
-  const handleDecline = (matchId: string) => {;
-    updateJobMatchStatus(matchId, 'declined');
-  };
-  if (isLoading) {;
-    return (
-      <div className="flex items-center justify-center p-6">;
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
-      </div>;
-    );
-  }
-
-  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
-    return <NoJobsCard />;
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 
   return (
@@ -99,6 +52,36 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply}
                 onDecline={handleDecline}
 
+=======
+    updateJobMatchStatus
+
+import { useAuth } from "@/hooks/useAuth",
+import { Loader2 } from 'lucide-react'
+import { Badge } from "@/components/ui/badge",
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",
+import { JobMatchesCard } from "./JobMatchesCard",
+import { NoJobsCard } from "./NoJobsCard",
+
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+  const { user } = useAuth()
+  const currentTalentId = talentId || user?.id
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+
+
+  const { 
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined')
+  },
+    return (
+  }
+              />;
+
+
+          
+          <div className="grid gap-4 md:grid-cols-2">
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               />
             ))}
           </div>;

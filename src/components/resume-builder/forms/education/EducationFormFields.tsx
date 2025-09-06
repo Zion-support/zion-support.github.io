@@ -106,13 +106,6 @@ function EducationFormFields() {
     }
   }
 
-=======
-
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Form {...form}>;
 
@@ -128,21 +121,83 @@ function EducationFormFields() {
                 <FormMessage />
               </FormItem>
             )}
+=======
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+      institution: ''
+      degree: ''
+      field_of_study: ''
+      start_date: format(new Date(), 'yyyy-MM-dd')
+      is_current: false
+      description: ''
+      location: ''
+    }
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { format } from 'date-fns',;
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { useState } from 'react',;
+import { EducationFormFieldsProps } from './types',;
+import { Education } from '@/types/resume',;
+// Define schema for form validation;
+const educationSchema = z.object({;
+  institution: z.string().min(1, 'Institution is required'),;
+  degree: z.string().min(1, 'Degree is required'),;
+  field_of_study: z.string().optional(),;
+  start_date: z.string().min(1, 'Start date is required'),;
+  end_date: z.string().optional(),;
+  is_current: z.boolean().default(false),;
+  description: z.string().optional(),;
+  location: z.string().optional()}),;
+type EducationFormValues = z.infer<typeof educationSchema>,;
+export function EducationFormFields({;
+  isEditing,;
+  onSubmit,;
+  onCancel;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const form = useForm<EducationFormValues>({;
+    resolver: zodResolver(educationSchema),;
+    defaultValues: {;
+      institution: '',;
+      degree: '',;
+      field_of_study: '',;
+      start_date: format(new Date(), 'yyyy-MM-dd'),;
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true),;
+    setError(null);
+    try {;
+      await onSubmit(data);
+    } catch (err: any) {;
+      setError(err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
                 <FormLabel>Degree</FormLabel>
-                <FormControl>
-                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
 
               <FormLabel>Field of Study</FormLabel>
-              <FormControl>
-                <Input placeholder="Computer Science, Engineering, etc." {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
           )}
         />
 

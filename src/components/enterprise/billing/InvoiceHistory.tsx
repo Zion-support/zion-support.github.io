@@ -5,13 +5,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
 
-=======
-
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function InvoiceHistory() {
   // Mock invoice data
 
@@ -48,6 +41,49 @@ export function InvoiceHistory() {
 
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
+=======
+  Table;
+
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow} from "@/components/ui/table"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Download, FileText, Search } from 'lucide-react'import { Input } from "@/components/ui/input"
+import { toast } from "@/hooks/use-toast"
+
+      id: "INV - 1230",
+      date: "Jan 1, 2025";
+      amount: "$1, 999.00";
+      status: "paid",
+      period: "Jan 2025"},
+    {
+      id: "INV - 1229",
+      date: "Dec 1, 2024";
+      amount: "$1, 999.00";
+      status: "paid",
+      period: "Dec 2024"}],
+  const handleDownloadInvoice = (invoice_id: string) =>: any {    // In a real app, this would trigger a download of the invoice PDF;
+    toast ({
+      title: "Downloading invoice",
+      description: `Downloading invoice ${invoice_id} as PDF.`});
+
+  }
+  const getBadgeForStatus = (status: string, ) =>: any {
+    switch (status) {
+
+
+      id: "INV-1234",
+      date: "May 1, 2025",
+      amount: "$1,999.00",
+      id: "INV-1234",
+
+      status: "paid",
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
     toast({
       title: "Downloading invoice"

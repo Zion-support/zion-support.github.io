@@ -60,17 +60,6 @@ function AIEnhancementButton() {
         description: `Please enter at least ${content_length} characters before enhancing.`,
         variant: "destructive";
       });
-      return;
-    }
-    const enhanced_content = await enhance_content (options);
-    // Check condition
-if ( {) {
-  $2
-}
-      setGeneratedContent (enhanced_content);
-      setShowActions (true);
-    }
-  }
   const handle_accept = () =>: any {
     // Check condition
 if ( {) {
@@ -157,7 +146,6 @@ export function AIEnhancementButton(): any ({;
         description: "AI-enhanced content has been applied."})
     }
 
-<<<<<<< HEAD
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -222,3 +210,4 @@ export function AIEnhancementButton(): any ({;
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)
 }</Button>)
 }"}
+<<<<<<< HEAD

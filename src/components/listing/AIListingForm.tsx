@@ -151,56 +151,6 @@ export function AIListingForm({
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles } from 'lucide-react'
-import { Star } from 'lucide-react';
-
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string
-  }) => void;
-  isLoading: boolean,
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-  }
-}
-
-
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
-  const [ title, setTitle ] = useState(initialValues.title || ""),
-  const [ category, setCategory ] = useState(initialValues.category || ""),
-  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
-  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
-
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      });
-      return
-    }
-
-    onSubmit({
-      title;
-      category;
-      keyFeatures;
-      targetAudience
-    })
-  };
-
-
-  return (
-    <div className="space-y-4">
         />
 
 
@@ -256,17 +206,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       <div className="space-y-2">
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
         <Textarea
-          id="keyFeatures"
+          id='keyFeatures'
           value={keyFeatures}
-          onChange={(e) => setKeyFeatures(e.target.value)}
-          placeholder="Briefly describe the main features or benefits"
-          className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
-          disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
-        <Input
+          onChange={e => setKeyFeatures(e.target.value)}
+          placeholder='Briefly describe the main features or benefits'
+          className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
+          disabled={isLoading}        />
+          value={title}
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}

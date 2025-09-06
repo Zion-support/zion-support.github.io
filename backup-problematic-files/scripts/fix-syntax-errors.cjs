@@ -1,6 +1,7 @@
 #!/usr/bin/env node;
 /**
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
  * Syntax Error Fixer;
@@ -10,6 +11,8 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }
 
   log(message) {
@@ -84,6 +87,7 @@ const path = require('path')
   generateReport() {
     const report = {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "timestamp": new Date().toISOString(),
@@ -101,10 +105,8 @@ const path = require('path')
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
     this.log(`📄 Report saved "to": ${reportPath}`);
     return report}
+<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async run() {
     this.log('🚀 Starting syntax error fixing...');
     try {
@@ -112,6 +114,7 @@ const path = require('path')
       await this.fixDirectory('pages');
       await this.fixDirectory('lib');
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if ( {
@@ -141,8 +144,7 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run type-check', { "stdio"})
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
-=======
 <<<<<<< HEAD
-      this.log(`� Syntax error fixing "failed"`)
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

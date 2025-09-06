@@ -96,3 +96,34 @@ class ErrorBoundary extends React.Component {
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
 
+<<<<<<< HEAD
+=======
+};
+};
+
+
+          <DialogFooter className='space - x-2'>;
+            <Button;
+              type='button';
+              variant='outline';
+              on_click={() => onOpenChange (false)}
+              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
+              Cancel;
+            </Button>;
+            <Button;
+              type='submit';
+              disabled={is_submitting || !email || !address}
+              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
+              {is_submitting ? (
+                'Processing...') : (
+                <>;
+                  <CreditCard className='h - 4 w - 4 mr - 2' />;
+                  Continue to Payment;
+                </>)}
+
+
+    </Dialog>);
+}
+}
+;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

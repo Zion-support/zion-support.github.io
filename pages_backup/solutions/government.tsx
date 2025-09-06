@@ -218,7 +218,6 @@ export default function GovernmentSolutions() {
                 and improve citizen services.
               </p>
 
-<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -229,6 +228,7 @@ export default function GovernmentSolutions() {
                     <feature.icon className="w-6 h-6 text-gray-600" />
                   </div>
 
+<<<<<<< HEAD
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">

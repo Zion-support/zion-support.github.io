@@ -27,26 +27,12 @@ export const ConversationsList: React.FC<ConversationsListProps> = ({
 
   const ConversationRow = ({ index, style }: ListChildComponentProps) => {
     const conversation = sortedConversations[index];
-    return (
-      <div style={style}>
-        <ConversationItem
-          conversation={conversation}
-          isActive={activeConversation?.id === conversation.id}
-          onClick={() => onConversationSelect(conversation)}
+          onClick={() => {
+            setActiveConversation(conversation)
+            markAsRead(conversation.id) }}
         />
       </div>
-    );
-  };
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
-          <p className="mt-2 text-sm text-gray-500">Loading conversations...</p>
-        </div>
-      </div>
-    );
+    )
   }
 
   return (

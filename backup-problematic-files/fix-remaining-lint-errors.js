@@ -53,6 +53,10 @@ function fixUnusedVariables(content) {};
 };
         fixedCount++}
     } catch (error) {_;
+=======
+<<<<<<< HEAD
+      errorCount++}
+}
 
   };
 };

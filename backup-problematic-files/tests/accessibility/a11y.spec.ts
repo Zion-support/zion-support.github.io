@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   test('contact form is accessible', async ({ page }) => {
     await page.goto('/contact');
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;);
@@ -40,3 +41,4 @@ export default function A11y.spec({ }: A11y.specProps) {
   );
 }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

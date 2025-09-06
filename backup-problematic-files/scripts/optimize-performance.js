@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -145,6 +146,7 @@ interface OptimizedImageProps {
   className?: string
   sizes?: string
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -156,6 +158,7 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
 }) => {
   return (
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       alt={alt}
       width={width}
       height={height}
@@ -165,6 +168,7 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
       quality={85}
       placeholder="blur"
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export default OptimizedImage
 ";
   fs && fs.writeFileSync(
@@ -175,6 +179,7 @@ export default OptimizedImage
   const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react'
 interface LazyComponentProps {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     lazyLoadingComponent
   );
   console && console.log('✅ Performance components created');
@@ -189,6 +194,8 @@ function optimizeImages() {
   for (const dir of imageDirs) {
 
   }
+  }
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   console && console.log('✅ Image directories optimized');
   return true}
 function main() {
@@ -202,8 +209,10 @@ function main() {
   for (const optimization of optimizations) {
     try {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         successCount++}
     } catch (error) {
       console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
   }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

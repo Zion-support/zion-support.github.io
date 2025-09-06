@@ -115,12 +115,6 @@ const formSchema = z.object({
         </div>;
         <FormField;
           control={form.control}
-=======
-          name='title';
-
-          render={({
-            field
-          }: {
 
           control={form.control}
 
@@ -130,14 +124,6 @@ const formSchema = z.object({
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-              <FormLabel>Interview Title</FormLabel>
-              <FormControl>
-                <Input placeholder='Brief title for the interview' {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
 
             name='date'
             render={({

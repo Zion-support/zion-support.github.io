@@ -131,7 +131,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
 
             render={({ field }) => (;
               <FormItem className="flex flex-col">;
@@ -139,8 +138,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
                     </FormControl>;

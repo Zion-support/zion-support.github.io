@@ -16,6 +16,7 @@ const __dirname = path && path.dirname(__filename),"}),"})
 // // // console && console.log(,"}),"})
   '🔍 Starting continuous quality checks automation...'),"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours,"}),"})
 const AUTOMATION_INTERVAL = parseInt(process ; // 3 hours,"}),"})
 async function runQualityChecks() {,"}),"})

@@ -121,10 +121,6 @@ if ( {) {
       </div>
     )
   }
-  if (!post && (error |timedOut)) {
-  if () {) {
-  $2
-}
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
         <p > Failed to load article.</p>;
@@ -246,7 +242,6 @@ if (return '') {
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
 
-<<<<<<< HEAD
               </p>
             </div>
                 to accelerate your projects.;
@@ -256,6 +251,7 @@ if (return '') {
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
               <Button
+<<<<<<< HEAD
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild

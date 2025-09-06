@@ -11,43 +11,6 @@ import { formatDistanceToNow } from "date-fns",
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-
-import {ApplicationStatus} from "@/types/jobs";
-    return (
-      <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
-  }
-  if (error) {
-    return (
-      <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
-        <p>{error}</p>
-      </div>
-    )
-  }
-  if (applications.length === 0) {
-    return (
-      <Card className="bg-muted/30">
-        <CardContent className="pt-6 text-center">
-          <p className="text-muted-foreground">
-            You haven't submitted any applications yet.
-          </p>
-          <Button className="mt-4" asChild>
-            <Link href="/jobs">Browse Jobs</Link>
-          </Button>
-        </CardContent>
-      </Card>
-    )
-  }
-  return (
-    <div className="grid gap-4 md:grid-cols-2">
-
-=======
-      {applications.map((application) => (
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -79,6 +42,32 @@ import {ApplicationStatus} from "@/types/jobs";
 
                 <Button
                   variant="default"
+=======
+  const { applications, isLoading, error } = useJobApplications()
+  const getStatusBadge = (status: ApplicationStatus,) => {
+    switch (status) {
+      case "new": return <Badge variant="secondary">New</Badge>
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
+
+import { useState } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
+import { formatDistanceToNow } from "date-fns",;
+import Link from "next/link",;
+import { ApplicationStatus } from "@/types/jobs",;
+                  className="text-xs"
+                  variant="outline" 
+                  size="sm" 
+                  className="text-xs"
+                  asChild>;
+                  <Link href={`/jobs/${application && application.job_id}`}>;
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
+                  </Link>;
+                </Button>;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
                   size="sm"
                   className="text-xs"

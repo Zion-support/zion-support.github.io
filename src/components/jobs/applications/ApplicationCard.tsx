@@ -64,18 +64,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <div>
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
 
-=======
-
-
-
-export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false),
-
-  const handleDownloadResume = () => {
-    // This would typically download the resume file
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -213,6 +201,33 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
               </div>;
             )}
 
+=======
+          <Button variant='default' size='sm'>;
+            <Calendar className='h - 4 w - 4 mr - 1' /> View Interview Details;
+          </Button>);
+      case 'hired':;
+          >;
+            <FileText className='h - 4 w - 4 mr - 1' /> View Offer;
+          </Button>);
+      case 'rejected':;
+
+        return (
+          <Button variant='outline' size='sm'>
+            <HelpCircle className='h-4 w-4 mr-1' /> View Feedback
+          </Button>
+        )
+      default:
+        return null
+    }
+  }
+
+  return (
+
+  };
+
+  const renderActionButtons = () => {
+    switch (application.status) {
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <Button
                     variant='ghost'
                     size='sm'

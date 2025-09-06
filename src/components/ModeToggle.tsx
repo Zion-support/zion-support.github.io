@@ -5,15 +5,6 @@ import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 
-=======
-
-    setIsClient(true);
-  }, []);
-  // Determine the actual resolved theme for display purposes;
-  const resolvedTheme = (() => {;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -116,3 +107,47 @@ if ( {) {
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>
             {theme === 'system' && (
 <<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button'
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+import { toast } from '@/hooks/use-toast'
+  darkModeMessages
+  lightModeMessages
+} from '@/utils/themeToggleMessages'
+// Use the ThemeProvider hook directly to ensure no conflicts
+import { useTheme } from '@/components/ThemeProvider'
+import { logIssue } from '@/utils/logIssue'
+import { useEffect, useState } from 'react'
+  const resolvedTheme = (() => {
+            variant='ghost'
+            size='icon'
+            </span>
+          </Button>
+          </div>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  )
+}
+if (!isClient) {"
+  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {
+  /* Changed to bg-muted for theme consistency */ "
+}<span className="sr-only" >Loading theme toggle</span> </Button>) "
+}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />)
+}{
+  /* Enhanced visual indicator */
+}<div className= {
+  `absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {'
+  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400'
+}opacity-70 group-hover:opacity-100`
+}/> </span> </Button> </TooltipTrigger> <TooltipContent>)
+}</div> </TooltipContent> </Tooltip> </TooltipProvider>)
+}'"}
+}
+;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

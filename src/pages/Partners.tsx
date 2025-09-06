@@ -21,21 +21,85 @@ import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 export default function Partners() {;
-  logInfo('PartnersPage rendering');
-  const [activeTab, setActiveTab] = useState('overview');
-  const { t } = useTranslation();
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+        setAuthServiceAvailable(res && res.ok);
+        logErrorToProduction('Partner login auth health check failed', {;
+          data: err,;
 
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { PartnerRegistrationForm } from '@/components / partners / PartnerRegistrationForm';
+import { PartnerReferralLinks } from '@/components / partners / PartnerReferralLinks';
+import { PartnerDashboard } from '@/components / partners / PartnerDashboard';
+import { PartnerLeaderboard } from '@/components / partners / PartnerLeaderboard';
+import { PartnerResources } from '@/components / partners / PartnerResources';
+import { use_auth } from '@/hooks / use_auth';
+import { use_router } from 'next / router';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+;
+export default /**
+ * Partners - Function description
+ */
+function Partners() {
+  log_info ('PartnersPage rendering');
+  const [active_tab, setActiveTab] = useState ('overview');
+  const { t } = use_translation ();
+  const { user, is_authenticated } = use_auth ();
+  const router = use_router ();
+  const [authServiceAvailable, setAuthServiceAvailable] = useState (true);
+  useEffect (() => {
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+import { useState, useEffect  } from './react';
+import { use_translation } from 'react - i18next';
+import Link from 'next / link';
+import { PartnerRegistrationForm  } from '@/components / partners / PartnerRegistrationForm';
+import { PartnerReferralLinks  } from '@/components / partners / PartnerReferralLinks';
+import { PartnerDashboard  } from '@/components / partners / PartnerDashboard';
+import { PartnerLeaderboard  } from '@/components / partners / PartnerLeaderboard';
+import { PartnerResources  } from '@/components / partners / PartnerResources';
+import { use_auth  } from '@/hooks / use_auth';
+import { use_router } from 'next / router';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+export default /**
+ * Partners - Function description
+ */
+function Partners() {
+  log_info ('PartnersPage rendering'),
+  const [active_tab, setActiveTab] = useState ("overview"),
+  const { t } = use_translation (),
+  const { user, is_authenticated } = use_auth (),
+  const router = use_router (),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState (true),
+  useEffect ((, ) => {
+    async /**
+ * check_health - Function description
+ */
+function check_health() {
+      try {
+        const res = await fetch ('/api / auth / health');
+        setAuthServiceAvailable (res.ok);
+        logErrorToProduction ('Partner login auth health check failed', {
+    checkHealth();  }, []);    checkHealth()
+  }, []);
+  useEffect(() => {
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/auth/health'),
+        setAuthServiceAvailable(res.ok)
+      } catch (err) {
+        logErrorToProduction('Partner login auth health check failed', { data: err }),
+        setAuthServiceAvailable(false)
+      }
+    }
+    checkHealth()
+  }, []),
 
-import { useState, useEffect } from "react";
-import { useTranslation  } from 'react-i18next';
+                  </p>                </div>        </div>
 
 import Link from 'next/link',
 import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",

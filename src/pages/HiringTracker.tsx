@@ -1,4 +1,18 @@
+=======
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
+import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { Briefcase } from 'lucide-react'
+function HiringTrackerContent() {
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
+  const router = useRouter()
+  const jobId = router.query.jobId as string
+  const [activeTab, setActiveTab] = useState<string>('kanban')
 
 import { useState } from "react",
 import { useRouter } from "next/router",
@@ -34,30 +48,3 @@ import { Briefcase } from 'lucide-react'
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 
-=======
-
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-          <TabsList>
-
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          </TabsList>
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-
-          
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-          
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          <TabsContent value="analytics" className="mt-6">
-            <HiringAnalytics jobId={jobId} />
-          </TabsContent>
-        </Tabs>
-      </main>
-    </>
-<<<<<<< HEAD
-  )

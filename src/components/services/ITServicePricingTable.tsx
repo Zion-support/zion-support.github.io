@@ -44,6 +44,7 @@ export function ITServicePricingTable() {
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
+<<<<<<< HEAD
 
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
@@ -62,3 +63,5 @@ export function ITServicePricingTable() {
                   No countries match your search
                 </TableCell>
               </TableRow>
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

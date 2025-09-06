@@ -180,14 +180,15 @@ export function ApiReference() {;
           <div className="sticky top-8">;
             <h3 className="text-lg font-semibold text-white mb-4">Endpoints</h3>;
             <ul className="space-y-2">;
-<<<<<<< HEAD
 
                       {endpoint.method}
                     </span>;
                     <span className="truncate">{endpoint.path}</span>;
                   </button>;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;

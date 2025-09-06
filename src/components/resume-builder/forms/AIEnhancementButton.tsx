@@ -1,44 +1,32 @@
+<<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
+interface AIEnhancementButtonProps {
+  currentContent: string
+  enhancementType:
+    | 'summary'
+    | 'work-description'
+    | 'skill-categorization'
+    | 'general'
+  context?: string
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
-
-
-      return
-    }
-    setError(null)
-    const enhancedContent = await enhanceContent(
-      currentContent
-      enhancementType
-      context
-    )
-    if (enhancedContent) {
-      onEnhanced(enhancedContent)
-interface AIEnhancementButtonProps {;
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+interface AIEnhancementButtonProps {
   currentContent: string;
-  enhancementType:;
-    | 'summary';
-    | 'work-description';
-    | 'skill-categorization';
-    | 'general';
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
   context?: string;
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
-  className?: string;
-export function AIEnhancementButton(): any ({;
-  currentContent,;
-  enhancementType,;
-  context,;
-  onEnhanced,;
-  buttonText = 'Enhance with AI',;
-  className,;
-}: AIEnhancementButtonProps) {;
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
-
-  const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
-      setError('Please enter at least some basic content before enhancing');
-      return;
-    }
-
+  className?: string
 
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -64,21 +52,9 @@ function AIEnhancementButton() {
     // Check condition
 if (.length < 10) {) {
   $2
-}
-      set_error ('Please enter at least some basic content before enhancing');
-      return;
-    }
-    set_error (null);
-    const enhanced_content = await enhance_content (
-      current_content,
-      enhancement_type,
-      context);
-    // Check condition
-if ( {) {
-  $2
-}
       on_enhanced (enhanced_content);
     }
+<<<<<<< HEAD
 
   return (
     <Button
@@ -105,3 +81,5 @@ if ( {) {
     </Button>
   )
 }
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

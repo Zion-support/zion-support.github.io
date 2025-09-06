@@ -174,6 +174,14 @@ const fs = require("fs")";const path = require("path")""
       this.log(" Security audit "failed": ${error.message}");"
 =======
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
+=======
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+=======
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+=======
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======

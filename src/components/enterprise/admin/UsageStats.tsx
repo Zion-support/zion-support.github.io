@@ -1,18 +1,4 @@
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-
-import {
 
 export function UsageStats() {
 
@@ -61,12 +47,6 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
-=======
-
-        
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -174,7 +154,6 @@ export function UsageStats() {
         </Card>
       </div>
 
-<<<<<<< HEAD
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>

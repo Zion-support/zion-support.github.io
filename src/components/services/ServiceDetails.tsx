@@ -60,14 +60,6 @@ interface ServiceDetailsProps {
               Service Locations
             </h4>
 
-=======
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (
-                <div 
-                  key={idx} 
-                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
-                >
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from 'lucide-react';
 import Image from "next/image",;
 interface ServiceDetailsProps {;

@@ -141,12 +141,6 @@ interface TemplateListProps {
         </Card>
       ))}
 
-=======
-
-      
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -196,3 +190,37 @@ router.push (`/auth/login?returnTo=$ {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
 <<<<<<< HEAD
+=======
+            <Button
+              onClick = {() => onSelect(template),}
+              variant="outline"
+
+                  onClick = {() => handleDeleteClick(template && template.id),}
+                  aria-label="Delete template";
+                >;
+                  <Trash className="h-4 w-4 text-destructive" />;
+                </Button>;
+              </div>;
+            </div>;
+
+            <Separator className="my-3" />;
+
+            <Button
+              onClick = {() => onSelect(template),}
+              variant="outline" ;
+              className="w-full";
+            >;
+              Use This Template;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      ))}
+
+
+  handleDeleteConfirm ;
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
+}'"};
+
+}
+;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

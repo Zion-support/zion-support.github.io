@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -47,6 +48,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     >
       <div className="min-h-screen bg-gray-50">
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.">;
@@ -58,6 +60,7 @@ import { motion } from 'framer-motion';
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -102,6 +105,7 @@ import { motion } from 'framer-motion';
         </section>
         {/* Services Section */}
         <section className="py-20">";
+=======
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {smbServices && smbServices.map((service, index) => {}
@@ -140,6 +144,119 @@ import { motion } from 'framer-motion';
             </div>;
           </div>;
         </section>;
+        {/* Services Section */}
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-12">;
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">SMB Services</h2>;
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+                Affordable technology solutions that grow with your business.;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {smbServices && smbServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">;
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">;
+                    <service && service.icon className="w-6 h-6 text-purple-600" />;
+                  </div>;
+                  <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;
+                  <p className="text-gray-600">{service && service.description}</p>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+        {/* Services Section */}
+        <section className="py-20">";
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+              {smbServices && smbServices.map((service, index) => {}
+                const IconComponent = service && service.icon;
+                return (
+                  <motion&& motion.div)
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>,;
+                    <div className="text-orange-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                      {service && service.title}
+                    </h3>,;
+                    <p className="text-gray-600 mb-4">";
+                      {service && service.description}
+                    </p>,;
+                    <ul className="space-y-2">";
+                      {service && service.features.map((feature, featureIndex) => (,;
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                          {feature}
+                        </li>,;
+                      ))}
+                    </ul>,;
+                  </motion && motion.div>;
+                );
+              })}
+            </div>,;
+          </div>;
+        </section>;
+            </div>;
+          </div>;
+        </section>;
+        {/* Services Section */}
+        <section className="py-20">"
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
+              {smbServices && smbServices.map((service, index) => {}
+                const IconComponent = service && service.icon;
+                return (
+                  <motion&& motion.div)
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>,;
+                    <div className="text-orange-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                      {service && service.title}
+                    </h3>,;
+                    <p className="text-gray-600 mb-4">";
+                      {service && service.description}
+                    </p>,;
+                    <ul className="space-y-2">";
+                      {service && service.features.map((feature, featureIndex) => (,;
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                          {feature}
+                        </li>,;
+                      ))}
+                    </ul>,;
+                  </motion && motion.div>;
+                );
+              })}
+            </div>,;
+          </div>;
+        </section>;
+            </div>;
+          </div>;
+        </section>;
+<<<<<<< HEAD
 
         {/* Services Section */}
         <section className="py-16 px-4">;
@@ -170,6 +287,7 @@ import { motion } from 'framer-motion';
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -189,4 +307,5 @@ import { motion } from 'framer-motion';
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 

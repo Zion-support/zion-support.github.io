@@ -199,10 +199,6 @@ if ( {) {
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
-              {...form.register(name)}
-            />
-            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
-          </div>
 
                     {option.label}
                   </SelectItem>
@@ -214,24 +210,7 @@ if ( {) {
             </div>
           </div>
 
-      case 'checkbox':
-              </SelectContent>;
-            </Select>;
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
-          </div>;
-        );
-
-      case 'checkbox':;
         return (
-          <div className='flex items-center space-x-2'>;
-            <Checkbox
-              id={name}
-              checked={fieldValue}
-              onCheckedChange={checked => form && form.setValue(name, checked)}
-              disabled={disabled}
-            />;
-            <label
-              htmlFor={name}
 
 =======
 

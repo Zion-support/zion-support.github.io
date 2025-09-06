@@ -1,5 +1,6 @@
 
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -64,6 +65,7 @@ async function main() {}
   const dirty = sh('git status --porcelain || true');
   let stashed = false;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (dirty && dirty.split('\n').filter(Boolean).length) {}
@@ -77,7 +79,9 @@ async function main() {}
     processed++;
     const head = pr.head.ref;
     const base = pr.base.ref;
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
@@ -101,7 +105,9 @@ async function main() {}
 });
       if (result && result.merged) {}
         merged++;
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         console.log(`Merged PR #${pr.number}`)} else {`}
@@ -120,8 +126,7 @@ async function main() {}
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-=======
 <<<<<<< HEAD
-});
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

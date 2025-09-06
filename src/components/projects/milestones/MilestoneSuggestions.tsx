@@ -104,9 +104,6 @@ export function MilestoneSuggestions({
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
@@ -215,6 +212,18 @@ export function MilestoneSuggestions({;
           </CardHeader>
           <CardContent>
 
+=======
+interface MilestoneSuggestionsProps {
+  projectName: string;
+  scopeSummary: string;
+  startDate: Date; import React, { useState } from 'react'
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator'
+import { Loader2, Sparkles, Check } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+interface MilestoneSuggestionsProps {
+              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />
+          )}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                         AI Suggested
                       </Badge>
                     </div>
@@ -238,3 +247,6 @@ export function MilestoneSuggestions({;
         </Card>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

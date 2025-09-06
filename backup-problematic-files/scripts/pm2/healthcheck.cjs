@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 const fs = require('fs');
@@ -45,6 +44,7 @@ function pingPreview() {}
 		console.error('Healthcheck failed');
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
@@ -243,6 +243,11 @@ async function main() {
 if (require.main === module) {
   main();
 }
+=======
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

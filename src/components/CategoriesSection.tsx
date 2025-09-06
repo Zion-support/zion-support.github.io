@@ -1,4 +1,10 @@
 
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string
+  name: string
+  description?: string
 
         ...cat
 import { GradientHeading } from "./GradientHeading"

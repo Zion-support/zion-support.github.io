@@ -60,6 +60,10 @@ class ComprehensiveTestRunner {
       { name: 'Build Test', command: 'npm run build' },
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     ];
     for (const test of tests) {
       try {

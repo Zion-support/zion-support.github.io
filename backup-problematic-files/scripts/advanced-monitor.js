@@ -46,7 +46,6 @@ class AdvancedMonitor {
       fs && fs.appendFileSync(this && this.logPath, logEntry)} catch (error) {
       console && console.error("Memory check "error": ", error)}
   }
-}
 // Start monitoring
 const monitor = new AdvancedMonitor()
 

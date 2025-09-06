@@ -33,7 +33,77 @@ import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRigh
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {DollarSign,, Shield,, TrendingUp,, Users,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: DollarSign,;
+    title: 'Financial Data Management,',;
+    description: 'Secure, real-time financial data processing and analytics for informed decision making.',;
+  },;
+  {}
+    icon: Shield,;
+    title: 'Regulatory Compliance,',;
+    description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',;
+  },;
+  {}
+    icon: TrendingUp,;
+    title: 'Risk Management,',;
+    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'';
+  },;
+  {}
+    icon: Users,;
+    title: 'Customer Experience,',;
+    description: 'Digital banking and financial services platforms that enhance customer engagement.'';
+  },;
+  {}
+    icon: Database,;
+    title: 'Fraud Detection,',;
+    description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
+import Layout from '../../components/Layout';
+import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+import Layout from '../../components/Layout';
+import {DollarSign,, Shield,, TrendingUp,, Users,, Database} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {DollarSign,, Shield,, TrendingUp,, Users,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: DollarSign,;
+    title: 'Financial Data Management,',;
+    description: 'Secure, real-time financial data processing and analytics for informed decision making.',;
+  },;
+  {}
+    icon: Shield,;
+    title: 'Regulatory Compliance,',;
+    description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',;
+  },;
+  {}
+    icon: TrendingUp,;
+    title: 'Risk Management,',;
+    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'',;
+  },;
+  {}
+    icon: Users,;
+    title: 'Customer Experience,',;
+    description: 'Digital banking and financial services platforms that enhance customer engagement.'',;
+  },;
+  {}
+    icon: Database,;
+    title: 'Fraud Detection,',;
+    description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout',;
+import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: DollarSign,
@@ -168,6 +238,7 @@ const benefits = [;
   'Faster transaction processing';
 ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -405,6 +476,7 @@ export default function FinanceSolutions() {;
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -581,6 +653,7 @@ export default function FinanceSolutions() {;
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -610,4 +683,5 @@ export default function FinanceSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
 

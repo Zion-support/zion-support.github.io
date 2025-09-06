@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+
+import { ApplicationStatus } from "@/types/jobs"
+import { Progress } from "@/components/ui/progress"
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils"
+import { ApplicationStatus } from "@/types/jobs",
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { ApplicationStatus  } from '@/types / jobs';
+import { Progress  } from '@/components / ui / progress';
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
+interface ApplicationProgressProps {
+  status: ApplicationStatus,
+  class_name?: string;
+}
+export /**
+ * ApplicationProgress - Function description
+ */
+function ApplicationProgress() {
+  // Define the progress value based on status;
+  const getProgressValue = () =>: any {
+    switch (status) {
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 import { ApplicationStatus } from "@/types/jobs",
@@ -176,4 +201,7 @@ if ( {) {
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

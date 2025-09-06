@@ -4,6 +4,7 @@
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -24,6 +25,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           <StarRating
             value={review && review.rating}
             onChange={() => {}}

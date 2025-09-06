@@ -106,18 +106,38 @@
           {upcomingInterviews.map(interview => {
 
             return (
-              <div key={interview.id} className="flex items-center gap-3">
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {interview.client_avatar || interview.talent_avatar ? (
+              <div key={interview.id} className='flex items-center gap-3'>
+                <Avatar className='h-10 w-10 bg-zion-purple/10'>
+                  {interview.client_avatar |interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                      src={interview.client_avatar |interview.talent_avatar}
+                      alt={interview.client_name |interview.talent_name}
+                      loading='lazy'                    />
+                  ) : (
+                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
+                      {(
+                        interview.client_name |
+                        interview.talent_name |
+                        'U'
+                      ).charAt(0)}
+                    </div>
+            return (<div key={interview.id} className="flex items-center gap-3">
+                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
+                  {/* For now, conditional rendering based on available image */}
+                  {interview.client_avatar |interview.talent_avatar ? (
+                    <img
+                      src={interview.client_avatar |interview.talent_avatar |undefined} // Ensure src is string | undefined
+                      alt={interview.client_name |interview.talent_name |"User"} // Ensure alt is string
+                    />
+                  ) : (
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                      {(interview.client_name |interview.talent_name |"U").charAt(0)}
                     </div>
                   )}
                 </Avatar>

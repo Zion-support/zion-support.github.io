@@ -115,6 +115,7 @@ try {,"}),"})
   analyzeWebsite(),"}),"})
 } catch (error) {,"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   '🔍 Analyzing Zion Tech Group Website...\n');
   const srcDir = path.join(__dirname, ';..', ';src');
   const pagesDir = path.join(srcDir, ';pages');
@@ -202,3 +203,4 @@ try {,"}),"})
 try {
   analyzeWebsite()} catch (error) {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

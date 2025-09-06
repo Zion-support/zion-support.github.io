@@ -17,3 +17,26 @@ interface InterviewCardProps {
   interview: Interview
 
   onRefresh: () => Promise<void>
+<<<<<<< HEAD
+=======
+}
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
+
+  const { user } = useAuth()
+  const { respondToInterview, cancelInterview } = useInterviews()
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const isClient = user?.id === interview.client_id
+  const isTalent = user?.id === interview.talent_id
+  const formattedEndTime = format(endTime, 'h: mm a')
+  const isInterviewPending = interview.status === 'requested'
+  const isInterviewConfirmed = interview.status === 'confirmed'
+  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>
+      default:
+        return <Badge>{interview.status}</Badge>
+}
+
+  )
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

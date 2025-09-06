@@ -33,7 +33,77 @@ import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'luc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: Shield,;
+    title: 'Cybersecurity & Compliance,',;
+    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',;
+  },;
+  {}
+    icon: Users,;
+    title: 'Citizen Services,',;
+    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',;
+  },;
+  {}
+    icon: FileText,;
+    title: 'Document Management,',;
+    description: 'Secure document management and workflow systems for government operations.'';
+  },;
+  {}
+    icon: Globe,;
+    title: 'Open Data Platforms,',;
+    description: 'Public data portals and open government initiatives for transparency and accountability.'';
+  },;
+  {}
+    icon: Database,;
+    title: 'Data Analytics,',;
+    description: 'Government data analytics and business intelligence for informed decision making.'';
+import Layout from '../../components/Layout';
+import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+import Layout from '../../components/Layout';
+import {Shield,, Users,, FileText,, Globe,, Database} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: Shield,;
+    title: 'Cybersecurity & Compliance,',;
+    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',;
+  },;
+  {}
+    icon: Users,;
+    title: 'Citizen Services,',;
+    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',;
+  },;
+  {}
+    icon: FileText,;
+    title: 'Document Management,',;
+    description: 'Secure document management and workflow systems for government operations.'',;
+  },;
+  {}
+    icon: Globe,;
+    title: 'Open Data Platforms,',;
+    description: 'Public data portals and open government initiatives for transparency and accountability.'',;
+  },;
+  {}
+    icon: Database,;
+    title: 'Data Analytics,',;
+    description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',;
+import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: Building2,
@@ -168,6 +238,7 @@ const benefits = [;
   'Increased government efficiency';
 ];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -398,6 +469,7 @@ export default function GovernmentSolutions() {;
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
@@ -575,6 +647,7 @@ export default function GovernmentSolutions() {;
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </div>
           </div>
         </section>
@@ -604,4 +677,5 @@ export default function GovernmentSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
 

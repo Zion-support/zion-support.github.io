@@ -24,12 +24,6 @@
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 
-=======
-
-    },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
@@ -61,6 +55,18 @@
       icon: <Code className="w-6 h-6" />
 
     },
+=======
+    }
+    'talents': {
+
+
+
+
+    'innovation': {
+      title: "Innovation"
+      description: "Discover cutting-edge solutions and tech breakthroughs"
+      icon: <Bot className="w-6 h-6" />
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",

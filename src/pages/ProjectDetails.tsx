@@ -497,15 +497,115 @@ function ProjectDetailsContent() {
                 </Card>
               </TabsContent>
 
-                <ProjectReviewSection project={project} />
-              </TabsContent>
-            </Tabs>
-          </div>
+
+        title={`Project: ${project && project.job?.title || 'Project Details'} | Zion AI Marketplace`}
+        description='View and manage your project details and collaboration.'
+      />;
+      <main className='container mx-auto px-4 py-8'>;
+        <div className='mb-6'>;
+          <div className='flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2'>;
+            <div>;
+              <h1 className='text-3xl font-bold'>;
+                {project && project.job?.title || 'Project'}
+              </h1>;
+              <div className='flex items-center gap-2 mt-1'>;
+                {getStatusBadge(project && project.status)}
+                <span className='text-muted-foreground'>;
+                  Started on {format(new Date(project && project.start_date), 'PPP')}
+                </span>;
+              </div>;
+            </div>;
 
 =======
 
-          
-          <div className="order-1 lg:order-2 lg:col-span-1">
+            {/* Action Buttons Based on Role and Status */}
+            <div className='space-x-2'>;
+              {isTalent && isOfferPending && (;
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger asChild>;
+                      <Button variant='default'>;
+                        <CheckCircle2 className='mr-2 h-4 w-4' /> Accept Offer;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='container mx - auto py - 8'>;
+        <Card>;
+          <CardContent className='flex flex - col items - center justify - center py - 10'>;
+            <AlertCircle className='h - 10 w - 10 text - muted - foreground mb - 4' />;
+            <h2 className='text - xl font - bold mb - 2'>Project Not Found</h2>;
+            <p className='text - muted - foreground mb - 4'>;
+              The project you're looking for doesn't exist or you don't have;
+              access to it.;
+            </p>;
+            <Button on_click={() => router.push ('/dashboard')}>              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      </div>);
+  }
+  // Check if user is either the client or the talent;
+  const is_client = user?.id === project.client_id;
+  const is_talent = user?.id === project.talent_id;
+  // Check condition
+if ( {) {
+  $2
+}
+    router.push ('/unauthorized');
+    return null;
+  }
+  const isOfferPending = project.status === 'offer_sent';
+  const isOfferAccepted = [;
+    'offer_accepted',
+    'in_progress',
+    'completed',
+  ].includes (project.status);
+  const isActiveProject = ['offer_accepted', 'in_progress'].includes (
+    project.status);
+  return (
+    <>;
+      <SEO;
+        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}
+        description='View and manage your project details and collaboration.';
+      />;
+      <main className='container mx - auto px - 4 py - 8'>;
+        <div className='mb - 6'>;
+          <div className='flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2'>;
+            <div>;
+              <h1 className='text - 3xl font - bold'>;
+                {project.job?.title || 'Project'}
+              </h1>;
+              <div className='flex items - center gap - 2 mt - 1'>;
+                {getStatusBadge (project.status)}
+                <span className='text - muted - foreground'>;
+                  Started on {format (new Date (project.start_date), 'PPP')}
+                </span>;
+              </div>;
+            </div>;
+            {/* Action Buttons Based on Role and Status */}
+            <div className='space - x-2'>;
+              {is_talent && isOfferPending && (
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger as_child>;
+                      <Button variant='default'>;
+                        <CheckCircle2 className='mr - 2 h - 4 w - 4' /> Accept Offer;
+                      </Button>;
+                    </AlertDialogTrigger>;
+                    <AlertDialogContent>;
+                      <AlertDialogHeader>;
+                        <AlertDialogTitle>;
+                          Accept Project Offer?;
+                        </AlertDialogTitle>;
+                        <AlertDialogDescription>;
+                          By accepting this offer, you agree to the project;
+                          terms and timeline. This will initiate the contract;
+                          and start the project.;
+                        </AlertDialogDescription>;
+                      </AlertDialogHeader>;
+                      <AlertDialogFooter>;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -540,103 +640,201 @@ function ProjectDetailsContent() {
               <TabsContent value='notes'>;
                 <Card>;
                   <CardHeader>;
-                    <CardTitle > Project Notes</CardTitle>;
-                    <CardDescription > Shared notes and updates</CardDescription>;
+                    <CardTitle>Project Scope</CardTitle>;
+                    <CardDescription>;
+                      Project details and expectations;
+                    </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
-                    <div className='space - y-4'>;
-                      <div className='space - y-4 max - h-[400px] overflow - y-auto mb - 4'>;
-                        {notes.length > 0 ? (
-                          notes.map (note => (
-                            <div;
-                              key={note.id}
-                              className='bg - muted / 30 p - 3 rounded - md';
-                            >;
-                              <div className='flex items - center gap - 2 mb - 2'>;
-                                <Avatar className='h - 6 w - 6'>;
-                                  {note.created_by_profile?.avatar_url ? (
-                                    <img;
-                                      src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
-                                      loading='lazy'                                    />) : (
-                                    <User className='h - 4 w - 4' />)}
-                                </Avatar>;
-                                <span className='font - medium text - sm'>;
-                                  {note.created_by_profile?.display_name ||;
-                                    'User'}
-                                </span>;
-                                <span className='text - xs text - muted - foreground'>;
-                                  {format (new Date (note.created_at), 'PPp')}
-                                </span>;
-                              </div>;
-                              <p className='text - sm whitespace - pre - wrap'>;
-                                {note.content}
-                              </p>;
-                            </div>))) : (
-                          <div className='text - center py - 8'>;
-                            <MessageSquare className='h - 8 w - 8 text - muted - foreground mx - auto mb - 2' />;
-                            <p className='text - muted - foreground'>;
-                              No notes yet. Add the first note to this project.;
-                            </p>;
-                          </div>)}
+                    <div className='space-y-4'>;
+                      <div>;
+                        <h3 className='font-semibold mb-2'>;
+                          Project Description;
+                        </h3>;
+                        <div className='bg-muted/30 p-4 rounded-md'>;
+                          <p className='whitespace-pre-wrap'>;
+                            {project && project.scope_summary}
+                          </p>;
+                        </div>;
                       </div>;
-                      {isOfferAccepted && (
-                        <div>;
-                          <Textarea;
-                            placeholder='Add a note or update to the project...';
-                            value={new_note}
-                            on_change={e => setNewNote (e.target.value)}
-                            className='min - h-[100px] mb - 2'                          />;
-                          <Button;
-                            on_click = {handleSubmitNote, }
-                            disabled = {!new_note.trim () || isSubmittingNote, }
-                          >;
-                            {isSubmittingNote ? 'Posting...' : 'Post Note'}
-                          </Button>;
-                        </div>)}
+
+                      <div>;
+                        <h3 className='font-semibold mb-2'>Payment Terms</h3>;
+                        <Badge variant='outline' className='capitalize'>;
+                          {project && project.payment_terms} Payment;
+                        </Badge>;
+                      </div>;
+
+                      <div>;
+                        <h3 className='font-semibold mb-2'>Job Details</h3>;
+                        <div className='bg-muted/30 p-4 rounded-md'>;
+                          <p className='whitespace-pre-wrap'>;
+                            {project && project.job?.description}
+                          </p>;
+                        </div>;
+                      </div>;
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-              <TabsContent value='reviews'>;
-                <ProjectReviewSection project={project} />;
+
+              <TabsContent value='timeline'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Timeline</CardTitle>;
+                    <CardDescription>Key dates and milestones</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space-y-4'>;
+                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>;
+                        <Calendar className='h-5 w-5 text-primary mt-0 && 0.5' />;
+                        <div>;
+                          <h3 className='font-semibold'>Start Date</h3>;
+                          <p>{format(new Date(project && project.start_date), 'PPP')}</p>;
+                        </div>;
+                      </div>;
+
+                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>;
+                        <Clock className='h-5 w-5 text-primary mt-0 && 0.5' />;
+                        <div>;
+                          <h3 className='font-semibold'>Project Status</h3>;
+                          <div className='mt-1'>;
+                            {getStatusBadge(project && project.status)}
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
               </TabsContent>;
-            </Tabs>;
-          </div>;
-          <div className='order - 1 lg:order - 2 lg:col - span - 1'>;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Project Participants</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className='space - y-6'>;
-                  <div className='flex items - start gap - 4'>;
-                    <Avatar className='h - 10 w - 10'>;
+
+              <TabsContent value='documents'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Documents</CardTitle>;
+                    <CardDescription>;
+                      Agreements and relevant files;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    {project && project.agreement_url ? (;
+                      <div className='flex items-center justify-between bg-muted/30 p-4 rounded-md'>;
+                        <div className='flex items-center gap-3'>;
+                          <FileText className='h-5 w-5 text-primary' />;
+                          <div>;
+                            <h3 className='font-semibold'>Project Agreement</h3>;
+                            <p className='text-sm text-muted-foreground'>;
+                {project.status === 'completed' && (
+                  <TabsTrigger value='reviews'>Reviews</TabsTrigger>)}
+              </TabsList>;
+              <TabsContent value='details'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Scope</CardTitle>;
+                    <CardDescription>;
+                      Project details and expectations;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div>;
+                        <h3 className='font - semibold mb - 2'>;
+                          Project Description;
+                        </h3>;
+                        <div className='bg - muted / 30 p - 4 rounded - md'>;
+                          <p className='whitespace - pre - wrap'>;
+                            {project.scope_summary}
+                          </p>;
+                        </div>;
+                      </div>;
+                      <div>;
+                        <h3 className='font - semibold mb - 2'>Payment Terms</h3>;
+                        <Badge variant='outline' className='capitalize'>;
+                          {project.payment_terms} Payment;
+                        </Badge>;
+                      </div>;
+                      <div>;
+                        <h3 className='font - semibold mb - 2'>Job Details</h3>;
+                        <div className='bg - muted / 30 p - 4 rounded - md'>;
+                          <p className='whitespace - pre - wrap'>;
+                            {project.job?.description}
+                          </p>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='timeline'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Timeline</CardTitle>;
+                    <CardDescription > Key dates and milestones</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div className='flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md'>;
+                        <Calendar className='h - 5 w - 5 text - primary mt - 0.5' />;
+                        <div>;
+                          <h3 className='font - semibold'>Start Date</h3>;
+                          <p>{format (new Date (project.start_date), 'PPP')}</p>;
+                        </div>;
+                      </div>;
+                      <div className='flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md'>;
+                        <Clock className='h - 5 w - 5 text - primary mt - 0.5' />;
+                        <div>;
+                          <h3 className='font - semibold'>Project Status</h3>;
+                          <div className='mt - 1'>;
+                            {getStatusBadge (project.status)}
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='documents'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Documents</CardTitle>;
+                    <CardDescription>;
+                      Agreements and relevant files;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    {project.agreement_url ? (
+                      <div className='flex items - center justify - between bg - muted / 30 p - 4 rounded - md'>;
+                        <div className='flex items - center gap - 3'>;
+                          <FileText className='h - 5 w - 5 text - primary' />;
+                          <div>;
+                            <h3 className='font - semibold'>Project Agreement</h3>;
+                            <p className='text - sm text - muted - foreground'>;
+                              Uploaded when project was created;
+                            </p>;
+                          </div>;
+                        </div>;
+
+
+              
+              <TabsContent value="notes">
+
+
+                              key={note && note.id}
+                              className='bg-muted/30 p-3 rounded-md'>;
+                              <div className='flex items-center gap-2 mb-2'>;
+                                <Avatar className='h-6 w-6'>;
+                                  {note && note.created_by_profile?.avatar_url ? (;
+
+                          notes.map((note) => (
+                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Avatar className="h-6 w-6">
+
+                                  {note.created_by_profile?.avatar_url ? (
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-                    </Avatar>
-                    <div>
-
-                          variant='outline'
-                          size='sm'
-                          className='mt-2'
-                          onClick={() =>
-                            router.push(
-                              `/messages?talentId=${project.talent_id}`
-                            )
-                          }                        >
-                          <MessageSquare className='mr-1 h-3 w-3' /> Message
-
-                        </Button>
-                      )}
-                    </div>
-                  </div>
 
                       {project.talent_profile?.profile_picture_url ? (
                         <img
@@ -898,6 +1096,7 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
+<<<<<<< HEAD
 
             </Card>;
           </div>;
@@ -915,3 +1114,5 @@ export default function ProjectDetails() {;
   );
 }
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

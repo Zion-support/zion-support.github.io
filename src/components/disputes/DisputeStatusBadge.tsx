@@ -1,9 +1,9 @@
 
+=======
+import { Badge } from "@/components/ui/badge";
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { ShieldAlert } from 'lucide-react'
 
-
-import { Badge } from '@/components / ui / badge';
-import { ShieldAlert } from 'lucide-react';
 import {
   Tooltip
   TooltipContent
@@ -15,6 +15,7 @@ interface DisputeStatusBadgeProps {
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
   let message = null;
+<<<<<<< HEAD
     default:
       break
 

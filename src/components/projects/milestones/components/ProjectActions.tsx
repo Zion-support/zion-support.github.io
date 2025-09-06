@@ -48,26 +48,32 @@ export function ProjectActions(): any ({;
         </Button>
       ) : (
 <<<<<<< HEAD
-=======
 
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import Link from 'next/link';
+import { ShieldAlert } from 'lucide-react'
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
+  projectId: string;
+  isUnderDispute: boolean;
+  disputeId?: string;
+  isTalent: boolean;
+  onAddMilestone: () => void
+export function ProjectActions({
 
+  projectId
+  isUnderDispute
+  disputeId
+  isTalent
 
-    </div>;
-  );
-};
-
-
-
+xport function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+        <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
       )}
-      {isTalent && !isUnderDispute && (;
-        <Button onClick={onAddMilestone}>;
-          Add Milestone;
-        </Button>;
-      )}
-
-    </div>;
-  );
-}
 
 import React from 'react';
 import {Button} from '@/components / ui / button';
@@ -110,4 +116,7 @@ function ProjectActions() {
     </div>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

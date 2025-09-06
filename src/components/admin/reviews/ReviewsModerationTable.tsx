@@ -20,11 +20,9 @@ interface ReviewsModerationTableProps {
   onRefresh: () => void
 }
       setViewDetailsOpen(false)
-    },
-    onError: (error: Error) => {
+    }
+    onError: (error: Error,) => {
       toast({
-        title: "Error",
-        description: `Failed to update review: ${error.message}`,
 
         variant: "destructive"})
     }}),
@@ -37,201 +35,135 @@ interface ReviewsModerationTableProps {
       .toUpperCase()
   },
 
-  if (isLoading) {
-
+import {
+  const renderStars = (rating: number) => {
     return (
-      <div className='space - y-4'>;
-        <div className='h - 12 w - full bg - muted rounded animate - pulse' />;
-        <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
-        <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
-        <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
-      </div>);
-  }
-
-  // Check condition
-if ( {) {
-  $2
-}
-
-    return (
-      <div className='py - 10 text - center'>;
-        <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
-        <p className='text - muted - foreground'>;
-          All reviews have been processed. Check back later for new submissions.;
-        </p>;
-      </div>);
-  }
-
-  const handle_approve = (review_id: string) =>: any {
-    updateReviewStatus ({ review_id, status: 'approved' });
-
-  }
-  const handle_reject = (review_id: string) =>: any {
-    updateReviewStatus ({ review_id, status: 'rejected' });
-  }
-  const handleViewDetails = (review: Review) =>: any {
-    setSelectedReview (review);
-    setViewDetailsOpen (true);
-  }
-
+      <div className="flex">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />
+import { useState } from "react",;
+import { useMutation } from "@tanstack/react-query",;
+import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
+import { format } from "date-fns",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Review, ReviewStatus } from "@/types/reviews",;
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
+  TableRow} from "@/components/ui/table",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
-  DialogTitle,;
-} from '@/components/ui/dialog';
+  DialogTitle} from "@/components/ui/dialog",;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
 interface ReviewsModerationTableProps {;
-  reviews: Review[];
-isLoading: boolean;
-onRefresh: () => void ;
-}export function ReviewsModerationTable(): any ({;
-  reviews;
-isLoading;
-onRefresh ;
-}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null> (null);
-const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
-const {;
-  mutate: updateReviewStatus, isPending ;
-}= useMutation ({;
-  mutationFn: async ({;
-  reviewId;
-status ;
-}: {;
-  reviewId: string;
-status: ReviewStatus ;
-}) => {;
-  const {;
-  error ;
-}= await supabase .from ("reviews") .update ({;
-  status ;
-}) if (error) throw error;
-return {;
-  reviewId, status ;
-
-export function ReviewsModerationTable(): any ({;
+  reviews: Review[],;
+  isLoading: boolean,;
+  onRefresh: () => void;
+}
+;
+export function ReviewsModerationTable({;
   reviews,;
   isLoading,;
-  onRefresh,;
-}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-
+  onRefresh}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
   const { mutate: updateReviewStatus, isPending } = useMutation({;
     mutationFn: async ({;
       reviewId,;
-      status,;
-    }: {;
-      reviewId: string;
+      status}: {;
+      reviewId: string,;
       status: ReviewStatus;
-    }) => {      const { error } = await supabase;
-        .from('reviews');
+    }) => {;
+      const { error } = await supabase;
+        .from("reviews");
         .update({ status });
-        .eq('id', reviewId);
-
-      if (error) throw error;
-      return { reviewId, status };
+        .eq("id", reviewId),;
+      if (error) throw error,;
+      return { reviewId, status }
     },;
-    onSuccess: data => {      toast({;
-        title: 'Review updated',;
-        description: `Review has been ${data && data.status}.`,;
-      });
-      onRefresh();
+    onSuccess: (data) => {;
+      toast({;
+        title: "Review updated",;
+        description: `Review has been ${data.status}.`}),;
+      onRefresh(),;
       setViewDetailsOpen(false);
     },;
-    onError: (error: Error,) => {;
+    onError: (error: Error) => {;
       toast({;
-        title: 'Error',;
-        description: `Failed to update review: ${error && error.message}`,;
-        variant: 'destructive',;
-      });
-    },;
-  });
-
-  const getInitials = (name: string,) => {;
+        title: "Error",;
+        description: `Failed to update review: ${error.message}`,;
+        variant: "destructive"});
+    }}),;
+  const getInitials = (name: string) => {;
     return name;
-      .split(' ');
-      .map(n => n[0]);
-      .join('');
+      .split(" ");
+      .map((n) => n[0]);
+      .join("");
       .toUpperCase();
-  };
+  },;
   if (isLoading) {;
-    return (
-      <div className='space-y-4'>;
-        <div className='h-12 w-full bg-muted rounded animate-pulse' />;
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+    return (;
+      <div className="space-y-4">;
+        <div className="h-12 w-full bg-muted rounded animate-pulse" />;
+        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
+        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
+        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
       </div>;
     );
   }
-
-  if (reviews && reviews.length === 0) {;
-    return (
-      <div className='py-10 text-center'>;
-        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
-        <p className='text-muted-foreground'>;
+;
+  if (reviews.length === 0) {;
+    return (;
+      <div className="py-10 text-center">;
+        <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
+        <p className="text-muted-foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
       </div>;
     );
   }
-
+;
   const handleApprove = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: 'approved' });
-  };
-
+    updateReviewStatus({ reviewId, status: "approved" });
+  },;
   const handleReject = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: 'rejected' });
-  };
-
+    updateReviewStatus({ reviewId, status: "rejected" });
+  },;
   const handleViewDetails = (review: Review) => {;
-    setSelectedReview(review);
+    setSelectedReview(review),;
     setViewDetailsOpen(true);
   };
-  const renderStars = (rating: number,) => {;
-
-    return (
-      <div className='flex'>;
-        {[1, 2, 3, 4, 5].map(star => (;
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
-        ))}
-
-  const render_stars = (rating: number, ) =>: any {
-    return (
-      <div className='flex'>;
-        {[1, 2, 3, 4, 5].map (star => (
+  const renderStars = (rating: number) => {;
+    return (;
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map((star) => (;
           <Star;
             key={star}
-            className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
-      </div>);
-
-  }
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />;
+        ))}
       </div>;
     );
   };
-
-  return (
+  return (;
     <>;
       <Table>;
         <TableHeader>;
@@ -488,26 +420,6 @@ export function ReviewsModerationTable(): any ({;
                     <>
                       <Button
 
-=======
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
-                        onClick={() => handleApprove(review.id)}
-                        disabled={isPending}
-                      >
-                        <Check className="h-4 w-4 text-green-500" />
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
-                        onClick={() => handleReject(review.id)}
-                        disabled={isPending}
-                      >
-                        <X className="h-4 w-4 text-red-500" />
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       </Button>
                     </>
                   )}
@@ -532,6 +444,14 @@ export function ReviewsModerationTable(): any ({;
                 </div>
               </TableCell>
             </TableRow>
+=======
+            <TableHead>Reviewer</TableHead>;
+            <TableHead>Rating</TableHead>;
+            <TableHead>Date</TableHead>;
+            <TableHead>Status</TableHead>;
+            <TableHead>Reports</TableHead>;
+            <TableHead className="text-right">Actions</TableHead>;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           ))}
         </TableBody>
       </Table>

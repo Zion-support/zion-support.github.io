@@ -269,41 +269,6 @@ if ( {) {
   $2
 }
         return this.props.fallback;
-      }
-      return (
-        <div className='flex min - h-screen items - center justify - center p - 4'>;
-          <div className='w - full max - w-md space - y-4'>;
-            <Alert variant='destructive'>;
-              <div className='flex items - center gap - 2'>;
-                {isNetworkError ? (
-                  <WifiOff className='h - 4 w - 4' />) : (
-                  <RefreshCw className='h - 4 w - 4' />)}
-
-                <AlertTitle>;
-                  {isNetworkError;
-                    ? 'Connection Problem';
-                    : 'Something went wrong'}
-                </AlertTitle>;
-              </div>;
-
-              </AlertDescription>;
-            </Alert>;
-        <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="w-full max-w-md space-y-4">
-            <Alert variant="destructive">
-              <div className="flex items-center gap-2">
-                {isNetworkError ? (
-                  <WifiOff className="h-4 w-4" />
-                ) : (
-
-=======
-                  <RefreshCw className="h-4 w-4" />
-                )}
-                <AlertTitle>;
-                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -329,6 +294,13 @@ if ( {) {
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
+=======
+            <div className='flex flex-col gap-2'>
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                 )}
               </Button>
               <Button

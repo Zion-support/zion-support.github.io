@@ -112,14 +112,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                       ) : (
                         <span>Pick a date</span>
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="single"
-                    selected={field.value || undefined}
+                    selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
                     initialFocus
@@ -131,68 +124,17 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               </FormDescription>
               <FormMessage />
             </FormItem>
-          name="endDate";
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (;
-            <FormItem className="flex flex-col">;
-              <Popover>;
-                <PopoverTrigger asChild>;
-                  <FormControl>;
-                    <Button
-                      variant={'outline'}
-                      className={`w-full pl-3 text-left font-normal ${!field && field.value && 'text-muted-foreground'}`}
-                      {field && field.value ? (
-                        format(field && field.value, 'PPP')
-                      ) : (
-                        <span>Pick a date</span>;
-                      )}
-                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
-                    </Button>;
-                  </FormControl>;
-                </PopoverTrigger>;
-                <PopoverContent className='w-auto p-0' align='start'>;
-                  <Calendar
-                    mode='single'
-
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <FormMessage />
-            </FormItem>
           )}
-        />
-        
-        <FormField
-          control={form.control}
-          name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>End Date (Optional)</FormLabel>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
-                    <Button
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
-
-                    >
-                      {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
-                        <span>Pick a date</span>
-                    selected={field && field.value || undefined}
-                    onSelect={field && field.onChange}
-                    disabled={date => date < form && form.getValues('startDate')}                    initialFocus                    mode="single";
-                    selected = {field && field.value || undefined,}
-                    onSelect = {field && field.onChange,}
-                    disabled = {(date,) => date < form && form.getValues("startDate"),}
-                    >;
-                      {field && field.value ? (;
-                        format(field && field.value, "PPP");
-                      ) : (;
-                        <span>Pick a date</span>;
+        />;
+      </div>;
+    </>;
+  );
+}
+;
+;
 
 
+<<<<<<< HEAD
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                     </Button>;
@@ -214,3 +156,5 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <FormMessage />
             </FormItem>
           )}
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

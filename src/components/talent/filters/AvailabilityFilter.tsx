@@ -160,6 +160,7 @@ function AvailabilityFilter() {
 }</div>);
 }</div>);
 }"}
+<<<<<<< HEAD
               >
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -199,3 +200,5 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               <label
                 htmlFor={`availability-${option.id}`}
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

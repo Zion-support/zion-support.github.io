@@ -16,11 +16,6 @@ export function CountrySelector({;
   // Set top/popular countries
   useEffect(() => {
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const popular = [
       'United States'
       'United Kingdom'
@@ -53,3 +48,21 @@ export function CountrySelector({;
               </SelectItem>
             ))}
 <<<<<<< HEAD
+=======
+import { useState, useEffect } from "react",
+import { Globe } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+    <div className="mb-6">
+              .map(item => (
+                <SelectItem
+                  key={item.country}
+                  value={item.country}
+                  className='text-white'
+                >
+                  {item.country} - ${item.pricePerIncident.toFixed(2)}
+                </SelectItem>
+              ))}          </div>              .map((item) => (
+              .sort((a, b,) => a.country.localeCompare(b.country))
+              .map((item,) => (
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

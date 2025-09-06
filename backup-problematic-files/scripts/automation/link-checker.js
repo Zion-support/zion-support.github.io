@@ -14,6 +14,7 @@ const __dirname = path && path.dirname(__filename),"}),"})
 // // // console && console.log(,"}),"})
   '🔗 Starting continuous link checker automation...'),"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes,"}),"})
 const AUTOMATION_INTERVAL = parseInt(process ; // 30 minutes,"}),"})
 async function checkLinks() {,"}),"})
@@ -79,11 +80,13 @@ async function checkLinks() {,"}),"})
     let hasIssues = false,"}),"})
     const brokenReferences = [],"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       try {,"}),"})
         const content = fs && fs.readFileSync(htmlFile,,"}),"})
   'utf8'),"}),"})
         const references = findReferences(content),"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           if (!isValidReference(ref, distPath)) {,"}),"})
             brokenReferences && brokenReferences.push({,"}),"})
               "file": path && path.relative(process && process.cwd(), htmlFile),,"}),"})
@@ -137,6 +140,7 @@ async function checkLinks() {,"}),"})
   t exit, just log the error and continue,"}),"})
 function files = [],"}),"})
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     const fullPath = path.join(dir, item),"}),"})
     const stat = fs.statSync(fullPath),"}),"})
     if (stat.isDirectory()) {,"}),"})
@@ -277,3 +281,4 @@ async function checkLinks() {
       '⚠️  index && index.html not found in build output');
       return;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

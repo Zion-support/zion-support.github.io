@@ -1,4 +1,8 @@
 
+=======
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button";
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { CheckCircle2 } from 'lucide-react'
 
 import {
@@ -9,6 +13,7 @@ import {
   TableHeader
   TableRow
 } from './ui/table'
+<<<<<<< HEAD
 
                 ))}
               </TableBody>

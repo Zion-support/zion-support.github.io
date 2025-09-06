@@ -12,6 +12,7 @@
       this.log('Running TypeScript type check...');';
       execSync('npm run type-check', { "stdio": 'pipe' });',
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 module.exports = LintAutomation;
 ;
 #!/usr/bin/env node
@@ -53,6 +54,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
   automation.start().catch(console.error);
       this.log('TypeScript type check completed successfully');
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 this.log('Type check completed successfully');
       // Run smoke tests
       this.log('Running smoke tests...');
@@ -92,11 +94,13 @@ this.log('Type check completed successfully');
     }
   }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run the automation
 if (require.main === module) {
   const automation = new LintAutomation();
   automation.run().catch(console.error);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 module.exports = LintAutomation;
       // Try to fix linting issues
       try {
@@ -122,6 +126,7 @@ module.exports = LintAutomation;
     }
   }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run the automation
 if (require.main === module) {
   const automation = new LintAutomation();
@@ -131,3 +136,4 @@ if (require.main === module) {
   });ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
 ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -9,15 +9,22 @@ import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
                 </div>
               </div>
 
-=======
-              
-              <div className="flex justify-between items-center">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
-                    <UserCheck className="h-4 w-4" />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
+=======
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+
+import Link from 'next/link'
+import React from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
+import Link from "next/link",
+xport function ClientDashboard() {
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
@@ -404,6 +411,7 @@ function ClientDashboard() {
       </section>;
 
   );
+<<<<<<< HEAD
 }
 
       <section>;
@@ -474,3 +482,5 @@ function ClientDashboard() {
   );
 }
 ;
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

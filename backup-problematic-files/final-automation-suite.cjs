@@ -7,6 +7,8 @@ class FinalAutomationSuite {
     this.projectRoot = process.cwd();
     this.changes = [];
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -19,13 +21,23 @@ class FinalAutomationSuite {
     console.log(`[${timestamp}] ${message}`);
   }
 =======
+=======
+
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    this.errors = []}
+  log(message) {
+    const timestamp = new Date().toISOString();
+    }
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -34,6 +46,8 @@ class FinalAutomationSuite {
     try {
       const result = execSync(command, {
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -71,8 +85,14 @@ class FinalAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+      } else {
+=======
+      } else {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         "cwd": this.projectRoot,
         "encoding": "utf8",
         "timeout": 300000, // 5 minutes timeout
@@ -80,6 +100,7 @@ class FinalAutomationSuite {
 
 #!/usr/bin/env node;
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node;
@@ -101,6 +122,8 @@ const path = require("path")
         "cwd"
         "encoding": "utf8"
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       });
       if (status.trim()) {
         this.log("📝 Changes "detected": ");
@@ -149,6 +172,7 @@ class AutoDeployment {
       console.error("❌ Deployment failed:", error.message);
       process.exit(1);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -156,6 +180,10 @@ class AutoDeployment {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.projectRoot = process.cwd()}
   async deploy() {
     try {
@@ -172,6 +200,7 @@ class AutoDeployment {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -197,6 +226,8 @@ class CodeQualityChecker {
   }
   async checkCodeQuality() {
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -204,12 +235,12 @@ class CodeQualityChecker {
     this.projectRoot = process.cwd();
   }
   async checkCodeQuality() {
+=======
     console.log("🔍 Checking code quality...");
     this.projectRoot = process.cwd()}
   async checkCodeQuality() {
     this.projectRoot = process.cwd()}
   async checkCodeQuality() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const issues = [];
@@ -224,6 +255,11 @@ class CodeQualityChecker {
           issues.push({
             file,
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             type: "console.log",
@@ -248,6 +284,12 @@ class CodeQualityChecker {
 
         this.log("� Changes "detected": ")
 
+=======
+        }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         this.log("� Changes "detected": ")
@@ -293,6 +335,15 @@ const path = require("path")
       }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     console.log("Found " + issues.length + " code quality issues");
     if (issues.length > 0) {
       console.log("Issues found:");
@@ -302,12 +353,25 @@ const path = require("path")
     }
     return issues;
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    if (issues.length > 0) {
+      issues.forEach(issue => {
+        })}
+    return issues}
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -327,14 +391,28 @@ const path = require("path")
     return files;
   }}
 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     
     return files;
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+  }
+    return files}
+    return files}
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+    
+    return files;
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
 const checker = new CodeQualityChecker();
 checker.checkCodeQuality();"
@@ -346,6 +424,8 @@ const { execSync } = require("child_process");
 class DependencyUpdater {
   constructor() {
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -374,8 +454,14 @@ class DependencyUpdater {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+    }
+=======
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.projectRoot = process.cwd()}
   async updateDependencies() {
     try {
@@ -393,6 +479,7 @@ class DependencyUpdater {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -418,6 +505,8 @@ class PerformanceMonitor {
   }
   async monitorPerformance() {
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -425,12 +514,12 @@ class PerformanceMonitor {
     this.projectRoot = process.cwd();
   }
   async monitorPerformance() {
+=======
     console.log("📊 Monitoring performance...");
     this.projectRoot = process.cwd()}
   async monitorPerformance() {
     this.projectRoot = process.cwd()}
   async monitorPerformance() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const metrics = {
       "timestamp": new Date().toISOString(),
       "memory": process.memoryUsage(),
@@ -461,6 +550,8 @@ class PerformanceMonitor {
     if (fs.existsSync(nodeModulesDir)) {
       const nodeModulesSize = this.getDirectorySize(nodeModulesDir);
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -482,8 +573,16 @@ class PerformanceMonitor {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+        const items = fs.readdirSync(dir);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       metrics.nodeModulesSize = nodeModulesSize}
     );
     // Save metrics to file
@@ -498,6 +597,7 @@ class PerformanceMonitor {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -517,14 +617,28 @@ class PerformanceMonitor {
     return size;
   }}
 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     
     return size;
   }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+  }
+    return size}
+    return size}
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+    
+    return size;
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }
 const monitor = new PerformanceMonitor();
 monitor.monitorPerformance();"
@@ -533,6 +647,8 @@ monitor.monitorPerformance();"
     const scriptsDir = path.join(this.projectRoot, "scripts", "additional");
     if (!fs.existsSync(scriptsDir)) {
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -569,13 +685,29 @@ monitor.monitorPerformance();"
     }
   }
 =======
+=======
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      fs.mkdirSync(scriptsDir, { "recursive": true })}
+    for (const script of scripts) {
+      const scriptPath = path.join(scriptsDir, script.name);
+      fs.writeFileSync(scriptPath, script.content);
+      this.log(`✅ Created ${script.name}`)}
+    return { "success": true, "scriptsCreated": scripts.length }}
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -695,6 +827,8 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         this.log("⚠️ Currently on main branch, creating feature branch...");
         const featureBranch = `automation-improvements-${Date.now()}`;
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -705,11 +839,12 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         this.log(`✅ Created feature branch: ${featureBranch}`);
       }
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       this.log("✅ Pull request setup completed");
       return true} catch (error) {
@@ -1136,6 +1271,11 @@ Enhancements: Performance, Security, SEO, Accessibility`;
       if (report.summary.recommendations.length > 0) {
         this.log("💡 Recommendations:");
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         report.summary.recommendations.forEach(rec => this.log(`  - ${rec}`));
@@ -1146,6 +1286,13 @@ Enhancements: Performance, Security, SEO, Accessibility`;
       throw error;
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         report.summary.recommendations.forEach(rec => this.log(`  - ${rec}`))}
       return report} catch (error) {
       this.log(`❌ Fatal error in final automation "suite": ${error.message}`);
@@ -1154,6 +1301,7 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -1187,6 +1335,8 @@ Enhancements: Performance, Security, SEO, Accessibility`;
       // Run performance monitor
       await this.runCommand("node scripts/additional/performance-monitor.cjs", "Performance Monitor");
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1201,11 +1351,12 @@ Enhancements: Performance, Security, SEO, Accessibility`;
     }
     return results;
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

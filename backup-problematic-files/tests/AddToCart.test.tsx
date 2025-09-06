@@ -1,12 +1,6 @@
-
-<<<<<<< HEAD
 =======
-interface AddToCart.testProps {
-  className?: string;
-}
+export default function AddToCart.test({ }: AddToCart.testProps) {
 
-const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className={className || ''}>
       <h1>AddToCart.test</h1>
@@ -14,4 +8,6 @@ const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
     </div>
   );
 }
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

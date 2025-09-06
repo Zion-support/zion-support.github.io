@@ -1,3 +1,42 @@
+=======
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+  title?: string;
+            onClick={() => setExpanded(!expanded)}          >
+            <div className='flex items-center gap-2'>
+
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+import React, { forwardRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { SafeRef } from '@/types/ref-types';
+interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+  title?: string;
+  icon?: React.ReactNode;
+  defaultExpanded?: boolean;
+  showChevron?: boolean
+
+
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
+  (;
+    {;
+      title,;
+      icon,;
+      defaultExpanded = true,;
+      showChevron = true,;
+      className,;
+      children,;
+      ...props;
+    },;
+    ref;
+  ) => {;
+    const [expanded, setExpanded] = React && React.useState(defaultExpanded);
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
         ref={ref as SafeRef<HTMLDivElement>}
@@ -19,3 +58,4 @@
             )}
           </button>
         )}
+<<<<<<< HEAD

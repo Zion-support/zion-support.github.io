@@ -31,11 +31,13 @@ import React from "react";} from "lucide-react"; export default function Service
 import React from "react";
 import Link from "next/link";
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 } from \"lucide-react\";
 } from "lucide-react";
 } from \"lucide-react\";
 } from "lucide-react";
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 	const title = \"Services — Zion Tech Group\";
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\";
 	return (
@@ -310,17 +312,16 @@ import Link from "next/link";
 							<Link
 								href=\"/\"
 								className=\"text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group\"
+=======
+								aria-label=\"Back to homepage\">;
+								Back to Home;
+								<span aria-hidden=\"true\" className=\"group-hover:translate-x-1 transition-transform inline-block\">→</span>;
+							</Link>;
+						</div>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
 
 <<<<<<< HEAD
-=======
-const Services-broken: React.FC<Services-brokenProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Services-broken</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Services-broken;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

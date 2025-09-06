@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -44,6 +45,18 @@ export default function CloudServicesPage() {;
       <div className="min-h-screen bg-gray-50">";
   ];
 
+=======
+interface CloudProps {
+  className?: string;
+}
+
+export default function CloudServicesPage() {
+  return (
+    <Layout
+      title="Cloud Solutions - Zion Tech Group"
+      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     >
       <div className="min-h-screen bg-gray-50">
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
@@ -55,6 +68,7 @@ export default function CloudServicesPage() {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -173,6 +187,7 @@ export default function CloudServicesPage() {;
                 </motion && motion.div>;
               ))}
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -192,4 +207,5 @@ export default function CloudServicesPage() {;
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 

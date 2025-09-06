@@ -14,10 +14,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
     return (
       <Card className="border border-dashed border-muted">
-        <CardContent className="flex items-center justify-center p-6">
-          <div className="text-center">
-            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
-            <p className="text-sm text-muted-foreground">
 
 =======
               Generating optimal pricing suggestion...

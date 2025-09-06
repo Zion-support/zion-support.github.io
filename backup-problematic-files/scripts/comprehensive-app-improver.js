@@ -1,4 +1,5 @@
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/"env": node,
 import fs from 'fs';
 import path from 'path';
@@ -292,6 +293,7 @@ const nextConfig = {
         "destination": '/api/:path*, ','}
     ]}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 module."exports": = nextConfig;";
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
     this.fixes.push('"Optimized": Next.js configuration for performance')}';
@@ -799,6 +801,7 @@ export const focusElement = ("selector": string) => {
   if (element) {
     (element as HTMLElement).focus()}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 ;
 export const announceToScreenReader = ("message": string) => {;";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';  ;
   const announcement = document.createElement('div');
@@ -810,3 +813,4 @@ export const announceToScreenReader = ("message": string) => {;";  const announc
   setTimeout(() => {;
     document.body.removeChild(announcement)}, 1000)}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

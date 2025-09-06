@@ -41,7 +41,6 @@ const path = require('path')
       .replace('.test.ts', '')
       .replace('.test.jsx', '')
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       .replace('.test.js', '');
     return `import React from 'react';
@@ -112,6 +111,7 @@ describe('${componentName}')
       const content = fs.readFileSync(filePath, 'utf8')
     this.log(' Starting Test File Fixer')
     console.log(' Test file fixing completed')
+<<<<<<< HEAD
 
     console.error(' Test file fixing "failed")
     console.error(' Test file fixing "failed")

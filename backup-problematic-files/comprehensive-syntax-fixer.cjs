@@ -101,6 +101,7 @@ console.log(' Starting comprehensive syntax fixer...')
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();

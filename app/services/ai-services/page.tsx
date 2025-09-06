@@ -1,190 +1,332 @@
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
-  description: 'Advanced AI solutions including LLM applications, RAG systems, AI agents, fine-tuning, and MLOps. Transform your business with cutting-edge AI technology.'
+  description: 'Advanced AI solutions including machine learning, natural language processing, computer vision, and intelligent automation. Transform your business with cutting-edge AI technology.'
 };
+<<<<<<< HEAD
+
+export default function AIPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Advanced AI solutions including machine learning, natural language processing, 
+            computer vision, and intelligent automation. Transform your business with cutting-edge AI technology.
+          </p>
+        </div>
 
 export default function AIPage() {
   return (
     <div className="animate-fade-in">
-      <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI Services & Solutions
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps. 
-          We help you build production-ready AI systems that drive real business value.
-        </p>
-      </section>
-
-<<<<<<< HEAD
-=======
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our AI Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            AI Services & Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps. 
+            We deliver production-ready AI solutions that drive real business value.
+          </p>
+        </div>
+
+        {/* Core AI Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <AIServiceCard
             title="Custom LLM Applications"
             description="Build intelligent applications powered by large language models"
-            features={["Custom model fine-tuning", "Prompt engineering", "Context-aware responses", "Multi-modal capabilities", "Real-time inference"]}
-            price="$15k–$50k"
+            features={[
+              "Custom prompt engineering",
+              "Context-aware responses",
+              "Multi-modal capabilities",
+              "Real-time streaming",
+              "Custom fine-tuning",
+              "API integration & deployment"
+            ]}
+            pricing="$15k - $50k"
+            timeline="4-10 weeks"
             icon="🧠"
           />
+          
           <AIServiceCard
-            title="RAG (Retrieval-Augmented Generation)"
-            description="Intelligent document search and question-answering systems"
-            features={["Vector database setup", "Document processing", "Semantic search", "Context retrieval", "Answer generation"]}
-            price="$10k–$30k"
+            title="RAG Systems & Knowledge Bases"
+            description="Retrieval-Augmented Generation for enterprise knowledge management"
+            features={[
+              "Document ingestion & processing",
+              "Vector database setup",
+              "Semantic search capabilities",
+              "Context-aware retrieval",
+              "Source attribution & citations",
+              "Performance optimization"
+            ]}
+            pricing="$20k - $60k"
+            timeline="6-12 weeks"
             icon="🔍"
           />
+          
           <AIServiceCard
-            title="AI Agents & Automation"
-            description="Autonomous AI agents that can perform complex tasks and workflows"
-            features={["Task automation", "Workflow orchestration", "API integrations", "Decision making", "Self-healing systems"]}
-            price="$20k–$60k"
+            title="AI Agent Development"
+            description="Intelligent autonomous agents for task automation and decision making"
+            features={[
+              "Multi-step reasoning",
+              "Tool integration & APIs",
+              "Memory & context management",
+              "Error handling & recovery",
+              "Human-in-the-loop workflows",
+              "Performance monitoring"
+            ]}
+            pricing="$25k - $70k"
+            timeline="8-16 weeks"
             icon="🤖"
           />
+          
           <AIServiceCard
             title="Computer Vision Solutions"
-            description="Image and video analysis with state-of-the-art computer vision models"
-            features={["Object detection", "Image classification", "OCR & text extraction", "Video analytics", "Real-time processing"]}
-            price="$12k–$40k"
+            description="Image and video analysis with deep learning models"
+            features={[
+              "Object detection & recognition",
+              "Image classification",
+              "OCR & text extraction",
+              "Video analysis & tracking",
+              "Custom model training",
+              "Real-time processing"
+            ]}
+            pricing="$18k - $55k"
+            timeline="6-14 weeks"
             icon="👁️"
           />
+          
           <AIServiceCard
             title="Natural Language Processing"
-            description="Advanced text analysis, sentiment analysis, and language understanding"
-            features={["Sentiment analysis", "Text classification", "Named entity recognition", "Language translation", "Text summarization"]}
-            price="$8k–$25k"
-            icon="📝"
+            description="Advanced text analysis and language understanding systems"
+            features={[
+              "Sentiment analysis",
+              "Named entity recognition",
+              "Text summarization",
+              "Language translation",
+              "Intent classification",
+              "Custom model training"
+            ]}
+            pricing="$12k - $40k"
+            timeline="4-10 weeks"
+            icon="💬"
           />
+          
           <AIServiceCard
-            title="Predictive Analytics & ML"
-            description="Machine learning models for forecasting and predictive insights"
-            features={["Time series forecasting", "Anomaly detection", "Recommendation systems", "Risk assessment", "Performance optimization"]}
-            price="$18k–$45k"
-            icon="📈"
-          />
-          <AIServiceCard
-            title="AI Voice & Speech Processing"
-            description="Advanced speech recognition, synthesis, and voice AI applications"
-            features={["Speech-to-text", "Text-to-speech", "Voice cloning", "Emotion detection", "Multi-language support", "Real-time processing"]}
-            price="$25k–$65k"
-            icon="🎤"
-          />
-          <AIServiceCard
-            title="AI-Powered Search & Discovery"
-            description="Intelligent search engines with semantic understanding and personalization"
-            features={["Semantic search", "Personalization", "Auto-tagging", "Content recommendation", "Search analytics", "Multi-modal search"]}
-            price="$18k–$45k"
-            icon="🔎"
-          />
-          <AIServiceCard
-            title="AI Fraud Detection & Security"
-            description="Advanced fraud detection and cybersecurity using machine learning"
-            features={["Real-time fraud detection", "Anomaly detection", "Risk scoring", "Behavioral analysis", "Threat intelligence", "Compliance monitoring"]}
-            price="$30k–$80k"
-            icon="🛡️"
-          />
-          <AIServiceCard
-            title="AI Content Generation & Moderation"
-            description="Automated content creation and intelligent content moderation systems"
-            features={["Content generation", "Auto-moderation", "Brand safety", "Content optimization", "Multi-format support", "Quality scoring"]}
-            price="$15k–$40k"
-            icon="✍️"
-          />
-          <AIServiceCard
-            title="AI Supply Chain Optimization"
-            description="Intelligent supply chain management with demand forecasting and logistics optimization"
-            features={["Demand forecasting", "Route optimization", "Inventory management", "Supplier analytics", "Risk assessment", "Cost optimization"]}
-            price="$35k–$90k"
-            icon="🚚"
-          />
-          <AIServiceCard
-            title="AI Healthcare & Medical Imaging"
-            description="Medical AI solutions for diagnosis, treatment planning, and patient care"
-            features={["Medical imaging analysis", "Diagnostic assistance", "Treatment recommendations", "Patient monitoring", "Drug discovery", "Clinical trials"]}
-            price="$50k–$150k"
-            icon="🏥"
-          />
-          <AIServiceCard
-            title="AI Financial Trading & Analysis"
-            description="Algorithmic trading and financial analysis using advanced AI models"
-            features={["Algorithmic trading", "Market analysis", "Risk management", "Portfolio optimization", "Sentiment analysis", "Real-time alerts"]}
-            price="$40k–$120k"
-            icon="💹"
-          />
-          <AIServiceCard
-            title="AI Customer Intelligence"
-            description="Deep customer insights and behavior analysis using AI and machine learning"
-            features={["Customer segmentation", "Behavior prediction", "Churn analysis", "Lifetime value", "Personalization", "Engagement optimization"]}
-            price="$20k–$55k"
-            icon="👥"
+            title="MLOps & Model Management"
+            description="End-to-end machine learning operations and model lifecycle management"
+            features={[
+              "Model versioning & tracking",
+              "Automated training pipelines",
+              "A/B testing frameworks",
+              "Model monitoring & drift detection",
+              "Automated retraining",
+              "Production deployment"
+            ]}
+            pricing="$30k - $80k"
+            timeline="10-20 weeks"
+            icon="⚙️"
           />
         </div>
-      </section>
 
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Development Stack</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item 
-            title="Applied AI" 
-            details={[
-              "RAG over private data with vector databases",
-              "Task-specific AI agents and workflows",
-              "Multi-modal AI (vision + speech + text)",
-              "Personalization and recommendation engines",
-              "Real-time AI inference and streaming",
-              "Custom model fine-tuning and optimization"
-            ]} 
-          />
-          <Item 
-            title="Model Operations" 
-            details={[
-              "Comprehensive offline evaluation frameworks",
-              "AI safety and guardrails implementation",
-              "Batch and streaming inference pipelines",
-              "Cost optimization and resource management",
-              "A/B testing for AI models",
-              "Performance monitoring and alerting"
-            ]} 
-          />
-          <Item 
-            title="Data & MLOps" 
-            details={[
-              "End-to-end ML pipeline automation",
-              "Feature stores and data versioning",
-              "Vector databases and embeddings",
-              "Model drift detection and monitoring",
-              "Automated retraining and deployment",
-              "Data quality and governance frameworks"
-            ]} 
-          />
+        {/* AI Capabilities */}
+        <div className="bg-gray-50 rounded-xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our AI Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <CapabilityItem
+              title="Applied AI"
+              capabilities={[
+                "RAG over private data",
+                "Task-specific agents",
+                "Vision + speech processing",
+                "Personalization engines",
+                "Recommendation systems",
+                "Predictive analytics"
+              ]}
+            />
+            <CapabilityItem
+              title="Model Operations"
+              capabilities={[
+                "Offline & online evaluations",
+                "Safety & guardrails",
+                "Batch & streaming inference",
+                "Cost optimization",
+                "Performance monitoring",
+                "Automated scaling"
+              ]}
+            />
+            <CapabilityItem
+              title="Data & MLOps"
+              capabilities={[
+                "Data pipelines & ETL",
+                "Feature stores",
+                "Vector databases",
+                "Model drift detection",
+                "A/B testing",
+                "Continuous integration"
+              ]}
+            />
+            <CapabilityItem
+              title="Enterprise Integration"
+              capabilities={[
+                "API development",
+                "Security & compliance",
+                "Multi-cloud deployment",
+                "Legacy system integration",
+                "Custom dashboards",
+                "24/7 monitoring"
+              ]}
+            />
+          </div>
+        </div>
+
+        {/* Industry Solutions */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Industry-Specific AI Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <IndustryCard
+              title="Healthcare AI"
+              description="Medical diagnosis, drug discovery, and patient care optimization"
+              features={["Medical image analysis", "Clinical decision support", "Drug interaction detection", "Patient risk assessment"]
+              pricing="$40k - $100k"
+              icon="🏥"
+            />
+            <IndustryCard
+              title="Financial AI"
+              description="Fraud detection, risk assessment, and algorithmic trading"
+              features={["Real-time fraud detection", "Credit risk modeling", "Algorithmic trading", "Regulatory compliance"]
+              pricing="$35k - $90k"
+              icon="💳"
+            />
+            <IndustryCard
+              title="E-commerce AI"
+              description="Personalized recommendations, inventory optimization, and customer service"
+              features={["Product recommendations", "Demand forecasting", "Chatbot automation", "Price optimization"]
+              pricing="$25k - $70k"
+              icon="🛒"
+            />
+            <IndustryCard
+              title="Manufacturing AI"
+              description="Predictive maintenance, quality control, and supply chain optimization"
+              features={["Predictive maintenance", "Quality inspection", "Supply chain optimization", "Energy efficiency"]
+              pricing="$30k - $80k"
+              icon="🏭"
+            />
+            <IndustryCard
+              title="Education AI"
+              description="Personalized learning, automated grading, and student success prediction"
+              features={["Adaptive learning paths", "Automated assessment", "Student performance prediction", "Content generation"]
+              pricing="$20k - $60k"
+              icon="🎓"
+            />
+            <IndustryCard
+              title="Legal AI"
+              description="Document analysis, contract review, and legal research automation"
+              features={["Contract analysis", "Legal research", "Document classification", "Compliance monitoring"]
+              pricing="$35k - $85k"
+              icon="⚖️"
+            />
+          </div>
+        </div>
+
+        {/* Pricing Tiers */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Development Packages</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AIPricingCard
+              name="AI Discovery"
+              price="$5k - $12k"
+              duration="2-3 weeks"
+              features={[
+                "Use-case analysis & design",
+                "Technology stack selection",
+                "Data requirements assessment",
+                "Implementation roadmap",
+                "Proof-of-concept development",
+                "ROI projections"
+              ]}
+              recommended={false}
+            />
+            <AIPricingCard
+              name="AI Pilot"
+              price="$15k - $45k"
+              duration="4-8 weeks"
+              features={[
+                "RAG/Agent MVP development",
+                "Model evaluation & testing",
+                "Safety & guardrails implementation",
+                "Performance dashboards",
+                "Integration with existing systems",
+                "User feedback collection"
+              ]}
+              recommended={true}
+            />
+            <AIPricingCard
+              name="AI Production"
+              price="$50k+"
+              duration="12+ weeks"
+              features={[
+                "Production-ready infrastructure",
+                "Advanced monitoring & alerting",
+                "SLA guarantees & support",
+                "Cost optimization",
+                "Security & compliance",
+                "Scalability & performance tuning"
+              ]}
+              recommended={false}
+            />
+          </div>
+        </div>
+
+        {/* Contact CTA */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's discuss your AI needs and create a custom solution that delivers measurable results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
         </div>
       </section>
-
-      <Pricing />
-      <ContactSection />
     </div>
   );
 }
 
-function AIServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
+function AIServiceCard({ title, description, features, pricing, timeline, icon }: {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+  timeline: string;
+  icon: string;
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+    <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2">
+      <div className="mb-4">
+        <span className="text-sm font-semibold text-purple-600">Pricing: {pricing}</span>
+        <span className="text-sm text-gray-500 ml-2">• Timeline: {timeline}</span>
+      </div>
+      <ul className="text-sm text-gray-600 space-y-1">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
+          <li key={index} className="flex items-center">
+            <span className="text-green-500 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
@@ -192,8 +334,254 @@ function AIServiceCard({ title, description, features, price, icon }: {
   );
 }
 
+function CapabilityItem({ title, capabilities }: { title: string; capabilities: string[] }) {
+  return (
+    <div>
+      <h3 className="font-semibold text-gray-900 mb-3">{title}</h3>
+      <ul className="space-y-2">
+        {capabilities.map((capability, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-purple-500 mr-2 mt-1">•</span>
+            <span className="text-gray-600 text-sm">{capability}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function IndustryCard({ title, description, features, pricing, icon }: {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+  icon: string;
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white">
+      <div className="text-3xl mb-3">{icon}</div>
+      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm mb-3">{description}</p>
+      <div className="text-sm font-semibold text-purple-600 mb-3">Pricing: {pricing}</div>
+      <ul className="text-xs text-gray-600 space-y-1">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-green-500 mr-2">✓</span> {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function AIPricingCard({ name, price, duration, features, recommended }: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+  recommended: boolean;
+}) {
+  return (
+    <div className={`border rounded-xl p-6 ${recommended ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'}`}>
+      {recommended && (
+        <div className="bg-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
+        </div>
+      )}
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
+      <div className="text-3xl font-bold text-gray-900 mb-1">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-green-500 mr-2 mt-1">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
+
+        {/* AI Service Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <AIServiceCategory
+            title="Machine Learning"
+            icon="🧠"
+            description="Custom ML models and predictive analytics"
+            services={[
+              "Predictive modeling",
+              "Recommendation systems",
+              "Anomaly detection",
+              "Time series forecasting",
+              "Classification algorithms",
+              "Regression analysis"
+            ]}
+          />
+          <AIServiceCategory
+            title="Natural Language Processing"
+            icon="💬"
+            description="Text analysis and language understanding"
+            services={[
+              "Sentiment analysis",
+              "Text classification",
+              "Named entity recognition",
+              "Language translation",
+              "Chatbot development",
+              "Document processing"
+            ]}
+          />
+          <AIServiceCategory
+            title="Computer Vision"
+            icon="👁️"
+            description="Image and video analysis solutions"
+            services={[
+              "Object detection",
+              "Image classification",
+              "Facial recognition",
+              "OCR (Optical Character Recognition)",
+              "Video analytics",
+              "Medical imaging"
+            ]}
+          />
+        </div>
+
+        {/* Real AI Solutions */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Solutions We Build</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AISolution
+              title="Intelligent Document Processing"
+              description="Automated document analysis and data extraction"
+              features={[
+                "OCR with 99%+ accuracy",
+                "Smart data extraction",
+                "Document classification",
+                "Automated workflows",
+                "Multi-language support",
+                "API integration"
+              ]}
+              price="$25k - $60k"
+              timeline="8-16 weeks"
+              useCase="Legal, finance, healthcare, insurance"
+              marketSize="$4.2B"
+            />
+            <AISolution
+              title="Predictive Maintenance System"
+              description="AI-powered equipment monitoring and failure prediction"
+              features={[
+                "IoT sensor integration",
+                "Real-time monitoring",
+                "Failure prediction algorithms",
+                "Maintenance scheduling",
+                "Cost optimization",
+                "Dashboard analytics"
+              ]}
+              price="$35k - $80k"
+              timeline="12-20 weeks"
+              useCase="Manufacturing, utilities, transportation"
+              marketSize="$6.8B"
+            />
+            <AISolution
+              title="Customer Service AI Assistant"
+              description="Intelligent chatbot with human-like interactions"
+              features={[
+                "Natural language understanding",
+                "Multi-channel support",
+                "Sentiment analysis",
+                "Escalation to humans",
+                "Knowledge base integration",
+                "Performance analytics"
+              ]}
+              price="$20k - $50k"
+              timeline="6-12 weeks"
+              useCase="E-commerce, SaaS, customer support"
+              marketSize="$5.3B"
+            />
+            <AISolution
+              title="Fraud Detection System"
+              description="Real-time fraud prevention and risk assessment"
+              features={[
+                "Real-time monitoring",
+                "Pattern recognition",
+                "Risk scoring",
+                "Alert system",
+                "Machine learning models",
+                "Compliance reporting"
+              ]}
+              price="$30k - $70k"
+              timeline="10-18 weeks"
+              useCase="Banking, fintech, e-commerce"
+              marketSize="$8.1B"
+            />
+            <AISolution
+              title="Personalized Recommendation Engine"
+              description="AI-driven product and content recommendations"
+              features={[
+                "Collaborative filtering",
+                "Content-based filtering",
+                "Real-time recommendations",
+                "A/B testing framework",
+                "Performance metrics",
+                "Scalable architecture"
+              ]}
+              price="$18k - $45k"
+              timeline="8-14 weeks"
+              useCase="E-commerce, streaming, content platforms"
+              marketSize="$3.7B"
+            />
+            <AISolution
+              title="Medical Image Analysis"
+              description="AI-powered medical imaging and diagnosis support"
+              features={[
+                "Image preprocessing",
+                "Disease detection",
+                "Segmentation algorithms",
+                "Diagnostic support",
+                "Radiologist workflow",
+                "HIPAA compliance"
+              ]}
+              price="$50k - $120k"
+              timeline="16-24 weeks"
+              useCase="Healthcare, medical imaging, diagnostics"
+              marketSize="$2.9B"
+            />
+          </div>
+        </div>
+
+        {/* Contact CTA */}
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform with AI?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's discuss how AI can revolutionize your business processes and create competitive advantages.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+          <div className="mt-6 text-sm">
+            <p>364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </div>
+  );
+}
+
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2">
@@ -204,12 +592,20 @@ function Item({ title, details }: { title: string; details: string[] }) {
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     </div>
   );
 }
 
-function Pricing() {
+function AIServiceCategory({ title, icon, description, services }: {
+  title: string;
+  icon: string;
+  description: string;
+  services: string[];
+}) {
   return (
+<<<<<<< HEAD
     <section className="py-12">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Development Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -282,10 +678,6 @@ function Plan({ name, price, duration, features }: {
       >
         Get Started
       </a>
-    </div>
-  );
-}
-
 function ContactSection() {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
@@ -318,4 +710,7 @@ function ContactSection() {
     </section>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

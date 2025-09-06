@@ -29,18 +29,7 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-#!/usr/bin/env node;
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
-function createValidComponent(filePath) {
-  const fileName = path && path.basename(filePath, path && path.extname(filePath));
-  const componentName = fileName;
-    .split("-");
-    .map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1));
-    .join("");
-    .replace(/[^a-zA-Z0-9]/g, "");
-  return `import React from "react";
-
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       <SEOtitle=`${componentName} - Zion Technologies"
         description="Professional ${componentName} services by Zion Technologies"

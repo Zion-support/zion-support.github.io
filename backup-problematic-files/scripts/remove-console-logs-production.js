@@ -29,6 +29,7 @@ class ConsoleLogRemover {
       "errors": []
     };
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             results.removed++;
             results && results.removed++;
             return ''}
@@ -67,6 +68,7 @@ class ConsoleLogRemover {
     this && this.log(`✅ Console log removal "completed": ${results && results.removed} statements removed from ${results && results.processed} files`);
     return report}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Run the script
 if (require && require.main === module) {
   const remover = new ConsoleLogRemover();

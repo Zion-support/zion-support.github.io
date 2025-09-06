@@ -216,7 +216,6 @@ export default function RetailSolutions() {
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
 
-<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -227,6 +226,7 @@ export default function RetailSolutions() {
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
 
+<<<<<<< HEAD
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>

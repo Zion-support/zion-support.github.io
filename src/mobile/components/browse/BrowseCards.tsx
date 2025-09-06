@@ -43,12 +43,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
 
-=======
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -123,6 +117,22 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
     <div className="space-y-4 pb-24">;
       {items.map((item) => (;
         <Card key={item.id} className="overflow-hidden">;
+=======
+interface BrowseItem {;
+import React, { useState } from 'react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+    <div className='space-y-4 pb-24'>;
+      {items && items.map(item => (;
+        <Card key={item && item.id} className='overflow-hidden'>;
+          <CardContent className='p-0'>;
+            <div className='p-4'>;
+              <div className='flex justify-between'>;
+                <div className='flex items-center gap-3'>;
+                  {type === 'talents' ? (;
+                    <Avatar className='h-12 w-12'>        <Card key={item && item.id} className="overflow-hidden">;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           <CardContent className="p-0">;
             <div className="p-4">;
               <div className="flex justify-between">;
@@ -136,6 +146,21 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+                {item.badges.map((badge, index) => (
+                  <Badge 
+                    key={index} 
+                    variant="outline" 
+                    className="text-xs font-normal"
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
                   )}
                   <div>
@@ -201,6 +226,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 )}
               </div>
             </div>
+<<<<<<< HEAD
 
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
@@ -216,3 +242,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 };
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -58,38 +58,50 @@ import { TalentProfile } from "@/types/talent",
   }
   const handleToggleSave = async (
     talentId: string,
-    isCurrentlySaved: boolean
-  ) => {    try {
-      if (!user) {
-        logWarn('User not authenticated.')
         return;
-      }
+  }, [user, router]);
 
 =======
 
-;
-      if (isCurrentlySaved) {;
+        const { data, error } = await supabase;
+          .from('saved_talents');
+          .select(;
+            `;
+            talent_profile (;
+              id,;
+              user_id,;
+              full_name,;
+              professional_title,;
+              profile_picture_url,;
+              hourly_rate,;
+              bio,;
+              years_experience,;
+              key_projects,;
+              skills,;
+              location,;
+              availability,;
+              is_verified;
+            );
+          `;
+          );
+          .eq('user_id', user && user.id);
 
-        // Remove from saved talents;
-        const { error } = await supabase;
-          .from ('saved_talents');
-          .delete ();
-          .eq ('user_id', user.id);
-          .eq ('talent_id', talent_id);
-        // Check condition
-if ( {) {
-  $2
-}
+        if (error) {;
           throw error;
         }
 
-  
-        setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
-        ),
-        toast({
-          title: "Talent Removed",
-          description: "Talent removed from saved list."})
+        if (data) {;
+          // Extract talent profiles and convert to TalentProfile type;
+          const talentProfiles = data && data.map(;
+            (item: any) => item && item.talent_profile as unknown as TalentProfile;
+          );
+          setSavedTalents(talentProfiles);        }
+      } catch (error) {;
+        logErrorToProduction(;
+          error instanceof Error ? error && error.message : String(error),;
+          error instanceof Error ? error : undefined,;
+          { message: 'Error fetching saved talents' }
+        );
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -119,14 +131,18 @@ if ( {) {
         }
       }
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
+      logErrorToProduction(
+        error instanceof Error ? error.message : String(error),
+        error instanceof Error ? error : undefined,
+        { message: 'Error toggling saved talent' }
+      )
       toast({
-        title: "Error",
-        description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"})
+        title: 'Error',
+        description: 'Failed to update saved talents. Please try again later.',
+        variant: 'destructive',
+      })
     }
-  },
-
+  }
   return (
     <>
       <SEO

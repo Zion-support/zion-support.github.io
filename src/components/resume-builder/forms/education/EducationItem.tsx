@@ -6,31 +6,6 @@
         </div>
         {education.description && (
 <<<<<<< HEAD
-=======
-
-
-              onClick={() => onDelete(education && education.id!)}
-              aria-label='Delete education'            >;
-              <Trash2 className='h-4 w-4' />            </Button>;
-          </div>;
-        </div>;
-        {education && education.description && (;
-          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>        )}
-      </CardContent>;
-    </Card>;
-  );
-}              <Trash2 className="h-4 w-4" />;
-            </Button>;
-          </div>;
-        </div>;
-        {education && education.description && (;
-          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
-
-    </Card>;
-  );
-};
-
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>;
     </Card>;
@@ -115,7 +90,10 @@ function EducationItem() {
           <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
 }
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

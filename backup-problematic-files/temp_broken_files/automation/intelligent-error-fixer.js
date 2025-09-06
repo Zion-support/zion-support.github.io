@@ -54,6 +54,7 @@ class IntelligentErrorFixer {
         pattern: /React\./g,
         fix: (content) => {
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -61,7 +62,9 @@ class IntelligentErrorFixer {
       }
     };
   }
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async runBuildCheck() {
     try {
       this.log('Running build check...');
@@ -77,7 +80,6 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
-
   async runLintCheck() {
     try {
       this.log('Running lint check...');
@@ -93,7 +95,6 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
-
   async runTypeCheck() {
     try {
       this.log('Running TypeScript check...');
@@ -109,12 +110,16 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
-
+  extractErrorInfo(buildOutput) {
+    const errors = [];
+    const lines = buildOutput.split('\n');
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     lines.forEach((line, index) => {
       // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
       const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
@@ -123,18 +128,18 @@ class IntelligentErrorFixer {
         });
       }
     });
-
   async fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
       return false;
     }
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
-
       // Apply error pattern fixes
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
@@ -148,36 +153,49 @@ class IntelligentErrorFixer {
           }
         }
       }
-
       // Specific fixes for common issues
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
         modified = true;
       }
-
       if (content.includes('};')) {
         content = content.replace(/}\s*;\s*$/gm, '}');
         modified = true;
       }
-
+      // Fix import statements
+      if (content.includes('React.') && !content.includes("import React")) {;
+        content = `import React from 'react';\n${content}`;
+        modified = true;
+      }
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       if (modified) {
         // Create backup
         const backupPath = `${filePath}.backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
         return true;
       }
-
       return false;
     } catch (error) {
       this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
   }
-
+  async cleanupDuplicateFiles() {
+    this.log('Checking for duplicate page files...');
+    const pagesDir = path.join(process.cwd(), 'pages');
+    if (!fs.existsSync(pagesDir)) {
+      return;
+    }
+    const duplicates = [];
+    const seen = new Set();
+    function scanDirectory(dir) {
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       files.forEach(file => {
         if (file.isDirectory()) {
           scanDirectory(path.join(dir, file.name));
@@ -185,6 +203,7 @@ class IntelligentErrorFixer {
           const baseName = file.name.replace(/\.(js|tsx)$/, '');
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -193,11 +212,12 @@ class IntelligentErrorFixer {
         }
       });
     }
-
     scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           fs.unlinkSync(duplicate);
         }
       }
@@ -248,6 +268,7 @@ const {
             // Remove merge conflict markers
             return content
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -323,6 +344,7 @@ const {
         // Attempt to fix files
         const uniqueFiles = [...new Set(buildErrors.map(e => e.file))];
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           }
         }
         // Run build again after fixes
@@ -347,6 +369,7 @@ const {
     }
   }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     }
     async runTypeCheck() {
       try {
@@ -558,3 +581,4 @@ if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

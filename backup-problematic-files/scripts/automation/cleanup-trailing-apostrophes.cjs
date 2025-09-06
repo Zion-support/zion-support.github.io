@@ -64,6 +64,7 @@ function $1() {}
         changed += 1};
     } catch (e) {}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -72,3 +73,4 @@ function $1() {}
 ;
 if (require.main === module) {}
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

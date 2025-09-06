@@ -47,3 +47,4 @@ import { execSync, spawn } from;
     if (line.includes('console.')
     if (message.includes('single quotes')
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

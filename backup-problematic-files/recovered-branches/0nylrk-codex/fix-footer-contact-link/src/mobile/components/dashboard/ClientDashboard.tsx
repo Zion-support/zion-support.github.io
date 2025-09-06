@@ -16,7 +16,6 @@ export function ClientDashboard() {;
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;
         </Button>;
       </section>;
-<<<<<<< HEAD
 
       <section>;
         <div className="flex items-center justify-between mb-4">;
@@ -59,6 +58,7 @@ export function ClientDashboard() {;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;

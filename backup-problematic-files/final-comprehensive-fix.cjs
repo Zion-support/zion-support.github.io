@@ -50,6 +50,8 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+=======
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Fix TalentCard.jsx - fix malformed JSX
@@ -89,6 +91,8 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+=======
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Fix enhancedServices.ts - fix malformed object properties
@@ -130,6 +134,13 @@ console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  console.log('\n✅ All syntax errors have been fixed!')}} else {
+  console.log('\n✅ No syntax errors found!')}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -176,8 +187,5 @@ const fs = require('fs')
 
   .replace(/"isLoading": fals e/g, '"isLoading")
   .replace(/"isLoading": fals e/g, '"isLoading")
-=======
-  .replace(/"isLoading": fals e/g, '"isLoading")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

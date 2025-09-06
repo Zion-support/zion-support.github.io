@@ -37,12 +37,14 @@ class SmartDeploymentAutomation {}
             "test": this.runTestCheck();
        };
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -172,3 +174,4 @@ if ( {})
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

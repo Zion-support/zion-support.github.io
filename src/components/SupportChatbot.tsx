@@ -53,19 +53,6 @@ export function SupportChatbot() {
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
 
-=======
-
-        const message = null;
-          data.message ||
-          data.choices?.[0]?.message?.content ||
-          data.choices?.[0]?.text ||
-          data.completion ||
-          ''
-        const finalMsg = null;
-          message.trim() ||
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -76,27 +63,78 @@ export function SupportChatbot() {
             id: Date.now().toString() + '-a'
             role: 'assistant'
             message: finalMsg
+=======
+          method: 'POST'
+          headers: {
+            'Content-Type': 'application/json'
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
+            Accept: 'text/event-stream'
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           }
-        ]) } else if (res.body) {
-        const botId = Date.now().toString() + '-a'
-        setMessages(prev => [
-          ...prev
-          { id: botId, role: 'assistant', message: '' }
-        ])
-        const reader = res.body.getReader()
-        const decoder = new TextDecoder()
-        let done = false
-        let buffer = ''
-        let accumulated = ''
+          body: JSON.stringify({
+            stream: true
+            messages: [
+              ...messages.map(m => ({ role: m.role, content: m.message }))
+              { role: 'user', content: text }
+            ]
+          })
+        }
+      )
+export function SupportChatbot() {
+  const [open, setOpen] = useState(false),
+  const [messages, setMessages] = useState<Msg[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [typing, setTyping] = useState(false),
+  const endRef = useRef<HTMLDivElement | null>(null),
+
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
+
+  const sendMessage = async (text: string) => {
+    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
+    setMessages(prev => [...prev, userMsg]),
+    setLoading(true),
+    setTyping(true),
+    
+    try {
+      // Try the Supabase AI chat function first with streaming
+      let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+          Accept: 'text/event-stream'
+        },
+        body: JSON.stringify({
+          stream: true,
+          messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
+        })
+      }),
+
+            messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
+          })
+        }),
+        if (!res.ok) throw new Error(`API error: ${res.status}`),
+        const data = await res.json().catch(() => ({})),
+        const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '',
+        const finalMsg = message.trim() ||
+          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
+        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }])
+      } else if (res.body) {
+        const botId = Date.now().toString() + '-a',
+        setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]),
+        const reader = res.body.getReader(),
+        const decoder = new TextDecoder(),
+        let done = false,
+        let buffer = '',
+        let accumulated = '',
         while (!done) {
 
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
             if (line.startsWith('data:')) {
-              line = line.replace(/^data:\s*/, '')
+              line = line.replace(/^data:\s*/, ''),
               if (line === '[DONE]') {
-                done = true
+                done = true,
                 break
               }
               try {

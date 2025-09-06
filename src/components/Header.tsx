@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
-interface HeaderProps {
-  onMenuClick: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -37,7 +33,6 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    onMenuClick();
   };
 
   return (
@@ -102,9 +97,25 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <span></span>
           </button>
         </div>
+=======
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-700">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+              <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
+              <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
+              <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
+              <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+            </nav>
+          </div>
+        )}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       </div>
     </header>
   );
 };
 
+<<<<<<< HEAD
 export default Header;

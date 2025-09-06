@@ -620,6 +620,56 @@ if ( {) {
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
 
+=======
+                        onClick={applyGeneratedContent}>;
+                        <Check className='mr-1 h-3 w-3' /> Apply;
+                      </Button>;
+                    </div>;
+
+                    <div className='space-y-4'>;
+                      <div>;
+                        <h5 className='text-zion-slate-light text-sm mb-1'>;
+                          Professional Summary;
+                        </h5>;
+                        <p className='text-zion-slate italic'>;
+                          {generatedContent && generatedContent.summary}
+                        </p>;
+                      </div>;
+
+                      {generatedContent && generatedContent.services &&;
+                        generatedContent && generatedContent.services.length > 0 && (;
+                          <div>;
+                            <h5 className='text-zion-slate-light text-sm mb-1'>;
+                              Suggested Services;
+                            </h5>;
+                            <div className='flex flex-wrap gap-2 mt-1'>;
+                              {generatedContent && generatedContent.services.map(;
+                                (service, index) => (;
+
+                                  <Badge
+                                    key={index}
+                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
+                                  >
+                                    {service}
+                                  </Badge>
+                                )
+                              )}
+                            </div>                          </div>
+                        )}
+                    </div>;
+                  </div>;
+                )}
+
+              </div>;
+
+              <Separator className="bg-zion-blue-light/50" />
+
+
+
+              <Separator className="bg-zion-blue-light/50" />
+
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
@@ -628,41 +678,10 @@ if ( {) {
                   <FormField
 
                     control={form.control}
+<<<<<<< HEAD
 
                           <FormControl>
                             <Input
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="Add a service..."
-                              {...field}
-                              onKeyDown={handleServiceKeyPress}
-                            />
-                          </FormControl>
-                          <Button
-
-                            Add
-                          </Button>
-                        </div>
-                        <FormDescription className="text-zion-slate">
-                          Press Enter or click Add to include a service
-                        </FormDescription>
-                        <FormMessage className="text-red-400" />
-                      </FormItem>
-                    )}
-                  />
-
-                        className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
-                      >
-                        {service}
-                        <button
-                          type='button'
-                          onClick={() => handleRemoveService(service)}
-                          className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'                        >
-                          <X className='h-3 w-3' />
-
-                        </button>
-                      </Badge>
-                    ))}
-                    {serviceTags.length === 0 && (
 
                         <FormControl>
                           <div className="relative">
@@ -765,3 +784,6 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

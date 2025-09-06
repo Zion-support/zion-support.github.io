@@ -20,6 +20,20 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
     title: "Real-time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests."
   }
+  {
+    icon: <Award className="h-10 w-10 text-zion-cyan" />
+    title: "Resume Builder"
+    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+  }
+  {
+    icon: <Zap className="h-10 w-10 text-zion-cyan" />
+    title: "Real-time Notifications"
+    description: "Get instant alerts about new job opportunities, messages, and hiring requests."
+  }
+]
+import React from "react",
+import { Brain, Clock, Award, Zap } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
 export const AppFeatures: React.FC = () => {
   return (
@@ -40,7 +54,6 @@ export const AppFeatures: React.FC = () => {
               </CardContent>
             </Card>
 <<<<<<< HEAD
-=======
 
 
 import React from 'react';
@@ -107,6 +120,7 @@ export const AppFeatures: React.FC = () => {;
   );
 };
 
+<<<<<<< HEAD
 "
 
 
@@ -162,3 +176,5 @@ export const AppFeatures: React.FC = () => {";
 }
 ";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

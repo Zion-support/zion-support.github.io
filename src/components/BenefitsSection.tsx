@@ -31,45 +31,16 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
               description={benefit.description}
               icon={benefit.icon}
 <<<<<<< HEAD
-=======
-
-          ))}
-
-              className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-            />))}
-        </div>;
-      </div>;
-    </section>);
 }
-import React, { useState } from 'react';
-export /**;
-
-export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
-export default /**
- * Page - Function description
- */
-function Page() {
-  {
-
-
-      "Direct provider connections",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure" ];
-
+export function BenefitsSection({ className, style }: BenefitsSectionProps) {
+  const { t } = useTranslation(),
+  const benefits = getBenefits(t),
+  
+  return (
+    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-  );
 }
 ";
     title: "24 / 7 Support", ";
