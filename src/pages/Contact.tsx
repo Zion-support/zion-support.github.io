@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useToast } from '../components/ui/use-toast';
+import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   const { toast } = useToast();

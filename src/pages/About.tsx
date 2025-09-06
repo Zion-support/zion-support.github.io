@@ -1,13 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 text-center">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold text-white mb-8 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>
-          </h1>
+          </motion.h1>
           
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-xl text-gray-300 mb-8 text-center">
