@@ -1,23 +1,25 @@
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
 
-
+export default function HomePage() {
+  return (
+    <div className="min-h-screen">
+      <section className="py-20 text-center">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          We build AI-powered micro SaaS solutions and provide comprehensive IT services 
+          to help businesses scale, automate, and succeed in the digital age.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             href="/services" 
-
-
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
-
-
           <a 
             href="https://ziontechgroup.com" 
-
-
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -26,23 +28,12 @@ import Link from 'next/link';
       </section>
 
       <section className="py-12">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-
-          <Card 
-            title="Micro SaaS" 
-            href="/services/micro-saas" 
-            description="End-to-end product engineering with billing, auth, analytics and growth." 
-            icon="🚀" 
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
             icon="🚀"
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
           />
           <Card 
             title="AI Services" 
@@ -55,8 +46,6 @@ import Link from 'next/link';
             href="/services/it-services" 
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
-
-
           />
           <Card
             title="Business Automation"
@@ -87,8 +76,6 @@ import Link from 'next/link';
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-
           <FeatureCard 
             title="Fast Delivery" 
             description="Rapid prototyping and deployment with modern tools and practices." 
@@ -104,16 +91,12 @@ import Link from 'next/link';
           <FeatureCard 
             title="Cost Effective" 
             description="Optimized solutions that reduce operational costs and improve efficiency." 
-
-
           />
         </div>
       </section>
     </div>
   );
 }
-
-
 
 function Card({ title, description, href, icon }: { 
   title: string; 
@@ -124,8 +107,6 @@ function Card({ title, description, href, icon }: {
   return (
     <Link 
       href={href} 
-
-
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -135,14 +116,10 @@ function Card({ title, description, href, icon }: {
   );
 }
 
-
-
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
 }) {
-
-
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
@@ -150,7 +127,3 @@ function FeatureCard({ title, description }: {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
