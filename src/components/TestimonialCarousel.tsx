@@ -4,31 +4,31 @@ const TestimonialCarousel = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "Zion Tech transformed our business with their AI solutions. The results exceeded our expectations.",
-      rating: 5
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech transformed our business with their AI solutions. The results exceeded our expectations.',
+      rating: 5,
     },
     {
       id: 2,
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "Outstanding IT services and support. They helped us migrate to the cloud seamlessly.",
-      rating: 5
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      content: 'Outstanding IT services and support. They helped us migrate to the cloud seamlessly.',
+      rating: 5,
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      company: "SecureNet Ltd.",
-      content: "Their cybersecurity solutions are top-notch. We feel completely protected.",
-      rating: 5
-    }
+      name: 'Emily Rodriguez',
+      company: 'SecureNet Ltd.',
+      content: 'Their cybersecurity solutions are top-notch. We feel completely protected.',
+      rating: 5,
+    },
   ];
 
   return (
     <div className="relative">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {testimonials.map((testimonial) => (
+        {testimonials.map(testimonial => (
           <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-lg">
             <div className="flex mb-4">
               {[...Array(testimonial.rating)].map((_, i) => (

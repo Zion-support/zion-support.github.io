@@ -19,7 +19,7 @@ const Carousel: React.FC<CarouselProps> = ({
   showDots = true,
   showArrows = true,
   className = '',
-  itemClassName = ''
+  itemClassName = '',
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -28,7 +28,7 @@ const Carousel: React.FC<CarouselProps> = ({
     if (!isPlaying || items.length <= 1) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % items.length);
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
@@ -39,13 +39,13 @@ const Carousel: React.FC<CarouselProps> = ({
   };
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    setCurrentIndex(prevIndex =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1,
     );
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    setCurrentIndex(prevIndex => (prevIndex + 1) % items.length);
   };
 
   const handleMouseEnter = () => {
@@ -72,7 +72,7 @@ const Carousel: React.FC<CarouselProps> = ({
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className={`w-full h-full ${itemClassName}`}
           >
             {items[currentIndex]}
@@ -89,7 +89,7 @@ const Carousel: React.FC<CarouselProps> = ({
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
-            
+
             <button
               onClick={goToNext}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700/80 text-white p-2 rounded-full transition-all duration-300 hover:scale-110"

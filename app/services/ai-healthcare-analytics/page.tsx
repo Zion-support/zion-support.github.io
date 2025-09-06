@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = { 
+export const metadata = {
   title: 'AI Healthcare Analytics | Zion Tech Group',
   description: 'Advanced AI-powered healthcare analytics platform for patient data analysis, predictive diagnostics, treatment optimization, and clinical decision support.',
-  keywords: 'AI healthcare analytics, medical AI, predictive diagnostics, clinical decision support, healthcare data analysis, medical analytics'
+  keywords: 'AI healthcare analytics, medical AI, predictive diagnostics, clinical decision support, healthcare data analysis, medical analytics',
 };
 
 interface FeatureProps {
@@ -154,14 +154,14 @@ export default function AIHealthcareAnalyticsPage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { name: "Epic", icon: "🏥", description: "EHR system" },
-            { name: "Cerner", icon: "💻", description: "Health records" },
-            { name: "Allscripts", icon: "📋", description: "Practice management" },
-            { name: "NextGen", icon: "⚕️", description: "EHR platform" },
-            { name: "athenahealth", icon: "🌐", description: "Cloud-based EHR" },
-            { name: "eClinicalWorks", icon: "📊", description: "Practice management" },
-            { name: "Meditech", icon: "🏢", description: "Hospital systems" },
-            { name: "HL7 FHIR", icon: "🔗", description: "Data standards" }
+            { name: 'Epic', icon: '🏥', description: 'EHR system' },
+            { name: 'Cerner', icon: '💻', description: 'Health records' },
+            { name: 'Allscripts', icon: '📋', description: 'Practice management' },
+            { name: 'NextGen', icon: '⚕️', description: 'EHR platform' },
+            { name: 'athenahealth', icon: '🌐', description: 'Cloud-based EHR' },
+            { name: 'eClinicalWorks', icon: '📊', description: 'Practice management' },
+            { name: 'Meditech', icon: '🏢', description: 'Hospital systems' },
+            { name: 'HL7 FHIR', icon: '🔗', description: 'Data standards' },
           ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="text-3xl mb-3">{integration.icon}</div>
@@ -227,12 +227,12 @@ export default function AIHealthcareAnalyticsPage() {
             period="month"
             description="Perfect for small clinics"
             features={[
-              "Up to 1,000 patients",
-              "Basic AI analytics",
-              "EHR integration",
-              "Basic reporting",
-              "Email support",
-              "5 user accounts"
+              'Up to 1,000 patients',
+              'Basic AI analytics',
+              'EHR integration',
+              'Basic reporting',
+              'Email support',
+              '5 user accounts',
             ]}
             cta="Start Free Trial"
           />
@@ -242,14 +242,14 @@ export default function AIHealthcareAnalyticsPage() {
             period="month"
             description="Most popular for hospitals"
             features={[
-              "Up to 10,000 patients",
-              "Advanced AI features",
-              "Predictive analytics",
-              "Clinical decision support",
-              "Advanced reporting",
-              "Priority support",
-              "Unlimited users",
-              "API access"
+              'Up to 10,000 patients',
+              'Advanced AI features',
+              'Predictive analytics',
+              'Clinical decision support',
+              'Advanced reporting',
+              'Priority support',
+              'Unlimited users',
+              'API access',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -260,14 +260,14 @@ export default function AIHealthcareAnalyticsPage() {
             period="month"
             description="For large health systems"
             features={[
-              "Unlimited patients",
-              "Full AI optimization suite",
-              "Custom AI models",
-              "White-label options",
-              "Dedicated account manager",
-              "24/7 phone support",
-              "Custom integrations",
-              "Advanced reporting"
+              'Unlimited patients',
+              'Full AI optimization suite',
+              'Custom AI models',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Custom integrations',
+              'Advanced reporting',
             ]}
             cta="Contact Sales"
           />

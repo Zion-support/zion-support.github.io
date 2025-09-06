@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "AI Code Reviewer | Zion Tech Group",
-  description: "Automated code review with AI-powered analysis, security scanning, and performance optimization suggestions.",
+  title: 'AI Code Reviewer | Zion Tech Group',
+  description: 'Automated code review with AI-powered analysis, security scanning, and performance optimization suggestions.',
 };
 
 export default function AICodeReviewerPage() {
@@ -56,11 +56,11 @@ export default function AICodeReviewerPage() {
               price="$29/month"
               description="Perfect for small teams and individual developers"
               features={[
-                "Up to 10,000 lines of code per month",
-                "Basic security scanning",
-                "Code quality analysis",
-                "Email support",
-                "GitHub integration"
+                'Up to 10,000 lines of code per month',
+                'Basic security scanning',
+                'Code quality analysis',
+                'Email support',
+                'GitHub integration',
               ]}
             />
             <PricingCard
@@ -68,12 +68,12 @@ export default function AICodeReviewerPage() {
               price="$99/month"
               description="Ideal for growing development teams"
               features={[
-                "Up to 100,000 lines of code per month",
-                "Advanced security scanning",
-                "Performance optimization",
-                "Priority support",
-                "All integrations included",
-                "Custom rules and standards"
+                'Up to 100,000 lines of code per month',
+                'Advanced security scanning',
+                'Performance optimization',
+                'Priority support',
+                'All integrations included',
+                'Custom rules and standards',
               ]}
             />
             <PricingCard
@@ -81,13 +81,13 @@ export default function AICodeReviewerPage() {
               price="$299/month"
               description="For large organizations with complex needs"
               features={[
-                "Unlimited code analysis",
-                "Enterprise security scanning",
-                "Custom AI model training",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-                "SLA guarantees"
+                'Unlimited code analysis',
+                'Enterprise security scanning',
+                'Custom AI model training',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Custom integrations',
+                'SLA guarantees',
               ]}
             />
           </div>

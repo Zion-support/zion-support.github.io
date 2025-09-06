@@ -40,14 +40,14 @@ const ParticleBackground: React.FC = () => {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.2
+        opacity: Math.random() * 0.5 + 0.2,
       });
     }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach((particle) => {
+      particles.forEach(particle => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -65,7 +65,7 @@ const ParticleBackground: React.FC = () => {
         ctx.fill();
 
         // Draw connections
-        particles.forEach((otherParticle) => {
+        particles.forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);

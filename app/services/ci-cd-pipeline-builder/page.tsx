@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "CI/CD Pipeline Builder | Zion Tech Group",
+  title: 'CI/CD Pipeline Builder | Zion Tech Group',
   description:
-    "Automated CI/CD pipeline creation with intelligent deployment strategies, monitoring, and rollback capabilities for faster, safer releases.",
+    'Automated CI/CD pipeline creation with intelligent deployment strategies, monitoring, and rollback capabilities for faster, safer releases.',
 };
 
 export default function CICDPipelineBuilderPage() {
@@ -63,11 +63,11 @@ export default function CICDPipelineBuilderPage() {
               price="$79/month"
               description="Perfect for small teams and simple deployments"
               features={[
-                "Up to 5 pipelines",
-                "Basic deployment strategies",
-                "Single cloud support",
-                "Email support",
-                "Basic monitoring",
+                'Up to 5 pipelines',
+                'Basic deployment strategies',
+                'Single cloud support',
+                'Email support',
+                'Basic monitoring',
               ]}
             />
             <PricingCard
@@ -75,12 +75,12 @@ export default function CICDPipelineBuilderPage() {
               price="$199/month"
               description="Ideal for growing development teams"
               features={[
-                "Up to 25 pipelines",
-                "Advanced deployment strategies",
-                "Multi-cloud support",
-                "Priority support",
-                "Advanced monitoring",
-                "Custom integrations",
+                'Up to 25 pipelines',
+                'Advanced deployment strategies',
+                'Multi-cloud support',
+                'Priority support',
+                'Advanced monitoring',
+                'Custom integrations',
               ]}
             />
             <PricingCard
@@ -88,13 +88,13 @@ export default function CICDPipelineBuilderPage() {
               price="$499/month"
               description="For large organizations with complex deployment needs"
               features={[
-                "Unlimited pipelines",
-                "Custom deployment strategies",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Advanced security features",
-                "SLA guarantees",
-                "Custom training",
+                'Unlimited pipelines',
+                'Custom deployment strategies',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Advanced security features',
+                'SLA guarantees',
+                'Custom training',
               ]}
             />
           </div>

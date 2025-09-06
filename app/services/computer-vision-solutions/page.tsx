@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Computer Vision Solutions | Zion Tech Group',
-  description: 'Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.'
+  description: 'Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.',
 };
 
 export default function ComputerVisionSolutionsPage() {
@@ -8,37 +8,37 @@ export default function ComputerVisionSolutionsPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Computer Vision Solutions</h1>
       <p className="text-xl text-gray-600 mb-12">Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Object Detection & Recognition" 
+        <FeatureCard
+          title="Object Detection & Recognition"
           features={[
-            "Real-time object detection",
-            "Facial recognition systems",
-            "Product identification",
-            "Quality control automation"
-          ]} 
+            'Real-time object detection',
+            'Facial recognition systems',
+            'Product identification',
+            'Quality control automation',
+          ]}
         />
-        <FeatureCard 
-          title="Image Processing & Analysis" 
+        <FeatureCard
+          title="Image Processing & Analysis"
           features={[
-            "Medical image analysis",
-            "Document digitization",
-            "Content moderation",
-            "Visual search capabilities"
-          ]} 
+            'Medical image analysis',
+            'Document digitization',
+            'Content moderation',
+            'Visual search capabilities',
+          ]}
         />
-        <FeatureCard 
-          title="Video Analytics" 
+        <FeatureCard
+          title="Video Analytics"
           features={[
-            "Motion detection",
-            "Behavioral analysis",
-            "Traffic monitoring",
-            "Security surveillance"
-          ]} 
+            'Motion detection',
+            'Behavioral analysis',
+            'Traffic monitoring',
+            'Security surveillance',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Computer Vision Solutions?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function ComputerVisionSolutionsPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to See the Future?</h2>
         <p className="text-gray-600 mb-6">Start with a free consultation to explore how computer vision can transform your business.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$2,999/mo" 
+        <Plan
+          name="Starter"
+          price="$2,999/mo"
           features={[
-            "Basic object detection",
-            "Up to 10,000 images/month",
-            "Standard support",
-            "Cloud deployment"
-          ]} 
+            'Basic object detection',
+            'Up to 10,000 images/month',
+            'Standard support',
+            'Cloud deployment',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$7,999/mo" 
+        <Plan
+          name="Professional"
+          price="$7,999/mo"
           features={[
-            "Advanced recognition models",
-            "Up to 100,000 images/month",
-            "Custom model training",
-            "Priority support",
-            "API access"
-          ]} 
+            'Advanced recognition models',
+            'Up to 100,000 images/month',
+            'Custom model training',
+            'Priority support',
+            'API access',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$19,999/mo" 
+        <Plan
+          name="Enterprise"
+          price="$19,999/mo"
           features={[
-            "Unlimited processing",
-            "Custom model development",
-            "On-premise deployment",
-            "Dedicated support",
-            "White-label solution"
-          ]} 
+            'Unlimited processing',
+            'Custom model development',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-cyan-600 text-white hover:bg-cyan-700' 
+          popular
+            ? 'bg-cyan-600 text-white hover:bg-cyan-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

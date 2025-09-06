@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Document Processing Automation | Zion Tech Group',
-  description: 'Automate document workflows with AI-powered processing, data extraction, and intelligent classification for maximum efficiency.'
+  description: 'Automate document workflows with AI-powered processing, data extraction, and intelligent classification for maximum efficiency.',
 };
 
 export default function DocumentProcessingAutomationPage() {
@@ -8,37 +8,37 @@ export default function DocumentProcessingAutomationPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Document Processing Automation</h1>
       <p className="text-xl text-gray-600 mb-12">Automate document workflows with AI-powered processing, data extraction, and intelligent classification for maximum efficiency.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Intelligent Data Extraction" 
+        <FeatureCard
+          title="Intelligent Data Extraction"
           features={[
-            "OCR text recognition",
-            "Form field extraction",
-            "Table data parsing",
-            "Handwriting recognition"
-          ]} 
+            'OCR text recognition',
+            'Form field extraction',
+            'Table data parsing',
+            'Handwriting recognition',
+          ]}
         />
-        <FeatureCard 
-          title="Document Classification" 
+        <FeatureCard
+          title="Document Classification"
           features={[
-            "Automatic categorization",
-            "Content analysis",
-            "Priority assignment",
-            "Workflow routing"
-          ]} 
+            'Automatic categorization',
+            'Content analysis',
+            'Priority assignment',
+            'Workflow routing',
+          ]}
         />
-        <FeatureCard 
-          title="Process Automation" 
+        <FeatureCard
+          title="Process Automation"
           features={[
-            "Batch processing",
-            "Quality validation",
-            "Exception handling",
-            "Integration workflows"
-          ]} 
+            'Batch processing',
+            'Quality validation',
+            'Exception handling',
+            'Integration workflows',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-slate-50 to-gray-50 border border-slate-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Document Processing Automation?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function DocumentProcessingAutomationPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your Document Workflows?</h2>
         <p className="text-gray-600 mb-6">Start with a free document analysis and see how much time you can save.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$1,499/mo" 
+        <Plan
+          name="Starter"
+          price="$1,499/mo"
           features={[
-            "Basic document processing",
-            "Up to 5,000 documents/month",
-            "Standard support",
-            "Cloud deployment"
-          ]} 
+            'Basic document processing',
+            'Up to 5,000 documents/month',
+            'Standard support',
+            'Cloud deployment',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$3,999/mo" 
+        <Plan
+          name="Professional"
+          price="$3,999/mo"
           features={[
-            "Advanced AI processing",
-            "Up to 50,000 documents/month",
-            "Custom workflows",
-            "Priority support",
-            "API access"
-          ]} 
+            'Advanced AI processing',
+            'Up to 50,000 documents/month',
+            'Custom workflows',
+            'Priority support',
+            'API access',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$9,999/mo" 
+        <Plan
+          name="Enterprise"
+          price="$9,999/mo"
           features={[
-            "Unlimited processing",
-            "Custom model training",
-            "On-premise deployment",
-            "Dedicated support",
-            "White-label solution"
-          ]} 
+            'Unlimited processing',
+            'Custom model training',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-slate-600 text-white hover:bg-slate-700' 
+          popular
+            ? 'bg-slate-600 text-white hover:bg-slate-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

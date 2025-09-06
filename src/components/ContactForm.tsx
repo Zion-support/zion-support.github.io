@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -26,14 +26,14 @@ const ContactForm: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
           Send us a Message
         </h3>
-        
+
         {submitStatus === 'success' && (
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

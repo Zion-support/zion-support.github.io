@@ -12,17 +12,17 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   children,
   speed = 0.5,
   className = '',
-  direction = 'up'
+  direction = 'up',
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ['start end', 'end start'],
   });
 
   const getTransform = () => {
     const baseTransform = scrollYProgress.get() * 100 * speed;
-    
+
     switch (direction) {
       case 'up':
         return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
