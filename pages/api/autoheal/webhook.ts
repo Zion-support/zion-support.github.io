@@ -1,49 +1,59 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
+
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { owner, repo, error, stack, context } = req.body || {};
+  
+  if (!owner || !repo || !error) {
+    return res.status(400).json({ error: 'Missing required fields' });
   }
 
   try {
-    const { app, severity, message, stack, metadata } = req.body || {};
-    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`;
+    const title = `Autoheal: ${error}`;
+    const body = `
+## Error Details
+\`\`\`
+${error}
+\`\`\`
 
-    const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
-    const [owner, repo] = REPO.split('/');
+## Stack Trace
+\`\`\`
+${stack || 'No stack trace available'}
+\`\`\`
 
-    const body = `Auto-healing alert
+## Context
+\`\`\`json
+${JSON.stringify(context || {}, null, 2)}
+\`\`\`
 
-App: ${app}
-Severity: ${severity}
-Message: ${message}
-
-Stack:\n\n${stack || 'n/a'}
-
-Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
+## Autoheal Action
+This issue was automatically created by the autoheal system. Please investigate and resolve.
 `;
 
-    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] });
+    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autoheal', 'bug'] });
 
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
-        owner;
-        repo;
-        workflow_id: 'autoheal.yml';
-        ref: 'dev';
-        inputs: { issue_number: String(issue.data.number) }} as any)
+        owner,
+        repo,
+        workflow_id: 'autoheal.yml',
+        ref: 'dev',
+        inputs: { issue_number: String(issue.data.number) }
+      } as any);
     } catch (e) {
       // ignore if missing
     }
 
-    return res.status(200).json({ ok: true, issue: issue.data.number })
+    return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Failed to process webhook' })
+    return res.status(500).json({ error: 'Failed to process webhook' });
   }
 }

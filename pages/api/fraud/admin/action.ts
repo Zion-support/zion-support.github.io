@@ -1,38 +1,43 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
+
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
-  return token === process.env.ADMIN_TOKEN
+  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
+  return token === process.env.ADMIN_TOKEN;
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
-    return
+    return;
   }
+  
   if (!ensureAdmin(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return
+    res.status(403).json({ error: 'Forbidden' });
+    return;
   }
 
-  const { fraudId, action, reason, adminId } = req.body || {};
-  if (!fraudId || !action) {
-    res.status(400).json({ error: 'Missing fraudId or action' });
-    return
+  const { action, targetId, reason } = req.body || {};
+  
+  if (!action || !targetId) {
+    res.status(400).json({ error: 'Missing action or targetId' });
+    return;
   }
 
-  const act = (action as string).toUpperCase() as AdminActionType;
-  if (!['SUSPENDWARNIGNORE'].includes(act)) {
-    res.status(400).json({ error: 'Invalid action' });
-    return
+  try {
+    const store = getFraudStore();
+    const result = await store.performAdminAction({
+      type: action as AdminActionType,
+      targetId,
+      reason,
+      adminId: 'admin', // TODO: Get from auth
+      timestamp: new Date().toISOString()
+    });
+
+    res.status(200).json({ success: true, result });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message || 'Failed to perform action' });
   }
-
-  const store = getFraudStore();
-  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });
-  const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
-  await store.updateEventStatus(fraudId, newStatus);
-
-  res.status(200).json({ ok: true, status: newStatus })
 }

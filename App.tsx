@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { JSX, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -60,7 +59,102 @@ interface Testimonial {
   avatar?: string;
 }
 
-<<<<<<< HEAD
+const services: Service[] = [
+  {
+    title: "Micro SaaS Solutions",
+    description: "150+ innovative micro SaaS products designed to solve specific business challenges with minimal overhead.",
+    icon: Code,
+    features: ["Cloud-based deployment", "Scalable architecture", "API integrations", "Real-time analytics"],
+    href: "/services/micro-saas",
+    color: "blue"
+  },
+  {
+    title: "AI Services",
+    description: "100+ advanced AI services including machine learning, natural language processing, and automation solutions.",
+    icon: Cpu,
+    features: ["Machine Learning", "NLP Processing", "Automation", "Predictive Analytics"],
+    href: "/services/ai",
+    color: "purple"
+  },
+  {
+    title: "IT Solutions",
+    description: "100+ comprehensive IT solutions covering infrastructure, security, and digital transformation.",
+    icon: Shield,
+    features: ["Infrastructure Management", "Security Audits", "Digital Transformation", "Cloud Migration"],
+    href: "/services/it",
+    color: "green"
+  },
+  {
+    title: "Cloud Optimization",
+    description: "Advanced cloud optimization services to improve performance and reduce costs.",
+    icon: Cloud,
+    features: ["Cost Optimization", "Performance Tuning", "Auto-scaling", "Monitoring"],
+    href: "/services/cloud",
+    color: "blue"
+  },
+  {
+    title: "Mobile Development",
+    description: "Native and cross-platform mobile applications for iOS and Android.",
+    icon: Smartphone,
+    features: ["Native Apps", "Cross-platform", "UI/UX Design", "App Store Optimization"],
+    href: "/services/mobile",
+    color: "purple"
+  },
+  {
+    title: "Enterprise Solutions",
+    description: "Custom enterprise-grade solutions tailored to large-scale business requirements.",
+    icon: Building,
+    features: ["Custom Development", "Integration", "Scalability", "Support"],
+    href: "/services/enterprise",
+    color: "indigo"
+  }
+];
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Sarah Johnson",
+    company: "TechCorp Inc.",
+    content: "Zion Tech Group transformed our business with their innovative micro SaaS solutions. The results exceeded our expectations.",
+    rating: 5
+  },
+  {
+    name: "Michael Chen",
+    company: "StartupXYZ",
+    content: "Their AI services helped us automate 80% of our manual processes. Incredible team and technology.",
+    rating: 5
+  },
+  {
+    name: "Emily Rodriguez",
+    company: "Global Enterprises",
+    content: "The cloud optimization services reduced our infrastructure costs by 40% while improving performance.",
+    rating: 5
+  }
+];
+
+const stats = [
+  { icon: Code, value: "150+", label: "Micro SaaS Products" },
+  { icon: Cpu, value: "100+", label: "AI Services" },
+  { icon: Shield, value: "100+", label: "IT Solutions" },
+  { icon: Users, value: "500+", label: "Happy Clients" }
+];
+
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  return (
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -174,15 +268,15 @@ interface Testimonial {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="group p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105"
                   >
-                                               <service.icon className={`w-12 h-12 mb-6 ${
-                             service.color === 'blue' ? 'text-blue-400' :
-                             service.color === 'purple' ? 'text-purple-400' :
-                             service.color === 'green' ? 'text-green-400' :
-                             service.color === 'red' ? 'text-red-400' :
-                             service.color === 'yellow' ? 'text-yellow-400' :
-                             service.color === 'indigo' ? 'text-indigo-400' :
-                             'text-blue-400'
-                           }`} />
+                    <service.icon className={`w-12 h-12 mb-6 ${
+                      service.color === 'blue' ? 'text-blue-400' :
+                      service.color === 'purple' ? 'text-purple-400' :
+                      service.color === 'green' ? 'text-green-400' :
+                      service.color === 'red' ? 'text-red-400' :
+                      service.color === 'yellow' ? 'text-yellow-400' :
+                      service.color === 'indigo' ? 'text-indigo-400' :
+                      'text-blue-400'
+                    }`} />
                     <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                     <p className="text-slate-300 mb-6">{service.description}</p>
                     <ul className="space-y-2 mb-6">
@@ -193,18 +287,18 @@ interface Testimonial {
                         </li>
                       ))}
                     </ul>
-                                               <Link
-                             href={service.href}
-                             className={`inline-flex items-center font-semibold group-hover:translate-x-1 transition-transform ${
-                               service.color === 'blue' ? 'text-blue-400 hover:text-blue-300' :
-                               service.color === 'purple' ? 'text-purple-400 hover:text-purple-300' :
-                               service.color === 'green' ? 'text-green-400 hover:text-green-300' :
-                               service.color === 'red' ? 'text-red-400 hover:text-red-300' :
-                               service.color === 'yellow' ? 'text-yellow-400 hover:text-yellow-300' :
-                               service.color === 'indigo' ? 'text-indigo-400 hover:text-indigo-300' :
-                               'text-blue-400 hover:text-blue-300'
-                             }`}
-                           >
+                    <Link
+                      href={service.href}
+                      className={`inline-flex items-center font-semibold group-hover:translate-x-1 transition-transform ${
+                        service.color === 'blue' ? 'text-blue-400 hover:text-blue-300' :
+                        service.color === 'purple' ? 'text-purple-400 hover:text-purple-300' :
+                        service.color === 'green' ? 'text-green-400 hover:text-green-300' :
+                        service.color === 'red' ? 'text-red-400 hover:text-red-300' :
+                        service.color === 'yellow' ? 'text-yellow-400 hover:text-yellow-300' :
+                        service.color === 'indigo' ? 'text-indigo-400 hover:text-indigo-300' :
+                        'text-blue-400 hover:text-blue-300'
+                      }`}
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>

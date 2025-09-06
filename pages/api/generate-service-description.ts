@@ -1,35 +1,39 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-export type GenerateServiceDescriptionRequest = {
+
+interface GenerateServiceDescriptionRequest {
   title: string;
   keyFeatures: string[];
   targetAudience: string;
   additionalNotes?: string;
-  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'
-};
+  tone?: 'professional' | 'casual' | 'technical' | 'friendly';
+}
 
-export type GenerateServiceDescriptionResponse = {
-  description: string
-};
+interface GenerateServiceDescriptionResponse {
+  description: string;
+  shortDescription: string;
+  keyBenefits: string[];
+  callToAction: string;
+}
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest;
 
   if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ error: 'OpenAI API key not configured' })
+    return res.status(500).json({ error: 'OpenAI API key not configured' });
   }
 
   if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
-    return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' })
+    return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' });
   }
 
   try {
@@ -45,37 +49,46 @@ ${additionalNotes ? `Additional Notes: ${additionalNotes}` : ''}
 
 ${toneInstruction}
 
-Requirements:
-- 2-3 sentence hook opening that addresses audience needs
-- 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline)
-- Use clear, benefit-focused language
-- End with a short call to action`;
+Please provide:
+1. A detailed service description (3-4 paragraphs)
+2. A short description (1-2 sentences)
+3. Key benefits (3-5 bullet points)
+4. A compelling call-to-action
 
-    // Using Responses API for modern SDK
-    const response = await openai.responses.create({
-      model: 'gpt-4o-mini';
-      input: prompt;
-      temperature: 0.7});
+Format your response as JSON with keys: description, shortDescription, keyBenefits, callToAction`;
 
-    let description = '';
-    const output = response.output?.[0];
-    if (output && output.type === 'message') {
-      // Aggregate all text parts from the first message
-      description = output.content
-        .filter((c) => c.type === 'output_text')
-        .map((c: any) => c.text)
-        .join('\n')
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        {
+          role: 'system',
+          content: 'You are a professional marketing copywriter specializing in service descriptions. Always respond with valid JSON.'
+        },
+        {
+          role: 'user',
+          content: prompt
+        }
+      ],
+      temperature: 0.7,
+      max_tokens: 1000
+    });
+
+    const responseText = completion.choices[0]?.message?.content || '';
+    
+    try {
+      const response = JSON.parse(responseText);
+      res.status(200).json(response);
+    } catch (parseError) {
+      // Fallback if JSON parsing fails
+      res.status(200).json({
+        description: responseText,
+        shortDescription: responseText.split('.')[0] + '.',
+        keyBenefits: keyFeatures,
+        callToAction: 'Contact us today to learn more!'
+      });
     }
-
-    if (!description) {
-      // Fallback to top-level text if available
-      // @ts-ignore
-      description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.'
-    }
-
-    return res.status(200).json({ description })
   } catch (error: any) {
-    console.error('OpenAI generation error:', error);
-    return res.status(500).json({ error: 'Failed to generate description' })
+    console.error('OpenAI API error:', error);
+    res.status(500).json({ error: 'Failed to generate service description' });
   }
 }
