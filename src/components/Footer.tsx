@@ -1,6 +1,6 @@
 import { FooterNewsletter } from "./FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -43,10 +43,10 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/ai-services" className="text-foreground/80 hover:text-primary transition-colors">AI Services</Link></li>
-              <li><Link href="/services/micro-saas" className="text-foreground/80 hover:text-primary transition-colors">Micro SaaS</Link></li>
-              <li><Link href="/services/it-services" className="text-foreground/80 hover:text-primary transition-colors">IT Services</Link></li>
-              <li><Link href="/pricing" className="text-foreground/80 hover:text-primary transition-colors">Pricing</Link></li>
+              <li><Link to="/services/ai-services" className="text-foreground/80 hover:text-primary transition-colors">AI Services</Link></li>
+              <li><Link to="/services/micro-saas" className="text-foreground/80 hover:text-primary transition-colors">Micro SaaS</Link></li>
+              <li><Link to="/services/it-services" className="text-foreground/80 hover:text-primary transition-colors">IT Services</Link></li>
+              <li><Link to="/pricing" className="text-foreground/80 hover:text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
@@ -54,10 +54,10 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-foreground/80 hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="/careers" className="text-foreground/80 hover:text-primary transition-colors">Careers</Link></li>
-              <li><Link href="/blog" className="text-foreground/80 hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link to="/careers" className="text-foreground/80 hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-foreground/80 hover:text-primary transition-colors">Blog</Link></li>
             </ul>
           </div>
 
@@ -74,8 +74,8 @@ export function Footer() {
               © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-sm text-foreground/60 hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-sm text-foreground/60 hover:text-primary transition-colors">Terms of Service</Link>
+              <Link to="/privacy" className="text-sm text-foreground/60 hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-sm text-foreground/60 hover:text-primary transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
