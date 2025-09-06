@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -14,5 +16,4 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "email"
     "address"
     "site"
-        <meta name="description" content="
         <meta name="description" content="

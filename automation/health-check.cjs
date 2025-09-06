@@ -1,42 +1,50 @@
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
+
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name}: OK`);
+  } catch (error) {
+    console.log(`❌ ${check.name}: FAILED`);
+  }
+});
 
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, "health-check-report.json");
+    this.checks = [];
+    this.errors = [];
   }
 
-  log(message) {
-    console.log(`🏥 [Health Check] ${message}`);
-  }
+#!/usr/bin/env node
 
-  async check() {
-    this.log("Starting health check...");
-    
+/**
+ * Health Check Monitor
+ * Monitors application health and provides alerts
+ */
+
     try {
-      this.log("Checking project health...");
-      
-      const report = {
-        timestamp: new Date().toISOString(),
-        checks: ["Build status: OK", "Dependencies: OK", "Configuration: OK"],
-        status: "healthy"
-      };
-      
-      fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
-      this.log(`Health check completed. Report saved to: ${this.reportPath}`);
-      
+      this.log(`Running: ${description}`);
+      const output = execSync(command, {
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
+        timeout: 30000
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output };
     } catch (error) {
-      this.log(`Error during health check: ${error.message}`);
-      throw error;
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return { success: false, error: error.message };
     }
-  }
-}
 
-if (require.main === module) {
-  const checker = new HealthChecker();
-  checker.check().catch(console.error);
-}
+    } else {
+      this.log('❌ Application health issues detected', 'ERROR');
+    }
 
-module.exports = HealthChecker;

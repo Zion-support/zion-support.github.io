@@ -13,14 +13,14 @@ import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 ;
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import Link from 'next / link';
 import { use_auth  } from '@/context / auth / AuthProvider';
-import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
+import { AlertCircle } from 'lucide-react'import { use_router } from 'next/router';
 import { AlertCircle } from 'lucide-react';
-import { Alert, AlertDescription  } from '@/components / ui / alert';
-import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
-import {logErrorToProduction} from '@/utils / production_logger';
+import { Alert, AlertDescription  } from '@/components/ui/ alert';
+import { PasswordStrengthMeter  } from '@/components/ PasswordStrengthMeter';
+import {logErrorToProduction} from '@/utils/ production_logger';
 export /**
  * SignUpForm - Function description
  */

@@ -164,11 +164,11 @@ export const ReplyCard = ({
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
 import { formatDistanceToNow  } from './date - fns';
-import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader  } from '@/components / ui / card';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { ForumReply  } from '@/types / community';
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader  } from '@/components/ui/ card';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/ avatar';
+import { Button  } from '@/components/ui/ button';
+import { Badge  } from '@/components/ui/ badge';
+import { ForumReply  } from '@/types/ community';
 import { cn  } from '@/lib / utils';
 interface ReplyCardProps {
   reply: ForumReply,

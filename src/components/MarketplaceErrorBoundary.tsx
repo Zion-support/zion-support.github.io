@@ -17,10 +17,10 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 import {ErrorBoundary, FallbackProps} from 'react - error - boundary';
 import * as Sentry from '@sentry / nextjs';
 import { mutate } from 'swr';
-import { Button } from '@/components / ui / button';
-import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
+import { Button } from '@/components/ui/ button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/ alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { logErrorToProduction } from '@/utils/ production_logger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed;
 /**

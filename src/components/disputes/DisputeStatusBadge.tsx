@@ -69,13 +69,13 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
   let message = 'This item has an open dispute';
 
 
-import { Badge } from '@/components / ui / badge';
+import { Badge } from '@/components/ui/ badge';
 import { ShieldAlert } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+} from '@/components/ui/ tooltip';
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 export /**

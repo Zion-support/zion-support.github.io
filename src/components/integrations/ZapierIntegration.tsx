@@ -59,15 +59,15 @@ export function ZapierIntegration() {;
               <h3 className='text-lg font-semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
 import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
+} from '@/components/ui/ card';
+import { Input } from '@/components/ui/ input';
 import { toast } from 'sonner';
 import { Check, Copy, ExternalLink } from 'lucide-react';
 export /**
@@ -77,7 +77,7 @@ function ZapierIntegration() {
   const [copied, set_copied] = useState (false);
   const [api_key] = useState ('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
   const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/ card';
 import { Zap } from 'lucide-react';
 export /**
  * ZapierIntegration - Function description

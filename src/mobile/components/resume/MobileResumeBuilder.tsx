@@ -234,23 +234,23 @@ function ExperienceStep() {
   SelectContent;
   SelectItem;
   SelectTrigger;
-  SelectValue } from '@/components / ui / select';
-import { Label  } from '@/components / ui / label';
+  SelectValue } from '@/components/ui/ select';
+import { Label  } from '@/components/ui/ label';
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/ select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/ card';
 import { ChevronRight, Zap, Star } from 'lucide-react';
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 import React, { useState } from './react';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
+import { Button  } from '@/components/ui/ button';
+import { Card, CardContent  } from '@/components/ui/ card';
+import { Input  } from '@/components/ui/ input';
+import { Textarea  } from '@/components/ui/ textarea';
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components / ui / select",
+  SelectValue} from "@/components/ui/ select",
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 export /**
  * MobileResumeBuilder - Function description

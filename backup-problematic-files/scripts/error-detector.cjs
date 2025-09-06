@@ -1,5 +1,5 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
+
+
 const path = require("path");
 class ErrorDetector {}
   constructor() {}
@@ -18,5 +18,4 @@ class ErrorDetector {}
 if (require.main === module) {}
   const detector = new ErrorDetector();
   detector.detect().catch(console.error)};
-module.exports = ErrorDetector;
-module.exports = ErrorDetector;
+

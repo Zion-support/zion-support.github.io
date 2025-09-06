@@ -124,8 +124,8 @@ export function ReviewStats({
               </div>
             </div>
 import { Star } from 'lucide-react';
-import { Progress } from '@/components / ui / progress';
-import { Progress  } from '@/components / ui / progress';
+import { Progress } from '@/components/ui/ progress';
+import { Progress  } from '@/components/ui/ progress';
 interface ReviewStatsProps {
   average_rating: number;
   total_reviews: number;

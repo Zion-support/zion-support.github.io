@@ -41,7 +41,7 @@
   title = "Complete Your Profile",
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } from '@/lib / utils';
-import { Button  } from '@/components / ui / button';
+import { Button  } from '@/components/ui/ button';
 import Link from './next / link';
 <<<<<<< HEAD
 =======

@@ -8,5 +8,4 @@ const { execSync } = require('child_process')
         return {"success": false,"error"}
 // console.log(`Build "Status"`)
     console.log(`Bundle "Size": ${bundleSize.success ? `${bundleSize.sizeInMB} MB``)
-    console.log(`"Dependencies"`)
-    console.log(`"Dependencies"`)
+

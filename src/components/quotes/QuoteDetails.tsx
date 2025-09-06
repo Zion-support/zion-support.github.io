@@ -250,12 +250,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription;
-} from '@/components / ui / dialog';
-import { Button  } from '@/components / ui / button';
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent  } from '@/components / ui / card';
-import { Separator  } from '@/components / ui / separator';
+} from '@/components/ui/ dialog';
+import { Button  } from '@/components/ui/ button';
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent  } from '@/components/ui/ card';
+import { Separator  } from '@/components/ui/ separator';
 import { QuoteStatusBadge  } from './QuoteStatusBadge';
-import type { QuoteRequest } from "@/types / quotes";
+import type { QuoteRequest } from "@/types/ quotes";
 import { format } from './date - fns';
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,

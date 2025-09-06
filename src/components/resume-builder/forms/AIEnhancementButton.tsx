@@ -49,9 +49,9 @@ export function AIEnhancementButton(): any ({;
     }
 
 
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Sparkles, Loader2 } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
+import { useResumeEnhancer } from '@/hooks/ useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string;
   enhancement_type:;

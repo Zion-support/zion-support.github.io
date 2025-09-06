@@ -339,12 +339,12 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 <<<<<<< HEAD
 =======
 import { useState  } from './react';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
+import { Badge  } from '@/components/ui/ badge';
+import { Button  } from '@/components/ui/ button';
+import { Card, CardHeader, CardTitle, CardContent  } from '@/components/ui/ card';
 import { supabase  } from '@/integrations / supabase / client';
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast  } from './sonner';
-import { JobApplication  } from '@/types / jobs';
+import { JobApplication  } from '@/types/ jobs';
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updated_application: JobApplication, ) => void;

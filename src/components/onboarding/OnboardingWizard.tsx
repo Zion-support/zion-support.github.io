@@ -43,16 +43,16 @@ interface WizardStep {;
     text: string;
 
 import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
+import { use_router } from 'next/router';
+import { use_auth } from '@/hooks/ use_auth';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
   Rocket,
   FileText,
   Users,
@@ -61,7 +61,7 @@ import {
   MessageSquare,
 } from 'lucide-react';
 import { cn } from '@/lib / utils';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/ card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 interface WizardStep {
   title: string;

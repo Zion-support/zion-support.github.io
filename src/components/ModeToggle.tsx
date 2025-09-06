@@ -61,29 +61,29 @@ import { useEffect, useState } from "react"
 <<<<<<< HEAD
 =======
 import { Moon, Sun } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
-import { toast } from '@/hooks / use - toast';
+} from '@/components/ui/ tooltip';
+import { toast } from '@/hooks/ use - toast';
   darkModeMessages,
   lightModeMessages,
-} from '@/utils / themeToggleMessages';
+} from '@/utils/ themeToggleMessages';
 // Use the ThemeProvider hook directly to ensure no conflicts;
-import { use_theme } from '@/components / ThemeProvider';
-import { log_issue } from '@/utils / log_issue';
+import { use_theme } from '@/components/ ThemeProvider';
+import { log_issue } from '@/utils/ log_issue';
 import { useEffect, useState } from 'react';
-import { Button  } from '@/components / ui / button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
-import { toast  } from '@/hooks / use - toast';
-import { darkModeMessages, lightModeMessages  } from '@/utils / themeToggleMessages';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
+import { Button  } from '@/components/ui/ button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/ tooltip';
+import { toast  } from '@/hooks/ use - toast';
+import { darkModeMessages, lightModeMessages  } from '@/utils/ themeToggleMessages';
+import { log_info, logErrorToProduction } from '@/utils/ production_logger';
 // Use the ThemeProvider hook directly to ensure no conflicts;
-import { use_theme  } from '@/components / ThemeProvider';
-import { log_issue  } from '@/utils / log_issue';
+import { use_theme  } from '@/components/ ThemeProvider';
+import { log_issue  } from '@/utils/ log_issue';
 import { useEffect, useState  } from './react';
 export /**
  * ModeToggle - Function description

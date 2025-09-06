@@ -7,3 +7,5 @@ import '../styles / globals.css',
 function MyApp() {
   return <Component {...page_props} />;
 
+}
+export default MyApp;

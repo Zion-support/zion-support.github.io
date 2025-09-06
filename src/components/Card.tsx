@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface CardProps {
   children: React.ReactNode;
@@ -16,14 +17,18 @@ const Card: React.FC<CardProps> = ({
   onClick 
 }) => {
   return (
-    <div 
-      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
+    <motion.div 
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer ${className}`}
       onClick={onClick}
     >
-      {title && <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
+      {title && (
+        <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
+      )}
+      {description && (
+        <p className="text-gray-300 mb-4">{description}</p>
+      )}
       {children}
-    </div>
+    </motion.div>
   );
 };
 

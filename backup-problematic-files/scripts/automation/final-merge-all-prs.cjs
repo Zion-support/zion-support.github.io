@@ -107,5 +107,4 @@ this.log(" Resolved conflicts "in")
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
-      "successRate"
-      "successRate"
+

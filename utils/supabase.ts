@@ -5,9 +5,11 @@ export const supabase = {
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>
-};
+    signOut: () => Promise<any>;
+  };
 }
+
+
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -72,9 +74,10 @@ export const supabase = createSupabaseClient(supabaseConfig);
     });
   });
 }
-  })
+  });
 };
 }
-  })
+
+  });
 };
 

@@ -2,13 +2,12 @@ import React from 'react';
 interface ServiceTypeStep.testProps {
   // Add props here as needed
 }
+}
+
 
 interface ServiceTypeStep.testProps {
   // Add props here as needed
-<=
-}
-
->interface ServiceTypeStep.testProps {
+interface ServiceTypeStep.testProps {
   // Add props here as needed
 }
 export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
@@ -18,13 +17,10 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<
 
-=
+
 }
 }
-=
 
 
->}
->
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import React from 'react';
+
 const About = ({ className }) => {
   return (
     <Layout 
@@ -22,7 +24,10 @@ const About = ({ className }) => {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4"></div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>              <p className="text-gray-600 text-lg">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+              <p className="text-gray-600 text-lg">
                 To empower businesses with cutting-edge technology solutions that drive growth, 
                 efficiency, and innovation. We believe in delivering exceptional value through 
                 personalized service and world-class expertise.
@@ -30,7 +35,10 @@ const About = ({ className }) => {
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4"></div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>              <p className="text-gray-600 text-lg">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+              <p className="text-gray-600 text-lg">
                 To be the global leader in technology transformation, helping businesses 
                 harness the power of AI, cloud computing, and digital innovation to create 
                 a more connected and efficient world.
@@ -57,7 +65,11 @@ const About = ({ className }) => {
               <p className="text-lg text-gray-600">
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
-                to excellence, innovation, and client success continues to drive everything we do.              </p>
+                to excellence, innovation, and client success continues to drive everything we do.
+                Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
+                presence, from small startups to enterprise-level organizations. Our commitment 
+                to excellence, innovation, and client success continues to drive everything we do.
+              </p>
             </div>
           </div>
 
@@ -76,13 +88,15 @@ const About = ({ className }) => {
               <div className="text-center">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
+                <p className="text-gray-600">
                   We believe in building long-term relationships with our clients, working as 
                   an extension of their team to achieve shared success.
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4"></div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
+                <p className="text-gray-600">
                   We believe in building long-term relationships with our
                   clients, working as an extension of their team to achieve
                   shared success.
@@ -91,10 +105,6 @@ const About = ({ className }) => {
               <div className="text-center">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
-                <div className="text-4xl mb-4">⭐</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Excellence
-                </h3>
                 <p className="text-gray-600">
                   We maintain the highest standards in everything we do, from project planning 
                   to final delivery, ensuring exceptional results every time.
@@ -147,7 +157,9 @@ const About = ({ className }) => {
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-6">
-              Let&apos;s discuss how we can help transform your business with our technology solutions.            </p>
+              Let&apos;s discuss how we can help transform your business with our technology solutions.
+              Let&apos;s discuss how we can help transform your business with our technology solutions.
+            </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
                 href="/contact"
@@ -166,7 +178,7 @@ const About = ({ className }) => {
         </main>
       </div>
     </Layout>
-  )
+  );
 };
 
 export default About;

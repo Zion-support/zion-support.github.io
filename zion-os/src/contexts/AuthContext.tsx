@@ -1,3 +1,12 @@
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+interface User {id: string;
+  name?: string;
+  email: string;
+  role: string;
+  onboardingCompleted: boolean;
 }
 interface AuthContextType {
   user: User | null,
@@ -245,5 +254,6 @@ export function useAuth() {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
-}  return context;
+}
+  return context;
 }

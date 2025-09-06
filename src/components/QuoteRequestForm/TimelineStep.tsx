@@ -127,17 +127,17 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               <h4 className='font-medium text-white'>Flexible Timeline</h4>;
               <p className='text-sm text-zion-slate-light'>;
 import { format } from 'date - fns';
-import { Calendar } from '@/components / ui / calendar';
-import { Button } from '@/components / ui / button';
-import { Label } from '@/components / ui / label';
+import { Calendar } from '@/components/ui/ calendar';
+import { Button } from '@/components/ui/ button';
+import { Label } from '@/components/ui/ label';
 import { CalendarIcon } from 'lucide-react';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components / ui / popover';
+} from '@/components/ui/ popover';
 import { cn } from '@/lib / utils';
-import { QuoteFormData } from '@/types / quotes';
+import { QuoteFormData } from '@/types/ quotes';
 interface TimelineStepProps {
   form_data: QuoteFormData;
   updateFormData: (data: Partial < QuoteFormData>) => void;

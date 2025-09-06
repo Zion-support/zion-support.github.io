@@ -209,21 +209,21 @@ import { Star } from 'lucide-react';
 
 }
 
-import { Project } from '@/types / projects';
+import { Project } from '@/types/ projects';
 import { useState } from 'react';
 import { Star } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
-import { ReviewsList } from '@/components / reviews / ReviewsList';
-import { LeaveReviewModal } from '@/components / reviews / LeaveReviewModal';
-import { use_reviews } from '@/hooks / use_reviews';
-import { use_auth } from '@/hooks / use_auth';
+} from '@/components/ui/ card';
+import { ReviewsList } from '@/components/ reviews / ReviewsList';
+import { LeaveReviewModal } from '@/components/ reviews / LeaveReviewModal';
+import { use_reviews } from '@/hooks/ use_reviews';
+import { use_auth } from '@/hooks/ use_auth';
 interface ProjectReviewSectionProps {
   project: Project;
 export /**

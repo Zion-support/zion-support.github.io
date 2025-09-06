@@ -1,49 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+
+
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-import { EmptyState } from '@/components/ui/empty-state';
-import { Bell } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-import React from 'react';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import Skeleton from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Bell } from 'lucide-react';
 
 interface Notification {
@@ -159,19 +119,11 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </div>
   );
 };
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
-<<<<<<< HEAD
 }; import React from 'react'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import Skeleton from '@/components/ui/skeleton'
@@ -216,14 +168,13 @@ interface NotificationListProps {;
 onRetry
 },) => {
 } import React from 'react';
-import { ScrollArea } from '@/components / ui / scroll - area';
-import Skeleton from '@/components / ui / skeleton';
-import { Button } from '@/components / ui / button';
+import { ScrollArea } from '@/components/ui/ scroll - area';
+import Skeleton from '@/components/ui/ skeleton';
+import { Button } from '@/components/ui/ button';
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
-import { EmptyState } from '@/components / ui / empty - state';
+import { EmptyState } from '@/components/ui/ empty - state';
 import { Bell } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -357,24 +308,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>;
   );
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -452,25 +385,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-  loading: boolean;
-  error: string | null;
-  notifications: Notification[];
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
-  onRetry: () => void
-}
-export const NotificationList: React.FC<NotificationListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

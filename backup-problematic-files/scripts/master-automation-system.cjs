@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -13,5 +15,4 @@ console.log('======')
       this.log(`Performance monitoring "failed"`)
 // console.log('\n Errors "encountered")
     console.log('\n Comprehensive report saved "to")
-  console.error('Master automation "failed")
   console.error('Master automation "failed")

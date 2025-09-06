@@ -1,3 +1,4 @@
+
 const { execSync } = require('child_process');
 console.log('Testing Next.js installation...');
 try {// Check if Next.js is installed;
@@ -10,6 +11,8 @@ try {// Check if Next.js is installed;
 } catch (error) {console.error('Error:', error.message);
 const { execSync } = require('child_process'),;
 const { execSync } = require('child_process');
+
+
 
 console.log('Testing Next.js installation...'),;
 try {;

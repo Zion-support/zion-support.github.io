@@ -20,6 +20,7 @@ export async function trackEvent(payload: TrackEventPayload) {
     console.error('Failed to track event:', error);
   }
 }
+
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
   name: string;
@@ -43,15 +44,29 @@ function track_event() {
 
   }
 }
-=======
 
+
+
+
+    await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
 
+
   }
 }
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(payload);
+      keepalive: true as any});
+  } catch (e) {;
+    // swallow;
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -62,5 +77,11 @@ function track_event() {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+  }
+}
   }
 }

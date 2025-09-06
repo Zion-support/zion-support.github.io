@@ -102,5 +102,4 @@ const { execSync } = require("child_process")
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
-      this.log(")
-      this.log(")
+

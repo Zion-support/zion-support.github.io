@@ -49,7 +49,7 @@ interface InterviewRequestFormProps {;
 =======
 
 import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Form,
   FormField,
@@ -57,31 +57,31 @@ import {
   FormLabel,
   FormControl,
   FormMessage,
-} from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
+} from '@/components/ui/ form';
+import { Input } from '@/components/ui/ input';
+import { Textarea } from '@/components/ui/ textarea';
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
   SelectItem,
-} from '@/components / ui / select';
-import { Calendar } from '@/components / ui / calendar';
+} from '@/components/ui/ select';
+import { Calendar } from '@/components/ui/ calendar';
   Popover,
   PopoverTrigger,
   PopoverContent,
-} from '@/components / ui / popover';
-import { TalentProfile } from '@/types / talent';
-import type { UserProfile } from '@/types / auth';
+} from '@/components/ui/ popover';
+import { TalentProfile } from '@/types/ talent';
+import type { UserProfile } from '@/types/ auth';
 import { cn } from '@/lib / utils';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
 import { z } from 'zod';
 import { format, add_days } from 'date - fns';
 import { CalendarIcon } from 'lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { use_interviews } from '@/hooks / use_interviews';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { toast } from '@/components/ui/ use - toast';
+import { use_interviews } from '@/hooks/ use_interviews';
+import { logErrorToProduction } from '@/utils/ production_logger';
 interface InterviewRequestFormProps {
   talent: TalentProfile;
   on_close: () => void;

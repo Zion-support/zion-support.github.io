@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const metadata = {
-  title: "About | Zion Tech Group",
-  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
 };
 
 export default function AboutPage() {
@@ -21,6 +21,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+<<<<<<< HEAD
             <p className="text-gray-300 text-lg mb-6">
               To empower businesses with cutting-edge technology solutions that
               drive growth, efficiency, and innovation. We believe in the
@@ -78,6 +79,50 @@ export default function AboutPage() {
                 innovate our solutions.
               </p>
             </div>
+=======
+            <p className="text-gray-300 mb-6">
+              To democratize access to cutting-edge AI and technology solutions, empowering businesses of all sizes to compete and thrive in the digital age.
+            </p>
+            <p className="text-gray-300 mb-6">
+              We combine technical expertise with business acumen to create solutions that drive real results for our clients.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/contact"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+              >
+                Get in Touch
+              </a>
+              <a
+                href="/services"
+                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
+              >
+                Our Services
+              </a>
+            </div>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                1000+ successful projects delivered
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                24/7 technical support
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                Enterprise-grade security
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                Custom solutions for every need
+              </li>
+            </ul>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-3df6
           </div>
         </div>
       </div>

@@ -2,10 +2,12 @@
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
 
+
 type ToasterProps = React.ComponentProps<typeof Sonner>
 const Toaster = ({ ...props }: ToasterProps) => {
 
   const { theme = "system" } = useTheme()
+
 
   return (
     <Sonner
@@ -13,7 +15,19 @@ const Toaster = ({ ...props }: ToasterProps) => {
       className="toaster group"
       toastOptions={{
         classNames: {
-          toast:import { use_theme } from &quot;next - themes & quot;
+          toast:
+
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          description: "group-[.toast]:text-muted-foreground",
+          actionButton:
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+
+          cancelButton:
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
+      {...props}
+    />;
+  );
+import { use_theme } from &quot;next - themes & quot;
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
 type ToasterProps = React.ComponentProps < typeof Sonner>;
@@ -32,6 +46,7 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
             &quot;group-[.toast]:bg - primary group-[.toast]:text - primary - foreground & quot;,
           cancel_button:;
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
+;
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 ;
 const Toaster = ({ ...props } ToasterProps) => {;
@@ -44,8 +59,8 @@ const Toaster = ({ ...props } ToasterProps) => {;
       toastOptions={{;
         classNames:{;
           toast:;
-            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",,
-  description:"group-[.toast]:text-muted-foreground",;
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",;
+          description:"group-[.toast]:text-muted-foreground",;
           actionButton:;
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",;
           cancelButton:;
@@ -53,6 +68,7 @@ const Toaster = ({ ...props } ToasterProps) => {;
       {...props}
     />);
 }
+
 ;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
