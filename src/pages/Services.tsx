@@ -137,9 +137,6 @@ const Services: React.FC = () => {
               <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
             </div>
           </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -149,36 +146,6 @@ const Services: React.FC = () => {
             </Link>
 }
 
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
-}) {
-  return (
-    <Link
-      to={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {bullet}
-          </li>
-        ))}
-      </ul>
-    </Link>
-  );
-}
+  icon,
+
+export default ServicesPage;

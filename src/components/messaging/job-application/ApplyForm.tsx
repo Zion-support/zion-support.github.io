@@ -139,144 +139,59 @@ interface ApplyFormProps {;
   job: Job,;
   onClose: () => void,;
   onApplySuccess?: (jobId: string,) => Promise<void>;
-}
-
-export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
-  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(;
-    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
-  );
-  const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-
-  const handleResumeSelected = (resume: ResumeOption) => {;
-    setSelectedResume(resume);    setSelectedResumeId(resume && resume.id);
+      setIsSubmitting(false);
+    }
   };
 
-  const handleApply = async () => {;
-    if (!message && message.trim()) {;
-      toast({;
-        title: "Message required",;
-        description: "Please enter a message before applying.",;
-        variant: "destructive";
-      });
-      return;
-    }
-
-    try {;
-      setIsSubmitting(true);
-
-      // First submit the application to the job applications table;
-      const applicationSuccess = await applyToJob(;
-        job && job.id;
-        message;
-        selectedResume && selectedResume.type === 'ai_resume';
-          ? selectedResumeId || undefined;
-          : undefined;
-        selectedResume && selectedResume.type === 'custom_upload';
-          ? selectedResume && selectedResume.file;
-          : undefined;
-      );
-
-      if (!applicationSuccess) {;
-        throw new Error("Failed to submit application");
-      }
-
-      // Format message with proposal link if provided;
-      let fullMessage = message;
-
-      if (proposalLink) {;
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-      }
-
-      // Add info about attached resume if available;
-      if (selectedResume) {;
-        fullMessage += `\n\nI've attached my resume: ${selectedResume && selectedResume.title}`;
-      }
-
-      // Create context data for the conversation;
-      const contextData = {;
-        title: job && job.title,;
-        description: job && job.description,;
-        attachedResume: selectedResume ? {;
-          id: selectedResume && selectedResume.id,;
-          title: selectedResume && selectedResume.title,;
-          type: selectedResume.type;
-        } : null;
-      };
-
-      // Create conversation with the job client;
-      await createConversation(;
-        job && job.client_id;
-        fullMessage;
-        'job';
-        job && job.id;
-        contextData;
-      );
-
-      // Call onApplySuccess to update job status in the UI;
-      if (onApplySuccess) {;
-        await onApplySuccess(job && job.id);
-      }
-
-      toast({;
-        title: "Application sent",;
-        description: `Your application for "${job && job.title}" has been sent.`}),;
-      onClose();
-    } catch (error) {;
-      logErrorToProduction('Failed to send application:', { data: error }),;
-      toast({;
-        title: "Application failed",;
-        description: "There was an error sending your application. Please try again.",;
-        variant: "destructive";
-      });
-    } finally {;
-      setIsSubmitting(false),;
-      toast ({
-        title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`}),
-      on_close ();
-    } catch (error) {
-      logErrorToProduction ('Failed to send application:', { data: error }),
-      toast ({
-        title: "Application failed",
-        description: "There was an error sending your application. Please try again.",
-        variant: "destructive";
-      });
-    } finally {
-      setIsSubmitting (false),
-    }
-  }
-
-    }
-
-  },
-
-
-
-
   return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-semibold">Apply to {job.title}</h2>
+        <Button variant="outline" onClick={onClose}>
+          Close
+        </Button>
+      </div>
 
+      <Tabs value={activeTab} onValueChange={setActiveTab}>
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="message">Message</TabsTrigger>
+          <TabsTrigger value="resume">Resume</TabsTrigger>
+        </TabsList>
 
-        <TabsContent value="resume">
+        <TabsContent value="message" className="space-y-4">
+          <MessageTab
+            message={message}
+            onMessageChange={setMessage}
+            job={job}
+          />
+        </TabsContent>
+
+        <TabsContent value="resume" className="space-y-4">
           <ResumeTab
-            onResumeSelected = {handleResumeSelected,}
-            selectedResumeId = {selectedResumeId,}
+            selectedResume={selectedResume}
+            onResumeSelect={setSelectedResume}
           />
         </TabsContent>
       </Tabs>
-          <MessageTab;
-            message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
-          />
-        </TabsContent>
-        
+
+      <div className="flex justify-end space-x-2">
+        <Button variant="outline" onClick={onClose}>
+          Cancel
+        </Button>
         <Button
-}
-;
+          onClick={handleSubmit}
+          disabled={isSubmitting || !selectedResume}
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              Submitting...
+            </>
+          ) : (
+            'Submit Application'
+          )}
+        </Button>
+      </div>
+    </div>
+  );
+};

@@ -50,12 +50,4 @@ function AIEnhancementButton() {
 if (.length < 10) {) {
   $2
       on_enhanced (enhanced_content);
-
-
-
-  },
-  
-
-;
-
-
+    }

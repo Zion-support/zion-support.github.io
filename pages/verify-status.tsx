@@ -104,6 +104,23 @@ export default function VerifyStatus(req, res) {
     setIsResending(true)
     setError('')
     setMessage('')
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    }
+    return () => clearInterval(interval)
+  }, [countdown]),
+
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address'),
+      return
+    }
+
+    setIsResending(true),
+    setError(''),
+    setMessage(''),
+
+<<<<<<< HEAD
     try {
       const response = await fetch('/api/resend-verification-email', {
 
@@ -121,7 +138,6 @@ export default function VerifyStatus(req, res) {
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message |'Failed to resend verification email')
-=======
 import { useState, useEffect } from 'react',
 import { use_router } from 'next / router',
 import { Input } from '@/components / ui / input',
@@ -195,7 +211,70 @@ if ( {) {
         set_countdown (60), // 60 second cooldown;
       } else {
         set_error (data.message || 'Failed to resend verification email');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout';
+<<<<<<< HEAD
+
+import { supabase } from '@/integrations/supabase/client', // Import Supabase client
+import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+export default function VerifyStatus() {
+
+  const router = useRouter()
+  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
+  const { email: emailParam } = router.query
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
+  const [isResending, setIsResending] = useState(false)
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false)
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null)
+  const [countdown, setCountdown] = useState(0)
+  useEffect(() => {
+    if (typeof emailParam === 'string') {
+      setEmail(emailParam)
+    }
+  }, [emailParam])
+  // Countdown timer for resend button
+  useEffect(() => {
+    let interval: NodeJS.Timeout
+    if (countdown > 0) {
+      interval = setInterval(() => {
+        setCountdown(prev => prev - 1)
+      }, 1000)
+    }
+    return () => clearInterval(interval)
+  }, [countdown])
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address')
+      return
+    }
+    setIsResending(true)
+    setError('')
+    setMessage('')
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email })
+      })
+      const data = await response.json()
+      if (response.ok) {
+        setMessage('Verification email sent successfully! Please check your inbox.')
+        setLastSentTime(new Date())
+        setCountdown(60), // 60 second cooldown
+      } else {
+        setError(data.message |'Failed to resend verification email')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
@@ -362,7 +441,6 @@ if ( {) {
     } catch (err: any) {
       logErrorToProduction ('Error checking verification status:', { data: err }),
       set_error ('An unexpected error occurred while checking status. Please try again.');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsCheckingStatus (false);
     }

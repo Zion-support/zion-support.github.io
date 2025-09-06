@@ -54,7 +54,7 @@ function readJson(p: string) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
-  fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
+  fs.writeFileSync(p, JSON.stringify(v, null, 2))
 }
 
 
@@ -94,6 +94,7 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
@@ -110,12 +111,10 @@ export default async function handler(req, res) {
     const transfersJson = await fetchJson(transfersUrl);
 
     const txs = transfersJson?.result || [];
-
     const holderToDelta: Record<string, bigint> = {};
 
 
     const entries = Object && Object.entries(holderToDelta)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
@@ -271,7 +270,6 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
 
     return res;

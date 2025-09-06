@@ -43,9 +43,3 @@ import {
           >;
             {option.label}
           </DropdownMenuItem>;
-        ))}
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-  );
-}
-;

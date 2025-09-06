@@ -47,12 +47,10 @@
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
-  }
 }
 =======
       language = 'en'
     } = req.body || {};
-
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt = promptAssist ||
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
@@ -97,6 +95,24 @@
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to generate proposal" });
+      ],
+      temperature: 0.3,
+    });
+const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
+    const meta = createProposal({
+      title,
+    targetInstitution,
+      type,
+    regionalScope,
+      budgetOrResolution,
+    supportingMultiverses,
+      contentMarkdown,
+      language,
+    });
+return res.status(200).json({ meta, markdown: contentMarkdown })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
+
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

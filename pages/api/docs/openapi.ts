@@ -8,7 +8,6 @@
               content: {
 
                   schema: ep && ep.responseBodySchema || { type: "object" },
-=======
                 "application / json": {
                   schema: ep.responseBodySchema || { type: "object" },
 
@@ -73,14 +72,11 @@ function toOpenApi() {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
-
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      security_schemes: {
+security_schemes: {
         bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
       },
     },

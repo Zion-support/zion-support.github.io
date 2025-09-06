@@ -119,6 +119,25 @@ import { motion } from 'framer-motion';
 } from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import {
+  Search, Star, DollarSign, CheckCircle,
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
+  ChevronDown, Sparkles
+} from 'lucide-react',;
+import { ultimate2026Services } from '../data/ultimate-2026-services',;
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -153,6 +172,33 @@ export default function Ultimate2026ServicesShowcase() {
 
     service.category?.includes('Emerging') || service.category?.includes('Innovation')
   ).length;
+=======
+  },
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+  // Combine all services
+  const allServices = [
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations
+  ],
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')
+  ).length,
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum') || service.category?.includes('Space')
+  ).length,
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise') || service.category?.includes('IT')
+  ).length,
+  const emergingCount = allServices.filter(service =>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length,
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -160,8 +206,7 @@ export default function Ultimate2026ServicesShowcase() {
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
-  ];
-
+];
   const priceRanges = [
 
       case 'popularity':
@@ -296,6 +341,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <Head>
         <title>Ultimate 2026 Services Showcase | Zion Tech Group</title>
         <meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting-edge enterprise solutions. Transform your business with next-generation technology." />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta name="keywords" content="AI consciousness, quantum computing, autonomous AI, metaverse development, space technology, edge computing, 5G networks, cybersecurity, healthcare AI, climate prediction" />
         <meta property="og:title" content="Ultimate 2026 Services Showcase | Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2026 innovations that will transform your business. AI, quantum computing, and emerging technologies." />
@@ -385,9 +431,21 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         </div>
         <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ultimate 2026
@@ -545,11 +603,16 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                           <Star className="w-3 h-3 mr-1" />
                           Popular
                         </div>
-                      )}
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
 
 
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
                       {service.name}
                     </h3>
                     <p className="text-gray-400 mb-4 line-clamp-3">
@@ -1038,11 +1101,16 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                             <Star className="w-3 h-3 mr-1" />
                             Popular
                           </div>
-                        )}
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </div>
 
 
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
                         {service.name}
                       </h3>
                       <p className="text-gray-400 mb-4 line-clamp-3">
@@ -1098,6 +1166,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                   </div>
                 ) : (
                   <div className="flex items-center space-x-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="text-4xl">{service.icon}</div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
@@ -1305,6 +1374,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
 
 
+=======
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1372,6 +1444,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+<div>
+=======
             <div>
               <h4 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h4>
               <div className="space-y-4">

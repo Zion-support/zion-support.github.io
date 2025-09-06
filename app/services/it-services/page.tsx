@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and digital transformation. Enterprise-grade solutions for modern businesses.'
 };
+=======
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 <<<<<<< HEAD
 export default function ITServicesPage() {
@@ -16,6 +20,7 @@ export default function ITServicesPage() {
           </p>
         </div>
 =======
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export const metadata = { 
@@ -851,11 +856,42 @@ function ITServiceCard({ title, description, features, price, icon }: {
         ))}
       </ul>
     </div>
+=======
+export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
+ * ITServicesPage - Function description
+ */
+function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
+ * Item - Function description
+ */
+function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
+ * Pricing - Function description
+ */
+function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
+ * Plan - Function description
+ */
+function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+=======
+export const metadata = { title: 'IT Services | Zion Tech Group' };
+
+export default function ITServicesPage() {
+  return (
+    <section>
+      <h1 style={{fontSize: 26, fontWeight: 800}}>IT Services</h1>
+      <p style={{marginTop: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p>
+      <div style={{display: 'grid', gap: 12, marginTop: 16}}>
+        <Item title="Cloud & Infra" details={["AWS/GCP/Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} />
+        <Item title="DevOps & SRE" details={["CI/CD", "Observability", "Autoscaling", "Chaos testing"]} />
+        <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} />
+      </div>
+      <Pricing />
+    </section>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }
 
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
+<<<<<<< HEAD
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2">
@@ -867,10 +903,16 @@ function Item({ title, details }: { title: string; details: string[] }) {
         ))}
       </ul>
 >>>>>>> main
+=======
+    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
+      <h3 style={{fontWeight: 700}}>{title}</h3>
+      <ul style={{paddingLeft: 18, color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </div>
   );
 }
 
+<<<<<<< HEAD
 function ITServiceCategory({ title, icon, description, services }: {
   title: string;
   icon: string;
@@ -962,10 +1004,19 @@ function Plan({ name, price, duration, features }: {
       >
         Get Started
       </a>
+=======
+function Pricing() {
+  return (
+    <div style={{marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))'}}>
+      <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} />
+      <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI/CD", "Monitoring"]} />
+      <Plan name="Managed" price="$5k+/mo" features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports"]} />
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </div>
   );
 }
 
+<<<<<<< HEAD
 function ITSolution({ title, description, features, price, timeline, useCase, marketSize }: {
   title: string;
   description: string;
@@ -1108,3 +1159,16 @@ function ContactSection() {
     </section>
   );
 }
+=======
+function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
+  return (
+    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
+      <h4 style={{fontWeight: 700}}>{name}</h4>
+      <div style={{color: '#111827', fontWeight: 800, marginTop: 4}}>{price}</div>
+      <ul style={{paddingLeft: 18, color: '#4b5563', marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul>
+      <a href="https://ziontechgroup.com" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Get Started</a>
+    </div>
+  );
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

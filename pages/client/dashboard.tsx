@@ -73,8 +73,6 @@ export default function ClientDashboard(req, res) {
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 2xl font - semibold'>Your Jobs</h1>;

@@ -22,29 +22,48 @@
     }
     load()
   }, [courseId]);
-
   const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
-
   async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons || []).includes(lessonId)
       ? (progress.completedLessons || []).length
       : (progress.completedLessons || []).length + 1;
     const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    async function load() {
+      const [courseResp, _progResp] = await Promise.all([
+        fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/progress?userId=demo-user`)
+      ]),
+      const courseData = await courseResp.json()
+      const progData = await progResp.json()
+      setCourse(courseData.course),
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+      setProgress(cp),
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
+
+    }
+    load()
+  }, [courseId]),
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),
+
+  async function markLessonComplete(_lessonId: string) {_const _completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1,
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100)
+
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
-    });
+});
     const data = await resp.json();
     setProgress(data.progress)
   }
-
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId)
   }
-
-  async function onFinalQuizComplete(score: number) {
+async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
     setFinalPassed(passed)
@@ -74,7 +93,6 @@
     });
     const data = await resp && resp.json();
     setProgress(data && data.progress);  }
-
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
@@ -82,12 +100,10 @@
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const passed = score >= needed;
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
-
   return (
 
                   <button
@@ -132,7 +148,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
 
             </ul>;
           </aside>;
-
           <section className='lg:col-span-3 space-y-4'>;
             {currentLesson ? (;
               <div className='border rounded p-4'>;
@@ -181,7 +196,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
             {finalPassed && <CertificatePreview courseId={courseId} />}          </section>;
         </div>;
       </div>;
-
       <div className='space-y-4'>;
         <CoachWidget />;
         <div className='border rounded p-3'>;
@@ -193,7 +207,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
           <button
             className='mt-2 px-3 py-2 bg-indigo-600 text-white rounded'
             onClick={() => alert('Preference saved (demo)')}
-=======
 import {useEffect, useMemo, useState} from 'react';
 import {use_router} from 'next / router';
 import ProgressBar from '../../components / learn / ProgressBar';
@@ -381,6 +394,7 @@ if (return <div > Loading...</div>) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+<<<<<<< HEAD
                 )}
               </div>
             ) : (

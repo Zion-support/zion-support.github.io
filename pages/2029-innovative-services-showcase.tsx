@@ -63,7 +63,6 @@ const contactInfo = {;
   website: 'https://ziontechgroup.com';
 
 };
-
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029;
@@ -77,7 +76,7 @@ export default function InnovativeServicesShowcase2029() {
       icon: Brain,
       color: 'from-violet-600 via-purple-600 to-indigo-600',
       services: aiAutonomousEcosystemServices2029
-    };
+};
     {
       title: '⚛️ Emerging Tech Breakthroughs',
       icon: Atom,
@@ -146,11 +145,10 @@ function InnovativeServicesShowcase2029() {
       color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
       services: emergingTechBreakthroughServices2029;
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: '🎯 Practical Business Solutions',
       icon: Target,
-      color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
+color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
       services: practicalBusinessSolutionServices2029;
     }
 
@@ -182,7 +180,6 @@ function InnovativeServicesShowcase2029() {
       </Head>;
       <div className="min - h-screen bg - black text - white">;
         <UltraFuturisticNavigation2029 />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="py - 32 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
           <div className="container mx - auto px - 4 text - center">;
@@ -505,6 +502,7 @@ function InnovativeServicesShowcase2029() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mt-16">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
                 View All Services
@@ -578,7 +576,6 @@ function InnovativeServicesShowcase2029() {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Contact CTA */}
         <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
           <div className="container mx - auto px - 4 text - center">;
@@ -623,6 +620,10 @@ function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <UltraFuturisticFooter2029 />
       </div>
     </>
@@ -661,6 +662,38 @@ function InnovativeServicesShowcase2029() {
                 </Link>;
                 <Link;
                   href="/pricing" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover:bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
+=======
+            >;
+              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">;
+                Join the future of technology with our innovative 2029 services.;
+                Contact us today to discover how we can revolutionize your business operations.;
+              </p>;
+              <div className="grid md:grid-cols-3 gap-8 mb-12">;
+                <div className="flex items-center justify-center gap-4 text-gray-300">;
+                  <Phone className="w-6 h-6 text-purple-400" />;
+                  <span>{contactInfo.mobile}</span>;
+                </div>;
+                <div className="flex items-center justify-center gap-4 text-gray-300">;
+                  <Mail className="w-6 h-6 text-blue-400" />;
+                  <span>{contactInfo.email}</span>;
+                </div>;
+                <div className="flex items-center justify-center gap-4 text-gray-300">;
+                  <MapPin className="w-6 h-6 text-green-400" />;
+                  <span>{contactInfo.address}</span>;
+                </div>;
+              </div>;
+              <div className="flex flex-wrap justify-center gap-4">;
+                <Link;
+                  href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">;
+                  Contact Us Now;
+                  <ArrowRight className="ml-2 h-5 w-5" />;
+                </Link>;
+                <Link;
+                  href="/pricing" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   View Pricing;
                 </Link>;
               </div>;
@@ -669,6 +702,7 @@ function InnovativeServicesShowcase2029() {
         </section>;
         <UltraFuturisticFooter2029 />;
       </div>;
+<<<<<<< HEAD
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

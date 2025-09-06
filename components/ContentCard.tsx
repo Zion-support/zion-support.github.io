@@ -50,7 +50,7 @@ const ContentCard: React.FC < ContentCardProps> = ({
     >;
 
       {/* Background Glow */}
-      <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - cyan - 500 / 0 via - cyan - 400 / 10 to - cyan - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
+      <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
       {/* Header */}
 
 const ContentCard: React.FC<ContentCardProps> = ({;
@@ -73,7 +73,7 @@ const ContentCard: React.FC<ContentCardProps> = ({;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {category}
-          </span>;
+          </span>
         )}
 
       </div>;
@@ -140,27 +140,21 @@ const ContentCard: React.FC<ContentCardProps> = ({;
         )}
 
       </div>
-=======
-      </h3>;
-
+<<<<<<< HEAD
+</h3>;
       <p className="text-white/70 leading-relaxed mb-6 line-clamp-3">;
       </p>;
-
       {/* Footer */}
       <div className='flex items-center justify-between'>;
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
           Read More;
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>;
         </div>;
-
         {date && (;
           <span className='text-xs text-white/50 font-mono'>{date}</span>        </div>;
-
         {date && (;
           <span className='text-xs text-white/50 font-mono'>{date}</span>        )}
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Hover Effects */}
 
       </div>;
@@ -172,12 +166,10 @@ const ContentCard: React.FC<ContentCardProps> = ({;
   );
 
 };
-
 export default ContentCard;    </Link>;
   );
 
 };
-
 export default ContentCard;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

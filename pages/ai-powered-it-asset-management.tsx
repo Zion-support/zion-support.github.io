@@ -102,6 +102,105 @@ const AIPoweredITAssetManagement = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+=======
+      description: "Reduction in IT asset costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management"
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance"
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const capabilities = [
+    "Automated asset discovery and inventory",
+    "Real-time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+    "Integration with existing IT tools"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ],
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ];
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-6 py-20">
+        <h1 className="text-4xl font-bold text-center mb-8">
+          AI-Powered IT Asset Management
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-700">{feature}</p>
+            </div>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </div>
+    </div>
+  );
+};
+export default AIPoweredITAssetManagement;
+  ],
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
       <Head>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
@@ -183,7 +282,6 @@ const AIPoweredITAssetManagement = () => {
         <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
@@ -439,7 +537,6 @@ const AIPoweredITAssetManagement = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -1051,7 +1148,6 @@ const AIPoweredITAssetManagement = () => {;
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -1065,8 +1161,6 @@ const AIPoweredITAssetManagement = () => {;
 
 
 export default AIPoweredITAssetManagement;
-
-=======
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;

@@ -18,16 +18,27 @@ export default defineConfig({
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   css: {
     postcss: false
   },
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
+<<<<<<< HEAD
     exclude: [],
   },
 =======
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+    exclude: [
+      /src\/components\/video\//,
+      /src\/components\/DynamicListingPage\.tsx$/,
+    ],
+  },
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -148,4 +159,8 @@ export default defineConfig({
     open: true 
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
   }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

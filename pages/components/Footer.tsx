@@ -12,20 +12,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -53,6 +49,8 @@ import Link from 'next/link';
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -173,8 +171,27 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin },;
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -302,7 +319,6 @@ const microSaasCategories = [
                 ))}
 
               </ul>;
-
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
@@ -326,6 +342,10 @@ const microSaasCategories = [
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -344,13 +364,14 @@ const microSaasCategories = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
-
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -366,6 +387,7 @@ const microSaasCategories = [
               ))}
 
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -382,7 +404,6 @@ const microSaasCategories = [
                 ))}
               </div>
             </div>
-
             {/* AI Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
@@ -396,7 +417,6 @@ const microSaasCategories = [
                 ))}
               </div>
             </div>
-
             {/* IT Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
@@ -412,7 +432,6 @@ const microSaasCategories = [
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -435,7 +454,6 @@ const microSaasCategories = [
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="bg-gray-800 border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
@@ -480,22 +498,23 @@ const microSaasCategories = [
                 Cookie Policy
               </Link>
             </div>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
         </div>
       </div>
     </footer>
-=======
             </motion && motion.div>;
           </div>;
         </div>;
       </div>;
     </footer>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default Footer;
-=======
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -733,4 +752,3 @@ const Footer = () =>: any {
 ;
 export default Footer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,49 +1,86 @@
-
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-import { Input } from '@/components/ui/input'
-import { Checkbox } from '@/components/ui/checkbox'
-import { format } from 'date-fns'
-import {
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
-
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        success = await updateWorkExperience (editing_id, experience_data);
+      } else {
+        success = await addWorkExperience(resumeId, experienceData)
       }
-  }
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Input } from '@/components/ui/input',;
-import { Checkbox } from '@/components/ui/checkbox',;
-import { format } from 'date-fns',;
-ursor/fix-website-loading-errors-and-merge-6662
-      {workExperiences && workExperiences.length > 0 && (;
-        <div className='space-y-4'>;
-          <h3 className='text-md font-medium'>Added Experience</h3>;
-          {workExperiences && workExperiences.map(work => (;
-            <Card key={work && work.id} className='bg-muted/40'>;
-              <CardContent className='pt-6'>;
-                <div className='flex justify-between'>                  <div>;
-                    <h4 className='font-medium'>{work && work.role_title}</h4>;
-                    <p className='text-sm text-muted-foreground'>;
-                      {work && work.company_name}
-                    </p>;
-                    <p className='text-xs text-muted-foreground mt-1'>;
-                      {typeof work && work.start_date === 'string';
-                        ? work && work.start_date;
-                        : format(work && work.start_date, 'MMM yyyy')}{' '}
+
+
+      setError(err.message || 'An error occurred');
+    };
+  };
+  const handleEdit = (work: WorkExperience) => {;
+
+
+    setEditingId(work.id!);    form.reset({
+      ...work
+  const handleEdit = (work: WorkExperience) => {
+    setEditingId(work.id!)
+    form.reset({
+      start_date: formatDateValue(work.start_date)
+      end_date:
+        work.end_date && !work.is_current
+          ? formatDateValue(work.end_date)
+          : undefined
+    })
+      // Check condition
+if ( {) {
+  $2
+}
+;
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  const [error, setError] = useState<string | null>(null),;
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const form = useForm<WorkExperienceFormValues>({;
+    resolver: zodResolver(workExperienceSchema),;
+    defaultValues: {;
+      company_name: '',;
+      role_title: '',;
+      start_date: format(new Date(), 'yyyy-MM-dd'),;
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
+    try {;
+      setError(null),;
+      let success,;
+      const experienceData: WorkExperience = {;
+        company_name: data.company_name, // Required field;
+        role_title: data.role_title, // Required field;
+        start_date: data.start_date, // Required field;
+        end_date: data.is_current ? undefined : (data.end_date || undefined),;
+        is_current: data.is_current,;
+        description: data.description,;
+        location: data.location},;
+      if (editingId) {;
+        success = await updateWorkExperience(editingId, experienceData);
+      } else {;
+        success = await addWorkExperience(resumeId, experienceData);
+      }
+;
+      if (success) {;
+        form.reset({;
+          company_name: '',;
+          role_title: '',;
+          start_date: format(new Date(), 'yyyy-MM-dd'),;
+          is_current: false,;
+          description: '',;
+          location: ''}),;
+        setEditingId(null);
+      }
+    } catch (err: any) {;
+      setError(err.message || 'An error occurred');
+    }
                     </p>;
                     {work && work.location && (;
                       <p className='text-xs text-muted-foreground'>;
@@ -56,23 +93,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       variant='ghost'
                       size='icon'
 
-        <div className="space-y-4">
-          <h3 className="text-md font-medium">Added Experience</h3>
-          {workExperiences.map((work) => (
-            <Card key={work.id} className="bg-muted/40">
-              <CardContent className="pt-6">
-                <div className="flex justify-between">
-                  <div>
-                    <h4 className="font-medium">{work.role_title}</h4>
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {typeof work.start_date === 'string' 
-                        ? work.start_date 
-                        : format(work.start_date, 'MMM yyyy')} - {work.is_current 
-                        ? 'Present' 
-                        : (work.end_date ? (typeof work.end_date === 'string' 
-                          ? work.end_date 
-                          : format(work.end_date, 'MMM yyyy')) : '')}
 
                       variant='ghost'
                       size='icon'
@@ -162,82 +182,3 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
-
-              </Button>;
-
-              <div className='flex gap-2'>;
-                <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
-                  {editingId ? 'Update' : 'Add'} Experience;
-                </Button>;
-
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
-                  <Button type='button' onClick={onComplete}>;
-                    Next;
-                  </Button>;
-                )}
-
-;
-
-
-                </FormItem>)}
-            />;
-            {error && (
-              <Alert variant='destructive'>;
-                <AlertDescription>{error}</AlertDescription>;
-              </Alert>)}
-            <div className='flex justify - between pt - 2'>;
-              <Button;
-                type='button';
-                variant='outline';
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
-                    setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format (new Date (), 'yyyy - MM - dd'),
-                      is_current: false,
-                      description: '',
-                      location: '',
-                    });
-                  } else {
-                    on_back ();
-                  }
-                }}
-              >;
-                {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className='flex gap - 2'>;
-                <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
-                  {editing_id ? 'Update' : 'Add'} Experience;
-                </Button>;
-                {!editing_id && work_experiences.length > 0 && (
-                  <Button type='button' on_click={on_complete}>;
-                    Next;
-                  </Button>)}
-
-
-
-      ...work;
-      start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  };
-
-
-
-    </div>);
-}> {';
-  editing_id ? 'Cancel': 'Back';
-}</Button> Next </Button>);
-}</div> </div> </form> </Form> </div> </div>);
-}'"  );
-}
-;

@@ -121,6 +121,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
+<<<<<<< HEAD
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>
 
@@ -150,10 +151,27 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
             onChange={e => setBody(e && e.target.value)}
             placeholder='{ }';
           />;
+=======
+<<<<<<< HEAD
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+=======
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div>
+          <label className='block text-sm mb-1'>Request Body (JSON)</label>
+          <textarea
+            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
+            value={body}
+            onChange={e => setBody(e.target.value)}
+            placeholder='{ }'
+          />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       )}
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
+<<<<<<< HEAD
         disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}
 
@@ -168,8 +186,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -214,6 +230,24 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
         </pre>;
       </div>;
     </div>);
+        </div>
+      </div>
+      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Request Body (JSON)</label>
+          <textarea className=&quot;w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm&quot; value={body} onChange={(e) => setBody(e.target.value)} placeholder=&quot;{ }&quot; />
+        </div>
+      )}
+      <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>
+      <div>
+        <label className=&quot;block text-sm mb-1&quot;>Response</label>
+        <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>
+      </div>
+    </div>
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

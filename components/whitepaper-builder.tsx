@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -69,7 +65,6 @@ export default function WhitepaperBuilderPage() {
           Investor and Developer editions. Toggle, review, and download as PDF.;
         </p>;
       </div>;
-
       <div className='flex flex-wrap gap-3 items-center'>;
         <label className='font-medium'>Edition</label>;
 
@@ -112,14 +107,12 @@ export default function WhitepaperBuilderPage() {
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>;
         <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>;
       </div>;
-
       <div className="flex flex-wrap gap-3 items-center">;
         <label className="font-medium" htmlFor="input-Edition">Edition</label>;
         <select
           value={edition}
           onChange={(e) => setEdition(e && e.target.value as WhitepaperEdition)}
           className="border rounded px-3 py-2 bg-white dark:bg-black";
-=======
 import Link from 'next / link';
 import {
   getWhitepaperSections,
@@ -195,7 +188,7 @@ if (return '/docs / zion - protocol.pdf') {
         ))}
       </div>
     </div>
-  );
+);
 }
 
 =======

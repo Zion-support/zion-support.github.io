@@ -41,7 +41,15 @@
   --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.6);
-=======
+}
+  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.6);}
+
+  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.6);
+
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --quantum-ripple: 0 0 60px rgba(0, 255, 255, 0.2);
@@ -50,7 +58,7 @@
   --quantum-space: 0 0 90px rgba(0, 255, 255, 0.1);
   --holographic-neural: 0 0 100px rgba(139, 92, 246, 0.08);
   --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+
 }
 =======
 <<<<<<< HEAD
@@ -626,15 +634,9 @@ body::before {
 <<<<<<< HEAD
 >>>>>>> main
 .quantum-button::before {
-=======
-    linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
-  z-index: -1;
-  animation: matrixFlow 30s linear infinite;
-}
 
+<<<<<<< HEAD
+=======
 /* Enhanced Neural Network Background */
 body::after {
 <<<<<<< HEAD
@@ -782,7 +784,7 @@ body::after {
 }
 
 .btn-quantum::before {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+
   content: '';
 =======
 =======
@@ -850,11 +852,14 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-=======
-.btn-quantum:hover::before {
-  left: 100%;
-}
 
+<<<<<<< HEAD
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  position: relative;
+
+  position: relative;
+
+=======
 .btn-quantum:hover {
   transform: translateY(-2px);
   box-shadow: var(--quantum-glow);
@@ -979,7 +984,7 @@ body::after {
 .card-quantum:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: var(--quantum-glow);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+
 }
 =======
 =======
@@ -1026,15 +1031,20 @@ body::after {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
   width: 60px;
   height: 60px;}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
+
   width: 60px;
+<<<<<<< HEAD
+  height: 60px;
+
+  width: 40px;
+  height: 40px;
+
+}
+=======
   height: 60px;}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1215,12 +1225,9 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
       0 0 60px rgba(16, 185, 129, 0.2);
-=======
-  border: 2px solid transparent;
-  border-top: 2px solid #00ffff;
-  border-right: 2px solid #8000ff;
-}
 
+<<<<<<< HEAD
+=======
 .loading-quantum::after {
   width: 60%;
   height: 60%;
@@ -1328,7 +1335,7 @@ body::after {
     --neon-cyan: #00ffff;
     --neon-purple: #a855f7;
     --neon-pink: #ec4899;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+
   }
 =======
 =======
@@ -1898,6 +1905,13 @@ body::after {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+}
+
+}
+
   .particle-quantum,
   .particle-holographic,
   .loading-quantum {
@@ -1910,6 +1924,9 @@ body::after {
     background: none !important;
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
 =======
 <<<<<<< HEAD

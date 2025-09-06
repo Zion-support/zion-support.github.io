@@ -3,6 +3,7 @@
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
         { name: 'Overview', href: '/enhanced-services-showcase' },
@@ -88,19 +89,16 @@ export default function DocsPage() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-=======
   });
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+<<<<<<< HEAD
       case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400'
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
-
   const sections = [;
     {;
       title: 'Getting Started',;
@@ -130,7 +128,6 @@ export default function DocsPage() {;
     },;
   ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }];
     }];
-
   const external = [;
     { name: 'OpenAI API pricing', url: 'https://openai && openai.com/api/pricing' },;
     { name: 'Anthropic pricing', url: 'https://www && www.anthropic.com/pricing' },;
@@ -166,7 +163,6 @@ export default function DocsPage() {;
       color: 'text-yellow-400',;
     },;
   ];
-
   const filteredDocs = documentationItems && documentationItems.filter(doc => {;
     const matchesSearch =;
       doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -174,17 +170,18 @@ export default function DocsPage() {;
     const matchesCategory =;
       selectedCategory === 'all' || doc && doc.category === selectedCategory;
     return matchesSearch && matchesCategory;  });
-
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {    const matchesSearch = doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
-
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {;
       case 'Beginner':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+      case 'Beginner':
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
@@ -216,7 +213,6 @@ export default function DocsPage() {;
 =======
 
   };
-
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
@@ -232,7 +228,6 @@ export default function DocsPage() {;
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/docs' />;
       </Head>;
-
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-6xl mx-auto space-y-10'>;
           <div className='text-center'>;
@@ -243,7 +238,6 @@ export default function DocsPage() {;
               Quick links, references, and integration guides for our services.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {sections && sections.map(s => (;
 
@@ -308,7 +302,6 @@ export default function DocsPage() {;
                 <li key={e && e.name}><a href={e && e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e && e.name}</a></li>;
             </ul>;
           </Card>;
-
           <Card className='p-6 bg-black/40 border border-gray-700/50'>;
             <h2 className='text-xl font-semibold mb-4 text-white'>;
               Need help?;
@@ -347,11 +340,9 @@ export default function DocsPage() {;
 
   );
 }
-=======
               ))}
             </ul>
           </Card>
-
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
             <div className="flex flex-col sm:flex-row gap-3">

@@ -15,6 +15,3 @@ interface ProfileAvailabilityProps {;
   );
 };
 }
-}
-
-;

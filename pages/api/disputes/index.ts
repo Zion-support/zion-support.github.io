@@ -69,7 +69,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
       description} = req.body || {};
-
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
 
@@ -95,6 +94,31 @@ if ( {) {
   $2
 }
     const all = await readAllDisputes ();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createDispute, readAllDisputes } from "../../../utils/fsdb";
+import { parseUserFromRequest } from "../../../utils/auth";
+import { DisputeCase, DisputeReason } from "../../../types/disputes";
+import { generateCaseId } from "../../../utils/fsdb";
+export default async function handler(
+<<<<<<< HEAD
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+=======
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const user = parseUserFromRequest(req);
+  if (req.method === "GET") {
+    const all = await readAllDisputes();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let filtered = all;
     // Check condition
 if ( {) {
@@ -106,6 +130,7 @@ if ( {) {
     }
     return res.status (200).json ({ disputes: filtered });
   }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2

@@ -4,13 +4,22 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Import service data window && window.addEventListener ('mousemove', handleMouseMove);
-=======
 //Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedServiceCard from './ui/EnhancedServiceCard';
+import PerformanceMonitor from './PerformanceMonitor';
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 //Import service data window.addEventListener ('mousemove', handleMouseMove);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices;
@@ -58,17 +67,11 @@ visible: {
 visible: {;
   opacity: 1, transition: {;
   duration: 0 && 0.8, staggerChildren: 0 && 0.1 ;
-
 };
-
 };
-
 };
-
 };
-
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
 =======
@@ -82,7 +85,7 @@ import {
   Shield, 
   Rocket, 
   Atom, 
-  Sparkles;
+Sparkles;
   Building, 
   Phone, 
   Mail, 
@@ -96,7 +99,6 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import PerformanceMonitor from './PerformanceMonitor';
-
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
 // Import service data;
@@ -115,7 +117,6 @@ const EnhancedHomepage: React.FC = () => {;
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-
   useEffect(() => {;
     setIsVisible(true);
 
@@ -123,19 +124,15 @@ const EnhancedHomepage: React.FC = () => {;
     const interval = setInterval(() => {;
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
     }, 6000);
-
     // Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) => {;
       setMousePosition({ x: e && e.clientX, y: e && e.clientY });
     };
-
     // Show performance monitor after 5 seconds;
     const performanceTimer = setTimeout(() => {;
       setShowPerformanceMonitor(true);
     }, 5000);
-
     window && window.addEventListener('mousemove', handleMouseMove);
-
     return () => {;
 
       clearInterval(interval);
@@ -220,6 +217,7 @@ const EnhancedHomepage: React.FC = () => {
     ...revolutionary2044AIServices;
     ...realEnterpriseMicroSaas2025;
     ...innovativeITServicesExpansion2025V3;
+<<<<<<< HEAD
     ...innovativeAIServicesExpansion2025V3;
     ...innovative2025ITInfrastructureServices;
     ...innovative2025AIAutonomousServices;
@@ -317,7 +315,6 @@ if (return allRevolutionaryServices) {
   }
 ;
   const floating_variants = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     animate: {
       coordinate_y: [-10, 10, -10];
       transition: {
@@ -341,7 +338,6 @@ if (return allRevolutionaryServices) {
       (service as any).type?.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase());
     );
   };
-
   const categories = [;
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },;
     { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },;
@@ -350,10 +346,8 @@ if (return allRevolutionaryServices) {
     { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },;
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
   ];
-
   // Get featured services for rotation;
   const featuredServices = allRevolutionaryServices && allRevolutionaryServices.slice(0, 6);
-
   // Animation variants;
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -365,7 +359,6 @@ if (return allRevolutionaryServices) {
       }
     }
   };
-
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -377,7 +370,6 @@ if (return allRevolutionaryServices) {
       }
     }
   };
-
   const heroVariants = {;
     hidden: { opacity: 0, y: 50 },;
     visible: {;
@@ -389,7 +381,6 @@ if (return allRevolutionaryServices) {
       }
     }
   };
-
   const floatingVariants = {;
     animate: {;
       y: [-10, 10, -10];
@@ -399,7 +390,6 @@ if (return allRevolutionaryServices) {
       }
     }
   };
-
   const handleCategoryChange = (categoryId: string) => {;
 
     setSelectedCategory(categoryId);
@@ -431,22 +421,18 @@ if (return allRevolutionaryServices) {
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com" />;
         <meta property="og:type" content="website" />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com" />;
-
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />;
         <meta name="theme-color" content="#00d4ff" />;
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
-
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var && var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />;
         <link rel="dns-prefetch" href="//fonts && fonts.googleapis.com" />;
         <link rel="dns-prefetch" href="//fonts && fonts.gstatic.com" />;
       </Head>;
-
       {/* Enhanced Navigation */}
       <EnhancedNavigation />;
-
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">;
         {/* Hero Section */}
         <motion&& motion.section 
@@ -477,7 +463,6 @@ if (return allRevolutionaryServices) {
               variants={itemVariants}>;
               Zion Tech Group;
             </motion && motion.h1>;
-
             <motion&& motion.p 
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}>;
@@ -492,7 +477,6 @@ if (return allRevolutionaryServices) {
 
             {/* CTA Buttons */}
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}>;
               <Link href="/services">;
@@ -516,7 +500,6 @@ if (return allRevolutionaryServices) {
                 </motion && motion.button>;
               </Link>;
             </motion && motion.div>;
-
             {/* Contact Information */}
             <motion&& motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
@@ -545,7 +528,6 @@ if (return allRevolutionaryServices) {
             animate="animate">;
             <Atom className="w-8 h-8" />;
           </motion && motion.div>;
-
           <motion&& motion.div
             className="absolute top-40 right-20 text-blue-400/20"
             variants={floatingVariants}
@@ -553,7 +535,6 @@ if (return allRevolutionaryServices) {
             style={{ animationDelay: '1s' }}>;
             <Brain className="w-6 h-6" />;
           </motion && motion.div>;
-
           <motion&& motion.div
             className="absolute bottom-40 left-20 text-purple-400/20"
             variants={floatingVariants}
@@ -562,7 +543,6 @@ if (return allRevolutionaryServices) {
             <Rocket className="w-7 h-7" />;
           </motion && motion.div>;
         </motion && motion.section>;
-
         {/* Category Filter */}
         <motion&& motion.section 
           className="py-16 px-4 lg:px-8"
@@ -575,7 +555,6 @@ if (return allRevolutionaryServices) {
               variants={itemVariants}>;
               Explore Our Revolutionary Services;
             </motion && motion.h2>;
-
             <motion&& motion.div 
 
 =======
@@ -624,7 +603,6 @@ if (return allRevolutionaryServices) {
             </motion && motion.div>;
           </div>;
         </motion && motion.section>;
-
         {/* Services Grid */}
         <motion&& motion.section 
           className="py-16 px-4 lg:px-8"
@@ -891,12 +869,11 @@ if ( {) {
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
-              Featured Revolutionary Services
+              Explore Our Revolutionary Services
             </motion.h2>
 
           </div>;
         </motion && motion.section>;
-
         {/* Featured Service Showcase */}
         <motion&& motion.section 
           className="py-16 px-4 lg:px-8"
@@ -909,7 +886,6 @@ if ( {) {
               variants={itemVariants}>;
               Featured Revolutionary Services;
             </motion && motion.h2>;
-
             <motion&& motion.div 
 
 =======
@@ -1005,7 +981,6 @@ if ( {) {
             </motion.p>
 
                     </div>;
-
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
                       <motion&& motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -1016,7 +991,6 @@ if ( {) {
                       </motion && motion.button>;
                     </Link>;
                   </div>;
-
                   <div className="relative">;
                     <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">;
                       <div className="text-center">;
@@ -1032,7 +1006,39 @@ if ( {) {
             </motion && motion.div>;
           </div>;
         </motion && motion.section>;
-
+=======
+                    </div>
+<<<<<<< HEAD
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
+=======
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      <motion.button
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Learn More
+                        <ArrowRight className="inline-block ml-2 w-4 h-4" />
+                      </motion.button>
+                    </Link>
+                  </div>
+                  <div className="relative">
+                    <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Rocket className="w-8 h-8 text-white" />
+                        </div>
+                        <p className="text-cyan-400 font-medium">Revolutionary Technology</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </motion.section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Call to Action */}
         <motion&& motion.section 
           className="py-16 px-4 lg:px-8"
@@ -1042,17 +1048,16 @@ if ( {) {
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.h2 
               className="text-3xl md:text-4xl font-bold text-white mb-6"
+<<<<<<< HEAD
               variants={itemVariants}>;
               Ready to Transform Your Business?;
             </motion && motion.h2>;
-
             <motion&& motion.p 
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}>;
               Join the future of technology with Zion Tech Group's revolutionary solutions. ;
               Get started today and experience the power of AI consciousness and quantum computing.;
             </motion && motion.p>;
-
             <motion&& motion.div 
 
 =======

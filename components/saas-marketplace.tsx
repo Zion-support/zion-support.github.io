@@ -366,7 +366,7 @@ export default function SaaSMarketplacePage() {;
       pricing: 'Free - $19.99/month',
       rating: 4.8,
       users: '2M+',
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+icon: <Zap className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
         '5000+ app integrationsVisual workflow builderMulti-step automationsScheduled triggersError handlingTeam collaboration'
@@ -426,7 +426,7 @@ export default function SaaSMarketplacePage() {;
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
       pros: ['Great UXPowerful featuresGood integrationsMobile apps'],
       cons: ['ExpensiveComplex pricingCan be overwhelming']
-    };
+};
     {
       name: 'Mixpanel',
       description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
@@ -434,7 +434,7 @@ export default function SaaSMarketplacePage() {;
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
@@ -451,7 +451,7 @@ export default function SaaSMarketplacePage() {;
       pricing: 'Free - $57/month',
       rating: 4.7,
       users: '35K+',
-      icon: <Database className="w-8 h-8 text-green-400" />,
+icon: <Database className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
         'Fully managed MongoDBGlobal clustersAuto-scalingBackup & recoverySecurity & complianceMonitoring & alerting'
@@ -478,6 +478,11 @@ export default function SaaSMarketplacePage() {;
       pros: ['Zero configExcellent performanceGreat DXFree tier'],
       cons: ['Limited backend featuresCan be expensive for high traffic']
     };
+=======
+
+export default function SaaSMarketplacePage() {
+  const microSaasServices = [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Linear',
       description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
@@ -488,17 +493,35 @@ export default function SaaSMarketplacePage() {;
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
+<<<<<<< HEAD
         'Issue trackingRoadmap planningTeam collaborationGit integrationAutomated workflowsMobile apps'
       ];
       website: 'https://linear.app',
       useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
     pros: ['Lightning fastBeautiful designGreat keyboard shortcutsGit integration'],
       cons: ['Limited reportingNo time trackingSmaller ecosystem']
+=======
+        '5000+ app integrations'
+        'Visual workflow builder'
+        'Multi-step automations'
+        'Scheduled triggers'
+        'Error handling'
+        'Team collaboration'
+      ]
+      website: 'https://zapier.com'
+      useCase:
+        'Perfect for businesses looking to automate customer support, marketing, and sales processes.'
+      pros: [
+        'Easy to use'
+        'Extensive integrations'
+        'Reliable'
+        'Great support'
+      ]
+      cons: ['Can get expensive', 'Limited customization']
     }
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
-
   const categories = [;
     'All',;
     'Automation',;
@@ -522,11 +545,11 @@ export default function SaaSMarketplacePage() {;
         <meta
           name='description'
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
-        />;
+        />
         <meta
           property='og:title'
           content='SaaS Marketplace - Zion Tech Group'
-        />;
+        />
         <meta
           property='og:description'
           content='Curated selection of the best micro SaaS services for modern businesses.'
@@ -550,17 +573,15 @@ export default function SaaSMarketplacePage() {;
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
-
   return (
     <>
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
+<meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
         <meta property="og:title" content="SaaS Marketplace - Zion Tech Group" />
         <meta property="og:description" content="Curated selection of the best micro SaaS services for modern businesses." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
@@ -568,9 +589,7 @@ export default function SaaSMarketplacePage() {;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
         </div>
-
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
             <div className="mb-8">
@@ -579,7 +598,6 @@ export default function SaaSMarketplacePage() {;
                 Curated SaaS Solutions
               </div>
             </div>
-            
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               SaaS Marketplace
             </h1>
@@ -587,7 +605,6 @@ export default function SaaSMarketplacePage() {;
               Discover the best micro SaaS services that power modern businesses. 
               Hand-picked tools for automation, productivity, and growth.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Button
                 href="#services"
@@ -639,13 +656,8 @@ export default function SaaSMarketplacePage() {;
                 100K+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                {microSaasServices.length}+
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
             <div className="text-center group">
@@ -676,7 +688,6 @@ export default function SaaSMarketplacePage() {;
               </Button>;
             </div>;
           </div>;
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -1180,10 +1191,8 @@ function SaaSMarketplacePage() {
                 : `Discover the best ${selectedCategory && selectedCategory.toLowerCase()} tools to streamline your business operations.`}
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredServices && filteredServices.map((service, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1283,7 +1292,6 @@ function SaaSMarketplacePage() {
                         </span>;
                       </div>;
                     </div>;
-
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>;
                         {service && service.category}
@@ -1291,11 +1299,9 @@ function SaaSMarketplacePage() {
                       <span>{service && service.users} users</span>;
                       <span className='text-green-400'>{service && service.pricing}</span>;
                     </div>;
-
                     <p className='text-gray-400 leading-relaxed mb-4'>;
                       {service && service.description}
                     </p>;
-
                     <div className='mb-4'>;
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
                         Key Features:;
@@ -1304,7 +1310,6 @@ function SaaSMarketplacePage() {
                         {service && service.features;
                           .slice(0, 4);
                           .map((feature, featureIndex) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
@@ -1315,7 +1320,6 @@ function SaaSMarketplacePage() {
 
                       </div>;
                     </div>;
-
                     <div className='flex items-center justify-between'>;
 
                       <Button
@@ -1382,5 +1386,13 @@ function SaaSMarketplacePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

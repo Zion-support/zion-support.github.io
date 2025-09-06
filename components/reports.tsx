@@ -33,20 +33,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -60,6 +56,32 @@ class ErrorBoundary extends React.Component {
 }<motion && motion.div > {;
   categories && categories.map ( (category, index) => (<buttonkey= {
   index 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+=======
+import React from 'react';
+
+ </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
+  index
+}</span>) )
+}</div> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <Download className="w-5 h-5" /> <span>Download Full Report</span> </button> <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2" > <Eye className="w-5 h-5" /> <span>Preview Report</span> </button> </div> </motion.div>) )
+}</div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > All Reports </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our comprehensive research across different technology domains </p> </motion.div> {
+  /* Category Pills */
+}<motion.div > {
+  categories.map ( (category, index) => (<button key= {
+  index
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }className= {
   `px-6 py-3 rounded-full font-medium transition-all duration-200 $ {
   category && category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' 
@@ -78,7 +100,6 @@ class ErrorBoundary extends React.Component {
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) ;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReportsPage;import React from 'react';
 
 
@@ -338,11 +359,20 @@ const ReportsPage: React.FC = () => {;
           <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>;
           <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />;
         </Head>;
-
         <QuickNavigation />;
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {categories && categories.map((category) => (;
+=======
+    <UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
+          <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
+        </Head>
+        <QuickNavigation />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Link
               key={category && category.name}
               href={category && category.href}
@@ -356,7 +386,6 @@ const ReportsPage: React.FC = () => {;
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.;
             </motion && motion.p>;
-
             <motion&& motion.div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
               initial={{ opacity: 0, y: 30 }}
@@ -377,7 +406,6 @@ const ReportsPage: React.FC = () => {;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -391,10 +419,8 @@ const ReportsPage: React.FC = () => {;
                 Featured Report;
               </h2>;
             </motion && motion.div>;
-
             {reports && reports.filter(report => report && report.featured).map((report, index) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -408,7 +434,7 @@ const ReportsPage: React.FC = () => {;
       downloads: 445,
       views: 1789,
       featured: false,
-      icon: <Globe className="w - 8 h - 8" />,
+icon: <Globe className="w - 8 h - 8" />,
       color: 'from - teal - 500 to - green - 500';
     }
   ];
@@ -510,7 +536,6 @@ const ReportsPage: React.FC = () => {;
                     </div>;
                     <h3 className="text-3xl font-bold text-white mb-4">{report && report.title}</h3>;
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report && report.excerpt}</p>;
-
                     <div className="flex flex-wrap items-center gap-6 mb-6">;
                       <span className="text-gray-400 text-sm flex items-center space-x-1">;
                         <User className="w-4 h-4" />;
@@ -529,7 +554,6 @@ const ReportsPage: React.FC = () => {;
                         <span>{formatNumber(report && report.views)} views</span>;
                       </span>;
                     </div>;
-
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {report && report.tags.map((tag, tagIndex) => (;
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
@@ -565,7 +589,6 @@ const ReportsPage: React.FC = () => {;
                     </div>;
                   </div>;
                 </div>;
-
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">;
                     <Download className="w-5 h-5" />;
@@ -580,7 +603,6 @@ const ReportsPage: React.FC = () => {;
             ))}
           </div>;
         </section>;
-
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
@@ -745,7 +767,6 @@ const ReportsPage: React.FC = () => {;
                   <div className={`w-16 h-16 bg-gradient-to-br ${report && report.color} rounded-xl flex items-center justify-center text-white mb-6`}>;
                     {report && report.icon}
                   </div>;
-
                   <div className="flex items-center space-x-4 mb-4">;
                     <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">;
                       {report && report.category}
@@ -755,10 +776,8 @@ const ReportsPage: React.FC = () => {;
                       <span>{formatDate(report && report.date)}</span>;
                     </span>;
                   </div>;
-
                   <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report && report.title}</h3>;
                   <p className="text-gray-300 mb-6 line-clamp-4">{report && report.excerpt}</p>;
-
                   <div className="flex items-center justify-between mb-6">;
                     <span className="text-gray-400 text-sm flex items-center space-x-1">;
                       <FileText className="w-4 h-4" />;
@@ -769,7 +788,6 @@ const ReportsPage: React.FC = () => {;
                       <span>{formatNumber(report && report.downloads)}</span>;
                     </span>;
                   </div>;
-
                   <div className="flex items-center justify-between">;
                     <span className="text-gray-400 text-sm flex items-center space-x-1">;
                       <User className="w-4 h-4" />;

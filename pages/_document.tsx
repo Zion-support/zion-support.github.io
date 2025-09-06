@@ -44,8 +44,9 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       </Head>
       <body>
         <Main />
@@ -72,7 +73,6 @@ export default function Document() {;
         <link
           href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
           rel='stylesheet'
-=======
 import {Html, Head, Main, NextScript} from 'next / document';
 export default /**
  * Document - Function description

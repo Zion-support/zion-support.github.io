@@ -32,7 +32,6 @@ export default async function handler(
     "Ask & Call to Action",
   ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
@@ -40,6 +39,15 @@ Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
+Operator Prompt: ${operatorPrompt}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+Company Mission: ${inputs?.mission}
+Key Metrics: ${JSON && JSON.stringify(metrics)}
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
@@ -60,8 +68,6 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
 
   }
 }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
@@ -86,8 +92,6 @@ function extractSection(body: string, title: string): string {
   return ''
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {

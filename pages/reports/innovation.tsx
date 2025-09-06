@@ -82,12 +82,27 @@ const InnovationPage: React.FC = () => {
       impact: 'high';
     },
     {
-      id: 'comprehensive - redundancy - 2025 - 01 - 16',
-      title: 'Comprehensive Redundancy System',
-      date: '2025 - 01 - 16',
-      summary: 'Multi - layer redundancy architecture for maximum uptime',
-      status: 'deployed',
-      impact: 'critical';
+      category: 'Cloud Infrastructure',
+      innovations: [
+        { name: 'Multi-Region Redundancy', status: 'active', impact: 'high', description: 'Geographic failover systems' },
+        { name: 'Auto-Scaling', status: 'active', impact: 'medium', description: 'Dynamic resource allocation' },
+        { name: 'Load Balancing', status: 'active', impact: 'high', description: 'Intelligent traffic distribution' },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery' }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      ]
     },
     {
       id: 'github - actions - automation - 2025 - 01 - 15',
@@ -105,12 +120,17 @@ const InnovationPage: React.FC = () => {
       name: 'Quantum Computing Integration',
       description: 'Exploring quantum algorithms for optimization problems',
       timeline: 'Q2 2025',
+<<<<<<< HEAD
       status: 'research';
+=======
+      status: 'research'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Edge Computing Network',
       description: 'Distributed computing for improved global performance',
       timeline: 'Q3 2025',
+<<<<<<< HEAD
       status: 'planning';
     },
     {
@@ -154,7 +174,6 @@ const InnovationPage: React.FC = () => {
 =======
 ;
   const getImpactColor = (impact: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (impact) {
 
       case 'critical': return 'bg-red-500/20 text-red-400';

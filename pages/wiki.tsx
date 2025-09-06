@@ -33,7 +33,8 @@ import {
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
-  operator_prompt,
+<<<<<<< HEAD
+operator_prompt,
   slugify} from '../utils / data / zion_content',
 /**
  * CopyButton - Function description
@@ -60,8 +61,6 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-
-=======
 export default /**
  * WikiPage - Function description
  */
@@ -69,7 +68,6 @@ function WikiPage() {
   const wiki = useMemo (() => generateZionWiki (), []),
   const md = useMemo (() => buildMarkdownFromWiki (wiki), [wiki]),
   const wikitext = useMemo (() => buildWikitextFromWiki (wiki), [wiki]),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="grid grid - cols - 1 lg:grid - cols-[260px, 1fr] gap - 8">;
       <aside className="sticky top - 20 self - start hidden lg:block">;
@@ -149,7 +147,11 @@ function WikiPage() {
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ol>
 
 

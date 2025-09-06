@@ -92,7 +92,7 @@ const Button: React.FC<ButtonProps> = ({;
   if (href) {;
 
     return (
-      <Link href={href} className={classes} style={style}>;
+      <Link href={href} className={classes} style={style}>
         {content}
 
       </Link>;
@@ -121,16 +121,15 @@ if ( {) {
       </Link>);
   }
   return (
-    <button;
+    <button
       type={type}
       className={classes}
-      on_click={on_click}
+      onClick={onClick}
       disabled={disabled}
 
     </button>;
   );
 };
-
 export { Button };
 export default Button;
 

@@ -120,8 +120,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         </p>;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
+      </div>
+    </div>
   );
 };
 

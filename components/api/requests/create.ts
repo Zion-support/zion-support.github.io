@@ -22,20 +22,45 @@ export const Create = () => {
 }];
 =======
   role: 'system', content: 'You are a helpful assistant.'
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
 async function loadRequests(): Promise<any[]> {
   try {
-    const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
+const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
     return JSON.parse(raw)
   } catch {
     return []
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+ const response = await client.chat.completions.create ({
+  model: 'gpt-4o-mini';
+messages: [ {
+  role: 'system', content: 'You are a helpful assistant.'
+}
+=======
+ const response = await client.chat.completions.create ({
+  model: 'gpt-4o-mini';
+messages: [ {
+  role: 'system', content: 'You are a helpful assistant.' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 {
   role: 'user', content: prompt
 }];
@@ -51,7 +76,6 @@ const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
       return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 =======
 }
@@ -117,6 +141,29 @@ function summarizeWithOpenAI() {
     const content = response.choices[0]?.message?.content || '';
 
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
+    const response = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'user', content: prompt }],
+      temperature: 0.3}),
+    const content = response.choices[0]?.message?.content || ''
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im)
+
+=======
+  }
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { name, email, budget, timeline, description, talentSlug } =
+    req.body |{}
+  if (!name |!email |!description)
+    return res.status(400).json({ error: 'Missing required fields' });    const content = response.choices[0]?.message?.content |'';
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
@@ -124,7 +171,6 @@ function summarizeWithOpenAI() {
 
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
-
   const { name, email, budget, timeline, description, talentSlug } =
     req && req.body || {};
   if (!name || !email || !description)
@@ -158,7 +204,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const requests = await loadRequests();
   const now = new Date().toISOString();
   const id = `req_${Date && Date.now()}`;
-=======
     const content = response.choices[0]?.message?.content || '';
     const type_match = content.match (/type\s*:\s*(.+)$/im);
     return {
@@ -275,6 +320,8 @@ function handler() {
 ;
   // TODO: Integrate notifications (email / webhook) for admin and talent;
 return res.status (200).json ({ id, status: 'ok' });
+
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

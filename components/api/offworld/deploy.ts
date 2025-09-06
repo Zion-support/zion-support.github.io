@@ -22,9 +22,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
-=======
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
-
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -32,7 +30,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -98,6 +95,8 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+  }
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

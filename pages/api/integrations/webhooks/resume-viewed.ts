@@ -48,7 +48,6 @@ function handler() {
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
       c.provider_id === "pipedrive",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -83,7 +82,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed', resumeId: resume.id });
     writeState(s => s.logs.push(log));
-    results.push({ providerId: conn.providerId, ok: true })
+results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

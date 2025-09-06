@@ -102,6 +102,7 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

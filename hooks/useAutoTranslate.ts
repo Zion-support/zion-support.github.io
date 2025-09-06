@@ -16,7 +16,6 @@ export type UseAutoTranslateResult = {
   loading: boolean,
   error?: string
 };
-
 export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -26,7 +25,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 
 
   const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-
   useEffect(() => {
     if (!text || targets && targets.length === 0) {
 
@@ -58,7 +56,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         if (set_error (e?.message || 'Translation failed')) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         if (set_loading (false)) {
   $2
@@ -79,4 +76,8 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 ;
   return { translations, loading, error }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }
+  }, [key, debounce_ms]);
+;
+  return { translations, loading, error }
+}

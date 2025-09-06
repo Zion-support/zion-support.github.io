@@ -24,6 +24,7 @@ function handler() {
   $2
 }
   res.status (200).json ({ allowed: allowlist.has (address) });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

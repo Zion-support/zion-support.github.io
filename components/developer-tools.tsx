@@ -68,7 +68,6 @@ import {
   Cloud,
   Shield,
   Zap,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Star;
   ExternalLink;
   CheckCircle;
@@ -79,12 +78,17 @@ import {
 
 
       icon: <Code className="w-8 h-8 text-white" />,
+
+export default function DeveloperToolsPage() {_const _developerTools = [
+    {
+      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
+<<<<<<< HEAD
         'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
-=======
-  Globe;
+Globe;
 export default /**
  * DeveloperToolsPage - Function description
  */
@@ -456,13 +460,11 @@ export default function DeveloperToolsPage() {;
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]' />;
         <div className='absolute inset-0 bg-grid opacity-10' />;
-
         <div className='relative z-10 container-cursor text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>;
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />;
@@ -475,13 +477,11 @@ export default function DeveloperToolsPage() {;
             Curated developer tools and services that professionals use daily.;
             Each tool has been tested and verified to provide real value for;
             developers and development teams.          </p>      </Head>;
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]" />;
         <div className="absolute inset-0 bg-grid opacity-10" />;
-
         <div className="relative z-10 container-cursor text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">;
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />;
@@ -496,7 +496,6 @@ export default function DeveloperToolsPage() {;
           </p>;
         </div>;
       </section>;
-
       {/* Developer Market Statistics */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -504,7 +503,6 @@ export default function DeveloperToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
         <meta;
           name='description';
           content='Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links.';
@@ -579,7 +577,6 @@ export default function DeveloperToolsPage() {;
               Understanding the developer tools landscape helps you make informed decisions about your development stack.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {devMarketStats.map((stat, index) => (
               <Card
@@ -588,6 +585,37 @@ export default function DeveloperToolsPage() {;
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
+=======
+      {/* Developer Market Statistics */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the developer tools landscape helps you make
+              informed decisions about your development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
+            {devMarketStats.map((stat, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue text-center'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-lg font-semibold text-white mb-3'>
+                    {stat.title}
+                  </h3>
+                  <div className='text-2xl font-bold text-cursor-blue mb-2'>
+                    {stat.value}
+                  </div>
+                  <div className='text-sm text-green-400 mb-3'>
+                    {stat.growth}
+                  </div>
+                  <p className='text-sm text-gray-400'>{stat.description}</p>                </div>                <div className="p-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
@@ -618,25 +646,17 @@ export default function DeveloperToolsPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools.map((tool, index) => (              Curated Developer Tools & Services
-=======
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Curated Developer Tools & Services
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {developerTools.map((tool, index) => (
-=======
           </div>;
         </div>;
       </section>;
-
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -649,14 +669,12 @@ export default function DeveloperToolsPage() {;
               reliability, and real-world developer usage.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools && developerTools.map((tool, index) => (              Curated Developer Tools & Services;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {developerTools && developerTools.map((tool, index) => (;
 
@@ -677,7 +695,6 @@ export default function DeveloperToolsPage() {;
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
-
                   <div className='flex-1'>;
                     <div className='flex items-center justify-between mb-2'>;
                       <h3 className={`text-2xl font-bold ${tool && tool.textColor}`}>;
@@ -687,11 +704,9 @@ export default function DeveloperToolsPage() {;
                         {tool && tool.category}
                       </span>;
                     </div>;
-
                     <p className='text-gray-400 leading-relaxed mb-6'>;
                       {tool && tool.description}
                     </p>;
-
                     <div className='mb-6'>;
                       <div className='flex items-center justify-between mb-3'>;
                         <span className='text-sm text-gray-500'>;
@@ -710,7 +725,6 @@ export default function DeveloperToolsPage() {;
                         </span>;
                       </div>;
                     </div>;
-
                     <ul className='space-y-2 mb-6'>;
                       {tool && tool.features.map((feature, featureIndex) => (;
                         <li
@@ -720,7 +734,6 @@ export default function DeveloperToolsPage() {;
                     </div>;
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
                   </div>;
-
                   <div className="flex-1">;
                     <div className="flex items-center justify-between mb-2">;
                       <h3 className={`text-2xl font-bold ${tool && tool.textColor}`}>;
@@ -730,11 +743,9 @@ export default function DeveloperToolsPage() {;
                         {tool && tool.category}
                       </span>;
                     </div>;
-
                     <p className="text-gray-400 leading-relaxed mb-6">;
                       {tool && tool.description}
                     </p>;
-
                     <div className="mb-6">;
                       <div className="flex items-center justify-between mb-3">;
                         <span className="text-sm text-gray-500">Service Price:</span>;
@@ -745,7 +756,6 @@ export default function DeveloperToolsPage() {;
                         <span className="text-sm text-gray-400">{tool && tool.marketPrice}</span>;
                       </div>;
                     </div>;
-
                     <ul className="space-y-2 mb-6">;
                       {tool && tool.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300">;
@@ -756,7 +766,6 @@ export default function DeveloperToolsPage() {;
                       ))}
 
                     </ul>;
-
                     <div className='flex items-center justify-between'>;
 
                       <Button
@@ -797,6 +806,7 @@ export default function DeveloperToolsPage() {;
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -841,7 +851,6 @@ export default function DeveloperToolsPage() {;
           </div>;
         </div>;
       </section>;
-
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -850,7 +859,6 @@ export default function DeveloperToolsPage() {;
               Complete Developer Workflow;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
                       </span>;
                     </div>;
                     <p className="text - gray - 400 leading - relaxed mb - 6">;
@@ -915,7 +923,6 @@ export default function DeveloperToolsPage() {;
               Complete Developer Workflow;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
             </p>;
@@ -925,6 +932,32 @@ export default function DeveloperToolsPage() {;
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+=======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Developer Workflow */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Complete Developer Workflow
 
             </h2>
@@ -934,17 +967,14 @@ export default function DeveloperToolsPage() {;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {devWorkflow.map((phase, index) => (
-=======
                         className='text-sm text-cursor-blue font-medium'>                        {tool}              Complete Developer Workflow;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Build a complete development pipeline with these essential tools that work together seamlessly.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {devWorkflow && devWorkflow.map((phase, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -983,7 +1013,6 @@ export default function DeveloperToolsPage() {;
           </div>;
         </div>;
       </section>;
-
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -991,7 +1020,6 @@ export default function DeveloperToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {dev_workflow.map ((phase, index) => (
               <Card;
@@ -1049,7 +1077,6 @@ export default function DeveloperToolsPage() {;
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Understanding the different types of developer tools helps you;
               build a comprehensive development stack.;
             </p>;
@@ -1066,7 +1093,6 @@ export default function DeveloperToolsPage() {;
               Understanding the different types of developer tools helps you build a comprehensive development stack.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {devCategories.map((category, index) => (
               <Card
@@ -1075,6 +1101,59 @@ export default function DeveloperToolsPage() {;
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
+=======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Tool Categories */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+              Developer Tool Categories
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of developer tools helps you
+              build a comprehensive development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {devCategories.map((category, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {category.name}
+                  </h3>
+                  <p className='text-gray-400 mb-4'>{category.description}</p>
+                  <div className='flex items-center justify-between text-sm'>
+                    <span className='text-gray-500'>
+                      Tools Available:{' '}
+                      <span className='text-white'>{category.tools}</span>
+                    </span>
+                    <span className='text-cursor-blue font-semibold'>
+                      {category.avgPrice}
+                    </span>                  </div>                <div className="p-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
                   <p className="text-gray-400 mb-4">{category.description}</p>
                   <div className="flex items-center justify-between text-sm">
@@ -1144,16 +1223,22 @@ export default function DeveloperToolsPage() {;
             and integrate seamlessly with your existing workflow.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
+<Button
               href="/ai-tools"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
+            <Button
+              href=&quot;/ai-tools&quot;
+              variant=&quot;primary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-cursor-blue hover:bg-cursor-blue-dark&quot;
+
             >
               Explore AI Tools
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"

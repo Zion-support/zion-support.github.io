@@ -26,5 +26,21 @@ export const lazyLoadComponents = () => {
 
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+  });
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...')
+}
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`);
+
+  };
+
+  return { loadComponent };
+};
+

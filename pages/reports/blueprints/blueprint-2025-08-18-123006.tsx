@@ -31,21 +31,33 @@ const Blueprint20250818123006: React.FC = () => {
       description: 'Primary edge node with high availability',
       status: 'active',
       health: 'excellent',
+<<<<<<< HEAD
       latency: '15ms';
+=======
+      latency: '15ms'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Europe',
       description: 'Secondary edge node for EU traffic',
       status: 'active',
       health: 'excellent',
+<<<<<<< HEAD
       latency: '25ms';
+=======
+      latency: '25ms'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Asia Pacific',
       description: 'Edge node for APAC region',
       status: 'active',
       health: 'excellent',
+<<<<<<< HEAD
       latency: '35ms';
+=======
+      latency: '35ms'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'South America',
@@ -62,18 +74,27 @@ const Blueprint20250818123006: React.FC = () => {
       feature: 'Global Load Balancing',
       description: 'Intelligent traffic routing based on location and performance',
       benefit: 'Reduced latency and improved user experience',
+<<<<<<< HEAD
       status: 'implemented';
+=======
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Content Delivery',
       description: 'Edge caching and content distribution',
       benefit: 'Faster content delivery worldwide',
+<<<<<<< HEAD
       status: 'implemented';
+=======
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Failover Management',
       description: 'Automatic failover between edge nodes',
       benefit: 'High availability and reliability',
+<<<<<<< HEAD
       status: 'implemented';
     },
     {
@@ -113,7 +134,6 @@ const Blueprint20250818123006: React.FC = () => {
 =======
 ;
   const getHealthColor = (health: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (health) {
 
       case 'excellent': return 'bg-green-500/20 text-green-400';

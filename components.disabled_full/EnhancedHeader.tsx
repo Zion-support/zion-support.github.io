@@ -51,7 +51,6 @@ export default function EnhancedHeader() {
     { "name": 'Blog', "href": '/blog' },
     { "name": 'Contact', "href": '/contact' },
   ];
-  
     >
       {' '}
 

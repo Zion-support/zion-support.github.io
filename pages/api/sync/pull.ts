@@ -36,6 +36,16 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt,
     events,
     scope: requested_scope});
+
+  const scoped = filterEventsByScope(state.events, state.config.scope),
+  const events = scoped.filter((e) => (e.timestamp || 0) > since)
+
+  return res.status(200).json({
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+    scope: requestedScope})
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

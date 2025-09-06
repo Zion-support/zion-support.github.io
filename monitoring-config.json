@@ -1,16 +1,11 @@
 {
   "healthCheck": {
     "interval": 30000,
-    "endpoints": [
-      "/api/health"
-    ]
+    "endpoints": ["/api/health"]
   },
   "performance": {
     "interval": 60000,
-    "metrics": [
-      "responseTime",
-      "memoryUsage"
-    ]
+    "metrics": ["responseTime", "memoryUsage"]
   },
   "errorTracking": {
     "enabled": true,

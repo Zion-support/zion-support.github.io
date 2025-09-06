@@ -165,6 +165,7 @@ if ( {) {
 
 
 },
+
 export default ActiveFiltersBar,
 
         className="text-xs h-6 px-2">;
@@ -190,17 +191,3 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-      </button>
-    </div>
-  )}
-'"
-
-  filters: Filter[];
-  onRemoveFilter: key: string void;
-  onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
-      >;
-        Clear all;
-      </button>;
-    </div>)}
-'";

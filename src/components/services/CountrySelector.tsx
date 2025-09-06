@@ -14,8 +14,3 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
               ))}          </div>              .map((item) => (
               .sort((a, b,) => a.country.localeCompare(b.country))
               .map((item,) => (
-
-;
-
-          </div>;
-;

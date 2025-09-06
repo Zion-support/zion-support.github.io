@@ -46,11 +46,15 @@ export default async function handler(
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;
+=======
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
   } catch {
     return [];
   }
+<<<<<<< HEAD
 /**
  * write_all - Function description
  */
@@ -79,6 +83,7 @@ if (return res.status (404).json ({ error: 'Not found' })) {
   items[idx] = { ...items[idx], status, updated_at: new Date ().toISOString () }
   write_all (items);
   res.status (200).json ({ ok: true });  res.status (200).json ({ ok: true });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
