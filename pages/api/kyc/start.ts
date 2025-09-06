@@ -3,43 +3,11 @@ import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-const DATA_DIR = path.join(process.cwd(), 'datakyc');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const FILE = path.join(DATA_DIR, 'profiles.json');
-
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return JSON.parse(raw);
-=======
-    return JSON.parse(raw)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  } catch {
-    return {}
-  }
-}
-
-function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const {
-=======
     return JSON.parse(raw)
   } catch {
     return {}
@@ -47,14 +15,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.mkdirSync(DATA_DIR, { recursive: true }),
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status($1).json({$2});
   const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
     userId?: string;
     role?: KycRole;
@@ -62,100 +28,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName?: string;
     businessRegistrationNumber?: string
   };
-  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' });
-
+  if (!userId || !role) return res.status($1).json({$2});
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
   const profile: KycProfile = existing || {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     userId,
     role,
     fullLegalName,
     businessName,
-    businessRegistrationNumber,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } = req.body as {
-    userId?: string;
-    role?: KycRole;
-    fullLegalName?: string;
-    businessName?: string;
-    businessRegistrationNumber?: string;
-  };
-  if (!userId || !role)
-    return res.status(400).json({ error: 'Missing userId or role' });
-
-  const db = load();
-  const now = new Date().toISOString();
-  const existing = db[userId];
-  const profile: KycProfile =
-    existing ||
-    ({
-      userId,
-      role,
-      fullLegalName,
-      businessName,
-      businessRegistrationNumber,
-      documents: [],
-      status: 'in_progress',
-      amlStatus: 'unknown',
-      createdAt: now,
-      lastUpdatedAt: now,
-      auditTrail: [{ at: now, by: userId, action: 'kyc_started' }],
-    } as KycProfile);
-=======
-    documents: [], status: 'in_progress',
-    amlStatus: 'unknown', createdAt: now,
-    lastUpdatedAt: now,
-    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+    businessRegistrationNumber;
     documents: [],
     status: 'in_progress',
     amlStatus: 'unknown',
     createdAt: now,
     lastUpdatedAt: now,
-    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
-  } as KycProfile;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
+    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (businessRegistrationNumber)
-    profile.businessRegistrationNumber = businessRegistrationNumber;
-=======
   if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-
   res.status(200).json({
-<<<<<<< HEAD
     ok: true,
-    profile,
-    requiredDocuments: getRequiredDocuments(role),
-<<<<<<< HEAD
-    optionalDocuments: getOptionalDocuments(role),
-  });
-=======
-    ok: true, profile,
+    profile;
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    optionalDocuments: getOptionalDocuments(role)
-  })
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

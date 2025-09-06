@@ -49,7 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
     }
 
-    const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
+    const at = new AccessToken(LIVEKIT_API_KEY; LIVEKIT_API_SECRET, {
       identity: String(identity),
       name: name ? String(name) : String(identity),
 <<<<<<< HEAD

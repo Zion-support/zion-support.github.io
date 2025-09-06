@@ -1,13 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 async function fetchFromGitHub(): Promise<any | null> {
   try {
     const pkg = require('../../../package.json');
@@ -17,33 +10,8 @@ async function fetchFromGitHub(): Promise<any | null> {
     const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
     if (!owner || !repo) return null;
     const pathFile = 'public/autonomy/HOMEPAGE_CONTENT.json';
-    const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${pathFile}`;
+    const rawUrl = `https: //raw.githubusercontent.com/${owner}/${repo}/main/${pathFile}`;
     const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (process.env.GITHUB_TOKEN)
-      headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
-=======
-    if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    const resp = await fetch(rawUrl, { headers });
-    if (!resp.ok) return null;
-    return await resp.json()
-  } catch {
-    return null
-  }
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
-  try {
-    const localPath = path.join(process.cwd(), 'publicautonomyHOMEPAGE_CONTENT.json');
-    if (fs.existsSync(localPath)) {
-      try {
-        const json = JSON.parse(fs.readFileSync(localPath, 'utf8'));
-<<<<<<< HEAD
-        return res.status(200).json(json);
-=======
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     const resp = await fetch(rawUrl, { headers });
     if (!resp.ok) return null;
@@ -61,33 +29,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       try {
         const json = JSON.parse(fs.readFileSync(localPath, 'utf8'));
         return res.status(200).json(json)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        return res.status(200).json(json)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       } catch {
         // fall back to remote
       }
     }
     const remote = await fetchFromGitHub();
     if (remote) return res.status(200).json(remote);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status(200).json(null);
-=======
-    return res.status(200).json(null)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'Internal error' })
-  }
-<<<<<<< HEAD
-=======
     return res.status(200).json(null)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
