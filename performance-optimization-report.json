@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-06T23:48:52.608Z",
+  "timestamp": "2025-09-06T23:55:31.040Z",
   "optimizations": [
     {
       "type": "code-splitting",
@@ -2374,7 +2374,7 @@
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-code-reviewer/page.tsx",
-      "size": 7542,
+      "size": 7460,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -2398,13 +2398,13 @@
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-meeting-assistant/page.tsx",
-      "size": 5894,
+      "size": 6327,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-powered-crm/page.tsx",
-      "size": 8912,
+      "size": 10613,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -2416,7 +2416,7 @@
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-services/page.tsx",
-      "size": 10042,
+      "size": 9759,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -2446,7 +2446,7 @@
     {
       "type": "large-component",
       "file": "/workspace/app/services/micro-saas/page.tsx",
-      "size": 8928,
+      "size": 8645,
       "recommendation": "Consider splitting this component"
     },
     {

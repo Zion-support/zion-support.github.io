@@ -1,12 +1,11 @@
-
-import { render, screen } from '@testing - library / react';
+import { render, screen } from '@testing - library / react;
 import WalletPage from '@/pages / Wallet';
-import { vi } from 'vitest';
-import * as useWalletHook from '@/hooks / use_wallet';
+import { vi } from vitest';
+import * as useWalletHook from '@/hooks / use_wallet;
 describe ('WalletPage', () => {
-  it ('renders balance heading', () => {
-    vi.spy_on (useWalletHook, 'use_wallet').mockReturnValue ({
-      wallet: { user_id: '1', balance: 100, updated_at: '' }
+  it (renders balance heading', () => {
+    vi.spy_on (useWalletHook, 'use_wallet).mockReturnValue ({
+      wallet: { user_id: '1', balance: 100, updated_at: ' }
       transactions: [];
       loading: false;
       fetch_wallet: vi.fn ();
@@ -15,14 +14,11 @@ describe ('WalletPage', () => {
       spend_tokens: vi.fn ()} as any);
     render (<WalletPage />);
     expect (
-      screen.getByRole ('heading', { name: /balance / i })).toBeInTheDocument ();
+      screen.getByRole ('heading, { name: /balance / i })).toBeInTheDocument ();
   });
-});describe('WalletPage', () => {
-  it('renders balance heading', () => {
-    vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
-      wallet: { user_id: '1', balance: 100, updated_at: '' };
-      transactions: [];
-      loading: false;
+});describe('WalletPage', () => {, () => {
+    vi.spyOn(useWalletHook, 'useWallet).mockReturnValue({
+      wallet: { user_id: '1', balance: 100, updated_at: ' };
       fetchWallet: vi.fn();
       fetchTransactions: vi.fn();
       earnTokens: vi.fn();
@@ -32,4 +28,3 @@ describe ('WalletPage', () => {
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
-});
