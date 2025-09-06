@@ -3,6 +3,7 @@ import {
 
   FormField,
 FormField,
+FormField,
   FormItem,
   FormLabel,
   FormControl,
@@ -74,6 +75,22 @@ function CertificationFormFields() {
             </FormItem>)}
         />;
         <FormField;
+render={({ field }) => (
+            <FormItem>
+              <FormLabel>Issuing Organization</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Amazon Web Services, PMI, etc."
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <FormField
           control={form.control}
           name="issuing_organization";
 
@@ -92,6 +109,13 @@ function CertificationFormFields() {
               <FormLabel>Issue Date</FormLabel>;
               <FormControl>;
                 <Input
+/>;
+        <FormField;
+
+        />
+        <FormField
+        />;
+        <FormField;
           control={form.control}
           name="expiration_date"
           render={({ field }) => (
@@ -135,6 +159,7 @@ function CertificationFormFields() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
             <FormItem>;
@@ -224,5 +249,42 @@ function CertificationFormFields() {
 }
 ;
 
+<FormItem>
+              <FormLabel>Credential URL (Optional)</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="https://www.credential.com/verify/abc123"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+    </>
+  );
+}
+;
+
+  ),;}
+ </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Issue Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Expiration Date (Optional) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Credential window.URL (Optional) </FormLabel> <FormControl> </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> </>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
 }
 ;

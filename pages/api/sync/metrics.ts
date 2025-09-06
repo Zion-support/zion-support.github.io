@@ -4,17 +4,13 @@ import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
+const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-
-
-=======
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -26,25 +22,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
 
-<<<<<<< HEAD
 
-  const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
-  let globalVotes = 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -58,8 +50,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
+const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
@@ -67,14 +59,12 @@ import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
+const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-=======
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -87,16 +77,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-  const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
-  let globalVotes = 0
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
@@ -106,7 +88,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -204,17 +186,14 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
+
 }
 }
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
       const p = e.payload as any
 

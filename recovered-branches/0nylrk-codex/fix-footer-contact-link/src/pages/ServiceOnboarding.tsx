@@ -54,6 +54,7 @@ export default function ServiceOnboarding() {
             </p>;
           </div>;
 
+;
           <ServiceProviderRegistrationForm />;
         </div>;
       </div>;
@@ -62,6 +63,7 @@ export default function ServiceOnboarding() {
     </>);
 }
 
+;
     </>;
   ); export default function ServiceOnboarding () {
   const {

@@ -17,6 +17,12 @@ export type MeetingPlatform =
 
 export interface Interview {;
 
+| 'cancelled';
+export type InterviewType = 'video' | 'phone' | 'in-person';
+export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+export interface Interview {
+
+export interface Interview {;
 export interface Interview {
   id: string;
   client_id: string;
@@ -46,6 +52,8 @@ export interface InterviewRequest {;
 export interface InterviewRequest {
 
 export interface InterviewRequest {;
+}
+export interface InterviewRequest {
   talent_id: string;
   client_id: string;
   scheduled_date: string;

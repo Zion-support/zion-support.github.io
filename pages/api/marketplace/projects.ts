@@ -1,10 +1,14 @@
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -35,6 +39,8 @@ import { getProjectById, saveProject } from "../../../utils/marketplace/store"
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types"
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res && res.status(code).json({ ok: false, error: message });
 }
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
@@ -42,10 +48,10 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
+
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -66,13 +72,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-<<<<<<< HEAD
-=======
+
     if (req && req.method === "PATCH") {
       const { action } = req && req.body as { action: string };
       if (action === "add_note") {
@@ -371,7 +376,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
 
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -397,11 +402,11 @@ function bad(res: NextApiResponse, message: string, code = 400) {
     ok: false
     error: message
   });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
-import { getProjectById, saveProject } from "../../../utils/marketplace/store"
-import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types"
+import type { NextApiRequest, NextApiResponse } from "next",
+import { v4 as uuidv4 } from "uuid",
+import { getDemoUser } from "../../../utils/marketplace/auth",
+import { getProjectById, saveProject } from "../../../utils/marketplace/store",
+import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
@@ -412,11 +417,12 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     return true;
   return false;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -450,6 +456,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project);
         return res.json({ ok: true, project });
       }
+if (action === "add_document") {
+        const { name, url } = req.body as { name: string; url?: string }
+        if (!name) return bad(res, "Missing name");
         project.documents.push(doc);
         saveProject(project);
         return res.json({ ok: true, project });
@@ -541,11 +550,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
 }
 }
   } catch (error) {
@@ -566,4 +574,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+}
+
+  }
+}

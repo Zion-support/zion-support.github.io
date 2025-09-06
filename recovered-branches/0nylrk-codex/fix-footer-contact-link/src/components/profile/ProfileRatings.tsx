@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -51,6 +52,10 @@ export function ProfileRatings({
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;
+// Fetch reviews when component mounts
+  useEffect(() => {
+    fetchUserReviews(userId);
+  }, [userId]);
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

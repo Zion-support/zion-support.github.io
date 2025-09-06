@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
@@ -46,6 +47,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           .select("id, status")
           .eq("project_id", projectId),
         
+query = query && query.order("status", { ascending: true });
 
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
@@ -54,8 +56,13 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         // Order by status priority: open, under_review, resolved, closed
 
         query = query && query.order("status", { ascending: true });
-        
 
+        const { data, error } = await query;
+        if (error) throw error;
+query = query.eq("milestone_id", milestoneId)
+        }
+        // Order by status priority: open, under_review, resolved, closed
+        query = query.order("status", { ascending: true });
         const { data, error } = await query;
         if (error) throw error;
         query = query.order("status", { ascending: true }),
@@ -63,8 +70,11 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         const { data, error } = await query,
         
         if (error) throw error,
-        
-
+// If milestone ID is provided, filter by that too
+        if (milestoneId) {
+          query = query && query.eq("milestone_id", milestoneId)
+        }
+        // Order by status priority: open, under_review, resolved, closed
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true),
@@ -139,6 +149,17 @@ if ( {) {
       }
     }
 
+if (data && data.length > 0) {
+          // Get the first dispute (highest priority based on status)
+          setIsUnderDispute(true),
+          setDisputeStatus(data[0].status as any),
+          setDisputeId(data[0].id)
+        } else {
+          setIsUnderDispute(false),
+          setDisputeStatus(null),
+          setDisputeId(null)
+        }
+      } catch (err) {
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
@@ -148,6 +169,19 @@ if ( {) {
 
     isLoading 
 
+isLoading 
+
+      }
+    }
+    checkDispute()
+  }, [projectId, milestoneId]);
+  return {
+    isUnderDispute
+    disputeStatus
+    disputeId;
+    isLoading
+
+    isLoading
     isLoading
 
     isLoading 
@@ -173,6 +207,18 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   }, [project_id, milestone_id]);
 ;
 
+;
+      try {;
+        setIsLoading(true),;
+        let query = supabase;
+          .from("disputes");
+          .select("id, status");
+          .eq("project_id", projectId),;
+        // If milestone ID is provided, filter by that too;
+        if (milestoneId) {;
+          query = query.eq("milestone_id", milestoneId);
+        }
+;
         // Order by status priority: open, under_review, resolved, closed;
         query = query.order("status", { ascending: true }),;
         const { data, error } = await query,;
@@ -206,6 +252,11 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 
   }
 }
+return {
+    isUnderDispute,
+    dispute_status,
+    dispute_id;
+    is_loading;
   }
 }
 

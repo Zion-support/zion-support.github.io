@@ -54,6 +54,9 @@ export interface Budget {
 
 export interface QuoteFormData {;
 
+export interface QuoteFormData {
+
+export interface QuoteFormData {;
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;

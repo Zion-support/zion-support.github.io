@@ -89,6 +89,9 @@ function TimelineField() {
       control={form.control}
       name="timeline";
 
+<FormField;
+      control={form.control}
+      name="timeline";
       render={({ field }) => (
         <FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
@@ -124,6 +127,9 @@ function TimelineField() {
   );
 }
 
+</FormItem>)}
+    />);
+}
                     {option.label}
                   </SelectItem>
                 ))}

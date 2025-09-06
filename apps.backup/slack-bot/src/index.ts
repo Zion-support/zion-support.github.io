@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 import fetch from 'node - fetch';
 dotenv.config (),
 const api_base = process.env.API_ORIGIN || 'http: //localhost:4000';
@@ -20,14 +17,13 @@ function help_text (): string {
   return [;
     '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
   ].join ('\n');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -100,13 +96,8 @@ if ( {) {
   console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })(),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
 import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -254,15 +245,13 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })(),
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -279,18 +268,14 @@ function helpText(): string {;
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';
   ].join('\n');
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -341,19 +326,12 @@ app.command('/zion', async ({ command, ack, respond }) => {;
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {;
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 })
 (async () => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 }),;
 (async () => {;
   const port = Number(process.env.SLACK_PORT || 3001),;
@@ -361,24 +339,21 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   // eslint-disable-next-line no-console;
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -448,12 +423,10 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })
 (async () => {
 import { App } from '@slack / bolt';
-<<<<<<< HEAD
+
+
+
 import dotenv from 'dotenv';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import dotenv from 'dotenv';
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

@@ -1,4 +1,9 @@
-slug: "ai-trends-2025",
+import { BlogPost } from "@/types/blog";
+import { BlogPost } from '@/types/blog';
+// Sample blog data - in a real app this would come from an API or CMS
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
@@ -143,6 +148,19 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Marketing',
     tags: ['Marketing', 'AI Services', 'Visibility', 'SEO'],
   },
+<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`
+      name: 'Marcus Johnson'
+      title: 'Marketing Strategist'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200'
+    }
+    publishedDate: 'Apr 10, 2025'
+    readTime: '8 min read'
+    category: 'Marketing'
+    tags: ['Marketing', 'AI Services', 'Visibility', 'SEO']
+    featuredImage:
+      'https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630'
+  }
   {
     title: "Green IT: Reducing Your Data Center's Carbon Footprint";
     slug: "green - it";
@@ -200,6 +218,25 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:;
       'A comprehensive guide to integrating ethical considerations into your AI development lifecycle.',    content: `<p > As AI systems become more prevalent in critical decision - making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>    id: "ai - ethics - frameworks";
 
+<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`
+      name: 'Sophia Chen'
+      title: 'Sustainability Engineer'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200'
+    }
+    publishedDate: 'Apr 5, 2025'
+    readTime: '6 min read'
+    category: 'Sustainability'
+    tags: ['Green IT', 'Sustainability', 'Data Centers', 'Energy Efficiency']
+    featuredImage:
+      'https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630'
+  }
+  {
+    id: 'ai-ethics-frameworks'
+    title: 'Implementing Ethical AI Frameworks in Enterprise Applications'
+    slug: 'ai-ethics-frameworks'
+    excerpt:
+      'A comprehensive guide to integrating ethical considerations into your AI development lifecycle.',    content: `<p>As AI systems become more prevalent in critical decision-making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>    id: "ai-ethics-frameworks";
     title: "Implementing Ethical AI Frameworks in Enterprise Applications";
     slug: "ai - ethics - frameworks";
     excerpt: "A comprehensive guide to integrating ethical considerations into your AI development lifecycle.";
@@ -216,6 +253,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
 
+<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
     author: {
       name: "Sophia Chen",
@@ -294,9 +332,39 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:;
       'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai - compute - optimization";
 
+<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`
+      name: 'Elena Rodriguez'
+      title: 'Head of AI Talent'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200'
+    }
+    publishedDate: 'Mar 22, 2025'
+    readTime: '9 min read'
+    category: 'Recruitment'
+    tags: ['AI Talent', 'Recruitment', 'Tech Hiring', 'Retention']
+    featuredImage:
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630'
+  }
+  {
+    id: 'ai-compute-optimization'
+    title: 'AI Compute Optimization: Balancing Performance and Cost'
+    slug: 'ai-compute-optimization'
+    excerpt:
+      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai-compute-optimization";
     title: "AI Compute Optimization: Balancing Performance and Cost";
     slug: "ai-compute-optimization";
     excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
+<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`,
+    author: {
+      name: "Elena Rodriguez",
+      title: "Head of AI Talent",
+      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
+    },
+    publishedDate: "Mar 22, 2025",
+    readTime: "9 min read",
+    category: "Recruitment",
+    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
+    featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630"
   },
   {
       name: 'Michael Wong'

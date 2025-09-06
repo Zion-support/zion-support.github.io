@@ -1,28 +1,23 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
-import { ensureAdminFromApi } from '../../../../utils/auth',;
-import OpenAI from 'openai',;
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
-
-
+const { slide } = req.body || {};
+  if (!slide) return res.status(400).json({ error: 'Missing slide' });
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+import OpenAI from 'openai';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
@@ -30,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   const { slide } = req.body |{}
   if (!slide) return res.status(400).json({ error: 'Missing slide' })
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -41,13 +36,13 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' }
-          { role: 'user', content: prompt }]
-        temperature: 0.6
-        response_format: { type: 'json_object' } as any})
-      const raw = chat.choices?.[0]?.message?.content || '{}'
-      const parsed = JSON.parse(raw)
-      title = parsed.title || title
+{ role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
+          { role: 'user', content: prompt }],
+        temperature: 0.6,
+        response_format: { type: 'json_object' } as any}),
+      const raw = chat.choices?.[0]?.message?.content || '{}',
+      const parsed = JSON.parse(raw),
+      title = parsed.title || title,
       content = parsed.content || content
     } catch (err) {
       // keep original if AI fails;

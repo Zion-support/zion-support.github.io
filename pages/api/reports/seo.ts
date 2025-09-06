@@ -1,13 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-=======
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  res.status(200).json({ message: 'Seo report endpoint' });
+  return;
+}
     }
 
   if (req && req.method === 'POST') {
     try {
       const { keywords, rankings, issues, recommendations } = req && req.body;
-      
 
       const report = {
         keywords: keywords |[]
@@ -29,7 +31,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+;
+      const report = {
+        keywords: keywords || [],
+        rankings: rankings || [],
+        issues: issues || [],
+        recommendations: recommendations || [],
+        generated_at: new Date ().toISOString ();
+      }
+;
+      fs.writeFileSync (p, JSON.stringify (report, null, 2));
+      return res.status (201).json (report);
+import fs from 'fs';
+import path from 'path';
 const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -37,11 +51,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const data = fs.readFileSync(p, 'utf8');
       const seo = JSON.parse(data);
       return res.status(200).json(seo);
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
     } catch (error) {
       return res.status(500).json({ error: 'Failed to read SEO report' });
     }
@@ -58,7 +72,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 if (req.method === 'POST') {
     try {
       const { keywords, rankings, issues, recommendations } = req && req.body;
-      
 
       const report = {
         keywords: keywords |[]
@@ -70,19 +83,19 @@ if (req.method === 'POST') {
       return res && res.status(500).json({ error: 'Failed to update SEO report' });
     }
   }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-=======
+
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+  res.set_header ('Allow', 'GET, POST');
+  res.status (405).end ('Method Not Allowed');
+}
+
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
@@ -108,12 +121,10 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -132,4 +143,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+

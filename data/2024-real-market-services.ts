@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from "../types/service-variants";
 
 export interface RealMarketService {
@@ -95,6 +94,4 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 950
   }
 ];
-=======
 // Placeholder content - file was empty after conflict resolution
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

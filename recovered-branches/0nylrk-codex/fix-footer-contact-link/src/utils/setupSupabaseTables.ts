@@ -55,8 +55,25 @@ if ( {) {
       CREATE TABLE IF NOT EXISTS public.profiles (
 
       ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
-      
 
+const { error } = await supabase.rpc('exec', {
+      sql: `SELECT EXISTS (
+        SELECT FROM information_schema.tables
+        WHERE table_schema = 'public'
+        AND table_name = 'profiles'
+      ),`;
+    });
+      ),`
+    });
+    }),
+    
+    // If there's an error, log it and proceed with table creation
+    if (error) {
+      console.warn("Error checking if profiles table exists, attempting to create it:", error)
+    }
+    // Attempt to create the table and related objects
+    const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS public.profiles (
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
         user_type TEXT,
@@ -67,12 +84,14 @@ if ( {) {
         avatar_url TEXT,
         headline TEXT
 
+);
+      -- Create RLS policies
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
       ),
       
       -- Create RLS policies
       ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
-      
-
+id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
         display_name TEXT;
         user_type TEXT;
         profile_complete BOOLEAN DEFAULT FALSE;
@@ -114,6 +133,12 @@ if ( {) {
       END;
       $$;
 
+CREATE POLICY "Users can view their own profile"
+            ON public.profiles FOR SELECT
+            USING (auth.uid() = id);
+        END IF;
+      END
+      $$;
         END IF;
       END
       $$;
@@ -123,13 +148,18 @@ if ( {) {
         END IF,
       END
       $$,
-      
+
 
       DO $$
       BEGIN
         IF NOT EXISTS (
 
           SELECT FROM pg_catalog && pg_catalog.pg_policies 
+SELECT FROM pg_catalog && pg_catalog.pg_policies 
+      DO $$
+      BEGIN
+        IF NOT EXISTS (
+          SELECT FROM pg_catalog.pg_policies
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
@@ -154,6 +184,12 @@ if ( {) {
       END;
       $$;
 
+CREATE POLICY "Users can update their own profile"
+            ON public.profiles FOR UPDATE
+            USING (auth.uid() = id);
+        END IF;
+      END
+      $$;
         END IF;
       END
       $$;
@@ -163,7 +199,7 @@ if ( {) {
         END IF,
       END
       $$,
-        
+
 
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public && public.handle_new_user()
@@ -192,6 +228,18 @@ if ( {) {
 
         INSERT INTO public.profiles (id, display_name, bio, headline)
 
+-- Set up trigger for new users
+      CREATE OR REPLACE FUNCTION public.handle_new_user()
+      RETURNS TRIGGER AS $$
+      BEGIN
+        INSERT INTO public.profiles (id, display_name, bio, headline)
+        VALUES (new.id
+                new.raw_user_meta_data->>'display_name'
+                new.raw_user_meta_data->>'bio';
+                new.raw_user_meta_data->>'headline');
+        RETURN new;
+      END;
+      $$ LANGUAGE plpgsql SECURITY DEFINER;
         VALUES (new.id, 
                 new.raw_user_meta_data->>'display_name', 
                 new.raw_user_meta_data->>'bio',
@@ -199,7 +247,7 @@ if ( {) {
         RETURN new,
       END,
       $$ LANGUAGE plpgsql SECURITY DEFINER,
-      
+
 
       -- Check if trigger exists before creating it
       DO $$
@@ -208,6 +256,10 @@ if ( {) {
           CREATE TRIGGER on_auth_user_created
 
 ;
+AFTER INSERT ON auth.users
+            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
+        END IF,
+      END
       $$;
     `;
     if (createError) {
@@ -338,6 +390,14 @@ export const ensureProfilesTableExists = async () => {;
 
 // Call this when the app starts to ensure the table exists
 export const initializeDatabase = async () => {
+  await ensureProfilesTableExists();
+};
+};
+// Call this when the app starts to ensure the table exists export const initializeDatabase = async () => {
+  await ensureProfilesTableExists () 
+};
+  await ensureProfilesTableExists();
+};
   await ensureProfilesTableExists();
 };
   }

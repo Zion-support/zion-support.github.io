@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export interface CuttingEdge2029Service {
-=======
-
-export interface CuttingEdge2029Service {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-<<<<<<< HEAD
 export interface CuttingEdge2029Service {
 
-=======
-=======
 export interface CuttingEdge2029Service {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface CuttingEdge2029Service {
+
+export interface CuttingEdge2029Service {;
   id: string;
   name: string;
   tagline: string;
@@ -48,8 +37,6 @@ export interface CuttingEdge2029Service {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
     website: string;
   }
 
@@ -64,7 +51,6 @@ export interface CuttingEdge2029Service {;
 
   {
 
-=======
     id: 'quantum - consciousness - computing',
     name: 'Quantum Consciousness Computing Platform',
     tagline: 'Quantum computing meets AI consciousness',
@@ -88,7 +74,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - consciousness - computing',
@@ -130,7 +115,6 @@ export interface CuttingEdge2029Service {;
     reviews: 5,
   },
 
-=======
   // Space Technology & Colonization;
   {
     id: 'space - colonization - automation - platform',
@@ -142,7 +126,6 @@ export interface CuttingEdge2029Service {;
       'Comprehensive platform for automating space colonization, resource extraction, and space infrastructure development. The future of human space exploration.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated space mining',
       'Colony infrastructure automation',
       'Resource extraction optimization',
@@ -155,11 +138,8 @@ export interface CuttingEdge2029Service {;
       'Space colony planning',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🚀',
 
-=======
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / space - colonization - automation - platform',
@@ -187,7 +167,6 @@ export interface CuttingEdge2029Service {;
     variant: 'space - futuristic',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -201,8 +180,6 @@ export interface CuttingEdge2029Service {;
     rating: 5 && 5.0,
     reviews: 3,
   },
-<<<<<<< HEAD
-=======
 
       'DNA-based algorithms',
   // Biotech & DNA Computing;
@@ -230,7 +207,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - green - 600 via - yellow - 600 to - orange - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / dna - computing - platform - 2029',
@@ -272,7 +248,6 @@ export interface CuttingEdge2029Service {;
     reviews: 7,
   },
 
-=======
   // Metaverse & Digital Reality;
   {
     id: 'metaverse - consciousness - platform',
@@ -284,7 +259,6 @@ export interface CuttingEdge2029Service {;
       'Revolutionary platform for creating digital consciousness within metaverse environments, enabling truly intelligent virtual beings and experiences.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Digital consciousness creation',
       'Metaverse AI beings',
       'Virtual consciousness training',
@@ -297,11 +271,8 @@ export interface CuttingEdge2029Service {;
       'Digital consciousness security',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🌌',
 
-=======
     color: 'from - purple - 600 via - pink - 600 to - rose - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / metaverse - consciousness - platform',
@@ -329,7 +300,6 @@ export interface CuttingEdge2029Service {;
     variant: 'metaverse - futuristic',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -343,10 +313,7 @@ export interface CuttingEdge2029Service {;
     rating: 4 && 4.8,
     reviews: 15,
   },
-<<<<<<< HEAD
-=======
 
-=======
   // Autonomous Business & Operations;
 {
     id: 'autonomous - business - ecosystem - 2029',
@@ -358,7 +325,6 @@ export interface CuttingEdge2029Service {;
       'Complete ecosystem for fully autonomous business operations, from decision - making to execution, requiring minimal human intervention.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous decision making',
       'Self - optimizing operations',
       'Automated business strategy',
@@ -372,9 +338,6 @@ export interface CuttingEdge2029Service {;
     ],
     popular: true,
     icon: '🏢',
-<<<<<<< HEAD
-=======
-
 
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',
@@ -382,7 +345,6 @@ export interface CuttingEdge2029Service {;
     rating: 4.9,
     reviews: 6,
   },;
-
 
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -395,13 +357,8 @@ export interface CuttingEdge2029Service {;
     customers: 8;
     rating: 4.9
 
-
-=======
     reviews: 6
 
-
-
-=======
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / autonomous - business - ecosystem - 2029',
@@ -443,7 +400,6 @@ export interface CuttingEdge2029Service {;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface CuttingEdgeInnovation2029V2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -469,7 +425,6 @@ export interface CuttingEdgeInnovation2029V2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
@@ -521,19 +476,12 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     growthRate: '500%+ annual growth potential',
     variant: 'ai-futuristic',
     contactInfo: {
-<<<<<<< HEAD
-=======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision - making, and self - optimizing operations.';
     launch_date: '2029 - 01 - 10';
@@ -542,11 +490,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     reviews: 6;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Advanced quantum consciousness computing platform with real-time quantum consciousness processing and validation.'
@@ -838,8 +782,6 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     growthRate: '800%+ annual growth potential'
     variant: 'metaverse-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-=======
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -909,27 +851,19 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.'
     launchDate: '2029-01-10'
     customers: 8
     rating: 4.9
     reviews: 6
   }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',
     customers: 8,
     rating: 4.9,
     reviews: 6,
   },;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -941,16 +875,9 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     customers: 8;
     rating: 4.9
 
-<<<<<<< HEAD
-=======
     reviews: 6
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeInnovation2029V2 {;
   id: string,;
@@ -1053,15 +980,6 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [;
     customers: 8;
     rating: 4.9,
     reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-<<<<<<< HEAD
 ;
-=======
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

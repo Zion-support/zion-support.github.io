@@ -1,10 +1,39 @@
-<<<<<<< HEAD
+v1 && v1.sections.forEach((section) => {
+    const typeName = section && section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
+    typedefs && typedefs.push(
+      `type ${typeName} { id: ID, title: String, description: String }`,
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+import type { NextApiRequest, NextApiResponse } from "next";
+import v1 from "../../../data/api-docs/v1";
+function toSDL() {
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+    );
+  });
+  return typedefs && typedefs.join("\n");
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+res && res.setHeader("Content-Type", "text/plain");
+  res && res.status(200).send(toSDL());
+}
+  const typedefs = [`schema { query: Query, mutation: Mutation }`, 'type Query { _placeholder: String }type Mutation { _placeholder: String }'];
+  // Simple mapping: create types per section for illustration
+  v1.sections.forEach((section) => {
+    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, '') + 'Type';
+typedefs.push(`type ${typeName} { id: ID, title: String, description: String }`)
+  });
+  return typedefs.join('\n')
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Typetext/plain');
+  res.status(200).send(toSDL())
+}
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -25,19 +54,18 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 
   res.status(200).send(toSDL());
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-=======
+
+
+
+
+
 export default /**
  * handler - Function description
  */
@@ -48,4 +76,9 @@ function handler() {
 
   res.status(200).send(toSDL());
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+res.setHeader("Content-Type", "text/plain");
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "text/plain");
+  res.status(200).send(toSDL());
+}

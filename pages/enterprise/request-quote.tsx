@@ -18,6 +18,7 @@ function RequestQuote() {
 
 }
 
+}
     <main style={{ padding: '3rem', max_width: 800, margin: '0 auto' }}>;
       <h1 > Request a Quote</h1>;
       <p > Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>;
@@ -55,4 +56,5 @@ export default function RequestQuote() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

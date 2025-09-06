@@ -103,6 +103,14 @@ export default function HelpCenter() {
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
+;
+              {selectedArticle && (;
+                <>;
+                  <Button;
+                    variant="ghost";
+                    onClick={handleBackToArticles}
+                    className="mb-4";
+                  >;
                     ← Back to Articles;
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;

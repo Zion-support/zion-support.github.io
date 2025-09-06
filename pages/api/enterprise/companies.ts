@@ -1,3 +1,8 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method === "GET") {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,28 +21,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     return res.status(201).json(created);
 
-<<<<<<< HEAD
-=======
+res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
+
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
+
+  res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
+
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
 
     const companies = store.listCompanies();
     return res.status(200).json(companies);
@@ -130,10 +139,8 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-}
-=======
 
+}
 
 }
     return res.status (201).json (created);
@@ -142,8 +149,6 @@ export default function handler(req, res) {
   return res.status (405).end ("Method Not Allowed");
 }
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+

@@ -1,11 +1,7 @@
 export function ClickableBadge({
-
-
         >
-          <X className="h-3 w-3" />
+          <X className="h-3 w-3" />"
         </button>
-
-
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -21,7 +17,7 @@ export function ClickableBadge({;
   variant = "default",;
   onRemove,;
   ...props;
-}: ClickableBadgeProps) {;
+}:,  ClickableBadgeProps) {;
   return (;
     <div;
       className={cn(;
@@ -29,9 +25,7 @@ export function ClickableBadge({;
         "group flex items-center gap-1",;
         onRemove && "pl-2.5 pr-1.5 py-1";
         className;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
-
     </div>
   )
   )
@@ -39,16 +33,12 @@ export function ClickableBadge({;
             e.stopPropagation()
             onRemove()
           }}
-
-          className="ml-1 rounded-full p-0.5 hover:bg-background/20";
-
+          className="ml-1 rounded-full p-0.5 hover:bg-background/20";",
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
-
-
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -93,7 +83,7 @@ function ClickableBadge() {
           on_click={e => {
             e.stop_propagation ();
             on_remove () }}
-          className='ml - 1 rounded - full p - 0.5 hover:bg - background / 20';
+          className='ml - 1 rounded - full p - 0.5 hover:bg - background / 20';',
           aria - label='Remove';
         >;
           <X className='h - 3 w - 3' />;
@@ -103,7 +93,7 @@ function ClickableBadge() {
             e.stop_propagation ();
             on_remove ();
           }}
-          className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
+          className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";",
           aria - label="Remove";
         >;
           <X className="h - 3 w - 3" />;

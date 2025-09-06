@@ -127,6 +127,7 @@ export interface GeneratedNewsletterContent {
 }
 
 export interface BlogAuthor {;
+export interface BlogAuthor {;
 
 // Type for generated newsletter content;
 export interface GeneratedNewsletterContent {;

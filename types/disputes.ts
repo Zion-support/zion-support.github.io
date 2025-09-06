@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 export type DisputeReason =
   | 'Scope Disagreement'
@@ -15,34 +9,21 @@ export type DisputeReason =
   | 'Other';
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
   | 'Other',;
 
@@ -81,80 +62,47 @@ export type DisputeCase = {
   talentUserId: string;
   createdAt: string;
   updatedAt: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+| 'Other',;
 
-  | 'Other',;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   role: 'admin' | 'client' | 'talent';
 
 };
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
   status: DisputeStatus;
   reason: DisputeReason;
   reasonDetails?: string;
-  description: string;
-  attachments: DisputeAttachment[];
-  messages: DisputeMessage[];
-  adminNotes?: string;
-  resolvedAt?: string;
-  resolutionSummary?: string;
-}
-export type DisputeListItem = Pick<
-  DisputeCase
-  'id' | 'projectId' | 'createdAt' | 'status'
-> & {
-  talentName: string;
-  clientName: string;
-  projectName?: string;
-}
-  status: DisputeStatus,;
-  reason: DisputeReason,;
-  reasonDetails?: string,;
-  description: string;
-  attachments: DisputeAttachment[];
-  messages: DisputeMessage[];
-  adminNotes?: string,;
-  resolvedAt?: string,;
-  resolutionSummary?: string;
-};
-export type DisputeListItem = Pick<;
-  DisputeCase;
-  'id' | 'projectId' | 'createdAt' | 'status';
-> & {;
-  talentName: string;
-  clientName: string;
-  projectName?: string;
-},;
-export type UserSummary = {
-  id: string;
-  name: string;
 
-  role: 'admin' | 'client' | 'talent';
+export interface Dispute {
+  id: string;
+  orderId: string;
+  userId: string;
+  reason: string;
+
+  description: string;
+  status: 'open' | 'in_progress' | 'resolved' | 'closed';
+  createdAt: Date;
+  updatedAt: Date;
+  resolution?: string;
+  resolvedAt?: Date;
 }
-<<<<<<< HEAD
+
+
+
+
+
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+export interface DisputeResolution {
+  disputeId: string;
+  resolution: string;
+  resolvedBy: string;
+  resolvedAt: Date;
+  refundAmount?: number;
+}
+

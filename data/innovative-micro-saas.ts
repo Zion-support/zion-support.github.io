@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -44,12 +43,9 @@
     reviews: 1600,
   },
   {
-=======
-
 
   {
 
-=======
     id: 'smart - contract - automation',
     name: 'Smart Contract Automation',
     tagline: 'Automate business processes with smart contracts',
@@ -59,7 +55,6 @@
       'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Visual smart contract builder',
       'Multi - blockchain support',
       'Template library',
@@ -73,10 +68,7 @@
     ],
     popular: true,
     icon: '⚡',
-<<<<<<< HEAD
-=======
 
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation',
@@ -90,7 +82,6 @@
     real_service: true,
     technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -100,10 +91,7 @@
       'Ethereum',
       'Polygon',
     ],
-<<<<<<< HEAD
-=======
 
-=======
     integrations: [;
       'DocuSign',
       'Adobe Sign',
@@ -116,7 +104,6 @@
     ],
     use_cases: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Legal agreements',
       'Real estate transactions',
       'Insurance claims',
@@ -126,15 +113,12 @@
     ],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
-<<<<<<< HEAD
-=======
 
     market_size: '$1.2B smart contract market',
     growth_rate: '200% annual growth',
     variant: 'quantum - blockchain',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -148,15 +132,11 @@
     rating: 4 && 4.9,
     reviews: 900,
   },
-<<<<<<< HEAD
   {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
-=======
     id: 'ai - powered - customer - feedback - analyzer',
     name: 'AI - Powered Customer Feedback Analyzer',
     tagline: 'Transform feedback into actionable insights',
@@ -168,7 +148,6 @@
       'AI - powered sentiment analysis',
       'Multi - channel feedback collection',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automatic categorization',
       'Trend identification',
       'Real - time alerts',
@@ -180,10 +159,7 @@
     ],
     popular: true,
     icon: '💬',
-<<<<<<< HEAD
-=======
 
-=======
     color: 'from - purple - 500 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - customer - feedback - analyzer',
@@ -197,7 +173,6 @@
     real_service: true,
     technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
@@ -207,10 +182,7 @@
       'MongoDB',
       'AWS',
     ],
-<<<<<<< HEAD
-=======
 
-=======
     integrations: [;
       'Salesforce',
       'HubSpot',
@@ -232,7 +204,6 @@
     roi: 'Average customer sees 250% ROI within 4 months through improved customer satisfaction and product decisions.',
     competitors: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Qualtrics',
       'SurveyMonkey',
       'Typeform',
@@ -252,14 +223,10 @@
     rating: 4 && 4.7,
     reviews: 1400,
   },
-<<<<<<< HEAD
   {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered scheduling',
-=======
     id: 'automated - social - media - scheduler',
     name: 'Automated Social Media Scheduler',
     tagline: 'AI - powered social media management',
@@ -270,7 +237,6 @@
     features: [;
       'AI - powered scheduling',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Content generation suggestions',
       'Multi - platform support',
       'Analytics and insights',
@@ -283,11 +249,8 @@
     ],
     popular: true,
     icon: '📱',
-<<<<<<< HEAD
-=======
 
       'AI/ML',
-=======
     color: 'from - pink - 500 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / automated - social - media - scheduler',
@@ -302,19 +265,15 @@
     technology: [;
       'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Social Media APIs',
       'React',
       'Node && Node.js',
       'Python',
       'PostgreSQL',
-<<<<<<< HEAD
-=======
       'Redis',
       'AWS',
     ],
 
-=======
     integrations: [;
       'Facebook',
       'Instagram',
@@ -362,11 +321,9 @@
     rating: 4 && 4.8,
     reviews: 2250,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered planning',
-=======
     id: 'intelligent - project - management',
     name: 'Intelligent Project Management',
     tagline: 'AI - powered project planning and execution',
@@ -377,7 +334,6 @@
     features: [;
       'AI - powered planning',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Resource optimization',
       'Timeline prediction',
       'Risk assessment',
@@ -390,11 +346,8 @@
     ],
     popular: true,
     icon: '📋',
-<<<<<<< HEAD
-=======
 
       'AI/ML',
-=======
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / intelligent - project - management',
@@ -409,7 +362,6 @@
     technology: [;
       'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Project Management',
       'React',
       'Node && Node.js',
@@ -418,10 +370,7 @@
       'Redis',
       'AWS',
     ],
-<<<<<<< HEAD
-=======
 
-=======
     integrations: [;
       'Slack',
       'Teams',
@@ -434,7 +383,6 @@
     ],
     use_cases: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Project planning',
       'Resource management',
       'Team collaboration',
@@ -458,11 +406,7 @@
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -511,7 +455,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     competitors: ['Bill.comExpensifyReceipt BankSage IntacctNetSuite'], marketSize: '$2.8B invoice processing market',
     growthRate: '140% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-<<<<<<< HEAD
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
     customers: 3200
@@ -538,14 +481,11 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 1600
-=======
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -556,23 +496,14 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600;
 
   }
-<<<<<<< HEAD
 ];
 export interface InnovativeMicroSaas {;
-=======
-
-=======
 
 export interface InnovativeMicroSaas {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string,;
   name: string,;
   tagline: string,;
@@ -828,14 +759,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     customers: 3200,;
     rating: 4.8,;
     reviews: 1600;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 ];
-<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -876,7 +802,3 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   reviews: number;
 }
 ;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,9 +1,21 @@
+
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
 
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {useRecordActivity} from './useRecordActivity';
+export const useUploadDeliverable = () => {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+  const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
+    if (!user |!projectId) return null;
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,7 +31,7 @@ export const useUploadDeliverable = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 
-  
+
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user || !projectId) return null,
     
@@ -40,13 +52,27 @@ export const useUploadDeliverable = () => {
       };
       
       const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
-      
 
+.single();
+      if (fetchError) throw fetchError;
+      if (!milestone) throw new Error("Milestone not found");
+      // For this example, instead of actually uploading files (which would require storage setup);
+      // we'll just store the file metadata in the deliverables JSONB field
+      const newDeliverable = {
+        id: crypto.randomUUID();
+        filename: file.name;
+        size: file.size;
+        type: file.type;
+        added_at: new Date().toISOString()
+        added_by: user.id
+      }
+      const deliverables = [...(milestone.deliverables |[]), newDeliverable];
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
         .eq('id', milestoneId);
       if (error) throw error;
+
         .single(),
       
       if (fetchError) throw fetchError,
@@ -72,6 +98,19 @@ export const useUploadDeliverable = () => {
         
       if (error) throw error,
       
+// Create activity record
+      await recordMilestoneActivity(
+        milestoneId
+        'deliverable_added'
+        milestone.status
+        milestone.status
+        `Deliverable added: ${file.name}`
+      );
+      toast.success("Deliverable added successfully");
+      return newDeliverable
+    } catch (err: any) {
+      console.error("Error uploading deliverable:", err);
+      toast.error("Failed to upload deliverable: " + err.message)
       return null
 export const useUploadDeliverable = () =>: any {
   const { user } = use_auth ();
@@ -182,7 +221,7 @@ export const useUploadDeliverable = () => {;
         .eq('id', milestoneId),
         
       if (error) throw error,
-      
+
 
       // Create activity record
       await recordMilestoneActivity(
@@ -289,5 +328,103 @@ if (throw error) {
   }
 }
 ;
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from 'sonner',;
+import { useRecordActivity } from './useRecordActivity',;
+;
+export const useUploadDeliverable = () => {;
+  const { user } = useAuth(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { recordMilestoneActivity } = useRecordActivity(),;
+  ;
+  const uploadDeliverable = async (milestoneId:string, projectId:string, file:File) => {;
+    if (!user || !projectId) return null,;
+    ;
+    try {;
+      setIsSubmitting(true),;
+      ;
+      // Get the current milestone;
+      const { data:milestone, error:fetchError } = await supabase;
+        .from('project_milestones');
+        .select('*');
+        .eq('id', milestoneId);
+        .single(),;
+      ;
+      if (fetchError) throw fetchError,;
+      if (!milestone) throw new Error("Milestone not found"),;
+      ;
+      // For this example, instead of actually uploading files (which would require storage setup),;
+      // we'll just store the file metadata in the deliverables JSONB field;
+      const newDeliverable = {;
+        id:crypto.randomUUID(),;
+        filename:file.name,;
+        size:file.size,;
+        type:file.type,;
+        added_at:new Date().toISOString(),;
+        added_by:user.id;
+      },;
+      ;
+      const deliverables = [...(milestone.deliverables || []), newDeliverable],;
+      ;
+      const { error } = await supabase;
+        .from('project_milestones');
+        .update({ deliverables });
+        .eq('id', milestoneId),;
+        ;
+      if (error) throw error,;
+      ;
+      // Create activity record;
+      await recordMilestoneActivity(;
+        milestoneId, ;
+        'deliverable_added', ;
+        milestone.status, ;
+        milestone.status, ;
+        `Deliverable added:${file.name}`;
+      ),;
+      ;
+      toast.success("Deliverable added successfully"),;
+      ;
+      return newDeliverable,;
+    } catch (err:any) {;
+      console.error("Error uploading deliverable:", err),;
+      toast.error("Failed to upload deliverable:" + err.message),;
+      return null;
+    } finally {;
+      setIsSubmitting(false),;
+    }
+  },;
+  ;
+  return {;
+    uploadDeliverable,;
+    isSubmitting;
+  },;
+},; try {
+  setIsSubmitting (true);
+//Get the current milestone const {
+  data: milestone, error: fetchError 
+}= await supabase .from ('project milestones') .select ('*') .eq ('id', milestoneId) .single ();
+//For this example, instead of actually uploading files (which would require storage setup);
+//we'll just store the file metadata in the deliverables JSONB field const {
+  error 
+}= await supabase .from ('project milestones') if (error) throw error;
+// Create activity record await recordMilestoneActivity (milestoneId;
+'deliverable added';
+milestone.status;
+milestone.status;
+}finally {
+  setIsSubmitting (false) 
+}
+};
+return {
+  uploadDeliverable;
+isSubmitting 
+}
+};
+  }
+};
+  }
+};
   }
 };

@@ -10,6 +10,8 @@ export default function PublishProduct() {
 
   // Show loading while checking authentication
   if (isLoading) {
+// Show loading while checking authentication
+  if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
@@ -83,12 +85,17 @@ if ( {) {
             Share your products, services, or digital assets with the Zion community.;
           </p>;
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
+;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
             <ProductSubmissionForm />;
           </div>;
         </div>;
       </main>;
       <Footer />;
 
+}
+</div>);
 }
 }
     </div>);

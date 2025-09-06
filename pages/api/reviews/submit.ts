@@ -1,3 +1,54 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
+import type { Review } from '../../../types/reviews';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const {
+      projectId,
+      fromRole,
+      fromId,
+      rating,
+      text,
+      categories,
+      anonymous
+    } = req.body as {
+      projectId: string, fromRole: 'client' | 'talent',
+      fromId: string, rating: number,
+      text: string, categories?: Review['categories'],
+      anonymous?: boolean;
+    };
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import {
+  findProjectById,
+  hasExistingReview,
+  upsertReview,
+  counterpartRole,
+} from "../../../utils/dataStore";
+import type { Review } from "../../../types/reviews";
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  try {
+    const { projectId, fromRole, fromId, rating, text, categories, anonymous } =
+      req.body as {
+        projectId: string;
+        fromRole: "client" | "talent";
+        fromId: string;
+        rating: number;
+        text: string;
+        categories?: Review["categories"];
+        anonymous?: boolean;
+      };
 
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: "Missing required fields" });
@@ -34,11 +85,13 @@ if ( {) {
         project_id: string;
         from_role: "client" | "talent";
         from_id: string;
+
         rating: number;
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
 
+};
 
     }
     const project = await findProjectById(projectId);
@@ -64,16 +117,64 @@ if ( {) {
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
       return res.status(409).json({
+error: "You have already submitted a review for this project",
+      });
+    }
+
+      .json({ message: "Review submitted", reviewId: review && review.id });
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
-      rating
-      text: String (text).trim ()
-      categories
+}
+}
+      id: uuidv4(),
+      projectId,
+      fromRole,
+      fromId,
+      toRole,
+      toId,
+    const now = new Date ().toISOString ();
+    const review: Review = {
+      id: uuidv4 (),
+      project_id,
+      from_role,
+      from_id,
+      to_role,
+      to_id,
+      rating,
+      text: String (text).trim (),
+      categories,
 
-      reported: false, reports: []
+      reported: false, reports: [],
 
+      id: uuidv4(),
+      projectId,
+    fromRole,
+      fromId,
+    toRole,
+      toId,
+    rating,
+      text: String(text).trim(),
+      categories,
+      anonymous: Boolean(anonymous),
+      approved: false, // requires admin approval
+      reported: false,
+      reports: [],
+
+      removed: false,
+      createdAt: now,
+    };
+
+    await upsertReview(review);
+
+    return res
+      .status(201)
+      .json({ message: "Review submitted", reviewId: review.id });
+  } catch (error: any) {
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+
+      anonymous: Boolean (anonymous),
       approved: false, // requires admin approval;
       reported: false
       reports: []
@@ -90,6 +191,8 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
+}
+}
   }
 }
   } catch (error) {
@@ -97,6 +200,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+    return res
+      .status(500)
+      .json({ error: "Internal server error", details: error?.message });
+} catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });

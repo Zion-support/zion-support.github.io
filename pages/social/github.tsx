@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,10 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
+export default function GitHubRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('https: //github && github.com/Zion-Holdings'),;
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description

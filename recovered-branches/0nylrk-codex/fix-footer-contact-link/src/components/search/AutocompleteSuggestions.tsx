@@ -1,5 +1,7 @@
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
+import React from "react",
+import { SearchSuggestion, SearchHighlight } from "@/types/search",
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 import React from "react";
@@ -40,12 +42,35 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     return { before: '', match: text, after: '' }
   }
 
-  
 
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
+import React from './react';
+import { SearchSuggestion, SearchHighlight } from '@/types / search';
+interface AutocompleteSuggestionsProps {
+  suggestions: SearchSuggestion[],
+  search_term: string,
+  onSelectSuggestion: (suggestion: string) => void,
+  visible: boolean;
+}
+// Helper function to highlight matching text;
+const highlight_match = (text: string, search_term: string): SearchHighlight => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return { before: '', match: text, after: '' }
+  }
+  const lower_text = text.toLowerCase ();
+  const lowerSearchTerm = search_term.toLowerCase ();
+  const index = lower_text.index_of (lowerSearchTerm);
+;
+  // Check condition
+if ( {) {
+  $2
+}
     return { before: '', match: text, after: '' }
   }
   return {
@@ -53,7 +78,21 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
-
+return { before: '', match: text, after: '' }
+  }
+  return {
+    before: text.substring(0, index);
+    match: text.substring(index, index + searchTerm.length);
+    after: text.substring(index + searchTerm.length)
+  }
+}
+export function AutocompleteSuggestions({
+  suggestions
+  searchTerm
+  onSelectSuggestion;
+  visible
+}: AutocompleteSuggestionsProps) {
+  if (!visible |suggestions.length === 0) return null;
 };
 
 export function AutocompleteSuggestions({ 
@@ -67,6 +106,7 @@ export function AutocompleteSuggestions({
   suggestions, 
   searchTerm, ;
   onSelectSuggestion;
+
 
 ;
   const lowerText = text.toLowerCase(),;
@@ -97,6 +137,12 @@ export function AutocompleteSuggestions({
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
 
+const highlight = highlightMatch(suggestion.text, searchTerm);
+
+          const highlight = highlightMatch(suggestion.text, searchTerm),
+          
+          return (
+            <li key={`${suggestion.type}-${index}`}
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
                 onClick={() => onSelectSuggestion(suggestion.text)}>
               <div className="flex items-center justify-between">
@@ -114,7 +160,7 @@ export function AutocompleteSuggestions({
         })}
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
-          
+
 
           return (
             <li key={`${suggestion.type}-${index}`}
@@ -180,10 +226,21 @@ export function AutocompleteSuggestions(): any ({ ;
           );
         })}
 
+</ul>
+    </div>
+  )
+}
       </ul>;
     </div>;
   );
 }
+}
+;
+
+}
+;
+}
+;
 export /**
  * AutocompleteSuggestions - Function description
  */

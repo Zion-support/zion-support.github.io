@@ -39,4 +39,14 @@ export function MobileApp() {
       </Routes>;
     </MobileThemeProvider>);
 }
+</MobileThemeProvider>);
+}
+        <Route path="/post-job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div>Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>;
+  );
+}
+;
 ;

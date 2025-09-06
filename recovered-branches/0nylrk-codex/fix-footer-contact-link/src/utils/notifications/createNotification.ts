@@ -1,3 +1,5 @@
+import { supabase } from "@/integrations/supabase/client";
+import { CreateNotificationParams, CreateNotificationResult } from './types';
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -12,6 +14,14 @@ export async function createNotification({;
   sendEmail = false;
   actionUrl = null;
 
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -64,7 +74,7 @@ export async function createNotification({
     }),
     
     if (error) throw error,
-    
+
 
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
@@ -162,6 +172,12 @@ if ( {) {
     console.error ('Error creating notification:', error);
     return { success: false, error }
   }
+}
+;
+
+  } catch (error) {
+  } catch (error) {;
+    console.error('Error creating notification:', error);
 
     return { success: false, error }
   }

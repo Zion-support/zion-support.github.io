@@ -1,4 +1,13 @@
-key?: string | number; // Added key prop;
+import { cn } from "@/lib/utils";
+import React from "react";
+interface FeatureCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  className?: string;
+  key?: string | number, // Added key prop
+
+  key?: string | number; // Added key prop;
 }
 
 export function FeatureCard(): any ({;
@@ -13,6 +22,38 @@ export function FeatureCard(): any ({;
     <div
       className={cn(
 
+key?: string | number; // Added key prop;
+}
+
+import { cn } from "@/lib/utils";
+import React from "react";
+interface FeatureCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  className?: string;
+  key?: string | number, // Added key prop
+}
+export function FeatureCard({
+  title
+  description
+  icon
+  className
+}: FeatureCardProps) {
+  return (
+import { cn } from "@/lib/utils";
+import React from "react";
+
+    <div
+      className={cn(
+        "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300"
+        className
+      )}
+    >
+      <div className="mr-4 text-zion-cyan p-2">{icon}</div>
+
+import { cn } from "@/lib/utils",
+import React from "react",
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -36,6 +77,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <p className="text-zion-slate-light">{description}</p>
       </div>
 
+</div>
   );
 }
   )
@@ -61,6 +103,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
   return (
     <div
       className={cn(
+
         "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300",
         className,
       )}>;
@@ -105,6 +148,7 @@ function FeatureCard() {
 }
 }
 
+}
 }
 
 import { cn } from "@/lib/utils",;

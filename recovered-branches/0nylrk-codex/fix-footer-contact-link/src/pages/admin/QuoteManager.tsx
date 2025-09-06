@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -132,6 +133,8 @@ export default function QuoteManager() {
 
   } = useAdminQuotes(),
 
+} = useAdminQuotes();
+  } = useAdminQuotes(),
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -172,14 +175,45 @@ export default function QuoteManager() {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
+}
+  },
 
-            
-            
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote)
+    setShowDetails(true)
+  }
+  },
+
+  const handleResetFilters = () => {
+    setStatusFilter('all'),
+    setArchiveFilter('all'),
+    setSearchQuery(''),
+    setDateRange({ from: undefined, to: undefined })
+  }
+  },
+
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+  }
+  return (
+    <ProtectedRoute adminOnly>
+      <div>
+        <Header />
+        <div className="min-h-screen bg-zion-blue px-4 py-8">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+              <div>
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
+                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
+              </div>
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+            </div>
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
+import { ;
 import { ;
 import {;
   Card,;
@@ -264,6 +298,14 @@ export default function QuoteManager() {;
 ;
   return (;
 
+setDateRange({ from:undefined, to:undefined }),;
+  },;
+;
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" replace />,;
+  }
+;
+  return (;
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -280,6 +322,15 @@ export default function QuoteManager() {;
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
+;
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />;
+            ;
+            {/* Filters */}
+            <QuotesFilter;
+              searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -335,6 +386,8 @@ function QuoteManager() {
 
             />;
 
+/>;
+            ;
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -348,6 +401,36 @@ function QuoteManager() {
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
+;
+              <TabsContent value="active">;
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter(quote => !quote.is_archived)}                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+                  />;
+                </Card>;
+              </TabsContent>;
+              ;
+              <TabsContent value="archived">;
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter(quote => quote.is_archived)}                    isArchived={true}
+            />
+            {/* Tabs for Active/Archived */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                  <QuotesTable
+                    quotes={quotes.filter(quote => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -364,6 +447,11 @@ function QuoteManager() {
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
+isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
 
                   />;
                 </Card>;
@@ -419,6 +507,10 @@ function QuoteManager() {
             setShowDetails(false);
             setSelectedQuote(null);
 
+setSelectedQuote(null)
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
           }}
         />
         <Footer />
@@ -534,4 +626,77 @@ if ( {) {
         <Footer />;
       </div>;
     </ProtectedRoute>);
+}
+            setShowDetails(false),;
+            setSelectedQuote(null),;
+          }}
+        />;
+        ;
+        <Footer />;
+      </div>;
+    </ProtectedRoute>;
+  ),;}
+ import {
+  QuoteStatusCards;
+QuotesFilter;
+QuotesTable export default function QuoteManager () {
+  const {
+  user 
+}= useAuth ();
+const isAdmin = user?.userType === 'admin';
+const [showDetails, setShowDetails] = useState (false);
+}min-h-screen bg-zion-blue px-4 py-8"> <div className=" container mx-auto"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center mb-8"> <div> <h1 className=" text-3xl font-bold text-white mb-2">Quote Request Manager</h1> <p className=" text-zion-slate-light">Manage and respond to all talent hire requests</p> </div> </div> {
+  /* Status Summary Cards */ 
+}<QuoteStatusCards statusCounts= {
+  statusCounts 
+}/> {
+  /* Filters */ 
+}<QuotesFilter searchQuery= {
+  searchQuery 
+}setSearchQuery= {
+  setSearchQuery 
+}statusFilter= {
+  statusFilter 
+}setStatusFilter= {
+  setStatusFilter 
+}archiveFilter= {
+  archiveFilter 
+}setArchiveFilter= {
+  setArchiveFilter 
+}dateRange= {
+  dateRange 
+}setDateRange= {
+  setDateRange 
+}onReset= {
+  handleResetFilters 
+}/> <QuotesTable quotes= {
+  quotes.filter (quote => !quote.is archived) 
+}isLoading= {
+  isLoading 
+}updateStatus= {
+  updateStatus 
+}toggleArchive= {
+  toggleArchive 
+}deleteQuote= {
+  deleteQuote 
+}onViewDetails= {
+  handleViewDetails 
+}/> </Card> </TabsContent> <TabsContent value=" archived"> <Card className=" bg-zion-blue-dark border border-zion-blue-light overflow-hidden" > <QuotesTable quotes= {
+  quotes.filter (quote => quote.is archived) 
+}isArchived= {
+  true 
+}isLoading= {
+  isLoading 
+}updateStatus= {
+  updateStatus 
+}toggleArchive= {
+  toggleArchive 
+}deleteQuote= {
+  deleteQuote 
+}onViewDetails= {
+  handleViewDetails 
+}/> </Card> </TabsContent> </Tabs> </div> </div> {
+  /* Quote Details Modal */ 
+}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
+}
 }

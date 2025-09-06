@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -58,41 +50,23 @@ export default function AiAutonomousDevOpsPlatform() {
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
+
+
+
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
+
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -115,44 +89,28 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/services/ai-autonomous-devops-platform.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AiAutonomousDevOpsPlatform() {;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
 
 
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
-<<<<<<< HEAD
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>;
       <Head>;
         <title>AI Autonomous DevOps — Zion Tech Group</title>;
@@ -198,31 +156,21 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
   ),;
 }
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
-<<<<<<< HEAD
+
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
+
+
+
+
+
 import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function AiAutonomousDevOpsPlatform() { return ( <> <Head> <title>AI Autonomous DevOps — Zion Tech Group</title> <meta name="description" content="Self-healing infrastructure,intelligent deployments,and observability automation." /> <link rel="canonical" href="https: </Head> <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"> <h1 className="text-3xl md:text-4xl font-bold mb-4">AI Autonomous DevOps</h1> <p className="text-gray-600 mb-6">From $1,999/month</p> <div className="grid gap-8 md:grid-cols-3"> <div className="md:col-span-2 space-y-6"> <section> <h2 className="text-xl font-semibold mb-2">Capabilities</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Automated rollback and remediation with policy guardrails</li> <li>Traffic-aware canary and progressive delivery</li> <li>Incident triage copilots with runbook execution</li> <li>Cost-aware autoscaling and capacity planning</li> <li>IaC drift detection and compliance enforcement</li> </ul> </section> <section> <h2 className="text-xl font-semibold mb-2">Outcomes</h2> <ul className="list-disc pl-5 space-y-1 text-gray-700"> <li>Lower MTTR and fewer customer-facing incidents</li> <li>Faster deployment cadence with higher reliability</li> <li>Cloud cost savings via intelligent scaling</li> </ul> </section> </div> <aside className="border rounded-lg p-6 space-y-4 h-max"> <div> <div className="text-sm text-gray-500">Starting at</div> <div className="text-2xl font-semibold">$1,999/mo</div> </div> <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Request a pilot</Link> <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a> </aside> </div> </div> </> )}
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+
+
+
+
+

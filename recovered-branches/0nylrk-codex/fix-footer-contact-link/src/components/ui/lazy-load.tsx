@@ -17,6 +17,10 @@ interface LazyLoadProps {;
 
 export function LazyLoad(): any ({;
 
+loadingComponent?: ReactNode;
+  className?: string;
+}
+export function LazyLoad(): any ({;
   height = "200px";
   width = "100%";
   children;
@@ -26,6 +30,21 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
+  height?: string | number;
+  width?: string | number;
+
+  children: ReactNode
+
+  loadingComponent?: ReactNode;
+import { cn } from "@/lib/utils",
+import { Skeleton } from "@/components/ui/skeleton",
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -67,6 +86,19 @@ export function LazyLoad({
       (entries) => {
         if (entries[0].isIntersecting) {
 
+setIsVisible(true),
+          observer.disconnect()
+        }
+      }
+      {
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        threshold: 0.1}
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+      },
+      {
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
         threshold: 0.1}
     );
 
@@ -156,6 +188,26 @@ if ( {) {
         root_margin: "200px", // Start loading when element is within 200px of viewport;
         threshold: 0.1}
 
+setIsVisible(true),;
+          observer.disconnect(),;
+        }
+      },;
+      {;
+        rootMargin:"200px", // Start loading when element is within 200px of viewport;
+        threshold:0.1}
+    ),;
+;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current),;
+    }
+;
+    return () => {;
+      if (containerRef.current) {;
+        observer.unobserve(containerRef.current),;
+      }
+    );
+
+    );
 ;
     // Check condition
 if ( {) {
@@ -178,6 +230,7 @@ if ( {) {
       }
     }
 
+}, []);
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />
@@ -207,6 +260,45 @@ if ( {) {
 
   }, []),;
 
+setIsVisible(true),;
+          observer.disconnect();
+        }
+      },;
+      {;
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0.1}
+    ),;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current);
+    }
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)
+      }
+    }
+  }, []);
+  useEffect(() => {
+    if (isVisible) {
+      // Simulate loading delay (remove in production)
+      const timer = setTimeout(() => {
+        setIsLoaded(true)
+      }, 500);
+      return () => clearTimeout(timer)
+    }
+  }, [isVisible]);
+  const defaultLoadingComponent = (
+    <Skeleton
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  );
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500"
+        isLoaded ? "opacity-100" : "opacity-0";
+
+  }, []),;
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
@@ -247,6 +339,42 @@ if ( {) {
     </div>;
   );
 }
+;
+
+      }, 500),;
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]),;
+  const defaultLoadingComponent = (;
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  ),
+
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500", 
+        isLoaded ? "opacity-100" : "opacity-0",
+        className
+      )}
+    >
+      {isVisible ? (
+        <>
+          {!isLoaded && (loadingComponent |defaultLoadingComponent)}
+          {isLoaded && children}
+        </>
+      ) : (
+        loadingComponent |defaultLoadingComponent
+      )}
+    </div>
+  )
+}
+    </div>;
+  );
+}
+;
 ;
   useEffect (() => {
     // Check condition

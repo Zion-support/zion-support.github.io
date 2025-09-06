@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
-
-
 
  // All services combined const allServices = [ ...advancedAIMLServices;
 
@@ -166,10 +161,11 @@
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 import React, { useState } from 'react';
 import SEO from './seo/Seo';
 import { motion } from 'framer-motion';
@@ -415,10 +411,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <div className="flex flex-col gap-2">
                     <a
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
 // All services combined const allServices = [ ...advancedAIMLServices;
@@ -582,32 +574,31 @@ const ComprehensiveServicesShowcase2025 = () => {
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       Get Started
                     </a>
                     <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
+
+
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -618,20 +609,15 @@ const ComprehensiveServicesShowcase2025 = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
@@ -654,34 +640,25 @@ const ComprehensiveServicesShowcase2025 = () => {
             ))}
           </div>;
 
-
-
-
           {/* Services Display */}
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (;
               <motion&& motion.div 
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
+
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (;
                   <motion&& motion.div
@@ -703,7 +680,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                       <div className="mt-4">;
                         <span className="text-2xl font-bold">;
                           {getServicePricing(service)}
-
 
                       {/* Price */}
                       <div className="mt - 4">;
@@ -729,10 +705,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                               {feature}
                             </li>;
                           ))}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
@@ -791,10 +768,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                         </ul>
                       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (;
                   <motion&& motion.div
                     key={service && service.id}
@@ -841,12 +815,13 @@ const ComprehensiveServicesShowcase2025 = () => {
                               {feature}
                             </li>;
                           ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -855,10 +830,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                         </span>
                       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
@@ -878,10 +849,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -918,11 +890,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                             </span>
                           </div>
                           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                      {/* Service Info */}
+{/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
                         <div>;
                           <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
@@ -940,33 +908,29 @@ const ComprehensiveServicesShowcase2025 = () => {
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
                               {service.features.slice(0, 4).map((feature, idx) => (
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
                                   {feature}
                                 </li>
                               ))}
                             </ul>
                           </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
@@ -1007,31 +971,24 @@ const ComprehensiveServicesShowcase2025 = () => {
                                   {feature}
                                 </li>
                               ))}
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
+
                                   {feature}
                                 </li>
                               ))}
                             </ul>
                           </div>
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
                             
                             <a
                               href={service.link}
@@ -1065,10 +1022,9 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 
                             </ul>;
                           </div>;
@@ -1078,7 +1034,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                               {getCategoryIcon(service && service.category)}
                               <span className="ml-1">{service && service.category}</span>;
                             </span>;
-
 
                             <a
                               href={service && service.link}
@@ -1131,10 +1086,8 @@ const ComprehensiveServicesShowcase2025 = () => {
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>;
             </div>;
           )}
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
+
                             
                             <a
                               href={service.link}
@@ -1168,10 +1121,9 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
       </section>
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1183,20 +1135,18 @@ const ComprehensiveServicesShowcase2025 = () => {
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1212,20 +1162,18 @@ const ComprehensiveServicesShowcase2025 = () => {
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1240,20 +1188,18 @@ const ComprehensiveServicesShowcase2025 = () => {
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1271,20 +1217,18 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1294,20 +1238,18 @@ const ComprehensiveServicesShowcase2025 = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
           
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
+
+
           
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
           
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -1325,14 +1267,9 @@ const ComprehensiveServicesShowcase2025 = () => {
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;
@@ -1421,18 +1358,18 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>;
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
@@ -1441,11 +1378,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               Start Consultation
             </a>
             <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -1459,11 +1392,9 @@ const ComprehensiveServicesShowcase2025 = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ComprehensiveServicesShowcase2025;
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
               Visit Website;
             </a>;
           </div>;
@@ -1494,10 +1425,8 @@ export default ComprehensiveServicesShowcase;
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
+
+
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -1512,8 +1441,6 @@ export default ComprehensiveServicesShowcase;
 };
 
 export default ComprehensiveServicesShowcase2025;
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 export default ComprehensiveServicesShowcase2025;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+

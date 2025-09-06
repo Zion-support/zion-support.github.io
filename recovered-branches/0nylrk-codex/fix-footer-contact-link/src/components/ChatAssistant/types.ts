@@ -1,3 +1,4 @@
+
 export interface Message {;
 
 export interface Message {;
@@ -11,6 +12,9 @@ export interface Message {;
   read?: boolean
 }
 
+export interface Recipient {
+  id: string;
+  name: string;
 export interface Recipient {;
   id: string;
   name: string;
@@ -40,9 +44,10 @@ export interface Recipient {;
 }
 
 ;
+;
 
 ;
 ;
 export interface Recipient {
   id: string;
-  name: string;
+name: string;

@@ -1,8 +1,5 @@
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -34,7 +31,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
-=======
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp  } from './lucide-react';
@@ -71,7 +67,6 @@ function ReferralStats() {
       icon: <Award className="h - 5 w - 5 text - muted - foreground" />,
       description: "Credits earned from referrals",
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -153,18 +148,14 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   );
 }
 
-=======
                 </p>;
               </>)}
           </CardContent>;
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
   );
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

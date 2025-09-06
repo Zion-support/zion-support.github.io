@@ -17,6 +17,8 @@ export interface ProductListing {
   category: string,
   subcategory?: string, // Adding optional subcategory field;
 
+category: string,
+  subcategory?: string, // Adding optional subcategory field;
 export interface ListingCategory {
 export interface ListingCategory {;
   id: string;

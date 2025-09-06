@@ -1,24 +1,19 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 }
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
 }
 
 }

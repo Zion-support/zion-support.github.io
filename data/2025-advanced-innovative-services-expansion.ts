@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -33,8 +30,6 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
     website: string;
   }
 
@@ -42,14 +37,11 @@
   implementation_details: string;
   launch_date: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-=======
 
   market_advantage: string;
 ;
@@ -59,7 +51,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -71,7 +62,6 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
     tagline:
@@ -1108,11 +1098,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
-
-
-=======
-
-=======
 export interface AdvancedInnovativeService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1143,14 +1128,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1158,10 +1138,6 @@ const contact = {
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1674,16 +1650,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-<<<<<<< HEAD
-=======
 
-
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1774,7 +1743,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     customers: 89,;
     rating: 4.8,;
     reviews: 67,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -1794,19 +1762,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   },
 ];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development';
     ];
-<<<<<<< HEAD
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
   }
 ];
 ;
-=======
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

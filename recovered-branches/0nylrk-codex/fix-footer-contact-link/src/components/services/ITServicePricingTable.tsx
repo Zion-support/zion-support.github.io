@@ -34,6 +34,7 @@ export function ITServicePricingTable() {
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     
+let filteredData = [...onsiteServicePricing];
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
@@ -66,6 +67,13 @@ export function ITServicePricingTable() {
   };
 
   return (
+<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
+      <div className="flex items-center mb-6">;
+        <div className="relative flex-1">;
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+          <Input
+            placeholder="Search by country..."
+            value={searchQuery}
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;

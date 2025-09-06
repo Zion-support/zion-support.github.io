@@ -62,6 +62,7 @@ function SidebarProvider() {
       </div>;
     </SidebarContext.Provider>);
 }
+}
 
 import React, { createContext, useContext, useState } from "react",;
 ;

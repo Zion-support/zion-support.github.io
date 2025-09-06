@@ -93,6 +93,21 @@ function PersonalInfoFields() {
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
 
+import { BasicInfoFormData } from "./schema",;
+;
+interface PersonalInfoFieldsProps {;
+  control:Control<BasicInfoFormData>;
+}
+;
+export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
+  return (;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <FormField;
+        control={control}
+        name="fullName";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Full Name</FormLabel>;
             <FormControl>;
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
@@ -117,6 +132,14 @@ function PersonalInfoFields() {
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
+</FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="title";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Professional Title</FormLabel>;
           </FormItem>;
         )}
       />;
@@ -137,11 +160,19 @@ function PersonalInfoFields() {
       <FormField
         control={control}
         name="email"
+</FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="email";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Email</FormLabel>;
             <FormControl>;
               <Input type="email" placeholder="john@example && example.com" {...field} />;
+<Input type="email" placeholder="john@example.com" {...field} />;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
@@ -155,6 +186,25 @@ function PersonalInfoFields() {
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;
+</FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="email";
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Phone</FormLabel>
+            <FormControl>
+              <Input placeholder="+1 234 567 8900" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  );
+}
+;
       />;
         )}
       />

@@ -49,5 +49,13 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
     </div>);
 }
 ;
+onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
+        >;
+          Mark all as read;
+        </Button>;
+      )}
+    </div>
+    </div>;
   );
 };

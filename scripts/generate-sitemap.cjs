@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -9,12 +7,8 @@ console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 
 module.exports = {};
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -115,9 +109,6 @@ ${urls.map(url => `  <url>`})
 if (require.main === module) {}
   generateSitemap()};
 module.exports = { generateSitemap };
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -209,10 +200,6 @@ if (require.main === module) {
 }
 
 module.exports = SitemapGenerator;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -221,7 +208,8 @@ console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 
 module.exports = {};
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+

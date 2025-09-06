@@ -22,6 +22,10 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
@@ -80,6 +84,7 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             className="w-full h-full object-cover"
           />;
         ) :(;
+) : (;
           <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
@@ -106,6 +111,9 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             </div>;
       </div>
       <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{project.title}</h3>
+<CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
           {project.description && (

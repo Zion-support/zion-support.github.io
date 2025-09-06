@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
+
+
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 /**
  * AI Code Quality Analyzer
  * Analyzes code quality using AI-powered insights
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 const fs = require('fs');
 const path = require('path');
 
@@ -82,8 +73,9 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       console.error('❌ AI code quality analysis failed:', error.message);
       return { success: false, error: error.message };
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -104,7 +96,6 @@ const { execSync } = require('child_process')
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -336,8 +327,6 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       this.log(`❌ AI code quality analysis: failed: ${error.message}`);
       process.exit(1);
-<<<<<<< HEAD
-=======
 const fs = require('fs');
 const path = require('path');
 
@@ -400,30 +389,31 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       console.error('❌ AI code quality analysis failed:', error.message);
       return { success: false, error: error.message };
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
     }
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 // Run the analyzer
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
-=======
+
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.analyzeCodeQuality();
+// Run the analyzer
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.run().catch(console.error);
+

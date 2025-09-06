@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔧 Starting Merge Conflict Resolution'),
@@ -33,79 +27,56 @@ if ( {) {
 }
       fs.writeFileSync (file_path, content, 'utf8'),
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-=======
 
-<<<<<<< HEAD
+
+
+
+
 const fs = require('fs');
 const path = require('path');
+
 console.log('🔧 Starting Merge Conflict Resolution');
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {try {;
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?
-    content = content.replace(/
-    if (content !== originalContent) {;
+    
+    // Remove merge conflict markers and keep HEAD version
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
       return true;
     }
     return false;
-  } catch (error) {console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
-  }
-}
-// Function to get all files recursively;
-function getAllFiles(dir, extensions) {let files = [];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 const fs = require('fs'),;
 const path = require('path'),;
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      fs.writeFileSync (file_path, content, 'utf8'),
+fs.writeFileSync (file_path, content, 'utf8'),
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 console.log('🔧 Starting Merge Conflict Resolution'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
 
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
@@ -116,11 +87,6 @@ function fixMergeConflicts(filePath) {;
     return false;
   } catch (error) {
     console.log (`❌ Error fixing ${file_path}: ${error.message}`),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 const fs = require('fs');
 const path = require('path');
 ;
@@ -132,10 +98,9 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
     // Remove merge conflict markers and keep HEAD version;
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
@@ -162,10 +127,7 @@ function getAllFiles(dir, extensions) {;
 
 function getAllFiles(dir, extensions) {;
   let files = [];
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     return false;
   }
 }
@@ -175,30 +137,36 @@ function getAllFiles(dir, extensions) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   try {;
+
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+// Function to get all files recursively
+function getAllFiles(dir, extensions) {
+  let files = [];
+  try {
+
     const items = fs.readdirSync(dir);
-    for (const item of items) {;
+    for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
 /**
  * getAllFiles - Function description
  */
@@ -220,14 +188,9 @@ function getAllFiles() {
       }
     }
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
     // Skip directories that can't be read;
 
   }
@@ -253,28 +216,21 @@ if (|| content.includes (') {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
         files = files.concat(getAllFiles(fullPath, extensions));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
         files = files.concat(getAllFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
       }
     }
   } catch (error) {// Skip directories that can't be read;
-=======
-    // Skip directories that can't be read;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    // Skip directories that can't be read;
   }
   return files;
 }
 // Main execution;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
@@ -283,12 +239,8 @@ async function main() {;
     try {;
       const content = fs.readFileSync(file, 'utf8');
       if (content.includes('') |content.includes('
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 
 async /**
  * main - Function description
@@ -305,16 +257,16 @@ if (|| content.includes (') {
   $2
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
         files = files.concat(getAllFiles(fullPath, extensions));
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       } else if (extensions.some(ext => item.endsWith(ext))) {;
       }
     } catch (error) {;
@@ -327,41 +279,71 @@ if (|| content.includes (') {
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...'),;
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files = files.concat(getAllFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  } catch (error) {
+    // Skip directories that can't be read
+  }
+  return files;
+}
+
+// Main execution
+async function main() {
+  console.log('🔍 Scanning for merge conflicts...');
+  const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+        if (fixMergeConflicts(file)) {;
+          fixedCount++;        }
+  let fixedCount = 0,;
+  for (const file of files) {;
+    try {;
+      const content = fs.readFileSync(file, 'utf8'),;
+      if (content.includes('') || content.includes('
+}
+}
+}
 
   let fixedCount = 0;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
         if (fixMergeConflicts(file)) {;
+      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+        if (fixMergeConflicts(file)) {
           fixedCount++;
         }
       }
-    } catch (error) {;
-      // Skip files that can't be read;
+    } catch (error) {
+      // Skip files that can't be read
     }
   }
-;
-  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),;
+  
+  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   console.log('🎉 Merge conflict resolution completed!');
 }
-;
-<<<<<<< HEAD
 main().catch(console.error),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-main().catch(console.error),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
+
+
 main().catch(console.error),;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+main().catch(console.error);
+

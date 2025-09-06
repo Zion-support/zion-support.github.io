@@ -19,6 +19,29 @@ export interface ProfileSkill {
 
 }
 export interface ProfileExperience {
+export interface ProfileSkill {
+
+  name: string
+
+  level: number, // 1-5
+  endorsements?: number
+}
+export interface ProfileProject {
+
+export interface ProfileProject {;
+  id: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+  tags?: string[];
+
+  url?: string
+
+  date: string
+}
+export interface ProfileExperience {
+
+export interface ProfileExperience {;
   id: string;
   role: string;
   company: string;
@@ -139,3 +162,4 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+}

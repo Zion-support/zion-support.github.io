@@ -51,6 +51,7 @@ export function HireRequestModal({
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm 
+
         <HireRequestForm
           talent={talent}
           onClose={handleClose}

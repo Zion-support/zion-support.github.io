@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
@@ -9,8 +10,6 @@ import path from "path";
 const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");
 const FILE = path && path.join(DATA_DIR, "profiles && profiles.json");
 
-
-
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, "utf8");
@@ -19,6 +18,35 @@ function load(): Record<string, KycProfile> {
     return {}
   }
 }
+const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw)
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import type { KycProfile } from "../../../utils / kyc";
+import { getRequiredDocuments, getOptionalDocuments  } from '../../../utils / kyc';
+import fs from './fs';
+import path from './path';
+;
+const DATA_DIR = path.join (process.cwd (), "data", "kyc");
+const FILE = path.join (DATA_DIR, "profiles.json");
+;
+function load (): Record < string, KycProfile> {
+  try {
+    const raw = fs.readFileSync (FILE, "utf8");
+    return JSON.parse (raw);
+  } catch {
+    return {}
+  }
+}
+
+  });
+
+}
+
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(profile.role),
+    optionalDocuments: getOptionalDocuments(profile.role)})
+
 }
 export default /**
  * handler - Function description
@@ -38,10 +66,10 @@ function handler() {
   $2
 }
   res.status (200).json ({
-    ok: true
-    profile
-    required_documents: getRequiredDocuments (profile.role)
-    optional_documents: getOptionalDocuments (profile.role)
+ok: true,
+    profile,
+    required_documents: getRequiredDocuments (profile.role),
+    optional_documents: getOptionalDocuments (profile.role),
   });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -111,4 +139,8 @@ function load (): Record < string, KycProfile> {
   }
 }
 
+requiredDocuments: getRequiredDocuments(profile.role),
+    optionalDocuments: getOptionalDocuments(profile.role),
+  });
+}
 

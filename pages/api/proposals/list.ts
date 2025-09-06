@@ -1,3 +1,4 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
@@ -10,13 +11,15 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+  if (req.method !== "GET") {;
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+
+
   }
 
   try {
@@ -29,10 +32,10 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -54,15 +57,42 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to list proposals" });
-<<<<<<< HEAD
-=======
-=======
+
+  }
+}
   }
 }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   }
 }
+
+      .json({ error: error?.message |"Failed to list proposals" });
+      .json({ error: error?.message || "Failed to list proposals" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { listProposals } from '../../../utils/data/proposals';
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const proposals = listProposals();
+    res.status(200).json({ proposals });
+  } catch (error: any) {
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+  }
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }
+}
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -75,13 +105,20 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
-=======
+
+
 
   }
 }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 }
+  }
+}
+  }
+}
+
+  }
+}
+
+

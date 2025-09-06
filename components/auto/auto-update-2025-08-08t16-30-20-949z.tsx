@@ -15,6 +15,7 @@ return (
 
 }
 
+}
 import React from 'react';
 
 export default function AutoUpdatePage4() {
@@ -72,4 +73,17 @@ export default function AutoUpdatePage4() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Generated content.</p>
 
     </div>
+);
+
+    </div>
   );
+
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}

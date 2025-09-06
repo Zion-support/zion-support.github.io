@@ -135,3 +135,22 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+  ),;
+}
+export default function PortfolioBuilder() {
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  )
+}
+;
+export default function PortfolioBuilder() {;
+  return (;
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+;

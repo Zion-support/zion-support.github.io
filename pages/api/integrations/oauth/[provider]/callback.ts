@@ -1,21 +1,32 @@
-<<<<<<< HEAD
-=======
 message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+    message:
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
+  });
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from "next";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({
+    ok: true
+    message:
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     ok: true
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
+
+}
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 export default /**
  * handler - Function description
@@ -27,9 +38,9 @@ function handler() {
       "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
   });
 }
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
   });
@@ -53,10 +64,8 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-}
-=======
 
+}
 
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
@@ -76,8 +85,6 @@ function handler() {
   });
 }
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
   contactInfo: {
-=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -54,7 +52,6 @@ export interface EmergingTech2026ServiceV4 {
     mobile: string, email: string,
     address: string,
     website: string
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -261,34 +258,21 @@ export interface EmergingTech2026ServiceV4 {
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-<<<<<<< HEAD
-=======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
-<<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     reviews: 25;
-=======
     reviews: 25;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -684,14 +668,8 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     rating: 4.8;
     reviews: 25;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-<<<<<<< HEAD
-=======
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

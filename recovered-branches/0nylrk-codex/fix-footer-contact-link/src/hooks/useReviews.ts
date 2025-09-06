@@ -45,10 +45,58 @@ if (return) {
 
   const fetchProjectReviews = async (projectId: string) => {
 
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Review, ReviewReport} from "@/types/reviews";
+import {toast} from "@/hooks/use-toast";
+export function useReviews(projectId?: string) {;
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [userReview, setUserReview] = useState<Review | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import { useState } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { Review, ReviewReport } from "@/types/reviews";
+import { toast } from "@/hooks/use-toast";
+export function useReviews(projectId?: string) {
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [reviews, setReviews] = useState<Review[]>([]),
+  const [userReview, setUserReview] = useState<Review | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import { Review, ReviewReport } from "@/types/reviews",
+import { toast } from "@/hooks/use-toast",
+export function useReviews(projectId?: string) {
+  const { user } = useAuth(),
+  const [isLoading, setIsLoading] = useState(false),
+  const [reviews, setReviews] = useState<Review[]>([]),
+  const [userReview, setUserReview] = useState<Review | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
+  // Fetch reviews for a project
+
+  const fetchProjectReviews = async (projectId: string) => {
+    if (!projectId) return;
+    setIsLoading(true)
     if (!projectId) return,
     
     setIsLoading(true),
+
+    try {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select(`
+          *,
+          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
+        `)
+        .eq("project_id", projectId)
+        .eq("is_visible", true)
+    if (!projectId) return,
     
+    setIsLoading(true),
 
     try {
       const { data, error } = await supabase;
@@ -56,12 +104,15 @@ if (return) {
         .select (`;
           *;
 
+.eq("status", "approved");
+      if (error) throw error;
+      setReviews(data |[]);
         .eq("status", "approved"),
         
       if (error) throw error,
       
       setReviews(data || []),
-      
+
 
       // Check if current user has already submitted a review
       if (user) {
@@ -73,8 +124,10 @@ if (return) {
           .eq("reviewer_id", user.id)
 
           .single(),
-          
 
+.eq("reviewer_id", user.id)
+          .single();
+          .single(),
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
@@ -83,6 +136,13 @@ if (return) {
       console && console.error("Error fetching reviews:", err);
       toast({
 
+console.error("Error fetching reviews:", err),
+      toast({
+        title: "Error";
+        description: "Failed to load reviews"
+        title: "Error",
+        description: "Failed to load reviews",
+        variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
@@ -167,7 +227,6 @@ if (return) {
     if (!userId) return,
     
     setIsLoading(true),
-    
 
     try {
       const { data, error } = await supabase;
@@ -175,6 +234,9 @@ if (return) {
         .select (`;
           *;
 
+.order("created_at", { ascending: false });
+      if (error) throw error;
+      setReviews(data |[])
         .order("created_at", { ascending: false }),
         
       if (error) throw error,
@@ -209,6 +271,20 @@ if (return) {
   // Submit a review;
   const submit_review = async (review: {
 
+} catch (err: any) {
+      console.error("Error fetching user reviews:", err),
+      toast({
+        title: "Error";
+        description: "Failed to load reviews"
+        title: "Error",
+        description: "Failed to load reviews",
+        variant: "destructive"})
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  // Submit a review
+  const submitReview = async (review: {
   }
     project_id: string;
     reviewee_id: string;
@@ -243,7 +319,6 @@ if ( {) {
           ...review;
 
       console && console.error("Error submitting review:", err);
-      
 
       // Check for unique constraint violation
       if (err && err.code === "23505") {
@@ -284,6 +359,7 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"});
 
+would_work_again?: boolean
   },
   
   // Submit a review
@@ -302,6 +378,12 @@ if ( {) {
     if (!user) {
       toast({
 
+title: "Error";
+        description: "You must be logged in to submit a review"
+        variant: "destructive"});
+      return false
+    }
+    setIsSubmitting(true);
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
@@ -309,7 +391,7 @@ if ( {) {
     }
     
     setIsSubmitting(true),
-    
+
 
     try {
       const { data, error } = await supabase
@@ -319,6 +401,17 @@ if ( {) {
           reviewer_id: user.id})
         .select()
 
+.single();
+      if (error) throw error;
+      toast({
+        title: "Success"
+        description: "Your review has been submitted and is pending approval"});
+      setUserReview(data);
+      return true
+    } catch (err: any) {
+      console.error("Error submitting review:", err);
+      // Check for unique constraint violation
+      if (err.code === "23505") {
         toast({
           title: "Error";
           description: "You have already submitted a review for this project"
@@ -423,6 +516,8 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"})
 
+toast ({
+          title: "Error";
       }
       return false;
     } finally {
@@ -431,12 +526,18 @@ if ( {) {
 
   };
 
+}
+      return false
+    } finally {
+      setIsSubmitting(false)
+    }
   }
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false;
     setIsSubmitting(true)
   };
+};
   },;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
@@ -520,14 +621,13 @@ if ( {) {
     }
   },
 
-  
-  
+
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false,
     
     setIsSubmitting(true),
-    
+
     try {
       const { error } = await supabase
         .from("reviews")
@@ -536,6 +636,12 @@ if ( {) {
 
         .eq("reviewer_id", user.id)
 
+.eq("reviewer_id", user.id)
+        .eq("status", "pending");
+      if (error) throw error;
+      toast({
+        title: "Success"
+        description: "Your review has been updated"});
         .eq("status", "pending"),
         
       if (error) throw error,
@@ -543,7 +649,7 @@ if ( {) {
       toast({
         title: "Success",
         description: "Your review has been updated"}),
-      
+
 
       if (userReview) {
         setUserReview({ ...userReview, ...updates })
@@ -598,8 +704,22 @@ if ( {) {
     }
 
   },
-  
 
+console.error("Error updating review:", err),
+      toast({
+        title: "Error";
+        description: "Failed to update review"
+        variant: "destructive"});
+        title: "Error",
+        description: "Failed to update review",
+        variant: "destructive"}),
+      return false
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  },
+  
   }
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
@@ -612,10 +732,16 @@ if ( {) {
           reporter_id: user && user.id,
 
           reason});
+reporter_id: user && user.id,
+
+          reason});
+
+          review_id: reviewId;
+          reporter_id: user.id
+          reason});
           review_id: reviewId,
           reporter_id: user.id,
           reason}),
-        
 
       if (error) {
         // Check for unique constraint violation
@@ -697,12 +823,33 @@ if ( {) {
           title: "Report Submitted",
           description: "Thank you. Our team will review your report"}),
 
+if (error) {
+        // Check for unique constraint violation
+        if (error.code === "23505") {
+          toast({
+            title: "Error";
+            description: "You have already reported this review"
+            title: "Error",
+            description: "You have already reported this review",
+            variant: "destructive"})
+        } else {
+          throw error
+        }
+      } else {
+        toast({
+          title: "Report Submitted"
+          description: "Thank you. Our team will review your report"});
+          title: "Report Submitted",
+          description: "Thank you. Our team will review your report"}),
         return true
       }
     } catch (err: any) {
       console.error("Error reporting review:", err),
       toast({
 
+title: "Error";
+        description: "Failed to report review"
+        variant: "destructive"})
     }
     return false
   }
@@ -804,6 +951,9 @@ if ( {) {
 
     reportReview}
     submit_review;
+    update_review;
+    report_review}
+submit_review;
     update_review;
     report_review}
     submit_review;

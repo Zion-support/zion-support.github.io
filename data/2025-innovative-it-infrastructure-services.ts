@@ -1,17 +1,8 @@
 
 
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const innovativeITInfrastructureServices2025 = [
   {
 
-
-<<<<<<< HEAD
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -25,11 +16,9 @@ export const innovativeITInfrastructureServices2025 = [
       'Energy-efficient quantum processing'
     pricing: {
       starter: {
-=======
     pricing: {
       starter: {
 
-=======
         price: 299,
         period: 'month',
         features: [;
@@ -63,25 +52,19 @@ export const innovativeITInfrastructureServices2025 = [
     category: 'Cybersecurity',
     tags: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Zero Trust',
       'Quantum Security',
       'AI Security',
       'Threat Detection',
       'Network Security',
     ],
-<<<<<<< HEAD
-=======
 
     website: 'https://ziontechgroup.com / zero - trust - quantum - security - platform',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
 
       'https://ziontechgroup && ziontechgroup.com/autonomous-devops-intelligence-platform',
     market_size: '$42.3B',
@@ -105,7 +88,6 @@ export const innovativeITInfrastructureServices2025 = [
     ],
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'FedRAMP', 'HIPAA', 'PCI DSS'],
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'autonomous-devops-intelligence-platform'
     name: 'Autonomous DevOps Intelligence Platform'
@@ -145,8 +127,6 @@ export const innovativeITInfrastructureServices2025 = [
         ]
       }
       enterprise: {
-<<<<<<< HEAD
-=======
         price: 1199,
         period: 'month',
         features: [;
@@ -168,15 +148,11 @@ export const innovativeITInfrastructureServices2025 = [
     website:;
       'https://ziontechgroup.com / autonomous - devops - intelligence - platform',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
 
-=======
     market_size: '$35.8B',
     target_audience:;
       'Software development companies, IT departments, DevOps teams, technology startups',
@@ -198,7 +174,6 @@ export const innovativeITInfrastructureServices2025 = [
     ],
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry - specific regulations'],
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
@@ -238,8 +213,6 @@ export const innovativeITInfrastructureServices2025 = [
         ]
       }
       enterprise: {
-<<<<<<< HEAD
-=======
         price: 2299,
         period: 'month',
         features: [;
@@ -253,27 +226,20 @@ export const innovativeITInfrastructureServices2025 = [
     category: 'Cloud Computing',
     tags: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum Computing',
       'Cloud Infrastructure',
       'Hybrid Computing',
       'Infrastructure Optimization',
       'Quantum Security',
     ],
-<<<<<<< HEAD
-=======
 
     website: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
 
-=======
     market_size: '$65.4B',
     target_audience:;
       'Enterprise businesses, technology companies, research institutions, government agencies',
@@ -301,7 +267,6 @@ export const innovativeITInfrastructureServices2025 = [
       'Industry - specific regulations',
     ],
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'ai-powered-data-center-automation'
     name: 'AI-Powered Data Center Automation'
@@ -341,8 +306,6 @@ export const innovativeITInfrastructureServices2025 = [
         ]
       }
       enterprise: {
-<<<<<<< HEAD
-=======
         price: 2999,
         period: 'month',
         features: [;
@@ -356,19 +319,15 @@ export const innovativeITInfrastructureServices2025 = [
     category: 'Data Center Management',
     tags: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI Automation',
       'Data Center',
       'Energy Optimization',
       'Predictive Maintenance',
       'Infrastructure Management',
     ],
-<<<<<<< HEAD
-=======
 
     website: 'https://ziontechgroup.com / ai - powered - data - center - automation',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -394,17 +353,12 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     compliance: [
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
       'Industry-specific regulations',
     ],;
-<<<<<<< HEAD
       'SOC2'
       'ISO 27001'
       'Uptime Institute'
@@ -413,8 +367,6 @@ export const innovativeITInfrastructureServices2025 = [
     ]
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
@@ -422,7 +374,6 @@ export const innovativeITInfrastructureServices2025 = [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols';
       'Scalable edge infrastructureEnergy-efficient quantum processing'
     ];
-<<<<<<< HEAD
     pricing: {
       starter: { 
         price: 199, 
@@ -604,8 +555,6 @@ export const innovativeITInfrastructureServices2025 = [
     },
 
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$31.2B',
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
@@ -626,25 +575,13 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools',
     ],
     compliance: [;
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
-<<<<<<< HEAD
-=======
 
-
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Industry-specific regulations',
     ],;
   },];
@@ -652,12 +589,7 @@ export const innovativeITInfrastructureServices2025 = [
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -863,7 +795,6 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
-<<<<<<< HEAD
   }
 ];
       'Industry - specific regulations',
@@ -876,12 +807,6 @@ export const innovativeITInfrastructureServices2025 = [;
   }
 ];
 ;
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

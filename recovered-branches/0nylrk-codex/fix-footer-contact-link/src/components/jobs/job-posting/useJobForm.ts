@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from 'react';
 import {use_form} from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -7,6 +8,7 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
+import {useState, useEffect} from 'react';
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -49,6 +51,21 @@ export interface JobPostingProps {
   const { user } = useAuth(),
   const navigate = useNavigate(),
 
+export interface JobPostingProps {
+  jobId?: string,
+  onSuccess?: () => void
+}
+
+export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [startDate, setStartDate] = useState<Date | undefined>(undefined);
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
+  const [isRemote, setIsRemote] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -74,6 +91,9 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     resolver: zod_resolver (job_schema);
     default_values: {
 
+const form = useForm<JobSchemaType>({
+    resolver: zodResolver(jobSchema),
+    defaultValues: {
       title: '';
       company: '';
       location: '';
@@ -93,6 +113,14 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       toast && toast.error("You must be logged in to post a job");
       navigate("/login"),
 
+status: ''
+      external_apply_link: ''}
+    mode: "onChange"});
+  // Function to create/update jobs that will be implemented by parent component
+  const submitJob = async (values: JobSchemaType) => {
+    if (!user) {
+      toast.error("You must be logged in to post a job");
+      navigate("/login")
       return
     }
     setIsLoading(true);
@@ -101,6 +129,8 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       const publishedDate = startDate ? startDate && startDate.toString() : '';
       const expiryDate = endDate ? endDate && endDate.toString() : '';
 
+const publishedDate = startDate ? startDate.toString() : '';
+      const expiryDate = endDate ? endDate.toString() : '';
       const jobData = {
         ...values;
         published_date: publishedDate;
@@ -109,11 +139,34 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
         is_remote: isRemote,
         user_id: user && user.id};
 
+is_remote: isRemote
+        user_id: user.id}
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
+console.error("Error in job form submission:", error);
+      toast.error(error.message |"Failed to process form");
+      throw error
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  return {
+    form;
+    isLoading;
+    startDate;
+    setStartDate;
+    endDate
+    setEndDate;
+    isRemote;
+    setIsRemote;
+    initialValues;
+    setInitialValues;
+    submitJob
+  }
+}
 
       title: '',
       company: '',
@@ -346,6 +399,7 @@ if ( {) {
     initial_values;
     setInitialValues;
     submit_job;
+setIsLoading(false)
   }
 }
 

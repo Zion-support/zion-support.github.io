@@ -36,8 +36,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     }
     const supabase = getServerSupabase();
-    const { data, error } = await supabase
+}
+    const supabase = getServerSupabase();
+    }
 
+    const supabase = getServerSupabase()
+    const { data, error } = await supabase
 
   } catch (e: any) {
 }
@@ -101,5 +105,20 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
+return res && res.status(500).json({ error: e?.message });
+
+  }
+
+}
+
+  }
+}
+
+  }
+
+}
+
   }
 }

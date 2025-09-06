@@ -4,6 +4,22 @@
   },
   {
 
+{
+
+          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+        title: 'Real - Time Analytics Dashboard',
+        description:;
+          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+
+      },
+    ],
+  },
+import { TalentProfile } from '@/types/talent';
+
+import { TalentProfile } from "@/types/talent";
+// Sample talent profiles with realistic data for the talent directory
+export const TALENT_PROFILES: TalentProfile[] = [
+  {
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -183,6 +199,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
   },
 ];
 
+;
 ;
 
 ];

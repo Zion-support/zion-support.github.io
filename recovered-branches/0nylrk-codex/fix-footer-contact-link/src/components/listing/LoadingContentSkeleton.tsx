@@ -1,6 +1,9 @@
 export function LoadingContentSkeleton() {;
 
   return (
+import React from "react",
+import { Skeleton } from "@/components/ui/skeleton";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 export function LoadingContentSkeleton() {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
@@ -18,6 +21,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export function LoadingContentSkeleton() {;
   return (;
+return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
       <CardHeader>;
         <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
@@ -65,4 +69,17 @@ function LoadingContentSkeleton() {
         </div>;
       </CardContent>;
     </Card>);
+}
+  ),;}
+ export function LoadingContentSkeleton () {
+  return (<Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden" > h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) 
+}</div> </CardContent> </Card>) 
+}
+        </div>
+      </CardContent>
+    </Card>
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
 }

@@ -1,3 +1,4 @@
+
 import type { GetServerSideProps, NextPage } from 'next';
 
 import Head from 'next/head';
@@ -32,6 +33,7 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
 
+<meta property='og:image' content='/images / og / topic - default.jpg' />;
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
@@ -166,6 +168,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 }
 export default TopicPage;
 
+return { props: { topic, posts } }
+}
+export default TopicPage;
     </div>);
 }
 ;

@@ -132,6 +132,14 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
+)}
+            </TabsTrigger>
+            <TabsTrigger value="pending">
+              Pending
+              {pendingInterviews.length > 0 && (
+                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
+                  {pendingInterviews.length}
+                </span>
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -336,3 +344,16 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
+    </>;
+  ),;
+}
+;
+export default function Interviews() {;
+  return (;
+    <ProtectedRoute>;
+      <InterviewsContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+;

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -8,6 +9,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -63,6 +65,7 @@ function Pricing2025() {
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ],
   const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
+const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
     selected_category === 'all' || service.category.includes (selected_category)),
   const getAnnualPrice = (monthly_price: string) =>: any {
     const price = parse_float (monthly_price.replace ('$', '')),
@@ -233,6 +236,8 @@ export default function Pricing2025(req, res) {
             </h1>;
             <p className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto leading - relaxed mb - 8">;
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
+{/* Billing Toggle */}
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services,
 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
@@ -275,6 +280,18 @@ export default function Pricing2025(req, res) {
         </div>
       </section>
 
+AI solutions, quantum technologies, and revolutionary IT services.;
+            </p>;
+            {/* Billing Toggle */}
+            <div className="flex items - center justify - center gap - 4 mb - 12">;
+              <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - white / 60'}`}>;
+                Monthly;
+              </span>;
+              <button;
+                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'annual' : 'monthly')}
+                className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${
+                  billing_cycle === 'annual' ? 'bg - cyan - 500' : 'bg - white / 20';
+                }`}
               >;
                 <div className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${
                   billing_cycle === 'annual' ? 'right - 1' : 'left - 1';
@@ -336,6 +353,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
@@ -389,6 +407,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -420,6 +439,9 @@ export default function Pricing2025(req, res) {
                     MOST POPULAR;
                   </div>)}
 
+<div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2 px - 6 py - 2 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full">;
+                    MOST POPULAR;
+                  </div>)}
                 {/* Service Header */}
                 <div className="text - center mb - 8">;
                   <div className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${service.color} p - 5 mx - auto mb - 4 flex items - center justify - center text - 3xl`}>;
@@ -968,6 +990,8 @@ export default function Pricing2025(req, res) {
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
 
+);
+};
   );
 };
 
@@ -978,6 +1002,20 @@ export default function Pricing2025(req, res) {
 
 }
 
+}
+
+}
+
+                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.";
+              }
+            ].map ((faq, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+}
                 className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
               >;
                 <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
@@ -988,6 +1026,359 @@ export default function Pricing2025(req, res) {
       </section>;
       <EnhancedFooter />;
 
+}
+
+    </div>);
+
+  const _filteredServices = innovative2025MicroSaasExpansionV3.filter(service => 
+    selectedCategory === 'all' || service.category.includes(selectedCategory)
+  ),
+
+  const getAnnualPrice = (monthlyPrice: string) => {
+    const price = parseFloat(monthlyPrice.replace('$', '')),
+    const annualPrice = price * 12 * 0.8, // 20% discount for annual
+    return `$${Math.round(annualPrice)}`
+  },
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
+      <Head>
+        <title>2025 Pricing & Services — Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;2025 Pricing & Services — Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/pricing-2025&quot; />
+      
+        <script type=&quot;application/ld+json&quot;>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebPage&quot;,&quot;headline&quot;:&quot;2025 Pricing & Services — Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com/pricing-2025&quot;,&quot;isPartOf&quot;:{&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com&quot;}}</script></Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+          >
+            <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent&quot;>
+              2025 Pricing & Services
+            </h1>
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8&quot;>
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
+              AI solutions, quantum technologies, and revolutionary IT services.
+            </p>
+            
+            {/* Billing Toggle */}
+            <div className=&quot;flex items-center justify-center gap-4 mb-12&quot;>
+  }
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.5
+      }
+    }
+  }
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {;
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink;
+} from 'lucide-react',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+export default function Pricing2025(req, res) {
+  try {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀' },;
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },;
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },;
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },;
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },;
+    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>;
+    selectedCategory === 'all' || service.category.includes(selectedCategory);
+  );
+  const getAnnualPrice = (monthlyPrice: string) => {;
+    const price = parseFloat(monthlyPrice.replace('$', '')),;
+    const annualPrice = price * 12 * 0.8, // 20% discount for annual;
+    return `$${Math.round(annualPrice)}`;
+  },;
+  const containerVariants = {;
+    hidden: { opacity: 0 };
+    visible: {;
+      opacity: 1;
+      transition: {;
+        staggerChildren: 0.1;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0.5;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <Head>
+        <title>2025 Pricing & Services — Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />
+        <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
+        <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+      <EnhancedNavigation />
+      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+              2025 Pricing & Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
+              AI solutions, quantum technologies, and revolutionary IT services.
+            </p>
+            {/* Billing Toggle */}
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services,
+              AI solutions, quantum technologies, and revolutionary IT services.
+            </p>
+            {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-white/60'}`}>
+                Monthly
+              </span>
+              <button
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative w-16 h-8 rounded-full transition-all duration-300 ${;
+                  billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-white/20';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >
+                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                  billingCycle === 'annual' ? 'right-1' : 'left-1'
+                }`} />
+              </button>
+              <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-white/60'}`}>
+                Annual
+                <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                  Save 20%
+                </span>
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Category Filter */}
+      {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <span>{category.icon}</span>
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Pricing Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={containerVariants}
+                key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
+                  selectedCategory === category.id;
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                <span>{category.icon}</span>;
+                {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </button>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={containerVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variants={itemVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${;
+                  service.popular ? 'ring-2 ring-cyan-400/50' : '';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                {/* Popular Badge */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                {service.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
+                    MOST POPULAR
+                  </div>
+                )}
+                {/* Service Header */}
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                {/* Service Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1314,11 +1705,17 @@ export default function Pricing2025(req, res) {
         </div>;
       </section>;
       <EnhancedFooter />;
+
     </div>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+}
+
+}
+}
 
 }

@@ -2,26 +2,23 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
     from: (table: string) => ({
-<<<<<<< HEAD
+
       select: (columns: string = "*") => ({
         eq: (column: string, value: any) => ({
           single: () => Promise.resolve({ data: null, error: null }),
@@ -65,8 +62,7 @@ const supabaseConfig: SupabaseConfig = {
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
-=======
-      select: (columns: string = '*') => ({
+select: (columns: string = '*') => ({
         eq: (column: string, value: any) => ({
           single: () => Promise && Promise.resolve({ data: null, error: null }),
           then: (callback: (result: any) => any) => callback({ data: [], error: null })
@@ -104,8 +100,7 @@ const supabaseConfig: SupabaseConfig = {
 };
 export const supabase = createSupabaseClient(supabaseConfig);
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -118,23 +113,14 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-<<<<<<< HEAD
-        single: () => null;
-      });
-    });
-  });
-}
-<<<<<<< HEAD
-  });
-};
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
+
 
   });
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+

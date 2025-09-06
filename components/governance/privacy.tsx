@@ -14,3 +14,4 @@ function GovernancePrivacy() {
     </div>);
 
 }
+}

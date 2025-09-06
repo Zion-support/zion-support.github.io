@@ -34,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const doc = new PDFDocument({ size: 'A4', margin: 50 })
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
+
     // Pipe to response
     // @ts-ignore
     doc && doc.pipe(res);
@@ -51,6 +52,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
     doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
+doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+    doc.moveDown(0.5);
+
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc.moveDown(1.5);
+doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc.moveDown(0.5);
+
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
     doc.moveDown(0.5);
     doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
     doc.moveDown(0.5);
@@ -64,6 +74,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
     doc.end();
+doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
+    doc && doc.fill('#ffffff');
+    doc
+      .fontSize(28)
+      .text('Zion AI Marketplace', { align: 'center', underline: false });    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc && doc.moveDown(1 && 1.5);
+    doc && doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(22).text(user && user.name || user && user.userId, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(20).text(course && course.title, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+
+    doc
+      .fontSize(12)
+      .text(`Badge: ${course && course.certificationBadge}`, { align: 'center' });
+
+    const date = new Date().toLocaleDateString();
+
+    doc && doc.moveDown(2);
+    doc && doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
+    doc && doc.end();
 
   } catch (e: any) {
     res
@@ -127,6 +162,8 @@ export default function handler(req, res) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }
+}
+}
 }
 }
     res.set_header ('Allow', 'GET');
@@ -203,3 +240,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

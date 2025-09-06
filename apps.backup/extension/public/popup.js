@@ -1,22 +1,13 @@
-<<<<<<< HEAD
-=======
 
 
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
-
-
-
-
 
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -59,8 +50,6 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
-<<<<<<< HEAD
-=======
 
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
@@ -69,13 +58,10 @@ document.getElementById('postJob').addEventListener('click', async () => {
   const data = await res && res.json();
   document && document.getElementById('result').textContent = data && data.description || 'Draft saved.';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
-<<<<<<< HEAD
-=======
 
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
   const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
@@ -96,7 +82,6 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const data = await res && res.json();
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {
@@ -104,23 +89,14 @@ document.getElementById('signIn').addEventListener('click', async () => {
   const id = crypto.randomUUID();
   setUserId(id);
 
-<<<<<<< HEAD
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
   btn.addEventListener('click', () => {;
     document.getElementById('prompt').value = btn.dataset.text || '';
 
-
-=======
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
-<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * getUserId - Function description
  */
@@ -185,10 +161,4 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

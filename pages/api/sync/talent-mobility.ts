@@ -13,6 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
+};
+  if (!personId || !fromNation || !toNation || !role || !startDate) {
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -32,14 +35,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
-    eventId: uuidv4()
-    type: "talent_mobility" as const
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-
-
+eventId: uuidv4(),
+    type: "talent_mobility" as const,
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()},
 
   upsertEvent(state, event);
   writeState(state);
@@ -53,12 +54,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
       })
-  )
+),
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };

@@ -1,9 +1,11 @@
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
@@ -27,14 +29,11 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
 
-=======
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -47,6 +46,25 @@ if ( {) {
   $2
 }
     res.status (405).json ({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "GET") {;
+    res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
     return;
   }
   const month =;
@@ -56,11 +74,24 @@ if ( {) {
   res.status (200).json (report);
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+  const month =
+    (req.query.month as string) |new Date().toISOString().slice(0, 7);
+  const store = getFraudStore();
+  const report = await store.generateMonthlyReport(month);
+  res.status(200).json(report);
+}
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -70,15 +101,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
-<<<<<<< HEAD
+
+
+
+
+
     return res.status(500).json({ error: "Internal server error" });
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

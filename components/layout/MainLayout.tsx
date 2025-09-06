@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 }
 
@@ -23,8 +21,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="description" content={description || 'Leading technology solutions provider'} />
         {keywords && <meta name="keywords" content={keywords} />}
 import Layout from './Layout';
-
-
 
 ;
 interface MainLayoutProps {
@@ -49,8 +45,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -71,18 +68,15 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -102,8 +96,6 @@ export default function MainLayout({
   image = '/og - image.jpg',
   url;
   return (
-
-
 
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
@@ -189,14 +181,15 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-=======
+
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -212,7 +205,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -222,14 +215,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 };
 
 export default MainLayout;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+

@@ -36,6 +36,8 @@ export interface MilestoneActivity {;
 export interface MilestoneActivity {
 
 export interface MilestoneActivity {;
+}
+export interface MilestoneActivity {
   id: string;
   milestone_id: string;
   user_id: string;

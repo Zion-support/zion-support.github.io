@@ -7,6 +7,10 @@
   Instagram,
   Github,;
 
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,29 +51,13 @@ import {;
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Footer - Zion Tech Group"
-      description="Footer component"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>
-          <p className="text-xl text-gray-600">Footer component page</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
 import Link from 'next/link';
 
+
+import Link from 'next/link';
+
+import React from 'react';
+import Link from 'next/link';
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -79,6 +67,7 @@ import Link from 'next/link';
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
+
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -112,12 +101,85 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
+
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
+const footerLinks = {;
+    services: [;
+      { name: "AI Services", href: "/ai-services" },;
+      { name: "IT Services", href: "/it-services" },;
+      { name: "Micro SaaS", href: "/micro-saas" },;
+      { name: "Cloud Solutions", href: "/cloud-solutions" },;
+      { name: "Cybersecurity", href: "/cybersecurity" },;
+      { name: "Database Solutions", href: "/database-solutions" },;
+    ],;
+    solutions: [;
+      { name: "Enterprise Solutions", href: "/enterprise-solutions" },;
+      { name: "Startup Solutions", href: "/startup-solutions" },;
+      { name: "Industries", href: "/industries" },;
+      { name: "Custom Development", href: "/custom-development" },;
+      { name: "Digital Transformation", href: "/digital-transformation" },;
+      { name: "Consulting", href: "/consulting" },;
+    ],;
+    company: [;
+      { name: "About Us", href: "/about" },;
+      { name: "Our Team", href: "/team" },;
+      { name: "Careers", href: "/careers" },;
+      { name: "Case Studies", href: "/case-studies" },;
+      { name: "News", href: "/news" },;
+      { name: "Partners", href: "/partners" },;
+    ],;
+    resources: [;
+      { name: "Blog", href: "/blog" },;
+      { name: "Documentation", href: "/docs" },;
+      { name: "API Documentation", href: "/docs/api" },;
+      { name: "Tutorials", href: "/tutorials" },;
+      { name: "White Papers", href: "/white-papers" },;
+      { name: "Webinars", href: "/webinars" },;
+    ],;
+    legal: [;
+      { name: "Privacy Policy", href: "/privacy" },;
+      { name: "Terms of Service", href: "/terms" },;
+      { name: "Cookie Policy", href: "/cookies" },;
+      { name: "Security", href: "/security" },;
+      { name: "Compliance", href: "/compliance" },;
+      { name: "Accessibility", href: "/accessibility" },;
+    ],;
+  };
+  ];
+
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+
+  const socialLinks = [;
+    { name: "Facebook", href: "#", icon: Facebook },;
+    { name: "Twitter", href: "#", icon: Twitter },;
+    { name: "LinkedIn", href: "#", icon: Linkedin },;
+    { name: "Instagram", href: "#", icon: Instagram },;
+    { name: "GitHub", href: "#", icon: Github },;
+  ];
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -127,6 +189,77 @@ import Link from 'next/link';
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0 && 0.8 }}>;
+              <div className="flex items-center space-x-2 mb-6">;
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
+                  <span className="text-white font-bold text-sm">Z</span>;
+                </div>;
+                <span className="text-xl font-bold">Zion Tech Group</span>;
+              </div>;
+              <p className="text-gray-400 mb-6">;
+                Leading provider of cutting-edge technology solutions, helping;
+                businesses transform and grow through innovation.;
+              </p>;
+              <div className="space-y-3">;
+                <div className="flex items-center space-x-3">;
+                  <Phone className="w-4 h-4 text-blue-400" />;
+                  <span className="text-sm">+1 (555) 123-4567</span>;
+                </div>;
+                <div className="flex items-center space-x-3">;
+                  <Mail className="w-4 h-4 text-blue-400" />;
+                  <span className="text-sm">hello@ziontechgroup && ziontechgroup.com</span>;
+                </div>;
+                <div className="flex items-center space-x-3">;
+                  <MapPin className="w-4 h-4 text-blue-400" />;
+                  <span className="text-sm">San Francisco, CA</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+
+          {/* Services */}
+          <div>;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}>;
+              <h3 className="text-lg font-semibold mb-6">Services</h3>;
+              <ul className="space-y-3">;
+                {footerLinks && footerLinks.services.map((link, index) => (;
+                  <li key={index}>;
+                    <Link
+                      href={link && link.href}
+                      className="text-gray-400 hover:text-white transition-colors">;
+                      {link && link.name}
+                    </Link>;
+                  </li>;
+                ))}
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+
+          {/* Solutions */}
+          <div>;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+              <h3 className="text-lg font-semibold mb-6">Solutions</h3>;
+              <ul className="space-y-3">;
+                {footerLinks && footerLinks.solutions.map((link, index) => (;
+                  <li key={index}>;
+                    <Link
+                      href={link && link.href}
+                      className="text-gray-400 hover:text-white transition-colors">;
+                      {link && link.name}
+                    </Link>;
+                  </li>;
+                ))}
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -144,6 +277,9 @@ import Link from 'next/link';
                     </Link>;
                   </li>;
                 ))}
+</ul>;
+            </motion && motion.div>;
+          </div>;
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -172,6 +308,7 @@ origin/automation-improvements-final
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
+
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -179,6 +316,10 @@ origin/automation-improvements-final
                     </Link>;
                   </li>;
                 ))}
+</ul>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -186,10 +327,7 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-
-
-
-
+<motion.div
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -210,6 +348,7 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
+
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -289,6 +428,7 @@ origin/automation-improvements-final
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -306,6 +446,7 @@ origin/automation-improvements-final
                 </a>
               ))}
             </motion.div>
+
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -327,4 +468,22 @@ origin/automation-improvements-final
       </div>;
     </footer>;
   );
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+import MainLayout from '../../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Footer - Zion Tech Group"
+      description="Footer component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>
+          <p className="text-xl text-gray-600">Footer component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;

@@ -1,5 +1,10 @@
 return <ExpoPage />;
 }
+const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),
+export default function ExpoRoute() {
+const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {;
+  ssr: false,;
+});
 export default function ExpoRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),;
 export default function ExpoRoute() {;

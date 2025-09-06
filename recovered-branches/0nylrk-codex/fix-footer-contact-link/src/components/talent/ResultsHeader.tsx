@@ -19,6 +19,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </span>
       )}
 
+</div>;
+  );
+}
     </div>
 
   )
@@ -49,6 +52,10 @@ function ResultsHeader() {
     </div>);
 }
 
+</div>
+  );
+}
+;
     </div>
   );
 }

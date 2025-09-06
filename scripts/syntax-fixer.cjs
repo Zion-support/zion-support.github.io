@@ -9,11 +9,7 @@ const util = require("util")
   async log(message, level = "INFO")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

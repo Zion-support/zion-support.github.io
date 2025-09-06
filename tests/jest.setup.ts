@@ -1,17 +1,13 @@
 // Polyfill fetch and enable fetch mocks;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
 import 'whatwg - fetch',
 import fetch_mock from 'jest - fetch - mock',
 fetch_mock.enable_mocks (),
-<<<<<<< HEAD
 // Reset fetch mocks before each test to ensure isolation;
 before_each (() => {
   fetch_mock.reset_mocks ();
@@ -24,14 +20,11 @@ global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
-<<<<<<< HEAD
-=======
+
 import 'whatwg-fetch',;
 import fetchMock from 'jest-fetch-mock',;
 fetchMock.enableMocks(),;
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Reset fetch mocks before each test to ensure isolation;
 before_each (() => {
   fetch_mock.reset_mocks ();
@@ -40,33 +33,25 @@ before_each (() => {
 import '@testing - library / jest - dom',
 import { TextEncoder, TextDecoder } from 'util',
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
-<<<<<<< HEAD
 global.TextEncoder = TextEncoder,;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321',
@@ -86,7 +71,6 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn ()}))}),
-<<<<<<< HEAD
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
 // global.import = {
 //   // @ts - expect - error;
@@ -232,8 +216,7 @@ if ( {) {
   $2
 }
   URL.revokeObjectURL = jest.fn ();
-<<<<<<< HEAD
-=======
+
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',;
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321',;
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',;
@@ -254,8 +237,6 @@ Object.defineProperty(window, 'matchMedia', {;
     removeEventListener:jest.fn(),;
     dispatchEvent:jest.fn()}))}),;
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
 // global.import = {
 //   // @ts - expect - error;
@@ -396,14 +377,10 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({
   unobserve: jest.fn (),
   disconnect: jest.fn ()})),
 // Polyfill for URL.revokeObjectURL;
-<<<<<<< HEAD
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 // Polyfill for BroadcastChannel;
-<<<<<<< HEAD
-=======
 // Check condition
 if ( {) {
   $2
@@ -411,11 +388,10 @@ if ( {) {
   URL.revokeObjectURL = jest.fn ();
 }
 // Polyfill for BroadcastChannel;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 }
 // Polyfill for BroadcastChannel;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 // Check condition
 if ( {) {
   $2
@@ -424,7 +400,6 @@ if ( {) {
   global.BroadcastChannel = class BroadcastChannelMock {
     constructor (name: string) {
       // @ts - expect - error - Mock name property assignment;
-<<<<<<< HEAD
       this.name = name;
     }
     post_message = jest.fn (),
@@ -447,15 +422,12 @@ if ( {) {
 import axios from 'axios',
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
-<<<<<<< HEAD
-=======
+
 if (typeof BroadcastChannel === 'undefined') {;
   // @ts-expect-error - BroadcastChannel polyfill for test environment;
   global.BroadcastChannel = class BroadcastChannelMock {;
     constructor(name:string) {;
       // @ts-expect-error - Mock name property assignment;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       this.name = name;
     }
     post_message = jest.fn (),
@@ -475,31 +447,26 @@ if ( {) {
   window.scroll_to = jest.fn ();
 }
 // Mock axios.create to return axios itself;
-<<<<<<< HEAD
 import axios from 'axios',;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import axios from 'axios',
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
 // Some test files were originally written for Vitest and import utilities from 'vitest'.;
 // To keep migrating gradually while still running the Jest suite successfully, we create;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 // a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.;
 //;
@@ -513,17 +480,18 @@ jest.mock ('vitest', () => {
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi: {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+return {
+    // Named export expected in `import { vi } from 'vitest'` statements;
+    vi: {
+
+
+
+
+
   return {
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       fn: jest_fn,
       spy_on: jest.spy_on.bind (jest),
       mock: jest.mock.bind (jest),
@@ -645,12 +613,9 @@ if ( {) {
   // @ts - ignore;
   window.IntersectionObserver = MockIntersectionObserver,
   // @ts - ignore;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
   global.IntersectionObserver = MockIntersectionObserver;
-=======
   global.IntersectionObserver = MockIntersectionObserver;
 // a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like "Vitest cannot be imported in a CommonJS module".;
@@ -793,26 +758,20 @@ if (typeof window.IntersectionObserver === 'undefined') {;
   window.IntersectionObserver = MockIntersectionObserver,;
   // @ts-ignore;
   global.IntersectionObserver = MockIntersectionObserver,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   global.IntersectionObserver = MockIntersectionObserver;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+global.IntersectionObserver = MockIntersectionObserver;
 
-  global.IntersectionObserver = MockIntersectionObserver;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
 // @ts - ignore;
 global.fetch = fetch_mock,
@@ -820,84 +779,6 @@ global.fetch = fetch_mock,
 // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
-}
-  // @ts - ignore;
-  window.window.window.performance.getEntriesByType = () => [];
-}
-jest.mock ('@supabase / ssr', () => ({
-  supabase: {
-    auth: {
-      onAuthStateChange: jest.fn (() => ({
-        data: { subscription: { unsubscribe: jest.fn () } }}))}}})),
-// Provide minimal mocks for other @supabase / ssr helpers referenced by auth - js;
-jest.mock ('@supabase / ssr / dist / main / cookies', () => ({
-  get_all: () => ({}),
-  set_item: jest.fn (),
-  get_item: jest.fn ()})),
-// When a module imports '@/context' root index (e.g., useEnqueueSnackbar);
-jest.mock ('@/context', () => {
-  const useEnqueueSnackbar = () =>: any jest.fn (),
-  return { __esModule: true, useEnqueueSnackbar }
-}),
-// Extend Vitest shim with restoreAllMocks for suites that call it;
-// @ts - ignore - vi is added by the vitest mock above;
-// Check condition
-if ( {) {
-  $2
-}
-  // @ts - ignore;
-  global.vi.restoreAllMocks = jest.restoreAllMocks;
-}
-// Mock @supabase / ssr createBrowserClient so components don't crash in tests;
-jest.mock ('@supabase / ssr', () => ({
-  createBrowserClient: () => ({
-    auth: { onAuthStateChange: jest.fn (), signInWithPassword: jest.fn (), sign_up: jest.fn () }})})),
-// Ensure hooks / use - toast exports usable toast fn;
-jest.mock ('@/hooks / use - toast', () => {
-  const toast_fn = jest.fn (),
-  return { __esModule: true, toast: toast_fn, use_toast: () => ({ toast: toast_fn }) }
-}),
-// Minimal MSW mocks to satisfy tests without parsing ESM bundles;
-jest.mock ('msw', () => ({ rest: { get: jest.fn (), post: jest.fn (), put: jest.fn (), delete: jest.fn () } })),
-jest.mock ('msw / node', () => ({ setup_server: () => ({ listen: jest.fn (), reset_handlers: jest.fn (), close: jest.fn () }) })),
-// Provide mock for missing component;
-jest.mock ('@/components / search / FilterSidebar', () => ({ FilterSidebar: () => null })),
-// Extend Vitest shim with timer helpers if not present;
-// @ts - ignore - vi is added by the vitest mock above;
-// Check condition
-if ( {) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.useFakeTimers = jest.useFakeTimers.bind (jest), ) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.useRealTimers = jest.useRealTimers.bind (jest)) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.runAllTimers = jest.runAllTimers.bind (jest)) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind (jest)) {
-  $2
-}
-<<<<<<< HEAD
-}
-
-=======
-// @ts-ignore;
-global.fetch = fetchMock,;
-;
-// Polyfill window.window.window.performance.getEntriesByType for JSDOM (used in productionLogger);
-if (typeof window.window.window.performance.getEntriesByType !== 'function') {;
-  // @ts-ignore;
-  window.window.window.performance.getEntriesByType = () => [],;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
@@ -963,171 +844,5 @@ if ( {) {
   $2
 }
 }
-<<<<<<< HEAD
-}) );
-//Add any other specific methods from supabase.auth if they get called 
-};
-//Add other top-level Supabase client methods if they get called //e.g., from: jest.fn (), rpc: jest.fn (), etc. //For now, keeping it minimal. 
-}
-}) );
-//Mock Firebase/Firestore jest.mock ('firebase/firestore', () => {
-  //Mock collection function to be available on the db instance (for v8 style) //and as a top-level export (for v9 style) . return {
-  path: actualPath, doc: jest.fn ( (docId) => ({
-  id: docId, path: `$ {
-  actualPath 
-}/$ {
-  docId 
-}`, get: jest.fn ( () => Promise.resolve ({
-  exists: () => false, data: () => undefined 
-}) );
-set: jest.fn ( () => Promise.resolve () );
-update: jest.fn ( () => Promise.resolve () );
-delete: jest.fn ( () => Promise.resolve () );
-onSnapshot: jest.fn ( () => jest.fn () ), //Returns an unsubscribe function 
-}) );
-return {
-  getFirestore: jest.fn ( () => ({
-  //For v8 style: db.collection ('path') collection: mockCollection, //For v8 style: db.doc ('path/docId') doc: mockDoc, //Add any other methods directly on db if used, e.g. batch, runTransaction 
-}) );
-//For v9 style: collection (db, 'path') collection: mockCollection;
-//For v9 style: doc (db, 'pathdocId') doc: mockDoc;
-getDoc: jest.fn ( () => Promise.resolve ({
-  exists: () => false, data: () => undefined 
-}) );
-setDoc: jest.fn ( () => Promise.resolve () );
-updateDoc: jest.fn ( () => Promise.resolve () );
-deleteDoc: jest.fn ( () => Promise.resolve () );
-onSnapshot: jest.fn ( () => jest.fn () ), //Returns an unsubscribe function for document/query snapshots query: jest.fn ( (collectionRef, ...constraints) => ({
-  ref: collectionRef, constraints 
-}) );
-where: jest.fn ( (fieldPath, opStr, value) => ({
-  type: 'where', fieldPath, opStr, value 
-}) );
-orderBy: jest.fn ( (fieldPath, directionStr) => ({
-  type: 'orderBy', fieldPath, directionStr 
-}) );
-limit: jest.fn ( (count) => ({
-  type: 'limit', count 
-}) );
-Timestamp: {
-  now: jest.fn ( () => ({
-  toDate: () => new Date () 
-}) );
-fromDate: jest.fn ( (date) => ({
-  toDate: () => date 
-}) ) 
-};
-//Add other Firestore exports your code uses 
-}
-});
-jest.mock ('firebase/auth', () => ({
-  getAuth: jest.fn ( () => ({
-  //Mock Auth instance properties/methods if needed, e.g., currentUser currentUser: null, onAuthStateChanged: jest.fn ( () => jest.fn () ), //Returns an unsubscribe function 
-}) );
-createUserWithEmailAndPassword: jest.fn ( () => Promise.resolve ({
-  user: {
-  uid: 'mock-uid', email: 'mock@example.com' 
-}
-}) );
-signInWithEmailAndPassword: jest.fn ( () => Promise.resolve ({
-  user: {
-  uid: 'mock-uid', email: 'mock@example.com' 
-}
-}) );
-sendEmailVerification: jest.fn ( () => Promise.resolve () );
-sendPasswordResetEmail: jest.fn ( () => Promise.resolve () );
-signOut: jest.fn ( () => Promise.resolve () );
-//Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.) //For example: //GoogleAuthProvider: jest.fn ();
-jest.mock ('firebase/storage', () => ({
-  getStorage: jest.fn ( () => ({
-  //Mock Storage instance properties/methods if needed 
-}) );
-ref: jest.fn ( (storageInstance, path) => ({
-  //Mock StorageReference name: path ? path.substring (path.lastIndexOf ('/') + 1) : 'mockfile.txt', fullPath: path || 'mock/full/path/mockfile.txt', //Add methods like uploadBytes, getDownloadURL, delete, etc. 
-}) );
-uploadBytes: jest.fn ( (storageRef, data, metadata) => Promise.resolve ({
-  //Mock UploadResult metadata: {
-  fullPath: storageRef.fullPath, ...metadata 
-};
-ref: storageRef 
-}) );
-getDownloadURL: jest.fn ( (storageRef) => Promise.resolve (`https://mockstorage.com/$ {
-  storageRef.fullPath 
-}`) );
-deleteObject: jest.fn ( () => Promise.resolve () );
-//Add other Storage exports your code uses 
-}) );
-//Mock axios jest.mock ('axios', () => ({
-  get: jest.fn ( () => Promise.resolve ({
-  data: {
-  
-}
-}) );
-post: jest.fn ( () => Promise.resolve ({
-  data: {
-  
-}
-}) );
-//Add other axios methods if used (e.g., put, delete, request) 
-}) );
-//Mock ResizeObserver for Radix UI components and other libraries that might use it //Polyfill for BroadcastChannel if (typeof BroadcastChannel === 'undefined') {
-  //@ts-expect-error - BroadcastChannel polyfill for test environment global.BroadcastChannel = class BroadcastChannelMock {
-  constructor (name: string) {
-  //@ts-expect-error - Mock name property assignment //Mock axios.create to return axios itself import {
-  {
-  axios from 'axios';
-//@ts-ignore //----------------------------- //Vitest Compatibility Layer for Jest //----------------------------- //Some test files were originally written for Vitest and import utilities from 'vitest'. //To keep migrating gradually while still running the Jest suite successfully, we create //a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents. //This avoids individual test failures like "Vitest cannot be imported in a CommonJS module" . // //NOTE: When the test suite is fully migrated to Vitest this shim can be removed together //with the associated `moduleNameMapper` entry in `jest.config.cjs`. //--------------------------------------------------------------------------- return {
-  //Named export expected in `import {
-  vi 
-}from 'vitest'` statements vi: {
-  fn: jestFn, spyOn: jest.spyOn.bind (jest), mock: jest.mock.bind (jest), clearAllMocks: jest.clearAllMocks, resetAllMocks: jest.resetAllMocks, restoreAllMocks: jest.restoreAllMocks, useFakeTimers: jest.useFakeTimers.bind (jest), useRealTimers: jest.useRealTimers.bind (jest), runAllTimers: jest.runAllTimers.bind (jest), advanceTimersByTime: jest.advanceTimersByTime.bind (jest), //Provide a simple implementation of `import.meta` mocking helpers //frequently used in Vitest examples // (no-op implementations because Jest already handles env vars via `process.env`) . importActual: jest.requireActual, mockResolvedValue: <T = unknown> (value: T) => jest.fn () .mockResolvedValue (value), mockRejectedValue: <T = unknown> (value: T) => jest.fn () .mockRejectedValue (value) 
-};
-//Re-export common testing globals so that `import {
-  {
-  {
-  expect, test 
-}from 'vitest'` //continues to work inside the Jest environment. describe: global.describe;
-it: global.it;
-test: global.test;
-expect: expect, //Use expect from jest-dom/jest instead of global.expect beforeEach: global.beforeEach;
-afterEach: global.afterEach;
-beforeAll: global.beforeAll;
-afterAll: global.afterAll 
-}as unknown as Record<string unknown> 
-});
-//----------------------------- //Lightweight Context & Redux mocks to avoid provider runtime errors //----------------------------- //Auth Context //Polyfill IntersectionObserver for components that use it (e.g., embla-carousel) if (typeof window.IntersectionObserver === 'undefined') {
-  class MockIntersectionObserver {
-  constructor () {
-  
-}observe () {
-  
-}unobserve () {
-  
-}disconnect () {
-  
-}
-}//@ts-ignore window.IntersectionObserver = MockIntersectionObserver;
-//@ts-ignore global.IntersectionObserver = MockIntersectionObserver 
-}//Ensure all code paths use the mock implementation //Some services import the global fetch reference before jest-fetch-mock is enabled. //Override it explicitly so those modules receive the mocked version. //@ts-ignore jest.mock ('@supabase/ssr', () => ({
-  supabase: {
-  auth: {
-  onAuthStateChange: jest.fn ( () => ({
-  //Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js jest.mock ('@supabase/ssr/dist/main/cookies', () => ({
-  getAll: () => ({
-  
-});
-setItem: jest.fn ();
-getItem: jest.fn () 
-}) );
-//When a module imports '@/context' root index (e.g., useEnqueueSnackbar) //@ts-ignore if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind (jest);
-//@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
-// @ts-ignore 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+

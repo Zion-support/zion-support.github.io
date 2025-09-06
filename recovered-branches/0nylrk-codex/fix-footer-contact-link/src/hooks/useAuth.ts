@@ -11,6 +11,7 @@ export const useAuth = (): AuthContextType => {
   // returned value matches `AuthContextType` exactly.
   return context as AuthContextType;
 };
+};
 }
 ;
   return context as AuthContextType,;

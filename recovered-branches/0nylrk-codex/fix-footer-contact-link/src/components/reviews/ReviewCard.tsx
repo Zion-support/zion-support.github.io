@@ -70,6 +70,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
     )
   },
   
+);
+  };
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -171,6 +173,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
+<div className="border-t pt-3 mt-3">
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -433,4 +438,6 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
   )
 }
 
+;
+;
 ;

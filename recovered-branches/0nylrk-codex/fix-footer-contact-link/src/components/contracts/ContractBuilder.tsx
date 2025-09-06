@@ -17,6 +17,56 @@ import {ContractForm, ContractFormValues} from "./components/ContractForm";
 import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+interface ContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+
+  onContractGenerated?: (contractContent: string) => void
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+interface ContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+
+  onContractGenerated?: (contractContent: string) => void
+}
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+interface ContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+
+  onContractGenerated?: (contractContent: string) => void
+}
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -27,11 +77,39 @@ interface ContractBuilderProps {;
 
 export function ContractBuilder(): any ({;
 
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager";
+import { SmartContractBuilder } from "./SmartContractBuilder";
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+interface ContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+
+  onContractGenerated?: (contractContent: string) => void
+}
+
+export function ContractBuilder({;
 export function ContractBuilder({;
   isOpen;
   onClose;
   talent;
   clientName;
+export function ContractBuilder({
+  isOpen,
+  onClose,
+  talent,
+  clientName,
   onContractGenerated;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
@@ -49,6 +127,46 @@ export function ContractBuilder({;
 
   const handleContractGenerated = (contract: string) => {;
     setGeneratedContract(contract);
+import { useState } from "react",;
+import { Dialog, DialogContent } from "@/components/ui/dialog",;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
+import { Button } from "@/components/ui/button",;
+import { Save } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { ContractForm, ContractFormValues } from "./components/ContractForm",;
+import { ContractPreview } from "./components/ContractPreview",;
+import { TemplateManager } from "./templates/TemplateManager",;
+import { SmartContractBuilder } from "./SmartContractBuilder",;
+;
+interface ContractBuilderProps {;
+  isOpen:boolean,;
+  onClose:() => void,;
+  talent:TalentProfile,;
+  clientName:string,;
+  onContractGenerated?:(contractContent:string) => void;
+}
+;
+export function ContractBuilder({;
+  isOpen,;
+  onClose,;
+  talent,;
+  clientName,;
+  onContractGenerated;
+} ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form"),;
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  ),;
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),;
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),;
+;
+  const handleLoadTemplate = (templateData:ContractFormValues) => {;
+    setFormValues(templateData);
+  },;
+;
+  const handleContractGenerated = (contract:string) => {;
+    setGeneratedContract(contract),;
     setActiveTab("preview"),;
     if (onContractGenerated) {;
       onContractGenerated(contract);
@@ -65,6 +183,7 @@ export function ContractBuilder({;
 
           onClose();
 
+onClose();
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -120,6 +239,11 @@ if ( {) {
           on_close ();
 }
 
+export function ContractBuilder({
+  isOpen,
+  onClose,
+  talent,
+  clientName,
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -128,9 +252,36 @@ if ( {) {
     undefined
   ),
 
+},;
+;
+  if (showSmartContractBuilder) {;
+    return (;
+      <SmartContractBuilder;
+        isOpen={isOpen}
+        onClose={() => {;
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData)
+  }
+  const handleContractGenerated = (contract: string) => {
+    setGeneratedContract(contract);
+    setActiveTab("preview")
+    if (onContractGenerated) {
+      onContractGenerated(contract)
+    }
+  }
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {
+          setShowSmartContractBuilder(false);
+
+          onClose()
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
 
@@ -144,6 +295,8 @@ if ( {) {
     if (onContractGenerated) {
       onContractGenerated(contract)
 
+setShowSmartContractBuilder(false),;
+          onClose(),;
         }}
         talent={talent}
         client_name={client_name}
@@ -155,6 +308,11 @@ if ( {) {
 
   return (
 
+/>;
+    ),;
+  }
+;
+  return (;
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -168,6 +326,11 @@ if ( {) {
               <Button
                 variant="outline" 
                 size="sm"
+;
+            <div className="flex gap-2">;
+              <Button ;
+                variant="outline" ;
+                size="sm";
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
@@ -175,6 +338,16 @@ if ( {) {
                 Templates;
               </Button>;
 
+}
+  };
+
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {
+          setShowSmartContractBuilder(false);
+          onClose()
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -256,6 +429,12 @@ export function ContractBuilder({;
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
 
+>
+                Smart Contract Builder
+              </Button>
+            </div>
+          </div>
+          <TabsContent value="form" className="pt-4">
       />);
   }
   return (
@@ -282,6 +461,11 @@ export function ContractBuilder({;
                 size="sm";
                 on_click={() => setShowSmartContractBuilder (true)}
 
+;
+              <Button;
+                variant="secondary";
+                size="sm";
+                onClick={() => setShowSmartContractBuilder(true)}
               >;
                 Smart Contract Builder;
               </Button>;
@@ -291,6 +475,7 @@ export function ContractBuilder({;
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
 
+<ContractForm
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
@@ -303,6 +488,28 @@ export function ContractBuilder({;
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
 
+<ContractForm 
+
+          ;
+          <TabsContent value="form" className="pt-4">;
+            <ContractForm ;
+              talent={talent}              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleContractGenerated}
+            />;
+          </TabsContent>;
+            <ContractForm
+            <ContractForm 
+              talent={talent}
+              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleContractGenerated}
+            />
+          </TabsContent>
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
               <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
@@ -314,6 +521,24 @@ export function ContractBuilder({;
           </TabsContent>;
         </Tabs>;
 
+;
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+              <ContractPreview ;
+                contractContent={generatedContract}
+                talent={talent}
+                onClose={onClose}
+                status="ready";
+              />;
+            )}
+          </TabsContent>;
+        </Tabs>;
+        ;
+        <TemplateManager;
+              />
+            )}
+          </TabsContent>
+        </Tabs>
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
@@ -326,6 +551,9 @@ export function ContractBuilder({;
   );
 }
 
+/>;
+      </DialogContent>;
+    </Dialog>;
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -348,6 +576,7 @@ export function ContractBuilder({;
     </Dialog>);
 }
 
+;
   ),; interface ContractBuilderProps {
   isOpen: boolean;
 onClose: () => void;

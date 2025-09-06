@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -111,18 +112,26 @@ export default function RequestsPanel() {
     markAsResponded,
     toggleArchive
 
+} = useTalentQuotes();
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote);
+    setShowDetails(true)
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote),
     setShowDetails(true),
-    
+
 
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
 
+}
+  // Filter quotes by archive status
+  const activeQuotes = quotes.filter(q => !q.is_archived);
+  const archivedQuotes = quotes.filter(q => q.is_archived);
   },
 
   // Filter quotes by archive status
@@ -183,6 +192,7 @@ export default function RequestsPanel() {;
   const archivedQuotes = quotes && quotes.filter(q => q && q.is_archived);
 
   return (
+return (
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -258,6 +268,20 @@ function RequestsPanel() {
   const activeQuotes = quotes.filter(q => !q.is_archived),;
   const archivedQuotes = quotes.filter(q => q.is_archived);
   return (;
+const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+    quotes;
+    unread_count;
+    is_loading;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    markAsViewed;
+    markAsResponded;
+  return (
     <ProtectedRoute>;
       <div>;
         <Header />;
@@ -266,6 +290,7 @@ function RequestsPanel() {
 
             <RequestsHeader;
 
+<RequestsHeader
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -274,6 +299,13 @@ function RequestsPanel() {
 
             />;
 
+<RequestsHeader;
+              unreadCount={unreadCount}              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+            />;
+            ;
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -283,6 +315,27 @@ function RequestsPanel() {
 
               <TabsContent value="active">;
 
+<QuoteRequestsList
+                  quotes={activeQuotes}
+                  isLoading={isLoading}
+              ;
+              <TabsContent value="active">;
+                <QuoteRequestsList;
+                  quotes={activeQuotes}                  isLoading={isLoading}
+            <RequestsHeader;
+              unreadCount={unreadCount}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+            />
+            {/* Main Content */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Requests</TabsTrigger>
+                <TabsTrigger value="archived">Archived</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -296,6 +349,18 @@ function RequestsPanel() {
 
               <TabsContent value="archived">;
 
+/>;
+              </TabsContent>;
+                <QuoteRequestsList
+                  quotes={archivedQuotes}
+                  isLoading={isLoading}
+              ;
+              <TabsContent value="archived">;
+                <QuoteRequestsList;
+                  quotes={archivedQuotes}                  isLoading={isLoading}
+                />
+              </TabsContent>
+              <TabsContent value="archived">
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -319,6 +384,34 @@ function RequestsPanel() {
             setShowDetails(false);
             setSelectedQuote(null);
 
+/>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+        ;
+        {/* Quote Details Modal */}
+        <QuoteDetails;
+          quote={selectedQuote}
+          isOpen={showDetails}
+
+          onClose={() => {;
+                />
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+        {/* Quote Details Modal */}
+        <QuoteDetails
+          quote={selectedQuote}
+          isOpen={showDetails}
+          onClose={() => {
+            setShowDetails(false);
+
+            setSelectedQuote(null)
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
           }}
         />
         <Footer />
@@ -401,4 +494,61 @@ if ( {) {
         <Footer />;
       </div>;
     </ProtectedRoute>);
+}
+            setShowDetails(false),;
+            setSelectedQuote(null),;
+          }}
+        />;
+        ;
+        <Footer />;
+      </div>;
+    </ProtectedRoute>;
+  ),;}
+ import {
+  RequestsHeader;
+QuoteRequestsList export default function RequestsPanel () {
+  const {
+  user 
+}= useAuth ();
+const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+const [showDetails, setShowDetails] = useState (false);
+//If status is new, mark as viewed if (quote.status === 'new') {
+  return (<ProtectedRoute> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <RequestsHeader unreadCount= {
+  unreadCount 
+}statusFilter= {
+  statusFilter 
+}setStatusFilter= {
+  setStatusFilter 
+}archiveFilter= {
+  archiveFilter 
+}setArchiveFilter= {
+  setArchiveFilter 
+}/> </TabsList> <TabsContent value="active" > <QuoteRequestsList quotes= {
+  activeQuotes 
+}isLoading= {
+  isLoading 
+}isArchived= {
+  false 
+}onViewDetails= {
+  handleViewDetails 
+}onMarkAsResponded= {
+  markAsResponded 
+}onToggleArchive= {
+  toggleArchive 
+}/> </TabsContent> <TabsContent value="archived" > <QuoteRequestsList quotes= {
+  archivedQuotes 
+}isLoading= {
+  isLoading 
+}isArchived= {
+  true 
+}onViewDetails= {
+  handleViewDetails 
+}onMarkAsResponded= {
+  markAsResponded 
+}onToggleArchive= {
+  toggleArchive 
+}/> </TabsContent> </Tabs> </div> </div> {
+  /* Quote Details Modal */ 
+}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
+}
 }

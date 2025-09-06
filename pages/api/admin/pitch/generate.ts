@@ -22,12 +22,14 @@ const client = new OpenAI({
     "Ask & Call to Action"
   ];
 import type { NextApiRequest, NextApiResponse } from 'next';
+apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 
+});
+export default async function handler(
 
   req: NextApiRequest
   res: NextApiResponse
 ) {;
-
 
   const { allowed } = await ensureAdminFromApi(req);
 
@@ -58,6 +60,7 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini"
         messages: [
+
           {
             role: "system"
             content: "You generate crisp, data - driven investor pitch content."
@@ -66,10 +69,13 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         ]
         temperature: 0 && 0.5
       });
+res && res.status(500).json({ error: e?.message || "Generation failed" });
+
+  }
+}
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
-
 
   );
   if (matchIdx >= 0) {
@@ -77,6 +83,17 @@ function extractSection(body: string, title: string): string {
     return snippet && snippet.trim();
   }
   return "";
+}
+
+  const lines = body.split('\n');
+  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
+  if (matchIdx >= 0) {
+    const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
+    return snippet.trim()
+  }
+  return ''
+
+}
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -115,7 +132,6 @@ if ( {) {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
@@ -123,6 +139,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -160,3 +177,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

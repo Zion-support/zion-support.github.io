@@ -1,28 +1,24 @@
+
+
+
+
+
+
+
+
+
 /** @type {import ('next').NextConfig} */;
 const next_config = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   // Image optimization;
   images: {
@@ -30,23 +26,18 @@ const next_config = {
     formats: ['image / webp', 'image / avif'],
   },
   // Output configuration;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
+
+
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-=======
   pageExtensions: ["tsx", "ts", "jsx", "js"],
 
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   // Image optimization
   images: {
     domains: [
@@ -57,19 +48,12 @@ const next_config = {
     ],
     formats: ["image/webp", "image/avif"],
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   // Output configuration
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
   // Output configuration
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  // Output configuration
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+// Output configuration
+
+
   output: 'standalone',
 
   // Trailing slash
@@ -80,20 +64,17 @@ const next_config = {
   assetPrefix: '',
   // Generate ETags
   generateEtags: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   // Dist directory
   distDir: '.next',
 };
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
+
 
   // Output configuration
   output: "standalone",
@@ -110,29 +91,23 @@ const next_config = {
   // Generate ETags
   generateEtags: true,
 
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   // Dist directory
   distDir: ".next",
 };
 
-
-<<<<<<< HEAD
 module.exports = nextConfig;
 
 module.exports = nextConfig;
-<<<<<<< HEAD
+
+
 module.exports = nextConfig;
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-module.exports = nextConfig;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+

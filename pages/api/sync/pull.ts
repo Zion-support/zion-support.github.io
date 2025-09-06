@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
-=======
 return res.status(200).json({
+
+
+
+  return res.status(200).json({
 
     instanceId: state.config.instanceId,
     lastSyncedAt: state.lastSyncedAt,
@@ -13,7 +13,7 @@ return res.status(200).json({
 
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 ;
 export default /**
  * handler - Function description
@@ -35,19 +35,20 @@ function handler() {
     events
     scope: requested_scope});
 }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-    instanceId: state.config.instanceId
+instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,17 +83,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     events
   return res.status(200).json({
 
-<<<<<<< HEAD
 
-
-    instanceId: state.config.instanceId
-    lastSyncedAt: state.lastSyncedAt
-    events
-=======
     instanceId: state.config.instanceId,
     lastSyncedAt: state.lastSyncedAt,
     events,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -121,10 +116,9 @@ export default function handler(req, res) {
 }
     scope: requestedScope
   });
-<<<<<<< HEAD
-}
-=======
 
+}
+}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
@@ -153,7 +147,6 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+

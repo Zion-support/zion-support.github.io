@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -33,7 +30,6 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -411,7 +407,6 @@
       rating: 4.9
       reviews: 28
     }
-=======
     website: string;
   }
 
@@ -435,8 +430,6 @@ const contact = {
 
     },;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ];    features: [
 
 export interface InnovativeMicroSaasService {
@@ -812,28 +805,20 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     description: 'Next-generation financial modeling platform that combines quantum computing with AI to solve complex financial problems, optimize portfolios, and predict market movements.',
     features: [
       'Quantum portfolio optimizationAI-powered market predictionRisk assessment algorithmsReal-time financial analyticsMulti-asset class modelingRegulatory compliance toolsBacktesting and validationCustom financial models';
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
       launchDate: '2023-10-01'
       customers: 34
       rating: 4.9
       reviews: 28
     }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
       launchDate: '2023-10-01',
       customers: 34,
       rating: 4.9,
       reviews: 28,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'API integration capabilities'
     ];
     popular: true, icon: '💰',
@@ -1015,23 +1000,15 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     description: 'Cutting-edge platform that combines AI, robotics, and IoT to create autonomous supply chain operations, from warehouse automation to last-mile delivery.',
     features: [
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
   ];    features: [;
       'Autonomous warehouse robotsAI - powered route optimization_real - time inventory tracking_predictive maintenance_multi - robot coordination_safety and collision avoidance_performance analytics_scalable deployment';
       'API integration capabilities';
     ];
-<<<<<<< HEAD
-=======
 
     popular: true, icon: '🤖',
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - gray - 600 to - slate - 700', text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / autonomous - supply - chain - robotics',
     market_position: 'Leading - edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
@@ -1043,14 +1020,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     useCases: ['Warehouse automation, Order fulfillment, Inventory management, Last-mile delivery'];
     roi: 'Increase warehouse efficiency by 300% and reduce operational costs by 40%'
     competitors: ['Amazon Robotics, Fetch Robotics, Locus Robotics, 6 River Systems, AutoStore'];
-<<<<<<< HEAD
     market_size: '$28B+ Warehouse Robotics market', growth_rate: '35% YoY',
     variant: 'autonomous - robotics - enterprise', contact_info: contact,
     real_implementation: true, implementation_details: 'Robotics - grade platform with AI - powered autonomy and comprehensive logistics management',
     launch_date: '2023 - 10 - 01', customers: 34,
     rating: 4.9,
-<<<<<<< HEAD
-=======
     reviews: 28;
 
   },;
@@ -1483,27 +1457,18 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9;
     reviews: 28;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
     marketSize: '$28B+ Warehouse Robotics market', growthRate: '35% YoY'
     variant: 'autonomous-robotics-enterprise', contactInfo: contact
     realImplementation: true, implementationDetails: 'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
     launchDate: '2023-10-01', customers: 34
     rating: 4.9
     reviews: 28
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService {;
   id: string,;
@@ -3015,11 +2980,5 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9;
     reviews: 28;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

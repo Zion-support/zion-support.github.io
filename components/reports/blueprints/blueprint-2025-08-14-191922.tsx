@@ -1,4 +1,9 @@
-<div className='min-h-screen bg-slate-950 text-white'>
+import Head from 'next/head';
+
+export default function Page() {
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
         <meta
@@ -167,6 +172,8 @@ function Page() {
     </div>);
 }
 
+);
+}
   )
   } catch (error) {
     console.error("Error:", error);

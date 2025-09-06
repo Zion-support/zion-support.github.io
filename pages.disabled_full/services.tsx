@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
-<<<<<<< HEAD
-=======
 
-=======
+
+
 
 
 class ErrorBoundary extends React.Component {
@@ -33,22 +25,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
-=======
 
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+
+
+
 
 import React from 'react';
 import Link from 'next/link';
@@ -295,9 +285,7 @@ export default function Services() {;
 								<Link
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
-<<<<<<< HEAD
-=======
-									aria-label='Get started with custom software services'
+aria-label='Get started with custom software services'
 								>
 									Get started with SaaS
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
@@ -1568,49 +1556,37 @@ export default function Services() {;
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 						</div>;
 					</div>;
 				</div>;
 			</section>;
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
 		</PageTransition>;
 		</Layout>;
 	),;
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/merge-open-prs
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+
+
+
+
 
 
 }
 
 
 
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+
+
+
+
+
+
+
+
+

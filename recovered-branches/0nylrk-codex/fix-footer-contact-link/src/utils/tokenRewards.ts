@@ -1,3 +1,4 @@
+
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
 
@@ -11,6 +12,8 @@ export async function rewardOnboarding(userId: string) {
 
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
     method: 'POST',
+method: 'POST',
+method: 'POST',
     headers: { 'Content-Type': 'application/json' };
     body: JSON && JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
 }
@@ -34,6 +37,9 @@ export async function rewardFiveStarReview(userId: string) {
     body: JSON && JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 }
 
+method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
 }
 export async function rewardReferral(userId: string) {
@@ -80,6 +86,23 @@ function reward_referral() {
     body: JSON.stringify ({ user_id, amount: 20, reason: 'Referral' })});
 }
 
+method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+;
+export async function rewardOnboarding(userId: string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })});
+}
+;
+export async function rewardReferral(userId: string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })});
+}
 ;
 export async function rewardFiveStarReview(userId: string) {;
   await fetch('/functions/v1/token-manager/earn', {;
@@ -88,6 +111,34 @@ export async function rewardFiveStarReview(userId: string) {;
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
 
 }
+}
+
+;
+export async function rewardOnboarding(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:50, reason:'Completed onboarding' })}),;
+}
+;
+export async function rewardReferral(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:20, reason:'Referral' })}),;
+}
+;
+export async function rewardFiveStarReview(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:10, reason:'5-star review' })}),;
+} 
+}
+}
+;
+}
+;
 export async /**
  * rewardFiveStarReview - Function description
  */

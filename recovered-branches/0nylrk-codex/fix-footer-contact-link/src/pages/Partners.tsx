@@ -412,6 +412,9 @@ export default function Partners() {
       <Tabs value={active_tab} onValueChange={setActiveTab} className="space - y-4">;
         <TabsList className="grid grid - cols - 2 md:grid - cols - 5 mb - 4">;
 
+;
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
+        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">;
           <TabsTrigger value="overview">Overview</TabsTrigger>;
           <TabsTrigger value="referrals">Referral Links</TabsTrigger>;
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
@@ -447,6 +450,8 @@ export default function Partners() {
     </div>);
 }
 
+}
+;
 }
 ;
 

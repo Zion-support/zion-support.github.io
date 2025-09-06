@@ -1,3 +1,4 @@
+
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';
@@ -80,6 +81,7 @@ function Metric() {
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
 }
+
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';

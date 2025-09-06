@@ -33,6 +33,8 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
 
+useEffect(() => {
+    const fetchProfile = async () => {
       setIsLoading(true),
       setIsError(false),
       try {
@@ -43,6 +45,8 @@ export default function ProfilePage() {
 
           .single(),
 
+.single();
+          .single(),
         if (error) {
           throw error;
         }
@@ -71,6 +75,8 @@ export default function ProfilePage() {
       fetchProfile();
     }
 
+}, [profileId]);
+  if (isLoading) {;
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -81,12 +87,27 @@ export default function ProfilePage() {
 
   if (isError || !profileData) {;
 
+if (isError || !profileData) {;
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p className="text-red-500">Failed to load profile.</p>;
       </div>;
     );
   }
+},;
+    if (profileId) {;
+      fetchProfile();
+    }
+  }, [profileId]),
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="loading loading-ring loading-lg"></span>
+      </div>
+    )
+  }
+  if (isError |!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
@@ -106,6 +127,98 @@ export default function ProfilePage() {
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+title={`${profileData && profileData.full_name} | Talent Profile`}
+        description={profileData && profileData.bio || "View the profile of this talented individual."}
+          {/* Main Content Area */}
+          <div className="col-span-12 lg:col-span-8">
+            {/* Profile Header */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <div className="flex items-start">
+                {/* Avatar */}
+                <div className="relative mr-4">
+                  <Avatar className="w-24 h-24">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    ) : (
+                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
+                    )}
+                  </Avatar>
+                  {profileData.is_verified && (
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                    </div>
+                  )}
+                </div>
+                {/* Main Info */}
+                <div className="flex-1">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>
+                      <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
+                    </div>
+                    {/* Add Save/Unsave Button Here */}
+                  </div>
+                  {/* Location & Availability */}
+                  <div className="mt-2 flex flex-wrap gap-3 text-sm">
+                    {profileData.location && (
+                      <div className="flex items-center text-zion-slate-light">
+                        <MapPin className="h-4 w-4 mr-1" />
+                        <span>{profileData.location}</span>
+                      </div>
+                    )}
+                    {profileData.availability && (
+                      <div className="flex items-center text-zion-slate-light">
+                        <Clock className="h-4 w-4 mr-1" />
+                        <span>{profileData.availability}</span>
+                      </div>
+                    )}
+        title={`${profileData && profileData.full_name} | Talent Profile`}
+        description={profileData && profileData.bio || "View the profile of this talented individual."}
+          .single(),;
+;
+        if (error) {;
+          throw error,;
+        }
+;
+        setProfileData(data),;
+      } catch (error) {;
+        console.error("Error fetching profile:", error),;
+        setIsError(true),;
+        toast({;
+          title:"Error",;
+          description:"Failed to load profile. Please try again later.",;
+          variant:"destructive"}),;
+      } finally {;
+        setIsLoading(false),;
+      }
+    },;
+;
+    if (profileId) {;
+      fetchProfile(),;
+    }
+  }, [profileId]),;
+;
+  if (isLoading) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <span className="loading loading-ring loading-lg"></span>;
+      </div>;
+    ),;
+  }
+;
+  if (isError || !profileData) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p className="text-red-500">Failed to load profile.</p>;
+      </div>;
+    ),;
+  }
+;
+  return (;
+    <>;
+      <SEO;
+        title={`${profileData.full_name} | Talent Profile`}
+        description={profileData.bio || "View the profile of this talented individual."}
       />;
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
@@ -221,6 +334,15 @@ export default function ProfilePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
+{profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (;
+                  profileData.portfolio_links.map((link, index) => (;
+                    <a;
+                      key={index}
+                      href={link}
+                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors";
+                    >;
                       <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
                     </a>
@@ -240,6 +362,12 @@ export default function ProfilePage() {
                 {profileData.experience || "No experience provided."}
               </p>
             </div>
+
+            {/* Social Links */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
+              <div className="flex space-x-4">;
+</Link>
 
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;

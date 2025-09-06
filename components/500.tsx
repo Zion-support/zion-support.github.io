@@ -1,3 +1,4 @@
+
 export default function FiveHundred() {;
   return (
     <div className='min-h-screen flex items-center justify-center'>;
@@ -27,6 +28,7 @@ function FiveHundred() {
 
 }
 
+}
 export default function FiveHundred() {
 import React from 'react';
 

@@ -1,3 +1,11 @@
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
@@ -79,6 +87,8 @@ function useTalentDirectory() {
 
   } = useFilterTalents(talents),
 
+} = useFilterTalents(talents);
+  } = useFilterTalents(talents),
   // Manage UI state
   const {
     isMobileFilterOpen,
@@ -90,6 +100,36 @@ function useTalentDirectory() {
     expandedSections,
     toggleSection
 
+} = useUIState();
+  return {
+    // Talents and loading state
+    talents;
+    filteredTalents;
+    isLoading;
+    // Search and filter state
+    searchTerm;
+    setSearchTerm;
+    selectedSkills;
+    selectedAvailability;
+    selectedRegions;
+    priceRange;
+    setPriceRange;
+    experienceRange;
+    setExperienceRange;
+    sortOption;
+    setSortOption;
+    // UI state
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+    selectedTalent;
+    setSelectedTalent;
+    expandedSections;
+    // Auth and user state
+    isAuthenticated;
+    userDetails;
+    savedTalents;
   } = useUIState(),
 
   return {
@@ -124,7 +164,7 @@ function useTalentDirectory() {
     isAuthenticated,
     userDetails,
     savedTalents,
-    
+
 
     // Actions
     toggleSkill;
@@ -135,6 +175,17 @@ function useTalentDirectory() {
     handleToggleSave
 
     expanded_sections;
+expanded_sections;
+
+    // Actions
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave
+  }
+}
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -236,6 +287,13 @@ export function useTalentDirectory() {;
     handleToggleSave;
   }
 }
+}
+  }
+}
+;
+  }
+}
+;
   }
 }
 ;

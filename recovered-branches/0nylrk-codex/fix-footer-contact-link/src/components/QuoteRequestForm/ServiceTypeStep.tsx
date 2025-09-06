@@ -145,6 +145,15 @@ export function ServiceTypeStep({
             Select a specific {formData.serviceType}
           </h3>
 
+{formData.serviceType && (
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+
+      {formData.serviceType && (
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
@@ -189,6 +198,7 @@ export function ServiceTypeStep({
 
     </div>;
 
+</div>;
   );
             on_click={() => handleTypeSelect ("service")}
           >;
@@ -267,4 +277,19 @@ export function ServiceTypeStep({
           </div>;
         </div>)}
     </div>);
+}
+                    description="Sample listing description"
+                  />
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-8 text-zion-slate-light">
+                No items found. Please try a different search.
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

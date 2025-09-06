@@ -1,3 +1,6 @@
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {JobApplication} from "@/types/jobs";
+import {ApplicationScoreCard} from "../ApplicationScoreCard";
 import {
   Dialog;
   DialogContent;
@@ -17,6 +20,33 @@ interface ScoreDialogProps {
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
 
+export function ScoreDialog({;
+  open;
+  onOpenChange;
+  application;
+export function ScoreDialog({
+  open,
+  onOpenChange,
+  application,
+  onScoreUpdated
+}: ScoreDialogProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Application Match Score</DialogTitle>
+        </DialogHeader>
+        {application && (
+          <ApplicationScoreCard
+          <ApplicationScoreCard 
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle;
+} from "@/components/ui/dialog",;
+import { JobApplication } from "@/types/jobs",;
+import { ApplicationScoreCard } from "../ApplicationScoreCard",;
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
@@ -40,6 +70,17 @@ export function ScoreDialog(): any ({;
 }: ScoreDialogProps) {
   return (
 
+export function ScoreDialog({;
+  open;
+  onOpenChange;
+  application;
+export function ScoreDialog({
+  open,
+  onOpenChange,
+  application,
+  onScoreUpdated
+}: ScoreDialogProps) {
+  return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -47,6 +88,55 @@ export function ScoreDialog(): any ({;
         </DialogHeader>
         {application && (
 
+<ApplicationScoreCard
+          <ApplicationScoreCard 
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle;
+} from "@/components/ui/dialog",;
+import { JobApplication } from "@/types/jobs",;
+import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+interface ScoreDialogProps {;
+  open: boolean,;
+  onOpenChange: (open: boolean) => void,;
+  application: JobApplication | null,;
+  onScoreUpdated: (updatedApplication: JobApplication) => void;
+}
+  open;
+;
+export function ScoreDialog({;
+  open,;
+  onOpenChange;
+  application;
+  onScoreUpdated;
+}: ScoreDialogProps) {;
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle;
+} from "@/components/ui/dialog",;
+import { JobApplication } from "@/types/jobs",;
+import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+;
+interface ScoreDialogProps {;
+  open:boolean,;
+  onOpenChange:(open:boolean) => void,;
+  application:JobApplication | null,;
+  onScoreUpdated:(updatedApplication:JobApplication) => void;
+}
+;
+export function ScoreDialog({;
+  open,;
+  onOpenChange,;
+  application,;
+  onScoreUpdated;
+} ScoreDialogProps) {;
+  return (;
+  return (;
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
@@ -57,6 +147,8 @@ export function ScoreDialog(): any ({;
 
           <ApplicationScoreCard 
 
+<ApplicationScoreCard
+          <ApplicationScoreCard ;
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
@@ -67,6 +159,8 @@ export function ScoreDialog(): any ({;
   );
 }
 
+</DialogContent>;
+    </Dialog>;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -93,4 +187,36 @@ function ScoreDialog() {
           />)}
       </DialogContent>;
     </Dialog>);
+}
+  ),;}
+ interface ScoreDialogProps {
+  open: boolean;
+onOpenChange: (open: boolean) => void;
+application: JobApplication | null;
+onScoreUpdated: (updatedApplication: JobApplication) => void 
+}export function ScoreDialog ({
+  open;
+onOpenChange;
+application;
+onScoreUpdated 
+}: ScoreDialogProps) {
+  return (<Dialog open= {
+  open 
+}onOpenChange= {
+  onOpenChange 
+}> <DialogContent className="sm:max-w-md" > application && (<ApplicationScoreCard application= {
+  application 
+}onScoreUpdated= {
+  onScoreUpdated 
+}/>) 
+}</DialogContent> </Dialog>) 
+}
+          <ApplicationScoreCard;
+            application={application}
+            onScoreUpdated={onScoreUpdated}
+          />
+        )}
+      </DialogContent>
+    </Dialog>
+  )
 }

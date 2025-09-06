@@ -1,3 +1,4 @@
+
 import {useRouter} from 'next/router';
 
 import useSWR from 'swr';
@@ -16,6 +17,9 @@ export default function EditJobPage(req, res) {
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
 
+const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
       setTitle(job.title || '');
       setDescription(job.description || '');
       setCategory(job.category || '')
@@ -31,6 +35,27 @@ export default function EditJobPage(req, res) {
     router.push('/client/dashboard')
   }
 
+}, [job]);
+
+  const [title, setTitle] = useState(''),
+  const [description, setDescription] = useState(''),
+  const [category, setCategory] = useState(''),
+
+  useEffect(() => {
+    if (job) {
+      setTitle(job.title || ''),
+      setDescription(job.description || ''),
+      setCategory(job.category || '')
+    }
+  }, [job]),
+
+  async function save() {
+    await fetch(`/api/jobs/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ title, description, category })});
+    router.push('/client/dashboard')
+  }
   useEffect(() => {;
     if (job) {;
       setTitle(job && job.title || '');
@@ -177,3 +202,11 @@ export default function EditJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+      body: JSON && JSON.stringify({ title, description, category }),;
+    });
+    router && router.push('/client/dashboard');  }
+
+  if (!job) return <div>Loading…</div>;
+
+  return (

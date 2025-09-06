@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Rocket
   Clock
   CheckCircle
@@ -59,7 +58,6 @@ interface Deployment {
   region?: string;
   country?: string;
 
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
           <div className='flex items-center gap-3'>;
             <div className='p-2 bg-yellow-500/20 rounded-lg'>;
@@ -116,8 +114,6 @@ interface Deployment {
         </h1>
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>
       </div>
-=======
-
 
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">;
@@ -129,7 +125,6 @@ interface Deployment {
         </h1>;
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>;
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
@@ -189,7 +184,6 @@ interface Deployment {
         </div>
       </div>
       {/* Filter Tabs */}
-<<<<<<< HEAD
       <div className='flex flex-wrap gap-2'>
           { key: 'all', label: 'All Deployments', count: deployments.length }
           {
@@ -371,9 +365,7 @@ export default function DeploymentsPage() {;
               filter === key;
                 ? 'bg-blue-600 text-white shadow-lg';
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             }`}
           >;
             {label} ({count});
@@ -381,23 +373,15 @@ export default function DeploymentsPage() {;
 
       </div>;
 
-
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
       {/* Deployments Grid */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
         {filteredDeployments.map((deployment) => (
-=======
-<<<<<<< HEAD
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <div
             key={deployment && deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'>;
@@ -420,7 +404,6 @@ export default function DeploymentsPage() {;
             key={deployment && deployment.id}
             className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
-<<<<<<< HEAD
         ))}
       </div>
       {/* Deployments Grid */}
@@ -501,22 +484,15 @@ export default function DeploymentsPage() {;
                     ></div>
                   </div>
                 </div>
-=======
-
 
         ))}
       </div>
       {/* Deployments Grid */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;
@@ -533,10 +509,7 @@ export default function DeploymentsPage() {;
                       </span>;
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
                         {deployment && deployment.governanceType}
-<<<<<<< HEAD
-=======
 
-=======
 ;
 // Mock data - replace with actual API calls;
 const mock_deployments: Deployment[] = [;
@@ -882,21 +855,15 @@ const getVerticalIcon = (vertical: string) =>: any {
                       <span className="inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
                         {deployment.governance_type}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       </span>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-=======
-
 
               {/* Progress Bar for Active Deployments */}
               {deployment && deployment.status === 'deploying' && (;
                 <div className='space-y-2'>;
                   <div className='flex justify-between text-sm text-white/70'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
@@ -932,10 +899,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                         .filter(Boolean)
                         .join(', ')}
                     </span>                  </div>              {/* Domain & Location */}
-<<<<<<< HEAD
                       style={{ width: `${deployment.progress}%` }}
-=======
-=======
                 <div className="flex items-center gap-2">
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
@@ -981,8 +945,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";
                       style={{ width: `${deployment.progress}%` }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     ></div>;
                   </div>;
                 </div>)}
@@ -993,11 +955,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                 <div className="flex items-center gap-2 text-white/70">
                   <span></span>
                   <span className="font-mono">
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
@@ -1006,10 +964,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span></span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
-<<<<<<< HEAD
-=======
 
-=======
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1025,13 +980,8 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div className='flex items-center gap-2 text-white/70'>;
                   <Globe className='w-4 h-4' />;
@@ -1061,7 +1011,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>📍</span>;
                     <span>{deployment && deployment.region} {deployment && deployment.country}</span>;
                   </div>;
-<<<<<<< HEAD
                       key={feature}
                       className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'
                     >
@@ -1070,12 +1019,9 @@ const getVerticalIcon = (vertical: string) =>: any {
                   ))}
                   )}
               {/* Timestamps */}
-=======
-=======
                     ></div>
                   </div>
                 </div>
-=======
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
@@ -1121,36 +1067,27 @@ const getVerticalIcon = (vertical: string) =>: any {
                     ></div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
             {/* Deployment Details */}
-<<<<<<< HEAD
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
                 <div className='flex items-center gap-2 text-white/70'>
                   <Globe className='w-4 h-4' />
                   <span className='font-mono'>
-<<<<<<< HEAD
                     {deployment.domain |
                       deployment.subdomain |
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
-=======
                     {deployment.domain ||
                       deployment.subdomain ||
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -1162,22 +1099,18 @@ const getVerticalIcon = (vertical: string) =>: any {
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
-<<<<<<< HEAD
                     {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
-=======
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
-=======
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1192,25 +1125,15 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 )}
               </div>;
               {/* Features */}
-
 
                       key={feature}
                       className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       {feature}
                     </span>;
                   ))}
-
-
-=======
 
               <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
@@ -1225,17 +1148,12 @@ const getVerticalIcon = (vertical: string) =>: any {
                       +{deployment.features.length - 4} more;
                     </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
 
                 </div>;
               </div>;
 
-
               {/* Timestamps */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
                 <div className='flex items-center gap-1'>;
                   <Calendar className='w-3 h-3' />;
@@ -1256,13 +1174,8 @@ const getVerticalIcon = (vertical: string) =>: any {
                 </div>;
               </div>;
 
-
               {/* Timestamps */}
-<<<<<<< HEAD
-=======
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
-=======
-<<<<<<< HEAD
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
@@ -1271,8 +1184,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="flex items-center gap-1">
                   <span>📅</span>
                   <span>Created: {formatDate(deployment.createdAt)}</span>
@@ -1282,14 +1193,9 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>🔄</span>
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               {/* Timestamps */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
                 <div className="flex items-center gap-1">;
                   <Calendar className="w-3 h-3" />;
@@ -1300,26 +1206,19 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
-<<<<<<< HEAD
                 )}
             {/* Action Buttons */}
                 )}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
               </div>;
             </div>;
 
-
             {/* Action Buttons */}
-
 
                 )}
                 {deployment && deployment.status === 'deploying' && (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <>;
                     <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                       ⏸️ Pause;
@@ -1346,13 +1245,9 @@ const getVerticalIcon = (vertical: string) =>: any {
             </div>;
           </div>;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
       </div>;
-
 
       {/* Empty State */}
               : `No deployments with status "${filter}" found`}
@@ -1364,16 +1259,11 @@ const getVerticalIcon = (vertical: string) =>: any {
               <Rocket className='w-4 h-4' />              Deploy First Instance;
             </a>;
           )}
-<<<<<<< HEAD
-=======
 
             <div className="p-6 pt-0">
               <div className="flex gap-2">
-=======
-<<<<<<< HEAD
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
                     ▶️ Start Deployment
@@ -1481,7 +1371,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     View Instance;
                   </button>)}
                 {deployment.status === 'failed' && (
-<<<<<<< HEAD
                   <button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
                     <RefreshCw className='w - 4 h - 4' />;
                     Retry;
@@ -1531,7 +1420,6 @@ const getVerticalIcon = (vertical: string) =>: any {
             <a
               href="/admin/os-deploy"
 
-
               <Rocket className="w-4 h-4" />;
               Deploy First Instance;
             </a>;
@@ -1539,7 +1427,6 @@ const getVerticalIcon = (vertical: string) =>: any {
 
         </div>;
       </div>;
-
 
       {/* Deployments Table */}
       <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">;
@@ -1663,7 +1550,6 @@ const getVerticalIcon = (vertical: string) =>: any {
 
   );
 }
-=======
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
               <Rocket className="w-4 h-4" />
@@ -1674,25 +1560,15 @@ const getVerticalIcon = (vertical: string) =>: any {
       )}
     </div>
 
-=======
         </div>;
       )}
     </div>;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }
-<<<<<<< HEAD
     </div>))}
     </div>);
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
@@ -1717,17 +1593,8 @@ const getVerticalIcon = (vertical: string) =>: any {
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
-<<<<<<< HEAD
     </div>))}
     </div>);
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

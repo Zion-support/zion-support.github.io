@@ -1,12 +1,18 @@
-<<<<<<< HEAD
-
-
-
-=======
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -39,21 +45,22 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   return resp.json();
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+}
+
+}
+
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
@@ -65,16 +72,23 @@ function readJson(p: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 }
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
 }
 
+}
+
+function readJson(p: string) {
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -91,23 +105,22 @@ function writeJson(p: string, v: any) {
   }
 }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+  fs.writeFileSync(p, JSON.stringify(v, null, 2))
+}
+
+
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
@@ -125,10 +138,17 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 ;
 export default async function handler(req, res) {
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+  try {;
+
+;
+export default async function handler(req, res) {
+
+  try {;
+;
+export default async function handler(req, res) {
+
   try {
   try {;
 ;
@@ -140,49 +160,64 @@ export default async function handler(req, res) {
 ;
 export default async function handler(req, res) {
   try {
+try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
-<<<<<<< HEAD
+
+
+
+
+
     }
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
+      return res.status(200).json({ ...cache, cached: true });
     }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
 
-<<<<<<< HEAD
+
+
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
+      return res.status(200).json({ ...cache, cached: true })
+    }
+    // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited, use rich list approximation via token transactions + unique addresses)
+    // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
+    const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
+    const transfersJson = await fetchJson(transfersUrl);
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
-    const txs = transfersJson?.result || [];
 
+    for (const tx of txs) {
+      const value = BigInt(tx.value || '0');
+      const from = (tx.from || '').toLowerCase();
+      const to = (tx.to || '').toLowerCase();
+      if (from) holderToDelta[from] = (holderToDelta[from] || 0n) - value;
+      if (to) holderToDelta[to] = (holderToDelta[to] || 0n) + value
+    }
+    const entries = Object.entries(holderToDelta)
+    const txs = transfersJson?.result || [];
     const holderToDelta: Record<string, bigint> = {};
 
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
+
 
     const entries = Object && Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
-<<<<<<< HEAD
-=======
+
 
     const topHolders = entries && entries.map((e) => ({
       address: e && e.address,
@@ -191,7 +226,11 @@ export default async function handler(req, res) {
     }));
     // Token distribution buckets (very rough: based on netDelta approximation)
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+const topHolders = entries && entries.map((e) => ({
+      address: e && e.address,
+      amount: e && e.netDelta.toString(),
+    }));
+    // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -199,31 +238,31 @@ export default async function handler(req, res) {
     const distribution = entries && entries.map((e) => ({
       address: e && e.address
       percent:
-<<<<<<< HEAD
-        total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0
-=======
+
+        total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
     const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() }));
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
     const distribution = entries.map((e) => ({
       address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean)
     );
@@ -231,16 +270,17 @@ export default async function handler(req, res) {
       ? Math && Math.min(
           100
           Math && Math.round(
-<<<<<<< HEAD
-            (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
-          )
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100,
           ),
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+            (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100,
+          ),
+
+
         )
       : 0;
     const result = {
@@ -251,12 +291,13 @@ export default async function handler(req, res) {
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
-<<<<<<< HEAD
-=======
+return res && res.status(200).json(result);
+
 
     return res && res.status(200).json(result);
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+    return res && res.status(200).json(result);
+
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
@@ -360,16 +401,15 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
-<<<<<<< HEAD
-=======
+
 
     return res;
       .status (500);
       .json ({ error: e?.message ?? "Failed to load DAO metrics" });
   }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
-  }
+}
+}
 }
 }
     return res

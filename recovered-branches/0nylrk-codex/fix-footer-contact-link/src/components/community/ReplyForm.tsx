@@ -1,4 +1,9 @@
-Form,
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
   FormControl,
   FormField,
   FormItem,
@@ -25,6 +30,9 @@ interface ReplyFormProps {;
   parentId?: string
 }
 
+onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
@@ -41,6 +49,48 @@ import {
   FormControl,
   FormField,
   FormItem,
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+
+  FormMessage,
+
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
+interface ReplyFormValues {;
+  content: string;
+}
+  const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: "",;
+    },;
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
+    setIsSubmitting(true);
+    try {;
+      (await onSubmit(values && values.content), form && form.reset());
+    } finally {;
+      setIsSubmitting(false);
+    }
+
+  },
 
   return (
     <Card>;
@@ -152,6 +202,7 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
       </CardContent>;
 
 FormMessage,;
+placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
 } from "@/components/ui/form";
 
@@ -159,6 +210,13 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
   };
 
+const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: "",;
+    },;
+  });
+
+  const handleSubmit = async (values: ReplyFormValues) => {;
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -423,6 +481,9 @@ export default ReplyForm;
   )
 },
 
+export default ReplyForm,
+export default ReplyForm;
+export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
 
@@ -435,4 +496,4 @@ export default ReplyForm,
             </div>;
           </form>;
         </Form>;
-      </CardContent>;
+</CardContent>;

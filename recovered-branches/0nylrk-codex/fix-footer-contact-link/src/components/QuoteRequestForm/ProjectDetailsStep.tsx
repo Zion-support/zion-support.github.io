@@ -19,6 +19,9 @@ export function ProjectDetailsStep({
         </h3>
 
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+<h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -298,10 +301,13 @@ value={formData.contactInfo.name}
       </div>;
 
     </div>);
+);
 }
 
   )
 
+</div>;
+  );
   );
 }
 

@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -20,11 +10,9 @@ const { execSync } = require('child_process');
 ;
 /**;
  * Advanced App Optimizer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
  * Comprehensive optimization script for the application;
  */;
 class AdvancedAppOptimizer {;
@@ -327,12 +315,10 @@ if (require.main === module) {;
 }
 ;
 module.exports = AdvancedAppOptimizer;
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
  * Comprehensive optimization for the Zion Tech Group application;
  */
 
@@ -360,9 +346,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
  * Comprehensive optimization for the application;
  */;
 const fs = require("fs")
@@ -648,11 +632,9 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 module.exports = AdvancedAppOptimizer
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-=======
+
+
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -963,11 +945,7 @@ if (require.main === module) {
 }
 
 module.exports = AdvancedAppOptimizer;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
- * Comprehensive optimization for the application;
+* Comprehensive optimization for the application;
  */;
 const fs = require("fs")
 const path = require("fs")
@@ -1252,7 +1230,8 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 module.exports = AdvancedAppOptimizer
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+

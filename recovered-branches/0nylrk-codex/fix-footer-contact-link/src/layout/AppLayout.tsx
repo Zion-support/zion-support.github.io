@@ -56,6 +56,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   );
 }
 
+;
     </div>;
 }
 

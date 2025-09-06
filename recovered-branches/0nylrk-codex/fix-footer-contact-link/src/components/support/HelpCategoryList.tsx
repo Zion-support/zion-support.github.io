@@ -108,6 +108,22 @@ interface HelpCategoryListProps {;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
 }
+)
+    : categories,
+
+export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
+  // Filter categories based on search query;
+  const filteredCategories = searchQuery;
+    ? categories && categories.filter(;
+        category =>;
+          category && category.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.articles.some(;
+            article =>;
+              article && article.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+              article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          );
+      );
     : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
@@ -133,6 +149,8 @@ interface HelpCategoryListProps {;
             </p>
           </CardContent>
         </Card>
+;
+export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
 
       ))}
     </div>

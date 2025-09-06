@@ -1,5 +1,9 @@
 export function LoginCard() {
   return (
+  return (
+import { Link } from "react-router-dom";
+import { LoginForm } from "./LoginForm";
+import { SocialLogin } from "./SocialLogin";
 import { Link } from "react-router-dom",
 
 export function LoginCard() {
@@ -23,6 +27,7 @@ export function LoginCard() {;
             to="/signup"
 
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
+className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 import { Link  } from './react-router-dom';
 import { LoginForm  } from './LoginForm';
 import { SocialLogin  } from './SocialLogin';
@@ -43,6 +48,15 @@ function LoginCard() {
             className="font - medium text - zion - cyan hover: text - zion - cyan - light";
           >;
 
+import { Link } from "react-router-dom",;
+import { LoginForm } from "./LoginForm",;
+import { SocialLogin } from "./SocialLogin",;
+;
+export function LoginCard() {;
+  return (;
+
+export function LoginCard() {
+  return (
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
@@ -67,3 +81,14 @@ function LoginCard() {
       </div>;
     </div>);
 }
+    </div>);
+}
+;
+      <div className="bg-zion-blue-dark rounded-lg p-6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+    </div>;
+  );
+}
+;

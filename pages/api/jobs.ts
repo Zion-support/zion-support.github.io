@@ -3,15 +3,15 @@ import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
 
 const FILE = "jobs && jobs.json";
 
 export default async function handler(
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -19,10 +19,84 @@ export default async function handler(
 
   if (!rateLimit(req, res)) return;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+const FILE = "jobs.json";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  if (!rateLimit(req, res)) return;
+  if (req && req.method === "GET") {
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    res && res.status(200).json({ jobs });
+    return;
+  }
+    }
+    const nowIso = new Date().toISOString();
+    const job: Job = {
+
+      deliveryDeadlineIso: deliveryDeadlineIso
+        ? String(deliveryDeadlineIso)
+        : undefined
+      clientEmail: String(clientEmail)
+      status: "New"
+      createdAtIso: nowIso
+      updatedAtIso: nowIso
+    }
+    // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
+
+    if (!job && job.category) {
+      const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
+
+      if (
+        skills && skills.some(
+          (s) =>
+
+            s && s.includes("openai") ||
+            s && s.includes("langchain") ||
+            s && s.includes("rag"),
+
+        )
+      )
+        job && job.category = "LLM App";
+      else if (
+        skills && skills.some(
+          (s) =>
+
+            s && s.includes("aws") ||
+            s && s.includes("kubernetes") ||
+            s && s.includes("terraform"),
+
+        )
+      )
+        job && job.category = "Cloud";
+      else job && job.category = "General";
+
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs && jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res && res.status(201).json({ job });
+    return;
+  }
+
+    }
+
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -35,11 +109,12 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     res.status(200).json({ jobs });
-<<<<<<< HEAD
-=======
+return
+  }
+
     return
   }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   if (req && req.method === "GET") {
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
@@ -51,10 +126,10 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -126,12 +201,16 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs),;
-<<<<<<< HEAD
-=======
+}
+
   }
 
   }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+  }
+  }
+
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4, as, uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -159,10 +238,10 @@ if ( {) {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
     const {
       title
       description
@@ -175,14 +254,10 @@ if ( {) {
     } = req.body |{}
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
+
   if (req && req.method === "POST") {
     const {
-<<<<<<< HEAD
-      title
-      description
-      category
-=======
-      title,
+title,
       description,
       category,
       required_skills = [],
@@ -192,24 +267,28 @@ if ( {) {
 
       return;
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+      clientEmail} = req.body || {};
+
+    if (!title || !description || !clientEmail) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return
+
+
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
 
-<<<<<<< HEAD
-
-=======
 required_skills = []
       budgetMinUsd
       budgetMaxUsd
       deliveryDeadlineIso
-=======
+
+
 required_skills = [],
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       clientEmail} = req.body || {};
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
@@ -223,16 +302,10 @@ required_skills = [],
 category: String(category || "")
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
-<<<<<<< HEAD
-        : []
-      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
-      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        : [],
+: [],
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -242,8 +315,7 @@ category: String(category || "")
       updatedAtIso: nowIso
     }
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
-<<<<<<< HEAD
-=======
+
 
     if (!job && job.category) {
       const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
@@ -256,21 +328,29 @@ category: String(category || "")
             s && s.includes("langchain") ||
             s && s.includes("rag"),
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+if (!job && job.category) {
+      const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
+      if (
+        skills && skills.some(
+          (s) =>
+            s && s.includes("openai") ||
+            s && s.includes("langchain") ||
+            s && s.includes("rag"),
         )
       )
         job && job.category = "LLM App";
       else if (
         skills && skills.some(
           (s) =>
-<<<<<<< HEAD
-=======
+
 
             s && s.includes("aws") ||
             s && s.includes("kubernetes") ||
             s && s.includes("terraform"),
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+s && s.includes("aws") ||
+            s && s.includes("kubernetes") ||
+            s && s.includes("terraform"),
         )
       )
         job && job.category = "Cloud";
@@ -283,13 +363,9 @@ category: String(category || "")
     res && res.status(201).json({ job });
     return;
   }
-<<<<<<< HEAD
-=======
-
-    res.status(201).json({ job });
+res.status(201).json({ job });
     return
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 
     }
 
@@ -302,7 +378,44 @@ category: String(category || "")
 
     res.status(201).json({ job });
     return
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+    }
+
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+
+    res.status(201).json({ job });
+    return
+      id: uuidv4(), title: String(title),
+      description: String(description), category: String(category || ''),
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [], budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined, deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
+      clientEmail: String(clientEmail), status: 'New',
+      createdAtIso: nowIso,
+      updatedAtIso: nowIso};
+    // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
+    if (!job.category) {
+      const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
+      if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
+      else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
+else job.category = 'General'
+
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res.status(201).json({ job });
+    return
+
+    res.status(201).json({ job });
+    return
+
+    res.status(201).json({ job });
+    return
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -319,27 +432,28 @@ category: String(category || "")
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   }
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       client_email
-=======
+
+
+  }
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+}
+
       client_email,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     } = req.body || {}
     // Check condition
 if ( {) {
@@ -398,9 +512,12 @@ if (=>) {
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
-<<<<<<< HEAD
-=======
-=======
+
+
+  }
+  res.set_header ("Allow", "GET, POST");
+  res.status (405).end ("Method Not Allowed");
+}
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -429,24 +546,21 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
+
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
   }
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
@@ -455,4 +569,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

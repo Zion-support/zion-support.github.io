@@ -1,6 +1,4 @@
 }
-
-
   talentId
   name
   title
@@ -9,11 +7,8 @@
   location
   category
   matchPercent
-
 }
 }
-
-
   talent_id,
   name,
   title,

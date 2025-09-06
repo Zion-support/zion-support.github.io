@@ -81,8 +81,10 @@ function resolveMergeConflicts() {
             
             // Remove conflict markers and keep both versions where possible
             content = content
-              .replace(/              .replace(/\n/g, '')
-              .replace(/              .replace(/              .replace(/\n/g, '')
+.replace(/\n/g, '')
+              .replace(/\n/g, '')
+              .replace(/              .replace(/<<<<<<< [^\n]+\n/g, '')
+              .replace(/\n/g, '')
               .replace(/            
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);

@@ -11,7 +11,6 @@ async function ensure() {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
 
 
   req: NextApiRequest
@@ -20,7 +19,7 @@ export default async function handler(
 
 
   await ensure();
-=======
+
 
   req: NextApiRequest,
   res: NextApiResponse,
@@ -31,7 +30,13 @@ export default async function handler(
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
@@ -47,11 +52,10 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
 
   req: NextApiRequest,
   res: NextApiResponse,
@@ -79,7 +83,7 @@ export default async function handler(
   }
   res.status(405).json({ error: "Method not allowed" });
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -107,18 +111,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
     const data = await fs.readJson(FILE_PATH);
-    const comment = {
-<<<<<<< HEAD
-      id: Date.now().toString(), proposalId: body.proposalId
-      region: body.region || 'Global', author: body.author || 'anon'
-=======
-      id: Date.now().toString()
+id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region || 'Global'
       author: body.author || 'anon'
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       text: body.text || ''
-=======
+
+
+  }
+
+  res.status(405).json({ error: 'Method not allowed' })
+
+}
+  if (req && req.method === "POST") {
+    const body = req && req.body || {};
+    const data = await fs && fs.readJson(FILE_PATH);
+    const comment = {
+
       id: Date && Date.now().toString(),
       proposalId: body && body.proposalId,
       region: body && body.region || "Global",
@@ -141,7 +150,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       region: body.region || 'Global',
       author: body.author || 'anon',
       text: body.text || '',
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       createdAt: new Date().toISOString()
     };
     data.comments.push(comment);
@@ -216,9 +225,7 @@ if ( {) {
     return res.status (201).json (comment);
   }
   res.status (405).json ({ error: "Method not allowed" });
-<<<<<<< HEAD
-}
-=======
+
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -324,9 +331,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

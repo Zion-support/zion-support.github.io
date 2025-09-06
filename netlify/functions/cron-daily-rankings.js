@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
           0
@@ -52,15 +50,12 @@ if ( {) {
         repo,
         path: 'data / marketplace / rankings - daily.json',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
     return {
-<<<<<<< HEAD
-=======
 
 exports.handler = async function() {
   try {
@@ -86,16 +81,12 @@ exports.handler = async function() {
       name: u.name || u.user_id,
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
@@ -104,11 +95,9 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
-<<<<<<< HEAD
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-=======
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -135,35 +124,21 @@ if ( {) {
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), top }, null, 2),
 
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
 
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
-=======
-
-
-
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
 }
 },
 },
-=======
-<<<<<<< HEAD
 
 },
 
 },
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

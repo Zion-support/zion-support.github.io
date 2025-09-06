@@ -1,13 +1,14 @@
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
 
   // Build context with top matched articles as brief references
 
@@ -38,7 +39,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         intentMatched: intent && intent.intentMatched,
         matchedArticleIds: intent && intent.matchedArticleIds,
         links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
+  const context = matchedArticles
+    .map((a) => `- ${a.title}: /help/${a.slug}`)
+    .join('\n');
+
+  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+import type { NextApiRequest, NextApiResponse } from "next";
+import OpenAI from "openai";
+import { readJson } from "../../../utils/fsDb";
+import { HelpArticle, matchIntent } from "../../../utils/support";
+import { logSupportEventToOperator } from "../../../utils/operator";
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
 
   const { sessionId, messages } = req.body as {
     sessionId?: string;
@@ -69,14 +91,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
       messages: [sysMessage, ...messages]
-=======
+
+
+
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
@@ -90,7 +112,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({
       assistantMessage,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+import type { NextApiRequest, NextApiResponse } from './next';
+import OpenAI from './openai';
+import { read_json  } from '../../../utils / fs_db';
+import { HelpArticle, match_intent  } from '../../../utils / support';
+import { logSupportEventToOperator  } from '../../../utils / operator';
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { session_id, messages } = req.body as {
+    session_id?: string;
+    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
+
+    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
   }
   if ()) {
   $2
@@ -121,19 +162,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
   try {
     const completion = await openai.chat.completions.create ({
-<<<<<<< HEAD
-      model: "gpt - 4o - mini"
-      messages: [sys_message, ...messages]
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
       temperature: 0.2
-=======
+
+
+
       model: "gpt - 4o - mini",
       messages: [sys_message, ...messages],
       temperature: 0.2,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     });
 
     const assistantMessage =
@@ -145,12 +184,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       sessionId: sessionId ?? "unknown"
       payload: { intent }
     });
-<<<<<<< HEAD
-=======
 ;
     return res.status (200).json ({
       assistant_message,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+;
+    return res.status (200).json ({
+      assistant_message,
+
       meta: {
         intent_matched: intent.intent_matched
         matchedArticleIds: intent.matchedArticleIds
@@ -163,35 +204,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         intentMatched: intent.intentMatched
         matchedArticleIds: intent.matchedArticleIds
         links: matchedArticles.map((a) => ({
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
           title: a.title
           href: `/help/${a.slug}`
         }))
       }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+
+
+
+
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
 
     });
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   } catch (e: any) {
 
     });
   } catch (e: any) {
+});
+  } catch (e: any) {
+    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(200).json({
       assistantMessage:
         "I could not reach the assistant right now. Please try again in a moment."
     });
   }
-<<<<<<< HEAD
+
+
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+  }
+}
+

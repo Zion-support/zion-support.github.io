@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface CybersecurityQuantumService {
 export interface CybersecurityQuantumService {;
   id: string;
@@ -12,9 +11,6 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   {
 
@@ -42,8 +38,6 @@ export interface CybersecurityQuantumService {;
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
-<<<<<<< HEAD
-=======
 
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
@@ -118,7 +112,6 @@ export interface CybersecurityQuantumService {;
     link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',
 
     icon: '🕵️',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -127,15 +120,12 @@ export interface CybersecurityQuantumService {;
     reviews: 950,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -151,8 +141,6 @@ export interface CybersecurityQuantumService {;
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
-<<<<<<< HEAD
-=======
 
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
@@ -225,7 +213,6 @@ export interface CybersecurityQuantumService {;
     link: 'https://ziontechgroup.com / zero - trust - network - access - platform',
 
     icon: '🛡️',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
@@ -234,8 +221,6 @@ export interface CybersecurityQuantumService {;
     reviews: 1400,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
@@ -312,7 +297,6 @@ export interface CybersecurityQuantumService {;
     link: 'https://ziontechgroup.com / quantum - key - distribution - network',
 
     icon: '🔮',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -321,15 +305,12 @@ export interface CybersecurityQuantumService {;
     reviews: 95,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -345,10 +326,7 @@ export interface CybersecurityQuantumService {;
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -360,18 +338,12 @@ export interface CybersecurityQuantumService {;
     rating: 4.8,
     reviews: 1900,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
-<<<<<<< HEAD
-
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-=======
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -438,10 +410,7 @@ export interface CybersecurityQuantumService {;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -450,10 +419,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.8,
     reviews: 1900,
   },
-<<<<<<< HEAD
-=======
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -476,11 +442,7 @@ export interface CybersecurityQuantumService {;
   reviews: number
 }
 
-
-=======
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -488,46 +450,31 @@ export interface CybersecurityQuantumService {;
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
 
     icon: '🔍';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
   }
 ;
-=======
 
     rating: 4 && 4.8,
 
     reviews: 1900
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
   }
 
-=======
-
 export interface CybersecurityQuantumService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
-=======
 export interface CybersecurityQuantumService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -789,16 +736,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

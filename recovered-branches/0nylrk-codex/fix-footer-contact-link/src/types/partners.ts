@@ -3,6 +3,9 @@ export interface PartnerProfile {
 export interface PartnerProfile {;
 
 export interface PartnerProfile {
+
+export interface PartnerProfile {;
+export interface PartnerProfile {
   id: string;
   user_id: string;
   name: string;
@@ -34,6 +37,10 @@ export interface PartnerSettings {;
 
 export interface PartnerReferralLink {;
 
+updated_at: string
+
+  commission_rate?: number
+}
 export interface PartnerSettings {
 
 export interface PartnerSettings {;
@@ -44,6 +51,7 @@ export interface PartnerSettings {
 export interface PartnerReferralLink {
 
 export interface PartnerReferralLink {;
+export interface PartnerReferralLink {
   id: string;
   name: string;
   url: string;
@@ -56,6 +64,13 @@ export interface PartnerReferralLink {;
 
 export interface PartnerPayout {;
 
+conversions: number
+
+  created_at: string
+}
+export interface PartnerPayout {
+
+export interface PartnerPayout {;
 export interface PartnerPayout {
 
 export interface PartnerPayout {;

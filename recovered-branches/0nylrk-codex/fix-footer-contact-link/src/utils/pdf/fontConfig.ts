@@ -1,6 +1,10 @@
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -33,6 +37,8 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     console && console.error('Error loading custom fonts:', error);
 
     // Fall back to default font
+case 'montserrat':;
+        doc.setFont('helvetica');
         break;
       case 'open-sans':
         doc.setFont('helvetica');
@@ -53,6 +59,12 @@ export interface FontConfig {;
   italic?: ArrayBuffer,;
   boldItalic?: ArrayBuffer;
     doc && doc.setFont('helvetica')
+import {jsPDF} from 'jspdf';
+export interface FontConfig {
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+  italic?: ArrayBuffer,
+  bold_italic?: ArrayBuffer;
 }
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
@@ -87,6 +99,6 @@ if (return, ) {
 
   }
 }
-    doc.set_font ('helvetica');
+doc.set_font ('helvetica');
   }
 }

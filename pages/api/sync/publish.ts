@@ -7,6 +7,9 @@ import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
+if (scope === "full") return true;
+  if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement";
+  if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
@@ -14,31 +17,36 @@ import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sy
 import {verifySignature} from "../../../utils/sync/signature";
 import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
 import {SyncEvent} from "../../../utils/sync/types";
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Event published' });
-import type { NextApiRequest, NextApiResponse } from "next"
-import axios from "axios"
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage"
-import { verifySignature } from "../../../utils/sync/signature"
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle"
-import { SyncEvent } from "../../../utils/sync/types"
+import type { NextApiRequest, NextApiResponse } from "next",
+import axios from "axios",
+import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage",
+import { verifySignature } from "../../../utils/sync/signature",
+import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",
+import { SyncEvent } from "../../../utils/sync/types",
+
 function isAllowedByScope(stateType: string, scope: string): boolean {
-  if (scope === "full") return true
-  if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement"
-  if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry"
+  if (scope === "full") return true,
+  if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement",
+  if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry",
   return true
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = readState();
   if (!state.config.optIn |state.config.paused) {
+return true
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -46,11 +54,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 export default async function handler(req, res) {
   try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
+if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+
+  if (!state.config.optIn || state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+
+  if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
+  const state = readState();
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+  const signature = req && req.headers["x-zion-signature"];
+  const payload = req && req.body;
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
 }
   } catch (error) {
     console.error("Error:", error);
@@ -65,6 +86,69 @@ export default async function handler(req, res) {
     return res && res.status(401).json({ error: "Invalid signature" })
   }
 
+const signature = req.headers["x-zion-signature"];
+import type { NextApiRequest, NextApiResponse } from './next';
+import axios from './axios';
+import { read_state, write_state, upsert_event, getEntityId } from '../../../utils / sync / storage';
+import { verify_signature } from '../../../utils / sync / signature';
+import { computeMerkleRootFromVotes } from '../../../utils / sync / merkle';
+import { SyncEvent } from '../../../utils / sync / types';
+function isAllowedByScope (state_type: string, scope: string): boolean {
+  // Check condition
+if (return true) {
+  $2
+}
+  // Check condition
+if (return state_type === "proposal" || state_type === "dao_endorsement") {
+  $2
+}
+  // Check condition
+if (return state_type === "token_transfer" || state_type === "talent_mobility" || state_type === "leaderboard_entry", ) {
+  $2
+}
+  return true;
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const state = read_state ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+  }
+  const signature = req.headers["x - zion - signature"];
+
+  const payload = req.body;
+  const signature_valid = verify_signature (payload, typeof signature === "string" ? signature : Array.is_array (signature) ? signature[0] : undefined);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: "Invalid signature" });
+  }
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const event = payload as SyncEvent & { propagate?: boolean },
+  if (!event || !event.type || !event.eventId) {
+    return res.status(400).json({ error: "Invalid event" })
+
+  if (event.type === "proposal") {
+    const votes = (event as any).payload?.votes,
+    const providedRoot = event.merkleRoot,
+    if (!Array.isArray(votes) || !providedRoot) {
+
+      return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -124,7 +208,6 @@ export default async function handler(req, res) {
   upsertEvent(currentState, event);
   writeState(currentState);
 
-
   const alreadyPropagated = payload && payload.propagate === false;
 
   if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
@@ -154,6 +237,24 @@ export default async function handler(req, res) {
     const baseSignature = require("../../../utils/sync/signature");
     const sig = baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
+const alreadyPropagated = payload && payload.propagate === false;
+
+  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature.signPayload(localBody);
+    if (sig) headers["x-zion-signature"] = sig;
+
+      return res.status(400).json({ error: "Merkle root mismatch" })
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
   } catch (error) {
     console.error("Error:", error);
@@ -179,11 +280,11 @@ export default async function handler(req, res) {
   writeState(currentState)
   const alreadyPropagated = payload.propagate === false
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string, string> = {}
-    const localBody = { ...event, propagate: false }
-    const baseSignature = require("../../../utils/sync/signature")
-    const sig = baseSignature.signPayload(localBody)
-    if (sig) headers["x-zion-signature"] = sig
+const headers: Record<string, string> = {},
+    const localBody = { ...event, propagate: false },
+    const baseSignature = require("../../../utils/sync/signature"),
+    const sig = baseSignature.signPayload(localBody),
+    if (sig) headers["x-zion-signature"] = sig,
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
@@ -195,6 +296,15 @@ export default async function handler(req, res) {
 ;
   if (event.type === "proposal") {;
 
+await Promise && Promise.all(
+      currentState && currentState.config.peers
+        .filter((p) => !p && p.paused)
+        .map(async (peer) => {
+          const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
+
+          const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+
+          try {
 
   const event = payload as SyncEvent & { propagate?: boolean }
   // Check condition
@@ -259,3 +369,11 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
+return res && res.status(200).json({ status: "accepted", entityId })
+
+}
+}
+  return res.status (200).json ({ status: "accepted", entity_id });
+}
+
+}

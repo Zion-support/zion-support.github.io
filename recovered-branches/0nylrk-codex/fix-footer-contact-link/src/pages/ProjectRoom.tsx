@@ -102,8 +102,7 @@ import {toast} from 'sonner';
 
   ]),
 
-  
-  
+
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -419,6 +418,16 @@ import {toast} from 'sonner';
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">File management will be implemented soon</p>;
 
+;
+          <TabsContent value="team" className="space-y-4">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle>Team Members</CardTitle>;
+                <CardDescription>Manage project participants</CardDescription>;
+              </CardHeader>;
+              <CardContent className="h-[400px]">;
+                <div className="flex items-center justify-center h-full">;
+                  <p className="text-muted-foreground">Team management will be implemented soon</p>;
                 </div>;
               </CardContent>;
             </Card>;
@@ -497,6 +506,16 @@ import {toast} from 'sonner';
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">Settings will be implemented soon</p>;
 
+;
+          <TabsContent value="settings" className="space-y-4">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle>Project Settings</CardTitle>;
+                <CardDescription>Configure project parameters</CardDescription>;
+              </CardHeader>;
+              <CardContent className="h-[400px]">;
+                <div className="flex items-center justify-center h-full">;
+                  <p className="text-muted-foreground">Settings will be implemented soon</p>;
                 </div>;
               </CardContent>;
             </Card>;
@@ -508,6 +527,7 @@ import {toast} from 'sonner';
     </>);
 }
 
+}
     </>;
   ),; //Switch to video tab if not already there if (activeTab !== 'video') {
   setActiveTab ('video') 

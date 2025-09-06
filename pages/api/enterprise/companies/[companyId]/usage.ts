@@ -1,17 +1,21 @@
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+  return res.status(405).json({ error: "method_not_allowed" });
+
+  return res.status(405).json({ error: "method_not_allowed" });
+
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -23,8 +27,7 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
+
     return res.status (400).json ({ error: "company_id required" });
   }
   const company = store.getCompanyById (company_id);
@@ -36,7 +39,14 @@ if ( {) {
   $2
 }
     return res.status (200).json (company.plan.usage_limits);
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+const { companyId } = req && req.query;
+  if (!companyId || typeof companyId !== "string") {
+    return res && res.status(400).json({ error: "companyId required" });
+  }
+  const company = store && store.getCompanyById(companyId);
+  if (!company) return res && res.status(404).json({ error: "Company not found" });
+  if (req && req.method === "GET") {
+    return res && res.status(200).json(company && company.plan.usageLimits);
   }
   // Check condition
 if ( {) {

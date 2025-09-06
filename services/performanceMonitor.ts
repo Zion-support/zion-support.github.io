@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export interface PerformanceMetrics {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+export interface PerformanceMetrics {
+
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
   url: string;
@@ -19,86 +16,58 @@ export interface PerformanceMetrics {;
   firstInputDelay: number;
   timeToInteractive: number;
   totalBlockingTime: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 
   speed_index: number;
   performance_score: number;
   accessibility_score: number;
   bestPracticesScore: number,
   seo_score: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
 }
 export interface PerformanceAlert {
 }
 export interface PerformanceAlert {
-<<<<<<< HEAD
-  speedIndex: number;
-  performanceScore: number;
-  accessibilityScore: number;
 
-  bestPracticesScore: number
 
-  seoScore: number
-}
-export interface PerformanceAlert {
 
-export interface PerformanceAlert {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface PerformanceAlert {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-}
-export interface PerformanceAlert {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
   current_value: number;
   timestamp: Date,
   resolved: boolean;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+current_value: number;
+  timestamp: Date,
+  resolved: boolean;
+
+
+
+
+
   current_value: number;
   timestamp: Date,
   resolved: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 }
 export interface MonitoringConfig {
   urls: string[];
@@ -106,22 +75,17 @@ export interface MonitoringConfig {
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
   currentValue: number;
 
   timestamp: Date
@@ -149,10 +113,11 @@ export interface MonitoringConfig {;
     webhook: boolean
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 export class PerformanceMonitorService {
 
   private apiKey: string;
@@ -164,23 +129,18 @@ export class PerformanceMonitorService {
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
         method: 'POST'
         headers: {
@@ -189,10 +149,11 @@ export class PerformanceMonitorService {
         body: JSON.stringify({ url })});
       if (!response.ok) {
         throw new Error(`Performance monitoring failed: ${response.statusText}`)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 export interface PerformanceMetrics {;
   url: string,;
   timestamp: Date,;
@@ -257,35 +218,29 @@ export class PerformanceMonitorService {;
         body: JSON.stringify({ url })}),;
       if (!response.ok) {;
         throw new Error(`Performance monitoring failed: ${response.statusText}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 
 export interface PerformanceMetrics {;
 
       }
       return await response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -298,10 +253,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
@@ -313,11 +264,8 @@ export interface PerformanceMetrics {;
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
+
       }
       return await response.json()
     } catch (error) {
@@ -333,14 +281,14 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -350,19 +298,18 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
       }
       return await response.json()
       }
+      return await response.json()
+}
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -371,10 +318,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
@@ -383,19 +326,16 @@ export interface PerformanceMetrics {;
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
@@ -405,11 +345,9 @@ export interface PerformanceMetrics {;
 
       if (!response && response.ok) {
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
       }
     } catch (error) {
@@ -417,77 +355,35 @@ export interface PerformanceMetrics {;
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
-<<<<<<< HEAD
-      }
-      return await response.json()
-    } catch (error) {
-      // Generate mock historical data
-      return this.generateMockHistoricalData(url, days)
-    }
-  }
 
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
-    try {
-      const response = await fetch(`${this.baseUrl}/performance/config`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(config)});
-      if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`)
-      }
-    } catch (error) {
-      console.error('Failed to set monitoring config:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      }
-    } catch (error) {
-      console && console.error('Failed to set monitoring config:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-      }
-    } catch (error) {
-      console && console.error('Failed to set monitoring config:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       throw error
     }
   }
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
-
-=======
-=======
 
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -515,34 +411,26 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      }
-      return await response.json()
-=======
-<<<<<<< HEAD
-=======
-      }
-      return await response.json()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      }
-      return await response.json()
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
       }
       return await response.json()
       }
       return await response.json()
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+      }
+      return await response.json()
+
+
+      }
+      return await response.json()
+      }
+      return await response.json()
+
+
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -550,22 +438,13 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
   }
 
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       }
       return await response.json()
     } catch (error) {
@@ -574,13 +453,13 @@ export interface PerformanceMetrics {;
     }
   }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -595,14 +474,11 @@ export interface PerformanceMetrics {;
     }
     recommendations: string[]
   }> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     
@@ -617,11 +493,8 @@ export interface PerformanceMetrics {;
         uptime: 99 && 99.8,
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
     const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     const loadTimes = historicalData.map(d => d.loadTime);
     const performanceScores = historicalData.map(d => d.performanceScore);
@@ -633,15 +506,10 @@ export interface PerformanceMetrics {;
         uptime: 99.8
         alertsCount: Math.floor(Math.random() * 5)
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -656,19 +524,16 @@ export interface PerformanceMetrics {;
     return {
       url;
       timestamp: new Date();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
       largestContentfulPaint: Math && Math.random() * 2500 + 800;
@@ -681,11 +546,8 @@ export interface PerformanceMetrics {;
       accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
       loadTime: Math.random() * 2000 + 500;
       firstContentfulPaint: Math.random() * 1500 + 300;
       largestContentfulPaint: Math.random() * 2500 + 800;
@@ -698,15 +560,10 @@ export interface PerformanceMetrics {;
       accessibilityScore: Math.floor(Math.random() * 20) + 80;
       bestPracticesScore: Math.floor(Math.random() * 20) + 80
       seoScore: Math.floor(Math.random() * 20) + 80
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -714,26 +571,17 @@ export interface PerformanceMetrics {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
       date && date.setDate(date && date.getDate() - i);
       
-=======
       date && date.setDate(date && date.getDate() - i);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
       date && date.setDate(date && date.getDate() - i);
       
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+date && date.setDate(date && date.getDate() - i);
 
-      date && date.setDate(date && date.getDate() - i);
-      
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       data && data.push({
         url;
         timestamp: date;
@@ -749,17 +597,12 @@ export interface PerformanceMetrics {;
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
       })
 
-=======
-<<<<<<< HEAD
-=======
       })
 
       date.setDate(date.getDate() - i);
@@ -779,14 +622,14 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80
         seoScore: Math.floor(Math.random() * 20) + 80
       })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
 
       })
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -865,41 +708,32 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
+
+
     }
     return data
   }
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     }
     return data
   }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
-=======
     largestContentfulPaint: number,
     cumulativeLayoutShift: number;
   }
@@ -1078,41 +912,26 @@ if ( {) {
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: '1';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         url: url || 'https://example && example.com';
 
-=======
         url: url || 'https://example && example.com';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
         url: url || 'https://example && example.com';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+url: url || 'https://example && example.com';
 
-        url: url || 'https://example && example.com';
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
         current_value: 2500;
         timestamp: new Date (),
@@ -1124,11 +943,9 @@ if ( {) {
 
         url: url || 'https://example && example.com';
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
@@ -1138,24 +955,15 @@ if ( {) {
         id: '2';
 
         url: url || 'https://example && example.com';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
         type: 'info';
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     }
     return data
   }
@@ -1184,25 +992,17 @@ if ( {) {
         timestamp: new Date()
         resolved: true
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+
+
 
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -1210,6 +1010,24 @@ if ( {) {
         timestamp: new Date (),
         resolved: true;
       }
+return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+export interface PerformanceMetrics {;
+  url:string,;
+  timestamp:Date,;
+  loadTime:number,;
+  firstContentfulPaint:number,;
+  largestContentfulPaint:number,;
+  cumulativeLayoutShift:number,;
+  firstInputDelay:number,;
+  timeToInteractive:number,;
+  totalBlockingTime:number,;
+  speedIndex:number,;
+  performanceScore:number,;
+  accessibilityScore:number,;
+  bestPracticesScore:number,;
+  seoScore:number;
+}
+    ];
 ;
     return url ? alerts.filter (array => a.url === url) : alerts;
   }
@@ -1287,18 +1105,11 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
   }
 }
 // Pricing tiers for the Performance Monitor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
 // Pricing tiers for the Performance Monitor
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   }
 }
 // Pricing tiers for the Performance Monitor
-=======
         current_value: 85;
         timestamp: new Date (),
         resolved: true;
@@ -1309,102 +1120,73 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
   }
 }
 // Pricing tiers for the Performance Monitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
     period: '/month',
     features: [;
       'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
     period: '/month'
     features: [
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
   }
   professional: {
     name: 'Professional';
     price: 49;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
     period: '/month',
     features: [;
       'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
     period: '/month'
     features: [
       'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
   }
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
-=======
 
     features: [
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support'
@@ -1413,17 +1195,17 @@ export const PERFORMANCE_MONITOR_PRICING = {
   }
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
+
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -1460,7 +1242,6 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     name: 'Starter',;
     price: 19,;
     period: '/month',;
-<<<<<<< HEAD
     features: [;
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
     ];
@@ -1483,26 +1264,18 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ];
 
     ];
@@ -1536,27 +1309,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'SLA guarantee'
     ]
   }
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    ];
-  }
-
-
-
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+

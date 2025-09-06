@@ -1,35 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 import type { NextApiRequest } from 'next';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 export interface Session {
 
 export interface Session {;
   userId: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   email: string;
   role: 'admin' | 'user' | 'guest';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const authHeader = req.headers.authorization;
@@ -44,11 +35,9 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 
 export interface Session {
   user_id: string;
@@ -56,14 +45,12 @@ export interface Session {
   role: 'admin' | 'user' | 'guest';
 }
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
 
@@ -71,42 +58,38 @@ export interface Session {
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
+
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
+
+
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -221,8 +204,6 @@ export async function authenticateAdmin(email: string, password: string): Promis
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -251,22 +232,12 @@ export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
 
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 };
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
@@ -280,29 +251,17 @@ export const isAdmin = () => {
   return true;
 }
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 };
 
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 };
 
 }
 ;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+

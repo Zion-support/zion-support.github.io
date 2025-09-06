@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
@@ -24,6 +24,19 @@ async function fetchFromGitHub(): Promise<any[]> {
         results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
         // ignore;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+async function fetchFromGitHub(): Promise<any[]> {
+  try {
+
+      } catch {
+        // ignore;
+        // ignore
       }
     }
     return results
@@ -56,6 +69,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // fall through to GitHub;
   }
 
-  const remote = await fetchFromGitHub()
+const remote = await fetchFromGitHub(),
   return res.status(200).json({ logs: remote })
 };

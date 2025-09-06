@@ -131,6 +131,11 @@ export default function WhitelabelManager() {
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
             <TabsList className="mb - 8">;
+;
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+            <TabsList className="mb-8">;
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+            <TabsList className="mb-8">;
   }
   return (
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
@@ -152,6 +157,28 @@ export default function WhitelabelManager() {
                   To use a custom domain with your white - label instance, you need to configure the DNS records.;
                   Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.;
 
+;
+            <TabsContent value="tenants" className="space-y-6">;
+              <TenantsList />;
+            </TabsContent>;
+            ;
+            <TabsContent value="create" className="flex justify-center">;
+              <WhitelabelRequestForm />;
+            </TabsContent>;
+            ;
+            <TabsContent value="tenants" className="space-y-6">;
+              <TenantsList />;
+            </TabsContent>;
+            <TabsContent value="create" className="flex justify-center">;
+              <WhitelabelRequestForm />;
+            </TabsContent>;
+            <TabsContent value="docs" className="space-y-6">;
+              <div className="prose dark:prose-invert max-w-none">;
+                <h2>White-Label Documentation</h2>;
+                <h3>DNS Configuration</h3>;
+                <p>;
+                  To use a custom domain with your white-label instance, you need to configure the DNS records.;
+                  Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.;
                 </p>;
                 <table>;
                   <thead>;
@@ -162,6 +189,10 @@ export default function WhitelabelManager() {
                       <th > Value</th>;
                       <th > TTL</th>;
 
+<th>Record Type</th>;
+                      <th>Name</th>;
+                      <th>Value</th>;
+                      <th>TTL</th>;
                     </tr>;
                   </thead>;
                   <tbody>;
@@ -190,6 +221,28 @@ export default function WhitelabelManager() {
                 <p>;
                   You can assign tenant administrators who will have access to manage their white - label instance,
 
+<td>CNAME</td>;
+                      <td>marketplace</td>;
+                      <td>ziontechmarketplace.com</td>;
+                      <td>3600</td>;
+                    </tr>;
+                  </tbody>;
+                </table>;
+                <h3>Email Templates</h3>;
+                <p>;
+                  White-label instances can use customized email templates. You can upload HTML templates;
+                  for the following emails:;
+                </p>;
+                <ul>;
+                  <li>Welcome Email</li>;
+                  <li>Password Reset</li>;
+                  <li>Quote Request</li>;
+                  <li>Invoice</li>;
+                  <li>Receipt</li>;
+                </ul>;
+                <h3>Admin Access</h3>;
+                <p>;
+                  You can assign tenant administrators who will have access to manage their white-label instance;
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.;
                 </p>;
               </div>;
@@ -199,6 +252,8 @@ export default function WhitelabelManager() {
       </main>;
       <Footer />;
 
+}
+</>);
 }
 }
     </>);

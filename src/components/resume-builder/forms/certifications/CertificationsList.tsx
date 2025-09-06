@@ -1,80 +1,70 @@
-interface CertificationsListProps {
-  certifications: Certification[]
-  onEdit: (cert: Certification) => void
-
-  onDelete: (id: string) => void
+interface CertificationsListProps {,
+  certifications: Certification[],
+  onEdit: (cert:,  Certification) => void,
+  onDelete: (id:,  string) => void
 }
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+export function CertificationsList({ certifications, onEdit, onDelete }:,  CertificationsListProps) {
   if (certifications.length === 0) {
     return null
 interface CertificationsListProps {;
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
+  certifications: Certification[];,
+  onEdit: (cert:,  Certification) => void;,
+  onDelete: (id:,  string) => void;,
 export function CertificationsList(): any ({;
   certifications,;
   onEdit,;
   onDelete,;
-}: CertificationsListProps) {  if (certifications && certifications.length === 0) {;
-export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+}:,  CertificationsListProps) {  if (certifications && certifications.length === 0) {;
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }:,  CertificationsListProps) {;
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Edit, Trash2 } from 'lucide-react';
 import { format } from 'date-fns';
-interface CertificationsListProps {;
+interface CertificationsListProps {;,
   certifications: Certification[],;
-  onEdit: (cert: Certification) => void,;
-  onDelete: (id: string) => void;
+  onEdit: (cert:,  Certification) => void,;
+  onDelete: (id:,  string) => void;
 }
-
-export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }:,  CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
-
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react'
+import { Edit, Trash2 } from 'lucide-react''
 import { format } from 'date-fns';
-interface CertificationsListProps {
+interface CertificationsListProps {,
   certifications: Certification[],
-  on_edit: (cert: Certification) => void,
-  on_delete: (id: string) => void;
+  on_edit: (cert:,  Certification) => void,
+  on_delete: (id:,  string) => void;
 }
-
     return null;
   }
   return (
-
-
                 <Button
-                  variant='ghost'
-                  size='icon'
+                  variant='ghost''
+                  size='icon''
                   onClick={() => onEdit(cert)}
-
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a
                   href = {cert && cert.credential_url,}
-
-                  variant="ghost"
-                  size="icon"
+                  variant="ghost""
+                  size="icon""
                   onClick={() => onDelete(cert.id!)}
-                  aria-label="Delete certification"
+                  aria-label="Delete certification""
                 >
-                  <Trash2 className="h-4 w-4" />
+                  <Trash2 className="h-4 w-4" />"
                 </Button>
               </div>
             </div>
             {cert.credential_url && (
-              <p className="text-xs mt-2">
-                <a 
-                  href={cert.credential_url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-
+              <p className="text-xs mt-2">"
+                <a
+                  href={cert.credential_url}
+                  target="_blank" "
+                  rel="noopener noreferrer""
+                  className="text-primary hover:underline""
                 >
-
                   View credential
                 </Link>
               </p>
@@ -82,11 +72,9 @@ interface CertificationsListProps {
           </CardContent>;
         </Card>;
       ))}
-
     </div>;
   );
 }
-
 export /**
  * CertificationsList - Function description
  */
@@ -109,36 +97,36 @@ if ( {) {
                   {cert.issuing_organization}
                 </p>;
                 <p className='text - xs text - muted - foreground mt - 1'>;
-                  Issued:{' '}
+                  Issued:{' '}'
                   {cert.issue_date;
                     ? typeof cert.issue_date === 'string';
                       ? cert.issue_date;
                       : format (cert.issue_date, 'MMM yyyy');
-                    : 'N / A'}
+                    : 'N / A'}'
                   {cert.expiration_date && (
                     <>;
-                      {' '}
-                      · Expires:{' '}
+                      {' '}'
+                      · Expires:{' '}'
                       {typeof cert.expiration_date === 'string';
                         ? cert.expiration_date;
-                        : format (cert.expiration_date, 'MMM yyyy')}                    </>)}
+                        : format (cert.expiration_date, 'MMM yyyy')}                    </>)}'
                 </p>;
               </div>;
               <div className='flex gap - 2'>;
                     <> · Expires: {typeof cert.expiration_date === 'string';
                       ? cert.expiration_date;
-                      : format (cert.expiration_date, 'MMM yyyy')}
+                      : format (cert.expiration_date, 'MMM yyyy')}'
               <div>;
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">{cert.issuing_organization}</p>;
                 <p className="text - xs text - muted - foreground mt - 1">;
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string';
                     ? cert.issue_date;
-                    : format (cert.issue_date, 'MMM yyyy')) : 'N / A'}
+                    : format (cert.issue_date, 'MMM yyyy')) : 'N / A'}'
                   {cert.expiration_date && (
                     <> · Expires: {typeof cert.expiration_date === 'string';
                       ? cert.expiration_date;
-                      : format (cert.expiration_date, 'MMM yyyy')}
+                      : format (cert.expiration_date, 'MMM yyyy')}'
                     </>)}
                 </p>;
               </div>;
@@ -177,7 +165,7 @@ if ( {) {
                   href = {cert.credential_url, }
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="text - primary hover:underline";
+                  className="text - primary hover:underline";",
                   View credential;
                 </a>;
               </p>)}
@@ -186,3 +174,4 @@ if ( {) {
     </div>);
 }
 ;
+}}}}}}

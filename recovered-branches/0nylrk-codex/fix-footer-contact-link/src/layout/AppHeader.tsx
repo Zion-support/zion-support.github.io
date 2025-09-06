@@ -33,6 +33,10 @@ export function AppHeader() {
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
+;
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">;
+            <button;
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
@@ -54,11 +58,30 @@ export function AppHeader() {
         </div>
       </header>
 
+</button>;
+          </div>;
+          <ModeToggle />;
+        </div>;
+      </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+) :(;
+                <Menu className="block h-6 w-6" aria-hidden="true" />;              )}
+            </button>;
+          </div>;
+          ;
+          <ModeToggle />;
+        </div>;
+      </header>;
+      ;
+      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
+      {mobileMenuOpen && (;
+        <div className="md:hidden fixed inset-0 z-40 pt-16">;
+          <div ;
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm";
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
@@ -77,6 +100,14 @@ export function AppHeader() {
   );
 }
 
+{/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+
+      )}
+;
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+    </>;
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
@@ -124,4 +155,27 @@ export function AppHeader() {
       {/* Mobile Bottom Navigation */}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
+}
+  ),;}
+) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
+}</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
+  () => setMobileMenuOpen (false) 
+}aria-hidden="true" /> <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
+  unreadCount 
+}onClose= {
+  () => setMobileMenuOpen (false) 
+}/> </div> </div>) 
+}{
+  /* Mobile Bottom Navigation */ 
+}{
+  isMobile && <MobileBottomNav unreadCount= {
+  unreadCount 
+}/> 
+}</>) 
+}
+
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+    </>
+  )
 }

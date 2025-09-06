@@ -1,3 +1,4 @@
+
 export interface OperatorSession {
   id: string;
   name: string;
@@ -15,11 +16,7 @@ export interface SupportEvent {
   timestamp: Date;
 }
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
 // Operator utilities;
 export const operator = {
   // Add operator functionality here;
@@ -27,16 +24,11 @@ export const operator = {
   get_events: () => [],
   getEventById: (id: string) => null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 // Operator utilities
 export const operator = {
   // Add operator functionality here
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   logEvent: (event: any) => null
   getEvents: () => []
   getEventById: (id: string) => null
@@ -47,13 +39,11 @@ export const operator = {
   getEventById: (id: string) => null;
 };
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -81,11 +71,8 @@ export const tagOperatorSession = (sessionId: string, tag: string) =>
 export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager.logSupportEvent(event);
 
-<<<<<<< HEAD
+
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
-<<<<<<< HEAD
-export const getSupportEvents = () => operatorManager.getSupportEvents();
-=======
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
 export async function logSupportEventToOperator(
   event: OperatorEvent
@@ -107,12 +94,13 @@ export const operator = {
   log_event: (event: any) => null,
   get_events: () => [],
   getEventById: (id: string) => null;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
+
+
+
+
 export const getSupportEvents = () => operatorManager.getSupportEvents();
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

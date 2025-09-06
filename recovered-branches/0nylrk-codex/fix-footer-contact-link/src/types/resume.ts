@@ -32,6 +32,14 @@ export interface WorkExperience {;
 
 }
 export interface Education {
+export interface Education {
+  company_logo_url?: string
+
+  location?: string
+}
+export interface Education {
+
+export interface Education {;
   id?: string;
   institution: string;
   degree: string;
@@ -49,6 +57,14 @@ export interface Education {
 
 }
 export interface Skill {
+export interface Skill {
+  institution_logo_url?: string
+
+  location?: string
+}
+export interface Skill {
+
+export interface Skill {;
   id?: string;
   name: string;
   proficiency?: number;
@@ -61,6 +77,14 @@ export interface Skill {
 
 }
 export interface Certification {
+export interface Certification {
+  category?: string
+
+  years_experience?: number
+}
+export interface Certification {
+
+export interface Certification {;
   id?: string;
   name: string;
   proficiency?: number;
@@ -79,6 +103,14 @@ export interface Certification {
 
 }
 export interface PortfolioProject {
+export interface PortfolioProject {
+  credential_id?: string
+
+  credential_url?: string
+}
+export interface PortfolioProject {
+
+export interface PortfolioProject {;
   id?: string;
   title: string;
   description?: string;
@@ -94,6 +126,14 @@ export interface PortfolioProject {
 
 }
 export interface Resume {
+export interface Resume {
+  demo_url?: string
+
+  pdf_url?: string
+}
+export interface Resume {
+
+export interface Resume {;
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -185,4 +225,7 @@ export interface Resume {;
 
 export interface ResumeBasicInfo {;
 
+is_active: boolean;
+}
+;
 }

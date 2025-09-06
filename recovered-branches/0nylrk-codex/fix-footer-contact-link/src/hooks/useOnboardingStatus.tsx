@@ -15,6 +15,7 @@ export function useOnboardingStatus() {;
   const { user } = useAuth();
 export function useOnboardingStatus() {
   const { user } = useAuth(),
+
   const [status, setStatus] = useState<OnboardingStatus>({
     profileCompleted: false,
     skillsAdded: false,
@@ -30,6 +31,14 @@ export function useOnboardingStatus() {
     const fetchOnboardingStatus = async () => {
       if (!user) return;
 
+});
+  }),
+  
+  useEffect(() => {
+
+    const fetchOnboardingStatus = async () => {
+      if (!user) return;
+      if (!user) return,
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
@@ -173,6 +182,7 @@ if ( {) {
   return status;
 }
 
+;
           .eq('user_id', user.id);
           .single(),;
           ;

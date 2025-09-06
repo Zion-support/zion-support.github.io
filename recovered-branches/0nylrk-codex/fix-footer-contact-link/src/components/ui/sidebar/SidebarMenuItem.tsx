@@ -26,11 +26,28 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 
     </li>);
 }
+</li>);
+}
     </li>
   );
 }
 ;
 
+}
+export function SidebarMenuItem({
+  className
+  children
+  ...props
+}: SidebarMenuItemProps) {
+  return (
+    <li className={cn("", className)} {...props}>
+      {children}
+    </li>
+  );
+}
+  )
+}
+;
   )
 }
 ;

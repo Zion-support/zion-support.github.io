@@ -89,6 +89,16 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
+]),
+    setIsJoining(true);
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true);
+      setIsJoining(false);
+    setHasJoined(false);
+    toast && toast.info("Call ended", {;
+      description: "You have left the meeting";
+    });
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -116,12 +126,14 @@ export default function VideoCall() {;
 
   const handleLeaveCall = () => {;
 
+const handleLeaveCall = () => {;
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
     });
 
   }
+}
   },
 
   const handleLeaveCall = () => {
@@ -285,5 +297,70 @@ export default function VideoCall() {;
     </>);
 }
 
+),; roomId 
+}` 
+}) 
+}, 1500) 
+};
+//Navigate back after a short delay setTimeout ( () => {
+  navigate (-1) 
+}, 1500) 
+};
+const simulateUserJoining = () => {
+  //This is just for demo purposes - in a real app, this would be handled by the video call service const mockUsers = [ {
+  id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false 
+};
+{
+  id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true 
+};
+{
+  id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true 
+}];
+const randomUser = mockUsers[Math.floor (Math.random () * mockUsers.length) ];
+if (!participants.find (p => p.id === randomUser.id) ) {
+  setParticipants (prev => [...prev, randomUser]);
+toast (`$ {
+  randomUser.name 
+}joined the call`) 
+}
+;
+
+;
+
+};
+return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom roomId= {
+  roomId || '' 
+}participants= {
+  participants 
+}onLeave= {
+  handleLeaveCall 
+}/> Simulate user joining (demo only) </Button> </div> </div>) 
+}</main> <Footer /> </>) 
+}
+            <VideoCallRoom
+              roomId={roomId |''}
+            <VideoCallRoom 
+              roomId={roomId || ''} 
+              participants={participants}
+              onLeave={handleLeaveCall}
+            />
+            {/* This button is just for demo/testing purposes */}
+            <div className="flex justify-center mt-4">
+              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+                Simulate user joining (demo only)
+              </Button>
+            </div>
+          </div>
+        )}
+      </main>
+      <Footer />
+    </>
+  )
+}
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
 ;
 ;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
@@ -16,8 +14,6 @@ function POST() {
   try {
     const body = await request.json (),
     const { name, email, password } = register_schema.parse (body),
-=======
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
@@ -28,18 +24,14 @@ const registerSchema = z.object({name: z.string().min(2, "Name must be at least 
 export async function POST() {
   try {const body = await request.json();
     const { name, email, password } = registerSchema.parse(body);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Check if user already exists;
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Check condition
 if ( {) {
   $2
 }
       return NextResponse.json (
-<<<<<<< HEAD
-=======
         { error: "User with this email already exists" },
 
         { status: 400 }
@@ -79,11 +71,7 @@ if ( {) {
     return NextResponse.json (
 
       { error: "Internal server error" }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -136,10 +124,7 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       { status: 500 }
     );
   }

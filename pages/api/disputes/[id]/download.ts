@@ -4,48 +4,70 @@ import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  parseUserFromRequest
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
 
-export default async function handler(
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  const { id, fileName } = req.query as { id?: string; fileName?: string };
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+  parseUserFromRequest
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
-
-  parseUserFromRequest
-=======
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
   parseUserFromRequest,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
-<<<<<<< HEAD
+
   req: NextApiRequest
   res: NextApiResponse
-=======
-  req: NextApiRequest,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+
+
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+
+  parseUserFromRequest
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+  parseUserFromRequest,
+
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+req: NextApiRequest,
   res: NextApiResponse,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const { id, fileName } = req.query as { id?: string; fileName?: string }
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -63,10 +85,10 @@ export default async function handler(
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
     return res.status(400).json({ error: "Invalid parameters" });
   }
 
@@ -87,15 +109,15 @@ export default async function handler(
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
 }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+return res && res.status(400).json({ error: "Invalid parameters" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -106,22 +128,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   }
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
-<<<<<<< HEAD
-  try {
-=======
+
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
@@ -145,7 +164,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -265,11 +283,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+try {
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  try {
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

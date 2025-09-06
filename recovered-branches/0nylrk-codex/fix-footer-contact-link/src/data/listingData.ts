@@ -1,3 +1,5 @@
+import { ProductListing } from '@/types/listings';
+import { SearchSuggestion } from '@/types/search';
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings
@@ -56,6 +58,23 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
+'AI models'
+    'GPT integration'
+    'Machine learning'
+    'Computer vision'
+    'Speech recognition'
+    'Data analysis'
+    'Content generation'
+    'Code assistant'
+    'Virtual assistant'
+    'Enterprise AI solutions'
+  ];
+  return suggestions.map(text => ({
+    text
+    type: 'product', // Use a valid type from the SearchSuggestion interface
+  }));};  ];
+import { ProductListing } from "@/types/listings",
+import { SearchSuggestion } from "@/types/search",
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -179,6 +198,19 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
     location: "Global",
 
+location: 'Global',
+    availability: 'Immediate',
+    aiScore: 94,;
+  },];      name: "VisionTech AI";
+      id: "visiontech";
+      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"};
+    images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"];
+    createdAt: "2023-12-10T16:45:00.000Z";
+    rating: 4.8;
+    reviewCount: 36;
+    featured: true;
+    location: "Global";
+    location: "Global",
     availability: "Immediate",
     aiScore: 94
   }
@@ -199,6 +231,8 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Enterprise AI solutions',;
   ];
 
+type: 'product', // Use a valid type from the SearchSuggestion interface
+  }));};  ];
     "AI models",
     "GPT integration",
     "Machine learning",
@@ -211,13 +245,19 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Enterprise AI solutions"
   ],
 
-  
+
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+}
+// Generate filter options for sidebar
+export const generateFilterOptions = () => {
+  // Extract unique categories, locations, and availability options from listings
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
   ].sort();
   const locations = [
     ...new Set(
@@ -276,6 +316,7 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
+},
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
@@ -334,6 +375,26 @@ export const generateFilterOptions = () =>: any {
   ].sort ();
 ;
     product_types: product_types.map (type => ({
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
+    ),
+  ].sort();
+
+  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
+  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
+  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
+  
+  return {
+    productTypes: productTypes.map(type => ({
       label: type,
       value: type,
     })),
@@ -354,6 +415,17 @@ export const MAX_PRICE = Math.max (
 export const MIN_PRICE = Math.min (
   ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 review_count: 58;
+ratingOptions: [1, 2, 3, 4, 5],
+  };
+};
+
+export const MAX_PRICE = Math.max(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+export const MIN_PRICE = Math.min(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+reviewCount: 58;
 featured: true;
 location: "Global";
 availability: "Immediate";
@@ -412,6 +484,7 @@ rating_options: [1, 2, 3, 4, 5];
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 ratingOptions: [1, 2, 3, 4, 5] 
 
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

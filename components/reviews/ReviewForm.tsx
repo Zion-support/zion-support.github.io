@@ -176,6 +176,24 @@ function handle_submit() {
   }
   return (
 
+}
+  }
+  return (
+      <div>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+    <form onSubmit={handleSubmit} className='space-y-6'>;
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">;
+      <div>;
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;
+        <StarRating value={rating} onChange={setRating} />;
+      </div>;
+
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Your Review</label>;
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -184,6 +202,7 @@ function handle_submit() {
         />;
       </div>;
 
+<label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
@@ -279,6 +298,13 @@ function handle_submit() {
         </div>;
 
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+<div className='enhanced - card'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - sm'>Would Work With Again</span>;
+            <input;
+              type='checkbox';
+              checked={wouldWorkWithAgain}
+              on_change={e => setWouldWorkWithAgain (e.target.checked)}
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
@@ -299,6 +325,15 @@ export default ReviewForm;    </form>;
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
 
+<button
+        type="submit"
+        className="enhanced-button enhanced-button-primary"
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+};
+
+export default ReviewForm;
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);

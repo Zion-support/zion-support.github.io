@@ -1,5 +1,10 @@
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+
 }</div>) import { useEffect, useState } from 'react';
 
+export default function AutomationStatusPage() {
+
+}</div>) import { useEffect, useState } from 'react';
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -21,6 +26,8 @@ export default function AutomationStatusPage() {;
   }, []);
   return (
 
+}, []);
+  return (
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (;

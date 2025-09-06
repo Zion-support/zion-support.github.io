@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
     );
@@ -8,11 +6,7 @@
   return events;export function resetState(): void {
   state = { ...defaultState }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-=======
-
-<<<<<<< HEAD
 
 export function readState(): SyncState {;
   return { ...state };
@@ -88,8 +82,6 @@ export function filterEventsByScope(
   scope: InstanceConfig['scope']
 }
 
-
-
 ): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
@@ -140,10 +132,6 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -172,7 +160,6 @@ export interface SyncLog {
   timestamp: string;
 }
 
-<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -372,10 +359,6 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -385,12 +368,10 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
-<<<<<<< HEAD
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
-=======
 }
 
 }
@@ -403,7 +384,6 @@ const default_state: SyncState = {
   // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -442,8 +422,6 @@ export function filterEventsByScope (
 if (return events) {
   $2
 }
-<<<<<<< HEAD
-=======
   // Check condition
 if ( {) {
   $2
@@ -464,6 +442,3 @@ if ( {) {
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

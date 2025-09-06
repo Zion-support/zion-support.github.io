@@ -64,6 +64,9 @@ export default function ReportProblemButton(): any ({;
 
   );
 }
+import Link from 'next/link';
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
   });
 
   return (
@@ -107,4 +110,4 @@ function ReportProblemButton() {
 
   );
 }
-  );
+);

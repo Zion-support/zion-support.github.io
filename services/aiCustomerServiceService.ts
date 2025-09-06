@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export interface CustomerTicket {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+export interface CustomerTicket {
+
 export interface CustomerTicket {
 export interface CustomerTicket {;
   id: string;
@@ -23,44 +20,36 @@ export interface CustomerTicket {;
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 
   attachments: string[],
   conversation_history: CustomerMessage[];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+attachments: string[],
+  conversation_history: CustomerMessage[];
+
+
+
+
+
+
+
   attachments: string[],
   conversation_history: CustomerMessage[];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 }
 export interface CustomerMessage {
   id: string;
   ticket_id: string;
   sender_id: string;
   sender_type: 'customer' | 'agent' | 'ai';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
   attachments: string[]
 
@@ -73,23 +62,26 @@ export interface CustomerMessage {;
   ticketId: string;
   senderId: string;
   senderType: 'customer' | 'agent' | 'ai';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   message: string;
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+  intent: string,
+  confidence: number;
+
+}
+export interface CustomerProfile {
 
   intent: string,
   confidence: number;
@@ -98,44 +90,20 @@ export interface CustomerMessage {;
 export interface CustomerProfile {
 }
 export interface CustomerProfile {
-<<<<<<< HEAD
 
-  intent: string
 
-  confidence: number
-}
-export interface CustomerProfile {
 
-export interface CustomerProfile {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface CustomerProfile {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-  intent: string,
-  confidence: number;
-
-}
-export interface CustomerProfile {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   email: string;
   name: string;
   phone?: string;
   company?: string;
   plan: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   total_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;
@@ -143,102 +111,87 @@ export interface CustomerProfile {
   last_contact: Date;
   preferences: {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
   }
   tags: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
   tags: string[];
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+  tags: string[];
+
+
 }
 export interface AIResponse {
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
 }
 export interface CustomerServiceMetrics {
   total_tickets: number;
   open_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
     ticketsResolved: number
     averageResolutionTime: number,
 
     customerSatisfaction: number
   }>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
     ticketsResolved: number
     averageResolutionTime: number,
     customerSatisfaction: number
   }>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   customer_satisfaction: number;
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
@@ -247,48 +200,87 @@ export interface CustomerServiceMetrics {
     averageResolutionTime: number,
     customer_satisfaction: number;
   }>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 }
 export interface CustomerServiceRequest {
   customer_id: string;
+
+}
+export interface CustomerServiceRequest {
+  customer_id: string;
+}
+export interface CustomerServiceRequest {
+  customer_id: string;
+  totalTickets: number;
+  resolvedTickets: number;
+  averageResolutionTime: number;
+  customerSatisfaction: number;
+  lastContact: Date;
+  preferences: {
+    communicationChannel: 'email' | 'chat' | 'phone';
+
+    language: string
+
+    timezone: string
+  }
+  tags: string[]
+}
+export interface AIResponse {
+
+export interface AIResponse {;
+  id: string;
+  ticketId: string;
+  response: string;
+  confidence: number;
+  suggestedActions: string[];
+  nextSteps: string[];
+
+  requiresHumanReview: boolean
+
+  generatedAt: Date
+}
+export interface CustomerServiceMetrics {
+
+export interface CustomerServiceMetrics {;
+  totalTickets: number;
+  openTickets: number;
+  resolvedTickets: number;
+  averageResolutionTime: number;
+  customerSatisfaction: number;
+
+  firstResponseTime: number
+  ticketVolumeByCategory: Record<string, number>;
+  agentPerformance: Record<string, {
+    ticketsResolved: number;
+    averageResolutionTime: number
+
+
     customerSatisfaction: number
   }>
 }
 export interface CustomerServiceRequest {
   customerId: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
   customer_id: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CustomerServiceRequest {
   customer_id: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
 
+attachments?: string[],
+  preferred_channel?: 'email' | 'chat' | 'phone';
 }
   ticketId: string;
 export interface CustomerServiceResponse {
@@ -301,6 +293,23 @@ export interface CustomerServiceResponse {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+attachments?: string[]
+
+  preferredChannel?: 'email' | 'chat' | 'phone'
+}
+export interface CustomerServiceResponse {
+
+export interface CustomerServiceResponse {;
+  ticketId: string;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  aiResponse?: AIResponse;
+  estimatedResolutionTime: string;
+
+  nextSteps: string[]
+
+  assignedAgent?: string
+}
+export class AICustomerServiceService {
 export class AICustomerServiceService {;
   private apiKey: string;
 
@@ -312,17 +321,13 @@ export class AICustomerServiceService {;
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
@@ -342,21 +347,19 @@ export interface CustomerServiceResponse {
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(request)});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
       if (!response && response.ok) {
         throw new Error(`Create ticket API error: ${response && response.statusText}`)
@@ -364,40 +367,57 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
-<<<<<<< HEAD
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+if (!response && response.ok) {
+        throw new Error(`Create ticket API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
+        body: JSON.stringify(request)});
+      if (!response.ok) {
+        throw new Error(`Create ticket API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return data
+    } catch (error) {
+      console.error('Error creating ticket:', error);
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+
+
+
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
       throw error
     }
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -416,7 +436,6 @@ export interface CustomerServiceResponse {
 
     } catch (error) {
       console && console.error('Error getting ticket:', error);
-<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
@@ -439,15 +458,17 @@ export interface CustomerServiceResponse {
   }
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
     try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
         headers: {
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
+'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
+        body: JSON && JSON.stringify(updates)});
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
@@ -464,8 +485,6 @@ export interface CustomerServiceResponse {
 
     } catch (error) {
       console && console.error('Error getting ticket:', error);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -492,72 +511,38 @@ export interface CustomerServiceResponse {
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
 
-<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error updating ticket:', error);
     } catch (error) {
       console && console.error('Error updating ticket:', error);
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
-        method: 'PATCH'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(updates)});
-      if (!response.ok) {
-        throw new Error(`Update ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
-        conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
-    } catch (error) {
-      console.error('Error updating ticket:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error updating ticket:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    } catch (error) {
-      console && console.error('Error updating ticket:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       throw error
     }
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(message)});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
@@ -565,30 +550,24 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
       }
       const data = await response && response.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       return {
         ...data;
         timestamp: new Date(data && data.timestamp)}
     } catch (error) {
       console && console.error('Error adding message:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST'
         headers: {
@@ -603,42 +582,37 @@ export interface CustomerServiceResponse {
         timestamp: new Date(data.timestamp)}
     } catch (error) {
       console.error('Error adding message:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       throw error
     }
   }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
@@ -646,30 +620,24 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
       }
       const data = await response && response.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
       console && console.error('Error generating AI response:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST'
         headers: {
@@ -683,26 +651,23 @@ export interface CustomerServiceResponse {
         generatedAt: new Date(data.generatedAt)}
     } catch (error) {
       console.error('Error generating AI response:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       throw error
     }
   }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
 
@@ -714,31 +679,25 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Get customer profile API error: ${response && response.statusText}`)
       }
       const data = await response && response.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
     } catch (error) {
       console && console.error('Error getting customer profile:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
@@ -751,26 +710,23 @@ export interface CustomerServiceResponse {
         lastContact: new Date(data.lastContact)}
     } catch (error) {
       console.error('Error getting customer profile:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       throw error
     }
   }
   async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
 
@@ -782,46 +738,29 @@ export interface CustomerServiceResponse {
 
       return await response && response.json()
 
-<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error getting metrics:', error);
-    } catch (error) {
-      console && console.error('Error getting metrics:', error);
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get metrics API error: ${response.statusText}`)
+'Authorization': `Bearer ${this && this.apiKey}`}});
+      if (!response && response.ok) {
+        throw new Error(`Get metrics API error: ${response && response.statusText}`)
       }
-      return await response.json()
-    } catch (error) {
-      console.error('Error getting metrics:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+      return await response && response.json()
     } catch (error) {
       console && console.error('Error getting metrics:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    } catch (error) {
-      console && console.error('Error getting metrics:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       throw error
     }
   }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -831,18 +770,16 @@ export interface CustomerServiceResponse {
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
       const data = await response && response.json();
       return data && data.tickets.map((ticket: any) => ({
         ...ticket;
@@ -852,75 +789,41 @@ export interface CustomerServiceResponse {
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
     } catch (error) {
       console && console.error('Error searching tickets:', error);
     } catch (error) {
       console && console.error('Error searching tickets:', error);
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Search tickets API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return data.tickets.map((ticket: any) => ({
-        ...ticket;
-        createdAt: new Date(ticket.createdAt);
-        updatedAt: new Date(ticket.updatedAt);
-        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined;
-        conversationHistory: ticket.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}))
-    } catch (error) {
-      console.error('Error searching tickets:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error searching tickets:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-    } catch (error) {
-      console && console.error('Error searching tickets:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
       throw error
     }
   }
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
       if (!response && response.ok) {
         throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
@@ -928,63 +831,42 @@ export interface CustomerServiceResponse {
 
       return await response && response.json()
 
-<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
-    } catch (error) {
-      console && console.error('Error auto-assigning tickets:', error);
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Auto assign tickets API error: ${response.statusText}`)
+if (!response && response.ok) {
+        throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
       }
-      return await response.json()
-    } catch (error) {
-      console.error('Error auto-assigning tickets:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+      return await response && response.json()
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    } catch (error) {
-      console && console.error('Error auto-assigning tickets:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       throw error
     }
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify({ timeframe, format })});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
@@ -993,49 +875,32 @@ export interface CustomerServiceResponse {
       const data = await response && response.json();
       return data && data.downloadUrl
 
-<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error generating report:', error);
-    } catch (error) {
-      console && console.error('Error generating report:', error);
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify({ timeframe, format })});
-      if (!response.ok) {
-        throw new Error(`Generate report API error: ${response.statusText}`)
+if (!response && response.ok) {
+        throw new Error(`Generate report API error: ${response && response.statusText}`)
       }
-      const data = await response.json();
-      return data.downloadUrl
-    } catch (error) {
-      console.error('Error generating report:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+      const data = await response && response.json();
+      return data && data.downloadUrl
     } catch (error) {
       console && console.error('Error generating report:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    } catch (error) {
-      console && console.error('Error generating report:', error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
       throw error
     }
   }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+export interface CustomerTicket {;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 
   id: string,;
   customerId: string,;
@@ -1056,18 +921,20 @@ export const aiCustomerServiceService = new AICustomerServiceService(process && 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -1307,19 +1174,15 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+export interface CustomerTicket {;
+
+
+
+
+
 
 export interface CustomerTicket {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export interface CustomerTicket {;
 
@@ -1718,19 +1581,6 @@ export class AICustomerServiceService {;
   }
 }
 ;
-<<<<<<< HEAD
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-export interface CustomerTicket {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

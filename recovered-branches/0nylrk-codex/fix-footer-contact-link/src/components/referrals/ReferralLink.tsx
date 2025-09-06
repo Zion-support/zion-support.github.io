@@ -1,3 +1,4 @@
+
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -56,6 +57,35 @@ export function ReferralLink({
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
+interface ReferralLinkProps {;
+  referralLink: string,;
+  onCopy: () => void,;
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}
+
+export function ReferralLink(): any ({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {;
+    onCopy();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <Card className="mt-6">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Link className="h-5 w-5" />;
+          Your Referral Link;
+        </CardTitle>;
+        <CardDescription>;
+          Share this link with others to earn rewards when they join and complete onboarding;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="flex flex-col space-y-3">;
+          <div className="flex space-x-2">;
             <Input
               value={referralLink}
               readOnly
@@ -204,6 +234,8 @@ function ReferralLink() {
     </Card>);
 }
 
+)
+  )
   )
   )
 
@@ -231,4 +263,4 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
 }
 ;
   )
-  )
+)

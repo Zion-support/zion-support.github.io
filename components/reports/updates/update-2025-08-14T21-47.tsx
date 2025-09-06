@@ -1,7 +1,14 @@
-return (
+export default function Page() {;
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Autonomous Update — 2025-08-14 21-47</title>;
+import Head from 'next/head';
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Autonomous Update — 2025-08-14 21-47</title>
         <meta
           name='description'
           content='Fresh autonomous update synthesized from recent site signals.'
@@ -27,6 +34,7 @@ return (
 
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
 
+'<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -56,10 +64,12 @@ export default function Page() {
   return (
 
 export default function Page() {
+export default function Page() {
   return (
 
 }
 
+export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;

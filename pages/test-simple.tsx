@@ -12,6 +12,8 @@ function TestSimple() {
     </div>);
 }
 export default function TestSimple() {return (;
+export default function TestSimple() {return (;
+}
 export default function TestSimple(req, res) {
   try {
 export default function TestSimple() {;
@@ -30,6 +32,7 @@ function TestSimple() {
       <h1 > Simple Test Page</h1>;
       <p > This is a simple test page to check if Next.js is working.</p>;
     </div>);
+
   return (;
     <div>;
       <h1>Simple Test Page</h1>;
@@ -42,5 +45,7 @@ function TestSimple() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 }
 }

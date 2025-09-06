@@ -1,3 +1,4 @@
+
 export interface Job {;
 
 export interface Job {;
@@ -12,6 +13,9 @@ export interface Job {;
   client_id: string
 }
 
+export interface ApplyToJobModalProps {
+  job: Job;
+  isOpen: boolean;
 export interface ApplyToJobModalProps {;
   job: Job;
   isOpen: boolean;
@@ -43,8 +47,9 @@ export interface ApplyToJobModalProps {;
 }
 
 ;
+;
 
 ;
 ;
 export interface ApplyToJobModalProps {
-  job: Job;
+job: Job;

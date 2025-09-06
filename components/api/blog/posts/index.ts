@@ -194,6 +194,12 @@ if ( {) {
     return res.status (201).json (post);
   }
 
+return res.status(405).end();
+}
+
+}
+}
+  return res.status(405).end();
 return res.status (405).end ();
 }
 import { v4 as uuidv4  } from 'uuid';
@@ -283,4 +289,4 @@ return res.status(405).end();
 
 }
 }
-  return res.status(405).end();
+return res.status(405).end();

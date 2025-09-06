@@ -7,6 +7,9 @@ export interface Wallet {
 export type TransactionType = "earn" | "burn";
 
 export interface TokenTransaction {
+export interface TokenTransaction {
+
+export interface TokenTransaction {;
   id: string;
   user_id: string;
   amount: number;
@@ -18,4 +21,7 @@ export interface TokenTransaction {
 
 export interface Wallet {;
 
+created_at: string;
+}
+;
 }

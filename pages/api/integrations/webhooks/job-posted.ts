@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { job } = req && req.body as { job?: Record<string, any> };
+  if (!job) return res && res.status(400).json({ error: "Missing job payload" });
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -12,23 +19,18 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
-<<<<<<< HEAD
-  const state = readState();
-  const crms = state && state.connections.filter(
-    (c) =>
-      c && c.providerId === "salesforce" ||
-      c && c.providerId === "hubspot" ||
-      c && c.providerId === "zoho" ||
-      c && c.providerId === "pipedrive"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
   try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { job } = req && req.body as { job?: Record<string, any> };
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
 
+if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { job } = req.body as { job?: Record<string, any> }
+  if (!job) return res.status(400).json({ error: "Missing job payload" });
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
@@ -38,7 +40,7 @@ export default async function handler(
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -61,21 +63,12 @@ function handler() {
       c.provider_id === "salesforce" ||;
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
-      c.provider_id === "pipedrive"
+c.provider_id === "pipedrive",
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-<<<<<<< HEAD
-      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
-      providerId: conn && conn.providerId
-      level: "info"
-      action: "sync_contact"
-    };
-    await crm && crm.syncContact(conn, {
-      company: job && job.company
-      contact: job && job.contact
-=======
+
 
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
@@ -90,7 +83,9 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+});
+    writeState((s) => s && s.logs.push(log));
+    results && results.push({ providerId: conn && conn.providerId, ok: true });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -105,16 +100,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
     results.push({ providerId: conn.providerId, ok: true })
 
   }
   // record Zapier event
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+results.push({ providerId: conn.providerId, ok: true })
+  }
+  // record Zapier event
     s && s.events.push({
       id: `${Date && Date.now()}-job-posted`
       type: "zion && zion.job.posted"
@@ -123,15 +120,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   });
 
-<<<<<<< HEAD
-=======
+
   res && res.status(200).json({ ok: true, results });
 
 }
 
   writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+res.status(200).json({ ok: true, results });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -167,21 +163,20 @@ export default async function handler(req, res) {
 
   res.status(200).json({ ok: true, results })
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
       level: "info"
       action: "sync_contact"
-=======
+
+
+
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
       action: "sync_contact",
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     }
     await crm.sync_contact (conn, {
       company: job.company
@@ -207,12 +202,11 @@ export default async function handler(req, res) {
   }
   res.status(200).json({ ok: true, results });
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 
 res.status(200).json({ ok: true, results });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -258,10 +252,12 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
+
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+  res.status(200).json({ ok: true, results });
+}
+

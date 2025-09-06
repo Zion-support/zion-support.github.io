@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +13,12 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -22,6 +29,25 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+{ name: 'Starter', price: '$69/month', items: ['1 project5 mocksOpenAPI importCI status checks'] },
+    { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocksRecord/replaySlack alerts'] },
+    { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support'] }
+  ];
+  const tiers = [;
+    {;
+      name: 'Starter',;
+      price: '$69/month',;
+      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],;
+    },;
+    {;
+      name: 'Team',;
+      price: '$149/month',;
+      items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts'],;
+    },;
+    {;
+      name: 'Enterprise',;
+      price: 'Custom',;
+      items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support'],;
 import Head from 'next / head';
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -111,6 +137,9 @@ function ApiMockContractTestingPage() {
             ))}
 
             ))}
+))}
+import React from 'react',
+import Head from 'next/head';
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -340,6 +369,10 @@ export default function ApiMockContractTestingPage(req, res) {
             </div>
             <div className="text-center">
 
+<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
+
+            </div>
+              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
             </div>
           </div>
         </div>
@@ -431,6 +464,7 @@ export default function ApiMockContractTestingPage(req, res) {
                 className='bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - xl';
               >;
 
+</div>;
                 Book a Demo;
               </a>            </div>;
           </div>;
@@ -439,6 +473,7 @@ export default function ApiMockContractTestingPage(req, res) {
 
 }
 
+}
   )
 }
 
@@ -447,6 +482,7 @@ export default function ApiMockContractTestingPage(req, res) {
 
 ;
 
+;
   )
 }
     </Layout>);

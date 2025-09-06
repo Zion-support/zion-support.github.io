@@ -15,6 +15,7 @@ return (
 
 }
 
+}
 import React from 'react';
 
 export default function CloudComputingStrategiesPage() {
@@ -72,4 +73,17 @@ export default function CloudComputingStrategiesPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
 
     </div>
+);
+
+    </div>
   );
+
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}

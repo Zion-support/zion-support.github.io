@@ -185,8 +185,5 @@ export function TalentDashboard() {
   );
 }
 
-=======
 ;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

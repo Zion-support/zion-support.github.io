@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Team - Zion Tech Group"
-      description="Meet our team"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
 
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import React from './react';
+import Head from './next / head';
+import Link from './next / link';
+import { motion  } from './framer-motion';
+import {
+import {
   ArrowRight,
   Phone,
   Mail,
@@ -49,6 +34,7 @@ origin/automation-improvements-final
     position: "CEO & Founder",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
+
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -130,6 +116,67 @@ origin/automation-improvements-final
     ],
   },
   {
+id: 2,
+    name: "Sarah Johnson",
+    position: "CTO",
+    department: "Technology",
+    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / sarahjohnson",
+    twitter: "https://twitter.com / sarahjohnson",
+    github: "https://github.com / sarahjohnson",
+    expertise: ["Cloud Computing", "AI / ML", "System Architecture", "DevOps"],
+  },
+  {
+    id: 3,
+    name: "Mike Chen",
+    position: "Head of Cybersecurity",
+    department: "Security",
+    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero - trust architecture and threat intelligence.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / mikechen",
+    twitter: "https://twitter.com / mikechen",
+    github: "https://github.com / mikechen",
+    expertise: [;
+      "Cybersecurity",
+      "Zero - Trust",
+      "Threat Intelligence",
+      "Compliance",
+    ],
+  },
+  {
+    id: 4,
+    name: "Emily Rodriguez",
+    position: "Head of AI / ML",
+    department: "AI & Machine Learning",
+    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / emilyrodriguez",
+    twitter: "https://twitter.com / emilyrodriguez",
+    github: "https://github.com / emilyrodriguez",
+    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"],
+  },
+  {
+    id: 5,
+    name: "David Kim",
+    position: "Head of Data Analytics",
+    department: "Data & Analytics",
+    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / davidkim",
+    twitter: "https://twitter.com / davidkim",
+    github: "https://github.com / davidkim",
+    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
+  },
+  {
+
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / lisawang",
+    twitter: "https://twitter.com / lisawang",
+    github: "https://github.com / lisawang",
+    expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
+
+  },
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -157,6 +204,7 @@ origin/automation-improvements-final
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
+}
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -167,6 +215,32 @@ origin/automation-improvements-final
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+name: 'Dr. Sarah Johnson',
+    role: 'Chief Technology Officer',
+    expertise: 'AI & Machine Learning',
+    icon: Brain,
+    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Cloud Solutions Architect',
+    expertise: 'Cloud Infrastructure',
+    icon: Cloud,
+    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Security Specialist',
+    expertise: 'Cybersecurity',
+    icon: Shield,
+    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
+  },
+  {
+    name: 'David Thompson',
+    role: 'Team Lead',
+    expertise: 'Project Management',
+    icon: Users,
+    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
   }
 ];
 
@@ -358,7 +432,6 @@ const teamMembers = [;
           </div>;
         </div>;
       </section>;
-
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
@@ -553,7 +626,6 @@ const teamMembers = [;
         </div>;
       </section>;
 
-
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -589,6 +661,7 @@ function TeamPage() {
           </div>;
         </div>;
       </section>;
+
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -641,6 +714,7 @@ const teamMembers = [
     description:
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
+
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
               Get Free Consultation;
             </Link>;
@@ -695,7 +769,6 @@ const teamMembers = [
         </div>;
       </section>;
 
-
 const teamMembers = [;
   {;
     name: "Dr. Sarah Johnson",;
@@ -735,13 +808,22 @@ export default function TeamPage() {;
 
   return (
     <>
+<>
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
 
+</>;
+      />
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
+        <p className="text-gray-300 mb-8">
+          Profiles coming soon. For inquiries, contact us.
+        </p>
+      </div>
 
-
+    </>;
 
     </>;
   );
@@ -764,11 +846,19 @@ import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
+
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
     </Layout>);
+<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
+			</div>
+		</>
+	)
+
+}
+</Layout>);
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -849,4 +939,23 @@ function TeamPage() {
 
 ;
 
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Team - Zion Tech Group"
+      description="Meet our team"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;

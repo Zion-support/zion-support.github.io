@@ -82,6 +82,12 @@ export interface CommunityUser {
 
 export interface UserBadge {;
 
+id: string;
+  name: string;
+  description: string;
+  icon: string
+  color: string
+}
 export interface UserBadge {
 
 export interface UserBadge {;
@@ -92,6 +98,9 @@ export interface UserBadge {;
 
 export interface CommunityUser {;
 
+export interface CommunityUser {
+
+export interface CommunityUser {;
 }
 export interface Badge {
   id: string;

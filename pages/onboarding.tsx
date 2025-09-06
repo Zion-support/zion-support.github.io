@@ -16,6 +16,8 @@ function OnboardingPage() {
       <OnboardingWizard />;
     </div>);
 }
+import OnboardingWizard from '../components/onboarding/OnboardingWizard';
+export default function OnboardingPage() {return (;
 export default function OnboardingPage(req, res) {
   try {
 export default function OnboardingPage() {;
@@ -35,5 +37,7 @@ export default function OnboardingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 }
 }

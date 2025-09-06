@@ -64,6 +64,7 @@ function SortFilter() {
     </div>);
 }
 
+)
   )
 
           <SelectItem value="price-low">Price:Low to High</SelectItem>;

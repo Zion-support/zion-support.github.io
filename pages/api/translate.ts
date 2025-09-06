@@ -17,6 +17,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         lng.startsWith('es') ? 'Spanish' :
         lng.startsWith('ar') ? 'Arabic' :
         'English'
+)
+      )
+      const completion = await openai.chat.completions.create({
+        model: 'gpt-4o-mini'
+        messages: [
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -48,9 +53,9 @@ export default async function handler(req, res) {
 
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
-const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
 export default async /**
  * handler - Function description
  */
@@ -82,6 +87,27 @@ if (|| targets.length === 0) {) {
         temperature: 0.2})
       const translated = completion.choices?.[0]?.message?.content?.trim () || ''
       results[lng] = translated;
+}
+    return res.status (200).json (results);
+  } catch (err: any) {
+    console.error ('Translation error', err),
+    return res.status (500).json ({ error: 'Translation failed' });
+
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ translation: 'Translated content' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { text, targets } = req.body as { text: string, targets: string[] },;
+  if (!text || !Array.isArray(targets) || targets.length === 0) {;
+    return res.status(400).json({ error: 'Invalid input' });
+    } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {

@@ -17,6 +17,7 @@ return (
 
 }
 
+}
 import React from 'react';
 
 export default function TechnologyImplementationStrategiesPage() {
@@ -80,4 +81,17 @@ export default function TechnologyImplementationStrategiesPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
 
     </div>
+);
+
+    </div>
   );
+
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}

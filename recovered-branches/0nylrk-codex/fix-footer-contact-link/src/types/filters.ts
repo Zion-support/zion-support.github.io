@@ -40,6 +40,33 @@ export interface FilterComponentProps {
   toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
+setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number],
+  setExperienceRange: (range: [number, number]) => void;
+  expandedSections: {
+    skills: boolean;
+    availability: boolean;
+    region: boolean;
+
+    experience: boolean
+    price: boolean
+  }
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  clearFilters: () => void
+
+  isMobileFilterOpen?: boolean
+}
+export interface FilterComponentProps {
+
+export interface FilterComponentProps {;
+  expanded: boolean;
+
+  toggleSection: () => void
+
+  isMobileFilterOpen?: boolean
+}
 export interface SkillsFilterProps extends FilterComponentProps {
 
   selectedSkills: string[]
@@ -85,6 +112,14 @@ export interface SortFilterProps {
   setSortOption: (option: string) => void;
 
 }
+setExperienceRange: (range: [number, number]) => void;
+}
+;
+export interface PriceFilterProps extends FilterComponentProps {;
+  priceRange: [number, number],;
+  setPriceRange: (range: [number, number]) => void;
+}
+export interface SearchFilterProps {
   searchTerm: string
 
 }
@@ -149,4 +184,6 @@ export interface SortFilterProps {;
   setSortOption:(option:string) => void;
 } 
 ;
+;
+
 ;

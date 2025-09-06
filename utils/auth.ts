@@ -1,41 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-
 // Authentication utilities
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface User {
   id: string;
   email: string;
-<<<<<<< HEAD
+
   role: "admin" | "user" | "guest";
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
-=======
-  role: string;
+role: string;
   isAdmin: boolean;
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface User {;
   id: string;
   email: string;
@@ -43,9 +28,7 @@ export interface User {;
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
-<<<<<<< HEAD
-=======
-  // Mock implementation - replace with actual auth logic;
+// Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: 'guest', email: 'guest@example.com', role: 'guest' };
@@ -58,8 +41,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
   try {;
@@ -68,10 +49,7 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
     ensureAdmin(user);
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -99,26 +77,25 @@ if ( {) {
     throw error;
   }
 }
-<<<<<<< HEAD
-=======
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
-=======
-=======
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
   id: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -128,14 +105,12 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   if (authHeader.includes("admin")) {
     return { id: "admin-1", email: "admin@zion.os", role: "admin" };
   }
-<<<<<<< HEAD
+return { id: 'user-1', email: 'user@zion.os', role: 'user' };
+
+
 
   return { id: "user-1", email: "user@zion.os", role: "user" };
-=======
-  
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 }
 
 export function ensureAdmin(user: User): void {
@@ -145,12 +120,8 @@ export function ensureAdmin(user: User): void {
     throw error;
   }
 }
-<<<<<<< HEAD
-=======
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-<<<<<<< HEAD
-    ensureAdmin(user);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 export async function ensureAdminFromApi(
   req: NextApiRequest,
@@ -159,40 +130,28 @@ export async function ensureAdminFromApi(
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 }
-=======
-<<<<<<< HEAD
 
   try {
-=======
   try {;
     const user = parseUserFromRequest(req);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ensureAdmin(user);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
-<<<<<<< HEAD
-=======
 
 // Additional auth utilities for login;
 
 export interface DemoUser {
-=======
 // Additional auth utilities for login
 export interface DemoUser {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   role: "admin" | "user" | "guest";
   email: string;
 }
-
 
 export function ensureDemoUsers(): void {
   if (demoUsers.length === 0) {
@@ -242,13 +201,7 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
   const cookieHeader = req.headers.cookie || "";
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -291,17 +244,15 @@ export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
 if (return null) {
   $2
 }
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
 
 
     user,
@@ -309,14 +260,13 @@ if (return null) {
     expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   };
 }
-=======
+
 
   }
 }
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -326,14 +276,11 @@ export function isAuthenticated(session: AuthSession | null): boolean {
 
   }
 
-<<<<<<< HEAD
-=======
 export function hasRole(session: AuthSession | null, role: string): boolean {
     if (!session || !isAuthenticated(session)) return false;
 
 
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -341,9 +288,12 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
-=======
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+}
+

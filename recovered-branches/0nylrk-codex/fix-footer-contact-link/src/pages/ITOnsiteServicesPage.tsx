@@ -74,6 +74,9 @@ export default function ITOnsiteServicesPage() {
       }, 100));
   };
 
+}
+
+  },
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
@@ -102,6 +105,38 @@ export default function ITOnsiteServicesPage() {;
   // Check for success parameter in URL;
   const success = searchParams && searchParams.get("success");
 
+const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState("");
+  // Check for success parameter in URL;
+  const success = searchParams && searchParams.get("success");
+
+import { useState, useEffect } from "react",;
+import { useSearchParams } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",;
+import { GlobalServiceSection } from "@/components/GlobalServiceSection",;
+import { QuoteFormSection } from "@/components/QuoteFormSection",;
+import { TrustedBySection } from "@/components/TrustedBySection",;
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
+import { toast } from "@/hooks/use-toast",;
+import { PageHero } from "@/components/services/PageSections/PageHero",;
+import { CountryTabs } from "@/components/services/PageSections/CountryTabs",;
+import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",;
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",;
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",;
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",;
+;
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams(),;
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  ;
+  // Check for success parameter in URL;
+  const success = searchParams.get("success"),;
+  ;
+  // Check for success parameter in URL;
+  const success = searchParams.get("success"),;
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
@@ -336,6 +371,7 @@ if (return 1) {
       <TrustedBySection />;
       <QuoteFormSection />;
     </AppLayout>);
+}
 }
   ),; //Show success toast if redirected from successful payment useEffect ( () => {
   if (success === "true") {

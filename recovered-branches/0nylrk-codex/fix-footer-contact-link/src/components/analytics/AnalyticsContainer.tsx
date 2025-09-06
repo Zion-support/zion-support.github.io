@@ -1,5 +1,12 @@
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
 
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -11,6 +18,7 @@ import { useAuth } from "@/hooks/useAuth",
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
+
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
@@ -18,12 +26,12 @@ interface AnalyticsContainerProps {
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
   const { isAuthenticated, isLoading, user } = useAuth(),
-  
 
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
-  
 
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
+  const { isAuthenticated, isLoading, user } = useAuth();
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
@@ -44,14 +52,12 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     )
   }
 
-  
 
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
 
-  
 
   // If not admin, redirect
   if (!isAdmin) {
@@ -73,6 +79,12 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
           </p>
         </div>
 
+{children}
+      </main>
+      <Footer />
+    </div>
+  );
+}
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -188,6 +200,8 @@ if ( {) {
     </div>);
 
 }
+}
+;
 }
 ;
 

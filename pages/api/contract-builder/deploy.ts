@@ -1,8 +1,11 @@
-<<<<<<< HEAD
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
+
+import { Interface } from 'ethers';
 import type { NextApiRequest, NextApiResponse } from 'next',;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -14,12 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
   try {
@@ -54,13 +58,11 @@ import { Interface } from 'ethers';
 
 }
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { Interface } from 'ethers'
-=======
+
+}
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { Interface } from 'ethers',
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 // Simple ABI for demonstration (release / refund);
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
@@ -92,26 +94,58 @@ if ( {) {
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   }
 }
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+    }
+
+    return res.status(200).json({ abi, tx })
+  } catch (e: any) {
+    return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' })
+  try {
+    const iface = new Interface(abi),
+    const data = iface.encodeDeploy(constructorArgs),
+    const tx = {
+      data: bytecode + data.slice(2),
+      // gas and value are intentionally left for client to estimate via MetaMask
+    },
+    return res.status(200).json({ abi, tx })
+  } catch (e: any) {
+    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Interface } from 'ethers';
+// Simple ABI for demonstration (release/refund);
+const abi = [;
+  'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)';
+],;
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    return res.status(405).json({ error: 'Method not allowed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
   }
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 ;
   const { bytecode, constructorArgs } = req.body || {};
   if (!bytecode || !constructorArgs) {;
@@ -143,14 +177,14 @@ if ( {) {
   }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
   }
 }
 
   }
 
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

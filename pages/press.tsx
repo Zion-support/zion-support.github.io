@@ -1,5 +1,42 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+}
+
+}
+import React from 'react',
+import SEO from '../components / SEO',
+export default /**
+ * PressPage - Function description
+ */
+function PressPage() {
+return (
+  <>;
+  <SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />;
+  <div className="container mx - auto px - 4 py - 16">;
+    <h1 className="text - 4xl font - bold mb - 4">Press</h1>;
+    <p className="text - gray - 300">Media kit and announcements coming soon.</p>;
+  </div>;
+  </>);
+}
+
+import React from 'react';
+import SEO from '../components/SEO';
+export default function PressPage() {
+	return (
+		<>
+			<SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />
+			<div className="container mx-auto px-4 py-16">
+				<h1 className="text-4xl font-bold mb-4">Press</h1>
+				<p className="text-gray-300">Media kit and announcements coming soon.</p>
+			</div>
+		</>
+	)
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -72,40 +109,14 @@ const contactInfo = {
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 }
 
-import React from 'react',
-import SEO from '../components / SEO',
-export default /**
- * PressPage - Function description
- */
-function PressPage() {
-return (
-  <>;
-  <SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />;
-  <div className="container mx - auto px - 4 py - 16">;
-    <h1 className="text - 4xl font - bold mb - 4">Press</h1>;
-    <p className="text - gray - 300">Media kit and announcements coming soon.</p>;
-  </div>;
-  </>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
 
 
 import React from 'react';
 import SEO from '../components/SEO';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 export default function PressPage() {
 	return (
 		<>
@@ -117,14 +128,16 @@ export default function PressPage() {
 		</>
 	)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+
+

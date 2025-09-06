@@ -1,6 +1,18 @@
-{
+import { ProfileData } from '@/types/profile';
+
+      {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+        id: 'p2',
+        title: 'Sentiment Analysis API',
+        description:;
+          'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023',
+      },
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',

@@ -1,3 +1,4 @@
+
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 
@@ -27,12 +28,17 @@ export default function AiHrAnalyticsPlatform() {
 	return (
 		<ServiceLanding
 
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 export default function AiHrAnalyticsPlatform() {
 	return (
 		<ServiceLanding
 			title="AI HR Analytics Platform"
 			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions."
 			subtitle="People insights that drive outcomes"
+
 			implementationWeeks="1-2 weeks"
 			roiNote="HR teams report measurable gains in retention and hiring yield"
 			features={[

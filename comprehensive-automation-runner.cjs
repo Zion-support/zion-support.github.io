@@ -1,37 +1,29 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -144,10 +136,6 @@ class ComprehensiveAutomationRunner {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
     
     try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       // Build the application
       execSync('npm run build', { stdio: 'inherit' });
       // Run tests
@@ -347,15 +335,25 @@ module.exports = HealthCheckAutomation;`;
     this.log('🚀 Starting Comprehensive Automation Runner...');
     try {
       // Run all automation steps
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+      // Run syntax fixes
+
       await this.runSyntaxFixes();
+      
+      // Run build process
       await this.runBuildProcess();
+      
+      // Run tests
       await this.runTests();
+      
+      // Generate final report
       this.generateFinalReport();
-    } catch (error) {
-      this.log(`Automation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      
+      this.log('🎉 Comprehensive automation completed successfully!', 'SUCCESS');
+    } catch(error) {
+      this.log(`❌ Comprehensive automation failed: ${error.message}`, 'ERROR');
+      throw error;
     }
   }
 
@@ -387,17 +385,11 @@ module.exports = HealthCheckAutomation;`;
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
-<<<<<<< HEAD
-  runner.run().catch(console.error);
-}
-
-module.exports = ComprehensiveAutomationRunner;
-=======
-  runner.runAllAutomations().catch(error => {
+runner.runAllAutomations().catch(error => {
     console.error('Comprehensive automation runner failed:', error);
     process.exit(1);
   });
 }
 
 module.exports = ComprehensiveAutomationRunner;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+

@@ -1,3 +1,4 @@
+interview: Interview;
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Interview } from "@/types/interview",
@@ -35,6 +36,32 @@ interface InterviewResponseFormProps {
   isLoading: boolean
 }
 
+export function InterviewResponseForm({
+  interview,
+  onConfirm,
+  onClose,
+  isLoading,
+}: InterviewResponseFormProps) {
+  // Format interview date and time;
+  const interviewDate = parseISO(interview.scheduled_date);
+  const formattedDate = format(interviewDate, "EEEE, MMMM d");
+  const formattedTime = format(interviewDate, "h: mm a");
+export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
+  // Format interview date and time
+  const interviewDate = parseISO(interview.scheduled_date),
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
+  const formattedTime = format(interviewDate, 'h: mm a'),
+// Calculate when interview ends
+  const endTime = new Date(interviewDate),
+  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),
+  const formattedEndTime = format(endTime, 'h: mm a'),
+
+  return (
+    <div className="space-y-4">
+      <div className="p-4 bg-zion-blue-light/20 rounded-md">
+        <h3 className="font-medium text-lg mb-2">{interview.title}</h3>
+        <p className="text-sm text-zion-slate-light mb-4">
+
 export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date),
@@ -51,6 +78,10 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           Interview requested by {interview.client_name || 'Client'}
         </p>
 
+Interview requested by {interview.client_name |"Client"}
+        </p>
+          Interview requested by {interview.client_name || 'Client'}
+        </p>
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -89,6 +120,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
       </div>
     </div>
 
+);
+}
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -119,6 +152,36 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           Interview requested by {interview && interview.client_name || "Client"}
         </p>;
 
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Interview } from "@/types/interview",;
+import { format, parseISO } from "date-fns",;
+;
+interface InterviewResponseFormProps {;
+  interview:Interview,;
+  onConfirm:() => Promise<void>,;
+  onClose:() => void,;
+  isLoading:boolean;
+}
+;
+export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading } InterviewResponseFormProps) {;
+  // Format interview date and time;
+  const interviewDate = parseISO(interview.scheduled_date),;
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),;
+  const formattedTime = format(interviewDate, 'h:mm a'),;
+;
+  // Calculate when interview ends;
+  const endTime = new Date(interviewDate),;
+  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),;
+  const formattedEndTime = format(endTime, 'h:mm a'),;
+;
+  return (;
+    <div className="space-y-4">;
+      <div className="p-4 bg-zion-blue-light/20 rounded-md">;
+        <h3 className="font-medium text-lg mb-2">{interview.title}</h3>;
+        <p className="text-sm text-zion-slate-light mb-4">;
+          Interview requested by {interview.client_name || 'Client'}
+        </p>;
         <div className="grid gap-3">;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>;
@@ -127,6 +190,11 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>;
             <div>;
+const endTime = new Date(interviewDate);
+  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
+  const formattedEndTime = format(endTime, "h: mm a");
+
+  return (
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;
@@ -152,6 +220,10 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </div>;
       </div>;
 
+<div>{formattedTime} - {formattedEndTime}</div>;
+          </div>;
+          <div className="flex items-center gap-3">;
+            <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
             <div>{interview.duration_minutes} minutes</div>;
           </div>;
           {interview.meeting_platform && (;
@@ -244,6 +316,8 @@ function InterviewResponseForm() {
     </div>);
 
 }
+}
+;
 }
 ;
 

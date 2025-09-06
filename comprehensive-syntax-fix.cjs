@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -11,20 +7,16 @@ const path = require('path')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
   content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -61,7 +53,7 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/          content = content.replace(/          
+content = content.replace(/[\s\S]*?[\s\S]*?          content = content.replace(/[\s\S]*?
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);
         } catch (error) {
@@ -129,10 +121,9 @@ class ComprehensiveSyntaxFixer {
 
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
-<<<<<<< HEAD
-fixer.run().catch(console.error);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -387,9 +378,6 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
-=======
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -426,7 +414,7 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?
           content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
           
           fs.writeFileSync(filePath, content);
@@ -497,10 +485,12 @@ class ComprehensiveSyntaxFixer {
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
+
+
+
 fixer.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

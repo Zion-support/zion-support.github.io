@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -133,11 +134,21 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   activities;
   is_loading;
   is_client;
+milestones;
+  activities;
+  isLoading;
+  isClient;
   onCreateMilestone;
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
 
+isSubmitting;
+
+  onApprove
+  onReject
+}) => {
+  const [showAddForm, setShowAddForm] = useState(false);
   milestones,
   activities,
   isLoading,
@@ -152,11 +163,31 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false),
-  
 
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
     setShowAddForm(false)
+const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data)
+    setShowAddForm(false)
+  }
+  },
+
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        {[1, 2, 3].map((i) => (
+          <Card key={i}>
+            <CardContent className="p-6">
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    )
+  }
 
   },
 
@@ -170,9 +201,12 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
     await onCreateMilestone(data),;
     setShowAddForm(false);
   };
+if (isLoading) {;
+    return (
 
   if (isLoading) {;
     return (
+    return (;
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -188,7 +222,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
     );
   }
 
-  
 
     );
   }
@@ -231,6 +264,29 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
   return (
   return (
+),;
+  }
+  ;
+  if (milestones.length === 0 && !showAddForm) {;
+    return (;
+      <EmptyState;
+        icon={<span className="text-3xl">📊</span>}
+        title="No Milestones Yet";
+        description={isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet."}
+        action={isClient ? ;
+          {;
+            text:"Create First Milestone",;
+            onClick:() => setShowAddForm(true);
+          } undefined;
+        }
+      />;
+    ),;
+  }
+;
+  return (;
+  return (
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -241,6 +297,22 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
         </div>;
       )}
 
+return (
+    <div className="space-y-6">
+      {isClient && !showAddForm && (
+        <div className="flex justify-end">
+          <Button onClick={() => setShowAddForm(true)}>
+            <Plus className="h-4 w-4 mr-2" />
+            Add Milestone
+          </Button>
+        </div>
+      )}
+      {showAddForm && (
+        <Card>
+          <CardContent className="pt-6">
+            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+
+      ;
       {showAddForm && (;
         <Card>;
           <CardContent className="pt-6">;
@@ -248,6 +320,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
             <AddMilestoneForm
 
+<AddMilestoneForm
             <AddMilestoneForm 
 
             <AddMilestoneForm ;
@@ -282,6 +355,32 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
     </div>;
   );
 
+;
+      <div className="space-y-4">;
+        {milestones.map((milestone) => (;
+          <MilestoneCard;
+            key={milestone.id}            id={milestone.id}
+            projectId={milestone.projectid}
+            <AddMilestoneForm
+            <AddMilestoneForm 
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setShowAddForm(false)}
+            />
+          </CardContent>
+        </Card>
+      )}
+      
+      <div className="space-y-4">
+        {milestones.map((milestone) => (
+          <MilestoneCard
+            key={milestone.id}
+            id={milestone.id}
+            projectId={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parseFloat(milestone.amount.toString())}
+            status={milestone.status}
       </div>;
     </div>;
   );
@@ -371,3 +470,57 @@ if ( {) {
     </div>);
 }
 ;
+  ),;
+},; <Card key= {
+  i 
+}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) 
+}</div>) 
+}
+}/>) 
+}<Button onClick= {
+  () => setShowAddForm (true) 
+}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) 
+}<AddMilestoneForm onSubmit= {
+  handleSubmit 
+}isSubmitting= {
+  isSubmitting 
+}onCancel= {
+  () => setShowAddForm (false) 
+}/> </CardContent> </Card>) 
+}<MilestoneCard key= {
+  milestone.id 
+}id= {
+  milestone.id 
+}projectId= {
+  milestone.project id 
+}title= {
+  milestone.title 
+}description= {
+  milestone.description 
+}amount= {
+  parseFloat (milestone.amount.toString () ) 
+}status= {
+  milestone.status 
+}dueDate= {
+  milestone.due date 
+}onApprove= {
+  onApprove 
+}onReject= {
+  onReject 
+}/>) ) 
+}</div> </div>) 
+};
+            dueDate={milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+      </div>;
+    </div>;
+  );
+};

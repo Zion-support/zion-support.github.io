@@ -1,8 +1,12 @@
+
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
 interface EmptyFraudStateProps {
   has_filters: boolean;
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
@@ -33,10 +37,18 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+</div>;
+);
 
     </div>;
 );
 
+<Button variant="outline" onClick={onResetFilters}>
+          Clear Filters
+        </Button>
+      )}
+    </div>;
+);
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;

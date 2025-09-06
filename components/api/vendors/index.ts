@@ -7,6 +7,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+const vendors = listVendors();
+  res && res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = listVendors();
+  res && res.status(200).json({ vendors })
+}
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
   const vendors = listVendors();
   res.status(200).json({ vendors })
 }

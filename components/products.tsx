@@ -1,4 +1,5 @@
 export default function Placeholder() {
+export default function Placeholder() {
 
 export default function Placeholder() {
   return (
@@ -17,6 +18,8 @@ export default function Placeholder() {
         </Link>
       </div>
   );export default function Placeholder() {
+export default function Placeholder() {;
+export default function Placeholder() {
 export default function Placeholder() {;
 export default function Placeholder() {
   return (
@@ -52,6 +55,9 @@ export default function Placeholder() {
 
 }
 
+}
+
+}
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -93,6 +99,7 @@ function Placeholder() {
 
 }
 
+}
       <Head>
         <title>Products - Placeholder</title>
         <meta name=&quot;robots&quot; content=&quot;noindex&quot; />

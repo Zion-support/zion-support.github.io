@@ -8,6 +8,8 @@ interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;
 }
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 
   const handleBrowserPrint = () => {
     setIsPrinting(true);
@@ -95,6 +97,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         </Button>
       </div>
     </div>
+  );
+}
+document.head.append_child (style);
+;
+
   );
 }
     document.head.append_child (style);

@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,10 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
+export default function YouTubeRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('https: //youtube && youtube.com/@ziontechgroup'),;
 import Head from 'next / head';
 export default /**
  * YouTubeRedirect - Function description

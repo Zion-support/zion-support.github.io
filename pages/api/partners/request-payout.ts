@@ -73,9 +73,9 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: e?.message });
     const { error } = await supabase.from('payout_requests').insert({
-      partner_code: String(code).toLowerCase()
-      amount: Number(amount) || null
-      status: "requested"
+partner_code: String(code).toLowerCase(),
+      amount: Number(amount) || null,
+      status: "requested",
     });
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
@@ -108,12 +108,16 @@ if ( {) {
     }
     const supabase = getServerSupabase ();
     const { error } = await supabase.from ("payout_requests").insert ({
-      partner_code: String (code).toLowerCase ()
-      amount: Number (amount) || null
-      status: "requested"
+partner_code: String (code).toLowerCase (),
+      amount: Number (amount) || null,
+      status: "requested",
     });
     if (return res.status (500).json ({ error: "Database error" })) {
   $2
 }
     return res.status (200).json ({ ok: true, status: "requested" });
   } catch (e: any) {
+return res.status(500).json({ error: e?.message });
+
+  }
+}

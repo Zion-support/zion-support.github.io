@@ -46,6 +46,9 @@ export default function AIMatcherPage() {
       }));
   };
 
+}
+
+  },
   return (
     <>
       <Header />
@@ -87,6 +90,17 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
+<AIMatchmaker 
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { AIMatchmaker } from "@/components/AIMatchmaker",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { toast } from "@/hooks/use-toast",;
+import { MatchResult } from "@/lib/ai-matchmaking",;
 
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
@@ -149,6 +163,13 @@ if (|| category === "hardware") {) {
             </div>;
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
+              onMatchSelect={handleMatchSelect}
+;
+            <AIMatchmaker ;
+              serviceType={selectedCategory === "all" ? "" :selectedCategory}
+              onMatchSelect={handleMatchSelect}
+            <AIMatchmaker;
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />;
           </div>;

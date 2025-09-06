@@ -31,6 +31,12 @@ export interface EscrowContractDetails {;
 
 export interface DeploymentOptions {;
 
+completionDeadline: string
+  arbitrator?: string
+}
+export interface DeploymentOptions {
+
+export interface DeploymentOptions {;
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean;
@@ -45,4 +51,14 @@ export interface DeploymentOptions {
 }
 ;
 
+arbitrator?: string;
+}
+;
+export interface DeploymentOptions {;
+  network: BlockchainNetwork,;
+  walletAddress?: string,;
+  useEscrow: boolean;
+  deployToChain: boolean;
+}
+;
 }

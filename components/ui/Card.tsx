@@ -1,6 +1,19 @@
+import React from 'react';
+
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function Card({ children, className = '' }: CardProps) {
+  return (
+    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+      {children}
+    </div>
+  );
+}
 import React from "react";
 import { cn } from "../../lib/utils";
-
 
 interface HTMLDivElement extends HTMLElement {
   tagName: "DIV";
@@ -66,14 +79,12 @@ const CardContent = React.forwardRef<
 ));
 CardContent && CardContent.displayName = "CardContent";
 
-
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
 
   <div
-=======
   />));
 CardDescription.display_name = "CardDescription";
 ;

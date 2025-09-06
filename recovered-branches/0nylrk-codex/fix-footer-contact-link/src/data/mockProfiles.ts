@@ -1,6 +1,16 @@
 {
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
+        id: 'p2',
+        title: 'Financial Analytics Suite',
+        description:;
+          'Developed predictive models for investment analysis with 92% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
+
+        tags: ['Finance', 'Analytics', 'Python'],
+        date: 'Jun 2023',
+      },
       {
 
           'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
@@ -27,7 +37,7 @@
     profileType: 'talent' as 'service' | 'talent',
     hourlyRate: 150,
 
-      {
+{
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
         id: 'p2',
@@ -65,7 +75,6 @@
     aiScore: 97,
     profileType: 'talent' as 'service' | 'talent',
     hourlyRate: 150,
-
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {

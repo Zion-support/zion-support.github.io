@@ -38,6 +38,7 @@ export interface UserDetails {;
 
   permissions?: string[];
   company_id?: string;
+
   bio?: string;
   created_at?: string;
   updated_at?: string;

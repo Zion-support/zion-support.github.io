@@ -1,3 +1,4 @@
+
 import {
 
 import {;
@@ -7,6 +8,28 @@ import {;
   Mail,;
   Search,;
   Settings,;
+import {
+
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import {
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
+} from "lucide-react";
+import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenu
+  SidebarMenuItem
+  SidebarMenuButton
+  SidebarGroupLabel
+  SidebarGroupContent
   Bell,
   FileText,
   Home,
@@ -16,6 +39,7 @@ import {;
 
   Users,;
 } from "lucide-react";
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
   Bell,
   FileText,
   Home,
@@ -39,7 +63,54 @@ import {;
 export function AppSidebar() {;
   return (
 
-        
+} from "@/components/ui/sidebar";
+export function AppSidebar() {;
+  return (
+  Users,;
+} from "lucide-react";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,;
+} from "@/components/ui/sidebar";
+
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent} from "@/components/ui/sidebar",
+
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <a href="/messaging">
+                    <Mail size={16} />
+                    <span>Messages</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <a href="/notifications">
+                    <Bell size={16} />
+                    <span>Notifications</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
 
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
@@ -52,6 +123,7 @@ export function AppSidebar() {;
                     <span>My Content</span>
                   </a>
                   </Link>
+</Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -61,13 +133,13 @@ export function AppSidebar() {;
                     <span>Analytics</span>
                   </a>
                   </Link>
+</Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
 
-        
 
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
@@ -80,6 +152,7 @@ export function AppSidebar() {;
                     <span>Profile</span>
                   </a>
                   </Link>
+</Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -89,6 +162,7 @@ export function AppSidebar() {;
                     <span>Settings</span>
                   </a>
                   </Link>
+</Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -96,6 +170,7 @@ export function AppSidebar() {;
         </SidebarGroup>
       </SidebarContent>
 
+</Sidebar>
   );
 }
   )
@@ -126,6 +201,41 @@ export function AppSidebar() {;
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
+Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,
+} from './lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,
+} from '@/components / ui / sidebar';
+;
+export /**
+ * AppSidebar - Function description
+ */
+function AppSidebar() {
+  return (
+    <Sidebar>;
+      <SidebarContent>;
+        <SidebarGroup>;
+          <SidebarGroupLabel > Dashboard</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/creator - dashboard">;
+                    <Home size={16} />;
+                    <span > Home</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -136,6 +246,10 @@ export function AppSidebar() {;
                     <Mail size={16} />;
                     <span > Messages</span>;
 
+<SidebarMenuButton asChild>;
+                  <a href="/messaging">;
+                    <Mail size={16} />;
+                    <span>Messages</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -146,6 +260,10 @@ export function AppSidebar() {;
                     <Bell size={16} />;
                     <span > Notifications</span>;
 
+<SidebarMenuButton asChild>;
+                  <a href="/notifications">;
+                    <Bell size={16} />;
+                    <span>Notifications</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -163,6 +281,16 @@ export function AppSidebar() {;
                     <FileText size={16} />;
                     <span > My Content</span>;
 
+;
+        <SidebarGroup>;
+          <SidebarGroupLabel>Content</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton asChild>;
+                  <a href="/publish">;
+                    <FileText size={16} />;
+                    <span>My Content</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -173,6 +301,10 @@ export function AppSidebar() {;
                     <Search size={16} />;
                     <span > Analytics</span>;
 
+<SidebarMenuButton asChild>;
+                  <a href="/analytics">;
+                    <Search size={16} />;
+                    <span>Analytics</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -190,6 +322,16 @@ export function AppSidebar() {;
                     <Users size={16} />;
                     <span > Profile</span>;
 
+;
+        <SidebarGroup>;
+          <SidebarGroupLabel>Settings</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton asChild>;
+                  <a href="/profile">;
+                    <Users size={16} />;
+                    <span>Profile</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -200,6 +342,10 @@ export function AppSidebar() {;
                     <Settings size={16} />;
                     <span > Settings</span>;
 
+<SidebarMenuButton asChild>;
+                  <a href="/settings">;
+                    <Settings size={16} />;
+                    <span>Settings</span>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -212,6 +358,7 @@ export function AppSidebar() {;
 
     </Sidebar>;
   );
+</Sidebar>);
 }
     </Sidebar>);
 }

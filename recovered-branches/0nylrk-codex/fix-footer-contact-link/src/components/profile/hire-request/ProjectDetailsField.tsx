@@ -46,6 +46,11 @@ function ProjectDetailsField() {
 }
 ;
 
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { FormValues } from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>;
   form: UseFormReturn<FormValues>;
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;

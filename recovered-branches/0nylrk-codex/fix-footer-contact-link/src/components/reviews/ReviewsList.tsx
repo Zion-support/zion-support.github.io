@@ -50,6 +50,7 @@ export function ReviewsList({
     );
   }
 
+))}
       </div>
     );
   }
@@ -85,5 +86,14 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
+<div className="space-y-4">
+      {reviews.map((review) => (
+        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
+      ))}
+    </div>
+  );
+}
+;
+
 }
 ;

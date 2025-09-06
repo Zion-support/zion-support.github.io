@@ -2,12 +2,7 @@
   return default_value;
 }
 
-<<<<<<< HEAD
-=======
-
-
 export function writeJsonFile<T>(fileName: string, data: T): void {;
-
 
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
@@ -15,15 +10,10 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
   fs && fs.writeFileSync(tmpPath, JSON && JSON.stringify(data, null, 2), 'utf-8');
   fs && fs.renameSync(tmpPath, filePath);
 
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
-<<<<<<< HEAD
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -33,7 +23,6 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
-=======
 
 }
 // Database utilities
@@ -45,7 +34,6 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface QueryResult<T = any> {
   rows: T[];
   rowCount: number;
@@ -80,24 +68,16 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
   } catch (error) {
     console.error('Error reading file:', error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   return defaultValue;
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 // Default database configuration
 const defaultConfig: DatabaseConfig = {
   host: process.env.DB_HOST || 'localhost',
@@ -110,8 +90,6 @@ const defaultConfig: DatabaseConfig = {
 // Singleton database instance
 export const db = new DatabaseManager(defaultConfig);
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
   const tmp_path = `${file_path}.tmp`;
@@ -123,34 +101,20 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   items.push (item);
   writeJsonFile < T[]>(file_name, items);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
 }
 }
-=======
 
-=======
 import fs from 'fs';
 import path from 'path';
 
-
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

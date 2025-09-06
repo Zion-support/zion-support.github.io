@@ -1,3 +1,4 @@
+
 import EmptyState from '../../components / ui / EmptyState';
 export default /**
  * RequestsPage - Function description
@@ -10,6 +11,9 @@ function RequestsPage() {
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; cta_label=&quot;Submit a quote & quot; cta_href=&quot;/dashboard & quot; />;
     </div>);
 }
+import EmptyState from '../../components/ui/EmptyState'
+export default function RequestsPage() {
+  return (
   return (
 
 export default function RequestsPage() {

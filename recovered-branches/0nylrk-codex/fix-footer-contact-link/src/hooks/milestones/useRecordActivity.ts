@@ -1,5 +1,7 @@
 export const useRecordActivity = () => {;
   const { user } = useAuth();
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
 
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -22,7 +24,7 @@ import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
   const { user } = useAuth(),
 
-  
+
   const recordMilestoneActivity = async (
     milestoneId: string,
     action: string, 
@@ -36,6 +38,11 @@ export const useRecordActivity = () => {
         .from('milestone_activities')
         .insert({
 
+milestone_id: milestoneId;
+          user_id: user.id;
+          action;
+          previous_status: previousStatus;
+          new_status: newStatus
           milestone_id: milestoneId,
           user_id: user.id,
           action,
@@ -58,7 +65,7 @@ export const useRecordActivity = () => {
         .single(),
       
       if (error) throw error,
-      
+
 
       return data
     } catch (err: any) {
@@ -114,6 +121,10 @@ if (throw error) {
 }
 ;
 
+return data
+    } catch (err: any) {
+      console.error("Error recording activity:", err),
+      return null
     }
   };
   

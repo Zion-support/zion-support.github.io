@@ -10,6 +10,13 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
 
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+  const { open, toggleSidebar } = useSidebar(),
+
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
+  const { open, toggleSidebar } = useSidebar();
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+  const { open, toggleSidebar } = useSidebar(),
   return (
     <Button
       variant="ghost"
@@ -34,6 +41,10 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
+className={cn("", className)}
+      onClick={toggleSidebar}
+      {...props}
+    >;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>

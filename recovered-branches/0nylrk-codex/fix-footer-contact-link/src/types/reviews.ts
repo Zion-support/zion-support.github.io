@@ -30,6 +30,13 @@ export interface Review {
 
 export interface ReviewReport {;
 
+display_name: string
+    avatar_url?: string
+  }
+}
+export interface ReviewReport {
+
+export interface ReviewReport {;
 export interface ReviewReport {
   id: string;
   review_id: string;

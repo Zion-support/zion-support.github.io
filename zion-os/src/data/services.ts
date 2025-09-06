@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
 export interface Service {
   id: string,
   name: string,
@@ -20,7 +14,6 @@ export interface Service {
     starter: string,
     professional: string,
     enterprise: string,
-<<<<<<< HEAD
 export interface Service {id: string;
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
@@ -30,8 +23,6 @@ export interface Service {id: string;
     starter: string;
     professional: string;
     enterprise: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     custom?: string;
     address: string;
   }
@@ -39,23 +30,18 @@ export interface Service {id: string;
 export const services: Service[] = [;
   // AI Services;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
   {
     id: 'ai - code - assistant',
     name: 'ZionAI Code Assistant',
     category: 'AI Services',
     description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
+
   {id: 'ai-code-assistant';
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
@@ -368,11 +354,11 @@ export const getServiceById = (id: string) => {return services.find(service => s
 }
 export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 export interface Service {;
   id: string,;
   name: string,;
@@ -739,20 +725,15 @@ export const getServiceById = (id: string) => {;
 },;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
-<<<<<<< HEAD
+
+
+
+
+
+
+
+
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

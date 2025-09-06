@@ -16,6 +16,10 @@ export const ResumeSteps = ({
       {steps.map((step) => (
         <TabsTrigger key={step.id} value={step.id}>
 
+{step.label}
+        </TabsTrigger>
+      ))}
+    </TabsList>
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { StepProps } from "./types",;
 

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
@@ -119,10 +119,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)

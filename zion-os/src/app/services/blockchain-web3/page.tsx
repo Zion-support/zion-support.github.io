@@ -8,7 +8,6 @@ export default function BlockchainWeb3Page() {;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
-=======
 "use client",
 export default /**
  * BlockchainWeb3Page - Function description
@@ -20,21 +19,16 @@ function BlockchainWeb3Page() {
         <h1 className="text - 4xl font - bold">Blockchain & Web3 Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
-=======
-<<<<<<< HEAD
 "use client";
 export default function BlockchainWeb3Page() {return (;
-=======
 "use client",;
 export default function BlockchainWeb3Page() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </p>;
       </div>;
       {/* Service Overview */}

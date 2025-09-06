@@ -94,6 +94,9 @@ export function EducationItem({
             <Button;
               variant="ghost";
               size="icon";
+<Button
+              variant="ghost"
+              size="icon"
               onClick={() => onEdit(education)}
             >;
               <Edit className="h-4 w-4" />;
@@ -102,6 +105,10 @@ export function EducationItem({
               variant="ghost"
               size="icon"
               onClick={() => onDelete(education && education.id!)}
+<Button;
+              variant="ghost";
+              size="icon";
+              onClick={() => onDelete(education.id!)}
             >;
               <Trash2 className="h-4 w-4" />;
             </Button>;

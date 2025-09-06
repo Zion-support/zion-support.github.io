@@ -1,19 +1,54 @@
+
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
 
+import { GradientHeading } from "./GradientHeading",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "./ui/button",
+import { GradientHeading } from "./GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+import { BLOG_POSTS } from "@/data/blog-posts";
+// Get the 3 most recent blog posts;
+const recentPosts = [...BLOG_POSTS];
+  .sort((a, b) => {;
     return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
   });
   .slice(0, 3);
 
+return (
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+    );
+  })
+  .slice(0, 3);
+export function BlogSection() {
+  return (
+    <section className="py-20 bg-zion-blue-dark" id="blog">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+          <div>
+            <GradientHeading>Latest Insights</GradientHeading>
+            <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">
+              Stay updated with trends in AI technology, marketplace strategies
+              and IT services
+            </p>
+          </div>
+          <Button
+            variant="outline"
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { Button } from "./ui/button",
@@ -44,6 +79,10 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
 
+onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+                    const target = e.currentTarget as HTMLImageElement,
+
+                  onError={(
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
                     const target = e.currentTarget as HTMLImageElement;
@@ -87,6 +126,12 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
               </CardFooter>
             </Card>
 
+))}
+        </div>
+      </div>
+    </section>
+  );
+}
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
@@ -181,6 +226,12 @@ export function BlogSection() {;
                   className="text-zion-cyan p-0 hover:text-zion-purple"
                   asChild>;
                   <Link to={`/blog/${post && post.slug}`}>Read More →</Link>;
+Stay updated with trends in AI technology, marketplace strategies, and IT services;
+            </p>;
+          </div>;
+          <Button ;
+            variant="outline" ;
+              Stay updated with trends in AI technology, marketplace strategies, and IT services;
             </p>;
           </div>;
           <Button;
@@ -323,6 +374,8 @@ function BlogSection() {
     </section>);
 
 }
+}
+;
 }
 ;
 

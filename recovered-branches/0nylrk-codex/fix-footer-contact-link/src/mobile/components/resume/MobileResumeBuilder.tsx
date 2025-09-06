@@ -13,6 +13,9 @@ import {
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
 
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -94,6 +97,27 @@ export function MobileResumeBuilder() {
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "basics": return <BasicsStep />,;
+      case "experience":;
+        return <ExperienceStep />,;
+      case "education":;
+        return <EducationStep />,;
+      case "skills":;
+        return <SkillsStep />,;
+      default:;
+        return <BasicsStep />;
+    }
+  },;
+  return (;
+    <div className="space-y-6 px-4 pb-24">;
+      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
+        <Button;
+          variant={currentStep === "basics" ? "default" : "outline"}
+          className="flex-1 rounded-full";
           onClick={() => setCurrentStep("basics")}
         >;
           Basics;
@@ -101,6 +125,9 @@ export function MobileResumeBuilder() {
         <Button
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
+<Button;
+          variant={currentStep === "experience" ? "default" : "outline"}
+          className="flex-1 rounded-full";
         <Button
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
@@ -111,6 +138,9 @@ export function MobileResumeBuilder() {
         <Button
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
+<Button;
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full";
         <Button
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
@@ -127,6 +157,13 @@ export function MobileResumeBuilder() {
         </Button>
       </div>
 
+;
+      {renderStepContent()}
+      ;
+      <Button className="w-full flex gap-2" size="lg">;
+        <Zap className="h-5 w-5" /> Enhance with AI;
+      </Button>;
+      ;
       {renderStepContent()}
 
       <Button className="w-full flex gap-2" size="lg">
@@ -445,6 +482,9 @@ function SkillsStep() {
     );
   };
 
+}
+
+  },
   return (
     <div className="space-y-4">
       <Card>
@@ -540,6 +580,29 @@ function EducationStep() {;
               <div className="space-y-2">;
                 <Label htmlFor={`eduEndDate-${edu && edu.id}`}>End Date</Label>;
                 <Input id={`eduEndDate-${edu && edu.id}`} type="month" placeholder="Present" />;
+;
+            <div className="space-y-2">;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor={`institution-${edu.id}`}>Institution</Label>;
+              <Input id={`institution-${edu.id}`} placeholder="School or university name" />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor={`degree-${edu.id}`}>Degree</Label>;
+              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science" />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor={`fieldOfStudy-${edu.id}`}>Field of Study</Label>;
+              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science" />;
+            </div>;
+            <div className="grid grid-cols-2 gap-3">;
+              <div className="space-y-2">;
+                <Label htmlFor={`eduStartDate-${edu.id}`}>Start Date</Label>;
+                <Input id={`eduStartDate-${edu.id}`} type="month" />;
+              </div>;
+              <div className="space-y-2">;
+                <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>;
+                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
               </div>;
             </div>;
           </CardContent>;
@@ -550,6 +613,12 @@ function EducationStep() {;
         variant="outline" 
         className="w-full gap-2" 
         onClick={addEducation}>;
+;
+      <Button;
+        variant="outline";
+        className="w-full gap-2";
+        onClick={addEducation}
+      >;
         <Plus className="h-4 w-4" /> Add Another Education;
       </Button>;
     </div>;
@@ -562,6 +631,24 @@ function SkillsStep() {;
   ]);
 
   return (
+;
+function SkillsStep() {;
+  const [skills, setSkills] = useState([;
+    { id: '1', name: "", proficiency: "beginner" }
+  ]),;
+  const addSkill = () => {;
+    const newId = (skills.length + 1).toString(),;
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+  },;
+  const removeSkill = (id: string) => {;
+    setSkills(skills.filter(skill => skill.id !== id));
+  };
+  const updateSkill = (id: string, field: string, value: string) => {;
+    setSkills(skills.map(skill =>;
+      skill.id === id ? { ...skill, [field]: value } : skill;
+    ));
+  };
+  return (;
     <div className="space-y-4">;
       <Card>;
         <CardContent className="p-4">;
@@ -660,6 +747,7 @@ function SkillsStep() {;
   );
 }
 
+}
     </div>;
   ),; import {
   Select;

@@ -1,47 +1,24 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 export type TokenSymbol = "ZION$",
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-export type TokenSymbol = "ZION$";
-export type TokenSymbol = "ZION$",;
-export type TokenSymbol = "ZION$";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-export type TokenSymbol = "ZION$",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-export type TokenSymbol = "ZION$",
-
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+  | "redeem";
+export interface TokenTransaction {id: string;
+  userId: string;
+  type: TokenTransactionType;
 
   | "redeem",;
 export interface TokenTransaction {;
@@ -55,19 +32,18 @@ export interface TokenTransaction {;
 }
 export interface Wallet {userId: string;
   balance: number, // current token balance;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 export interface TokenConfig {symbol: TokenSymbol;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+}
+export interface TokenConfig {symbol: TokenSymbol;
+
+
   | "redeem",
 export interface TokenTransaction {
   id: string,
@@ -77,32 +53,26 @@ export interface TokenTransaction {
   reason: string,
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 }
 export interface Wallet {
   user_id: string,
   balance: number, // current token balance;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
   | "redeem",;
 export interface TokenTransaction {;
 
-
 }
 export interface TokenConfig {
   symbol: TokenSymbol,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
 
 }
@@ -176,24 +146,6 @@ export interface WalletSummary {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-
-
 }
 
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

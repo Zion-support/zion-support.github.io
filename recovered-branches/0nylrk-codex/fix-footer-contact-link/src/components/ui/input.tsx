@@ -1,3 +1,5 @@
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
@@ -31,6 +33,13 @@ import { cn } from &quot;@/lib / utils & quot;
       />);
   }
 export { Input }
+export { Input };
+
+Input.displayName = "Input"
+
+export { Input }
+
+;
 
 export { Input };
 

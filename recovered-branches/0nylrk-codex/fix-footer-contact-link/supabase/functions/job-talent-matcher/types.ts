@@ -13,6 +13,12 @@ export interface JobData {
 
 }
 export interface TalentProfile {
+}
+  deadline: string
+}
+export interface TalentProfile {
+
+export interface TalentProfile {;
   id: string;
   full_name: string;
   professional_title: string;
@@ -28,6 +34,14 @@ export interface TalentProfile {
 
 }
 export interface TalentMatch {
+export interface TalentMatch {
+  hourly_rate?: number
+
+  availability_type?: string
+}
+export interface TalentMatch {
+
+export interface TalentMatch {;
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -101,4 +115,7 @@ export interface MatchResult {
 
 export interface JobData {;
 
+reason?: string;
+}
+;
 }

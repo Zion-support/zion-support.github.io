@@ -1,3 +1,4 @@
+
 const AIAssistant: React.FC = () => {
 import React from 'react',
 import Head from 'next/head';
@@ -113,11 +114,27 @@ import Head from 'next/head';
 }
 
 import Button from '../components/ui/Button';
+import Button from '../components/ui/Button';
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
+
+import Layout from '../components/layout/Layout';
+const AIAssistant: React.FC = () => {
+
+import Head from 'next/head',
+import Button from '../components/ui/Button',
+import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
     <>
       <Head>
         <title>AI Assistant | Zion Tech Group</title>
+<meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
       </Head>

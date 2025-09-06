@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -11,8 +9,6 @@ interface User {
   email: string,
   role: string,
   onboarding_completed: boolean;
-=======
-<<<<<<< HEAD
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -22,8 +18,6 @@ interface User {id: string;
   email: string;
   role: string;
   onboardingCompleted: boolean;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 interface AuthContextType {
   user: User | null,
@@ -152,13 +146,7 @@ if ( {) {
     throw new Error ("use_auth must be used within an AuthProvider");
 
   }
-<<<<<<< HEAD
-=======
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -277,10 +265,8 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
-<<<<<<< HEAD
   return context;
 }
-=======
 
   return context;
 }
@@ -391,7 +377,5 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return context;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

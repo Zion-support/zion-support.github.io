@@ -1,22 +1,18 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
-const dataPath = path.join(process.cwd(), 'datalearncourses.json')
+const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
 
     res.status(200).json({ course })
 res.status(200).json({ course })
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const data_path = path.join (process.cwd (), 'datalearncourses.json')
-=======
+
+    res.status(200).json({ course })
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 const data_path = path.join (process.cwd (), 'datalearncourses.json'),
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 export default /**
  * handler - Function description
  */
@@ -31,11 +27,9 @@ function handler() {
 }
 
     res.status (200).json ({ course });
-<<<<<<< HEAD
-=======
+
 
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

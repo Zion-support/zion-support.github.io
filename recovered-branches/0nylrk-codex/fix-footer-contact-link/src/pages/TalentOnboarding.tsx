@@ -55,6 +55,7 @@ export default function TalentOnboarding() {
             </p>;
           </div>;
 
+;
           <TalentOnboardingForm />;
         </div>;
       </div>;
@@ -63,6 +64,7 @@ export default function TalentOnboarding() {
     </>);
 }
 
+;
     </>;
   ); export default function TalentOnboarding () {
   const {

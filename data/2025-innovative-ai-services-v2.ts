@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -8,7 +7,6 @@
     monthly: number;
     yearly: number;
     currency: string;
-
 
   features: string[];
   benefits: string[];
@@ -59,8 +57,6 @@
     growth_rate: '45% annually',
   },
   {
-=======
-
 
   {
 
@@ -68,7 +64,6 @@
     ],
     realImplementation: true,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.'
@@ -84,8 +79,6 @@
       'Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications'
     ]
     support:
-<<<<<<< HEAD
-=======
 
       'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
@@ -160,16 +153,13 @@
     link: 'https://ziontechgroup.com / quantum - ai - fusion - platform',
 
     icon: '⚛️',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
     customers: 420,
     rating: 4 && 4.9,
     reviews: 95,
-<<<<<<< HEAD
   {
-=======
 
     market_size: '$8.5B quantum computing market',
     growth_rate: '55% annually',
@@ -184,7 +174,6 @@
     ],
     realImplementation: true,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.'
     roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
@@ -202,8 +191,6 @@
     support:
       '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.'
     compliance: [
-<<<<<<< HEAD
-=======
 
       'SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry-specific regulations',
     ],
@@ -278,7 +265,6 @@
     link: 'https://ziontechgroup.com / ai - autonomous - ecosystem - manager',
 
     icon: '🤖',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -289,8 +275,6 @@
     growth_rate: '38% annually',
   },
   {
-<<<<<<< HEAD
-=======
 
       'Competitive with OpenAI GPT-4 ($0 && 0.03/token), Google Gemini ($0 && 0.0025/token), and Anthropic Claude ($0 && 0.015/token). Our advantage: Multimodal orchestration, unified API, and cross-modal intelligence.',
     competitors: ['OpenAI, Google AI, Anthropic, Cohere, AI21 Labs'],
@@ -299,7 +283,6 @@
     ],
     realImplementation: true,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.'
     roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.'
@@ -315,8 +298,6 @@
       'AI platforms, Content management systems, Media platforms, Business applications, Mobile apps'
     ]
     support:
-<<<<<<< HEAD
-=======
 
       '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
@@ -389,7 +370,6 @@
     link: 'https://ziontechgroup.com / multimodal - ai - orchestrator',
 
     icon: '🎭',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -400,14 +380,11 @@
     growth_rate: '32% annually',
   },
   {
-<<<<<<< HEAD
-=======
 
       'AI ethics algorithms, Bias detection, React, Node && Node.js, PostgreSQL, Redis, AWS, Compliance tools',
     ],
     realImplementation: true,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.'
     roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.'
@@ -425,10 +402,7 @@
     support:
       '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
     compliance: [
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
@@ -442,7 +416,6 @@
     marketSize: '$15B AI governance market',
     growthRate: '28% annually',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
 
     ];
@@ -481,7 +454,6 @@
     tagline: 'Quantum computing meets artificial intelligence';
     description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.';
     category: 'Quantum & AI';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     price: {
       monthly: 179,
       yearly: 1790,
@@ -490,8 +462,6 @@
       setup_time: '2 hours',
       enterprise: 699,
     },
-<<<<<<< HEAD
-=======
     features: [;
       'Bias detection and mitigation',
       'Ethical AI guidelines',
@@ -547,7 +517,6 @@
     ],
     link: 'https://ziontechgroup.com / ai - ethics - governance - platform',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '⚖️',
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
@@ -558,7 +527,6 @@
     market_size: '$15B AI governance market',
     growth_rate: '28% annually',
   },
-<<<<<<< HEAD
     ];
     ];
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'],
@@ -569,9 +537,7 @@
     support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
     link: 'https://ziontechgroup.com / ai - ethics - governance - platform';
-=======
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -595,8 +561,6 @@
   growthRate: string
 }
 
-
-=======
 ];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement';
     ];
 
@@ -604,7 +568,6 @@
     support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '⚖️';
     color: 'from - yellow - 500 to - orange - 600';
     popular: true;
@@ -612,9 +575,7 @@
     customers: 950;
     rating: 4 && 4.6;
     reviews: 220;
-<<<<<<< HEAD
   }
-=======
 
     market_size: '$15B AI governance market',
     growth_rate: '28% annually';
@@ -623,10 +584,6 @@
 
 ];
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string,;
   name: string,;
   tagline: string,;
@@ -665,7 +622,6 @@
   growthRate: string;
 }
 ;
-<<<<<<< HEAD
 
 export interface InnovativeAIService {;
   id: string,;
@@ -709,14 +665,8 @@ export interface InnovativeAIService {;
   }
 ];
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface InnovativeAIService {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

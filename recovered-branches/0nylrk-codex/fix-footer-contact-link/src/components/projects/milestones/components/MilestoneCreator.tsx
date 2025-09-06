@@ -1,3 +1,4 @@
+
 import {AddMilestoneForm} from '../AddMilestoneForm';
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
@@ -12,6 +13,31 @@ interface MilestoneCreatorProps {;
 
 export function MilestoneCreator(): any ({;
 
+projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string | null;
+  projectType?: string;
+}
+
+export function MilestoneCreator({;
+
+export function MilestoneCreator(): any ({;
+
+import React from 'react';
+import { AddMilestoneForm } from '../AddMilestoneForm';
+interface MilestoneCreatorProps {
+
+  onSubmit: (data: any) => Promise<void>
+  isSubmitting: boolean
+  onCancel: () => void
+
+  projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string | null;
+  projectType?: string
+}
+export function MilestoneCreator({
+
 export function MilestoneCreator({;
 
 export function MilestoneCreator({;
@@ -21,6 +47,7 @@ export function MilestoneCreator({;
   projectScope;
   projectStartDate;
   projectEndDate;
+<AddMilestoneForm
 
   projectType
 }: MilestoneCreatorProps) {
@@ -28,6 +55,8 @@ export function MilestoneCreator({;
 
     <AddMilestoneForm 
 
+<AddMilestoneForm
+    <AddMilestoneForm
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -81,6 +110,10 @@ export function MilestoneCreator({;
     <AddMilestoneForm ;
   return (;
     <AddMilestoneForm;
+projectType;
+}: MilestoneCreatorProps) {;
+  return (
+    <AddMilestoneForm
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -93,6 +126,7 @@ export function MilestoneCreator({;
   );
 }
 
+/>;
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
@@ -115,4 +149,27 @@ function MilestoneCreator() {
       projectEndDate={projectEndDate}
       project_type={project_type}
     />);
+}
+  ),;}
+ export function MilestoneCreator ({
+  onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
+}: MilestoneCreatorProps) {
+  return (<AddMilestoneForm onSubmit= {
+  onSubmit 
+}isSubmitting= {
+  isSubmitting 
+}onCancel= {
+  onCancel 
+}projectScope= {
+  projectScope 
+}projectStartDate= {
+  projectStartDate 
+}projectEndDate= {
+  projectEndDate 
+}projectType= {
+  projectType 
+}/>) 
+}
+    />
+  )
 }

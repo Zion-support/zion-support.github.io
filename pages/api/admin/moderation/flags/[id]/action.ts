@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',;
 import { updateFlagStatus } from '../../../../../../utils/moderationDb',;
 import type { ModerationStatus } from '../../../../../../types/moderation',;
@@ -55,10 +55,9 @@ import type { ModerationStatus } from '../../../../../../types/moderation';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
   if (req.method === 'POST') {
     const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string }
     const actionMap: Record<string, ModerationStatus> = {
@@ -73,6 +72,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flag })
   }
 
-  res.setHeader('AllowPOST')
+res.setHeader('AllowPOST'),
   return res.status(405).end('Method Not Allowed');
 };

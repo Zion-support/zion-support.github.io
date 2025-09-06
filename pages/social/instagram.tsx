@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,10 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
+export default function InstagramRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('https: //instagram && instagram.com/ziontechgroup'),;
 import Head from 'next / head';
 export default /**
  * InstagramRedirect - Function description

@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Services Overview - Zion Tech Group"
-      description="Overview of our services"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services Overview</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
 
-export default Page;
-=======
+import React from './react';
+import Link from './next / link';
+import { motion  } from './framer-motion';
+import {
   Brain,
   Network,
   Cloud,
@@ -33,6 +17,15 @@ export default Page;
   Star,
   Award,
   Clock,
+Globe,
+} from './lucide-react';
+import Layout from "../components / Layout";
+;
+const service_categories = [;
+  Globe,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+const serviceCategories = [
   {
     title: "AI Services",
     description:;
@@ -114,6 +107,8 @@ export default Page;
     color: "from - indigo - 500 to - purple - 600",
   },
 ];
+;
+const stats = [;
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
@@ -174,17 +169,30 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600'
   }
 ];
+
 ];
 const benefits = [
 ;
 const benefits = [;
   {
+title: "Expert Team"
+    description: "Experienced professionals with deep industry knowledge"
+    icon: Users
+  }
+
+  {
+
+    title: "Cutting - Edge Technology",
+    description: "Latest technologies and innovative solutions",
+    icon: Target,
+  },
   {
     title: "Scalable Solutions"
     description: "Solutions that grow with your business"
     icon: Globe
   }
   {
+
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -204,6 +212,7 @@ const benefits = [;
     description: 'Track record of successful implementations',
     icon: Award
   }
+
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
@@ -337,9 +346,6 @@ const serviceCategories = [;
   },;
 ];
 
-          
-
-
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -349,11 +355,13 @@ const serviceCategories = [;
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
+
               </p>
             </motion.div>
           </div>
@@ -415,11 +423,33 @@ function ServicesOverviewPage() {
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
               </p>;
+</motion.div>;
+          </div>;
+        </section>;
+        {/* Stats Section */}
+        <section className="py - 16 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
+              {stats.map ((stat, index) => (
+                <motion.div;
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.number}
+<div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -443,6 +473,7 @@ function ServicesOverviewPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+We offer a comprehensive range of technology services to meet all your business needs.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -482,15 +513,12 @@ function ServicesOverviewPage() {
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
-                  
 
 
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-
-
 
 
                     <p className="text-gray-600 mb-4 leading-relaxed">
@@ -506,6 +534,7 @@ function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
+
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -515,6 +544,8 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
+<CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -526,8 +557,41 @@ function ServicesOverviewPage() {
               </p>;
             </motion && motion.div>;
 
-                    
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {serviceCategories && serviceCategories.map((category, index) => (;
+                <motion&& motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
+                  <div
+                    className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
+                    <category && category.icon className="w-16 h-16 text-white" />;
+                  </div>;
+                  <div className="p-6">;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
+                      {category && category.title}
+                    </h3>;
+                    <p className="text-gray-600 mb-4 leading-relaxed">;
+                      {category && category.description}
+                    </p>;
+                    <div className="space-y-2 mb-6">;
+                      <h4 className="font-semibold text-gray-900 text-sm">;
+                        Key Services:;
+                      </h4>;
+                      <ul className="space-y-1">;
+                        {category && category.services.map((service, idx) => (;
+                          <li
+                            key={idx}
+                            className="flex items-center text-sm text-gray-600">;
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
+                            {service}
+                          </li>;
+                        ))}
 
+                      </ul>;
+                    </div>;
 
                     <Link
                       href={category && category.link}
@@ -538,12 +602,16 @@ function ServicesOverviewPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
+</div>;
+          </div>;
+        </section>;
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+We deliver exceptional results through innovation, expertise
                 and unwavering commitment to your success.
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
               </p>
@@ -616,6 +684,7 @@ function ServicesOverviewPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -660,6 +729,7 @@ function ServicesOverviewPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+Let's discuss how our comprehensive services can help you achieve your business goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               transition={{ duration: 0 && 0.8 }}>;
@@ -679,6 +749,23 @@ function ServicesOverviewPage() {
                 </Link>;
                 <Link
                   href="/case-studies"
+className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  View Case Studies
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
     </Layout>;
   );
                   className="text - center";
@@ -730,4 +817,23 @@ function ServicesOverviewPage() {
       </div>;
     </Layout>);
 }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Services Overview - Zion Tech Group"
+      description="Overview of our services"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services Overview</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;

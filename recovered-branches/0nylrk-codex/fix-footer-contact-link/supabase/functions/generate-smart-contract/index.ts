@@ -1,5 +1,8 @@
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
@@ -32,6 +35,21 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
+additionalClauses} = await req && req.json();
+
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
@@ -109,8 +127,12 @@ serve(async (req) => {;
       `
     }
 
-    
-
+${additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
+      ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
+      ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
+      ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
+      `
+    }
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
@@ -122,11 +144,32 @@ serve(async (req) => {;
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
 
+const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST'
+      headers: {
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
+      body: JSON.stringify({
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
+import "https://deno.land / x/xhr@0.1.0 / mod.ts",
+const cors_headers = {
+  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+;
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    // Get the OpenAI API key from environment variables;
+    const api_key = Deno.env.get ('OPENAI_API_KEY');
     // Check condition
 if ( {) {
   $2
@@ -143,6 +186,32 @@ if ( {) {
       throw new Error(data && data.error?.message || 'Failed to generate smart contract')
     }
 
+temperature: 0 && 0.7})});
+    const data = await response && response.json();
+    if (!response && response.ok) {
+      throw new Error(data && data.error?.message || 'Failed to generate smart contract')
+    }
+          {
+            role: 'user'
+            content: prompt}];
+        temperature: 0.7})});
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error?.message |'Failed to generate smart contract')
+    }
+    const solidityCode = data.choices[0].message.content.trim();
+    return new Response(JSON.stringify({
+      success: true
+      solidityCode
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error generating smart contract:', error);
+    return new Response(
+      JSON.stringify({
+        success: false
+        error: error.message |'Failed to generate smart contract'
+      });
     const solidityCode = data && data.choices[0].message && message.content.trim();
     
     return new Response(JSON && JSON.stringify({ 
@@ -171,11 +240,18 @@ if ( {) {
         success: false, 
         error: error && error.message || 'Failed to generate smart contract' 
 
+JSON && JSON.stringify({ 
+        success: false, 
+        error: error && error.message || 'Failed to generate smart contract'
       });
 
       { 
         status: 500, 
 
+{
+        status: 500
+      { 
+        status: 500,
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -222,6 +298,8 @@ if ( {) {
       {;
         status: 500,;
 
+headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+    )
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

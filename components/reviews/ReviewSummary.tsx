@@ -76,6 +76,9 @@ export default ReviewSummary;  );
 
 export default ReviewSummary;
 
+};
+
+export default ReviewSummary;
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (

@@ -6,11 +6,7 @@ const { execSync } = require('child_process');
 
 class IntelligentErrorDetector {
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     this.projectRoot = process.cwd();
     this.errors = [];
     this.fixes = [];
@@ -199,9 +195,7 @@ class IntelligentErrorDetector {
       fixesApplied: this.fixes.length,
       errors: this.errors,
       fixes: this.fixes
-<<<<<<< HEAD
-=======
-    this.errorPatterns = {
+this.errorPatterns = {
       syntax: /SyntaxError|ParseError|Unexpected token/gi,
       type: /TypeError|ReferenceError/gi,
       module: /Cannot find module|Module not found/gi,
@@ -397,9 +391,8 @@ class IntelligentErrorDetector {
         {}
       ),
       details: errors,
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
     };
   }
 }
@@ -410,11 +403,8 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentErrorDetector;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
     this.errorPatterns = {
       synta: x: /SyntaxError|ParseError|Unexpected token/gi,
       typ: e: /TypeError|ReferenceError/gi,
@@ -669,9 +659,7 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentErrorDetector;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+

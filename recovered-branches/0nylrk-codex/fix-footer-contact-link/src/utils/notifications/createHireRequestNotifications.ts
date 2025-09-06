@@ -1,3 +1,4 @@
+
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
@@ -14,6 +15,8 @@ export async function createHireRequestNotifications({;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',
 /**
  * Creates a hire request notification for admin and talent
  */
@@ -23,6 +26,19 @@ export async function createHireRequestNotifications({
   const projectInfo = projectType 
     ? `${projectType} project` 
 
+talentId;
+  adminId;
+  requesterName;
+
+  requesterEmail
+
+  projectType;
+  projectSummary;
+  hireRequestId
+}: HireRequestNotificationParams) {
+
+  const projectInfo = projectType
+    ? `${projectType} project`
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -60,6 +76,12 @@ export async function createHireRequestNotifications({
   adminId,
   requesterName,
 
+success: talentNotification.success && adminNotification.success;
+      talentNotification
+      adminNotification
+  talentId,
+  adminId,
+  requesterName,
   requesterEmail, 
   projectType,
   projectSummary,
@@ -209,5 +231,11 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
+}
+  }
+  return {
+    success: talentNotification.success
+
+    talentNotification
   }
 }

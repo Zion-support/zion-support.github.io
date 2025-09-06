@@ -31,24 +31,13 @@ export const a11yUtils = {
     setTimeout(() => {
       document && document.body.removeChild(announcement)}, 1000)}
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements.length - 1]; element.addEventListener('keydown',(e) => { if (e.key === 'Tab') { if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault()} } else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault()} } } })},announce: (message) => { const announcement = document.createElement('div'); announcement.setAttribute('aria-live','polite'); announcement.setAttribute('aria-atomic','true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => { document.body.removeChild(announcement)},1000)} };
 
-=======
-
-
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element && element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements && focusableElements.length - 1]; element && element.addEventListener('keydown',(e) => { if (e && e.key === 'Tab') { if (e && e.shiftKey) { if (document && document.activeElement === firstElement) { lastElement && lastElement.focus(); e && e.preventDefault()} } else { if (document && document.activeElement === lastElement) { firstElement && firstElement.focus(); e && e.preventDefault()} } } })},announce: (message) => { const announcement = document && document.createElement('div'); announcement && announcement.setAttribute('aria-live','polite'); announcement && announcement.setAttribute('aria-atomic','true'); announcement && announcement.className = 'sr-only'; announcement && announcement.textContent = message; document && document.body.appendChild(announcement); setTimeout(() => { document && document.body.removeChild(announcement)},1000)} };
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element && element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements && focusableElements.length - 1]; element && element.addEventListener('keydown',(e) => { if (e && e.key === 'Tab') { if (e && e.shiftKey) { if (document && document.activeElement === firstElement) { lastElement && lastElement.focus(); e && e.preventDefault()} } else { if (document && document.activeElement === lastElement) { firstElement && firstElement.focus(); e && e.preventDefault()} } } })},announce: (message) => { const announcement = document && document.createElement('div'); announcement && announcement.setAttribute('aria-live','polite'); announcement && announcement.setAttribute('aria-atomic','true'); announcement && announcement.className = 'sr-only'; announcement && announcement.textContent = message; document && document.body.appendChild(announcement); setTimeout(() => { document && document.body.removeChild(announcement)},1000)} };
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element && element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements && focusableElements.length - 1]; element && element.addEventListener('keydown',(e) => { if (e && e.key === 'Tab') { if (e && e.shiftKey) { if (document && document.activeElement === firstElement) { lastElement && lastElement.focus(); e && e.preventDefault()} } else { if (document && document.activeElement === lastElement) { firstElement && firstElement.focus(); e && e.preventDefault()} } } })},announce: (message) => { const announcement = document && document.createElement('div'); announcement && announcement.setAttribute('aria-live','polite'); announcement && announcement.setAttribute('aria-atomic','true'); announcement && announcement.className = 'sr-only'; announcement && announcement.textContent = message; document && document.body.appendChild(announcement); setTimeout(() => { document && document.body.removeChild(announcement)},1000)} };
-
 
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements.length - 1]; element.addEventListener('keydown',(e) => { if (e.key === 'Tab') { if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault()} } else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault()} } } })},announce: (message) => { const announcement = document.createElement('div'); announcement.setAttribute('aria-live','polite'); announcement.setAttribute('aria-atomic','true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => { document.body.removeChild(announcement)},1000)} };
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements.length - 1]; element.addEventListener('keydown',(e) => { if (e.key === 'Tab') { if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault()} } else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault()} } } })},announce: (message) => { const announcement = document.createElement('div'); announcement.setAttribute('aria-live','polite'); announcement.setAttribute('aria-atomic','true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => { document.body.removeChild(announcement)},1000)} };
@@ -56,16 +45,12 @@ export const a11yUtils = { trapFocus: (element) => { const focusableElements = e
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements.length - 1]; element.addEventListener('keydown',(e) => { if (e.key === 'Tab') { if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault()} } else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault()} } } })},announce: (message) => { const announcement = document.createElement('div'); announcement.setAttribute('aria-live','polite'); announcement.setAttribute('aria-atomic','true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => { document.body.removeChild(announcement)},1000)} };
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
+
+
+
 export const a11yUtils = { trapFocus: (element) => { const focusableElements = element.querySelectorAll( 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])' ); const firstElement = focusableElements[0]; const lastElement = focusableElements[focusableElements.length - 1]; element.addEventListener('keydown',(e) => { if (e.key === 'Tab') { if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault()} } else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault()} } } })},announce: (message) => { const announcement = document.createElement('div'); announcement.setAttribute('aria-live','polite'); announcement.setAttribute('aria-atomic','true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => { document.body.removeChild(announcement)},1000)} };
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+

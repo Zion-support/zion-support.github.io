@@ -1,3 +1,7 @@
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
@@ -25,6 +29,15 @@ export function ApiDocsHub() {
       icon: Webhook
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
+import React from './react';
+import { Link } from './react-router-dom';
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from './lucide-react';
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
+export /**
+ * ApiDocsHub - Function description
+ */
+function ApiDocsHub() {
+  const sections = [;
     {
       title: "Sample Code"
       description: "Examples in JavaScript, Python, and Node.js";
@@ -55,6 +68,12 @@ export function ApiDocsHub() {
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
 
+title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
 
@@ -151,6 +170,8 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
     </ApiDocsLayout>
   )
 
+}
+export default ApiDocsHub;
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
@@ -179,6 +200,7 @@ export function ApiDocsHub() {;
     {;
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node && Node.js";
+description: "Examples in JavaScript, Python, and Node.js",;
       icon: Zap,;
       path: "/developers/docs/samples",;
       color: "from-yellow-500 to-orange-500"},;
@@ -190,6 +212,47 @@ export function ApiDocsHub() {;
       color: "from-red-500 to-rose-500"}],;
 
   return (
+import React from "react",;
+import { Link } from "react-router-dom",;
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+;
+export function ApiDocsHub() {;
+  const sections = [;
+    {;
+      title:"Getting Started",;
+      description:"Learn how to authenticate and make your first API request",;
+      icon:BookOpen,;
+      path:"/developers/docs/getting-started",;
+      color:"from-blue-500 to-cyan-500"},;
+    {;
+      title:"API Reference",;
+      description:"Detailed documentation for all available endpoints",;
+      icon:Code,;
+      path:"/developers/docs/reference",;
+      color:"from-purple-500 to-pink-500"},;
+    {;
+      title:"Webhooks",;
+      description:"Subscribe to events and receive real-time updates",;
+      icon:Webhook,;
+      path:"/developers/docs/webhooks",;
+      color:"from-green-500 to-emerald-500"},;
+    {;
+      title:"Sample Code",;
+      description:"Examples in JavaScript, Python, and Node.js",;
+      icon:Zap,;
+      path:"/developers/docs/samples",;
+      color:"from-yellow-500 to-orange-500"},;
+    {;
+      title:"Error Codes & Rate Limits",;
+      description:"Understanding API errors and rate limiting",;
+      icon:AlertCircle,;
+      path:"/developers/docs/errors",;
+      color:"from-red-500 to-rose-500"}],;
+;
+  return (;
+      color: "from-red-500 to-rose-500"}];
+  return (;
     <ApiDocsLayout>;
       <div className="max-w-4xl">;
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>;
@@ -252,6 +315,9 @@ export function ApiDocsHub() {;
 export default ApiDocsHub;
 ;
 
+{sections.map((section) => (;
+            <Link;
+              key={section.path} ;
           {sections && sections.map((section) => (;
             <Link
               key={section && section.path} 
@@ -357,4 +423,4 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
         <div className="grid gap-6 md:grid-cols-2">;
           {sections.map((section) => (;
             <Link;
-              key={section.path} ;
+key={section.path} ;

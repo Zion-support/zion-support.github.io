@@ -9,6 +9,11 @@ export type NotificationType =
 
 export interface Notification extends BaseNotification {;
 
+| 'onboarding';
+  | 'system';
+export interface Notification extends BaseNotification {
+
+export interface Notification extends BaseNotification {;
   type: NotificationType;
   action_url?: string;
   action_text?: string;
@@ -25,6 +30,11 @@ import {Notification, as, BaseNotification} from '@/types / notifications';
 
 export interface NotificationContextType {;
 
+| 'onboarding';
+  | 'system';
+export interface NotificationContextType {
+
+export interface NotificationContextType {;
 export interface NotificationContextType {
   notifications: Notification[];
   filtered_notifications: Notification[];

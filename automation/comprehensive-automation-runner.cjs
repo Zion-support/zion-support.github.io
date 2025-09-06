@@ -32,12 +32,6 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 console.log('🚀 Starting Comprehensive Automation Runner...');
 
 class ComprehensiveAutomationRunner {
@@ -69,30 +63,15 @@ class ComprehensiveAutomationRunner {
     } catch (error) {
       this.log(`❌ ${scriptName} failed: ${error.message}`);
       return { success: false, script: scriptName, error: error.message };
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   }
 
   async runAllAutomations() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('
-=======
-<<<<<<< HEAD
     this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('==========================================');
+    this.log('');
 
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
@@ -161,8 +140,6 @@ this.log('🎯 Starting Comprehensive Automation Runner');
 // Run the comprehensive automation
 const runner = new ComprehensiveAutomationRunner();
 runner.run().catch(console.error);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const automations = [
       { name: 'Master Orchestrator', path: 'automation/master-orchestrator.cjs' },
       { name: 'Comprehensive App Improvement Suite', path: 'automation/comprehensive-app-improvement-suite.cjs' },
@@ -209,22 +186,13 @@ runner.run().catch(console.error);
 // Run all automations
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
-<<<<<<< HEAD
 
     this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('📋 Running all automation scripts...');
 
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
     this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('📋 Running all automation scripts...');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
       { path: 'automation/comprehensive-app-improvement-suite.cjs', name: 'Comprehensive App Improvement Suite' },
@@ -272,7 +240,3 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationRunner;
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

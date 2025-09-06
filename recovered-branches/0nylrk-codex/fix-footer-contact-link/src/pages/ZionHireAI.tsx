@@ -31,7 +31,6 @@ export default function ZionHireAI() {
       <SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant"
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
-=======
   return (
     <>;
       <SEO
@@ -333,9 +332,7 @@ export default function ZionHireAI() {;
           </div>
         </section>
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
@@ -360,12 +357,8 @@ export default function ZionHireAI() {;
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </>);
 }
@@ -389,10 +382,7 @@ reduce time-to-hire, and improve candidate experience. </p> <Button asChild > <L
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+
 interface ErrorStateProps {
   error: string;
 }
@@ -37,6 +38,17 @@ function ErrorState() {
       </CardContent>;
     </Card>);
 }
+import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+
+import { Card, CardContent } from "@/components/ui/card",
+
+import { Card, CardContent } from "@/components/ui/card",
+
+interface ErrorStateProps {
+  error: string
+}
+export function ErrorState({ error }: ErrorStateProps) {
   return (
     <Card className="border-red-200">
       <CardContent className="p-6 text-center">
@@ -50,6 +62,9 @@ function ErrorState() {
   );
 }
 
+</Card>
+  );
+}
   )
 import { Card, CardContent } from "@/components/ui/card";
 interface ErrorStateProps {;
@@ -67,3 +82,9 @@ export function ErrorState({ error }: ErrorStateProps) {;
   );
 }
 ;
+
+    </Card>;
+  );
+}
+
+}

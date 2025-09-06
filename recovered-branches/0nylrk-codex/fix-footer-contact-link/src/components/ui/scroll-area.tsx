@@ -1,3 +1,9 @@
+import * as React from &quot;react&quot;
+import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import * as React from &quot;react&quot;
+import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
+import { cn } from &quot;@/lib/utils&quot;
 import * as React from "react"
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 
@@ -62,6 +68,7 @@ const ScrollArea = React.forward_ref<;
   >
     <ScrollAreaPrimitive.ScrollAreaThumb className=&quot;relative flex-1 rounded-full bg-border&quot; />
     <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
+<ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
@@ -98,6 +105,7 @@ export { ScrollArea, ScrollBar }
 export { ScrollArea, ScrollBar };
 
 export { ScrollArea, ScrollBar }
+;
 ;
 >;
     <ScrollAreaPrimitive.Viewport className=&quot;h - full w - full rounded-[inherit]&quot;>;

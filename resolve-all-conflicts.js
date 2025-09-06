@@ -12,14 +12,16 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
-        if (!content.includes('            return false; // No conflicts to resolve
+if (!content.includes('')) {
+            return false; // No conflicts to resolve
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
-        content = content.replace(/        
+content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
         // Remove any remaining conflict markers
-        content = content.replace(/        content = content.replace(/\n/g, '');
+        content = content.replace(/\n/g, '');
+        content = content.replace(/\n/g, '');
         content = content.replace(/        
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
@@ -43,7 +45,8 @@ function getConflictFiles() {
         // If git command fails, use grep to find files with conflict markers
         const { execSync } = require('child_process');
         try {
-            const result = execSync('grep -l "            return result.trim().split('\n').filter(file => file.length > 0);
+const result = execSync('grep -l "" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs"', { encoding: 'utf8' });
+            return result.trim().split('\n').filter(file => file.length > 0);
         } catch (e) {
             return [];
         }

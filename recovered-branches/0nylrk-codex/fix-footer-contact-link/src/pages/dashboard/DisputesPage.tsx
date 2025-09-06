@@ -22,6 +22,17 @@ function DisputesPage() {
 
         <SEO
           title="Dispute Resolution Center | Zion AI Marketplace"
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {DisputeDashboard} from '@/components/disputes';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+function DisputesPage() {;
+  return (
+    <ProtectedRoute>;
+      <>;
+        <SEO
+          title="Dispute Resolution Center | Zion AI Marketplace"
           description="View and manage disputes between clients and talents"
 import React from 'react';
 import {SEO} from '@/components / SEO';
@@ -38,6 +49,19 @@ function DisputesPage() {
       <>;
         <SEO;
           title="Dispute Resolution Center | Zion AI Marketplace";
+import React from 'react',;
+import { SEO } from '@/components/SEO',;
+import { AppHeader } from '@/layout/AppHeader',;
+import { Footer } from '@/components/Footer',;
+import { DisputeDashboard } from '@/components/disputes',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+;
+function DisputesPage() {;
+  return (;
+    <ProtectedRoute>;
+      <>;
+        <SEO ;
+          title="Dispute Resolution Center | Zion AI Marketplace" ;
           description="View and manage disputes between clients and talents";
         />;
         <AppHeader />;
@@ -49,6 +73,10 @@ function DisputesPage() {
 
 export default DisputesPage;
 
+</ProtectedRoute>);
+}
+export default DisputesPage;
+;
 export default DisputesPage;
 ;
     </ProtectedRoute>;

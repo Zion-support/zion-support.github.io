@@ -1,5 +1,14 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+
+import React from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Download, Settings} from "lucide-react";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+
+export function AdminHeader() {
 export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
@@ -73,6 +82,7 @@ export function AdminHeader() {;
   const { company } = useCompanyWorkspace();
   return (
 
+}
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -83,6 +93,12 @@ export function AdminHeader() {;
   const { company } = useCompanyWorkspace();
   return (;
 
+;
+export function AdminHeader() {;
+  const { user } = useAuth(),;
+  const { company } = useCompanyWorkspace(),;
+;
+  return (;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -98,6 +114,35 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
+:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
+import React from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Download, Settings } from './lucide-react';
+import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
+export /**
+ * AdminHeader - Function description
+ */
+function AdminHeader() {
+  const { user } = use_auth ();
+  const { company } = useCompanyWorkspace ();
+;
+  return (
+    <div className="space - y-4">;
+      <div className="flex items - center justify - between">;
+        <div>;
+          <h1 className="text - 3xl font - bold tracking - tight">Enterprise Admin Dashboard</h1>;
+          <p className="text - muted - foreground mt - 1">;
+            Manage your company's account, team members, and subscription;
+          </p>;
+        </div>;
+        <div className="flex items - center gap - 2">;
+          <Button variant="outline" size="sm" className="gap - 2">;
+            <Settings className="h - 4 w - 4" />;
+            Settings;
+          </Button>;
+          <Button variant="outline" size="sm" className="gap - 2">;
+            <Download className="h - 4 w - 4" />;
             Export Data;
           </Button>;
         </div>;
@@ -138,6 +183,8 @@ export function AdminHeader() {;
     </div>);
 
 }
+}
+;
 }
 ;
 

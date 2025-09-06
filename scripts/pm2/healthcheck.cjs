@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -21,9 +17,6 @@ function pingPreview() {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
 	console.log('Healthy')})();
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node
 
 /**
@@ -201,12 +194,9 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-<<<<<<< HEAD
 
-=======
     const issues = [];
     
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
@@ -269,5 +259,3 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

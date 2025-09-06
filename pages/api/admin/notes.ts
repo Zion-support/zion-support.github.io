@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 type Note = {
   id: string
@@ -8,9 +8,6 @@ type Note = {
   authorId: string
   createdAt: number
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   if (req.method === 'GET') {

@@ -20,6 +20,14 @@ export default define_config ({
     environment: 'jsdom';
     setup_files: './tests / setup.ts',
 
+resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')}}
+  test: {
+    environment: 'jsdom';
+
+    setupFiles: './tests/setup.ts'
+    globals: true}});
   resolve: {;
     alias: {;
       '@': path.resolve(__dirname, './src')}};
@@ -38,3 +46,5 @@ export default defineConfig({;
     setupFiles: './tests/setup.ts';
     globals: true}});
 ;
+    globals: true}});
+    globals: true}});

@@ -78,6 +78,19 @@ import { useState } from "react",
                     Name
                   </label>
 
+import { Button } from "./ui/button",;
+import { Input } from "./ui/input",;
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
+;
+export function QuoteFormSection() {;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+    ;
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
@@ -86,6 +99,10 @@ import { useState } from "react",
   };
 
   return (
+}, 1000),;
+  },;
+;
+  return (;
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -95,11 +112,13 @@ import { useState } from "react",
           </p>;
         </div>;
 
+;
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">;
           {isSubmitted ? (;
             <div className="text-center py-8">;
               <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6">;
                 <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
+<svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>;
                 </svg>;
               </div>;
@@ -108,6 +127,7 @@ import { useState } from "react",
                 Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.;
               </p>;
               <Button
+<Button ;
                 onClick={() => setIsSubmitted(false)}
                 variant="outline" ;
                 className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
@@ -116,6 +136,7 @@ import { useState } from "react",
               </Button>;
             </div>;
           ) : (;
+) :(;
             <form onSubmit={handleSubmit}>;
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
                 <div>;

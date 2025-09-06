@@ -1,6 +1,12 @@
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
 
+import React from 'react';
+import { MilestonesList  } from '../MilestonesList';
+import { PaymentSummary  } from '../PaymentSummary';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { toast } from "sonner";
+interface MilestoneManagerProps {
   projectId: string
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -40,6 +46,7 @@ interface MilestoneManagerProps {
   refetch: () => Promise<void>
 }
 
+export function MilestoneManager({;
   projectId;
   milestones;
   activities;
@@ -151,8 +158,11 @@ function MilestoneManager() {
     }
 
   },
-  
 
+},
+
+  }
+  },
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -165,12 +175,19 @@ function MilestoneManager() {
 
   },
 
+}
+  },
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
 
         <MilestonesList 
 
+<MilestonesList
+        <MilestonesList 
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -263,16 +280,37 @@ export function MilestoneManager({;
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
+milestones={milestones}
+          activities={activities}
+          isLoading={isLoading}
+          isClient={isClient}
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
 
+isSubmitting={isSubmitting}
+          onApprove={isClient ? handleMilestoneApproved : undefined}
+          onReject={isClient ? handleMilestoneRejected : undefined}
+        />
+      </div>
+      <div>
+        <PaymentSummary
+          milestones={milestones}
+          paymentTerms={paymentTerms}
         />;
       </div>;
       <div>;
         <PaymentSummary
           milestones={milestones} 
+isSubmitting={isSubmitting}
+          onApprove={isClient ? handleMilestoneApproved :undefined}
+          onReject={isClient ? handleMilestoneRejected :undefined}
+        />;
+      </div>;
+      <div>;
+        <PaymentSummary ;
+          milestones={milestones} ;
           paymentTerms={paymentTerms}
         />;
       </div>;
@@ -294,6 +332,7 @@ export function MilestoneManager({;
     </div>);
 }
 
+;
   ),; interface MilestoneManagerProps {
   projectId: string;
 milestones: Milestone[];

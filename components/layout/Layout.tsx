@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+import Head from 'next/head';
 import React, { ReactNode } from 'react';
 
 import Header from '../Header';
@@ -13,11 +9,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Header from '../Header';
 import Footer from '../Footer';
-
-
-
-
-
 
 ;
 import React from 'react';
@@ -50,11 +41,9 @@ function Layout() {
       <Header />;
       <main>;
 
-
   "./Footer"import Footer  from "react./Footer,;
 export default function Layout({ children }: LayoutProps) {;
   return (;
-
 
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
@@ -99,13 +88,31 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}
   keywords?: string;
 }
 
@@ -121,8 +128,6 @@ export default function Layout({
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -144,7 +149,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+

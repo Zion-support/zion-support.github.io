@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -7,6 +9,8 @@ import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
 
+import { useState } from "react",
+import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 
@@ -37,11 +41,20 @@ import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
 
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+
+import { Textarea } from "@/components/ui/textarea";
+import { ForumCategory } from "@/types/community";
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+interface PostFormValues {
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
+}
 
   title: string
   content: string
@@ -100,6 +113,8 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues;
   onSubmit;
+initialValues,
+  onSubmit,
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
@@ -142,6 +157,9 @@ export const PostForm = ({;
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+}
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -184,6 +202,26 @@ export const PostForm = ({
       await on_submit (values);
     } finally {
 
+title: initialValues?.title |""
+      content: initialValues?.content |""
+      categoryId: initialValues?.categoryId |"project-help"
+      tags: initialValues?.tags |""
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = async (values: PostFormValues) => {
+    setIsSubmitting(true)
+    try {
+      await onSubmit(values)
+    } finally {
+      setIsSubmitting(false)
+    }
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+    try {
+      await on_submit (values);
+    } finally {
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
@@ -193,6 +231,7 @@ export const PostForm = ({
   };
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -202,6 +241,7 @@ export const PostForm = ({
 
     }
   }
+
   return (
     <Card>;
       <CardHeader>;
@@ -526,6 +566,7 @@ export default PostForm;
 
 },
 
+},
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { ;

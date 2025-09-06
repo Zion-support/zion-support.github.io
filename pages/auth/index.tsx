@@ -1,7 +1,14 @@
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
+import type { NextPage } from './next';
+import Head from './next / head';
+import { useState  } from './react';
+import EnhancedButton from "../../components / ui / EnhancedButton";
+;
 const steps = ["Account", "Profile", "Preferences", "Preview"];
 
 import type { NextPage } from 'next';
@@ -30,7 +37,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
 const steps = ['AccountProfilePreferencesPreview'];
 
 const Onboarding: NextPage = () => {
-
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
@@ -43,6 +49,7 @@ const Onboarding: NextPage = () => {
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
   return (
 
+return (
     <div className="space-y-6">
       <Head>
         <title>Onboarding - Zion</title>
@@ -53,6 +60,11 @@ const Onboarding: NextPage = () => {
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
 
+const steps = ["Account", "Profile", "Preferences", "Preview"];
+const Onboarding: NextPage = () => {
+  const [step, setStep] = useState(0);
+  const next = () => setStep((s) => Math.min(s + 1, steps.length - 1));
+  const prev = () => setStep((s) => Math.max(s - 1, 0));
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
@@ -123,6 +135,10 @@ const Onboarding: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<h1 className="text-2xl font-semibold">Get Started</h1>
+
+      <div className="flex items-center gap-2 text-sm flex-wrap">
+        {steps.map((label, i) => (
       </div>
 
       <div className="flex gap-2">
@@ -181,6 +197,10 @@ export default Onboarding;
   )
 },
 export default Onboarding,
+
+);
+}
+export default Onboarding;
 
   )
 },

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -20,13 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const users_path = path.join (process.cwd (), 'datalearnusers.json')
-const courses_path = path.join (process.cwd (), 'datalearncourses.json')
-=======
+
 
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
@@ -45,12 +39,13 @@ const courses_path = path.join (process.cwd (), 'datalearncourses.json')
     writeJson(usersPath, users);
 
     return res.status(200).json({ ok: true, user })
+return res.status(200).json({ ok: true, user })
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 /**
  * read_json - Function description
  */

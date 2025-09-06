@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-:src.broken/pages/Blog.js
-=======
 <<<<<<< HEAD:src.broken/pages/Blog.js
 :src.broken/pages/Blog.js
-=======
+
 <<<<<<< HEAD:src.broken/pages/Blog.js
->>>>>>> main:corrupted_backup/Blog.js
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -120,17 +121,12 @@ export default function Blog() {
               </Select>
             </div>
           </div>
-<<<<<<< HEAD
-import React from 'react';
-=======
 <<<<<<< HEAD:src.broken/pages/Blog.js
+
+:src.broken/pages/Blog.js
 import React from 'react';
-=======
-=======
 import React from 'react';
->>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
->>>>>>> main:corrupted_backup/Blog.js
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 export default function Blog() {
     return (
@@ -172,23 +168,20 @@ export default function Blog() {
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src.broken/pages/Blog.js
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+:src.broken/pages/Blog.js
+
 :src.broken/pages/Blog.js
       </div>
     </>);
     );
-<<<<<<< HEAD
-=======
-=======
+
 <<<<<<< HEAD:src.broken/pages/Blog.js
+
+:src.broken/pages/Blog.js
       </div>
     </>);
-=======
     );
->>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
 }
->>>>>>> main:corrupted_backup/Blog.js
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

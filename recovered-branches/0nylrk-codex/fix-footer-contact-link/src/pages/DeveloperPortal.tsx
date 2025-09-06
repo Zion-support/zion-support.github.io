@@ -74,6 +74,13 @@ export function DeveloperPortal() {
 
             const Icon = tab.icon,
 
+{/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">
+        <div className="flex flex-wrap -mb-px">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+
+            const Icon = tab.icon,
             return (
               <button
                 key={tab.id}
@@ -116,6 +123,7 @@ export function DeveloperPortal() {;
         <div className="flex flex - wrap -mb - px">;
           {tabs.map ((tab) => {
             const Icon = tab.icon;
+
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
@@ -125,6 +133,8 @@ export function DeveloperPortal() {;
 
   return (
     { id: "logs", label: "Logs", icon: List }];
+  return (;
+{ id: "logs", label: "Logs", icon: List }];
   return (;
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
@@ -228,3 +238,26 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
+  ),;
+}
+      </div>
+    </div>
+  )
+}
+export default function ProtectedDeveloperPortal() {
+  return (
+    <ProtectedRoute>
+      <DeveloperPortal />
+    </ProtectedRoute>
+  )
+}
+;
+export default function ProtectedDeveloperPortal() {;
+  return (;
+    <ProtectedRoute>;
+      <DeveloperPortal />;
+    </ProtectedRoute>;
+  );
+}
+;
+;

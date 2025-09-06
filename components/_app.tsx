@@ -1,3 +1,4 @@
+
 import type { AppProps } from 'next / app',
 import '../styles / globals.css',
 /**
@@ -8,3 +9,8 @@ function MyApp() {
 
 }
 export default MyApp;
+}
+export default MyApp;
+}
+
+export default MyApp

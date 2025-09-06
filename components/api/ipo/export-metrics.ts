@@ -52,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Content-Dispositionattachment, filename="ipo-metrics && metrics.csv"');
   res && res.status(200).send(csv)
 
+}
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**
  * handler - Function description
@@ -60,6 +61,8 @@ function handler() {
   if () return) {
   $2
 }
+}
+
 }
 
 }

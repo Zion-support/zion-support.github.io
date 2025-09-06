@@ -1,3 +1,6 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
     <div>
@@ -12,11 +15,14 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <Link href="/blog"><a>Back to Blog</Link></Link>
         <Link href="/blog"><a>Back to Blog</Link></Link>
 
+<Link href="/blog"><a>Back to Blog</Link></Link>
+        <Link href="/blog"><a>Back to Blog</Link></Link>
       </main>
     </div>
   )
 },
 
+<Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
   )

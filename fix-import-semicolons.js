@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
@@ -9,19 +7,13 @@ files && files.forEach((file) => {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
     // Fix import statements missing semicolons;
 
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-<<<<<<< HEAD
-=======
 
     const matches = content && content.match(importRegex);
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -62,13 +54,10 @@ if (.ends_with (") {
         }
       });
     }
-<<<<<<< HEAD
-=======
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -115,14 +104,9 @@ if (&&) {
         return match;
       }
     );
-<<<<<<< HEAD
-=======
-
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     // Check condition
 if ( {) {

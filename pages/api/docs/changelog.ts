@@ -1,13 +1,27 @@
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 }
+
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
+        : { content: "" };
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || "Failed to read changelog" });
+    }
+    return;
+  }
+
 
   if (req.method === 'POST') {
     try {
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -28,12 +42,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
     } catch (e: any) {
       res
         .status(500)
@@ -42,31 +57,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-<<<<<<< HEAD
-=======
-  res.setHeader("Allow", "GET, POST");
+res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
-<<<<<<< HEAD
 
-=======
-=======
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
@@ -110,14 +129,12 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -140,4 +157,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+

@@ -1,3 +1,4 @@
+
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
@@ -24,6 +25,7 @@ interface MobileHeaderProps {
 
 export function MobileHeader(): any ({;
 
+export function MobileHeader(): any ({;
   onSettingsClick?: () => void;
 }
   title;
@@ -37,6 +39,10 @@ export function MobileHeader(): any ({;
   const navigate = useNavigate();
   return (
 
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -48,6 +54,11 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void
 }
 
+onSettingsClick?: () => void
+}
+
+  onSettingsClick?: () => void
+}
 export function MobileHeader({;
   title;
   showBack = false;
@@ -84,6 +95,9 @@ export function MobileHeader({
     <headerclassName={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
       className
+<headerclassName={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+      className
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -115,6 +129,12 @@ export function MobileHeader({
               <span className="sr-only">Settings</span>
             </Button>
 
+)}
+        </div>
+      </div>
+    </header>
+  )
+}
 }
 
 import React from "react",;
@@ -170,6 +190,14 @@ export function MobileHeader({;
               variant="ghost" 
               size="icon" 
               className="mr-2" 
+<Button ;
+              variant="ghost" ;
+              size="icon" ;
+              className="mr-2" ;
+            <Button;
+              variant="ghost";
+              size="icon";
+              className="mr-2";
               onClick={() => navigate(-1)}
             >;
               <ChevronLeft className="h-5 w-5" />;
@@ -211,6 +239,7 @@ export function MobileHeader({;
 
               size="icon"
               onClick={onSettingsClick}>;
+{showSettings && (;
               size="icon"
               onClick={onSettingsClick}>;
             <Button ;
@@ -254,6 +283,9 @@ export /**
 function MobileHeader() {
   const navigate = use_navigate ();
 ;
+</div>;
+      </div>;
+    </header>;
   return (
     <header className={cn (
       "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
@@ -297,3 +329,43 @@ function MobileHeader() {
       </div>;
     </header>);
 }
+  ),;}
+ interface MobileHeaderProps {
+  title: string;
+showBack?: boolean;
+showNotifications?: boolean;
+showSettings?: boolean;
+className?: string;
+onNotificationsClick?: () => void;
+onSettingsClick?: () => void 
+}export function MobileHeader ({
+  title;
+showBack = false;
+showNotifications = false;
+showSettings = false;
+className;
+onNotificationsClick;
+onSettingsClick 
+}: MobileHeaderProps) {
+  const navigate = useNavigate ();
+return (<header className= {
+  cn ("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
+className) 
+}> <div className="flex items-center justify-between h-14 px-4" > <div className="flex items-center" > {
+  showBack && (<Button variant="ghost" size="icon" className="mr-2" () => navigate (-1) 
+}> <ChevronLeft className="h-5 w-5" /> <span className="sr-only" >Back</span> </Button>) 
+}<Button variant="ghost" size="icon" onClick= {
+  onNotificationsClick 
+}> <Bell className="h-5 w-5" /> <span className="sr-only" >Notifications</span> </Button>) 
+}{
+  showSettings && (<Button variant="ghost" size="icon" onClick= {
+  onSettingsClick 
+}> <Settings className="h-5 w-5" /> <span className="sr-only" >Settings</span> </Button>) 
+}</div> </div> </header>) 
+}
+        </div>;
+      </div>;
+    </header>;
+  );
+}
+;

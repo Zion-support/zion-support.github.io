@@ -28,6 +28,9 @@ export {;
   DeveloperRoutes;
 }
 ;
+DeveloperRoutes;
+}
+;
 
   DeveloperRoutes
 };
@@ -45,6 +48,9 @@ import CommunityRoutes from "./CommunityRoutes";
 import DeveloperRoutes from "./DeveloperRoutes";
 import CommunityRoutes from "./CommunityRoutes",
 import DeveloperRoutes from "./DeveloperRoutes",
+DeveloperRoutes;
+}
+;
 export {
   AuthRoutes,
   DashboardRoutes,
@@ -58,6 +64,14 @@ export {
   CommunityRoutes,
   DeveloperRoutes
 
+},
+  DeveloperRoutes;
+};
+  DeveloperRoutes;
+}
+;
+
+}
 },
 import AuthRoutes from "./AuthRoutes",;
 import DashboardRoutes from "./DashboardRoutes",;
@@ -86,3 +100,19 @@ export {;
 };
 
 export default Index;
+
+  CommunityRoutes,;
+  DeveloperRoutes;
+},; export {
+  AuthRoutes;
+DashboardRoutes;
+MarketplaceRoutes;
+TalentRoutes;
+AdminRoutes;
+MobileAppRoutes;
+ContentRoutes;
+ErrorRoutes;
+EnterpriseRoutes;
+CommunityRoutes;
+DeveloperRoutes 
+};

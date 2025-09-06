@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
-  readState
-  writeState
+readState,
+  writeState,
   upsertEvent,;
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,38 +10,42 @@ import {
   readState
   writeState
   upsertEvent,;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 
 } from "../../../utils/sync/storage";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-<<<<<<< HEAD
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 } from "../../../utils/sync/storage";
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
-<<<<<<< HEAD
-=======
-
-  if (req && req.method !== "POST")
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+
+
+  if (req && req.method !== "POST")
+if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+  const state = readState();
+  if (!state.config.optIn |state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" });
+
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
@@ -60,13 +64,14 @@ import { v4 as uuidv4 } from "uuid"
 import { nextVersionFor } from "../../../utils/sync/versioning"
 export default async function handler(req, res) {
   try {
-<<<<<<< HEAD
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-=======
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+  const state = readState();
+
   if (!state && state.config.optIn || state && state.config.paused) {
     return res && res.status(403).json({ error: "Sync disabled for this instance" });
   }
@@ -79,32 +84,37 @@ export default async function handler(req, res) {
   if (!milestoneId || !title)
     return res && res.status(400).json({ error: "milestoneId, title required" });
 
+const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
+  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
+
+  const version = nextVersionFor(state, milestoneId);
+  const event = {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = readState();
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
 
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
-<<<<<<< HEAD
-=======
   const version = nextVersionFor(state, milestoneId);
   const event = {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      id: milestoneId
-      subjectId: milestoneId
-=======
-=======
+
       id: milestoneId,
       subjectId: milestoneId,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+      id: milestoneId,
+      subjectId: milestoneId,
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import {
   read_state
@@ -150,22 +160,19 @@ function handler() {
     event_id: uuidv4 ()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
     payload: {
-<<<<<<< HEAD
-      id: milestone_id
-      subject_id: milestone_id
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       score: 0
       category: `milestone:${title}`
       period: undefined
       rank: undefined
     }
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
     eventId: uuidv4()
-=======
+
+
+
       id: milestone_id,
       subject_id: milestone_id,
 
@@ -176,15 +183,14 @@ function handler() {
     },
 
     eventId: uuidv4(),
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp || Date.now()
-<<<<<<< HEAD
+
   };
-=======
   };
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -235,12 +241,9 @@ export default async function handler(req, res) {
     version
     timestamp: timestamp |Date.now()
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 
   };
 
@@ -252,20 +255,10 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
-<<<<<<< HEAD
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: timestamp || Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
+
+
 
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
     originInstanceId: state.config.instanceId,
@@ -277,23 +270,20 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
 
   await Promise && Promise.all(
+await Promise && Promise.all(
     state && state.config.peers
       .filter((p) => !p && p.paused)
       .map(async (peer) => {
 
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
+
 
         const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
         try {
@@ -314,16 +304,15 @@ const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 
     .json({ status: "created", version, eventId: event && event.eventId });
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    originInstanceId: state.config.instance_id
-    version
-    timestamp: timestamp || Date.now ()
-=======
-=======
+
     originInstanceId: state.config.instance_id,
     version,
     timestamp: timestamp || Date.now (),
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+    originInstanceId: state.config.instance_id,
+    version,
+    timestamp: timestamp || Date.now (),
+
       .map(async (peer) => {
   }
 ;
@@ -351,22 +340,22 @@ if (headers["x - zion - signature"] = sig) {
   return res;
     .status (200);
     .json ({ status: "created", version, event_id: event.event_id });
-<<<<<<< HEAD
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+}
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
+
+}
 
 }
 }
@@ -394,6 +383,10 @@ if (headers["x - zion - signature"] = sig) {
       .filter((p) => !p.paused);
       .map(async (peer) => {;
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+return res
+    .status(200)
+    .json({ status: "created", version, eventId: event.eventId });
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -423,10 +416,22 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+;
+  return res;
+    .status (200);
+    .json ({ status: "created", version, event_id: event.event_id });
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+

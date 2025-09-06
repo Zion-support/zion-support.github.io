@@ -2,7 +2,6 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
-<<<<<<< HEAD
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -11,12 +10,10 @@ await app.register (cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
     if (|| allowed.includes (origin)) {) {
-=======
 
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
 dotenv && dotenv.config();
-
 
 const app = Fastify({ logger: true });
 await app && app.register(cors, {
@@ -32,7 +29,6 @@ await app && app.register(cors, {
   }
   methods: ['GET', 'POST', 'OPTIONS']
 });
-
 
 await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 
@@ -64,7 +60,6 @@ app && app.post('/jobs/generate', async (req, reply) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
     )
-=======
 import { get_pool, with_user } from './pg.js';
     const allowed = (process.env.CORS_ORIGINS || '';
     cb (new Error ('Not allowed';
@@ -81,7 +76,6 @@ app.post ('/jobs / generate';
   const description = await generateJobPost (openai, role, body);
   // Check condition
 if (return { description }) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   $2
 }
       cb (null, true);
@@ -152,16 +146,11 @@ app.post ('/jobs / generate', async (req, reply) => {
 });
 const port = Number(process.env.API_PORT |4000);
 
-<<<<<<< HEAD
-=======
-
 const port = Number(process && process.env.API_PORT || 4000);
 app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
   app && app.log.error(err);
   process && process.exit(1)
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -217,9 +206,5 @@ const port = Number (process.env.API_PORT || 4000);
 app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
-<<<<<<< HEAD
 });
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 "use client",;
 import { useState } from "react",;
@@ -237,7 +235,6 @@ const servicePricing: ServicePricing[] = [;
         description: "Advanced security assessment",;
         features: ["Advanced testing", "Custom compliance", "Ongoing monitoring", "Security training", "Incident response", "Dedicated support"],;
         cta: "Contact Sales",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         ctaLink: "mailto:kleber@ziontechgroup.com";
       }
     ];
@@ -250,10 +247,6 @@ const servicePricing: ServicePricing[] = [;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -265,10 +258,6 @@ interface PricingTier {
   popular?: boolean,
   cta: string,
   cta_link: string;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface PricingTier {name: string;
@@ -279,8 +268,6 @@ interface PricingTier {name: string;
   popular?: boolean;
   cta: string;
   ctaLink: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 interface ServicePricing {
   service_name: string,
@@ -508,9 +495,6 @@ const service_pricing: ServicePricing[] = [;
       }
     ];
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ],
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E - commerce & Services"],
 export default /**
@@ -526,7 +510,6 @@ function PricingPage() {
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Pricing & Plans</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
-=======
   {serviceName: "ZionGPT Core";
     category: "AI Services";
     description: "Advanced AI language model optimized for business applications";
@@ -695,7 +678,6 @@ function PricingPage() {
 ];
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
 export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState("All");
-=======
 "use client",;
 import { useState } from "react",;
 interface PricingTier {;
@@ -940,7 +922,6 @@ const servicePricing: ServicePricing[] = [;
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],;
 export default function PricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState("All");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
@@ -949,8 +930,6 @@ export default function PricingPage() {;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
@@ -960,8 +939,6 @@ export default function PricingPage() {;
           {categories.map (category => (
             <button;
               key={category}
-<<<<<<< HEAD
-=======
 
               on_click={() => setSelectedCategory (category)}
               className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
@@ -969,7 +946,6 @@ export default function PricingPage() {;
                   ? 'bg - blue - 600 text - white';
                   : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               }`}
             >;
               {category}
@@ -1011,8 +987,6 @@ export default function PricingPage() {;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
               {service.tiers.map ((tier, tier_index) => (
                 <div;
-<<<<<<< HEAD
-=======
 
                   key={tier_index}
                   className={`relative border rounded - lg p - 6 ${
@@ -1020,7 +994,6 @@ export default function PricingPage() {;
                       ? 'border - blue - 500 bg - blue - 500 / 10';
                       : 'border - white / 10';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   }`}
                 >;
                   {tier.popular && (
@@ -1028,14 +1001,11 @@ export default function PricingPage() {;
                       <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font - medium">;
                         Most Popular;
                       </span>;
-<<<<<<< HEAD
-=======
 
                     </div>)}
                   <div className="text - center space - y-4">;
                     <h3 className="text - xl font - semibold">{tier.name}</h3>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
                       <span className="text - lg opacity - 80">{tier.period}</span>;
@@ -1051,8 +1021,6 @@ export default function PricingPage() {;
                   </ul>;
                   <div className="mt - 6">;
                     <a;
-<<<<<<< HEAD
-=======
 
                       href={tier.cta_link}
                       className={`block w - full text - center py - 3 px - 4 rounded - lg font - medium transition - colors ${
@@ -1060,7 +1028,6 @@ export default function PricingPage() {;
                           ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
                           : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       }`}
                     >;
                       {tier.cta}

@@ -33,6 +33,23 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
   const features = [;
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+export default function SecretsRotationAutomationPage() {;
+  const features = [;
+    "Automated key and secret rotation",;
+    "JIT credentials with expirations",;
+    "Policy approvals and audit trails",;
+    "CI/CD integration (GitHub Actions, CircleCI)",;
+    "Cloud KMS and Vault support",;
+  ];
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
 
 export default function SecretsRotationAutomationPage() {
 
@@ -132,6 +149,7 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
+return (
   return (
   return (
   return (
@@ -195,6 +213,8 @@ export default function SecretsRotationAutomationPage() {
 
 }
 
+</>);
+}
     </>);
 }
 
@@ -364,4 +384,4 @@ return (
             </a>;
           </div>;
         </section>;
-      </main>;
+</main>;

@@ -133,11 +133,7 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" Missing packages resolved")
   console.log("⚠  Some missing packages remain")
 // console.log(" No missing packages found")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
   console.log(" No missing packages found")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.log(" No missing packages found")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

@@ -195,11 +195,29 @@ function LanguageThemeSelector() {
               <span > Dark</span>;
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
+}`}
+            onClick={() => setTheme('dark')}
+          >
+            <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Moon className="h-8 w-8 mb-2" />
+              <span>Dark</span>
+              {theme === 'dark' && (
+                <Check className="h-4 w-4 text-primary mt-2" />
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+}
             </CardContent>;
           </Card>;
         </div>;
       </div>;
 
+}
+</div>);
 }
     </div>);
 }

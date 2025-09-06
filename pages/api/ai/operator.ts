@@ -1,20 +1,17 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-<<<<<<< HEAD
 
-const ipToRequests: Record<string, { timestamps: number[] }> = {}
-=======
 const ipToRequests: Record<string, { timestamps: number[] }> = {},
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] || { timestamps: [] }
   // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
+bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -26,15 +23,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -45,12 +40,16 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
+
+
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -62,8 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-  const authHeader = req.headers.authorization || ''
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
+const authHeader = req.headers.authorization || '',
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined,
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
     return res.status(401).json({ error: 'Unauthorized' })
   }
@@ -93,6 +92,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
 
+const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
       temperature: typeof temperature === 'number' ? temperature : 0.7
@@ -102,7 +102,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
       ]
     })
 
-    const text = completion.choices?.[0]?.message?.content ?? ''
+const text = completion.choices?.[0]?.message?.content ?? '',
     return res.status(200).json({ text })
   } catch (err: any) {
     console.error('Operator error', err)

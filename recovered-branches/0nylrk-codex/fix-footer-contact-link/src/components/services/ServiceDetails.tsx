@@ -1,6 +1,11 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Server, Clock, MapPin } from './lucide-react';
 
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Server, Clock, MapPin} from "lucide-react";
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -69,11 +74,16 @@ function ServiceDetails() {
       // Default for other countries
       "default": ["Major metropolitan areas"]
 
+// Default for other countries
+      "default": ["Major metropolitan areas"]
+    }
+    return dataCenters[country] |dataCenters["default"]
+  }
     },
     
     return dataCenters[country] || dataCenters["default"]
   },
-  
+
 
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
@@ -155,6 +165,21 @@ function ServiceDetails() {
       "Australia": "AEST / ACDT / AWST depending on location";
       "Singapore": "SGT";
 
+// Get region-specific image
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region
+    const regions: Record<string string> = {
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
+      // Default placeholder
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+    }
+    return regions[country] |regions["default"]
+  }
     }
     return regions[country] |regions["default"]
   }
@@ -162,7 +187,7 @@ function ServiceDetails() {
     
     return regions[country] || regions["default"]
   },
-  
+
 
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
@@ -176,20 +201,23 @@ function ServiceDetails() {
       "Singapore": "SGT",
       "default": "Local timezone"
 
+}
+    const timezone = timeZones[country] |timeZones["default"];
     },
     
     const timezone = timeZones[country] || timeZones["default"],
-    
 
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
            `For remote locations, additional travel fees may apply.`
+}
+  const datacenters = getDatacenters(country);
 
   },
   
   const datacenters = getDatacenters(country),
-  
+
 
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -320,10 +348,32 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
       <CardContent className="space-y-4">;
         <div className="overflow-hidden rounded-lg mb-4">;
 
+IT Onsite Service in {country}
+        </CardTitle>
+        <CardDescription className="text-zion-slate-light">
+          Details about our service locations and capabilities in {country}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="overflow-hidden rounded-lg mb-4">
           <img
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+/>
+        </div>
+        <div className="space-y-4">
+          <div>
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
+              Service Locations
+            </h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {datacenters.map((dc, idx) => (
+                <div
+                  key={idx}
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
+                >
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
@@ -405,6 +455,18 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
           />;
         </div>;
+<img ;
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110";
+          />;
+        </div>;
+        ;
+          />;
+        </div>;
+
+          />;
+        </div>;
         <div className="space-y-4">;
           <div>;
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
@@ -426,6 +488,17 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             </div>;
           </div>;
 
+{datacenters.map((dc, idx) => (;
+                <div ;
+                  key={idx} ;
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
+                >;
+                  {dc}
+                </div>;
+              ))}
+            </div>;
+          </div>;
+          ;
           <div>;
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
               <Clock className="mr-2 h-4 w-4 text-zion-purple" />;
@@ -436,6 +509,18 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             </p>;
           </div>;
 
+{dc}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <Clock className="mr-2 h-4 w-4 text-zion-purple" />
+              Service Instructions
+            </h4>
+            <p className="text-zion-slate-light">
+              {getRegionalInstructions(country)}
             </p>
           </div>
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
@@ -468,6 +553,10 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               <li>Basic hardware diagnosis</li>;
               <li>Network connectivity troubleshooting</li>;
               <li>Equipment installation assistance</li>;
+"default": "Local timezone";
+    }
+}
+}
 ;
                   {dc}
                 </div>))}
@@ -506,6 +595,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
     </Card>);
 }
 
+}
+;
 }
 ;
 

@@ -1,3 +1,72 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {;
+import { useEffect, useMemo, useRef, useState } from 'react';
+  useEffect(() => {;
+    if (!query) {;
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+      return
+    }
+    controller && controller.current?.abort();
+    controller && controller.current = new AbortController();
+    const run = async () => {;
+      try {;
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;
+          signal: controller && controller.current!.signal,;
+        });
+        const j = await r && r.json();
+        setSuggestions(j && j.suggestions || []);
+        setOpen(true);
+      } catch {}
+    }
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
+        setSuggestions(j && j.suggestions || []);
+        setOpen(true);
+      } catch {}
+    }
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id);
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
+        const j = await r.json();
+        setSuggestions(j.suggestions || []);
+        setOpen(true)
+      } catch {}
+    };
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id)
+  }, [query]);
+    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+    router.push(`/search?q=${encodeURIComponent(query)}`);
+    setOpen(false)
+  };
+  const startVoice = () => {
+    if (typeof window === 'undefined') return;
+    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+import { useEffect, useMemo, useRef, useState  } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -143,6 +212,26 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
+}
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+      return
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -280,6 +369,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
       )}
     </form>
 
+)
+}
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -449,8 +540,9 @@ if (return) {
     </form>));
 }
 
+);
   );
 
 );  )
 }
-  );
+);

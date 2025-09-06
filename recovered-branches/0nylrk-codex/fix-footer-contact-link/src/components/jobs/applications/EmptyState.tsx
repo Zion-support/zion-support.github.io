@@ -26,6 +26,7 @@ function EmptyState() {
     </Card>);
 
 }
+
 export function EmptyState() {
   return (
     <Card className="bg-muted/30">
@@ -87,3 +88,4 @@ export function EmptyState() {;
   );
 }
 ;
+}

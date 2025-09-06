@@ -33,6 +33,8 @@ export interface FraudStats {;
 export interface FraudStats {
 
 export interface FraudStats {;
+}
+export interface FraudStats {
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;

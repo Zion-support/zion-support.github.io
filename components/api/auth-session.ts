@@ -38,6 +38,7 @@ res.status (200).json ({ message: 'OK' });    return;
 
 }
 
+}
 import {
   getSessionFromReq
   isInternalAgentRequest;

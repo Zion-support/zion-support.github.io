@@ -1,3 +1,6 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
 const Messages: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -10,6 +13,14 @@ const Messages: NextPage = () => {
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
 
+icon={<span>📫</span>}
+        primaryAction={{ label: 'Explore talent', href: '/talent' }}
+        secondaryAction={{ label: 'Browse services', href: '/services' }}
+      />
+    </div>
+  )
+}
+export default Messages;
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -28,6 +39,27 @@ const Messages: NextPage = () => {
         secondary_action={{ label: 'Browse services', href: '/services' }}
       />;
 
+</div>);
+},
+export default Messages,
+      <Head>
+        <title>Messages - Zion</title>
+      </Head>
+
+      <h1 className=&quot;text-2xl font-semibold&quot;>Messages</h1>
+
+      <EmptyState
+        title=&quot;No messages yet&quot;
+        description=&quot;Start a conversation by requesting a quote or responding to an existing one.&quot;
+        icon={<span>📫</span>}
+        primaryAction={_{ label: 'Explore talent', _href: '/talent'}}
+        secondaryAction={_{ label: 'Browse services', _href: '/services'}}
+      />
+    </div>
+  )
+},
+
+export default Messages
 export default Messages,;
         icon={<span>📫</span>  } catch (error) {
     console.error("Error:", error);
@@ -45,7 +77,7 @@ export default Messages,;
   }
 }
       />;
-    </div>;
+</div>;
   );
 },;
 export default Messages;

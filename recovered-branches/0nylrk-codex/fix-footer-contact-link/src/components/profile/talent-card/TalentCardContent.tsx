@@ -48,6 +48,9 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 
   const [isHovering, setIsHovering] = useState(false);
   return (
+import React, { useState } from "react",;
+import { MapPin } from "lucide-react",;
+import { TalentCardSkills } from "./TalentCardSkills",;
 ;
 interface TalentCardContentProps {;
   summary:string | undefined,;
@@ -60,6 +63,8 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
   const [isHovering, setIsHovering] = useState(false),;
 ;
   return (;
+const [isHovering, setIsHovering] = useState(false);
+  return (
     <div>;
 
 }
@@ -82,11 +87,22 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         <p className="text-zion-slate mb-4">{summary || bio}</p>
       </div>
 
+<p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
 }
+{/* Short bio or summary - longer on hover for desktop */}
+      <div
+        className="overflow-hidden transition-all duration-300" 
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+      ;
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div ;
+        className="overflow-hidden transition-all duration-300" ;
+        style={{ maxHeight:isHovering ? '8rem' :'3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >;
@@ -95,6 +111,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         </p>;
       </div>;
 
+;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
     </div>;

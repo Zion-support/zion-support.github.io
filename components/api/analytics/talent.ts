@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { createServerClient } from '../../../utils/supabase/server';
 
       supabase
         .from('profile_views')
@@ -33,6 +34,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 
+}
 }
 
   }
