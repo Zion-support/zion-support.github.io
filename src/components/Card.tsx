@@ -5,8 +5,6 @@ interface CardProps {
   title?: string;
   description?: string;
   className?: string;
-  hover?: boolean;
-  glass?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -27,9 +25,3 @@ const Card: React.FC<CardProps> = ({
     <div className={classes}>
       {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
       {description && <p className="text-gray-300 mb-4">{description}</p>}
-      {children}
-    </div>
-  );
-};
-
-export default Card;

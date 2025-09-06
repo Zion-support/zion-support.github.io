@@ -54,29 +54,5 @@ const Home = () => (
           <Card title="Scalability" description="Solutions designed to grow with you." />
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
 
 export default App;

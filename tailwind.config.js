@@ -6,15 +6,20 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
 <<<<<<< HEAD
+<<<<<<< HEAD
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    './app/**/*.{js,ts,jsx,tsx}'
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
   ],
   theme: {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
+<<<<<<< HEAD
 <<<<<<< HEAD
           500: '#3b82f6',
           600: '#2563eb',
@@ -36,6 +41,11 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
+=======
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8'
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
         },
         gray: {
           50: '#f9fafb',
@@ -48,12 +58,16 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#030712',
-        },
+          950: '#030712'
+        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+<<<<<<< HEAD
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+=======
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -62,15 +76,20 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
+<<<<<<< HEAD
         'spin-slow': 'spin 8s linear infinite',
+=======
+        'spin-slow': 'spin 8s linear infinite'
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '100%': { opacity: '1' }
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
           '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
         scaleIn: {
@@ -81,27 +100,55 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
         },
+=======
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' }
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' }
+        }
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
       },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem',
+        '128': '32rem'
       },
       borderRadius: {
         '4xl': '2rem',
+<<<<<<< HEAD
         '5xl': '2.5rem',
+=======
+        '5xl': '2.5rem'
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+<<<<<<< HEAD
         'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
       },
     },
+=======
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
+      }
+    }
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+<<<<<<< HEAD
     require('@tailwindcss/aspect-ratio'),
   ],
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    require('@tailwindcss/aspect-ratio')
+  ]
+}
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e

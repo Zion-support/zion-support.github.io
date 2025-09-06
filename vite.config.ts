@@ -17,6 +17,7 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets')
     }
   },
+<<<<<<< HEAD
   css: {
     postcss: false
   },
@@ -25,6 +26,8 @@ export default defineConfig({
     include: /src\/.*\.[jt]sx?$/,
     exclude: [],
   },
+=======
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -38,6 +41,7 @@ export default defineConfig({
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name || '';
+<<<<<<< HEAD
           if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
@@ -69,6 +73,16 @@ export default defineConfig({
     reportCompressedSize: false,
     emptyOutDir: true,
     assetsInlineLimit: 4096,
+=======
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
   },
   optimizeDeps: {
     include: [
@@ -80,6 +94,7 @@ export default defineConfig({
       'clsx',
       'tailwind-merge'
     ],
+<<<<<<< HEAD
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
       target: 'esnext'
@@ -119,5 +134,18 @@ export default defineConfig({
         return { relative: true };
       }
     }
+=======
+    exclude: ['@radix-ui/react-icons']
+  },
+  server: { 
+    port: 3000, 
+    host: true, 
+    open: true 
+  },
+  preview: { 
+    port: 4173, 
+    host: true, 
+    open: true 
+>>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
   }
 });

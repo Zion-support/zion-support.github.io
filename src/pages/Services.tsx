@@ -13,116 +13,106 @@ const Services: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
             Comprehensive technology solutions designed to transform your business
             and drive innovation across all sectors.
-          </p>
-        </div>
-        {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ServiceCard
-            title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
-            features={["Machine Learning", "Natural Language Processing", "Computer Vision"]}
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-            features={["Threat Detection", "Data Protection", "Compliance"]}
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
-            features={["Scalable Architecture", "High Availability", "Cost Optimization"]}
-          />
-          <ServiceCard
-            title="Digital Transformation"
-            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            href="/services/micro-saas"
+            title="Micro SaaS"
+            description="End-to-end product development with billing, auth, and analytics"
+            bullets={[
+              "Foundational architecture",
+              "Billing + subscriptions",
+              "Growth analytics"
+            ]}
             icon="🚀"
-            features={["Process Automation", "Digital Strategy", "Change Management"]}
           />
           <ServiceCard
+            href="/services/ai-services"
+            title="AI Services"
+            description="LLM applications, RAG systems, and MLOps pipelines"
+            bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+            icon="🤖"
+          />
+          <ServiceCard
+            href="/services/it-services"
+            title="IT Services"
+            description="Cloud migration, DevOps, and security solutions"
+            bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+            icon="⚙️"
+          />
+          <ServiceCard
+            href="/services/blockchain"
+            title="Blockchain"
+            description="Smart contracts, DeFi protocols, and Web3 applications"
+            bullets={["Smart contracts", "DeFi protocols", "NFT platforms"]}
+            icon="⛓️"
+          />
+          <ServiceCard
+            href="/services/data-analytics"
             title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            description="Business intelligence, predictive modeling, and real-time analytics"
+            bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
             icon="📊"
-            features={["Business Intelligence", "Data Visualization", "Predictive Analytics"]}
-          />
-          <ServiceCard
-            title="IoT Solutions"
-            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
-            icon="🌐"
-            features={["Device Management", "Real-time Monitoring", "Smart Automation"]}
           />
         </div>
 
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="Consulting Services"
-              description="Strategic technology consulting to help you make informed decisions about your digital future."
-            />
-            <Card
-              title="Implementation"
-              description="End-to-end implementation of technology solutions tailored to your specific business needs."
-            />
-            <Card
-              title="Support & Maintenance"
-              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
-            />
-            <Card
-              title="Training & Education"
-              description="Comprehensive training programs to help your team master new technologies and processes."
-            />
-            <Card
-              title="Custom Development"
-              description="Bespoke software development solutions designed specifically for your unique requirements."
-            />
-            <Card
-              title="Integration Services"
-              description="Seamless integration of new technologies with your existing systems and workflows."
-            />
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Talk to our experts about your project. We'll help you choose the right
+            service and create a custom solution for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
 
-        {/* Industry Solutions */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏥</span>
-              </div>
-              <h3 className="text-lg font-semibold">Healthcare</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏦</span>
-              </div>
-              <h3 className="text-lg font-semibold">Finance</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏭</span>
-              </div>
-              <h3 className="text-lg font-semibold">Manufacturing</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛒</span>
-              </div>
-              <h3 className="text-lg font-semibold">Retail</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="text-lg font-semibold">Education</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏛️</span>
-              </div>
-              <h3 className="text-lg font-semibold">Government</h3>
-            </div>
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon
+}: {
+  href: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: string;
+}) {
+  return (
+    <Link
+      to={href}
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {bullet}
+          </li>
+        ))}
+      </ul>
+    </Link>
+  );
+}

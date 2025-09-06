@@ -47,55 +47,8 @@ const Header: React.FC = () => {
                   </Link>
                 )}
               </div>
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden ml-auto p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
-          <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
-            {navigation.map((item) => (
-              <div key={item.name} className="mb-2">
-                <div className="flex items-center justify-between">
-                  <Link
-                    to={item.href}
-                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.dropdown && (
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className="p-1"
-                    >
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                  )}
-                </div>
-                {item.dropdown && activeDropdown === item.name && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {item.dropdown.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <Link
                 to="/contact"
                 className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+    </header>
+  );
+}
