@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,27 +56,17 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-md">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                About
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                Contact
-              </Link>
-              <Button variant="primary" size="small" className="w-full">
-                Get Started
-              </Button>
+            <nav className="space-y-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
