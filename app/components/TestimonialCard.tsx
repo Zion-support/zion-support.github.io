@@ -53,7 +53,7 @@ export default function TestimonialCard({
       </div>
       
       <blockquote className="text-gray-700 italic">
-        "{content}"
+        &ldquo;{content}&rdquo;
       </blockquote>
     </div>
   );

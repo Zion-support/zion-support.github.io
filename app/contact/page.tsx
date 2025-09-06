@@ -1,6 +1,5 @@
 import React from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Contact Us | Zion Tech Group',
@@ -23,7 +22,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge AI, Micro SaaS, and IT solutions? 
-            Let's discuss how we can help you achieve your goals.
+            Let&apos;s discuss how we can help you achieve your goals.
           </p>
         </div>
       </div>
@@ -63,7 +62,7 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Send us a Message</h2>
             <p className="text-lg text-gray-600">
-              Fill out the form below and we'll get back to you within one business day.
+              Fill out the form below and we&apos;ll get back to you within one business day.
             </p>
           </div>
           
