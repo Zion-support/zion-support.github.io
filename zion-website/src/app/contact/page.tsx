@@ -1,395 +1,267 @@
 import {
-<<<<<<< HEAD
-  EnvelopeIcon
-  PhoneIcon
-  MapPinIcon
-  ClockIcon
-  ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline'
-const contactMethods = [
-=======
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
   ClockIcon,
-  ChatBubbleLeftRightIcon;
-} from '@heroicons / react / 24 / outline';
-const contact_methods = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  ChatBubbleLeftRightIcon,
+} from '@heroicons/react/24/outline';
+
+const contactMethods = [
   {
-    name: 'Email'
-    description: 'Get in touch with our team'
-    value: 'contact@ziontechgroup.com'
-    href: 'mailto:contact@ziontechgroup.com'
-    icon: EnvelopeIcon}
+    name: 'Email',
+    description: 'Get in touch with our team',
+    value: 'contact@ziontechgroup.com',
+    href: 'mailto:contact@ziontechgroup.com',
+    icon: EnvelopeIcon
+  },
   {
-<<<<<<< HEAD
-    name: 'Phone'
-    description: 'Speak with an expert'
-    value: '+1 (555) 123-4567'
-    href: 'tel:+15551234567'
-    icon: PhoneIcon}
-  {
-    name: 'Office'
-    description: 'Visit our headquarters'
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025'
-    href: '#'
-    icon: MapPinIcon}]
-const officeLocations = [
-  {
-    name: 'Silicon Valley'
-    address: '1234 Innovation Drive, San Jose, CA 94025'
-    phone: '+1 (555) 123-4567'
-    email: 'sv@ziontechgroup.com'
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'}
-  {
-    name: 'London'
-    address: '456 Tech Square, London, UK EC2A 4BX'
-    phone: '+44 20 1234 5678'
-    email: 'london@ziontechgroup.com'
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'}
-  {
-    name: 'Tokyo'
-    address: '789 Innovation Tower, Tokyo, Japan 100-0001'
-    phone: '+81 3 1234 5678'
-    email: 'tokyo@ziontechgroup.com'
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM JST'}]
-const faqs = [
-=======
     name: 'Phone',
     description: 'Speak with an expert',
-    value: '+1 (555) 123 - 4567',
+    value: '+1 (555) 123-4567',
     href: 'tel:+15551234567',
-    icon: PhoneIcon},
+    icon: PhoneIcon
+  },
   {
     name: 'Office',
     description: 'Visit our headquarters',
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025',
+    value: '123 Innovation Drive, Tech City, TC 12345',
+    href: 'https://maps.google.com',
+    icon: MapPinIcon
+  },
+  {
+    name: 'Hours',
+    description: 'Business hours',
+    value: 'Mon-Fri 9AM-6PM PST',
     href: '#',
-    icon: MapPinIcon}];
-const office_locations = [;
+    icon: ClockIcon
+  }
+];
+
+const offices = [
   {
-    name: 'Silicon Valley',
-    address: '1234 Innovation Drive, San Jose, CA 94025',
-    phone: '+1 (555) 123 - 4567',
-    email: 'sv@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM PST'},
+    name: 'Headquarters',
+    address: '123 Innovation Drive, Tech City, TC 12345',
+    phone: '+1 (555) 123-4567',
+    email: 'hq@ziontechgroup.com'
+  },
   {
-    name: 'London',
-    address: '456 Tech Square, London, UK EC2A 4BX',
-    phone: '+44 20 1234 5678',
-    email: 'london@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM GMT'},
+    name: 'Research Center',
+    address: '456 Quantum Lane, Science Park, SP 67890',
+    phone: '+1 (555) 234-5678',
+    email: 'research@ziontechgroup.com'
+  },
   {
-    name: 'Tokyo',
-    address: '789 Innovation Tower, Tokyo, Japan 100 - 0001',
-    phone: '+81 3 1234 5678',
-    email: 'tokyo@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM JST'}];
-const faqs = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  {
-    question: 'What industries do you serve?'
-    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
-  {
-<<<<<<< HEAD
-    question: 'How long does implementation take?'
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2-4 weeks, while complex enterprise solutions typically take 3-6 months.'}
-=======
-    question: 'How long does implementation take?',
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weeks, while complex enterprise solutions typically take 3 - 6 months.'},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  {
-    question: 'Do you provide ongoing support?'
-    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
-  {
-<<<<<<< HEAD
-    question: 'What security measures do you have?'
-    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+    name: 'European Office',
+    address: '789 AI Boulevard, London, UK SW1A 1AA',
+    phone: '+44 20 7946 0958',
+    email: 'europe@ziontechgroup.com'
+  }
+];
+
 export default function ContactPage() {
-=======
-    question: 'What security measures do you have?',
-    answer: 'We implement enterprise - grade security including end - to - end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <div className=&quot;bg - black & quot;>;
+    <div className="bg-black">
       {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Get in{' '}
-<<<<<<< HEAD
-              <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Ready to transform your business with AI? Let's discuss how our cutting-edge
-              technology can accelerate your growth and innovation.
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Ready to transform your business with AI? Let's discuss how our solutions
+              can help you achieve your goals.
             </p>
           </div>
         </div>
       </div>
-=======
-              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
-                Touch;
-              </span>;
-            </h1>;
-            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              Ready to transform your business with AI? Let's discuss how our cutting - edge;
-              technology can accelerate your growth and innovation.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      {/* Contact methods */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Contact Us</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Multiple ways to reach us;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {contact_methods.map ((method) => (
-              <div key={method.name} className=&quot;flex flex - col group & quot;>;
-                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
-                  <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
-                  {method.name}
-<<<<<<< HEAD
-                </dt>
-                <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
-                  <p className=&quot;flex-auto&quot;>{method.description}</p>
-                  <p className=&quot;mt-6&quot;>
-                    <a
-                      href={method.href}
-                      className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-                    >
-                      {method.value} <span aria-hidden=&quot;true&quot;>→</span>
-                    </Link>
-                  </p>
-                </dd>
+
+      {/* Contact Methods */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            How to Reach Us
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Choose the most convenient way to get in touch with our team of experts.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            {contactMethods.map((method) => (
+              <div key={method.name} className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <method.icon className="h-6 w-6 text-blue-400" />
+                  <h3 className="text-lg font-semibold text-white">{method.name}</h3>
+                </div>
+                <p className="text-gray-300 mb-2">{method.description}</p>
+                <a
+                  href={method.href}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  {method.value}
+                </a>
               </div>
             ))}
-=======
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto & quot;>{method.description}</p>;
-                  <p className=&quot;mt - 6&quot;>;
-                    <a;
-                      href={method.href}
-                      className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                    >;
-                      {method.value} <span aria - hidden=&quot;true & quot;>→</span>;
-                    </Link>;
-                  </p>;
-                </dd>;
-              </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          </dl>;
-        </div>;
-      </div>;
-      {/* Contact form */}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Send us a message</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Let's start a conversation;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
-          <form className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm & quot;>;
-            <div className=&quot;grid grid - cols - 1 gap - x-8 gap - y-6 sm:grid - cols - 2&quot;>;
-              <div>;
-                <label html_for=&quot;first - name & quot; className=&quot;block text - sm font - semibold leading - 6 text - white & quot;>;
-                  First name;
-                </label>;
-                <div className=&quot;mt - 2.5 & quot;>;
-                  <input;
-                    type=&quot;text & quot;
-                    name=&quot;first - name & quot;
-                    id=&quot;first - name & quot;
-                    auto_complete=&quot;given - name & quot;
-                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
-                  />;
-                </div>;
-              </div>;
-              <div>;
-                <label html_for=&quot;last - name & quot; className=&quot;block text - sm font - semibold leading - 6 text - white & quot;>;
-                  Last name;
-                </label>;
-                <div className=&quot;mt - 2.5 & quot;>;
-                  <input;
-                    type=&quot;text & quot;
-                    name=&quot;last - name & quot;
-                    id=&quot;last - name & quot;
-                    auto_complete=&quot;family - name & quot;
-                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
-                  />;
-                </div>;
-              </div>;
-              <div className=&quot;sm:col - span - 2&quot;>;
-                <label html_for=&quot;email & quot; className=&quot;block text - sm font - semibold leading - 6 text - white & quot;>;
-                  Email;
-                </label>;
-                <div className=&quot;mt - 2.5 & quot;>;
-                  <input;
-                    type=&quot;email & quot;
-                    name=&quot;email & quot;
-                    id=&quot;email & quot;
-                    auto_complete=&quot;email & quot;
-                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
-                  />;
-                </div>;
-              </div>;
-              <div className=&quot;sm:col - span - 2&quot;>;
-                <label html_for=&quot;company & quot; className=&quot;block text - sm font - semibold leading - 6 text - white & quot;>;
-                  Company;
-                </label>;
-                <div className=&quot;mt - 2.5 & quot;>;
-                  <input;
-                    type=&quot;text & quot;
-                    name=&quot;company & quot;
-                    id=&quot;company & quot;
-                    auto_complete=&quot;organization & quot;
-                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
-                  />;
-                </div>;
-              </div>;
-              <div className=&quot;sm:col - span - 2&quot;>;
-                <label html_for=&quot;message & quot; className=&quot;block text - sm font - semibold leading - 6 text - white & quot;>;
-                  Message;
-                </label>;
-                <div className=&quot;mt - 2.5 & quot;>;
-                  <textarea;
-                    name=&quot;message & quot;
-                    id=&quot;message & quot;
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a Message</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Let's Start a Conversation
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Fill out the form below and we'll get back to you within 24 hours.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24">
+          <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
+                  First name
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md border-0 bg-white/10 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    placeholder="John"
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
+                  Last name
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    autoComplete="family-name"
+                    className="block w-full rounded-md border-0 bg-white/10 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
+                  Email
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    className="block w-full rounded-md border-0 bg-white/10 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    placeholder="john.doe@company.com"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
+                  Company
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    autoComplete="organization"
+                    className="block w-full rounded-md border-0 bg-white/10 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    placeholder="Your Company"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
+                  Message
+                </label>
+                <div className="mt-2.5">
+                  <textarea
+                    name="message"
+                    id="message"
                     rows={4}
-<<<<<<< HEAD
-                    className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
-                    defaultValue={''}
+                    className="block w-full rounded-md border-0 bg-white/10 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    placeholder="Tell us about your project..."
                   />
                 </div>
               </div>
             </div>
-            <div className=&quot;mt-8 flex justify-end&quot;>
+            <div className="mt-10">
               <button
-                type=&quot;submit&quot;
-                className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
+                type="submit"
+                className="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
-                Send message
+                Send Message
               </button>
             </div>
           </form>
         </div>
       </div>
-=======
-                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
-                    default_value={''}
-                  />;
-                </div>;
-              </div>;
-            </div>;
-            <div className=&quot;mt - 8 flex justify - end & quot;>;
-              <button;
-                type=&quot;submit & quot;
-                className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - center text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
-              >;
-                Send message;
-              </button>;
-            </div>;
-          </form>;
-        </div>;
-      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      {/* Office locations */}
-      <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Global Presence</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Visit our offices worldwide;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {office_locations.map ((office) => (
-              <div key={office.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 & quot;>;
-                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
-                  <MapPinIcon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{office.name}</h3>;
-                </div>;
-                <div className=&quot;space - y-3 text - gray - 300 & quot;>;
-                  <p className=&quot;flex items - start gap - 2&quot;>;
-                    <MapPinIcon className=&quot;h - 5 w - 5 text - blue - 400 mt - 0.5 flex - shrink - 0&quot; />;
-                    {office.address}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <PhoneIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-                    {office.phone}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <EnvelopeIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-                    {office.email}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-                    {office.hours}
-                  </p>;
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* FAQ */}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Frequently Asked</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Common questions;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
-          <dl className=&quot;space - y-8 & quot;>;
-            {faqs.map ((faq, index) => (
-              <div key={index} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm & quot;>;
-                <dt className=&quot;text - lg font - semibold leading - 7 text - white mb - 4&quot;>;
-                  {faq.question}
-                </dt>;
-                <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
-                  {faq.answer}
-                </dd>;
-              </div>))}
-          </dl>;
-        </div>;
-      </div>;
+
+      {/* Offices */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Offices</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Global Presence
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We have offices around the world to serve our global client base.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {offices.map((office) => (
+              <div key={office.name} className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white mb-4">{office.name}</h3>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-300">{office.address}</p>
+                  <p className="text-sm text-blue-400">{office.phone}</p>
+                  <p className="text-sm text-blue-400">{office.email}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* CTA section */}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
-          <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Ready to get started?;
-          </h2>;
-          <p className=&quot;mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray - 300 & quot;>;
-            Our team is ready to help you explore the possibilities of AI and transform your business.;
-          </p>;
-          <div className=&quot;mt - 10 flex items - center justify - center gap - x-6 & quot;>;
-            <a;
-              href=&quot;/solutions & quot;
-              className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
-            >;
-              Explore Solutions;
-            </Link>;
-            <a href=&quot;/about & quot; className=&quot;text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200 & quot;>;
-              Learn More <span aria - hidden=&quot;true & quot;>→</span>;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>);
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Ready to Get Started?
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Don't wait to transform your business with AI. Contact us today to schedule
+            a consultation with our experts.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="tel:+15551234567"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+            >
+              Call Now
+            </a>
+            <a href="mailto:contact@ziontechgroup.com" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              Send Email <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
