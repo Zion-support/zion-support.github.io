@@ -1,4 +1,19 @@
 import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
+
+interface PerformanceData {
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory: {
+    used: number,
+    total: number,
+    limit: number,
+  } | null;
+}
 
 interface PerformanceData {
   domContentLoaded: number,

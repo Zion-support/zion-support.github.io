@@ -103,9 +103,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
+
+          
           {/* Sidebar */}
           <motion.div
-            initial={{ x: '-100%' }}
+            initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
