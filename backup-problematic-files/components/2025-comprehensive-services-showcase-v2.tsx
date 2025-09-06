@@ -4,64 +4,58 @@
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
-          >
-            Our Comprehensive Service Portfolio
-          </motion.h2>
-          
-          <motion.div 
-            className="space-y-20"
+          >;
+            Our Comprehensive Service Portfolio;
+          </motion.h2>;
+          <motion.div;
+            className="space-y-20";
             variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
+            initial="initial";
+            whileInView="animate";
             viewport={{ once: true }}
-          >
-            {serviceCategories.map((category) => (
-              <motion.div key={category.id} variants={fadeInUp}>
-                <div className="text-center mb-12">
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
+          >;
+            {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp}>;
+                <div className="text-center mb-12">;
+                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>;
                     {category.icon}
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  </div>;
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                     {category.name}
-                  </h3>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  </h3>;
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                     {category.description}
-                  </p>
-                </div>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service) => (
-                    <motion.div
+                  </p>;
+                </div>;
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                  {category.services.map((service) => (<motion.div;
                       key={service.id}
-                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105";
                       whileHover={{ y: -5 }}
-                    >
-                      <h4 className="text-xl font-semibold text-white mb-3">
+                    >;
+                      <h4 className="text-xl font-semibold text-white mb-3">;
                         {service.title}
-                      </h4>
-                      <p className="text-gray-300 mb-4">
+                      </h4>;
+                      <p className="text-gray-300 mb-4">;
                         {service.description}
-                      </p>
-                      
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-center text-sm text-cyan-400">
-                          <TrendingUp className="w-4 h-4 mr-2" />
+                      </p>;
+                      <div className="space-y-3 mb-6">;
+                        <div className="flex items-center text-sm text-cyan-400">;
+                          <TrendingUp className="w-4 h-4 mr-2" />;
                           {service.marketSize}
-                        </div>
-                        <div className="flex items-center text-sm text-green-400">
-                          <Star className="w-4 h-4 mr-2" />
+                        </div>;
+                        <div className="flex items-center text-sm text-green-400">;
+                          <Star className="w-4 h-4 mr-2" />;
                           {service.growthRate}
-                        </div>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <div className="text-2xl font-bold text-white mb-2">
+                        </div>;
+                      </div>;
+                      <div className="mb-6">;
+                        <div className="text-2xl font-bold text-white mb-2">;
                           Starting at {(service as any).pricing?.starter || service.price}
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          {(service as any).pricing?.professional ? 
-                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
-                            `${service.price} ${service.period}`
+                        </div>;
+                        <div className="text-sm text-gray-400">;
+                          {(service as any).pricing?.professional ?;
+                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
+                            `${service.price} ${service.period}`;
                           }
                         </div>;
                       </div>;
@@ -87,9 +81,7 @@
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-
-            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - 4xl md:text - 5xl font - bold text-white mb-6";
             initial={{ opacity: 0, coordinate_y: 20 }}

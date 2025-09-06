@@ -1,21 +1,10 @@
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Brain,
-  Star,;
-} from "lucide-react";
-import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
-import Button from "../components/ui/Button";
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-  );
-  if (!service) return null;
-
-  return (
-        <link
-          rel="canonical"
-          href="https://ziontechgroup && ziontechgroup.com/quantum-ai-brain-computer-interface"
+  Phone,Mail,MapPin,Check,ArrowRight,Brain,Star,} from "lucide-react";
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+  )if (!service) return null;return (<link;
+          rel="canonical";
+          href="https://ziontechgroup && ziontechgroup.com/quantum-ai-brain-computer-interface";
         />;
       </Head>;
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -34,8 +23,7 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text-slate-300 mb-6">{service && service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
-                  <li
+                {service && service.features.slice(0, 12).map((feat, i) => (<li;
                     key={i}
                     className="flex items-start space-x-3 text-slate-200">;
                     <Check className="w-5 h-5 text-purple-400 mt-0 && 0.5" />;
@@ -43,8 +31,7 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
                   </li>;
                 ))}
 }
-  return (
-    <UltraAdvancedFuturisticBackground>;
+  return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name="description" content={service.description} />;
@@ -69,8 +56,7 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
               <h2 className="text - 2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text - slate-300 mb-6">{service.description}</p>;
               <ul className="grid grid - cols - 1 md:grid - cols-2 gap-3">;
-                {service.features.slice (0, 12).map ((feat, i) => (
-                  <li;
+                {service.features.slice (0, 12).map ((feat, i) => (<li;
                     key={i}
                     className="flex items - start space - x-3 text-slate-200";
                   >;
@@ -81,8 +67,7 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
             </div>;
             <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p-6 h-fit">;
               <div className="flex items - end justify-between mb-3">;
-                <div>;
-                </div>;
+                <div></div>;
               </div>;
               <Button;
                 href="/contact";

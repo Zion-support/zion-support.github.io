@@ -1,18 +1,34 @@
-import { defineConfig } from 'vite';
+import { defineConfig  } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
+export default defineConfig({plugins: [react()],server: {port: 3000,open: true,host: true;
+  },build: {outDir: "dist",sourcemap: true,minify: "esbuild",rollupOptions: {output: {manualChunks: {vendor: ['react', 'react-dom'],router: ['react-router-dom'],ui: ['framer-motion', 'lucide-react'];
+        }
+      }
+    },terserOptions: {compress: {drop_console: true,drop_debugger: true;
+      }
+    }
+  },resolve: {alias: {'@': path.resolve(__dirname, './src')}
+  },optimizeDeps: {include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'];
+  }
+})
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
   server: {
     port: 3000,
     open: true,
-    host: true,
+    host: true
   },
   build: {
     outDir: "dist",
     sourcemap: true,
-<<<<<<< HEAD
-    minify: "terser",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
@@ -21,27 +37,9 @@ export default defineConfig({
           router: ["react-router-dom"]
         }
       }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-=======
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-        },
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
-      },
-    },
+    }
   },
   optimizeDeps: {
-<<<<<<< HEAD
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
-=======
-    include: ['react', 'react-dom', 'react-router-dom'],
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
-  },
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+  }
 });
