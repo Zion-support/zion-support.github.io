@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 import React, { useMemo } from 'react';
-=======
-<<<<<<< HEAD
 import React, { useMemo } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { User } from 'lucide-react'
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem  } from './ConversationItem';
@@ -43,11 +37,6 @@ export function ConversationsList({
       </div>
     )
   }
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging',;
@@ -89,13 +78,8 @@ export function ConversationsList({;
       </div>
     )
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>> 
+>>>>>>>   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
         <h3 className="font-medium text-white">Conversations</h3>
@@ -113,42 +97,14 @@ export function ConversationsList({;
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-<<<<<<< HEAD
-          width='100%'        >
-<<<<<<< HEAD
-=======
-          width="100%"
-        >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {Row}
         </List>
       )}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-=======
-          {Row}
-        </List>
-      )};
-    </div>;
-  );
-};
-}
-=======
-          width="100%"
-        >
-          {Row}
-        </List>;
-      )}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

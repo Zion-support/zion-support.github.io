@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -18,53 +17,16 @@ export function UpcomingInterviewsCard() {
     const loadInterviews = async () => {      setIsLoading(true)
       try {
         const interviews = await fetchInterviews()
-=======
-
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import Link from "next/link",
-import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function UpcomingInterviewsCard() {
-
-  const { fetchInterviews } = useInterviews(),
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-
-  useEffect(() => {
-    const loadInterviews = async () => {
-      setIsLoading(true),
-      try {
-        const interviews = await fetchInterviews(),
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        // Filter for confirmed interviews in the future
+>>>>>>>         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
-<<<<<<< HEAD
-<<<<<<< HEAD
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()          )
-=======
-          .sort(;
-            (a, b) =>;
-              parseISO(a.scheduled_date).getTime() -;
-              parseISO(b.scheduled_date).getTime()          );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -77,7 +39,6 @@ export function UpcomingInterviewsCard() {
     }
     loadInterviews()
   }, [])
-=======
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -94,12 +55,7 @@ export function UpcomingInterviewsCard() {
     loadInterviews()
   }, []),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  if (isLoading) {
+>>>>>>>   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -118,17 +74,7 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    )
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -191,14 +137,9 @@ export function UpcomingInterviewsCard() {;
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
+>>>>>>>   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  if (upcomingInterviews.length === 0) {
+>>>>>>>   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -230,15 +171,6 @@ export function UpcomingInterviewsCard() {;
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
-<<<<<<< HEAD
-            const interviewDate = parseISO(interview.scheduled_date)
-            const formattedDate = format(interviewDate, 'EEE, MMM d')
-            const formattedTime = format(interviewDate, 'h:mm a')
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
-            const isStartingSoon = null;
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime()
-<<<<<<< HEAD
 
             return (
               <div key={interview.id} className='flex items-center gap-3'>
@@ -275,9 +207,6 @@ export function UpcomingInterviewsCard() {;
                   <div className='flex justify-between items-start'>
                     <p className='font-medium line-clamp-1'>
                       {interview.title |'Interview'}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -288,23 +217,16 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            return (
+>>>>>>>             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
-<<<<<<< HEAD
                       loading="lazy"
                     />
                   ) : (
-=======
-<<<<<<< HEAD
                       loading='lazy'                    />
                   ) : (
                     <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
@@ -324,13 +246,7 @@ export function UpcomingInterviewsCard() {;
                       alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
                     />
                   ) : (
-=======
-                      loading="lazy"
-                    />
-                  ) : (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
+>>>>>>>                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
                   )}
@@ -339,15 +255,13 @@ export function UpcomingInterviewsCard() {;
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                    </p>
+>>>>>>>                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
                     )}
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center text-sm text-muted-foreground'>
                     <Clock className='h-3 w-3 mr-1' />
                     {formattedDate} at {formattedTime}
@@ -360,41 +274,11 @@ export function UpcomingInterviewsCard() {;
         <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
           <Button asChild size='sm' variant='outline' className='w-full'>
             <Link href='/interviews'>View All Interviews</Link>
-=======
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1" />
-                    {formattedDate} at {formattedTime}
-                  </div>;
-                </div>;
-              </div>;
-            );
-          })}
-        </div>
-        
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
-          <Button asChild size="sm" variant="outline" className="w-full">
-            <Link href="/interviews">
-              View All Interviews
-            </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          </Button>
+>>>>>>>           </Button>
         </div>
       </CardContent>
     </Card>
   )
 }
-<<<<<<< HEAD
 }
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

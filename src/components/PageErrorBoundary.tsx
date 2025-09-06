@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
-=======
-import React from 'react'
-import Link from 'next/link'
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
 
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -22,17 +15,10 @@ function PageErrorFallback({
   resetErrorBoundary
   pageName
 }: PageErrorFallbackProps) {
-<<<<<<< HEAD
   const isAuthConfigError =
     error?.message?.includes('Auth0') |
     error?.message?.includes('AUTH0') |
     error?.message?.includes('authentication') |
-=======
-  const isAuthConfigError = null;
-    error?.message?.includes('Auth0') ||
-    error?.message?.includes('AUTH0') ||
-    error?.message?.includes('authentication') ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     error?.message?.includes('environment')
   const handleRefresh = () => {
     if (resetErrorBoundary) {
@@ -41,7 +27,6 @@ function PageErrorFallback({
       window.location.reload()
     }
   }
-=======
 import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
@@ -65,12 +50,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>>   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         {/* Main Error Card */}
@@ -108,7 +88,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
-<<<<<<< HEAD
               <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
                 {error.message}
               </pre>
@@ -125,32 +104,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
-=======
-              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
-                {error.message}
-              </pre>;
-            </details>;
-          )}
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <button 
-              onClick={handleRefresh}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-            >
-              <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
-            </button>
-            
-            <Link 
-              href="/"
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            >
+>>>>>>>             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
@@ -192,50 +146,14 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
       </div>
     </div>
   )
-<<<<<<< HEAD
-interface PageErrorBoundaryProps {
-  children: React.ReactNode
-  pageName?: string
-  fallback?: React.ComponentType<FallbackProps>
-export default function PageErrorBoundary({
-  children
-  pageName
-  fallback
-}: PageErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    prodLogError(
-      `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
-      error
-    )
-    logErrorToProduction(
-      error instanceof Error ? error.message : String(error)
-      error instanceof Error ? error : undefined
-      {
-        page: pageName |'unknown'
-        componentStack: errorInfo.componentStack |undefined
-        errorBoundary: 'PageErrorBoundary'
-        timestamp: new Date().toISOString()
-      }
-    )
-  }
-<<<<<<< HEAD
   const FallbackComponent =
     fallback |
-=======
-  const FallbackComponent = null;
-    fallback ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
-<<<<<<< HEAD
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
 
-=======
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -321,33 +239,13 @@ export default function PageErrorBoundary({;
       onReset={() => {;
         // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      }}
+>>>>>>>       }}
     >
       {children}
-<<<<<<< HEAD
-    </ErrorBoundary>
-  )
-<<<<<<< HEAD
 }
 }
 }
-=======
-} ;
-} ;
-};
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </ErrorBoundary>;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

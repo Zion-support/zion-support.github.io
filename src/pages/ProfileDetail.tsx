@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type;
@@ -10,8 +7,6 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -23,7 +18,6 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-<<<<<<< HEAD
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -34,54 +28,27 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-=======
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
-export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  useEffect(() => {
+>>>>>>>   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true),
       setError(null),
       try {
         if (!profileId) {
-<<<<<<< HEAD
           setError("Profile ID is missing.");
           return;
-=======
-          setError("Profile ID is missing."),
-          return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-<<<<<<< HEAD
           .single();
-=======
-          .single(),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (error) {
           throw new Error(error.message)
         }
         if (!data) {
-<<<<<<< HEAD
           setError("Profile not found.");
           return;
-=======
-          setError("Profile not found."),
-          return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         setProfileData(data)
       } catch (err: any) {
@@ -93,17 +60,9 @@ export default function ProfileDetail() {
       } finally {
         setIsLoading(false)
       }
-<<<<<<< HEAD
     }
     fetchProfile()
   }, [profileId]);
-=======
-    },
-
-    fetchProfile()
-  }, [profileId]),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -124,18 +83,7 @@ export default function ProfileDetail() {
         <p>Profile not found.</p>
       </div>
     )
-<<<<<<< HEAD
-  }
-  return (
-    <>
-      <SEO
-        title={`${profileData.full_name} | Zion AI Marketplace`}
-<<<<<<< HEAD
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
-=======
-        description = {profileData.bio || "Check out this talent's profile on Zion!",}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -222,12 +170,7 @@ export default function ProfileDetail() {;
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      />
+>>>>>>>       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -275,20 +218,10 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
-<<<<<<< HEAD
                 </div>
               </CardContent>
             </Card>
-=======
-                </div>;
-              </CardContent>;
-            </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {/* About Section */}
+>>>>>>>             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>
@@ -347,13 +280,8 @@ export default function ProfileDetail() {;
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
-<<<<<<< HEAD
                         {link.title |link.url}
                       </a>
-=======
-                        {link.title || link.url}
-                      </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     ))}
                   </div>
                 ) : (
@@ -366,27 +294,14 @@ export default function ProfileDetail() {;
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
-<<<<<<< HEAD
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-=======
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0,
-=======
-                hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              }}
+>>>>>>>               }}
             />
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
@@ -412,18 +327,9 @@ export default function ProfileDetail() {;
                     </Link>
                   </div>
                 )}
-<<<<<<< HEAD
               </div>
             </div>
-=======
-              </div>;
-            </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {/* Social Links */}
+>>>>>>>             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
@@ -438,24 +344,12 @@ export default function ProfileDetail() {;
                   >
                     <Github className="h-4 w-4" />
                     GitHub
-<<<<<<< HEAD
                   </a>
                 )}
                 {profileData.twitter_url && (
                   <a
                     href = {profileData.twitter_url,}
-=======
-                  </Link>
-                )}
-                {profileData.twitter_url && (;
-                  <a;
-                    href={profileData.twitter_url}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    target="_blank"
+>>>>>>>                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
@@ -463,24 +357,12 @@ export default function ProfileDetail() {;
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
-<<<<<<< HEAD
                   </a>
                 )}
                 {profileData.linkedin_url && (
                   <a
                     href = {profileData.linkedin_url,}
-=======
-                  </Link>
-                )}
-                {profileData.linkedin_url && (;
-                  <a;
-                    href={profileData.linkedin_url}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    target="_blank"
+>>>>>>>                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
@@ -488,7 +370,6 @@ export default function ProfileDetail() {;
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
-<<<<<<< HEAD
                   </a>
                 )}
               </div>
@@ -522,20 +403,4 @@ export default function ProfileDetail() {;
 }target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"}
-=======
-                  </Link>
-                )}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

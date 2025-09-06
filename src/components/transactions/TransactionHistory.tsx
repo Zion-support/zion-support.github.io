@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useCurrency } from '@/hooks/useCurrency'
 import {logErrorToProduction} from '@/utils/productionLogger'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -16,7 +11,6 @@ import { Badge } from "@/components/ui/badge",
 import Skeleton from "@/components/ui/skeleton",
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -72,15 +66,7 @@ export function TransactionHistory() {
 
   )
 }
-=======
-import { safeStorage } from "@/utils/safeStorage",
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface Transaction {
+>>>>>>> interface Transaction {
   id: string,
   user_id: string,
   provider_id: string,
@@ -90,9 +76,6 @@ interface Transaction {
   status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
   in_escrow: boolean,
   created_at: string,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   completed_at?: string
   refunded_at?: string
   cancelled_at?: string
@@ -134,8 +117,6 @@ export function TransactionHistory() {
   )
 }
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -678,8 +659,4 @@ export function TransactionHistory() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

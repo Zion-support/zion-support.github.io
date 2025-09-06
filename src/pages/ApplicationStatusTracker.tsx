@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO'
-import { ApplicationsTracker } from '@/components/jobs/applications'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
-<<<<<<< HEAD
   const isMobile = null;
-=======
-  const isMobile = useIsMobile()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -22,62 +8,26 @@ import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>>   return (
     <>
       <SEO 
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
-<<<<<<< HEAD
       <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-=======
-      
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          <div>
+>>>>>>>           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 gap-6'>
-<<<<<<< HEAD
           <Card>
             <CardHeader className='border-b bg-muted/50'>
               <CardTitle className='flex items-center text-lg'>
                 <Inbox className='mr-2 h-5 w-5' /> Your Applications
-=======
-
-        <div className="grid grid-cols-1 gap-6">
-          <Card>
-            <CardHeader className="border-b bg-muted/50">
-=======
-          <Card>
-            <CardHeader className='border-b bg-muted/50'>
-              <CardTitle className='flex items-center text-lg'>
-                <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">
-=======
-
-        <div className="grid grid-cols-1 gap-6">
-          <Card>
-            <CardHeader className="border-b bg-muted/50">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              <CardTitle className="flex items-center text-lg">
+>>>>>>>               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-              </CardTitle>
+>>>>>>>               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>
               <ApplicationsTracker />
@@ -87,23 +37,10 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
-<<<<<<< HEAD
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
   )
 }
-=======
-      <ApplicationStatusTrackerContent />;
-    </ProtectedRoute>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -150,8 +87,4 @@ export default function ApplicationStatusTracker() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

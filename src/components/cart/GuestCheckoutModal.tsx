@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -20,14 +16,9 @@ import {
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-<<<<<<< HEAD
 
   open: boolean
   onOpenChange: (open: boolean) => void
-=======
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onSubmit: (details: { email: string; address: string }) => void
 export default function GuestCheckoutModal({
   open
@@ -50,7 +41,6 @@ export default function GuestCheckoutModal({
       setIsSubmitting(false)
     }
   }
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -92,13 +82,8 @@ export default function GuestCheckoutModal({;
       setIsSubmitting(false);
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>> 
+>>>>>>>   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
         <DialogHeader>
@@ -115,7 +100,6 @@ export default function GuestCheckoutModal({;
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
-<<<<<<< HEAD
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div className='space-y-2'>
             <Label
@@ -168,18 +152,6 @@ export default function GuestCheckoutModal({;
               type='submit'
               disabled={isSubmitting |!email |!address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
-=======
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
-              <Mail className="h-4 w-4 text-zion-cyan" />
-              Email Address
-            </Label>
-            <Input
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               id='guest-email'
               type='email'
               value={email || ''}
@@ -222,8 +194,6 @@ export default function GuestCheckoutModal({;
               type='submit'
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               id="guest-email"
               type="email"
               value={email || ''}
@@ -269,12 +239,7 @@ export default function GuestCheckoutModal({;
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              {isSubmitting ? (
+>>>>>>>               {isSubmitting ? (
                 'Processing...'
               ) : (
                 <>
@@ -282,21 +247,8 @@ export default function GuestCheckoutModal({;
                   Continue to Payment
                 </>
               )}
-<<<<<<< HEAD
-            </Button>
-          </DialogFooter>
-        </form>
-      </DialogContent>
-    </Dialog>
-  )
-<<<<<<< HEAD
 }
 }
-=======
-};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             </Button>;
           </DialogFooter>;
         </form>;
@@ -305,8 +257,4 @@ export default function GuestCheckoutModal({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

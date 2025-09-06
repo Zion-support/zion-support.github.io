@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -9,11 +6,8 @@ interface LeaderboardEntry {
   rank: number,
   name: string,
   avatar?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from 'lucide-react'
@@ -27,19 +21,9 @@ interface LeaderboardEntry {
   referrals: number
   earnings: number
 
-=======
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Crown, Medal, Trophy } from 'lucide-react'
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  referrals: number,
+>>>>>>>   referrals: number,
   earnings: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  badges: string[]
+>>>>>>>   badges: string[]
 }
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
@@ -53,16 +37,8 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
-<<<<<<< HEAD
     }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
+>>>>>>>     {
       id: "2"
       rank: 2
       name: "Machine Learning Hub"
@@ -70,16 +46,8 @@ export function PartnerLeaderboard() {
       referrals: 145
       earnings: 3625
       badges: ["silver"]
-<<<<<<< HEAD
     }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
+>>>>>>>     {
       id: "3"
       rank: 3
       name: "Neural Networks Pro"
@@ -87,16 +55,8 @@ export function PartnerLeaderboard() {
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
-<<<<<<< HEAD
     }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
+>>>>>>>     {
       id: "4"
       rank: 4
       name: "AI Career Insights"
@@ -104,9 +64,6 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
     {
       id: "5"
       rank: 5
@@ -134,14 +91,7 @@ export function PartnerLeaderboard() {
 
   )
 }
-=======
-    },
-=======
-=======
-    },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
+>>>>>>>     {
       id: "5",
       rank: 5,
       name: "Deep Learning Daily",
@@ -149,9 +99,6 @@ export function PartnerLeaderboard() {
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   ]
   // Function to render rank badge
@@ -169,8 +116,6 @@ export function PartnerLeaderboard() {
   );
 };
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -373,8 +318,4 @@ export function PartnerLeaderboard() {;
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

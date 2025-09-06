@@ -39,11 +39,5 @@ export const defaultSEO = {
     }
   ]
 }
-<<<<<<< HEAD
 export default defaultSEO
 
-=======
-export default defaultSEO;
-;
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

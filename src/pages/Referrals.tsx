@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -14,25 +12,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button  } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
-=======
-import { useEffect } from 'react'
-import { useAuth } from '@/hooks/useAuth'
-import { useReferrals } from '@/hooks/useReferrals'
-import { ReferralStats } from '@/components/referrals/ReferralStats'
-import { ReferralLink } from '@/components/referrals/ReferralLink'
-import { ReferralTable } from '@/components/referrals/ReferralTable'
-import { RewardsCard } from '@/components/referrals/RewardsCard'
-import { ReferralGuide } from '@/components/referrals/ReferralGuide'
-import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from '@/components/ui/button'
-import { toast } from '@/hooks/use-toast'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
@@ -90,20 +72,6 @@ export default function ReferralsPage() {
         </div>
         <Button className='flex items-center gap-2' onClick={copyReferralLink}>
           <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
-=======
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-export default function ReferralsPage() {;
-  const router = useRouter(); // Changed from navigate
-  const { isAuthenticated } = useAuth()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -123,11 +91,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
   const { isAuthenticated } = useAuth(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const {
+>>>>>>>   const {
     isLoading,
     referralCode,
     referrals,
@@ -135,9 +99,6 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     shareOnSocialMedia,
   } = useReferrals()
   useEffect(() => {
@@ -174,8 +135,6 @@ export default function ReferralsPage() {
         </div>
         <Button className='flex items-center gap-2' onClick={copyReferralLink}>
           <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     shareOnSocialMedia} = useReferrals(),
 
   useEffect(() => {
@@ -192,12 +151,7 @@ export default function ReferralsPage() {
 
   return (
     <div className="container max-w-7xl py-10">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
+>>>>>>>       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>
           <p className="text-muted-foreground mt-1">
@@ -210,7 +164,6 @@ export default function ReferralsPage() {
         </Button>
       </div>
       <ReferralStats stats={stats} isLoading={isLoading} />
-<<<<<<< HEAD
       <div className='grid gap-6 mt-6 lg:grid-cols-3'>
         <div className='lg:col-span-2 space-y-6'>
           <ReferralLink
@@ -224,26 +177,7 @@ export default function ReferralsPage() {
                 className='flex items-center gap-2'
               >
                 <Users className='h-4 w-4' />
-=======
-      
-      <div className="grid gap-6 mt-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 space-y-6">
-          <ReferralLink 
-            referralLink={referralLink} 
-            onCopy={copyReferralLink} 
-            onShare={shareOnSocialMedia}
-          />
-          
-          <Tabs defaultValue="referrals" className="w-full">
-            <TabsList className="w-full grid grid-cols-2">
-              <TabsTrigger value="referrals" className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                Your Referrals
+>>>>>>>                 Your Referrals
               </TabsTrigger>
               <TabsTrigger value="rewards" className="flex items-center gap-2">
                 <Share className="h-4 w-4" />
@@ -253,7 +187,6 @@ export default function ReferralsPage() {
             <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
-<<<<<<< HEAD
             <TabsContent value='rewards' className='p-0 mt-6'>              <RewardsCard rewards={rewards} isLoading={isLoading} />
             <TabsContent value="rewards" className="p-0 mt-6">
             onShare={shareOnSocialMedia}
@@ -272,52 +205,18 @@ export default function ReferralsPage() {
             <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            <TabsContent value="rewards" className="p-0 mt-6">
+>>>>>>>             <TabsContent value="rewards" className="p-0 mt-6">
               <RewardsCard rewards={rewards} isLoading={isLoading} />
             </TabsContent>
           </Tabs>
         </div>
-<<<<<<< HEAD
         <div className='space-y-6'>          <ReferralGuide />        <div className="space-y-6">
-=======
-
-        <div className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          <ReferralGuide />
+>>>>>>>           <ReferralGuide />
           <ReferralLeaderboard />
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
-}, [isAuthenticated, router]), //Changed navigate to router in dependencies return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4" > <div> <h1 className="text-3xl font-bold tracking-tight" >Referral Program</h1> <p className="text-muted-foreground mt-1" > Invite others to Zion AI Marketplace and earn rewards </p> </div> Share Referral Link </Button> </div> <ReferralStats stats= {
-  stats
-}isLoading= {
-  isLoading "
-}/> <div className="grid gap-6 mt-6 lg:grid-cols-3" > <div className="lg:col-span-2 space-y-6" > <ReferralLink referralLink= {
-  referralLink
-}onCopy= {
-  copyReferralLink
-}onShare= {
-  shareOnSocialMedia "
-}/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>)
-}'"
-}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -405,8 +304,4 @@ export default function ReferralsPage() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

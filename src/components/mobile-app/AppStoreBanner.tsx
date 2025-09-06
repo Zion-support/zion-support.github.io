@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 }
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -11,11 +7,6 @@ export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X } from 'lucide-react'
@@ -25,33 +16,12 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile(),
   
   useEffect(() => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    // Only show banner on mobile devices and if it hasn't been dismissed before
+>>>>>>>     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
         setIsVisible(true)
-<<<<<<< HEAD
-      }, 2000)
-      return () => clearTimeout(timer)
-    }
-    return undefined
-  }, [isMobile])
-  const dismissBanner = () => {
-    setIsVisible(false)
-    safeStorage.setItem("appBannerDismissed", "true")
-  }
-  // Only render on mobile devices
-<<<<<<< HEAD
   if (!isMobile |!isVisible) return null
-=======
-  if (!isMobile || !isVisible) return null
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       }, 2000),
       
       return () => clearTimeout(timer)
@@ -67,12 +37,7 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null,
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>>   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>
@@ -97,22 +62,14 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 '"};
 };
-=======
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 '"}
 }
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
 import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
@@ -165,8 +122,4 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

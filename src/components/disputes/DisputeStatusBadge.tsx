@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
-=======
-import { Badge } from '@/components/ui/badge'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ShieldAlert } from 'lucide-react'
 
 import {
@@ -20,19 +15,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let message = null;
     default:
       break
-<<<<<<< HEAD
   }
-=======
-    case 'resolved':
-      variant = 'outline'
-      message = 'This dispute has been resolved'
-      break
-    case 'closed':
-      variant = 'outline'
-      message = 'This dispute has been closed'
-      break
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 
@@ -61,16 +44,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       variant = "outline",
       message = "This dispute has been closed",
       break,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    default:
+>>>>>>>     default:
       break
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return (
+>>>>>>>   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <Badge variant={variant} className="flex items-center gap-1">
@@ -80,22 +58,12 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
-<<<<<<< HEAD
       </TooltipContent>;
     </Tooltip>;
   );
 };
 }
-=======
-      </TooltipContent>
-    </Tooltip>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -138,8 +106,4 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

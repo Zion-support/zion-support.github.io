@@ -1,36 +1,22 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from 'lucide-react'
-<<<<<<< HEAD
 import { AppPlatform } from "./MetadataManager";
-=======
-import { AppPlatform } from "./MetadataManager",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface ChangelogManagerProps {
+>>>>>>> interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
-<<<<<<< HEAD
   id: string
   version: string
   date: string
@@ -38,59 +24,15 @@ type ChangelogEntry = {
 }
     })
   }
-=======
-  id: string,
-  version: string,
-  date: string,
-  changes: string
-},
-
-export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
-    {
-      id: "1",
-      version: "1.0.0",
-      date: "2025-05-15",
-      changes: "Initial release of the Zion AI Marketplace app."
-    }
-  ]),
-  
-  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({
-    version: "",
-    date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
-    changes: ""
-  }),
-  
-  const handleAddEntry = () => {
-    if (!newEntry.version || !newEntry.changes) return,
-    
-    const entry: ChangelogEntry = {
-      ...newEntry,
-      id: Math.random().toString(36).substring(2, 9)
-    },
-    
-    setEntries([entry, ...entries]),
-    setNewEntry({
-      version: "",
-      date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
-      changes: ""
-    })
-  },
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-};  const handleRemoveEntry = (id: string,) => {
+>>>>>>> };  const handleRemoveEntry = (id: string,) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
@@ -109,34 +51,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
-<<<<<<< HEAD
                 value = {newEntry.version,}
                 onChange = {handleInputChange,}
-=======
-                value={newEntry.version}
-                onChange={handleInputChange}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              />
+>>>>>>>               />
               <Input
                 type="date"
                 name="date"
-<<<<<<< HEAD
-                value = {newEntry.date,}
-                onChange = {handleInputChange,}
-              />
-            </div>
-            <Button
-              onClick = {handleAddEntry,}
-<<<<<<< HEAD
               disabled = {!newEntry.version |!newEntry.changes,}
-=======
-              disabled = {!newEntry.version || !newEntry.changes,}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -213,12 +134,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             <Button;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            >
+>>>>>>>             >
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
@@ -226,7 +142,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
-<<<<<<< HEAD
             value = {newEntry.changes,}
             onChange = {handleInputChange,}
             rows = {3,}
@@ -235,22 +150,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             {entries.map((entry,) => (
               <div
                 key = {entry.id,}
-=======
-            value={newEntry.changes}
-            onChange={handleInputChange}
-            rows={3}
-          />
-          
-          <div className="border-t border-zion-purple/20 pt-4 space-y-4">
-            {entries.map((entry) => (
-              <div 
-                key={entry.id}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
+>>>>>>>                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
               >
                 <div className="flex justify-between mb-2">
                   <div className="flex items-center gap-3">
@@ -260,16 +160,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                   <Button
                     variant="ghost"
                     size="sm"
-<<<<<<< HEAD
                     onClick = {(,) => handleRemoveEntry(entry.id),}
-=======
-                    onClick={() => handleRemoveEntry(entry.id)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    className="text-gray-400 hover:text-red-400 p-1 h-auto"
+>>>>>>>                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>
@@ -280,27 +172,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-<<<<<<< HEAD
 }
 
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

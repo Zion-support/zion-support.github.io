@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -187,7 +183,6 @@ export function PerformanceDashboard() {
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)
   }, [])
-=======
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -356,13 +351,8 @@ export function PerformanceDashboard() {;
 
     return () => clearInterval(interval)
   }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>> 
+>>>>>>>   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -373,76 +363,10 @@ export function PerformanceDashboard() {;
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-<<<<<<< HEAD
           <RefreshCw
             className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
           />
-=======
-          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
-;
-    return vitals;
-  },;
-  const collectChunkData = async (): Promise<BundleChunk[]> => {;
-    if (typeof window === 'undefined') return [],;
-    const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],;
-    const scriptEntries = resourceEntries.filter(entry =>;
-      entry.name.includes('/_next/static/') && entry.name.endsWith('.js');
-    ),;
-    return scriptEntries.map(entry => ({;
-      name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',;
-      size: entry.transferSize || entry.encodedBodySize || 0,;
-      loadTime: entry.responseEnd - entry.requestStart,;
-      cached: entry.transferSize === 0,;
-      type: categorizeChunk(entry.name);
-    })).sort((a, b) => b.size - a.size);
-  },;
-  const categorizeChunk = (filename: string): string => {;
-    if (filename.includes('framework')) return 'framework',;
-    if (filename.includes('vendor')) return 'vendor',;
-    if (filename.includes('pages')) return 'page',;
-    if (filename.includes('chunks')) return 'chunk',;
-    return 'other';
-  },;
-  const formatSize = (bytes: number): string => {;
-    if (bytes === 0) return '0 B',;
-    const k = 1024,;
-    const sizes = ['BKBMBGB'],;
-    const i = Math.floor(Math.log(bytes) / Math.log(k)),;
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  },;
-  const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-600',;
-    if (score >= 70) return 'text-yellow-600',;
-    return 'text-red-600';
-  },;
-  const getScoreIcon = (score: number) => {;
-    if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,;
-    if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,;
-    return <AlertTriangle className="w-4 h-4 text-red-600" />;
-  },;
-  useEffect(() => {;
-    collectMetrics();
-    const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds;
-    return () => clearInterval(interval);
-  }, []);
-  return (;
-    <div className="space-y-6">;
-      {/* Header */}
-      <div className="flex items-center justify-between">;
-        <div>;
-          <h2 className="text-2xl font-bold">Performance Dashboard</h2>;
-          <p className="text-muted-foreground">;
-            Monitor bundle size, performance metrics, and optimization opportunities;
-          </p>;
-        </div>;
-        <Button onClick={collectMetrics} disabled={isLoading}>;
-          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {isLoading ? 'Collecting...' : 'Refresh'}
+>>>>>>>           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>
       </div>
       {/* Performance Score */}
@@ -471,19 +395,9 @@ export function PerformanceDashboard() {;
                   <Progress value={metrics.performanceScore} className="h-2" />
                 </div>
               </div>
-<<<<<<< HEAD
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
-=======
-              
-              {lastUpdated && (
-                <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  Last updated: {lastUpdated.toLocaleString()}
+>>>>>>>                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
               )}
             </div>
@@ -562,7 +476,6 @@ export function PerformanceDashboard() {;
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-<<<<<<< HEAD
             <div className='space-y-2'>
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div
@@ -571,19 +484,7 @@ export function PerformanceDashboard() {;
                 >
                   <div className='flex items-center gap-3'>
                     <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
-=======
-            <div className="space-y-2">
-              {chunks.slice(0, 10).map((chunk, index) => (
-                <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-mono text-muted-foreground">
-                      {index + 1}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    </span>
+>>>>>>>                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
                       <div className="flex items-center gap-2">
@@ -606,10 +507,6 @@ export function PerformanceDashboard() {;
                   </div>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {chunks.length > 10 && (
                 <p className="text-sm text-muted-foreground text-center pt-2">
                   ... and {chunks.length - 10} more chunks
@@ -644,19 +541,9 @@ export function PerformanceDashboard() {;
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
-=======
-            
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              <div>
+>>>>>>>               <div>
                 <p className="font-medium text-green-900 dark:text-green-100">
                   Performance monitoring active
                 </p>
@@ -665,15 +552,7 @@ export function PerformanceDashboard() {;
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
+>>>>>>>             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
                 <div>
@@ -686,27 +565,12 @@ export function PerformanceDashboard() {;
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-<<<<<<< HEAD
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </div>;
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

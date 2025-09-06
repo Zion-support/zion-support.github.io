@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useWallet } from '@/hooks/useWallet'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-<<<<<<< HEAD
 import {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Card,
   CardContent,
@@ -29,15 +16,12 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  Dialog,
+>>>>>>>   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   Card
   CardContent
@@ -52,20 +36,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogHeader
   DialogTitle
   DialogTrigger
-=======
-<<<<<<< HEAD
-  DialogTrigger,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from '@/components/ui/dialog'
-type RewardOption = {
-<<<<<<< HEAD
-  id: string
-title: string;
-description: string;
-cost: number;'
-type: 'credit' | 'feature' | 'course'
-}
-<<<<<<< HEAD
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -98,13 +68,6 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
-=======
-=======
-=======
-  DialogTrigger} from "@/components/ui/dialog",
-
-type RewardOption = {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,
   title: string,
   description: string,
@@ -112,11 +75,7 @@ type RewardOption = {
   type: 'credit' | 'feature' | 'course'
 },
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const REWARD_OPTIONS: RewardOption[] = [
+onst REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week',
     title: 'Premium Week',
@@ -136,9 +95,6 @@ const REWARD_OPTIONS: RewardOption[] = [
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     type: 'credit',
   },
 ]
@@ -150,8 +106,6 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     type: 'credit'
   }
 ],
@@ -166,13 +120,8 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>> 
+>>>>>>>   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -189,15 +138,6 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-                Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance |0} ZION$.
-              </DialogDescription>
-            </DialogHeader>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
                 <div
@@ -223,13 +163,9 @@ export function RedeemTokensCard() {
                       disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
-=======
-<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -246,12 +182,7 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    </Button>
+>>>>>>>                     </Button>
                   </div>
                 </div>
               ))}
@@ -266,17 +197,9 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   );
 };
-=======
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -381,8 +304,4 @@ export function RedeemTokensCard() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

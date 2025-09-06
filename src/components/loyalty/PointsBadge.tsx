@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-import React, { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Gift, RefreshCw } from 'lucide-react'
 
 import { usePoints } from '@/hooks/usePoints'
@@ -50,7 +45,6 @@ export function PointsBadge() {
       setIsRefreshing(false)
     }
   }
-=======
 import React, { useState } from 'react',;
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
@@ -94,19 +88,13 @@ export function PointsBadge() {;
       setIsRefreshing(false);
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
+>>>>>>> 
+>>>>>>>   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-<<<<<<< HEAD
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
               title={
@@ -114,19 +102,7 @@ export function PointsBadge() {;
               }
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
-=======
-              href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
-              <Gift className="h-4 w-4" aria-hidden="true" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              <span>{`${points} pts`}</span>
+>>>>>>>               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent>
@@ -163,32 +139,13 @@ export function PointsBadge() {;
             )}
           </TooltipContent>
         </Tooltip>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {isAuthenticated && (
+>>>>>>>         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD
-                variant='ghost'
-                size='sm'
-                onClick={handleRefresh}
-                disabled={isRefreshing |loading}
-                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
-                aria-label='Refresh points'              >
-<<<<<<< HEAD
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -196,15 +153,10 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                <RefreshCw
+>>>>>>>                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                />
+>>>>>>>                 />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -212,20 +164,6 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-<<<<<<< HEAD
-      </div>
-      {!isAuthenticated && (
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      )}
-    </TooltipProvider>
-  )
-}
-}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -234,8 +172,4 @@ export function PointsBadge() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 

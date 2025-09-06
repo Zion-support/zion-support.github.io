@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 import Link from 'next/link'
 import {
   DropdownMenu
@@ -11,24 +7,11 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
-=======
-import Link from "next/link",
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
-import { Eye, ChevronDown, Loader2 } from 'lucide-react'
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
 
-<<<<<<< HEAD
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
@@ -107,60 +90,21 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-import Link from "next/link",
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
-import { Eye, ChevronDown, Loader2 } from 'lucide-react'
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-
-interface ApplicationActionsProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            Reject
+>>>>>>>             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
-<<<<<<< HEAD
       <Button
         variant="default"
         size="sm"
         asChild
       >
-=======
-      
-=======
-=======
-      
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      <Button 
+>>>>>>>       <Button 
         variant="default" 
         size="sm"
         asChild
       >
-<<<<<<< HEAD
         <Link href={`/messages?talentId=${application.talent_id}`}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
           Contact
         </Link>
       </Button>
@@ -168,20 +112,12 @@ interface ApplicationActionsProps {
   );
 };
 }
-=======
-        <Link href={`/messages?talentId=${application.talent_id}`}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Contact
         </Link>
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from "next/link",;
 import {;
   DropdownMenu,;
@@ -266,8 +202,4 @@ export function ApplicationActions({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 
