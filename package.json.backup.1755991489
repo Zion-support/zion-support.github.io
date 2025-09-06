@@ -4,11 +4,20 @@
   "private": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -713,6 +722,10 @@
     "@testing-library/jest-dom": "^6.6.4",
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "@testing-library/react": "12.1.5",
 =======
   "description": "Secure, modular smart contracts and deploy scripts for ZION$ multichain (zkSync, Starknet relay, L2s)",
@@ -735,23 +748,29 @@
     "@nomicfoundation/hardhat-verify": "^2.1.1",
     "@nomicfoundation/ignition-core": "^0.15.13",
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.20",
     "@types/mocha": "^10.0.10",
-<<<<<<< HEAD
-=======
     "@testing-library/react": "12.1.5",    "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.20",
     "@types/mocha": "^10.0.10",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "@testing-library/react": "12.1.5",    "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.20",
     "@types/mocha": "^10.0.10",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@types/node": "^24.2.0",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^17.0.34",
@@ -799,6 +818,10 @@
     "rimraf": "^6.0.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   }
 =======
   },
@@ -823,10 +846,18 @@
     "js-yaml": "^4.1.0"
   }
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
-}
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
   }}
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   }}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  }}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

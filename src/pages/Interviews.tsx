@@ -1,86 +1,72 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { InterviewCard } from '@/components/interviews/InterviewCard';
-import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Video } from 'lucide-react';
-import { format, isAfter, parseISO, startOfDay } from 'date-fns';
-=======
 
-import React, { useEffect, useState } from "react";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { InterviewCard } from "@/components/interviews/InterviewCard";
-import { Button } from "@/components/ui/button";
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+import { Button } from "@/components/ui/button",
 import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import { format, isAfter, parseISO, startOfDay } from "date-fns",
 
 function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),
+  const [activeTab, setActiveTab] = useState("upcoming"),
   
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews()
-    };
+    },
     
     loadInterviews()
-  }, []);
+  }, []),
 
   // Filter interviews based on status and date
-  const now = new Date();
-  const today = startOfDay(now);
+  const now = new Date(),
+  const today = startOfDay(now),
   
   const upcomingInterviews = interviews
     .filter((interview) => {
-      const interviewDate = parseISO(interview.scheduled_date);
+      const interviewDate = parseISO(interview.scheduled_date),
       return isAfter(interviewDate, now) && 
-        ['confirmedrequested'].includes(interview.status);
+        ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) => 
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    );
+    ),
   
   const pendingInterviews = interviews.filter(interview => 
     interview.status === 'requested'
-  );
+  ),
   
   const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date);
+    const interviewDate = parseISO(interview.scheduled_date),
     return !isAfter(interviewDate, now) || 
       ['completeddeclinedcancelled'].includes(interview.status)
-  });
+  }),
 
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {};
+    const grouped: Record<string Interview[]> = {},
     
     interviews.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
       }
       grouped[dateKey].push(interview)
-    });
+    }),
     
     return grouped
-  };
+  },
   
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews);
-  const pastGrouped = groupInterviewsByDate(pastInterviews);
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),
+  const pendingGrouped = groupInterviewsByDate(pendingInterviews),
+  const pastGrouped = groupInterviewsByDate(pastInterviews),
 
-  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
+  const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) => 
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
@@ -91,20 +77,90 @@ function InterviewsContent() {
             <Calendar className="h-5 w-5 mr-2" />
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
               <InterviewCard 
                 key={interview.id} 
+import React, { useEffect, useState } from "react",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { InterviewCard } from "@/components/interviews/InterviewCard",;
+import { Button } from "@/components/ui/button",;
+import { Calendar, Clock, Video } from 'lucide-react';
+import { format, isAfter, parseISO, startOfDay } from "date-fns",;
+function InterviewsContent() {;
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),;
+  const [activeTab, setActiveTab] = useState("upcoming"),;
+  useEffect(() => {;
+    // Modified to handle Promise<Interview[]> return type;
+    const loadInterviews = async () => {;
+      await fetchInterviews();
+    },;
+    loadInterviews();
+  }, []),;
+  // Filter interviews based on status and date;
+  const now = new Date(),;
+  const today = startOfDay(now),;
+  const upcomingInterviews = interviews;
+    .filter((interview) => {;
+      const interviewDate = parseISO(interview.scheduled_date),;
+      return isAfter(interviewDate, now) &&;
+        ['confirmedrequested'].includes(interview.status);
+    });
+    .sort((a, b) =>;
+      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
+    ),;
+  const pendingInterviews = interviews.filter(interview =>;
+    interview.status === 'requested';
+  ),;
+  const pastInterviews = interviews.filter(interview => {;
+    const interviewDate = parseISO(interview.scheduled_date),;
+    return !isAfter(interviewDate, now) ||;
+      ['completeddeclinedcancelled'].includes(interview.status);
+  }),;
+  // Group interviews by date;
+  const groupInterviewsByDate = (interviews: Interview[]) => {;
+    const grouped: Record<string Interview[]> = {},;
+    interviews.forEach((interview) => {;
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),;
+      if (!grouped[dateKey]) {;
+        grouped[dateKey] = [];
+      }
+      grouped[dateKey].push(interview);
+    }),;
+    return grouped;
+  },;
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),;
+  const pendingGrouped = groupInterviewsByDate(pendingInterviews),;
+  const pastGrouped = groupInterviewsByDate(pastInterviews),;
+  const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {;
+    return Object.entries(groupedInterviews);
+      .sort(([dateA], [dateB]) =>;
+        parseISO(dateA).getTime() - parseISO(dateB).getTime();
+      );
+      .map(([date, interviews]) => (;
+        <div key={date} className="mb-8">;
+          <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
+            <Calendar className="h-5 w-5 mr-2" />;
+            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
+          </h3>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+            {interviews.map((interview) => (;
+              <InterviewCard;
+                key={interview.id} ;
                 interview={interview}
-                onRefresh={async () => {
-                  await fetchInterviews()
+                onRefresh={async () => {;
+                  await fetchInterviews();
                 }}
-              />
+              />;
             ))}
           </div>
         </div>
       ))
-  };
+  },
 
   return (
     <>
@@ -128,7 +184,7 @@ function InterviewsContent() {
               {upcomingInterviews.length > 0 && (
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
-                </span>
+                </span>;
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
@@ -136,7 +192,7 @@ function InterviewsContent() {
               {pendingInterviews.length > 0 && (
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
-                </span>
+                </span>;
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -188,24 +244,18 @@ function InterviewsContent() {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-          </TabsContent>
-        </Tabs>
-      </main>
-    </>
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+    </>;
   );
 }
-
-export default function Interviews() {
-  return (
-    <ProtectedRoute>
-      <InterviewsContent />
-    </ProtectedRoute>
+;
+export default function Interviews() {;
+  return (;
+    <ProtectedRoute>;
+      <InterviewsContent />;
+    </ProtectedRoute>;
   );
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

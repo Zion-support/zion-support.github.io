@@ -1,42 +1,31 @@
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import Head from 'next/head',
 export default function ComprehensiveRedundancyRedirect() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta
-          httpEquiv='refresh'
-          content='0; url=/COMPREHENSIVE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md'
-        />
-=======
         <meta httpEquiv="refresh" content="0, url=/COMPREHENSIVE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <meta httpEquiv="refresh" content="0, url=/COMPREHENSIVE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main style={{ padding: 24 }}>
         <p>Redirecting to Comprehensive Redundancy docs…</p>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
+  )
+import Head from 'next/head';
+export default function ComprehensiveRedundancyRedirect(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/COMPREHENSIVE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p>Redirecting to Comprehensive Redundancy docs…</p>;
+      </main>;
+    </>;
   );
-=======
-  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

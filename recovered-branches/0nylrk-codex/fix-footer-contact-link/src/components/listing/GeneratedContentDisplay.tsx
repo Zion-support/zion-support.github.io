@@ -1,9 +1,20 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { ArrowRight } from "lucide-react",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
   description: string,
@@ -11,13 +22,26 @@ interface GeneratedContent {
   suggestedPrice: {
     min: number,
     max: number
-  };
+  },
   keyPoints: string[]
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ArrowRight } from "lucide-react",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  },;
+  keyPoints: string[];
 }
-
-interface GeneratedContentDisplayProps {
-  content: GeneratedContent,
-  onApply: () => void
+;
+interface GeneratedContentDisplayProps {;
+  content: GeneratedContent;
+  onApply: () => void;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
@@ -38,7 +62,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
-              </Badge>
+              </Badge>;
             ))}
           </div>
         </div>
@@ -56,11 +80,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
-          </ul>
-        </div>
-      </CardContent>
-      <CardFooter>
-        <Button
+          </ul>;
+        </div>;
+      </CardContent>;
+      <CardFooter>;
+        <Button;
           onClick={onApply}
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
@@ -70,4 +94,13 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardFooter>
     </Card>
   )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
 }
+;

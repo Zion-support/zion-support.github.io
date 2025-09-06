@@ -10,10 +10,8 @@ class TypeChecker {}
   async start() {}
     console.log('Starting Type Checker...');
     this.isRunning = true;
-    
     // Initial type check;
     await this.runTypeCheck();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
@@ -27,14 +25,11 @@ class TypeChecker {}
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
-
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
-
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
@@ -69,7 +64,6 @@ class TypeChecker {}
   stop() {}
     console.log('Stopping Type Checker...');
     this.isRunning = false;
-    
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')) {}
@@ -82,17 +76,14 @@ if ( {})
   const checker = new TypeChecker) {}
      {}
   const checker = new TypeChecker}(;);
-  
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     checker.stop();
     process.exit(0)}
 });
-  
   process.on('SIGTERM', () => {}
     checker.stop();
     process.exit(0)}
 });
-  
   checker.start().catch(console.error)};
 module.exports = TypeChecker;

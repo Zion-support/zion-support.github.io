@@ -1,92 +1,80 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
-  trackPricingSuggestion,;
-} from '@/services/pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { useAuth } from '@/hooks/useAuth';
-import { Sparkles } from 'lucide-react';
-=======
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  getClientBudgetSuggestion;
-  PricingSuggestion;
-  ClientBudgetParams;
   trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
-  timeline?: string;
-  scope?: string;
-  experienceLevel?: string;
+  timeline?: string,
+  scope?: string,
+  experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from 'lucide-react';
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
+  timeline?: string,;
+  scope?: string,;
+  experienceLevel?: string,;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
-
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
-  jobTitle;
-  category;
-  timeline;
-  scope;
-  experienceLevel;
-  onSuggestionApplied}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
-
-  const generateSuggestion = async () => {
-    if (!jobTitle || !category) {
-      return
+;
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
     }
-
-    setIsLoading(true);
-    try {
-      const params: ClientBudgetParams = {
-<<<<<<< HEAD
-        jobTitle,
-        category,
-      };
-=======
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        jobTitle;
-        category};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
-      if (timeline) params.timeline = timeline;
-      if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;
-
-<<<<<<< HEAD
-      const result = await getClientBudgetSuggestion(params);
-      setSuggestion(result)
-    } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', { data: error })
-    } finally {
-      setIsLoading(false)
+;
+    setIsLoading(true),;
+    try {;
+      const params: ClientBudgetParams = {;
+        jobTitle,;
+        category},;
+      if (timeline) params.timeline = timeline,;
+      if (scope) params.scope = scope,;
+      if (experienceLevel) params.experienceLevel = experienceLevel,;
+      const result = await getClientBudgetSuggestion(params),;
+      setSuggestion(result);
+    } catch (error) {;
+      logErrorToProduction('Error generating budget suggestion:', { data: error });
+    } finally {;
+      setIsLoading(false);
     }
-  };
+  },
 
   const handleApplySuggestion = () => {
     if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
       // Track this suggestion application
       if (user && user.id) {
@@ -99,7 +87,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         })
       }
     }
-  };
+  },
 
   return (
     <div className="space-y-4">
@@ -122,29 +110,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             rateType="hourly"
           />
         )}
-      </div>
-    </div>
-  )
+      </div>;
+    </div>;
+  );
 };
-<<<<<<< HEAD
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
-//Track this suggestion application if (user && user.id) {;
-  trackPricingSuggestion ({;
-  ;
-
-
-};
-return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
-  generateSuggestion ";
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
-}</div> </div>) ;
-};
-'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

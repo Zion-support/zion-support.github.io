@@ -1,68 +1,63 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/resume';
-// Define schema for form validation
-const educationSchema = z.object({
-  institution: z.string().min(1, 'Institution is required');
-  degree: z.string().min(1, 'Degree is required');
-  field_of_study: z.string().optional(),
-  start_date: z.string().min(1, 'Start date is required');
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type EducationFormValues = z.infer<typeof educationSchema>;
-
-export function EducationFormFields({ 
-  isEditing, onSubmit, onCancel 
-}: EducationFormFieldsProps) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const form = useForm<EducationFormValues>({
-    resolver: zodResolver(educationSchema),
-    defaultValues: {
-      institution: '',
-      degree: '',
-      field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd');
-      is_current: false,
-      description: '',
-      location: ''}}),
-  const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true);
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { format } from 'date-fns',;
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { useState } from 'react',;
+import { EducationFormFieldsProps } from './types',;
+import { Education } from '@/types/resume',;
+// Define schema for form validation;
+const educationSchema = z.object({;
+  institution: z.string().min(1, 'Institution is required'),;
+  degree: z.string().min(1, 'Degree is required'),;
+  field_of_study: z.string().optional(),;
+  start_date: z.string().min(1, 'Start date is required'),;
+  end_date: z.string().optional(),;
+  is_current: z.boolean().default(false),;
+  description: z.string().optional(),;
+  location: z.string().optional()}),;
+type EducationFormValues = z.infer<typeof educationSchema>,;
+export function EducationFormFields({;
+  isEditing,;
+  onSubmit,;
+  onCancel;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const form = useForm<EducationFormValues>({;
+    resolver: zodResolver(educationSchema),;
+    defaultValues: {;
+      institution: '',;
+      degree: '',;
+      field_of_study: '',;
+      start_date: format(new Date(), 'yyyy-MM-dd'),;
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true),;
     setError(null);
-    try {
-      await onSubmit(data)
-    } catch (err: any) {
-      setError(err.message || 'An error occurred')
-    } finally {
-      setIsLoading(false)
+    try {;
+      await onSubmit(data);
+    } catch (err: any) {;
+      setError(err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false);
     }
-  };
+  },
 
   return (
     <Form {...form}>
@@ -80,9 +75,8 @@ export function EducationFormFields({
                 <FormMessage />
               </FormItem>
             )}
-          />
-
-          <FormField
+          />;
+          <FormField;
             control={form.control}
             name="degree"
             render={({ field }: { field: any }) => (
@@ -94,10 +88,9 @@ export function EducationFormFields({
                 <FormMessage />
               </FormItem>
             )}
-          />
-        </div>
-
-        <FormField
+          />;
+        </div>;
+        <FormField;
           control={form.control}
           name="field_of_study"
           render={({ field }: { field: any }) => (
@@ -122,11 +115,11 @@ export function EducationFormFields({
                   <Input 
                     type="date" 
                     {...field}
-                    value={field.value || ''} 
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+                    value={field.value || ''} ;
+                  />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;
             )}
           />
 
@@ -147,10 +140,9 @@ export function EducationFormFields({
                   </div>
                 </FormItem>
               )}
-            />
-
-            {!form.watch('is_current') && (
-              <FormField
+            />;
+            {!form.watch('is_current') && (;
+              <FormField;
                 control={form.control}
                 name="end_date"
                 render={({ field }: { field: any }) => (
@@ -166,12 +158,11 @@ export function EducationFormFields({
                     <FormMessage />
                   </FormItem>
                 )}
-              />
+              />;
             )}
-          </div>
-        </div>
-
-        <FormField
+          </div>;
+        </div>;
+        <FormField;
           control={form.control}
           name="location"
           render={({ field }: { field: any }) => (
@@ -183,9 +174,8 @@ export function EducationFormFields({
               <FormMessage />
             </FormItem>
           )}
-        />
-
-        <FormField
+        />;
+        <FormField;
           control={form.control}
           name="description"
           render={({ field }: { field: any }) => (
@@ -196,10 +186,10 @@ export function EducationFormFields({
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
                   {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
           )}
         />
 
@@ -210,7 +200,7 @@ export function EducationFormFields({
             type="button"
             variant="outline"
             onClick={onCancel}
-          >
+          >;
             {isEditing ? 'Cancel' : 'Back'}
           </Button>
 
@@ -221,24 +211,6 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
-  );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type EducationFormValues = z.infer<typeof educationSchema>;
-
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

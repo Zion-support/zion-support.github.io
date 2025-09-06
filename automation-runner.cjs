@@ -61,15 +61,9 @@ class AutomationRunner {
     if (testResult.success) {
       this.results.tests.passed++;
     } else {
-<<<<<<< HEAD
-    this.results.tests.failed++,
-    this.results.tests.errors.push(testResult.error)
-  }
-=======
       this.results.tests.failed++;
       this.results.tests.errors.push(testResult.error);
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     // Run type checking
     const typeResult = await this.runCommand(
@@ -80,19 +74,14 @@ class AutomationRunner {
     if (typeResult.success) {
       this.results.tests.passed++;
     } else {
-<<<<<<< HEAD
-    this.results.tests.failed++,
-    this.results.tests.errors.push(typeResult.error)
-  }
-=======
       this.results.tests.failed++;
       this.results.tests.errors.push(typeResult.error);
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async runLinting() {
     this.log('Running linting...', 'PROGRESS');
+    
     const lintResult = await this.runCommand(
       'npm run lint',
       'ESLint check',
@@ -102,6 +91,7 @@ class AutomationRunner {
       this.results.linting.success = true;
     } else {
       this.results.linting.errors.push(lintResult.error);
+      
       // Try to fix linting issues
       const fixResult = await this.runCommand(
         'npm run lint -- --fix',
@@ -117,6 +107,7 @@ class AutomationRunner {
 
   async runBuild() {
     this.log('Building application...', 'PROGRESS');
+    
     const buildResult = await this.runCommand(
       'npm run build',
       'Next.js build',
@@ -133,6 +124,7 @@ class AutomationRunner {
 
   async runSecurityAudit() {
     this.log('Running security audit...', 'PROGRESS');
+    
     const auditResult = await this.runCommand(
       'npm audit --audit-level=moderate',
       'Security audit',
@@ -140,6 +132,7 @@ class AutomationRunner {
     );
     if (!auditResult.success) {
       this.results.security.issues.push('Security vulnerabilities found');
+      
       // Try to fix automatically
       const fixResult = await this.runCommand(
         'npm audit fix',
@@ -177,15 +170,9 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (fs.existsSync(buildDir)) {
-<<<<<<< HEAD
-    const stats = fs.statSync(buildDir),
-    this.metrics.bundleSize = stats.size
-  }
-=======
         const stats = fs.statSync(buildDir);
         this.metrics.bundleSize = stats.size;
       }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } catch(error) {
       console.error('Error measuring bundle size:', error);
     }
@@ -233,6 +220,7 @@ console.log('Performance report generated:', reportPath);
 
   async runAllAutomations() {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
+    
     try {
       await this.runTests();
       await this.runLinting();

@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = default function BlockchainSolutions() { return null}
-=======
-=======
+module.exports = default function BlockchainSolutions() { return null}
+module.exports = default function BlockchainSolutions() { return null}
+module.exports = default function BlockchainSolutions() { return null}
 import React from 'react';
-
 interface BlockchainsolutionsProps {
   // Add props here as needed
 }
-
 export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
   return (
     <div>
@@ -16,10 +13,7 @@ export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
+}
 }

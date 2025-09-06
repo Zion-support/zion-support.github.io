@@ -7,11 +7,20 @@ export default [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -123,9 +132,15 @@ export default [
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ignores: [
       'node_modules/',
       '.next/',
@@ -139,20 +154,18 @@ export default [
       'public/reports/**',
       'netlify/',
       'ecosystem*.cjs',
-<<<<<<< HEAD
-      '**/*.cjs'
-=======
-      '**/*.cjs',
-      'components/**',
-      'pages/**',
-      'services/**'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
     ]
-=======
   {    ]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   {    ]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  {    ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 ];

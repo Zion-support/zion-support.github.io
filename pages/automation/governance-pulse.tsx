@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- </div> </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore - JSON import import data from '../../data/governance-pulse.json',
 export default function GovernancePulsePage() {
-  const items: any[] = (data?.items || []).slice(0, 60);
+  const items: any[] = (data?.items || []).slice(0, 60),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -18,20 +11,31 @@ export default function GovernancePulsePage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.title}
-              </a>
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </EnhancedLayout>
-  )
-<<<<<<< HEAD
+                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+              </div>;
+            </li>;
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

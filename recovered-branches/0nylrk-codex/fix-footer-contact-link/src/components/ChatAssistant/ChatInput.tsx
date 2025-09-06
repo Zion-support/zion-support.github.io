@@ -1,37 +1,40 @@
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
-import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+import { Send } from "lucide-react",
 interface ChatInputProps {
   onSend: (message: string) => void,
   disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from "lucide-react",;
+interface ChatInputProps {;
+  onSend: (message: string) => void,;
+  disabled?: boolean;
 }
-
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-  const [message, setMessage] = useState('');
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    // Focus input when component mounts
-    inputRef.current?.focus()
-  }, []);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (message.trim() && !disabled) {
-      onSend(message);
-      setMessage('')
+;
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+  useEffect(() => {;
+    // Focus input when component mounts;
+    inputRef.current?.focus();
+  }, []),;
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
+    e.preventDefault(),;
+    if (message.trim() && !disabled) {;
+      onSend(message),;
+      setMessage('');
     }
-  };
-
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      if (message.trim() && !disabled) {
+  },;
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      if (message.trim() && !disabled) {;
         onSend(message);
-        setMessage('')
+        setMessage('');
       }
     }
-  };
+  },
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">

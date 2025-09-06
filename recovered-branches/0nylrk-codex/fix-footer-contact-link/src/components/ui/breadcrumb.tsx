@@ -6,16 +6,16 @@ import { ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
  
 const Breadcrumb = React.forwardRef<
-  HTMLElement;
+  HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
->(({ className, separator, ...props }, ref) => (
-  <nav
+>(({ className, separator, ...props }, ref) => (;
+  <nav;
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light";
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
     )}
     {...props}
@@ -24,7 +24,7 @@ const Breadcrumb = React.forwardRef<
 Breadcrumb.displayName = "Breadcrumb"
  
 const BreadcrumbList = React.forwardRef<
-  HTMLOListElement;
+  HTMLOListElement,
   React.ComponentPropsWithoutRef<"ol">
 >(({ className, ...props }, ref) => (
   <ol
@@ -36,7 +36,7 @@ const BreadcrumbList = React.forwardRef<
 BreadcrumbList.displayName = "BreadcrumbList"
  
 const BreadcrumbItem = React.forwardRef<
-  HTMLLIElement;
+  HTMLLIElement,
   React.ComponentPropsWithoutRef<"li">
 >(({ className, ...props }, ref) => (
   <li
@@ -48,7 +48,7 @@ const BreadcrumbItem = React.forwardRef<
 BreadcrumbItem.displayName = "BreadcrumbItem"
  
 const BreadcrumbLink = React.forwardRef<
-  HTMLAnchorElement;
+  HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> & {
     asChild?: boolean
   }
@@ -66,8 +66,8 @@ const BreadcrumbLink = React.forwardRef<
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
 const BreadcrumbSeparator = ({
-  children;
-  className;
+  children,
+  className,
   ...props
 }: React.ComponentProps<"li">) => (
   <li
@@ -82,7 +82,7 @@ const BreadcrumbSeparator = ({
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
  
 const BreadcrumbEllipsis = ({
-  className;
+  className,
   ...props
 }: React.ComponentProps<"span">) => (
   <span
@@ -97,9 +97,10 @@ const BreadcrumbEllipsis = ({
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
 export {
-  Breadcrumb;
-  BreadcrumbList;
-  BreadcrumbItem;
-  BreadcrumbLink;
-  BreadcrumbSeparator;
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
   BreadcrumbEllipsis}
+;

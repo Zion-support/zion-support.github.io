@@ -1,31 +1,29 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import React from 'react',
+import Link from 'next/link',
+import { useAuth } from '@/hooks/useAuth',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel} from '@/components/ui/dropdown-menu';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel} from '@/components/ui/dropdown-menu',
 import { User as UserIcon, Package } from 'lucide-react'
-import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
+import { LogOut } from 'lucide-react', // Assuming lucide-react is used
 
 export const AvatarMenu: React.FC = () => {
-  const { user, logout, avatarUrl } = useAuth();
+  const { user, logout, avatarUrl } = useAuth(),
 
-  if (!user) return null;
+  if (!user) return null,
 
-  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
+  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase(),
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
         <button
-          className="flex items-center gap-2 rounded-full focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           aria-label="Open user menu"
         >
           <Avatar className="h-8 w-8">
@@ -46,7 +44,7 @@ export const AvatarMenu: React.FC = () => {
             {user.email && (
               <p className="text-xs leading-none text-muted-foreground">
                 {user.email}
-              </p>
+              </p>;
             )}
           </div>
         </DropdownMenuLabel>
@@ -71,19 +69,6 @@ export const AvatarMenu: React.FC = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   )
-};
+},
 
-export default AvatarMenu;
-<<<<<<< HEAD
-"
-=======
-
-<<<<<<< HEAD
-
-
-
-export default AvatarMenu;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+export default AvatarMenu,

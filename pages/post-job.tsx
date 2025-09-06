@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-export default function PostJobPage() {
+export default function PostJobPage(req, res) {
+  try {
   const router = useRouter();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -19,153 +13,60 @@ export default function PostJobPage() {
   const [clientEmail, setClientEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
     setError(null);
-
-    if (!title || !description || !category || !clientEmail) {
+    if (!title || !description || !category || !clientEmail) {;
       setError('Please fill in all required fields.');
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
-=======
-      return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    }
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
     try {
       setIsSubmitting(true);
-      const res = await fetch('/api/jobs', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
-          title,
-          description,
-          category,
-=======
-          title;
-          description;
-          category;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          requiredSkills: skills
-            .split()
-            .map((s) => s.trim())
+      const res = await fetch('/api/jobs', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          description,;
+          category,;
+          requiredSkills: skills;
+            .split();
+            .map((s) => s.trim());
             .filter(Boolean);
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-<<<<<<< HEAD
-          clientEmail,
-        }),
-      });
-=======
-          title;
-          description;
-          category;
-          requiredSkills: skills
-            .split()
-            .map((s) => s.trim())
-            .filter(Boolean);
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-          clientEmail})});
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          clientEmail})});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,;
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,;
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,;
+          clientEmail})}),;
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to post job');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
       router.push(`/client/dashboard`);
-=======
-      router.push(`/client/dashboard`)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong')
-    } finally {
-<<<<<<< HEAD
+    } catch (error) {
+      setError(err.message || 'Something went wrong');
+    } finally {;
       setIsSubmitting(false);
-=======
-      router.push(`/client/dashboard`)
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong')
-    } finally {
-      setIsSubmitting(false),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      setIsSubmitting(false),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className='max-w-2xl mx-auto'>
-      <h1 className='text-2xl font-semibold mb-4'>Post a Job</h1>
-      {error && <p className='text-red-600 mb-3'>{error}</p>}
-      <form onSubmit={handleSubmit} className='space-y-4'>
-=======
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
-      {error && <p className="text-red-600 mb-3">{error}</p>}
-      <form onSubmit={handleSubmit} className="space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        <div>
-          <label className="block text-sm font-medium">Project Title *</label>
-          <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Description *</label>
-          <textarea className="mt-1 w-full border rounded p-2" rows={6} value={description} onChange={(e) => setDescription(e.target.value)} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Category *</label>
-          <input className="mt-1 w-full border rounded p-2" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="e.g., LLM App, Data Engineering" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Required Skills (comma-separated)</label>
-          <input className="mt-1 w-full border rounded p-2" value={skills} onChange={(e) => setSkills(e.target.value)} placeholder="OpenAI, LangChain, RAG" />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium">Budget Min (USD)</label>
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetMinUsd} onChange={(e) => setBudgetMinUsd(e.target.value)} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Budget Max (USD)</label>
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetMaxUsd} onChange={(e) => setBudgetMaxUsd(e.target.value)} />
-          </div>
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Delivery Deadline (ISO or YYYY-MM-DD)</label>
-          <input className="mt-1 w-full border rounded p-2" value={deliveryDeadlineIso} onChange={(e) => setDeliveryDeadlineIso(e.target.value)} placeholder="2025-09-30" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Email *</label>
-          <input type="email" className="mt-1 w-full border rounded p-2" value={clientEmail} onChange={(e) => setClientEmail(e.target.value)} placeholder="you@example.com" />
-        </div>
-<<<<<<< HEAD
-        <div className='pt-2'>
-          <button
-            type='submit'
-            className='px-4 py-2 rounded bg-black text-white disabled:opacity-50'
-            disabled={isSubmitting}
-          >
-=======
-    <div className="max-w-2xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
-      {error && <p className="text-red-600 mb-3">{error}</p>}
+      {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -203,24 +104,18 @@ export default function PostJobPage() {
         </div>
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <div className="pt-2">
-          <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            {isSubmitting ? 'Posting…' : 'Post Job'}
-          </button>
-        </div>
-      </form>
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+            {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>;
+        </div>;
+      </form>;
+    </div>;
   );
-=======
-  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

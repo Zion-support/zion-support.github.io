@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 ' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/MobileLaunchPage.jsx
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-=======
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-=======
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-=======
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-=======
+' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}

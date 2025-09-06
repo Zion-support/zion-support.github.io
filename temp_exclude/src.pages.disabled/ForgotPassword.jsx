@@ -1,8 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
+<<<<<<< HEAD:src.pages.disabled/ForgotPassword.jsx
 <<<<<<< \"HEAD\": src.pages.disabled/ForgotPassword.jsx import React from \'react\'; export default function ForgotPassword () { import React from \'react\'; export default function ForgotPassword () {\'';
 <<<<<<< "HEAD": src.pages.disabled/ForgotPassword.jsx import _React from 'react'; export default function ForgotPassword () { import _React from 'react'; export default function ForgotPassword () {'';
-=======
-=======
-=======

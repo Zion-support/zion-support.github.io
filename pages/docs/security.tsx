@@ -1,39 +1,31 @@
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import Head from 'next/head',
 export default function SecurityDocRedirect() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta httpEquiv='refresh' content='0; url=/SECURITY.md' />
-=======
         <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main style={{ padding: 24 }}>
         <p>Redirecting to Security documentation…</p>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
+  )
+import Head from 'next/head';
+export default function SecurityDocRedirect(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p>Redirecting to Security documentation…</p>;
+      </main>;
+    </>;
   );
-=======
-  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

@@ -1,40 +1,78 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getWalletSummary } from '../../../utils/token/service';
-
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getWalletSummary } from "../../../utils/token/service";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query;
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { getWalletSummary } from "../../../utils/token/service",
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { userId } = req.query,
   if (!userId || typeof userId !== "string") {
     return res.status(400).json({ error: "Missing userId" })
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   try {
-    const summary = getWalletSummary(userId);
+    const summary = getWalletSummary(userId),
     return res.status(200).json(summary)
   } catch (err: any) {
     return res.status(500).json({ error: err.message || "Unknown error" })
-  }
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getWalletSummary } from "../../../utils/token/service";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req, res) {
+  try {
   const { userId } = req.query;
-  if (!userId || typeof userId !== "string") {
-    return res.status(400).json({ error: "Missing userId" })
+  if (!userId || typeof userId !== "string") {;
+    return res.status(400).json({ error: "Missing userId" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   try {
     const summary = getWalletSummary(userId);
-    return res.status(200).json(summary)
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || "Unknown error" })
+    return res.status(200).json(summary);
+  } catch (error) {
+    return res.status(500).json({ error: err.message || "Unknown error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

@@ -15,7 +15,7 @@ await app.register(cors, {
       return;
     }
     cb(new Error('Not allowed'), false);
-  };
+  },
   methods: ['GET', 'POST', 'OPTIONS']
 });
 

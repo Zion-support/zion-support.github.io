@@ -1,17 +1,12 @@
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React from "react";
 
 export default function CertificatePreview({
   courseId,
-  userId = 'demo-user',
+  userId = "demo-user",
 }: {
   courseId: string;
   userId?: string;
 }) {
-=======
-export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -22,12 +17,14 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
           <div className="text-xs opacity-80">Preview</div>
         </div>
       </div>
-      <a href={url} className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">Download PDF</a>
+      <a
+        href={url}
+        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
+      >
+        Download PDF
+      </a>
     </div>
   );
-<<<<<<< HEAD
-=======
-export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -38,11 +35,12 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
           <div className="text-xs opacity-80">Preview</div>
         </div>
       </div>
-      <a href={url} className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">Download PDF</a>
+      <a
+        href={url}
+        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
+      >
+        Download PDF
+      </a>
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

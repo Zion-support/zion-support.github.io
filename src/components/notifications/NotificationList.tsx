@@ -1,32 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import React from 'react';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import Skeleton from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-import { EmptyState } from '@/components/ui/empty-state';
-import { Bell } from 'lucide-react'
-
-interface NotificationListProps {
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-  onRetry: () => void
+import React from 'react',;
+import { ScrollArea } from '@/components/ui/scroll-area',;
+import Skeleton from '@/components/ui/skeleton',;
+import { Button } from '@/components/ui/button',;
+import { NotificationItem } from './NotificationItem',;
+import { Notification } from '@/context/notifications',;
+import { EmptyState } from '@/components/ui/empty-state',;
+import { Bell } from 'lucide-react';
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
+  onRetry: () => void;
 }
 
 export const NotificationList: React.FC<NotificationListProps> = ({
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-  onDismiss;
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+  onDismiss,
   onRetry
 }) => {
   return (
@@ -66,20 +61,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
-          />
-        ))
+          />;
+        ));
       )}
-    </ScrollArea>
-  )
+    </ScrollArea>;
+  );
 };
-<<<<<<< HEAD
-"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

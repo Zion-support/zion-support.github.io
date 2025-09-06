@@ -19,11 +19,20 @@
   "dependencies": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -90,6 +99,10 @@
   "optionalDependencies": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "@elastic/elasticsearch": "^8.12.0"
 =======
     "@google-analytics/data": "^5.2.0",
@@ -143,13 +156,21 @@
     "tailwind-merge": "^3.3.1",
     "uuid": "^11.1.0"
 >>>>>>> origin/cursor/website-audit-and-enhancement-bb45
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "@elastic/elasticsearch": "^8.12.0"  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "@elastic/elasticsearch": "^8.12.0"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@elastic/elasticsearch": "^8.12.0"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/plugin-transform-runtime": "^7.28.3",

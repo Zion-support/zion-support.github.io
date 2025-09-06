@@ -34,14 +34,24 @@ jobs:
         run: node automation/instagram-marketing-orchestrator.cjs once | cat
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/backup-20250818-113801/marketing-daily.yml
 =======
 =======
 :.github/workflows/backup-20250818-113801/marketing-daily.yml
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 :.github/workflows/backup-20250818-113801/marketing-daily.yml
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+:.github/workflows/backup-20250818-113801/marketing-daily.yml
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Run site link crawl+fix (single cycle)
         env:
@@ -52,11 +62,20 @@ jobs:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc:.github/workflows/marketing-daily.yml
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Upload marketing reports and logs
         uses: actions/upload-artifact@v4
         with:
@@ -67,14 +86,24 @@ jobs:
           if-no-files-found: ignore
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/backup-20250818-113801/marketing-daily.yml
 =======
 =======
 :.github/workflows/backup-20250818-113801/marketing-daily.yml
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 :.github/workflows/backup-20250818-113801/marketing-daily.yml
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+:.github/workflows/backup-20250818-113801/marketing-daily.yml
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Upload link-monitor reports
         uses: actions/upload-artifact@v4
@@ -86,8 +115,17 @@ jobs:
           if-no-files-found: ignore
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc:.github/workflows/marketing-daily.yml
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

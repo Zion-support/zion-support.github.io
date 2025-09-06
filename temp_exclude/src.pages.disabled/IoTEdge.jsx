@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface IoTEdgeProps {
   // Add props here as needed
 }
-
 export default function IoTEdge({ }: IoTEdgeProps) {
   return (
     <div>
@@ -11,13 +9,9 @@ export default function IoTEdge({ }: IoTEdgeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/IoTEdge.jsx
 }
-=======
 }
-=======
 }
-=======
+}
 }

@@ -1,17 +1,8 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-ignore) ) 
-}</ul> </li>) ) 
-}</ul>) 
-}</div> </EnhancedLayout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-// @ts-ignore
-import data from '../../data/security/osv-report.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/security/osv-report.json',
 export default function OsvWatchPage() {
-  const results: any[] = (data?.results || []).slice(0, 50);
+  const results: any[] = (data?.results || []).slice(0, 50),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -26,19 +17,30 @@ export default function OsvWatchPage() {
                 <div className="font-medium">{r.name} — {r.versionRange}</div>
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
-                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </EnhancedLayout>
-  )
-<<<<<<< HEAD
+                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+                </ul>;
+              </li>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          </ul>;
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

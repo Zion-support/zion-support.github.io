@@ -1,15 +1,8 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-// @ts-ignore
-import data from '../../data/dao-leaderboard.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/dao-leaderboard.json',
 export default function DaoLeaderboardPage() {
-  const items: any[] = (data?.items || []).slice(0, 25);
+  const items: any[] = (data?.items || []).slice(0, 25),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -24,14 +17,17 @@ export default function DaoLeaderboardPage() {
               </div>
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
-          ))}
-        </ul>
-      </div>
-    </EnhancedLayout>
-  )
-<<<<<<< HEAD
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

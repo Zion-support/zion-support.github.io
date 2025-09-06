@@ -1,15 +1,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const os = require('os');
 const path = require('path');
 
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
 =======
@@ -24,10 +37,18 @@ try {
 
 const baseConfig = {
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+  trailingSlash: false,
+  reactStrictMode: true,
+  bundlePagesRouterDependencies: true,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
@@ -35,13 +56,10 @@ const baseConfig = {
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
-  trailingSlash: false,
-  reactStrictMode: true,
-  bundlePagesRouterDependencies: true,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
     ignoreDuringBuilds: true,
@@ -56,11 +74,20 @@ const baseConfig = {
   productionBrowserSourceMaps: false, // Disable for faster builds
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   
   // Environment configuration
   env: {
@@ -92,16 +119,29 @@ const baseConfig = {
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     esmExternals: 'loose',
     optimizeCss: process.env.NODE_ENV === 'production',
     largePageDataBytes: 128 * 1000,
     workerThreads: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     cpus: Math.min(2, os.cpus().length),
 =======
@@ -117,13 +157,21 @@ const baseConfig = {
     // Bundle analysis optimizations moved to root level
     // Disable profiling for faster builds
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
-    swcTraceProfiling: false,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    swcTraceProfiling: false,
     cpus: Math.min(2, os.cpus().length),    swcTraceProfiling: false,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     cpus: Math.min(2, os.cpus().length),    swcTraceProfiling: false,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    cpus: Math.min(2, os.cpus().length),    swcTraceProfiling: false,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
 
   images: {

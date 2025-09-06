@@ -1,25 +1,30 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
+  
+  // Image optimization
   images: {
     domains: [
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
-      'via.placeholder.com'],
+      'via.placeholder.com'
+    ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000},
+    minimumCacheTTL: 31536000
+  },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -55,13 +60,14 @@ const nextConfig = {
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt'
+          '**/performance-*.txt',
+          '**/apps/**'
         ],
         poll: 1000,
-        aggregateTimeout: 300};
+        aggregateTimeout: 300
+      }
     }
-    return config;
+    return config
   }
-};
-
-export default nextConfig;
+}
+export default nextConfig

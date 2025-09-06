@@ -1,21 +1,46 @@
-
 import { UseFormReturn } from "react-hook-form";
-import { 
-  FormField;
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription 
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
-  form: UseFormReturn<ContractFormValues>
+  form: UseFormReturn<ContractFormValues>;
 }
 
-export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {
-  return (
-    <FormField
+import { UseFormReturn } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription 
+} from "@/components/ui/form",
+import { Checkbox } from "@/components/ui/checkbox",
+import { ContractFormValues } from "./ContractForm",
+interface AdditionalClausesFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+import { UseFormReturn } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription;
+} from "@/components/ui/form",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { ContractFormValues } from "./ContractForm",;
+interface AdditionalClausesFieldsProps {;
+  form: UseFormReturn<ContractFormValues>;
+}
+;
+export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
+  return (;
+    <FormField;
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -35,13 +60,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   <FormControl>
                     <Checkbox
                       checked={field.value?.includes('nda')}
-                      onCheckedChange={(checked) => {
-                        const currentValues = field.value || [];
-                        return checked
-                          ? field.onChange([...currentValues, 'nda'])
-                          : field.onChange(
-                              currentValues.filter((value) => value !== 'nda')
-                            )
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field.value || [],;
+                        return checked;
+                          ? field.onChange([...currentValues, 'nda']);
+                          : field.onChange(;
+                              currentValues.filter((value) => value !== 'nda');
+                            );
                       }}
                     />
                   </FormControl>
@@ -55,9 +80,8 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   </div>
                 </FormItem>
               )}
-            />
-            
-            <FormField
+            />;
+            <FormField;
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
@@ -65,13 +89,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   <FormControl>
                     <Checkbox
                       checked={field.value?.includes('ip')}
-                      onCheckedChange={(checked) => {
-                        const currentValues = field.value || [];
-                        return checked
-                          ? field.onChange([...currentValues, 'ip'])
-                          : field.onChange(
-                              currentValues.filter((value) => value !== 'ip')
-                            )
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field.value || [],;
+                        return checked;
+                          ? field.onChange([...currentValues, 'ip']);
+                          : field.onChange(;
+                              currentValues.filter((value) => value !== 'ip');
+                            );
                       }}
                     />
                   </FormControl>
@@ -85,9 +109,8 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   </div>
                 </FormItem>
               )}
-            />
-            
-            <FormField
+            />;
+            <FormField;
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
@@ -95,13 +118,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   <FormControl>
                     <Checkbox
                       checked={field.value?.includes('termination')}
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
-                        return checked
-                          ? field.onChange([...currentValues, 'termination'])
-                          : field.onChange(
-                              currentValues.filter((value) => value !== 'termination')
-                            )
+                        return checked;
+                          ? field.onChange([...currentValues, 'termination']);
+                          : field.onChange(;
+                              currentValues.filter((value) => value !== 'termination');
+                            );
                       }}
                     />
                   </FormControl>
@@ -115,9 +138,8 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   </div>
                 </FormItem>
               )}
-            />
-            
-            <FormField
+            />;
+            <FormField;
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
@@ -125,13 +147,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   <FormControl>
                     <Checkbox
                       checked={field.value?.includes('revisions')}
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
-                        return checked
-                          ? field.onChange([...currentValues, 'revisions'])
-                          : field.onChange(
-                              currentValues.filter((value) => value !== 'revisions')
-                            )
+                        return checked;
+                          ? field.onChange([...currentValues, 'revisions']);
+                          : field.onChange(;
+                              currentValues.filter((value) => value !== 'revisions');
+                            );
                       }}
                     />
                   </FormControl>
@@ -145,10 +167,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                   </div>
                 </FormItem>
               )}
-            />
-          </div>
-        </FormItem>
+            />;
+          </div>;
+        </FormItem>;
       )}
-    />
-  )
+    />;
+  );
 }
+;

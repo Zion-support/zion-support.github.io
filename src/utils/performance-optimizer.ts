@@ -1,4 +1,3 @@
-
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -12,31 +11,16 @@ export const optimizeImages = () => {
   });
 };
 
-export const preloadCriticalResources = () => {
-  const criticalResources = [
-    '/fonts/main.woff2';
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-  const loadComponent = (componentName) => {
+  const loadComponent = componentName => {
     return import(`./components/${componentName}`);
   };
-  
+
   return { loadComponent };
 };
-<<<<<<< HEAD
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

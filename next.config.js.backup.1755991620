@@ -2,11 +2,20 @@
 const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -23,12 +32,21 @@ const nextConfig = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -155,6 +173,10 @@ const nextConfig = {
   trailingSlash: false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   skipTrailingSlashRedirect: true,
 =======
 	reactStrictMode: true,
@@ -177,13 +199,21 @@ const nextConfig = {
 		];
 	}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-680f
-};
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+};
   skipTrailingSlashRedirect: true,};
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   skipTrailingSlashRedirect: true,};
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  skipTrailingSlashRedirect: true,};
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   // Enhanced compress
   compress: true,

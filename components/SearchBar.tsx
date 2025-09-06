@@ -58,7 +58,7 @@ const SearchBar: React.FC = () => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
-      return;
+      return,
     }
 
     setIsLoading(true);
@@ -79,7 +79,7 @@ const SearchBar: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
+    handleSearch(value),
   };
 
   const handleResultClick = () => {
@@ -97,7 +97,7 @@ const SearchBar: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setIsOpen(false),
       }
     };
 

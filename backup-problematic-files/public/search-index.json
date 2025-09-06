@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "generated": "2025-09-06T09:16:13.542Z",
+  "baseUrl": "https://zion.app",
+  "pages": [
+    {
+      "url": "https://zion.app",
+      "title": "Home",
+      "description": "Zion Tech Group - Leading technology solutions and services",
+      "keywords": [
+        "home",
+        "ztech",
+        "technology",
+        "solutions",
+        "services"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/about",
+      "title": "About Us",
+      "description": "Learn about Zion Tech Group and our mission to provide innovative technology solutions",
+      "keywords": [
+        "about",
+        "company",
+        "mission",
+        "team",
+        "history"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/services",
+      "title": "Our Services",
+      "description": "Comprehensive technology services including web development, mobile apps, and cloud solutions",
+      "keywords": [
+        "services",
+        "web development",
+        "mobile apps",
+        "cloud",
+        "solutions"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/contact",
+      "title": "Contact Us",
+      "description": "Get in touch with Zion Tech Group for your technology needs",
+      "keywords": [
+        "contact",
+        "get in touch",
+        "support",
+        "help"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/blog",
+      "title": "Blog",
+      "description": "Latest insights and updates from Zion Tech Group",
+      "keywords": [
+        "blog",
+        "news",
+        "insights",
+        "updates",
+        "articles"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/privacy",
+      "title": "Privacy Policy",
+      "description": "Privacy policy and data protection information",
+      "keywords": [
+        "privacy",
+        "policy",
+        "data protection",
+        "legal"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/terms",
+      "title": "Terms of Service",
+      "description": "Terms and conditions for using our services",
+      "keywords": [
+        "terms",
+        "conditions",
+        "legal",
+        "agreement"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    }
+  ],
+  "totalPages": 7
+}

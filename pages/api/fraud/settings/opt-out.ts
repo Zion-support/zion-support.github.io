@@ -1,20 +1,58 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
+  try {
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
-    if (!userId) return res.status($1).json({$2});
-    const settings = await store.getPrivacySettings(userId);
-    return res.status(200).json(settings)
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-  if (req.method === 'POST') {
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
     const { userId, optOut } = req.body || {};
-    if (!userId || typeof optOut !== 'boolean') return res.status($1).json({$2});
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const updated = await store.setPrivacySettings(userId, optOut);
-    return res.status(200).json(updated)
+    return res.status(200).json(updated);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-  res.status(405).json({ error: 'Method not allowed' })
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

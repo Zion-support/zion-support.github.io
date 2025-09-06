@@ -1,43 +1,43 @@
 
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { AppMetadataValues } from "./MetadataManager";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Badge } from "@/components/ui/badge";
-import { X } from "lucide-react";
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from "lucide-react",
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
-  const platform = watch("platform");
+  const { control, register, watch, setValue } = form,
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
   
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
-      e.preventDefault();
-      const value = e.currentTarget.value.trim();
+      e.preventDefault(),
+      const value = e.currentTarget.value.trim(),
       
       if (value && !keywords.includes(value)) {
-        setValue("keywords", [...keywords, value]);
+        setValue("keywords", [...keywords, value]),
         e.currentTarget.value = ""
       }
     }
-  };
+  },
   
   const removeKeyword = (keyword: string) => {
     setValue(
-      "keywords";
+      "keywords",
       keywords.filter((k) => k !== keyword)
     )
-  };
+  },
   
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-  const longDescription = watch("longDescription");
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
+  const longDescription = watch("longDescription"),
 
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -64,10 +64,69 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     Max {platform === "ios" ? "30" : "50"} characters
                   </FormDescription>
                 </FormItem>
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { AppMetadataValues } from "./MetadataManager",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Badge } from "@/components/ui/badge",;
+import { X } from "lucide-react",;
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
+}
+;
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form,;
+  const keywords = watch("keywords"),;
+  const platform = watch("platform"),;
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e.key === "Enter" || e.key === ",") {;
+      e.preventDefault(),;
+      const value = e.currentTarget.value.trim(),;
+      if (value && !keywords.includes(value)) {;
+        setValue("keywords", [...keywords, value]),;
+        e.currentTarget.value = "";
+      }
+    }
+  },;
+  const removeKeyword = (keyword: string) => {;
+    setValue(;
+      "keywords",;
+      keywords.filter((k) => k !== keyword);
+    );
+  },;
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,;
+  const longDescription = watch("longDescription");
+  return (;
+    <Card className="bg-zion-blue border-zion-purple/30">;
+      <CardHeader>;
+        <CardTitle>App Metadata</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <div className="space-y-4">;
+            <FormField;
+              control={control}
+              name="appTitle";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>App Title</FormLabel>;
+                  <FormControl>;
+                    <Input;
+                      placeholder="Enter app title";
+                      maxLength={platform === "ios" ? 30 : 50}
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
+                    Max {platform === "ios" ? "30" : "50"} characters;
+                  </FormDescription>;
+                </FormItem>;
               )}
-            />
-            
-            <FormField
+            />;
+            <FormField;
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -85,9 +144,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   </FormDescription>
                 </FormItem>
               )}
-            />
-            
-            <FormField
+            />;
+            <FormField;
               control={control}
               name="longDescription"
               render={({ field }) => (
@@ -146,14 +204,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
-                    />
-                  </FormControl>
-                </FormItem>
+                    />;
+                  </FormControl>;
+                </FormItem>;
               )}
-            />
-          </div>
-        </Form>
-      </CardContent>
-    </Card>
-  )
+            />;
+          </div>;
+        </Form>;
+      </CardContent>;
+    </Card>;
+  );
 };

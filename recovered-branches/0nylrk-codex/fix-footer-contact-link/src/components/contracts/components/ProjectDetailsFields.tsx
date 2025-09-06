@@ -1,29 +1,48 @@
 
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { UseFormReturn } from "react-hook-form";
+import { format } from "date-fns",
+import { CalendarIcon } from "lucide-react",
+import { UseFormReturn } from "react-hook-form",
 import { 
-  FormField;
+  FormField,
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
   FormMessage 
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { ContractFormValues } from "./ContractForm",
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {;
+  form: UseFormReturn<ContractFormValues>;
 }
-
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
-      <FormField
+;
+export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
         control={form.control}
         name="projectName"
         render={({ field }) => (
@@ -35,9 +54,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormMessage />
           </FormItem>
         )}
-      />
-      
-      <FormField
+      />;
+      <FormField;
         control={form.control}
         name="scopeSummary"
         render={({ field }) => (
@@ -48,13 +66,13 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
                 {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Be specific about what is included and any limitations
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Be specific about what is included and any limitations;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
         )}
       />
       
@@ -87,16 +105,15 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) => date < new Date()}
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <FormMessage />
-            </FormItem>
+                    initialFocus;
+                  />;
+                </PopoverContent>;
+              </Popover>;
+              <FormMessage />;
+            </FormItem>;
           )}
-        />
-        
-        <FormField
+        />;
+        <FormField;
           control={form.control}
           name="endDate"
           render={({ field }) => (
@@ -134,8 +151,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormMessage />
             </FormItem>
           )}
-        />
-      </div>
-    </>
-  )
+        />;
+      </div>;
+    </>;
+  );
 }
+;

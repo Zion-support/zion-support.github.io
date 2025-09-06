@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from \'react\';
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/ResetPassword.jsx
 import _React from 'react';
-=======
 import _React from 'react';
-=======
 import _React from 'react';
-=======
 import _React from 'react';
-=======
+import _React from 'react';
 import _React from 'react';

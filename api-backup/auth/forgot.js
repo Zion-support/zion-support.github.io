@@ -1,11 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 (" ");
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 export default function ForgotPassword() {
   return (
     <div>
@@ -13,9 +7,4 @@ export default function ForgotPassword() {
       <p>Password reset functionality would go here.</p>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

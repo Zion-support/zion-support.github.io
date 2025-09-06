@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
@@ -9,23 +8,50 @@ import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications();
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
+    "all",
+  );
+
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { ApplicationCard } from "./ApplicationCard",
+import { LoadingState } from "./LoadingState",
+import { EmptyState } from "./EmptyState",
+import { ErrorState } from "./ErrorState",
+import { Button } from "@/components/ui/button",
+import { ApplicationStatus } from "@/types/jobs",
+export function ApplicationsTracker() {
+  const { applications, isLoading, error } = useJobApplications(),
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
   
   if (isLoading) {
     return <LoadingState />
+import { useState } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { ApplicationCard } from "./ApplicationCard",;
+import { LoadingState } from "./LoadingState",;
+import { EmptyState } from "./EmptyState",;
+import { ErrorState } from "./ErrorState",;
+import { Button } from "@/components/ui/button",;
+import { ApplicationStatus } from "@/types/jobs",;
+export function ApplicationsTracker() {;
+  const { applications, isLoading, error } = useJobApplications(),;
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+  if (isLoading) {;
+    return <LoadingState />;
   }
-  
-  if (error) {
-    return <ErrorState error={error} />
+;
+  if (error) {;
+    return <ErrorState error={error} />;
   }
-  
-  if (applications.length === 0) {
-    return <EmptyState />
+;
+  if (applications.length === 0) {;
+    return <EmptyState />;
   }
   
   const filteredApplications = statusFilter === 'all' 
     ? applications
-    : applications.filter(app => app.status === statusFilter);
+    : applications.filter(app => app.status === statusFilter),
   
   return (
     <div className="space-y-6">
@@ -92,6 +118,7 @@ export function ApplicationsTracker() {
           <p className="text-muted-foreground">No applications with this status.</p>
         </div>
       )}
-    </div>
-  )
+    </div>;
+  );
 }
+;

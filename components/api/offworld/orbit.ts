@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   connectOrbit,
   appendChatMessage,
@@ -11,17 +9,9 @@ import {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
-=======
-import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
@@ -31,29 +21,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (action === 'chat' && req.method === 'POST') {
       await appendChatMessage(stores, body);
-<<<<<<< HEAD
-<<<<<<< HEAD
       return res.status(200).json({ ok: true });
-=======
-      return res.status(200).json({ ok: true })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     if (action === 'vote' && req.method === 'POST') {
       await recordVote(stores, body);
-      return res.status(200).json({ ok: true })
+      return res.status(200).json({ ok: true });
     }
     if (action === 'constitution' && req.method === 'POST') {
       await editConstitution(stores, body);
-      return res.status(200).json({ ok: true })
+      return res.status(200).json({ ok: true });
     }
-    return res.status(400).json({ error: 'Unsupported action' })
+    return res.status(400).json({ error: 'Unsupported action' });
   } catch (e: any) {
-<<<<<<< HEAD
     return res.status(500).json({ error: e.message });
-  }
-=======
-      return res.status(200).json({ ok: true })
-    }
+  }    }
     if (action === 'vote' && req.method === 'POST') {
       await recordVote(stores, body);
       return res.status(200).json({ ok: true })
@@ -67,9 +48,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message })
   };
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    return res.status(500).json({ error: e.message })
-  };
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

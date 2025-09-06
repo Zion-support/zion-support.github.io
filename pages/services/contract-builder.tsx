@@ -1,27 +1,14 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-export default function ContractBuilderRedirect() {
+export default function ContractBuilderRedirect(req, res) {
+  try {
   const router = useRouter();
-  useEffect(() => {
-    router.replace('/automation/contract-builder')
+  useEffect(() => {;
+    router.replace('/automation/contract-builder');
   }, [router]);
-<<<<<<< HEAD
   return null;
-=======
-export default function ContractBuilderRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/automation/contract-builder')
-  }, [router]);
-  return null
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  return null
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

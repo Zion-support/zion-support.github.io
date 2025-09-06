@@ -1,43 +1,42 @@
 
-import { useState } from 'react';
-import { 
-  DropdownMenu;
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuSeparator;
-  DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
-import { Resume } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
-interface ResumeVersionSelectorProps {
-  currentResume: Resume,
-  onResumeChange: (resumeId: string) => void
+import { useState } from 'react',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuSeparator,;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',;
+import { Resume } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+interface ResumeVersionSelectorProps {;
+  currentResume: Resume,;
+  onResumeChange: (resumeId: string) => void;
 }
-
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const handleCreateNewVersion = async () => {
-    if (newResumeTitle.trim()) {
-      setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),
-      if (resumeId) {
-        await fetchResume(resumeId);
-        onResumeChange(resumeId);
+;
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume(),;
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle.trim()) {;
+      setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
+      if (resumeId) {;
+        await fetchResume(resumeId),;
+        onResumeChange(resumeId),;
         setSaveDialogOpen(false);
-        setNewResumeTitle('')
+        setNewResumeTitle('');
       }
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  };
+  },
 
   return (
     <div className="flex items-center gap-2">
@@ -57,10 +56,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               className="cursor-pointer"
             >
               {resume.basic_info.title}
-            </DropdownMenuItem>
+            </DropdownMenuItem>;
           ))}
-          <DropdownMenuSeparator />
-          <DropdownMenuItem 
+          <DropdownMenuSeparator />;
+          <DropdownMenuItem;
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
           >
@@ -86,10 +85,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button 
               variant="outline" 
               onClick={() => setSaveDialogOpen(false)}
-            >
-              Cancel
-            </Button>
-            <Button 
+            >;
+              Cancel;
+            </Button>;
+            <Button;
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
               className="gap-2"
@@ -104,3 +103,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   )
 }
+;

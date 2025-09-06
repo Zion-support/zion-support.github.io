@@ -4,11 +4,23 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -33,7 +45,14 @@ a {
 }
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
 /* Enhanced scrollbar */
 =======
 /* Import Inter font for modern typography */
@@ -82,24 +101,48 @@ a {
 
 /* Enhanced Scrollbar */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+<<<<<<< HEAD
 ::-webkit-scrollbar {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+::-webkit-scrollbar {
 /* Enhanced scrollbar */::-webkit-scrollbar {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 /* Enhanced scrollbar */::-webkit-scrollbar {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+/* Enhanced scrollbar */::-webkit-scrollbar {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -238,7 +281,14 @@ a {
 
 /* Quantum Field Effects */
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
 .quantum-field-2029 {
 =======
   background: rgba(0, 0, 0, 0.4);
@@ -731,6 +781,7 @@ body::after {
 
 .quantum-field {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+<<<<<<< HEAD
   position: relative;
   overflow: hidden;
 }
@@ -997,19 +1048,36 @@ body::after {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   content: '';
 =======
-.quantum-field-2029 {  position: relative;
-  overflow: hidden;
-}
-
-.quantum-field-2029::before {  content: '';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  position: relative;
+  overflow: hidden;
+}
+
+  content: '';
 .quantum-field-2029 {  position: relative;
   overflow: hidden;
 }
 
 .quantum-field-2029::before {  content: '';
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+.quantum-field-2029 {  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field-2029::before {  content: '';
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   position: absolute;
   top: -50%;
   left: -50%;
@@ -1020,11 +1088,23 @@ body::after {
     transparent,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
     rgba(0, 255, 255, 0.1),
     transparent,
     rgba(139, 92, 246, 0.1),
@@ -1230,7 +1310,14 @@ body::after {
 }
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
 /* Hover effects */
 =======
     rgba(59, 130, 246, 0.1),
@@ -1252,24 +1339,48 @@ body::after {
 
 /* Enhanced hover effects */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+<<<<<<< HEAD
 .hover-lift {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+.hover-lift {
 /* Hover effects */.hover-lift {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 /* Hover effects */.hover-lift {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+/* Hover effects */.hover-lift {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -1325,7 +1436,6 @@ body::after {
 .card-hover {
   @apply card hover:bg-white/20 hover:transform hover:scale-105 hover:shadow-xl;
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
 =======
   transform: translateY(-8px) scale(1.02);
@@ -1333,6 +1443,19 @@ body::after {
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(59, 130, 246, 0.2);
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+}
+<<<<<<< HEAD
+>>>>>>> main
 
 .hover-glow:hover {
   box-shadow: 
@@ -1506,9 +1629,17 @@ body::after {
   }
 }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+<<<<<<< HEAD
+=======
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main

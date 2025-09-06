@@ -1,19 +1,28 @@
 
-import React from 'react';
-import { Control } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { JobSchemaType } from './validation';
+import React from 'react',
+import { Control } from 'react-hook-form',
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import { JobSchemaType } from './validation',
 interface DescriptionFieldsProps {
   control: Control<JobSchemaType>,
   handleEditorChange: (content: string) => void,
   editorContent: string
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+interface DescriptionFieldsProps {;
+  control: Control<JobSchemaType>,;
+  handleEditorChange: (content: string) => void,;
+  editorContent: string;
 }
-
-export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
-  return (
-    <>
-      <FormField
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
         control={control}
         name="description"
         render={({ field }) => (
@@ -22,9 +31,9 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormControl>
               <Textarea 
                 value={editorContent}
-                onChange={(e) => {
+                onChange={(e) => {;
                   handleEditorChange(e.target.value);
-                  field.onChange(e.target.value)
+                  field.onChange(e.target.value);
                 }}
                 className="min-h-[200px]"
                 placeholder="Enter a detailed description of the job role"
@@ -36,9 +45,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormMessage />
           </FormItem>
         )}
-      />
-
-      <FormField
+      />;
+      <FormField;
         control={control}
         name="responsibilities"
         render={({ field }) => (
@@ -49,17 +57,16 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 placeholder="List the main responsibilities of this job"
                 className="resize-none min-h-[100px]"
                 {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              List the main responsibilities of this job.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
+              />;
+            </FormControl>;
+            <FormDescription>;
+              List the main responsibilities of this job.;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
         )}
-      />
-
-      <FormField
+      />;
+      <FormField;
         control={control}
         name="qualifications"
         render={({ field }) => (
@@ -70,17 +77,16 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 placeholder="List the required qualifications for this job"
                 className="resize-none min-h-[100px]"
                 {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              List the required qualifications for this job.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
+              />;
+            </FormControl>;
+            <FormDescription>;
+              List the required qualifications for this job.;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
         )}
-      />
-
-      <FormField
+      />;
+      <FormField;
         control={control}
         name="benefits"
         render={({ field }) => (
@@ -91,17 +97,16 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 placeholder="List the benefits offered for this job"
                 className="resize-none min-h-[100px]"
                 {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              List the benefits offered for this job.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
+              />;
+            </FormControl>;
+            <FormDescription>;
+              List the benefits offered for this job.;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
         )}
-      />
-
-      <FormField
+      />;
+      <FormField;
         control={control}
         name="application_instructions"
         render={({ field }) => (
@@ -112,15 +117,16 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 placeholder="Provide instructions on how to apply for this job"
                 className="resize-none min-h-[100px]"
                 {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Provide instructions on how to apply for this job.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Provide instructions on how to apply for this job.;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
         )}
-      />
-    </>
-  )
+      />;
+    </>;
+  );
 }
+;

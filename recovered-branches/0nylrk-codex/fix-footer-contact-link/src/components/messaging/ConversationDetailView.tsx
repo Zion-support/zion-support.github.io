@@ -1,46 +1,45 @@
 
-import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
-import { MessageSquare } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { useAuth } from '@/hooks/useAuth';
-import { MessageBubble } from './MessageBubble';
-import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
-  const { user } = useAuth();
-  const { 
-    activeConversation;
-    activeMessages, 
-    sendMessage, 
-    loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    if (activeConversation) {
-      loadMessages(activeConversation.id)
+import React, { useState, useEffect, useRef } from 'react',;
+import { format } from 'date-fns',;
+import { MessageSquare } from 'lucide-react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { Button } from '@/components/ui/button',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessageBubble } from './MessageBubble',;
+import { DateDivider } from './DateDivider',;
+export function ConversationDetailView() {;
+  const { user } = useAuth(),;
+  const {;
+    activeConversation,;
+    activeMessages,;
+    sendMessage,;
+    loadMessages;
+  } = useMessaging(),;
+  const [messageText, setMessageText] = useState(''),;
+  const messagesEndRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (activeConversation) {;
+      loadMessages(activeConversation.id);
     }
-  }, [activeConversation?.id, loadMessages]);
+  }, [activeConversation?.id, loadMessages]),
   
   useEffect(() => {
     scrollToBottom()
-  }, [activeMessages]);
+  }, [activeMessages]),
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  };
+  },
   
   const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!messageText.trim() || !activeConversation) return;
+    e.preventDefault(),
+    if (!messageText.trim() || !activeConversation) return,
     
-    await sendMessage(activeConversation.id, messageText);
+    await sendMessage(activeConversation.id, messageText),
     setMessageText('')
-  };
+  },
   
   if (!activeConversation) {
     return (
@@ -53,26 +52,24 @@ export function ConversationDetailView() {
       </div>
     )
   }
-  
-  // Group messages by date
-  const groupedMessages: { date: string, messages: any[] }[] = [],
-  
-  activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
-    
-    if (existingGroup) {
-      existingGroup.messages.push(message)
-    } else {
-      groupedMessages.push({
-        date: messageDate,
-        messages: [message]
-      })
+;
+  // Group messages by date;
+  const groupedMessages: { date: string, messages: any[] }[] = [],;
+  activeMessages.forEach(message => {;
+    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),;
+    const existingGroup = groupedMessages.find(group => group.date === messageDate),;
+    if (existingGroup) {;
+      existingGroup.messages.push(message);
+    } else {;
+      groupedMessages.push({;
+        date: messageDate,;
+        messages: [message];
+      });
     }
-  });
+  }),
   
   const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description);
+    (activeConversation.context_data.title || activeConversation.context_data.description),
 
   return (
     <div className="flex-1 flex flex-col h-full">
@@ -96,11 +93,10 @@ export function ConversationDetailView() {
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-            </div>
-          </div>
-        </div>
-      </div>
-      
+            </div>;
+          </div>;
+        </div>;
+      </div>;
       {/* Context information (if available) */}
       {hasContextData && (
         <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
@@ -128,13 +124,13 @@ export function ConversationDetailView() {
               {activeConversation.context_data.description && (
                 <div className="text-xs text-zion-slate mt-1 line-clamp-2">
                   {activeConversation.context_data.description}
-                </div>
+                </div>;
               )}
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       )}
-      
+;
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {groupedMessages.length === 0 ? (
@@ -151,15 +147,14 @@ export function ConversationDetailView() {
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
-                  />
+                  />;
                 ))}
-              </div>
-            </div>
-          ))
+              </div>;
+            </div>;
+          ));
         )}
-        <div ref={messagesEndRef} />
-      </div>
-      
+        <div ref={messagesEndRef} />;
+      </div>;
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
@@ -179,4 +174,23 @@ export function ConversationDetailView() {
       </div>
     </div>
   )
+      <div className="p-3 border-t border-zion-purple/20">;
+        <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
+          <textarea;
+            value={messageText}
+            onChange={(e) => setMessageText(e.target.value)}
+            placeholder="Type a message...";
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan";
+          />;
+          <Button;
+            type="submit";
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
+          >;
+            Send;
+          </Button>;
+        </form>;
+      </div>;
+    </div>;
+  );
 }
+;

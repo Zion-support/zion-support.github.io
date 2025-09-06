@@ -1,273 +1,59 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Code,
-  BookOpen,
-  Activity,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,
-  Check,
-  X,
-  AlertTriangle,
-  Info,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Users as UsersIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Cloud as CloudIcon,
-  Smartphone as SmartphoneIcon,
-  Palette as PaletteIcon,
-  Search as SearchIcon,
-  MessageSquare as MessageSquareIcon,
-  FileText as FileTextIcon,
-  Calendar as CalendarIcon,
-  CreditCard as CreditCardIcon,
-  BarChart3 as BarChart3Icon,
-  Settings as SettingsIcon,
-  Code as CodeIcon,
-  BookOpen as BookIcon,
-  Activity as ActivityIcon,
-  Database as DatabaseIcon2,
-  Play as PlayIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  Filter as FilterIcon,
-  Grid as GridIcon,
-  List as ListIcon,
-  ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
-  Sparkles as SparklesIcon,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Globe2 as Globe2Icon,
-  Bot as BotIcon,
-  ChevronRight as ChevronRightIcon,
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  Bookmark,
-  ThumbsUp,
-  MessageCircle,
-  Share,
-  Users as UsersIcon2,
-  Target as TargetIcon,
-  Zap as ZapIcon2,;
-} from 'lucide-react';
-=======
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
 import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
 import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function Revolutionary2025Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly'
-  );
-=======
-export default function Revolutionary2025Pricing() {
+export default function Revolutionary2025Pricing(req, res) {
+  try {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-export default function Revolutionary2025Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  const contactInfo = {;
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-
-  // Combine all revolutionary services
-  const allRevolutionaryServices = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ...revolutionaryAI2025Services,
-    ...revolutionaryITInfrastructure2025Services,
-    ...revolutionary2025MicroSaasServices,
-=======
+  // Combine all revolutionary services;
+  const allRevolutionaryServices = [;
     ...revolutionaryAI2025Services;
     ...revolutionaryITInfrastructure2025Services;
-    ...revolutionary2025MicroSaasServices
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    ...revolutionaryAI2025Services;
-    ...revolutionaryITInfrastructure2025Services;
-    ...revolutionary2025MicroSaasServices
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    ...revolutionary2025MicroSaasServices;
   ];
-
-  // Service categories
-  const serviceCategories = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {
-      id: 'all',
-      name: 'All Services',
-      icon: Sparkles,
-      count: allRevolutionaryServices.length,
-    },
-    {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      count: revolutionaryAI2025Services.length,
-    },
-    {
-      id: 'infrastructure',
-      name: 'IT Infrastructure',
-      icon: Cpu,
-      count: revolutionaryITInfrastructure2025Services.length,
-    },
-    {
-      id: 'saas',
-      name: 'Micro SaaS',
-      icon: Zap,
-      count: revolutionary2025MicroSaasServices.length,
-    },
-=======
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
-          { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  ];
-
-  // Filter services based on selected category
-  const filteredServices = selectedCategory === 'all' 
-    ? allRevolutionaryServices 
-    : allRevolutionaryServices.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing');
+  // Service categories;
+  const serviceCategories = [;
+    { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },;
+    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },;
+          { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Filter services based on selected category;
+  const filteredServices = selectedCategory === 'all';
+    ? allRevolutionaryServices;
+    : allRevolutionaryServices.filter(service => {;
+        if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
         if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
-        return true
+        return true;
       });
-
-  // Calculate pricing with billing cycle
-  const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(, ''));
-    if (billingCycle === 'yearly') {
-      return Math.floor(basePrice * 0.8), // 20% discount for yearly
-    }
-<<<<<<< HEAD
-    return basePrice;
-=======
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
-          { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
-  ];
-
-  // Filter services based on selected category
-  const filteredServices = selectedCategory === 'all' 
-    ? allRevolutionaryServices 
-    : allRevolutionaryServices.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing');
-        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
-        return true
-      });
-
-  // Calculate pricing with billing cycle
-  const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(, ''));
-    if (billingCycle === 'yearly') {
-      return Math.floor(basePrice * 0.8), // 20% discount for yearly
-    }
+  // Calculate pricing with billing cycle;
+  const getPrice = (service: any) => {;
+    const basePrice = parseInt(service.price.replace('$', '').replace('')),;
+    if (billingCycle === 'yearly') {;
+      return Math.floor(basePrice * 0.8), // 20% discount for yearly;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     return basePrice
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    return basePrice
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
-
+  },
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -277,43 +63,14 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'Access to 25+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features',
+        'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
-      icon: <Sparkles className='w-8 h-8' />,
+      icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
-      ctaVariant: 'secondary' as const,
+      ctaVariant: 'secondary' as const
     },
-=======
-        'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
-      ];
-      icon: <Sparkles className="w-8 h-8" />,
-      variant: 'quantum' as const,
-      popular: false,
-      cta: 'Start Free Trial',
-      ctaVariant: 'secondary' as const
-    };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
-      ];
-      icon: <Sparkles className="w-8 h-8" />,
-      variant: 'quantum' as const,
-      popular: false,
-      cta: 'Start Free Trial',
-      ctaVariant: 'secondary' as const
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -321,47 +78,15 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'Access to 50+ Services',
-        'Advanced AI Integration',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics Dashboard',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Advanced Security Features',
-        'Custom Integrations',
-        'Performance Monitoring',
+        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
+        'Custom IntegrationsPerformance Monitoring'
       ],
-      icon: <Rocket className='w-8 h-8' />,
+      icon: <Rocket className="w-8 h-8" />,
       variant: 'ai-futuristic' as const,
       popular: true,
       cta: 'Start Free Trial',
-      ctaVariant: 'primary' as const,
+      ctaVariant: 'primary' as const
     },
-=======
-        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
-        'Custom IntegrationsPerformance Monitoring'
-      ];
-      icon: <Rocket className="w-8 h-8" />,
-      variant: 'ai-futuristic' as const,
-      popular: true,
-      cta: 'Start Free Trial',
-      ctaVariant: 'primary' as const
-    };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
-        'Custom IntegrationsPerformance Monitoring'
-      ];
-      icon: <Rocket className="w-8 h-8" />,
-      variant: 'ai-futuristic' as const,
-      popular: true,
-      cta: 'Start Free Trial',
-      ctaVariant: 'primary' as const
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
@@ -369,51 +94,20 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'Access to ALL Services',
-        'Full AI & Quantum Integration',
-        'Dedicated Support Team',
-        '90-Day Free Trial',
-        'Enterprise Analytics Suite',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security Features',
-        'Custom Development',
-        'White-label Solutions',
-        'API Access',
-        'SLA Guarantees',
+        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features',
+        'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
       ],
-      icon: <Crown className='w-8 h-8' />,
-      variant: 'quantum-futuristic' as const,
-      popular: false,
-      cta: 'Contact Sales',
-      ctaVariant: 'primary' as const,
-    },
-=======
-        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features';
-        'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
-      ];
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-futuristic' as const,
       popular: false,
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
-    }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features';
-        'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
-      ];
-      icon: <Crown className="w-8 h-8" />,
-      variant: 'quantum-futuristic' as const,
-      popular: false,
-      cta: 'Contact Sales',
-      ctaVariant: 'primary' as const
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  ];
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
   // Market analysis
   const marketAnalysis = {
     totalMarketSize: '$150B+',
@@ -421,61 +115,12 @@ export default function Revolutionary2025Pricing() {
     customerSatisfaction: '98%',
     averageROI: '500%',
     timeToValue: '< 30 days',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    globalReach: '150+ countries',
-=======
     globalReach: '150+ countries'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    globalReach: '150+ countries'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
-
+  },
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className='min-h-screen'>
-        <Head>
-          <title>
-            Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT
-            Solutions
-          </title>
-          <meta
-            name='description'
-            content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950"
-          />
-          <meta
-            name='keywords'
-            content='AI pricing, quantum computing pricing, zero trust security pricing, edge computing pricing, 5G pricing, neuromorphic computing pricing, AI branding pricing, holographic events pricing'
-          />
-          <meta name='author' content='Zion Tech Group' />
-          <meta name='robots' content='index, follow' />
-          <meta
-            property='og:title'
-            content='Revolutionary 2025 Pricing - Zion Tech Group'
-          />
-          <meta
-            property='og:description'
-            content='Competitive pricing for cutting-edge AI, quantum computing, and IT infrastructure services. Contact: +1 302 464 0950'
-          />
-          <meta
-            property='og:url'
-            content='https://ziontechgroup.com/revolutionary-2025-pricing'
-          />
-          <meta property='og:type' content='website' />
-          <link
-            rel='canonical'
-            href='https://ziontechgroup.com/revolutionary-2025-pricing'
-          />
-=======
       <div className="min-h-screen">
         <Head>
-=======
-      <div className="min-h-screen">
-        <Head>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <title>Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT Solutions</title>
           <meta name="description" content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI pricing, quantum computing pricing, zero trust security pricing, edge computing pricing, 5G pricing, neuromorphic computing pricing, AI branding pricing, holographic events pricing" />
@@ -486,535 +131,433 @@ export default function Revolutionary2025Pricing() {
           <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2025-pricing" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-pricing" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </Head>
-
         <UltraAdvancedNavigation />
-
-        {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>
-=======
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
-=======
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                Revolutionary 2025 Pricing
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Experience the future of technology at competitive prices. Our revolutionary services 
-                deliver 10x better performance at 50% lower costs than traditional solutions.
-              </p>
-
-              {/* Billing Toggle */}
-              <div className="flex items-center justify-center gap-4 mb-12">
-                <span className="text-gray-400">Monthly</span>
-                <button
-<<<<<<< HEAD
-                  onClick={() =>
-                    setBillingCycle(
-                      billingCycle === 'monthly' ? 'yearly' : 'monthly'
-                    )
-                  }
-=======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Experience the future of technology at competitive prices. Our revolutionary services 
+                Experience the future of technology at competitive prices. Our revolutionary services
                 deliver 10x better performance at 50% lower costs than traditional solutions.
               </p>
-
-              {/* Billing Toggle */}
+              {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-gray-400">Monthly</span>
                 <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      billingCycle === 'yearly'
-                        ? 'translate-x-8'
-                        : 'translate-x-1'
-=======
-                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    }`}
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${;
+                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >;
+                  <span;
+                    className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
+                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
               </div>
-
-              {/* Market Analysis */}
+              {/* Market Analysis */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
                   <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
                   <div className="text-xs text-gray-400">Market Size</div>
                 </motion.div>
-                
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
                   <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
                   <div className="text-xs text-gray-400">Growth Rate</div>
                 </motion.div>
-                
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
                   <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
                   <div className="text-xs text-gray-400">Satisfaction</div>
                 </motion.div>
-                
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
                   <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
                   <div className="text-xs text-gray-400">Average ROI</div>
                 </motion.div>
-                
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
                   <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
                   <div className="text-xs text-gray-400">Time to Value</div>
                 </motion.div>
-                
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'
-                >
-                  <div className='text-2xl font-bold text-pink-400'>
-                    {marketAnalysis.globalReach}
-                  </div>
-                  <div className='text-xs text-gray-400'>Global Reach</div>
-=======
-                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-                <span className="text-gray-400">Yearly (Save 20%)</span>
-              </div>
-
-              {/* Market Analysis */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
-                  <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
-                  <div className="text-xs text-gray-400">Market Size</div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
-                  <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
-                  <div className="text-xs text-gray-400">Growth Rate</div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
-                  <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
-                  <div className="text-xs text-gray-400">Satisfaction</div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
-                  <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
-                  <div className="text-xs text-gray-400">Average ROI</div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
-                  <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
-                  <div className="text-xs text-gray-400">Time to Value</div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
-                  <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
-                  <div className="text-xs text-gray-400">Global Reach</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </motion.div>
               </div>
             </motion.div>
           </div>
         </section>
-
-        {/* Pricing Tiers */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-=======
+        {/* Pricing Tiers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                Choose Your Transformation Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our starter plan and scale up as you grow. All plans include 
-                our revolutionary AI and quantum computing services.
-              </p>
-            </motion.div>
-
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-=======
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our starter plan and scale up as you grow. All plans include 
+                Start with our starter plan and scale up as you grow. All plans include
                 our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {pricingTiers.map((tier, index) => (
                 <motion.div
-                  key={tier.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className={`relative ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    tier.popular
-                      ? 'scale-105 border-2 border-blue-500'
-=======
-                    tier.popular 
-                      ? 'scale-105 border-2 border-blue-500' 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    tier.popular 
-                      ? 'scale-105 border-2 border-blue-500' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      : 'border border-gray-700'
-                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
+                  key={tier.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`relative ${;
+                    tier.popular;
+                      ? 'scale-105 border-2 border-blue-500';
+                      : 'border border-gray-700';
+                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   {tier.popular && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold'>
-=======
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         Most Popular
                       </div>
                     </div>
-                  )}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className='text-center mb-8'>
-                    <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4'>
-=======
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      {tier.icon}
+                      {tier.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-400 mb-6">{tier.description}</p>
-                    
                     <div className="mb-4">
                       <span className="text-4xl font-bold text-white">${tier.price}</span>
                       <span className="text-gray-400">{tier.period}</span>
                     </div>
-                    
-                    {tier.savings && (
-<<<<<<< HEAD
-                      <div className='text-green-400 text-sm font-semibold mb-6'>
-=======
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
-                      {tier.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                    <p className="text-gray-400 mb-6">{tier.description}</p>
-                    
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">${tier.price}</span>
-                      <span className="text-gray-400">{tier.period}</span>
-                    </div>
-                    
                     {tier.savings && (
                       <div className="text-green-400 text-sm font-semibold mb-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      <div className="text-green-400 text-sm font-semibold mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                        {tier.savings}
-                      </div>
-                    )}
+                        {tier.savings  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </div>;
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <ul className='space-y-4 mb-8'>
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className='flex items-start gap-3'>
-                        <Check className='w-5 h-5 text-green-400 mt-0.5 flex-shrink-0' />
-                        <span className='text-gray-300'>{feature}</span>
-=======
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>
-=======
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    {tier.cta}
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Service Pricing Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-=======
+                    {tier.cta  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </button>;
+                </motion.div>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Service Pricing Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }} className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Individual Service Pricing
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose individual services or bundle them for maximum savings.
-=======
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Individual Service Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose individual services or bundle them for maximum savings. 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Individual Service Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose individual services or bundle them for maximum savings. 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 All services include free trials and comprehensive support.
               </p>
             </motion.div>
-
-            {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>
-              {serviceCategories.map(category => (
-=======
+            {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {serviceCategories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {serviceCategories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white'
-                      : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
-                  }`}
+                  key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${;
+                    selectedCategory === category.id;
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white';
+                      : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <category.icon className='w-5 h-5' />
-                  {category.name}
-                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
-=======
                   <category.icon className="w-5 h-5" />
-                  {category.name}
+                  {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <category.icon className="w-5 h-5" />
-                  {category.name}
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    {category.count}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {filteredServices.map(service => (
-=======
+                    {category.count  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </span>;
+                </button>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+            {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  viewport={{ once: true }}
-                  className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'
-                >
-=======
+                  key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.5, delay: 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  {/* Service Header */}
+                  {/* Service Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                          {service.name}
-                        </h3>
-                        <p className="text-gray-400 text-sm">{service.tagline}</p>
-                      </div>
-                    </div>
-                    {service.popular && (
-<<<<<<< HEAD
-                      <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>
-                        <Star className='w-3 h-3' />
-=======
-                  viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
-                  {/* Service Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="text-3xl">{service.icon}</div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                          {service.name}
+                          {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </h3>
                         <p className="text-gray-400 text-sm">{service.tagline}</p>
                       </div>
@@ -1022,147 +565,89 @@ export default function Revolutionary2025Pricing() {
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
                         <Star className="w-3 h-3" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                        <Star className="w-3 h-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         Popular
                       </div>
-                    )}
-                  </div>
-
-                  {/* Service Description */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <p className='text-gray-300 mb-4 line-clamp-3'>
-                    {service.description}
-                  </p>
-=======
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </div>;
+                  {/* Service Description */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
-                  {/* Price and Rating */}
+                  {/* Price and Rating */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <span className="text-2xl font-bold text-blue-400">
-                        ${getPrice(service)}
+                        ${getPrice(service)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
-<<<<<<< HEAD
-                    <div className='flex items-center gap-1'>
-                      <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                      <span className='text-white'>{service.rating}</span>
-                      <span className='text-gray-400 text-sm'>
-                        ({service.reviews})
-                      </span>
-=======
-                  <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-
-                  {/* Price and Rating */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl font-bold text-blue-400">
-                        ${getPrice(service)}
-                      </span>
-                      <span className="text-gray-400">{service.period}</span>
-                    </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
                       <span className="text-white">{service.rating}</span>
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
-
-                  {/* Key Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-gray-300 mb-2'>
-                      Key Features:
-                    </h4>
-                    <div className='grid grid-cols-1 gap-1'>
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div
-                          key={idx}
-                          className='flex items-center gap-2 text-sm text-gray-400'
-                        >
-                          <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
-=======
+                  {/* Key Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                    <div className="grid grid-cols-1 gap-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                          {feature}
-                        </div>
-                      ))}
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       {service.features.length > 3 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <div className='text-xs text-gray-500 mt-1'>
-=======
                         <div className="text-xs text-gray-500 mt-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                        <div className="text-xs text-gray-500 mt-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           +{service.features.length - 3} more features
                         </div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Market Position */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>
-                    <h4 className='text-xs font-semibold text-gray-300 mb-1'>
-                      Market Position:
-                    </h4>
-                    <p className='text-xs text-gray-400 line-clamp-2'>
-                      {service.marketPosition}
-                    </p>
-=======
-                  <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
-                    <h4 className="text-xs font-semibold text-gray-300 mb-1">Market Position:</h4>
-                    <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex items-center gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Learn More
-                    </button>
-<<<<<<< HEAD
-                    <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
-                      <Phone className='w-4 h-4' />
-=======
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>;
+                  </div>;
+                  {/* Market Position */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
                     <h4 className="text-xs font-semibold text-gray-300 mb-1">Market Position:</h4>
                     <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                   </div>
-
-                  {/* Actions */}
+                  {/* Actions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="flex items-center gap-3">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -1170,119 +655,76 @@ export default function Revolutionary2025Pricing() {
                     </button>
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                       <Phone className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
-                      <Phone className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </button>
                   </div>
-
-                  {/* Hover Effects */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>
-=======
+                  {/* Hover Effects */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>
-=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our team to discuss your specific needs and get a custom quote. 
+                Contact our team to discuss your specific needs and get a custom quote.
                 We offer flexible pricing and payment options to fit your budget.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
                   <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-blue-400 font-mono">{contactInfo.mobile}</p>
                 </div>
-                
                 <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">
                   <Mail className="w-8 h-8 text-green-400 mx-auto mb-3" />
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                   <p className="text-green-400">{contactInfo.email}</p>
                 </div>
-                
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
                   <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-3" />
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-purple-400 text-sm">{contactInfo.address}</p>
                 </div>
               </div>
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Custom Quote
-                </button>
-<<<<<<< HEAD
-                <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
-                  <BookOpen className='w-5 h-5 mr-2' />
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our team to discuss your specific needs and get a custom quote. 
-                We offer flexible pricing and payment options to fit your budget.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
-                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-blue-400 font-mono">{contactInfo.mobile}</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">
-                  <Mail className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-green-400">{contactInfo.email}</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
-                  <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-purple-400 text-sm">{contactInfo.address}</p>
-                </div>
-              </div>
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
@@ -1290,11 +732,6 @@ export default function Revolutionary2025Pricing() {
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                   <BookOpen className="w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
-                  <BookOpen className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Download Pricing Guide
                 </button>
               </div>
@@ -1303,14 +740,50 @@ export default function Revolutionary2025Pricing() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
+  )
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+                Ready to Get Started?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Contact our team to discuss your specific needs and get a custom quote.;
+                We offer flexible pricing and payment options to fit your budget.;
+              </p>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">;
+                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />;
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>;
+                  <p className="text-blue-400 font-mono">{contactInfo.mobile}</p>;
+                </div>;
+                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">;
+                  <Mail className="w-8 h-8 text-green-400 mx-auto mb-3" />;
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>;
+                  <p className="text-green-400">{contactInfo.email}</p>;
+                </div>;
+                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">;
+                  <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-3" />;
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>;
+                  <p className="text-purple-400 text-sm">{contactInfo.address}</p>;
+                </div>;
+              </div>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">;
+                  <Phone className="w-5 h-5 mr-2" />;
+                  Get Custom Quote;
+                </button>;
+                <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">;
+                  <BookOpen className="w-5 h-5 mr-2" />;
+                  Download Pricing Guide;
+                </button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraQuantumHolographicBackground>;
   );
-=======
-  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

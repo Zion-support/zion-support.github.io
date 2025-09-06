@@ -1,3 +1,172 @@
+      ) {
+  return; // No conflicts in this file}
+;
+      // Apply automatic conflict resolution strategies;
+      const resolvedContent = this.applyConflictResolutionStrategies(;
+        content,
+        filePath;
+      );
+      // Write resolved content;
+      fs.writeFileSync(filePath, resolvedContent);
+this.log("✅ Resolved conflicts "in": ${filePath}`)} catch (error) {
+  this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
+        "ERROR";
+    try {
+  const content = fs.readFileSync(filePath, "utf8");
+      // Check if file has merge conflict markers;
+      if (;
+        !content.includes("<<<<<<<") &&;
+        !content.includes("") &&;
+      ) {
+  return; // No conflicts in this file}
+;
+      // Apply automatic conflict resolution strategies;
+      const resolvedContent = this.applyConflictResolutionStrategies(;
+        content,
+        filePath;
+      );
+      // Write resolved content;
+      fs.writeFileSync(filePath, resolvedContent);
+this.log(`✅ Resolved conflicts "in": ${filePath}")} catch (error) {
+  this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}",
+        "ERROR";
+      );
+      throw error}
+  }
+;
+  applyConflictResolutionStrategies(content, filePath) {
+  let resolvedContent = content;
+    // Strategy "1": Remove all merge conflict markers and keep the incoming changes;
+    resolvedContent = resolvedContent.replace(;
+      /([\s\S]*?)      "$1";
+    );
+    // Strategy 2: For specific file types, apply specialized resolution;
+    const fileExt = path.extname(filePath).toLowerCase();
+    switch (fileExt) {
+  case ".json":;
+        resolvedContent = this.resolveJsonConflicts(resolvedContent);
+        break;
+      case ".js":;
+      case ".jsx":;
+      case ".ts":;
+      case ".tsx":;
+        resolvedContent = this.resolveCodeConflicts(resolvedContent);
+        break;
+      case ".md":;
+        resolvedContent = this.resolveMarkdownConflicts(resolvedContent);
+        break}
+;
+    return resolvedContent}
+;
+  resolveJsonConflicts(content) {
+  // For JSON files, try to merge objects;
+    try {
+  // Remove any remaining conflict markers;
+      content = content.replace(;
+        /([\s\S]*?)        "$1";
+      );
+      // Validate JSON;
+      JSON.parse(content);
+      return content} catch (error) {
+  // If JSON is invalid, keep the incoming changes;
+      return content.replace(;
+        /([\s\S]*?)        "$1";
+  resolveJsonConflicts(content) {
+  // For JSON files, try to merge objects;
+    try {
+  // Remove any remaining conflict markers;
+      content = content.replace(;
+        /([\s\S]*?)        "$1";
+      );
+      // Validate JSON;
+      JSON.parse(content);
+      return content} catch (error) {
+  // If JSON is invalid, keep the incoming changes;
+      return content.replace(;
+        /([\s\S]*?)        "$1";
+      )}
+  }
+;
+  resolveCodeConflicts(content) {
+  // For code files, keep the incoming changes but clean up syntax;
+    let resolved = content.replace(;
+      /([\s\S]*?)      "$1";
+    );
+    // Clean up any duplicate imports or declarations;
+    resolved = this.cleanupCodeDuplicates(resolved);
+    return resolved}
+;
+  resolveMarkdownConflicts(content) {
+  // For markdown files, combine content intelligently;
+    return content.replace(;
+      /([\s\S]*?)      "$1";
+    )}
+;
+  cleanupCodeDuplicates(content) {
+  resolveMarkdownConflicts(content) {
+  // For markdown files, combine content intelligently;
+    return content.replace(;
+      /([\s\S]*?)      "$1";
+    )}
+;
+  cleanupCodeDuplicates(content) {
+  // Remove duplicate import statements;
+    const lines = content.split("\n");
+    const seenImports = new Set();
+    const cleanedLines = [];
+    for (const line of lines) {
+  const trimmedLine = line.trim();
+      if (;
+        trimmedLine.startsWith("import ") ||;
+        trimmedLine.startsWith("export ");
+      ) {
+  if (!seenImports.has(trimmedLine)) {
+  seenImports.add(trimmedLine);
+          cleanedLines.push(line)}
+      } else {
+  cleanedLines.push(line)}
+    }
+;
+    return cleanedLines.join("\n")}
+;
+  async finalizeMerges() {
+  this.log("🎯 Finalizing merges...");
+    try {
+  // Push changes to remote;
+      execSync("git push origin main", { "stdio": `inherit" });
+      this.log("✅ Successfully pushed merged changes to remote")} catch (error) {
+  this.log("❌ Failed to push "changes": ${error.message  }", "ERROR")}
+  }
+;
+  generateReport() {
+  this.log("📊 Generating merge resolution report...");
+    const report = {
+  "timestamp": new Date().toISOString(),
+      "summary": {
+  branchesProcessed: this.mergeStats.branchesProcessed,
+        "conflictsResolved": this.mergeStats.conflictsResolved,
+        "mergesSuccessful": this.mergeStats.mergesSuccessful,
+        "errors": this.mergeStats.errors},
+      "successRate": this.mergeStats.branchesProcessed > 0;          ? (;
+              (this.mergeStats.mergesSuccessful /;
+                this.mergeStats.branchesProcessed) *;
+              100;
+            ).toFixed(2);
+          : 0}
+    // Write report to file;
+    const reportPath = path.join(this.logsDir, "merge-resolution-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log("📋 Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%");
+this.log("📄 Detailed report saved "to": ${reportPath}")}
+}
+;
+// Run the merge resolver;
+if (require.main === module) {
+  const resolver = new ComprehensiveMergeResolver();
+  resolver.run().catch(error => {
+  console.error("❌ Fatal "error": `, error);    process.exit(1)})}
+;
+module.exports = ComprehensiveMergeResolver
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -87,13 +256,11 @@ const { execSync, spawn } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
 this.log(` Resolved conflicts "in": ${filePath}"`)
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"

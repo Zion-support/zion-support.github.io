@@ -1,15 +1,8 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-// @ts-ignore
-import data from '../../data/npm-trends.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/npm-trends.json',
 export default function NpmTrendsPage() {
-  const items: any[] = (data?.items || []).slice(0, 50);
+  const items: any[] = (data?.items || []).slice(0, 50),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -19,19 +12,26 @@ export default function NpmTrendsPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.links?.npm} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.name}
-              </a>
+                {it.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">v{it.version} · Score {Math.round((it.score || 0) * 100) / 100}</div>
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
             </li>
-          ))}
-        </ul>
-      </div>
-    </EnhancedLayout>
-  )
-<<<<<<< HEAD
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,18 +1,18 @@
 
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react';
-import { format } from 'date-fns';
-interface CertificationsListProps {
-  certifications: Certification[],
-  onEdit: (cert: Certification) => void,
-  onDelete: (id: string) => void
+import { Certification } from '@/types/resume',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Edit, Trash2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;
 }
-
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
-  if (certifications.length === 0) {
-    return null
+;
+export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+  if (certifications.length === 0) {;
+    return null;
   }
 
   return (
@@ -29,11 +29,11 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
-                  {cert.expiration_date && (
-                    <> · Expires: {typeof cert.expiration_date === 'string' 
-                      ? cert.expiration_date 
+                  {cert.expiration_date && (;
+                    <> · Expires: {typeof cert.expiration_date === 'string';
+                      ? cert.expiration_date;
                       : format(cert.expiration_date, 'MMM yyyy')}
-                    </>
+                    </>;
                   )}
                 </p>
               </div>
@@ -63,12 +63,13 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   className="text-primary hover:underline"
                 >
                   View credential
-                </a>
+                </Link>
               </p>
             )}
-          </CardContent>
-        </Card>
+          </CardContent>;
+        </Card>;
       ))}
-    </div>
-  )
+    </div>;
+  );
 }
+;

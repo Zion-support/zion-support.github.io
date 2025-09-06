@@ -1,16 +1,9 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-ignore </div> </div> </EnhancedLayout>) 
-}</div>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-// @ts-ignore
-import data from '../../data/github-pulse.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-pulse.json',
 export default function GithubPulsePage() {
-  const repo = data?.repo || {};
-  const last24h = data?.last24h || {};
+  const repo = data?.repo || {},
+  const last24h = data?.last24h || {},
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -27,8 +20,11 @@ export default function GithubPulsePage() {
       </div>
     </EnhancedLayout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -36,9 +32,8 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
   )
-<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

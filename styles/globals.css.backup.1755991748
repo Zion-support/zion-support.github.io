@@ -962,11 +962,23 @@ h3 {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   
   .text-gradient-cyan,
   .text-gradient-purple,
@@ -1021,10 +1033,22 @@ h3 {
     display: none;
   }
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
 =======
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+}
+<<<<<<< HEAD
+>>>>>>> main
 
 /* Additional Futuristic Styles */
 .text-gradient-green {
@@ -1399,9 +1423,17 @@ h3 {
   }
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
+<<<<<<< HEAD
+=======
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main

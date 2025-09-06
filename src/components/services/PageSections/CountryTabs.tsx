@@ -1,46 +1,45 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Search } from 'lucide-react'
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import {
-  Pagination;
-  PaginationContent;
-  PaginationItem;
-  PaginationButton;
-  PaginationNext;
-  PaginationPrevious} from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CountryServiceCard } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-interface CountryTabsProps {
-  popularCountries: string[],
-  filteredCountries: CountryPricing[],
-  handleCountrySelect: (country: CountryPricing) => void,
-  onQuote?: (country: CountryPricing) => void,
-  searchQuery: string,
-  setSearchQuery: (query: string) => void
+import { useState, useEffect } from 'react',;
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import {;
+  Pagination,;
+  PaginationContent,;
+  PaginationItem,;
+  PaginationButton,;
+  PaginationNext,;
+  PaginationPrevious} from '@/components/ui/pagination',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
+import { CountryPricing } from '@/data/onsiteServicePricing',;
+interface CountryTabsProps {;
+  popularCountries: string[],;
+  filteredCountries: CountryPricing[],;
+  handleCountrySelect: (country: CountryPricing) => void,;
+  onQuote?: (country: CountryPricing) => void,;
+  searchQuery: string,;
+  setSearchQuery: (query: string) => void;
 }
 
 export function CountryTabs({
-  popularCountries;
-  filteredCountries;
-  handleCountrySelect;
-  onQuote;
-  searchQuery;
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
   setSearchQuery}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
+  const [currentPage, setCurrentPage] = useState(1),
+  const countriesPerPage = 50,
 
   useEffect(() => {
     setCurrentPage(1)
-  }, [searchQuery]);
+  }, [searchQuery]),
 
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
   const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage;
+    (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
-  );
+  ),
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
@@ -65,7 +64,7 @@ export function CountryTabs({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
@@ -75,7 +74,7 @@ export function CountryTabs({
                 onSelect={handleCountrySelect}
                 onQuote={onQuote}
                 isPopular={true}
-              />
+              />;
             ))}
         </div>
       </TabsContent>
@@ -102,7 +101,7 @@ export function CountryTabs({
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
-            />
+            />;
           ))}
         </div>
 
@@ -113,51 +112,41 @@ export function CountryTabs({
                 <PaginationItem>
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(Math.max(1, currentPage - 1))
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
                     }}
-                  />
-                </PaginationItem>
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                  (page) => (
-                    <PaginationItem key={page}>
-                      <PaginationButton
+                  />;
+                </PaginationItem>;
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  (page) => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-                        onClick={(e) => {
+                        onClick={(e) => {;
                           e.preventDefault();
-                          setCurrentPage(page)
+                          setCurrentPage(page);
                         }}
-                      />
-                    </PaginationItem>
-                  )
+                      />;
+                    </PaginationItem>;
+                  );
                 )}
-                <PaginationItem>
-                  <PaginationNext
+                <PaginationItem>;
+                  <PaginationNext;
                     href={`?page=${currentPage + 1}`}
-                    onClick={(e) => {
+                    onClick={(e) => {;
                       e.preventDefault();
-                      setCurrentPage(Math.min(totalPages, currentPage + 1))
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));
                     }}
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
+                  />;
+                </PaginationItem>;
+              </PaginationContent>;
+            </Pagination>;
+          </div>;
         )}
-      </TabsContent>
-    </Tabs>
-<<<<<<< HEAD
+      </TabsContent>;
+    </Tabs>;
   );
-=======
-
-<<<<<<< HEAD
-  const countriesPerPage = 50;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

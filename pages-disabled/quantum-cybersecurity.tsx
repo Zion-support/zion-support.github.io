@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Lock, Eye, AlertTriangle, Zap, Cpu, 
-  Database, Globe, ArrowRight, CheckCircle, Star, Users
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, AlertTriangle, Zap, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function QuantumCybersecurityPage() {
@@ -92,7 +89,7 @@ export default function QuantumCybersecurityPage() {
         "Email support";
         "Up to 100 users";
         "Standard compliance reports"
-      ];
+      ],
       popular: false
     };
     {
@@ -109,7 +106,7 @@ export default function QuantumCybersecurityPage() {
         "Custom security policies";
         "Advanced compliance reporting";
         "Incident response team"
-      ];
+      ],
       popular: true
     };
     {
@@ -126,7 +123,7 @@ export default function QuantumCybersecurityPage() {
         "Custom training programs";
         "SLA guarantees";
         "Executive reporting"
-      ];
+      ],
       popular: false
     }
   ];

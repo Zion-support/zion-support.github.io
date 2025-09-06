@@ -1,10 +1,10 @@
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { UseFormReturn } from 'react-hook-form';
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
-interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>
+interface CertificationFormFieldsProps {;
+  form: UseFormReturn<CertificationFormValues>;
 }
 
 export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
@@ -23,9 +23,8 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-        />
-
-        <FormField
+        />;
+        <FormField;
           control={form.control}
           name="issuing_organization"
           render={({ field }) => (
@@ -57,9 +56,8 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-        />
-
-        <FormField
+        />;
+        <FormField;
           control={form.control}
           name="expiration_date"
           render={({ field }) => (
@@ -70,10 +68,10 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
                   type="date" 
                   {...field}
                   value={field.value || ''}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
           )}
         />
       </div>
@@ -91,9 +89,8 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-        />
-
-        <FormField
+        />;
+        <FormField;
           control={form.control}
           name="credential_url"
           render={({ field }) => (
@@ -105,8 +102,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-        />
-      </div>
-    </>
-  )
+        />;
+      </div>;
+    </>;
+  );
 }
+;

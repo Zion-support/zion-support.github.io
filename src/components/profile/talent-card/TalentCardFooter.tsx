@@ -1,74 +1,69 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
-import { TalentProfile } from '@/types/talent';
-import { HireRequestModal } from '@/components/profile/hire-request';
-import { useAuthStatus } from '@/hooks/talent';
-import type { UserProfile } from '@/types/auth';
-=======
-import React, { useState } from "react";
+import React, { useState } from "react",
 import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button",
 import { ExternalLink } from 'lucide-react'
-import { TalentProfile } from "@/types/talent";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import type { UserProfile } from "@/types/auth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useRouter } from 'next/router';
+import { TalentProfile } from "@/types/talent",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
+import type { UserProfile } from "@/types/auth",
+import { useRouter } from 'next/router',
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
+import React, { useState } from "react",;
+import { Star } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { ExternalLink } from 'lucide-react';
+import { TalentProfile } from "@/types/talent",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import type { UserProfile } from "@/types/auth",;
+import { useRouter } from 'next/router',;
+interface TalentCardFooterProps {;
+  profile: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire?: (profile: TalentProfile) => void;
 }
-
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const router = useRouter();
-
-  // Create a compatible UserProfile from UserDetails
-  const userProfile: UserProfile = {
-    id: userDetails?.id,
-    name: userDetails?.name || '',
-    email: userDetails?.email || '',
-    userType: null,
-    profileComplete: false,
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString(),
-    role: userDetails?.userType || '',
-    displayName: userDetails?.name || '',
-    points: 0,
-    avatarUrl: userDetails?.avatar || ''
-  };
-
-  // Handle request to hire
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
-    if (onRequestHire) {
-      onRequestHire(profile)
-    } else {
-      // Open hire modal directly if no handler provided
-      setIsHireModalOpen(true)
+;
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
+  const { userDetails } = useAuthStatus(),;
+  const router = useRouter(),;
+  // Create a compatible UserProfile from UserDetails;
+  const userProfile: UserProfile = {;
+    id: userDetails?.id,;
+    name: userDetails?.name || '',;
+    email: userDetails?.email || '',;
+    userType: null,;
+    profileComplete: false,;
+    created_at: new Date().toISOString(),;
+    updated_at: new Date().toISOString(),;
+    role: userDetails?.userType || '',;
+    displayName: userDetails?.name || '',;
+    points: 0,;
+    avatarUrl: userDetails?.avatar || '';
+  },;
+  // Handle request to hire;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(profile);
+    } else {;
+      // Open hire modal directly if no handler provided;
+      setIsHireModalOpen(true);
     }
-  };
-
-  // Handle view profile
-  const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
-    // Navigate to the talent profile page
+  },;
+  // Handle view profile;
+  const handleViewProfile = (e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    // Navigate to the talent profile page;
     router.push(`/talent/${profile.id || ''}`);
-    
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(profile.id || '')
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(profile.id || '');
     }
-  };
+  },
 
   return (
     <>
@@ -86,8 +81,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
-        </div>
-        
+        </div>;
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button 
@@ -112,45 +106,13 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       </div>
       
       {/* Hire Request Modal */}
-      <HireRequestModal
+      <HireRequestModal;
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
-      />
-    </>
+      />;
+    </>;
   );
-<<<<<<< HEAD
-
-};
-//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
-  e.stopPropagation ();';
-profile.id || '' ;
-}`);
-//Also call the onViewProfile callback if provided <div> {;
-  profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;
-  profile.hourly rate ;
-}/hr</div> </div>) : (</div>) ";
-}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
-  /* Hire Request Modal */ ;
-}<HireRequestModal talent= {;
-  profile ;
-}isOpen= {;
-  isHireModalOpen ;
-}onClose= {;
-  () => setIsHireModalOpen (false) ;
-}userDetails= {;
-  userProfile ;
-}/> </>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

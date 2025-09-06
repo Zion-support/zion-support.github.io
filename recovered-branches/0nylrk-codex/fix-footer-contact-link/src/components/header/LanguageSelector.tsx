@@ -1,18 +1,29 @@
-
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import { Globe } from "lucide-react";
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+
+import React from 'react',
+import { useTranslation } from 'react-i18next',
+import { Button } from '@/components/ui/button',
+import { Globe } from 'lucide-react',
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
 export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+  const { t } = useTranslation(),
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
 
   return (
     <DropdownMenu>
@@ -26,8 +37,8 @@ export function LanguageSelector() {
         {supportedLanguages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            className={`cursor-pointer ${
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'
+            className={`cursor-pointer ${;
+              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -37,7 +48,8 @@ export function LanguageSelector() {
             </div>
           </DropdownMenuItem>
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+  );
 }
+;

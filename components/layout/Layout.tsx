@@ -1,46 +1,71 @@
-<<<<<<< HEAD
-import React, { ReactNode } from 'react';
-import Header from '../Header';
-
-import React, { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-
-interface LayoutProps {
-  children: ReactNode,
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default Layout;
-
-=======
 import React from 'react';
-
 interface LayoutProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 export default function Layout({
-  children
+  children,
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
 }: LayoutProps) {
   return (
     <div className="min-h-screen bg-gray-50">
-      {children}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

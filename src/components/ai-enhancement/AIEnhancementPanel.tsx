@@ -1,66 +1,57 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-
-interface AIEnhancementPanelProps {
-  title: string,
-  defaultOptions: AIEnhancementOptions,
-  onApply: (content: string) => void,
-  onClose?: () => void;
-  showInstructions?: boolean;
-  initialContent?: string
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
 }
-
-export function AIEnhancementPanel({
-  title;
-  defaultOptions;
-  onApply;
-  onClose;
-  showInstructions = true;
-  initialContent = ''
-}: AIEnhancementPanelProps) {
-  const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions;
-    content: initialContent || defaultOptions.content}),
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
-  const handleGenerate = async () => {
-    const result = await enhanceContent(options);
-    if (result) {
-      setGeneratedContent(result)
+;
+export function AIEnhancementPanel({;
+  title,;
+  defaultOptions,;
+  onApply,;
+  onClose,;
+  showInstructions = true,;
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions,;
+    content: initialContent || defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [copied, setCopied] = useState(false),;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options),;
+    if (result) {;
+      setGeneratedContent(result);
     }
-  };
+  },
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options;
+      ...options,
       [field]: e.target.value})
-  };
+  },
 
   const handleApply = () => {
-    onApply(generatedContent);
+    onApply(generatedContent),
     if (onClose) onClose()
-  };
+  },
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent);
-    setCopied(true);
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
     setTimeout(() => setCopied(false), 2000)
-  };
+  },
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -73,36 +64,34 @@ export function AIEnhancementPanel({
       <CardContent className="space-y-4">
         {/* Input area */}
         <div className="space-y-2">
-          <label className="text-sm font-medium" htmlFor="input-Content to enhance">Content to enhance</label>
+          <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
-          />
-        </div>
-
+          />;
+        </div>;
         {/* Context input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium" htmlFor="input-Context (optional)">Context (optional)</label>
+          <label className="text-sm font-medium">Context (optional)</label>
           <Textarea
             placeholder="Add any relevant context to guide the AI..."
             className="min-h-[60px]"
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}
-          />
-        </div>
-
+          />;
+        </div>;
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
-            <label className="text-sm font-medium" htmlFor="input-Special instructions (optional)">Special instructions (optional)</label>
+            <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
-            />
-          </div>
+            />;
+          </div>;
         )}
 
         {/* Generate button */}
@@ -122,13 +111,12 @@ export function AIEnhancementPanel({
               Generate Enhanced Content
             </>
           )}
-        </Button>
-
+        </Button>;
         {/* Output area */}
         {generatedContent && (
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
-              <label className="text-sm font-medium" htmlFor="input-Generated content">Generated content</label>
+              <label className="text-sm font-medium">Generated content</label>
               <Button 
                 variant="ghost" 
                 size="sm" 
@@ -160,21 +148,12 @@ export function AIEnhancementPanel({
               Cancel
             </Button>
           )}
-          <Button onClick={handleApply}>
-            Apply to Form
-          </Button>
-        </CardFooter>
+          <Button onClick={handleApply}>;
+            Apply to Form;
+          </Button>;
+        </CardFooter>;
       )}
-    </Card>
+    </Card>;
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-    ...defaultOptions;
-    content: initialContent || defaultOptions.content}),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

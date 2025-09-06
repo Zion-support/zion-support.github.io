@@ -1,31 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import React from 'react';
-import { Milestone } from '@/hooks/useMilestones';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-interface PaymentSummaryProps {
-  milestones: Milestone[],
-  paymentTerms: string | null
+import React from 'react',;
+import { Milestone } from '@/hooks/useMilestones',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { CreditCard } from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString());
+    (sum, m) => sum + parseFloat(m.amount.toString()), 
     0
-  ).toFixed(2);
+  ).toFixed(2),
   
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
     .reduce(
-      (sum, m) => sum + parseFloat(m.amount.toString());
+      (sum, m) => sum + parseFloat(m.amount.toString()), 
       0
-    ).toFixed(2);
+    ).toFixed(2),
 
   return (
     <Card className="mb-8 bg-muted/30">
@@ -35,7 +29,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">
@@ -54,21 +48,10 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
-            </p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
+            </p>;
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
 };
-<<<<<<< HEAD
-'"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

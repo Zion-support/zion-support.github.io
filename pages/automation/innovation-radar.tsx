@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore - JSON import import data from '../../data/innovation-radar.json',
 export default function InnovationRadarPage() {
-  const items: any[] = (data?.items || []).slice(0, 50);
+  const items: any[] = (data?.items || []).slice(0, 50),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -18,21 +11,32 @@ export default function InnovationRadarPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.title}
-              </a>
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
+                {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
             </li>
-          ))}
-        </ul>
-      </div>
-    </EnhancedLayout>
-  )
-<<<<<<< HEAD
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

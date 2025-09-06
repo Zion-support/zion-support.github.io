@@ -438,11 +438,20 @@
   "scripts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
@@ -459,17 +468,29 @@
     "functions:run:execute": "node scripts/run-netlify-functions-locally.cjs --execute",
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "front:advertise": "node automation/front-index-advertiser.cjs",
 =======
     "automations": "node scripts/run-automations.mjs",
 >>>>>>> origin/cursor/build-talent-marketplace-platform-793e
-    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "front:advertise": "node automation/front-index-advertiser.cjs",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "front:advertise": "node automation/front-index-advertiser.cjs",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "front:advertise": "node automation/front-index-advertiser.cjs",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "netlify:manifest": "node scripts/generate-netlify-functions-manifest.cjs",
@@ -704,10 +725,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",
