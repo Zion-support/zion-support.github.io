@@ -1,20 +1,24 @@
-import React from 'react';
-import Head from 'next/head';
-import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import { Button } from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
+import React from 'react'
+import Head from 'next/head'
+import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
+import Button from '../components/ui/Button'
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function ApiObservabilityPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
-  if (!service) return null;
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'))
+  if (!service) return null,
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
+<<<<<<<< HEAD:backup-problematic-files/components/api-observability.tsx
+    <UltraAdvancedFuturisticBackground>
+========
 <<<<<<< HEAD
     <UltraFuturisticBackground variant="holographic" intensity="high">
 =======
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+>>>>>>>> main:pages/api-observability.tsx.backup.1755991722
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
@@ -53,7 +57,7 @@ export default function ApiObservabilityPage() {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
-  );
+    </UltraAdvancedFuturisticBackground>
+  )
 }
-
+;

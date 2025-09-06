@@ -1,6 +1,4 @@
-
-
-    if (scrollContainerRef.current) {
+if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
@@ -29,17 +27,13 @@ export const AppScreenshots: React.FC = () => {;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
-=======
     }
 
   },
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <section className="py-16 bg-zion-blue-dark">;
@@ -53,13 +47,10 @@ export const AppScreenshots: React.FC = () => {;
 
         <div className="relative">;
 
-=======
 
         
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="relative">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="ghost"
             size="icon"
@@ -98,12 +89,9 @@ export const AppScreenshots: React.FC = () => {;
           </div>;
 
 
-=======
 
 
-=======
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -112,7 +100,6 @@ export const AppScreenshots: React.FC = () => {;
             {mockScreenshots.map((screenshot) => (
               <div 
                 key={screenshot.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
               >
                 <img
@@ -127,8 +114,6 @@ export const AppScreenshots: React.FC = () => {;
 
           
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="ghost"
             size="icon"
@@ -157,7 +142,6 @@ export const AppScreenshots: React.FC = () => {;
 
 };
 
-=======
 ;
 }
 import React, { useRef } from './react';
@@ -235,10 +219,5 @@ if ( {) {
 }
 '"},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

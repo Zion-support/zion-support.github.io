@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  onAddMilestone
+onAddMilestone
 }: ProjectActionsProps) {
 
   onAddMilestone: () => void;
@@ -32,7 +29,6 @@ export function ProjectActions(): any ({;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>Add Milestone</Button>;
 
-=======
   return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
@@ -45,18 +41,13 @@ export function ProjectActions(): any ({;
       ) : (
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
 };
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
@@ -68,7 +59,6 @@ export function ProjectActions(): any ({;
   );
 }
 
-=======
 import React from 'react';
 import {Button} from '@/components / ui / button';
 import Link from 'next / link';
@@ -109,10 +99,4 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,56 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+<<<<<<< HEAD
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const {
+    isAuthenticated;
+
+    userDetails
+    savedTalents
+    handleToggleSave
+  } = useAuthStatus();
+  // Fetch talent data
+  const {
+    talents
+    isLoading
+=======
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { 
+    isAuthenticated,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    userDetails, 
+    savedTalents, 
+    handleToggleSave 
+  } = useAuthStatus(),
+
+  // Fetch talent data
+  const { 
+    talents, 
+    isLoading 
+  } = useTalentData(),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
@@ -91,6 +143,7 @@ function useTalentDirectory() {
 
 
 
+>>>>>>> main
 
   } = useTalentData();
   // Apply filters and sorting
@@ -111,10 +164,19 @@ function useTalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters
+<<<<<<< HEAD
+<<<<<<< HEAD
+  } = useFilterTalents(talents);
+=======
+  } = useFilterTalents(talents),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
   } = useFilterTalents(talents),
 
 
+>>>>>>> main
   // Manage UI state
   const {
     isMobileFilterOpen,
@@ -125,7 +187,42 @@ function useTalentDirectory() {
     setSelectedTalent,
     expandedSections,
     toggleSection
+<<<<<<< HEAD
+<<<<<<< HEAD
+  } = useUIState();
+  return {
+    // Talents and loading state
+    talents;
+    filteredTalents;
+    isLoading;
+    // Search and filter state
+    searchTerm;
+    setSearchTerm;
+    selectedSkills;
+    selectedAvailability;
+    selectedRegions;
+    priceRange;
+    setPriceRange;
+    experienceRange;
+    setExperienceRange;
+    sortOption;
+    setSortOption;
+    // UI state
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+    selectedTalent;
+    setSelectedTalent;
+    expandedSections;
+    // Auth and user state
+    isAuthenticated;
+    userDetails;
+    savedTalents;
+=======
+=======
 
+>>>>>>> main
   } = useUIState(),
 
   return {
@@ -161,6 +258,22 @@ function useTalentDirectory() {
     userDetails,
     savedTalents,
     
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Actions
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
     // Actions
@@ -175,6 +288,7 @@ function useTalentDirectory() {
 =======
 
 
+>>>>>>> main
 =======
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
@@ -259,6 +373,16 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
 
@@ -281,3 +405,4 @@ export function useTalentDirectory() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
+>>>>>>> main

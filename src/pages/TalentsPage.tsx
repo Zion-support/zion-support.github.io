@@ -1,18 +1,12 @@
-
-
-
-
-    let filteredTalents = allTalents
+let filteredTalents = allTalents
     }
 }
 ;
 
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
@@ -469,17 +463,12 @@ export default function TalentsPage() {;
     }
 }
 
-=======
 
 
-=======
 ;
     let filtered_talents = all_talents;
     }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   // Error state
   if (error) {
@@ -629,6 +618,3 @@ export default function TalentsPage() {;
   );
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,16 @@
 
+<<<<<<< HEAD
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+=======
 
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
 
 
+>>>>>>> main
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -12,6 +18,56 @@ export const useResumeProgress = (resume: Resume | null) => {;
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
+let completed = 0;
+    // Basic info is always considered (1 point)
+    completed += 1;
+    // Work experience (1 point if at least one entry)
+    if (resume.work_experience && resume.work_experience.length > 0) {
+
+    }
+;
+    // Education (1 point if at least one entry);
+    if (resume.education && resume.education.length > 0) {;
+
+      completed += 1;
+    }
+
+    let completed = 0;
+
+    // Basic info is always considered (1 point)
+    completed += 1;
+
+    // Work experience (1 point if at least one entry)
+    if (resume.work_experience && resume.work_experience.length > 0) {
+      completed += 1;
+    }
+
+    // Education (1 point if at least one entry)
+    if (resume.education && resume.education.length > 0) {
+      completed += 1;
+    }
+
+    // Skills (1 point if at least one entry)
+    if (resume.skills && resume.skills.length > 0) {
+      completed += 1;
+    }
+// Certifications (1 point if at least one entry)
+    if (resume.certifications && resume.certifications.length > 0) {
+      completed += 1;
+    }
+
+    const progressPercentage = (completed / 5) * 100;
+    setProgress(progressPercentage);
+  }, [resume]);
+  return progress;
+}
+
+  return progress;
+
+};
+
+=======
     let completed = 0;
     // Basic info is always considered (1 point)
     completed += 1;
@@ -123,3 +179,4 @@ if ( {) {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

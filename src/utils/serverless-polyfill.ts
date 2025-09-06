@@ -1,8 +1,5 @@
-
-
 declare global {
 
-=======
 
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
@@ -15,7 +12,6 @@ declare global {
 
 
   var __awaiter: any
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 // CRITICAL: Self polyfill - must be first
 
 if (typeof self === 'undefined') {
@@ -23,7 +19,6 @@ if (typeof self === 'undefined') {
     (global as any).self = global
     if (typeof globalThis !== 'undefined') {
       (globalThis as any).self = global
-=======
   var __awaiter: any;
 // CRITICAL: Self polyfill - must be first;
 // Check condition
@@ -40,7 +35,6 @@ if ( {) {
   $2
 }
       (global_this as any).self = global;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   } else // Check condition
 if ( {) {
@@ -79,12 +73,10 @@ if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;
 
 
-=======
   selfRef.webpackChunk_N_E = []
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function (d: any, b: any) {
@@ -114,7 +106,6 @@ const tsHelpers = {
           for (let p in s)
             if (Object && Object.prototype.hasOwnProperty && hasOwnProperty.call(s, p)) t[p] = s[p];
 
-=======
 // Ensure self is properly referenced;
 const self_ref: any =;
   typeof self !== 'undefined';
@@ -169,7 +160,6 @@ function __extends_helper() {
             if () t[p] = s[p]) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         return t;
       }
@@ -187,7 +177,6 @@ function __extends_helper() {
           Object && Object.prototype.propertyIsEnumerable && propertyIsEnumerable.call(s, symbol)
         )
 
-=======
   var webpackChunk_N_E: any[],
   var __webpack_require__: any,
   var __webpack_exports__: any,
@@ -294,7 +283,6 @@ const tsHelpers = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           t[symbol] = s[symbol]
       }
     }
@@ -339,7 +327,6 @@ const tsHelpers = {;
 
           step(generator && generator.next(value));
 
-=======
     );
   })(),
   __rest: function (string: any, e: string[]) {
@@ -413,7 +400,6 @@ function adopt() {
 function fulfilled() {
         try {
           step (generator.next (value));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } catch (e) {
           reject (e);
         }
@@ -435,7 +421,6 @@ function rejected() {
       }
       step((generator = generator && generator.apply(thisArg, _arguments || [])).next());
 
-=======
       /**
  * step - Function description
  */
@@ -445,7 +430,6 @@ function step() {
           : adopt (result.value).then (fulfilled, rejected);
       }
       step ((generator = generator.apply (this_arg, _arguments || [])).next ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
   },
 };
@@ -464,7 +448,6 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
 
 });
 
-=======
       step((generator = generator.apply(thisArg, _arguments |[])).next())
     })
   }
@@ -509,10 +492,8 @@ if ( {) {
         console && console.warn('Webpack chunk loading error prevented:', error);
         return 0;
 
-=======
         console.warn ('Webpack chunk loading error prevented:', error);
         return 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
   }
@@ -610,7 +591,6 @@ if ( {) {
 
       return originalOnUnhandledRejection && originalOnUnhandledRejection.call(this, event);
 
-=======
     // Suppress specific promise rejection errors;
     // Check condition
 if ( {) {
@@ -633,7 +613,6 @@ if ( {) {
   $2
 }
       return originalOnUnhandledRejection.call (this, event);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
   }
@@ -708,9 +687,7 @@ export const verify_polyfills = () =>: any {
 
 export default {}; // Ensure this can be imported as a module
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, // Ensure this can be imported as a module'"
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
 // Auto-verify in development
 
@@ -721,7 +698,6 @@ if (process && process.env.NODE_ENV === 'development') {
 
 export default {}, // Ensure this can be imported as a module
 
-=======
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors // Check condition
 if ( {) {
@@ -737,7 +713,3 @@ if ( {) {
   set_timeout ((, ) => verify_polyfills (), 100);
 }
 export default {}, // Ensure this can be imported as a module;
-
-
-
-

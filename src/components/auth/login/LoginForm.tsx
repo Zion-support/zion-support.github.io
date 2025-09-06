@@ -1,12 +1,65 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+import { useState } from "react";
+import { useRouter  } from 'next/router';
+=======
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { LogIn, User, Eye, EyeOff } from 'lucide-react'
+import { fireEvent } from '@/lib/analytics'
+import { useAuth } from '@/context/auth/AuthProvider'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useState } from "react"
+import { useForm, ControllerRenderProps } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import { useAuth } from "@/context/auth/AuthProvider"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from "react",
+import { useRouter } from 'next/router',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> main
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
 import { useState } from 'react';
 import { use_router } from 'next / router';
@@ -25,12 +78,40 @@ import { z  } from './zod';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
+>>>>>>> main
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  FormMessage,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/form'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
+import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
+const loginSchema = z.object({
+  email: z
+    .string()
+    .email('Please enter a valid email')
+    .min(1, 'Email is required')
+  password: z.string().min(6, 'Password must be at least 6 characters')
+  rememberMe: z.boolean()
+})
+type LoginFormValues = z.infer<typeof loginSchema>
+export function LoginForm() {
+  const { isLoading, login } = useAuth()
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isResending, setIsResending] = useState(false)
+  const [verificationMessage, setVerificationMessage] = useState('')
+  const router = useRouter()
+<<<<<<< HEAD
+=======
+=======
   FormMessage,
 } from '@/components / ui / form';
 import { Alert, AlertDescription } from '@/components / ui / alert';
@@ -88,7 +169,6 @@ if ( {) {
           ) {
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
-=======
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -100,6 +180,7 @@ import {
   FormItem,
   FormLabel,
 
+>>>>>>> main
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -108,7 +189,10 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
@@ -131,8 +215,12 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
+>>>>>>> main
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -154,11 +242,26 @@ export function LoginForm() {
   const [verificationMessage, setVerificationMessage] = useState(''),
   const router = useRouter(),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
+<<<<<<< HEAD
+      email: ''
+      password: ''
+      rememberMe: false
+    }
+  })
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return
+=======
+=======
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema) as any
+    defaultValues: {
 
+>>>>>>> main
       email: "",
       password: "",
       rememberMe: false}}),
@@ -166,6 +269,91 @@ export function LoginForm() {
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    try {
+      setIsSubmitting(true)
+      // Pass email and password to the login function
+<<<<<<< HEAD
+      const result = await login(data.email, data.password, data.rememberMe)
+=======
+      const result = await login(data.email, data.password, data.rememberMe),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+<<<<<<< HEAD
+          if (
+            result.error.message.toLowerCase().includes('email not confirmed')
+          ) {
+            errorMessage =
+              'Your email is not confirmed. Please check your inbox for a confirmation link.'
+=======
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          } else {
+            errorMessage = result.error.message
+          }
+        }
+<<<<<<< HEAD
+        form.setError('root', { message: errorMessage })
+      } else {
+        fireEvent('login', { method: 'email' })
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  const handleResendEmail = async () => {
+    const email = form.getValues('email')
+    if (!email) {
+      form.setError('root', { message: 'Please enter your email address.' })
+      return;
+    }
+    setIsResending(true)
+    setVerificationMessage('')
+    try {
+      const response = await fetch('/api/auth/resend-verification-email', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email })
+      })
+      const data = await response.json()
+      if (response.ok) {
+        setVerificationMessage(
+          'Verification email sent. Please check your inbox.'
+        )
+      } else {
+        setVerificationMessage(
+          data.message |'Failed to resend verification email.'
+        )
+      }
+    } catch (err) {
+      setVerificationMessage('Failed to resend verification email.')
+    } finally {
+      setIsResending(false)
+    }
+  }
+  const handleCheckStatus = () => {
+    const email = form.getValues('email')
+    if (!email) {
+      form.setError('root', { message: 'Please enter your email address.' })
+      return;
+    }
+    router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+  }
+=======
+=======
 
     try {
       setIsSubmitting(true)
@@ -173,8 +361,6 @@ export function LoginForm() {
 
       const result = await login(data.email, data.password, data.rememberMe),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           } else {
             error_message = result.error.message;
           }
@@ -214,9 +400,8 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
-=======
-=======
 
+>>>>>>> main
         form.setError("root", { message: errorMessage })
       } else {
         fireEvent('login', { method: 'email' })
@@ -230,13 +415,53 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
+  FormMessage} from "@/components/ui/form",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import Link from "next/link",;
+import { Checkbox } from "@/components/ui/checkbox",;
+// Form validation schema;
+const loginSchema = z.object({;
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),;
+  password: z.string().min(6, "Password must be at least 6 characters"),;
+  rememberMe: z.boolean()}),;
+type LoginFormValues = z.infer<typeof loginSchema>,;
+export function LoginForm() {;
+  const { isLoading, login } = useAuth(),;
+  const [showPassword, setShowPassword] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isResending, setIsResending] = useState(false),;
+  const [verificationMessage, setVerificationMessage] = useState(''),;
+  const router = useRouter(),;
+  const form = useForm<LoginFormValues>({;
+    resolver: zodResolver(loginSchema) as any,;
+    defaultValues: {;
+      email: "",;
+      password: "",;
+      rememberMe: false}}),;
+  const onSubmit = async (data: LoginFormValues) => {;
+    if (isSubmitting) return,;
+    try {;
+      setIsSubmitting(true),;
+      // Pass email and password to the login function;
+      const result = await login(data.email, data.password, data.rememberMe),;
+      if (result?.error) {;
+        let errorMessage = "Login failed. Please try again.", // Default generic error;
+        if (result?.error && result?.error?.message) {;
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {;
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.";
+          } else {;
+            errorMessage = result.error.message;
+          }
+        }
+        form.setError("root", { message: errorMessage });
+=======
   FormMessage,;
 } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -290,12 +515,24 @@ export function LoginForm() {;
           }
         }
         form && form.setError('root', { message: errorMessage });
+>>>>>>> main
       } else {;
         fireEvent('login', { method: 'email' });
       }
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
+  },;
+  const handleResendEmail = async () => {;
+    const email = form.getValues('email'),;
+    if (!email) {;
+      form.setError('root', { message: 'Please enter your email address.' }),;
+      return;
+    }
+    setIsResending(true),;
+    setVerificationMessage(''),;
+=======
   };
 
   const handleResendEmail = async () => {;
@@ -306,10 +543,20 @@ export function LoginForm() {;
     }
     setIsResending(true);
     setVerificationMessage('');
+>>>>>>> main
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
+        body: JSON.stringify({ email });
+      }),;
+      const data = await response.json(),;
+      if (response.ok) {;
+        setVerificationMessage('Verification email sent. Please check your inbox.');
+      } else {;
+        setVerificationMessage(data.message || 'Failed to resend verification email.');
+=======
         body: JSON && JSON.stringify({ email }),;
       });
       const data = await response && response.json();
@@ -321,12 +568,30 @@ export function LoginForm() {;
         setVerificationMessage(;
           data && data.message || 'Failed to resend verification email.';
         );
+>>>>>>> main
       }
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
     }
+<<<<<<< HEAD
+  },;
+  const handleCheckStatus = () => {;
+    const email = form.getValues('email'),;
+    if (!email) {;
+      form.setError('root', { message: 'Please enter your email address.' }),;
+      return;
+    }
+    router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+  },
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
   };
 
   const handleCheckStatus = () => {;
@@ -350,7 +615,6 @@ export function LoginForm() {;
         <FormField
           control={form && form.control}
           name='email'
-=======
       {form.form_state.errors.root && (
         <Alert variant='destructive' className='mb - 4'>;
           <AlertDescription>;
@@ -371,13 +635,13 @@ if ( {) {
         <FormField;
           control={form.control}
           name='email';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({
             field
           }: {
 
 
 
+>>>>>>> main
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -385,7 +649,32 @@ if ( {) {
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <form
+        onSubmit={form.handleSubmit(onSubmit, errors => {
+          const firstError = Object.keys(errors)[0] as keyof LoginFormValues
 
+          if (firstError) {
+            form.setFocus(firstError)
+          }        })}
+        className='space-y-6'
+      >
+        <FormField
+          control={form.control}
+          name='email'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<LoginFormValues, 'email'>
+          }) => (            <FormItem>
+              <FormLabel className='text-zion-slate-light'>
+                Email address
+              </FormLabel>
+=======
+=======
+
+>>>>>>> main
       <form;
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
@@ -401,20 +690,31 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <FormControl>
+                <div className="relative">
+                  <Input
+<<<<<<< HEAD
+                    placeholder='you@example.com'
+                    aria-label='Email address'
+                    aria-invalid={!!form.formState.errors.email}
+                    className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
+=======
+=======
+
               <FormControl>
                 <div className='relative'>
-=======
             field: ControllerRenderProps<LoginFormValues, 'email'>;
           }) => (            <FormItem>;
               <FormLabel className='text-zion-slate-light'>;
-=======
             field: ControllerRenderProps < LoginFormValues, 'email'>;
           }) => (            <FormItem>;
               <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Email address;
               </FormLabel>;
               <FormControl>;
@@ -460,22 +760,70 @@ if ( {) {
                     size='sm'
                     className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
                     onClick={() => setShowPassword(!showPassword)}                  >;
-=======
 
+>>>>>>> main
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> main
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          )}
+        />
+        <FormField
+          control={form.control}
+          name='password'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<LoginFormValues, 'password'>
+          }) => (            <FormItem>
+              <FormLabel className='text-zion-slate-light'>Password</FormLabel>
+              <FormControl>
+                <div className='relative'>
+                  <Input
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder='Enter password'
+                    aria-label='Password'
+                    aria-invalid={!!form.formState.errors.password}
+                    className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
+                  />
+                  <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
+                  <Button
+                    type='button'
+                    variant='ghost'
+                    size='sm'
+                    className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
+                    onClick={() => setShowPassword(!showPassword)}                  >
+                    {showPassword ? (
+                      <EyeOff className='h-4 w-4' />
+                    ) : (
+                      <Eye className='h-4 w-4' />
+                    )}
+                    <span className='sr-only'>
+                      {showPassword ? 'Hide password' : 'Show password'}
+                    </span>
+                  </Button>
+=======
+=======
 
+>>>>>>> main
         className="space-y-6";
       >;
         <FormField;
@@ -494,13 +842,36 @@ if ( {) {
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> main
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          )}
+        />
+        <FormField
+          control={form.control}
+          name='rememberMe'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<LoginFormValues, 'rememberMe'>
+          }) => (
+            <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
+=======
+=======
 
+>>>>>>> main
           )}
         />;
         <FormField;
@@ -562,15 +933,21 @@ if ( {) {
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                     onClick={() => setShowPassword(!showPassword)}
                   >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {showPassword ? (;
+<<<<<<< HEAD
+                      <EyeOff className="h-4 w-4" />;
+                    ) : (;
+                      <Eye className="h-4 w-4" />;
+                    )}
+                    <span className="sr-only">;
+                      {showPassword ? "Hide password" : "Show password"}
+=======
                       <EyeOff className='h-4 w-4' />;
                     ) : (;
                       <Eye className='h-4 w-4' />;
                     )}
                     <span className='sr-only'>;
                       {showPassword ? 'Hide password' : 'Show password'}
-=======
             field: ControllerRenderProps < LoginFormValues, 'password'>;
           }) => (            <FormItem>;
               <FormLabel className='text - zion - slate - light'>Password</FormLabel>;
@@ -595,11 +972,43 @@ if ( {) {
                       <Eye className='h - 4 w - 4' />)}
                     <span className='sr - only'>;
                       {show_password ? 'Hide password' : 'Show password'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
                     </span>;
                   </Button>;
                 </div>;
               </FormControl>;
+<<<<<<< HEAD
+              <FormMessage className="text-red-400" />;
+            </FormItem>;
+          )}
+        />;
+        <FormField;
+          control={form.control}
+          name="rememberMe"
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+<<<<<<< HEAD
+                  className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
+                  aria-label='Remember me'                />
+=======
+                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
+                  aria-label="Remember me"
+                />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
               <FormMessage className='text - red - 400' />;
             </FormItem>)}
@@ -608,12 +1017,10 @@ if ( {) {
           control={form.control}
 
               <FormControl>
-=======
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Checkbox
 
                   checked={field.value}
@@ -624,13 +1031,20 @@ if ( {) {
                 />
 
 
+>>>>>>> main
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
+<<<<<<< HEAD
+        />
+        <div className="flex items-center justify-between">
+          <div className="text-sm">
+            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
+            {/* If "Remember me" was previously here, it's moved. */}
+=======
         />;
         <div className='flex items-center justify-between'>;
           <div className='text-sm'>;
@@ -700,6 +1114,7 @@ if ( {) {
           <Link
             href='/signup'
 
+>>>>>>> main
           </div>
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -708,7 +1123,36 @@ if ( {) {
           </div>
         </div>
         <Button
+<<<<<<< HEAD
+<<<<<<< HEAD
+          type='submit'
+          className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible'
+          disabled={isLoading |isSubmitting}        >
+          {isLoading |isSubmitting ? 'Logging in...' : 'Login'}
+        </Button>
+        {verificationMessage && (
+          <p className='text-sm text-center text-zion-slate-light mt-2'>
+            {verificationMessage}
+          </p>
+        )}
+        <div className='flex justify-between mt-4'>
+          <Button
+            type='button'
+            variant='secondary'
+            className='w-1/2 mr-2'
+            onClick={handleResendEmail}
+            disabled={isResending}          >
+            {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
+          </Button>
+          <Button
+            type='button'
+            variant='outline'
+            className='w-1/2 ml-2'
+            onClick={handleCheckStatus}          >
+=======
+=======
 
+>>>>>>> main
           type="submit"
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
           disabled={isLoading || isSubmitting}
@@ -773,25 +1217,54 @@ if ( {) {
             className="w-1/2 ml-2"
             onClick={handleCheckStatus}
           >
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
+>>>>>>> main
             Check status
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Create account
           </Link>
         </p>
       </form>
     </Form>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}else {
+  fireEvent ('login', {'
+  method: 'email'
+})
+}finally {
+  setIsSubmitting (false)
+}
+const handleResendEmail = async () => {'
+  const email = form.getValues ('email')
+if (!email) {'
+  form.setError ('root', {'
+  message: 'Please enter your email address.'
+})
+<<<<<<< HEAD
+return
+=======
+return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 return;
 
 
+>>>>>>> main
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -820,11 +1293,19 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
+<<<<<<< HEAD
+<<<<<<< HEAD
+return
+=======
+return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 return;
 
 
+>>>>>>> main
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -845,19 +1326,40 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
+<<<<<<< HEAD
+=======
+          </Button>;
+          <Button;
+            type="button";
+            variant="outline";
+            className="w-1/2 ml-2";
+            onClick={handleCheckStatus}
+          >;
+            Check status;
+          </Button>;
+        </div>;
+        <p className="text-sm text-center mt-4">;
+          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 =======
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
+>>>>>>> main
             Create account;
           </Link>;
         </p>;
       </form>;
     </Form>;
   );
+<<<<<<< HEAD
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -967,12 +1469,6 @@ return;
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
@@ -16,10 +27,20 @@ const cors_headers = {
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
 interface HireRequest {
   talent: {
     id: string;
     full_name: string;
+<<<<<<< HEAD
+    professional_title: string
+    email?: string
+  }
+  requester: {
+    name: string;
+    email: string
+    id?: string
+=======
 
     professional_title: string,
     email?: string;
@@ -29,10 +50,20 @@ interface HireRequest {
     email: string,
     id?: string;
 
+>>>>>>> main
   }
   project: {
     overview: string;
     timeline: string;
+<<<<<<< HEAD
+    budgetMin: number
+    budgetMax: number
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
@@ -40,14 +71,22 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 
+>>>>>>> main
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -69,15 +108,60 @@ interface HireRequest {
     timeline: string,
     budgetMin: number,
     budgetMax: number
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+interface HireRequest {;
+  talent: {;
+    id: string,;
+    full_name: string,;
+    professional_title: string,;
+    email?: string;
+  },;
+  requester: {;
+    name: string,;
+    email: string,;
+    id?: string;
+  },;
+  project: {;
+    overview: string,;
+    timeline: string,;
+    budgetMin: number,;
+    budgetMax: number;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   }
 }
 interface EnhancedContent {
   summary: string
   projectType: string
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === "OPTIONS") {
+=======
 
 
 
@@ -86,10 +170,24 @@ interface EnhancedContent {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
+>>>>>>> main
     return new Response(null, { headers: corsHeaders })
   }
   try {
     const supabase = createClient(
+<<<<<<< HEAD
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+<<<<<<< HEAD
+    );
+    const requestData: HireRequest = await req.json()
+    const { talent, requester, project } = requestData;
+    // Format budget for display
+    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`;
+    // 1. Optional: Enhance content with AI
+    let enhancedContent: EnhancedContent | null = null;
+    const openAiKey = Deno.env.get("OPENAI_API_KEY")
+=======
 
     
     const requestData: HireRequest = await req && req.json(),
@@ -104,15 +202,19 @@ serve(async (req) => {
     
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),
 
+>>>>>>> main
     if (openAiKey) {
       try {
         const configuration = new Configuration({
           apiKey: openAiKey});
         const openai = new OpenAIApi(configuration);
 =======
+<<<<<<< HEAD
+=======
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
+>>>>>>> main
     ),
     
     const requestData: HireRequest = await req.json(),
@@ -131,6 +233,15 @@ serve(async (req) => {
           apiKey: openAiKey}),
         const openai = new OpenAIApi(configuration),
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        const prompt = `
+          Project Overview: "${project.overview}"
+          Please provide:
+          1. A brief summary of this project (max 100 characters)
+          2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         const prompt = `
@@ -142,11 +253,21 @@ serve(async (req) => {
           2. Classify this project into one category (e && e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
           
 
+>>>>>>> main
           Format your response as JSON: {
             "summary": "Brief summary here"
             "projectType": "Project type here"
           }
         `;
+<<<<<<< HEAD
+        const completion = await openai.createCompletion({
+          model: "gpt-3.5-turbo-instruct";
+          prompt;
+          max_tokens: 150
+          temperature: 0.3});
+        const responseText = completion.data.choices[0]?.text |"";
+=======
+=======
 
     budget_min: number,
     budget_max: number;
@@ -208,6 +329,7 @@ if ( {) {
 
 =======
 
+>>>>>>> main
           
           Format your response as JSON:
           {
@@ -215,6 +337,53 @@ if ( {) {
             "projectType": "Project type here"
           }
         `,
+<<<<<<< HEAD
+        
+        const completion = await openai.createCompletion({
+          model: "gpt-3.5-turbo-instruct",
+          prompt,
+          max_tokens: 150,
+          temperature: 0.3}),
+        
+        const responseText = completion.data.choices[0]?.text || "",
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        try {
+          // Extract JSON from the response
+          const jsonMatch = responseText.match(/\{[\s\S]*\}/),
+          if (jsonMatch) {
+<<<<<<< HEAD
+            enhancedContent = JSON.parse(jsonMatch[0]);
+            console.log("Enhanced content generated:", enhancedContent)
+          }
+        } catch (jsonError) {
+          console.error("Error parsing AI response:", jsonError);
+          // Continue without enhanced content
+        }
+      } catch (aiError) {
+        console.error("Error generating enhanced content:", aiError);
+        // Continue without enhanced content
+      }
+    }
+    // 2. Store the request in the database
+    const { data: requestRecord, error: requestError } = await supabase
+      .from('hire_requests')
+      .insert([
+        {
+          talent_id: talent.id
+          requester_id: requester.id |null, // May be null if user is not authenticated
+          requester_name: requester.name;
+          requester_email: requester.email;
+          project_overview: project.overview;
+          project_summary: enhancedContent?.summary |null;
+          project_type: enhancedContent?.projectType |null;
+          timeline: project.timeline;
+          budget_min: project.budgetMin;
+          budget_max: project.budgetMax;
+          budget_display: budgetDisplay;
+          status: 'new'
+          expiry_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
+=======
 
         
         const completion = await openai && openai.createCompletion({
@@ -247,15 +416,24 @@ if ( {) {
           status: 'new',
           expiry_date: new Date(Date && Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
 
+>>>>>>> main
         }
       ])
       .select();
     if (requestError) {
+<<<<<<< HEAD
+      throw new Error(`Error storing hire request: ${requestError.message}`)
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
     }
 =======
 
 
+>>>>>>> main
 =======
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
@@ -296,21 +474,40 @@ if ( {) {
       .select(),;
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
 
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
       .from('profiles')
       .select('id')
       .eq('user_typeadmin')
+<<<<<<< HEAD
+<<<<<<< HEAD
+      .limit(1);
+    if (adminError) {
+      console.error("Error fetching admin users:", adminError)
+    }
+    let adminId: string | undefined = undefined;
+=======
+=======
 
 
+>>>>>>> main
       .limit(1),
       
     if (adminError) {
@@ -319,6 +516,17 @@ if ( {) {
     
     let adminId: string | undefined = undefined,
     
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Create notification for admin (if any found)
+    if (adminUsers && adminUsers.length > 0) {
+      adminId = adminUsers[0].id
+      const adminNotificationContent = {
+<<<<<<< HEAD
+        title: `New hiring request for ${talent.full_name}`;
+        message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`;
+        type: "hire_request"
+=======
 
 
     // Create notification for admin (if any found)
@@ -404,11 +612,40 @@ if ( {) {
         message: `${requester && requester.name} (${requester && requester.email}) wants to hire ${talent && talent.full_name} for a project with budget ${budgetDisplay}.`;
         type: "hire_request",
 
+>>>>>>> main
         related_id: requestRecord[0].id
       }
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId;
+<<<<<<< HEAD
+          _title: adminNotificationContent.title;
+          _message: adminNotificationContent.message;
+          _type: adminNotificationContent.type
+          _related_id: adminNotificationContent.related_id
+        });
+      if (notificationError) {
+        console.error("Error creating admin notification:", notificationError)
+      }
+    }
+    // 4. Send email notification to talent
+    if (talent.email) {
+      // In a real implementation, this would call your email sending function
+      const emailResponse = await supabase.functions.invoke('send-email', {
+        body: {
+          to: talent.email
+          subject: `New Project Request from ${requester.name}`;
+          html: `
+            <h1>You've Received a New Project Request</h1>
+            <p>Hello ${talent.full_name},</p>
+            <p>You have received a new project request from ${requester.name} (${requester.email}).</p>
+            <h2>Project Details</h2>
+            <p><strong>Budget:</strong> ${budgetDisplay}</p>
+            <p><strong>Timeline:</strong> ${project.timeline}</p>
+            <p><strong>Overview:</strong></p>
+            <p>${project.overview}</p>
+=======
+=======
 
           _title: adminNotificationContent && adminNotificationContent.title;
           _message: adminNotificationContent && adminNotificationContent.message;
@@ -479,6 +716,7 @@ if ( {) {
 
 =======
 
+>>>>>>> main
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
         type: "hire_request",
@@ -496,11 +734,123 @@ if ( {) {
         
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+    }
+    
+    // 4. Send email notification to talent
+    if (talent.email) {
+      // In a real implementation, this would call your email sending function
+      const emailResponse = await supabase.functions.invoke('send-email', {
+        body: {
+          to: talent.email,
+          subject: `New Project Request from ${requester.name}`;
+          html: `
+            <h1>You've Received a New Project Request</h1>
+            <p>Hello ${talent.full_name},</p>
+            <p>You have received a new project request from ${requester.name} (${requester.email}).</p>
+            <h2>Project Details</h2>
+            <p><strong>Budget:</strong> ${budgetDisplay}</p>
+            <p><strong>Timeline:</strong> ${project.timeline}</p>
+            <p><strong>Overview:</strong></p>
+            <p>${project.overview}</p>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+    // 3. Create notification for the admin;
+    // Fetch admin users;
+    const { data: adminUsers, error: adminError } = await supabase;
+      .from('profiles');
+      .select('id');
+      .eq('user_typeadmin');
+      .limit(1),;
+    if (adminError) {;
+      console.error("Error fetching admin users:", adminError);
+    }
+;
+    let adminId: string | undefined = undefined,;
+    // Create notification for admin (if any found);
+    if (adminUsers && adminUsers.length > 0) {;
+      adminId = adminUsers[0].id,;
+      const adminNotificationContent = {;
+        title: `New hiring request for ${talent.full_name}`,;
+        message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,;
+        type: "hire_request",;
+        related_id: requestRecord[0].id;
+      },;
+      const { error: notificationError } = await supabase;
+        .rpc('create_notification', {;
+          _user_id: adminId,;
+          _title: adminNotificationContent.title,;
+          _message: adminNotificationContent.message,;
+          _type: adminNotificationContent.type,;
+          _related_id: adminNotificationContent.related_id;
+        }),;
+      if (notificationError) {;
+        console.error("Error creating admin notification:", notificationError);
+      }
+    }
+;
+    // 4. Send email notification to talent;
+    if (talent.email) {;
+      // In a real implementation, this would call your email sending function;
+      const emailResponse = await supabase.functions.invoke('send-email', {;
+        body: {;
+          to: talent.email,;
+          subject: `New Project Request from ${requester.name}`,;
+          html: `;
+            <h1>You've Received a New Project Request</h1>;
+            <p>Hello ${talent.full_name},</p>;
+            <p>You have received a new project request from ${requester.name} (${requester.email}).</p>;
+            <h2>Project Details</h2>;
+            <p><strong>Budget:</strong> ${budgetDisplay}</p>;
+            <p><strong>Timeline:</strong> ${project.timeline}</p>;
+            <p><strong>Overview:</strong></p>;
+            <p>${project.overview}</p>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          `}});
+      console.log("Email sending result:", emailResponse)
+=======
+          `}}),
+      
+      // // // console.log("Email sending result:", emailResponse)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    }
+    return new Response(
+      JSON.stringify({
+        success: true
+        message: "Hire request processed successfully"
+        request_id: requestRecord[0].id
+      }),
+      {
+<<<<<<< HEAD
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 200}
+    )
+  } catch (error) {
+    console.error("Error processing hire request:", error.message);
+    return new Response(
+      JSON.stringify({
+        success: false
+        message: "Failed to process hire request"
+        error: error.message
+=======
 
           `}}),
       
@@ -556,9 +906,12 @@ if ( {) {
         message: "Failed to process hire request",
         error: error && error.message 
 
+>>>>>>> main
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+<<<<<<< HEAD
 =======
     console.error ("Error processing hire request:", error.message);
 ;
@@ -573,6 +926,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> main
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
     )
@@ -586,6 +940,54 @@ if ( {) {
         error: error.message 
       }),
       {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
+            <p>Best regards,<br>The Zion AI Marketplace Team</p>;
+          `}}),;
+      // // // console.log("Email sending result:", emailResponse);
+    }
+;
+    return new Response(;
+      JSON.stringify({;
+        success: true,;
+        message: "Hire request processed successfully",;
+        request_id: requestRecord[0].id;
+      }),;
+      {;
+        headers: { ...corsHeaders, "Content-Type": "application/json" },;
+        status: 200}
+    );
+  } catch (error) {;
+    console.error("Error processing hire request:", error.message),;
+    return new Response(;
+      JSON.stringify({;
+        success: false,;
+        message: "Failed to process hire request",;
+        error: error.message;
+      }),;
+      {;
+        headers: { ...corsHeaders, "Content-Type": "application/json" },;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        status: 500}
+    )
+  }
+});
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         status: 500}
@@ -599,3 +1001,4 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

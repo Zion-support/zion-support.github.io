@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,10 +55,8 @@ import {
 } from '@/components / ui / card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -191,7 +187,6 @@ function ProjectDetailsContent() {
   useEffect(() => {
     async function loadProject() {
       if (!projectId) return
-=======
 
 
   // Load project data
@@ -200,13 +195,11 @@ function ProjectDetailsContent() {
 
       if (!projectId) return;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
 
-=======
       if (!projectId) return,
       
       setIsLoading(true),
@@ -218,13 +211,11 @@ function ProjectDetailsContent() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
 
-=======
 
           title: 'Project not found',
           description: 'The requested project could not be found.',
@@ -240,7 +231,6 @@ function ProjectDetailsContent() {
   }, [projectId])
   const fetchProjectNotes = async (projectId: string) => {    try {
 
-=======
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
@@ -303,7 +293,6 @@ function ProjectDetailsContent() {;
           variant: 'destructive',;
         });
         router && router.push('/dashboard');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       setIsLoading(false)
     }
@@ -337,7 +326,6 @@ function ProjectDetailsContent() {;
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return
     setIsSubmittingNote(true)
-=======
 
     
     loadProject()
@@ -353,7 +341,6 @@ function ProjectDetailsContent() {;
           created_by_profile:profiles!user_id(display_name, avatar_url)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data, error } = await supabase
         .from('project_notes')
@@ -557,7 +544,6 @@ if (throw error) {
           description: 'The project is now in progress. Congratulations!',;
         });
 
-=======
   const handleStatusChange = async (new_status: ProjectStatus) => {
     // Check condition
 if (return) {
@@ -581,14 +567,11 @@ if ( {) {
           title: 'Offer Accepted! 🎉',
           description: 'The project is now in progress. Congratulations!',
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           title: 'Offer Accepted! 🎉',
           description: 'The project is now in progress. Congratulations!',
 
         })
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
 
@@ -609,7 +592,6 @@ if ( {) {
     }
   }
 
-=======
           title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"})
       }
@@ -638,7 +620,6 @@ if ( {) {
 
 
   if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className='container mx - auto py - 8'>;
         <div className='flex justify - center items - center h - 64'>;
@@ -671,7 +652,6 @@ if ( {) {
               Return to Dashboard
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </CardContent>
         </Card>
@@ -763,7 +743,6 @@ if ( {) {
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>
@@ -809,7 +788,6 @@ if ( {) {
                     <AlertDialogTrigger asChild>;
                       <Button variant='default'>;
                         <CheckCircle2 className='mr-2 h-4 w-4' /> Accept Offer;
-=======
   // Check condition
 if ( {) {
   $2
@@ -876,7 +854,6 @@ if ( {) {
                     <AlertDialogTrigger as_child>;
                       <Button variant='default'>;
                         <CheckCircle2 className='mr - 2 h - 4 w - 4' /> Accept Offer;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </Button>;
                     </AlertDialogTrigger>;
                     <AlertDialogContent>;
@@ -920,14 +897,11 @@ if ( {) {
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
                           Accept Offer
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
 
-=======
                         <AlertDialogCancel > Cancel</AlertDialogCancel>;
                         <AlertDialogAction;
                           on_click={() => handleStatusChange ('offer_accepted')}
@@ -940,7 +914,6 @@ if ( {) {
 
 
 
-=======
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
@@ -950,8 +923,6 @@ if ( {) {
               )}
               
               {(isClient || isTalent) && project.status === "in_progress" && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant='default'>
@@ -978,7 +949,6 @@ if ( {) {
                         Mark as Completed
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -1012,7 +982,6 @@ if ( {) {
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
-=======
 
               {(isClient || isTalent) && project && project.status === 'in_progress' && (;
                 <AlertDialog>;
@@ -1064,7 +1033,6 @@ if ( {) {
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(;
                   project && project.status;
                 ) && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant='outline'
                     onClick={() =>;
@@ -1088,7 +1056,6 @@ if ( {) {
               value={activeTab}
               onValueChange={setActiveTab}>;
               <TabsList className='mb-6'>;
-=======
                   <Button;
                     variant='outline';
                     on_click={() => handleStatusChange ('changes_requested')}
@@ -1158,13 +1125,11 @@ if ( {) {
               onValueChange={setActiveTab}
             >;
               <TabsList className='mb - 6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <TabsTrigger value='details'>Project Details</TabsTrigger>;
                 <TabsTrigger value='timeline'>Timeline</TabsTrigger>;
                 <TabsTrigger value='documents'>Documents</TabsTrigger>;
                 <TabsTrigger value='notes'>Shared Notes</TabsTrigger>;
 
-=======
               
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
@@ -1195,7 +1160,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -1220,7 +1184,6 @@ if ( {) {
                       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h3 className='font-semibold mb-2'>Payment Terms</h3>
                         <Badge variant='outline' className='capitalize'>
@@ -1232,7 +1195,6 @@ if ( {) {
                       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h3 className='font-semibold mb-2'>Job Details</h3>
                         <div className='bg-muted/30 p-4 rounded-md'>
@@ -1251,7 +1213,6 @@ if ( {) {
               <TabsContent value="timeline">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -1273,7 +1234,6 @@ if ( {) {
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div>
                           <h3 className='font-semibold'>Project Status</h3>
                           <div className='mt-1'>
@@ -1291,7 +1251,6 @@ if ( {) {
               <TabsContent value="documents">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -1312,7 +1271,6 @@ if ( {) {
                           </div>
                         </div>
                         <Button variant='outline' size='sm' asChild>
-=======
               </TabsList>;
 
               <TabsContent value='details'>;
@@ -1402,7 +1360,6 @@ if ( {) {
                           <div>;
                             <h3 className='font-semibold'>Project Agreement</h3>;
                             <p className='text-sm text-muted-foreground'>;
-=======
                 {project.status === 'completed' && (
                   <TabsTrigger value='reviews'>Reviews</TabsTrigger>)}
               </TabsList>;
@@ -1488,7 +1445,6 @@ if ( {) {
                           <div>;
                             <h3 className='font - semibold'>Project Agreement</h3>;
                             <p className='text - sm text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               Uploaded when project was created;
                             </p>;
                           </div>;
@@ -1499,7 +1455,6 @@ if ( {) {
               <TabsContent value="notes">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -1532,16 +1487,13 @@ if ( {) {
                               <div className='flex items-center gap-2 mb-2'>;
                                 <Avatar className='h-6 w-6'>;
                                   {note && note.created_by_profile?.avatar_url ? (;
-=======
 
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   {note.created_by_profile?.avatar_url ? (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                     <img
 
 
@@ -1549,7 +1501,6 @@ if ( {) {
                                     />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                   ) : (
                                     <User className='h-4 w-4' />
                                   )}
@@ -1595,7 +1546,6 @@ if ( {) {
                             onChange={e => setNewNote(e && e.target.value)}
                             className='min-h-[100px] mb-2'                          />;
 
-=======
 
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
@@ -1619,7 +1569,6 @@ if ( {) {
                       </div>
 
 
-=======
                       
                       {isOfferAccepted && (
                         <div>
@@ -1631,8 +1580,6 @@ if ( {) {
                           />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <Button
 
                             onClick = {handleSubmitNote,}
@@ -1647,7 +1594,6 @@ if ( {) {
               <TabsContent value="reviews">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
@@ -1658,7 +1604,6 @@ if ( {) {
           <div className="order-1 lg:order-2 lg:col-span-1">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -1667,7 +1612,6 @@ if ( {) {
                 <div className='space-y-6'>
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
-=======
                         <Button variant='outline' size='sm' as_child>;
                           <a;
                             href={project.agreement_url}
@@ -1763,7 +1707,6 @@ if ( {) {
                 <div className='space - y-6'>;
                   <div className='flex items - start gap - 4'>;
                     <Avatar className='h - 10 w - 10'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
@@ -1774,7 +1717,6 @@ if ( {) {
                         />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ) : (
                         <User className='h-6 w-6' />
                       )}
@@ -1860,14 +1802,11 @@ if ( {) {
                   <div className='flex items - start gap - 4'>;
                     <Avatar className='h - 10 w - 10'>;
 
-=======
 
                   
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
@@ -1878,7 +1817,6 @@ if ( {) {
                         />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ) : (
                         <User className='h-6 w-6' />
                       )}
@@ -1895,7 +1833,6 @@ if ( {) {
                         Project Owner
                       </p>
                       {isTalent && (
-=======
                           onClick={() =>;
                             router && router.push(;
                               `/messages?talentId=${project && project.talent_id}`;
@@ -1926,7 +1863,6 @@ if ( {) {
                         Project Owner;
                       </p>;
                       {isTalent && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <Button
 
 
@@ -2421,7 +2357,6 @@ if ( {) {
             <Card className="mt-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -2447,7 +2382,6 @@ if ( {) {
                       {format(new Date(project.start_date), "PPP")}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </span>
                   </div>
                 </div>
@@ -2490,7 +2424,6 @@ if ( {) {
                     <span className='text-sm font-medium'>Start Date:</span>;
                     <span className='text-sm'>;
                       {format(new Date(project && project.start_date), 'PPP')}
-=======
                           loading='lazy'                        />) : (
                         <User className='h - 6 w - 6' />)}
                     </Avatar>;
@@ -2556,7 +2489,6 @@ if ( {) {
                   </p>
 
 
-=======
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
@@ -2565,7 +2497,6 @@ if ( {) {
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </Button>
                 </CardFooter>
               )}
@@ -2573,8 +2504,6 @@ if ( {) {
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
@@ -2611,7 +2540,6 @@ if ( {) {
                   </p>;
                 </CardFooter>;
               )}
-=======
               {/* Conditional Footer Based on Status */}
               {project.status === 'changes_requested' && is_client && (
                 <CardFooter className='flex - col items - start gap - 2 border - t pt - 6'>;
@@ -2655,7 +2583,6 @@ if ( {) {
       </main>;
 
   )
-=======
     </>);
 
 }
@@ -2847,7 +2774,6 @@ const ProjectDetails = () => {;
     </>;
 
   );
-=======
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -2896,13 +2822,10 @@ const ProjectDetails = () => {
             </div>
     </>
   )
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
 
-=======
 
 
-=======
   status;
 }</Badge>;
 }'";
@@ -3017,9 +2940,3 @@ const ProjectDetails = () =>: any {
             </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -12,14 +10,12 @@ type FormData = z && z.infer<typeof formSchema>;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
 
-=======
 const form_schema = z.object ({
   title: z.string ().min (3, "Title must be at least 3 characters");
   key_features: z.string (),
@@ -31,7 +27,3 @@ type FormData = z.infer < typeof form_schema>;
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

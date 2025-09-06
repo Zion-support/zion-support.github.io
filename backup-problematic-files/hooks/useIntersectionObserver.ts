@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:hooks/useIntersectionObserver.ts
+<<<<<<< HEAD
+import { useEffect, useRef, useState } from 'react';
+=======
+import {useEffect, useRef, useState} from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+import { useEffect, useRef, useState } from 'react',
+=======
+import {useEffect, useRef, useState} from 'react';
+>>>>>>> main:hooks/useIntersectionObserver.ts
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
 
 import {useEffect, useRef, useState} from 'react';
 
@@ -7,23 +25,114 @@ import {useEffect, useRef, useState} from 'react';
 
 
 
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+  freezeOnceVisible?: boolean;
+}
+export function useIntersectionObserver({
+  threshold = 0,
+  root = null,
+  rootMargin = '0%',
+  freezeOnceVisible = false,
+}: UseIntersectionObserverProps = {}) {
+  const [entry, setEntry] = useState<IntersectionObserverEntry>(),
+  const [node, setNode] = useState<Element | null>(null),
+  const observer = useRef<IntersectionObserver | null>(null),
+  const frozen = entry?.isIntersecting && freezeOnceVisible,
+  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+    setEntry(entry);
+=======
+  freezeOnceVisible?: boolean
+}
+<<<<<<< HEAD
+export function useIntersectionObserver({
+
+=======
+export function useIntersectionObserver({;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  threshold = 0;
+  root = null;
+  rootMargin = '0%';
+  freezeOnceVisible = false
+}: UseIntersectionObserverProps = {}) {
+  const [entry, setEntry] = useState<IntersectionObserverEntry>();
+  const [node, setNode] = useState<Element | null>(null);
+  const observer = useRef<IntersectionObserver | null>(null);
+  const frozen = entry?.isIntersecting && freezeOnceVisible;
+  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+    setEntry(entry)
+<<<<<<< HEAD:hooks/useIntersectionObserver.ts
+  }
+  useEffect(() => {
+    const hasIOSupport = !!window.IntersectionObserver;
+    if (!hasIOSupport |frozen |!node) return;
+    const observerParams = { threshold, root, rootMargin }
+=======
+>>>>>>> main:hooks/useIntersectionObserver.ts
+  };
+  useEffect(() => {
+    const hasIOSupport = !!window.IntersectionObserver;
+    if (!hasIOSupport || frozen || !node) return;
+    const observerParams = { threshold, root, rootMargin };
+<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+    const currentObserver = new IntersectionObserver(
+      updateEntry,
+      observerParams
+    );
+    observer.current = currentObserver;
+    currentObserver.observe(node);
+    return () => {
+      currentObserver.disconnect();
+    };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
+    const currentObserver = new IntersectionObserver(updateEntry, observerParams);
+    observer.current = currentObserver;
+    currentObserver.observe(node);
+    return () => {
+      currentObserver.disconnect()
+    }
+>>>>>>> main:hooks/useIntersectionObserver.ts
+=======
 
   freezeOnceVisible?: boolean
 }
 
+>>>>>>> main
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+      observer.current?.unobserve(prevNode.current);
+    }
+    if (node) {
+      observer.current?.observe(node);
+    }
+    prevNode.current = node;
+  }, [node]);
+<<<<<<< HEAD:hooks/useIntersectionObserver.ts
+<<<<<<< HEAD
+
+  return [setNode, entry] as const
+}
+=======
+  return [setNode, entry] as const
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
   return [setNode, entry] as const
 };
 
+>>>>>>> main
 =======
   return [setNode, entry] as const;
 }
@@ -81,6 +190,13 @@ export function useIntersectionObserver({;
   return [setNode, entry] as const
 }
 >>>>>>> main:hooks/useIntersectionObserver.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
 
 
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

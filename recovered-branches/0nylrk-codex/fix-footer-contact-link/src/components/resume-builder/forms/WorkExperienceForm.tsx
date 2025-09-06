@@ -1,5 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { format } from 'date-fns';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { WorkExperience  } from '@/types/resume';
+import { Loader2, Edit, Trash2  } from 'lucide-react';
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Card, CardContent  } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+=======
+=======
 
 
+>>>>>>> main
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -16,8 +43,12 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
+>>>>>>> main
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -35,12 +66,21 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
+=======
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 
 
+>>>>>>> main
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +125,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 =======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -172,20 +215,38 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: '',;
           location: ''}),;
         setEditingId(null);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
   };
 
 
 
+>>>>>>> main
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -197,10 +258,21 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  const handleEnhanceDescription = (enhancedContent: string) => {
+    form.setValue('description', enhancedContent)
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
   };
 
+>>>>>>> main
 =======
   },;
   const handleEdit = (work: WorkExperience) => {;
@@ -215,16 +287,26 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <div className="space-y-6">
       <div>
@@ -254,6 +336,39 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
+<<<<<<< HEAD
+                    )}
+                  </div>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleEdit(work)}
+                    >
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleDelete(work.id!)}
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+                {work.description && (
+                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
@@ -272,6 +387,7 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
 
 
 
+>>>>>>> main
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -279,6 +395,49 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
+              <FormField
+                control={form.control}
+                name="company_name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Company Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Google, Microsoft, etc." {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="role_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Job Title</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="start_date"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Start Date</FormLabel>
+                    <FormControl>
+<<<<<<< HEAD
+                      <Input
+                        type="date"
+                        {...field}
+                        value={field.value |''}
+=======
+=======
 =======
 
       <div className="bg-muted/40 p-6 rounded-lg">;
@@ -511,12 +670,17 @@ if ( {) {
                 name="start_date"
 
 
+>>>>>>> main
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
+>>>>>>> main
                       />
                     </FormControl>
                     <FormMessage />
@@ -524,6 +688,89 @@ if ( {) {
                 )}
               />
               <div className="space-y-4">
+<<<<<<< HEAD
+                <FormField
+                  control={form.control}
+                  name="is_current"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>I currently work here</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                {!form.watch('is_current') && (
+                  <FormField
+                    control={form.control}
+                    name="end_date"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>End Date</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="date"
+                            {...field}
+                            value={field.value |''}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
+              </div>
+            </div>
+            <FormField
+              control={form.control}
+              name="location"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Location (Optional)</FormLabel>
+                  <FormControl>
+                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="description"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="flex justify-between">
+                    <span>Job Description</span>
+                    <AIEnhancementButton
+                      currentContent={field.value |''}
+                      enhancementType="work-description"
+                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
+                      onEnhanced={handleEnhanceDescription}
+                    />
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Describe your responsibilities and accomplishments..."
+                      className="min-h-[100px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+            <div className="flex justify-between pt-2">
+              <Button
+                type="button"
+                variant="outline"
+=======
 =======
                 render={({ field }) => (;
                   <FormItem>;
@@ -723,16 +970,59 @@ if ( {) {
                 type="button"
                 variant="outline"
 
+>>>>>>> main
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      company_name: ''
+                      role_title: ''
+                      start_date: format(new Date(), 'yyyy-MM-dd');
+                      is_current: false
+                      description: ''
 
+=======
+=======
+
+>>>>>>> main
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                      location: ''})
+                  } else {
+                    onBack()
+                  }
+                }}
+              >
+                {editingId ? 'Cancel' : 'Back'}
+              </Button>
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {editingId ? 'Update' : 'Add'} Experience
+                </Button>
+                {!editingId && workExperiences.length > 0 && (
+                  <Button type="button" onClick={onComplete}>
+                    Next
+                  </Button>
+                )}
+<<<<<<< HEAD
+              </div>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </div>
+  )
+}
+=======
+=======
 
 
                       location: ''})
@@ -808,11 +1098,19 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
+    </div>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
     </div>);
 }
@@ -821,3 +1119,4 @@ if ( {) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

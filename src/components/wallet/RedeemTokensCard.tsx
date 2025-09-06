@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <Card>;
       <CardHeader>;
 
@@ -89,7 +87,6 @@
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </DialogContent>
@@ -97,7 +94,6 @@
       </CardContent>
     </Card>
 
-=======
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
@@ -159,16 +155,8 @@
       </CardContent>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 interface ApplicationProgressProps {
 
   status: ApplicationStatus
@@ -10,7 +8,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
 
   const getProgressValue = () => {
-=======
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
@@ -24,7 +21,6 @@ export /**
 function ApplicationProgress() {
   // Define the progress value based on status;
   const getProgressValue = () =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (status) {
 
 
@@ -46,7 +42,6 @@ function ApplicationProgress() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -90,7 +85,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -179,7 +173,6 @@ function StatusIcon(): any ({ status, current }: { status: ApplicationStatus, cu
   };
 }
 
-=======
     <div className={cn ("w - full space - y-2", class_name)}>;
       <Progress value={progress_value} className="h - 2" />;
       <div className="flex justify - between text - xs text - muted - foreground">;
@@ -239,11 +232,6 @@ if ( {) {
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

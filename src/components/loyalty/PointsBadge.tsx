@@ -1,6 +1,4 @@
-
-
-    { purchase: 0, post: 0, referral: 0 }
+{ purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
     // Check condition
@@ -104,7 +102,6 @@ export function PointsBadge() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
@@ -119,7 +116,6 @@ export function PointsBadge() {;
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -131,7 +127,6 @@ export function PointsBadge() {;
                   <p className="text-xs text-muted-foreground">
                     You haven't earned any points yet.
                   </p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
@@ -146,7 +141,6 @@ export function PointsBadge() {;
               <>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
                 <p className='text-xs mt-1 text-muted-foreground'>;
-=======
             {is_authenticated ? (
               <>;
                 <p className='text - sm font - medium'>Point Breakdown</p>;
@@ -166,7 +160,6 @@ export function PointsBadge() {;
               <>;
                 <p className='text - sm font - medium'>Zion Rewards Program</p>;
                 <p className='text - xs mt - 1 text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   • Sign up: 50 pts;
                   <br />;
                   • First purchase: 100 pts;
@@ -179,18 +172,15 @@ export function PointsBadge() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
-=======
           </TooltipContent>;
         </Tooltip>;
 
         {isAuthenticated && (;
           <Tooltip>;
             <TooltipTrigger asChild>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
 
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
@@ -220,7 +210,6 @@ export function PointsBadge() {;
 
 
 
-=======
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -234,7 +223,6 @@ export function PointsBadge() {;
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 />
               </Button>
             </TooltipTrigger>
@@ -246,8 +234,6 @@ export function PointsBadge() {;
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       </div>;
 
       {!isAuthenticated && (;
@@ -258,10 +244,8 @@ export function PointsBadge() {;
 }
 
 }
-=======
 
 
-=======
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
@@ -271,11 +255,4 @@ export function PointsBadge() {;
     </TooltipProvider>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

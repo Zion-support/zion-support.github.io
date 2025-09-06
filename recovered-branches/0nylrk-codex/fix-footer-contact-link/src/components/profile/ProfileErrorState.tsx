@@ -1,8 +1,21 @@
+<<<<<<< HEAD
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -10,7 +23,11 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">
+<<<<<<< HEAD
+{error |"Something went wrong"}
+=======
         {error |"Something went wrong"}
+>>>>>>> main
       </div>
       <Button asChild>
         <Link
@@ -23,6 +40,13 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       </Button>
     </div>
 
+<<<<<<< HEAD
+  );
+}
+}
+;
+
+=======
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
@@ -85,3 +109,4 @@ function ProfileErrorState() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

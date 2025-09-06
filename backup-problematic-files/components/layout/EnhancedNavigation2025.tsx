@@ -178,11 +178,14 @@ const navigationItems = [
     icon: <Cpu className="w-5 h-5" />,
     description: 'Enterprise solutions and infrastructure',
     children: [
+<<<<<<< HEAD
+=======
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-healing IT infrastructure' },
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', description: 'Intelligent development automation' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', description: 'Quantum-enhanced cloud computing' },
       { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
       { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
@@ -574,7 +577,12 @@ export default function EnhancedNavigation2025() {;
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
+<<<<<<<< HEAD:backup-problematic-files/components/layout/EnhancedNavigation2025.tsx
                 </a>
+========
+                </Link>
+=======
+>>>>>>>> main:components/layout/EnhancedNavigation2025.tsx.backup.1756001745
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}

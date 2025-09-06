@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from "react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export type FilterType =
+  | "all"
+  | "unread"
+  | "onboarding"
+  | "messages"
+  | "system";
+=======
 
 import React from './react';
 import { Tabs, TabsList, TabsTrigger  } from '@/components / ui / tabs';
@@ -10,11 +21,22 @@ export type FilterType =;
   | "system";
 ;
 
+>>>>>>> main
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
 
+<<<<<<< HEAD
+interface NotificationFilterProps {
+  filter: FilterType;
+  onFilterChange: (filter: FilterType) => void;
+
+}
+
+export const NotificationFilter: React.FC<NotificationFilterProps> = ({
+filter
+=======
 
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
@@ -41,6 +63,7 @@ interface NotificationFilterProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
+>>>>>>> main
   onFilterChange
 }) => {
   return (
@@ -68,6 +91,12 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
+<<<<<<< HEAD
+);
+
+}
+};
+=======
 
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
@@ -100,10 +129,13 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
     </div>;
   );
 =======
+>>>>>>> main
 
   )
 },
 
+<<<<<<< HEAD
+=======
 =======
 
 };
@@ -141,3 +173,4 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

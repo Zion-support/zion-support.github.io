@@ -1,12 +1,109 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Switch } from "@/components/ui/switch"
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts"
+import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast } from "sonner"
+import {logErrorToProduction} from '@/utils/productionLogger'
+<<<<<<< HEAD
+interface SmartContractDeploymentProps {
+  solidityCode: string
+  onDeploy: (options: DeploymentOptions,) => Promise<void>
+  isDeploying: boolean
+}
+export function SmartContractDeployment({
+  solidityCode
+  onDeploy
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import { Loader2, ShieldCheck, Download } from 'lucide-react'
+import { toast } from "sonner",
+import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SmartContractDeploymentProps {
+  solidityCode: string,
+  onDeploy: (options: DeploymentOptions) => Promise<void>,
+  isDeploying: boolean
+}
+
+export function SmartContractDeployment({ 
+<<<<<<< HEAD
+  solidityCode,
+  onDeploy,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  solidityCode
+  onDeploy
+=======
+  solidityCode,
+  onDeploy,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isDeploying
+=======
+isDeploying
+>>>>>>> main
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none'
     useEscrow: true
     deployToChain: false
     walletAddress: ''
+<<<<<<< HEAD
+<<<<<<< HEAD
+  })
+  const handleDeployContract = async () => {
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
+      toast.error("Please enter a wallet address for blockchain deployment")
+      return;
+    }
+    try {
+      await onDeploy(deploymentOptions)
+    } catch (error) {
+      logErrorToProduction('Deployment error:', { data: error })
+    }
+  }
+  const handleDownloadSolidity = () => {
+    // Create a blob from the Solidity code
+    const blob = new Blob([solidityCode], { type: 'text/plain' })
+    const url = URL.createObjectURL(blob)
+    // Create a temporary anchor to trigger download
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'ZionContract.sol'
+    document.body.appendChild(a)
+    a.click()
+    // Clean up
+    URL.revokeObjectURL(url)
+    document.body.removeChild(a)
+    toast.success("Solidity contract downloaded")
+  }
+=======
+=======
 
 ;
 import React, { useState } from './react';
@@ -51,6 +148,7 @@ if ( {) {
   }
 
 
+>>>>>>> main
   }),
 
   const handleDeployContract = async () => {
@@ -117,9 +215,16 @@ export function SmartContractDeployment({;
     toast.success("Solidity contract downloaded")
   },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <Card className="w-full">
       <CardHeader>
@@ -131,6 +236,54 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <CardContent className="space-y-6">
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <Switch
+<<<<<<< HEAD
+              id="deploy-blockchain";
+              aria-label="Deploy to blockchain";
+              checked={deploymentOptions.deployToChain};
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions;                deployToChain: checked
+=======
+              id="deploy-blockchain"
+              aria-label="Deploy to blockchain"
+<<<<<<< HEAD
+<<<<<<< HEAD
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({
+                ...deploymentOptions;                deployToChain: checked
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },;
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL.createObjectURL(blob),;
+    // Create a temporary anchor to trigger download;
+    const a = document.createElement('a'),;
+    a.href = url,;
+    a.download = 'ZionContract.sol',;
+    document.body.appendChild(a),;
+    a.click(),;
+    // Clean up;
+    URL.revokeObjectURL(url),;
+    document.body.removeChild(a),;
+    toast.success("Solidity contract downloaded");
+  },;
+  return (;
+=======
 
 
 import React, { useState } from "react";
@@ -194,10 +347,12 @@ export function SmartContractDeployment(): any ({ ;
   };
 
   return (
+>>>>>>> main
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+<<<<<<< HEAD
 =======
   const handleDownloadSolidity = () =>: any {
     // Create a blob from the Solidity code;
@@ -219,13 +374,42 @@ export function SmartContractDeployment(): any ({ ;
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <ShieldCheck className="h - 5 w - 5 text - primary" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items-center space-x-2">;
+            <Switch;
+              id="deploy-blockchain";
+              aria-label="Deploy to blockchain";
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions,;
+                deployToChain: checked;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              })}
+            />
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
+          </div>
+<<<<<<< HEAD
+=======
+          
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
       
@@ -239,34 +423,55 @@ export function SmartContractDeployment(): any ({ ;
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               })}
 
 
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <RadioGroup
+                  defaultValue={deploymentOptions.network}
+<<<<<<< HEAD
+                  onValueChange={(value) => setDeploymentOptions({
+                    ...deploymentOptions;                    network: value as BlockchainNetwork
+=======
+=======
 
 
+>>>>>>> main
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
+                  onValueChange={(value) => setDeploymentOptions({
+                    ...deploymentOptions;                    network: value as BlockchainNetwork
+=======
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
 
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -280,26 +485,98 @@ export function SmartContractDeployment(): any ({ ;
                   </div>
                 </RadioGroup>
               </div>
-
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="space-y-2">
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>
+                <Input
+                  id="wallet-address"
+                  placeholder="0x..."
+                  value={deploymentOptions.walletAddress |''}
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;                    walletAddress: e.target.value
+                  })}
+                />
+              </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
+
+
+              
+
+>>>>>>> main
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;                    walletAddress: e.target.value
+                  })}
+                />
+              </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  })}
+                />
+              </div>
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;                    useEscrow: checked
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  })}
+                />
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>
+              </div>
+            </>
+          )}
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
@@ -313,17 +590,14 @@ export function SmartContractDeployment(): any ({ ;
                   defaultValue={deploymentOptions && deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork;
-=======
 
 
-=======
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   })}
                   className="flex flex-col space-y-1";
                 >;
@@ -357,7 +631,6 @@ export function SmartContractDeployment(): any ({ ;
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;                    useEscrow: checked;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
@@ -369,6 +642,7 @@ export function SmartContractDeployment(): any ({ ;
           
 
 
+>>>>>>> main
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
@@ -377,23 +651,43 @@ export function SmartContractDeployment(): any ({ ;
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
             <>
@@ -403,6 +697,24 @@ export function SmartContractDeployment(): any ({ ;
           ) : (
             'Deploy Contract'
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+<CardHeader> <CardTitle className="flex items-center gap-2" > <ShieldCheck className="h-5 w-5 text-primary" /> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className="space-y-6" > <div className="space-y-4" > <div className="flex items-center space-x-2" > <Switch /> <Label htmlFor="deploy-blockchain" >Deploy to blockchain</Label> </div> > <div className="flex items-center space-x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label htmlFor="ethereum" >Ethereum (higher fees, more secure) </Label> </div> <div className="flex items-center space-x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label htmlFor="polygon" >Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className="space-y-2" > <Label htmlFor="wallet-address" >Wallet address for transactions</Label> <Input /> </div> <div className="flex items-center space-x-2" > <Switch /> <Label htmlFor="use-escrow" >Use escrow for payments</Label> </div> </>)
+}</div> </div> </div> </CardContent> Download .sol File </Button> <Button onClick={
+  handleDeployContract
+}disabled= {
+  isDeploying
+}> {'"
+  isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract')
+}</Button> </CardFooter> </Card>)
+}'"}
+=======
+=======
 
 
           <div className="rounded-md bg-muted p-4">;
@@ -429,19 +741,25 @@ export function SmartContractDeployment(): any ({ ;
           ) : (;
             'Deploy Contract';
           )}
-=======
 
 
+>>>>>>> main
         </Button>;
       </CardFooter>;
     </Card>;
   );
-
-
+<<<<<<< HEAD
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -532,11 +850,6 @@ export function SmartContractDeployment(): any ({ ;
   is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');
 }</Button> </CardFooter> </Card>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

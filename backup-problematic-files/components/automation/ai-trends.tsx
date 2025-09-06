@@ -1,23 +1,26 @@
 import fs from 'fs',;
 import path from 'path',;
+;
 export type Trend = {;
-  id: string,;
-  date: string,;
-  title: string,;
-  highlights: string[],;
-  summary: string,;
-  tags: string[];
+  id:string,;
+  date:string,;
+  title:string,;
+  highlights:string[],;
+  summary:string,;
+  tags:string[];
 },;
+;
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'dataai-trends.json'),;
-  let items: Trend[] = [],;
+  let items:Trend[] = [],;
   try {;
-    const raw = fs.readFileSync(file, 'utf-8');
-    items = JSON.parse(raw);
+    const raw = fs.readFileSync(file, 'utf-8'),;
+    items = JSON.parse(raw),;
   } catch {}
-  items.sort((a, b) => (a.date < b.date ? 1 : -1));
-  return { props: { items } }
+  items.sort((a, b) => (a.date < b.date ? 1 :-1)),;
+  return { props:{ items } },;
 }
+<<<<<<<< HEAD:backup-problematic-files/components/automation/ai-trends.tsx
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
@@ -33,6 +36,23 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
             </div>
             <div className="text-sm text-gray-700">{t.summary}</div>
             <ul className="list-disc pl-5 text-sm text-gray-700">
+========
+;
+export default function AiTrendsPage({ items } { items:Trend[] }) {;
+  return (;
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">AI Automation:Trend Watch</h1>;
+      <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
+      <div className="grid grid-cols-1 gap-4">;
+        {items.map((t) => (;
+          <div key={t.id} className="border rounded p-4 space-y-2">;
+            <div className="flex items-center justify-between">;
+              <div className="font-medium">{t.title}</div>;
+              <div className="text-xs text-gray-500">{new Date(t.date).toLocaleDateString()}</div>;
+            </div>;
+            <div className="text-sm text-gray-700">{t.summary}</div>;
+            <ul className="list-disc pl-5 text-sm text-gray-700">;
+>>>>>>>> main:backup-problematic-files/temp_conflicts/pages/automation/ai-trends.tsx
               {t.highlights.map((h, i) => (<li key={i}>{h}</li>))}
             </ul>
             <div className="flex flex-wrap gap-2 pt-1">
@@ -42,5 +62,5 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
         ))}
       </div>;
     </div>;
-  );
+  ),;
 }

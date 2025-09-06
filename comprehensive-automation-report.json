@@ -1,25 +1,66 @@
 {
+<<<<<<< HEAD
+"timestamp": "2025-09-06T12:00:35.732Z",
+  "totalDuration": 40787,
+  "successfulTasks": 5,
+
+  "successfulTasks": 6,
+=======
 
 
   "timestamp": "2025-09-06T09:22:21.501Z",
   "totalDuration": 93290,
   "successfulTasks": 2,
 
+>>>>>>> main
 
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
+<<<<<<< HEAD
+"duration": 6023,
+=======
 
 
       "duration": 80288,
 
+>>>>>>> main
 
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
+<<<<<<< HEAD
+"duration": 26106,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS",
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+
+      "errors": [],
+      "warnings": []
+    },
+    "securityAudit": {
+      "success": true,
+"duration": 1683,
+
+      "errors": [],
+      "warnings": []
+    },
+    "buildOptimization": {
+      "success": true,
+"duration": 6198,
+
+      "errors": [],
+      "warnings": []
+    },
+    "seoOptimization": {
+"success": true,
+
+      "duration": 46,
+      ],
+=======
 
 
       "duration": 5840,
@@ -28,18 +69,44 @@
         "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
 
+>>>>>>> main
       "warnings": []
     },
     "securityAudit": {
       "success": false,
+<<<<<<< HEAD
+"duration": 2836,
+=======
 
       "duration": 3375,
+>>>>>>> main
       "errors": [
         "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ],
       "warnings": []
     },
     "buildOptimization": {
+<<<<<<< HEAD
+"success": true,
+      "duration": 938,
+      "errors": [],
+      "warnings": []
+    },
+    "seoOptimization": {
+      "success": true,
+      "duration": 77,
+      "errors": [],
+      "warnings": []
+    },
+    "accessibilityImprovements": {
+      "success": false,
+      "duration": 1110,
+      "errors": [
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
+      "errors": [],
+
+=======
       "success": false,
       "duration": 550,
       "errors": [
@@ -54,10 +121,25 @@
 
 
       "errors": [],
+>>>>>>> main
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
+<<<<<<< HEAD
+"duration": 9692,
+
+      "errors": [],
+
+      "warnings": []
+    },
+    "performanceOptimization": {
+      "success": true,
+
+      "duration": 2310,
+
+      "errors": [],
+=======
 
 
       "duration": 585,
@@ -73,14 +155,24 @@
         "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
       ],
 
+>>>>>>> main
 
       "warnings": []
     },
     "deployment": {
       "success": true,
+<<<<<<< HEAD
+"duration": 1383,
+
+      "errors": [],
+      "warnings": []
+    }
+  }
+=======
 
 
       "duration": 1619,
+>>>>>>> main
       "errors": [],
       "warnings": []
     }
@@ -88,6 +180,13 @@
   "recommendations": [
     "Review and fix code quality issues",
     "Address security vulnerabilities",
+<<<<<<< HEAD
+"Enhance accessibility features"
+  ]
+}
+}
+
+=======
     "Optimize application performance",
     "Improve SEO optimization",
     "Enhance accessibility features"
@@ -96,3 +195,4 @@
 }
 
 
+>>>>>>> main

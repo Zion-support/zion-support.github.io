@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+interface EmptyFraudStateProps {
+  hasFilters: boolean;
+  onResetFilters: () => void
+}
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
@@ -6,6 +20,7 @@ interface EmptyFraudStateProps {
   has_filters: boolean;
 =======
 
+>>>>>>> main
 
 interface EmptyFraudStateProps {
   hasFilters: boolean,
@@ -27,6 +42,19 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+<<<<<<< HEAD
+<Button variant="outline" onClick={onResetFilters}>
+          Clear Filters
+        </Button>
+      )}
+</div>
+  );
+
+}
+
+};
+
+=======
 
     </div>;
 );
@@ -77,3 +105,4 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

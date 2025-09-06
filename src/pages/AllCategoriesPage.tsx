@@ -1,5 +1,3 @@
-
-
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 
@@ -49,7 +47,6 @@ const categories = [;
 ];
 
 export default function AllCategoriesPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-zion-blue'>;
       <div className='container mx-auto px-4 py-12'>;
@@ -64,7 +61,6 @@ export default function AllCategoriesPage() {;
         </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <CategoryCard
                 key={category && category.id}
                 title={category && category.title}
@@ -85,11 +81,9 @@ export default function AllCategoriesPage() {;
 
 }
 
-=======
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               />;
             ))}
 
@@ -100,7 +94,6 @@ export default function AllCategoriesPage() {;
   );
 }
 
-=======
         <ErrorBoundary>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {categories.map (category => (
@@ -136,10 +129,4 @@ export default function AllCategoriesPage() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

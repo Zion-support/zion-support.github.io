@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
@@ -32,10 +29,8 @@ import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface ApplicationRowProps {;
   application: JobApplication;
@@ -63,7 +58,6 @@ export function ApplicationRow(): any ({;
 }: ApplicationRowProps) {;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <TableRow key={application && application.id}>;
@@ -88,7 +82,6 @@ export function ApplicationRow(): any ({;
 
             ) : (
               <User className="h-5 w-5 text-gray-400" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
 
@@ -105,7 +98,6 @@ export function ApplicationRow(): any ({;
       </TableCell>
       <TableCell>
 
-=======
 
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
@@ -192,13 +184,11 @@ export function ApplicationRow({;
             ) : (;
               <User className="h-5 w-5 text-gray-400" />;
             )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </AvatarPrimitive>;
           <div>;
             <div className='font-medium'>{talentName}</div>;
             <div className='text-xs text-muted-foreground'>;
               {application && application.talent_profile?.professional_title || 'Talent'}
-=======
     application_id: string,
     new_status: ApplicationStatus) => Promise < void>;
   onViewScore: (application: JobApplication) => void;
@@ -237,7 +227,6 @@ function ApplicationRow() {
             <div className='font - medium'>{talent_name}</div>;
             <div className='text - xs text - muted - foreground'>;
               {application.talent_profile?.professional_title || 'Talent'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -295,7 +284,6 @@ function ApplicationRow() {
   );
 }
 
-=======
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
             <a;
@@ -318,10 +306,4 @@ function ApplicationRow() {
       </TableCell>;
     </TableRow>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

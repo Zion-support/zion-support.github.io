@@ -1,9 +1,6 @@
-
-
-  }
+}
 >(({ className, separator, ...props }, ref,) => (;
   <nav
-=======
 import * as React from 'react';
 import { Slot } from '@radix - ui / react - slot';
 import { ChevronRight } from 'lucide-react';
@@ -15,7 +12,6 @@ const Breadcrumb = React.forward_ref<;
   }
 >(({ class_name, separator, ...props }, ref, ) => (
   <nav;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     aria - label='breadcrumb';
     className={cn (
@@ -24,7 +20,6 @@ const Breadcrumb = React.forward_ref<;
 
 
 
-=======
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -46,8 +41,6 @@ const Breadcrumb = React.forwardRef<
 
 
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     ),}
     {...props}
@@ -64,7 +57,6 @@ Breadcrumb.display_name = 'Breadcrumb';
     {...props}
   />));
 Breadcrumb.display_name = 'Breadcrumb';
-=======
 
 Breadcrumb.displayName = "Breadcrumb"
  
@@ -89,7 +81,6 @@ const BreadcrumbItem = React.forward_ref<;
 BreadcrumbItem.display_name = 'BreadcrumbItem';
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   React.ComponentPropsWithoutRef<'a'> & {
     as_child?: boolean;
   }
@@ -109,11 +100,9 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
  
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const BreadcrumbSeparator = ({
 
 
-=======
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
@@ -122,7 +111,6 @@ const BreadcrumbSeparator = ({
     {...props}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   >
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
@@ -145,7 +133,6 @@ Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
   HTMLOListElement,;
   React && React.ComponentPropsWithoutRef<'ol'>;
 >(({ className, ...props }, ref) => (;
-=======
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -234,7 +221,6 @@ const BreadcrumbEllipsis = ({;
   </span>;
     role="presentation";
     aria-hidden="true";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     className={cn("flex h-9 w-9 items-center justify-center", className)}
   <li
     role="presentation"
@@ -271,8 +257,6 @@ export {
   </span>;
 );
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export {;
   Breadcrumb,;
@@ -285,11 +269,9 @@ export {;
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
-=======
 
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
-=======
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
  
 const BreadcrumbEllipsis = ({
@@ -339,13 +321,6 @@ export {
   BreadcrumbSeparator,
 
 
-=======
   BreadcrumbEllipsis}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   BreadcrumbEllipsis}
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

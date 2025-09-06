@@ -1,8 +1,44 @@
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
+const Sidebar: React.FC = () => {
+  return (
+    <aside className="hidden lg:block fixed left-0 top-16 w-80 h-full bg-white border-r border-gray-200 overflow-y-auto">
+      <nav className="p-4">
+        <ul className="space-y-2">
+          <li>
+            <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+              Pricing
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  );
+};
+
+=======
 const Sidebar: React.FC = () => {;
   return (
     <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
@@ -43,7 +79,6 @@ const Sidebar: React.FC = () => {;
 
 export default Sidebar;
 
-=======
   };
 ,
   const navigationSections = [,
@@ -248,10 +283,7 @@ export default Sidebar;
     </motion.aside>,
   ),
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
 };
+>>>>>>> main
 export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

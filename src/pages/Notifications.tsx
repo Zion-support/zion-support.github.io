@@ -1,6 +1,3 @@
-
-
-
 interface NotificationProps {
   type: 'message' | 'order' | 'default';
 }
@@ -25,7 +22,6 @@ export default function NotificationsPage() {
     </div>
   );
 }
-=======
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -36,14 +32,11 @@ import { toast } from '@/hooks/use-toast';
 
 
 
-=======
-
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -57,7 +50,6 @@ interface Notification {
 
 
 
-=======
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
 import {;
@@ -100,11 +92,7 @@ const getNotificationIcon = (;
 },
 
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const getNotificationIcon = (type: string) =>: any {
   switch (type) {
@@ -132,10 +120,3 @@ const getNotificationBadge = (type: string) =>: any {
   }
 }
 ;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

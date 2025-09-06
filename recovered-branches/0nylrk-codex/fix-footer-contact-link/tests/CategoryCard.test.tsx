@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { render, screen  } from '@testing-library/react';
+import { MemoryRouter  } from 'react-router-dom';
+import { CategoryCard } from '@/components/CategoryCard';
+it('renders category card with link to slug', () => {
+  render(
+    <MemoryRouter>
+      <CategoryCard title="Test Category" slug="test-category" />
+    </MemoryRouter>
+  );
+  expect(screen.getByText('Test Category')).toBeInTheDocument();
+});
+=======
+import {render, screen} from '@testing-library/react',
+import {MemoryRouter} from 'react-router-dom',
+import {CategoryCard} from '@/components/CategoryCard',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 import {render, screen} from '@testing-library/react',;
 import {MemoryRouter} from 'react-router-dom',;
@@ -8,19 +28,34 @@ import {render, screen} from '@testing-library/react',
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
 
+>>>>>>> main
 =======
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
+<<<<<<< HEAD
+
+  const link = screen.getByRole('link', { name: /test category/i }),
+  expect(link).toHaveAttribute('href/category/test-category')
+}),
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 it('renders category card with link to slug', () => {;
@@ -56,6 +91,7 @@ it ('treats underscores as spaces in slug', () => {
   expect (link).toHaveAttribute ('href / category / ai - tools');
 
 =======
+>>>>>>> main
 it('normalizes slug with special characters', () => {
   render(
     <MemoryRouter>
@@ -86,9 +122,24 @@ it('treats underscores as spaces in slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
+<<<<<<< HEAD
+<<<<<<< HEAD
+  expect(link).toHaveAttribute('href/category/ai-tools'),
+}),;
+;
+=======
+  expect(link).toHaveAttribute('href/category/ai-tools')
+}),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

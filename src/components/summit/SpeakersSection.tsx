@@ -1,5 +1,3 @@
-
-
 interface Speaker {
   name: string;
   title: string;
@@ -16,7 +14,6 @@ interface Speaker {
   avatar: string,
   twitter?: string
 
-=======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -30,8 +27,6 @@ interface Speaker {
 
   linkedin?: string
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   name: string
   title: string
@@ -73,7 +68,6 @@ const speakers: Speaker[] = [;
     linkedin: '#',;
   },;
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function SpeakersSection() {;
   return (
@@ -114,7 +108,6 @@ export function SpeakersSection() {;
                     <span className="sr-only">Twitter</span>;
                   </a>;
 
-=======
 import Image from "next/image";
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -134,7 +127,6 @@ interface Speaker {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -164,7 +156,6 @@ function SpeakersSection() {
           {speakers.map ((sp, ) => (
             <div key={sp.name} className="text - center space - y-2">;
 
-=======
 
               <Image
 import Image from "next/image",;
@@ -194,8 +185,6 @@ export function SpeakersSection() {;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -209,30 +198,25 @@ export function SpeakersSection() {;
               <p className="font-semibold">{sp.name}</p>
               <p className="text-sm opacity-80">{sp.title}</p>
               <div className="flex justify-center gap-3 text-zion-cyan">
-=======
                 className='rounded - full mx - auto';
                 loading='lazy';
               <p className='font - semibold'>{sp.name}</p>;
               <p className='text - sm opacity - 80'>{sp.title}</p>;
               <div className='flex justify - center gap - 3 text - zion - cyan'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {sp.twitter && (
                   <a;
                     href={sp.twitter}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
 
-=======
                     href={sp.linkedin}
                     aria-label="LinkedIn"
-=======
 
                     <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
@@ -244,7 +228,6 @@ export function SpeakersSection() {;
                     aria-label="LinkedIn"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -256,13 +239,11 @@ export function SpeakersSection() {;
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             </div>;
           ))}
 
-=======
 
 
         </div>;
@@ -274,7 +255,6 @@ export function SpeakersSection() {;
   );
 }
 
-=======
                     aria - label='Twitter';
                     target='_blank';
                     rel='noopener noreferrer';
@@ -311,9 +291,4 @@ export function SpeakersSection() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

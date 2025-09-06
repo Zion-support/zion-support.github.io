@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+export default function HelpCenter() {
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,10 +48,41 @@ import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
 
+>>>>>>> main
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
+<<<<<<< HEAD
+  const handleCategorySelect = (categoryId: string) => {
+    (setSelectedCategory(categoryId), setSelectedArticle(null));
+  }
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId);
+  }
+  const handleBackToCategories = () => {
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  }
+  const handleBackToArticles = () => {
+    setSelectedArticle(null);
+  }
+import React, { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { HelpCategoryList } from "./HelpCategoryList",
+import { HelpArticleList } from "./HelpArticleList",
+import { HelpArticleView } from "./HelpArticleView",
+import { HELP_CATEGORIES } from "./help-content",
+import { AppLayout } from "@/layout/AppLayout",
+import { Search } from "lucide-react",
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(""),
+
+=======
 
 
 
@@ -46,6 +90,7 @@ export default function HelpCenter() {;
 
 
   
+>>>>>>> main
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
@@ -63,9 +108,13 @@ export default function HelpCenter() {;
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
+<<<<<<< HEAD
+
+=======
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -77,6 +126,10 @@ export default function HelpCenter() {;
             Find answers to common questions or get in touch with our support
             team.
           </p>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -86,12 +139,51 @@ export default function HelpCenter() {;
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
+<TabsContent value="articles">
+              {!selectedCategory && !selectedArticle && (
+<HelpCategoryList
+                  categories={HELP_CATEGORIES}
+import React, { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { HelpCategoryList } from "./HelpCategoryList",;
+import { HelpArticleList } from "./HelpArticleList",;
+import { HelpArticleView } from "./HelpArticleView",;
+import { HELP_CATEGORIES } from "./help-content",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { Search } from "lucide-react",;
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId),;
+    setSelectedArticle(null);
+  },;
+  const handleArticleSelect = (articleId: string) => {;
+    setSelectedArticle(articleId);
+  },;
+  const handleBackToCategories = () => {;
+    setSelectedCategory(null),;
+    setSelectedArticle(null);
+  };
+  const handleBackToArticles = () => {;
+    setSelectedArticle(null);
+  };
+  return (;
+=======
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
 
@@ -181,6 +273,7 @@ function HelpCenter() {
   };
 
   return (
+>>>>>>> main
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto">;
@@ -190,23 +283,45 @@ function HelpCenter() {
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
           </p>;
+<<<<<<< HEAD
+          <div className="relative mb-8">;
+            <Input;
+              placeholder="Search for help articles...";
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+=======
 
           <div className="relative mb-8">;
             <Input
               placeholder="Search for help articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e && e.target.value)}
+>>>>>>> main
               className="pl-10";
             />;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
           </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
           <Tabs defaultValue="articles" className="mb-8">;
             <TabsList className="w-full grid grid-cols-3 mb-6">;
               <TabsTrigger value="articles">Articles</TabsTrigger>;
               <TabsTrigger value="faq">FAQ</TabsTrigger>;
               <TabsTrigger value="contact">Contact Us</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
+            <TabsContent value="articles">;
+              {!selectedCategory && !selectedArticle && (;
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES} ;
+
+                  onCategorySelect={handleCategorySelect}
+                  searchQuery={searchQuery}
+                />
+              )}
+=======
 
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
@@ -224,6 +339,7 @@ function HelpCenter() {
 
               
 
+>>>>>>> main
 
               {selectedCategory && !selectedArticle && (
                 <>
@@ -234,6 +350,34 @@ function HelpCenter() {
                   >
                     ← All Categories
                   </Button>
+<<<<<<< HEAD
+<HelpArticleList
+                    categoryId={selectedCategory}
+                    onArticleSelect={handleArticleSelect}
+                    searchQuery={searchQuery}
+                  />
+                </>
+              )}
+
+              {selectedArticle && (
+                <>
+                  <Button
+                    variant="ghost"
+                    onClick={handleBackToArticles}
+                    className="mb-4"
+                  >
+                    ← Back to Articles
+                  </Button>
+                  <HelpArticleView articleId={selectedArticle} />
+                </>
+              )}
+            </TabsContent>
+<TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+<h2 className="text-xl font-semibold mb-4">
+                  Frequently Asked Questions
+                </h2>
+=======
 
 
               {selectedCategory && !selectedArticle && (;
@@ -283,6 +427,7 @@ function HelpCenter() {
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 
 
+>>>>>>> main
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -291,11 +436,19 @@ function HelpCenter() {
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
                       preferences to match you with the most compatible talent
+<<<<<<< HEAD
+or services. The process takes into account skills
+=======
                       or services. The process takes into account skills
+>>>>>>> main
                       experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -307,6 +460,10 @@ function HelpCenter() {
                       protects both parties throughout the engagement.
                     </p>
                   </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -318,6 +475,10 @@ function HelpCenter() {
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -332,6 +493,10 @@ function HelpCenter() {
                 </div>
               </div>
             </TabsContent>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -342,6 +507,10 @@ function HelpCenter() {
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -360,8 +529,14 @@ function HelpCenter() {
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
+<<<<<<< HEAD
+                      </Link>
+                    </div>
+
+=======
                       </a>
                     </div>
+>>>>>>> main
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -378,10 +553,18 @@ function HelpCenter() {
                       </span>
                     </div>
                   </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -390,6 +573,10 @@ function HelpCenter() {
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />
@@ -403,6 +590,10 @@ function HelpCenter() {
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -414,6 +605,13 @@ function HelpCenter() {
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
+);
+}
+}
+;
+
+=======
 
             </TabsContent>;
 
@@ -626,3 +824,4 @@ function HelpCenter() {
     </AppLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

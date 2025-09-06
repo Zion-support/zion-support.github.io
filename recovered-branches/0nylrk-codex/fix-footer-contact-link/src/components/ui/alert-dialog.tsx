@@ -1,13 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import * as React from 'react';
+import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+import {buttonVariants} from '@/components/ui/button';
+const AlertDialog = AlertDialogPrimitive.Root;
+const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
+const AlertDialogPortal = AlertDialogPrimitive.Portal;
+=======
+=======
 
 
+>>>>>>> main
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 =======
 =======
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
+>>>>>>> main
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -19,6 +37,19 @@ const AlertDialogTrigger = AlertDialogPrimitive.Trigger
 const AlertDialogPortal = AlertDialogPrimitive.Portal
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+const AlertDialogOverlay = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Overlay>
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Overlay
+    className={cn(
+<<<<<<< HEAD
+      'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
+=======
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>
@@ -47,10 +78,21 @@ const AlertDialogOverlay = React && React.forwardRef<;
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       className
     )}
     {...props}
     ref={ref}
+<<<<<<< HEAD
+  />
+));
+AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
   />;
 ));
 
@@ -58,6 +100,7 @@ const AlertDialogOverlay = React && React.forwardRef<;
 
 
 
+>>>>>>> main
 const AlertDialogContent = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.C</typeof>ontent>
@@ -65,6 +108,14 @@ const AlertDialogContent = React.forwardRef<
   <AlertDialogPortal>
     <AlertDialogOverlay />
     <AlertDialogPrimitive.Content
+<<<<<<< HEAD
+<<<<<<< HEAD
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 AlertDialogOverlay && AlertDialogOverlay.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Overlay.displayName;
 
@@ -79,6 +130,7 @@ const AlertDialogContent = React && React.forwardRef<;
 =======
 
 
+>>>>>>> main
 =======
 const AlertDialogContent = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Content>,;
@@ -87,6 +139,40 @@ const AlertDialogContent = React.forwardRef<;
   <AlertDialogPortal>;
     <AlertDialogOverlay />;
     <AlertDialogPrimitive.Content;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      ref={ref}
+      className={cn(
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        className
+      )}
+      {...props}
+    />
+  </AlertDialogPortal>
+<<<<<<< HEAD
+));
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
+=======
+))
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const AlertDialogHeader = ({
+  className
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+<<<<<<< HEAD
+      'flex flex-col space-y-2 text-center sm:text-left'
+=======
+      "flex flex-col space-y-2 text-center sm:text-left",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -124,10 +210,32 @@ const AlertDialogHeader = ({;
 
       "flex flex-col space-y-2 text-center sm:text-left",
 
+>>>>>>> main
       className
     )}
     {...props}
   />
+<<<<<<< HEAD
+<<<<<<< HEAD
+);
+AlertDialogHeader.displayName = 'AlertDialogHeader';
+=======
+)
+AlertDialogHeader.displayName = "AlertDialogHeader"
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const AlertDialogFooter = ({
+  className
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+<<<<<<< HEAD
+      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
+=======
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 )
 AlertDialogHeader.displayName = "AlertDialogHeader"
@@ -235,18 +343,33 @@ const AlertDialogTitle = React.forward_ref<;
 
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
 
+>>>>>>> main
       className
     )}
     {...props}
   />
+<<<<<<< HEAD
+<<<<<<< HEAD
+);
+AlertDialogFooter.displayName = 'AlertDialogFooter';
+const AlertDialogTitle = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Title>
+  React.Component</typeof>PropsWithoutRef<typeof AlertDialogPrimitive.Title>
+=======
+=======
 
+>>>>>>> main
 )
 AlertDialogFooter.displayName = "AlertDialogFooter"
 
 const AlertDialogTitle = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
+>>>>>>> main
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Title
     ref={ref}
@@ -255,15 +378,47 @@ const AlertDialogTitle = React.forwardRef<
   />
 ));
 AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 
+>>>>>>> main
 const AlertDialogDescription = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>
   React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description
+=======
+<<<<<<< HEAD
+const AlertDialogDescription = React.forwardRef<;
+  React.ElementRef<typeof AlertDialogPrimitive.Description>,;
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>;
+>(({ className, ...props }, ref) => (;
+  <AlertDialogPrimitive.Description;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    ref={ref}
+    className={cn('text-sm text-muted-foreground', className)}
+    {...props}
+  />
+));
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 AlertDialogTitle && AlertDialogTitle.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Title.displayName;
 
@@ -295,11 +450,32 @@ const AlertDialogDescription = React.forward_ref<;
 
 
 
+>>>>>>> main
 const AlertDialogAction = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Action>
 </typeof>  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Action
+<<<<<<< HEAD
+    ref={ref}
+    className={cn(buttonVariants(), className)}
+    {...props}
+  />
+));
+AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName;
+const AlertDialogCancel = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.</typeof>Cancel>
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Cancel
+    ref={ref}
+<<<<<<< HEAD
+    className={cn(
+      buttonVariants({ variant: 'outline' })
+      'mt-2 sm:mt-0'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 =======
 AlertDialogDescription && AlertDialogDescription.displayName =;
   AlertDialogPrimitive && AlertDialogPrimitive.Description.displayName;
@@ -337,6 +513,7 @@ const AlertDialogCancel = React && React.forwardRef<;
 
 
 
+>>>>>>> main
 =======
 const AlertDialogAction = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Action>,;
@@ -355,13 +532,45 @@ const AlertDialogCancel = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive.Cancel;
     ref={ref}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
     className={cn(
       buttonVariants({ variant: "outline" }),
       "mt-2 sm:mt-0",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+      className
+    )}
+    {...props}
+  />
+));
+AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+export {
+  AlertDialog
+  AlertDialogPortal
+  AlertDialogOverlay
+  AlertDialogTrigger
+  AlertDialogContent
+  AlertDialogHeader
+  AlertDialogFooter
+  AlertDialogTitle
+  AlertDialogDescription
+  AlertDialogAction
+  AlertDialogCancel
+}
+=======
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
@@ -406,6 +615,7 @@ const AlertDialogCancel = React.forward_ref<;
   />));
 AlertDialogCancel.display_name = AlertDialogPrimitive.Cancel.display_name;
 ;
+>>>>>>> main
 export {
   AlertDialog,
   AlertDialogPortal,
@@ -417,10 +627,16 @@ export {
   AlertDialogTitle,
   AlertDialogDescription,
   AlertDialogAction,
+<<<<<<< HEAD
+  AlertDialogCancel,;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
   AlertDialogCancel,;
 };
 
+>>>>>>> main
 =======
 export {;
   AlertDialog,;
@@ -435,7 +651,15 @@ export {;
   AlertDialogAction;
   AlertDialogCancel}
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

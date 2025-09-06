@@ -1,13 +1,10 @@
-
-
-  onViewDetails, }
+onViewDetails, }
 
   )
 }
 
 
 
-=======
 import { use_router } from 'next / router';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -80,8 +77,6 @@ if ( {) {
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
@@ -203,7 +198,3 @@ function PartnerTable({;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 import { Star } from 'lucide-react'
 
 import { Star } from 'lucide-react';
@@ -33,14 +31,12 @@ export const CommunityTrust: React.FC = () => {;
             <span className='text-zion-cyan'>Tech Community</span>;
           </h2>;
           <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-=======
 import React from 'react'; import { Star } from 'lucide-react';
 import React from './react';
 import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof;
   const stats = [;
-=======
 
 
     { value: '4.8', label: 'App Store Rating' },
@@ -56,7 +52,6 @@ export const CommunityTrust: React.FC = () => {
           <div className='flex justify-center mb-4'>;
             {[1, 2, 3, 4, 5].map(star => (;
               <Star
-=======
         {/* Stats Grid */}
         <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 16'>;
           {stats.map ((stat, index) => (
@@ -74,7 +69,6 @@ export const CommunityTrust: React.FC = () => {
           <div className='flex justify - center mb - 4'>;
             {[1, 2, 3, 4, 5].map (star => (
               <Star;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={star}
                 className='w - 6 h - 6 text - zion - cyan';
                 fill='current_color';
@@ -83,7 +77,6 @@ export const CommunityTrust: React.FC = () => {
 
 
   ]
-=======
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
@@ -94,7 +87,6 @@ export const CommunityTrust: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -121,7 +113,6 @@ export const CommunityTrust: React.FC = () => {
           <div className="text-center">;
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
-=======
 
         
         {/* Stats Grid */}
@@ -155,7 +146,6 @@ export const CommunityTrust: React.FC = () => {;
           </p>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">;
           {stats && stats.map((stat, index) => (;
@@ -202,26 +192,20 @@ export const CommunityTrust: React.FC = () => {;
     </section>;
   );
 }</div>) ) ;
-=======
 
   )
 },
 
-=======
 }</div>) ) 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
 '"  );
 };
 
 
-=======
 
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>;
           <blockquote className='text - center text - lg text - white italic mb - 4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
@@ -277,5 +261,3 @@ export const CommunityTrust: React.FC = () => {;
 }
 '"  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,13 +1,24 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
+>>>>>>> main
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> main
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 =======
@@ -16,31 +27,62 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 =======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+serve(async (req) => {
+  // Handle CORS preflight request
+  if (req.method === "OPTIONS") {
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight request
   if (req && req.method === "OPTIONS") {
+>>>>>>> main
     return new Response("ok", { headers: corsHeaders })
   }
   try {
     const supabaseClient = createClient(
+<<<<<<< HEAD
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+<<<<<<< HEAD
+    );
+    // Parse the request body
+    const { days_back = 7 } = await req.json();
+    // Calculate the start date
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - days_back);
+=======
+=======
 
     const { days_back = 7 } = await req && req.json();
 =======
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
+>>>>>>> main
     ),
 
     // Parse the request body
     const { days_back = 7 } = await req.json(),
+<<<<<<< HEAD
+    
+    // Calculate the start date
+    const startDate = new Date(),
+    startDate.setDate(startDate.getDate() - days_back),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
     
     // Calculate the start date
@@ -50,10 +92,35 @@ serve(async (req) => {
 
 
 
+>>>>>>> main
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
+<<<<<<< HEAD
+<<<<<<< HEAD
+      .gte("created_at", startDate.toISOString());
+=======
+      .gte("created_at", startDate.toISOString()),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    if (error) {
+      console.error("Error fetching analytics data:", error),
+      throw error
+    }
+    // Group events by date and event type
+<<<<<<< HEAD
+    const eventsByDate = {}
+=======
+    const eventsByDate = {},
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    data.forEach((event) => {
+      const date = new Date(event.created_at).toISOString().split("T")[0],
+      if (!eventsByDate[date]) {
+<<<<<<< HEAD
+=======
+=======
 
       .gte("created_at", startDate && startDate.toISOString());
 
@@ -80,6 +147,7 @@ serve(async (req) => {
       if (!eventsByDate[date]) {
 
 
+>>>>>>> main
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 const corsHeaders = {;
@@ -116,14 +184,30 @@ serve(async (req) => {;
     data.forEach((event) => {;
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
         eventsByDate[date][event.event_type] = 0
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      eventsByDate[date][event.event_type]++
+    });
+    // Convert to array for easier consumption by frontend
+    const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date));
+    return new Response(JSON.stringify(result), {
+=======
 
     const eventsByDate = {};
     
@@ -146,11 +230,15 @@ serve(async (req) => {;
 
     return new Response(JSON && JSON.stringify(result), {
 
+>>>>>>> main
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       
       eventsByDate[date][event.event_type]++
     }),
@@ -162,6 +250,54 @@ serve(async (req) => {;
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json"},
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      status: 200})
+  } catch (error) {
+    console.error("Error:", error.message),
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: {
+<<<<<<< HEAD
+        ...corsHeaders
+        "Content-Type": "application/json"}
+      status: 500})
+  }
+});
+
+=======
+        ...corsHeaders,
+        "Content-Type": "application/json"},
+      status: 500})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+      eventsByDate[date][event.event_type]++;
+    }),;
+    // Convert to array for easier consumption by frontend;
+    const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date)),;
+    return new Response(JSON.stringify(result), {;
+      headers: {;
+        ...corsHeaders,;
+        "Content-Type": "application/json"},;
+      status: 200});
+  } catch (error) {;
+    console.error("Error:", error.message),;
+    return new Response(JSON.stringify({ error: error.message }), {;
+      headers: {;
+        ...corsHeaders,;
+        "Content-Type": "application/json"},;
+      status: 500});
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       status: 200})
@@ -255,3 +391,4 @@ if ( {) {
 });
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

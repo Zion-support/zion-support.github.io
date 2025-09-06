@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -9,6 +15,37 @@ import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
+<<<<<<< HEAD
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+import { Calendar, Clock, Video } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+=======
+import { Calendar, Clock, Video } from "lucide-react",
+import { Avatar } from "@/components/ui/avatar",
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews(),
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
@@ -25,17 +62,29 @@ export function UpcomingInterviewsCard() {;
 
 
 
+>>>>>>> main
   useEffect(() => {
 
     const loadInterviews = async () => {
       setIsLoading(true),
       try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const interviews = await fetchInterviews();
+        const now = new Date();
+=======
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
         const interviews = await fetchInterviews(),
         const now = new Date(),
         
 
 
+>>>>>>> main
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -47,6 +96,8 @@ export function UpcomingInterviewsCard() {;
           )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
+<<<<<<< HEAD
+=======
 
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -73,18 +124,31 @@ function UpcomingInterviewsCard() {
         const now = new Date ();
 ;
 =======
+>>>>>>> main
       } catch (error) {
         console.error("Error loading upcoming interviews:", error)
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+    loadInterviews()
+  }, []);
+=======
+=======
 
+>>>>>>> main
     },
 
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
+>>>>>>> main
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -104,7 +168,12 @@ function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> main
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -124,6 +193,29 @@ export function UpcomingInterviewsCard() {;
       try {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
+<<<<<<< HEAD
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter(interview =>;
+            interview.status === 'confirmed' &&;
+            !isPast(parseISO(interview.scheduled_date));
+          );
+          .sort((a, b) =>;
+            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
+          );
+          .slice(0, 3), // Take only the next 3 interviews;
+        setUpcomingInterviews(upcoming);
+      } catch (error) {;
+        console.error("Error loading upcoming interviews:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    loadInterviews();
+  }, []),;
+  if (isLoading) {;
+    return (;
+=======
 
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
@@ -168,6 +260,7 @@ export function UpcomingInterviewsCard() {;
   if (isLoading) {;
 
     return (
+>>>>>>> main
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -185,6 +278,45 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (upcomingInterviews.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center">
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+            Upcoming Interviews
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center py-6">
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
+            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
+            <Button asChild className="mt-4" variant="outline" size="sm">
+              <Link to="/interviews">Schedule Interview</Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+=======
 
 
 
@@ -227,6 +359,7 @@ export function UpcomingInterviewsCard() {;
   }
   return (
 
+>>>>>>> main
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -237,7 +370,21 @@ export function UpcomingInterviewsCard() {;
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedDate = format(interviewDate, 'EEE, MMM d');
+            const formattedTime = format(interviewDate, 'h: mm a')
+            // Determine if interview is happening soon (within 30 minutes)
+            const now = new Date();
+            const isStartingSoon =
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
+              interviewDate.getTime() > now.getTime();
 
+=======
+=======
+
+>>>>>>> main
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -248,8 +395,12 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
+>>>>>>> main
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -273,6 +424,35 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
+<<<<<<< HEAD
+                    )}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-3 w-3 mr-1" />
+                    {formattedDate} at {formattedTime}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
+          <Button asChild size="sm" variant="outline" className="w-full">
+            <Link to="/interviews">
+              View All Interviews
+            </Link>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+<<<<<<< HEAD
+}
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
             const formattedTime = format(interviewDate, 'h: mm a'),;
 
@@ -444,3 +624,4 @@ if ( {) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

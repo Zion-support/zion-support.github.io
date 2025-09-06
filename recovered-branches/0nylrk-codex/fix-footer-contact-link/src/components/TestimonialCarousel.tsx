@@ -1,12 +1,24 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 
+>>>>>>> main
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+const testimonials = [
+=======
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
 import { Card, CardContent } from '@/components / ui / card';
@@ -14,10 +26,27 @@ import { Avatar } from '@/components / ui / avatar';
 import { Quote } from './lucide-react';
 const testimonials = [;
 
+>>>>>>> main
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
+<<<<<<< HEAD
+    avatar: "https://i.pravatar.cc/150?img=32"
+    company: "DataMind"}
+  {
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry."
+    author: "Michael Rodriguez"
+    role: "IT Director, GlobalTech";
+    avatar: "https://i.pravatar.cc/150?img=12"
+    company: "GlobalTech"}
+  {
+    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.";
+    author: "Aanya Patel"
+    role: "Independent AI Consultant"
+    avatar: "https://i.pravatar.cc/150?img=28"
+    company: "AI Systems"}
+=======
 
     avatar: "https://i.pravatar.cc / 150?img = 32",
     company: "DataMind"},
@@ -34,13 +63,21 @@ const testimonials = [;
     avatar: "https://i.pravatar.cc / 150?img = 28",
     company: "AI Systems"},
 
+>>>>>>> main
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
+<<<<<<< HEAD
+    avatar: "https://i.pravatar.cc/150?img=67"
+    company: "EcoTech"}]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 =======
 import {
   Carousel,
@@ -51,9 +88,16 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -81,7 +125,10 @@ const testimonials = [
     company: "EcoTech"}],
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -93,6 +140,9 @@ export function TestimonialCarousel() {
           </p>
         </div>
         <div className="max-w-5xl mx-auto px-8">
+<<<<<<< HEAD
+          <Carousel
+=======
 =======
 const testimonials = [;
   {;
@@ -153,15 +203,59 @@ function TestimonialCarousel() {
         <div className="max - w-5xl mx - auto px - 8">;
           <Carousel;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
             opts={{
               align: "start"
 
               loop: true}}
+<<<<<<< HEAD
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
+                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">
+                      <div className="flex-shrink-0 flex flex-col items-center">
+                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
+                          <img src={testimonial.avatar} alt={testimonial.author} />
+                        </Avatar>
+                        <div className="text-center md:text-left">
+                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>
+                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
+                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-8 gap-2">
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+            </div>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 =======
 
 };
 
+>>>>>>> main
 =======
 import {;
   Carousel,;
@@ -236,11 +330,16 @@ export function TestimonialCarousel() {;
                   </Card>;
                 </CarouselItem>;
               ))}
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
             </CarouselContent>;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+<<<<<<< HEAD
+=======
 =======
             className="w - full";
           >;
@@ -270,10 +369,23 @@ export function TestimonialCarousel() {;
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
             </div>;
           </Carousel>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </section>;
+  );
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
     </section>);
 }
@@ -284,3 +396,4 @@ export function TestimonialCarousel() {;
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

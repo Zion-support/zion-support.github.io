@@ -1,14 +1,10 @@
-
-
-  tutorial?: TutorialType
+tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
 
   const router = useRouter()
   const slug = router.query.slug as string | undefined
   const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -56,13 +52,11 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
   const router = useRouter(),;
   const slug = router && router.query.slug as string | undefined,;
   const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t,) => t && t.slug === slug),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (!tutorial) {;
     return (
 
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>;
-=======
   }
   return (
     <>
@@ -87,7 +81,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
 
 }
 
-=======
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -111,7 +104,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         Tutorial not found.;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <>;
@@ -149,7 +141,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
 
 }
 
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { TUTORIALS } from '@/data / tutorials';
@@ -217,11 +208,4 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

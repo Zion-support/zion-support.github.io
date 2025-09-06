@@ -1,4 +1,84 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import { MessageSquare, Video  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { toast  } from 'sonner';
+import { Button  } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+export default function MessagingInbox() {
+  const {
+    conversations;
+
+    activeConversation
+    setActiveConversation
+
+    markAsRead;
+    fetchConversations;
+    isLoading
+  } = useMessaging();
+
+  const isMobile = useIsMobile();
+  const navigate = useNavigate();
+  const [activeCall, setActiveCall] = useState<string | null>(null);
+=======
+import {MessageSquare, Video} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components/messaging';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {toast} from 'sonner';
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+export default function MessagingInbox() {
+  const { ;
+    conversations;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useEffect, useState } from 'react',
+import { MessageSquare, Video } from 'lucide-react',
+import { useMessaging } from '@/context/MessagingContext',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView } from '@/components/messaging',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { toast } from 'sonner',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
+export default function MessagingInbox() {
+  const { 
+    conversations,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    activeConversation, 
+    setActiveConversation, 
+    markAsRead,
+    fetchConversations,
+    isLoading
+  } = useMessaging(),
+  const isMobile = useIsMobile(),
+  const navigate = useNavigate(),
+  const [activeCall, setActiveCall] = useState<string | null>(null),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  useEffect(() => {
+    // Fetch conversations when component mounts
+    const loadData = async () => {
+      try {
+        await fetchConversations()
+      } catch (error) {
+        console.error("Failed to load conversations:", error),
+        toast.error("Failed to load messages. Please try again.")
+      }
+<<<<<<< HEAD
+    }
+    loadData()
+  }, [fetchConversations]);
+=======
+=======
 
 import React, { useEffect, useState } from 'react';
 
@@ -44,11 +124,32 @@ function MessagingInbox() {
       }
 
 
+>>>>>>> main
     },
     
     loadData()
   }, [fetchConversations]),
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const startVideoCall = () => {
+    if (!activeConversation) {
+      toast.error("Please select a conversation first"),
+      return
+    }
+<<<<<<< HEAD
+    const roomId = `msg-${activeConversation.id}`;
+    setActiveCall(roomId);
+    // Show toast notification
+    toast.success("Starting video call", {
+      description: "Initializing video call connection..."
+    });
+    // Navigate to video call page
+    navigate(`/call/${roomId}`)
+  }
+
+=======
+=======
 
 
   const startVideoCall = () => {
@@ -58,6 +159,7 @@ function MessagingInbox() {
     }
 
 
+>>>>>>> main
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -71,8 +173,12 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   },
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
+>>>>>>> main
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -83,9 +189,12 @@ function MessagingInbox() {
               Messages
             </h1>
             {activeConversation && (
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> main
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -104,7 +213,12 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> main
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -126,13 +240,40 @@ export default function MessagingInbox() {;
   const isMobile = useIsMobile(),;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
       try {;
         await fetchConversations();
       } catch (error) {;
+<<<<<<< HEAD
+        console.error("Failed to load conversations:", error),;
+        toast.error("Failed to load messages. Please try again.");
+      }
+    },;
+    loadData();
+  }, [fetchConversations]),;
+  const startVideoCall = () => {;
+    if (!activeConversation) {;
+      toast.error("Please select a conversation first"),;
+      return;
+    }
+;
+    const roomId = `msg-${activeConversation.id}`,;
+    setActiveCall(roomId),;
+    // Show toast notification;
+    toast.success("Starting video call", {;
+      description: "Initializing video call connection...";
+    });
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`);
+  };
+  return (;
+=======
         console && console.error("Failed to load conversations:", error);
         toast && toast.error("Failed to load messages. Please try again.");
       }
@@ -160,6 +301,7 @@ export default function MessagingInbox() {;
   };
 
   return (
+>>>>>>> main
     <ProtectedRoute>;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
@@ -168,6 +310,20 @@ export default function MessagingInbox() {;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
+<<<<<<< HEAD
+            {activeConversation && (;
+              <Button;
+                onClick={startVideoCall}
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+              >
+                <Video className="h-4 w-4" />
+                Start Call
+              </Button>
+            )}
+          </div>;
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
+=======
 
             {activeConversation && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -184,12 +340,43 @@ export default function MessagingInbox() {;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
 
+>>>>>>> main
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>;
               ) : (;
+<<<<<<< HEAD
+                <ConversationsList;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  conversations={conversations}
+                  activeConversation={activeConversation}
+                  setActiveConversation={setActiveConversation}
+                  markAsRead={markAsRead}
+                />
+              )}
+              {/* Conversation Detail */}
+              <ConversationDetailView />
+            </div>
+          </div>
+        </div>
+        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+        {isMobile && <div className="h-16"></div>}
+      </div>
+    </ProtectedRoute>
+  )
+<<<<<<< HEAD
+}
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
     }
 ;
@@ -286,3 +473,4 @@ if ( {) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

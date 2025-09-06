@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -10,8 +16,12 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
+<<<<<<< HEAD
+export function FilterSidebar({;
+=======
 export function FilterSidebar(): any ({;
 
+>>>>>>> main
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -29,11 +39,35 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Filter } from "lucide-react",
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+<<<<<<< HEAD
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
+=======
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
 =======
 
 
+>>>>>>> main
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -55,12 +89,34 @@ export function FilterSidebar({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isMobileFilterOpen
 }: FilterSidebarProps) {
+<<<<<<< HEAD
+  return (
+    <>
+      {/* Filter header */}
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+          Filters
+        </h3>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+        >
+          Clear All
+        </Button>
+      </div>
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Filter header */}
 
 
+>>>>>>> main
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -110,9 +166,17 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -167,6 +231,9 @@ export function FilterSidebar({;
       )}
     </>
   )
+<<<<<<< HEAD
+}
+=======
 }
 =======
       <div className="flex items-center justify-between mb-6">;
@@ -333,3 +400,4 @@ function FilterSidebar() {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

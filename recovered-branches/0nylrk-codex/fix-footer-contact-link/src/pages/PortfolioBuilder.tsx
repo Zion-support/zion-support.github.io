@@ -1,6 +1,22 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume');
+=======
+=======
 
 
+>>>>>>> main
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -9,7 +25,11 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
 =======
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
@@ -19,14 +39,24 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <>
       <SEO
@@ -53,6 +83,21 @@ function PortfolioBuilderContent() {
     </>
   )
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function PortfolioBuilder() {
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
+=======
+;
+export default function PortfolioBuilder() {;
+  return (;
+=======
 
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
@@ -101,11 +146,19 @@ function PortfolioBuilderContent() {;
 
 export default function PortfolioBuilder() {;
   return (
+>>>>>>> main
     <ProtectedRoute>;
       <PortfolioBuilderContent />;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 ;
 
@@ -160,3 +213,4 @@ function PortfolioBuilder() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

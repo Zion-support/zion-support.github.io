@@ -1,6 +1,4 @@
-
-
-  "feedback": {
+"feedback": {
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -11,14 +9,12 @@
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   "announcements": {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-=======
 import { log_info } from '@/utils / production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
@@ -48,7 +44,6 @@ function CategoryContent({
   IconComponent,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   user}: {
   categoryId: string
   category: ForumCategoryInfo
@@ -58,7 +53,6 @@ function CategoryContent({
 
 
 
-=======
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
@@ -74,7 +68,6 @@ function CategoryContent({
     index === self.findIndex(p => p.id === post.id)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Apply search filter
   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -88,7 +81,6 @@ function CategoryContent({
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
 
-=======
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
@@ -108,9 +100,7 @@ import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 import { logInfo } from '@/utils/productionLogger';
-=======
 
-=======
 
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
@@ -130,7 +120,6 @@ import { useCommunity } from "@/context",;
 import { useToast } from "@/hooks/use-toast",;
 import { useFollowedCategories } from "@/hooks/useFollowedCategories",;
 import { logInfo } from '@/utils/productionLogger',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
 const categoriesInfo: Record<string, ForumCategoryInfo> = {;
@@ -245,16 +234,12 @@ function CategoryContent(): any ({;
 
   )
 }
-=======
 
 
-=======
 
   );
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 /**
  * CategoryContent - Function description
  */
@@ -304,7 +289,3 @@ if ( {) {
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

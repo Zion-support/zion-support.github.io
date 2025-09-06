@@ -1,4 +1,25 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Certification  } from '@/types/resume';
+import { format } from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+}
+export function CertificationsSection({ certifications }: CertificationsSectionProps) {
+
+  const formatDate = (date: Date | string | undefined) => {
+    if (!date) return ''
+    if (typeof date === 'string') {
+      return format(new Date(date), 'MMM yyyy')
+    }
+    return format(date, 'MMM yyyy')
+  }
+  if (certifications.length === 0) return null;
+
+=======
+=======
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -8,19 +29,31 @@ interface CertificationsSectionProps {
 
 
 
+>>>>>>> main
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
 =======
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -29,15 +62,28 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return format(date, 'MMM yyyy');
+  };
+=======
+    return format(date, 'MMM yyyy')
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
     return format(date, 'MMM yyyy')
   },
 
+>>>>>>> main
 
   if (certifications.length === 0) return null,
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -51,6 +97,24 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                   {formatDate(cert.issue_date)}
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
+<<<<<<< HEAD
+              )}
+            </div>
+            <p className="text-sm">{cert.issuing_organization}</p>
+            {cert.credential_url && (
+              <p className="text-sm">
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                  View Credential
+                </Link>
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+=======
 =======
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
@@ -150,3 +214,4 @@ if (return null) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

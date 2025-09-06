@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import { EducationForm as EducationFormComponent  } from './education';
+import { EducationFormProps } from './education/types';
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />;
+}
+
+}
+;
+
+=======
 import { EducationForm, as, EducationFormComponent  } from './education';
 import { EducationFormProps  } from './education / types';
 export /**
@@ -34,3 +45,4 @@ export function EducationForm(props: EducationFormProps) {;
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

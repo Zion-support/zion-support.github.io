@@ -1,10 +1,32 @@
 
+<<<<<<< HEAD
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+
+import {
+=======
+
+>>>>>>> main
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
+<<<<<<< HEAD
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+=======
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { Control  } from './react - hook - form';
@@ -30,6 +52,7 @@ import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
 
 
+>>>>>>> main
 
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
@@ -49,6 +72,59 @@ export function ContactFields({ control }: ContactFieldsProps) {
             <FormMessage />
           </FormItem>
 
+<<<<<<< HEAD
+        )}
+      />
+      <FormField
+        control={control}
+        name="website"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Website</FormLabel>
+            <FormControl>
+              <Input placeholder="https://yourwebsite.com" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="linkedin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="github"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>GitHub</FormLabel>
+            <FormControl>
+              <Input placeholder="https://github.com/username" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+
+  );
+}
+}
+;
+
+=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -202,3 +278,4 @@ function ContactFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

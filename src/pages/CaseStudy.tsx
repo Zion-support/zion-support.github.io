@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ArrowLeft } from 'lucide-react'
 
 
@@ -20,8 +17,6 @@ export default function CaseStudy() {
   const slug = router.query.slug as string
   const study = CASE_STUDIES.find((s,) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ArrowLeft } from 'lucide-react';
 import {  Breadcrumb,;
   BreadcrumbList,;
@@ -33,14 +28,12 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 
 
-=======
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
@@ -48,7 +41,6 @@ export default function CaseStudy() {;
   const slug = router && router.query.slug as string,;
   const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   const router = useRouter();
@@ -61,16 +53,13 @@ export default function CaseStudy() {;
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
 
-=======
   if (!study) {
     return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         Case study not found.
       </div>
     )
-=======
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
@@ -85,7 +74,6 @@ export default function CaseStudy() {;
         Case study not found.;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
@@ -99,7 +87,6 @@ export default function CaseStudy() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link href="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -111,7 +98,6 @@ export default function CaseStudy() {;
                   <Link href="/case-studies">Case Studies</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -121,7 +107,6 @@ export default function CaseStudy() {;
                 <BreadcrumbLink asChild aria-current="page">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>{study.title}</span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -139,7 +124,6 @@ export default function CaseStudy() {;
             </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </Button>
           <img
             src={study.companyLogo}
@@ -150,7 +134,6 @@ export default function CaseStudy() {;
             loading="lazy"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
@@ -163,7 +146,6 @@ export default function CaseStudy() {;
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>
           )}
           <div
@@ -176,8 +158,6 @@ export default function CaseStudy() {;
 }
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />;
           <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className="prose prose-invert";
@@ -194,7 +174,6 @@ export default function CaseStudy() {;
   );
 }
 
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { CASE_STUDIES } from '@/data / case - studies';
@@ -332,10 +311,4 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,7 +1,3 @@
-
-
-
-
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -61,7 +57,6 @@ function InterviewsContent() {
 
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
-=======
       !is_after (interview_date, now) ||;
       ['completed', 'declined', 'cancelled'].includes (interview.status));
   });
@@ -75,7 +70,6 @@ if ( {) {
   $2
 }
         grouped[date_key] = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
 
       grouped[dateKey].push(interview)
@@ -92,7 +86,6 @@ if ( {) {
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return Object.entries(groupedInterviews)
       .sort(
         ([dateA], [dateB]) =>
@@ -131,7 +124,6 @@ import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { InterviewCard } from '@/components/interviews/InterviewCard';
 import { Button } from '@/components/ui/button';
-=======
 
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
@@ -231,7 +223,6 @@ function InterviewsContent() {;
         <div key={date} className='mb-8'>;
           <h3 className='text-lg font-medium text-white mb-4 flex items-center'>;
             <Calendar className='h-5 w-5 mr-2' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
@@ -246,7 +237,6 @@ function InterviewsContent() {;
               />;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>
         </div>
@@ -275,7 +265,6 @@ function InterviewsContent() {;
         </div>));
 
   }
-=======
                 onRefresh={async () => {;
                   await fetchInterviews();                }}
               />;
@@ -284,17 +273,13 @@ function InterviewsContent() {;
         </div>;
       ));
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
 
   },
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
 
@@ -304,7 +289,6 @@ function InterviewsContent() {;
           <div>;
             <h1 className='text-3xl font-bold'>Interviews</h1>;
             <p className='text-muted-foreground mt-1'>;
-=======
       <SEO;
         title='Interviews | Zion AI Marketplace';
         description='Manage your scheduled interviews with clients and talent';
@@ -341,10 +325,8 @@ function InterviewsContent() {;
 
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {pendingInterviews.length}
                 </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
 
 
@@ -352,7 +334,6 @@ function InterviewsContent() {;
           <TabsContent value="upcoming" className="space-y-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -377,7 +358,6 @@ function InterviewsContent() {;
           <TabsContent value="pending" className="space-y-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -403,7 +383,6 @@ function InterviewsContent() {;
           <TabsContent value="past" className="space-y-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -423,7 +402,6 @@ function InterviewsContent() {;
             </TabsTrigger>;
             <TabsTrigger value='past'>Past</TabsTrigger>;
           </TabsList>;
-=======
 
 
           <TabsContent value='upcoming' className='space-y-6'>;
@@ -464,9 +442,7 @@ export default function Interviews() {;
 }
 
 }
-=======
 
-=======
         <Tabs;
           default_value={active_tab}
           onValueChange={setActiveTab}
@@ -550,10 +526,4 @@ function Interviews() {
     </ProtectedRoute>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

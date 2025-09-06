@@ -1,9 +1,5 @@
-
-
-          
 import { logInfo, logWarn } from '@/utils/productionLogger'
 
-=======
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -23,15 +19,12 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
 
    */
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -134,11 +127,9 @@ if ( {) {
   $2
 }
               setApiSuggestions (data.slice (0, 5)), // Limit to 5 API suggestions;
-=======
 
           setApiSuggestions([]),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           } else {
 
@@ -243,11 +234,9 @@ if ( {) {
     onChange(suggestionObj.text),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
-=======
         setHighlightedIndex (-1);
       });
       .catch (() => setFilteredSuggestions ([]));
@@ -279,7 +268,6 @@ if ( {) {
 }
       log_info ('Calling onSelectSuggestion with:', { data: suggestion_obj }),
       onSelectSuggestion (suggestion_obj);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
 
         router.push (`/search/${suggestion_obj.slug || slugify (suggestion_obj.text)}`);
@@ -686,7 +674,6 @@ if ( {) {
         break;
     }
   }
-=======
 
     switch(e && e.key) {;
       case 'ArrowDown':;
@@ -740,13 +727,10 @@ if ( {) {
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       // Provide a sensible default navigation if the parent did not supply a handler
 
       logWarn('onSelectSuggestion callback not provided'),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -757,7 +741,6 @@ if ( {) {
 
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
       aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
@@ -776,7 +759,6 @@ if ( {) {
           ref={inputRef}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -814,7 +796,6 @@ if ( {) {
             e.target.setSelectionRange (current_val.length, current_val.length);
           }}
 
-=======
 
 
           onChange={(e) => {;
@@ -832,7 +813,6 @@ if ( {) {
             const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;
               setIsFocused(false);
               setHighlightedIndex(-1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ,}
             setValueOnFocus(null);
           }}
@@ -843,7 +823,6 @@ if ( {) {
 
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="off";
         />;
@@ -865,7 +844,6 @@ if ( {) {
         searchTerm = {value,}
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
-=======
 
       </div>;
       <AutocompleteSuggestions;
@@ -874,8 +852,6 @@ if ( {) {
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
 
@@ -965,10 +941,7 @@ break ;
   );
 }
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
@@ -1074,5 +1047,3 @@ break;
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

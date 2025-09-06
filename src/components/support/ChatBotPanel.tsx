@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -70,7 +67,6 @@ if ( {) {
     }
 
 import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme";
-=======
 import { Send, Loader2 } from 'lucide-react'
 
 import { useTheme } from "@/hooks/useTheme",
@@ -95,7 +91,6 @@ const QUICK_REPLIES = [
         description: "We're having trouble connecting to our support service."}),
             
 
-=======
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -161,7 +156,6 @@ export function ChatBotPanel() {;
   );
 }
 
-=======
   }, []);
   const handleSendMessage = async (text: string = input_value) => {
     if () return) {
@@ -181,9 +175,6 @@ export function ChatBotPanel() {;
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -226,7 +217,6 @@ export function ChatBotPanel() {;
     const escalationMessage: Message = {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -258,6 +248,3 @@ export function ChatBotPanel() {;
 
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

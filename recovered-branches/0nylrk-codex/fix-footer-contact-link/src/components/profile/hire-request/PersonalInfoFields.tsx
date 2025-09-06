@@ -1,10 +1,33 @@
 
+<<<<<<< HEAD
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
+
+import {
+=======
+
+>>>>>>> main
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
+<<<<<<< HEAD
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+=======
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
@@ -36,10 +59,60 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;
 
+>>>>>>> main
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 
+<<<<<<< HEAD
+}
+export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
+  return (
+    <>
+      <FormField
+        control={form.control}
+        name="requesterName"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Your Name</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="Enter your full name"
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      <FormField
+        control={form.control}
+        name="requesterEmail"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Your Email</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="Enter your email address"
+                type="email"
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </>
+
+  );
+}
+}
+;
+
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -146,3 +219,4 @@ function PersonalInfoFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

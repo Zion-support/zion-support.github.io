@@ -34,4 +34,8 @@ const { execSync } = require('child_process')
           "type"
           "type"
     console.log('\n Error Fixing "Summary")
+<<<<<<< HEAD
     console.error('Error fixing "failed")
+=======
+    console.error('Error fixing "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

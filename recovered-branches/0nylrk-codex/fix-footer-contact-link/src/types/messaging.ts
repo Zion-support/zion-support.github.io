@@ -1,31 +1,104 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Define the shape of a message
+export interface Message {;
+  id: string;
+  sender_id: string;
+  recipient_id: string;
+  content: string;
+  created_at: string;
+  read: boolean;
+  sender_name?: string;
+  sender_avatar?: string;
+
+  attachment_url?: string
+
+  attachment_name?: string
+}
+// Define the shape of a conversation
+export interface Conversation {;
+=======
   attachment_url?: string,
   attachment_name?: string;
 }
 // Define the shape of a conversation;
 
 export interface Conversation {
+>>>>>>> main
   id: string;
   user_id: string;
   other_user: {
     id: string;
     name: string;
 
+<<<<<<< HEAD
+    avatar_url?: string
+    user_type?: string
+=======
     avatar_url?: string,
     user_type?: string;
 
+>>>>>>> main
   }
   name: string;
   avatar_url?: string;
   last_message?: {
+<<<<<<< HEAD
+    content: string
+    created_at: string
+=======
 
     content: string,
     created_at: string;
 
+>>>>>>> main
   }
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
+<<<<<<< HEAD
+  context_id?: string
+
+  context_data?: ConversationContextData
+}
+// Context data for creating a conversation
+export interface ConversationContextData {;
+  title?: string;
+  description?: string;
+  image_url?: string
+}
+// Define the shape of the messaging context
+export interface MessagingContextType {;
+  messages: Message[];
+  conversations: Conversation[];
+  unreadCount: number;
+  activeConversation: Conversation | null;
+  activeMessages: Message[];
+
+  isLoading: boolean
+  sendMessage: (conversationId: string, content: string) => Promise<void>
+  createConversation: (
+    recipientId: string
+    initialMessage: string
+
+    contextType?: 'job' | 'talent' | 'general';
+    contextId?: string;
+    contextData?: ConversationContextData
+  ) => Promise<void>;
+  markAsRead: (conversationId: string) => Promise<void>;
+  /**
+   * Set the currently active conversation. Passing `null` will clear the
+   * selection.
+   */
+  setActiveConversation: (value: Conversation | null) => void;
+
+  fetchConversations: () => Promise<void>
+
+  loadMessages: (conversationId: string) => Promise<void>
+}
+=======
+=======
 
   context_id?: string,
   context_data?: ConversationContextData;
@@ -41,6 +114,7 @@ export interface ConversationContextData {
 =======
 
 
+>>>>>>> main
 // Define the shape of a message;
 export interface Message {;
   id: string,;
@@ -85,6 +159,26 @@ export interface ConversationContextData {;
   image_url?: string;
 }
 ;
+<<<<<<< HEAD
+// Define the shape of the messaging context;
+export interface MessagingContextType {;
+  messages: Message[],;
+  conversations: Conversation[],;
+  unreadCount: number,;
+  activeConversation: Conversation | null,;
+  activeMessages: Message[],;
+  isLoading: boolean,;
+  sendMessage: (conversationId: string, content: string) => Promise<void>,;
+  createConversation: (;
+    recipientId: string,;
+    initialMessage: string,;
+    contextType?: 'job' | 'talent' | 'general',;
+    contextId?: string,;
+    contextData?: ConversationContextData;
+  ) => Promise<void>,;
+  markAsRead: (conversationId: string) => Promise<void>,;
+  /**;
+=======
 
 // Define the shape of the messaging context;
 export interface MessagingContextType {
@@ -104,6 +198,7 @@ export interface MessagingContextType {
   markAsRead: (conversation_id: string) => Promise < void>;
   /**;
 
+>>>>>>> main
    * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;
@@ -112,6 +207,14 @@ export interface MessagingContextType {
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

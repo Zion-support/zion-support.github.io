@@ -1,6 +1,4 @@
-
-
-      }
+}
       // Check condition
 if ( {) {
   $2
@@ -28,7 +26,6 @@ if ( {) {
           ? formatDateValue(work.end_date)
           : undefined
     })
-=======
       // Check condition
 if ( {) {
   $2
@@ -59,7 +56,6 @@ if ( {) {
           ? formatDateValue (work.end_date);
           : undefined,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const handle_delete = async (id: string, ) => {
     if () {) {
@@ -77,7 +73,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -240,7 +235,6 @@ export function WorkExperienceForm(): any ({;
                       {typeof work && work.start_date === 'string';
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       -{' '}
                       {work && work.is_current;
                         ? 'Present';
@@ -260,7 +254,6 @@ export function WorkExperienceForm(): any ({;
                     <Button
                       variant='ghost'
                       size='icon'
-=======
 
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
@@ -280,7 +273,6 @@ export function WorkExperienceForm(): any ({;
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -291,7 +283,6 @@ export function WorkExperienceForm(): any ({;
 
                       variant="ghost"
                       size="icon"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       onClick={() => handleEdit(work)}
                       aria-label='Edit experience'                    >;
                       <Edit className='h-4 w-4' />;
@@ -313,8 +304,6 @@ export function WorkExperienceForm(): any ({;
 
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </CardContent>;
             </Card>;
@@ -331,7 +320,6 @@ export function WorkExperienceForm(): any ({;
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
-=======
 
       <div className='bg-muted/40 p-6 rounded-lg'>;
         <h3 className='text-md font-medium mb-4'>;
@@ -339,7 +327,6 @@ export function WorkExperienceForm(): any ({;
         </h3>;
 
         <Form {...form}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <form
             onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4'>;
@@ -427,7 +414,6 @@ export function WorkExperienceForm(): any ({;
                     </FormControl>;
                     <FormMessage />;
 
-=======
                 control={form.control}
 
                 name="company_name"
@@ -443,10 +429,8 @@ export function WorkExperienceForm(): any ({;
                   </FormItem>
                 )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name='role_title'
@@ -455,7 +439,6 @@ export function WorkExperienceForm(): any ({;
                     <FormControl>;
                       <Input
                         placeholder='Software Engineer, Product Manager, etc.'
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -472,24 +455,20 @@ export function WorkExperienceForm(): any ({;
                     </FormControl>
                     <FormMessage />
                   </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
               />;
             </div>;
-=======
 
 
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
 
                 control={form.control}
                 name="start_date"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -502,13 +481,11 @@ export function WorkExperienceForm(): any ({;
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-=======
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
 
-=======
                       <Input 
                         type="date" 
                         {...field} 
@@ -520,12 +497,10 @@ export function WorkExperienceForm(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               />;
 
               <div className='space-y-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <FormField
 
                   control={form.control}
@@ -573,7 +548,6 @@ export function WorkExperienceForm(): any ({;
 
                             value={field.value || ''}                          />
 
-=======
                           <Input 
                             type="date" 
                             {...field} 
@@ -581,28 +555,22 @@ export function WorkExperienceForm(): any ({;
                           />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </FormControl>
                         <FormMessage />
                       </FormItem>
-=======
                             value={field && field.value || ''}                          />;
                         </FormControl>;
                         <FormMessage />;
                       </FormItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   />;
                 )}
 
-=======
 
 
               </div>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name='location'
@@ -611,7 +579,6 @@ export function WorkExperienceForm(): any ({;
                   <FormLabel>Location (Optional)</FormLabel>;
                   <FormControl>;
                     <Input
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -687,7 +654,6 @@ export function WorkExperienceForm(): any ({;
                     <Textarea
                       placeholder='Describe your responsibilities and accomplishments...'
                       className='min-h-[100px]'
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -708,11 +674,8 @@ export function WorkExperienceForm(): any ({;
                     <Textarea;
                       placeholder='Describe your responsibilities and accomplishments...';
                       className='min - h-[100px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               name="location"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
@@ -720,14 +683,12 @@ export function WorkExperienceForm(): any ({;
 
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
 
 
-=======
             />;
             <FormField;
               control={form.control}
@@ -747,7 +708,6 @@ export function WorkExperienceForm(): any ({;
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {...field}
                     />;
                   </FormControl>;
@@ -761,8 +721,6 @@ export function WorkExperienceForm(): any ({;
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 type='button'
                 variant='outline'
@@ -771,8 +729,6 @@ export function WorkExperienceForm(): any ({;
 
 
                     setEditingId(null),
-=======
-=======
                     setEditingId(null),
 
 
@@ -784,10 +740,8 @@ export function WorkExperienceForm(): any ({;
                       description: '',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   } else {
                     onBack()
-=======
             />;
 
             {error && (;
@@ -813,7 +767,6 @@ export function WorkExperienceForm(): any ({;
                     });
                   } else {;
                     onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
               >;
@@ -827,7 +780,6 @@ export function WorkExperienceForm(): any ({;
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
                 {!editingId && workExperiences.length > 0 && (
@@ -851,12 +803,10 @@ export function WorkExperienceForm(): any ({;
                     Next;
                   </Button>;
                 )}
-=======
 
 ;
 
 
-=======
                 </FormItem>)}
             />;
             {error && (
@@ -898,7 +848,6 @@ if ( {) {
                   <Button type='button' on_click={on_complete}>;
                     Next;
                   </Button>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </form>;
@@ -906,7 +855,6 @@ if ( {) {
       </div>;
 
 
-=======
 
       ...work;
       start_date: formatDateValue(work.start_date),
@@ -915,8 +863,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }> {';
   editing_id ? 'Cancel': 'Back';
@@ -924,11 +870,4 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>);
 }'"  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

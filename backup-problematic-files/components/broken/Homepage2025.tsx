@@ -656,7 +656,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
                 <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
+<<<<<<<< HEAD:backup-problematic-files/components/broken/Homepage2025.tsx
                 <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter/X</a></li>
+========
+<<<<<<< HEAD
+                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">X (Twitter)</a></li>
+=======
+                <li><a href="https://twitter.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
+>>>>>>>> main:components/Homepage2025.tsx.backup.1755991634
               </ul>
             </div>
           </div>

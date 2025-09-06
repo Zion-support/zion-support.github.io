@@ -1,4 +1,25 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { WorkExperience  } from '@/types/resume';
+import { format } from 'date-fns';
+=======
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface WorkExperienceSectionProps {
+  workExperience: WorkExperience[]
+}
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
+<<<<<<< HEAD
+
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+=======
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -16,6 +37,7 @@ interface WorkExperienceSectionProps {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
+>>>>>>> main
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -26,9 +48,20 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedWorkExperience.length === 0) return null;
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 =======
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -49,9 +82,16 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
     }
     return format(date, 'MMM yyyy')
   },
@@ -59,7 +99,10 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   if (sortedWorkExperience.length === 0) return null,
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -76,6 +119,19 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               <p className="text-sm">{work.company_name}</p>
               {work.location && (
                 <span className="text-sm">{work.location}</span>
+<<<<<<< HEAD
+              )}
+            </div>
+            {work.description && (
+              <p className="text-sm mt-2 whitespace-pre-line">{work.description}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+=======
 =======
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
@@ -196,3 +252,4 @@ if (return null) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

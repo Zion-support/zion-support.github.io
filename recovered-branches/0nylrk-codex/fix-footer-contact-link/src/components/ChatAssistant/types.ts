@@ -1,16 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface Message {
+=======
+export interface Message {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 export interface Message {;
 
 
+>>>>>>> main
   id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface Recipient {
+  id: string;
+  name: string;
+=======
+=======
 
 
+>>>>>>> main
 
 export interface Recipient {;
   id: string;
@@ -18,7 +35,11 @@ export interface Recipient {;
   avatarUrl?: string;
   role?: string;
 }
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
 =======
 
 export interface Message {;
@@ -32,12 +53,27 @@ export interface Message {;
 export interface Recipient {;
   id: string,;
   name: string,;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   avatarUrl?: string;
 
   role?: string;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
   avatar_url?: string;
@@ -49,3 +85,4 @@ export interface Recipient {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

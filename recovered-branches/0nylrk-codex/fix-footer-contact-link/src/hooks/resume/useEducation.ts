@@ -1,13 +1,29 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Education  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useEducation() {
+=======
+=======
 
+>>>>>>> main
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
+>>>>>>> main
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,9 +32,18 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -33,20 +58,46 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
     }
     
     setIsLoading(true),
     setError(null),
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     try {
       const { error } = await supabase
         .from('education')
         .insert({
+<<<<<<< HEAD
+<<<<<<< HEAD
+          resume_id: resumeId;
+          institution: education.institution;
+          degree: education.degree;
+          field_of_study: education.field_of_study;
+          start_date: formatDateForDB(education.start_date);
+          end_date: education.is_current ? null : formatDateForDB(education.end_date);
+          is_current: education.is_current;
+          description: education.description;
+          institution_logo_url: education.institution_logo_url
+          location: education.location
+        });
+      if (error) throw error;
+=======
+=======
 
           institution: education && education.institution;
           degree: education && education.degree;
@@ -62,6 +113,7 @@ export function useEducation() {;
       if (error) throw error;
 =======
 
+>>>>>>> main
           resume_id: resumeId,
           institution: education.institution,
           degree: education.degree,
@@ -76,16 +128,36 @@ export function useEducation() {;
       
       if (error) throw error,
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update education')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 =======
 ;
     setIsLoading(true),;
@@ -117,20 +189,42 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
     }
     
     setIsLoading(true),
     setError(null),
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     try {
       const { error } = await supabase
         .from('education')
         .update({
+<<<<<<< HEAD
+<<<<<<< HEAD
+          institution: education.institution;
+          degree: education.degree;
+          field_of_study: education.field_of_study;
+          start_date: formatDateForDB(education.start_date);
+          end_date: education.is_current ? null : formatDateForDB(education.end_date);
+          is_current: education.is_current;
+          description: education.description;
+          institution_logo_url: education.institution_logo_url
+          location: education.location
+=======
 
           institution: education && education.institution;
           degree: education && education.degree;
@@ -142,11 +236,15 @@ export function useEducation() {;
           institution_logo_url: education && education.institution_logo_url,
           location: education && education.location
 
+>>>>>>> main
         })
         .eq('id', eduId);
       if (error) throw error;
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
           institution: education.institution,
           degree: education.degree,
           field_of_study: education.field_of_study,
@@ -161,16 +259,36 @@ export function useEducation() {;
       
       if (error) throw error,
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+  const deleteEducation = async (eduId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete education')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
 =======
 ;
     setIsLoading(true),;
@@ -202,33 +320,87 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
+>>>>>>> main
     }
     
     setIsLoading(true),
     setError(null),
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     try {
       const { error } = await supabase
         .from('education')
         .delete()
+<<<<<<< HEAD
+<<<<<<< HEAD
+        .eq('id', eduId);
+      if (error) throw error;
+=======
+=======
 
 
+>>>>>>> main
         .eq('id', eduId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
+>>>>>>> main
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+  return {
+    isLoading;
+    error;
+    addEducation;
+    updateEducation;
+
+    deleteEducation
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      const { error } = await supabase;
+        .from('education');
+        .delete();
+        .eq('id', eduId),;
+      if (error) throw error,;
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume");
+    } catch (e: any) {;
+      return handleResumeError(e, 'Could not delete education');
+    } finally {;
+      setIsLoading(false);
+    }
+=======
 
 
 
@@ -256,6 +428,7 @@ if ( {) {
       return false;
     }
 
+>>>>>>> main
   },;
   return {;
     isLoading,;
@@ -263,6 +436,16 @@ if ( {) {
     addEducation;
     updateEducation;
     deleteEducation;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
 
@@ -375,3 +558,4 @@ if (throw error) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
+>>>>>>> main

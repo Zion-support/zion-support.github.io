@@ -1,4 +1,29 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import HelpCenter from "@/components/support/HelpCenter";
+import {SEO} from "@/components/SEO";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import HelpCenter from "@/components/support/HelpCenter";
+import { SEO } from "@/components/SEO";
+=======
+import HelpCenter from "@/components/support/HelpCenter",
+import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function HelpCenterPage() {
+  return (
+    <>
+=======
 
 
 
@@ -37,10 +62,28 @@ export default function HelpCenterPage() {;
   return (
     <>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> main
       <SEO
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+<<<<<<< HEAD
+      />
+      <HelpCenter />
+    </>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",;
+import HelpCenter from "@/components/support/HelpCenter",;
+import { SEO } from "@/components/SEO";
+export default function HelpCenterPage() {;
+  return (;
+=======
 
       />;
       <HelpCenter />;
@@ -61,6 +104,7 @@ export default /**
  */
 function HelpCenterPage() {
   return (
+>>>>>>> main
     <>;
       <SEO;
         title="Help Center | Zion AI Marketplace";
@@ -68,6 +112,19 @@ function HelpCenterPage() {
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";
       />;
       <HelpCenter />;
+<<<<<<< HEAD
+    </>;
+  );
+<<<<<<< HEAD
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
     </>;
   );
@@ -77,3 +134,4 @@ function HelpCenterPage() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

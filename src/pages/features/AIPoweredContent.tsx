@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <>;
       <SEO
         title='AI Content Generation'
@@ -38,12 +36,10 @@
     </>
 
 
-=======
 
 ;
 }
 
-=======
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -90,13 +86,11 @@ export default function AIPoweredContent() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of ZionGPT content tool";
               className="object-cover";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>;
 
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -169,7 +163,6 @@ function AIPoweredContent() {
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <li>;
               Save time drafting marketing content for your products or;
               services.;
@@ -189,9 +182,4 @@ function AIPoweredContent() {
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

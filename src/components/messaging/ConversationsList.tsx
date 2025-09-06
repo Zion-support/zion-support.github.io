@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
+return (
 
           isActive={activeConversation?.id === conversation && conversation.id}
           onClick={() => {;
@@ -46,7 +43,6 @@
   );
 }
 
-=======
     <div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
       <div className='p - 3 border - b border - zion - purple / 20'>;
         <h3 className='font - medium text - white'>Conversations</h3>;
@@ -68,11 +64,7 @@
         </List>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
           {Row}
         </List>
       )};
@@ -80,7 +72,6 @@
   );
 };
 }
-=======
           width="100%"
         >
           {Row}
@@ -91,7 +82,3 @@
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

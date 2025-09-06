@@ -1,26 +1,20 @@
-
-
-        if (error) {
+if (error) {
           throw error
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
 
 
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
 
-=======
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
 
         setIsError(true),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
-=======
         setProfileData (data);
       } catch (error) {
         logErrorToProduction (error instanceof Error ? error.message : String (error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
@@ -29,14 +23,12 @@
           title: "Error",
           description: "Failed to load profile. Please try again later.",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
 
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
         setIsLoading(false)
 
 import { useState, useEffect } from "react",;
@@ -97,7 +89,6 @@ export default function ProfilePage() {;
 
 
   if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
@@ -134,7 +125,6 @@ export default function ProfilePage() {;
 
         description = {profileData.bio || "View the profile of this talented individual.",}
 
-=======
 ;
   return (;
     <>;
@@ -144,17 +134,14 @@ export default function ProfilePage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-=======
         title={`${profileData && profileData.full_name} | Talent Profile`}
         description = {profileData && profileData.bio || "View the profile of this talented individual.",}
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -211,7 +198,6 @@ export default function ProfilePage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -229,7 +215,6 @@ export default function ProfilePage() {;
 
 
             </div>
-=======
             </div>;
 
             {/* Bio Section */}
@@ -238,7 +223,6 @@ export default function ProfilePage() {;
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -264,7 +248,6 @@ export default function ProfilePage() {;
 
 
             </div>
-=======
               </div>;
             </div>;
 
@@ -274,7 +257,6 @@ export default function ProfilePage() {;
               <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -298,7 +280,6 @@ export default function ProfilePage() {;
                     href={profileData.twitter_link}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -322,7 +303,6 @@ export default function ProfilePage() {;
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
               </div>;
@@ -351,7 +331,6 @@ export default function ProfilePage() {;
 }'"};
 
 
-=======
           </div>;
         </div>;
       </div>;
@@ -359,10 +338,7 @@ export default function ProfilePage() {;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     // Check condition
 if ( {) {
   $2
@@ -577,12 +553,5 @@ if ( {") {
   /* Placeholder for other sidebar elements */;
 }</div> </div> </div> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

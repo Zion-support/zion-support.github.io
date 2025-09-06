@@ -1,46 +1,112 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import React from 'react'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { CreditCard, Plus, Trash } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-
+import { CreditCard, Plus, Trash } from 'lucide-react'
+import React from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+<<<<<<< HEAD
+=======
+=======
+=======
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
-=======
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
+>>>>>>> main
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      id: 'pm-1'
+      type: 'credit_card'
+      brand: 'Visa'
+      last4: '4242'
+      expYear: 2025
+      isDefault: true
+    }
+    {
+      id: 'pm-2'
+      type: 'credit_card'
+      brand: 'Mastercard'
+      last4: '8888'
+      expMonth: 4
+      expYear: 2026
+      isDefault: false
+    }
+  ]
+=======
+=======
 
 
+>>>>>>> main
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
-
-
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+
+
+>>>>>>> main
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       expYear: 2025,
       isDefault: true},
     {
@@ -50,6 +116,24 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      isDefault: false,
+    },
+  ]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      isDefault: false}
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
@@ -57,21 +141,33 @@ export function PaymentMethods() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <CardDescription>
+          Manage your payment methods for automatic billing
+        </CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-4'>
+        {paymentMethods.map(method => (
+          <div            key={method.id}
+=======
 
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
 
+>>>>>>> main
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
+<<<<<<< HEAD
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 import React from 'react';
 import {;
   Card,;
@@ -125,22 +221,28 @@ export function PaymentMethods() {;
         {paymentMethods && paymentMethods.map((method,) => (;
           <div
             key = {method && method.id,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
+>>>>>>> main
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (
           <div 
             key={method.id}
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            className={`flex items-center justify-between p-4 rounded-lg border ${
+              method.isDefault ? "bg-muted border-primary" : "border-border"
+=======
+
             className={`flex items-center justify-between p-4 rounded-lg border ${
 
-=======
               method.isDefault ? "bg-muted border-primary" : "border-border";
+>>>>>>> main
             }`}
           >
             <div className="flex items-center space-x-4">
@@ -151,28 +253,78 @@ export function PaymentMethods() {;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
+                    </span>
+                  )}
+                </p>
+                <p className='text-sm text-muted-foreground'>                  Expires {method.expMonth}/{method.expYear}
+                </p>
+              </div>
+            </div>
+            <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+=======
+                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
                       Default
                     </span>
                   )}
                 </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
+=======
+                <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
                 <p className="text-sm text-muted-foreground">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className='flex gap-2'>
+              {!method.isDefault && (
+                <Button size='sm' variant='ghost'>
+                  Set Default
+                </Button>
+              )}
+              <Button size='sm' variant='ghost' className='text-destructive'>
+                <Trash className='h-4 w-4' />              </Button>              {!method.isDefault && (
+=======
+            <div className="flex gap-2">
+              {!method.isDefault && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
             <div className="flex gap-2">
               {!method.isDefault && (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
@@ -180,16 +332,26 @@ export function PaymentMethods() {;
               </Button>
             </div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
-
+<<<<<<< HEAD
+      </CardContent>
+      <CardFooter>
+<<<<<<< HEAD
+        <Button className='gap-1'>
+          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">
+<<<<<<< HEAD
+=======
         <Button className="gap-1">
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 
         <Button className="gap-1">
 
-=======
+
+        <Button className="gap-1">
+
+>>>>>>> main
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -197,21 +359,32 @@ export function PaymentMethods() {;
     </Card>;
   );
 };
+<<<<<<< HEAD
 =======
         <Button className="gap-1">
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <Button className="gap-1">
+>>>>>>> main
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
-
-
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
-=======
 
+
+
+>>>>>>> main
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -283,11 +456,14 @@ export function PaymentMethods() {;
             </div>
           </div>
         ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
+        <Button className="gap-1">;
+=======
         <Button className='gap-1'>;
           <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
+>>>>>>> main
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;
@@ -295,11 +471,18 @@ export function PaymentMethods() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
   );
 }
 
-=======
 import React from 'react';
 import {
   Card,
@@ -405,10 +588,5 @@ function PaymentMethods() {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

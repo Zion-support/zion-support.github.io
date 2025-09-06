@@ -1,17 +1,32 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+=======
+import {useState} from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function useAuthStatus() {
+  // Mock authenticated status;
+=======
 
 import {useState} from 'react';
 
 
 export function useAuthStatus() {
   // Mock authenticated status
+>>>>>>> main
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
 
+<<<<<<< HEAD
+    email: 'demo@example.com'
+=======
     email: 'demo@example && example.com',
+>>>>>>> main
 
     avatar: ''
   });
@@ -24,11 +39,19 @@ export function useAuthStatus() {
       if (isSaved) {
         setSavedTalents(prev => [...prev, talentId])
       } else {
+<<<<<<< HEAD
+        setSavedTalents(prev => prev.filter(id => id !== talentId))
+      }
+    } else {
+      // In a real app, we might show a login prompt
+      console.log('User needs to log in to save talents')
+=======
         setSavedTalents(prev => prev && prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
       console && console.log('User needs to log in to save talents')
+>>>>>>> main
     }
   }
   // For demo purposes, let's provide a login/logout toggle
@@ -42,6 +65,42 @@ export function useAuthStatus() {
     handleToggleSave;
 
     toggleAuth
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react',;
+export function useAuthStatus() {;
+  // Mock authenticated status;
+  const [isAuthenticated, setIsAuthenticated] = useState(false),;
+  // Mock user details;
+  const [userDetails, setUserDetails] = useState({;
+    id: 'user-123',;
+    name: 'Demo User',;
+    email: 'demo@example.com',;
+    avatar: '';
+  }),;
+  // Mock saved talents;
+  const [savedTalents, setSavedTalents] = useState<string[]>([]),;
+  // Toggle saved talent;
+  const handleToggleSave = (talentId: string, isSaved: boolean) => {;
+    if (isAuthenticated) {;
+      if (isSaved) {;
+        setSavedTalents(prev => [...prev, talentId]);
+      } else {;
+        setSavedTalents(prev => prev.filter(id => id !== talentId));
+      }
+    } else {
+      // In a real app, we might show a login prompt
+      // // // console.log('User needs to log in to save talents')
+    } else {;
+      // In a real app, we might show a login prompt;
+      // // // console.log('User needs to log in to save talents');
+    }
+=======
 
 import {useState} from 'react';
 export /**
@@ -88,6 +147,7 @@ if ( {) {
       console.log ('User needs to log in to save talents');
     }
 
+>>>>>>> main
   },;
   // For demo purposes, let's provide a login/logout toggle;
   const toggleAuth = () => {;
@@ -99,6 +159,16 @@ if ( {) {
     savedTalents;
     handleToggleSave;
     toggleAuth;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
 
@@ -119,3 +189,4 @@ if ( {) {
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+>>>>>>> main

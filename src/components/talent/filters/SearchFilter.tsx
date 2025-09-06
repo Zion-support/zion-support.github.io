@@ -1,9 +1,6 @@
-
-
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6">
       <div className="relative">
@@ -13,8 +10,6 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
           id='talent-search'
           type='text'
@@ -23,7 +18,6 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Type a name or skill to filter results
         </p>
       </div>
@@ -32,12 +26,10 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='talent-search-help';
           className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light';
-=======
 
 };
 ;
 
-=======
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from 'lucide-react';
 import { SearchFilterProps } from "@/types/filters";
@@ -70,7 +62,6 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   );
 }
 
-=======
 import { Input } from '@/components / ui / input';
 import { SearchIcon } from 'lucide-react';
 import { SearchFilterProps } from '@/types / filters';
@@ -107,10 +98,4 @@ import { SearchFilterProps } from '@/types / filters';
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -11,17 +9,13 @@ interface ProfileBadgeProps {;
 }
 
 
-=======
 interface ProfileBadgeProps {
   type: BadgeType,
 
 
 
   className?: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
@@ -92,8 +86,3 @@ function ProfileBadge() {
 }</span>;
 }'"  );
 }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

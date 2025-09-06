@@ -4,22 +4,27 @@ import path from 'path',;
 import fs from 'fs',;
 import DocsLayout from '../../../components/docs/DocsLayout',;
 import CodeBlock from '../../../components/docs/CodeBlock',;
+;
 export type Section = {;
-  id: string,;
-  title: string,;
-  html?: string,;
-  code?: { language?: string, content: string }[];
+  id:string,;
+  title:string,;
+  html?:string,;
+  code?:{ language?:string, content:string }[],;
 },;
+;
 type DocsContent = {;
-  title: string,;
-  sections: Section[];
+  title:string,;
+  sections:Section[];
 },;
+;
 type PageProps = {;
-  docs: DocsContent;
+  docs:DocsContent;
 },;
-export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
-  const contentPath = path.join(process.cwd(), 'datadocscontent.json'),;
+;
+export const getServerSideProps:GetServerSideProps<PageProps> = async () => {;
+  const contentPath = path.join(process.cwd(), 'datadocs', 'content.json'),;
   const raw = fs.readFileSync(contentPath, 'utf8'),;
+<<<<<<<< HEAD:backup-problematic-files/components/developers/docs/index.tsx
   const docs = JSON.parse(raw) as DocsContent;
   return { props: { docs } }
 },
@@ -32,6 +37,20 @@ export default function ApiDocsPage({ docs }: PageProps) {
           <h2 className="text-2xl font-semibold">{section.title}</h2>
           {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
+========
+  const docs = JSON.parse(raw) as DocsContent,;
+  return { props:{ docs } },;
+},;
+;
+export default function ApiDocsPage({ docs } PageProps) {;
+  return (;
+    <DocsLayout title={docs.title} nav={docs.sections.map((s) => ({ id:s.id, title:s.title }))}>;
+      {docs.sections.map((section) => (;
+        <section key={section.id} id={section.id} className="scroll-mt-24">;
+          <h2 className="text-2xl font-semibold">{section.title}</h2>;
+          {section.html && (;
+            <div dangerouslySetInnerHTML={{ __html:section.html }} />;
+>>>>>>>> main:backup-problematic-files/temp_conflicts/pages/developers/docs/index.tsx
           )}
           {section.code && section.code.length > 0 && (
             <div className="space-y-4 mt-4">
@@ -43,5 +62,5 @@ export default function ApiDocsPage({ docs }: PageProps) {
         </section>;
       ))}
     </DocsLayout>;
-  );
+  ),;
 }

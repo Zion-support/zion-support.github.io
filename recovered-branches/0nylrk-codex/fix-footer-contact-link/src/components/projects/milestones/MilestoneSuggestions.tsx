@@ -1,6 +1,20 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check  } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
+=======
+=======
 
 
+>>>>>>> main
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -15,7 +29,11 @@ export function MilestoneSuggestions({;
   startDate;
   endDate;
   projectType;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -32,8 +50,12 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 
   projectName: string
   scopeSummary: string
@@ -44,6 +66,29 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
+<<<<<<< HEAD
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
+  const [showSuggestions, setShowSuggestions] = useState(false),
+
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+<<<<<<< HEAD
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+      projectType: projectType |"Other"
+    }
+    const milestones = await generateMilestones(input);
+=======
+=======
 =======
 import {Button} from '@/components/ui/button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
@@ -76,6 +121,7 @@ export function MilestoneSuggestions(): any ({;
 
 =======
 
+>>>>>>> main
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -84,14 +130,36 @@ export function MilestoneSuggestions(): any ({;
 
     const milestones = await generateMilestones(input),
     
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
+>>>>>>> main
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
   };
 
+>>>>>>> main
 =======
 ;
 export function MilestoneSuggestions({;
@@ -104,6 +172,18 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
+<<<<<<< HEAD
+  const handleGenerateMilestones = async () => {;
+    const input: MilestoneInput = {;
+      scope: `${projectName}: ${scopeSummary}`,;
+      startDate: startDate.toISOString(),;
+      endDate: endDate ? endDate.toISOString() : null,;
+      projectType: projectType || "Other";
+    },;
+    const milestones = await generateMilestones(input),;
+    if (milestones.length > 0) {;
+      setShowSuggestions(true),;
+=======
 
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
@@ -118,10 +198,14 @@ export function MilestoneSuggestions({;
     if (milestones && milestones.length > 0) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setShowSuggestions(true);
+>>>>>>> main
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
+<<<<<<< HEAD
+  };
+=======
 
 import {Button} from '@/components / ui / button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
@@ -176,11 +260,48 @@ if ( {) {
 
   };
 
+>>>>>>> main
   const formatDate = (dateString: string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
+<<<<<<< HEAD
+    }
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  return (
+    <div className="space-y-4">
+      {!showSuggestions && (
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className="w-full"
+        >
+          {isGenerating ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating milestones...
+            </>
+          ) : (
+            <>
+              <Sparkles className="mr-2 h-4 w-4" />
+              Suggest Project Milestones with AI
+            </>
+          )}
+        </Button>
+      )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
     }
 
@@ -218,6 +339,7 @@ if ( {) {
 
 
 
+>>>>>>> main
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -255,6 +377,13 @@ if ( {) {
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
+=======
 
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
@@ -355,9 +484,14 @@ if ( {) {
 
 =======
 
+>>>>>>> main
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

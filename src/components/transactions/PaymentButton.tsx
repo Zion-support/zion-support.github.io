@@ -1,7 +1,4 @@
-
-
-
-  redirectUrl?: string
+redirectUrl?: string
 }
 export function PaymentButton({
 
@@ -62,7 +59,6 @@ if ( {) {
 
 
 
-=======
   amount,
   serviceId,
   providerId,
@@ -101,8 +97,6 @@ if ( {) {
         throw error
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Type assertion needed for mock Supabase client compatibility
       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
@@ -134,14 +128,12 @@ if (?.url) {) {
       } else {
         throw new Error ("No checkout URL returned");
       }
-=======
       } else {
         throw new Error("No checkout URL returned")
       }
 
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (error) {
 
       logErrorToProduction ('Payment error:', { data: error }),
@@ -196,16 +188,13 @@ export function PaymentButton(): any ({;
         onPaymentInitiated();
       }
 
-=======
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
 
 
-=======
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Call the create-checkout edge function;
       const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;
         body: {;
@@ -241,7 +230,6 @@ export function PaymentButton(): any ({;
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
         "relative min-w-[120px]",
@@ -250,7 +238,6 @@ export function PaymentButton(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     >
       {isProcessing ? (
         <>
@@ -299,15 +286,11 @@ toast ({;
 }</Button>)
 }'"  )
 }
-=======
 
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     <Button;
       on_click={handlePaymentClick}
       disabled={is_processing}
@@ -333,7 +316,3 @@ toast ({
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

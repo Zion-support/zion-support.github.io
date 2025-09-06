@@ -1,4 +1,33 @@
 
+<<<<<<< HEAD
+
+const http = require('http')
+const fs = require('fs')
+const path = require('path')
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/' |req.url === '/index.html') {
+    fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
+      if (err) {
+
+        res.writeHead(500)
+        res.end('Error loading offline.html')
+        return
+      }
+<<<<<<< HEAD
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+
+      res.end(data)
+    })
+  } else if (req.url === '/online-check') {
+    // Endpoint to check if we're online
+
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
+  } else {
+    res.writeHead(404)
+    res.end('Not found')
+=======
 const server = http && http.createServer((req, res) => {
   if (req && req.url === '/' || req && req.url === '/index && index.html') {
     fs && fs.readFile(path && path.join(__dirname, 'offline && offline.html'), (err, data) => {
@@ -20,11 +49,15 @@ const server = http && http.createServer((req, res) => {
     res && res.writeHead(404),
     res && res.end('Not found')
 
+>>>>>>> main
   }
 })
 const PORT = 8080
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -37,6 +70,12 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+server.listen(PORT, () => {
+  // // // console.log(`
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -45,6 +84,7 @@ const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
 
+>>>>>>> main
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -55,15 +95,41 @@ server && server.listen(PORT, () => {
 ║     dependencies. Most features will not work until you install  ║
 ║     the required npm packages.                                   ║
 ║                                                                  ║
+<<<<<<< HEAD
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║
+║                                                                  ║
+║  🌐 When internet is available: ║
+║     1. Run: chmod +x setup.sh                                    ║
+║     2. Run: ./setup.sh npm                                       ║
+=======
 ║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup && setup.sh                                    ║
 ║     2. Run: ./setup && setup.sh npm                                       ║
+>>>>>>> main
 ║     3. Run: npm run dev                                          ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+});
+
+=======
+}),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;
+=======
 
 
 const http = require ('http'),
@@ -101,6 +167,7 @@ if ( {) {
 const PORT = 8080,
 server.listen (PORT, () => {
   console.log (`;
+>>>>>>> main
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -111,7 +178,11 @@ server.listen (PORT, () => {
 ║     dependencies. Most features will not work until you install  ║;
 ║     the required npm packages.                                   ║;
 ║                                                                  ║;
+<<<<<<< HEAD
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
+=======
 ║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
+>>>>>>> main
 ║                                                                  ║;
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
@@ -120,6 +191,14 @@ server.listen (PORT, () => {
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
+<<<<<<< HEAD
+}),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 }),
 ;
 
@@ -127,3 +206,4 @@ server.listen (PORT, () => {
 }),
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

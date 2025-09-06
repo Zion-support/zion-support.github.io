@@ -1,10 +1,38 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { User  } from 'lucide-react';
+import { Conversation  } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+interface ConversationsListProps {
+
+  conversations: Conversation[]
+  activeConversation: Conversation | null
+  setActiveConversation: (conversation: Conversation) => void
+
+  markAsRead: (conversationId: string) => Promise<void>
+}
+<<<<<<< HEAD
+export function ConversationsList({
+  conversations;
+
+  activeConversation
+  setActiveConversation
+  markAsRead
+=======
+
+export function ConversationsList({ ;
+  conversations;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 export function ConversationsList({ ;
   conversations;
 
+>>>>>>> main
 =======
 import React from 'react',;
 import { User } from 'lucide-react',;
@@ -19,12 +47,19 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
+>>>>>>> main
   activeConversation, 
   setActiveConversation, 
   markAsRead 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -42,6 +77,34 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
+<<<<<<< HEAD
+            <ConversationItem
+              key={conversation.id}
+              conversation={conversation}
+              isActive={activeConversation?.id === conversation.id}
+<<<<<<< HEAD
+              onClick={() => {
+                setActiveConversation(conversation);
+
+                markAsRead(conversation.id)
+=======
+              onClick={() => {;
+                setActiveConversation(conversation);
+                markAsRead(conversation.id);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+=======
 =======
 import {User} from 'lucide-react';
 import {Conversation} from '@/types/messaging';
@@ -144,3 +207,4 @@ function ConversationsList() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

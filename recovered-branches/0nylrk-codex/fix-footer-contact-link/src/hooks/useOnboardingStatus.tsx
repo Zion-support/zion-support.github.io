@@ -1,8 +1,31 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useAuth} from "./useAuth";
+import {supabase} from "@/integrations/supabase/client";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+<<<<<<< HEAD
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+=======
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -14,11 +37,25 @@ interface OnboardingStatus {
 
   responseReceived: boolean
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function useOnboardingStatus() {
+  const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 
 
 
 
 
+>>>>>>> main
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -29,6 +66,23 @@ interface OnboardingStatus {
     inviteSent: false
 
     responseReceived: false
+<<<<<<< HEAD
+<<<<<<< HEAD
+  });
+=======
+  }),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  useEffect(() => {
+
+    const fetchOnboardingStatus = async () => {
+<<<<<<< HEAD
+      if (!user) return;
+=======
+      if (!user) return,
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
   }),
@@ -42,12 +96,26 @@ interface OnboardingStatus {
       
 
 
+>>>>>>> main
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
+<<<<<<< HEAD
+<<<<<<< HEAD
+          .single();
+=======
+          .single(),
+          
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        if (error) {
+          console.error("Error fetching onboarding status:", error),
+          return
+<<<<<<< HEAD
+=======
+=======
 
 
           .single(),
@@ -59,6 +127,7 @@ interface OnboardingStatus {
           return
 
 
+>>>>>>> main
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -96,9 +165,17 @@ export function useOnboardingStatus() {;
         if (error) {;
           console.error("Error fetching onboarding status:", error),;
           return;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
         }
         if (data) {
           setStatus({
@@ -110,6 +187,34 @@ export function useOnboardingStatus() {;
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
+<<<<<<< HEAD
+        }
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)
+<<<<<<< HEAD
+      }
+    }
+    fetchOnboardingStatus()
+  }, [user]);
+
+  return status
+}
+=======
+      } catch (err) {;
+        console.error("Error in onboarding status hook:", err);
+      }
+    };
+    fetchOnboardingStatus();
+  }, [user]);
+  return status;
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 =======
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
@@ -247,3 +352,4 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

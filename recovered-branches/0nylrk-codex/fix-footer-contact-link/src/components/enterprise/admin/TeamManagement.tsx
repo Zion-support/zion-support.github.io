@@ -1,6 +1,27 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from "react";
+<<<<<<< HEAD
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+=======
+=======
 
 
+>>>>>>> main
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -12,7 +33,11 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> main
 =======
 import React, { useState } from "react",
 import {
@@ -29,24 +54,47 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
+=======
+=======
 
 
+>>>>>>> main
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   // Mock team members data
 
   const teamMembers = [
@@ -88,8 +136,18 @@ export function TeamManagement() {
       return
     }
     toast({
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: "Invitation sent"
+      description: `An invitation has been sent to ${newMemberEmail}`})
+    setNewMemberEmail("");
+    setIsAddingMember(false)
+  }
+=======
+=======
 
 
+>>>>>>> main
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -97,24 +155,122 @@ export function TeamManagement() {
     setIsAddingMember(false)
   },
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
+>>>>>>> main
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 
   },
 
 
 
+>>>>>>> main
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-medium">Team Members</h3>
+        <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>
+          <DialogTrigger asChild>
+            <Button className="gap-2">
+              <UserPlus className="h-4 w-4" />
+              Add Team Member
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Add Team Member</DialogTitle>
+              <DialogDescription>
+                Send an invitation to join your workspace. They'll receive an email with instructions.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="email" className="text-right">
+                  Email
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="colleague@company.com"
+                  className="col-span-3"
+                  value={newMemberEmail}
+                  onChange={(e) => setNewMemberEmail(e.target.value)}
+                />
+              </div>
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="role" className="text-right">
+                  Role
+                </Label>
+                <select
+                  id="role"
+                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="admin">Admin</option>
+                  <option value="recruiter">Recruiter</option>
+                  <option value="manager">Manager</option>
+                  <option value="viewer">Viewer</option>
+                </select>
+              </div>
+            </div>
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setIsAddingMember(false)}>
+                Cancel
+              </Button>
+              <Button onClick={handleAddMember}>Send Invitation</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+      <div className="rounded-md border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Name</TableHead>
+              <TableHead>Role</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>Last Active</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {teamMembers.map((member) => (
+              <TableRow key={member.id}>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
+                      <span className="text-sm font-medium">
+                        {member.name
+                          .split(" ")
+                          .map((n) => n[0])
+=======
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
@@ -313,6 +469,7 @@ if ( {) {
               <div className="grid grid - cols - 4 items - center gap - 4">;
                 <Label html_for="email" className="text - right">;
 =======
+>>>>>>> main
                           .join("")}
                       </span>
                     </div>
@@ -349,7 +506,12 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> main
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -454,13 +616,25 @@ export function TeamManagement() {;
             <div className="grid gap-4 py-4">;
               <div className="grid grid-cols-4 items-center gap-4">;
                 <Label htmlFor="email" className="text-right">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
                   Email;
                 </Label>;
                 <Input;
                   id="email";
                   type="email";
                   placeholder="colleague@company.com";
+<<<<<<< HEAD
+                  className="col-span-3";
+                  value={newMemberEmail}
+                  onChange={(e) => setNewMemberEmail(e.target.value)}
+                />;
+              </div>;
+              <div className="grid grid-cols-4 items-center gap-4">;
+                <Label htmlFor="role" className="text-right">;
+=======
                   className="col - span - 3";
                   value={newMemberEmail}
                   on_change={(e) => setNewMemberEmail (e.target.value)}
@@ -468,13 +642,19 @@ export function TeamManagement() {;
               </div>;
               <div className="grid grid - cols - 4 items - center gap - 4">;
                 <Label html_for="role" className="text - right">;
+>>>>>>> main
                   Role;
                 </Label>;
                 <select;
                   id="role";
+<<<<<<< HEAD
+                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
+                >;
+=======
                   className="col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
                 >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
                   <option value="admin">Admin</option>;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
@@ -483,16 +663,53 @@ export function TeamManagement() {;
               </div>;
             </div>;
             <DialogFooter>;
+<<<<<<< HEAD
+              <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
+                Cancel;
+              </Button>;
+              <Button onClick={handleAddMember}>Send Invitation</Button>;
+=======
 
               <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
                 Cancel;
               </Button>;
               <Button on_click={handleAddMember}>Send Invitation</Button>;
 
+>>>>>>> main
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
+      <div className="rounded-md border">;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead>Name</TableHead>;
+              <TableHead>Role</TableHead>;
+              <TableHead>Status</TableHead>;
+              <TableHead>Last Active</TableHead>;
+              <TableHead className="text-right">Actions</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {teamMembers.map((member) => (;
+              <TableRow key={member.id}>;
+                <TableCell>;
+                  <div className="flex items-center gap-2">;
+                    <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">;
+                      <span className="text-sm font-medium">;
+                        {member.name;
+                          .split(" ");
+                          .map((n) => n[0]);
+                          .join("")}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="font-medium">{member.name}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {member.email}
+=======
 
       <div className="rounded - md border">;
         <Table>;
@@ -523,10 +740,13 @@ export function TeamManagement() {;
                       <div className="text - sm text - muted - foreground">;
                         {member.email}
 
+>>>>>>> main
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
+=======
 
           </TableBody>;
         </Table>;
@@ -536,12 +756,39 @@ export function TeamManagement() {;
 }
 
 =======
+>>>>>>> main
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
                     variant={member.status === "active" ? "default" : "outline"}
                   >;
                     {member.status}
+<<<<<<< HEAD
+                  </Badge>
+                </TableCell>
+                <TableCell>{member.lastActive}</TableCell>
+                <TableCell className="text-right">
+                  <div className="flex justify-end gap-2">
+                    {member.status === "pending" ? (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleResendInvite(member.email)}
+                      >;
+                        <Mail className="h-4 w-4 mr-1" />;
+                        Resend;
+                      </Button>;
+                    ) : (;
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        className="text-destructive hover:text-destructive";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
                   </Badge>;
                 </TableCell>;
                 <TableCell>{member.last_active}</TableCell>;
@@ -555,6 +802,7 @@ export function TeamManagement() {;
                         className="text-destructive hover:text-destructive";
 
 
+>>>>>>> main
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />
@@ -569,5 +817,9 @@ export function TeamManagement() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
