@@ -10,11 +10,33 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ArrowRight,
+  Award,
+  BarChart3,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   BookOpen,
   Brain,
   Building,
@@ -49,6 +71,7 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 
 import {;
   ArrowRight,;
@@ -95,6 +118,14 @@ import {;
 
 } from "lucide-react";
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Truck,
+  Users,
+  X,
+  Zap
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
 
   Clock,
   DollarSign,
@@ -133,6 +164,18 @@ import {;
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+} from 'lucide-react';
+=======
+  Truck,
+  Users,
+  X,
+  Zap,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final

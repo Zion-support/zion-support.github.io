@@ -79,6 +79,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 =======
 =======
@@ -87,6 +88,12 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 <<<<<<< HEAD
 ^^
@@ -287,6 +294,7 @@ Node.js v22.16.0
 [2025-09-05T14:30:33.348Z] ⚠️ ESLint found issues, but continuing...
 [2025-09-05T14:30:33.348Z] Running TypeScript check...
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
@@ -303,3 +311,11 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

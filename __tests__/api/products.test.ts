@@ -154,8 +154,16 @@ describe('/api/products API Endpoint', () => {
       });
     });
   });
+<<<<<<< HEAD
 
 =======
           "id"
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

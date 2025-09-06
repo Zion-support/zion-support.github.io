@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -26,6 +27,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +112,7 @@ import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
@@ -115,11 +122,18 @@ import MainLayout from '../components/layout/MainLayout';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 
@@ -128,14 +142,18 @@ import React from 'react';
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -144,10 +162,13 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 ========
 import React, { useState } from 'react';
 import Head from 'next/head';
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -161,6 +182,16 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import Link from 'next/link';
+=======
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import {
   FileText,
   Download,
@@ -178,6 +209,7 @@ import {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -188,135 +220,40 @@ import {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
+<<<<<<< HEAD
   Tag
 } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-const whitePaperCategories = [
-  { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
-  { name: 'Cybersecurity', count: 6, color: 'bg-red-100 text-red-800' },
-  { name: 'Cloud Computing', count: 5, color: 'bg-green-100 text-green-800' },
-  { name: 'Data Analytics', count: 7, color: 'bg-purple-100 text-purple-800' },
-  { name: 'Digital Transformation', count: 4, color: 'bg-yellow-100 text-yellow-800' },
-  { name: 'Industry Insights', count: 9, color: 'bg-indigo-100 text-indigo-800' }
-];
-
-const featuredPapers = [
-  {
-    id: 1,
-    title: 'The Future of AI in Enterprise: A Comprehensive Guide to Implementation',
-    excerpt: 'Explore how artificial intelligence is transforming enterprise operations and learn best practices for successful AI implementation.',
-    category: 'AI & Machine Learning',
-    author: 'Dr. Sarah Chen',
-    date: '2025-01-15',
-    readTime: '25 min read',
-    pages: 45,
-    downloads: 1250,
-    featured: true,
-    tags: ['AI', 'Enterprise', 'Implementation', 'Future Tech'],
-    downloadUrl: '/whitepapers/ai-enterprise-guide.pdf'
-  },
-  {
-    id: 2,
-    title: 'Cybersecurity in the Age of Quantum Computing: Preparing for the Future',
-    excerpt: 'Understand the implications of quantum computing on cybersecurity and learn how to prepare your organization for the quantum era.',
-    category: 'Cybersecurity',
-    author: 'Michael Rodriguez',
-    date: '2025-01-10',
-    readTime: '30 min read',
-    pages: 52,
-    downloads: 980,
-    featured: true,
-    tags: ['Cybersecurity', 'Quantum Computing', 'Future Security'],
-    downloadUrl: '/whitepapers/quantum-cybersecurity.pdf'
-  },
-  {
-    id: 3,
-    title: 'Cloud Migration Strategies: A Step-by-Step Guide for Enterprise',
-    excerpt: 'Comprehensive guide to planning and executing successful cloud migration projects with real-world case studies.',
-    category: 'Cloud Computing',
-    author: 'Lisa Wang',
-    date: '2025-01-05',
-    readTime: '35 min read',
-    pages: 60,
-    downloads: 2100,
-    featured: true,
-    tags: ['Cloud Migration', 'Enterprise', 'Strategy'],
-    downloadUrl: '/whitepapers/cloud-migration-guide.pdf'
-  }
-];
-
-const recentPapers = [
-  {
-    id: 4,
-    title: 'Data Analytics for Healthcare: Improving Patient Outcomes',
-    excerpt: 'How healthcare organizations can leverage data analytics to improve patient care and operational efficiency.',
-    category: 'Data Analytics',
-    author: 'Dr. James Wilson',
-    date: '2025-01-03',
-    readTime: '20 min read',
-    pages: 32,
-    downloads: 750,
-    tags: ['Healthcare', 'Data Analytics', 'Patient Care']
-  },
-  {
-    id: 5,
-    title: 'Digital Transformation in Manufacturing: Industry 4.0 Implementation',
-    excerpt: 'A comprehensive look at how manufacturers can embrace Industry 4.0 technologies for competitive advantage.',
-    category: 'Digital Transformation',
-    author: 'Maria Garcia',
-    date: '2024-12-28',
-    readTime: '28 min read',
-    pages: 48,
-    downloads: 890,
-    tags: ['Manufacturing', 'Industry 4.0', 'Digital Transformation']
-  },
-  {
-    id: 6,
-    title: 'The State of FinTech: Trends and Opportunities in 2025',
-    excerpt: 'Analysis of current FinTech trends and emerging opportunities in the financial technology sector.',
-    category: 'Industry Insights',
-    author: 'David Kim',
-    date: '2024-12-20',
-    readTime: '22 min read',
-    pages: 38,
-    downloads: 1100,
-    tags: ['FinTech', 'Trends', 'Financial Technology']
-  },
-  {
-    id: 7,
-    title: 'IoT Security Best Practices: Protecting Connected Devices',
-    excerpt: 'Essential security measures for protecting Internet of Things devices and networks.',
-    category: 'Cybersecurity',
-    author: 'Emily Johnson',
-    date: '2024-12-15',
-    readTime: '18 min read',
-    pages: 28,
-    downloads: 650,
-    tags: ['IoT', 'Security', 'Connected Devices']
-  }
-];
-
-const stats = [
-  { number: '25+', label: 'White Papers' },
-  { number: '10K+', label: 'Downloads' },
-  { number: '15+', label: 'Industry Experts' },
-  { number: '95%', label: 'Reader Satisfaction' }
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -329,6 +266,7 @@ import {
   Tag, 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   ExternalLink 
 } from 'lucide-react';
@@ -338,20 +276,31 @@ import {
   Tag,
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 ========
   Tag,
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   ExternalLink 
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
 >>>>>>> main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <:pages/white-papers.tsx.backup
@@ -367,6 +316,9 @@ import {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 const whitePapers = [
   {
@@ -435,6 +387,7 @@ title: 'Cybersecurity Best Practices 2024',
     downloadCount: 750
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 
@@ -458,11 +411,15 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 =======
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -472,6 +429,15 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
+];
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -645,6 +611,7 @@ title="White Papers - Zion Tech Group"
                 </span>
               </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -661,17 +628,26 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
   return (
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -688,6 +664,10 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -710,6 +690,7 @@ title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -753,6 +734,9 @@ title="White Papers - Zion Tech Group"
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 <<<<<<< HEAD
@@ -765,12 +749,16 @@ title="White Papers - Zion Tech Group"
               </p>
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -785,10 +773,19 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
               </p>
             </motion.div>
           </div>
@@ -796,6 +793,7 @@ title="White Papers - Zion Tech Group"
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 </motion.div>
 =======
@@ -805,15 +803,23 @@ title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -988,6 +994,12 @@ title="White Papers - Zion Tech Group"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 </Link>
@@ -1013,6 +1025,7 @@ title="White Papers - Zion Tech Group"
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1034,6 +1047,12 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1280,6 +1299,7 @@ title="White Papers - Zion Tech Group"
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 </Layout>
@@ -1291,6 +1311,8 @@ title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
     </Layout>
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Layout>
@@ -1299,19 +1321,26 @@ title="White Papers - Zion Tech Group"
     </>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
 
 =======
 <<<<<<< HEAD
     </Layout>
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1362,6 +1391,7 @@ title="White Papers - Zion Tech Group"
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -1388,6 +1418,11 @@ title="White Papers - Zion Tech Group"
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 =======
@@ -1399,12 +1434,16 @@ title="White Papers - Zion Tech Group"
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
     </>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -1424,5 +1463,16 @@ title="White Papers - Zion Tech Group"
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+=======
+    </MainLayout>
+
+    </>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+    </MainLayout>
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   );
 }

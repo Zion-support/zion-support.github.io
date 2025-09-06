@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -22,6 +23,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+import React from 'react;';
+import Link from 'next/link';
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from "react";
 import Link from "next/link";
 import {;
@@ -55,6 +64,7 @@ import {
   Linkedin,
   Instagram,
   ArrowRight,
+<<<<<<< HEAD
 } from './lucide-react';
 ;
 export default /**
@@ -68,6 +78,10 @@ function Footer() {
       { name: "AI Services", href: "/ai - services" },
       { name: "IT Services", href: "/it - services" },
       { name: "Micro SaaS", href: "/micro - saas" },
+=======
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
       { name: "Blockchain", href: "/blockchain" },
       { name: "IoT Solutions", href: "/iot" },
@@ -248,6 +262,7 @@ export default function Footer() {;
             </p>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Contact Info */}
+<<<<<<< HEAD
 
 
 
@@ -259,6 +274,20 @@ export default function Footer() {;
 =======
 
 
+=======
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
 
 
@@ -355,26 +384,42 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <MapPin className=w-4 h-4 mr-2 text-blue-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <span>
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
                 </span>
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               </div>
             </div>
           </div>
           {/* Services */}
           <div>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -388,10 +433,14 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
+<<<<<<< HEAD
 
 =======
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
@@ -411,6 +460,7 @@ const Footer: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
 
               ))}
             </ul>
@@ -418,6 +468,29 @@ const Footer: React.FC = () => {
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+              ))}
+            </ul>
+          </div>
+<<<<<<< HEAD
+=======
+              ))}
+            </ul>
+          </div>
+>>>>>>> origin/main
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-2">
+              {footerLinks.solutions.map((link) => (
+                <li key={link.name}>
+<<<<<<< HEAD
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 >>>>>>> origin/automation-improvements-final
@@ -478,6 +551,7 @@ const Footer: React.FC = () => {
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+<<<<<<< HEAD
 
 =======
 
@@ -485,6 +559,14 @@ const Footer: React.FC = () => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   >
                     {link.name}
                   </Link>
@@ -492,8 +574,26 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+          {/* Company & Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+<<<<<<< HEAD
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
@@ -524,6 +624,7 @@ const Footer: React.FC = () => {
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+<<<<<<< HEAD
 
 =======
 
@@ -531,16 +632,33 @@ const Footer: React.FC = () => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -713,6 +831,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
 
+<<<<<<< HEAD
 
 
               <Link
@@ -722,6 +841,11 @@ const Footer: React.FC = () => {
 =======
 
 
+=======
+            {/* Legal Links */}
+            <div className="flex space-x-6 text-sm">
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
 
 
@@ -754,17 +878,26 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex space-x-6 text-sm>
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 Privacy Policy
               </Link>
 =======
@@ -788,7 +921,23 @@ const Footer: React.FC = () => {
               </Link>;
               <Link
                 href="/cookies"
+<<<<<<< HEAD
                 className="text-gray-400 hover:text-white transition-colors">;
+=======
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
       {/* Newsletter Signup */}
       <div className="border - t border - gray - 800">;
@@ -881,6 +1030,7 @@ const Footer: React.FC = () => {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 =======
 }
@@ -894,3 +1044,10 @@ const Footer: React.FC = () => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default Footer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

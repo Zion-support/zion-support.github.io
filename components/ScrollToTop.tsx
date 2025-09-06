@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ChevronUp } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,16 +54,29 @@ export default function ScrollToTop() {;
 
 const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+import { ChevronUp } from 'lucide-react';
+
+export default function ScrollToTop() {
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         setIsVisible(true);
       } else {;
         setIsVisible(false);      }
@@ -79,10 +99,20 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(true)
       } else {
         setIsVisible(false)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     }
     window.addEventListener('scroll', toggleVisibility);
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);      }
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 =======
@@ -99,6 +129,7 @@ const ScrollToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
       } else {
         setIsVisible(false)
+<<<<<<< HEAD
       }
     }
     window.addEventListener('scroll', toggleVisibility);
@@ -142,6 +173,35 @@ const ScrollToTop: React.FC = () => {
       behavior: 'smooth'})
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/main
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return () => window.removeEventListener('scroll', toggleVisibility);
+=======
+<<<<<<< HEAD
+    return () => window.removeEventListener('scroll', toggleVisibility);
+=======
+    return () => window.removeEventListener('scroll', toggleVisibility)
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
+>>>>>>> origin/main
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      behavior: 'smooth'
+    });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   };
 
   if (!isVisible) {
@@ -162,6 +222,15 @@ const ScrollToTop: React.FC = () => {
   );
 }
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      behavior: 'smooth',
+    });  };      behavior: 'smooth'})
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
     });  };      behavior: 'smooth'})
   }
@@ -244,6 +313,7 @@ export default ScrollToTop;
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -339,3 +409,10 @@ export default ScrollToTop;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

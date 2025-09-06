@@ -29,8 +29,16 @@ class ErrorBoundary extends React.Component {
 
 import React from 'react';
 import { NextPage } from 'next';
+<<<<<<< HEAD
 
 
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -311,6 +319,7 @@ const categories = [;
 ];
 ;
 const ProductsIndex: NextPage = () => {
+<<<<<<< HEAD
   const [selected_category, setSelectedCategory] = React.useState ('All');
   const [search_term, setSearchTerm] = React.useState ('');
 ;
@@ -329,6 +338,46 @@ const ProductsIndex: NextPage = () => {
       keywords="products, technology solutions, AI, cloud, security, automation, collaboration";
     >;
       <div className="min - h-screen bg - gray - 50">;
+=======
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
+<<<<<<< HEAD
+
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+const Index: NextPage = () => {
+  return (
+<<<<<<< HEAD
+=======
+
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+>>>>>>> origin/main
+    <Layout
+      title="Products - Zion Tech Group"
+      description="Discover our comprehensive suite of technology products designed to transform your business operations."
+      keywords="products, technology solutions, AI, cloud, security, automation, collaboration"
+    >
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Hero Section */}
         <section className="relative bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900 text - white py - 20 overflow - hidden">;
           <div className="absolute inset - 0">;
@@ -484,11 +533,25 @@ const ProductsIndex: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
+<<<<<<< HEAD
 
 
 
 
 =======
+=======
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
     <div>
       <Head>
@@ -524,6 +587,7 @@ import Head from 'next/head';
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 
 
 
@@ -538,11 +602,29 @@ export default ProductsIndex;
 export default Index;
 
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+};
+
+export default Index;
+=======
+=======
+  );
+};
+
+<<<<<<< HEAD
+export default ProductsIndex;
+>>>>>>> origin/main
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
   )
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Index;
+<<<<<<< HEAD
 
 
 
@@ -667,3 +749,9 @@ export default Index,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

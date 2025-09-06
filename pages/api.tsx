@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -79,6 +80,18 @@ export default function APIPage() {
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import {
   Code,
   Check,
@@ -319,6 +332,7 @@ export default function APIPage() {;
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -336,6 +350,33 @@ export default function APIPage() {;
           </div>;
         </section>;
 
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
+                API{' '}
+=======
+                API{" "}
+>>>>>>> origin/main
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  Documentation
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+                Integrate with Zion Tech Group's powerful APIs to build amazing applications 
+                with AI, cloud services, and enterprise solutions.
+=======
+                Integrate with Zion Tech Group's powerful APIs to build amazing
+                applications with AI, cloud services, and enterprise solutions.
+>>>>>>> origin/main
+              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
         {/* Quick Start */}
         <section className="py-20 bg-white">;
@@ -458,6 +499,7 @@ export default function APIPage() {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Quick Start Guide;
@@ -520,6 +562,96 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion.div>;
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Quick Start Guide
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                Get started with our APIs in minutes. Follow these simple steps to make your first API call.
+=======
+                Get started with our APIs in minutes. Follow these simple steps
+                to make your first API call.
+>>>>>>> origin/main
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-indigo-600" />
+                  </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">1. Get API Key</h3>
+                  <p className="text-gray-600">Sign up and obtain your API key from the dashboard</p>
+=======
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    1. Get API Key
+                  </h3>
+                  <p className="text-gray-600">
+                    Sign up and obtain your API key from the dashboard
+                  </p>
+>>>>>>> origin/main
+                </motion.div>
+
+                <motion.div
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Code className="w-8 h-8 text-purple-600" />
+                  </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Make Request</h3>
+                  <p className="text-gray-600">Use our RESTful APIs with your preferred language</p>
+=======
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    2. Make Request
+                  </h3>
+                  <p className="text-gray-600">
+                    Use our RESTful APIs with your preferred language
+                  </p>
+>>>>>>> origin/main
+                </motion.div>
+
+                <motion.div
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-green-600" />
+                  </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Build & Scale</h3>
+                  <p className="text-gray-600">Create powerful applications with our APIs</p>
+=======
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    3. Build & Scale
+                  </h3>
+                  <p className="text-gray-600">
+                    Create powerful applications with our APIs
+                  </p>
+>>>>>>> origin/main
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
               </div>;
             </div>;
@@ -649,6 +781,52 @@ export default function APIPage() {;
           </div>;
         </section>;
 
+<<<<<<< HEAD
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                Start building with our APIs today. Get your API key and begin integrating 
+                with our powerful services.
+=======
+                Start building with our APIs today. Get your API key and begin
+                integrating with our powerful services.
+>>>>>>> origin/main
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
+                  Get API Key
+                </a>
+                <a
+                  href="/docs"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
+                >
+                  View Documentation
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -670,6 +848,7 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 
 =======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
@@ -728,3 +907,11 @@ export default function APIPage() {
     </MainLayout>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+=======
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

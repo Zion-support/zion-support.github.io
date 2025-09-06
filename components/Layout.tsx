@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,10 +24,23 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 =======
@@ -167,6 +181,7 @@ import React, { ReactNode } from "react";
         />;
       </Head>;
 
+<<<<<<< HEAD
       <Header />;
       <main>{children}</main>;
       <Footer />;
@@ -174,6 +189,15 @@ import React, { ReactNode } from "react";
   );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from "react";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 interface LayoutProps {
   children: ReactNode,
@@ -184,6 +208,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
+<<<<<<< HEAD
 
 
 
@@ -249,9 +274,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   );
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+  );
+};
+
+export default Layout;
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 
@@ -7,13 +14,29 @@
 =======
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export default function 404.route({ }: 404.routeProps) {
 =======
 
@@ -59,9 +82,25 @@ export default function 404 && 404.route({ }: 404 && 404.routeProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 =======
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

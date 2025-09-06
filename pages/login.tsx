@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,11 +24,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -408,10 +419,196 @@ import {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
+=======
+>>>>>>> origin/main
+import {
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Database,
+  Cloud,
+  Brain,
+  Code,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Unlock,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+<<<<<<< HEAD
+  DizzyFace2
+} from 'lucide-react';
+=======
+  DizzyFace2,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
 
 } from './lucide-react';
 ;
@@ -434,6 +631,9 @@ function LoginPage() {
       ...prev,
       [name]: value,
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -441,6 +641,7 @@ function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
       ...prev
@@ -463,10 +664,22 @@ export default function LoginPage() {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+  const [error, setError] = useState("");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
 =======
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
@@ -492,6 +705,10 @@ export default function LoginPage() {
     } catch (err) {;
       setError("Login failed. Please try again.");
 
+=======
+    setIsLoading(true);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     setError('');
 
     try {
@@ -507,11 +724,29 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
+<<<<<<< HEAD
+=======
+=======
+    setError("");
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      // For demo purposes, accept any email/password
+      if (formData.email && formData.password) {
+        // Redirect to dashboard or home page
+        window.location.href = "/";
+      } else {
+        setError("Please fill in all fields");
+      }
+    } catch (err) {
+      setError("Login failed. Please try again.");
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     } finally {
 =======
     } finally {;
@@ -520,6 +755,21 @@ export default function LoginPage() {
     }
   }
   return (
+<<<<<<< HEAD
+=======
+    <Layout>
+      <Head>
+        <title>Login - Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+=======
+        <meta
+          name="description"
+          content="Sign in to your Zion Tech Group account to access your dashboard and services."
+        />
+>>>>>>> origin/main
+      </Head>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 
@@ -543,6 +793,7 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+<<<<<<< HEAD
 
     <Layout>;
       <Head>;
@@ -576,6 +827,13 @@ export default function LoginPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+              Or{' '}
+=======
+              Or{" "}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/contact"
 
@@ -603,6 +861,7 @@ export default function LoginPage() {
                 </motion && motion.div>;
               )}
 
+<<<<<<< HEAD
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
 =======
@@ -612,6 +871,17 @@ export default function LoginPage() {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <div>
+<<<<<<< HEAD
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   Email address
                 </label>
                 <div className="relative">
@@ -642,12 +912,24 @@ export default function LoginPage() {
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
 
+<<<<<<< HEAD
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <div>
+<<<<<<< HEAD
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   Password
                 </label>
                 <div className="relative">
@@ -704,6 +986,7 @@ export default function LoginPage() {
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+<<<<<<< HEAD
 
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
 
@@ -711,6 +994,17 @@ export default function LoginPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                  />
+<<<<<<< HEAD
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+=======
+                  <label
+                    htmlFor="remember-me"
+                    className="ml-2 block text-sm text-gray-900"
+                  >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                     Remember me
                   </label>
                 </div>
@@ -899,12 +1193,28 @@ if ( {) {
                 </div>;
               </div>;
 
+<<<<<<< HEAD
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <div className="mt-6">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+<<<<<<< HEAD
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+=======
+                  <span className="px-2 bg-white text-gray-500">
+                    Or continue with
+                  </span>
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -926,6 +1236,7 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+<<<<<<< HEAD
 
                 </button>;
               </div>;
@@ -972,6 +1283,13 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+              Don't have an account?{' '}
+=======
+              Don't have an account?{" "}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

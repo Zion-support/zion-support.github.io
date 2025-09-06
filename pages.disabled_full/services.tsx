@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 
@@ -38,6 +39,14 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 import React from 'react';
 import Link from 'next/link';
@@ -1544,6 +1553,7 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
+<<<<<<< HEAD
 
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
@@ -1556,10 +1566,25 @@ export default function Services() {;
 		</Layout>;
 	),;
 
+=======
+								aria-label='Back to homepage'
+							>
+								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</PageTransition>
+		</Layout>
+	);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
 >>>>>>> origin/chore/merge-open-prs
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 
 
@@ -1575,3 +1600,5 @@ export default function Services() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 
 
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import { Footer } from '@/components/Footer'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
@@ -23,8 +31,12 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 		</div>
 	)
 }
@@ -46,13 +58,19 @@ export function AppLayout({ children }: AppLayoutProps) {
   );
 }
 >>>>>>> origin/chore/build-fixes-and-slim-app
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 		</div>;
 	);
 }'"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

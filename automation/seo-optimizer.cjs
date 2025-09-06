@@ -2,6 +2,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -18,8 +22,14 @@
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 const { execSync } = require('child_process');
 >>>>>>> origin/main
 const fs = require('fs');
@@ -150,6 +160,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
@@ -397,6 +408,9 @@ class SEOOptimizer {
 }
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -406,13 +420,20 @@ if (require.main === module) {
 module.exports = SEOOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 optimizer.optimizeSEO().catch(console.error);
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

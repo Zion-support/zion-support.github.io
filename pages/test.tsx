@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -14,14 +15,41 @@ export default function TestPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import Layout from '../components/Layout';
+
+export default function TestPage() {
+  return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     <Layout title="Test Page">
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
+<<<<<<< HEAD
 
 
 
 =======
+=======
+    </Layout>
+  );
+<<<<<<< HEAD
+}
+>>>>>>> origin/main
+export default function TestPage() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
     <>
       <Head>
@@ -30,6 +58,7 @@ export default function TestPage() {
 
 export default function TestPage() {;
   return (
+<<<<<<< HEAD
     <Layout title="Test Page">;
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">;
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>;
@@ -52,6 +81,15 @@ export default function TestPage() {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+    <Layout title="Test Page">
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+      </div>
+    </Layout>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
@@ -59,10 +97,19 @@ export default function TestPage() {;
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
+<<<<<<< HEAD
 
 
 
 
+=======
+    </>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   );
 =======
 =======
@@ -104,6 +151,7 @@ export default function TestPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -141,3 +189,9 @@ function TestPage() {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

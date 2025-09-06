@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -6,9 +7,16 @@ import React from 'react';
 import React, { ReactNode } from 'react';
 
 >>>>>>> origin/automation-improvements-final
+=======
+import React from 'react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Header from '../Header';
 import Footer from '../Footer';
+>>>>>>> origin/main
 
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
 =======
@@ -23,6 +31,8 @@ import Footer from '../Footer';
 =======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 interface LayoutProps {
   children: React.ReactNode;
 =======
@@ -33,6 +43,7 @@ interface LayoutProps {;
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
 
   og_title?: string;
   og_description?: string;
@@ -54,9 +65,43 @@ export default function Layout({
   ogTitle
   ogDescription
   ogImage
+=======
+<<<<<<< HEAD
+=======
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+>>>>>>> origin/main
+}
+
+export default function Layout({
+  children,
+<<<<<<< HEAD
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS",
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
+  );
+}
+=======
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   noIndex = false
 
 }: LayoutProps) {
+<<<<<<< HEAD
 
 =======
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -79,6 +124,8 @@ export default function Layout(): any ({;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <div className="min-h-screen bg-white">;
 =======
@@ -151,6 +198,7 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
 
 =======
     <div className="min-h-screen bg-gray-50">
@@ -202,3 +250,6 @@ export default function Layout({ children }: LayoutProps) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

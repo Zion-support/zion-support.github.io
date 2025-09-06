@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-monitoring-alerting.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -350,6 +351,8 @@ async function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-monitoring-alerting.cjs
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -389,6 +392,7 @@ async function main() {
     log('error', 'Fatal error in comprehensive monitoring and alerting', error.message);
     process.exit(1)}
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-monitoring-alerting.cjs
 <<<<<<< HEAD
 
 main();#!/usr/bin/env node;
@@ -408,6 +412,10 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+main();#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-monitoring-alerting.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -457,6 +465,7 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-monitoring-alerting.cjs
 <<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
 =======
@@ -470,3 +479,6 @@ console.log('')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      log('info', 'Monitoring "Recommendations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-monitoring-alerting.cjs

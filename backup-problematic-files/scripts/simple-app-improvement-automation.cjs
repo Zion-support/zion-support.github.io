@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvement-automation.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -327,6 +328,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-app-improvement-automation.cjs
 const { execSync } = require('child_process')
 // console.log(' Starting Simple App Improvement Automation')
 console.log('====')
@@ -351,6 +357,7 @@ console.log('🧪 Test "Summary")
 // console.log('� "Pages": ' + pageCount + ', "Components")
   console.log('⚠  "Alerts")
     console.log(' "Summary")
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvement-automation.cjs
 <<<<<<< HEAD
     console.error('� Automation "failed")
 =======
@@ -364,3 +371,6 @@ console.log('🧪 Test "Summary")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    console.error('� Automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-app-improvement-automation.cjs

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,10 +24,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -98,6 +102,8 @@ import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import {
   Search,
   HelpCircle,
@@ -110,10 +116,21 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
+<<<<<<< HEAD
+  Cloud
+} from 'lucide-react';
+=======
   Cloud,
+<<<<<<< HEAD
 } from './lucide-react';
 ;
 const help_articles = [;
+=======
+} from "lucide-react";
+>>>>>>> origin/main
+
+const helpArticles = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   {
     id: "overview",
     title: "Understanding Our Services",
@@ -142,6 +159,7 @@ const help_articles = [;
       },
 
       {
+<<<<<<< HEAD
 
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
@@ -155,6 +173,19 @@ const help_articles = [;
     title: 'Cloud Services',
     description: 'Cloud infrastructure and deployment solutions.',
 
+=======
+        title: "AI Best Practices",
+        description: "Tips and best practices for AI development",
+        readTime: "6 min read",
+        type: "Best Practice",
+      },
+    ],
+  },
+  {
+    id: "cloud-services",
+    title: "Cloud Services",
+    description: "Cloud infrastructure and deployment solutions.",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     icon: Cloud,
     color: "blue",
 
@@ -198,6 +229,7 @@ const help_articles = [;
       },
 
       {
+<<<<<<< HEAD
 
         title: 'Cloud Security',
         description: 'Best practices for securing your cloud infrastructure',
@@ -221,12 +253,22 @@ const help_articles = [;
     ]
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+        title: "Cloud Security",
+        description: "Best practices for securing your cloud infrastructure",
+        readTime: "9 min read",
+        type: "Security",
+      },
+    ],
+  },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 ];
 
 ;
 const help_categories = [;
 
   {
+<<<<<<< HEAD
 
 =======
 
@@ -333,6 +375,22 @@ const helpCategories = [;
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
+=======
+    title: "Getting Started",
+    description: "New to our platform? Start here.",
+    icon: BookOpen,
+    color: "blue",
+    articles: helpArticles,
+  },
+];
+
+export default function HelpPage() {
+<<<<<<< HEAD
+  const [searchTerm, setSearchTerm] = useState('');
+=======
+  const [searchTerm, setSearchTerm] = useState("");
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
   const toggleCategory = (index: number) => {;
@@ -345,6 +403,7 @@ export default function HelpPage() {;
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
 
+<<<<<<< HEAD
 
 
   }
@@ -367,6 +426,18 @@ export default function HelpPage() {;
       article.description.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.articles.length > 0);
+=======
+  const filteredCategories = helpCategories
+    .map((category) => ({
+      ...category,
+      articles: category.articles.filter(
+        (article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          article.description.toLowerCase().includes(searchTerm.toLowerCase()),
+      ),
+    }))
+    .filter((category) => category.articles.length > 0);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
   const filteredCategories = helpCategories;

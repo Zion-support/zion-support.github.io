@@ -10,6 +10,7 @@ import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
 
 import {
+<<<<<<< HEAD
 
 import {;
   Menu,;
@@ -37,6 +38,43 @@ import {;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
+=======
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  BarChart3,
+  Search
+} from 'lucide-react';
+import SearchModal from './SearchModal';
+=======
+  BarChart3
+} from 'lucide-react;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+  BarChart3,
+  Search,
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
   BarChart3
 } from 'lucide-react;
@@ -776,11 +814,23 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
               <Link
                 href="/pricing"
+<<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Pricing;
               </Link>;
             </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -788,6 +838,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
+<<<<<<< HEAD
                 className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
                 aria-label="Search";
               >;
@@ -796,11 +847,24 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <Link
                 href="/contact"
 
+=======
+                className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+<<<<<<< HEAD
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+<<<<<<< HEAD
 
 =======
 
@@ -808,6 +872,14 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               >
                 Get Started
               </Link>

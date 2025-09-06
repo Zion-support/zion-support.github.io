@@ -1,11 +1,34 @@
+<<<<<<< HEAD
 
 
 
-import '../src/styles/globals.css';
+=======
+import type { AppProps } from 'next/app';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+=======
+import Layout from '../components/layout/Layout';
+import '../styles/globals.css';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+import '../src/styles/globals.css';
+>>>>>>> origin/main
+
+export default function App({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return <Component {...pageProps} />;
+import '../styles/globals.css';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
+<<<<<<< HEAD
 =======
 
 
@@ -57,3 +80,13 @@ function App() {
   return <Component {...page_props} />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

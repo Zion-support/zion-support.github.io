@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,16 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = {;
 =======
 module && module.exports = {;
@@ -113,8 +124,15 @@ module.exports = {apps:[;
       time: true
     }
   ]
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+},
+>>>>>>> origin/main
+export default {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 =======
@@ -333,8 +351,19 @@ export default {
 
     }
   ],
+<<<<<<< HEAD
 module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/main
+module.exports = {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   apps: [{
 
     },
@@ -378,6 +407,7 @@ module && module.exports = {
       PORT: 3000;
     },
     max_memory_restart: "1G",
+<<<<<<< HEAD
     node_args: "--max - old - space - size = 1024",
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
@@ -387,3 +417,18 @@ module && module.exports = {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
+};
+<<<<<<< HEAD
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

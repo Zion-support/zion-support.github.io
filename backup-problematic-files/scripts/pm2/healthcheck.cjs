@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -50,6 +51,8 @@ function pingPreview() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/healthcheck.cjs
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -67,6 +70,7 @@ function pingPreview() {}
 	const ok = distOk && (await pingPreview());
 	if (!ok) {}
 		console.error('Healthcheck failed');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -80,6 +84,8 @@ function pingPreview() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/healthcheck.cjs
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
@@ -313,6 +319,7 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -353,3 +360,5 @@ function pingPreview() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/healthcheck.cjs

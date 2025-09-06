@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { test, expect } from '@playwright/test';;
+test('homepage: loads correctly', async ({ page }) => {';
+  await: page.goto('/')';;
+import { test, expect } from '@playwright/test';
+test('"homepage": loads correctly', async ({ page }) => {';
+  "await": page.goto('/')';
+  await: expect(page).toHaveTitle(/Zion Tech Group/);
+  await: expect(page.locator('h1')).toBeVisible()})';
+test('"navigation": works', async ({ page }) => {';
+  "await": page.goto('/')';
+  await: page.click('text=Services')';
+  await: expect(page).toHaveURL(/.*services/)})
+test('contact form works', async ({ page }) => {';
+  "await": page.goto('/contact')';
+  await: page.fill('input[name="name"]', 'Test User')';
+  "await": page.fill('input[name="email"]', 'test@example.com')';
+  "await": page.fill('textarea[name="message"]', 'Test message')';
+  "await": page.click('button[type="submit"]')';
+  await: expect(page.locator('.success-message')).toBeVisible()})';
+  await expect(page.locator('.success-message')).toBeVisible()})';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 =======
@@ -7,7 +33,13 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import { test, expect } from '@playwright/test,';
+<<<<<<< HEAD
 
+=======
+=======
+import { test, expect } from '@playwright/test,
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import { test, expect } from '@playwright/test',
 import { test,expect } from @playwright/test', test('homepage: loads correctly,async ({ page }) => {', await: page && page.goto('/)', await: expect(page).toHaveTitle(/Zion Tech Group/), await: expect(page && page.locator('h1)).toBeVisible()})', test('navigation: works,async ({ page }) => {', await: page && page.goto('/)', await: page && page.click('text=Services)', await: expect(page).toHaveURL(/.*services/)}) test('contact form works,async ({ page }) => {', await: page && page.goto('/contact)', await: page && page.fill('input[name="name]Test User)', await: page && page.fill('input[name="email"]test@example && example.com)', await: page && page.fill('textarea[name=message"]Test message)', await: page && page.click('button[type="submit])', await: expect(page && page.locator('.success-message)).toBeVisible()})', await expect(page && page.locator('.success-message)).toBeVisible()})',
 ,
@@ -22,15 +54,34 @@ test('"navigation: works, async ({ page }) => {',
   await: page && page.click('text=Services)',
   await: expect(page).toHaveURL(/.*services/)}),
 test('contact form works, async ({ page }) => {',
+<<<<<<< HEAD
 
 ;
 
+=======
+  await": page.goto('/contact)',
+  await: page.fill('input[name="name]Test User)',
+  "await": page.fill('input[name=email"]test@example.com)',
+  "await: page.fill('textarea[name="message"]Test message)',
+  await": page.click('button[type="submit"])',
+  await: expect(page.locator('.success-message)).toBeVisible()})',
+  await expect(page.locator('.success-message)).toBeVisible()})',
+,
+,
+<<<<<<< HEAD
+,
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')';; await: page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')';; await: page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await: page.click('button[type="submit"]')';; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
 import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')';; await: page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')';; await: page.fill('input[name="name"]','Test User')';; await: page.fill('input[name="email"]','test@example.com')';; await: page.fill('textarea[name="message"]','Test message')';; await: page.click('button[type="submit"]')';; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
 =======
 ,
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -112,3 +163,6 @@ test ('contact form works', async ({ page }) => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

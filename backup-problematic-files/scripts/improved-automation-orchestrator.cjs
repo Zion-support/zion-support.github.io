@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/improved-automation-orchestrator.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -186,6 +187,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/improved-automation-orchestrator.cjs
 const { execSync } = require('child_process')
   console.log(' Starting Improved Automation Orchestrator...')
     "overallStatus"
@@ -213,6 +219,7 @@ const { execSync } = require('child_process')
       return { "status": 'completed', "message"}
         "status"
         "status"
+<<<<<<< HEAD:backup-problematic-files/scripts/improved-automation-orchestrator.cjs
 <<<<<<< HEAD
     console.error(' Improved automation "failed")
 =======
@@ -226,3 +233,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    console.error(' Improved automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/improved-automation-orchestrator.cjs

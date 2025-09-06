@@ -22,9 +22,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 =======
@@ -680,6 +687,7 @@ const accessibility_guidelines = [;
     ];
   }
 ];
+<<<<<<< HEAD
 ;
 export default /**
  * AccessibilityPage - Function description
@@ -716,6 +724,36 @@ function AccessibilityPage() {
               className="text - center mb - 16";
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+export default function AccessibilityPage() {
+  
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Accessibility Statement
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are committed to ensuring our website is accessible to all users.
+              </p>
+<<<<<<< HEAD
+            </motion.div>
+          </div>
+        </section>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
@@ -932,6 +970,7 @@ function AccessibilityPage() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Have Questions About Accessibility?;
@@ -954,3 +993,38 @@ function AccessibilityPage() {
     </MainLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Have Questions About Accessibility?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Contact Accessibility Team
+                </a>
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  General Contact
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      </div>
+    </Layout>
+  );
+=======
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

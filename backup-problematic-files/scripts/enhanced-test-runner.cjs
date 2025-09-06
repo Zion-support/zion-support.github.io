@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-test-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13,10 +14,13 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-test-runner.cjs
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-test-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -28,10 +32,13 @@ console.log('');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-test-runner.cjs
 
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
 
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-test-runner.cjs
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -40,6 +47,8 @@ console.log('');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-test-runner.cjs
 const testReport = {}
   "timestamp": new Date().toISOString(),
   "sessionId": Date.now().toString(),
@@ -57,6 +66,7 @@ const testReport = {}
 
 function log(level, message) {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-test-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -69,6 +79,8 @@ async function runJestTests() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-test-runner.cjs
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -306,6 +318,7 @@ async function main() {}
     log('error', 'Fatal error in enhanced test runner', error.message);
     process.exit(1)};
 };
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-test-runner.cjs
 <<<<<<< HEAD
 main();
 =======
@@ -319,3 +332,6 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+main();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-test-runner.cjs

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitoring-system.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -303,6 +304,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/advanced-monitoring-system.cjs
 const { execSync } = require('child_process')
 console.log(' Starting Advanced Monitoring System...')
     "status"
@@ -339,6 +345,7 @@ console.log(' Starting Advanced Monitoring System...')
     throw new Error("Performance "issues")
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
+<<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitoring-system.cjs
 <<<<<<< HEAD
   return { "status": 'success', "metrics": mockPerformance, "message"}
 =======
@@ -352,3 +359,6 @@ console.log(' Starting Advanced Monitoring System...')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  return { "status": 'success', "metrics": mockPerformance, "message"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/advanced-monitoring-system.cjs

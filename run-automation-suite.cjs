@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -14,6 +15,11 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node
 /**
  * Automation Suite Runner
@@ -311,6 +317,7 @@ module.exports = AutomationSuiteRunner;
 module.exports = AutomationSuiteRunner;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -318,3 +325,6 @@ module.exports = AutomationSuiteRunner;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

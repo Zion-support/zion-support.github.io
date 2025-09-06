@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -49,6 +50,17 @@ import {;
 
 =======
 
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, User, 
+  Settings, LogOut, Bell, Globe, Zap
+} from 'lucide-react';
+import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -78,7 +90,12 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import Link from "next/link";
+<<<<<<< HEAD
 interface EnhancedNavigationProps {;
+=======
+>>>>>>> origin/main
+interface EnhancedNavigationProps {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   className?: string;
 }
 

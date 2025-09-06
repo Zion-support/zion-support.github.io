@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 >>>>>>> origin/automation-improvements-final
@@ -6,7 +7,22 @@
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -35,6 +51,7 @@ export function securityMiddleware(request) {;
       'max-age=31536000; includeSubDomains; preload'
     );
   }
+<<<<<<< HEAD
 
 =======
 
@@ -57,7 +74,15 @@ export function securityHeaders(req, res, next) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+  
+<<<<<<< HEAD
+  return response;
+=======
+// Security headers middleware
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
   return response;// Security headers middleware
+>>>>>>> origin/main
 export function securityHeaders(req, res, next) {
   Object.entries({
 
@@ -75,8 +100,15 @@ export function securityHeaders(req, res, next) {
     res && res.setHeader(key, value);
   });
   next();
+<<<<<<< HEAD
 
 
+=======
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 
@@ -84,6 +116,7 @@ export function securityHeaders(req, res, next) {
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 }
@@ -135,3 +168,7 @@ function security_headers() {
   next ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

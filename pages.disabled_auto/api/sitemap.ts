@@ -15,6 +15,7 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 
 
@@ -25,10 +26,21 @@ export default function Sitemap({ }: SitemapProps) {
 =======
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

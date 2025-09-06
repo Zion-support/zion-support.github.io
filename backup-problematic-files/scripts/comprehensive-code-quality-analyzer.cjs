@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -391,6 +392,8 @@ async function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-quality-analyzer.cjs
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -430,6 +433,7 @@ async function main() {
     log('error', 'Fatal error in comprehensive code quality analysis', error.message);
     process.exit(1)}
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 <<<<<<< HEAD
 
 main();#!/usr/bin/env node;
@@ -449,6 +453,10 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+main();#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-quality-analyzer.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -541,6 +549,7 @@ console.log('')
     "message"
     "action"
       log('warn', 'Issues "found")
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 <<<<<<< HEAD
       log('info', 'Quality "Recommendations")
 =======
@@ -554,3 +563,6 @@ console.log('')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      log('info', 'Quality "Recommendations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-quality-analyzer.cjs

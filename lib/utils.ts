@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 =======
 
 
@@ -6,6 +7,22 @@ export function cn(...inputs: ClassValue[]) {;
 
   return twMerge(clsx(inputs));}
 =======
+=======
+export function cn(...inputs: ClassValue[]) {
+<<<<<<< HEAD
+  return twMerge(clsx(inputs));
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+}
+=======
+  return twMerge(clsx(inputs));}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
   return twMerge(clsx(inputs));
@@ -73,6 +90,16 @@ export function format_currency (amount: number, currency = "USD"): string {
 
 };
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+},
+
+
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

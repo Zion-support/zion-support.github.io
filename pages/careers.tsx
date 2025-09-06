@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -262,6 +263,18 @@ export default function CareersPage() {
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import {
   Users,
   MapPin,
@@ -360,13 +373,44 @@ const benefits = [;
   {
     icon: DollarSign,
     title: "Competitive Compensation",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Competitive salaries, performance bonuses, and equity participation"
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Competitive salaries, performance bonuses, and equity participation",
+>>>>>>> origin/main
   },
   {
     icon: GraduationCap,
     title: "Learning & Development",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Professional development budget, conference attendance, and training programs"
+  },
+  {
+    icon: Globe,
+    title: "Flexible Work",
+    description: "Remote work options, flexible hours, and work-life balance"
+  },
+  {
+    icon: Coffee,
+    title: "Great Culture",
+    description: "Collaborative environment, team events, and inclusive workplace"
+  },
+  {
+    icon: Award,
+    title: "Career Growth",
+    description: "Clear career paths, mentorship programs, and advancement opportunities"
+  }
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Professional development budget, conference attendance, and training programs",
   },
   {
@@ -386,12 +430,33 @@ const benefits = [;
     description:;
       "Clear career paths, mentorship programs, and advancement opportunities",
   },
+>>>>>>> origin/main
 ];
 ;
 const values = [;
   {
     title: "Innovation",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "We encourage creative thinking and embrace new technologies to solve complex problems."
+  },
+  {
+    title: "Collaboration",
+    description: "We believe in the power of teamwork and open communication across all levels."
+  },
+  {
+    title: "Excellence",
+    description: "We strive for the highest quality in everything we do and continuously improve."
+  },
+  {
+    title: "Integrity",
+    description: "We conduct business with honesty, transparency, and ethical practices."
+  }
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "We encourage creative thinking and embrace new technologies to solve complex problems.",
   },
   {
@@ -409,6 +474,7 @@ const values = [;
     description:;
       "We conduct business with honesty, transparency, and ethical practices.",
   },
+>>>>>>> origin/main
 ];
 ;
 export default /**
@@ -433,9 +499,45 @@ function CareersPage() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+=======
+              className="text-center"
+            >
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function CareersPage() {
+  
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Careers
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Join our team of innovative developers, engineers, and designers
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+<<<<<<< HEAD
+    </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 Join Our{" "}
                 <span className="bg - gradient - to - r from - blue - 400 to - purple - 400 bg - clip - text text - transparent">;
                   Amazing Team;
@@ -847,6 +949,7 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -876,3 +979,35 @@ function CareersPage() {
     </MainLayout>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Don't See Your Dream Job?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're always looking for talented individuals. Send us your
+                resume and let us know how you'd like to contribute to our team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
+                  Send Resume
+                </a>
+                <a
+                  href="/about"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Learn More About Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 =======
@@ -50,12 +56,16 @@ export const messageChannelHandler: MessageHandler = {
 };
 };
 ,
+<<<<<<< HEAD
 
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
@@ -104,6 +114,7 @@ if ( {) {
   }
 }
 export default MessageChannelHandler;
+<<<<<<< HEAD
 
 
 
@@ -118,3 +129,6 @@ export default MessageChannelHandler;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

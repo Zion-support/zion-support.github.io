@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,20 @@ class ErrorBoundary extends React.Component {
 
 import React from "react";
 import Head from "next/head";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+=======
+import Head from "next/head";
+import { useRouter } from "next/router";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import React from "react";
+import Head from "next/head";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 =======
@@ -47,9 +62,16 @@ interface SEOProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   keywords?: string;
 }
 
@@ -75,6 +97,7 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
     </Head>;
   );
+<<<<<<< HEAD
 
 
 };
@@ -83,6 +106,9 @@ export default SEO;
 
 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
 =======
   image?: string;
@@ -100,10 +126,32 @@ export default function SEO({
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
 
   return (
+<<<<<<< HEAD
+=======
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={canonicalUrl} />
+    </Head>
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 }
 export default SEO;
+<<<<<<< HEAD
 
 =======
 
@@ -124,3 +172,6 @@ export default SEO;
 export default SEO;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

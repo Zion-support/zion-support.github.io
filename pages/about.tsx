@@ -1,7 +1,40 @@
+<<<<<<< HEAD
 
 
 import React from "react";
 import Layout from "../components/Layout";
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+<<<<<<< HEAD
+  Brain,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  BarChart3,
+  Heart,
+  Lightbulb,
+  Rocket,
+  Lock,
+  TrendingUp;
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 import React from 'react';
@@ -207,6 +240,7 @@ export default function AboutPage() {
       color: 'from-purple-500 to-pink-500'
     },
     {
+<<<<<<< HEAD
       name: 'Quantum Team',
       role: 'Quantum Computing',
       description: 'Specialists in quantum algorithms and quantum-resistant cryptography',
@@ -311,6 +345,44 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+=======
+      name: "Mike Chen",
+      role: "Lead Developer",
+      image: "/team/mike.jpg",
+      bio: "Full-stack developer passionate about innovation"
+    }
+  ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
+
+export default function About() {
+  return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    <Layout
+      title="About Us - Zion Tech Group"
+      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider specializing in AI,
+              cybersecurity, and digital transformation.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">About page is under construction.</p>
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         </div>
       </div>
     </>
@@ -359,10 +431,14 @@ export default function About() {;
 
   );
 }
+<<<<<<< HEAD
 
 =======
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
     <>
       <Head>
@@ -662,6 +738,7 @@ export default function AboutPage() {
 
 export default AboutPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 
 
@@ -705,3 +782,7 @@ function About() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

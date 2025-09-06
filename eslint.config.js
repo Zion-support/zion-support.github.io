@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -28,6 +29,19 @@ class ErrorBoundary extends React.Component {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+import js from '@eslint/js';
+<<<<<<< HEAD
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -36,6 +50,10 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 import js from '@eslint/js';
 
@@ -196,6 +214,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
       "react-hooks": reactHooks
     },
     rules: {
+<<<<<<< HEAD
       ...react && react.configs.recommended && recommended.rules,
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
       "no-unused-vars": "warn",
@@ -204,7 +223,83 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
       "no-var": "error",
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off"
+=======
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+<<<<<<< HEAD
+
+        ...globals && globals.browser,
+        ...globals && globals.node,
+
+=======
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        React: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        performance: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        jest: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+<<<<<<< HEAD
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+=======
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "prefer-const": "error",
+      "no-var": "error",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+    },
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -212,10 +307,9 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
-
-        ...globals && globals.browser,
-        ...globals && globals.node,
-
+        ...globals.browser,
+        ...globals.node,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -225,6 +319,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+<<<<<<< HEAD
 
         React: 'readonly',
 =======
@@ -260,6 +355,10 @@ export default [
 =======
         afterAll: "readonly"
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+        afterAll: "readonly",
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       },
       parser: tsparser,
       parserOptions: {
@@ -288,6 +387,7 @@ export default [
         "warn",
         { allowConstantExport: true }
       ],
+<<<<<<< HEAD
 
 
 
@@ -299,6 +399,9 @@ export default [
       "no-console": "warn",
       "react/prop-types": "off",
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
         describe: 'readonly',
         it: 'readonly',
@@ -315,6 +418,7 @@ export default [
       'react-hooks': reactHooks
     },
     rules: {
+<<<<<<< HEAD
 
 
 
@@ -323,6 +427,29 @@ export default [
       "react/react-in-jsx-scope": "off"
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+<<<<<<< HEAD
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+=======
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-console": "warn",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     },
     settings: {
       react: {
@@ -354,7 +481,11 @@ export default [
       }
     },
     rules: {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
@@ -406,6 +537,7 @@ export default [
 
   }
 ];
+<<<<<<< HEAD
 
 
 
@@ -417,3 +549,13 @@ export default [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "no-undef": "error",
+    },
+  },
+];
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

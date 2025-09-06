@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,12 @@ class ErrorBoundary extends React.Component {
 
 import React from "react";
 import Layout from "../components/Layout";
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 import React from 'react';
 
@@ -35,10 +42,16 @@ export default function AIServices() {
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
+<<<<<<< HEAD
 
 =======
 
 
+=======
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -46,6 +59,7 @@ export default function AIServices() {
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
+<<<<<<< HEAD
 
 
 =======
@@ -214,6 +228,8 @@ export default function AIServices() {
               </div>
             </motion.div>
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
           </div>
         </div>
       </div>
@@ -279,6 +295,7 @@ function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -287,6 +304,8 @@ function AIServices() {
 
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -380,6 +399,7 @@ export default function AIServices() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 
 
 
@@ -395,3 +415,38 @@ export default function AIServices() {
     </Layout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import React from "react";
+import Layout from "../components/Layout";
+
+export default function AIServices() {
+  return (
+    <Layout
+      title="AI Services - Zion Tech Group"
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and
+              services.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">
+              AI Services page is under construction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

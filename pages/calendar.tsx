@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {
 
@@ -402,11 +403,29 @@ import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Calendar, 
+  Clock, 
+  Users, 
+  CheckCircle, 
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import {
   Calendar,
   Clock,
   Users,
   CheckCircle,
+>>>>>>> origin/main
   ArrowRight,
   Phone,
   Mail,

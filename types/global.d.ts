@@ -85,7 +85,11 @@
   }
 }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export {};
 =======
 
@@ -105,6 +109,7 @@ export {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 // Re-export DOM types that might not be available
@@ -114,3 +119,9 @@ export {}
 // Re - export DOM types that might not be available;
 export {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+// Re-export DOM types that might not be available
+export {};
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

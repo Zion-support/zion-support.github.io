@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/force-merge-open-pr-heads-into-main.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/force-merge-open-pr-heads-into-main.cjs
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -72,6 +75,7 @@ async function main() {}
     attempted++;
     const head = pr.head && pr.head.ref;
     if (!head) continue;
+<<<<<<< HEAD:backup-problematic-files/scripts/force-merge-open-pr-heads-into-main.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -94,6 +98,8 @@ async function main() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/force-merge-open-pr-heads-into-main.cjs
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);
     try {}
       sh(`git fetch origin ${head}:${head} || true`);
@@ -113,6 +119,7 @@ async function main() {}
   try { sh(`git checkout ${startBranch}`)} catch {};
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+<<<<<<< HEAD:backup-problematic-files/scripts/force-merge-open-pr-heads-into-main.cjs
 <<<<<<< HEAD
 });
 =======
@@ -126,3 +133,6 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/force-merge-open-pr-heads-into-main.cjs

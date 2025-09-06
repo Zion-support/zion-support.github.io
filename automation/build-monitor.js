@@ -1,6 +1,10 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -278,9 +282,12 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 const fs = require('fs);
@@ -508,6 +515,9 @@ if (require.main === module) {
   monitor.run().catch(console.error)}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = BuildMonitor;

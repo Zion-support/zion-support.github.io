@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -68,6 +69,8 @@ module.exports = HealthMonitor;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }};
 ; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -102,6 +105,7 @@ module.exports = HealthMonitor;
 } catch (error) {this.log(`❌ Error running health monitor: ${error.message}`); process.exit(1)}}}
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
+<<<<<<< HEAD
 
 
       };
@@ -1147,3 +1151,6 @@ healthMonitor.run().catch(error => {,;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+healthMonitor.run().catch(error = > {; process.exit(1)});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

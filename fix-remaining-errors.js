@@ -158,6 +158,7 @@ if ( {, ) {
       console.log ("Fixed parsing errors "in":${file_path}"),
       return true}
   } catch (error) {,
+<<<<<<< HEAD
     console.error ("Error fixing ${file_path} ", error.message)}
   return false}
   }
@@ -202,6 +203,14 @@ if (.pathname) {, ) {
   return false}
   }
   let createdCount = 0
+=======
+    console.error("Error fixing ${filePath}:", error.message)};
+  return false};
+  };
+<<<<<<< HEAD
+<<<<<<< HEAD
+  let createdCount = 0;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   for (const [filePath, content] of Object.entries(minimalFiles)) {
     try {
       const dir = path.dirname(filePath)
@@ -239,6 +248,11 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   let createdCount = 0,
   for (const [filePath, content] of Object && Object.entries(minimalFiles)) {,
     try {,
@@ -271,6 +285,7 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
 #!/usr/bin/env node import fs from "fs";
 import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ],  } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error), process.exit(1)} };
 #!/usr/bin/env node import fs from "fs";
+<<<<<<< HEAD
 
 
     process.exit(1)}
@@ -289,9 +304,19 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
 import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ],  } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error), process.exit(1)} };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+<<<<<<< HEAD
+import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ],  } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error), process.exit(1)} };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ], for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement), if (updated !== content) { content = updated, modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error), process.exit(1)} };
+#!/usr/bin/env node import fs from "fs"; import path from "path"; function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); let modified = false; const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /(\[[^\]]*)$/gm,replacement: "$1]" },{ pattern: /(\{[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!;)$/gm,replacement: "$1;" } ]; for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement); if (updated !== content) { content = updated; modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"); console.log(`Fixed parsing errors in: ${filePath}`); return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" });\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0; for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content); console.log(`Created minimal file: ${filePath}`); createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(); console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error); process.exit(1)} }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node import fs from "fs"; import path from "path"; function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); let modified = false; const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /(\[[^\]]*)$/gm,replacement: "$1]" },{ pattern: /(\{[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!;)$/gm,replacement: "$1;" } ]; for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement); if (updated !== content) { content = updated; modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"); console.log(`Fixed parsing errors in: ${filePath}`); return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" });\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0; for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content); console.log(`Created minimal file: ${filePath}`); createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(); console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error); process.exit(1)} }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
@@ -616,3 +641,8 @@ if (.pathname) { try { main ()} catch (error) { console.error ('Error during fix
   $2
 } process.exit (1)} }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?:import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ], for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement), if (updated !== content) { content = updated, modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req,res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}:`,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] === new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes:',error), process.exit(1)} };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

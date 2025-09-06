@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 
@@ -1571,6 +1580,7 @@ export default function Services(): any (): React && React.JSX.Element {;
     </section>;
   );
   return (
+<<<<<<< HEAD
 
 =======
 
@@ -1659,6 +1669,66 @@ export default function Services(): any (): React && React.JSX.Element {;
 
 
 
+=======
+    <main style={{ 
+      background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)', 
+      minHeight: 'calc(100vh - 120px)' 
+    }}>
+      {/* Header */}
+      <section style={{ 
+        background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
+        color: 'white', padding: '60px 20px', textAlign: 'center' 
+      }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <h1 style={{ 
+            fontSize: 48, fontWeight: 800, marginBottom: 16,
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>Our Services</h1>
+          <p style={{ 
+            fontSize: 20, opacity: 0.9, marginBottom: 24,
+            lineHeight: 1.6 
+          }}>
+            Comprehensive technology solutions to transform your business
+          </p>
+          <div style={{ 
+            display: 'flex', gap: 16, justifyContent: 'center',
+            flexWrap: 'wrap', marginBottom: 32 
+          }}>
+            <div style={{ 
+              background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
+              borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
+            }}>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
+              <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
+            </div>
+            <div style={{ 
+              background: 'rgba(139, 92, 246, 0.1)', padding: '12px 20px', 
+              borderRadius: 12, border: '1px solid rgba(139, 92, 246, 0.2)'
+            }}>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }}>40+</div>
+              <div style={{ fontSize: 14, opacity: 0.8 }}>AI Services</div>
+            </div>
+            <div style={{ 
+              background: 'rgba(34, 197, 94, 0.1)', padding: '12px 20px', 
+              borderRadius: 12, border: '1px solid rgba(34, 197, 94, 0.2)'
+            }}>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
+              <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
+
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
@@ -1698,14 +1768,22 @@ export default function Services(): any (): React && React.JSX.Element {;
         </div>
       </section>
     </main>
+<<<<<<< HEAD
 
 
 
+=======
+  );
+<<<<<<< HEAD
+}
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
+<<<<<<< HEAD
 
 =======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
@@ -1713,6 +1791,9 @@ export default function Services(): any (): React && React.JSX.Element {;
 
 
 
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -1850,6 +1931,7 @@ function Services() {
                   </ul>;
                   <div className="text - blue - 600 font - semibold mb - 4">;
                     {service.pricing}
+<<<<<<< HEAD
 
 
 
@@ -1857,10 +1939,23 @@ function Services() {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                  </div>
+                  <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Learn More
+                  </button>
+                </motion.div>
+              ))}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 
 
 =======
@@ -1870,6 +1965,52 @@ function Services() {
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
+      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
+      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
+      
+      {/* CTA Section */}
+      <section style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
+        textAlign: 'center', background: 'white', marginTop: 40,
+        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
+      }}>
+        <h2 style={{ 
+          fontSize: 32, fontWeight: 700, marginBottom: 16,
+          color: '#1e293b'
+        }}>Ready to Get Started?</h2>
+        <p style={{ 
+          fontSize: 18, color: '#64748b', marginBottom: 32,
+          maxWidth: 600, margin: '0 auto 32px auto'
+        }}>
+          Contact our experts to discuss your project requirements and discover 
+          how our innovative solutions can drive your business forward.
+        </p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{
+            display: 'inline-block', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            transition: 'all 0.3s ease'
+          }}>Request a Quote</Link>
+          <a href="tel:+13024640950" style={{
+            display: 'inline-block', 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            border: '2px solid #22c55e', transition: 'all 0.3s ease'
+          }}>Call +1 302 464 0950</a>
+        </div>
+      </section>
+    </main>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -2584,9 +2725,16 @@ function Services() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
 
 
 >>>>>>> origin/automation-improvements-final
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   );
 =======
                       

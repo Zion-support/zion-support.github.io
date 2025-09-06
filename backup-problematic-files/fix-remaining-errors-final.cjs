@@ -85,6 +85,7 @@ if (totalFixes > 0) {
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/fix-remaining-errors-final.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -92,6 +93,8 @@ if (totalFixes > 0) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:fix-remaining-errors-final.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -119,8 +122,11 @@ const filesToFix = ['src/components/SEO.tsx']
     content = content.replace(/'"")
     content = content.replace(/"")
     content = content.replace(/")
+<<<<<<< HEAD:backup-problematic-files/fix-remaining-errors-final.cjs
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:fix-remaining-errors-final.cjs
 <<<<<<< HEAD
     content = content.replace(/^\s*")
 =======
@@ -134,6 +140,7 @@ const filesToFix = ['src/components/SEO.tsx']
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/fix-remaining-errors-final.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -141,3 +148,5 @@ const filesToFix = ['src/components/SEO.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:fix-remaining-errors-final.cjs

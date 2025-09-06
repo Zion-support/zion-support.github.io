@@ -3,6 +3,7 @@ import React from 'react';
 ;
 
 interface LoadingSpinnerProps {
+<<<<<<< HEAD
 =======
 
 interface LoadingSpinnerProps {;
@@ -13,6 +14,26 @@ interface LoadingSpinnerProps {;
 
 interface LoadingSpinnerProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'blue' | 'white' | 'gray';
+  text?: string;
+  className?: string;
+}
+
+export default function LoadingSpinner({ 
+  size = 'md', 
+  color = 'blue', 
+  text,
+  className = '' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
@@ -20,6 +41,7 @@ interface LoadingSpinnerProps {
   class_name?: string;
 }
 
+<<<<<<< HEAD
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md',;
@@ -36,6 +58,28 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
     white: 'text-white',;
     gray: 'text-gray-600',;
     slate: 'text-slate-600';
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = '',}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+>>>>>>> origin/main
+  };
+
+  const colorClasses = {
+    blue: 'text-blue-600',
+    white: 'text-white',
+<<<<<<< HEAD
+    gray: 'text-gray-600'
+=======
+    gray: 'text-gray-600',
+    slate: 'text-slate-600'
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   };
 
   const spinner = (;
@@ -47,6 +91,14 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
           {text}
         </p>;
       )}
+<<<<<<< HEAD
+=======
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
   if (fullScreen) {;
@@ -126,6 +178,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
+<<<<<<< HEAD
 =======
 export default LoadingSpinner;
 ;
@@ -154,3 +207,6 @@ export default function LoadingSpinner() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -197,6 +197,7 @@ export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 hover:text-white"> {item && item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
 
+<<<<<<< HEAD
 
 =======
 
@@ -258,9 +259,18 @@ export default Header;
     </header>);
 }
 ;
+=======
+<<<<<<< HEAD
+export default Header;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

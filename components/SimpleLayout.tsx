@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -27,6 +28,30 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+interface SimpleLayoutProps {
+  title: string;
+  description?: string;
+  children: React.ReactNode;
+}
+
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        {description && <meta name="description" content={description} />}
+      </Head>
+      {children}
+    </>
+  );
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react;';
 import * as React from 'react';
 import Head from next/head';
@@ -72,5 +97,9 @@ function SimpleLayout() {,
       {children};
     </>)
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

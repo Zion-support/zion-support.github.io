@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-commit-fixes.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +203,8 @@ autoCommit.run().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/auto-commit-fixes.cjs
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -230,6 +233,7 @@ const fs = require(,"}),"
         "encoding"
         "stdio"
       const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-commit-fixes.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,3 +269,7 @@ const fs = require(,"}),"
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+        "stdio"        "stdio"
+        "stdio"        "stdio"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/auto-commit-fixes.cjs

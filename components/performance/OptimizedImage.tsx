@@ -32,6 +32,22 @@ interface OptimizedImageProps {;
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
+  sizes?: string;
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   src: string, alt: string,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   width?: number;
@@ -44,6 +60,7 @@ interface OptimizedImageProps {
   style?: React && React.CSSProperties;
 }
 
+<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -60,11 +77,40 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 =======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
+=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   src,
   alt,
   width,
   height,
+<<<<<<< HEAD
   class_name = '',
+=======
+<<<<<<< HEAD
+  priority = false,
+  className,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+}) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      className={className}
+      sizes={sizes}
+      quality={85}
+    />
+  );
+};
+
+export default OptimizedImage;
+=======
+  className = '',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -122,8 +168,12 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
+<<<<<<< HEAD
 =======
 ;
 export default OptimizedImage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

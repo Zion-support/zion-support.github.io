@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -26,11 +27,22 @@ class ErrorBoundary extends React.Component {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 
 
   return (
@@ -176,6 +188,9 @@ import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import {
 =======
 
@@ -383,6 +398,16 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  DizzyFace2
+} from 'lucide-react';
+=======
+  DizzyFace2,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
   DizzyFace2,;
 
@@ -392,8 +417,16 @@ const guides = [
   {
     id: 1,
     title: "Getting Started with AI Development",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Learn the fundamentals of AI development and how to build your first AI application.",
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Learn the fundamentals of AI development and how to build your first AI application.",
+>>>>>>> origin/main
     category: "AI Development",
     difficulty: "Beginner",
     read_time: "15 min read",
@@ -402,13 +435,25 @@ const guides = [
     students: 1250,
     image: "/images / guides / ai - development.jpg",
     icon: Brain,
+<<<<<<< HEAD
+    tags: ["AI", "Machine Learning", "Python", "TensorFlow"]
+=======
     tags: ["AI", "Machine Learning", "Python", "TensorFlow"],
+>>>>>>> origin/main
   },
   {
     id: 2,
     title: "Cloud Infrastructure Setup",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Complete guide to setting up scalable cloud infrastructure for your applications.",
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Complete guide to setting up scalable cloud infrastructure for your applications.",
+>>>>>>> origin/main
     category: "Cloud Computing",
     difficulty: "Intermediate",
     read_time: "25 min read",
@@ -417,13 +462,25 @@ const guides = [
     students: 980,
     image: "/images / guides / cloud - infrastructure.jpg",
     icon: Cloud,
+<<<<<<< HEAD
+    tags: ["AWS", "Docker", "Kubernetes", "DevOps"]
+=======
     tags: ["AWS", "Docker", "Kubernetes", "DevOps"],
+>>>>>>> origin/main
   },
   {
     id: 3,
     title: "Cybersecurity Best Practices",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Essential cybersecurity practices to protect your applications and data.",
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Essential cybersecurity practices to protect your applications and data.",
+>>>>>>> origin/main
     category: "Security",
     difficulty: "Advanced",
     read_time: "30 min read",
@@ -432,13 +489,26 @@ const guides = [
     students: 750,
     image: "/images / guides / cybersecurity.jpg",
     icon: Shield,
+<<<<<<< HEAD
+    tags: ["Security", "Encryption", "Authentication", "Compliance"]
+=======
     tags: ["Security", "Encryption", "Authentication", "Compliance"],
+>>>>>>> origin/main
   },
   {
     id: 4,
     title: "Mobile App Development",
+<<<<<<< HEAD
     description:;
       "Build cross - platform mobile applications with modern frameworks.",
+=======
+<<<<<<< HEAD
+    description: "Build cross-platform mobile applications with modern frameworks.",
+=======
+    description:
+      "Build cross-platform mobile applications with modern frameworks.",
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     category: "Mobile Development",
     difficulty: "Intermediate",
     read_time: "20 min read",
@@ -447,13 +517,25 @@ const guides = [
     students: 1100,
     image: "/images / guides / mobile - development.jpg",
     icon: Smartphone,
+<<<<<<< HEAD
+    tags: ["React Native", "Flutter", "iOS", "Android"]
+=======
     tags: ["React Native", "Flutter", "iOS", "Android"],
+>>>>>>> origin/main
   },
   {
     id: 5,
     title: "Database Design & Optimization",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Learn database design principles and optimization techniques.",
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Learn database design principles and optimization techniques.",
+>>>>>>> origin/main
     category: "Database",
     difficulty: "Intermediate",
     read_time: "22 min read",
@@ -462,13 +544,25 @@ const guides = [
     students: 890,
     image: "/images / guides / database - design.jpg",
     icon: Database,
+<<<<<<< HEAD
+    tags: ["SQL", "NoSQL", "Performance", "Scaling"]
+=======
     tags: ["SQL", "NoSQL", "Performance", "Scaling"],
+>>>>>>> origin/main
   },
   {
     id: 6,
     title: "Web Performance Optimization",
+<<<<<<< HEAD
     description:;
+=======
+<<<<<<< HEAD
+    description: "Optimize your web applications for maximum performance and user experience.",
+=======
+    description:
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       "Optimize your web applications for maximum performance and user experience.",
+>>>>>>> origin/main
     category: "Performance",
     difficulty: "Advanced",
     read_time: "18 min read",
@@ -477,6 +571,10 @@ const guides = [
     students: 650,
     image: "/images / guides / web - performance.jpg",
     icon: Zap,
+<<<<<<< HEAD
+    tags: ["Performance", "Optimization", "Caching", "CDN"]
+  }
+=======
     tags: ["Performance", "Optimization", "Caching", "CDN"],
   },
 ];
@@ -489,6 +587,17 @@ const categories = [;
   { name: "Mobile Development", count: 1, icon: Smartphone },
   { name: "Database", count: 1, icon: Database },
   { name: "Performance", count: 1, icon: Zap },
+>>>>>>> origin/main
+];
+
+const categories = [
+  { name: "All", count: guides.length, icon: Globe },
+  { name: "AI Development", count: 1, icon: Brain },
+  { name: "Cloud Computing", count: 1, icon: Cloud },
+  { name: "Security", count: 1, icon: Shield },
+  { name: "Mobile Development", count: 1, icon: Smartphone },
+  { name: "Database", count: 1, icon: Database },
+  { name: "Performance", count: 1, icon: Zap }
 ];
 
 
@@ -501,6 +610,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
 
 
   return (
+<<<<<<< HEAD
     <Layout>;
       <Head>;
         <title > Guides & Tutorials - Zion Tech Group</title>;
@@ -510,6 +620,22 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
         />;
       </Head>;
       <div className="min - h-screen bg - gray - 50">;
+=======
+    <Layout>
+      <Head>
+        <title>Guides & Tutorials - Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts." />
+=======
+        <meta
+          name="description"
+          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
+        />
+>>>>>>> origin/main
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Hero Section */}
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
           <div className="container mx - auto px - 4">;
@@ -518,6 +644,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >;
               <h1 className="text - 5xl font - bold mb - 6">;
                 Expert Guides & Tutorials;
@@ -545,6 +672,40 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion.div>;
           </div>;
         </section>;
+=======
+            >
+              <h1 className="text-5xl font-bold mb-6">
+                Expert Guides & Tutorials
+              </h1>
+              <p className="text-xl mb-8 text-blue-100">
+<<<<<<< HEAD
+                Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts.
+=======
+                Master the latest technologies with our comprehensive guides,
+                tutorials, and best practices from industry experts.
+>>>>>>> origin/main
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="#guides"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                >
+                  Browse Guides
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href="#categories"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
+                >
+                  View Categories
+                  <BookOpen className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Categories Section */}
         <section id="categories" className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -553,6 +714,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
                 Explore by Category;
@@ -565,6 +727,25 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             <div className="grid grid - cols - 2 md:grid - cols - 4 lg:grid - cols - 7 gap - 4">;
               {categories.map ((category, index) => (
                 <motion.div;
+=======
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Explore by Category
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
+                Find guides tailored to your specific technology interests and skill level.
+=======
+                Find guides tailored to your specific technology interests and
+                skill level.
+>>>>>>> origin/main
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              {categories.map((category, index) => (
+                <motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   key={category.name}
                   className="bg - gray - 50 rounded - lg p - 4 text - center hover:bg - blue - 50 hover:border - blue - 200 border - 2 border - transparent transition - all cursor - pointer";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -591,6 +772,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
                 Featured Guides;
@@ -603,6 +785,25 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {guides.map ((guide, index) => (
                 <motion.div;
+=======
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Featured Guides
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
+                Hand-picked guides to help you master the most in-demand technologies.
+=======
+                Hand-picked guides to help you master the most in-demand
+                technologies.
+>>>>>>> origin/main
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {guides.map((guide, index) => (
+                <motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   key={guide.title}
                   className="bg - white rounded - lg shadow - lg overflow - hidden hover:shadow - xl transition - shadow";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -618,6 +819,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                     <div className="absolute top - 4 left - 4 flex gap - 2">;
                       <span className="px - 3 py - 1 rounded - full text - sm font - medium bg - blue - 100 text - blue - 600">;
                         {guide.category}
+<<<<<<< HEAD
                       </span>;
                       <span;
                         className={`px - 3 py - 1 rounded - full text - sm font - medium ${
@@ -629,6 +831,26 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }`}
                       >;
+=======
+                      </span>
+<<<<<<< HEAD
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
+                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
+                        'bg-red-100 text-red-600'
+                      }`}>
+=======
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          guide.difficulty === "Beginner"
+                            ? "bg-green-100 text-green-600"
+                            : guide.difficulty === "Intermediate"
+                              ? "bg-yellow-100 text-yellow-600"
+                              : "bg-red-100 text-red-600"
+                        }`}
+                      >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                         {guide.difficulty}
 
                         }`}>;
@@ -637,6 +859,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                     </div>;
                   </div>;
 
+<<<<<<< HEAD
                   <div className="p-6">;
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">;
                       <div className="flex items-center">;
@@ -658,13 +881,34 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       <div className="flex items-center">;
                         <div className="flex items-center">;
                           {[...Array(5)].map((_, i) => (;
+=======
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {guide.title}
+                    </h3>
+<<<<<<< HEAD
+                    <p className="text-gray-600 mb-4">
+                      {guide.description}
+                    </p>
+=======
+                    <p className="text-gray-600 mb-4">{guide.description}</p>
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
+<<<<<<< HEAD
                                 i < Math && Math.floor(guide && guide.rating)
+=======
+                                i < Math.floor(guide.rating)
+<<<<<<< HEAD
+                                  ? 'text-yellow-400'
+                                  : 'text-gray-300'
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                                   ? "text-yellow-400"
                                   : "text-gray-300"
+>>>>>>> origin/main
                               }`}
                               fill="currentColor"
                             />;
@@ -719,6 +963,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-4xl font-bold mb-6">;
                 Ready to Start Learning?;
@@ -728,6 +973,22 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 technologies with our guides.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Start Learning?
+              </h2>
+              <p className="text-xl mb-8 text-green-100">
+<<<<<<< HEAD
+                Join thousands of developers who are already mastering new technologies with our guides.
+=======
+                Join thousands of developers who are already mastering new
+                technologies with our guides.
+>>>>>>> origin/main
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <Link
                   href="#guides"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center">;
@@ -736,7 +997,21 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="/contact"
+<<<<<<< HEAD
 
+=======
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
+                >
+                  Request Custom Guide
+                  <ExternalLink className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Layout from '../components/Layout';
 
 export default function GuidesPage() {
@@ -755,6 +1030,7 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 
@@ -762,6 +1038,13 @@ export default function GuidesPage() {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      </div>
+    </Layout>
+  );
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       </div>
     </Layout>
 =======
@@ -777,6 +1060,7 @@ export default function GuidesPage() {
     </Layout>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
 =======
                       </span>;
                     </div>;
@@ -883,3 +1167,7 @@ export default function GuidesPage() {
     </Layout>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

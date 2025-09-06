@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 =======
@@ -115,6 +116,9 @@ function findConflictedFiles() {;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-merge-conflict-resolver.cjs
       { "encoding": "utf8" }
     );
     return result;
@@ -284,6 +288,7 @@ if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }))
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -295,6 +300,8 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-merge-conflict-resolver.cjs
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -353,6 +360,7 @@ function log(message, color = "reset")
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}`, "red")}"}"
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
@@ -367,6 +375,8 @@ function log(message, color = "reset")
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-merge-conflict-resolver.cjs
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Remove everything between  and       content = content.replace(/[\s\S]*?)      // Remove any remaining       content = content.replace(/)      // Remove any remaining  sections;
@@ -426,6 +436,7 @@ if (require.main === module) {
 if (require.main === module) {
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }))
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -437,3 +448,5 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-merge-conflict-resolver.cjs

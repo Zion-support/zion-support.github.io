@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import { motion } from 'framer-motion';
 
 import React from 'react';
@@ -89,6 +96,7 @@ const apiEndpoints = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 ];
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -98,15 +106,35 @@ import Head from 'next/head';
 
 
 
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 export default function APIDocsPage() {
+=======
+export default function ApiDocsPage() {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <Head>
+<<<<<<< HEAD
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
+=======
+        <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name='description' content='API reference and guides.' />
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+      </Head>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 =======
@@ -314,10 +342,28 @@ function APIDocsPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 
 =======
+=======
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Our developer support team is here to help you integrate our APIs successfully.
+            </p>
+            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+              Contact Developer Support
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
@@ -330,8 +376,14 @@ function APIDocsPage() {
         </p>
       </div>
     </Layout>
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   );
 }
 import Layout from '../components/Layout';
@@ -353,10 +405,18 @@ export default function ApiDocsPage() {
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
 
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
 
+=======
+        <meta name='description' content='API reference and guides.' />
+<<<<<<< HEAD
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+      </Head>
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 
@@ -382,6 +442,7 @@ export default function ApiDocsPage() {
     </div>;
   );
 }
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 
 export default function APIDocsPage() {;
@@ -525,3 +586,9 @@ function ApiDocsPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import { 
   Home, 
   Brain, 
@@ -282,6 +293,7 @@ function SitemapPage() {
                         <div>;
                           <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
                             {page.name}
+<<<<<<< HEAD
                           </div>;
                         </div>;
                         <ArrowRight className="w - 4 h - 4 text - gray - 400 group - hover:text - blue - 600 ml - auto" />;
@@ -301,6 +313,27 @@ function SitemapPage() {
 =======
     </>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                          </div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+<<<<<<< HEAD
+=======
+=======
+  );
+>>>>>>> origin/main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
 
 
@@ -1306,6 +1339,18 @@ export default function SitemapPage() {;
               <Link
                 href='/contact'
 
+<<<<<<< HEAD
+=======
+      <SmartFooter />
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+=======
+  ),
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 =======
@@ -1381,6 +1426,7 @@ export default function SitemapPage() {;
 =======
   )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
       type: 'Address',
@@ -1758,3 +1804,10 @@ export default function SitemapPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+;
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -13,6 +13,7 @@ const manifest = {
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
+<<<<<<< HEAD:backup-problematic-files/scripts/generate-netlify-functions-manifest.cjs
 <<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-build-nav-links
@@ -38,3 +39,5 @@ console.log('[netlify] Functions manifest generated at', manifestPath);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/generate-netlify-functions-manifest.cjs

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+/** @type {import('tailwindcss').Config} */
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = {
   darkMode: "class"
 =======
@@ -575,10 +579,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
 
         background: 'var(--background)',
         foreground: 'var(--foreground)',
 
+=======
+<<<<<<< HEAD
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         primary: {
 
           50: '#eff6ff'
@@ -607,13 +629,23 @@ module.exports = {
           800: '#1f2937',
           900: '#111827',
           950: '#030712',
+>>>>>>> origin/main
         },
       },
+<<<<<<< HEAD
       font_family: {
         sans: ['Inter', 'system - ui', 'sans - serif'],
+=======
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+>>>>>>> origin/main
       },
       animation: {
+<<<<<<< HEAD
         'fade - in': 'fade_in 0.5s ease - in - out',
         'slide - up': 'slide_up 0.5s ease - out',
         'scale - in': 'scale_in 0.3s ease - out',
@@ -622,6 +654,18 @@ module.exports = {
         'bounce - slow': 'bounce 3s infinite',
         'spin - slow': 'spin 8s linear infinite',
 
+=======
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
+=======
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       keyframes: {
@@ -634,9 +678,17 @@ module.exports = {
           '0%': { transform: 'translate_y (20px)', opacity: '0' },
           '100%': { transform: 'translate_y (0px)', opacity: '1' },
         },
+<<<<<<< HEAD
         scale_in: {
           '0%': { transform: 'scale (0)' },
           '100%': { transform: 'scale (1)' },
+=======
+<<<<<<< HEAD
+=======
+        scaleIn: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         },
         float: {
           '0%, 100%': { transform: 'translate_y (0px)' },
@@ -654,6 +706,7 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2 && 2.5rem',
       },
+<<<<<<< HEAD
 
 =======
     require('@tailwindcss/forms')
@@ -677,3 +730,19 @@ module.exports = {
   ],
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      boxShadow: {
+        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+>>>>>>> origin/main
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

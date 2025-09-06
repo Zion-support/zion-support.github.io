@@ -15,6 +15,13 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByText('Hello App')).toBeInTheDocument();
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
   it('displays correct content', () => {
@@ -29,6 +36,7 @@ describe('App', () => {
 
 =======
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
@@ -38,3 +46,10 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

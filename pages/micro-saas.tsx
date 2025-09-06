@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -184,8 +187,18 @@ export default function MicroSaasPage() {
   Database,
   Sprout;
 } from 'lucide-react';
+<<<<<<< HEAD
 ;
 const microSaasProducts = [;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+
+const microSaasProducts = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   {
     id: 1,
     title: "AI - Powered Voice Assistant Builder",
@@ -257,6 +270,7 @@ function MicroSaasPage() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -274,6 +288,30 @@ function MicroSaasPage() {
 =======
 
 =======
+=======
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Powerful, focused tools that solve specific business problems with precision and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Demo
+<<<<<<< HEAD
+                </Link>
+import React from 'react';
+=======
+                </Link>import React from 'react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main
+import Head from 'next/head';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -526,7 +564,11 @@ export default function MicroSaaS() {;
   useEffect(() => {
 
     const timer = setTimeout(() => setIsLoaded(true), 100);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     return () => clearTimeout(timer);
 =======
 import Link from 'next/link';
@@ -541,6 +583,15 @@ export default function MicroSaaS() {
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    return () => clearTimeout(timer);  }, []);
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
   }, []);
 
@@ -559,8 +610,53 @@ export default function MicroSaaS() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  const categories = [
+    { id: 'all', name: 'All Products', count: 150 },
+    { id: 'ai', name: 'AI-Powered', count: 45 },
+    { id: 'analytics', name: 'Analytics', count: 30 },
+    { id: 'automation', name: 'Automation', count: 25 },
+    { id: 'security', name: 'Security', count: 20 },
+    { id: 'productivity', name: 'Productivity', count: 15 },
+    { id: 'marketing', name: 'Marketing', count: 15 },  ];
+
+<<<<<<< HEAD
+export default function MicroSaasPage() {
+  return (
+    <Layout
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools."
+      keywords="micro saas, saas solutions, business tools, automation, productivity"
+    >
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Powerful, focused tools that solve specific business problems with precision and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Demo
+                </Link>
+              </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const products = [
     {
 
@@ -1587,12 +1683,26 @@ function MicroSaas() {
                   Call {contact && contact.phone}
                 </a>;
                 <a
+<<<<<<< HEAD
 
 
+=======
+                  href={`mailto:${contact.email}`}
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
+                  Email Us
+                </a>
+              </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 
                   href={`mailto:${contact && contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
@@ -1610,6 +1720,10 @@ function MicroSaas() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1619,6 +1733,7 @@ function MicroSaas() {
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1644,18 +1759,64 @@ function MicroSaas() {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+=======
+        {/* Solutions Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+=======
+        {/* Products Grid */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/main
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Micro SaaS Products
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Each product is designed to solve a specific business challenge with powerful, easy-to-use tools
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product, index) => (
+                <motion.div
+<<<<<<< HEAD
+                  key={solution.id}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+                  key={product.id}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
                     <product.icon className="w-8 h-8 text-blue-600 mr-3" />
                     <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+<<<<<<< HEAD
 =======
                       </span>;
                     </div>;
@@ -1865,32 +2026,63 @@ function MicroSaas() {
                       </div>;
                     ))}
 
+=======
+                      {product.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {product.description}
+                  </p>
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-green-600">
+                      {product.pricing}
+                    </span>
+                  </div>
+                  <div className="space-y-2 mb-6">
+                    {product.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+=======
+=======
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <solution.icon className="w-8 h-8 text-blue-600" />
+                  <div className="flex items-center mb-4">
+                    <product.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                      {product.category}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {product.description}
+                  </p>
                   <div className="mb-4">
-                    <span className="text-2xl font-bold text-blue-600">{solution.pricing}</span>
-                    {solution.marketPrice && (
-                      <span className="text-gray-500 ml-2">(Market: {solution.marketPrice})</span>
-                    )}
+                    <span className="text-2xl font-bold text-green-600">
+                      {product.pricing}
+                    </span>
                   </div>
-
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {solution.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="space-y-2 mb-6">
+                    {product.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
                   </div>
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -1898,16 +2090,34 @@ function MicroSaas() {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   <Link
                     href="/contact"
                     className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
                   >
+<<<<<<< HEAD
 
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    Learn More
+=======
+                    Get Started
+                    <ArrowRight className="ml-2 w-4 h-4" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+                    Learn More
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   </Link>
                 </motion.div>
               ))}
@@ -1915,6 +2125,7 @@ function MicroSaas() {
           </div>
         </section>
 
+<<<<<<< HEAD
 
                   </div>;
                   <Link
@@ -1942,6 +2153,29 @@ function MicroSaas() {
               initial={{ opacity: 0, y: 30 }}
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Categories */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+=======
+        {/* Industries Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+        {/* Categories */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
@@ -2019,9 +2253,36 @@ function MicroSaas() {
 
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                Ready to Transform Your Business?              </h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Discover how our micro SaaS solutions can solve your specific business challenges
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started Today
+                </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Demo
+=======
+                <Link
+                  href="/it-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View IT Services
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Demo
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 </Link>
               </div>
             </motion.div>
@@ -2030,10 +2291,23 @@ function MicroSaas() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+
+=======
+            </div>
+=======
+>>>>>>> origin/main
+          </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
@@ -2118,6 +2392,7 @@ function MicroSaas() {
     </Layout>;
   );
 }
+<<<<<<< HEAD
 
 
 =======
@@ -2194,3 +2469,14 @@ Ready to Transform Your Business?;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

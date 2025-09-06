@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,11 @@ const path = require('path');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 const { execSync, spawn } = require('child_process');
 class MasterAutomationOrchestrator {
   constructor() {
@@ -228,11 +234,14 @@ class MasterAutomationOrchestrator {
       process.exit(1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
   }
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 const { execSync } = require('child_process');
 
@@ -317,14 +326,24 @@ async function runAllAutomations() {
         console.log(`⚠️ Critical task failed: ${task.name}`);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     }
   }
 
   return { results, successCount, failureCount };
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+    }
+  }
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -399,6 +418,7 @@ async function main() {
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/main
@@ -407,6 +427,9 @@ async function main() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     }
 
     console.log('\n✅ Master automation orchestration completed');
@@ -470,7 +493,9 @@ const { execSync, spawn } = require('child_process')
 =======
 
 main();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -480,3 +505,7 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

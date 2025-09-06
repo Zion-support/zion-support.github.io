@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -395,6 +396,8 @@ async function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-performance-monitor.cjs
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -437,6 +440,7 @@ async function main() {
 }
 
 // Run the enhanced performance monitor
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 <<<<<<< HEAD
 main();#!/usr/bin/env node;
 =======
@@ -455,6 +459,9 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+main();#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-performance-monitor.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -506,6 +513,7 @@ console.log('=')
       "message"
       "action"
       log('warn', 'Performance "Alerts")
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 <<<<<<< HEAD
       log('info', 'Performance "Recommendations")
 =======
@@ -519,3 +527,6 @@ console.log('=')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      log('info', 'Performance "Recommendations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-performance-monitor.cjs

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,12 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from 'react';
 
 import React, { useState, useEffect } from 'react',
@@ -469,6 +476,7 @@ const filters = [;
   { name: 'Recent', count: 4 },
   { name: 'Popular', count: 2 }
 ];
+<<<<<<< HEAD
 export default /**
  * SearchPage - Function description
  */
@@ -485,6 +493,79 @@ function SearchPage() {
     const matches_filter = selected_filter === 'All' || result.type === selected_filter;
 ;
     return matches_query && matches_category && matches_filter;
+=======
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  ExternalLink,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Globe,
+  Code,
+  Server,
+  TrendingUp,
+  BarChart3,
+  Cloud,
+  Network,
+  Lightbulb,
+  Flame,
+  Zap as ZapIcon,
+  X,
+  Sliders,
+  SortAsc,
+  SortDesc,;
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+import { 
+  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
+  X, Sliders, SortAsc, SortDesc
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+export default function SearchPage() {
+<<<<<<< HEAD
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedFilter, setSelectedFilter] = useState('All');
+  const [showFilters, setShowFilters] = useState(false);
+
+  const filteredResults = searchResults.filter(result => {
+    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                        result.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || result.category === selectedCategory;
+    const matchesFilter = selectedFilter === 'All' || result.type === selectedFilter;
+    
+    return matchesQuery && matchesCategory && matchesFilter;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   });
 ;
   return (
@@ -607,6 +688,102 @@ function SearchPage() {
                 {filteredResults.length} results found
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+=======
+export default function SearchPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedFilter, setSelectedFilter] = useState('All');
+  const [showFilters, setShowFilters] = useState(false);
+
+  const filteredResults = searchResults.filter(result => {
+    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                        result.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || result.category === selectedCategory;
+    const matchesFilter = selectedFilter === 'All' || result.type === selectedFilter;
+    
+    return matchesQuery && matchesCategory && matchesFilter;
+  });
+
+  return (
+    <Layout>
+      <Head>
+        <title>Search - Zion Tech Group</title>
+        <meta name="description" content="Search our website for information, guides, services, and more." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl font-bold mb-6">
+                Search Our Website
+              </h1>
+              <p className="text-xl mb-8 text-blue-100">
+                Find the information you need quickly and easily.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search for services, guides, articles..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Filters Section */}
+        <section className="py-8 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex flex-wrap gap-4">
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  <Filter className="w-4 h-4 mr-2" />
+                  Filters
+                  {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+                </button>
+                
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-lg transition-colors ${
+                      selectedCategory === category.name
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+              
+              <div className="text-sm text-gray-600">
+                {filteredResults.length} results found
+              </div>
+            </div>
+
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             {showFilters && (
               <motion.div
 =======
@@ -731,6 +908,7 @@ function SearchPage() {
 =======
                   ))}
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
@@ -740,6 +918,8 @@ function SearchPage() {
 ))}
                 </div>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               </motion.div>
             )}
           </div>
@@ -1095,7 +1275,32 @@ function SearchPage() {
                             className="hover:text - blue - 600 transition - colors";
                           >;
                             {result.title}
+<<<<<<< HEAD
 
+=======
+                          </Link>
+                        </h3>
+                        
+                        <p className="text-gray-600 mb-4">
+                          {result.description}
+                        </p>
+                        
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span className="mr-4">Updated {result.lastUpdated}</span>
+                          <div className="flex items-center">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                            <span>{result.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <Link
+                        href={result.url}
+                        className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                       </Link>
 =======
   const [searchTerm, setSearchTerm] = useState('');
@@ -1694,8 +1899,78 @@ function SearchPage() {
                           Get Quote
                         </a>
                       </div>
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+                  ))}
+                </div>
+=======
+                  ))}                </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+              </motion.div>
+            )}
+          </div>
+        </section>
+
+        {/* Search Results */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            {filteredResults.length > 0 ? (
+              <div className="space-y-6">
+                {filteredResults.map((result, index) => (
+                  <motion.div
+                    key={result.id}
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center mb-2">
+                          <result.icon className="w-5 h-5 text-blue-600 mr-2" />
+                          <span className="text-sm text-gray-500">{result.category}</span>
+                          <span className="mx-2 text-gray-300">•</span>
+                          <span className="text-sm text-gray-500">{result.type}</span>
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          <Link
+                            href={result.url}
+                            className="hover:text-blue-600 transition-colors"
+                          >
+                            {result.title}
+                          </Link>
+                        </h3>
+                        
+                        <p className="text-gray-600 mb-4">
+                          {result.description}
+                        </p>
+                        
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span className="mr-4">Updated {result.lastUpdated}</span>
+                          <div className="flex items-center">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                            <span>{result.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <Link
+                        href={result.url}
+                        className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
+                      </Link>
+>>>>>>> origin/main
+                    </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 
@@ -1707,8 +1982,15 @@ function SearchPage() {
                   </motion.div>
                 ))}
               </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             ) : (
               <motion.div
 =======
@@ -1919,6 +2201,7 @@ function SearchPage() {
       </div>;
 
   );
+<<<<<<< HEAD
 
 =======
 =======
@@ -1928,11 +2211,17 @@ function SearchPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+}  )
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
             </AnimatePresence>
           )}
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
+<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -2006,3 +2295,17 @@ function SearchPage() {
 );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+  )
+}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

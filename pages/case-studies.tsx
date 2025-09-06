@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 }
 
 import React from 'react';
+<<<<<<< HEAD
 
 
 =======
@@ -34,6 +35,12 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import MainLayout from '../src/components/layout/MainLayout';
 =======
 import MainLayout from '../src / components / layout / MainLayout';
@@ -614,6 +621,7 @@ function CaseStudiesPage() {
                 </a>;
                 <a
                   href="/services"
+<<<<<<< HEAD
 
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
                   Explore Our Services;
@@ -630,6 +638,28 @@ function CaseStudiesPage() {
 =======
 =======
 import Head from 'next/head';
+=======
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
+                >
+                  Explore Our Services
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+=======
+  );
+>>>>>>> origin/main
+<<<<<<< HEAD
+}
+import Link from 'next/link';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 export default function CaseStudiesPage() {;
@@ -642,6 +672,22 @@ export default function CaseStudiesPage() {;
         <meta
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
+<<<<<<< HEAD
+=======
+        />
+      </Head>
+      <section className='container mx-auto px-4 py-24'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
+          Case Studies
+        </h1>
+        <p className='text-gray-300'>
+          Proven outcomes and detailed success stories. Coming soon.
+        </p>
+      </section>
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 >>>>>>> origin/automation-improvements-final
@@ -709,6 +755,7 @@ export default function CaseStudiesPage() {
 		</Layout>;
 	);
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -797,3 +844,9 @@ return (
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

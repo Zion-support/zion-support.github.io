@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 'use client';
 
 ;
@@ -15,6 +22,7 @@ interface Props {
 interface Props {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   children: ReactNode;
+<<<<<<< HEAD
   level?: string;
   fallback?: ReactNode;
 
@@ -40,6 +48,9 @@ interface Props {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
 
 
@@ -52,18 +63,41 @@ interface State {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   hasError: boolean;
   error?: Error;
+<<<<<<< HEAD
 
 =======
 
 
+=======
+  errorInfo?: ErrorInfo;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode,
+=======
+  level?: string;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
+interface Props {
+  children: ReactNode;
+>>>>>>> origin/main
   fallback?: ReactNode;
 }
 
+<<<<<<< HEAD
+=======
+interface State {
+  hasError: boolean;
+  error?: Error;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+  errorInfo?: ErrorInfo;
+>>>>>>> origin/main
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
 
@@ -77,6 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {
+<<<<<<< HEAD
 
 
 =======
@@ -106,10 +141,33 @@ class ErrorBoundary extends Component<Props, State> {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+    // Update state so the next render will show the fallback UI
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // Log the error to console or error reporting service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    this.setState({
+=======
+    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       error,
       error_info;
     });
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -169,6 +227,9 @@ class ErrorBoundary extends Component<Props, State> {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
 =======
@@ -177,12 +238,41 @@ class ErrorBoundary extends Component<Props, State> {;
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    // Log error to external service (e.g., Sentry)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(error, { extra: errorInfo });    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+// Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send to an error reporting service
+      console.error('Production error:', error, errorInfo);
+    }
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  handleGoHome = () => {
+    window.location.href = '/';  };
+
+  render() {
+    if (this.state.hasError) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -251,6 +341,7 @@ class ErrorBoundary extends Component<Props, State> {
 
 
               <button
+<<<<<<< HEAD
                 onClick={() => window && window.location.reload()}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors";
               >;
@@ -258,6 +349,17 @@ class ErrorBoundary extends Component<Props, State> {
               </button>;
               <button
 
+=======
+                onClick={() => window.location.reload()}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+<<<<<<< HEAD
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -275,12 +377,16 @@ class ErrorBoundary extends Component<Props, State> {
               <button 
                 onClick={() => typeof window !== 'undefined' && window.location.reload()} 
                 className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+=======
+>>>>>>> origin/main
               >
-                Reload Page
+                Refresh Page
               </button>
+<<<<<<< HEAD
               <button 
                 onClick={() => this.setState({ hasError: false })} 
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
+<<<<<<< HEAD
 
 
 
@@ -303,14 +409,26 @@ class ErrorBoundary extends Component<Props, State> {
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -318,7 +436,11 @@ class ErrorBoundary extends Component<Props, State> {
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
@@ -326,6 +448,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
+<<<<<<< HEAD
 
 
 
@@ -352,6 +475,11 @@ class ErrorBoundary extends Component<Props, State> {
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 </pre>
               </details>
 =======

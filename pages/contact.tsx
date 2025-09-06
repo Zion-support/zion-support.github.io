@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -42,6 +43,16 @@ import { useState } from 'react';
 import { ContactInfo } from '../types';
 
 
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+=======
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -149,7 +160,12 @@ export default function Contact() {
       </div>
     </>
   );
+<<<<<<< HEAD
 
+=======
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import Head from 'next/head';
 
@@ -266,6 +282,7 @@ const ContactPage: React.FC = () => {
 
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
@@ -309,3 +326,7 @@ function Contact() {
     </Layout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

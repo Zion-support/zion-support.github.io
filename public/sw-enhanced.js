@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+event.respondWith(handleOtherRequest(request))}});
+>>>>>>> origin/main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 const CACHE_NAME = 'zion-tech-group-v1'';;
 const STATIC_CACHE = 'static-v1'';;
 const DYNAMIC_CACHE = 'dynamic-v1'';;
@@ -146,6 +155,7 @@ self.addEventListener ('fetch', (event) => {';
   if: (url && url.origin !== location && location.origin) {
     return}
   // Handle different types of requests;
+<<<<<<< HEAD
 
 
 
@@ -160,6 +170,19 @@ event.respondWith(handleOtherRequest(request))}});
 =======
 
 >>>>>>> origin/automation-improvements-final
+=======
+  "if": (isStaticAsset(request.url)) {
+    event.respondWith(handleStaticAsset(request))} else if (isPageRequest(request)) {
+    event.respondWith(handlePageRequest(request))} else {
+    event.respondWith(handleOtherRequest(request))}
+})
+<<<<<<< HEAD
+=======
+event.respondWith(handleOtherRequest(request))}});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 // Check if request is for a static asset;
 
 
@@ -184,7 +207,18 @@ self && self.addEventListener('notificationclick', (event) = > {'; event && even
 // "Helper": functions for background sync;
 
 async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+;
+=======
+    event.respondWith(handleOtherRequest(request))};
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 });
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {;
@@ -257,6 +291,7 @@ self && self.addEventListener('notificationclick', (event) => {';
     event && event.waitUntil(;
       clients && clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+<<<<<<< HEAD
 
 
 =======
@@ -264,6 +299,9 @@ self && self.addEventListener('notificationclick', (event) => {';
 
 async: function getPendingSubmissions() {;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB;
 
@@ -317,6 +355,7 @@ self.addEventListener('sync', (event) => {',
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
+<<<<<<< HEAD
 
 
 
@@ -327,6 +366,12 @@ self.addEventListener('sync', (event) => {',
       self.registration.showNotification(data.title, options))}),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+async: function getPendingSubmissions() {;
+  // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 // "Notification": click,
 =======
 ;// "Notification": click,
@@ -474,14 +519,19 @@ self.addEventListener('message', (event) => {';
 =======
 ;  "return": []};
   "return": []};
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -569,3 +619,7 @@ asyn: c: function getPendingSubmissions() {,;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -216,6 +216,7 @@ interface WebVitalMetric {name: string;
   value: number;
   id: string}
 
+<<<<<<< HEAD
 
 export const trackWebVitals = (metric: WebVitalMetric) => {;
   if (typeof window !== 'undefined' && window && window.gtag) {';
@@ -226,6 +227,15 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
       non_interaction: true;,
 
 })}
+=======
+// Declare global types
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
 
 
@@ -237,6 +247,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
 
 // Declare global types
 =======
+<<<<<<< HEAD
         navigation.domContentLoadedEventStart,
       first_paint:;
         performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
@@ -285,3 +296,9 @@ declare global {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
