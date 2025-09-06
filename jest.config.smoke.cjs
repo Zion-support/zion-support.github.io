@@ -1,24 +1,26 @@
-const nextJest = require('next/jest');
-
-const createJestConfig = nextJest({
-  dir: './',
-});
-
-const config = {
+module.exports = {
   testEnvironment: 'jsdom',
+  testMatch: ['**/__tests__/**/*.test.{js,jsx,ts,tsx}', '**/*.test.{js,jsx,ts,tsx}'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testMatch: [
-    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
-    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
   ],
-  collectCoverage: false,
-  verbose: true,
-  testTimeout: 10000,
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ],
+<<<<<<< HEAD
 };
-
-module.exports = createJestConfig(config);
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

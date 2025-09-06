@@ -1,5 +1,11 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "generatedAt": "2025-08-14T09:38:10.512Z",
   "files": [
     "update-2025-08-14-0638.tsx",
@@ -107,6 +113,8 @@
     "diversityScore": 100,
     "avgLen": 1839,
     "duplicateCount": 0,
+<<<<<<< HEAD
+<<<<<<< HEAD
     "seoScore": 26
 =======
   "generatedAt": "2025-08-19T03:44:34.226Z",
@@ -219,6 +227,12 @@
     "seoScore": 5
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
   },
+=======
+    "seoScore": 26  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "seoScore": 26  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "guidance": [
     "Aim for varied intros, highlights, and CTAs across updates.",
     "Keep meta description and keywords present for each page.",

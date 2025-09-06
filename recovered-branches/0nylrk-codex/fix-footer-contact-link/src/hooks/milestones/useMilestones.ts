@@ -6,7 +6,6 @@ import { useUpdateMilestone } from './useUpdateMilestone';
 import { useDeleteMilestone } from './useDeleteMilestone';
 import { useUploadDeliverable } from './useUploadDeliverable';
 import { MilestoneStatus } from './types';
-
 export const useMilestones = (projectId?: string) => {
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId);
   const { createMilestone, isSubmitting: isCreating } = useCreateMilestone(projectId);
@@ -20,20 +19,20 @@ export const useMilestones = (projectId?: string) => {
   // Function to upload deliverable with project_id
   const handleUploadDeliverable = async (milestoneId: string, file: File) => {
     if (!projectId) return null;
-    return await uploadDeliverable(milestoneId, projectId, file);
+    return await uploadDeliverable(milestoneId, projectId, file)
   };
   
   return {
-    milestones,
-    activities,
-    isLoading,
-    error,
-    isSubmitting,
-    createMilestone,
-    updateMilestoneStatus,
-    updateMilestone,
-    deleteMilestone,
-    uploadDeliverable: handleUploadDeliverable,
+    milestones;
+    activities;
+    isLoading;
+    error;
+    isSubmitting;
+    createMilestone;
+    updateMilestoneStatus;
+    updateMilestone;
+    deleteMilestone;
+    uploadDeliverable: handleUploadDeliverable;
     refetch
-  };
+  }
 };

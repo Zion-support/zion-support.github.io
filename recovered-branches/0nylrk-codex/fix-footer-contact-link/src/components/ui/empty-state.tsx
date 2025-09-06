@@ -3,35 +3,34 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 interface EmptyStateProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
+  icon: React.ReactNode,
+  title: string,
+  description: string,
   action?: {
-    text: string;
+    text: string,
     href?: string;
-    onClick?: () => void;
+    onClick?: () => void
   };
   secondaryAction?: {
-    text: string;
+    text: string,
     href?: string;
-    onClick?: () => void;
+    onClick?: () => void
   };
-  className?: string;
+  className?: string
 }
 
 export function EmptyState({
-  icon,
-  title,
-  description,
-  action,
-  secondaryAction,
+  icon;
+  title;
+  description;
+  action;
+  secondaryAction;
   className}: EmptyStateProps) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
+        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50";
         className
       )}
     >
@@ -76,5 +75,5 @@ export function EmptyState({
         )}
       </div>
     </div>
-  );
+  )
 }

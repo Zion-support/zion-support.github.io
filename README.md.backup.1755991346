@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ## Zion Assistant Monorepo
 
 Cross-platform assistant for hiring managers and remote workers.
@@ -46,6 +52,8 @@ This README is auto-generated. Do not edit manually.
 
 - Intelligent Orchestrator (1m): /.netlify/functions/intelligent-orchestrator
 - Anomaly Watchdog (10m): /.netlify/functions/anomaly-watchdog
+<<<<<<< HEAD
+<<<<<<< HEAD
 - Pulse Sync (1m): /.netlify/functions/pulse-sync
 =======
 # Zion AI Marketplace – Chat Assistant
@@ -114,3 +122,9 @@ The widget creates a floating button and a panel (bottom-right on desktop, full-
 - The assistant greets users, answers FAQs, and guides through marketplace features. Customize the system prompt in `server/index.js`.
 - For streaming responses, you can extend the server to use OpenAI streaming and emit text via server-sent events.
 >>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-4a2a
+=======
+- Pulse Sync (1m): /.netlify/functions/pulse-sync
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+- Pulse Sync (1m): /.netlify/functions/pulse-sync
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

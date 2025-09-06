@@ -1,3 +1,42 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ export default function ServicesIndexPage () {
+  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (return (<UltraAdvancedFuturisticBackground> <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
+}</div> </div> </section> />) ) 
+}</div> </section>) 
+}/>) ) 
+}</div> </section>) 
+}<section className="mb-20"> <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> `/services/category/$ {
+  toSlug (category) 
+}` 
+}className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105" > </svg> </Link> </div>) 
+}</div>) 
+}) 
+}</div> </section> Need a Custom Solution? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts can help you build custom solutions tailored to your specific needs. Let's discuss how we can transform your business with cutting-edge technology. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105" > Get Started </Link> <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105" > Schedule Demo </Link> </div> </div> </section> </div> </div> </UltraFuturisticBackground> 
+}) 
+}</div> </div> />) ) 
+}</div> </section>) 
+}/>) ) 
+}</div> </section>) 
+}<section className="mb-20"> <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> `/services/category/$ {
+  toSlug (category) 
+}` 
+}className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all" > View All {
+  category 
+}Services ({
+  categoryServices.length 
+}) </Link> </div>) 
+}</div> </div> <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </div>) ) 
+}</div> </div> {
+  service.link && (<a href= {
+  service.link 
+}className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300" > Learn More </Link>) 
+}</div> </div> </motion.div>) ) 
+}</div> </div>) 
+}</div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 20 
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -24,31 +63,150 @@ import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-
 // Define a common service interface
 interface Service {
   id?: string;
-  name: string;
+  name: string,
   description?: string;
   price?: string;
   category?: string;
   popular?: boolean;
   launchDate?: string;
-  [key: string]: unknown; // Allow additional properties
+  [key: string]: unknown, // Allow additional properties
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+// Define a unified service interface
+interface Service {
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  price: string,
+  category: string,
+  features: string[],
+  popular?: boolean;
+  icon?: string;
+  link?: string
+}
+
+// Sample services for now
+const sampleServices: Service[] = [
+  {
+    id: 'ai-services',
+    name: 'AI & Machine Learning',
+    tagline: 'Advanced AI solutions for enterprise',
+    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.';
+    price: '$2,999/month';
+    category: 'AI',
+    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],
+    popular: true,
+    link: '/ai-services'
+  };
+  {
+    id: 'quantum-computing',
+    name: 'Quantum Computing',
+    tagline: 'Next-generation quantum solutions',
+    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
+    price: '$9,999/month';
+    category: 'Quantum',
+    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
+    link: '/quantum-computing'
+  };
+  {
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    tagline: 'Enterprise security solutions',
+    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
+    price: '$1,999/month';
+    category: 'Security',
+    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
+    link: '/cybersecurity'
+  };
+  {
+    id: 'cloud-platform',
+    name: 'Cloud Platform',
+    tagline: 'Scalable cloud infrastructure',
+    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',
+    price: '$1,499/month';
+    category: 'Cloud',
+    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'],
+    link: '/cloud-platform'
+  };
+  {
+    id: 'space-technology',
+    name: 'Space Technology',
+    tagline: 'Innovative space solutions',
+    description: 'Cutting-edge space technology services for satellite operations and space missions.',
+    price: '$24,999/month';
+    category: 'Space',
+    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
+    link: '/space-tech'
+  }
+];
+
+<<<<<<< HEAD
+}> <h2 className="text-4xl font-bold text-white mb-6" >Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to discuss how our services can transform your business. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Contact Sales </Link> <a href="/get-started" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Get Started </Link> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
+}<QuoteRequestModal open= {
+  modalOpen 
+}onClose= {
+  () => setModalOpen (false) 
+}service= {
+  selected 
+}onSubmit= {
+  handleSubmit 
+}/> </div>) 
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../../components/ui/Card';
+import Link from 'next/link';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { extraServices } from '../../data/extra-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { realMarketServices } from '../../data/real-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025'
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
+import { realServicesQ22025 } from '../../data/real-services-q2-2025';
+import { realServicesQ32025 } from '../../data/real-services-q3-2025';
+import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+// Define a common service interface
+interface Service {
+  id?: string;
+  name: string,
+  description?: string;
+  price?: string;
+  category?: string;
+  popular?: boolean;
+  launchDate?: string;
+  [key: string]: unknown, // Allow additional properties
 }
 
 // Define a unified service interface
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  category: string;
-  features: string[];
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  price: string,
+  category: string,
+  features: string[],
   popular?: boolean;
   icon?: string;
-  link?: string;
+  link?: string
 }
 
 // Sample services for now
@@ -60,10 +218,10 @@ const sampleServices: Service[] = [
     description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
     price: '$2,999/month',
     category: 'AI',
-    features: ['Custom AI Models', 'MLOps Pipeline', 'Real-time Analytics', '24/7 Support'],
+    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],
     popular: true,
     link: '/ai-services'
-  },
+  };
   {
     id: 'quantum-computing',
     name: 'Quantum Computing',
@@ -71,9 +229,9 @@ const sampleServices: Service[] = [
     description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
     price: '$9,999/month',
     category: 'Quantum',
-    features: ['Quantum Algorithms', 'Cryptography', 'Optimization', 'Research Support'],
+    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
     link: '/quantum-computing'
-  },
+  };
   {
     id: 'cybersecurity',
     name: 'Cybersecurity',
@@ -81,9 +239,9 @@ const sampleServices: Service[] = [
     description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
     price: '$1,999/month',
     category: 'Security',
-    features: ['Threat Detection', 'Incident Response', 'Compliance', 'Security Audits'],
+    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
     link: '/cybersecurity'
-  },
+  };
   {
     id: 'cloud-platform',
     name: 'Cloud Platform',
@@ -91,9 +249,9 @@ const sampleServices: Service[] = [
     description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',
     price: '$1,499/month',
     category: 'Cloud',
-    features: ['Multi-Cloud', 'Auto-scaling', 'Global CDN', 'DevOps Tools'],
+    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'],
     link: '/cloud-platform'
-  },
+  };
   {
     id: 'space-technology',
     name: 'Space Technology',
@@ -101,36 +259,38 @@ const sampleServices: Service[] = [
     description: 'Cutting-edge space technology services for satellite operations and space missions.',
     price: '$24,999/month',
     category: 'Space',
-    features: ['Satellite Operations', 'Mission Control', 'Data Analytics', 'Ground Systems'],
+    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
     link: '/space-tech'
   }
 ];
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
-      extraServices as unknown[],
-      additionalEnhancedServices as unknown[],
-      newlyAddedServices as unknown[],
-      curatedMarketServices as unknown[],
-      realMarketServices as unknown[],
-      new2025Services as unknown[],
-      marketValidatedServices as unknown[],
-      moreRealServices2025 as unknown[],
-      realOperationalServices as unknown[],
-      verified2025Additions as unknown[],
-      realServicesQ12025 as unknown[],
-      realEnterpriseServices2025 as unknown[],
-      realMarketAugmentations2025 as unknown[],
-      verifiedRealServices2025Batch2 as unknown[],
-      additionalLiveServices2025 as unknown[],
-      real2025Q2Additions as unknown[],
-      augmentedServicesBatch3 as unknown[],
-      realServicesQ22025 as unknown[],
-      realServicesQ32025 as unknown[],
+      extraServices as unknown[];
+      additionalEnhancedServices as unknown[];
+      newlyAddedServices as unknown[];
+      curatedMarketServices as unknown[];
+      realMarketServices as unknown[];
+      new2025Services as unknown[];
+      marketValidatedServices as unknown[];
+      moreRealServices2025 as unknown[];
+      realOperationalServices as unknown[];
+      verified2025Additions as unknown[];
+      realServicesQ12025 as unknown[];
+      realEnterpriseServices2025 as unknown[];
+      realMarketAugmentations2025 as unknown[];
+      verifiedRealServices2025Batch2 as unknown[];
+      additionalLiveServices2025 as unknown[];
+      real2025Q2Additions as unknown[];
+      augmentedServicesBatch3 as unknown[];
+      realServicesQ22025 as unknown[];
+      realServicesQ32025 as unknown[];
       realServicesQ42025 as unknown[]
     );
-    return acc;
+    return acc
   }, {} as Record<string, Service[]>);
 
 
@@ -198,7 +358,7 @@ export default function ServicesIndexPage() {
 
             {/* Services by Category */}
             <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Services by Category
               </h2>
               <div className="space-y-12">
@@ -257,7 +417,7 @@ export default function ServicesIndexPage() {
                         </div>
                       )}
                     </div>
-                  );
+                  )
                 })}
               </div>
             </section>
@@ -297,8 +457,8 @@ export default function ServicesIndexPage() {
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
-                const service = s as { id?: string; name?: string; link?: string; category?: string; tagline?: string; description?: string; price?: string; period?: string };
-                const slug = service.link ? (() => { try { const u = new URL(service.link); const p = u.pathname.replace(/^\/+|\/+$/g, ''); return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''); } catch { return toSlug(service.id || service.name || ''); } })() : toSlug(service.id || service.name || '');
+                const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string };
+                const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || '') } catch { return toSlug(service.id || service.name || '') } })() : toSlug(service.id || service.name || '');
                 return (
                   <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
                     <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
@@ -307,10 +467,10 @@ export default function ServicesIndexPage() {
                     <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
                     <div className="flex gap-3">
                       <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
                     </div>
                   </Card>
-                );
+                )
               })}
             </div>
           </div>
@@ -353,7 +513,7 @@ export default function ServicesIndexPage() {
 
           {/* Services by Category */}
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
             </h2>
             <div className="space-y-12">
@@ -477,7 +637,7 @@ export default function ServicesIndexPage() {
               <p className="text-xl text-gray-300 mb-8">
                 Contact us today to discuss how our services can transform your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
@@ -496,7 +656,7 @@ export default function ServicesIndexPage() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
 
       <QuoteRequestModal
@@ -506,5 +666,9 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
-  );
+  )
 }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

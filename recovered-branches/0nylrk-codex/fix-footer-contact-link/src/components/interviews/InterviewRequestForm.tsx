@@ -17,24 +17,23 @@ import { format, addDays } from "date-fns";
 import { CalendarIcon, Check, Clock } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
-
 interface InterviewRequestFormProps {
-  talent: TalentProfile;
-  onClose: () => void;
-  userDetails?: UserProfile;
+  talent: TalentProfile,
+  onClose: () => void,
+  userDetails?: UserProfile
 }
 
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
-  }),
-  time: z.string().min(1, "Please select a time for the interview."),
-  duration: z.string().min(1, "Please select the interview duration."),
-  platform: z.string().min(1, "Please select a meeting platform."),
+  });
+  time: z.string().min(1, "Please select a time for the interview.");
+  duration: z.string().min(1, "Please select the interview duration.");
+  platform: z.string().min(1, "Please select a meeting platform.");
   meetingLink: z.string().optional(),
-  title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional()});
+  title: z.string().min(3, "Please provide a brief title for the interview.");
+  notes: z.string().optional()}),
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
@@ -47,15 +46,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       duration: "30",
       platform: "zoom",
       notes: "",
-      meetingLink: ""}});
+      meetingLink: ""}}),
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
         title: "Authentication required",
         description: "Please log in to schedule an interview",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return
     }
 
     setIsSubmitting(true);
@@ -82,24 +81,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
       toast({
         title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`});
-      onClose();
+        description: `Your interview request with ${talent.full_name} has been sent.`}),
+      onClose()
     } catch (error) {
       console.error("Failed to schedule interview:", error);
       toast({
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }
 
   const timeSlots = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
-    "18:00", "18:30", "19:00", "19:30", "20:00"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";
+    "18:00", "18:30", "19:00", "19:30", "20: 00"
   ];
 
   return (
@@ -146,7 +145,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <Button
                         variant="outline"
                         className={cn(
-                          "w-full pl-3 text-left font-normal",
+                          "w-full pl-3 text-left font-normal";
                           !field.value && "text-muted-foreground"
                         )}
                       >
@@ -298,5 +297,5 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
       </form>
     </Form>
-  );
+  )
 }

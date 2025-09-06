@@ -13,7 +13,6 @@ import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
 import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
 import { QuoteFormData } from "@/types/quotes";
 import { Sparkles } from "lucide-react";
-
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
 export function QuoteRequestForm() {
@@ -34,7 +33,7 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0,
       type: "fixed"
-    },
+    };
     contactInfo: {
       name: "",
       email: "",
@@ -45,15 +44,14 @@ export function QuoteRequestForm() {
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       ...data
-    }));
+    }))
   };
   
   const handleNext = () => {
     switch (currentStep) {
-      case "service":
-        setCurrentStep("details");
+      case "service": setCurrentStep("details");
         break;
       case "details":
         setCurrentStep("timeline");
@@ -65,14 +63,13 @@ export function QuoteRequestForm() {
         setCurrentStep("summary");
         break;
       default:
-        break;
+        break
     }
   };
   
   const handleBack = () => {
     switch (currentStep) {
-      case "details":
-        setCurrentStep("service");
+      case "details": setCurrentStep("service");
         break;
       case "timeline":
         setCurrentStep("details");
@@ -84,7 +81,7 @@ export function QuoteRequestForm() {
         setCurrentStep("budget");
         break;
       default:
-        break;
+        break
     }
   };
   
@@ -100,17 +97,17 @@ export function QuoteRequestForm() {
       
       toast({
         title: "Quote Request Submitted",
-        description: "We've received your request and will get back to you soon."});
+        description: "We've received your request and will get back to you soon."}),
       
       // Redirect to confirmation page or homepage
-      navigate("/");
+      navigate("/")
     } catch (error) {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   };
   
@@ -126,8 +123,7 @@ export function QuoteRequestForm() {
         return <BudgetStep formData={formData} updateFormData={updateFormData} />;
       case "summary":
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
-      default:
-        return null;
+      default: return null
     }
   };
   
@@ -185,5 +181,5 @@ export function QuoteRequestForm() {
         </Card>
       </div>
     </div>
-  );
+  )
 }

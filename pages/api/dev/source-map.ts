@@ -1,11 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]);
   if (!identity) return;
-
   if (req.method === "GET") {
     const nodes = getSourceMapWithExistence();
     const git = getGitStatus();
@@ -25,5 +23,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
+  res.status(405).end("Method Not Allowed")
 }

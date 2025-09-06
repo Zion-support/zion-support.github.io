@@ -11,7 +11,13 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -58,13 +64,25 @@
   schedule = "0 */12 * * *" # twice per day
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[redirects]]
   from = "/team"
   to = "/about"
   status = 301
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[scheduled.functions]]
   name = "fast-front-promoter"
   schedule = "*/15 * * * *" # every 15 minutes
@@ -302,6 +320,8 @@
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [[scheduled.functions]]
   name = "fast-front-promoter"
@@ -503,3 +523,7 @@
   name = "ultra-innovation-accelerator"
   schedule = "*/3 * * * *"
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

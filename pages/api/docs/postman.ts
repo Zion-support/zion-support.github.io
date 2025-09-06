@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
-
 function toPostman() {
   return {
     info: {
@@ -15,12 +14,17 @@ function toPostman() {
           url: {
             raw: `{{baseUrl}}${ep.path}`,
             host: ['{{baseUrl}}'],
-            path: ep.path.replace(/^\//, '').split('/')},
-          body: ep.requestBodySchema ? { mode: 'raw', raw: JSON.stringify({}, null, 2) } : undefined}}))
+            path: ep.path.replace(/^\//, '').split('/')
+          },
+          body: ep.requestBodySchema ? { mode: 'raw', raw: JSON.stringify({}, null, 2) } : undefined
+        }
+      }))
     ),
     variable: [
       { key: 'baseUrl', value: 'https://api.zion.os' },
-      { key: 'token', value: '' }]};
+      { key: 'token', value: '' }
+    ]
+  };
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {

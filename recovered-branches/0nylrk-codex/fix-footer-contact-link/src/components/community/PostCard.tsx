@@ -9,19 +9,18 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
-
 interface PostCardProps {
-  post: ForumPost;
-  compact?: boolean;
+  post: ForumPost,
+  compact?: boolean
 }
 
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 
   return (
     <Card className={cn(
-      "transition-shadow hover:shadow-md",
-      post.isPinned && "border-zion-purple/50",
+      "transition-shadow hover:shadow-md";
+      post.isPinned && "border-zion-purple/50";
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -89,7 +88,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
         )}
       </CardFooter>
     </Card>
-  );
+  )
 };
 
 export default PostCard;

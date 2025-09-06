@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import {
+  CheckCircle,
+  ChevronRight,
+  FileText,
+  MessageSquare,
+  Video,;
+} from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+import { SeverityIndicator } from '../common/SeverityIndicator';
+import { useRouter } from 'next/router';
+import { toast } from 'sonner';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,32 +29,31 @@ import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useRouter } from 'next/router';
 import { toast } from "sonner";
-
 interface Milestone {
-  id: string;
-  title: string;
-  dueDate: string;
-  status: "completed" | "in_progress" | "pending";
-  paymentStatus: "paid" | "pending" | "overdue";
-  amount: string;
+  id: string,
+  title: string,
+  dueDate: string,
+  status: "completed" | "in_progress" | "pending",
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
 }
 
 interface ProjectViewProps {
   project: {
-    id: string;
-    title: string;
+    id: string,
+    title: string,
     client: {
-      name: string;
-      avatar?: string;
+      name: string,
+      avatar?: string
     };
-    startDate: string;
+    startDate: string,
     endDate?: string;
-    status: string;
-    totalAmount: string;
-    progress: number;
-    description: string;
+    status: string,
+    totalAmount: string,
+    progress: number,
+    description: string
   };
-  milestones: Milestone[];
+  milestones: Milestone[]
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -46,7 +65,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       description: "Initializing video connection..."
     });
     
-    router.push(`/call/${roomId}`);
+    router.push(`/call/${roomId}`)
   };
   
   const messageClient = () => {
@@ -149,7 +168,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
-                      milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+                      milestone.paymentStatus === "overdue" ? "destructive" : "outline";
                     }
                   >
                     {milestone.paymentStatus}
@@ -167,7 +186,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Status:</span>
-                    <span className="capitalize">{milestone.status.replace('_', ' ')}</span>
+                    <span className="capitalize">{milestone.status.replace('_ ')}</span>
                   </div>
                   <Button 
                     size="sm" 
@@ -184,4 +203,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

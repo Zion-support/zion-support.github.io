@@ -1,20 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useMemo } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+=======
 import React, { useMemo } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
-
 interface ChatMessageProps {
-  message: string;
-  isUser: boolean;
-  timestamp: Date;
+  message: string,
+  isUser: boolean,
+  timestamp: Date
 }
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
-  message,
-  isUser,
+  message;
+  isUser;
   timestamp}: ChatMessageProps) => {
   const { theme } = useTheme();
   
@@ -30,7 +37,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       <Avatar className="h-8 w-8">
         {isUser ? (
           <>
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarImage src="https: //i.pravatar.cc/40?img=1" alt="User avatar" />
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
@@ -45,7 +52,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       </Avatar>
       
       <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
         isUser 
           ? "bg-zion-purple text-white" 
           : theme === "dark"
@@ -54,18 +61,18 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       )}>
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
-          "text-xs mt-1",
+          "text-xs mt-1";
           isUser 
             ? "text-white/70" 
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
         )}>
-          {format(timestamp, "h:mm a")}
+          {format(timestamp, "h: mm a")}
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
@@ -74,11 +81,11 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/&/g, "&amp,")
+    .replace(/</g, "&lt,")
+    .replace(/>/g, "&gt,")
+    .replace(/"/g, "&quot,")
+    .replace(/'/g, "&#039,");
 }
 
 function formatMessageWithLinks(message: string): string {
@@ -89,16 +96,29 @@ function formatMessageWithLinks(message: string): string {
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   let formattedMessage = safeText.replace(
-    urlRegex,
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+    urlRegex;
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   );
 
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex,
-    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+    helpCenterRegex;
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   );
 
+<<<<<<< HEAD
   return formattedMessage;
+=======
+
+<<<<<<< HEAD
+
+      <div className={cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return formattedMessage
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

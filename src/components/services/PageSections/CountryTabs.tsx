@@ -1,44 +1,44 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react'
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationButton,
-  PaginationNext,
+  Pagination;
+  PaginationContent;
+  PaginationItem;
+  PaginationButton;
+  PaginationNext;
   PaginationPrevious} from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
-
 interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
+  popularCountries: string[],
+  filteredCountries: CountryPricing[],
+  handleCountrySelect: (country: CountryPricing) => void,
+  onQuote?: (country: CountryPricing) => void,
+  searchQuery: string,
+  setSearchQuery: (query: string) => void
 }
 
 export function CountryTabs({
-  popularCountries,
-  filteredCountries,
-  handleCountrySelect,
-  onQuote,
-  searchQuery,
+  popularCountries;
+  filteredCountries;
+  handleCountrySelect;
+  onQuote;
+  searchQuery;
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
   useEffect(() => {
-    setCurrentPage(1);
+    setCurrentPage(1)
   }, [searchQuery]);
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
   const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage,
+    (currentPage - 1) * countriesPerPage;
     currentPage * countriesPerPage
   );
   return (
@@ -65,7 +65,7 @@ export function CountryTabs({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
@@ -115,7 +115,7 @@ export function CountryTabs({
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {
                       e.preventDefault();
-                      setCurrentPage(Math.max(1, currentPage - 1));
+                      setCurrentPage(Math.max(1, currentPage - 1))
                     }}
                   />
                 </PaginationItem>
@@ -127,7 +127,7 @@ export function CountryTabs({
                         isActive={page === currentPage}
                         onClick={(e) => {
                           e.preventDefault();
-                          setCurrentPage(page);
+                          setCurrentPage(page)
                         }}
                       />
                     </PaginationItem>
@@ -138,7 +138,7 @@ export function CountryTabs({
                     href={`?page=${currentPage + 1}`}
                     onClick={(e) => {
                       e.preventDefault();
-                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+                      setCurrentPage(Math.min(totalPages, currentPage + 1))
                     }}
                   />
                 </PaginationItem>
@@ -148,5 +148,16 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
+<<<<<<< HEAD
   );
+=======
+
+<<<<<<< HEAD
+  const countriesPerPage = 50;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

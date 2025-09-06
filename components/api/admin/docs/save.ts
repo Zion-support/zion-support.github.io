@@ -1,20 +1,46 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ const ts = new Date () .toISOString () 
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-const DOCS_DIR = path.join(process.cwd(), 'data', 'docs');
+const DOCS_DIR = path.join(process.cwd(), 'datadocs');
 const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
 const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true })
   }
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
+    return res.status(405).json({ error: 'Method Not Allowed' })
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = path.join(process.cwd(), 'datadocs');
+const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
+const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
+
+function ensureDir(dir: string) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const token = req.headers['x-admin-token'] as string | undefined;
@@ -28,7 +54,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const body = req.body;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+=======
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const ts = new Date()
       .toISOString()
@@ -38,8 +73,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     res.status(200).json({ ok: true, version: ts });
+=======
+    res.status(200).json({ ok: true, version: ts })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch (e) {
-    res.status(500).json({ error: 'Failed to save content' });
+    res.status(500).json({ error: 'Failed to save content' })
+  }
+<<<<<<< HEAD
+=======
+    res.status(200).json({ ok: true, version: ts })
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
   }
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

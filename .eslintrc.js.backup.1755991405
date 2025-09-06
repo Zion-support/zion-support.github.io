@@ -39,6 +39,8 @@ module.exports = {
     'scripts/',
     'automation/',
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     'tmp/',
     'public/',
   ],
@@ -47,3 +49,13 @@ module.exports = {
   ]
 >>>>>>> origin/cursor/check-and-fix-project-errors-05af
 };
+=======
+    'tmp/',
+    'public/',
+  ],};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    'tmp/',
+    'public/',
+  ],};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

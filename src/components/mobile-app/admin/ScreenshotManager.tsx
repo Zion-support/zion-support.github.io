@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useRef } from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Upload, Trash2, Plus } from 'lucide-react';
+import { AppPlatform } from './MetadataManager';
+import { toast } from 'sonner';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -5,15 +15,14 @@ import { Button } from "@/components/ui/button";
 import { Upload, Trash2, Plus } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
-
 interface ScreenshotManagerProps {
-  platform: AppPlatform;
+  platform: AppPlatform
 }
 
 type Screenshot = {
-  id: string;
-  url: string;
-  file: File;
+  id: string,
+  url: string,
+  file: File
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
@@ -23,7 +32,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      addScreenshots(Array.from(e.target.files));
+      addScreenshots(Array.from(e.target.files))
     }
   };
   
@@ -33,7 +42,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files");
-      return;
+      return
     }
     
     // Limit the number of screenshots
@@ -42,13 +51,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return;
+      return
     }
     
     const filesToAdd = imageFiles.slice(0, availableSlots);
     
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9),
+      id: Math.random().toString(36).substring(2, 9);
       url: URL.createObjectURL(file),
       file
     }));
@@ -56,7 +65,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setScreenshots(prev => [...prev, ...newScreenshots]);
     
     if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
     }
   };
   
@@ -67,20 +76,20 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       // Revoke object URL to avoid memory leaks
       const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
-        URL.revokeObjectURL(removed.url);
+        URL.revokeObjectURL(removed.url)
       }
       
-      return filtered;
-    });
+      return filtered
+    })
   };
   
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
-    setIsDragging(true);
+    setIsDragging(true)
   };
   
   const handleDragLeave = () => {
-    setIsDragging(false);
+    setIsDragging(false)
   };
   
   const handleDrop = (e: React.DragEvent) => {
@@ -88,7 +97,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setIsDragging(false);
     
     if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files));
+      addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
   
@@ -131,7 +140,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
           }
         </div>
         
@@ -156,5 +165,36 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>
       </CardContent>
     </Card>
-  );
+  )
 };
+<<<<<<< HEAD
+return filtered;
+}) ;
+};
+<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;
+  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";
+  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
+}</div> </CardContent> </Card>) ;
+};
+"
+=======
+
+<<<<<<< HEAD
+  
+  const addScreenshots = (files: File[]) => {
+    // Filter for image files only
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    
+<<<<<<< HEAD
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots.length;
+    
+<<<<<<< HEAD
+      
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

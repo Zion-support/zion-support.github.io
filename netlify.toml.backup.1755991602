@@ -11,7 +11,13 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -50,6 +56,12 @@
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/og-image.jpg"
   to = "/og-image.svg"
   status = 301
@@ -86,6 +98,8 @@
 
 [[redirects]]
   from = "/legal"
+<<<<<<< HEAD
+<<<<<<< HEAD
   to = "/terms"
 =======
   from = "/ai-customer-success-automation"
@@ -187,3 +201,9 @@
   to = "/quantum-internet-security-platform"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
   status = 301
+=======
+  to = "/terms"  status = 301
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  to = "/terms"  status = 301
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

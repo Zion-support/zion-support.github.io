@@ -4,7 +4,6 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 import { useRecordActivity } from './useRecordActivity';
-
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,14 +25,14 @@ export const useUploadDeliverable = () => {
       if (fetchError) throw fetchError;
       if (!milestone) throw new Error("Milestone not found");
       
-      // For this example, instead of actually uploading files (which would require storage setup),
+      // For this example, instead of actually uploading files (which would require storage setup);
       // we'll just store the file metadata in the deliverables JSONB field
       const newDeliverable = {
-        id: crypto.randomUUID(),
-        filename: file.name,
-        size: file.size,
-        type: file.type,
-        added_at: new Date().toISOString(),
+        id: crypto.randomUUID();
+        filename: file.name;
+        size: file.size;
+        type: file.type;
+        added_at: new Date().toISOString();
         added_by: user.id
       };
       
@@ -57,18 +56,18 @@ export const useUploadDeliverable = () => {
       
       toast.success("Deliverable added successfully");
       
-      return newDeliverable;
+      return newDeliverable
     } catch (err: any) {
       console.error("Error uploading deliverable:", err);
       toast.error("Failed to upload deliverable: " + err.message);
-      return null;
+      return null
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   };
   
   return {
-    uploadDeliverable,
+    uploadDeliverable;
     isSubmitting
-  };
+  }
 };

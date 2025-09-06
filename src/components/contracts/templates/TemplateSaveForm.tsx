@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+import { useForm, type ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Loader2 } from 'lucide-react';
+import { ContractFormValues } from '@/components/contracts/components/ContractForm';
+import { ContractTemplate } from '@/types/contracts';
+import { useContractTemplates } from '@/hooks/useContractTemplates';
+import { Button } from '@/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Switch } from '@/components/ui/switch';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { useForm, type ControllerRenderProps } from "react-hook-form";
@@ -11,24 +34,23 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
-
 const formSchema = z.object({
-  title: z.string().min(1, "Title is required"),
-  isDefault: z.boolean()});
+  title: z.string().min(1, "Title is required");
+  isDefault: z.boolean()}),
 
 type FormValues = z.infer<typeof formSchema>;
 
 interface TemplateSaveFormProps {
-  onCancel: () => void;
-  onComplete: () => void;
+  onCancel: () => void,
+  onComplete: () => void,
   editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;
+  currentValues?: ContractFormValues
 }
 
 export function TemplateSaveForm({
-  onCancel,
-  onComplete,
-  editTemplate,
+  onCancel;
+  onComplete;
+  editTemplate;
   currentValues
 }: TemplateSaveFormProps) {
   const [saving, setSaving] = useState(false);
@@ -38,11 +60,10 @@ export function TemplateSaveForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}});
-  
+      isDefault: editTemplate?.is_default || false}}),
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
-      return;
+      return
     }
     
     setSaving(true);
@@ -53,17 +74,17 @@ export function TemplateSaveForm({
           templateId: editTemplate.id,
           title: values.title,
           templateData: editTemplate.template_data,
-          isDefault: values.isDefault});
+          isDefault: values.isDefault})
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
           templateData: currentValues,
-          isDefault: values.isDefault});
+          isDefault: values.isDefault})
       }
       
-      onComplete();
+      onComplete()
     } finally {
-      setSaving(false);
+      setSaving(false)
     }
   };
   
@@ -120,4 +141,29 @@ export function TemplateSaveForm({
       </form>
     </Form>
   );
+<<<<<<< HEAD
+
+setSaving (true);
+try {;
+  if (editTemplate) {;
+  await updateTemplate.mutateAsync ({;
+  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
+  ...field ";
+}placeholder="Enter template name" /> ;
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
+  editTemplate ? "Update" : "Save" ;
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"
+=======
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

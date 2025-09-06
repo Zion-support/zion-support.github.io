@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,21 +7,19 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface BundleInfo {
-  totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  loadTime: number;
-  cacheHitRate: number;
+  totalSize: number,
+  gzippedSize: number,
+  chunkCount: number,
+  loadTime: number,
+  cacheHitRate: number
 }
 
 interface ChunkInfo {
-  name: string;
-  size: number;
-  loadTime: number;
-  cached: boolean;
+  name: string,
+  size: number,
+  loadTime: number,
+  cached: boolean
 }
 
 export function BundleAnalyzer() {
@@ -29,7 +28,7 @@ export function BundleAnalyzer() {
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
 
   if (!isAllowed) {
-    return null;
+    return null
   }
 
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
@@ -49,7 +48,7 @@ export function BundleAnalyzer() {
     if (!show) return;
 
     setIsVisible(true);
-    collectBundleInfo();
+    collectBundleInfo()
   }, []);
 
   const collectBundleInfo = async () => {
@@ -68,21 +67,39 @@ export function BundleAnalyzer() {
       // Calculate bundle information
       let totalSize = 0;
       let totalLoadTime = 0;
+<<<<<<< HEAD
       const chunkData: ChunkInfo[] = [];
+=======
+
+<<<<<<< HEAD
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
+
+<<<<<<< HEAD
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      const chunkData: ChunkInfo[] = [],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         totalSize += size;
         totalLoadTime += loadTime;
 
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-          size,
-          loadTime,
-          cached});
+          size;
+          loadTime;
+          cached})
       });
 
       // Estimate gzipped size (roughly 70% of original)
@@ -90,32 +107,31 @@ export function BundleAnalyzer() {
       const cacheHitRate = chunkData.filter(chunk => chunk.cached).length / chunkData.length;
 
       setBundleInfo({
-        totalSize,
-        gzippedSize,
+        totalSize;
+        gzippedSize;
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
-        cacheHitRate: cacheHitRate * 100});
-
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks
+        cacheHitRate: cacheHitRate * 100}),
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
     } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error });
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
-      setIsCollecting(false);
+      setIsCollecting(false)
     }
   };
 
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B';
     const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const sizes = ['BKBMBGB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   };
 
   const getSizeColor = (size: number) => {
-    if (size < 100000) return 'bg-green-500'; // < 100KB
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB
-    return 'bg-red-500'; // > 500KB
+    if (size < 100000) return 'bg-green-500', // < 100KB
+    if (size < 500000) return 'bg-yellow-500', // < 500KB
+    return 'bg-red-500', // > 500KB
   };
 
   const toggleAnalyzer = () => {
@@ -123,12 +139,12 @@ export function BundleAnalyzer() {
     localStorage.setItem('bundle-analyzer', (!current).toString());
     setIsVisible(!current);
     if (!current) {
-      collectBundleInfo();
+      collectBundleInfo()
     }
   };
 
   if (!shouldShow) {
-    return null;
+    return null
   }
 
   if (!isVisible) {
@@ -253,4 +269,12 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
+<<<<<<< HEAD
+=======
+        
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 } 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

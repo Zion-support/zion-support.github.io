@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -5,25 +6,22 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface ApiErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
   queryClient?: QueryClient;
-  fallback?: ReactNode;
+  fallback?: ReactNode
 }
 
 interface ApiErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: any;
-  isRetrying: boolean;
-  isOnline: boolean;
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: any,
+  isRetrying: boolean,
+  isOnline: boolean
 }
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-
+  private retryTimeoutId: NodeJS.Timeout | null = null,
   constructor(props: ApiErrorBoundaryProps) {
     super(props);
     this.state = {
@@ -31,7 +29,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       error: null,
       errorInfo: null,
       isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true};
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true}
   }
 
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
@@ -43,57 +41,56 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
     Sentry.withScope((scope) => {
-      scope.setTag('errorBoundary', 'ApiErrorBoundary');
+      scope.setTag('errorBoundaryApiErrorBoundary');
       scope.setContext('errorInfo', errorInfo);
       scope.setLevel('error');
-      Sentry.captureException(error);
+      Sentry.captureException(error)
     });
 
     this.setState({
-      error,
+      error;
       errorInfo});
 
-    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
+    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo)
   }
 
   componentDidMount() {
     // Listen for online/offline events
     if (typeof window !== 'undefined') {
       window.addEventListener('online', this.handleOnline);
-      window.addEventListener('offline', this.handleOffline);
+      window.addEventListener('offline', this.handleOffline)
     }
   }
 
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
       window.removeEventListener('online', this.handleOnline);
-      window.removeEventListener('offline', this.handleOffline);
+      window.removeEventListener('offline', this.handleOffline)
     }
     if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
+      clearTimeout(this.retryTimeoutId)
     }
   }
 
   handleOnline = () => {
-    this.setState({ isOnline: true });
+    this.setState({ isOnline: true }),
     // Auto-retry when coming back online
     if (this.state.hasError) {
-      this.handleRetry();
+      this.handleRetry()
     }
   };
 
   handleOffline = () => {
-    this.setState({ isOnline: false });
+    this.setState({ isOnline: false })
   };
 
   handleRetry = async () => {
-    this.setState({ isRetrying: true });
-
+    this.setState({ isRetrying: true }),
     try {
       // Invalidate all queries to force refetch
       if (this.props.queryClient) {
         await this.props.queryClient.invalidateQueries();
-        await this.props.queryClient.refetchQueries();
+        await this.props.queryClient.refetchQueries()
       }
 
       // Reset error state after a brief delay
@@ -102,12 +99,12 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
           hasError: false,
           error: null,
           errorInfo: null,
-          isRetrying: false});
-      }, 500);
+          isRetrying: false})
+      }, 500)
     } catch (retryError) {
-      logErrorToProduction('Retry failed:', { data: retryError });
+      logErrorToProduction('Retry failed:', { data: retryError }),
       Sentry.captureException(retryError);
-      this.setState({ isRetrying: false });
+      this.setState({ isRetrying: false })
     }
   };
 
@@ -121,7 +118,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -199,22 +196,31 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
             )}
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;
-  }
+  };
 }
 
 // Hook for accessing query client in function components
 export const useApiErrorHandler = () => {
   const handleApiError = (error: Error) => {
     Sentry.withScope((scope) => {
-      scope.setTag('source', 'useApiErrorHandler');
+      scope.setTag('sourceuseApiErrorHandler');
       scope.setLevel('error');
-      Sentry.captureException(error);
-    });
+      Sentry.captureException(error)
+    })
   };
 
+<<<<<<< HEAD
   return { handleApiError };
-}; 
+};
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return { handleApiError }
+}, 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

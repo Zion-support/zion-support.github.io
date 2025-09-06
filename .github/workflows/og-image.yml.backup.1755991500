@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: OG Image Generator
 
 on:
   schedule:
     - cron: '0 */6 * * *'
   push:
+<<<<<<< HEAD
+<<<<<<< HEAD
     branches: [ main ]
 =======
 name: Generate OG Image
@@ -16,12 +24,24 @@ on:
     - cron: '0 1 * * *'
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
   workflow_dispatch:
+=======
+    branches: [ main ]  workflow_dispatch:
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    branches: [ main ]  workflow_dispatch:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 permissions:
   contents: write
 
 jobs:
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   generate:
     runs-on: ubuntu-latest
     steps:
@@ -65,6 +85,8 @@ jobs:
           branch: main
           commit_user_name: zion-bot
           commit_user_email: bot@users.noreply.github.com
+<<<<<<< HEAD
+<<<<<<< HEAD
           commit_author: zion-bot <bot@users.noreply.github.com>
 =======
   og:
@@ -85,3 +107,9 @@ jobs:
           commit_message: 'chore(og): update og-image.svg'
           file_pattern: og-image.svg
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+          commit_author: zion-bot <bot@users.noreply.github.com>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          commit_author: zion-bot <bot@users.noreply.github.com>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

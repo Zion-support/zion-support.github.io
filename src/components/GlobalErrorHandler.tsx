@@ -1,23 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,;
+} from 'react';
+=======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
-  showNetworkError: (retryAction?: () => void) => void;
-  showAuthError: (loginAction?: () => void) => void;
-  clearAllErrors: () => void;
+  showNetworkError: (retryAction?: () => void) => void,
+  showAuthError: (loginAction?: () => void) => void,
+  clearAllErrors: () => void
 }
 
 const ErrorContext = createContext<ErrorContextType | null>(null);
 
 interface GlobalErrorHandlerProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
@@ -26,18 +35,18 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const reportError = useCallback((error: Error, context?: any) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
-      logErrorToProduction('Global Error Handler:', error, context);
+      logErrorToProduction('Global Error Handler:', error, context)
     }
 
     // Report to Sentry for production
     if (process.env.NODE_ENV === 'production') {
       Sentry.withScope((scope) => {
         if (context) {
-          scope.setContext('errorContext', context);
+          scope.setContext('errorContext', context)
         }
         scope.setLevel('error');
-        Sentry.captureException(error);
-      });
+        Sentry.captureException(error)
+      })
     }
   }, []);
 
@@ -45,7 +54,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     const errorKey = error.message;
     const currentRetryCount = retryCount[errorKey] || 0;
 
-    reportError(error, { retryCount: currentRetryCount });
+    reportError(error, { retryCount: currentRetryCount }),
 
     // Show user-friendly error message with retry option
     toast({
@@ -56,12 +65,12 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
         label: "Try Again",
         onClick: () => {
           setRetryCount(prev => ({
-            ...prev,
+            ...prev;
             [errorKey]: currentRetryCount + 1
           }));
-          retryAction();
+          retryAction()
         }
-      } : undefined});
+      } : undefined})
   }, [retryCount, reportError]);
 
   const showNetworkError = useCallback((retryAction?: () => void) => {
@@ -71,12 +80,12 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
         ? "Unable to connect to our servers. Please check your connection and try again."
-        : "You appear to be offline. Please check your internet connection.",
+        : "You appear to be offline. Please check your internet connection.";
       variant: "destructive",
       action: retryAction ? {
         label: "Retry",
         onClick: retryAction
-      } : undefined});
+      } : undefined})
   }, []);
 
   const showAuthError = useCallback((loginAction?: () => void) => {
@@ -87,7 +96,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       action: loginAction ? {
         label: "Log In",
         onClick: loginAction
-      } : undefined});
+      } : undefined})
   }, []);
 
   const clearAllErrors = useCallback(() => {
@@ -96,10 +105,10 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   }, []);
 
   const contextValue: ErrorContextType = {
-    reportError,
-    showRetryableError,
-    showNetworkError,
-    showAuthError,
+    reportError;
+    showRetryableError;
+    showNetworkError;
+    showAuthError;
     clearAllErrors};
 
   return (
@@ -112,9 +121,9 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
 export function useGlobalErrorHandler(): ErrorContextType {
   const context = useContext(ErrorContext);
   if (!context) {
-    throw new Error('useGlobalErrorHandler must be used within a GlobalErrorHandler');
+    throw new Error('useGlobalErrorHandler must be used within a GlobalErrorHandler')
   }
-  return context;
+  return context
 }
 
 // Helper function to convert technical errors to user-friendly messages
@@ -122,27 +131,27 @@ function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase();
 
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
-    return "Unable to connect to our servers. Please check your internet connection.";
+    return "Unable to connect to our servers. Please check your internet connection."
   }
 
   if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {
-    return "Your session has expired. Please log in again.";
+    return "Your session has expired. Please log in again."
   }
 
   if (message.includes('forbidden') || message.includes('403')) {
-    return "You don't have permission to perform this action.";
+    return "You don't have permission to perform this action."
   }
 
   if (message.includes('not found') || message.includes('404')) {
-    return "The requested information could not be found.";
+    return "The requested information could not be found."
   }
 
   if (message.includes('timeout')) {
-    return "Request timed out. Please try again.";
+    return "Request timed out. Please try again."
   }
 
   if (message.includes('validation') || message.includes('invalid')) {
-    return "Please check your input and try again.";
+    return "Please check your input and try again."
   }
 
   if (message.includes('server') || message.includes('500')) {
@@ -159,20 +168,20 @@ export function useErrorHandler() {
 
   const handleApiError = useCallback((error: any, retryAction?: () => void) => {
     if (error.response?.status === 401 || error.response?.status === 403) {
-      showAuthError();
+      showAuthError()
     } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
-      showNetworkError(retryAction);
+      showNetworkError(retryAction)
     } else {
-      showRetryableError(error, retryAction);
+      showRetryableError(error, retryAction)
     }
   }, [showRetryableError, showNetworkError, showAuthError]);
 
-  const handleAsyncOperation = useCallback(async <T,>(
+  const handleAsyncOperation = useCallback(async <T>(
     operation: () => Promise<T>,
     options?: {
-      onError?: (error: Error) => void;
+      onError?: (error: Error) => void,
       retryAction?: () => void;
-      successMessage?: string;
+      successMessage?: string
     }
   ): Promise<T | null> => {
     try {
@@ -181,25 +190,46 @@ export function useErrorHandler() {
       if (options?.successMessage) {
         toast({
           title: "Success",
-          description: options.successMessage});
+          description: options.successMessage})
       }
       
-      return result;
+      return result
     } catch (error: any) {
       reportError(error);
       
       if (options?.onError) {
-        options.onError(error);
+        options.onError(error)
       } else {
-        handleApiError(error, options?.retryAction);
+        handleApiError(error, options?.retryAction)
       }
       
-      return null;
+      return null
     }
   }, [reportError, handleApiError]);
 
   return {
+<<<<<<< HEAD
     reportError,
     handleApiError,
-    handleAsyncOperation};
+    handleAsyncOperation,
+  };
+=======
+
+<<<<<<< HEAD
+
+    const errorKey = error.message;
+    const currentRetryCount = retryCount[errorKey] || 0;
+
+    reportError(error, { retryCount: currentRetryCount }),
+
+
+<<<<<<< HEAD
+      
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    reportError;
+    handleApiError;
+    handleAsyncOperation}
 } 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

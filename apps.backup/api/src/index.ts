@@ -4,27 +4,24 @@ import rateLimit from '@fastify/rate-limit';
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost } from './openai.js';
 import { getPool, withUser } from './pg.js';
-
 dotenv.config();
 
 const app = Fastify({ logger: true });
-
 await app.register(cors, {
   origin: (origin, cb) => {
-    const allowed = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim());
+    const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
-  },
+  };
   methods: ['GET', 'POST', 'OPTIONS']
 });
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
-
 function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
 }
@@ -46,11 +43,11 @@ app.post('/jobs/generate', async (req, reply) => {
   await withUser(userId, async (client) => {
     await client.query(
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
-       VALUES ($1, $2, $3, $4, $5, 'draft')`,
+       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [userId, role, description, body.location || null, body.tags || null]
-    );
+    )
   });
-  return { saved: Boolean(userId), description };
+  return { saved: Boolean(userId), description }
 });
 
 app.get('/talent/search', async (req, reply) => {
@@ -66,12 +63,12 @@ app.get('/talent/search', async (req, reply) => {
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
        ORDER BY created_at DESC
-       LIMIT 25`,
+       LIMIT 25`;
       [country || null, q || null]
     );
-    return res.rows;
+    return res.rows
   });
-  return { results: rows };
+  return { results: rows }
 });
 
 app.get('/projects/:name/track', async (req, reply) => {
@@ -80,10 +77,10 @@ app.get('/projects/:name/track', async (req, reply) => {
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0];
+    return res.rows[0]
   });
   if (!project) return reply.code(404).send({ error: 'not found' });
-  return { project };
+  return { project }
 });
 
 app.get('/notifications', async (req, reply) => {
@@ -94,13 +91,13 @@ app.get('/notifications', async (req, reply) => {
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
-    return res.rows;
+    return res.rows
   });
-  return { items };
+  return { items }
 });
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);
-  process.exit(1);
+  process.exit(1)
 });

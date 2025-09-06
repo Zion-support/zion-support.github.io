@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { JobMatch } from "@/types/jobs";
-
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +18,7 @@ export function useJobSuggestions(talentId?: string) {
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
-            *,
+            *;
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
@@ -27,25 +26,25 @@ export function useJobSuggestions(talentId?: string) {
           
         if (error) throw error;
         
-        setJobMatches(data || []);
+        setJobMatches(data || [])
       } catch (error) {
         console.error("Error fetching job matches:", error);
         toast({
-          title: "Error",
-          description: "Failed to load job suggestions",
-          variant: "destructive"});
+          title: "Error";
+          description: "Failed to load job suggestions";
+          variant: "destructive"})
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     };
     
-    fetchSuggestedJobs();
+    fetchSuggestedJobs()
   }, [talentId]);
 
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
-        status,
+        status;
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
       };
       
@@ -68,21 +67,21 @@ export function useJobSuggestions(talentId?: string) {
       // Show appropriate message
       if (status === 'applied') {
         toast({
-          title: "Application Submitted",
+          title: "Application Submitted";
           description: "You've successfully applied to this job"
-        });
+        })
       } else if (status === 'declined') {
         toast({
-          title: "Job Declined",
+          title: "Job Declined";
           description: "This job will be removed from your suggestions"
-        });
+        })
       }
     } catch (error) {
       console.error("Error updating job match status:", error);
       toast({
-        title: "Error",
-        description: "Failed to update job status",
-        variant: "destructive"});
+        title: "Error";
+        description: "Failed to update job status";
+        variant: "destructive"})
     }
   };
 
@@ -93,14 +92,14 @@ export function useJobSuggestions(talentId?: string) {
   const declinedMatches = jobMatches.filter(match => match.status === 'declined');
 
   return {
-    jobMatches,
-    isLoading,
-    updateJobMatchStatus,
+    jobMatches;
+    isLoading;
+    updateJobMatchStatus;
     categorizedMatches: {
-      newMatches,
-      viewedMatches,
-      appliedMatches,
+      newMatches;
+      viewedMatches;
+      appliedMatches;
       declinedMatches
     }
-  };
+  }
 }

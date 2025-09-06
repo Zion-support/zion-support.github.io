@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+import { X } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile";
-
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
@@ -13,17 +20,17 @@ export const AppStoreBanner: React.FC = () => {
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
-        setIsVisible(true);
+        setIsVisible(true)
       }, 2000);
       
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
-    return undefined;
+    return undefined
   }, [isMobile]);
   
   const dismissBanner = () => {
     setIsVisible(false);
-    safeStorage.setItem("appBannerDismissed", "true");
+    safeStorage.setItem("appBannerDismissed", "true")
   };
   
   // Only render on mobile devices
@@ -46,7 +53,7 @@ export const AppStoreBanner: React.FC = () => {
           </a>
           <button
             onClick={dismissBanner}
-            className="text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+            className="text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
             aria-label="Dismiss banner"
           >
             <X className="h-5 w-5" />
@@ -54,5 +61,16 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
+<<<<<<< HEAD
+'"
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

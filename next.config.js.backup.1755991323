@@ -3,6 +3,12 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   swcMinify: true,
   // Static export for Netlify deployment
   // output: 'export',
@@ -17,6 +23,8 @@ const nextConfig = {
   reactStrictMode: false,
   // React version enforcement
   webpack: (config, { isServer }) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
     // Ensure React version consistency
 =======
 
@@ -589,12 +597,24 @@ const nextConfig = {
     // Handle formik and lodash ESM issues with multiple strategies
 >>>>>>> origin/cursor/build-project-with-netlify-95a5
     config.resolve.alias = {
+=======
+    // Ensure React version consistency    config.resolve.alias = {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    // Ensure React version consistency    config.resolve.alias = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ...config.resolve.alias,
       'react': require.resolve('react'),
       'react-dom': require.resolve('react-dom'),
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     // Override module resolution for problematic packages
     config.resolve.extensionAlias = {
@@ -729,7 +749,13 @@ const nextConfig = {
       };
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-95a5
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return config;
   },
 };

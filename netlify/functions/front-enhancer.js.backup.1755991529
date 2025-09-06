@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -7,10 +13,16 @@ function runNode(relPath, args = []) {
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // child_process imported within handler to avoid top-level unused var lint
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 exports.config = {
   schedule: '*/10 * * * *', // every 10 minutes for faster iteration
 };

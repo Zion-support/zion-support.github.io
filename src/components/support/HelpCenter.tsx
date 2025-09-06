@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help-content';
+import { Search } from 'lucide-react';
+=======
 
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -8,6 +20,7 @@ import { HelpArticleList } from "./HelpArticleList";
 import { HelpArticleView } from "./HelpArticleView";
 import { HELP_CATEGORIES } from "./help-content";
 import { Search } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -16,20 +29,20 @@ export default function HelpCenter() {
   
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId);
-    setSelectedArticle(null);
+    setSelectedArticle(null)
   };
   
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
+    setSelectedArticle(articleId)
   };
   
   const handleBackToCategories = () => {
     setSelectedCategory(null);
-    setSelectedArticle(null);
+    setSelectedArticle(null)
   };
   
   const handleBackToArticles = () => {
-    setSelectedArticle(null);
+    setSelectedArticle(null)
   };
   
   return (
@@ -137,7 +150,7 @@ export default function HelpCenter() {
             </TabsContent>
             
             <TabsContent value="contact">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
                   <p className="text-zion-slate-light mb-4">
@@ -208,4 +221,13 @@ export default function HelpCenter() {
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

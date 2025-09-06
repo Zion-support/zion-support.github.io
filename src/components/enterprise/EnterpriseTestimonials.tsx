@@ -1,11 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { Quote } from 'lucide-react';
+=======
 
 import React from "react";
 import { Quote } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
   CarouselPrevious} from "@/components/ui/carousel";
 
 const testimonials = [
@@ -26,6 +32,47 @@ const testimonials = [
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
+    image: "/placeholder.svg"}],
+export function EnterpriseTestimonials() {
+  return (
+    <section id="testimonials" className="py-20 px-4 md:px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Trusted by Leading Companies
+          </h2>
+<<<<<<< HEAD
+          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
+=======
+
+import React from "react";
+import { Quote } from 'lucide-react'
+import {
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
+  CarouselPrevious} from "@/components/ui/carousel";
+
+const testimonials = [
+  {
+    quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
+    author: "Sarah Johnson",
+    title: "VP of Talent Acquisition",
+    company: "TechGlobal Inc.",
+    image: "/placeholder.svg"},
+  {
+    quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
+    author: "Michael Chen",
+    title: "Director of HR",
+    company: "InnovateCorp",
+    image: "/placeholder.svg"},
+  {
+    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
+    author: "Elena Rodriguez",
+    title: "CTO",
+    company: "FutureTech Systems",
+
     image: "/placeholder.svg"}];
 
 export function EnterpriseTestimonials() {
@@ -37,10 +84,42 @@ export function EnterpriseTestimonials() {
             Trusted by Leading Companies
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <Carousel className='w-full'>
+=======
+        <Carousel className="w-full">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                <div className="bg-card rounded-xl p-8 border border-border h-full">
+                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
+                  <blockquote className="text-xl mb-6 italic">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+<<<<<<< HEAD
+                      <p className='font-bold'>{testimonial.author}</p>
+                      <p className='text-sm text-muted-foreground'>
+=======
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
@@ -62,6 +141,11 @@ export function EnterpriseTestimonials() {
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         {testimonial.title}, {testimonial.company}
                       </p>
                     </div>
@@ -70,7 +154,15 @@ export function EnterpriseTestimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className='flex justify-center gap-2 mt-8'>
+=======
           <div className="flex justify-center gap-2 mt-8">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          <div className="flex justify-center gap-2 mt-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <CarouselPrevious />
             <CarouselNext />
           </div>
@@ -78,4 +170,11 @@ export function EnterpriseTestimonials() {
       </div>
     </section>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

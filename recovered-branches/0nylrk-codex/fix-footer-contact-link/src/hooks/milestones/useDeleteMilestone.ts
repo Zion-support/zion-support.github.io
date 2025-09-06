@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
-
 export const useDeleteMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,18 +22,18 @@ export const useDeleteMilestone = () => {
       
       toast.success("Milestone deleted successfully");
       
-      return true;
+      return true
     } catch (err: any) {
       console.error("Error deleting milestone:", err);
       toast.error("Failed to delete milestone: " + err.message);
-      return false;
+      return false
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   };
   
   return {
-    deleteMilestone,
+    deleteMilestone;
     isSubmitting
-  };
+  }
 };

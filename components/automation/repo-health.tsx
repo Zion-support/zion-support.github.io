@@ -1,27 +1,56 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ 
+=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
-
 interface Report {
-  generatedAt: string;
-  commits: { last7d: number; last30d: number };
-  changes: { last7dFiles: string[] };
-  largestFiles: { file: string; bytes: number }[];
-  stalePages: { file: string; lastCommitAt: string }[];
+  generatedAt: string,
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-type Props = { report: Report | null };
-
+type Props = { report: Report | null },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'public', 'automation', 'repo-health.json');
+    const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 3600 };
+    return { props: { report: data }, revalidate: 3600 }
   } catch {
-    return { props: { report: null }, revalidate: 3600 };
+    return { props: { report: null }, revalidate: 3600 }
   }
 };
+<<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string,
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
+
+type Props = { report: Report | null },
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 3600 }
+  } catch {
+    return { props: { report: null }, revalidate: 3600 }
+  }
+};
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>;
@@ -55,4 +84,9 @@ export default function RepoHealth({ report }: Props) {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

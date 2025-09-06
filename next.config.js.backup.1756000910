@@ -1,5 +1,11 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const nextConfig = {
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
@@ -11,6 +17,8 @@ const nextConfig = {
   },
   images: {
     domains: ["localhost"],
+<<<<<<< HEAD
+<<<<<<< HEAD
     unoptimized: true,
 =======
 const os = require('os');
@@ -36,6 +44,12 @@ const nextConfig = {
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 >>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
   },
+=======
+    unoptimized: true,  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    unoptimized: true,  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -87,6 +101,8 @@ const nextConfig = {
       },
     });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Polyfills for Node.js APIs
 =======
@@ -146,6 +162,12 @@ const nextConfig = {
     // Add polyfills for Node.js APIs
 >>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
     config.resolve.fallback = {
+=======
+    // Polyfills for Node.js APIs    config.resolve.fallback = {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    // Polyfills for Node.js APIs    config.resolve.fallback = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ...config.resolve.fallback,
       fs: false,
       net: false,

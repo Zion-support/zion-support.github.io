@@ -2,12 +2,20 @@ name: Lighthouse CI
 
 on:
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   schedule:
     - cron: '0 */12 * * *' # twice daily
   workflow_dispatch: {}
 
 permissions:
   contents: write
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   push:
     branches: [ main ]
@@ -20,11 +28,21 @@ permissions:
   issues: write
 >>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   lhci:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - uses: actions/checkout@v4
       - name: Install Lighthouse CI
         run: npm i -g @lhci/cli
@@ -44,6 +62,8 @@ jobs:
           fi
           git add -A
           git commit -m "chore(auto): lighthouse ci artifacts [skip ci]" || true
+<<<<<<< HEAD
+<<<<<<< HEAD
           git push || true
 =======
       - name: Checkout
@@ -93,3 +113,9 @@ jobs:
               core.warning('Failed to create issue: ' + e.message);
             }
 >>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
+=======
+          git push || true
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          git push || true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

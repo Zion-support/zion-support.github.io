@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
+import { format } from 'date-fns';
+import { JobMatch } from '@/types/jobs';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -6,12 +24,11 @@ import { Button } from "@/components/ui/button";
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
-
 interface JobMatchCardProps {
-  match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
-  onDecline: (matchId: string) => void;
-  showApplied?: boolean;
+  match: JobMatch,
+  onApply: (matchId: string, jobId: string) => void,
+  onDecline: (matchId: string) => void,
+  showApplied?: boolean
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
@@ -104,4 +121,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       </CardFooter>
     </Card>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

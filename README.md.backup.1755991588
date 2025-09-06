@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 # AI/IT Talent Profile — Jordan Lee
 
 <!-- badges:start -->
@@ -13,6 +19,8 @@ A clean, modern profile page for an AI/ML engineer with autonomous cloud automat
 - Produces OpenGraph image and screenshots
 - Auto-formats code and validates HTML
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 View the site after deployment on GitHub Pages.
 =======
 # Zion AI Marketplace – Assistant Widget
@@ -64,3 +72,9 @@ If your site is hosted separately, deploy this server and set `ALLOWED_ORIGIN` a
 - Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
 - For enterprise usage, add authentication and stronger rate limiting.
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+View the site after deployment on GitHub Pages.
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+View the site after deployment on GitHub Pages.
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,13 +1,29 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+
+=======
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface InteractiveFeaturesProps {
   className?: string;
-  style?: React.CSSProperties;
+  style?: React.CSSProperties
 }
 
 export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
@@ -18,33 +34,32 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       title: "AI Talent Matching",
       description: "Connect with the perfect talent using intelligent matching.",
       details:
-        "Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.",
+        "Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.";
       icon: <Search className="h-8 w-8 text-blue-700" />,
       link: "/match"},
     {
       title: "Talent Directory",
       description: "Browse a verified database of AI and tech specialists.",
       details:
-        "Every profile is vetted for quality and authenticity so you can hire with confidence.",
+        "Every profile is vetted for quality and authenticity so you can hire with confidence.";
       icon: <Users className="h-8 w-8 text-purple-700" />,
       link: "/talent"},
     {
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business.",
       details:
-        "From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.",
+        "From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.";
       icon: <Zap className="h-8 w-8 text-cyan-700" />,
       link: "/services"},
     {
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
-        "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
+        "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.";
       icon: <Settings className="h-8 w-8 text-amber-700" />,
-      link: "/equipment"}];
-
+      link: "/equipment"}],
   const handleToggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
+    setOpenIndex((prev) => (prev === index ? null : index))
   };
 
   return (
@@ -65,7 +80,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover: shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
                 {feature.icon}
@@ -78,7 +93,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
-                  "transition-all duration-300",
+                  "transition-all duration-300";
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
               >
@@ -100,3 +115,11 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 }
 
 export default InteractiveFeatures;
+=======
+
+<<<<<<< HEAD
+      details: "Every profile is vetted for quality and authenticity so you can hire with confidence.",
+      icon: <Users className="h-8 w-8 text-purple-700" />,
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

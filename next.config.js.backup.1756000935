@@ -1,8 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const os = require('os');
 const path = require('path');
 
 const nextConfig = {
+<<<<<<< HEAD
+<<<<<<< HEAD
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
 =======
 const path = require('path');
@@ -22,6 +30,18 @@ const baseConfig = {
   bundlePagesRouterDependencies: true,
 <<<<<<< HEAD
 =======
+=======
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+  trailingSlash: false,
+  reactStrictMode: true,
+  bundlePagesRouterDependencies: true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+  trailingSlash: false,
+  reactStrictMode: true,
+  bundlePagesRouterDependencies: true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
     ignoreDuringBuilds: true,
@@ -34,7 +54,13 @@ const baseConfig = {
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
   productionBrowserSourceMaps: false, // Disable for faster builds
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   // Environment configuration
   env: {
@@ -65,10 +91,18 @@ const baseConfig = {
       'fuse.js'
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     esmExternals: 'loose',
     optimizeCss: process.env.NODE_ENV === 'production',
     largePageDataBytes: 128 * 1000,
     workerThreads: false,
+<<<<<<< HEAD
+<<<<<<< HEAD
     cpus: Math.min(2, os.cpus().length),
 =======
     // ESM configuration for problematic packages
@@ -84,6 +118,12 @@ const baseConfig = {
     // Disable profiling for faster builds
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
     swcTraceProfiling: false,
+=======
+    cpus: Math.min(2, os.cpus().length),    swcTraceProfiling: false,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    cpus: Math.min(2, os.cpus().length),    swcTraceProfiling: false,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
 
   images: {

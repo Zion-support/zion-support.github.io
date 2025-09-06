@@ -7,25 +7,24 @@ import { supabase } from "@/integrations/supabase/client";
 import { AIListingForm } from "./AIListingForm";
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-
 interface GeneratedContent {
-  description: string;
-  tags: string[];
+  description: string,
+  tags: string[],
   suggestedPrice: {
-    min: number;
-    max: number;
+    min: number,
+    max: number
   };
-  keyPoints: string[];
+  keyPoints: string[]
 }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
+  onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string;
-  };
+    targetAudience?: string
+  }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
@@ -34,15 +33,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
 
   const handleGenerate = async ({
-    title,
-    category,
-    keyFeatures,
+    title;
+    category;
+    keyFeatures;
     targetAudience
   }: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string;
+    title: string,
+    category: string,
+    keyFeatures: string,
+    targetAudience: string
   }) => {
     setIsLoading(true);
     
@@ -52,27 +51,27 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
 
       if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message)
       }
       
       if (data.error) {
-        throw new Error(data.error);
+        throw new Error(data.error)
       }
 
       setGeneratedContent(data.generated);
       toast({
         title: "Content Generated",
         description: "AI has created optimized listing content for you."
-      });
+      })
     } catch (error) {
       console.error("Error generating content:", error);
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-      });
+      })
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
@@ -82,7 +81,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       toast({
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
-      });
+      })
     }
   };
 
@@ -113,5 +112,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
     </div>
-  );
+  )
 }

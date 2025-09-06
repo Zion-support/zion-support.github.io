@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-const filePath = path.join(process.cwd(), 'data', 'api-docs', 'changelog.json');
-
+const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
@@ -28,6 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
 }

@@ -1,26 +1,25 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
-
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders })
   }
 
   const supabaseClient = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_URL") ?? "";
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
   );
   
   // Create service client for admin operations
   const supabaseAdmin = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+    Deno.env.get("SUPABASE_URL") ?? "";
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
   );
 
@@ -35,11 +34,11 @@ serve(async (req) => {
     // Get request data
     const { 
       transactionId, 
-      action, // 'release', 'refund', 'cancel'
+      action, // 'releaserefundcancel'
     } = await req.json();
 
     if (!transactionId) {
-      throw new Error("Transaction ID is required");
+      throw new Error("Transaction ID is required")
     }
 
     // Get transaction details
@@ -50,7 +49,7 @@ serve(async (req) => {
       .single();
     
     if (fetchError || !transaction) {
-      throw new Error("Transaction not found");
+      throw new Error("Transaction not found")
     }
     
     // Verify user is authorized to manage this transaction
@@ -59,7 +58,7 @@ serve(async (req) => {
     
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
-      throw new Error("You are not authorized to manage this transaction");
+      throw new Error("You are not authorized to manage this transaction")
     }
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
@@ -71,15 +70,15 @@ serve(async (req) => {
       case 'release':
         // Only providers or admins can release escrow funds
         if (!isProvider) {
-          throw new Error("Only service providers can release funds from escrow");
+          throw new Error("Only service providers can release funds from escrow")
         }
         
         // Update transaction status
         await supabaseAdmin
           .from("transactions")
           .update({ 
-            status: "completed",
-            in_escrow: false,
+            status: "completed";
+            in_escrow: false;
             completed_at: new Date().toISOString() 
           })
           .eq("id", transactionId);
@@ -90,7 +89,7 @@ serve(async (req) => {
       case 'refund':
         // Check if transaction can be refunded
         if (transaction.status !== "completed" && transaction.status !== "pending") {
-          throw new Error("This transaction cannot be refunded");
+          throw new Error("This transaction cannot be refunded")
         }
         
         // Process refund via Stripe
@@ -100,7 +99,7 @@ serve(async (req) => {
           
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString(),
+              payment_intent: session.payment_intent.toString();
               reason: "requested_by_customer"
             });
             
@@ -108,11 +107,11 @@ serve(async (req) => {
             await supabaseAdmin
               .from("transactions")
               .update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString(),
+                status: "refunded";
+                refunded_at: new Date().toISOString();
                 refund_id: refund.id
               })
-              .eq("id", transactionId);
+              .eq("id", transactionId)
           }
         }
         
@@ -122,14 +121,14 @@ serve(async (req) => {
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction.status !== "pending") {
-          throw new Error("Only pending transactions can be cancelled");
+          throw new Error("Only pending transactions can be cancelled")
         }
         
         // Update transaction status
         await supabaseAdmin
           .from("transactions")
           .update({ 
-            status: "cancelled",
+            status: "cancelled";
             cancelled_at: new Date().toISOString() 
           })
           .eq("id", transactionId);
@@ -137,17 +136,16 @@ serve(async (req) => {
         result = { message: "Transaction cancelled successfully" };
         break;
         
-      default:
-        throw new Error("Invalid action");
+      default: throw new Error("Invalid action")
     }
 
     return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200});
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+      status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500});
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+      status: 500})
   }
 });

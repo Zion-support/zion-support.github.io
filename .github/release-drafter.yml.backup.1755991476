@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 
@@ -14,6 +20,8 @@ categories:
   - title: '⚡ Performance'
     labels:
       - 'perf'
+<<<<<<< HEAD
+<<<<<<< HEAD
       - 'performance'
 =======
 name-template: 'v$NEXT_PATCH_VERSION'
@@ -33,6 +41,18 @@ categories:
       - 'chore'
       - 'dependencies'
 <<<<<<< HEAD
+=======
+      - 'performance'  - title: '🧰 Maintenance'
+    labels:
+      - 'chore'
+      - 'dependencies'
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      - 'performance'  - title: '🧰 Maintenance'
+    labels:
+      - 'chore'
+      - 'dependencies'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   - title: '📝 Documentation'
     labels:
       - 'docs'
@@ -57,8 +77,16 @@ template: |
   $CHANGES
 
   ## Contributors
+<<<<<<< HEAD
+<<<<<<< HEAD
   $CONTRIBUTORS
 =======
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 no-changes-template: 'No user-facing changes.'
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
+=======
+  $CONTRIBUTORS
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  $CONTRIBUTORS
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

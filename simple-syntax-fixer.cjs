@@ -9,7 +9,7 @@ console.log('🚀 Starting Simple Syntax Fixer');
 function fixSimpleSyntaxIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let originalContent = content;
 
     // Fix HTML entity issues
     content = content.replace(/&amp;apos;/g, "'");
@@ -125,9 +125,7 @@ function fixSimpleSyntaxIssues(filePath) {
           lines[i] =
             `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
-
-export default defineConfig({`;
+import path from 'node: path', export default defineConfig({`,
         }
       }
       content = lines.join('\n');

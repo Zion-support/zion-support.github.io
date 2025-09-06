@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+=======
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useRef } from "react";
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export function EnhancedNewsletterForm() {
 
   const [email, setEmail] = useState("");
@@ -24,7 +34,7 @@ export function EnhancedNewsletterForm() {
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
-      return;
+      return
     }
 
     setIsSubmitting(true);
@@ -32,27 +42,27 @@ export function EnhancedNewsletterForm() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })});
+        body: JSON.stringify({ email: trimmed })}),
 
       const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!");
+          toast.success(data.message || "You're already subscribed!")
         } else {
-          toast.success(data.message || "Thanks for subscribing!");
+          toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true);
-        setEmail("");
+        setEmail("")
       } else {
         // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data });
-        toast.error(data.error || "Subscription failed. Please try again.");
+        logErrorToProduction('Newsletter subscription failed:', { data: data }),
+        toast.error(data.error || "Subscription failed. Please try again.")
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast.error("Unable to subscribe right now. Please try again later.");
+      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      toast.error("Unable to subscribe right now. Please try again later.")
     } finally {
       setIsSubmitting(false);
     }
@@ -73,11 +83,13 @@ export function EnhancedNewsletterForm() {
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
+          <p className="text-zion-slate-light mt-1">We&apos,ll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">
+          <label htmlFor="enhanced-newsletter-email" className="sr-only" htmlFor="input-
+            Email address for newsletter subscription
+          ">
             Email address for newsletter subscription
           </label>
           <Input
@@ -113,4 +125,16 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

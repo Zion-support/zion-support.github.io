@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import Link from 'next/link';
@@ -14,9 +15,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { UserMenu } from '@/components/header/UserMenu';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { cn } from '@/lib/utils'; // Import cn utility
+import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router';
-
 export function AppHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,7 +24,7 @@ export function AppHeader() {
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter();
   const showTagline = router.pathname === '/';
 
@@ -36,7 +36,7 @@ export function AppHeader() {
     // using router.push with shallow:true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true);
+    setLoginOpen(true)
   };
   
   return (
@@ -44,11 +44,11 @@ export function AppHeader() {
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
         className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
           { "bg-red-500": mobileMenuOpen }
         )}
       >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
+        <div className="container flex h-16 items-center px-4 sm: px-6">
           <Logo />
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
@@ -88,11 +88,11 @@ export function AppHeader() {
                 data-testid="login-link"
                 onClick={(e) => {
                   e.preventDefault();
-                  // For the main login link, we might not have a specific returnTo beyond current page,
+                  // For the main login link, we might not have a specific returnTo beyond current page;
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true });
-                  openLoginModal(router.asPath);
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+                  openLoginModal(router.asPath)
                 }}
               >
                 {t('auth.login')}
@@ -138,5 +138,45 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
   );
+
+}';
+}> {';';
+  t ('auth.login') ;';
+}</Link> <Link > {';';
+  t ('auth.signup') ;
+}</Link> </div>) ;";
+}<UserMenu /> </div>) ";";
+}</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;";
+  () => setMobileMenuOpen (false) ";";
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+  unreadCount ;
+}onClose= {;
+  () => setMobileMenuOpen (false) ;
+}openLoginModal= {;
+  openLoginModal ;
+}/> </div> </div>) ;
+}{;
+  /* Mobile Bottom Navigation */ ;
+}{;
+  isMobile && <MobileBottomNav unreadCount= {;
+  unreadCount ;
+}/> ;
+}<LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+=======
+
+<<<<<<< HEAD
+  const showTagline = router.pathname === '/';
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

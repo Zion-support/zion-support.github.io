@@ -52,6 +52,8 @@
   {
     "route": "/404",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "title": "",
     "h1": "404 - Page Not Found"
 =======
@@ -59,6 +61,14 @@
     "h1": "404"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
   },
+=======
+    "title": "",
+    "h1": "404 - Page Not Found"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "title": "",
+    "h1": "404 - Page Not Found"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/500",
     "title": "",
@@ -82,11 +92,19 @@
   {
     "route": "/about",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",
 =======
     "title": "About Us | Zion Tech Group",
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
     "h1": "About Zion Tech Group"
+=======
+    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",    "h1": "About Zion Tech Group"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",    "h1": "About Zion Tech Group"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/agency-dashboard",
@@ -256,11 +274,19 @@
   {
     "route": "/case-studies",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",
 =======
     "title": "",
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
     "h1": "Case Studies"
+=======
+    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",    "h1": "Case Studies"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",    "h1": "Case Studies"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/changelog",
@@ -305,18 +331,32 @@
   {
     "route": "/contact",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
     "h1": "Let's Transform Your Business"
   },
   {
     "route": "/cookies",
     "title": "Cookie Policy - Zion Tech Group | Cookie Usage & Management",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "h1": "Cookie Policy"
 =======
     "title": "Contact Us | Zion Tech Group",
     "h1": "Get in Touch"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
   },
+=======
+    "h1": "Cookie Policy"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "h1": "Cookie Policy"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/cutting-edge-pricing-2025",
     "title": "Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions",
@@ -389,13 +429,25 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/explore",
     "title": "Explore Technology Categories | Zion Tech Group",
     "h1": "Explore Technology Categories"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/expo",
     "title": "",
     "h1": ""
@@ -582,10 +634,18 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/privacy",
     "title": "Privacy Policy - Zion Tech Group | Data Protection & Privacy",
     "h1": "Privacy Policy"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
@@ -673,6 +733,12 @@
   {
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
     "route": "/secrets-rotation-automation",
+=======
+  {    "route": "/secrets-rotation-automation",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {    "route": "/secrets-rotation-automation",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "title": "",
     "h1": "Secrets Rotation Automation"
   },
@@ -699,6 +765,8 @@
   {
     "route": "/services",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
     "h1": ""
 =======
@@ -706,6 +774,14 @@
     "h1": "AI & Technology Services"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
   },
+=======
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
+    "h1": ""  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
+    "h1": ""  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/site-health",
     "title": "Site Health — A11y, Performance, Links",
@@ -715,11 +791,19 @@
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "h1": "Sitemap"
 =======
     "h1": "Site Map"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
   },
+=======
+    "h1": "Sitemap"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "h1": "Sitemap"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/soc2-compliance-automation",
     "title": "",
@@ -847,13 +931,25 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/services/ai-autonomous-business-manager",
     "title": "AI Autonomous Business Manager - Zion Tech Group | Autonomous Business Operations",
     "h1": "AI Autonomous Business Manager"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/services/ai-model-development-chat",
     "title": "AiModelDevelopmentChat - Zion Tech Solutions",
     "h1": "AiModelDevelopmentChat"

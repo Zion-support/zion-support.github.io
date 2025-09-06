@@ -2,6 +2,12 @@ name: Link Check
 
 on:
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   workflow_dispatch: {}
   schedule:
     - cron: "0 3 * * 1"  # Mondays at 03:00 UTC
@@ -36,6 +42,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: link_audit_report
+<<<<<<< HEAD
+<<<<<<< HEAD
           path: link_audit_report
 =======
   push:
@@ -73,3 +81,9 @@ jobs:
             echo "No changes to commit"
           fi
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
+=======
+          path: link_audit_report
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          path: link_audit_report
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

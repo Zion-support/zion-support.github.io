@@ -24,7 +24,6 @@ const nextConfig = {
     if (dev) {
       config.watchOptions = {
         ignored: [
-
           '**/node_modules/**',
           '**/.git/**',
           '**/pages_backup*/**',
@@ -62,6 +61,7 @@ const nextConfig = {
         aggregateTimeout: 300};
     }
     return config;
-  }};
+  }
+};
 
 export default nextConfig;

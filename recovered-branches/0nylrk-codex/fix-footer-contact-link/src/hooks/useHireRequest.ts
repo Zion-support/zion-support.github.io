@@ -3,25 +3,24 @@ import { useState } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
-
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
     professional_title: string;
-    email?: string;
+    email?: string
   };
   requester: {
     name: string;
     email: string;
-    id?: string;
+    id?: string
   };
   project: {
     overview: string;
     timeline: string;
     budgetMin: number;
-    budgetMax: number;
-  };
+    budgetMax: number
+  }
 }
 
 export function useHireRequest() {
@@ -42,10 +41,10 @@ export function useHireRequest() {
       
       // Show success message
       toast({
-        title: "Request Submitted",
+        title: "Request Submitted";
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       
-      return { success: true, requestId: response?.request_id };
+      return { success: true, requestId: response?.request_id }
     } catch (error) {
       console.error("Error submitting hire request:", error);
       
@@ -56,19 +55,19 @@ export function useHireRequest() {
       setError(errorMessage);
       
       toast({
-        title: "Error",
-        description: errorMessage,
+        title: "Error";
+        description: errorMessage;
         variant: "destructive"});
       
-      return { success: false, error: errorMessage };
+      return { success: false, error: errorMessage }
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   };
   
   return {
-    submitHireRequest,
-    isSubmitting,
+    submitHireRequest;
+    isSubmitting;
     error
-  };
+  }
 }

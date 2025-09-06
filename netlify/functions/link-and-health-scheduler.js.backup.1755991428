@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // Netlify Scheduled Function: Link & Health Scheduler
 // Replaces GH Actions for link integrity, health scans, and sitemap generation.
 
@@ -10,6 +16,8 @@ function runNode(relPath, args = []) {
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // netlify/functions/link-and-health-scheduler.js
 exports.handler = async function() {
@@ -27,6 +35,10 @@ exports.handler = async function() {
 };
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-2625
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 exports.config = {
   schedule: '0 */4 * * *', // every 4 hours
 };
@@ -49,4 +61,10 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

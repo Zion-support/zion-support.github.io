@@ -241,7 +241,13 @@
     "cloud:daily": "node scripts/zion-daily-report.cjs",
     "cloud:benchmark": "node scripts/zion-prompt-benchmark.cjs",
     "cloud:governance": "node scripts/zion-governance-digest.cjs"
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -369,7 +375,13 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
@@ -389,7 +401,13 @@
     "eslint-plugin-react-refresh": "^0.4.20",
   },
   "type": "module"
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "husky": "^9.1.7",
     "lint-staged": "^16.1.4",
     "postcss": "^8.4.32",
@@ -398,7 +416,13 @@
     "typescript": "^5.9.2"
   },
   "type": "module"
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

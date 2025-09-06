@@ -100,9 +100,9 @@ class IntelligentErrorDetector {
     this.log(\`Found \${totalErrors} total errors across all categories\`);
 
     if (totalErrors > 0) {
-      await this.generateErrorReport(errors);
-      await this.suggestFixes(errors);
-    }
+    await this.generateErrorReport(errors),
+    await this.suggestFixes(errors)
+  }
 
     return errors;
   }
@@ -130,9 +130,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-      const lines = error.stdout.split('\\n');
-      return lines.filter(line => this.errorPatterns.type.test(line));
-    }
+    const lines = error.stdout.split('\\n'),
+    return lines.filter(line => this.errorPatterns.type.test(line))
+  }
   }
 
   async detectModuleErrors() {
@@ -143,9 +143,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-      const lines = (error.stdout || error.stderr || '').split('\\n');
-      return lines.filter(line => this.errorPatterns.module.test(line));
-    }
+    const lines = (error.stdout || error.stderr || '').split('\\n'),
+    return lines.filter(line => this.errorPatterns.module.test(line))
+  }
   }
 
   async detectImportErrors() {
@@ -156,9 +156,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-      const lines = (error.stdout || error.stderr || '').split('\\n');
-      return lines.filter(line => this.errorPatterns.import.test(line));
-    }
+    const lines = (error.stdout || error.stderr || '').split('\\n'),
+    return lines.filter(line => this.errorPatterns.import.test(line))
+  }
   }
 
   async detectBuildErrors() {
@@ -169,9 +169,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-      const lines = (error.stdout || error.stderr || '').split('\\n');
-      return lines.filter(line => this.errorPatterns.build.test(line));
-    }
+    const lines = (error.stdout || error.stderr || '').split('\\n'),
+    return lines.filter(line => this.errorPatterns.build.test(line))
+  }
   }
 
   async detectRuntimeErrors() {
@@ -228,9 +228,9 @@ class IntelligentErrorDetector {
       timestamp: new Date().toISOString(),
       totalErrors: Object.values(errors).reduce((sum, arr) => sum + arr.length, 0),
       errorsByCategory: Object.entries(errors).reduce((acc, [category, errorList]) => {
-        acc[category] = errorList.length;
-        return acc;
-      }, {}),
+    acc[category] = errorList.length,
+    return acc
+  }, {}),
       details: errors
     };
 
@@ -269,7 +269,7 @@ class IntelligentErrorDetector {
     }
 
     if (suggestions.length > 0) {
-      this.log('💡 Suggested fixes:');
+      this.log('💡 Suggested fixes: '),
       suggestions.forEach((suggestion, index) => {
         this.log(\`   \${index + 1}. \${suggestion}\`);
       });
@@ -279,9 +279,9 @@ class IntelligentErrorDetector {
 
 // Run if called directly
 if (require.main === module) {
-  const detector = new IntelligentErrorDetector();
-  detector.detectErrors().catch(console.error);
-}
+    const detector = new IntelligentErrorDetector(),
+    detector.detectErrors().catch(console.error)
+  }
 
 module.exports = IntelligentErrorDetector;`;
 
@@ -442,9 +442,9 @@ class PerformanceMonitor {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.monitorPerformance().catch(console.error);
-}
+    const monitor = new PerformanceMonitor(),
+    monitor.monitorPerformance().catch(console.error)
+  }
 
 module.exports = PerformanceMonitor;`;
 
@@ -644,9 +644,9 @@ class SecurityScanner {
 
 // Run if called directly
 if (require.main === module) {
-  const scanner = new SecurityScanner();
-  scanner.scanSecurity().catch(console.error);
-}
+    const scanner = new SecurityScanner(),
+    scanner.scanSecurity().catch(console.error)
+  }
 
 module.exports = SecurityScanner;`;
 
@@ -718,9 +718,9 @@ class GitWorkflowAutomator {
       // Check if there are changes to commit
       const statusResult = await this.runCommand('git status --porcelain', 'Check git status');
       if (!statusResult.success || !statusResult.output.trim()) {
-        this.log('No changes to commit');
-        return;
-      }
+    this.log('No changes to commit'),
+    return
+  }
       
       // Commit changes
       const commitMessage = \`feat: Automated improvements and fixes - \${new Date().toISOString()}\`;
@@ -855,8 +855,8 @@ module.exports = GitWorkflowAutomator;`;
 
 // Run the advanced automation improvements
 if (require.main === module) {
-  const improvements = new AdvancedAutomationImprovements();
-  improvements.run().catch(console.error);
-}
+    const improvements = new AdvancedAutomationImprovements(),
+    improvements.run().catch(console.error)
+  }
 
 module.exports = AdvancedAutomationImprovements;

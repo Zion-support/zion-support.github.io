@@ -12,7 +12,7 @@ export interface SmartContractInfo {
   metadataUrl?: string;
   createdAt: string;
   createdBy: string;
-  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
+  status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 }
 
 export interface EscrowContractDetails {
@@ -22,12 +22,12 @@ export interface EscrowContractDetails {
   currency: string;
   deliverables: string;
   completionDeadline: string;
-  arbitrator?: string;
+  arbitrator?: string
 }
 
 export interface DeploymentOptions {
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean;
-  deployToChain: boolean;
+  deployToChain: boolean
 }

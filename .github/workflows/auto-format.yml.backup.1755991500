@@ -2,17 +2,26 @@ name: Auto Format
 
 on:
 <<<<<<< HEAD
-  schedule:
-    - cron: '*/30 * * * *'
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-  pull_request:
-    branches: [ main ]
->>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
-  workflow_dispatch:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  schedule:
+    - cron: '*/30 * * * *'  workflow_dispatch:
 
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  schedule:
+    - cron: '*/30 * * * *'  workflow_dispatch:
+
+permissions:
+  contents: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 jobs:
   format:
@@ -41,6 +50,8 @@ jobs:
           branch: main
           commit_user_name: zion-bot
           commit_user_email: bot@users.noreply.github.com
+<<<<<<< HEAD
+<<<<<<< HEAD
           commit_author: zion-bot <bot@users.noreply.github.com>
 =======
   pull-requests: write
@@ -63,3 +74,9 @@ jobs:
           commit_message: "chore(format): apply Prettier"
           branch: ${{ github.head_ref || github.ref_name }}
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+          commit_author: zion-bot <bot@users.noreply.github.com>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          commit_author: zion-bot <bot@users.noreply.github.com>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -12,7 +12,6 @@ import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,7 +24,7 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }))
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -34,9 +33,9 @@ export default function Contact() {
     try {
       // Basic validation with Zod
       const schema = z.object({
-        name: z.string().min(2, "Name must be at least 2 characters"),
+        name: z.string().min(2, "Name must be at least 2 characters");
         email: z.string().email("Invalid email address"),
-        subject: z.string().min(2, "Subject must be at least 2 characters"),
+        subject: z.string().min(2, "Subject must be at least 2 characters");
         message: z.string().min(10, "Message must be at least 10 characters")
       });
       
@@ -49,7 +48,7 @@ export default function Contact() {
         setIsSubmitting(false);
         toast({
           title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
+          description: "We've received your message and will get back to you soon."}),
         
         // Reset form
         setFormData({
@@ -57,21 +56,21 @@ export default function Contact() {
           email: "",
           subject: "",
           message: ""
-        });
-      }, 1500);
+        })
+      }, 1500)
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Form Validation Error",
           description: error.errors[0].message,
           variant: "destructive"
-        });
+        })
       } else {
         toast({
           title: "An error occurred",
           description: "Please try again later",
           variant: "destructive"
-        });
+        })
       }
     }
   };
@@ -82,16 +81,16 @@ export default function Contact() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"},
+          "Content-Type": "application/json"};
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })});
       
       if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant");
+        throw new Error("Failed to get response from AI assistant")
       }
       
-      return Promise.resolve();
+      return Promise.resolve()
     } catch (error) {
       console.error("Error in AI chat:", error);
       toast({
@@ -99,20 +98,20 @@ export default function Contact() {
         description: "There was an error communicating with our AI assistant. Please try again.",
         variant: "destructive"
       });
-      return Promise.resolve();
+      return Promise.resolve()
     }
   };
 
   const offices = [
     {
       name: "Headquarters",
-      address: "123 Tech Avenue, San Francisco, CA 94105",
+      address: "123 Tech Avenue, San Francisco, CA 94105";
       phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com"
-    },
+    };
     {
       name: "East Coast Office",
-      address: "456 Innovation Street, New York, NY 10001",
+      address: "456 Innovation Street, New York, NY 10001";
       phone: "+1 302 464 0950", 
       email: "commercial@ziontechgroup.com"
     }
@@ -312,5 +311,5 @@ export default function Contact() {
         />
       )}
     </AppLayout>
-  );
+  )
 }

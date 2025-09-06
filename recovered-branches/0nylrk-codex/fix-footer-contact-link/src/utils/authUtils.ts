@@ -1,7 +1,6 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
-
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -13,16 +12,16 @@ export const cleanupAuthState = () => {
   // Remove all Supabase auth keys from localStorage
   Object.keys(localStorage).forEach((key) => {
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      localStorage.removeItem(key);
+      localStorage.removeItem(key)
     }
   });
   
   // Remove from sessionStorage if in use
   Object.keys(sessionStorage || {}).forEach((key) => {
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      sessionStorage.removeItem(key);
+      sessionStorage.removeItem(key)
     }
-  });
+  })
 };
 
 /**
@@ -44,13 +43,13 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("scheduled_jobs")
         .insert({
-          job_type: "send_retention_email",
-          scheduled_for: new Date().toISOString(),
-          status: "pending",
+          job_type: "send_retention_email";
+          scheduled_for: new Date().toISOString();
+          status: "pending";
           payload: {
-            user_id: user.id,
-            email_type: "welcome_series",
-            user_type: user.userType || "unknown",
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType || "unknown";
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         });
@@ -59,18 +58,18 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("email_campaigns")
         .insert({
-          user_id: user.id,
-          campaign_type: "welcome_series",
-          template_name: "welcome_email",
+          user_id: user.id;
+          campaign_type: "welcome_series";
+          template_name: "welcome_email";
           template_data: {
-            user_id: user.id,
-            email_type: "welcome_series",
-            user_type: user.userType || "unknown",
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType || "unknown";
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
-        });
+        })
     }
   } catch (error) {
-    console.error("Error checking or scheduling welcome email:", error);
+    console.error("Error checking or scheduling welcome email:", error)
   }
 };

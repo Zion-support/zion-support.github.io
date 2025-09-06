@@ -1,34 +1,42 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { ClickableBadge } from '@/components/ui/clickable-badge';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
+=======
 
 import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ActiveFiltersProps {
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
+  selectedSkills: string[],
+  toggleSkill: (skill: string) => void,
+  selectedAvailability: string[],
+  toggleAvailability: (status: string) => void,
+  selectedRegions: string[],
+  toggleRegion: (region: string) => void,
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;
+  clearFilters: () => void
 }
 
 export function ActiveFilters({
-  selectedSkills,
-  toggleSkill,
-  selectedAvailability,
-  toggleAvailability,
-  selectedRegions,
-  toggleRegion,
-  priceRange,
-  setPriceRange,
-  experienceRange,
-  setExperienceRange,
+  selectedSkills;
+  toggleSkill;
+  selectedAvailability;
+  toggleAvailability;
+  selectedRegions;
+  toggleRegion;
+  priceRange;
+  setPriceRange;
+  experienceRange;
+  setExperienceRange;
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
@@ -106,10 +114,17 @@ export function ActiveFilters({
         variant="ghost" 
         size="sm" 
         onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
         Clear All
       </Button>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -4,16 +4,26 @@
   "warnings": [
     "No upstream configured for current branch.",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "Set upstream to origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3."
 =======
     "Set upstream to origin/cursor/build-zion-ai-marketplace-service-listing-9ebf."
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   ],
+=======
+    "Set upstream to origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3."  ],
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "Set upstream to origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3."  ],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "checks": {
     "user": {
       "name": "Cursor Agent",
       "email": "cursoragent@cursor.com"
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     "origin": "origin\thttps://x-access-token:ghs_DhwaPNUqmGTfRc6NzxlDldBixJAKan1LFxHx@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_DhwaPNUqmGTfRc6NzxlDldBixJAKan1LFxHx@github.com/Zion-Holdings/zion.app (push)",
     "fsck": {
@@ -26,6 +36,18 @@
       "output": "dangling tree 6b880121859551b1c832193dcdce396469e91056\n"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     },
+=======
+    "origin": "origin\thttps://x-access-token:ghs_DhwaPNUqmGTfRc6NzxlDldBixJAKan1LFxHx@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_DhwaPNUqmGTfRc6NzxlDldBixJAKan1LFxHx@github.com/Zion-Holdings/zion.app (push)",
+    "fsck": {
+      "status": 0,
+      "output": "dangling tree 2ac5457361a665fb4080147887cb0e44361b138b\n"    },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "origin": "origin\thttps://x-access-token:ghs_DhwaPNUqmGTfRc6NzxlDldBixJAKan1LFxHx@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_DhwaPNUqmGTfRc6NzxlDldBixJAKan1LFxHx@github.com/Zion-Holdings/zion.app (push)",
+    "fsck": {
+      "status": 0,
+      "output": "dangling tree 2ac5457361a665fb4080147887cb0e44361b138b\n"    },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "working": "clean"
   }
 }

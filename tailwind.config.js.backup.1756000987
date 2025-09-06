@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   darkMode: "class",
 >>>>>>> origin/by9dba-codex/implement-light/dark-theme-with-persistence
+=======
+  darkMode: "class",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  darkMode: "class",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -11,6 +19,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Modern color palette
 =======
@@ -37,6 +47,12 @@ module.exports = {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
         primary: {
+=======
+        // Modern color palette        primary: {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        // Modern color palette        primary: {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -235,6 +251,8 @@ module.exports = {
         'slide-up': 'slideUp 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         'glow': 'glow 2s ease-in-out infinite alternate',
         'spin-slow': 'spin 8s linear infinite',
 =======
@@ -306,6 +324,14 @@ module.exports = {
         'count-up': 'countUp 2s ease-out forwards',
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       },
+=======
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'spin-slow': 'spin 8s linear infinite',      },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'spin-slow': 'spin 8s linear infinite',      },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -333,6 +359,12 @@ module.exports = {
         },
         scaleIn: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           '0%': { transform: 'scale(0.8)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' }
         },
@@ -407,6 +439,8 @@ module.exports = {
         },
         metaverseFloat: {
           '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+<<<<<<< HEAD
+<<<<<<< HEAD
           '50%': { transform: 'translateY(-15px) rotate(180deg)' }
 =======
           '0%': { transform: 'scale(0)' },
@@ -490,6 +524,12 @@ module.exports = {
           '100%': { transform: 'scale(1)', opacity: '1' },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
         },
+=======
+          '50%': { transform: 'translateY(-15px) rotate(180deg)' }        },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          '50%': { transform: 'translateY(-15px) rotate(180deg)' }        },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         quantumCompute: {
           '0%': { transform: 'rotate(0deg) scale(1)' },
           '25%': { transform: 'rotate(90deg) scale(1.2)' },
@@ -995,5 +1035,11 @@ module.exports = {
   },
   plugins: [],
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 

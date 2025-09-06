@@ -1,16 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
+  DropdownMenuSeparator;
   DropdownMenuLabel} from '@/components/ui/dropdown-menu';
 import { User as UserIcon, Package } from 'lucide-react'
 import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 
 export const AvatarMenu: React.FC = () => {
   const { user, logout, avatarUrl } = useAuth();
@@ -23,7 +25,7 @@ export const AvatarMenu: React.FC = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
         <button
-          className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          className="flex items-center gap-2 rounded-full focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           aria-label="Open user menu"
         >
           <Avatar className="h-8 w-8">
@@ -68,7 +70,20 @@ export const AvatarMenu: React.FC = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 };
 
 export default AvatarMenu;
+<<<<<<< HEAD
+"
+=======
+
+<<<<<<< HEAD
+
+
+
+export default AvatarMenu;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

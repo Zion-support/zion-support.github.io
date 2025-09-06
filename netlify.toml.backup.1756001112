@@ -12,6 +12,12 @@
   package = "netlify-plugin-cloudinary"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 # Autonomous scheduled functions
 [[scheduled.functions]]
   function = "auto_repo_sync"
@@ -95,6 +101,8 @@
 
 [[scheduled.functions]]
   function = "readme_badges_updater"
+<<<<<<< HEAD
+<<<<<<< HEAD
   cron = "0 */6 * * *" 
 =======
 # Static redirects for exported site
@@ -138,3 +146,9 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+=======
+  cron = "0 */6 * * *" 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  cron = "0 */6 * * *" 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

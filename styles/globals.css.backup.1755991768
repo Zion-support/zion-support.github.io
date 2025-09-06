@@ -39,6 +39,8 @@
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
   --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);
@@ -64,6 +66,16 @@
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-71e4
 }
+=======
+  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
+  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
+  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
+  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
+  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Base styles */
 @layer base {

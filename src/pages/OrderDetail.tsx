@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -9,7 +10,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { OrderTimeline } from '@/components/orders/OrderTimeline';
-
 export default function OrderDetailPage() {
   const router = useRouter();
   const { orderId } = router.query as { orderId?: string };
@@ -26,7 +26,7 @@ export default function OrderDetailPage() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    URL.revokeObjectURL(url)
   };
 
   const handleResend = async () => {
@@ -39,30 +39,30 @@ export default function OrderDetailPage() {
           html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
         }
       });
-      toast({ title: 'Receipt sent!' });
+      toast({ title: 'Receipt sent!' })
     } catch (err) {
-      toast({ title: 'Failed to send receipt', variant: 'destructive' });
+      toast({ title: 'Failed to send receipt', variant: 'destructive' })
     }
   };
 
   const handleCopySummary = async () => {
     if (!order) return;
     const summary = [
-      `Order #${order.orderId}`,
+      `Order #${order.orderId}`;
       `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '',
-      'Items:',
-      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
-      '',
+      '';
+      'Items:';
+      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`);
+      '';
       `Total: $${order.total.toFixed(2)}`,
-      '',
-      'Shipping Address:',
-      order.shippingAddress.name,
-      order.shippingAddress.street,
+      '';
+      'Shipping Address:';
+      order.shippingAddress.name;
+      order.shippingAddress.street;
       `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n');
 
     await navigator.clipboard.writeText(summary);
-    toast.success('Order summary copied to clipboard');
+    toast.success('Order summary copied to clipboard')
   };
 
   if (isLoading || !order) {
@@ -114,4 +114,45 @@ export default function OrderDetailPage() {
       </Link>
     </div>
   );
+<<<<<<< HEAD
+
+
+};
+`Order #$ {;
+  order.orderId ;
+}`;
+`Date: $ {;
+  new Date (order.date) .toLocaleDateString () ;
+}`;';
+'';';
+'Items:';
+...order.items.map ( (i) => `$ {;
+  i.name ;
+}x$ {;
+  i.quantity ;
+}- $$ {;
+  i.price.toFixed (2) ;
+}`);';
+'';
+`Total: $$ {;
+  order.total.toFixed (2) ;
+}`;';
+'';';
+'Shipping Address: ';
+order.shippingAddress.name;
+order.shippingAddress.street;
+await navigator.clipboard.writeText (summary);';
+toast.success ('Order summary copied to clipboard') ;
+};
+</li>) ) ;
+}</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

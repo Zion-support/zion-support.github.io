@@ -5,6 +5,12 @@
   "type": "module",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "dev": "vite",
     "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -15,6 +21,8 @@
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "es:index": "node scripts/index-elasticsearch.js"
 =======
     "sitemap": "node scripts/generate-sitemap.mjs",
@@ -28,6 +36,12 @@
     "type-check": "tsc --noEmit"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   },
+=======
+    "es:index": "node scripts/index-elasticsearch.js"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "es:index": "node scripts/index-elasticsearch.js"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -37,6 +51,12 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@playwright/test": "^1.55.0",
     "@sentry/nextjs": "^7.120.4",
     "@sentry/node": "^7.120.4",
@@ -58,6 +78,8 @@
     "events": "^3.3.0",
     "firebase-admin": "^13.4.0",
     "formidable": "^3.5.4",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "framer-motion": "^12.23.12",
 =======
     "@sentry/nextjs": "^7.120.4",
@@ -77,11 +99,23 @@
     "framer-motion": "^6.5.1",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
     "fs": "^0.0.1-security",
+=======
+    "framer-motion": "^12.23.12",    "fs": "^0.0.1-security",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "framer-motion": "^12.23.12",    "fs": "^0.0.1-security",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "js-yaml": "^4.1.0",
     "jsdom": "^26.1.0",
     "lightningcss": "1.27.0",
@@ -101,6 +135,8 @@
     "resend": "^6.0.1",
     "socket.io": "^4.8.1",
     "stripe": "^18.4.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "tailwind-merge": "^3.3.1",
 =======
     "js-cookie": "^3.0.5",
@@ -122,6 +158,12 @@
     "resend": "^4.0.0",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
     "uuid": "^11.1.0"
+=======
+    "tailwind-merge": "^3.3.1",    "uuid": "^11.1.0"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "tailwind-merge": "^3.3.1",    "uuid": "^11.1.0"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",
@@ -132,6 +174,8 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
 =======
@@ -155,6 +199,12 @@
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
     "husky": "^9.1.7",
+=======
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",    "husky": "^9.1.7",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",    "husky": "^9.1.7",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "lint-staged": "^16.1.4",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
@@ -162,6 +212,12 @@
     "typescript": "^5.9.2"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -170,6 +226,8 @@
     "rimraf": "^5.0.5"
   },
   "resolutions": {
+<<<<<<< HEAD
+<<<<<<< HEAD
     "rimraf": "^5.0.5"
 =======
   "lint-staged": {
@@ -179,4 +237,10 @@
   }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   }
+=======
+    "rimraf": "^5.0.5"  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "rimraf": "^5.0.5"  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

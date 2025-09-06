@@ -314,7 +314,13 @@ const nextConfig = {
         })
       );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -965,6 +971,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   // Enable SWC minification explicitly (already default in Next 15)
   swcMinify: true,
@@ -984,6 +992,16 @@ const nextConfig = {
     return config;
   },
 >>>>>>> origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3
+=======
+
+  // Enable SWC minification explicitly (already default in Next 15)
+  swcMinify: true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+
+  // Enable SWC minification explicitly (already default in Next 15)
+  swcMinify: true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 module.exports = withSentryConfig(baseConfig);

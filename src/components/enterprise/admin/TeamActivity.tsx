@@ -1,17 +1,33 @@
-
-import React from "react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { CalendarIcon, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+import React from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -56,8 +72,7 @@ export function TeamActivity() {
       action: "Updated budget",
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
-      category: "billing"}];
-
+      category: "billing"}],
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
     const now = new Date();
@@ -67,13 +82,13 @@ export function TeamActivity() {
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
     if (diffMins < 60) {
-      return `${diffMins} minutes ago`;
+      return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
-      return `${diffHrs} hours ago`;
+      return `${diffHrs} hours ago`
     } else if (diffDays < 7) {
-      return `${diffDays} days ago`;
+      return `${diffDays} days ago`
     } else {
-      return date.toLocaleDateString();
+      return date.toLocaleDateString()
     }
   };
 
@@ -82,10 +97,9 @@ export function TeamActivity() {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
-      billing: { variant: "destructive" }};
-
-    const style = categoryStyles[category] || { variant: "default" as const };
-    return <Badge variant={style.variant}>{category}</Badge>;
+      billing: { variant: "destructive" }},
+    const style = categoryStyles[category] || { variant: "default" as const },
+    return <Badge variant={style.variant}>{category}</Badge>
   };
 
   return (
@@ -149,4 +163,25 @@ export function TeamActivity() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+
+};
+const getCategoryBadge = (category: string) => {;
+  ;
+};";
+  activities.map ( (activity) => (<TableRow key= {;
+  activity.id ;
+}> </TableCell> </TableRow>) ) ";
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
+}"
+=======
+
+<<<<<<< HEAD
+    return <Badge variant={style.variant}>{category}</Badge>
+  };
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

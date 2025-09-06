@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
@@ -450,4 +452,16 @@
     "typescript": "^5.1.6"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
   }
+=======
+  "engines": {
+    "node": ">=20.18.1",
+    "npm": ">=10.0.0"
+  },  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "engines": {
+    "node": ">=20.18.1",
+    "npm": ">=10.0.0"
+  },  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

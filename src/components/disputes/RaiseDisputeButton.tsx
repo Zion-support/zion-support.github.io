@@ -1,29 +1,44 @@
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,;
+} from '@/components/ui/dialog';
+import { DisputeForm } from './DisputeForm';
+=======
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { 
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
   DialogDescription} from "@/components/ui/dialog";
 import { DisputeForm } from "./DisputeForm";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 
 interface RaiseDisputeButtonProps {
-  projectId: string;
+  projectId: string,
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
-  className?: string;
+  className?: string
 }
 
 export function RaiseDisputeButton({ 
-  projectId, 
+  projectId;
   milestoneId, 
   variant = "outline", 
-  size,
+  size;
   className 
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -31,7 +46,7 @@ export function RaiseDisputeButton({
   
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false);
-    router.push(`/dashboard/disputes/${disputeId}`);
+    router.push(`/dashboard/disputes/${disputeId}`)
   };
   
   return (
@@ -65,4 +80,14 @@ export function RaiseDisputeButton({
       </Dialog>
     </>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  milestoneId, 
+  variant = "outline", 
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

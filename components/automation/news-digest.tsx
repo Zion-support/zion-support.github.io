@@ -1,22 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ </div> </div>) ) 
+}</div> </div>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
-
-type NewsItem = { source: string; title: string; url: string; summary: string; tags: string[] };
-
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'news-digest.json');
+  const file = path.join(process.cwd(), 'datanews-digest.json');
+<<<<<<< HEAD
   let items: NewsItem[] = [];
+=======
+  let items: NewsItem[] = [],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
     items = json.items || [];
-    generatedAt = json.generatedAt || '';
+    generatedAt = json.generatedAt || ''
   } catch {}
-  return { props: { items, generatedAt } };
+  return { props: { items, generatedAt } }
 }
 
-export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[]; generatedAt: string }) {
+export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>
@@ -37,4 +46,9 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

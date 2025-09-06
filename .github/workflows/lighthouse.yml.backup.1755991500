@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Lighthouse Audit
 
 on:
@@ -34,6 +40,8 @@ jobs:
             git add data/reports/lighthouse.json
             git commit -m "chore(autonomy): update lighthouse summary"
             git push
+<<<<<<< HEAD
+<<<<<<< HEAD
           fi
 =======
 name: Lighthouse CI
@@ -120,3 +128,9 @@ jobs:
           commit_message: 'chore(badge): update Lighthouse badge'
           file_pattern: badges/lighthouse.json
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

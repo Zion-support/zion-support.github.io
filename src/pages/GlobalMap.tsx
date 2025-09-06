@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
@@ -5,15 +6,15 @@ import { Globe, MapPin } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface Instance {
-  id: number;
-  name: string;
-  lat: number;
-  lng: number;
-  talent: number;
-  governance: 'admin' | 'hybrid' | 'vote';
-  votesPassed: number;
-  votesPending: number;
-  region: string;
+  id: number,
+  name: string,
+  lat: number,
+  lng: number,
+  talent: number,
+  governance: 'admin' | 'hybrid' | 'vote',
+  votesPassed: number,
+  votesPending: number,
+  region: string
 }
 
 const INSTANCES: Instance[] = [
@@ -46,11 +47,10 @@ const INSTANCES: Instance[] = [
     governance: 'vote',
     votesPassed: 12,
     votesPending: 3,
-    region: 'Europe'}];
-
+    region: 'Europe'}],
 interface FeedItem {
-  id: number;
-  text: string;
+  id: number,
+  text: string
 }
 
 export default function GlobalMapPage() {
@@ -59,14 +59,12 @@ export default function GlobalMapPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       const messages = [
-        'ZionGPT upgraded to v1.7 in Egypt',
-        'Proposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia'];
+        'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],
       const id = Date.now();
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress';
-      setFeed((f) => [{ id, text }, ...f].slice(0, 5));
+      setFeed((f) => [{ id, text }, ...f].slice(0, 5))
     }, 5000);
-    return () => clearInterval(interval);
+    return () => clearInterval(interval)
   }, []);
 
   const width = 800;
@@ -74,7 +72,7 @@ export default function GlobalMapPage() {
   function project(lat: number, lng: number) {
     const x = ((lng + 180) / 360) * width;
     const y = ((90 - lat) / 180) * height;
-    return { x, y };
+    return { x, y }
   }
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5);
@@ -141,5 +139,16 @@ export default function GlobalMapPage() {
       </main>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  const width = 800;
+  const height = 400;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

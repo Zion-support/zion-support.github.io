@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
@@ -9,18 +10,17 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-
 export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isAuthenticated: boolean;
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isAuthenticated: boolean
 }
 
 const TalentCardComponent = ({
-  talent,
-  onViewProfile,
-  onRequestHire,
+  talent;
+  onViewProfile;
+  onRequestHire;
   isAuthenticated
 }: TalentCardProps) => {
   const router = useRouter();
@@ -31,7 +31,7 @@ const TalentCardComponent = ({
     
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(talent.id);
+      onViewProfile(talent.id)
     }
   };
 
@@ -39,7 +39,7 @@ const TalentCardComponent = ({
     e.preventDefault();
     e.stopPropagation();
     if (onRequestHire) {
-      onRequestHire(talent);
+      onRequestHire(talent)
     }
   };
 
@@ -144,7 +144,7 @@ const TalentCardComponent = ({
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
                 Hire
               </Button>
@@ -154,9 +154,9 @@ const TalentCardComponent = ({
               variant="ghost"
               onClick={(e) => {
                 e.stopPropagation();
-                handleViewProfile();
+                handleViewProfile()
               }}
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -164,8 +164,20 @@ const TalentCardComponent = ({
         </div>
       </div>
     </Card>
-  );
+  )
 };
+<<<<<<< HEAD
+"
+=======
+<<<<<<< HEAD
+
+
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard';
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,24 +1,24 @@
+<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import {
-  Dialog,
-  DialogContent,
+  Dialog;
+  DialogContent;
   DialogTrigger} from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
 const ReactPlayer = React.lazy(() => import('react-player'));
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer');
   return {
     default: (props: any) => (
       React.createElement('model-viewer', props)
-    )};
+    )}
 });
 
 interface ProductGalleryProps {
-  images: string[];
+  images: string[],
   videoUrl?: string;
-  modelUrl?: string;
+  modelUrl?: string
 }
 
 export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryProps) {
@@ -28,7 +28,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   const poster = images[0];
 
   return (
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o); if (!o) setZoomed(false); }}>
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
       <Tabs defaultValue="images" className="w-full">
       <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
         <TabsTrigger value="images">Images</TabsTrigger>
@@ -91,7 +91,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                 alt="3D model preview"
                 className="w-full h-full object-cover"
                 loading="lazy"
-              />
+              />;
             }>
               <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '100%', height: '100%' }} />
             </Suspense>
@@ -115,4 +115,14 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
     )}
     </Dialog>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  const poster = images[0];
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -2,14 +2,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-
 interface ResourceItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;
-  url: string;
+  id: string,
+  title: string,
+  description: string,
+  type: 'image' | 'video' | 'document' | 'link',
+  icon: JSX.Element,
+  url: string
 }
 
 export function PartnerResources() {
@@ -17,11 +16,11 @@ export function PartnerResources() {
     {
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
-    },
+    };
     {
       id: 'brand-guidelines',
       title: 'Brand Guidelines',
@@ -29,7 +28,7 @@ export function PartnerResources() {
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
-    },
+    };
     {
       id: 'banner-templates',
       title: 'Social Media Banners',
@@ -37,7 +36,7 @@ export function PartnerResources() {
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
-    },
+    };
     {
       id: 'promotional-video',
       title: 'Promotional Video',
@@ -45,7 +44,7 @@ export function PartnerResources() {
       type: 'video',
       icon: <FileVideo className="h-10 w-10 text-red-500" />,
       url: '#'
-    },
+    };
     {
       id: 'email-templates',
       title: 'Email Templates',
@@ -53,7 +52,7 @@ export function PartnerResources() {
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
-    },
+    };
     {
       id: 'talking-points',
       title: 'Talking Points',
@@ -69,7 +68,7 @@ export function PartnerResources() {
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-      variant: "default"});
+      variant: "default"})
   };
 
   return (
@@ -151,11 +150,11 @@ export function PartnerResources() {
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
             Feel free to reach out if you have questions about promotions, resources, or payment.
           </p>
-          <Button className="bg-zion-purple hover:bg-zion-purple-dark">
+          <Button className="bg-zion-purple hover: bg-zion-purple-dark">
             Contact Partner Support
           </Button>
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

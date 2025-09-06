@@ -3,14 +3,13 @@
 // This file handles interaction with the fine-tuned ZionGPT model
 
 import { supabase } from '@/integrations/supabase/client';
-
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
 
 export type ZionGPTUsage = {
   modelId: string;
   tokensUsed: number;
   cost: number;
-  timestamp: Date;
+  timestamp: Date
 };
 
 export interface ModelConfig {
@@ -19,7 +18,7 @@ export interface ModelConfig {
   createdAt: string;
   baseModel: string;
   purpose: string;
-  active: boolean;
+  active: boolean
 }
 
 // Get the latest active model ID for a specific purpose
@@ -41,22 +40,22 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
         case 'support': return 'zion-support-v1';
-        default: return 'gpt-3.5-turbo';
+        default: return 'gpt-3.5-turbo'
       }
     }
     
-    return data.id as ModelVersion;
+    return data.id as ModelVersion
   } catch (error) {
     console.error('Error fetching active model:', error);
-    return 'gpt-3.5-turbo'; // Fallback to base model
+    return 'gpt-3.5-turbo', // Fallback to base model
   }
 }
 
 // Log usage of the fine-tuned model
 export async function logModelUsage(
-  modelId: string,
-  tokensUsed: number,
-  feature: string,
+  modelId: string;
+  tokensUsed: number;
+  feature: string;
   userId?: string
 ): Promise<void> {
   try {
@@ -65,13 +64,13 @@ export async function logModelUsage(
     await supabase
       .from('model_usage_logs')
       .insert({
-        model_id: modelId,
-        tokens_used: tokensUsed,
-        cost: cost,
-        feature: feature,
-        user_id: userId || null,
+        model_id: modelId;
+        tokens_used: tokensUsed;
+        cost: cost;
+        feature: feature;
+        user_id: userId || null;
         timestamp: new Date().toISOString()
-      });
+      })
       
   } catch (error) {
     console.error('Error logging model usage:', error);
@@ -82,23 +81,23 @@ export async function logModelUsage(
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
-  const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008; // Higher for fine-tuned models
-  return tokens * ratePerToken;
+  const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008, // Higher for fine-tuned models
+  return tokens * ratePerToken
 }
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt, 
-  purpose,
-  maxTokens = 500,
-  temperature = 0.7,
+  purpose;
+  maxTokens = 500;
+  temperature = 0.7;
   userId
 }: {
   prompt: string;
   purpose: 'job' | 'resume' | 'support';
   maxTokens?: number;
   temperature?: number;
-  userId?: string;
+  userId?: string
 }): Promise<string> {
   try {
     // Dynamically get the proper model ID based on purpose
@@ -107,9 +106,9 @@ export async function callZionGPT({
     // Call the edge function that will use the model
     const { data, error } = await supabase.functions.invoke('zion-gpt', {
       body: {
-        prompt,
-        modelId,
-        maxTokens,
+        prompt;
+        modelId;
+        maxTokens;
         temperature
       }
     });
@@ -120,15 +119,15 @@ export async function callZionGPT({
     if (data.tokensUsed) {
       await logModelUsage(
         modelId, 
-        data.tokensUsed,
-        `${purpose}-generation`,
+        data.tokensUsed;
+        `${purpose}-generation`;
         userId
-      );
+      )
     }
     
-    return data.completion;
+    return data.completion
   } catch (error) {
     console.error('Error calling ZionGPT:', error);
-    throw error;
+    throw error
   }
 }

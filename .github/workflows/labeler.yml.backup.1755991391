@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Pull Request Labeler
 
 on:
@@ -17,6 +23,8 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: .github/labeler.yml
+<<<<<<< HEAD
+<<<<<<< HEAD
           sync-labels: true
 =======
 ---
@@ -53,3 +61,9 @@ jobs:
         run: |
           echo "Workflow Workflow completed successfully"
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
+=======
+          sync-labels: true
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          sync-labels: true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

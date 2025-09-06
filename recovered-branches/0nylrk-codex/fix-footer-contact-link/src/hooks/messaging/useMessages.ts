@@ -3,7 +3,6 @@ import { UserProfile, UserDetails } from '@/types/auth';
 import { supabase } from '@/integrations/supabase/client';
 import { Message, Conversation } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null;
 
@@ -11,14 +10,14 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations
  */
 export function useMessages(
-  user: UserWithProfile,
-  activeConversation: Conversation | null,
-  activeMessages: Message[],
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,
-  conversations: Conversation[],
-  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,
-  setUnreadCount: (updater: (prev: number) => number) => void,
-  setIsLoading: (loading: boolean) => void,
+  user: UserWithProfile;
+  activeConversation: Conversation | null;
+  activeMessages: Message[];
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+  conversations: Conversation[];
+  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
+  setUnreadCount: (updater: (prev: number) => number) => void;
+  setIsLoading: (loading: boolean) => void;
   fetchConversations: () => Promise<void>
 ) {
   /**
@@ -47,12 +46,12 @@ export function useMessages(
       );
       
       if (unreadMessages.length > 0) {
-        await markAsRead(conversationId);
+        await markAsRead(conversationId)
       }
     } catch (error) {
-      console.error('Error fetching messages:', error);
+      console.error('Error fetching messages:', error)
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
@@ -65,18 +64,18 @@ export function useMessages(
     try {
       const conversation = conversations.find(c => c.id === conversationId);
       if (!conversation) {
-        throw new Error('Conversation not found');
+        throw new Error('Conversation not found')
       }
 
       // Send the message
       const { data, error } = await supabase
         .from('messages')
         .insert({
-          conversation_id: conversationId,
-          sender_id: user.id,
-          recipient_id: conversation.user_id,
-          content,
-          created_at: new Date().toISOString(),
+          conversation_id: conversationId;
+          sender_id: user.id;
+          recipient_id: conversation.user_id;
+          content;
+          created_at: new Date().toISOString();
           read: false
         })
         .select('*')
@@ -86,21 +85,21 @@ export function useMessages(
       
       // Update active messages if this conversation is selected
       if (activeConversation && activeConversation.id === conversationId) {
-        setActiveMessages(prev => [...prev, data as Message]);
+        setActiveMessages(prev => [...prev, data as Message])
       }
       
       // Update conversations list
       await fetchConversations();
       
       // Return the sent message
-      return data;
+      return data
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
-        title: "Failed to send message",
-        description: "Please try again later",
+        title: "Failed to send message";
+        description: "Please try again later";
         variant: "destructive"
-      });
+      })
     }
   };
 
@@ -147,16 +146,16 @@ export function useMessages(
         return updatedConversations.reduce(
           (total, conv) => total + (conv.unread_count || 0), 
           0
-        );
-      });
+        )
+      })
     } catch (error) {
-      console.error('Error marking messages as read:', error);
+      console.error('Error marking messages as read:', error)
     }
   };
 
   return {
-    loadMessages,
-    sendMessage,
+    loadMessages;
+    sendMessage;
     markAsRead
-  };
+  }
 }

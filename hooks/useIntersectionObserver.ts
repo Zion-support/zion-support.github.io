@@ -6,9 +6,9 @@ interface UseIntersectionObserverProps {
   freezeOnceVisible?: boolean
 }
 export function useIntersectionObserver({
-  threshold = 0,
-  root = null,
-  rootMargin = '0%',
+  threshold = 0;
+  root = null;
+  rootMargin = '0%';
   freezeOnceVisible = false
 }: UseIntersectionObserverProps = {}) {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();

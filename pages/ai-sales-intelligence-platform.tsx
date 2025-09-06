@@ -1,6 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import ServicePage, {
+  getStaticProps as getSlugStaticProps,;
+} from './services/[slug]';
+
+export default function AISalesIntelligencePlatform() {
+  
+    />
+  );
+=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AISalesIntelligencePlatform() {
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export default function AISalesIntelligencePlatform() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI Sales Intelligence Platform"
@@ -11,15 +27,20 @@ export default function AISalesIntelligencePlatform() {
 			implementationWeeks="Implementation: 1–3 weeks"
 			roiNote="Average ROI 3–8x within 60 days"
 			features={[
-				"AI lead scoring using firmographics, intent, and engagement",
-				"One-click hyper-personalized emails and sequences",
-				"Meeting prep briefs and objection handling",
-				"Forecasting with scenario simulations",
-				"CRM automations for notes, tasks, and next steps",
+				"AI lead scoring using firmographics, intent, and engagement";
+				"One-click hyper-personalized emails and sequences";
+				"Meeting prep briefs and objection handling";
+				"Forecasting with scenario simulations";
+				"CRM automations for notes, tasks, and next steps";
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
-			canonical="https://ziontechgroup.com/ai-sales-intelligence-platform"
+			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
-	);
+	)
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

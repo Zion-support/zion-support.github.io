@@ -1,12 +1,18 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { QrCode } from 'lucide-react';
+import { AppStoreButtons } from './AppStoreButtons';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { QrCode } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons";
-
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
-  const appStoreUrl = "#"; // Replace with actual App Store URL
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL
+  const appStoreUrl = "#", // Replace with actual App Store URL
+  const googlePlayUrl = "#", // Replace with actual Google Play URL
 
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
@@ -34,7 +40,7 @@ export const QrCodeDownload: React.FC = () => {
             </div>
             
             <div className="flex-shrink-0">
-              <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
+              <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
                   {/* This would be replaced with an actual QR code in production */}
@@ -48,5 +54,16 @@ export const QrCodeDownload: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
+<<<<<<< HEAD
+"
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

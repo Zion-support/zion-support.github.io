@@ -1,16 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
   SelectValue} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
 
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 
@@ -19,8 +31,7 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
-      case "basics":
-        return <BasicsStep />;
+      case "basics": return <BasicsStep />;
       case "experience":
         return <ExperienceStep />;
       case "education":
@@ -28,7 +39,7 @@ export function MobileResumeBuilder() {
       case "skills":
         return <SkillsStep />;
       default:
-        return <BasicsStep />;
+        return <BasicsStep />
     }
   };
   
@@ -116,15 +127,14 @@ function BasicsStep() {
 }
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }]);
-  
+  const [experiences, setExperiences] = useState([{ id: '1' }]),
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
-    setExperiences([...experiences, { id: newId }]);
+    setExperiences([...experiences, { id: newId }])
   };
   
   const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id));
+    setExperiences(experiences.filter(exp => exp.id !== id))
   };
   
   return (
@@ -188,15 +198,14 @@ function ExperienceStep() {
 }
 
 function EducationStep() {
-  const [educations, setEducations] = useState([{ id: '1' }]);
-  
+  const [educations, setEducations] = useState([{ id: '1' }]),
   const addEducation = () => {
     const newId = (educations.length + 1).toString();
-    setEducations([...educations, { id: newId }]);
+    setEducations([...educations, { id: newId }])
   };
   
   const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id));
+    setEducations(educations.filter(edu => edu.id !== id))
   };
   
   return (
@@ -262,17 +271,17 @@ function SkillsStep() {
   
   const addSkill = () => {
     const newId = (skills.length + 1).toString();
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
   };
   
   const removeSkill = (id: string) => {
-    setSkills(skills.filter(skill => skill.id !== id));
+    setSkills(skills.filter(skill => skill.id !== id))
   };
   
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill, [field]: value } : skill
-    ));
+    ))
   };
   
   return (
@@ -343,4 +352,42 @@ function SkillsStep() {
       </Card>
     </div>
   );
+<<<<<<< HEAD
+
+};";
+  () => removeSkill (skill.id) ";
+}aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;
+}</div>) ) ";
+}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
+}"
+=======
+
+<<<<<<< HEAD
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+
+<<<<<<< HEAD
+
+  
+  const removeExperience = (id: string) => {
+    setExperiences(experiences.filter(exp => exp.id !== id))
+  };
+  
+
+<<<<<<< HEAD
+
+  
+  const removeEducation = (id: string) => {
+    setEducations(educations.filter(edu => edu.id !== id))
+  };
+  
+
+<<<<<<< HEAD
+
+  
+
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

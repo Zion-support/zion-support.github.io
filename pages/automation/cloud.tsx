@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ useEffect ( () => {
+  fetch ('/api/automation/cloud-logs') return (<div className="space-y-6" > <div> <h1 className="text-2xl font-bold" >Autonomous Cloud Automation</h1> <p className="text-sm text-gray-600 dark:text-gray-400" >Runs scheduled workflows: roadmap synthesis, link health checks, market intelligence, sitemap refresh, and logging.</p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900" > <h3 className="font-semibold" >Roadmap (Autonomous) </h3> <p className="text-sm text-gray-600 dark:text-gray-400" >Docs/ROADMAP.md</p> </Link> <a href="/docs/LINK HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900" > <h3 className="font-semibold" >Link Health</h3> <p className="text-sm text-gray-600 dark:text-gray-400" >Docs/LINK HEALTH.md</p> </Link> <a href="/docs/INTELLIGENCE DIGEST.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900" > <h3 className="font-semibold" >Intelligence Digest</h3> <p className="text-sm text-gray-600 dark:text-gray-400" >Docs/INTELLIGENCE DIGEST.md</p> </Link> </div> </li>) ) 
+}</ul> </div> </div> </div>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useEffect, useState } from 'react';
 
 export default function CloudAutomationHub() {
@@ -7,7 +15,7 @@ export default function CloudAutomationHub() {
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
-      .catch(() => setLogs([]));
+      .catch(() => setLogs([]))
   }, []);
 
   return (
@@ -46,9 +54,14 @@ export default function CloudAutomationHub() {
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
+        <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
-  );
+  )
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

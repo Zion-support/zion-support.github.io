@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Autonomous Cloud Automations
 
 on:
   schedule:
     - cron: '*/15 * * * *' # every 15 minutes
   workflow_dispatch: {}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 name: Cloud Automations
 
@@ -17,6 +25,10 @@ permissions:
   contents: write
 >>>>>>> origin/cursor/build-talent-marketplace-platform-793e
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   run-automations:
     runs-on: ubuntu-latest
@@ -32,6 +44,12 @@ jobs:
           cache: 'npm'
       - name: Install deps
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         run: npm ci --no-audit --no-fund
       - name: Generate ideas
         run: node scripts/generate-ideas.cjs
@@ -58,6 +76,8 @@ jobs:
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "No changes to commit"
+<<<<<<< HEAD
+<<<<<<< HEAD
           fi
 =======
         run: npm ci
@@ -79,3 +99,9 @@ jobs:
             echo "No changes to commit"
           fi
 >>>>>>> origin/cursor/build-talent-marketplace-platform-793e
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

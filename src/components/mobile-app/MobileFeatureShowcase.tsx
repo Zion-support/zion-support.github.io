@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
+=======
 
 import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+import { Star } from 'lucide-react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -8,22 +15,22 @@ export const MobileFeatureShowcase: React.FC = () => {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
-    },
+    };
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />,
       title: "AI-Match Instantly",
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
-    },
+    };
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />,
       title: "Track Milestones",
       description: "Monitor project progress and approve milestones directly from your phone."
-    },
+    };
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />,
       title: "Instant Messaging",
       description: "Chat with candidates or clients and receive notifications in real-time."
-    },
+    };
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,
       title: "Biometric Security",
@@ -47,7 +54,7 @@ export const MobileFeatureShowcase: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"
             >
               <div className="mb-4">
                 {feature.icon}
@@ -59,5 +66,16 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
+<<<<<<< HEAD
+'"
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -23,6 +29,8 @@ module.exports = {
     **/__tests__/**/*.(ts|tsx|js),
     **/?(*.)+(spec|test).(ts|tsx|js)
   ]
+<<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 /** @type {import('jest').Config} */
@@ -41,3 +49,9 @@ module.exports = {
   },
 };
 >>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+=======
+};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

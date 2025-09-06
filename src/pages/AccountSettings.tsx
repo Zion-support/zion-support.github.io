@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -32,14 +36,14 @@ export default function AccountSettings() {
         setDidHandle(didHandle);
         setEnableBackup(enableBackup);
         logInfo('Saved settings', { displayWeb3, didHandle, enableBackup });
-        toast.success('Account settings updated successfully');
+        toast.success('Account settings updated successfully')
       } catch (e) {
-        logErrorToProduction('Failed to save settings', { data:  e });
-        toast.error('Failed to save settings');
+        logErrorToProduction('Failed to save settings', { data: e }),
+        toast.error('Failed to save settings')
       } finally {
         setIsSubmitting(false);
       }
-    }, 1000);
+    }, 1000)
   };
   
   const handleConnectWallet = async () => {
@@ -48,15 +52,15 @@ export default function AccountSettings() {
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
         toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
-        return;
+        return
       }
       
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
@@ -67,15 +71,15 @@ export default function AccountSettings() {
         const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
-          setDidHandle(ensName);
+          setDidHandle(ensName)
         }
       } catch (error) {
-        logErrorToProduction('ENS lookup error:', { data: error });
+        logErrorToProduction('ENS lookup error:', { data: error })
       }
       
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet');
+      toast.error(error.message || 'Failed to connect wallet')
     }
   };
 
@@ -275,4 +279,17 @@ export default function AccountSettings() {
       </main>
     </>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+      
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

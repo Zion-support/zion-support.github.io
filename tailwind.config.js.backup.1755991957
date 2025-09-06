@@ -27,7 +27,13 @@ module.exports = {
         'neural-network': 'neuralNetwork 10s linear infinite',
         'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
         'cyber-grid': 'cyberGrid 15s linear infinite',
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -178,6 +184,12 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
         'bounce-slow': 'bounce 2s infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
         'float': 'float 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
@@ -197,6 +209,8 @@ module.exports = {
         'quantum-rotate': 'quantumRotate 15s linear infinite',
         'neon-rotate': 'neonRotate 10s linear infinite',
         'hologram-rotate': 'hologramRotate 25s linear infinite',
+<<<<<<< HEAD
+<<<<<<< HEAD
         'cyberpunk-rotate': 'cyberpunkRotate 12s linear infinite',
 =======
         'grid-flow': 'gridFlow 20s linear infinite',
@@ -207,6 +221,12 @@ module.exports = {
         'count-up': 'countUp 2s ease-out forwards',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
       },
+=======
+        'cyberpunk-rotate': 'cyberpunkRotate 12s linear infinite',      },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        'cyberpunk-rotate': 'cyberpunkRotate 12s linear infinite',      },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -301,6 +321,12 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         glow: {
           '0%': { boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor' },
           '100%': { boxShadow: '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor' },
@@ -502,6 +528,8 @@ module.exports = {
           '100%': { 
             transform: 'rotate(360deg) skew(0deg)',
             filter: 'hue-rotate(360deg)'
+<<<<<<< HEAD
+<<<<<<< HEAD
           },
 =======
         gridFlow: {
@@ -530,6 +558,12 @@ module.exports = {
           '100%': { transform: 'scale(1)', opacity: '1' },
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
         },
+=======
+          },        },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          },        },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       },
       backdropBlur: {
         xs: '2px',
@@ -801,5 +835,11 @@ module.exports = {
   },
   plugins: [],
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 

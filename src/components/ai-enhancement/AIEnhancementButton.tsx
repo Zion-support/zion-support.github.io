@@ -1,27 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
-
 interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions;
-  onEnhanced: (enhancedContent: string) => void;
+  options: AIEnhancementOptions,
+  onEnhanced: (enhancedContent: string) => void,
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
-  contentLength?: number;
+  contentLength?: number
 }
 
 export function AIEnhancementButton({
-  options,
-  onEnhanced,
-  buttonText = "Enhance with AI",
-  className,
-  variant = "ghost",
-  size = "sm",
+  options;
+  onEnhanced;
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
   contentLength = 10
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
@@ -36,14 +39,14 @@ export function AIEnhancementButton({
         description: `Please enter at least ${contentLength} characters before enhancing.`,
         variant: "destructive"
       });
-      return;
+      return
     }
     
     const enhancedContent = await enhanceContent(options);
     
     if (enhancedContent) {
       setGeneratedContent(enhancedContent);
-      setShowActions(true);
+      setShowActions(true)
     }
   };
   
@@ -54,17 +57,17 @@ export function AIEnhancementButton({
       setGeneratedContent(null);
       toast({
         title: "Content applied",
-        description: "AI-enhanced content has been applied."});
+        description: "AI-enhanced content has been applied."})
     }
   };
   
   const handleRegenerate = async () => {
-    await handleEnhance();
+    await handleEnhance()
   };
   
   const handleCancel = () => {
     setShowActions(false);
-    setGeneratedContent(null);
+    setGeneratedContent(null)
   };
   
   if (showActions) {
@@ -100,7 +103,7 @@ export function AIEnhancementButton({
           variant="ghost"
           size="sm"
           onClick={handleCancel}
-          className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20"
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
         >
           <X className="h-4 w-4 mr-1" />
           Cancel
@@ -126,4 +129,22 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   );
+<<<<<<< HEAD
+
+};";
+<Button type="button" variant="ghost" size="sm" onClick={;
+  handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
+}</Button>) ;
+}"
+=======
+
+<<<<<<< HEAD
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

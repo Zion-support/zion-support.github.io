@@ -1,10 +1,9 @@
 import React from 'react';
-
 export type EmptyStateProps = {
   emoji?: string;
-  title: string;
-  message: string;
-  action?: React.ReactNode;
+  title: string,
+  message: string,
+  action?: React.ReactNode
 };
 
 export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {

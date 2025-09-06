@@ -5,7 +5,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 import { Milestone } from './types';
 import { useRecordActivity } from './useRecordActivity';
-
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,8 +19,8 @@ export const useCreateMilestone = (projectId?: string) => {
       const { data, error } = await supabase
         .from('project_milestones')
         .insert({
-          ...milestoneData,
-          project_id: projectId,
+          ...milestoneData;
+          project_id: projectId;
           created_by: user.id})
         .select()
         .single();
@@ -29,22 +28,22 @@ export const useCreateMilestone = (projectId?: string) => {
       if (error) throw error;
       
       // Create activity record
-      await recordMilestoneActivity(data.id, 'created', null, 'pending', 'Milestone created');
+      await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created');
       
       toast.success("Milestone created successfully");
       
-      return data;
+      return data
     } catch (err: any) {
       console.error("Error creating milestone:", err);
       toast.error("Failed to create milestone: " + err.message);
-      return null;
+      return null
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   };
   
   return {
-    createMilestone,
+    createMilestone;
     isSubmitting
-  };
+  }
 };

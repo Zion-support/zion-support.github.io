@@ -1,5 +1,11 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const fs = require('fs');
 const { spawnSync } = require('child_process');
 
@@ -102,6 +108,8 @@ exports.handler = async () => {
       logs: logs.slice(-2000),
     }),
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 const { spawnSync } = require('child_process');
@@ -181,3 +189,9 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') };
 };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-f951
+=======
+};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

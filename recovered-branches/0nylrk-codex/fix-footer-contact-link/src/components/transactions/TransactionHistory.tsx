@@ -10,26 +10,25 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
-
 interface Transaction {
-  id: string;
-  user_id: string;
-  provider_id: string;
-  service_id: string;
-  amount: number;
-  currency: string;
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled';
-  in_escrow: boolean;
-  created_at: string;
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {
-    display_name?: string;
+    display_name?: string
   };
   service?: {
-    title?: string;
-  };
+    title?: string
+  }
 }
 
 export function TransactionHistory() {
@@ -38,7 +37,7 @@ export function TransactionHistory() {
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
-    queryKey: ['transactions', user?.id, filter],
+    queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
       if (!user) return [];
       
@@ -46,28 +45,28 @@ export function TransactionHistory() {
       let query = supabase
         .from('transactions')
         .select(`
-          *,
-          provider:profiles!provider_id(display_name),
+          *;
+          provider:profiles!provider_id(display_name);
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
       
       if (filter === 'pending') {
-        query = query.eq('status', 'pending');
+        query = query.eq('statuspending')
       } else if (filter === 'completed') {
-        query = query.eq('status', 'completed');
+        query = query.eq('statuscompleted')
       } else if (filter === 'escrow') {
-        query = query.eq('in_escrow', true);
+        query = query.eq('in_escrow', true)
       }
       
-      query = query.order('created_at', { ascending: false });
+      query = query.order('created_at', { ascending: false }),
       
       const { data, error } = await query;
       
       if (error) throw error;
-      return data as Transaction[];
-    },
-    enabled: !!user});
+      return data as Transaction[]
+    };
+    enabled: !!user}),
 
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
@@ -79,15 +78,15 @@ export function TransactionHistory() {
       
       toast({
         title: "Success",
-        description: data.message || "Transaction updated successfully"});
+        description: data.message || "Transaction updated successfully"}),
       
-      refetch();
+      refetch()
     } catch (error) {
       console.error("Error managing transaction:", error);
       toast({
         title: "Error",
         description: error.message || "Failed to update transaction",
-        variant: "destructive"});
+        variant: "destructive"})
     }
   };
   
@@ -126,7 +125,7 @@ export function TransactionHistory() {
           <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown
           </Badge>
-        );
+        )
     }
   };
   
@@ -134,7 +133,7 @@ export function TransactionHistory() {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency.toUpperCase()
-    }).format(amount);
+    }).format(amount)
   };
 
   if (error) {
@@ -150,7 +149,7 @@ export function TransactionHistory() {
           </Button>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -316,7 +315,7 @@ export function TransactionHistory() {
                     )}
                   </CardFooter>
                 </Card>
-              );
+              )
             })}
           </div>
         ) : (
@@ -335,5 +334,5 @@ export function TransactionHistory() {
         )}
       </div>
     </div>
-  );
+  )
 }

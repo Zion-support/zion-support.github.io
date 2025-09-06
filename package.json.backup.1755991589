@@ -1,10 +1,18 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "name": "zion-multichain-suite",
   "version": "0.1.0",
   "private": true,
   "description": "Secure, modular smart contracts and deploy scripts for ZION$ multichain (zkSync, Starknet relay, L2s)",
   "license": "MIT",
+<<<<<<< HEAD
+<<<<<<< HEAD
   "scripts": {
 =======
   "name": "zion-ai-assistant",
@@ -29,6 +37,12 @@
     "front:advertise": "node automation/front-index-advertiser.cjs",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+=======
+  "scripts": {    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "scripts": {    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "changelog": "node automation/generate-changelog.cjs",
@@ -38,6 +52,8 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     "prepare": "husky install",
 =======
@@ -65,6 +81,12 @@
     "netlify:cron:status": "bash automation/netlify-monitor-cron.sh status"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
+=======
+    "prepare": "husky install",    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "prepare": "husky install",    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
     "linkedin:run": "ts-node scripts/linkedin-automation.ts run",
@@ -235,12 +257,20 @@
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "admin:dashboard": "node automation/admin-dashboard-updater.cjs",
     "admin:dashboard:watch": "node automation/admin-dashboard-updater.cjs --watch",
     "admin:insights": "node automation/admin-insights-researcher.cjs",
     "admin:insights:watch": "node automation/admin-insights-researcher.cjs --watch",
     "admin:cron:start": "bash automation/admin-dashboard-cron.sh start",
     "admin:cron:stop": "bash automation/admin-dashboard-cron.sh stop",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"
 =======
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
@@ -346,6 +376,12 @@
     "master:report": "node automation/master-automation-launcher.cjs report"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
+=======
+    "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -374,6 +410,8 @@
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "jspdf": "^3.0.1",
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
@@ -389,11 +427,23 @@
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "react-datepicker": "^8.4.0",
+=======
+    "jspdf": "^3.0.1",    "react-datepicker": "^8.4.0",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "jspdf": "^3.0.1",    "react-datepicker": "^8.4.0",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
     "@nomicfoundation/hardhat-ethers": "^3.1.0",
     "@nomicfoundation/hardhat-ignition": "^0.15.13",
@@ -405,6 +455,8 @@
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.20",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "@types/mocha": "^10.0.10",
 =======
     "@commitlint/cli": "^19.8.1",
@@ -434,6 +486,14 @@
   },
   "type": "module"
 =======
+=======
+    "@types/mocha": "^10.0.10",  },
+  "type": "module"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@types/mocha": "^10.0.10",  },
+  "type": "module"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

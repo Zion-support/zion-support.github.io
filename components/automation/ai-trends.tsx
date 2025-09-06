@@ -1,24 +1,34 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ </div> </div>) ) 
+}</div> </div>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
-
 export type Trend = {
-  id: string;
-  date: string;
-  title: string;
-  highlights: string[];
-  summary: string;
-  tags: string[];
+  id: string,
+  date: string,
+  title: string,
+  highlights: string[],
+  summary: string,
+  tags: string[]
 };
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'ai-trends.json');
+  const file = path.join(process.cwd(), 'dataai-trends.json');
+<<<<<<< HEAD
   let items: Trend[] = [];
+=======
+  let items: Trend[] = [],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     const raw = fs.readFileSync(file, 'utf-8');
-    items = JSON.parse(raw);
+    items = JSON.parse(raw)
   } catch {}
   items.sort((a, b) => (a.date < b.date ? 1 : -1));
-  return { props: { items } };
+  return { props: { items } }
 }
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
@@ -45,4 +55,9 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

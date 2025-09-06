@@ -1,60 +1,94 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+<<<<<<< HEAD
+    Menu,
+    X
+  } from 'lucide-react';
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  Menu;
+  X;
+} from 'lucide-react';
+
+=======
 import React from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
-
+>>>>>>> pr-11992
 const Header: React.FC = () => {
-  const navigation = [
-    { name: 'About', href: '/about' },
+  const [, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }];
 
   return (
-    <header className="bg-white/5 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-fuchsia-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white/80 hover:text-white transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button href="/contact" variant="primary" size="sm">
-              Get Started
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+    <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+        <Link href="/" className="text-white font-bold">
+          Zion Tech Group
+        </Link>
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          {navigationItems.map((item) => (
+            <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white">
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
+      
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-slate-800 border-t border-slate-700"
+          >
+            <div className="px-4 py-4 space-y-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block text-gray-300 hover:text-white py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
-  );
+  )
 };
 
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default Header;
+=======
+export default Header;
+>>>>>>> pr-11992

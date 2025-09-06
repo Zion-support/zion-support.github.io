@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
@@ -158,6 +164,8 @@ function hydrateAutomationLinks() {
   });
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', hydrateAutomationLinks);
 =======
 (function () {
@@ -228,3 +236,9 @@ document.addEventListener('DOMContentLoaded', hydrateAutomationLinks);
   });
 })();
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+document.addEventListener('DOMContentLoaded', hydrateAutomationLinks);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+document.addEventListener('DOMContentLoaded', hydrateAutomationLinks);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

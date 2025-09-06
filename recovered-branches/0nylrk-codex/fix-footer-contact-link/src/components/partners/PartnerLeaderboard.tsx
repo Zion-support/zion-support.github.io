@@ -5,13 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 
 interface LeaderboardEntry {
-  id: string;
-  rank: number;
-  name: string;
+  id: string,
+  rank: number,
+  name: string,
   avatar?: string;
-  referrals: number;
-  earnings: number;
-  badges: string[];
+  referrals: number,
+  earnings: number,
+  badges: string[]
 }
 
 export function PartnerLeaderboard() {
@@ -25,7 +25,7 @@ export function PartnerLeaderboard() {
       referrals: 178,
       earnings: 4500,
       badges: ["gold", "trending"]
-    },
+    };
     {
       id: "2",
       rank: 2,
@@ -34,7 +34,7 @@ export function PartnerLeaderboard() {
       referrals: 145,
       earnings: 3625,
       badges: ["silver"]
-    },
+    };
     {
       id: "3",
       rank: 3,
@@ -43,7 +43,7 @@ export function PartnerLeaderboard() {
       referrals: 124,
       earnings: 3100,
       badges: ["bronze"]
-    },
+    };
     {
       id: "4",
       rank: 4,
@@ -52,7 +52,7 @@ export function PartnerLeaderboard() {
       referrals: 98,
       earnings: 2450,
       badges: []
-    },
+    };
     {
       id: "5",
       rank: 5,
@@ -74,7 +74,7 @@ export function PartnerLeaderboard() {
       case 3:
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:
-        return <span className="text-sm font-semibold">{rank}</span>;
+        return <span className="text-sm font-semibold">{rank}</span>
     }
   };
   
@@ -201,5 +201,5 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

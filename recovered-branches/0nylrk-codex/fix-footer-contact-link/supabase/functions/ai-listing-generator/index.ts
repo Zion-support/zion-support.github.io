@@ -1,14 +1,14 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0";
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -18,12 +18,12 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
-        }),
+        });
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
         }
-      );
+      )
     }
 
     const configuration = new Configuration({
@@ -45,15 +45,15 @@ Please create:
 
 Format the response as a JSON object with the following structure:
 {
-  "description": "The optimized description here...",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-  "suggestedPrice": { "min": number, "max": number },
+  "description": "The optimized description here...";
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+  "suggestedPrice": { "min": number, "max": number };
   "keyPoints": ["point1", "point2", "point3"]
 }`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
+      model: "gpt-4o-mini";
+      messages: [{ role: "user", content: prompt }];
       temperature: 0.7});
 
     const responseText = completion.choices[0].message.content;
@@ -67,40 +67,40 @@ Format the response as a JSON object with the following structure:
                         [null, responseText];
       
       const jsonString = jsonMatch[1].trim();
-      parsedResponse = JSON.parse(jsonString);
+      parsedResponse = JSON.parse(jsonString)
     } catch (error) {
       console.error("Failed to parse AI response as JSON:", error);
       console.log("Raw response:", responseText);
       
       // Provide a fallback structured response
       parsedResponse = {
-        description: "An error occurred while generating the optimized description. Please try again.",
-        tags: [],
-        suggestedPrice: { min: 0, max: 0 },
+        description: "An error occurred while generating the optimized description. Please try again.";
+        tags: [];
+        suggestedPrice: { min: 0, max: 0 };
         keyPoints: []
-      };
+      }
     }
 
     return new Response(
       JSON.stringify({ 
         generated: parsedResponse
-      }),
+      });
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    );
+    )
   } catch (error) {
     console.error("Error in AI listing generator:", error);
     
     return new Response(
       JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
+        error: "Failed to generate optimized listing content";
         details: error.message 
-      }),
+      });
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    );
+    )
   }
 });

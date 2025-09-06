@@ -5,27 +5,26 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { format } from 'date-fns';
 import { Skeleton } from '@/components/ui/skeleton';
-
 interface MilestoneActivitiesProps {
-  projectId: string;
+  projectId: string
 }
 
 interface Activity {
-  id: string;
-  milestone_id: string;
-  user_id: string;
-  action: string;
-  previous_status: string | null;
-  new_status: string;
-  comment: string | null;
-  created_at: string;
+  id: string,
+  milestone_id: string,
+  user_id: string,
+  action: string,
+  previous_status: string | null,
+  new_status: string,
+  comment: string | null,
+  created_at: string,
   milestone: {
-    title: string;
+    title: string
   };
   created_by_profile: {
-    display_name: string;
-    avatar_url: string | null;
-  };
+    display_name: string,
+    avatar_url: string | null
+  }
 }
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
@@ -40,25 +39,25 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
         const { data, error } = await supabase
           .from('milestone_activities')
           .select(`
-            *,
-            milestone:milestone_id(title),
+            *;
+            milestone:milestone_id(title);
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
           .eq('project_id', projectId)
-          .order('created_at', { ascending: false });
+          .order('created_at', { ascending: false }),
 
         if (error) throw error;
         
-        setActivities(data || []);
+        setActivities(data || [])
       } catch (err) {
-        console.error('Error fetching milestone activities:', err);
+        console.error('Error fetching milestone activities:', err)
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     }
 
     if (projectId) {
-      fetchActivities();
+      fetchActivities()
     }
   }, [projectId]);
 
@@ -73,7 +72,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       case 'deliverable_added':
         return 'added a deliverable';
       default:
-        return activity.action.replace(/_/g, ' ');
+        return activity.action.replace(/_/g, ' ')
     }
   }
 
@@ -94,7 +93,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
           </Card>
         ))}
       </div>
-    );
+    )
   }
 
   if (activities.length === 0) {
@@ -104,7 +103,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
           <p className="text-muted-foreground py-8">No activity found for this project</p>
         </CardContent>
       </Card>
-    );
+    )
   }
 
   return (
@@ -146,5 +145,5 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

@@ -10,18 +10,17 @@ import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
-
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }];
+  { id: "billing", text: "Billing help" }],
 
 type Message = {
-  id: string;
-  content: string;
-  sender: "user" | "bot";
-  timestamp: Date;
+  id: string,
+  content: string,
+  sender: "user" | "bot",
+  timestamp: Date
 };
 
 export function ChatBotPanel() {
@@ -30,7 +29,7 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
-      timestamp: new Date()}]);
+      timestamp: new Date()}]),
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
@@ -41,14 +40,14 @@ export function ChatBotPanel() {
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
     }
   }, [messages]);
 
   // Focus input when component mounts
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
   }, []);
 
@@ -59,7 +58,7 @@ export function ChatBotPanel() {
       id: `user-${Date.now()}`,
       content: text,
       sender: "user",
-      timestamp: new Date()};
+      timestamp: new Date()},
     
     setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
@@ -71,9 +70,9 @@ export function ChatBotPanel() {
       
       const botMessage: Message = {
         id: `bot-${Date.now()}`,
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",
+        content: response.message || "Sorry, I couldn't process your request. Please try again.";
         sender: "bot",
-        timestamp: new Date()};
+        timestamp: new Date()},
       
       setMessages((prev) => [...prev, botMessage]);
       
@@ -83,25 +82,25 @@ export function ChatBotPanel() {
         
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
-          suggestEscalation();
+          suggestEscalation()
         }
       } else {
         // Reset failed attempts if successful
-        setFailedAttempts(0);
+        setFailedAttempts(0)
       }
     } catch (error) {
       console.error("Error in AI chat:", error);
       toast({
         variant: "destructive",
         title: "Communication Error",
-        description: "We're having trouble connecting to our support service."});
+        description: "We're having trouble connecting to our support service."}),
       
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {
-        suggestEscalation();
+        suggestEscalation()
       }
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
@@ -110,7 +109,7 @@ export function ChatBotPanel() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"},
+          "Content-Type": "application/json"};
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })});
@@ -119,20 +118,20 @@ export function ChatBotPanel() {
         return {
           success: false,
           message: "I'm having trouble connecting to my knowledge base right now."
-        };
+        }
       }
       
       const data = await response.json();
       return {
         success: true,
         message: data.message
-      };
+      }
     } catch (error) {
       console.error("Error in AI chat:", error);
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
-      };
+      }
     }
   };
 
@@ -140,14 +139,14 @@ export function ChatBotPanel() {
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
       content: 
-        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?";
       sender: "bot",
-      timestamp: new Date()};
+      timestamp: new Date()},
     
     setMessages((prev) => [...prev, escalationMessage]);
     
     // Log this interaction for the support team
-    logSupportEscalation();
+    logSupportEscalation()
   };
 
   const logSupportEscalation = async () => {
@@ -160,14 +159,14 @@ export function ChatBotPanel() {
           sender: m.sender,
           timestamp: m.timestamp
         }))
-      });
+      })
     } catch (error) {
-      console.error("Failed to log support escalation:", error);
+      console.error("Failed to log support escalation:", error)
     }
   };
 
   const handleQuickReply = (text: string) => {
-    handleSendMessage(text);
+    handleSendMessage(text)
   };
 
   const handleEscalateToLiveAgent = () => {
@@ -178,10 +177,10 @@ export function ChatBotPanel() {
         content: "I'd like to speak with a human agent",
         sender: "user",
         timestamp: new Date()
-      },
+      };
       {
         id: `bot-${Date.now()}`,
-        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
         sender: "bot",
         timestamp: new Date()
       }
@@ -190,7 +189,7 @@ export function ChatBotPanel() {
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted",
-      description: "A support agent will be with you shortly."});
+      description: "A support agent will be with you shortly."})
   };
 
   const handleEmailSupport = () => {
@@ -201,14 +200,14 @@ export function ChatBotPanel() {
         content: "I'd like to email support",
         sender: "user",
         timestamp: new Date()
-      },
+      };
       {
         id: `bot-${Date.now()}`,
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
         sender: "bot",
         timestamp: new Date()
       }
-    ]);
+    ])
   };
 
   return (
@@ -280,7 +279,7 @@ export function ChatBotPanel() {
         <form 
           onSubmit={(e) => {
             e.preventDefault();
-            handleSendMessage();
+            handleSendMessage()
           }}
           className="flex items-center gap-2"
         >
@@ -290,7 +289,7 @@ export function ChatBotPanel() {
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
             className={cn(
-              "flex-1",
+              "flex-1";
               theme === "dark" 
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
                 : "bg-white border-gray-200"
@@ -300,12 +299,12 @@ export function ChatBotPanel() {
             type="submit"
             size="icon"
             disabled={isLoading || !inputValue.trim()}
-            className="bg-zion-cyan hover:bg-zion-cyan/80 text-white"
+            className="bg-zion-cyan hover: bg-zion-cyan/80 text-white"
           >
             <Send className="h-4 w-4" />
           </Button>
         </form>
       </div>
     </div>
-  );
+  )
 }

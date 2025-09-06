@@ -10,7 +10,7 @@ export interface Integration {
   logoUrl: string;
   status: IntegrationStatus;
   lastSync?: string;
-  type: IntegrationType;
+  type: IntegrationType
 }
 
 export interface SyncLog {
@@ -19,7 +19,7 @@ export interface SyncLog {
   event: string;
   status: "success" | "error" | "warning";
   timestamp: string;
-  details: string;
+  details: string
 }
 
 export type CrmIntegrationEvents = 

@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -425,7 +431,13 @@
     "doc": "docs",
     "test": "tests"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -757,7 +769,13 @@
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",

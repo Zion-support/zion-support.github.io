@@ -1,7 +1,13 @@
 [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/2025-advanced-services-showcase",
     "vector": [
       1,
@@ -3395,7 +3401,13 @@
     ]
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/_app",
     "vector": [
       0,
@@ -3918,6 +3930,8 @@
     ]
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "route": "/about",
@@ -14361,6 +14375,10 @@
   },
   {
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/comprehensive-2025-services-showcase",
     "vector": [
       2,
@@ -14623,6 +14641,8 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "route": "/comprehensive-2026-services-showcase",
 =======
     "route": "/comprehensive-pricing",
@@ -14632,6 +14652,18 @@
       0,
       0,
 <<<<<<< HEAD
+=======
+    "route": "/comprehensive-2026-services-showcase",    "vector": [
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "route": "/comprehensive-2026-services-showcase",    "vector": [
+      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1,
       1,
@@ -14640,6 +14672,8 @@
       0,
       2,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       0,
@@ -14673,6 +14707,18 @@
       0,
       0,
 <<<<<<< HEAD
+=======
+      1,      2,
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      2,
+      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       0,
       0,
@@ -14719,6 +14765,8 @@
       2,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       0,
@@ -14755,6 +14803,18 @@
       2,
       0,
 <<<<<<< HEAD
+=======
+      1,      0,
+      0,
+      2,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+      0,
+      2,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
@@ -14796,6 +14856,8 @@
       3,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
 =======
       2,
@@ -14835,6 +14897,18 @@
       0,
       0,
 <<<<<<< HEAD
+=======
+      2,      1,
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      1,
+      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       9,
       0,
       0,
@@ -14863,6 +14937,8 @@
       2,
       1,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       0,
@@ -14888,6 +14964,12 @@
       5,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       3,
@@ -14895,6 +14977,12 @@
       4,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       3,
       0,
@@ -14911,6 +14999,8 @@
       1,
       0,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
 =======
       1,
@@ -15165,273 +15255,34 @@
       1,
       0,
       0,
-      0,
-      7,
-      0,
-      3,
-      0,
-      9,
-      3,
-      3,
-      0,
-      0,
-      0,
-      0,
-      2,
-      2,
-      1,
+=======
+      3,      3,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
       1,
       0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      0,
-      1,
-      1,
-      3,
-      0,
-      0,
-      2,
-      2,
-      0,
-      1,
-      0,
-      0,
-      4,
-      0,
-      1,
-      0,
-      2,
-      1,
-      4,
-      0,
-      0,
-      0,
-      0,
-      5,
-      5,
-      4,
-      0,
-      0,
-      3,
-      1,
-      1,
-      0,
-      3,
-      1,
-      0,
-      5,
-      0,
-      2,
-      2,
-      0,
-      3,
-      0,
-      0,
-      2,
-      3,
-      0,
-      0,
-      0,
-      3,
-      1,
-      0,
-      2,
-      0,
-      2,
-      3,
-      0,
-      1,
-      0,
-      0,
-      0,
-      6,
-      0,
-      2,
-      0,
-      2,
-      0,
-      0,
-      2,
-      1,
-      0,
-      16,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      1,
-      6,
-      0,
-      3,
-      1,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      1,
-      0,
-      1,
-      2,
+<<<<<<< HEAD
+=======
+      3,      3,
       0,
       0,
       1,
       1,
       0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      1,
-      7,
-      1,
-      1,
-      3
-    ]
-  },
-  {
-    "route": "/contact",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      3,
-      3,
-      0,
-      8,
-      0,
-      2,
-      1,
-      4,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      3,
-      4,
-      0,
-      6,
-      0,
-      0,
-      0,
-      1,
-      4,
-      5,
-      5,
-      1,
-      0,
-      0,
-      1,
-      1,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      1,
-      1,
-      2,
-      4,
-      1,
-      0,
-      3,
-      5,
-      0,
-      4,
-      2,
-      0,
-      1,
-      0,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      4,
-      1,
-      0,
-      0,
-      1,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      5,
-      2,
-      0,
-      0,
-      0,
-      6,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      6,
-      9,
-      1,
-      3,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
-      0,
+      2,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       5,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       1,
 =======
@@ -15555,31 +15406,45 @@
       0,
       0,
       0,
+=======
+      1,      3,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      3,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
       0,
       3,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
       3,
       1,
       1,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
-      2,
-      1,
-      0,
-      0,
-      2,
-      2,
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
-      1,
+      0,      1,
       1,
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      0,
+      0,
+      0,      1,
+      1,
+      0,
+      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       2,
@@ -15601,7 +15466,13 @@
       0,
       17,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       2,
       0,
@@ -15610,6 +15481,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       3,
       0,
@@ -15633,15 +15506,12 @@
       0,
       0,
       0,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
-      61,
-      0,
-      1,
-      2,
-      1,
-      6,
       0,
       0,
+<<<<<<< HEAD
       7,
       0,
       0,
@@ -15681,11 +15551,26 @@
       2,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       1,
+=======
+      3,
+      0,
+      0,
+      0,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       2,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       12,
       2,
@@ -15698,6 +15583,8 @@
       0,
       0,
       4,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       0,
@@ -15732,6 +15619,18 @@
       0,
 <<<<<<< HEAD
 =======
+=======
+      1,      4,
+      0,
+      1,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      4,
+      0,
+      1,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       1,
       8,
@@ -15767,16 +15666,30 @@
       0,
       6,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       4,
@@ -15828,6 +15741,18 @@
       0,
 <<<<<<< HEAD
 =======
+=======
+      1,      2,
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      2,
+      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       2,
       22,
@@ -15867,12 +15792,20 @@
       0,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
       3,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       8,
@@ -15894,16 +15827,28 @@
     "vector": [
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       10,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2
 =======
       0,
@@ -21901,6 +21846,12 @@
       0
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
     ]
+=======
+      2    ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2    ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/",
@@ -21927,6 +21878,8 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       2,
@@ -21944,6 +21897,24 @@
       2,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      1,      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
@@ -21951,11 +21922,19 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       2,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       0,
@@ -21966,11 +21945,19 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       1,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       2,
+=======
+      0,      2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       0,
@@ -21998,11 +21985,19 @@
       1,
       4,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       2,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       3,
@@ -22013,6 +22008,8 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
       2,
 =======
@@ -22020,11 +22017,21 @@
       3,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      1,
+      2,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,
+      2,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       1,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       2,
       0,
@@ -22032,6 +22039,14 @@
       0,
       1,
       1,
+=======
+      2,
+      0,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -22039,6 +22054,8 @@
       1,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
       6,
       0,
@@ -22140,11 +22157,23 @@
       0,
       0,
       2,
+=======
+      1,
+      7,
+      0,      3,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,
+      7,
+      0,      3,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
       2,
       0,
@@ -22289,6 +22318,10 @@
       0,
       0,
 <<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       0,
       0,
@@ -22297,6 +22330,8 @@
       0,
       7,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       0,
@@ -23686,6 +23721,18 @@
       1,
 <<<<<<< HEAD
 =======
+=======
+      0,      0,
+      2,
+      0,
+      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+      2,
+      0,
+      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       1,
@@ -23760,7 +23807,13 @@
       2,
       5,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       2,
@@ -23773,6 +23826,12 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       3,
@@ -23785,6 +23844,8 @@
       0,
       0,
       4,
+<<<<<<< HEAD
+<<<<<<< HEAD
       4,
 =======
       0,
@@ -23803,12 +23864,20 @@
     "route": "/leadership",
     "vector": [
       0,
+=======
+      4,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      4,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       0,
@@ -23856,12 +23925,20 @@
       0,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+      1,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 <<<<<<< HEAD
       1,
@@ -24387,10 +24464,16 @@
       0,
       0,
       0,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       7,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
       7,
       0,
@@ -24650,6 +24733,12 @@
       2,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       2,
+=======
+      0,      2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -24657,6 +24746,12 @@
       6,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       2,
       1,
@@ -24670,6 +24765,8 @@
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       3,
@@ -24696,11 +24793,14 @@
       4,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       2,
+=======
+      1,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
+      2,
       2,
 <<<<<<< HEAD
-      2,
       0,
 =======
       0,
@@ -24719,13 +24819,30 @@
       4,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      1,      2,
+      0,
+      0,
+      2,
+      2,
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       3,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       4,
@@ -24932,13 +25049,21 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       1,
@@ -25699,13 +25824,23 @@
       2,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       12,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       4,
       0,
@@ -25831,12 +25966,20 @@
       0,
       3,
       15,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       3,
@@ -28150,57 +28293,25 @@
       0,
       0,
       0,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
-      14,
-      1,
-      3,
-      2,
-      5,
-      1,
-      2,
-      0,
-      1,
-      4,
-      3,
       0,
       0,
-      1,
       1,
       0,
       1,
       0,
       0,
-      2,
       0,
-      3,
-      2,
-      0,
-      2,
-      0,
-      4,
-      2,
-      2,
-      0,
-      1,
-      5,
-      0,
-      4,
-      0,
-      0,
-      18,
       0,
       0,
       0,
       1,
-      3,
-      0,
-      2,
-      0,
-      3,
-      0,
-      1,
+      1,      0,
       0,
       0,
+<<<<<<< HEAD
       2,
       0,
       2,
@@ -28209,10 +28320,32 @@
       0,
       0,
       9,
+=======
+      1,
+      0,
+      0,
+      1,
+      0,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
       0,
+<<<<<<< HEAD
+      0,
+      0,
+      0,
+      1,
+      1,      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      1,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
       8,
       14,
       1,
@@ -28222,74 +28355,30 @@
       0,
       3,
       0,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       2,
       0,
-      17,
-      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       3,
       0,
       2,
-      3,
-      2,
-      2,
       0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      3,
-      1,
-      0,
-      0,
-      0,
-      6,
-      0,
-      2,
-      1,
-      15,
-      2,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      1,
-      0,
-      10,
-      2,
-      1,
-      0,
-      0,
-      1,
-      0,
-      1,
-      2,
-      3,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      5,
-      0,
-      1,
-      0,
-      4,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
+<<<<<<< HEAD
       3,
       5,
       0,
@@ -28318,12 +28407,39 @@
       0,
       0,
       0,
+=======
+      0,
+      2,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      2,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
       1,
       0,
       0,
@@ -28334,12 +28450,22 @@
       0,
       0,
       1,
+=======
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       0,
@@ -28372,6 +28498,14 @@
       0,
       0,
       0,
+=======
+      1,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -28381,6 +28515,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       0,
@@ -28448,6 +28584,16 @@
       0,
       0,
       0,
+=======
+      1,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
@@ -28458,6 +28604,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
       0,
       0,
@@ -28470,14 +28618,24 @@
       0,
       0,
       0,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       1,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -28485,6 +28643,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       0,
@@ -28495,6 +28655,10 @@
       0,
       0,
       2,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -28510,6 +28674,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
       6,
       0,
@@ -28519,6 +28685,12 @@
       0,
       0,
       1,
+=======
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
@@ -28526,12 +28698,22 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      3,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      3,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       1,
@@ -28555,6 +28737,16 @@
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       0,
+=======
+      1,
+      0,
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,
+      0,
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0
     ]
   },
@@ -28820,6 +29012,8 @@
     ]
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     "route": "/services-advertising-2026",
 =======
@@ -36719,6 +36913,12 @@
       0,
       1,
       0,
+=======
+    "route": "/services-advertising-2026",    "vector": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "route": "/services-advertising-2026",    "vector": [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -36727,6 +36927,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       0,
@@ -36734,60 +36936,93 @@
       2,
       2,
       0,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
+      0,
+      0,
       0,
       1,
       0,
-      0,
-      1,
+<<<<<<< HEAD
       2,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      2,
-      5,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
       0,
       0,
       2,
       5,
+=======
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      1,
+      0,
+      1,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      1,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
+      1,
+      0,
+=======
+      0,
+      1,
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      2,
+      5,
       0,
       1,
       1,
+=======
+      0,
+      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
       0,
       0,
@@ -36797,6 +37032,16 @@
       0,
       0,
       1,
+=======
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -36813,143 +37058,106 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      2,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      0,
+      1,
+<<<<<<< HEAD
       2,
       0,
-      3,
-      0,
-      1,
-      2,
-      0,
+=======
       0,
       0,
       1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
+      0,
+      1,
+      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       4,
       0,
       0,
       0,
       0,
       0,
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
-      3,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      7,
-      0,
-      0,
       1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      8,
-      0,
-      0,
-      0,
       1,
-      0,
-      0,
-      2,
       0,
       0,
       3,
+      1,
       0,
+      2,
       0,
-      0,
-      0,
+      1,
+      1,
+      0,      0,
       0,
       3,
-      0,
-      0,
-      2,
-      2,
-      0,
-      2,
-      0,
-      0,
-      5,
-      1,
-      0,
-      0,
-      9,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      5,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
       1,
       1,
       0,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       1,
       1,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0
-    ]
-  },
-  {
-    "route": "/tool-comparison",
-    "vector": [
-      2,
-      0,
-      0,
-      0,
-      1,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       2,
+=======
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      3,
+      1,
+      0,
+      2,
+      0,
+      1,
+      1,
+      0,      0,
+      0,
+      3,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,      2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
@@ -37116,12 +37324,24 @@
       2,
       2,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       1,
       5,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       1,
       1,
@@ -37134,6 +37354,8 @@
       0,
       1,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       0,
@@ -37170,6 +37392,18 @@
       1,
       9,
 <<<<<<< HEAD
+=======
+      0,      4,
+      1,
+      1,
+      9,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      4,
+      1,
+      1,
+      9,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       3,
       1,
@@ -37205,6 +37439,8 @@
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
 =======
       0,
@@ -37327,6 +37563,12 @@
       0,
       0,
       1,
+=======
+      2,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       4,
       0,
@@ -37337,6 +37579,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
       0,
       0,
@@ -37372,6 +37616,10 @@
       0,
       0,
       0,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
@@ -37681,7 +37929,13 @@
       1,
       0,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -37690,6 +37944,12 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       6,
       1,
       9,
@@ -37757,6 +38017,8 @@
       0,
       0,
       3,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
 =======
       0,
@@ -37855,379 +38117,45 @@
       0,
       0,
       3,
+=======
+      3,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
-      1,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      7,
-      0,
-      0,
-      0,
-      0,
-      9,
-      5,
-      1,
-      3,
-      0,
-      0,
       0,
       0,
       5,
       0,
       0,
-      16,
-      5,
-      3,
-      0,
-      0,
-      3,
-      9,
-      1,
-      6,
       0,
       1,
-      1,
+      3,      1,
       0,
-      0,
-      1,
-      5,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      3,
       0,
       0,
       3,
+      3,
+      0,      0,
+      0,
       3,
       4,
       0,
-      1,
-      6,
-      4,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      1,
-      0,
-      3,
-      0,
-      2,
-      1,
-      6,
-      3,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
       2,
       3,
-      1,
-      0,
-      0,
-      4,
-      6,
-      4,
-      0,
-      4,
-      0,
-      0,
-      0,
-      1,
+      2,
+      2,
+      0,      0,
       2,
       1,
-      1,
-      0,
-      0,
-      10,
-      6,
-      0,
-      0,
-      0,
-      5,
-      7,
-      0,
-      5,
-      2,
-      0,
-      4,
-      6,
       1,
       3,
-      0,
-      1,
-      0,
-      2,
-      5,
-      0,
-      0,
-      2,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      4,
-      1,
-      0,
-      0,
-      0,
-      5,
-      1,
-      5,
-      0,
-      0,
-      7,
-      1,
-      2,
-      0,
-      0,
-      3,
-      0,
-      13,
-      1,
-      1,
-      6,
-      0,
-      2,
-      0,
-      3,
-      1,
-      2,
-      1,
-      0,
-      0,
-      1,
-      6,
-      13,
-      0,
-      0,
-      1,
-      11,
-      1,
-      0,
-      0,
-      2,
-      2,
-      2,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      2,
-      0,
-      1,
-      1,
-      1,
-      0,
-      4,
-      0,
-      1,
-      1,
-      1,
-      9,
-      2,
-      5,
-      0,
-      0,
-      5,
-      1,
-      0,
-      3,
-      0,
-      1,
-      0,
-      1,
-      0,
-      3,
-      0,
-      4,
-      3,
-      11,
-      6,
-      0,
-      0,
-      0,
-      0,
-      2,
-      1,
-      1,
-      0,
-      4,
-      2,
-      8,
-      1,
-      3,
-      3,
-      1,
-      0,
-      1,
-      0,
-      2,
-      0,
-      5,
-      7,
-      0,
-      2,
-      6,
-      0,
-      1,
+      0,      3,
       0,
       1,
       0,
       4,
       0,
-      5,
       0,
-      0,
-      2,
-      0,
-      1,
-      6,
-      3,
-      0,
-      0
-    ]
-  },
-  {
-    "route": "/wcag-accessibility-scanner",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
+<<<<<<< HEAD
       0,
       6,
       0,
@@ -175108,11 +175036,59 @@
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       11,
+=======
+      3,      0,
+      2,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      1,
+      3,      1,
+      0,
+      0,
+      0,
+      3,
+      3,
+      0,      0,
+      0,
+      3,
+      4,
+      0,
+      2,
+      3,
+      2,
+      2,
+      0,      0,
+      2,
+      1,
+      1,
+      3,
+      0,      3,
+      0,
+      1,
+      0,
+      4,
+      0,
+      0,
+      2,      11,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      11,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       1,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       2,
       7,
@@ -175121,6 +175097,8 @@
       4,
       4,
       4,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       0,
@@ -176847,11 +176825,19 @@
       0,
       0,
       0,
+=======
+      1,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       3,
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
       0,
       0,
@@ -179120,6 +179106,10 @@
       0,
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
@@ -205506,13 +205496,21 @@
       1,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       2,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       1,
@@ -205632,12 +205630,22 @@
       0,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       2,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       4,
       3,
@@ -205647,6 +205655,8 @@
       1,
       1,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
       8,
 =======
       1,
@@ -207293,6 +207303,12 @@
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
       1,
+=======
+      8,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      8,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1
     ]

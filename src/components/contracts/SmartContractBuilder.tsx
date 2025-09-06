@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Save } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { ContractForm, ContractFormValues } from './components/ContractForm';
+import { ContractPreview } from './components/ContractPreview';
+import { TemplateManager } from './templates/TemplateManager';
+import { DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';
+import { useSmartContracts } from '@/hooks/useSmartContracts';
+import { toast } from 'sonner';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+=======
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -11,21 +33,20 @@ import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface SmartContractBuilderProps {
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated?: (contractContent: string) => void;
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string,
+  onContractGenerated?: (contractContent: string) => void
 }
 
 export function SmartContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
+  isOpen;
+  onClose;
+  talent;
+  clientName;
   onContractGenerated}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
@@ -44,7 +65,7 @@ export function SmartContractBuilder({
   const { deploySmartContract } = useSmartContracts();
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData);
+    setFormValues(templateData)
   };
 
   // Convert ContractFormValues to contract content string
@@ -59,15 +80,15 @@ export function SmartContractBuilder({
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
-        toast.success("Smart contract deployed successfully!");
+        toast.success("Smart contract deployed successfully!")
       } else {
         setDeployStatus('error');
-        toast.error("Failed to deploy smart contract");
+        toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-      logErrorToProduction('Error deploying contract:', { data: error });
+      logErrorToProduction('Error deploying contract:', { data: error }),
       setDeployStatus('error');
-      toast.error("Failed to deploy smart contract");
+      toast.error("Failed to deploy smart contract")
     }
   };
 
@@ -76,10 +97,10 @@ export function SmartContractBuilder({
     // This should be a function that takes a string (contract content)
     // Since we need to adapt the interface, we'll implement the simplest solution that works
     if (onContractGenerated) {
-      onContractGenerated(contract);
+      onContractGenerated(contract)
     }
     setGeneratedContract(contract);
-    setActiveTab("preview");
+    setActiveTab("preview")
   };
 
   return (
@@ -153,4 +174,49 @@ export function SmartContractBuilder({
       </DialogContent>
     </Dialog>
   );
+<<<<<<< HEAD
+
+};
+//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
+  setGeneratedContract (contract);";
+setActiveTab ("preview");
+};";
+  talent ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleFormSubmit ;
+}/> </TabsContent> <div> <ContractPreview generatedContract= {;
+  generatedContract ;
+}talent= {;
+  talent ;
+}onClose= {;
+  onClose ;
+}deploymentInfo= {;
+  deploymentInfo ;
+}/> > {';
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
+}</Button> </div>) ;
+}</div>) ;
+}</TabsContent> </Tabs> <TemplateManager isOpen= {;
+  templateManagerOpen ;
+}onClose= {;
+  () => setTemplateManagerOpen (false) ;
+}onSelectTemplate= {;
+  handleLoadTemplate ;
+}currentValues= {;
+  formValues ;
+}/> </DialogContent> </Dialog>) ;
+}'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

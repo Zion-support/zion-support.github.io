@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,21 +8,18 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react
 import { supabase } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string;
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
+  errorMessage?: string
 }
 
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
-
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
   // Fetch model data on component mount
   useEffect(() => {
-    fetchModels();
+    fetchModels()
   }, []);
 
   const fetchModels = async () => {
@@ -30,7 +28,7 @@ export function ZionGPTModelManager() {
       const { data, error } = await supabase
         .from('model_versions')
         .select('*')
-        .order('createdAt', { ascending: false });
+        .order('createdAt', { ascending: false }),
       
       if (error) throw error;
       
@@ -44,11 +42,11 @@ export function ZionGPTModelManager() {
         active: model.active,
         trainingStatus: model.training_status,
         errorMessage: model.error_message
-      })));
+      })))
     } catch (error) {
-      logErrorToProduction('Error fetching models:', { data: error });
+      logErrorToProduction('Error fetching models:', { data: error })
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
@@ -81,12 +79,12 @@ export function ZionGPTModelManager() {
           // If training succeeded, automatically set to active
           ...((data as any)?.status === 'succeeded' ? { active: true } : {})
         })
-        .eq('id', modelId);
+        .eq('id', modelId)
       
     } catch (error) {
-      logErrorToProduction('Error checking status for model ${modelId}:', { data: error });
+      logErrorToProduction('Error checking status for model ${modelId}:', { data: error })
     } finally {
-      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }))
     }
   };
 
@@ -97,7 +95,7 @@ export function ZionGPTModelManager() {
         await supabase
           .from('model_versions')
           .update({ active: false })
-          .eq('purpose', purpose);
+          .eq('purpose', purpose)
       }
       
       // Update this model
@@ -107,9 +105,9 @@ export function ZionGPTModelManager() {
         .eq('id', modelId);
       
       // Refresh the model list
-      fetchModels();
+      fetchModels()
     } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error });
+      logErrorToProduction('Error toggling model active state:', { data: error })
     }
   };
 
@@ -214,4 +212,38 @@ export function ZionGPTModelManager() {
       </CardContent>
     </Card>
   );
+<<<<<<< HEAD
+
+};
+return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  models.map ( (model) => (<TableRow key= {;
+  model.id '";
+}>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>) ;
+}onClick={;
+  () => checkTrainingStatus (model.id) ;
+}disabled= {;
+  activeJobs[model.id] ";
+}>) : (<RefreshCw className="h-4 w-4" />) ";
+}<span className="ml-1" >Check</span> </Button> > {";
+  model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) ";
+}</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1" /> Error </Button>) ;
+}</TableCell> </TableRow>) ) ;
+}</TableBody> </Table>) ;
+}</CardContent> </Card>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+        .order('createdAt', { ascending: false }),
+      
+
+<<<<<<< HEAD
+
+      
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

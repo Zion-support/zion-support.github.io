@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import z from 'zod';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { useToast } from '@/hooks/use-toast';
+import { useRouter } from 'next/router';
+import Image from 'next/image'; // Import next/image
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+=======
 import React from "react";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -6,16 +20,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/router";
-import Image from 'next/image'; // Import next/image
+import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger';
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
   FormMessage} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -24,21 +38,22 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from 'lucide-react'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 // Define the form schema with zod
 const productSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  description: z.string().min(10, "Description must be at least 10 characters"),
+  title: z.string().min(3, "Title must be at least 3 characters");
+  description: z.string().min(10, "Description must be at least 10 characters");
   price: z
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
       message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category"),
+  category: z.string().min(1, "Please select a category");
   image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  tags: z.string().optional()});
-
+  tags: z.string().optional()}),
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 
@@ -60,8 +75,7 @@ export function ProductSubmissionForm() {
       category: "",
       video: undefined,
       model: undefined,
-      tags: ""}});
-  
+      tags: ""}}),
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -69,23 +83,23 @@ export function ProductSubmissionForm() {
       form.setValue("image", file);
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImagePreview(reader.result as string);
+        setImagePreview(reader.result as string)
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file)
     }
   };
 
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      form.setValue("video", file);
+      form.setValue("video", file)
     }
   };
 
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      form.setValue("model", file);
+      form.setValue("model", file)
     }
   };
 
@@ -99,7 +113,7 @@ export function ProductSubmissionForm() {
     form.setValue("price", averagePrice);
     
     // Switch to the manual tab to show applied content
-    setActiveTab("manual");
+    setActiveTab("manual")
   };
 
   // Handle form submission
@@ -108,8 +122,8 @@ export function ProductSubmissionForm() {
       toast({
         title: "Authentication Required",
         description: "You must be logged in to publish products",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return
     }
 
     setIsSubmitting(true);
@@ -122,12 +136,11 @@ export function ProductSubmissionForm() {
         price: parseFloat(values.price),
         category: values.category,
         currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
+        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [],
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
-        createdAt: new Date().toISOString()};
-      
+        createdAt: new Date().toISOString()},
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
@@ -135,11 +148,10 @@ export function ProductSubmissionForm() {
         .single();
         
       if (productError) {
-        throw new Error(productError.message);
+        throw new Error(productError.message)
       }
 
-      let imagePublicUrl: string | undefined;
-
+      let imagePublicUrl: string | undefined,
       // If we have an image, upload it
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -148,7 +160,7 @@ export function ProductSubmissionForm() {
           .upload(imagePath, values.image);
           
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message)
         }
         
         // Get the public URL for the image
@@ -166,7 +178,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id);
           
       if (updateError) {
-        throw new Error(updateError.message);
+        throw new Error(updateError.message)
       }
     }
 
@@ -178,7 +190,7 @@ export function ProductSubmissionForm() {
           .upload(videoPath, values.video);
 
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message)
         }
 
         const { data: publicUrlData } = supabase.storage
@@ -191,7 +203,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id);
 
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message)
         }
       }
 
@@ -203,7 +215,7 @@ export function ProductSubmissionForm() {
           .upload(modelPath, values.model);
 
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message)
         }
 
         const { data: publicUrlData } = supabase.storage
@@ -216,7 +228,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id);
 
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message)
         }
       }
 
@@ -229,25 +241,24 @@ export function ProductSubmissionForm() {
             description: values.description,
             images: imagePublicUrl ? [imagePublicUrl] : [],
             sellerId: user.id}
-        });
+        })
       } catch (err) {
-        logErrorToProduction('Error invoking moderation:', { data: err });
+        logErrorToProduction('Error invoking moderation:', { data: err })
       }
       
       // Show success message
       toast({
         title: "Product Published!",
-        description: "Your product has been successfully published on Zion."});
-      
+        description: "Your product has been successfully published on Zion."}),
       // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`);
+      router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -403,7 +414,7 @@ export function ProductSubmissionForm() {
                           height={400} // Example height, adjust as needed
                           className="w-full h-full object-cover"
                           priority={false} // Preview images are not LCP
-                          // `sizes` might not be strictly necessary for a preview of this nature,
+                          // `sizes` might not be strictly necessary for a preview of this nature;
                           // but can be added if responsive behavior is critical here.
                           // For local object URLs, optimization via loader won't occur.
                         />
@@ -452,7 +463,7 @@ export function ProductSubmissionForm() {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>
@@ -471,5 +482,113 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
+<<<<<<< HEAD
   );
+
+  const file = e.target.files?.[0];
+if (file) {;
+  reader.onloadend = () => {;
+  setImagePreview (reader.result as string) ;
+};
+reader.readAsDataURL (file) ;
+
+};
+
+};
+const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const file = e.target.files?.[0];
+if (file) {;
+  ;
+
+};
+//Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
+  if (!user) {;
+  toast ({;
+  return;
+}setIsSubmitting (true);
+author: {";
+  name: user.displayName || "Anonymous Creator";
+id: user.id ;
+};
+createdAt: new Date () .toISOString () ;
+};
+data: productRecord, error: productError ';
+}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
+let imagePublicUrl: string | undefined;';
+//If we have an image, upload it .from ('products') .upload (imagePath, values.image);
+//Get the public window.URL for the image const {;
+  data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (imagePath);
+imagePublicUrl = publicUrlData.publicUrl;
+//Update the product with the image window.URL const {;
+  error: updateError ';
+}= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video);
+const {;
+  data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (videoPath);
+const {;
+  error: updateError ';
+}= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model);
+const {;
+  data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (modelPath);
+const {;
+  error: updateError ';
+}= await supabase .from ('product listings') ;
+}//Send listing to moderation service try {';
+  await supabase.functions.invoke ('moderate-listing', {;
+  body: {;
+  //Redirect to product page router.push (`/marketplace/listing/$ {;
+  productRecord.id ;
+}`) ;
+}catch (error) {;
+  toast ({;
+  ;
+}finally {;
+  setIsSubmitting (false) ;
+
+};
+
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
+}";
+}/> <FormField Describe your product in detail..." className="min-h-32" {;
+  ...field ';
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {;
+  ...field ;
+}/> ";
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {;
+  ...field ;
+}/> ";
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {;
+  handleImageChange ";
+}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;
+}</FormItem>) ";
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video/mp4" onChange= {;
+  handleVideoChange ";
+}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+type ProductFormValues = z.infer<typeof productSchema>;
+
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+        imagePublicUrl = publicUrlData.publicUrl;
+          
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

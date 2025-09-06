@@ -580,6 +580,8 @@
     "links:cron:status": "bash automation/site-link-cron.sh status",
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "links:advertise": "node automation/site-content-advertiser-factory.cjs",
     "links:cron:full": "bash automation/site-link-cron.sh",
 =======
@@ -588,6 +590,14 @@
     "homepage:auto": "npm run homepage:auto:analyze && npm run homepage:auto:apply",
 >>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc
     "promo:start": "node automation/site-promo-orchestrator.cjs",
+=======
+    "links:advertise": "node automation/site-content-advertiser-factory.cjs",
+    "links:cron:full": "bash automation/site-link-cron.sh",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "links:advertise": "node automation/site-content-advertiser-factory.cjs",
+    "links:cron:full": "bash automation/site-link-cron.sh",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
     "spec-dev:start": "node automation/spec-dev-orchestrator.cjs",
@@ -719,7 +729,13 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

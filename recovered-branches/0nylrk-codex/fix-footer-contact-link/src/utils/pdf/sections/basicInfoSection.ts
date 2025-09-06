@@ -2,10 +2,9 @@
 import { jsPDF } from 'jspdf';
 import { ResumeBasicInfo } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
-
 export function addBasicInfoSection(
-  doc: jsPDF,
-  basicInfo: ResumeBasicInfo,
+  doc: jsPDF;
+  basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
@@ -19,7 +18,7 @@ export function addBasicInfoSection(
     doc.setFontSize(14);
     doc.setTextColor(colors.subheading);
     doc.text(basicInfo.headline, 20, yPos);
-    yPos += 5;
+    yPos += 5
   }
   
   // Add horizontal line divider
@@ -36,8 +35,8 @@ export function addBasicInfoSection(
     // Split text into multiple lines to fit within page width
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
-    yPos += (summaryLines.length * 6) + 10;
+    yPos += (summaryLines.length * 6) + 10
   }
   
-  return yPos;
+  return yPos
 }

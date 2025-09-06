@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 const path = require('path');
 const os = require('os');
 =======
@@ -6,6 +8,14 @@ const os = require('os');
 const path = require('path');
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
 
+=======
+const path = require('path');
+const os = require('os');
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const path = require('path');
+const os = require('os');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
@@ -13,12 +23,20 @@ const nextConfig = {
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   eslint: {
     ignoreDuringBuilds: true,
   },
 
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
+<<<<<<< HEAD
+<<<<<<< HEAD
   productionBrowserSourceMaps: false, // Disable for faster builds
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
@@ -51,6 +69,12 @@ const nextConfig = {
 
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
   experimental: {
+=======
+  productionBrowserSourceMaps: false, // Disable for faster builds  experimental: {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  productionBrowserSourceMaps: false, // Disable for faster builds  experimental: {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     optimizeCss: true,
     optimizePackageImports: [
       'lucide-react', 
@@ -60,6 +84,12 @@ const nextConfig = {
       'fuse.js'
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // ESM configuration for problematic packages
     esmExternals: 'loose', // Allow loose ESM handling
     
@@ -149,6 +179,8 @@ const nextConfig = {
       config.resolve.conditionNames = ['import', 'require', 'default'];
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     // Add polyfills for Node.js APIs
 =======
     esmExternals: 'loose',
@@ -198,6 +230,12 @@ const nextConfig = {
     // Handle problematic packages
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
     config.resolve.fallback = {
+=======
+    // Add polyfills for Node.js APIs    config.resolve.fallback = {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    // Add polyfills for Node.js APIs    config.resolve.fallback = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -217,6 +255,12 @@ const nextConfig = {
       zlib: false,
       url: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
 
     // Optimize bundle size
@@ -230,6 +274,8 @@ const nextConfig = {
       // Removed compression-webpack-plugin to avoid dependency conflicts
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     // PERFORMANCE: Add bundle optimization
 =======
       'dd-trace': false,
@@ -251,6 +297,12 @@ const nextConfig = {
     // Optimize bundle size for production
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
     if (!dev) {
+=======
+    // PERFORMANCE: Add bundle optimization    if (!dev) {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    // PERFORMANCE: Add bundle optimization    if (!dev) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       config.optimization = {
         ...config.optimization,
         moduleIds: 'deterministic',

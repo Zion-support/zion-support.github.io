@@ -1,11 +1,10 @@
 
 import { jsPDF } from 'jspdf';
-
 export interface FontConfig {
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
   italic?: ArrayBuffer;
-  boldItalic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer
 }
 
 export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
@@ -30,12 +29,11 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
       case 'roboto':
         doc.setFont('helvetica');
         break;
-      default:
-        doc.setFont('helvetica');
+      default: doc.setFont('helvetica')
     }
   } catch (error) {
     console.error('Error loading custom fonts:', error);
     // Fall back to default font
-    doc.setFont('helvetica');
+    doc.setFont('helvetica')
   }
 }

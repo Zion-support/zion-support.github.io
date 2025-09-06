@@ -3,6 +3,12 @@ const path = require('path');
 
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
   trailingSlash: false,
@@ -472,6 +478,8 @@ const nextConfig = {
     }
     
     return config;
+<<<<<<< HEAD
+<<<<<<< HEAD
   },
 =======
 	reactStrictMode: true,
@@ -497,5 +505,11 @@ const nextConfig = {
 	}
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 };
+=======
+  },};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  },};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = nextConfig;

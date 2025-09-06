@@ -1,18 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { SearchSuggestion } from '@/types/search';
+import React, { useState } from 'react';
+=======
 
 import { SearchSuggestion } from "@/types/search";
 import React, { useState } from "react";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Search } from 'lucide-react'
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
 import {
- getDocsSearchPath,
+ getDocsSearchPath;
  docsSearchSuggestions
 } from "@/data/docsSearchData";
 
 interface ApiDocsLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
@@ -25,13 +31,12 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
     { title: "Sample Code", path: "/docs/sample-code" },
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }];
-
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
     const path = getDocsSearchPath(suggestion.text);
     if (path) {
       router.push(path);
-      setSearchValue("");
+      setSearchValue("")
     }
   };
 
@@ -40,14 +45,14 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     const path = getDocsSearchPath(searchValue);
     if (path) {
       router.push(path);
-      setSearchValue("");
+      setSearchValue("")
     }
   };
 
   return (
     <div className="flex min-h-screen bg-zinc-950">
      {/* Sidebar */}
-     <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+     <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
@@ -74,10 +79,10 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
          key={item.path}
          href={item.path}
          className={cn(
-          "block px-3 py-2 rounded-md text-sm",
+          "block px-3 py-2 rounded-md text-sm";
           currentPath === item.path
            ? "bg-zion-purple/20 text-zion-cyan"
-           : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+           : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}
         >
          {item.title}
@@ -94,4 +99,29 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   );
 }
 
+<<<<<<< HEAD
+};
+/* Sidebar */ ";
+}<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>) ;
+}> {;
+  item.title ;
+}</Link>) ) ;
+}</nav> </div> {;
+  /* Main content */ ";
+}<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {;
+  children ;
+}</div> </div>) ;
+}export default ApiDocsLayout;
+"
+=======
+
+<<<<<<< HEAD
+  const currentPath = router.pathname;
+<<<<<<< HEAD
+
 export default ApiDocsLayout;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default ApiDocsLayout;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

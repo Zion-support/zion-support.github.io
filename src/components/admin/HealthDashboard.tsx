@@ -1,45 +1,48 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface HealthData {
-  status: 'healthy' | 'warning' | 'critical';
-  timestamp: string;
-  uptime: number;
-  version: string;
-  environment: string;
+  status: 'healthy' | 'warning' | 'critical',
+  timestamp: string,
+  uptime: number,
+  version: string,
+  environment: string,
   metrics: {
-    errorRate: number;
-    criticalErrors: number;
-    responseTime: number;
-    memoryUsage: number;
+    errorRate: number,
+    criticalErrors: number,
+    responseTime: number,
+    memoryUsage: number
   };
   health: {
-    status: string;
-    score: number;
-    issues: string[];
-    recommendations: string[];
+    status: string,
+    score: number,
+    issues: string[],
+    recommendations: string[]
   };
   errors: {
     summary: {
-      total: number;
-      critical: number;
-      high: number;
-      medium: number;
-      low: number;
+      total: number,
+      critical: number,
+      high: number,
+      medium: number,
+      low: number
     };
     topErrors: Array<{
-      patternId: string;
-      description: string;
-      occurrences: number;
-      severity: string;
-      solution?: string;
+      patternId: string,
+      description: string,
+      occurrences: number,
+      severity: string,
+      solution?: string
     }>;
-    byCategory: { [category: string]: number };
-  };
+    byCategory: { [category: string]: number }
+  }
 }
 
 const HealthDashboard: React.FC = () => {
@@ -52,15 +55,15 @@ const HealthDashboard: React.FC = () => {
     try {
       const response = await fetch('/api/admin/health');
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        throw new Error(`HTTP ${response.status}`)
       }
       const data = await response.json();
       setHealthData(data);
-      setError(null);
+      setError(null)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch health data');
+      setError(err instanceof Error ? err.message : 'Failed to fetch health data')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
@@ -68,11 +71,11 @@ const HealthDashboard: React.FC = () => {
     fetchHealthData();
 
     if (autoRefresh) {
-      const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
+      const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds
       return () => clearInterval(interval);
     }
     
-    return undefined;
+    return undefined
   }, [autoRefresh]);
 
   const getStatusIcon = (status: string) => {
@@ -84,7 +87,7 @@ const HealthDashboard: React.FC = () => {
       case 'critical':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Activity className="w-5 h-5 text-gray-500" />;
+        return <Activity className="w-5 h-5 text-gray-500" />
     }
   };
 
@@ -95,17 +98,17 @@ const HealthDashboard: React.FC = () => {
       <Badge variant={variant} className="ml-2">
         {status.toUpperCase()}
       </Badge>
-    );
+    )
   };
 
   const formatUptime = (seconds: number) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-    return `${hours}h ${minutes}m`;
+    return `${hours}h ${minutes}m`
   };
 
   const formatBytes = (bytes: number) => {
-    return `${bytes.toFixed(1)} MB`;
+    return `${bytes.toFixed(1)} MB`
   };
 
   if (loading) {
@@ -113,7 +116,7 @@ const HealthDashboard: React.FC = () => {
       <div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
       </div>
-    );
+    )
   }
 
   if (error) {
@@ -388,7 +391,19 @@ const HealthDashboard: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 };
 
-export default HealthDashboard; 
+<<<<<<< HEAD
+export default HealthDashboard;
+=======
+
+<<<<<<< HEAD
+
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default HealthDashboard, 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

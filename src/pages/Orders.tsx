@@ -1,24 +1,28 @@
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
+=======
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow} from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
-
 export default function OrdersPage() {
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
-
+  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -41,7 +45,7 @@ export default function OrdersPage() {
           </Badge>
         );
       default:
-        return status;
+        return status
     }
   };
 
@@ -110,4 +114,14 @@ export default function OrdersPage() {
       )}
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

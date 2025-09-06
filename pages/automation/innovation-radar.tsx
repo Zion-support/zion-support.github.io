@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ </li>) ) 
+}</ul> </div> </EnhancedLayout>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import
-import data from '../../data/innovation-radar.json';
-
+// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
 export default function InnovationRadarPage() {
   const items: any[] = (data?.items || []).slice(0, 50);
   return (
@@ -24,5 +29,10 @@ export default function InnovationRadarPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  )
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

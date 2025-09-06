@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -5,22 +6,22 @@ import { toast } from '@/hooks/use-toast';
 import { Loader2, Shield } from 'lucide-react'
 
 interface AuthGuardProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   requireAuth?: boolean;
   requireRole?: string[];
   redirectTo?: string;
   fallback?: React.ReactNode;
   showToast?: boolean;
-  allowGuest?: boolean;
+  allowGuest?: boolean
 }
 
 export function AuthGuard({
-  children,
-  requireAuth = true,
-  requireRole,
-  redirectTo = '/auth/login',
-  fallback,
-  showToast = true,
+  children;
+  requireAuth = true;
+  requireRole;
+  redirectTo = '/auth/login';
+  fallback;
+  showToast = true;
   allowGuest = false}: AuthGuardProps) {
   const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
@@ -35,12 +36,12 @@ export function AuthGuard({
         toast({
           title: "Authentication Required",
           description: "Please log in to access this feature.",
-          variant: "destructive"});
+          variant: "destructive"})
       }
 
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`${redirectTo}?returnTo=${returnTo}`);
-      return;
+      return
     }
 
     // If specific roles are required
@@ -53,10 +54,10 @@ export function AuthGuard({
           toast({
             title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,
-            variant: "destructive"});
+            variant: "destructive"})
         }
-        router.push('/dashboard'); // Redirect to dashboard instead of login
-        return;
+        router.push('/dashboard'), // Redirect to dashboard instead of login
+        return
       }
     }
   }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
@@ -104,12 +105,12 @@ export function AuthGuard({
             </p>
           </div>
         </div>
-      );
+      )
     }
   }
 
   // Render children if all auth checks pass
-  return <>{children}</>;
+  return <>{children}</>
 }
 
 // Higher-order component for easy wrapping
@@ -134,7 +135,7 @@ export function useAuthGuard() {
   const requireAuth = (options?: {
     redirectTo?: string;
     showToast?: boolean;
-    returnUrl?: string;
+    returnUrl?: string
   }) => {
     if (isLoading) return false;
 
@@ -146,21 +147,21 @@ export function useAuthGuard() {
         toast({
           title: "Authentication Required",
           description: "Please log in to continue.",
-          variant: "destructive"});
+          variant: "destructive"})
       }
 
       router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`);
-      return false;
+      return false
     }
 
-    return true;
+    return true
   };
 
   const requireRole = (roles: string[], options?: {
     showToast?: boolean;
-    redirectTo?: string;
+    redirectTo?: string
   }) => {
-    if (!requireAuth({ showToast: false })) return false;
+    if (!requireAuth({ showToast: false })) return false,
 
     const userRoles = user?.role ? [user.role] : [];
     const hasRequiredRole = roles.some(role => userRoles.includes(role));
@@ -170,14 +171,14 @@ export function useAuthGuard() {
         toast({
           title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,
-          variant: "destructive"});
+          variant: "destructive"})
       }
 
       router.push(options?.redirectTo || '/dashboard');
-      return false;
+      return false
     }
 
-    return true;
+    return true
   };
 
   const checkPermission = (permission: string): boolean => {
@@ -186,14 +187,55 @@ export function useAuthGuard() {
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
     const userPermissions = (user as any).permissions || [];
-    return userPermissions.includes(permission);
+    return userPermissions.includes(permission)
   };
 
   return {
+<<<<<<< HEAD
     requireAuth,
     requireRole,
     checkPermission,
     isAuthenticated,
     user,
-    isLoading};
+    isLoading,
+  };
+
+}//Hook for programmatic auth checks ;
+}router.push (`$ {;
+  redirectTo ;
+}?returnTo=$ {;
+  encodeURIComponent (returnUrl) ;
+}`);
+return false;
+}return true;
+};
+if (!hasRequiredRole) {;
+  if (options?.showToast !== false) {;
+  toast ({;
+  ';
+}router.push (options?.redirectTo || '/dashboard');
+return false;
+}return true;
+};
+}'"
+=======
+
+<<<<<<< HEAD
+
+      const redirectTo = options?.redirectTo || '/login';
+      const returnUrl = options?.returnUrl || router.asPath;
+      
+
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    requireAuth;
+    requireRole;
+    checkPermission;
+    isAuthenticated;
+    user;
+    isLoading}
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

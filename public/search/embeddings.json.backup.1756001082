@@ -21405,6 +21405,12 @@
     "route": "/",
     "vector": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       0,
@@ -21432,6 +21438,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
 =======
       0,
@@ -21464,6 +21472,12 @@
       3,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       2,
+=======
+      2,      2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -21471,12 +21485,65 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      1,
+      2,      0,
+      3,
+      0,
+      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      1,
+      2,      0,
+      3,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
       1,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      3,
 =======
       2,
       2,
+      3,
       0,
+      0,
+      1,
+=======
+      3,      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      3,      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      4,
+      0,
+      1,
+      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      4,
+      0,
+      0,
+      3,
+      1,
       0,
       0,
       0,
@@ -21484,42 +21551,6 @@
       1,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
-      3,
-      0,
-      0,
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      2,
-      3,
-=======
-      2,
-      2,
-      3,
-      0,
-      0,
-      1,
-      4,
-      0,
-      1,
-      0,
-      4,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
->>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
-      0,
       0,
       0,
       4,
@@ -21527,6 +21558,10 @@
 <<<<<<< HEAD
       1,
       0,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       0,
@@ -21542,22 +21577,38 @@
       0,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       4,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       1,
+=======
+      0,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       2,
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       3,
 =======
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      3,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      3,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -21568,11 +21619,19 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       2,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       1,
+=======
+      0,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
@@ -21580,6 +21639,12 @@
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -21600,6 +21665,8 @@
       0,
       3,
       7,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       1,
@@ -21625,11 +21692,23 @@
       1,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       7,
+=======
+      0,      7,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      7,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1,
       0,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
@@ -21647,6 +21726,8 @@
       0,
       3,
       4,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       2,
@@ -21671,15 +21752,30 @@
       3,
       4,
       1,
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
-      1,
-      3,
       0,
+<<<<<<< HEAD
       1,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       5,
+=======
+      1,      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      4,      5,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+      4,      5,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
@@ -21687,6 +21783,12 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1,
       2,
@@ -21696,6 +21798,8 @@
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       2,
@@ -21708,6 +21812,18 @@
       0,
 <<<<<<< HEAD
 =======
+=======
+      0,      7,
+      0,
+      0,
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      7,
+      0,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       5,
@@ -21715,7 +21831,13 @@
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       0,
@@ -21728,12 +21850,20 @@
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       1,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       0,
@@ -21745,12 +21875,24 @@
       7,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       2,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       2,
       1,
@@ -21758,6 +21900,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
 =======
       2,
@@ -21770,17 +21914,31 @@
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       2,
+=======
+      3,      2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      3,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       10,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       2,
@@ -21791,6 +21949,12 @@
       1,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -21798,12 +21962,20 @@
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       1,
 =======
       2,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
@@ -21813,6 +21985,12 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -21829,6 +22007,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       2,
@@ -21850,17 +22030,31 @@
       3,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       1,
       0,
-<<<<<<< HEAD
       0,
+<<<<<<< HEAD
       0,
 =======
       3,
       2,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0
+=======
+      0,      0,
+      2,
+      1,
+      0,
+      0,
+      0,      0
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     ]
   },
   {
@@ -31783,6 +31977,12 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/revolutionary-2025-services-showcase",
     "vector": [
       3,
@@ -32043,6 +32243,8 @@
       1
     ]
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
@@ -34415,6 +34617,12 @@
       5,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+  {      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1,
       3,
@@ -34423,11 +34631,19 @@
       21,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       4,
 =======
       5,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      4,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      4,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
@@ -34439,11 +34655,19 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       2,
       2,
       4,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
       3,
 =======
       1,
@@ -34454,6 +34678,12 @@
       2,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      3,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      3,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       2,
@@ -34468,6 +34698,12 @@
       0,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       17,
       0,
       5,
@@ -34496,6 +34732,8 @@
       0,
       0,
       5,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       14,
@@ -34529,6 +34767,12 @@
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -34555,11 +34799,19 @@
       1,
       4,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       1,
 =======
       2,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       2,
+=======
+      1,      2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      2,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
@@ -34581,6 +34833,8 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       4,
       0,
       1,
@@ -34592,6 +34846,18 @@
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      4,
+      0,
+      1,
+      1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      4,
+      0,
+      1,
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       0,
       0,
@@ -34615,6 +34881,8 @@
       0,
       1,
       3,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       4,
       5,
@@ -34623,17 +34891,33 @@
       4,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       14,
+=======
+      4,
+      5,      14,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      4,
+      5,      14,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       1,
       34,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       6,
 =======
       5,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       8,
+=======
+      6,      8,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      6,      8,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       3,
       5,
@@ -34642,11 +34926,19 @@
       2,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       4,
 =======
       3,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      4,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      4,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       2,
@@ -34672,12 +34964,20 @@
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       5,
 =======
       6,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      5,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      5,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       1,
@@ -34694,6 +34994,8 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       1,
@@ -34708,6 +35010,20 @@
       5,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      1,
+      1,
+      3,
+      2,
+      7,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+      1,
+      3,
+      2,
+      7,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       5,
       0,
       0,
@@ -34731,11 +35047,19 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       2,
 =======
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       1,
+=======
+      2,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       13,
@@ -47281,7 +47605,13 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -47309,7 +47639,13 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47317,12 +47653,18 @@
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       2,
       0,
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47354,6 +47696,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       1,
@@ -47365,12 +47709,24 @@
       0,
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+=======
+      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47393,6 +47749,12 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47417,11 +47779,19 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       3,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47445,6 +47815,12 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -47456,6 +47832,8 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
@@ -47482,6 +47860,12 @@
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -47526,7 +47910,13 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47536,7 +47926,13 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -47547,10 +47943,18 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
       0,
@@ -47561,6 +47965,12 @@
       0,
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       0,
+=======
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -47582,11 +47992,19 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       0,
 =======
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
@@ -47602,6 +48020,12 @@
 =======
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
       1,
+=======
+      0,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,

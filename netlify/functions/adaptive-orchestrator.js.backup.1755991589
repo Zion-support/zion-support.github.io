@@ -8,6 +8,12 @@ function runNode(relPath, args = []) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function now() {
   const d = new Date();
   return { hour: d.getUTCHours(), dow: d.getUTCDay(), minutes: d.getUTCMinutes() };
@@ -22,6 +28,8 @@ exports.handler = async () => {
   const { hour, dow, minutes } = now();
   logs.push(`UTC time h=${hour} dow=${dow} m=${minutes}`);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   function step(name, rel, args = []) {
 =======
 exports.config = { schedule: '*/5 * * * *' };
@@ -31,6 +39,12 @@ exports.handler = async () => {
   const logStep = (name, fn) => {
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     logs.push(`\n=== ${name} ===`);
+=======
+  function step(name, rel, args = []) {    logs.push(`\n=== ${name} ===`);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  function step(name, rel, args = []) {    logs.push(`\n=== ${name} ===`);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const { status, stdout, stderr } = runNode(rel, args);
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
@@ -39,6 +53,12 @@ exports.handler = async () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Always keep front/home fresh on each tick
   step('front:auto-advertiser', 'automation/front-index-auto-advertiser.cjs');
   step('homepage:updater', 'automation/homepage-updater.cjs');
@@ -67,11 +87,17 @@ exports.handler = async () => {
     try { step('code-smell', 'automation/code-smell-audit.cjs'); } catch { logs.push('code-smell failed'); }
     try { step('topics:clusters', 'automation/topic-cluster-builder.cjs'); } catch { logs.push('topics:clusters failed'); }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   logStep('adaptive:orchestrator', () => runNode('automation/adaptive-orchestrator.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   step('git:sync', 'automation/advanced-git-sync.cjs');
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };

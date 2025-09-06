@@ -1,12 +1,14 @@
-
-import React, { useState } from "react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow,;
+} from '@/components/ui/table';
 import {
   Dialog,
   DialogContent,
@@ -14,6 +16,32 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+  DialogTrigger,;
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Badge } from '@/components/ui/badge';
+import { Trash, Mail, UserPlus } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+import React, { useState } from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
   DialogTrigger} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,7 +49,6 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Trash, Mail, UserPlus } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
-
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
@@ -55,38 +82,37 @@ export function TeamManagement() {
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
-      lastActive: "3 days ago"}];
-
+      lastActive: "3 days ago"}],
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
         title: "Email required",
         description: "Please enter an email address for the new team member.",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return
     }
 
     toast({
       title: "Invitation sent",
-      description: `An invitation has been sent to ${newMemberEmail}`});
+      description: `An invitation has been sent to ${newMemberEmail}`}),
 
     setNewMemberEmail("");
-    setIsAddingMember(false);
+    setIsAddingMember(false)
   };
 
   const handleRemoveMember = (_memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
-      description: "The team member has been removed from your workspace."});
+      description: "The team member has been removed from your workspace."})
   };
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
-      description: `A new invitation has been sent to ${memberEmail}`});
+      description: `A new invitation has been sent to ${memberEmail}`})
   };
 
   return (
@@ -217,4 +243,42 @@ export function TeamManagement() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+
+  //In a real app, this would make an API call to remove the member toast ({;
+  ;
+};
+  //In a real app, this would make an API call to resend the invitation toast ({;
+  ;
+};";
+  handleAddMember ";
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  teamMembers.map ( (member) => (<TableRow key= {;
+  member.id ";
+}> <TableCell> .join ("") ;
+}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {;
+  member.role ;
+}</TableCell> <TableCell> <Badge > {;
+  member.status ;
+}</Badge> </TableCell> <TableCell> {;
+  member.lastActive ";
+}</TableCell> <TableCell className="text-right"> onClick={;
+  () => handleResendInvite (member.email) ";
+}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={;
+  () => handleRemoveMember (member.id) ";
+}> <Trash className="h-4 w-4" /> </Button>) ;
+}</div> </TableCell> </TableRow>) ) ;
+}</TableBody> </Table> </div> </div>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+      description: `An invitation has been sent to ${newMemberEmail}`}),
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

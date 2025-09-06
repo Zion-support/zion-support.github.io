@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ </div> </li>) ) 
+}</ul> </div> </EnhancedLayout>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import
-import data from '../../data/governance-pulse.json';
-
+// @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
 export default function GovernancePulsePage() {
   const items: any[] = (data?.items || []).slice(0, 60);
   return (
@@ -23,5 +28,10 @@ export default function GovernancePulsePage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  )
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

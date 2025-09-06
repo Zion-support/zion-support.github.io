@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -7,23 +8,22 @@ import { useNotifications } from '@/context/notifications/NotificationContext';
 import { useEnqueueSnackbar } from '@/context';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
-  NotificationFilter, 
+  NotificationFilter;
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
 } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
-
 export const NotificationCenter: React.FC = () => {
   const { 
-    filteredNotifications, 
+    filteredNotifications;
     unreadCount, 
     markAsRead, 
-    markAllAsRead,
+    markAllAsRead;
     dismissNotification, 
-    loading,
-    filter,
-    setFilter,
+    loading;
+    filter;
+    setFilter;
     fetchNotifications
   } = useNotifications();
   
@@ -38,32 +38,32 @@ export const NotificationCenter: React.FC = () => {
       const loadNotifications = async () => {
         try {
           await fetchNotifications();
-          setError(null);
+          setError(null)
         } catch (err) {
-          logErrorToProduction('Failed to fetch notifications:', { data: err });
+          logErrorToProduction('Failed to fetch notifications:', { data: err }),
           setError("Couldn't load notifications");
-          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
+          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
         } finally {
-          setLoadedOnce(true);
+          setLoadedOnce(true)
         }
       };
 
-      loadNotifications();
+      loadNotifications()
     }
   }, [open, loadedOnce, fetchNotifications]);
 
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead();
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' });
+      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
     } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err });
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
+      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
+      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
     }
   };
 
   const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any);
+    setFilter(newFilter as any)
   };
 
   return (
@@ -101,5 +101,60 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-  );
+  )
 };
+<<<<<<< HEAD
+
+}, [open, loadedOnce, fetchNotifications]);
+}catch (err) {;
+  logErrorToProduction ('Failed to mark notifications as read:', {;
+  data: err ;
+});
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+  variant: 'error' ;
+}) ;
+
+};
+
+  (v) => setOpen (v ?? false) ;
+}> <PopoverTrigger asChild> {';
+  unreadCount > 9 ? '9+' : unreadCount ;
+}</span>) ;
+}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {;
+  unreadCount ;
+}onMarkAllAsRead= {;
+  handleMarkAllAsRead ;
+}/> <NotificationFilter filter= {;
+  filter as FilterType ;
+}onFilterChange= {;
+  handleFilterChange ;
+}/> <NotificationList loading= {;
+  loading ;
+}error= {;
+  error ;
+}notifications= {;
+  filteredNotifications ;
+}onMarkAsRead= {;
+  markAsRead ;
+}onDismiss= {;
+  dismissNotification ;
+}onRetry= {;
+  fetchNotifications ;
+}/> <NotificationFooter onClose= {;
+  () => setOpen (false) ;
+}/> </PopoverContent> </Popover>) ;
+};
+'"
+=======
+
+<<<<<<< HEAD
+    unreadCount, 
+    markAsRead, 
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

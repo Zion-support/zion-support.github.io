@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Slider } from '@/components/ui/slider';
+import { Switch } from '@/components/ui/switch';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { X, Filter } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetFooter,
+  SheetTrigger,;
+} from '@/components/ui/sheet';
+import { Badge } from '@/components/ui/badge';
+import { Label } from '@/components/ui/label';
+
+=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -8,9 +35,9 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface BrowseFiltersProps {
-  type: "jobs" | "talents";
+  type: "jobs" | "talents"
 }
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
@@ -18,12 +45,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]);
+      setActiveFilters([...activeFilters, filter])
     }
   };
   
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter));
+    setActiveFilters(activeFilters.filter(f => f !== filter))
   };
   
   return (
@@ -170,4 +197,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

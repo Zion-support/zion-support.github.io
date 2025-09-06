@@ -3,6 +3,12 @@ const path = require('path');
 
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -23,6 +29,8 @@ const nextConfig = {
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
+<<<<<<< HEAD
+<<<<<<< HEAD
 	}
 =======
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
@@ -769,5 +777,11 @@ const nextConfig = {
   },
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 };
+=======
+	}};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+	}};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = nextConfig;

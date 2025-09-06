@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,23 +9,23 @@ import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 
 interface PerformanceMetrics {
-  bundleSize: number;
-  loadTime: number;
-  performanceScore: number;
-  chunkCount: number;
-  cacheHitRate: number;
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  cls: number; // Cumulative Layout Shift
-  fid: number; // First Input Delay
+  bundleSize: number,
+  loadTime: number,
+  performanceScore: number,
+  chunkCount: number,
+  cacheHitRate: number,
+  fcp: number, // First Contentful Paint
+  lcp: number, // Largest Contentful Paint
+  cls: number, // Cumulative Layout Shift
+  fid: number, // First Input Delay
 }
 
 interface BundleChunk {
-  name: string;
-  size: number;
-  loadTime: number;
-  cached: boolean;
-  type: string;
+  name: string,
+  size: number,
+  loadTime: number,
+  cached: boolean,
+  type: string
 }
 
 export function PerformanceDashboard() {
@@ -56,7 +57,7 @@ export function PerformanceDashboard() {
       logInfo('Performance metrics collected successfully', { 
         loadTime: performanceMetrics.loadTime,
         resourceCount: performanceMetrics.chunkCount
-      });
+      })
     } catch (error) {
       logErrorToProduction('Failed to collect performance metrics', error, {
         component: 'PerformanceDashboard',
@@ -73,20 +74,19 @@ export function PerformanceDashboard() {
         lcp: 0,
         cls: 0,
         fid: 0
-      });
+      })
     }
   };
 
   const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {
     if (typeof window === 'undefined') return {};
     
-    const vitals: Partial<PerformanceMetrics> = {};
-    
+    const vitals: Partial<PerformanceMetrics> = {},
     // Collect navigation timing
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
-      vitals.lcp = navigation.loadEventEnd - navigation.fetchStart;
+      vitals.lcp = navigation.loadEventEnd - navigation.fetchStart
     }
     
     // Use PerformanceObserver for more accurate metrics
@@ -96,32 +96,31 @@ export function PerformanceDashboard() {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
-                vitals.fcp = entry.startTime;
+                vitals.fcp = entry.startTime
               }
             }
             if (entry.entryType === 'largest-contentful-paint') {
-              vitals.lcp = entry.startTime;
+              vitals.lcp = entry.startTime
             }
             if (entry.entryType === 'layout-shift') {
-              vitals.cls = (vitals.cls || 0) + (entry as any).value;
+              vitals.cls = (vitals.cls || 0) + (entry as any).value
             }
             if (entry.entryType === 'first-input') {
-              vitals.fid = (entry as any).processingStart - entry.startTime;
+              vitals.fid = (entry as any).processingStart - entry.startTime
             }
-          });
+          })
         });
         
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-        
+        observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
         // Resolve after a short delay
         setTimeout(() => {
           observer.disconnect();
-          resolve(vitals);
-        }, 2000);
-      });
+          resolve(vitals)
+        }, 2000)
+      })
     }
     
-    return vitals;
+    return vitals
   };
 
   const collectChunkData = async (): Promise<BundleChunk[]> => {
@@ -138,7 +137,7 @@ export function PerformanceDashboard() {
       loadTime: entry.responseEnd - entry.requestStart,
       cached: entry.transferSize === 0,
       type: categorizeChunk(entry.name)
-    })).sort((a, b) => b.size - a.size);
+    })).sort((a, b) => b.size - a.size)
   };
 
   const categorizeChunk = (filename: string): string => {
@@ -146,34 +145,34 @@ export function PerformanceDashboard() {
     if (filename.includes('vendor')) return 'vendor';
     if (filename.includes('pages')) return 'page';
     if (filename.includes('chunks')) return 'chunk';
-    return 'other';
+    return 'other'
   };
 
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B';
     const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const sizes = ['BKBMBGB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   };
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    return 'text-red-600'
   };
 
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />;
     if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />;
-    return <AlertTriangle className="w-4 h-4 text-red-600" />;
+    return <AlertTriangle className="w-4 h-4 text-red-600" />
   };
 
   useEffect(() => {
     collectMetrics();
-    const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
+    const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval)
   }, []);
 
   return (
@@ -401,4 +400,16 @@ export function PerformanceDashboard() {
       </Card>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+        
+        observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 } 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+=======
+const fs = require('fs');
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const fs = require('fs');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -12,6 +20,12 @@ function runNode(relPath, args = []) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 exports.config = {
   schedule: '0 */6 * * *',
 };
@@ -32,6 +46,8 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 =======
 exports.config = { schedule: '15 */6 * * *' };
@@ -56,3 +72,7 @@ exports.handler = async () => {
   return { statusCode: 200, body: JSON.stringify(report) };
 };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

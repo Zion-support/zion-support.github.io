@@ -1,5 +1,11 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 let withSentryConfig = (cfg) => cfg;
 try {
@@ -12,6 +18,8 @@ const baseConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
   trailingSlash: false,
+<<<<<<< HEAD
+<<<<<<< HEAD
   reactStrictMode: true,
 =======
 const os = require('os');
@@ -33,6 +41,12 @@ const nextConfig = {
   productionBrowserSourceMaps: false, // Disable for faster builds
 >>>>>>> origin/cursor/website-audit-and-enhancement-bb45
   
+=======
+  reactStrictMode: true,  
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  reactStrictMode: true,  
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Environment configuration
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',

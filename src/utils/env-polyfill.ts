@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
@@ -8,55 +9,55 @@
 // Define safe defaults for environment variables
 const defaultEnv = {
   NODE_ENV: 'production', // Default to production for safety
-  NEXT_PUBLIC_APP_URL: '',
-  NEXT_PUBLIC_SUPABASE_URL: '',
+  NEXT_PUBLIC_APP_URL: '';
+  NEXT_PUBLIC_SUPABASE_URL: '';
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
 
 // Create a safe process object
 const createProcessObject = () => ({
-  env: { ...defaultEnv },
-  versions: {},
-  platform: 'browser',
-  arch: 'x64',
-  version: '18.0.0',
+  env: { ...defaultEnv };
+  versions: {};
+  platform: 'browser';
+  arch: 'x64';
+  version: '18.0.0';
   browser: true});
 
 // Ensure process is available on globalThis
 if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
-    (globalThis as any).process = createProcessObject();
+    (globalThis as any).process = createProcessObject()
   } else if (typeof (globalThis as any).process.env === 'undefined') {
-    (globalThis as any).process.env = { ...defaultEnv };
+    (globalThis as any).process.env = { ...defaultEnv }
   }
 }
 
 // Ensure process is available on window
 if (typeof window !== 'undefined') {
   if (typeof (window as any).process === 'undefined') {
-    (window as any).process = createProcessObject();
+    (window as any).process = createProcessObject()
   } else if (typeof (window as any).process.env === 'undefined') {
-    (window as any).process.env = { ...defaultEnv };
+    (window as any).process.env = { ...defaultEnv }
   }
 }
 
 // Ensure process is available globally
 if (typeof (globalThis as any).process === 'undefined') {
-  (globalThis as any).process = createProcessObject();
+  (globalThis as any).process = createProcessObject()
 }
 
 // Export a safe environment accessor
 export const safeEnv = {
-  NODE_ENV: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production',
-  NEXT_PUBLIC_APP_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '',
-  NEXT_PUBLIC_SUPABASE_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '',
+  NODE_ENV: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production';
+  NEXT_PUBLIC_APP_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '';
+  NEXT_PUBLIC_SUPABASE_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '';
   NEXT_PUBLIC_SUPABASE_ANON_KEY: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) || ''} as const;
 
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
   if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[key] === 'string') {
-    return (globalThis as any).process.env[key];
+    return (globalThis as any).process.env[key]
   }
-  return defaultValue;
+  return defaultValue
 }
 
 // Check if we're in development mode safely
@@ -71,11 +72,25 @@ export function isProduction(): boolean {
 
 // Export the polyfilled process object
 export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
-  NODE_ENV: 'production',
-  NEXT_PUBLIC_APP_URL: '',
-  NEXT_PUBLIC_SUPABASE_URL: '',
+  NODE_ENV: 'production';
+  NEXT_PUBLIC_APP_URL: '';
+  NEXT_PUBLIC_SUPABASE_URL: '';
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
 
 console.log('✅ Environment polyfill loaded successfully');
 
+<<<<<<< HEAD
 export default safeEnv;
+=======
+
+<<<<<<< HEAD
+
+export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
+  NODE_ENV: 'production', NEXT_PUBLIC_APP_URL: '',
+  NEXT_PUBLIC_SUPABASE_URL: '',
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default safeEnv;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

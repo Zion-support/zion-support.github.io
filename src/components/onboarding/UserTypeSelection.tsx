@@ -1,18 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+import { Briefcase, Star, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button";
-
 interface UserTypeOption {
-  id: "serviceProvider" | "talent" | "client";
-  name: string;
-  description: string;
-  icon: React.ElementType;
+  id: "serviceProvider" | "talent" | "client",
+  name: string,
+  description: string,
+  icon: React.ElementType
 }
 
 interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
-  selectedType: string | null;
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
+  selectedType: string | null
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
@@ -22,13 +28,13 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       name: "Service Provider",
       description: "I want to offer services on the platform",
       icon: Briefcase
-    },
+    };
     {
       id: "talent",
       name: "Talent",
       description: "I want to showcase my skills and find opportunities",
       icon: Star
-    },
+    };
     {
       id: "client",
       name: "Client",
@@ -46,7 +52,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         </p>
       </div>
       
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon;
           const isSelected = selectedType === type.id;
@@ -77,4 +83,15 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+          const Icon = type.icon;
+          const isSelected = selectedType === type.id;
+          
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

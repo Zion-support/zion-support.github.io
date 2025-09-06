@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { useForm, useFieldArray } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+=======
 import React, { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -20,40 +28,37 @@ import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upl
 import { useAuth } from "@/hooks/useAuth";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
-
 // Define the form schema with validation
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
-    fullName: z.string().min(2, "Full Name must be at least 2 characters"),
-    professionalTitle: z.string().min(2, "Professional title is required"),
+    fullName: z.string().min(2, "Full Name must be at least 2 characters");
+    professionalTitle: z.string().min(2, "Professional title is required");
     profilePicture: z.any().optional()}),
-  
   // Step 2: Experience
   experience: z.object({
-    bio: z.string().min(50, "Bio must be at least 50 characters"),
+    bio: z.string().min(50, "Bio must be at least 50 characters");
     keyProjects: z.array(
       z.object({
-        title: z.string().min(2, "Project title is required"),
+        title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
-    ).min(1, "Add at least one key project"),
-    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
+    ).min(1, "Add at least one key project");
+    yearsOfExperience: z.string().min(1, "Years of experience is required")});
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
-    skillsList: z.string().min(2, "Add at least one skill"),
+    skillsList: z.string().min(2, "Add at least one skill");
     toolsUsed: z.string().optional()}),
-  
   // Step 4: Availability & Preferences
   availability: z.object({
-    availabilityType: z.string().min(1, "Select your availability"),
-    timezone: z.string().min(1, "Timezone is required"),
+    availabilityType: z.string().min(1, "Select your availability");
+    timezone: z.string().min(1, "Timezone is required");
     hourlyRate: z.string().optional(),
     portfolioLinks: z.array(
       z.object({
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
-    ).optional().default([]),
-    cv: z.any().optional()})});
+    ).optional().default([]);
+    cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>;
 
@@ -90,18 +95,15 @@ export function TalentOnboardingForm() {
         hourlyRate: "",
         portfolioLinks: [{ url: "" }],
         cv: undefined}},
-    mode: "onChange"});
-  
+    mode: "onChange"}),
   const { fields: projectFields, append: appendProject, remove: removeProject } = 
     useFieldArray({
       name: "experience.keyProjects",
-      control: form.control});
-    
+      control: form.control}),
   const { fields: linkFields, append: appendLink, remove: removeLink } = 
     useFieldArray({
       name: "availability.portfolioLinks",
-      control: form.control});
-
+      control: form.control}),
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -110,12 +112,12 @@ export function TalentOnboardingForm() {
     // Preview the image
     const reader = new FileReader();
     reader.onloadend = () => {
-      setProfilePictureUrl(reader.result as string);
+      setProfilePictureUrl(reader.result as string)
     };
     reader.readAsDataURL(file);
     
     // Store the file in the form data
-    form.setValue("basicInfo.profilePicture", file);
+    form.setValue("basicInfo.profilePicture", file)
   };
 
   // Handle CV upload
@@ -126,8 +128,8 @@ export function TalentOnboardingForm() {
       .upload(fileName, file);
       
     if (cvError) {
-      logErrorToProduction('Error uploading CV:', { data: cvError });
-      throw new Error("Failed to upload CV");
+      logErrorToProduction('Error uploading CV:', { data: cvError }),
+      throw new Error("Failed to upload CV")
     }
     
     // Get the public URL
@@ -135,11 +137,61 @@ export function TalentOnboardingForm() {
       .from('resumes')
       .getPublicUrl(fileName);
     
-    return publicUrl;
+    return publicUrl
   };
 
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 
   return null;
+<<<<<<< HEAD
+
+  //Step 1: Basic Info basicInfo: z.object ({;
+  ) .optional () .default ([]);
+cv: z.any () .optional () ;
+}) ;
+});
+type TalentFormValues = z.infer<typeof talentSchema>;
+const form = useForm<TalentFormValues> ({;
+  resolver: zodResolver (talentSchema), defaultValues: {;
+  basicInfo: {;
+  cv: undefined ;
+
+};
+//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const file = e.target.files?.[0];
+if (!file) return;
+//Preview the image const reader = new FileReader ();
+reader.onloadend = () => {;
+  setProfilePictureUrl (reader.result as string) ;
+};
+reader.readAsDataURL (file);
+}//Get the public window.URL const {;
+  data: {;
+  publicUrl ;
+
+}= supabase.storage.from ('resumes') .getPublicUrl (fileName);
+return publicUrl;
+};
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}'
+=======
+
+<<<<<<< HEAD
+
+    cv: z.any().optional()})}),
+
+type TalentFormValues = z.infer<typeof talentSchema>;
+
+
+<<<<<<< HEAD
+  
+  const totalSteps = 4;
+  
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

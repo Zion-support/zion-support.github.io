@@ -1,10 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
-
 interface SocialShareButtonsProps {
-  title: string;
+  title: string
 }
 
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
@@ -14,17 +14,17 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareToTwitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,
+      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`;
       '_blank'
-    );
+    )
   };
 
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')
   };
 
   const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank');
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   };
 
   const copyLink = () => {
@@ -32,15 +32,14 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
-      .catch(() => toast.error('Failed to copy link'));
+      .catch(() => toast.error('Failed to copy link'))
   };
 
   const buttons = [
     { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },
     { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },
     { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
-    { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }];
-
+    { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
   return (
     <div className="mt-12 flex flex-wrap gap-2">
       {buttons.map((btn) => (
@@ -51,4 +50,11 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       ))}
     </div>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

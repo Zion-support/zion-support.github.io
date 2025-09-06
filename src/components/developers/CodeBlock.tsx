@@ -1,19 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils";
-
 interface CodeBlockProps {
-  code: string;
+  code: string,
   language?: string;
   showLineNumbers?: boolean;
-  className?: string;
+  className?: string
 }
 
 export function CodeBlock({ 
-  code,
-  language = 'bash',
-  showLineNumbers = false,
+  code;
+  language = 'bash';
+  showLineNumbers = false;
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
@@ -22,17 +25,17 @@ export function CodeBlock({
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {
-      setCopied(false);
-    }, 2000);
+      setCopied(false)
+    }, 2000)
   };
 
   return (
     <div className={cn(
-      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
+      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
       className
     )}>
       <pre className={cn(
-        "p-4 overflow-auto",
+        "p-4 overflow-auto";
         showLineNumbers && "pl-12 relative"
       )}>
         {showLineNumbers && (
@@ -47,7 +50,7 @@ export function CodeBlock({
         <code className="language-javascript">{code}</code>
       </pre>
       <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
+        className="absolute top-2 right-2 p-2 rounded-md hover: bg-zinc-800 transition-colors"
         onClick={handleCopyClick}
         aria-label="Copy code"
       >
@@ -59,7 +62,14 @@ export function CodeBlock({
         </div>
       )}
     </div>
-  );
+  )
 }
 
 export default CodeBlock;
+=======
+
+<<<<<<< HEAD
+
+export default CodeBlock;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

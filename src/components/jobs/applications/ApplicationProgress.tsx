@@ -1,12 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ApplicationStatus } from '@/types/jobs';
+import { Progress } from '@/components/ui/progress';
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
+import { cn } from '@/lib/utils';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
 import { cn } from "@/lib/utils";
-
 interface ApplicationProgressProps {
-  status: ApplicationStatus;
-  className?: string;
+  status: ApplicationStatus,
+  className?: string
 }
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
@@ -19,7 +26,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
       case "interview": return 80;
       case "hired": return 100;
       case "rejected": return 100;
-      default: return 0;
+      default: return 0
     }
   };
 
@@ -55,7 +62,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   );
 }
 
-function StatusIcon({ status, current }: { status: ApplicationStatus; current: ApplicationStatus }) {
+function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
   const statusRank: Record<ApplicationStatus, number> = {
     new: 1,
@@ -63,19 +70,34 @@ function StatusIcon({ status, current }: { status: ApplicationStatus; current: A
     shortlisted: 3,
     interview: 4,
     hired: 5,
-    rejected: 5};
+    rejected: 5},
 
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
   if (currentRank < statusRank_) {
     // This step is complete
-    return <CheckCircle2 className="h-4 w-4 text-green-500" />;
+    return <CheckCircle2 className="h-4 w-4 text-green-500" />
   } else if (currentRank === statusRank_) {
     // This is the current step
-    return <CircleDot className="h-4 w-4 text-blue-500" />;
+    return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
     // This step is upcoming
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+<<<<<<< HEAD
+    return <Circle className='h-4 w-4 text-muted-foreground/50' />;
   }
+
+}"
+=======
+<<<<<<< HEAD
+
+
+  const currentRank = statusRank[current],
+  const statusRank_ = statusRank[status];
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+  };
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

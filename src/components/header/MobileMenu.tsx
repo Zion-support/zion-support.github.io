@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
@@ -6,23 +7,16 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { ModeToggle } from '@/components/ModeToggle';
 import { useTranslation } from 'react-i18next';
-
 export interface MobileMenuProps {
   unreadCount?: number;
-  onClose: () => void;
-  openLoginModal: (returnToPath: string) => void; // Added from plan
+  onClose: () => void,
+  openLoginModal: (returnToPath: string) => void, // Added from plan
 }
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
 // These are routes that should trigger the login modal if accessed while unauthenticated.
 const protectedRoutes = [
-  '/categories',
-  '/talent',
-  '/equipment',
-  '/partners',
-  '/tutorials',
-  '/case-studies',
-  '/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
+  '/categories/talent/equipment/partners/tutorials/case-studies/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
   '/messages',  // Already marked as authRequired
   '/dashboard', // Already marked as authRequired
   // Add any specific sub-routes if necessary
@@ -52,13 +46,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       matches: (path: string) =>
         path.startsWith('/talent') ||
         path.startsWith('/categories') ||
-        path.startsWith('/marketplace')},
+        path.startsWith('/marketplace')};
     {
       key: 'community',
       href: '/community',
       icon: MessageCircle,
       matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum')},
+        path.startsWith('/community') || path.startsWith('/forum')};
     {
       key: 'post_job',
       href: '/post-job',
@@ -70,7 +64,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       href: '/messages',
       icon: MessageSquare,
       matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),
+        path.startsWith('/messages') || path.startsWith('/inbox');
       badge: unreadCount,
       authRequired: true},
     {
@@ -78,15 +72,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       href: '/dashboard',
       icon: User,
       matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true}];
-
+      authRequired: true}],
   const navItems = baseItems.map((item) => ({
-    ...item,
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)}));
-
+    ...item;
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
   // Filter items based on auth status
   const visibleItems = navItems.filter(
-    (item) => !item.authRequired || (item.authRequired && isAuthenticated),
+    (item) => !item.authRequired || (item.authRequired && isAuthenticated);
   );
 
   return (
@@ -111,22 +103,22 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
             href={item.href}
             aria-label={item.name}
             className={cn(
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
               item.matches(router.pathname)
                 ? 'bg-primary/20 text-primary border-l-4 border-primary'
-                : 'text-foreground hover:bg-primary/10 hover:text-primary',
+                : 'text-foreground hover:bg-primary/10 hover:text-primary';
             )}
             onClick={(e) => {
               const routeIsProtected = item.authRequired || isProtectedRoute(item.href);
               if (!isAuthenticated && routeIsProtected) {
                 e.preventDefault();
                 // Update URL to include returnTo, then open modal
-                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true });
+                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true }),
                 openLoginModal(item.href);
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }
-              onClose(); // Close mobile menu on any click
+              onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -145,5 +137,24 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         <ModeToggle />
       </div>
     </div>
+<<<<<<< HEAD
   );
+
+}> {';
+  item.badge > 9 ? '9+' : item.badge ;
+}</span>) ;
+}</div> {;
+  item.name ;
+}</Link>) ) ";
+}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

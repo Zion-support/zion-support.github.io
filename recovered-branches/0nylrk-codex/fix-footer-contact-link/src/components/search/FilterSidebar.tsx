@@ -4,25 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
-
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[];
-    selectedLocations: string[];
-    selectedAvailability: string[];
-    selectedRating: number | null;
+    selectedProductTypes: string[],
+    selectedLocations: string[],
+    selectedAvailability: string[],
+    selectedRating: number | null
   };
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void;
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
+  onClearFilters: () => void
 }
 
 export function FilterSidebar({
-  filters,
-  filterOptions,
-  onFilterChange,
-  onRatingChange,
+  filters;
+  filterOptions;
+  onFilterChange;
+  onRatingChange;
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -149,5 +148,5 @@ export function FilterSidebar({
         </div>
       </div>
     </div>
-  );
+  )
 }

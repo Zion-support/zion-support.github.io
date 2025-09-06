@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
@@ -8,28 +9,28 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import { useEffect } from 'react'; // Added useEffect
+import { useRouter } from 'next/router', // Changed from useNavigate
+import { useEffect } from 'react', // Added useEffect
 
 export default function WishlistPage() {
   const { favorites, loading, toggleFavorite } = useFavorites();
-  const { user, isLoading: isAuthLoading } = useAuth(); // Added isAuthLoading
-  const router = useRouter(); // Changed from navigate
+  const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading
+  const router = useRouter(), // Changed from navigate
 
   useEffect(() => {
     // Redirect if not authenticated and auth loading is complete
     if (!isAuthLoading && !user) {
-      router.push('/login');
+      router.push('/login')
     }
   }, [user, isAuthLoading, router]);
 
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null; // Or a loading spinner
+    return null, // Or a loading spinner;
   }
 
   const { items, dispatch } = useCart();
 
-  const addToCart = (item: { id: string; title?: string; price?: number }) => {
+  const addToCart = (item: { id: string, title?: string, price?: number }) => {
     if (items.some(i => i.id === item.id)) return;
     dispatch({
       type: 'ADD_ITEM',
@@ -40,16 +41,16 @@ export default function WishlistPage() {
         quantity: 1
       }
     });
-    toast.success(`1× ${item.title || 'Item'} added`);
+    toast.success(`1× ${item.title || 'Item'} added`)
   };
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
     acc[p.id] = p;
-    return acc;
+    return acc
   }, {});
   const talentMap = TALENT_PROFILES.reduce<Record<string, any>>((acc, t) => {
     acc[t.id] = t;
-    return acc;
+    return acc
   }, {});
 
   const sortedFavorites = [...favorites].sort(
@@ -124,4 +125,36 @@ export default function WishlistPage() {
       )}
     </div>
   );
+<<<<<<< HEAD
+
+}onRequestHire= {;
+  () => {;
+  ;
+
+}isAuthenticated= {;
+  true ;
+}/> Saved {;
+  new Date (fav.created at) .toLocaleDateString () ;
+}</p>) ;
+}</div>) : null ";
+}> <X className="h-4 w-4" /> </button> <ProductListingCard listing= {;
+  item ;
+}/> <Button > {';
+  items.some (i => i.id === item.id) ? 'In Cart': 'Add to Cart' ;
+}</Button> Saved {;
+  new Date (fav.created at) .toLocaleDateString () ;
+}</p>) ;
+}</div>) : null ;
+}) ;
+}</div>) ;
+}</div>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+    return null, // Or a loading spinner;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

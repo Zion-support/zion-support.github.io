@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -26,6 +32,8 @@ a {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 /* Enhanced scrollbar */
 =======
 /* Import Inter font for modern typography */
@@ -75,11 +83,23 @@ a {
 /* Enhanced Scrollbar */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 ::-webkit-scrollbar {
+=======
+/* Enhanced scrollbar */::-webkit-scrollbar {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+/* Enhanced scrollbar */::-webkit-scrollbar {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -217,6 +237,8 @@ a {
 }
 
 /* Quantum Field Effects */
+<<<<<<< HEAD
+<<<<<<< HEAD
 .quantum-field-2029 {
 =======
   background: rgba(0, 0, 0, 0.4);
@@ -974,6 +996,20 @@ body::after {
 .quantum-holographic::before {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   content: '';
+=======
+.quantum-field-2029 {  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field-2029::before {  content: '';
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.quantum-field-2029 {  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field-2029::before {  content: '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   position: absolute;
   top: -50%;
   left: -50%;
@@ -983,6 +1019,12 @@ body::after {
     from 0deg,
     transparent,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     rgba(0, 255, 255, 0.1),
     transparent,
     rgba(139, 92, 246, 0.1),
@@ -1187,6 +1229,8 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 /* Hover effects */
 =======
     rgba(59, 130, 246, 0.1),
@@ -1209,11 +1253,23 @@ body::after {
 /* Enhanced hover effects */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 .hover-lift {
+=======
+/* Hover effects */.hover-lift {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+/* Hover effects */.hover-lift {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -1268,6 +1324,8 @@ body::after {
 
 .card-hover {
   @apply card hover:bg-white/20 hover:transform hover:scale-105 hover:shadow-xl;
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
   transform: translateY(-8px) scale(1.02);
@@ -1448,3 +1506,9 @@ body::after {
   }
 }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

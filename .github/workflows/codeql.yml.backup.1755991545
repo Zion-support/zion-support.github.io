@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ---
 name: CodeQL
 
@@ -10,6 +16,8 @@ on:
   schedule:
     - cron: '30 1 * * 0'
   workflow_dispatch: {}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 name: "CodeQL"
 
@@ -22,6 +30,10 @@ on:
     - cron: "33 1 * * 1"
 >>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 permissions:
   contents: read
   security-events: write
@@ -35,6 +47,12 @@ jobs:
     name: Analyze
     runs-on: ubuntu-latest
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     timeout-minutes: 60
     steps:
       - name: Checkout repository
@@ -49,6 +67,8 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
+<<<<<<< HEAD
+<<<<<<< HEAD
         run: echo "Workflow completed successfully"
 =======
     permissions:
@@ -79,3 +99,9 @@ jobs:
  
 
 >>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
+=======
+        run: echo "Workflow completed successfully"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        run: echo "Workflow completed successfully"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

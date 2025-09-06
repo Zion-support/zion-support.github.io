@@ -1,16 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api/authSocial';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
-
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGoogle = () => {
     setIsLoading(true);
-    window.location.href = '/auth/google';
+    window.location.href = '/auth/google'
   };
 
   return (
@@ -68,4 +76,14 @@ export function SocialLogin() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  };
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

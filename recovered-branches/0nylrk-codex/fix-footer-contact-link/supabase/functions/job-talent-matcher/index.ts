@@ -1,10 +1,10 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
 import { processJobMatching, storeMatchResults } from "./job-matching.ts";
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 // Initialize the Supabase client
@@ -15,14 +15,14 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
     const { jobId } = await req.json();
     
     if (!jobId) {
-      throw new Error("Job ID is required");
+      throw new Error("Job ID is required")
     }
 
     // 1. Retrieve job details
@@ -33,7 +33,7 @@ serve(async (req) => {
       .single();
 
     if (jobError) {
-      throw new Error(`Failed to fetch job: ${jobError.message}`);
+      throw new Error(`Failed to fetch job: ${jobError.message}`)
     }
 
     // 2. Retrieve all talent profiles
@@ -43,14 +43,14 @@ serve(async (req) => {
       .eq("is_published", true);
 
     if (talentsError) {
-      throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`);
+      throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`)
     }
 
     if (!talents || talents.length === 0) {
       return new Response(
-        JSON.stringify({ message: "No talent profiles found" }),
+        JSON.stringify({ message: "No talent profiles found" });
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      )
     }
 
     // 3. Use AI to normalize skills and find matches
@@ -63,19 +63,19 @@ serve(async (req) => {
       JSON.stringify({ 
         message: "Job matching completed", 
         matches: matchedTalents.length 
-      }),
+      });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
+    )
     
   } catch (error) {
     console.error("Error in job-talent-matcher:", error);
     
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: error.message });
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    );
+    )
   }
 });

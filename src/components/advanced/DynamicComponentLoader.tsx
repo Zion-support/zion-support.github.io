@@ -1,4 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client';
+
+import React, {
+  Suspense,
+  lazy,
+  useState,
+  useEffect,
+  ComponentType,;
+} from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
 'use client'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -7,8 +26,6 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface LoadingState {
   isLoading: boolean
   error: Error | null
@@ -19,7 +36,7 @@ interface LoadingState {
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>
   fallback?: React.ReactNode
-  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
   maxRetries?: number
@@ -35,7 +52,7 @@ const EnhancedLoading: React.FC<{
   message?: string
   showProgress?: boolean
 }> = ({ 
-  progress = 0, 
+  progress = 0;
   message = 'Loading component...', 
   showProgress = true 
 }) => (
@@ -132,23 +149,23 @@ const useNetworkStatus = () => {
     return () => {
       window.removeEventListener('online', updateOnlineStatus)
       window.removeEventListener('offline', updateOnlineStatus)
-    }
+    };
   }, [])
 
-  return isOnline
+  return isOnline;
 }
 
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
-  importFn,
-  fallback,
-  errorFallback,
-  loadingComponent,
-  enableRetry = true,
-  maxRetries = 3,
-  prefetch = false,
-  className,
-  children,
+  importFn;
+  fallback;
+  errorFallback;
+  loadingComponent;
+  enableRetry = true;
+  maxRetries = 3;
+  prefetch = false;
+  className;
+  children;
   ...props
 }) => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
@@ -194,7 +211,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', { data: error })
       setLoadingState(prev => ({
-        ...prev,
+        ...prev;
         isLoading: false,
         error: error as Error,
         retryCount: prev.retryCount + 1,
@@ -254,7 +271,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   if (loadingState.error) {
     if (errorFallback) {
       return React.createElement(errorFallback, { 
-        error: loadingState.error, 
+        error: loadingState.error,
         retry 
       })
     }
@@ -297,7 +314,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     )
   }
 
-  return null
+  return null;
 }
 
 // HOC for creating dynamic components easily
@@ -311,7 +328,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
       {...(options || {})}
       {...(props as any)}
     />
-  )
+  );
 }
 
 // Predefined dynamic loaders for common heavy components
@@ -324,7 +341,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
 //       </div>
-//     ),
+//     );
 //     prefetch: true
 //   }
 // )
@@ -340,4 +357,15 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
+<<<<<<< HEAD
+export default DynamicComponentLoader;
+=======
+
+<<<<<<< HEAD
+      setLoadingState(prev => ({
+        ...prev;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 export default DynamicComponentLoader 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -173,9 +173,9 @@ class IntelligentGitWorkflow {
 
     // Don't auto-commit if there are too many changes
     if (changes.linesAdded > 500 || changes.linesDeleted > 200) {
-      console.log('⚠️  Too many changes for auto-commit');
-      return false;
-    }
+    console.log('⚠️  Too many changes for auto-commit'),
+    return false
+  }
 
     // Don't auto-commit if there are test failures
     if (changes.types.tests > 0) {
@@ -412,14 +412,14 @@ class IntelligentGitWorkflow {
         const line = lines[i];
 
         if (line.startsWith('<<<<<<<')) {
-          inConflict = true;
-          conflictType = 'ours';
-        } else if (line.startsWith('=======')) {
+    inConflict = true,
+    conflictType = 'ours'
+  } else if (line.startsWith('=======')) {
           conflictType = 'theirs';
         } else if (line.startsWith('>>>>>>>')) {
-          inConflict = false;
-          conflictType = '';
-        } else if (!inConflict) {
+    inConflict = false,
+    conflictType = ''
+  } else if (!inConflict) {
           resolvedLines.push(line);
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version for now (simple strategy)

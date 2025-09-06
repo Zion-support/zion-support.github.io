@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from useParams
+=======
+import { useRouter } from 'next/router', // Changed from useParams
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -7,11 +12,10 @@ import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 export default function ProductPage() {
 
   const router = useRouter();
-  const { id: rawId } = router.query;
+  const { id: rawId } = router.query,
   const id = typeof rawId === 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
     NEW_PRODUCTS.find((p) => p.id === id) || null
@@ -23,7 +27,7 @@ export default function ProductPage() {
     // Update product if id changes and is available from router.query
     if (id) {
       const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
-      setProduct(foundProduct || null);
+      setProduct(foundProduct || null)
     }
   }, [id]);
 
@@ -34,19 +38,19 @@ export default function ProductPage() {
         const res = await fetch(`/api/products/${id}`);
         if (res.ok) {
           const data = await res.json();
-          setProduct(data);
+          setProduct(data)
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err });
+        logErrorToProduction('Error fetching product', { data: err })
       }
     };
 
     // Only fetch if id is available (from router)
     if (id) {
-      fetchProduct();
+      fetchProduct()
     }
-  }, [id]); // id is now from router.query
+  }, [id]), // id is now from router.query
 
   if (!product && !id) { // If no id from router yet, it might still be loading
     return <div className="p-6 text-white">Loading product details...</div>;
@@ -66,7 +70,7 @@ export default function ProductPage() {
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
     });
     toast.success(`1× ${product.title} added`);
-    setTimeout(() => setAdding(false), 500);
+    setTimeout(() => setAdding(false), 500)
   };
 
   return (
@@ -94,4 +98,40 @@ export default function ProductPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
+
+};
+//Only fetch if id is available (from router) ;
+}const inCart = items.some (i => i.id === product.id);
+const handleAdd = () => {;
+  if (inCart) return;
+setAdding (true);
+dispatch ({;
+  type: 'ADD ITEM';
+payload: {;
+  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
+
+});
+toast.success (`1× $ {;
+  product.title ;
+}added`);
+setTimeout ( () => setAdding (false), 500) ;
+};
+product.title ;
+}description= {;
+  product.description ;
+}ogImage= {;
+  product.images?.[0] ;
+}/> </Button> </div> </>) ;
+}'
+=======
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

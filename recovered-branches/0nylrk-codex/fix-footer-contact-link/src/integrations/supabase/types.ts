@@ -167,7 +167,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "api_keys"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "api_logs_user_id_fkey"
             columns: ["user_id"]
@@ -464,7 +464,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "fraud_flags_user_id_fkey"
             columns: ["user_id"]
@@ -643,14 +643,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "job_applications_talent_id_fkey"
             columns: ["talent_id"]
@@ -746,7 +746,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "milestone_activities_user_id_fkey"
             columns: ["user_id"]
@@ -1090,7 +1090,7 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "profiles_tenant_id_fkey"
             columns: ["tenant_id"]
@@ -1146,7 +1146,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "project_milestones_project_id_fkey"
             columns: ["project_id"]
@@ -1184,7 +1184,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "project_notes_user_id_fkey"
             columns: ["user_id"]
@@ -1240,14 +1240,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "projects_talent_id_fkey"
             columns: ["talent_id"]
@@ -1327,7 +1327,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "quote_requests_talent_id_fkey"
             columns: ["talent_id"]
@@ -1405,14 +1405,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "referral_rewards_user_id_fkey"
             columns: ["user_id"]
@@ -1477,21 +1477,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-          },
+          };
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "referrals_referrer_id_fkey"
             columns: ["referrer_id"]
@@ -1612,7 +1612,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "review_reports_review_id_fkey"
             columns: ["review_id"]
@@ -1683,14 +1683,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          };
           {
             foreignKeyName: "reviews_reviewer_id_fkey"
             columns: ["reviewer_id"]
@@ -1844,7 +1844,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
-          },
+          };
           {
             foreignKeyName: "tenant_administrators_user_id_fkey"
             columns: ["user_id"]
@@ -2191,7 +2191,7 @@ export type Database = {
         }[]
       }
       complete_referral: {
-        Args: { _referred_id: string; _user_type: string }
+        Args: { _referred_id: string, _user_type: string }
         Returns: undefined
       }
       create_notification: {
@@ -2226,7 +2226,7 @@ export type Database = {
         Returns: string
       }
       generate_fraud_report: {
-        Args: { year: number; month: number }
+        Args: { year: number, month: number }
         Returns: string
       }
       generate_referral_code: {
@@ -2234,7 +2234,7 @@ export type Database = {
         Returns: string
       }
       get_api_key_user_id: {
-        Args: { key_prefix: string; provided_key: string }
+        Args: { key_prefix: string, provided_key: string }
         Returns: string
       }
       get_current_tenant_id: {
@@ -2262,11 +2262,11 @@ export type Database = {
         Returns: undefined
       }
       update_onboarding_milestone: {
-        Args: { _user_id: string; _milestone: string; _status: boolean }
+        Args: { _user_id: string, _milestone: string, _status: boolean }
         Returns: undefined
       }
       verify_api_key: {
-        Args: { provided_key: string; stored_hash: string }
+        Args: { provided_key: string, stored_hash: string }
         Returns: boolean
       }
     }
@@ -2298,13 +2298,13 @@ type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-    | { schema: keyof Database },
+    | { schema: keyof Database };
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never = never;
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
       Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
@@ -2325,12 +2325,12 @@ export type Tables<
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database },
+    | { schema: keyof Database };
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never = never;
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Insert: infer I
@@ -2348,12 +2348,12 @@ export type TablesInsert<
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database },
+    | { schema: keyof Database };
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never = never;
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Update: infer U
@@ -2371,12 +2371,12 @@ export type TablesUpdate<
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
-    | { schema: keyof Database },
+    | { schema: keyof Database };
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never = never;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
@@ -2386,12 +2386,12 @@ export type Enums<
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
-    | { schema: keyof Database },
+    | { schema: keyof Database };
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
@@ -2402,17 +2402,17 @@ export const Constants = {
   public: {
     Enums: {
       api_key_scope: [
-        "jobs:read",
-        "jobs:write",
-        "talent:read",
-        "quotes:write",
-        "webhooks:manage"],
-      fraud_severity: ["safe", "suspicious", "dangerous"],
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+        "webhooks:manage"];
+      fraud_severity: ["safe", "suspicious", "dangerous"];
       quote_request_status: [
-        "new",
-        "in_review",
-        "accepted",
-        "responded",
-        "closed",
-        "archived"],
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const

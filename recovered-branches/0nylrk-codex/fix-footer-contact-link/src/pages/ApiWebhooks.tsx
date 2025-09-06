@@ -7,57 +7,57 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiWebhooks() {
   // Sample webhook event payload
   const newApplicationPayload = `{
-  "event_type": "new_application",
-  "created_at": "2023-06-10T15:42:31Z",
+  "event_type": "new_application";
+  "created_at": "2023-06-10T15:42:31Z";
   "data": {
-    "application_id": "app-123456",
-    "job_id": "job-789",
-    "talent_id": "talent-456",
-    "status": "new",
-    "cover_letter": "I'm excited to apply for this position...",
-    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
+    "application_id": "app-123456";
+    "job_id": "job-789";
+    "talent_id": "talent-456";
+    "status": "new";
+    "cover_letter": "I'm excited to apply for this position...";
+    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf";
     "created_at": "2023-06-10T15:42:31Z"
   }
 }`;
 
   const newHirePayload = `{
-  "event_type": "talent_hired",
-  "created_at": "2023-06-12T09:15:22Z",
+  "event_type": "talent_hired";
+  "created_at": "2023-06-12T09:15:22Z";
   "data": {
-    "project_id": "project-123",
-    "job_id": "job-456",
-    "client_id": "client-789",
-    "talent_id": "talent-123",
-    "start_date": "2023-07-01",
-    "status": "offer_accepted",
+    "project_id": "project-123";
+    "job_id": "job-456";
+    "client_id": "client-789";
+    "talent_id": "talent-123";
+    "start_date": "2023-07-01";
+    "status": "offer_accepted";
     "created_at": "2023-06-12T09:15:22Z"
   }
 }`;
 
   const quoteReceivedPayload = `{
-  "event_type": "quote_received",
-  "created_at": "2023-06-15T11:30:00Z",
+  "event_type": "quote_received";
+  "created_at": "2023-06-15T11:30:00Z";
   "data": {
-    "quote_id": "quote-123",
-    "client_id": "client-456",
-    "talent_id": "talent-789",
-    "project_name": "Website Redesign",
-    "budget_min": 5000,
-    "budget_max": 8000,
-    "status": "new",
+    "quote_id": "quote-123";
+    "client_id": "client-456";
+    "talent_id": "talent-789";
+    "project_name": "Website Redesign";
+    "budget_min": 5000;
+    "budget_max": 8000;
+    "status": "new";
     "created_at": "2023-06-15T11:30:00Z"
   }
 }`;
 
   const messageReceivedPayload = `{
-  "event_type": "message_received",
-  "created_at": "2023-06-18T14:22:15Z",
+  "event_type": "message_received";
+  "created_at": "2023-06-18T14:22:15Z";
   "data": {
-    "message_id": "msg-123",
-    "conversation_id": "conv-456",
-    "sender_id": "user-789",
-    "recipient_id": "user-012",
-    "content": "Hi, I'd like to discuss the project details.",
+    "message_id": "msg-123";
+    "conversation_id": "conv-456";
+    "sender_id": "user-789";
+    "recipient_id": "user-012";
+    "content": "Hi, I'd like to discuss the project details.";
     "created_at": "2023-06-18T14:22:15Z"
   }
 }`;
@@ -79,7 +79,7 @@ function verifyWebhookSignature(req, res, next) {
   const timestamp = req.headers['x-zion-timestamp'];
   
   if (!signature || !timestamp) {
-    return res.status(401).send('Missing signature or timestamp');
+    return res.status(401).send('Missing signature or timestamp')
   }
   
   // Verify the signature
@@ -90,10 +90,10 @@ function verifyWebhookSignature(req, res, next) {
     .digest('hex');
   
   if (signature !== expectedSignature) {
-    return res.status(401).send('Invalid signature');
+    return res.status(401).send('Invalid signature')
   }
   
-  next();
+  next()
 }
 
 // Webhook endpoint with signature verification
@@ -123,16 +123,16 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break;
     
     default:
-      console.log('Unknown event type:', event_type);
+      console.log('Unknown event type:', event_type)
   }
   
   // Always return a 200 response quickly
-  res.status(200).send('Webhook received');
+  res.status(200).send('Webhook received')
 });
 
 app.listen(3000, () => {
-  console.log('Webhook server listening on port 3000');
-});`;
+  console.log('Webhook server listening on port 3000')
+}),`;
 
   return (
     <ApiDocsLayout>
@@ -233,7 +233,7 @@ app.listen(3000, () => {
 
         <h2>Testing Webhooks</h2>
         <p>
-          You can test your webhook implementation using the Developer Portal. From the Webhooks tab,
+          You can test your webhook implementation using the Developer Portal. From the Webhooks tab;
           select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.
         </p>
         
@@ -246,7 +246,7 @@ app.listen(3000, () => {
         </ul>
       </div>
     </ApiDocsLayout>
-  );
+  )
 }
 
 export default ApiWebhooks;

@@ -8,10 +8,9 @@ import { CalendarIcon } from "@/components/icons";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
-
 interface TimelineStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -56,7 +55,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.startDate && "text-zion-slate-light"
                       )}
                     >
@@ -83,7 +82,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >
@@ -108,5 +107,5 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

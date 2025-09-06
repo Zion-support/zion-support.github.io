@@ -10,7 +10,7 @@ export interface PartnerProfile {
     instagram?: string;
     youtube?: string;
     linkedin?: string;
-    [key: string]: string | undefined;
+    [key: string]: string | undefined
   };
   niche: string;
   audience_size: string;
@@ -19,14 +19,14 @@ export interface PartnerProfile {
   status: 'pending' | 'approved' | 'rejected';
   created_at: string;
   updated_at: string;
-  commission_rate?: number;
+  commission_rate?: number
 }
 
 export interface PartnerSettings {
   id: string;
   commission_rate: number;
   fraud_threshold: number;
-  is_payouts_enabled: boolean;
+  is_payouts_enabled: boolean
 }
 
 export interface PartnerReferralLink {
@@ -37,7 +37,7 @@ export interface PartnerReferralLink {
   source?: string;
   clicks: number;
   conversions: number;
-  created_at: string;
+  created_at: string
 }
 
 export interface PartnerPayout {
@@ -47,5 +47,5 @@ export interface PartnerPayout {
   status: 'pending' | 'processing' | 'completed' | 'failed';
   method: string;
   created_at: string;
-  completed_at?: string;
+  completed_at?: string
 }

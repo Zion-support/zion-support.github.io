@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { format } from 'date-fns';
+import { Calendar } from '@/components/ui/calendar';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { CalendarIcon } from 'lucide-react';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+} from '@/components/ui/popover';
+import { cn } from '@/lib/utils';
+import { QuoteFormData } from '@/types/quotes';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -7,10 +23,9 @@ import { CalendarIcon } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
-
 interface TimelineStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -25,7 +40,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "fixed" 
                   ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"
               }`}
               onClick={() => updateFormData({ timeline: "fixed" })}
             >
@@ -37,7 +52,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible" 
                   ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
               onClick={() => updateFormData({ timeline: "flexible" })}
             >
@@ -55,7 +70,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.startDate && "text-zion-slate-light"
                       )}
                     >
@@ -82,7 +97,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >
@@ -108,4 +123,12 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

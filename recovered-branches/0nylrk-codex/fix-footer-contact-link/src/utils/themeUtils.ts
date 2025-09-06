@@ -7,7 +7,7 @@ export interface ThemeColors {
   textColor: string;
   accentColor: string;
   buttonColor: string;
-  cardBackground: string;
+  cardBackground: string
 }
 
 // Define theme presets
@@ -15,45 +15,45 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   switch (preset) {
     case 'dark':
       return {
-        primaryColor,
-        backgroundColor: '#0f172a',
-        textColor: '#e2e8f0',
-        accentColor: primaryColor,
-        buttonColor: primaryColor,
+        primaryColor;
+        backgroundColor: '#0f172a';
+        textColor: '#e2e8f0';
+        accentColor: primaryColor;
+        buttonColor: primaryColor;
         cardBackground: '#1e293b'};
     case 'neon':
       return {
-        primaryColor,
-        backgroundColor: '#030712',
-        textColor: '#f8fafc',
-        accentColor: '#00ffbb',
-        buttonColor: primaryColor,
+        primaryColor;
+        backgroundColor: '#030712';
+        textColor: '#f8fafc';
+        accentColor: '#00ffbb';
+        buttonColor: primaryColor;
         cardBackground: '#0f172a'};
     case 'corporate':
       return {
-        primaryColor,
-        backgroundColor: '#f8fafc',
-        textColor: '#334155',
-        accentColor: primaryColor,
-        buttonColor: primaryColor,
+        primaryColor;
+        backgroundColor: '#f8fafc';
+        textColor: '#334155';
+        accentColor: primaryColor;
+        buttonColor: primaryColor;
         cardBackground: '#ffffff'};
     case 'startup':
       return {
-        primaryColor,
-        backgroundColor: '#16181d',
-        textColor: '#fafafa',
-        accentColor: '#ff7f50',
-        buttonColor: primaryColor,
+        primaryColor;
+        backgroundColor: '#16181d';
+        textColor: '#fafafa';
+        accentColor: '#ff7f50';
+        buttonColor: primaryColor;
         cardBackground: '#1e2127'};
     case 'light':
     default:
       return {
-        primaryColor,
-        backgroundColor: '#ffffff',
-        textColor: '#0f172a',
-        accentColor: primaryColor,
-        buttonColor: primaryColor,
-        cardBackground: '#f8fafc'};
+        primaryColor;
+        backgroundColor: '#ffffff';
+        textColor: '#0f172a';
+        accentColor: primaryColor;
+        buttonColor: primaryColor;
+        cardBackground: '#f8fafc'}
   }
 }
 
@@ -69,5 +69,5 @@ export function applyThemeColors(colors: ThemeColors) {
   
   // Set background and text colors on body
   document.body.style.backgroundColor = colors.backgroundColor;
-  document.body.style.color = colors.textColor;
+  document.body.style.color = colors.textColor
 }

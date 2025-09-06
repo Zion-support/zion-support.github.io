@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 # Node
 node_modules/
 *.log
@@ -53,6 +59,8 @@ automation/logs/autonomous-system.log .next/
 # Allow committing workspace VSCode config
 !/.vscode
 !/.vscode/extensions.json
+<<<<<<< HEAD
+<<<<<<< HEAD
 !/.vscode/settings.json
 =======
 node_modules
@@ -62,3 +70,9 @@ server/.env
 npm-debug.log*
 yarn-error.log
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+!/.vscode/settings.json
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+!/.vscode/settings.json
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

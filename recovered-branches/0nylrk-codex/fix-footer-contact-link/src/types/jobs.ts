@@ -13,7 +13,7 @@ export type JobCategory =
 export interface JobBudget {
   min: number;
   max: number;
-  currency: string;
+  currency: string
 }
 
 export interface Job {
@@ -27,7 +27,7 @@ export interface Job {
   deadline: string;
   status: JobStatus;
   created_at: string;
-  updated_at: string;
+  updated_at: string
 }
 
 export interface JobFormData {
@@ -37,7 +37,7 @@ export interface JobFormData {
   skills: string;
   budgetMin: number;
   budgetMax: number;
-  deadline: Date;
+  deadline: Date
 }
 
 // Add JobMatch interface to be shared across components
@@ -64,8 +64,8 @@ export interface JobMatch {
     skills: string[];
     location?: string;
     category?: string;
-    company_name?: string;
-  };
+    company_name?: string
+  }
 }
 
 export interface ResumeAttachment {
@@ -75,7 +75,7 @@ export interface ResumeAttachment {
   file_url?: string;
   resume_id?: string;
   summary?: string;
-  skills?: string[];
+  skills?: string[]
 }
 
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
@@ -98,7 +98,7 @@ export interface JobApplication {
     professional_title: string;
     profile_picture_url?: string;
     bio: string;
-    skills: string[];
+    skills: string[]
   };
   resume?: ResumeAttachment;
   // New fields for resume scoring
@@ -108,18 +108,18 @@ export interface JobApplication {
     skills_match?: {
       score: number;
       matching: string[];
-      missing: string[];
+      missing: string[]
     };
     experience_match?: {
       score: number;
-      analysis: string;
+      analysis: string
     };
     education_match?: {
       score: number;
-      analysis: string;
-    };
+      analysis: string
+    }
   };
   match_suggestion?: string;
   scored_at?: string;
-  notes?: string;  // New field for client notes
+  notes?: string,  // New field for client notes
 }

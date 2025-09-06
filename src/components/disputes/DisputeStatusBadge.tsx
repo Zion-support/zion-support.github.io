@@ -1,14 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Badge } from '@/components/ui/badge';
+import { ShieldAlert } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+=======
 
 import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
   let message = "This item has an open dispute";
   
   switch (status) {
@@ -25,7 +36,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       message = "This dispute has been closed";
       break;
     default:
-      break;
+      break
   }
   
   return (
@@ -41,4 +52,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

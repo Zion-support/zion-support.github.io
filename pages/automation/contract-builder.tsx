@@ -1,7 +1,37 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+ const canSubmit = useMemo ( () => {
+  return (talentName.trim () .length > 0 && projectName.trim () .length > 0 && scopeSummary.trim () .length > 0 && !!startDate && !!endDate && (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0) setLoading (true);
+setError (null);
+setContract ('');
+try {
+  const body = {
+  talentName, projectName, scopeSummary, startDate: startDate?.toISOString () .slice (0, 10), endDate: endDate?.toISOString () .slice (0, 10), payment: paymentType === 'hourly' ? {
+  type: 'hourly', currency, hourlyRate, weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined, paymentSchedule 
+}: {
+  type: 'fixed', currency, totalAmount: fixedAmount, milestoneSummary: milestoneSummary || undefined, paymentSchedule 
+};
+clauses: {
+  nda, ipTransfer 
+};
+governingLaw;
+revisionRounds 
+};
+const res = await fetch ('/api/ai-contract', {
+  method: 'POST', headers: {
+  'Content-Type': 'application/json' 
+};
+body: JSON.stringify (body) 
+});
+</div> </div>) 
+}</div> <div> </label> </div> </div> <div> </article> </div>) 
+}</div>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
-
 type PaymentType = 'hourly' | 'fixed';
 
 export default function ContractBuilderPage() {
@@ -29,9 +59,9 @@ export default function ContractBuilderPage() {
 
   useEffect(() => {
     if (!router.isReady) return;
-    const { talent, project } = router.query as { talent?: string; project?: string };
+    const { talent, project } = router.query as { talent?: string, project?: string };
     if (talent && !talentName) setTalentName(decodeURIComponent(talent));
-    if (project && !projectName) setProjectName(decodeURIComponent(project));
+    if (project && !projectName) setProjectName(decodeURIComponent(project))
   }, [router.isReady, router.query, talentName, projectName]);
 
   const canSubmit = useMemo(() => {
@@ -42,7 +72,7 @@ export default function ContractBuilderPage() {
       !!startDate &&
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
-    );
+    )
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]);
 
   async function submitForm(event: React.FormEvent) {
@@ -55,65 +85,71 @@ export default function ContractBuilderPage() {
 
     try {
       const body = {
-        talentName,
-        projectName,
-        scopeSummary,
-        startDate: startDate?.toISOString().slice(0, 10),
-        endDate: endDate?.toISOString().slice(0, 10),
+        talentName;
+        projectName;
+        scopeSummary;
+        startDate: startDate?.toISOString().slice(0, 10);
+        endDate: endDate?.toISOString().slice(0, 10);
         payment:
           paymentType === 'hourly'
             ? {
                 type: 'hourly',
-                currency,
-                hourlyRate,
+                currency;
+                hourlyRate;
                 weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,
                 paymentSchedule}
             : {
                 type: 'fixed',
-                currency,
+                currency;
                 totalAmount: fixedAmount,
                 milestoneSummary: milestoneSummary || undefined,
-                paymentSchedule},
+                paymentSchedule};
         clauses: {
-          nda,
-          ipTransfer},
-        governingLaw,
+          nda;
+          ipTransfer};
+        governingLaw;
         revisionRounds};
 
       const res = await fetch('/api/ai-contract', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(body)});
-
+<<<<<<< HEAD
+      
+          'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)}),
+=======
+          'Content-Type': 'application/json'};
+        body: JSON.stringify(body)}),
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error || `Request failed: ${res.status}`);
+        throw new Error(data?.error || `Request failed: ${res.status}`)
       }
 
-      const data = (await res.json()) as { contract: string };
-      setContract(data.contract);
+      const data = (await res.json()) as { contract: string },
+      setContract(data.contract)
     } catch (e: any) {
-      setError(e?.message || 'Failed to generate contract');
+      setError(e?.message || 'Failed to generate contract')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
 
   function copyToClipboard() {
     if (!contract) return;
-    void navigator.clipboard.writeText(contract);
+    void navigator.clipboard.writeText(contract)
   }
 
   function downloadAsTxt() {
     if (!contract) return;
-    const blob = new Blob([contract], { type: 'text/plain;charset=utf-8' });
+    const blob = new Blob([contract], { type: 'text/plain,charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`;
     a.click();
-    URL.revokeObjectURL(url);
+    URL.revokeObjectURL(url)
   }
 
   return (
@@ -234,5 +270,10 @@ export default function ContractBuilderPage() {
         </div>
       )}
     </div>
-  );
+  )
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

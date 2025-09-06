@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AIMatchingResults } from '@/components/AIMatchingResults';
+import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
+import { Textarea } from '@/components/ui/textarea';
+import { Sparkles, Search } from 'lucide-react';
+=======
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -6,13 +17,14 @@ import { AIMatchingResults } from "@/components/AIMatchingResults";
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
 interface AIMatchmakerProps {
   serviceType?: string;
-  onMatchSelect?: (match: any) => void;
-  className?: string;
+  onMatchSelect?: (match: any) => void,
+  className?: string
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
@@ -26,8 +38,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return
     }
 
     setIsMatchmaking(true);
@@ -38,27 +50,27 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       
       // Get AI matches
       const results = await findMatches(
-        query,
-        serviceType,
+        query;
+        serviceType;
         3
       );
       
-      logInfo('AI matching results:', { data: results });
+      logInfo('AI matching results:', { data: results }),
       setMatches(results);
       
       toast({
         title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`});
+        description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error });
+      logErrorToProduction('Error during AI matching:', { data: error }),
       toast({
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"}),
       // Set empty matches to show no results found UI
-      setMatches([]);
+      setMatches([])
     } finally {
-      setIsMatchmaking(false);
+      setIsMatchmaking(false)
     }
   };
   
@@ -67,7 +79,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       // Find the original MatchResult that contains this item
       const matchResult = matches.find(match => match.item.id === item.id);
       if (matchResult) {
-        onMatchSelect(matchResult);
+        onMatchSelect(matchResult)
       }
     }
   };
@@ -83,7 +95,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
-          Describe what you&apos;re looking for and our AI will find the best matches
+          Describe what you&apos,re looking for and our AI will find the best matches
         </p>
       </CardHeader>
       <CardContent>
@@ -124,4 +136,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       </CardContent>
     </Card>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+      
+      logInfo('AI matching results:', { data: results }),
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

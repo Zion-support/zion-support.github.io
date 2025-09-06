@@ -9,32 +9,31 @@ import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-
 interface Milestone {
-  id: string;
-  title: string;
-  dueDate: string;
-  status: "completed" | "in_progress" | "pending";
-  paymentStatus: "paid" | "pending" | "overdue";
-  amount: string;
+  id: string,
+  title: string,
+  dueDate: string,
+  status: "completed" | "in_progress" | "pending",
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
 }
 
 interface ProjectViewProps {
   project: {
-    id: string;
-    title: string;
+    id: string,
+    title: string,
     client: {
-      name: string;
-      avatar?: string;
+      name: string,
+      avatar?: string
     };
-    startDate: string;
+    startDate: string,
     endDate?: string;
-    status: string;
-    totalAmount: string;
-    progress: number;
-    description: string;
+    status: string,
+    totalAmount: string,
+    progress: number,
+    description: string
   };
-  milestones: Milestone[];
+  milestones: Milestone[]
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -46,7 +45,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       description: "Initializing video connection..."
     });
     
-    navigate(`/call/${roomId}`);
+    navigate(`/call/${roomId}`)
   };
   
   const messageClient = () => {
@@ -167,7 +166,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Status:</span>
-                    <span className="capitalize">{milestone.status.replace('_', ' ')}</span>
+                    <span className="capitalize">{milestone.status.replace('_ ')}</span>
                   </div>
                   <Button 
                     size="sm" 
@@ -183,5 +182,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
-  );
+  )
 }

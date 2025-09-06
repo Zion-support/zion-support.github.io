@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
@@ -12,19 +13,19 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
-import Image from 'next/image'; // Import next/image
+import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
-  listing: ProductListing;
+  listing: ProductListing,
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  detailBasePath?: string;
+  onRequestQuote?: (id: string) => void,
+  detailBasePath?: string
 }
 
 const ProductListingCardComponent = ({
-  listing,
-  view = 'grid',
-  onRequestQuote,
+  listing;
+  view = 'grid';
+  onRequestQuote;
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
@@ -59,35 +60,35 @@ const ProductListingCardComponent = ({
 
   const getPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return formatPrice(listing.price);
+    return formatPrice(listing.price)
   };
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg');
-      setImageError(true);
+      setImageError(true)
     }
   };
   
   const handleViewListing = () => {
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
-      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` });
-      logDebug('[ProductCard] Listing ID:', { id: listing.id });
-      logDebug('[ProductCard] Listing Title:', { title: listing.title });
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` }),
+      logDebug('[ProductCard] Listing ID:', { id: listing.id }),
+      logDebug('[ProductCard] Listing Title:', { title: listing.title })
     }
     
     // Validate listing ID exists before navigation
     if (!listing.id) {
-      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' });
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),
       toast({
         title: "Navigation Error",
         description: "Product information is incomplete",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return
     }
     
-    router.push(`${detailBasePath}/${listing.id}`);
+    router.push(`${detailBasePath}/${listing.id}`)
   };
 
   const dispatch = useDispatch<AppDispatch>();
@@ -100,8 +101,8 @@ const ProductListingCardComponent = ({
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart')}});
-    setLoading(false);
+        onClick: () => router.push('/cart')}}),
+    setLoading(false)
   };
   
   const handleRequestQuote = (e: React.MouseEvent) => {
@@ -109,9 +110,9 @@ const ProductListingCardComponent = ({
     e.stopPropagation();
     
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
-      router.push(`/request-quote?listing=${listing.id}`);
+      router.push(`/request-quote?listing=${listing.id}`)
     }
   };
   
@@ -120,14 +121,14 @@ const ProductListingCardComponent = ({
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleViewListing();
+          handleViewListing()
         }
       }}
     >
@@ -140,7 +141,7 @@ const ProductListingCardComponent = ({
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            handleViewListing();
+            handleViewListing()
           }
         }}
       >
@@ -232,10 +233,10 @@ const ProductListingCardComponent = ({
           <div className="flex gap-2">
             <Button
               size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
+              className="bg-primary hover: bg-primary/80 text-primary-foreground"
               onClick={(e) => {
-                e.stopPropagation(); // Prevent card click event
-                addToCart();
+                e.stopPropagation(), // Prevent card click event
+                addToCart()
               }}
               disabled={loading}
             >
@@ -255,14 +256,14 @@ const ProductListingCardComponent = ({
             <Button
               size="sm"
               variant="default"
-              className="bg-green-600 hover:bg-green-700 text-white"
+              className="bg-green-600 hover: bg-green-700 text-white"
               onClick={(e) => {
-                e.stopPropagation(); // Prevent card click event
+                e.stopPropagation(), // Prevent card click event
                 // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 );
-                router.push('/checkout');
+                router.push('/checkout')
               }}
               disabled={loading}
             >
@@ -274,7 +275,7 @@ const ProductListingCardComponent = ({
                 size="sm"
                 variant="outline" 
                 onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
+                className="border-primary text-primary hover: bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
               </Button>
@@ -283,8 +284,92 @@ const ProductListingCardComponent = ({
         </div>
       </div>
     </div>
-  );
+  )
 };
 
+<<<<<<< HEAD
+}> {;
+  /* Image */ ;
+}<div ;
+
+}> <div className= {;
+  `relative $ {;
+  imageContainerClasses ;
+}` ;
+}> {;
+  /* Ensure this container has dimensions */ ;
+}<Image Featured </Badge>) ;
+}{;
+  stockStatus && (<Badge variant= {;
+  stockVariant as any ;
+}className="absolute top-2 left-2" > {;
+  stockStatus ;
+}</Badge>) ;
+}<FavoriteButton itemId= {;
+  listing.id ;
+}/> </div> </div> {;
+  /* Content */ ;
+}<div className= {;
+  `flex flex-col justify-between $ {';
+  isGrid ? 'p-4 flex-1' : 'p-4 flex-1' ;
+}` ;
+}> <div> </Badge> {;
+  listing.rating && (<RatingStars value= {;
+  listing.rating ;
+}count= {;
+  listing.reviewCount ;
+}/>) ;
+}</div> <span key= {;
+  idx ";
+}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {;
+  tag ;
+}</span>) ) ;
+}</div>) ;
+}</div> </span>) ";
+}</div> <div className="flex gap-2" > <Button onClick={;
+  (e) => {;
+  e.stopPropagation (), //Prevent card click event addToCart () ;
+
+}disabled= {;
+  loading ";
+}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") ;
+}</Button> <Button onClick={;
+  (e) => {;
+  e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({;
+  id: listing.id,  title: listing.title, price: listing.price ?? 0 ;
+}) );';
+router.push ('/checkout') ;
+
+}disabled= {;
+  loading ;
+}> Buy Now </Button> {";
+  onRequestQuote && (<Button size="sm" variant="outline" onClick={;
+  handleRequestQuote ";
+}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) ;
+}</div> </div> </div> </div>) ;
+};
+'"
+=======
+
+<<<<<<< HEAD
+
+
+  const stockStatus =
+    listing.stock === undefined
+
+<<<<<<< HEAD
+
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+
+<<<<<<< HEAD
+
+
+export const ProductListingCard = React.memo(ProductListingCardComponent),
+ProductListingCard.displayName = 'ProductListingCard';
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

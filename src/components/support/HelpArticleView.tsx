@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
+import { HELP_CATEGORIES } from './help-content';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -5,9 +15,8 @@ import { Card } from "@/components/ui/card";
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
-
 interface HelpArticleViewProps {
-  articleId: string;
+  articleId: string
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
@@ -19,12 +28,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     const found = category.articles.find(a => a.id === articleId);
     if (found) {
       article = found;
-      break;
+      break
     }
   }
   
   if (!article) {
-    return <div>Article not found</div>;
+    return <div>Article not found</div>
   }
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
@@ -35,7 +44,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       title: "Thank you for your feedback!",
       description: type === "helpful" 
         ? "We're glad this article was helpful." 
-        : "We'll work on improving this article."});
+        : "We'll work on improving this article."})
   };
   
   return (
@@ -97,13 +106,30 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         </div>
       </Card>
     </div>
-  );
+  )
 }
 
 function formatDate(date: string): string {
+<<<<<<< HEAD
+  return new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+}'"
+=======
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric"
-  });
+    day: "numeric", });
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,17 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Search, Sliders } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Search, Sliders } from 'lucide-react'
 import { Input } from "@/components/ui/input";
-
 interface MobileFilterBarProps {
-  searchTerm: string;
-  setSearchTerm: (value: string) => void;
-  setIsMobileFilterOpen: (isOpen: boolean) => void;
+  searchTerm: string,
+  setSearchTerm: (value: string) => void,
+  setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
 export function MobileFilterBar({ 
-  searchTerm, 
+  searchTerm;
   setSearchTerm, 
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
@@ -27,7 +34,9 @@ export function MobileFilterBar({
       </Button>
       
       <div className="relative mt-4">
-        <label htmlFor="mobile-talent-search" className="sr-only">
+        <label htmlFor="mobile-talent-search" className="sr-only" htmlFor="input-
+          Search talents
+        ">
           Search talents
         </label>
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
@@ -37,7 +46,7 @@ export function MobileFilterBar({
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
           aria-describedby="mobile-talent-search-help"
-          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate"
+          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
         <p id="mobile-talent-search-help" className="sr-only">
           Search by name or skill
@@ -45,4 +54,11 @@ export function MobileFilterBar({
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  setSearchTerm, 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -6,9 +7,9 @@ import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
   TooltipTrigger} from '@/components/ui/tooltip';
 import { useRouter } from 'next/router';
 import { Notification, NotificationType } from '@/context/notifications';
@@ -47,7 +48,8 @@ interface NotificationItemProps {
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
   onMarkAsRead,
-  onDismiss}) => {
+  onDismiss
+}) => {
   const router = useRouter(); // Changed from useNavigate to useRouter
 
   const handleClick = () => {
@@ -60,12 +62,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     }
   };
 
-  return (
-    <div
+  return (<div
       className={cn(
         'p-3 border-b border-zion-blue-light relative group',
-        !notification.read ? 'bg-zion-blue-dark/30' : '',
-      )}
+        !notification.read ? 'bg-zion-blue-dark/30' : '')}
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -85,7 +85,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             <p className="text-xs text-zion-slate">
               {notification.created_at
                 ? formatDistanceToNow(new Date(notification.created_at), {
-                    addSuffix: true})
+                    addSuffix: true
+                  })
                 : 'Just now'}
             </p>
 
@@ -153,3 +154,29 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     </div>
   );
 };
+<<<<<<< HEAD
+interface NotificationItemProps {;
+  notification: Notification;
+onMarkAsRead: (id: string) => Promise<void>;
+onDismiss: (id: string) => Promise<void> ;
+}export const NotificationItem: React.FC<NotificationItemProps> = ({;
+  notification;
+onMarkAsRead;
+onDismiss ;
+}) => {;
+  const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
+  addSuffix: true ';
+}) : 'Just now' ;
+}</p> {;
+  notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
+  handleClick ;
+}> </Button>) ";
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+};
+'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

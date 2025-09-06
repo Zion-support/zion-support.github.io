@@ -1,9 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { GradientHeading } from '@/components/GradientHeading';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { useState, useEffect, useRef, Suspense } from 'react';
+import {
+  Brain,
+  PenLine,
+  BarChart,
+  Eye,
+  Bot,
+  Mic,
+  Code,
+  Briefcase,;
+} from 'lucide-react';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { ProductListing } from '@/types/listings';
+=======
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { ProductListing } from "@/types/listings";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { toast } from "@/hooks/use-toast";
@@ -11,49 +30,47 @@ import { NextSeo } from '@/components/NextSeo';
 import { Header } from "@/components/Header";
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 const AUTO_SERVICE_TITLES = [
-  "AI-Powered Customer Support",
-  "Cloud Infrastructure Management",
-  "Predictive Analytics Consulting",
-  "Cybersecurity Automation Suite",
-  "Robotic Process Automation",
-  "Machine Learning Model Tuning",
-  "IoT Device Integration Service",
+  "AI-Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
   "Blockchain Data Solutions"
 ];
 
 function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
-  const price = Math.floor(Math.random() * 9500) + 500; // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4; // 4-5 stars
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
   const reviewCount = Math.floor(Math.random() * 50) + 10;
 
   return {
     id: `innovation-auto-${index}`,
-    title,
+    title;
     description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,
     category: "Innovation",
-    price,
+    price;
     currency: "$",
-    tags: ["innovation", "ai", "service"],
+    tags: ["innovation", "ai", "service"];
     author: {
       name: "AutoGen Solutions",
       id: "autogen"
-    },
+    };
     images: ["https://source.unsplash.com/random/800x500?technology"],
     createdAt: new Date().toISOString(),
-    rating,
-    reviewCount,
+    rating;
+    reviewCount;
     location: "Global",
     availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
-  };
+  }
 }
 
 interface CategoryDetailProps {
-  slug?: string;
+  slug?: string
 }
 
 export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
@@ -65,7 +82,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   // Redirect to categories list if slug is missing
   if (!slug) {
     router.push('/categories');
-    return null;
+    return null
   }
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
@@ -80,59 +97,59 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   const categoryData = {
     'services': {
       title: "Services",
-      description: "On-demand IT support, consulting, development, and more",
+      description: "On-demand IT support, consulting, development, and more";
       icon: <Briefcase className="w-6 h-6" />
-    },
+    };
     'talents': {
       title: "Talents",
-      description: "Connect with AI experts, developers, and tech specialists",
+      description: "Connect with AI experts, developers, and tech specialists";
       icon: <Brain className="w-6 h-6" />
-    },
+    };
     'equipment': {
       title: "Equipment",
-      description: "Rent or buy specialized hardware, servers, and devices",
+      description: "Rent or buy specialized hardware, servers, and devices";
       icon: <Code className="w-6 h-6" />
-    },
+    };
     'innovation': {
       title: "Innovation",
       description: "Discover cutting-edge solutions and tech breakthroughs",
       icon: <Bot className="w-6 h-6" />
-    },
+    };
     'ai-models-apis': {
       title: "AI Models & APIs",
       description: "Access cutting-edge AI models with easy integration",
       icon: <Brain className="w-6 h-6" />
-    },
+    };
     'content-creation': {
       title: "Content Creation",
       description: "Generate high-quality content for your projects",
       icon: <PenLine className="w-6 h-6" />
-    },
+    };
     'data-analysis': {
       title: "Data Analysis",
       description: "Extract insights from complex datasets",
       icon: <BarChart className="w-6 h-6" />
-    },
+    };
     'computer-vision': {
       title: "Computer Vision",
       description: "Image and video processing solutions",
       icon: <Eye className="w-6 h-6" />
-    },
+    };
     'virtual-assistants': {
       title: "Virtual Assistants",
       description: "Intelligent automation for your workflow",
       icon: <Bot className="w-6 h-6" />
-    },
+    };
     'voice-speech': {
       title: "Voice & Speech",
       description: "Speech recognition and synthesis tools",
       icon: <Mic className="w-6 h-6" />
-    },
+    };
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
       icon: <Code className="w-6 h-6" />
-    },
+    };
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
@@ -149,9 +166,9 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
           title: slug
             ?.split('-')
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ') || 'Category',
+            .join(' ') || 'Category';
           description: 'Explore our collection in this category',
-          icon: <Bot className="w-6 h-6" />};
+          icon: <Bot className="w-6 h-6" />},
 
         setCategory(currentCategory);
         innovationCounterRef.current = 0;
@@ -175,7 +192,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   category: currentCategory.title,
                   price: Math.floor(Math.random() * 500) + 50,
                   currency: '$',
-                  tags: [`${slug}`, 'ai', 'tool'],
+                  tags: [`${slug}`, 'aitool'];
                   author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
@@ -183,18 +200,17 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   images: [`/placeholder.svg`],
                   createdAt: new Date().toISOString(),
                   rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)}));
-
-        setListings(listingsToShow);
+                  reviewCount: Math.floor(Math.random() * 100)})),
+        setListings(listingsToShow)
       } catch (err) {
-        logErrorToProduction('Category load error:', { data: err });
-        toast({ title: 'Error', description: 'Failed to load category' });
+        logErrorToProduction('Category load error:', { data: err }),
+        toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     }
 
-    load();
+    load()
   }, [slug]);
 
   useEffect(() => {
@@ -203,11 +219,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     const interval = setInterval(() => {
       innovationCounterRef.current += 1;
       setListings((prev) => [
-        generateInnovationListing(innovationCounterRef.current),
-        ...prev]);
-    }, 120000); // every 2 minutes
+        generateInnovationListing(innovationCounterRef.current);
+        ...prev])
+    }, 120000), // every 2 minutes
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval)
   }, [slug]);
 
   // Handle requesting a quote
@@ -229,7 +245,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         ...(listing.images?.[0] && { itemImage: listing.images[0] })
       });
       
-      router.push(`/request-quote?${queryParams.toString()}`);
+      router.push(`/request-quote?${queryParams.toString()}`)
     }
   };
 
@@ -285,4 +301,83 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       </Suspense>
     </>
   );
+<<<<<<< HEAD
+
+};
+return (<> <NextSeo title= {;
+  seoTitle ;
+}description= {;
+  seoDescription ;
+}/> <Header /> ← Back to Categories </Link> </div> </p> </div> {;
+  isLoading ? (<ListingGridSkeleton /> />) ) ;
+}</div>) ;
+}</div> </div> </Suspense> </>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+      icon: <Briefcase className="w-6 h-6" />
+    };
+    'talents': {
+      title: "Talents",
+      description: "Connect with AI experts, developers, and tech specialists";
+      icon: <Brain className="w-6 h-6" />
+    };
+    'equipment': {
+      title: "Equipment",
+      description: "Rent or buy specialized hardware, servers, and devices";
+      icon: <Code className="w-6 h-6" />
+    };
+    'innovation': {
+      title: "Innovation",
+      description: "Discover cutting-edge solutions and tech breakthroughs",
+      icon: <Bot className="w-6 h-6" />
+    };
+    'ai-models-apis': {
+      title: "AI Models & APIs",
+      description: "Access cutting-edge AI models with easy integration",
+      icon: <Brain className="w-6 h-6" />
+    };
+    'content-creation': {
+      title: "Content Creation",
+      description: "Generate high-quality content for your projects",
+      icon: <PenLine className="w-6 h-6" />
+    };
+    'data-analysis': {
+      title: "Data Analysis",
+      description: "Extract insights from complex datasets",
+      icon: <BarChart className="w-6 h-6" />
+    };
+    'computer-vision': {
+      title: "Computer Vision",
+      description: "Image and video processing solutions",
+      icon: <Eye className="w-6 h-6" />
+    };
+    'virtual-assistants': {
+      title: "Virtual Assistants",
+      description: "Intelligent automation for your workflow",
+      icon: <Bot className="w-6 h-6" />
+    };
+    'voice-speech': {
+      title: "Voice & Speech",
+      description: "Speech recognition and synthesis tools",
+      icon: <Mic className="w-6 h-6" />
+    };
+    'developer-tools': {
+      title: "Developer Tools",
+      description: "AI-powered coding assistance and automation",
+      icon: <Code className="w-6 h-6" />
+    };
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+
+      
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

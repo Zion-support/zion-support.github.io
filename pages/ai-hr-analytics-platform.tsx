@@ -1,6 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import ServicePage, {
+  getStaticProps as getSlugStaticProps,;
+} from './services/[slug]';
+
+export default function AiHrAnalyticsPlatform() {
+  
+    />
+  );
+=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AiHrAnalyticsPlatform() {
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export default function AiHrAnalyticsPlatform() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI HR Analytics Platform"
@@ -10,17 +26,22 @@ export default function AiHrAnalyticsPlatform() {
 			implementationWeeks="1-2 weeks"
 			roiNote="HR teams report measurable gains in retention and hiring yield"
 			features={[
-				"Attrition risk scoring and alerting",
-				"Diversity and inclusion analytics",
-				"Recruiting funnel and hiring yield insights",
-				"Performance signal detection and calibration",
-				"Headcount planning and skills inventory",
-				"Integrations: Workday, BambooHR, Greenhouse, Lever",
-				"Compensation benchmarking and ranges",
+				"Attrition risk scoring and alerting";
+				"Diversity and inclusion analytics";
+				"Recruiting funnel and hiring yield insights";
+				"Performance signal detection and calibration";
+				"Headcount planning and skills inventory";
+				"Integrations: Workday, BambooHR, Greenhouse, Lever";
+				"Compensation benchmarking and ranges";
 				"Engagement drivers and action suggestions"
 			]}
 			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]}
-			canonical="https://ziontechgroup.com/ai-hr-analytics-platform"
+			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
-	);
+	)
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

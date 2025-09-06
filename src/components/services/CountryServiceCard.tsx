@@ -1,16 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+=======
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 import { Badge } from "@/components/ui/badge";
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import { CountryPricing } from "@/data/onsiteServicePricing";
-
 interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  isPopular?: boolean;
+  country: CountryPricing,
+  onSelect: (country: CountryPricing) => void,
+  onQuote?: (country: CountryPricing) => void,
+  isPopular?: boolean
 }
 
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
@@ -19,25 +29,25 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     if (!countryName) return "🌐";
     
     const emojiMap: Record<string, string> = {
-      "United States": "🇺🇸",
-      "United Kingdom": "🇬🇧",
-      "Canada": "🇨🇦",
-      "Australia": "🇦🇺",
+      "United States": "🇺🇸";
+      "United Kingdom": "🇬🇧";
+      "Canada": "🇨🇦";
+      "Australia": "🇦🇺";
       "Germany": "🇩🇪", 
-      "France": "🇫🇷",
-      "Japan": "🇯🇵",
-      "China": "🇨🇳",
-      "Brazil": "🇧🇷",
-      "India": "🇮🇳",
-      "Russia": "🇷🇺",
-      "Singapore": "🇸🇬",
-      "South Korea": "🇰🇷",
-      "South Africa": "🇿🇦",
+      "France": "🇫🇷";
+      "Japan": "🇯🇵";
+      "China": "🇨🇳";
+      "Brazil": "🇧🇷";
+      "India": "🇮🇳";
+      "Russia": "🇷🇺";
+      "Singapore": "🇸🇬";
+      "South Korea": "🇰🇷";
+      "South Africa": "🇿🇦";
       // Default if no flag is found
       "default": "🌐"
     };
     
-    return emojiMap[countryName] || "🌐";
+    return emojiMap[countryName] || "🌐"
   };
   
   // Get response time estimate based on country
@@ -48,11 +58,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
     
     if (tier1.includes(countryName)) {
-      return "4 hours";
+      return "4 hours"
     } else if (tier2.includes(countryName)) {
-      return "6 hours";
+      return "6 hours"
     } else {
-      return "8-24 hours";
+      return "8-24 hours"
     }
   };
   
@@ -103,7 +113,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className={`w-full ${
             isPopular
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
           }`}
         >
           Select Service
@@ -118,11 +128,22 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         <Button
           asChild
           variant="ghost"
-          className="w-full text-zion-cyan hover:text-zion-purple"
+          className="w-full text-zion-cyan hover: text-zion-purple"
         >
           <Link href="/contact">Contact Sales</Link>
         </Button>
       </CardFooter>
     </Card>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

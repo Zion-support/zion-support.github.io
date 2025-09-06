@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [200] https://ziontechgroup.com/
 [200] https://ziontechgroup.com/sitemap.xml
 [200] https://ziontechgroup.com/site.webmanifest
@@ -1666,6 +1672,8 @@
   [200] https://ziontechgroup.com/services/ai-predictive-health-analytics-2029
   [200] https://ziontechgroup.com/services/quantum-learning-accelerator-2029
   [200] https://ziontechgroup.com/services/ai-emotion-based-marketing-2029
+<<<<<<< HEAD
+<<<<<<< HEAD
   [200] https://ziontechgroup.com/services/ai-autonomous-business-manager-2029
 =======
 {
@@ -5431,3 +5439,9 @@
   "passed": false
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
+=======
+  [200] https://ziontechgroup.com/services/ai-autonomous-business-manager-2029
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  [200] https://ziontechgroup.com/services/ai-autonomous-business-manager-2029
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -13,7 +13,7 @@ export function useSkills() {
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add skills');
-      return false;
+      return false
     }
     
     setIsLoading(true);
@@ -23,27 +23,27 @@ export function useSkills() {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
-          resume_id: resumeId,
-          name: skill.name,
-          proficiency: skill.proficiency,
-          category: skill.category,
+          resume_id: resumeId;
+          name: skill.name;
+          proficiency: skill.proficiency;
+          category: skill.category;
           years_experience: skill.years_experience
         });
       
       if (error) throw error;
       
-      return showSuccessToast("Skill added", "Your skill has been added to your resume");
+      return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not add skill');
+      return handleResumeError(e, 'Could not add skill')
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
   
   const deleteSkill = async (skillId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete skills');
-      return false;
+      return false
     }
     
     setIsLoading(true);
@@ -57,18 +57,18 @@ export function useSkills() {
       
       if (error) throw error;
       
-      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume");
+      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete skill');
+      return handleResumeError(e, 'Could not delete skill')
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
   return {
-    isLoading,
-    error,
-    addSkill,
+    isLoading;
+    error;
+    addSkill;
     deleteSkill
-  };
+  }
 }

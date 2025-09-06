@@ -142,7 +142,7 @@ async function main() {
     console.log(`Success Rate: ${report.summary.successRate}`);
 
     if (results.failureCount > 0) {
-      console.log('\n❌ FAILED TASKS:');
+      console.log('\n❌ FAILED TASKS: '),
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
@@ -158,12 +158,12 @@ async function main() {
       r => r.critical && r.status === 'failed'
     );
     if (criticalFailures.length > 0) {
-      console.log('\n⚠️ Critical tasks failed - manual intervention required');
-      process.exit(1);
-    } else {
-      console.log('\n🎉 All critical tasks passed successfully');
-      process.exit(0);
-    }
+    console.log('\n⚠️ Critical tasks failed - manual intervention required'),
+    process.exit(1)
+  } else {
+    console.log('\n🎉 All critical tasks passed successfully'),
+    process.exit(0)
+  }
   } catch (error) {
     console.error('❌ Master automation failed:', error.message);
     process.exit(1);

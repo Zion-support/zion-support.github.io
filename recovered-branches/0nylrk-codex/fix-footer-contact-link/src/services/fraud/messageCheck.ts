@@ -3,7 +3,6 @@
 import { FraudSeverity } from '@/types/fraud';
 import { analyzeContent } from './analyzeContent';
 import { MessageAnalysisResult } from './types';
-
 /**
  * Check message for suspicious content
  */
@@ -16,11 +15,11 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity = analysis.reasons.length > 2 || 
               analysis.reasons.some(r => r.includes('payment') || r.includes('external')) 
       ? 'dangerous' 
-      : 'suspicious';
+      : 'suspicious'
   }
   
   return {
-    ...analysis,
+    ...analysis;
     severity
-  };
+  }
 };

@@ -5,13 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from 'date-fns';
 import { toast } from "sonner";
 import { useNavigate } from 'react-router-dom';
-
 import { jobSchema, JobSchemaType } from './validation';
 import { useAuth } from "@/hooks/useAuth";
-
 export interface JobPostingProps {
   jobId?: string;
-  onSuccess?: () => void;
+  onSuccess?: () => void
 }
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
@@ -25,25 +23,25 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
 
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema),
+    resolver: zodResolver(jobSchema);
     defaultValues: {
-      title: '',
-      company: '',
-      location: '',
-      job_type: '',
-      salary_range: '',
-      description: '',
-      responsibilities: '',
-      qualifications: '',
-      benefits: '',
-      application_instructions: '',
-      contact_email: '',
-      published_date: '',
-      expiry_date: '',
-      is_remote: false,
-      category: '',
-      status: '',
-      external_apply_link: ''},
+      title: '';
+      company: '';
+      location: '';
+      job_type: '';
+      salary_range: '';
+      description: '';
+      responsibilities: '';
+      qualifications: '';
+      benefits: '';
+      application_instructions: '';
+      contact_email: '';
+      published_date: '';
+      expiry_date: '';
+      is_remote: false;
+      category: '';
+      status: '';
+      external_apply_link: ''};
     mode: "onChange"});
 
   // Function to create/update jobs that will be implemented by parent component
@@ -51,7 +49,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     if (!user) {
       toast.error("You must be logged in to post a job");
       navigate("/login");
-      return;
+      return
     }
 
     setIsLoading(true);
@@ -61,37 +59,37 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       const expiryDate = endDate ? endDate.toString() : '';
 
       const jobData = {
-        ...values,
-        published_date: publishedDate,
-        expiry_date: expiryDate,
-        is_remote: isRemote,
+        ...values;
+        published_date: publishedDate;
+        expiry_date: expiryDate;
+        is_remote: isRemote;
         user_id: user.id};
 
       if (onSuccess) {
-        onSuccess();
+        onSuccess()
       }
       
-      return jobData;
+      return jobData
     } catch (error: any) {
       console.error("Error in job form submission:", error);
       toast.error(error.message || "Failed to process form");
-      throw error;
+      throw error
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
   return {
-    form,
-    isLoading,
-    startDate,
-    setStartDate,
+    form;
+    isLoading;
+    startDate;
+    setStartDate;
     endDate, 
-    setEndDate,
-    isRemote,
-    setIsRemote,
-    initialValues,
-    setInitialValues,
+    setEndDate;
+    isRemote;
+    setIsRemote;
+    initialValues;
+    setInitialValues;
     submitJob
-  };
+  }
 };

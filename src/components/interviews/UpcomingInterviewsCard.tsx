@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { format, isPast, parseISO } from 'date-fns';
+import Link from 'next/link';
+import { Calendar, Clock, Video } from 'lucide-react';
+import { Avatar } from '@/components/ui/avatar';
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,7 +23,6 @@ import Link from "next/link";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { Avatar } from "@/components/ui/avatar";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 export function UpcomingInterviewsCard() {
 
   const { fetchInterviews } = useInterviews();
@@ -31,17 +44,17 @@ export function UpcomingInterviewsCard() {
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
-          .slice(0, 3); // Take only the next 3 interviews
+          .slice(0, 3), // Take only the next 3 interviews
         
-        setUpcomingInterviews(upcoming);
+        setUpcomingInterviews(upcoming)
       } catch (error) {
-        logErrorToProduction('Error loading upcoming interviews:', { data: error });
+        logErrorToProduction('Error loading upcoming interviews:', { data: error })
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     };
 
-    loadInterviews();
+    loadInterviews()
   }, []);
 
   if (isLoading) {
@@ -105,8 +118,7 @@ export function UpcomingInterviewsCard() {
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
-            
+            const formattedTime = format(interviewDate, 'h: mm a'),
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = 
@@ -159,4 +171,11 @@ export function UpcomingInterviewsCard() {
       </CardContent>
     </Card>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,16 +1,45 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  Brain,
+  Atom,
+  Cpu,
+  Shield,
+  Database,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Sparkles,;
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Search, Filter, Star, Users, TrendingUp, 
-  Brain, Atom, Cpu, Shield, Database, Cloud,
+  Brain, Atom, Cpu, Shield, Database, Cloud;
   ArrowRight, CheckCircle, Zap, Sparkles
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -22,7 +51,46 @@ const Services2024Page: React.FC = () => {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
+<<<<<<< HEAD
     let filtered = allServices.filter(service => {
+      const matchesSearch =
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.features.some(feature =>
+          feature.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+
+      const matchesCategory =
+        selectedCategory === 'all' ||
+        (selectedCategory === 'ai' && service.variant.includes('ai')) ||
+        (selectedCategory === 'quantum' &&
+          service.variant.includes('security')) ||
+        (selectedCategory === 'it' && service.variant.includes('it')) ||
+        (selectedCategory === 'api' && service.variant.includes('api')) ||
+        (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||
+        (selectedCategory === 'marketing' &&
+          service.variant.includes('marketing')) ||
+        (selectedCategory === 'project' &&
+          service.variant.includes('project')) ||
+        (selectedCategory === 'customer' &&
+          service.variant.includes('customer'));
+
+      return matchesSearch && matchesCategory;
+=======
+const Services2024Page: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+
+  // Combine all services
+  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024];
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -37,13 +105,25 @@ const Services2024Page: React.FC = () => {
                              (selectedCategory === 'project' && service.variant.includes('project')) ||
                              (selectedCategory === 'customer' && service.variant.includes('customer'));
       
-      return matchesSearch && matchesCategory;
+      return matchesSearch && matchesCategory
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     });
 
     // Sort services
     filtered.sort((a, b) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
       let aValue: any, bValue: any;
-      
+
+=======
+      let aValue: any, bValue: any,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      let aValue: any, bValue: any,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       switch (sortBy) {
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
@@ -57,22 +137,101 @@ const Services2024Page: React.FC = () => {
           aValue = parseInt(a.customers.replace(/[^0-9]/g, ''));
           bValue = parseInt(b.customers.replace(/[^0-9]/g, ''));
           break;
+<<<<<<< HEAD
+<<<<<<< HEAD
         default:
           aValue = a.name.toLowerCase();
           bValue = b.name.toLowerCase();
+=======
+        default: aValue = a.name.toLowerCase(),
+          bValue = b.name.toLowerCase()
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
       
       if (sortOrder === 'asc') {
-        return aValue > bValue ? 1 : -1;
+        return aValue > bValue ? 1 : -1
       } else {
-        return aValue < bValue ? 1 : -1;
+        return aValue < bValue ? 1 : -1
       }
     });
 
-    return filtered;
+    return filtered
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
 
   const categories = [
+<<<<<<< HEAD
+    {
+      id: 'all',
+      name: 'All Services',
+      icon: Sparkles,
+      count: allServices.length,
+    },
+    {
+      id: 'ai',
+      name: 'AI & ML',
+      icon: Brain,
+      count: allServices.filter(s => s.variant.includes('ai')).length,
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum & Security',
+      icon: Shield,
+      count: allServices.filter(s => s.variant.includes('security')).length,
+    },
+    {
+      id: 'it',
+      name: 'Enterprise IT',
+      icon: Cpu,
+      count: allServices.filter(s => s.variant.includes('it')).length,
+    },
+    {
+      id: 'api',
+      name: 'API & Development',
+      icon: Database,
+      count: allServices.filter(s => s.variant.includes('api')).length,
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      count: allServices.filter(s => s.variant.includes('cloud')).length,
+    },
+    {
+      id: 'marketing',
+      name: 'Marketing & SEO',
+      icon: TrendingUp,
+      count: allServices.filter(s => s.variant.includes('marketing')).length,
+    },
+    {
+      id: 'project',
+      name: 'Project Management',
+      icon: Users,
+      count: allServices.filter(s => s.variant.includes('project')).length,
+    },
+    {
+      id: 'customer',
+      name: 'Customer Success',
+      icon: CheckCircle,
+      count: allServices.filter(s => s.variant.includes('customer')).length,
+    },
+=======
+        default: aValue = a.name.toLowerCase(),
+          bValue = b.name.toLowerCase()
+      }
+      
+      if (sortOrder === 'asc') {
+        return aValue > bValue ? 1 : -1
+      } else {
+        return aValue < bValue ? 1 : -1
+      }
+    });
+
+    return filtered
+  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
+
+  const categories = [
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },
     { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },
     { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },
@@ -82,6 +241,10 @@ const Services2024Page: React.FC = () => {
     { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },
     { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },
     { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const getVariantIcon = (variant: string) => {
@@ -93,7 +256,15 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return TrendingUp;
     if (variant.includes('project')) return Users;
     if (variant.includes('customer')) return CheckCircle;
+<<<<<<< HEAD
+<<<<<<< HEAD
     return Sparkles;
+=======
+    return Sparkles
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return Sparkles
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const getVariantColor = (variant: string) => {
@@ -105,13 +276,47 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+<<<<<<< HEAD
+<<<<<<< HEAD
     return 'from-gray-500 to-slate-500';
+=======
+    return 'from-gray-500 to-slate-500'
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return 'from-gray-500 to-slate-500'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta
+          name='description'
+          content='Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology.'
+        />
+        <meta
+          name='keywords'
+          content='AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/services-2024' />
+=======
+        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      </Head>
+
+      <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
+
+      <div className="relative z-10 min-h-screen">
+        {/* Hero Section */}
+<<<<<<< HEAD
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
+=======
         <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
@@ -123,11 +328,64 @@ const Services2024Page: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>
+                <Sparkles className='w-5 h-5 text-cyan-400' />
+                <span className='text-cyan-400 font-medium'>
+                  2024 Revolutionary Services
+                </span>
+=======
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
+                <Sparkles className="w-5 h-5 text-cyan-400" />
+                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  Future-Ready
+                </span>
+                <br />
+                <span className="text-white">Solutions</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
+                Transform your business with our revolutionary 2024 service portfolio.
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
+                  <div className="text-gray-400">Revolutionary Services</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
+                  <div className="text-gray-400">Service Categories</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">4.8</div>
+                  <div className="text-gray-400">Average Rating</div>
+                </div>
+<<<<<<< HEAD
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-green-400 mb-2'>
+                    1000+
+                  </div>
+                  <div className='text-gray-400'>Happy Customers</div>
+=======
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
@@ -163,6 +421,12 @@ const Services2024Page: React.FC = () => {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
                   <div className="text-gray-400">Happy Customers</div>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
+                  <div className="text-gray-400">Happy Customers</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -170,6 +434,30 @@ const Services2024Page: React.FC = () => {
         </section>
 
         {/* Search and Filters */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className='px-4 sm:px-6 lg:px-8 mb-16'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'>
+              <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
+=======
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                {/* Search */}
+                <div className="lg:col-span-2">
+                  <div className="relative">
+                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Search services by name, features, or description..."
+                      value={searchQuery}
+<<<<<<< HEAD
+                      onChange={e => setSearchQuery(e.target.value)}
+                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
+=======
         <section className="px-4 sm:px-6 lg:px-8 mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
@@ -183,6 +471,10 @@ const Services2024Page: React.FC = () => {
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     />
                   </div>
                 </div>
@@ -191,8 +483,20 @@ const Services2024Page: React.FC = () => {
                 <div>
                   <select
                     value={selectedCategory}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    onChange={e => setSelectedCategory(e.target.value)}
+                    className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
+                  >
+                    {categories.map(category => (
+=======
                     onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
                     {categories.map((category) => (
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
+                    {categories.map((category) => (
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
@@ -201,6 +505,28 @@ const Services2024Page: React.FC = () => {
                 </div>
 
                 {/* Sort */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div className='flex space-x-2'>
+=======
+                <div className="flex space-x-2">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
+                    <option value="name">Sort by Name</option>
+                    <option value="price">Sort by Price</option>
+                    <option value="rating">Sort by Rating</option>
+                    <option value="customers">Sort by Customers</option>
+                  </select>
+                  <button
+<<<<<<< HEAD
+                    onClick={() =>
+                      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
+                    }
+                    className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'
+                  >
+=======
                 <div className="flex space-x-2">
                   <select
                     value={sortBy}
@@ -212,6 +538,10 @@ const Services2024Page: React.FC = () => {
                   </select>
                   <button
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {sortOrder === 'asc' ? '↑' : '↓'}
                   </button>
                 </div>
@@ -221,6 +551,24 @@ const Services2024Page: React.FC = () => {
         </section>
 
         {/* Services Grid */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+          <div className='max-w-7xl mx-auto'>
+=======
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            {filteredServices.length === 0 ? (
+              <div className="text-center py-20">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
+                <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
+              </div>
+            ) : (
+<<<<<<< HEAD
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+=======
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             {filteredServices.length === 0 ? (
@@ -231,11 +579,39 @@ const Services2024Page: React.FC = () => {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className='group'
+                  >
+                    <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
+=======
+                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
+                    <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                      {/* Service Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
+                          {React.createElement(getVariantIcon(service.variant), { 
+                            className: `w-6 h-6 text-cyan-400` 
+                          })}
+                        </div>
+<<<<<<< HEAD
+                        <div className='text-right'>
+                          <div className='text-2xl font-bold text-cyan-400'>
+                            {service.price}
+                          </div>
+                          <div className='text-sm text-gray-400'>per month</div>
+=======
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */}
@@ -248,18 +624,61 @@ const Services2024Page: React.FC = () => {
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                          <div className="text-sm text-gray-400">per month</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
 
                       {/* Service Info */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
+                        {service.name}
+                      </h3>
+                      <p className='text-gray-300 mb-4 leading-relaxed'>
+=======
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
                         {service.name}
                       </h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                        {service.name}
+                      </h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         {service.tagline}
                       </p>
 
                       {/* Features */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <div className='mb-6'>
+                        <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>
+                          Key Features
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.features
+                            .slice(0, 3)
+                            .map((feature, featureIndex) => (
+                              <div
+                                key={featureIndex}
+                                className='flex items-center space-x-2'
+                              >
+                                <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                <span className='text-sm text-gray-300'>
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          {service.features.length > 3 && (
+                            <div className='text-sm text-cyan-400'>
+=======
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
                         <div className="space-y-2">
@@ -271,6 +690,20 @@ const Services2024Page: React.FC = () => {
                           ))}
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      <div className="mb-6">
+                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
+                        <div className="space-y-2">
+                          {service.features.slice(0, 3).map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center space-x-2">
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <span className="text-sm text-gray-300">{feature}</span>
+                            </div>
+                          ))}
+                          {service.features.length > 3 && (
+                            <div className="text-sm text-cyan-400">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                               +{service.features.length - 3} more features
                             </div>
                           )}
@@ -278,6 +711,36 @@ const Services2024Page: React.FC = () => {
                       </div>
 
                       {/* Stats */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <div className='grid grid-cols-3 gap-4 mb-6'>
+                        <div className='text-center'>
+                          <div className='flex items-center justify-center space-x-1 mb-1'>
+                            <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                            <span className='text-sm font-semibold text-white'>
+                              {service.rating}
+                            </span>
+=======
+                      <div className="grid grid-cols-3 gap-4 mb-6">
+                        <div className="text-center">
+                          <div className="flex items-center justify-center space-x-1 mb-1">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <span className="text-sm font-semibold text-white">{service.rating}</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                          </div>
+                          <div className="text-xs text-gray-400">Rating</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-sm font-semibold text-white mb-1">{service.customers}</div>
+                          <div className="text-xs text-gray-400">Customers</div>
+                        </div>
+<<<<<<< HEAD
+                        <div className='text-center'>
+                          <div className='text-sm font-semibold text-white mb-1'>
+                            {service.launchDate}
+                          </div>
+                          <div className='text-xs text-gray-400'>Launched</div>
+=======
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
@@ -293,10 +756,33 @@ const Services2024Page: React.FC = () => {
                         <div className="text-center">
                           <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
                           <div className="text-xs text-gray-400">Launched</div>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                        <div className="text-center">
+                          <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
+                          <div className="text-xs text-gray-400">Launched</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
 
                       {/* CTA */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <div className='flex items-center justify-between'>
+=======
+                      <div className="flex items-center justify-between">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                        <Link
+                          href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
+                          <span className="font-medium">Learn More</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                        </Link>
+<<<<<<< HEAD
+                        <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
+                          {service.variant
+                            .replace('-futuristic', '')
+                            .replace('-', ' ')}
+=======
                       <div className="flex items-center justify-between">
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
@@ -304,7 +790,12 @@ const Services2024Page: React.FC = () => {
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-                          {service.variant.replace('-futuristic', '').replace('-', ' ')}
+                          {service.variant.replace('-futuristic', '').replace('- ')}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                        <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
+                          {service.variant.replace('-futuristic', '').replace('- ')}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
                     </div>
@@ -316,12 +807,50 @@ const Services2024Page: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+          <div className='max-w-4xl mx-auto text-center'>
+=======
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              viewport={{ once: true }}
+              className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
+            >
+              <h2 className='text-4xl font-bold text-white mb-6'>
+=======
+              viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
+              <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Join thousands of businesses already leveraging our revolutionary 2024 services. 
+                Get started today and experience the future of technology.
+              </p>
+              <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <Link
+                  href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
+                  <Zap className="w-5 h-5" />
+                  <span>Get Started Today</span>
+                </Link>
+                <Link
+                  href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
+                  <span>View Pricing Plans</span>
+<<<<<<< HEAD
+                  <ArrowRight className='w-4 h-4' />
+=======
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -330,7 +859,7 @@ const Services2024Page: React.FC = () => {
                 Join thousands of businesses already leveraging our revolutionary 2024 services. 
                 Get started today and experience the future of technology.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
                   <Zap className="w-5 h-5" />
@@ -340,6 +869,10 @@ const Services2024Page: React.FC = () => {
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               </div>
             </motion.div>
@@ -347,7 +880,21 @@ const Services2024Page: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 
 export default Services2024Page;
+=======
+  )
+};
+
+export default Services2024Page;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+};
+
+export default Services2024Page;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

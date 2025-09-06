@@ -188,6 +188,12 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Enhanced futuristic effects */
 .neon-glow {
   text-shadow: 
@@ -498,6 +504,8 @@ a:hover {
     inset 0 0 20px rgba(0, 212, 255, 0.1);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 .btn-futuristic::before {
 =======
 .particles-bg::before {
@@ -775,6 +783,12 @@ a:hover {
 .button::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   content: '';
+=======
+.btn-futuristic::before {  content: '';
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.btn-futuristic::before {  content: '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   position: absolute;
   top: 0;
   left: -100%;
@@ -782,17 +796,31 @@ a:hover {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   transition: left 0.5s ease;
 =======
   transition: left 0.5s;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
 }
+=======
+  transition: left 0.5s ease;}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  transition: left 0.5s ease;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 .button:hover::before {
   left: 100%;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 .btn-futuristic:hover {
   transform: translateY(-2px);
   box-shadow: 
@@ -885,6 +913,8 @@ a:hover {
 /* Responsive design */
 @media (max-width: 768px) {
   .particles {
+<<<<<<< HEAD
+<<<<<<< HEAD
     display: none;
 =======
 .button:hover {
@@ -966,6 +996,12 @@ a:hover {
     animation: none !important;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   }
+=======
+    display: none;  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    display: none;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   .cyber-grid {
     background-size: 15px 15px;

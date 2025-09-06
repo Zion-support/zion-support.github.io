@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -30,6 +32,14 @@ function scanCanonical(dir) {
 }
 
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -37,6 +47,12 @@ function runNode(relPath, args = []) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 exports.config = {
   schedule: '*/60 * * * *',
 };
@@ -57,6 +73,8 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 =======
 exports.config = { schedule: '30 */6 * * *' };
@@ -82,3 +100,7 @@ exports.handler = async () => {
   return { statusCode: 200, body: JSON.stringify({ ok: true, total: findings.length }) };
 };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

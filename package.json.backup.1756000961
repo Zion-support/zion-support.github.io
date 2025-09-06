@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -10,6 +16,8 @@
   "bugs": {
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
   "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
@@ -474,4 +482,10 @@
     "typescript": "^5.0.0"
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
   }
+=======
+  "homepage": "https://github.com/Zion-Holdings/zion.app#readme",  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "homepage": "https://github.com/Zion-Holdings/zion.app#readme",  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

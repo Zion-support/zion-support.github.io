@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -9,11 +13,10 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
-
 export function ConversationDetailView() {
   const { user } = useAuth();
   const { 
-    activeConversation, 
+    activeConversation;
     activeMessages, 
     sendMessage, 
     loadMessages
@@ -24,17 +27,17 @@ export function ConversationDetailView() {
   
   useEffect(() => {
     if (activeConversation) {
-      loadMessages(activeConversation.id);
+      loadMessages(activeConversation.id)
     }
-    inputRef.current?.focus();
+    inputRef.current?.focus()
   }, [activeConversation?.id, loadMessages]);
   
   useEffect(() => {
-    scrollToBottom();
+    scrollToBottom()
   }, [activeMessages]);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   };
   
   const send = async () => {
@@ -42,18 +45,18 @@ export function ConversationDetailView() {
 
     await sendMessage(activeConversation.id, messageText);
     setMessageText('');
-    inputRef.current?.focus();
+    inputRef.current?.focus()
   };
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    await send();
+    await send()
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      send();
+      send()
     }
   };
   
@@ -70,19 +73,18 @@ export function ConversationDetailView() {
   }
   
   // Group messages by date
-  const groupedMessages: { date: string; messages: any[] }[] = [];
-  
+  const groupedMessages: { date: string, messages: any[] }[] = [],
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     
     if (existingGroup) {
-      existingGroup.messages.push(message);
+      existingGroup.messages.push(message)
     } else {
       groupedMessages.push({
         date: messageDate,
         messages: [message]
-      });
+      })
     }
   });
   
@@ -189,7 +191,7 @@ export function ConversationDetailView() {
           />
           <Button 
             type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
@@ -197,4 +199,44 @@ export function ConversationDetailView() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+
+});
+<AvatarImage src= {;
+  activeConversation.other user.avatar url ;
+}alt= {;
+  activeConversation.other user.name ;
+}/> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User' ;
+}</div> </div> </div> </div> {;
+  activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {;
+  1/1 ";
+}className="rounded bg-zion-blue-dark/30 overflow-hidden" > <img /> </AspectRatio> </div>) ;
+}<div> {;
+  activeConversation.context data.description ;
+}</div>) ;
+}</div> </div> </div>) ;
+}<p>No messages yet. Start the conversation!</p> </div>) : (groupedMessages.map ( (group, groupIndex) => (<div key= {;
+  group.date ;
+}> <MessageBubble key= {;
+  message.id ;
+}message= {;
+  message ;
+}isUserMessage= {;
+  message.sender id === user?.id ;
+}/>) ) ;
+}</div> </div>) ) ) ;
+}<div ref= {;
+  messagesEndRef ;
+}/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+  
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

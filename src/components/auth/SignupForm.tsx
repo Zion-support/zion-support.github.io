@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,36 +12,34 @@ import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { fireEvent } from '@/lib/analytics';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 const signupSchema = z.object({
-  name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
-  email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
+  name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters');
+  email: z.string().email('Please enter a valid email address').min(1, 'Email is required');
   password: z.string()
     .min(8, 'Password must be at least 8 characters')
     .regex(/[A-Z]/, 'Password must include at least one uppercase letter')
     .regex(/[a-z]/, 'Password must include at least one lowercase letter')
     .regex(/[0-9]/, 'Password must include at least one number')
-    .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character'),
+    .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character');
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
-  path: ["confirmPassword"]});
+  path: ["confirmPassword"]}),
 
 type SignupFormData = z.infer<typeof signupSchema>;
 
 interface SignupFormProps {
   onSuccess?: (result: {
-    email: string;
-    emailVerificationRequired: boolean;
+    email: string,
+    emailVerificationRequired: boolean
   }) => void;
-  onError?: (error: string) => void;
+  onError?: (error: string) => void
 }
 
 interface FieldValidationState {
-  isValid: boolean;
-  isValidating: boolean;
-  error: string | null;
+  isValid: boolean,
+  isValidating: boolean,
+  error: string | null
 }
 
 export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
@@ -51,12 +50,12 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
   const { signUp } = useAuth();
   
   const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid, touchedFields },
-    setError,
-    reset,
-    watch,
+    register;
+    handleSubmit;
+    formState: { errors, isValid, touchedFields };
+    setError;
+    reset;
+    watch;
     trigger} = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
     mode: 'onChange', // Enable real-time validation
@@ -72,7 +71,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       const typedFieldName = fieldName as keyof SignupFormData;
       if (touchedFields[typedFieldName]) {
         setFieldStates(prev => ({
-          ...prev,
+          ...prev;
           [fieldName]: { 
             isValid: prev[fieldName]?.isValid ?? false,
             isValidating: true,
@@ -85,20 +84,20 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           const error = errors[typedFieldName];
           
           setFieldStates(prev => ({
-            ...prev,
+            ...prev;
             [fieldName]: {
               isValid: result,
               isValidating: false,
               error: error?.message || null
             }
-          }));
-        }, 300);
+          }))
+        }, 300)
       }
     });
 
     return () => {
-      Object.values(timeouts).forEach(clearTimeout);
-    };
+      Object.values(timeouts).forEach(clearTimeout)
+    }
   }, [watchedFields, touchedFields, trigger, errors]);
 
   const getFieldValidationIcon = (fieldName: string) => {
@@ -108,18 +107,18 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     if (!isTouched) return null;
     
     if (state?.isValidating) {
-      return <Loader2 className="h-4 w-4 animate-spin text-blue-500" />;
+      return <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
     }
     
     if (state?.isValid && !state?.error) {
-      return <CheckCircle className="h-4 w-4 text-green-500" />;
+      return <CheckCircle className="h-4 w-4 text-green-500" />
     }
     
     if (state?.error) {
       return <AlertCircle className="h-4 w-4 text-red-500" />;
     }
     
-    return null;
+    return null
   };
 
   const getFieldClasses = (fieldName: string) => {
@@ -129,42 +128,42 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     if (!isTouched) return '';
     
     if (state?.isValidating) {
-      return 'border-blue-300 focus:border-blue-500 focus:ring-blue-500/20';
+      return 'border-blue-300 focus: border-blue-500 focus:ring-blue-500/20'
     }
     
     if (state?.isValid && !state?.error) {
-      return 'border-green-500 focus:border-green-500 focus:ring-green-500/20';
+      return 'border-green-500 focus: border-green-500 focus:ring-green-500/20'
     }
     
     if (state?.error) {
-      return 'border-red-500 focus:border-red-500 focus:ring-red-500/20';
+      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20';
     }
     
-    return '';
+    return ''
   };
 
   const getPasswordStrength = (password: string) => {
-    if (!password) return { strength: 0, label: '' };
+    if (!password) return { strength: 0, label: '' },
     
     let strength = 0;
     const checks = [
-      password.length >= 8,
-      /[A-Z]/.test(password),
-      /[a-z]/.test(password),
-      /[0-9]/.test(password),
+      password.length >= 8;
+      /[A-Z]/.test(password);
+      /[a-z]/.test(password);
+      /[0-9]/.test(password);
       /[^A-Za-z0-9]/.test(password)];
     
     strength = checks.filter(Boolean).length;
     
-    const labels = ['Very Weak', 'Weak', 'Fair', 'Good', 'Strong'];
-    const colors = ['bg-red-500', 'bg-orange-500', 'bg-yellow-500', 'bg-blue-500', 'bg-green-500'];
+    const labels = ['Very WeakWeakFairGoodStrong'];
+    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500'];
     
     return {
-      strength,
+      strength;
       label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
       percentage: (strength / 5) * 100
-    };
+    }
   };
 
   const passwordStrength = getPasswordStrength(watchedFields.password || '');
@@ -181,30 +180,29 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       });
 
       if (result.error) {
-        logErrorToProduction('Signup error:', { data: result.error });
-        fireEvent('signup_error', { message: result.error });
-        
+        logErrorToProduction('Signup error:', { data: result.error }),
+        fireEvent('signup_error', { message: result.error }),
         // Handle specific error cases with inline field errors
         if (result.error.includes('already registered') || result.error.includes('already exists')) {
           setError('email', { 
             message: 'An account with this email already exists. Please try logging in instead.' 
-          });
+          })
         } else if (result.error.includes('invalid email')) {
           setError('email', { 
             message: 'Please enter a valid email address.' 
-          });
+          })
         } else if (result.error.includes('weak password')) {
           setError('password', { 
             message: 'Password is too weak. Please choose a stronger password.' 
-          });
+          })
         } else {
           setError('root', { 
             message: result.error 
-          });
+          })
         }
         
         onError?.(result.error);
-        return;
+        return
       }
 
       // Success
@@ -218,22 +216,22 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       fireEvent('signup_success');
       onSuccess?.({
         email: data.email,
-        emailVerificationRequired: result.emailVerificationRequired ?? false});
+        emailVerificationRequired: result.emailVerificationRequired ?? false})
 
     } catch (error: any) {
-      logErrorToProduction('Unexpected signup error:', { data: error });
-      fireEvent('signup_error', { message: error.message || 'unexpected' });
+      logErrorToProduction('Unexpected signup error:', { data: error }),
+      fireEvent('signup_error', { message: error.message || 'unexpected' }),
       const errorMessage = 'An unexpected error occurred during signup. Please try again.';
       
-      setError('root', { message: errorMessage });
+      setError('root', { message: errorMessage }),
       onError?.(errorMessage);
 
       toast({
         title: "Signup Failed",
         description: errorMessage,
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -331,8 +329,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           <div className="space-y-2">
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
-              <span className={cn('font-medium', 
-                passwordStrength.strength >= 4 ? 'text-green-600' :
+              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -441,4 +438,44 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       </Button>
     </form>
   );
+<<<<<<< HEAD
+
+}/> </div> ✓ 8+ characters </span> <span className= {';
+  /[A-Z]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Uppercase letter </span> <span className= {';
+  /[a-z]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Lowercase letter </span> <span className= {';
+  /[0-9]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Number </span> <span className= {';
+  /[^A-Za-z0-9]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Special character </span> </div> </div> </div>) ;
+}{;
+  errors.password.message ;
+}</p>) ";
+}</div> </Label> <div className=" relative"> <Input) : (<Eye className=" h-4 w-4"/>) ;
+}</Button> </div> </div> {;
+  errors.confirmPassword.message ;
+}</p>) ;
+}</div> {;
+  errors.root.message ;
+}</div>) ;
+}{;
+  /* Submit Button */ ;
+}<Button > {'";
+  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
+}</Button> </form>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+        setFieldStates(prev => ({
+          ...prev;
+
+<<<<<<< HEAD
+              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

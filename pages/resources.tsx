@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-
 export default function ResourcesPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -14,14 +19,14 @@ export default function ResourcesPage() {
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
+            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' };
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
             { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
-            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' },
+            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (
-            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
+            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
@@ -31,7 +36,7 @@ export default function ResourcesPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
+  )
 };
 
       {/* Whitepapers */}
@@ -263,10 +268,10 @@ export default function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research,
               personalized consultations, and tailored solutions for your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -286,5 +291,10 @@ export default function ResourcesPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

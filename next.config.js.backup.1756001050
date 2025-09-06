@@ -6,6 +6,12 @@ const nextConfig = {
   trailingSlash: false,
   reactStrictMode: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   bundlePagesRouterDependencies: true,
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
@@ -14,6 +20,8 @@ const nextConfig = {
   // Temporarily disable TypeScript checking during build
   typescript: {
     ignoreBuildErrors: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
   },
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
@@ -46,6 +54,12 @@ const nextConfig = {
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
   modularizeImports: {
+=======
+  },  modularizeImports: {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  },  modularizeImports: {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
       skipDefaultConversion: true,
@@ -73,12 +87,22 @@ const nextConfig = {
     largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
     workerThreads: false, // Disable worker threads to reduce memory usage
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level
 =======
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
     // Disable profiling for faster builds
+=======
+    cpus: Math.min(2, 2), // Adaptive CPU limit
+    // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    cpus: Math.min(2, 2), // Adaptive CPU limit
+    // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     swcTraceProfiling: false,
   },
 
@@ -117,6 +141,8 @@ const nextConfig = {
     'axios-retry',
   ],
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
   webpack: (config, { dev, isServer }) => {
     // Handle problematic packages
@@ -414,6 +440,14 @@ const nextConfig = {
     // Add polyfills for Node.js APIs
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
     config.resolve.fallback = {
+=======
+  webpack: (config, { dev, isServer }) => {
+    // Handle problematic packages    config.resolve.fallback = {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  webpack: (config, { dev, isServer }) => {
+    // Handle problematic packages    config.resolve.fallback = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -449,6 +483,12 @@ const nextConfig = {
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // Optimize bundle size for production
     if (!dev) {
       config.optimization = {
@@ -473,6 +513,8 @@ const nextConfig = {
             },
           },
         },
+<<<<<<< HEAD
+<<<<<<< HEAD
       };
 =======
     // Force certain packages to use ESM - Enhanced for Next.js 15
@@ -526,6 +568,12 @@ const nextConfig = {
       config.resolve.conditionNames = ['import', 'require', 'default'];
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
     }
+=======
+      };    }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      };    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     
     return config;
   },

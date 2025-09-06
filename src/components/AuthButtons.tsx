@@ -1,20 +1,20 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook } from 'lucide-react'
 import { signIn } from 'next-auth/react';
-
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 
 interface AuthButtonsProps {
-  providers?: Provider[];
+  providers?: Provider[]
 }
 
-export function AuthButtons({ providers = ['google', 'github', 'facebook', 'credentials'] }: AuthButtonsProps) {
+export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
 
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider(provider);
-    await signIn(provider);
+    await signIn(provider)
   };
 
   const gridCols = `grid-cols-${providers.length}`;
@@ -93,4 +93,15 @@ export function AuthButtons({ providers = ['google', 'github', 'facebook', 'cred
       )}
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+
+  const gridCols = `grid-cols-${providers.length}`;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

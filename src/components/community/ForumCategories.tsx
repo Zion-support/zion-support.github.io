@@ -1,38 +1,59 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,;
+} from 'lucide-react';
+import { ForumCategoryInfo } from '@/types/community';
+
+=======
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 import { ForumCategoryInfo } from "@/types/community";
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
     name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,
     icon: "Briefcase"
-  },
+  };
   {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"
-  },
+  };
   {
     id: "ai-tools",
     name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
+    description: "Discuss AI tools, frameworks, and best practices.";
     adminOnly: false,
     icon: "Code"
-  },
+  };
   {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"
-  },
+  };
   {
     id: "announcements",
     name: "Announcements",
@@ -43,10 +64,10 @@ const categories: ForumCategoryInfo[] = [
 ];
 
 const iconMap = {
-  Briefcase,
-  MessageSquare,
-  Code,
-  FileText,
+  Briefcase;
+  MessageSquare;
+  Code;
+  FileText;
   Megaphone
 };
 
@@ -59,12 +80,12 @@ export const ForumCategories = () => {
   );
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap];
         return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
+            <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="p-2 bg-zion-purple/10 rounded-full">
                   <Icon className="h-6 w-6 text-zion-purple" />
@@ -79,7 +100,23 @@ export const ForumCategories = () => {
         );
       })}
     </div>
-  );
+  )
 };
 
 export default ForumCategories;
+<<<<<<< HEAD
+"
+=======
+
+<<<<<<< HEAD
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+
+
+<<<<<<< HEAD
+
+
+export default ForumCategories;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

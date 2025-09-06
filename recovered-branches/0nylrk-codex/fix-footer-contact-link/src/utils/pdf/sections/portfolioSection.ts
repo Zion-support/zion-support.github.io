@@ -2,12 +2,11 @@
 import { jsPDF } from 'jspdf';
 import { PortfolioProject } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
-
 export function addPortfolioSection(
-  doc: jsPDF,
-  projects: PortfolioProject[],
-  colors: PdfThemeColors,
-  startY: number,
+  doc: jsPDF;
+  projects: PortfolioProject[];
+  colors: PdfThemeColors;
+  startY: number;
   maxProjects: number = 2
 ): number {
   if (projects.length === 0) return startY;
@@ -17,7 +16,7 @@ export function addPortfolioSection(
   // Check if we need to add a new page
   if (yPos > 250) {
     doc.addPage();
-    yPos = 20;
+    yPos = 20
   }
   
   doc.setFontSize(16);
@@ -36,7 +35,7 @@ export function addPortfolioSection(
     // Check if we need to add a new page
     if (yPos > 260) {
       doc.addPage();
-      yPos = 20;
+      yPos = 20
     }
     
     doc.setFontSize(14);
@@ -47,15 +46,15 @@ export function addPortfolioSection(
     if (project.technologies && project.technologies.length > 0) {
       doc.setFontSize(10);
       doc.setTextColor(colors.text);
-      doc.text(`Technologies: ${project.technologies.join(', ')}`, 20, yPos);
-      yPos += 5;
+      doc.text(`Technologies: ${project.technologies.join()}`, 20, yPos);
+      yPos += 5
     }
     
     if (project.description) {
       doc.setFontSize(10);
       const descriptionLines = doc.splitTextToSize(project.description, 170);
       doc.text(descriptionLines, 20, yPos);
-      yPos += (descriptionLines.length * 5);
+      yPos += (descriptionLines.length * 5)
     }
     
     // Add links if available
@@ -66,16 +65,16 @@ export function addPortfolioSection(
       
       if (project.github_url) {
         doc.text(`GitHub: ${project.github_url}`, 20, yPos);
-        yPos += 4;
+        yPos += 4
       }
       
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
-        yPos += 4;
+        yPos += 4
       }
     }
     
-    yPos += 10; // Add space between projects
+    yPos += 10, // Add space between projects
   }
   
   // If there are more projects than we're displaying
@@ -83,8 +82,8 @@ export function addPortfolioSection(
     doc.setFontSize(10);
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
-    yPos += 6;
+    yPos += 6
   }
   
-  return yPos + 5;
+  return yPos + 5
 }

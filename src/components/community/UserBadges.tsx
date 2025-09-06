@@ -1,17 +1,29 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
+import { Badge } from '@/types/community';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+=======
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface UserBadgesProps {
-  badges: Badge[];
+  badges: Badge[]
 }
 
 const iconMap = {
-  Trophy,
-  Award,
-  BadgeCheck,
-  Star,
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
   MessageSquare
 };
 
@@ -49,7 +61,21 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
         );
       })}
     </div>
-  );
+  )
 };
 
 export default UserBadges;
+<<<<<<< HEAD
+'"
+=======
+<<<<<<< HEAD
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+        
+<<<<<<< HEAD
+
+
+export default UserBadges;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

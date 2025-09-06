@@ -1,27 +1,27 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
   DialogTitle} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
-
 interface GuestCheckoutModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  onSubmit: (details: { email: string, address: string }) => void
 }
 
 export default function GuestCheckoutModal({
-  open,
-  onOpenChange,
+  open;
+  onOpenChange;
   onSubmit}: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
@@ -32,12 +32,12 @@ export default function GuestCheckoutModal({
     
     if (!email || !address) {
       alert('Please fill in all required fields');
-      return;
+      return
     }
 
     setIsSubmitting(true);
     try {
-      onSubmit({ email, address });
+      onSubmit({ email, address })
     } finally {
       setIsSubmitting(false);
     }
@@ -128,4 +128,13 @@ export default function GuestCheckoutModal({
       </DialogContent>
     </Dialog>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

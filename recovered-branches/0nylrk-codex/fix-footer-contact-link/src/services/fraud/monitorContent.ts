@@ -3,15 +3,14 @@
 import { FraudFlag, FraudSeverity } from '@/types/fraud';
 import { analyzeContent } from './analyzeContent';
 import { flagContent } from './flagContent';
-
 /**
  * Create a monitoring system helper to easily monitor any content
  */
 export const monitorContent = async (
-  userId: string,
-  userEmail: string | undefined,
-  contentType: FraudFlag['content_type'],
-  contentId: string,
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
@@ -25,17 +24,17 @@ export const monitorContent = async (
       r.includes('external') || 
       r.includes('bypass')
     )) {
-      severity = 'dangerous';
+      severity = 'dangerous'
     }
     
     await flagContent(
-      userId,
-      userEmail,
-      contentType,
-      contentId,
-      content,
-      severity,
-      analysis.reasons.join('; '),
+      userId;
+      userEmail;
+      contentType;
+      contentId;
+      content;
+      severity;
+      analysis.reasons.join();
       undefined // IP address would be added in a real implementation
     );
     

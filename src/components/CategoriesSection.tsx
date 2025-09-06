@@ -1,21 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { GradientHeading } from './GradientHeading';
+import Link from 'next/link';
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
+import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
-  id: string;
-  name: string;
+  id: string,
+  name: string,
   description?: string;
-  iconName?: string; // Example field if categories have icons
-  itemCount?: number; // Example field for number of items in a category
+  iconName?: string, // Example field if categories have icons
+  itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
-  link?: string;
+  link?: string
 }
 
 // Default static categories with translation keys
@@ -27,7 +36,7 @@ const getDefaultCategories = (t: any) => [
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
-  },
+  };
   {
     id: "talents",
     name: t('categories.talents'),
@@ -48,8 +57,7 @@ const getDefaultCategories = (t: any) => [
     description: t('categories.innovation_desc'),
     iconName: "Lightbulb",
     link: "/innovation",
-    color: "from-emerald-500 to-green-600"}];
-
+    color: "from-emerald-500 to-green-600"}],
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
@@ -57,7 +65,7 @@ const getIcon = (iconName?: string) => {
     case "Users": return <Users className="w-10 h-10" />;
     case "HardDrive": return <HardDrive className="w-10 h-10" />;
     case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
-    default: return <HelpCircle className="w-10 h-10" />; // Default icon
+    default: return <HelpCircle className="w-10 h-10" />, // Default icon
   }
 };
 
@@ -72,13 +80,13 @@ interface CategoriesSectionProps {
   showTitle?: boolean;
   className?: string;
   style?: React.CSSProperties;
-  categories?: CategoryType[]; // Accept categories as a prop
+  categories?: CategoryType[], // Accept categories as a prop
 }
 
 export function CategoriesSection({
-  showTitle = true,
-  className,
-  style,
+  showTitle = true;
+  className;
+  style;
   categories: fetchedCategories, // Rename prop for clarity
 }: CategoriesSectionProps) {
   const { t } = useTranslation();
@@ -95,10 +103,9 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-        ...cat,
+        ...cat;
         title: cat.name,
-        icon: getIcon(cat.iconName)}));
-
+        icon: getIcon(cat.iconName)})),
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -175,4 +182,67 @@ export function CategoriesSection({
       </div>
     </section>
   );
+<<<<<<< HEAD
+  switch (iconName) {;
+  ;
+
+};
+const getSpecialServices = (t: any) => [ {;
+  title: t ('categories.it onsite services');
+link: "/it-onsite-services" ;
+}];
+interface CategoriesSectionProps {;
+  showTitle?: boolean;
+className?: string;
+style?: React.CSSProperties;
+categories?: CategoryType[], //Accept categories as a prop ;
+}export function CategoriesSection ({;
+  showTitle = true;
+className;
+style;
+categories: fetchedCategories, //Rename prop for clarity ;
+}: CategoriesSectionProps) {;
+  const {;
+  t ;
+}= useTranslation ();
+const defaultCategories = getDefaultCategories (t);
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+  id: cat.id;";
+title: cat.name,  //Map name to title description: cat.description || "No description available.";
+icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {;
+  cat.id ";
+}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color || "from-gray-500 to-gray-600" ;
+}) ) : defaultCategories.map (cat => ({;
+  ...cat;
+title: cat.name;
+icon: getIcon (cat.iconName) ;
+}) );
+//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
+  
+}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
+  t ('home.no categories title') ";
+}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
+  t ('home.no categories desc') ";
+}</p> <p className="text-zion-slate-light text-md" > {';
+  t ('home.no categories support') ;
+
+}return (</p> </div>) ;
+}</div> </Link>) ) ;
+}</div> > {;
+  service.title ;
+}</Link>) ) ";
+}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
+  t ('home.view all categories') ;
+}</Link> </div> </div> </section>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({
+        ...cat;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

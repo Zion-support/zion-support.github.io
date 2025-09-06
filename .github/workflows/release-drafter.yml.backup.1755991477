@@ -3,6 +3,8 @@ name: Release Drafter
 on:
   push:
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     branches: [ main ]
 =======
     branches:
@@ -33,3 +35,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
+=======
+    branches: [ main ]  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    branches: [ main ]  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

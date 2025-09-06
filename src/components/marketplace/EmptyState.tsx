@@ -1,25 +1,25 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-
 export interface EmptyStateProps {
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',
   title?: string;
   description?: string;
   action?: {
-    label: string;
-    onClick: () => void;
+    label: string,
+    onClick: () => void
   };
-  icon?: React.ReactNode;
+  icon?: React.ReactNode
 }
 
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
     title: 'No Products Available',
-    description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},
+    description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'};
   categories: {
     icon: <Lightbulb className="w-16 h-16 text-gray-400" />,
     title: 'No Categories Found',
@@ -43,25 +43,29 @@ const defaultContent = {
   network: {
     icon: <Wifi className="w-16 h-16 text-orange-400" />,
     title: 'Connection Issue',
-    description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},
+    description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'};
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-    description: 'We\'re fetching the latest data for you. This should only take a moment.'}};
-
+    description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 export function EmptyState({
-  type,
-  title,
-  description,
-  action,
+  type;
+  title;
+  description;
+  action;
   icon
 }: EmptyStateProps) {
   const { t } = useTranslation();
+=======
+
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const content = defaultContent[type];
   const displayTitle = title || content.title;
   const displayDescription = description || content.description;
   const displayIcon = icon || content.icon;
 
+<<<<<<< HEAD
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
       <div className="mb-4">
@@ -94,7 +98,7 @@ export function EmptyState({
       )}
       
       {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-4 text-sm text-gray-500 dark: text-gray-400">
           <p>
             {t('general.check_status_page')}
             {" "}
@@ -106,23 +110,23 @@ export function EmptyState({
         </div>
       )}
     </div>
-  );
+  )
 }
 
 // Specific empty state variants for quick use
 export function ProductsEmptyState({
-  onRetry,
-  onAddProduct,
+  onRetry;
+  onAddProduct;
   isAuthenticated = false
 }: {
   onRetry?: () => void;
   onAddProduct?: () => void;
-  isAuthenticated?: boolean;
+  isAuthenticated?: boolean
 }) {
   const action = onAddProduct
     ? { 
-        label: isAuthenticated ? 'Add Product' : 'Login to Add Product', 
-        onClick: onAddProduct 
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
+        onClick: onAddProduct ;
       }
     : onRetry
     ? { label: 'Try Again', onClick: onRetry }
@@ -138,7 +142,7 @@ export function ProductsEmptyState({
       action={action}
       description={customDescription}
     />
-  );
+  )
 }
 
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -147,7 +151,7 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="categories"
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />
-  );
+  )
 }
 
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -156,7 +160,7 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="talent"
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
     />
-  );
+  )
 }
 
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -165,7 +169,7 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="equipment"
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
     />
-  );
+  )
 }
 
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -174,7 +178,7 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="search"
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
     />
-  );
+  )
 }
 
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
@@ -193,4 +197,10 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
     />
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 } 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

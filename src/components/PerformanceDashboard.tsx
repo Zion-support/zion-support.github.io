@@ -1,23 +1,27 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 
 interface PerformanceMetrics {
-  buildSize: string;
-  pageCount: number;
-  loadTime: number;
-  healthStatus: 'healthy' | 'warning' | 'error';
+  buildSize: string,
+  pageCount: number,
+  loadTime: number,
+  healthStatus: 'healthy' | 'warning' | 'error'
 }
 
 interface Improvement {
-  id: string;
-  title: string;
-  description: string;
-  status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'security' | 'ux' | 'build';
+  id: string,
+  title: string,
+  description: string,
+  status: 'completed' | 'in-progress' | 'planned',
+  impact: 'high' | 'medium' | 'low',
+  category: 'performance' | 'security' | 'ux' | 'build'
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -32,19 +36,19 @@ const PerformanceDashboard: React.FC = () => {
     {
       id: '1',
       title: 'Fixed Search Bar Issues',
-      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
+      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems';
       status: 'completed',
       impact: 'high',
       category: 'ux'
-    },
+    };
     {
-      id: '2', 
+      id: '2',
       title: 'Environment Validation System',
       description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
       status: 'completed',
       impact: 'high',
       category: 'build'
-    },
+    };
     {
       id: '3',
       title: 'NextAuth Configuration Fix',
@@ -52,7 +56,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'medium',
       category: 'security'
-    },
+    };
     {
       id: '4',
       title: 'API Client Error Handling',
@@ -60,7 +64,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'medium',
       category: 'ux'
-    },
+    };
     {
       id: '5',
       title: 'Bundle Analyzer Integration',
@@ -68,7 +72,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'medium',
       category: 'performance'
-    },
+    };
     {
       id: '6',
       title: 'Health Check Endpoint',
@@ -84,7 +88,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
       case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
     }
   };
 
@@ -93,7 +97,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'high': return 'bg-red-100 text-red-800';
       case 'medium': return 'bg-yellow-100 text-yellow-800';
       case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800'
     }
   };
 
@@ -103,7 +107,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'security': return <Shield className="h-4 w-4" />;
       case 'ux': return <Search className="h-4 w-4" />;
       case 'build': return <TrendingUp className="h-4 w-4" />;
-      default: return <CheckCircle className="h-4 w-4" />;
+      default: return <CheckCircle className="h-4 w-4" />
     }
   };
 
@@ -119,7 +123,7 @@ const PerformanceDashboard: React.FC = () => {
       </div>
 
       {/* Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
@@ -205,7 +209,7 @@ const PerformanceDashboard: React.FC = () => {
 
       {/* Action Buttons */}
       <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment', '_blank')} variant="outline">
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
           Check Health Status
         </Button>
@@ -215,7 +219,23 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
-  );
+  )
 };
 
-export default PerformanceDashboard; 
+<<<<<<< HEAD
+export default PerformanceDashboard;
+=======
+
+<<<<<<< HEAD
+
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+
+export default PerformanceDashboard, 
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default PerformanceDashboard, 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 name: Workflow Auto-Healer
 =======
 ---
 name: Workflow Auto Healer
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
 
+=======
+name: Workflow Auto-Healer
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+name: Workflow Auto-Healer
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 on:
   workflow_run:
     workflows: ["*"]
@@ -45,6 +53,12 @@ jobs:
         run: |
           echo "Validating all workflow files..."
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           invalid_files=()
 
           while IFS= read -r workflow_file; do
@@ -62,6 +76,8 @@ PY
           if [ ${#invalid_files[@]} -gt 0 ]; then
             echo "needs_fix=true" >> "$GITHUB_OUTPUT"
             echo "invalid_count=${#invalid_files[@]}" >> "$GITHUB_OUTPUT"
+<<<<<<< HEAD
+<<<<<<< HEAD
             echo "Found ${#invalid_files[@]} invalid workflows"
 =======
 
@@ -81,13 +97,27 @@ PY
             echo "Found $invalid_count invalid workflows"
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
           else
+=======
+            echo "Found ${#invalid_files[@]} invalid workflows"          else
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            echo "Found ${#invalid_files[@]} invalid workflows"          else
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             echo "needs_fix=false" >> "$GITHUB_OUTPUT"
             echo "All workflows are valid"
           fi
       - name: Report workflow status
         run: |
           echo "📊 Auto-Heal Report" > auto-heal-report.md
+<<<<<<< HEAD
+<<<<<<< HEAD
           echo "===================" >> auto-heal-report.md
+=======
+          echo "=====" >> auto-heal-report.md
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          echo "=====" >> auto-heal-report.md
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           echo "" >> auto-heal-report.md
           echo "**Timestamp:** $(date)" >> auto-heal-report.md
           echo "**Workflows Checked:** $(ls .github/workflows/*.yml | wc -l)" >> auto-heal-report.md

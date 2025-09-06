@@ -1,5 +1,5 @@
+<<<<<<< HEAD
 import { Project } from '@/types/projects';
-
 import { useState } from "react";
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -8,9 +8,8 @@ import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
 import { useReviews } from "@/hooks/useReviews";
 import { useAuth } from "@/hooks/useAuth";
-
 interface ProjectReviewSectionProps {
-  project: Project;
+  project: Project
 }
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
@@ -105,4 +104,23 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  
+  const isCompleted = project.status === "completed";
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  
+  const clientProfile = project?.talent_profile;
+  const talentProfile = project.talent_profile;
+
+
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

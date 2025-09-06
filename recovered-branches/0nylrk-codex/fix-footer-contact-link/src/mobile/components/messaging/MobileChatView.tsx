@@ -7,27 +7,26 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lu
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-
 interface Message {
-  id: string;
-  content: string;
-  timestamp: string;
-  isMe: boolean;
+  id: string,
+  content: string,
+  timestamp: string,
+  isMe: boolean,
   sender?: string;
   avatar?: string;
-  status?: 'sent' | 'delivered' | 'read';
+  status?: 'sent' | 'delivered' | 'read'
 }
 
 interface MobileChatViewProps {
   contact: {
-    id: string;
-    name: string;
+    id: string,
+    name: string,
     avatar?: string;
-    status?: string;
+    status?: string
   };
-  messages: Message[];
-  onBack: () => void;
-  onSendMessage: (content: string) => void;
+  messages: Message[],
+  onBack: () => void,
+  onSendMessage: (content: string) => void
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -37,14 +36,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const handleSend = () => {
     if (newMessage.trim() !== "") {
       onSendMessage(newMessage);
-      setNewMessage("");
+      setNewMessage("")
     }
   };
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      handleSend();
+      handleSend()
     }
   };
   
@@ -55,7 +54,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     });
     
     // Navigate to video call page
-    navigate(`/call/${roomId}`);
+    navigate(`/call/${roomId}`)
   };
   
   const startAudioCall = () => {
@@ -65,7 +64,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     });
     
     // Navigate to video call page with audio-only flag
-    navigate(`/call/${roomId}?audioOnly=true`);
+    navigate(`/call/${roomId}?audioOnly=true`)
   };
   
   return (
@@ -110,13 +109,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           <div 
             key={message.id} 
             className={cn(
-              "flex",
+              "flex";
               message.isMe ? "justify-end" : "justify-start"
             )}
           >
             <div 
               className={cn(
-                "max-w-[80%] rounded-2xl px-4 py-2",
+                "max-w-[80%] rounded-2xl px-4 py-2";
                 message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
@@ -124,7 +123,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             >
               <p>{message.content}</p>
               <div className={cn(
-                "text-xs mt-1 flex justify-end",
+                "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
                 {message.timestamp}
@@ -164,5 +163,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>
       </div>
     </div>
-  );
+  )
 }

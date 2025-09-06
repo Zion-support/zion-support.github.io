@@ -7,26 +7,25 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
-
 interface ReplyCardProps {
-  reply: ForumReply;
+  reply: ForumReply,
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
-  className?: string;
+  className?: string
 }
 
 export const ReplyCard = ({ 
-  reply, 
+  reply;
   onMarkAnswer, 
-  canMarkAnswer = false,
+  canMarkAnswer = false;
   className
 }: ReplyCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true });
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
 
   return (
     <Card className={cn(
-      "transition-shadow",
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+      "transition-shadow";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20";
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -81,7 +80,7 @@ export const ReplyCard = ({
         )}
       </CardFooter>
     </Card>
-  );
+  )
 };
 
 export default ReplyCard;

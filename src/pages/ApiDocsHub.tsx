@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  BookOpen,
+  Code,
+  Webhook,
+  AlertCircle,
+  Zap,;
+} from 'lucide-react';
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-
 export function ApiDocsHub() {
   const sections = [
     {
@@ -26,7 +40,7 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"},
     {
       title: "Sample Code",
-      description: "Examples in JavaScript, Python, and Node.js",
+      description: "Examples in JavaScript, Python, and Node.js";
       icon: Zap,
       path: "/docs/sample-code",
       color: "from-yellow-500 to-orange-500"},
@@ -35,8 +49,7 @@ export function ApiDocsHub() {
       description: "Understanding API errors and rate limiting",
       icon: AlertCircle,
       path: "/developers/docs/errors",
-      color: "from-red-500 to-rose-500"}];
-
+      color: "from-red-500 to-rose-500"}],
   return (
     <ApiDocsLayout>
       <div className="max-w-4xl">
@@ -72,7 +85,7 @@ export function ApiDocsHub() {
           </p>
           <Link
             href="/developers/portal"
-            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
+            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
           >
             Go to Developer Portal
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -84,3 +97,10 @@ export function ApiDocsHub() {
 }
 
 export default ApiDocsHub;
+=======
+
+<<<<<<< HEAD
+
+export default ApiDocsHub;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

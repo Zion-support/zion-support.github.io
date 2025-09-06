@@ -1,12 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { job } = req.body as { job?: Record<string, any> };
-  if (!job) return res.status(400).json({ error: 'Missing job payload' });
-
+  if (!job) return res.status(400).json({ error: 'job is required' });
   const state = readState();
   const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive');
   const results: any[] = [];
@@ -20,6 +18,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
   });
-
   res.status(200).json({ ok: true, results });
 }

@@ -1,16 +1,37 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
@@ -28,15 +49,15 @@ export function OnChainExport() {
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
         });
-        return;
+        return
       }
       
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
@@ -45,13 +66,13 @@ export function OnChainExport() {
       setIsConnected(true);
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
+        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
     } catch (error: any) {
       toast({
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
         variant: "destructive"
-      });
+      })
     }
   };
   
@@ -66,16 +87,16 @@ export function OnChainExport() {
       setExportStatus('success');
       toast({
         title: "Tokens exported",
-        description: "Your ZION$ tokens have been exported to your wallet"});
+        description: "Your ZION$ tokens have been exported to your wallet"})
     } catch (error: any) {
       setExportStatus('error');
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
         variant: "destructive"
-      });
+      })
     } finally {
-      setIsExporting(false);
+      setIsExporting(false)
     }
   };
   
@@ -138,4 +159,43 @@ export function OnChainExport() {
       </CardContent>
     </Card>
   );
+<<<<<<< HEAD
+}//Request accounts ;
+
+};';
+setExportStatus ('success');
+toast ({;
+  ;
+}catch (error: any) {';
+  setExportStatus ('error');
+toast ({;
+  ;
+}finally {;
+  setIsExporting (false) ;
+
+};
+h-5 w-5"/>) ";
+}On-chain Export <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Info className=" h-4 w-4 text-muted-foreground cursor-help"/> </TooltipTrigger> <TooltipContent> <p className=" max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p> </TooltipContent> </Tooltip> </TooltipProvider> </CardTitle> <CardDescription>Export your ZION$ to an external wallet</CardDescription> </CardHeader> <CardContent> <span>Available to export:</span> <span className=" font-medium">250 ZION$</span> </div> {'";
+  exportStatus === 'success' ? (<Button className=" w-full bg-green-600 hover:bg-green-700"disabled> <Check className=" mr-2 h-4 w-4"/> Tokens Exported </Button>) : (<Button className=" w-full"onClick={;
+  handleExportTokens ;
+}disabled= {;
+  isExporting ;
+}> </Button>) ";
+}</div>) : (<div className=" space-y-2"> <p className=" text-sm text-muted-foreground mb-3" > Connect your web3 wallet to export tokens to the blockchain. </p> Connect Wallet </Button> </div>) ;
+}</CardContent> </Card>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+      
+
+<<<<<<< HEAD
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

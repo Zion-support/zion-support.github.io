@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from '@/components/ui/use-toast';
+import z from 'zod';
+import { Mail } from 'lucide-react';
+=======
 
 import { useState } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -7,20 +18,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { Mail } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""});
+    message: ""}),
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{
     name?: string;
     email?: string;
     subject?: string;
-    message?: string;
+    message?: string
   }>({});
 
   const handleChange = (
@@ -28,16 +40,16 @@ export function ContactSection() {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const schema = z.object({
-      name: z.string().min(2, "Name is required"),
+      name: z.string().min(2, "Name is required");
       email: z.string().email("Enter a valid email"),
-      subject: z.string().min(2, "Subject is required"),
+      subject: z.string().min(2, "Subject is required");
       message: z.string().min(10, "Message must be at least 10 characters")});
 
     const result = schema.safeParse(formData);
@@ -45,15 +57,15 @@ export function ContactSection() {
       const fieldErrors: Record<string, string> = {};
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
+          fieldErrors[err.path[0] as string] = err.message
         }
       }
       setErrors(fieldErrors);
       toast({
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return
     }
 
     setErrors({});
@@ -67,22 +79,22 @@ export function ContactSection() {
         setIsSubmitting(false);
         if (!res.ok) {
           const data = await res.json().catch(() => ({}));
-          throw new Error(data.error || "Failed to send message");
+          throw new Error(data.error || "Failed to send message")
         }
         toast({
           title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
+          description: "We've received your message and will get back to you soon."}),
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 2000);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);
         toast({
           title: "Submission Error",
           description: err.message,
-          variant: "destructive"});
-      });
+          variant: "destructive"})
+      })
   };
 
   return (
@@ -116,7 +128,9 @@ export function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                      Name
+                    ">
                       Name
                     </label>
                     <Input
@@ -132,7 +146,9 @@ export function ContactSection() {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                      Email
+                    ">
                       Email
                     </label>
                     <Input
@@ -150,7 +166,9 @@ export function ContactSection() {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                    Subject
+                  ">
                     Subject
                   </label>
                   <Input
@@ -166,7 +184,9 @@ export function ContactSection() {
                   )}
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                    Message
+                  ">
                     Message
                   </label>
                   <Textarea
@@ -201,4 +221,34 @@ export function ContactSection() {
       </div>
     </section>
   );
+<<<<<<< HEAD
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

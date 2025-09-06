@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { useTranslation } from 'react-i18next';
+import { useFavorites } from '@/hooks/useFavorites';
+import { useCart } from '@/context/CartContext';
+import {
+  Heart,
+  MessageSquare,
+  CreditCard,
+  ShoppingCart,
+  Wallet,;
+} from 'lucide-react';
+=======
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -7,35 +25,35 @@ import { useTranslation } from "react-i18next";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useCart } from "@/context/CartContext";
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
-  className?: string;
+  className?: string
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const [loginOpen, setLoginOpen] = useState(false);
   const { count } = useFavorites();
   const { items } = useCart();
   const cartCount = items.length;
-  const router = useRouter(); // Changed from useLocation
+  const router = useRouter(), // Changed from useLocation
   const { t } = useTranslation();
 
   const handleCartClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
       e.preventDefault();
       setLoginOpen(true);
-      return;
+      return
     }
-    setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false)
   };
 
   const baseLinks = [
@@ -43,27 +61,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'home',
       href: '/',
       matches: (path: string) => path === '/'
-    },
+    };
     {
       key: 'marketplace',
       href: '/marketplace',
       matches: (path: string) => path.startsWith('/marketplace')
-    },
+    };
     {
       key: 'categories',
       href: '/categories',
       matches: (path: string) => path.startsWith('/categories')
-    },
+    };
     {
       key: 'talent',
       href: '/talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
-    },
+    };
     {
       key: 'equipment',
       href: '/equipment',
       matches: (path: string) => path.startsWith('/equipment')
-    },
+    };
     {
       key: 'community',
       href: '/community',
@@ -71,8 +89,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
   ];
 
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
-  
+  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -80,7 +97,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.dashboard'),
       href: '/dashboard',
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
-    });
+    })
   }
   
   // Add admin-only links
@@ -90,7 +107,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.analytics'),
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics')
-    });
+    })
   }
   
   return (
@@ -112,13 +129,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         <div
           id="main-navbar-collapse"
           className={cn(
-            "navbar-collapse",
-            { "open": isMobileMenuOpen },
+            "navbar-collapse";
+            { "open": isMobileMenuOpen };
             "w-full md:flex md:w-auto", // Handles visibility and desktop layout
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >
-          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
+          <ul className="navbar-nav flex flex-col md: flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
             {links.map((link) => (
               <li key={link.name} className="nav-item">
                 <Link 
@@ -126,11 +143,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link",
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    "nav-link";
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     link.matches(router.pathname)
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   {link.name}
@@ -146,11 +163,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   aria-label="Wishlist"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    "nav-link";
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     router.pathname === "/wishlist"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   <Heart className="w-4 h-4" />
@@ -171,11 +188,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   aria-label="Wallet"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    "nav-link";
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     router.pathname === "/wallet"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   <Wallet className="w-4 h-4" />
@@ -191,11 +208,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   aria-label="Messages"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    "nav-link";
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     router.pathname === "/messages"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   <MessageSquare className="w-4 h-4" />
@@ -217,15 +234,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
-                      'nav-link',
-                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
                       router.pathname.startsWith('/cart')
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     )}
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
-                    {t('nav.cart', 'Cart')}
+                    {t('nav.cartCart')}
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                         {cartCount}
@@ -246,5 +262,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
   );
+=======
+
+<<<<<<< HEAD
+
+      matches: (path: string) => path === '/'
+    };
+
+                    "nav-link";
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
+<<<<<<< HEAD
+
+                  className={cn(
+
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
+
+                    router.pathname === "/wishlist"
+
+<<<<<<< HEAD
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

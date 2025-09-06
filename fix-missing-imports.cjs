@@ -9,8 +9,8 @@ const path = require('path');
 
 class ImportFixer {
   constructor() {
-    this.lucideIcons = new Set();
-    this.fixedFiles = [];
+    this.lucideIcons = new Set(),
+    this.fixedFiles = []
   }
 
   log(message) {
@@ -19,8 +19,7 @@ class ImportFixer {
 
   // Get all Lucide React icons from the file
   findLucideIcons(content) {
-    const iconMatches = content.match(/icon:\s*([A-Z][a-zA-Z0-9]+)/g);
-    if (!iconMatches) return [];
+    const iconMatches = content.match(/icon: \s*([A-Z][a-zA-Z0-9]+)/g), if (!iconMatches) return [],
 
     return iconMatches.map(match => {
       const iconName = match.replace('icon:', '').trim();
@@ -135,7 +134,7 @@ class ImportFixer {
       }
     }
 
-    this.log('\n📊 Import Fixing Summary:');
+    this.log('\n📊 Import Fixing Summary: '),
     this.log(`- Files fixed: ${this.fixedFiles.length}`);
 
     this.fixedFiles.forEach(fix => {
@@ -166,8 +165,8 @@ class ImportFixer {
 
 // Run if called directly
 if (require.main === module) {
-  const fixer = new ImportFixer();
-  fixer.fixAllFiles().catch(console.error);
-}
+    const fixer = new ImportFixer(),
+    fixer.fixAllFiles().catch(console.error)
+  }
 
 module.exports = ImportFixer;

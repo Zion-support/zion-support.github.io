@@ -1,5 +1,6 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
+import { useRouter } from 'next/router', // Changed from react-router-dom
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -24,15 +25,15 @@ const SignupSchema = Yup.object({
     .matches(/[A-Z]/, 'Password must include an uppercase letter')
     .matches(/[a-z]/, 'Password must include a lowercase letter')
     .matches(/[0-9]/, 'Password must include a number')
-    .required('Password is required'),
+    .required('Password is required');
   confirm: Yup.string()
     .oneOf([Yup.ref('password')], 'Passwords must match')
-    .required('Confirm password is required'),
+    .required('Confirm password is required');
   terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
 });
 
 export default function Signup() {
-  const router = useRouter(); // Changed from navigate
+  const router = useRouter(), // Changed from navigate
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -52,26 +53,26 @@ export default function Signup() {
       const res = await axios.get('/api/auth/health');
       setAuthServiceAvailable(res.status === 200);
       if (res.status !== 200) {
-        setHealthCheckError('Authentication service is experiencing issues');
+        setHealthCheckError('Authentication service is experiencing issues')
       }
     } catch (err: any) {
-      logErrorToProduction('Auth service health check failed', { data: err });
+      logErrorToProduction('Auth service health check failed', { data: err }),
       setAuthServiceAvailable(false);
       // Set a more specific error message based on the error type
       if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {
-        setHealthCheckError('Network connection issues detected');
+        setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
-        setHealthCheckError('Authentication service is temporarily unavailable');
+        setHealthCheckError('Authentication service is temporarily unavailable')
       } else {
-        setHealthCheckError('Unable to verify authentication service status');
+        setHealthCheckError('Unable to verify authentication service status')
       }
     } finally {
-      setHealthCheckLoading(false);
+      setHealthCheckLoading(false)
     }
   };
 
   useEffect(() => {
-    performHealthCheck();
+    performHealthCheck()
   }, []);
 
   const formik = useFormik({
@@ -81,19 +82,19 @@ export default function Signup() {
       password: '',
       confirm: '',
       terms: false
-    },
+    };
     validationSchema: SignupSchema,
     onSubmit: async (values, { setErrors }) => {
       logInfo('Form submission started with:', { 
-        name: values.name, 
+        name: values.name,
         email: values.email,
         hasPassword: !!values.password,
         isPartnerSignup 
       });
       
       setLoading(true);
-      setErrorMessage(''); // Clear any previous error
-      setSuccessMessage(''); // Clear any previous success message
+      setErrorMessage(''), // Clear any previous error
+      setSuccessMessage(''), // Clear any previous success message
       setEmailVerificationRequired(false);
       
       try {
@@ -112,14 +113,14 @@ export default function Signup() {
         };
         
         logInfo('Making API request to /api/auth/register with:', { 
-          ...requestData, 
+          ...requestData,
           password: '[REDACTED]' 
         });
         
         const res = await axios.post('/api/auth/register', requestData);
         
         logInfo('API response received:', { 
-          status: res.status, 
+          status: res.status,
           data: res.data 
         });
         
@@ -138,7 +139,7 @@ export default function Signup() {
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',
               description: isPartnerSignup 
                 ? 'Please verify your email. Your partner application will be reviewed after verification.'
-                : 'Please check your email to verify your account before logging in.'});
+                : 'Please check your email to verify your account before logging in.'})
           } else {
             // Account created and ready to use
             const message = isPartnerSignup 
@@ -154,8 +155,8 @@ export default function Signup() {
             
             // Redirect to appropriate page after a short delay
             setTimeout(() => {
-              router.push(isPartnerSignup ? '/partners' : '/login');
-            }, 2000);
+              router.push(isPartnerSignup ? '/partners' : '/login')
+            }, 2000)
           }
         }
       } catch (err: any) {
@@ -165,7 +166,7 @@ export default function Signup() {
             status: err.response.status,
             statusText: err.response.statusText,
             data: err.response.data
-          } : 'No response',
+          } : 'No response';
           request: err.request ? 'Request made but no response' : 'No request',
           config: err.config ? {
             url: err.config.url,
@@ -177,47 +178,44 @@ export default function Signup() {
         // Try both 'error' and 'message' fields for compatibility
         const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
         
-        logInfo('Processed error message:', { data: errorMsg });
-        
+        logInfo('Processed error message:', { data: errorMsg }),
         if (status === 409) {
           // Handle duplicate email specifically
           setErrorMessage(errorMsg);
-          setErrors({ email: errorMsg });
-          
+          setErrors({ email: errorMsg }),
           // Show toast notification
           toast({
             title: 'Signup failed',
             description: errorMsg,
-            variant: 'destructive'});
+            variant: 'destructive'})
         } else if (status === 400) {
           // Handle validation errors (weak password, etc.)
           setErrorMessage(errorMsg);
           
           // Set the error on password field if it's password-related
           if (errorMsg.toLowerCase().includes('password')) {
-            setErrors({ password: errorMsg });
+            setErrors({ password: errorMsg })
           } else {
-            setErrors({ confirm: errorMsg });
+            setErrors({ confirm: errorMsg })
           }
           
           toast({
             title: 'Signup failed',
             description: errorMsg,
-            variant: 'destructive'});
+            variant: 'destructive'})
         } else {
           // Handle other errors (network, server, etc.)
           setErrorMessage(errorMsg);
-          setErrors({ confirm: errorMsg });
-          
+          setErrors({ confirm: errorMsg }),
           // Show toast notification for other errors
           toast({
             title: 'Signup failed',
             description: errorMsg,
-            variant: 'destructive'});
+            variant: 'destructive'})
         }
       } finally {
         logInfo('Form submission completed, setting loading to false');
-        setLoading(false);
+        setLoading(false)
       }
     }
   });
@@ -231,18 +229,18 @@ export default function Signup() {
       confirm: true,
       terms: true
     });
-    await formik.handleSubmit(e);
+    await formik.handleSubmit(e)
   };
 
   // After successful registration, guide the user to the verification screen
   useEffect(() => {
     if (emailVerificationRequired && formik.values.email) {
       const timer = setTimeout(() => {
-        router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`);
+        router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
       }, 3000);
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
-    return undefined;
+    return undefined
   }, [emailVerificationRequired, formik.values.email, router]);
 
   // Show loading state only during initial health check
@@ -256,7 +254,7 @@ export default function Signup() {
           </div>
         </div>
       </AuthLayout>
-    );
+    )
   }
 
   return (
@@ -317,7 +315,9 @@ export default function Signup() {
           )}
           
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">
+            <label htmlFor="name" className="block text-sm font-medium" htmlFor="input-
+              Full Name
+            ">
               Full Name
             </label>
             <Input
@@ -334,7 +334,9 @@ export default function Signup() {
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">
+            <label htmlFor="email" className="block text-sm font-medium" htmlFor="input-
+              Email address
+            ">
               Email address
             </label>
             <Input
@@ -352,7 +354,9 @@ export default function Signup() {
           </div>
           
           <div>
-            <label htmlFor="password" className="block text-sm font-medium">
+            <label htmlFor="password" className="block text-sm font-medium" htmlFor="input-
+              Password
+            ">
               Password
             </label>
           <Input
@@ -371,7 +375,9 @@ export default function Signup() {
         </div>
           
           <div>
-            <label htmlFor="confirm" className="block text-sm font-medium">
+            <label htmlFor="confirm" className="block text-sm font-medium" htmlFor="input-
+              Confirm Password
+            ">
               Confirm Password
             </label>
             <Input
@@ -414,7 +420,7 @@ export default function Signup() {
               type="submit" 
               disabled={loading} 
               data-testid="signup-submit"
-              className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
+              className={healthCheckError ? 'bg-yellow-600 hover: bg-yellow-700' : ''}
             >
               {loading ? (
                 <>
@@ -451,7 +457,7 @@ export default function Signup() {
                 className="w-full text-sm"
                 onClick={() => {
                   setEmailVerificationRequired(false);
-                  setSuccessMessage('');
+                  setSuccessMessage('')
                 }}
               >
                 Try Different Email
@@ -476,4 +482,84 @@ export default function Signup() {
       </div>
     </AuthLayout>
   );
+<<<<<<< HEAD
+
+}) ;
+};
+toast ({';
+  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';
+setSuccessMessage (data.message || message);
+toast ({';
+  title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.' ;
+});
+//Redirect to appropriate page after a short delay ;
+
+
+}catch (err: unknown) {';
+  logErrorToProduction ('Signup error details:', {;
+  message: err.message, response: err.response ? {;
+  status: err.response.status,  statusText: err.response.statusText, data: err.response.data ';
+}: 'No response';';
+request: err.request ? 'Request made but no response': 'No request';
+
+});
+}return undefined;
+}, [emailVerificationRequired, formik.values.email, router]);
+//Show loading state only during initial health check if (healthCheckLoading) {;
+  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) ;
+}> {';
+  healthCheckLoading ? 'Checking...': 'Retry' ;
+}</Button> </AlertDescription> </Alert>) ;
+}<AlertDescription> {;
+  errorMessage ;
+}</AlertDescription> </Alert>) ;
+}<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {;
+  formik.values.email ;
+}</strong>. </AlertDescription> </Alert>) ";
+}<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) ";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) ";
+}</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) ";
+}</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) ";
+}</div> <div className="flex items-center space-x-2" > <input) ;
+}{";
+  !emailVerificationRequired ? (<Button type="submit" disabled= {;
+  loading ;
+}> {'";
+  loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account') ;
+}</Button> > Go to Login </Button> <Button router.push (`/verify-status?email=$ {;
+  encodeURIComponent (formik.values.email) ;
+}`) ;
+}> Check Verification Status </Button> <Button > Try Different Email </Button> </div>) ;
+}<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>) ;
+}</form> </div>) ;
+}</div> </div> </AuthLayout>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+  const isPartnerSignup = router.query.type === 'partner';
+  const signupSource = router.query.source as string || 'direct';
+
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+        
+        if (res.status === 201) {
+          const data = res.data;
+          
+<<<<<<< HEAD
+            
+<<<<<<< HEAD
+        
+        const status = err.response?.status;
+        // Try both 'error' and 'message' fields for compatibility
+        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
+        
+        logInfo('Processed error message:', { data: errorMsg }),
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

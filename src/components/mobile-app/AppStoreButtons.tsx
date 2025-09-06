@@ -1,30 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { Apple, GithubIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Apple, GithubIcon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { logInfo } from '@/utils/productionLogger';
-
-
 interface AppStoreButtonsProps {
   className?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
-  onGooglePlayClick?: () => void;
+  onGooglePlayClick?: () => void
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className, 
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
-  onAppStoreClick,
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+  onAppStoreClick;
   onGooglePlayClick
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault();
       logInfo("App Store download clicked");
-      onAppStoreClick?.();
+      onAppStoreClick?.()
     }
   };
 
@@ -32,7 +38,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault();
       logInfo("Google Play download clicked");
-      onGooglePlayClick?.();
+      onGooglePlayClick?.()
     }
   };
 
@@ -40,7 +46,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
         href={appStoreUrl}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover: bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
         target="_blank"
         rel="noopener noreferrer"
@@ -63,7 +69,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       >
         <svg
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="http: //www.w3.org/2000/svg"
           className="h-8 w-8 mr-3 fill-current"
           aria-hidden="true"
           focusable="false"
@@ -79,5 +85,16 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         </div>
       </a>
     </div>
-  );
+  )
 };
+<<<<<<< HEAD
+"
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

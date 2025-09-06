@@ -2,6 +2,12 @@ module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-unused-vars': [
@@ -39,6 +45,8 @@ module.exports = {
     '*.log',
     '*.txt',
     '*.md'
+<<<<<<< HEAD
+<<<<<<< HEAD
   ]
 =======
     'react/no-unescaped-entities': 'off',
@@ -47,3 +55,9 @@ module.exports = {
   }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
 };
+=======
+  ]};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  ]};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 {
   "links": [
     {
@@ -4781,6 +4787,8 @@
     }
   ],
   "passed": false
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 file:///home/ubuntu/.npm/_npx/a07aeef48358ad48/node_modules/linkinator/build/src/options.js:33
@@ -4795,3 +4803,9 @@ Error: Paths cannot be mixed between HTTP and local filesystem paths.
 
 Node.js v22.16.0
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e67c
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

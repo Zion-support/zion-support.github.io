@@ -7,47 +7,46 @@ import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
 
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow} from "@/components/ui/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
   DialogTitle} from "@/components/ui/dialog";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
 interface ReviewsModerationTableProps {
-  reviews: Review[];
-  isLoading: boolean;
-  onRefresh: () => void;
+  reviews: Review[],
+  isLoading: boolean,
+  onRefresh: () => void
 }
 
 export function ReviewsModerationTable({
-  reviews,
-  isLoading,
+  reviews;
+  isLoading;
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
-      reviewId,
+      reviewId;
       status}: {
-      reviewId: string;
-      status: ReviewStatus;
+      reviewId: string,
+      status: ReviewStatus
     }) => {
       const { error } = await supabase
         .from("reviews")
@@ -55,30 +54,29 @@ export function ReviewsModerationTable({
         .eq("id", reviewId);
 
       if (error) throw error;
-      return { reviewId, status };
-    },
+      return { reviewId, status }
+    };
     onSuccess: (data) => {
       toast({
         title: "Review updated",
-        description: `Review has been ${data.status}.`});
+        description: `Review has been ${data.status}.`}),
       onRefresh();
-      setViewDetailsOpen(false);
-    },
+      setViewDetailsOpen(false)
+    };
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
-        variant: "destructive"});
+        variant: "destructive"})
     }});
 
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
-      case "approved":
-        return "bg-green-100 text-green-800 hover:bg-green-200";
+      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200";
       default:
-        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
+        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
   };
 
@@ -87,7 +85,7 @@ export function ReviewsModerationTable({
       .split(" ")
       .map((n) => n[0])
       .join("")
-      .toUpperCase();
+      .toUpperCase()
   };
 
   if (isLoading) {
@@ -98,7 +96,7 @@ export function ReviewsModerationTable({
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
       </div>
-    );
+    )
   }
 
   if (reviews.length === 0) {
@@ -109,20 +107,20 @@ export function ReviewsModerationTable({
           All reviews have been processed. Check back later for new submissions.
         </p>
       </div>
-    );
+    )
   }
 
   const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "approved" });
+    updateReviewStatus({ reviewId, status: "approved" })
   };
 
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" });
+    updateReviewStatus({ reviewId, status: "rejected" })
   };
 
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review);
-    setViewDetailsOpen(true);
+    setViewDetailsOpen(true)
   };
 
   const renderStars = (rating: number) => {
@@ -135,7 +133,7 @@ export function ReviewsModerationTable({
           />
         ))}
       </div>
-    );
+    )
   };
 
   return (
@@ -382,5 +380,5 @@ export function ReviewsModerationTable({
         </Dialog>
       )}
     </>
-  );
+  )
 }

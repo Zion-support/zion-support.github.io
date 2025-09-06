@@ -1,5 +1,7 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   "name": "zion-tech-group",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +23,16 @@
   },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
   "scripts": {
+=======
+  "name": "zion-tech-group",
+  "version": "0.1.0",
+  "private": true,  "scripts": {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "name": "zion-tech-group",
+  "version": "0.1.0",
+  "private": true,  "scripts": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -29,6 +41,12 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -109,6 +127,8 @@
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
+<<<<<<< HEAD
+<<<<<<< HEAD
     ]
 =======
     "next": "^14.0.0",
@@ -128,4 +148,10 @@
     "typescript": "^5.0.0"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
   }
+=======
+    ]  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    ]  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

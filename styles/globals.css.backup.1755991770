@@ -214,6 +214,12 @@ h3 {
 /* Focus styles */
 :focus {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   outline: 2px solid var(--neon-blue);
   outline-offset: 2px;
 }
@@ -517,6 +523,8 @@ h3 {
 }
 
 /* Quantum Matrix Grid */
+<<<<<<< HEAD
+<<<<<<< HEAD
 .quantum-matrix {
 =======
   outline: 2px solid var(--primary);
@@ -740,13 +748,16 @@ h3 {
 .grid-bg {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
   background-image: 
+=======
+.quantum-matrix {  background-image: 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
-<<<<<<< HEAD
   animation: matrixMove 30s linear infinite;
 }
 
+<<<<<<< HEAD
 @keyframes matrixMove {
 =======
   animation: grid-move 20s linear infinite;
@@ -755,12 +766,31 @@ h3 {
 @keyframes grid-move {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
   0% {
+=======
+.quantum-matrix {  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: matrixMove 30s linear infinite;
+}
+
+@keyframes matrixMove {  0% {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+@keyframes matrixMove {  0% {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     transform: translate(0, 0);
   }
   100% {
     transform: translate(50px, 50px);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* Holographic Scan Lines */
@@ -1407,6 +1437,8 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
+<<<<<<< HEAD
+<<<<<<< HEAD
   *::after {
 =======
 }
@@ -1475,6 +1507,18 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 <<<<<<< HEAD
+=======
+  *::after {    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  *::after {    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* Enhanced Print Styles */
@@ -1774,7 +1818,15 @@ h3 {
     0 0 5px rgba(59, 130, 246, 0.5),
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

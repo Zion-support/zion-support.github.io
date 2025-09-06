@@ -3,12 +3,24 @@
     "totalFiles": 1,
     "filesWithIssues": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "totalIssues": 3,
     "totalWarnings": 1,
     "buildBreakingFiles": 1,
     "canBuild": false
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "results": [
     {
       "file": "pages/services-enhanced.tsx",
@@ -39,6 +51,8 @@
         {
           "type": "WARNING",
           "code": "PAGE_TOO_SHORT",
+<<<<<<< HEAD
+<<<<<<< HEAD
           "message": "Page content seems too short, may be incomplete",
 =======
     "totalIssues": 0,
@@ -57,23 +71,36 @@
           "message": "Incomplete HTML tags detected",
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
           "line": 0,
+=======
+          "message": "Page content seems too short, may be incomplete",          "line": 0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "message": "Page content seems too short, may be incomplete",          "line": 0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           "severity": "warning"
         }
       ]
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "buildBreakingFiles": [
     "pages/services-enhanced.tsx"
   ],
-  "generatedAt": "2025-08-21T00:58:31.338Z"
-=======
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-21T03:41:49.504Z"
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4bf6
-=======
-  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-21T00:58:31.338Z"  "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:31:39.368Z"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
+=======
+  "buildBreakingFiles": [
+    "pages/services-enhanced.tsx"
+  ],
+  "generatedAt": "2025-08-21T00:58:31.338Z"  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T18:31:39.368Z"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

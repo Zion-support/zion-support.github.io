@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
@@ -7,7 +8,7 @@ import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productio
 
 
 interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string;
+  pageName?: string
 }
 
 function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {
@@ -18,9 +19,9 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
   const handleRefresh = () => {
     if (resetErrorBoundary) {
-      resetErrorBoundary();
+      resetErrorBoundary()
     } else {
-      window.location.reload();
+      window.location.reload()
     }
   };
 
@@ -71,7 +72,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
           )}
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <div className="flex flex-col sm: flex-row gap-3 mb-6">
             <button 
               onClick={handleRefresh}
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
@@ -112,7 +113,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
         {/* Support Information */}
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
           <p className="mb-3">Need help? Contact our support team</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm: flex-row gap-3 justify-center">
             <a 
               href="mailto:support@zion.tech" 
               className="text-blue-400 hover:underline"
@@ -126,20 +127,17 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 interface PageErrorBoundaryProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   pageName?: string;
-  fallback?: React.ComponentType<FallbackProps>;
+  fallback?: React.ComponentType<FallbackProps>
 }
 
 export default function PageErrorBoundary({ 
-  children, 
-  pageName, 
-  fallback 
-}: PageErrorBoundaryProps) {
+  children, pageName, fallback , }: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error);
     
@@ -148,7 +146,7 @@ export default function PageErrorBoundary({
       componentStack: errorInfo.componentStack || undefined,
       errorBoundary: 'PageErrorBoundary',
       timestamp: new Date().toISOString()
-    });
+    })
   };
 
   const FallbackComponent = fallback || ((props: FallbackProps) => (
@@ -167,4 +165,11 @@ export default function PageErrorBoundary({
       {children}
     </ErrorBoundary>
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 } 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

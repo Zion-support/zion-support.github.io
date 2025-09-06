@@ -17,7 +17,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
-      return;
+      return
     }
 
     try {
@@ -30,7 +30,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .order("created_at", { ascending: false });
       
       if (status) {
-        query = query.eq("status", status);
+        query = query.eq("status", status)
       }
       
       const { data, error: fetchError } = await query;
@@ -38,13 +38,13 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       if (fetchError) throw fetchError;
       
       setJobs(data as Job[]);
-      setError(null);
+      setError(null)
     } catch (err: any) {
       console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs. Please try again.");
-      toast.error("Failed to fetch jobs");
+      toast.error("Failed to fetch jobs")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
   
@@ -54,18 +54,18 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .from("jobs")
         .update({ status: newStatus })
         .eq("id", jobId)
-        .eq("client_id", clientId); // Ensure user can only update their own jobs
+        .eq("client_id", clientId), // Ensure user can only update their own jobs
       
       if (updateError) throw updateError;
       
       // Update local state
       setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
       toast.success("Job status updated successfully");
-      return true;
+      return true
     } catch (err: any) {
       console.error("Error updating job status:", err);
       toast.error("Failed to update job status");
-      return false;
+      return false
     }
   };
   
@@ -75,35 +75,35 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .from("jobs")
         .delete()
         .eq("id", jobId)
-        .eq("client_id", clientId); // Ensure user can only delete their own jobs
+        .eq("client_id", clientId), // Ensure user can only delete their own jobs
         
       if (deleteError) throw deleteError;
       
       // Update local state
       setJobs(jobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
-      return true;
+      return true
     } catch (err: any) {
       console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
-      return false;
+      return false
     }
   };
   
   // Fetch jobs when component mounts or dependencies change
   useEffect(() => {
-    fetchJobs();
+    fetchJobs()
   }, [clientId, status]);
   
   return {
-    jobs,
-    isLoading,
-    error,
-    refetch: fetchJobs,
-    updateJobStatus,
-    deleteJob,
-    createJob,
-    updateJob,
+    jobs;
+    isLoading;
+    error;
+    refetch: fetchJobs;
+    updateJobStatus;
+    deleteJob;
+    createJob;
+    updateJob;
     getJobById
-  };
+  }
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,7 +12,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
-
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -48,26 +48,26 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterSpecialization: string;
-  setFilterSpecialization: (spec: string) => void;
-  filterAvailability: string;
-  setFilterAvailability: (avail: string) => void;
-  specializations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-  loading: boolean;
+  sortBy: string,
+  setSortBy: (sort: string) => void,
+  filterSpecialization: string,
+  setFilterSpecialization: (spec: string) => void,
+  filterAvailability: string,
+  setFilterAvailability: (avail: string) => void,
+  specializations: string[],
+  showRecommended: boolean,
+  setShowRecommended: (show: boolean) => void,
+  loading: boolean
 }> = ({
-  sortBy,
-  setSortBy,
-  filterSpecialization,
-  setFilterSpecialization,
-  filterAvailability,
-  setFilterAvailability,
-  specializations,
-  showRecommended,
-  setShowRecommended,
+  sortBy;
+  setSortBy;
+  filterSpecialization;
+  setFilterSpecialization;
+  filterAvailability;
+  setFilterAvailability;
+  specializations;
+  showRecommended;
+  setShowRecommended;
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -130,7 +130,7 @@ const TalentFilterControls: React.FC<{
 );
 
 // Talent card component
-const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ talent, onHire }) => (
+const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
@@ -195,7 +195,7 @@ const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ t
 
       <div className="flex items-center justify-between">
         <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">
-          {talent.availability_type?.replace('_', ' ').toUpperCase()}
+          {talent.availability_type?.replace('_ ').toUpperCase()}
         </Badge>
         <Button size="sm" onClick={onHire}>
           Hire Talent
@@ -228,11 +228,10 @@ export default function TalentsPage() {
     // Add realistic loading delay
     await new Promise(resolve => setTimeout(resolve, 300));
 
-    let allTalents: TalentProfile[] = [];
-    
+    let allTalents: TalentProfile[] = [],
     // Start with existing talent profiles
     if (page === 1) {
-      allTalents = [...TALENT_PROFILES];
+      allTalents = [...TALENT_PROFILES]
     }
     
     // Generate new AI/IT talents using the auto-feed algorithm
@@ -248,15 +247,15 @@ export default function TalentsPage() {
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
-      );
+      )
     }
 
     if (filterAvailability) {
-      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability);
+      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability)
     }
     
     if (showRecommended) {
-      filteredTalents = getRecommendedTalents(filteredTalents);
+      filteredTalents = getRecommendedTalents(filteredTalents)
     }
     
     // Apply sorting
@@ -273,8 +272,7 @@ export default function TalentsPage() {
         case 'verified':
           return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
         case 'newest':
-        default:
-          return new Date(b.id || '').getTime() - new Date(a.id || '').getTime();
+        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
       }
     });
     
@@ -284,51 +282,51 @@ export default function TalentsPage() {
     const items = filteredTalents.slice(startIndex, endIndex);
     
     return {
-      items,
+      items;
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
       total: filteredTalents.length
-    };
+    }
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
 
   // Use infinite scroll hook
   const {
     items: talents,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
+    loading;
+    error;
+    hasMore;
+    total;
+    isFetching;
+    lastElementRef;
+    refresh;
+    scrollToTop;
     loadMore
   } = useInfiniteScrollPagination(fetchTalents, 16);
 
   // Refresh when filters change
   useEffect(() => {
     refresh();
-    setTotalGenerated(0);
+    setTotalGenerated(0)
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended]);
 
   // Calculate market stats
   const marketStats = useMemo(() => {
     if (talents.length === 0) return null;
-    return getTalentMarketStats(talents);
+    return getTalentMarketStats(talents)
   }, [talents]);
 
   // Get unique specializations
   const specializations = useMemo(() => {
-    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)));
+    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
   }, [talents]);
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800);
+      setShowScrollTop(window.scrollY > 800)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
   // Loading state
@@ -349,7 +347,7 @@ export default function TalentsPage() {
         </motion.div>
         <TalentLoadingGrid />
       </div>
-    );
+    )
   }
 
   // Error state
@@ -500,4 +498,119 @@ export default function TalentsPage() {
       </AnimatePresence>
     </div>
   );
+<<<<<<< HEAD
+
+}animate= {;
+  {;
+  opacity: 1, y: 0 ;
+
+}transition= {;
+  {;
+  delay: 0.2 ;
+
+}> <TalentMarketInsights stats= {;
+  marketStats ;
+}/> </motion.div>) ;
+}{;
+  /* Filter Controls */ ;
+}<motion.div initial= {;
+  {;
+  opacity: 0, y: 20 ;
+
+}animate= {;
+  {;
+  opacity: 1, y: 0 ;
+
+}transition= {;
+  {;
+  delay: 0.3 ;
+
+}> <TalentFilterControls sortBy= {;
+  sortBy ;
+}setSortBy= {;
+  setSortBy ;
+}filterSpecialization= {;
+  filterSpecialization ;
+}setFilterSpecialization= {;
+  setFilterSpecialization ;
+}filterAvailability= {;
+  filterAvailability ;
+}setFilterAvailability= {;
+  setFilterAvailability ;
+}specializations= {;
+  specializations ;
+}showRecommended= {;
+  showRecommended ;
+}setShowRecommended= {;
+  setShowRecommended ;
+}loading= {;
+  isFetching ;
+}/> </motion.div> {;
+  /* Talent Grid */ ;
+}<motion.div <motion.div key= {;
+  talent.id ;
+}ref= {;
+  index === talents.length - 1 ? lastElementRef : null ;
+}initial= {;
+  {;
+  opacity: 0, scale: 0.9 ;
+
+}animate= {;
+  {;
+  opacity: 1, scale: 1 ;
+
+}exit= {;
+  {;
+  opacity: 0, scale: 0.9 ;
+
+}transition= {;
+  {;
+  delay: Math.min (index * 0.03, 0.5) ;
+
+}whileHover= {;
+  {;
+  scale: 1.02 ;
+
+}> <TalentCard talent= {;
+  talent ;
+}onHire= {;
+  () => router.push (`/hire/$ {;
+  talent.id ;
+}`) ;
+}/> </motion.div>) ) ;
+}</AnimatePresence> </motion.div> {;
+  /* Loading More Indicator */ ;
+}{;
+  (isFetching || loading) && (<motion.div > <TalentLoadingGrid count= {;
+  4 ;
+}/> </motion.div>) ;
+}{";
+  isFetching ? (<Spinner className=" mx-auto h-6 w-6"/>) : (<Button onClick={;
+  loadMore ;
+}>Load More</Button>) ;
+}</p>) ;
+}</div>) ;
+}{;
+  /* End of Results */ ;
+}{'";
+  !hasMore && talents.length > 0 && (<motion.div > <div className=" text-muted-foreground text-lg mb-2"> 🎉 You've explored all available talents! </div> </div> </motion.div>) ;
+}{;
+  /* Scroll to Top Button */ ;
+}<AnimatePresence> {;
+  showScrollTop && (<motion.button onClick={;
+  scrollToTop ";
+}> <ArrowUp className=" h-5 w-5 text-primary-foreground" /> </motion.button>) ;
+}</AnimatePresence> </div>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+    let filteredTalents = allTalents;
+    
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

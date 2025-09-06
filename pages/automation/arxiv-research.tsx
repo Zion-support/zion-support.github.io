@@ -1,7 +1,13 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+<<<<<<< HEAD
+// @ts-ignore </li>) ) 
+}</ul> </div> </EnhancedLayout>) 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // @ts-ignore
 import data from '../../data/arxiv-research.json';
-
 export default function ArxivResearchPage() {
   const items: any[] = (data?.items || []).slice(0, 40);
   return (
@@ -22,5 +28,10 @@ export default function ArxivResearchPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  )
+<<<<<<< HEAD
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

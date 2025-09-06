@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -10,33 +14,30 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
   FormMessage} from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
-
 // Define schema for form validation
 const educationSchema = z.object({
-  institution: z.string().min(1, 'Institution is required'),
-  degree: z.string().min(1, 'Degree is required'),
+  institution: z.string().min(1, 'Institution is required');
+  degree: z.string().min(1, 'Degree is required');
   field_of_study: z.string().optional(),
-  start_date: z.string().min(1, 'Start date is required'),
+  start_date: z.string().min(1, 'Start date is required');
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional()}),
 
 type EducationFormValues = z.infer<typeof educationSchema>;
 
 export function EducationFormFields({ 
-  isEditing, 
-  onSubmit, 
-  onCancel 
+  isEditing, onSubmit, onCancel 
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -47,20 +48,19 @@ export function EducationFormFields({
       institution: '',
       degree: '',
       field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
+      start_date: format(new Date(), 'yyyy-MM-dd');
       is_current: false,
       description: '',
-      location: ''}});
-
+      location: ''}}),
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
     setError(null);
     try {
-      await onSubmit(data);
+      await onSubmit(data)
     } catch (err: any) {
-      setError(err.message || 'An error occurred');
+      setError(err.message || 'An error occurred')
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
@@ -222,4 +222,23 @@ export function EducationFormFields({
       </form>
     </Form>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  end_date: z.string().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional()}),
+
+type EducationFormValues = z.infer<typeof educationSchema>;
+
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

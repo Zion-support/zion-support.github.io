@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -15,12 +16,10 @@ import { ProductListing } from "@/types/listings";
 import { toast } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface ServiceQuoteModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  service: ProductListing | null;
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  service: ProductListing | null
 }
 
 const BUDGET_RANGES = [
@@ -28,20 +27,18 @@ const BUDGET_RANGES = [
   { label: "$5,000 - $10,000", value: "5000-10000" },
   { label: "$10,000 - $25,000", value: "10000-25000" },
   { label: "$25,000 - $50,000", value: "25000-50000" },
-  { label: "$50,000+", value: "50000+" }];
-
+  { label: "$50,000+", value: "50000+" }],
 const TIMELINE_OPTIONS = [
   { label: "Less than 1 month", value: "lt-1month" },
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
-  { label: "6+ months", value: "6+months" }];
-
+  { label: "6+ months", value: "6+months" }],
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
     description: '',
     email: '',
     budget: BUDGET_RANGES[0]?.value || '0-5000',
-    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
+    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
@@ -49,7 +46,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }))
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -65,7 +62,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             title: service.title,
             category: service.category} : null,
           quoteDetails: {
-            ...formData,
+            ...formData;
             startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
@@ -76,37 +73,36 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       // Show success message
       toast({
         title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon."});
-
+        description: "We've sent your request to the service provider. They will contact you soon."}),
       // Close the modal and reset form
       onOpenChange(false);
       setFormData({
         description: '',
         email: '',
         budget: BUDGET_RANGES[0]?.value || '0-5000',
-        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
+        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
       setStartDate(new Date());
       setEndDate(undefined);
-      setCurrentStep('details');
+      setCurrentStep('details')
     } catch (error) {
-      logErrorToProduction('Error submitting quote:', { data: error });
+      logErrorToProduction('Error submitting quote:', { data: error }),
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline');
-    else if (currentStep === 'timeline') setCurrentStep('contact');
+    else if (currentStep === 'timeline') setCurrentStep('contact')
   };
 
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details');
-    else if (currentStep === 'contact') setCurrentStep('timeline');
+    else if (currentStep === 'contact') setCurrentStep('timeline')
   };
 
   return (
@@ -192,7 +188,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
+                          "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
@@ -219,7 +215,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
+                          "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
@@ -337,4 +333,79 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       </DialogContent>
     </Dialog>
   );
+<<<<<<< HEAD
+
+});
+if (error) throw error;
+//Show success message //Close the modal and reset form onOpenChange (false);
+setFormData ({';
+  description: '';';
+email: '';';
+budget: BUDGET RANGES[0]?.value || '0-5000';';
+timeframe: TIMELINE OPTIONS[0]?.value || 'lt-1month' ;
+});
+setStartDate (new Date () );
+setEndDate (undefined);';
+setCurrentStep ('details') ;
+}catch (error) {';
+  logErrorToProduction ('Error submitting quote:', {;
+  data: error ;
+});
+toast ({;
+  ;
+}finally {;
+  setIsSubmitting (false) ;
+
+};
+const nextStep = () => {';
+  if (currentStep === 'details') setCurrentStep ('timeline');';
+else if (currentStep === 'timeline') setCurrentStep ('contact') ;
+};
+const prevStep = () => {';
+  if (currentStep === 'timeline') setCurrentStep ('details');';
+else if (currentStep === 'contact') setCurrentStep ('timeline') ;
+};
+
+}> <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]" > text-2xl font-semibold text-white"> Request Service Quote </DialogTitle> </DialogHeader> </div> <div className=" space-y-2"> <Label htmlFor=" description"className=" text-white">Project Description</Label> <Textarea required /> </div> <div className=" space-y-2"> <Label htmlFor=" budget"className=" text-white">Estimated Budget</Label> <Select value= {;
+  formData.budget ;
+}onValueChange= {;
+  (value) => setFormData (prev => ({;
+  ...prev, budget: value ;
+}) ) ";
+}> <SelectTrigger className=" bg-zion-blue-dark border-zion-blue-light text-white"> <SelectValue placeholder=" Select your budget range"/> </SelectTrigger> </SelectItem>) ) ;
+}</SelectContent> </Select> </div> </div>) ;
+}<Select value= {;
+  formData.timeframe ;
+}onValueChange= {;
+  (value) => setFormData (prev => ({;
+  ...prev, timeframe: value ;
+}) ) ";
+}> <SelectTrigger className=" bg-zion-blue-dark border-zion-blue-light text-white"> <SelectValue placeholder=" Select your timeline"/> </SelectTrigger> </SelectItem>) ) ";
+}</SelectContent> </Select> </div> <div className=" grid grid-cols-2 gap-4"> <div className=" space-y-2"> <Label className=" text-white">Expected Start Date</Label> <Popover> <PopoverTrigger asChild> <Button </Button> </PopoverTrigger> <PopoverContent className=" w-auto p-0 bg-zion-blue-dark border-zion-blue-light"> <Calendar initialFocus className=" p-3 pointer-events-auto bg-zion-blue-dark text-white"/> </PopoverContent> </Popover> </div> <div className=" space-y-2"> <Label className=" text-white">Expected End Date</Label> <Popover> <PopoverTrigger asChild> <Button </Button> </PopoverTrigger> <PopoverContent className=" w-auto p-0 bg-zion-blue-dark border-zion-blue-light"> <Calendar initialFocus className=" p-3 pointer-events-auto bg-zion-blue-dark text-white"/> </PopoverContent> </Popover> </div> </div> </div>) ";
+}<Input id=" email"name=" email"type=" email"value= {;
+  formData.email ;
+}required /> </div> </div>) ;
+}</div> </div> </div>) ";
+}<Button type=" button"variant=" outline"onClick={;
+  prevStep ";
+}className=" border-zion-blue-light text-white hover:bg-zion-blue-light"> Previous </Button>) ;
+}> Cancel </Button> {'";
+  currentStep !== 'contact' ? (<Button type=" button"onClick={;
+  nextStep ";
+}className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>) ;
+}</div> </DialogFooter> </form> </DialogContent> </Dialog>) ;
+}'"
+=======
+
+<<<<<<< HEAD
+
+            ...formData;
+            startDate: startDate?.toISOString(),
+            endDate: endDate?.toISOString()}
+        }
+      });
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

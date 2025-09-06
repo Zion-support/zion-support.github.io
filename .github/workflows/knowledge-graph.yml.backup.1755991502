@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Knowledge Graph Builder
 
 on:
@@ -12,6 +18,8 @@ on:
 
 permissions:
   contents: write
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 name: Knowledge Graph
 
@@ -21,6 +29,10 @@ on:
   workflow_dispatch:
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   graph:
     runs-on: ubuntu-latest
@@ -32,6 +44,12 @@ jobs:
         with:
           node-version: '20'
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Build knowledge graph
@@ -41,6 +59,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ -n "$(git status --porcelain)" ]]; then
+<<<<<<< HEAD
+<<<<<<< HEAD
             git add -A
 =======
           cache: 'npm'
@@ -54,6 +74,12 @@ jobs:
           if ! git diff --cached --quiet; then
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
             git commit -m "chore(automation): update knowledge graph [skip ci]"
+=======
+            git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             git push
           else
             echo "No changes to commit"

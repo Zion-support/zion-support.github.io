@@ -7,12 +7,11 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
-
 interface DateFieldsProps {
-  startDate: Date | undefined;
-  setStartDate: (date: Date | undefined) => void;
-  endDate: Date | undefined;
-  setEndDate: (date: Date | undefined) => void;
+  startDate: Date | undefined,
+  setStartDate: (date: Date | undefined) => void,
+  endDate: Date | undefined,
+  setEndDate: (date: Date | undefined) => void
 }
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
@@ -26,7 +25,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
-                  "w-full md:w-[240px] pl-3 text-left font-normal",
+                  "w-full md:w-[240px] pl-3 text-left font-normal";
                   !startDate && "text-muted-foreground"
                 )}
               >
@@ -60,7 +59,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
-                  "w-full md:w-[240px] pl-3 text-left font-normal",
+                  "w-full md:w-[240px] pl-3 text-left font-normal";
                   !endDate && "text-muted-foreground"
                 )}
               >
@@ -86,5 +85,5 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
         </Popover>
       </div>
     </div>
-  );
+  )
 }

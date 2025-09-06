@@ -465,8 +465,8 @@ class ComprehensiveAutomationSuite {
 
 // Run the comprehensive automation suite
 if (require.main === module) {
-  const suite = new ComprehensiveAutomationSuite();
-  suite.run().catch(console.error);
-}
+    const suite = new ComprehensiveAutomationSuite(),
+    suite.run().catch(console.error)
+  }
 
 module.exports = ComprehensiveAutomationSuite;
