@@ -1,14 +1,27 @@
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
 });
 
-module.exports = [
+export default [
   js.configs.recommended,
   {
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -38,7 +51,6 @@ module.exports = [
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
-      'api/**',
       'api-backup/**',
       'api-disabled/**',
       'api.disabled/**',
@@ -56,7 +68,6 @@ module.exports = [
       'test_build/**',
       'tests/**',
       '__tests__/**',
-      'types/**',
       'components/apps/extension/**',
       'lib.broken/**',
       'middleware/**',
@@ -100,10 +111,8 @@ module.exports = [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js',
-      'public/**',
-      'src/**',
-      'app/**'
+      'pages_backup_conflict/**',
+      'data.disabled/**'
     ]
   }
 ];

@@ -353,28 +353,6 @@ export default function AIPoweredCRMPage() {
   );
 }
 
-function FeatureCard({ icon, title, description, benefits }: {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
-}) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {benefits.map((benefit, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {benefit}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 function PricingCard({ name, price, period, description, features, popular }: {
   name: string;
