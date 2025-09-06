@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
 body {
@@ -17,4 +14,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d

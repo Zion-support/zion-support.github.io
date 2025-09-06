@@ -300,12 +300,9 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
-<<<<<<< HEAD
-=======
     "@reduxjs/toolkit": "^2.9.0",
     "@sendgrid/mail": "^8.1.5",
     "@stripe/stripe-js": "^7.9.0",
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -362,21 +359,6 @@
     "sharp": "^0.34.3",
     "tailwind-merge": "^2.5.4"
   },
-  "devDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.50.0",
-    "@types/node": "^20.14.15",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^5.0.2",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.35.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "terser": "^5.44.0",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.10",
-    "vitest": "^2.1.8"
-  },
   "optionalDependencies": {
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
@@ -384,8 +366,6 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
-<<<<<<< HEAD
-=======
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
@@ -443,7 +423,6 @@
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
   },
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
