@@ -49,7 +49,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [],
-
     // FCP recommendations
     if (metrics.fcp > 2000) {
       recs.push({
@@ -144,7 +143,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             resolve(lastEntry.startTime)
           });
           observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-          
           // Fallback timeout
           setTimeout(() => resolve(0), 5000)
         } else {

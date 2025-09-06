@@ -4,6 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical',
@@ -69,7 +71,7 @@ const HealthDashboard: React.FC = () => {
 
     if (autoRefresh) {
       const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds
-      return () => clearInterval(interval)
+      return () => clearInterval(interval);
     }
     
     return undefined
@@ -129,7 +131,7 @@ const HealthDashboard: React.FC = () => {
           </Button>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   if (!healthData) return null;

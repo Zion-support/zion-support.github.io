@@ -30,5 +30,5 @@ export default function CoachWidget() {
       </div>
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
-  )
+  );
 }

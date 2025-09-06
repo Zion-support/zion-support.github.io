@@ -28,5 +28,5 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         Next
       </EnhancedButton>
     </div>
-  )
+  );
 }

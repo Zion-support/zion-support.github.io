@@ -178,5 +178,5 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </Dialog>
       </div>
     </div>
-  )
+  );
 }

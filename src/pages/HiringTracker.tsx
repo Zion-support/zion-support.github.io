@@ -48,7 +48,7 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
     </>
-  )
+  );
 }
 
 export default function HiringTracker() {
@@ -56,5 +56,5 @@ export default function HiringTracker() {
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-  )
+  );
 }

@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 type OpenAIClient = OpenAI;
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
-  return new OpenAI({ apiKey })
+  return new OpenAI({ apiKey });
 }
 
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {

@@ -51,5 +51,5 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  )
+  );
 }

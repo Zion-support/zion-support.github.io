@@ -67,7 +67,7 @@ class ChunkErrorHandler {
       errorMessage.includes(pattern) || 
       errorName.includes(pattern) ||
       (filename && filename.includes(pattern))
-    )
+    );
   }
 
   private async handleChunkError(error: Error, context: { filename?: string, source: string }): Promise<void> {
@@ -131,7 +131,7 @@ class ChunkErrorHandler {
       case 2: return 'cache-clear-retry';
       case 3: return 'hard-refresh';
       default: return 'fatal-error'
-    }
+    };
   }
 
   private async clearCaches(): Promise<void> {
@@ -141,7 +141,7 @@ class ChunkErrorHandler {
         const cacheNames = await caches.keys();
         await Promise.all(
           cacheNames.map(cacheName => caches.delete(cacheName))
-        )
+        );
       }
 
       // Clear localStorage items that might be stale
@@ -253,8 +253,8 @@ class ChunkErrorHandler {
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
-      this.reloadPage()
-    })
+      this.reloadPage();
+    });
   }
 
   // Public method to check if we're in a chunk error state

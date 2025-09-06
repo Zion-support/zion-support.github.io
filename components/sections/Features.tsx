@@ -50,7 +50,7 @@ const Features: React.FC<FeaturesProps> = ({
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
+              className="text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
             >
               <div className="relative">

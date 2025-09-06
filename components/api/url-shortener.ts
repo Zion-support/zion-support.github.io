@@ -133,7 +133,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   if (!shortUrl || !shortUrl.isActive) {
     return {
       notFound: true
-    }
+    };
   }
 
   // Increment click count
@@ -146,5 +146,5 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
       destination: shortUrl.originalUrl;
       permanent: false
     }
-  }
+  };
 }

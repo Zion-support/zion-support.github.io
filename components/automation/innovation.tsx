@@ -4,7 +4,6 @@ import type { GetStaticProps } from 'next';
 type Item = { source: string, title: string, url: string, date?: string, summary?: string };
 
 type Props = { items: Item[] },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json');
@@ -39,5 +38,5 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
     </div>
-  )
+  );
 }

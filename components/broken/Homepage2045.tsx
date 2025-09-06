@@ -103,11 +103,10 @@ const Homepage2045: React.FC = () => {
           <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
         </div>
       </div>
-    )
+    );
   }
 
-  return (
-    <Layout>
+  return(<Layout>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">

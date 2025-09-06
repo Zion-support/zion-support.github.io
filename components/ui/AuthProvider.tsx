@@ -8,7 +8,6 @@ type AuthContextType = {
 };
 
 const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
-
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [role, setRoleState] = useState<UserRole>('talent');
 
@@ -35,5 +34,5 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 }
 
 export function useAuth() {
-  return useContext(AuthContext)
+  return useContext(AuthContext);
 }

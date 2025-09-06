@@ -12,5 +12,5 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
         </span>
       ))}
     </div>
-  )
+  );
 }

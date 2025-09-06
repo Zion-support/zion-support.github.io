@@ -173,5 +173,5 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
-  )
+  );
 }

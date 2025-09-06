@@ -28,7 +28,7 @@ export function ConversationsList({
     const conversation = conversations[index];
     
     if (!conversation) {
-      return <div style={style} />
+      return <div style={style} />;
     }
     
     return (
@@ -70,5 +70,5 @@ export function ConversationsList({
         </List>
       )}
     </div>
-  )
+  );
 }

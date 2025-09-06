@@ -8,8 +8,7 @@ import {
 } from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {
-  return (
-    <>
+  return(<>
       <SEO 
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
         description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages."
@@ -40,8 +39,7 @@ const AICodeReviewSecurityScanner = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, 
-                suggests improvements, and ensures code quality across multiple programming languages.
+                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -99,7 +97,7 @@ const AICodeReviewSecurityScanner = () => {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Code className="w-8 h-8" />,
@@ -288,12 +286,12 @@ const AICodeReviewSecurityScanner = () => {
                 Why Choose Our AI Code Security Platform?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our platform delivers measurable results that improve your security posture, 
+                Our platform delivers measurable results that improve your security posture,
                 development efficiency, and code quality while reducing costs and risks.
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md: grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
                   {

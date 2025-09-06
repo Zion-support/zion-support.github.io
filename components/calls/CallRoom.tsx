@@ -39,7 +39,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
     await r.connect(serverUrl, token, {
       autoSubscribe: true}),
-
     // publish local tracks
     for (const t of localTracks) {
       await r.localParticipant.publishTrack(t)
@@ -100,5 +99,5 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         ))}
       </div>
     </div>
-  )
+  );
 }

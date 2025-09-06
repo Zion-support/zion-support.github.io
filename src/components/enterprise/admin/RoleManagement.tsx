@@ -68,7 +68,6 @@ export function RoleManagement() {
         manageTeam: false,
         viewBilling: false,
         manageBilling: false}}],
-
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
@@ -242,7 +241,7 @@ export function RoleManagement() {
                     aria-label="View billing"
                     checked={member.permissions.viewBilling}
                     onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "viewBilling", checked)
+                      handlePermissionChange(member.id, "viewBilling", checked);
                     }
                   />
                 </TableCell>
@@ -252,5 +251,5 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
-  )
+  );
 }

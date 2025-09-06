@@ -5,7 +5,6 @@ import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/g
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
-
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
@@ -74,5 +73,5 @@ export default function GrantsPage() {
         {items.length === 0 && <div className="text-sm text-gray-600">No grants found.</div>}
       </div>
     </EnhancedLayout>
-  )
+  );
 }

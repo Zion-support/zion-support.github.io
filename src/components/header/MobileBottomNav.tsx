@@ -84,7 +84,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   );
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
+    <nav className="md: hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
           <Link
@@ -111,5 +111,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
-  )
+  );
 }

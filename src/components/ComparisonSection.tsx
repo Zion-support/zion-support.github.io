@@ -61,5 +61,5 @@ export function ComparisonSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

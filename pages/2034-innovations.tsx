@@ -140,12 +140,12 @@ export default function Innovations2034Page() {
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2034 innovations span across multiple cutting-edge technology domains, 
+                Our 2034 innovations span across multiple cutting-edge technology domains,
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   icon: '🧠',
@@ -245,12 +245,12 @@ export default function Innovations2034Page() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers building the future, 
+                We're not just another technology company. We're pioneers building the future,
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: '🚀',

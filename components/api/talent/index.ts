@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ items: LOCAL })
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
-    }
+    };
   }
 
   if (req.method === 'POST') {
@@ -97,5 +97,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }

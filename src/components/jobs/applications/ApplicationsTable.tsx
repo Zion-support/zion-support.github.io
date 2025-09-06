@@ -150,5 +150,5 @@ export function ApplicationsTable({
         onConfirm={handleHireConfirmed}
       />
     </>
-  )
+  );
 }

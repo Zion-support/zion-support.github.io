@@ -12,7 +12,6 @@ export default function EmergingTechPage() {
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
-
   return (
     <Layout>
       <Head>

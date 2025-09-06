@@ -103,5 +103,5 @@ export default function MessagingInbox() {
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-  )
+  );
 }

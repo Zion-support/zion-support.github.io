@@ -71,7 +71,7 @@ export default function WalletPanel() {
       setEthAddress(accounts?.[0] || null)
     } catch (e) {
       console.error(e)
-    }
+    };
   }
 
   async function redeem(amount: number) {
@@ -151,5 +151,5 @@ export default function WalletPanel() {
         )}
       </div>
     </div>
-  )
+  );
 }

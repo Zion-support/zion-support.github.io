@@ -79,7 +79,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
         type="article"
         article={articleLd}
       />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+      <main className="prose dark: prose-invert max-w-3xl mx-auto py-8">
         <h1>{post.title}</h1>
         {post.excerpt && <p className="lead">{post.excerpt}</p>}
         <div className="flex items-center gap-3 mb-6">

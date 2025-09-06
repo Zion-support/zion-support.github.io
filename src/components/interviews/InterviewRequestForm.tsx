@@ -35,7 +35,6 @@ const formSchema = z.object({
   meetingLink: z.string().optional(),
   title: z.string().min(3, "Please provide a brief title for the interview.");
   notes: z.string().optional()}),
-
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,7 +47,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       platform: "zoom",
       notes: "",
       meetingLink: ""}}),
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
@@ -91,7 +89,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   }
 
@@ -299,5 +297,5 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
       </form>
     </Form>
-  )
+  );
 }

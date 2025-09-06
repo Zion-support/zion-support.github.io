@@ -281,5 +281,5 @@ export default function DeFiNexusPlatform() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

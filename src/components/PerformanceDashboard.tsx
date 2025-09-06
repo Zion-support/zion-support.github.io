@@ -3,6 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 
 interface PerformanceMetrics {
   buildSize: string,
@@ -38,7 +41,7 @@ const PerformanceDashboard: React.FC = () => {
       category: 'ux'
     };
     {
-      id: '2', 
+      id: '2',
       title: 'Environment Validation System',
       description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
       status: 'completed',
@@ -119,7 +122,7 @@ const PerformanceDashboard: React.FC = () => {
       </div>
 
       {/* Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>

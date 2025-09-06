@@ -132,5 +132,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </p>
       </CardFooter>
     </Card>
-  )
+  );
 }

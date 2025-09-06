@@ -74,5 +74,5 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         </div>
       </div>
     </section>
-  )
+  );
 }

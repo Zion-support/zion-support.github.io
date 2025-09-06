@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
-    return res.status(401).json({ error: "Invalid API key" })
+    return res.status(401).json({ error: "Invalid API key" });
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(

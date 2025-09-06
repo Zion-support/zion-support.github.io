@@ -42,7 +42,6 @@ export default function AISeosuitePage() {
       description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500'}],
-
   const seoTools = [
     {
       category: 'Keyword Research',
@@ -491,5 +490,5 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-  )
+  );
 }

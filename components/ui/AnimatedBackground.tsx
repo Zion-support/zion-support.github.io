@@ -1,7 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-
-const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Gradient Background */}

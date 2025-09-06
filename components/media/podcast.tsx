@@ -75,5 +75,5 @@ export default function PodcastIndexPage() {
         ))}
       </ul>
     </div>
-  )
+  );
 }

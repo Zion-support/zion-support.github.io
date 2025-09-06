@@ -228,7 +228,6 @@ export default function TalentsPage() {
     await new Promise(resolve => setTimeout(resolve, 300));
 
     let allTalents: TalentProfile[] = [],
-    
     // Start with existing talent profiles
     if (page === 1) {
       allTalents = [...TALENT_PROFILES]
@@ -360,7 +359,7 @@ export default function TalentsPage() {
           <Button onClick={refresh}>Try Again</Button>
         </div>
       </div>
-    )
+    );
   }
 
   // Main render
@@ -497,5 +496,5 @@ export default function TalentsPage() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }

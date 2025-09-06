@@ -369,5 +369,5 @@ export function ReviewsModerationTable({
         </Dialog>
       )}
     </>
-  )
+  );
 }

@@ -122,7 +122,9 @@ export default function URLShortenerPage() {
               <div className="space-y-6">
                 {/* Long URL Input */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Long URL
+                  ">
                     Long URL
                   </label>
                   <input
@@ -136,7 +138,9 @@ export default function URLShortenerPage() {
 
                 {/* Custom Alias */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Custom Alias (Optional)
+                  ">
                     Custom Alias (Optional)
                   </label>
                   <div className="flex space-x-2">
@@ -517,5 +521,5 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

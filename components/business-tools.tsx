@@ -281,8 +281,7 @@ export default function BusinessToolsPage() {
             Essential Business Tools & Productivity
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Discover the most powerful business tools that successful companies use to manage projects, 
-            communicate effectively, market their products, and grow their operations. Real pricing and features.
+            Discover the most powerful business tools that successful companies use to manage projects, communicate effectively, market their products, and grow their operations. Real pricing and features.
           </p>
         </div>
       </section>
@@ -455,5 +454,5 @@ export default function BusinessToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

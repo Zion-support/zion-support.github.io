@@ -28,7 +28,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;

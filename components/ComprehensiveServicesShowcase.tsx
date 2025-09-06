@@ -418,5 +418,5 @@ export default function ComprehensiveServicesShowcase() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

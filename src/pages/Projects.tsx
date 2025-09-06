@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Clock, Briefcase } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 function ProjectsContent() {
   const { projects, isLoading } = useProjects();
@@ -55,9 +58,9 @@ function ProjectsContent() {
         )}
       </main>
     </>
-  )
+  );
 }
 
 export default function Projects() {
-  return <ProjectsContent />
+  return <ProjectsContent />;
 }

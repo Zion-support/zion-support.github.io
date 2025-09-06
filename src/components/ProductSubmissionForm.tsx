@@ -23,6 +23,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from 'lucide-react'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 // Define the form schema with zod
 const productSchema = z.object({
@@ -37,7 +39,6 @@ const productSchema = z.object({
   video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   tags: z.string().optional()}),
-
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 
@@ -60,7 +61,6 @@ export function ProductSubmissionForm() {
       video: undefined,
       model: undefined,
       tags: ""}}),
-  
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -126,7 +126,6 @@ export function ProductSubmissionForm() {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
-      
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
@@ -138,7 +137,6 @@ export function ProductSubmissionForm() {
       }
 
       let imagePublicUrl: string | undefined,
-
       // If we have an image, upload it
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -237,7 +235,6 @@ export function ProductSubmissionForm() {
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
-      
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
@@ -246,7 +243,7 @@ export function ProductSubmissionForm() {
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -287,7 +284,7 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-                )
+                );
               }}
             />
 
@@ -451,7 +448,7 @@ export function ProductSubmissionForm() {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>

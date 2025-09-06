@@ -16,7 +16,6 @@ const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
-
 type Message = {
   id: string,
   content: string,
@@ -173,7 +172,7 @@ export function ChatBotPanel() {
 
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
-      ...prev, 
+      ...prev,
       {
         id: `user-${Date.now()}`,
         content: "I'd like to speak with a human agent",
@@ -196,7 +195,7 @@ export function ChatBotPanel() {
 
   const handleEmailSupport = () => {
     setMessages((prev) => [
-      ...prev, 
+      ...prev,
       {
         id: `user-${Date.now()}`,
         content: "I'd like to email support",
@@ -259,7 +258,7 @@ export function ChatBotPanel() {
             <Button 
               onClick={handleEscalateToLiveAgent}
               size="sm"
-              className="bg-zion-purple hover:bg-zion-purple-light text-white"
+              className="bg-zion-purple hover: bg-zion-purple-light text-white"
             >
               Chat with Live Agent
             </Button>
@@ -275,7 +274,7 @@ export function ChatBotPanel() {
       )}
       
       <div className={cn(
-        "p-4 border-t", 
+        "p-4 border-t",
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
       )}>
         <form 

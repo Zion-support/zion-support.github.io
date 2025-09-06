@@ -2,7 +2,6 @@ import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
 type Props = { urlCount: number },
-
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">

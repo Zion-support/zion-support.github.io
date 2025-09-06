@@ -68,7 +68,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             <Link
               key={index}
               href={link.link}
-              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
+              className="group bg-zion-blue relative border border-zion-blue-light hover: border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
                 {link.icon}
@@ -84,7 +84,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default QuickAccess;

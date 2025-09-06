@@ -104,7 +104,7 @@ export const InstallPrompt: React.FC = () => {
             .pwa-install-button-container { /* Target a container for better transform control */
               transform: scale(0.9), /* Slightly less aggressive scaling */
               transform-origin: bottom right
-            }
+            };
           }
         `}
       </style>

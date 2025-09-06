@@ -83,5 +83,5 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         </div>
       </div>
     </div>
-  )
+  );
 }

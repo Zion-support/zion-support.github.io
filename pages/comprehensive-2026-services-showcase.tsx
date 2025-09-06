@@ -363,7 +363,7 @@ export default function Comprehensive2026ServicesShowcase() {
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3">
+                      <div className="flex flex-col sm: flex-row gap-3">
                         <Link
                           href={service.link}
                           className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105"

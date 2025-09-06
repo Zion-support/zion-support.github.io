@@ -65,7 +65,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          <div className="flex flex-col md:flex-row gap-3">
+          <div className="flex flex-col md: flex-row gap-3">
             <div className="flex-1 grid grid-cols-2 gap-3">
               <Input
                 placeholder="Version (e.g. 1.0.1)"

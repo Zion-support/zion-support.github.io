@@ -174,5 +174,5 @@ export default function Careers() {
         </div>
       </main>
     </>
-  )
+  );
 }

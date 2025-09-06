@@ -104,7 +104,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     <ErrorContext.Provider value={contextValue}>
       {children}
     </ErrorContext.Provider>
-  )
+  );
 }
 
 export function useGlobalErrorHandler(): ErrorContextType {
@@ -144,11 +144,11 @@ function getErrorMessage(error: Error): string {
   }
 
   if (message.includes('server') || message.includes('500')) {
-    return "Our servers are experiencing issues. Please try again in a moment."
+    return "Our servers are experiencing issues. Please try again in a moment.";
   }
 
   // Fallback for unknown errors
-  return "An unexpected error occurred. Please try again."
+  return "An unexpected error occurred. Please try again.";
 }
 
 // Utility hook for common error scenarios

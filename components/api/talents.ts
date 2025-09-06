@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
+    return res.status(401).json({ error: "Unauthorized" });
   }
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);

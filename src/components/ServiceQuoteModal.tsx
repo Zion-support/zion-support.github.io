@@ -27,13 +27,11 @@ const BUDGET_RANGES = [
   { label: "$10,000 - $25,000", value: "10000-25000" },
   { label: "$25,000 - $50,000", value: "25000-50000" },
   { label: "$50,000+", value: "50000+" }],
-
 const TIMELINE_OPTIONS = [
   { label: "Less than 1 month", value: "lt-1month" },
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
   { label: "6+ months", value: "6+months" }],
-
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
     description: '',
@@ -75,7 +73,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       toast({
         title: "Quote Request Submitted!",
         description: "We've sent your request to the service provider. They will contact you soon."}),
-
       // Close the modal and reset form
       onOpenChange(false);
       setFormData({
@@ -93,7 +90,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         description: "There was an error submitting your quote request. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -334,5 +331,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

@@ -18,5 +18,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(201).json({ vendor })
   } catch (e: any) {
     res.status(500).json({ error: e.message })
-  }
+  };
 }

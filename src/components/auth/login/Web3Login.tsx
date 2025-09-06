@@ -83,5 +83,5 @@ export function Web3Login() {
     >
       {buttonContent}
     </Button>
-  )
+  );
 }

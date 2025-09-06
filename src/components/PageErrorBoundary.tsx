@@ -71,7 +71,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
           )}
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <div className="flex flex-col sm: flex-row gap-3 mb-6">
             <button 
               onClick={handleRefresh}
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
@@ -136,10 +136,7 @@ interface PageErrorBoundaryProps {
 }
 
 export default function PageErrorBoundary({ 
-  children, 
-  pageName, 
-  fallback 
-}: PageErrorBoundaryProps) {
+  children, pageName, fallback , }: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error);
     
@@ -161,10 +158,10 @@ export default function PageErrorBoundary({
       onError={handleError}
       onReset={() => {
         // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
       }}
     >
       {children}
     </ErrorBoundary>
-  )
+  );
 } 

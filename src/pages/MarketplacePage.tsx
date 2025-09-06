@@ -85,7 +85,7 @@ import { toast } from '@/hooks/use-toast';
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
   const { formatPrice } = useCurrency();
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">
+  <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
         <div className="flex-1 min-w-0">
@@ -420,10 +420,10 @@ function MarketplacePageContent() {
       </AnimatePresence>
     </div>
     </>
-  )
+  );
 }
 
 // Main export
 export default function MarketplacePage() {
-  return <MarketplacePageContent />
+  return <MarketplacePageContent />;
 }

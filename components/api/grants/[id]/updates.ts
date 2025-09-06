@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import type { GrantApplication } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
+  return path.join(GRANTS_DIR, `${id}.json`);
 }
 
 function readGrant(id: string): GrantApplication | null {
@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!existing) return res.status(404).json({ error: 'Not found' });
 
   if (req.method === 'GET') {
-    return res.status(200).json({ updates: existing.updates || [] })
+    return res.status(200).json({ updates: existing.updates || [] });
   }
 
   if (req.method === 'POST') {

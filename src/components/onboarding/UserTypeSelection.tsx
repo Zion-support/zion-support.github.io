@@ -71,9 +71,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 </p>
               </div>
             </Button>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }

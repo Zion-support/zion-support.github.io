@@ -29,7 +29,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       <Avatar className="h-8 w-8">
         {isUser ? (
           <>
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarImage src="https: //i.pravatar.cc/40?img=1" alt="User avatar" />
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
@@ -60,7 +60,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
               ? "text-gray-300"
               : "text-gray-500"
         )}>
-          {format(timestamp, "h:mm a")}
+          {format(timestamp, "h: mm a")}
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@ function escapeHtml(unsafe: string): string {
     .replace(/</g, "&lt,")
     .replace(/>/g, "&gt,")
     .replace(/"/g, "&quot,")
-    .replace(/'/g, "&#039,")
+    .replace(/'/g, "&#039,");
 }
 
 function formatMessageWithLinks(message: string): string {

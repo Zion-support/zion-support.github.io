@@ -33,7 +33,7 @@ async function summarizeWithOpenAI(description: string) {
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
-  }
+  };
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -66,5 +66,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
-  return res.status(200).json({ id, status: 'ok' })
+  return res.status(200).json({ id, status: 'ok' });
 }

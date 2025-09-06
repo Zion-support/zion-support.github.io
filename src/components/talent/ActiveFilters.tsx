@@ -111,5 +111,5 @@ export function ActiveFilters({
         Clear All
       </Button>
     </div>
-  )
+  );
 }

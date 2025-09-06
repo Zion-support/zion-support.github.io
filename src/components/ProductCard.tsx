@@ -67,7 +67,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>
-    )
+    );
   }
 
   const active = isWishlisted(product.id);

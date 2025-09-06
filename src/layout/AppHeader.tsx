@@ -47,7 +47,7 @@ export function AppHeader() {
           { "bg-red-500": mobileMenuOpen }
         )}
       >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
+        <div className="container flex h-16 items-center px-4 sm: px-6">
           <Logo />
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">

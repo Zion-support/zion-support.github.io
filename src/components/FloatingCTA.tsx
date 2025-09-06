@@ -59,5 +59,5 @@ export function FloatingCTA() {
         </div>
       </div>
     </div>
-  )
+  );
 }

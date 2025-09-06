@@ -3,6 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 interface LeaderboardEntry {
   id: string,
@@ -96,8 +99,7 @@ export function PartnerLeaderboard() {
                   key={entry.id} 
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' : 
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-                  }`}
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10', }`}
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
@@ -201,5 +203,5 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

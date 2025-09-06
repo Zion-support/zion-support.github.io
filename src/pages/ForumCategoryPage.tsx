@@ -115,11 +115,10 @@ function CategoryContent({
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
-
   return (
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
-        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
+        <Link href="/community" className="text-sm text-muted-foreground hover: text-foreground">
           Forum
         </Link>
         <span className="text-muted-foreground">/</span>
@@ -192,7 +191,7 @@ function CategoryContent({
         )}
       </div>
     </div>
-  )
+  );
 }
 
 export default function ForumCategoryPage() {
@@ -238,7 +237,7 @@ export default function ForumCategoryPage() {
   }
 
   if (!IconComponent) {
-    return <NotFound />
+    return <NotFound />;
   }
 
   return (
@@ -257,5 +256,5 @@ export default function ForumCategoryPage() {
         user={user}
       />
     </>
-  )
+  );
 }

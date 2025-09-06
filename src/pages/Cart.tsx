@@ -79,8 +79,7 @@ export default function CartPage() {
     } finally {
       setLoading(false)
     }
-  }, 
-
+  };
   const startCheckout = () => {
     if (!isAuthenticated) {
       setGuestOpen(true)
@@ -146,7 +145,7 @@ export default function CartPage() {
           </motion.div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -340,5 +339,5 @@ export default function CartPage() {
         />
       </div>
     </div>
-  )
+  );
 }

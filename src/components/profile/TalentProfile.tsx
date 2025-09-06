@@ -136,5 +136,5 @@ export function TalentProfile({
         </div>
       </div>
     </div>
-  )
+  );
 }

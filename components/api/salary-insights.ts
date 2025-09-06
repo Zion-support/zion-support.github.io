@@ -70,7 +70,7 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     current = Math.max(baseMonthly * 0.7, current * (1 + drift));
     series.push({ label: months[date.getMonth()], value: Math.round(current) })
   }
-  return series
+  return series;
 }
 
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
@@ -96,7 +96,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const body: RequestBody = req.body;
@@ -126,6 +126,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
   const recommendedMonthly = Math.round(recommendedHourly * 160);
 
+  const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
+  const recommendedMonthly = Math.round(recommendedHourly * 160);
   // Confidence based on sample size and dispersion
   const sampleSize = rates.length;
   const dispersion = (max - min) / Math.max(1, baseMedian);

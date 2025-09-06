@@ -48,7 +48,6 @@ const getDefaultCategories = (t: any) => [
     iconName: "Lightbulb",
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
-
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
@@ -97,7 +96,6 @@ export function CategoriesSection({
         ...cat;
         title: cat.name,
         icon: getIcon(cat.iconName)})),
-
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -112,7 +110,7 @@ export function CategoriesSection({
           </p>
         </div>
       </section>
-    )
+    );
   }
 
   return (
@@ -173,5 +171,5 @@ export function CategoriesSection({
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -67,7 +67,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
@@ -86,7 +86,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   const contentVariants = {
     hidden: { opacity: 0, height: 0 },
     visible: { 
-      opacity: 1, 
+      opacity: 1,
       height: "auto",
       transition: {
         duration: 0.5,
@@ -108,7 +108,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       {/* Glow Effect */}
       <div 
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
-          isHovered ? 'opacity-100' : 'opacity-50'
+          isHovered ? 'opacity-100' : 'opacity-50';
         }`}
         style={{
           background: `linear-gradient(135deg, ${service.color})`;
@@ -268,7 +268,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded 
                   ? 'border-gray-600 text-gray-400' 
-                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
+                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

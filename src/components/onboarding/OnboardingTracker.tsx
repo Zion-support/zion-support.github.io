@@ -71,5 +71,5 @@ export function OnboardingTracker({
         ))}
       </div>
     </div>
-  )
+  );
 }

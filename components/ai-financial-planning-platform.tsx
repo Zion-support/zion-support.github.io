@@ -100,7 +100,7 @@ export default function AIFinancialPlanningPlatform() {
                 AI Financial Planning Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Intelligent financial planning and wealth management with AI. Get personalized plans, 
+                Intelligent financial planning and wealth management with AI. Get personalized plans,
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -273,5 +273,5 @@ export default function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
-  )
+  );
 }

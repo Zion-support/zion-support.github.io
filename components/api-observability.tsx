@@ -49,6 +49,6 @@ export default function ApiObservabilityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

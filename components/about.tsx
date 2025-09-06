@@ -74,7 +74,7 @@ export default function AboutPage() {
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="flex items-center gap-3 text-cyan-400">
 								<Phone className="w-5 h-5" />
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">{contactInfo.mobile}</a>
+								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover: text-white">{contactInfo.mobile}</a>
 							</div>
 							<div className="flex items-center gap-3 text-purple-400">
 								<Mail className="w-5 h-5" />
@@ -94,7 +94,7 @@ export default function AboutPage() {
 				</div>
 			</section>
 		</UltraFuturisticBackground>
-	)
+	);
 }
 
 import React from 'react';
@@ -121,7 +121,6 @@ export default function AboutPage() {
       description: 'Creating technology that makes a positive difference in the world',
       color: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500'}],
-
   const services = [
     {
       title: 'AI Development',
@@ -135,13 +134,11 @@ export default function AboutPage() {
       icon: '⚙️',
       color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}],
-
   const achievements = [
     { number: '600+', label: 'Services', color: 'text-cyan-400' },
     { number: '1000%', label: 'ROI', color: 'text-fuchsia-400' },
     { number: '24/7', label: 'Support', color: 'text-green-400' },
     { number: '99.9%', label: 'SLA', color: 'text-blue-400' }],
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -327,5 +324,5 @@ export default function AboutPage() {
         </section>
       </section>
     </>
-  )
+  );
 }

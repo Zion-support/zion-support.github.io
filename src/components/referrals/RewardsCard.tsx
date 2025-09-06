@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface RewardsCardProps {
   rewards: ReferralReward[],
@@ -66,7 +68,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
             <div 
               key={reward.id}
               className={`flex justify-between items-start ${
-                index !== rewards.length - 1 ? "border-b pb-3" : ""
+                index !== rewards.length - 1 ? "border-b pb-3" : "";
               }`}
             >
               <div>
@@ -96,5 +98,5 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

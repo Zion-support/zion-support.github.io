@@ -90,7 +90,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                 alt="3D model preview"
                 className="w-full h-full object-cover"
                 loading="lazy"
-              />
+              />;
             }>
               <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '100%', height: '100%' }} />
             </Suspense>
@@ -113,5 +113,5 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
       </DialogContent>
     )}
     </Dialog>
-  )
+  );
 }

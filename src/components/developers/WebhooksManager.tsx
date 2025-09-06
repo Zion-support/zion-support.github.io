@@ -88,7 +88,6 @@ export function WebhooksManager() {
     { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
     { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
     { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],
-
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev => 
@@ -147,7 +146,7 @@ export function WebhooksManager() {
                     id="webhook-url"
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
-                    placeholder="https://example.com/webhook"
+                    placeholder="https: //example.com/webhook"
                     className="bg-zinc-800 border-zinc-700"
                   />
                   <p className="text-xs text-zinc-500">
@@ -204,7 +203,7 @@ export function WebhooksManager() {
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
-                  selectedEvents.length === 0
+                  selectedEvents.length === 0;
                 }>
                   Create Webhook
                 </Button>
@@ -286,7 +285,7 @@ export function WebhooksManager() {
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
-                    <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH: mm')}</span>
                   )}
                 </div>
               </div>

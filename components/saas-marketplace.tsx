@@ -394,5 +394,5 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
     </>
-  )
+  );
 }

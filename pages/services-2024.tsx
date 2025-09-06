@@ -42,7 +42,6 @@ const Services2024Page: React.FC = () => {
     // Sort services
     filtered.sort((a, b) => {
       let aValue: any, bValue: any,
-      
       switch (sortBy) {
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));

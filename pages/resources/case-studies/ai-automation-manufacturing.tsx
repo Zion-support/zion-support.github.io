@@ -24,7 +24,7 @@ export default function ResourceCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8">
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
                 ← Back to Resources
               </Link>
             </nav>
@@ -56,7 +56,7 @@ export default function ResourceCaseStudyPage() {
                 <div className="bg-blue-500/10 rounded-lg p-6 border border-blue-500/20">
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Implementation Strategy</h3>
                   <p className="text-white/90">
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while 
                     sharing data for comprehensive insights.
                   </p>

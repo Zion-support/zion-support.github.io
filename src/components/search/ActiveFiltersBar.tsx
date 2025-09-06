@@ -25,7 +25,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   className = ''
 }) => {
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],
-
   // Add type filters
   filters.types.forEach(type => {
     const labels: Record<string, string> = {
@@ -100,12 +99,12 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   };
 
   if (activeFilters.length === 0) {
-    return null
+    return null;
   }
 
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      <span className="text-sm font-medium text-muted-foreground">Active filters: </span>
       
       {activeFilters.map(filter => (
         <Badge 

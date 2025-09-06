@@ -12,7 +12,6 @@ type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
-
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');

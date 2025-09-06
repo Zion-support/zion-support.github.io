@@ -136,5 +136,5 @@ export function JobMatchCard({
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -15,5 +15,5 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
         </button>
       )}
     </div>
-  )
+  );
 }

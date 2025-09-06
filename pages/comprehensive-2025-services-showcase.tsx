@@ -99,7 +99,7 @@ export default function Comprehensive2025ServicesShowcase() {
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
+              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions;
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -260,7 +260,7 @@ export default function Comprehensive2025ServicesShowcase() {
                 {/* Market Info */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>
-                    <span className="text-white/60">Market Size:</span>
+                    <span className="text-white/60">Market Size: </span>
                     <div className="text-white font-medium">{service.marketSize}</div>
                   </div>
                   <div>

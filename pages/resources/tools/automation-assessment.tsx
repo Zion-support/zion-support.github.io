@@ -109,7 +109,7 @@ export default function ToolPage() {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button 
                     onClick={resetAssessment}
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"

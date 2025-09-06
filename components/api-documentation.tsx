@@ -23,5 +23,5 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
-	)
+	);
 }

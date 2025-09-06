@@ -58,5 +58,5 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
         ))}
       </nav>
     </aside>
-  )
+  );
 }

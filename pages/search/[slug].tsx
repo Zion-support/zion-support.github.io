@@ -105,7 +105,6 @@ function offlineSearch(
     tags: p.tags,
     category: p.category,
     date: p.createdAt})),
-
   const talentResults = TALENT_PROFILES.filter(
     (t) =>
       match(t.full_name) ||
@@ -124,7 +123,6 @@ function offlineSearch(
     tags: t.skills,
     category: t.location,
     date: undefined})),
-
   const blogResults = BLOG_POSTS.filter(
     (b) =>
       match(b.title) ||
@@ -230,7 +228,6 @@ export default function SearchResultsPage({
     try {
       setLoading(true);
       logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
-
       const params = new URLSearchParams({
         query: searchTerm,
         page: String(page),
@@ -577,7 +574,7 @@ export default function SearchResultsPage({
             <div className="space-y-8">
               {Object.entries(groupedResults).map(([type, typeResults]) => (
                 <div key={type}>
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
+                  <h2 className="text-xl font-semibold text-gray-900 dark: text-white mb-4 capitalize">
                     {type}s ({typeResults.length})
                   </h2>
 
@@ -633,9 +630,7 @@ export const getServerSideProps: GetServerSideProps<
     // In production, replace with your actual API base URL
     const apiBaseUrl =
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
-
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
-
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
@@ -664,7 +659,6 @@ export const getServerSideProps: GetServerSideProps<
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error }),
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
-
     return {
       props: {
         initialResults: offline.results,

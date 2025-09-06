@@ -591,14 +591,14 @@ export default function SearchPage() {
                       <div className="flex items-center justify-between">
                         <a
                           href={service.link}
-                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
+                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
                         >
                           <span className="text-sm font-medium">Learn More</span>
                           <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                         <a
                           href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
+                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
                         >
                           Get Quote
                         </a>

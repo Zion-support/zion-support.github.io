@@ -53,7 +53,7 @@ export function EnhancedNewsletterForm() {
       logErrorToProduction('Newsletter subscription error:', { data: err }),
       toast.error("Unable to subscribe right now. Please try again later.")
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
 
@@ -76,7 +76,9 @@ export function EnhancedNewsletterForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">
+          <label htmlFor="enhanced-newsletter-email" className="sr-only" htmlFor="input-
+            Email address for newsletter subscription
+          ">
             Email address for newsletter subscription
           </label>
           <Input
@@ -111,5 +113,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  )
+  );
 }

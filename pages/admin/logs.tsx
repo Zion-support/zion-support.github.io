@@ -68,7 +68,6 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
     warn: 'bg-yellow-100 text-yellow-800',
     error: 'bg-red-100 text-red-800',
     critical: 'bg-red-200 text-red-900'},
-
   return (
     <Badge className={colors[level]}>
       {level.toUpperCase()}
@@ -376,7 +375,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logsDir = path.join(process.cwd(), 'logs');
     const logs: LogEntry[] = [],
-
     // Read all log files
     if (fs.existsSync(logsDir)) {
       const files = fs.readdirSync(logsDir);
@@ -427,4 +425,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
         totalCount: 0,
         lastUpdated: new Date().toISOString()}}
   }
-}, 
+},

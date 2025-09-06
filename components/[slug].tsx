@@ -135,7 +135,7 @@ export default function DynamicServicePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 
 // Static export support: generate root-level pages for service slugs
@@ -162,7 +162,7 @@ function collectAllServices(): Svc[] {
 }
 
 function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 function extractRootSlugFromLink(link?: string): string | null {
@@ -175,7 +175,7 @@ function extractRootSlugFromLink(link?: string): string | null {
     return null
   } catch {
     return null
-  }
+  };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

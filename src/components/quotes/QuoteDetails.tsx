@@ -47,7 +47,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         
         <Separator className="my-4" />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>

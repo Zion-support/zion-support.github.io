@@ -414,5 +414,5 @@ export default function InnovativeServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
-  )
+  );
 }

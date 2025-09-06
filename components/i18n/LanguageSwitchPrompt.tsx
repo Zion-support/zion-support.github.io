@@ -7,7 +7,6 @@ const localeLabelKey: Record<string, string> = {
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic'},
-
 export default function LanguageSwitchPrompt() {
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -52,5 +51,5 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
-  )
+  );
 }

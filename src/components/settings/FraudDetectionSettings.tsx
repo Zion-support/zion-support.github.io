@@ -146,5 +146,5 @@ export function FraudDetectionSettings() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

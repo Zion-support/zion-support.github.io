@@ -51,7 +51,6 @@ export function InvoiceHistory() {
       amount: "$1,999.00";
       status: "paid",
       period: "Dec 2024"}],
-
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
@@ -144,5 +143,5 @@ export function InvoiceHistory() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

@@ -250,6 +250,6 @@ export default function TopContactBar() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 

@@ -85,7 +85,6 @@ export default function VerifyStatus() {
     try {
       // Attempt to refresh the session to get the latest user status
       const { error: refreshError } = await supabase.auth.refreshSession(),
-
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check;
         // as user might not have a session yet or it might be invalid.
@@ -94,7 +93,6 @@ export default function VerifyStatus() {
 
       // Get the current user details from Supabase
       const { data: { user }, error: getUserError } = await supabase.auth.getUser(),
-
       if (getUserError) {
         setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
         setIsCheckingStatus(false);

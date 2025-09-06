@@ -216,5 +216,5 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </Button>
       </div>
     </div>
-  )
+  );
 }

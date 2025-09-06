@@ -19,7 +19,6 @@ export default function Button({
   disabled = false 
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900',
-  
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500',
     secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 focus:ring-white/50',
@@ -45,5 +44,5 @@ export default function Button({
     >
       {children}
     </button>
-  )
+  );
 }

@@ -93,7 +93,7 @@ export default function AIAssistant({
 
             <div className="p-4 space-y-3">
               <div>
-                <label className="block text-xs font-medium mb-1">Operator prompt</label>
+                <label className="block text-xs font-medium mb-1" htmlFor="input-Operator prompt">Operator prompt</label>
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
@@ -125,7 +125,7 @@ export default function AIAssistant({
               )}
 
               <div>
-                <label className="block text-xs font-medium mb-1">Output (markdown)</label>
+                <label className="block text-xs font-medium mb-1" htmlFor="input-Output (markdown)">Output (markdown)</label>
                 {isEditing ? (
                   <textarea
                     value={output}
@@ -142,5 +142,5 @@ export default function AIAssistant({
         </div>
       )}
     </>
-  )
+  );
 }

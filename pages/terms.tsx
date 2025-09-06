@@ -966,7 +966,7 @@ export default function Terms() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">2. Service Description and Availability</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        Our services include AI and machine learning solutions, quantum computing services, 
+                        Our services include AI and machine learning solutions, quantum computing services;
                         IT infrastructure consulting, micro SAAS applications, business automation, and 
                         technical support.
                       </p>
@@ -1006,7 +1006,7 @@ export default function Terms() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        Our services, including software, content, and technology, are protected by copyright, 
+                        Our services, including software, content, and technology, are protected by copyright;
                         trademark, and other intellectual property laws. You retain rights to your own content.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
@@ -1178,7 +1178,7 @@ export default function Terms() {
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
                 <div className="text-gray-300 space-y-4">
                   <p>
-                    By accessing, browsing, or using our services, you acknowledge that you have read, 
+                    By accessing, browsing, or using our services, you acknowledge that you have read;
                     understood, and agree to be bound by these Terms of Service and our Privacy Policy.
                   </p>
                   <p>
@@ -1262,7 +1262,7 @@ export default function Terms() {
                   
                   <h4 className="text-lg font-semibold text-white">Disclaimer of Warranties</h4>
                   <p>
-                    Our services are provided "as is" and "as available" without warranties of any kind, 
+                    Our services are provided "as is" and "as available" without warranties of any kind;
                     either express or implied, including but not limited to warranties of merchantability 
                     or fitness for a particular purpose.
                   </p>

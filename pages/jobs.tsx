@@ -17,7 +17,6 @@ const Jobs: NextPage = () => {
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
-
   return (
     <div>
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />

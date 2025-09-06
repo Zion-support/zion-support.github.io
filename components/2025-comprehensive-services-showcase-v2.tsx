@@ -13,6 +13,7 @@ import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
+import { Zap, Star } from 'lucide-react';
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -112,7 +113,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
+            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
           </motion.p>
           <motion.div 
@@ -345,5 +346,5 @@ export default function ComprehensiveServicesShowcase2025V2() {
         </div>
       </section>
     </div>
-  )
+  );
 }

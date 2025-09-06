@@ -336,7 +336,7 @@ export default function AIServices() {
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>

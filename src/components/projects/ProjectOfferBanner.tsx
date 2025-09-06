@@ -33,7 +33,7 @@ export function ProjectOfferBanner() {
   };
   
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-    return null
+    return null;
   }
   
   return (
@@ -75,5 +75,5 @@ export function ProjectOfferBanner() {
           </Card>
         ))}
     </div>
-  )
+  );
 }

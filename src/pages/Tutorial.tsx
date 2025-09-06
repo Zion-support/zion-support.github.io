@@ -19,7 +19,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Tutorial not found.
       </div>
-    )
+    );
   }
 
   return (
@@ -49,5 +49,5 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         </div>
       </div>
     </>
-  )
+  );
 }

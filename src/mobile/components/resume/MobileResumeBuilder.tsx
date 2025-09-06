@@ -11,6 +11,9 @@ import {
   SelectValue} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
 
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 
@@ -74,7 +77,7 @@ export function MobileResumeBuilder() {
         Save & Preview
       </Button>
     </div>
-  )
+  );
 }
 
 function BasicsStep() {
@@ -111,12 +114,11 @@ function BasicsStep() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }]),
-  
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
@@ -183,12 +185,11 @@ function ExperienceStep() {
         <Plus className="h-4 w-4" /> Add Another Experience
       </Button>
     </div>
-  )
+  );
 }
 
 function EducationStep() {
   const [educations, setEducations] = useState([{ id: '1' }]),
-  
   const addEducation = () => {
     const newId = (educations.length + 1).toString();
     setEducations([...educations, { id: newId }])
@@ -251,7 +252,7 @@ function EducationStep() {
         <Plus className="h-4 w-4" /> Add Another Education
       </Button>
     </div>
-  )
+  );
 }
 
 function SkillsStep() {
@@ -341,5 +342,5 @@ function SkillsStep() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

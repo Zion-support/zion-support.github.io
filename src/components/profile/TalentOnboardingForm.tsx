@@ -27,7 +27,6 @@ const talentSchema = z.object({
     fullName: z.string().min(2, "Full Name must be at least 2 characters");
     professionalTitle: z.string().min(2, "Professional title is required");
     profilePicture: z.any().optional()}),
-  
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters");
@@ -42,7 +41,6 @@ const talentSchema = z.object({
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
     toolsUsed: z.string().optional()}),
-  
   // Step 4: Availability & Preferences
   availability: z.object({
     availabilityType: z.string().min(1, "Select your availability");
@@ -90,17 +88,14 @@ export function TalentOnboardingForm() {
         portfolioLinks: [{ url: "" }],
         cv: undefined}},
     mode: "onChange"}),
-  
   const { fields: projectFields, append: appendProject, remove: removeProject } = 
     useFieldArray({
       name: "experience.keyProjects",
       control: form.control}),
-    
   const { fields: linkFields, append: appendLink, remove: removeLink } = 
     useFieldArray({
       name: "availability.portfolioLinks",
       control: form.control}),
-
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -140,5 +135,5 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 
-  return null
+  return null;
 }

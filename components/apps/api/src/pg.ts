@@ -6,7 +6,7 @@ export function getPool(): Pool {
   if (!pool) {
     pool = new Pool({ connectionString: process.env.DATABASE_URL })
   }
-  return pool
+  return pool;
 }
 
 export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {

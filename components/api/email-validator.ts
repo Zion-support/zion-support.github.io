@@ -27,7 +27,7 @@ export default async function handler(
     const { email } = req.body;
 
     if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' })
+      return res.status(400).json({ error: 'Email is required' });
     }
 
     // Basic email format validation

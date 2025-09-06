@@ -33,9 +33,7 @@ const educationSchema = z.object({
 type EducationFormValues = z.infer<typeof educationSchema>;
 
 export function EducationFormFields({ 
-  isEditing, 
-  onSubmit, 
-  onCancel 
+  isEditing, onSubmit, onCancel 
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -50,7 +48,6 @@ export function EducationFormFields({
       is_current: false,
       description: '',
       location: ''}}),
-
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
     setError(null);
@@ -220,5 +217,5 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
-  )
+  );
 }

@@ -234,7 +234,7 @@ const Navigation: React.FC = () => {
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
                                 >
                                   <Icon className="w-5 h-5 text-cyan-400" />
                                   <div>

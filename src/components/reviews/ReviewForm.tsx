@@ -98,14 +98,14 @@ export function ReviewForm({
                       onClick={() => field.onChange(star)}
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110"
+                      className="focus: outline-none transition-transform hover: scale-110"
                       aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
                     >
                       <Star
                         className={`h-10 w-10 ${
                           star <= (hoveredStar || field.value || 0)
                             ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
+                            : "text-gray-300";
                         } transition-colors`}
                       />
                     </button>
@@ -310,5 +310,5 @@ export function ReviewForm({
         </Button>
       </form>
     </Form>
-  )
+  );
 }

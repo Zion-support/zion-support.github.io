@@ -19,7 +19,6 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
-
   return (
     <>
       <Head><title>Admin — Web3</title></Head>

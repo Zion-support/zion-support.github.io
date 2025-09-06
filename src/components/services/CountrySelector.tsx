@@ -63,5 +63,5 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         </SelectContent>
       </Select>
     </div>
-  )
+  );
 }

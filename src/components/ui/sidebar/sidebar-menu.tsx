@@ -14,8 +14,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
   ({ icon, active, children, href, target, badge, className, ...props }, ref) => {
     if (href) {
-      return (
-        <a
+      return(<a
           href={href}
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
@@ -34,8 +33,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
       )
     }
 
-    return (
-      <button
+    return(<button
         ref={ref}
         type="button"
         className={cn(

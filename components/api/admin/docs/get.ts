@@ -6,7 +6,7 @@ const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' })
+    return res.status(403).json({ error: 'Forbidden' });
   }
 
   try {

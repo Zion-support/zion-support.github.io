@@ -382,5 +382,5 @@ export default function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

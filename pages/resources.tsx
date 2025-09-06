@@ -20,7 +20,7 @@ export default function ResourcesPage() {
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (
-            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
+            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
@@ -262,7 +262,7 @@ export default function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research,
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">

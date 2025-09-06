@@ -65,12 +65,11 @@ export function ConversationDetailView() {
           Select a conversation from the list to view and send messages.
         </p>
       </div>
-    )
+    );
   }
   
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = [],
-  
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
@@ -195,5 +194,5 @@ export function ConversationDetailView() {
         </form>
       </div>
     </div>
-  )
+  );
 }

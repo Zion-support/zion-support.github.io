@@ -50,7 +50,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         )}
       </div>
     </main>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -69,5 +69,5 @@ export async function getStaticProps() {
         updatedAt: null,
         items: []},
       revalidate: 300}
-  }
+  };
 }

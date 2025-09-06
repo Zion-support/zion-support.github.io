@@ -55,7 +55,7 @@ async function summarizeAndTag(input: {
       // fall through to heuristic
     }
   } catch (err) {
-    // ignore and fallback
+    // ignore and fallback;
   }
 
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -86,7 +86,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       cvFile} = req.body || {};
 
     if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {
-      return res.status(400).json({ error: 'Missing required fields' })
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
@@ -169,5 +169,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' })
-  }
+  };
 }

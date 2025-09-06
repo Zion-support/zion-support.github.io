@@ -122,7 +122,7 @@ const PrivacyPage: React.FC = () => {
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
-                    of your personal information. This Privacy Policy explains how we collect, use, disclose, 
+                    of your personal information. This Privacy Policy explains how we collect, use, disclose;
                     and safeguard your information when you use our services.
                   </p>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -259,12 +259,12 @@ const PrivacyPage: React.FC = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">Information Collection</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        We collect information you provide directly to us, such as when you create an account, 
+                        We collect information you provide directly to us, such as when you create an account;
                         request a quote, or contact our support team. We also automatically collect certain 
                         information about your device and how you interact with our services.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
-                        This may include your IP address, browser type, operating system, referring URLs, 
+                        This may include your IP address, browser type, operating system, referring URLs;
                         access times, and pages viewed. We use this information to improve our services 
                         and provide a better user experience.
                       </p>
@@ -304,7 +304,7 @@ const PrivacyPage: React.FC = () => {
                         your personal information against unauthorized access, alteration, disclosure, or destruction.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
-                        These measures include encryption, access controls, regular security assessments, 
+                        These measures include encryption, access controls, regular security assessments;
                         and employee training on data protection best practices.
                       </p>
                     </div>
@@ -312,7 +312,7 @@ const PrivacyPage: React.FC = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        We retain your personal information for as long as necessary to provide our services, 
+                        We retain your personal information for as long as necessary to provide our services;
                         comply with legal obligations, resolve disputes, and enforce our agreements.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
@@ -388,7 +388,7 @@ const PrivacyPage: React.FC = () => {
                   Questions About Privacy?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  If you have any questions about this Privacy Policy or our data practices, 
+                  If you have any questions about this Privacy Policy or our data practices,
                   please don't hesitate to contact us.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">

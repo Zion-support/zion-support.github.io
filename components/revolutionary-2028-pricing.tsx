@@ -356,7 +356,7 @@ export default function Revolutionary2028Pricing() {
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
-                Transparent pricing with no surprise fees. What you see is what you pay, 
+                Transparent pricing with no surprise fees. What you see is what you pay,
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -438,5 +438,5 @@ export default function Revolutionary2028Pricing() {
 
       <UltraFuturisticFooter2028 />
     </>
-  )
+  );
 }

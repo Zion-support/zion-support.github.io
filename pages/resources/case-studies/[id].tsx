@@ -17,7 +17,7 @@ export default function CaseStudyResourcePage() {
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, 
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         
         <h2>Background</h2>
@@ -27,11 +27,11 @@ export default function CaseStudyResourcePage() {
         
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands, 
+        and reducing operational costs. They required a solution that could adapt to changing production demands;
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
-        <p>We implemented a comprehensive AI automation system that included:</p>
+        <p>We implemented a comprehensive AI automation system that included: </p>
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>

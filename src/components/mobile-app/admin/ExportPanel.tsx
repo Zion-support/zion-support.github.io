@@ -18,7 +18,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     try {
       let content: string,
       let fileName: string,
-      
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2);
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
@@ -76,7 +75,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
             <p className="text-sm text-gray-400 mb-3">
               Export your app metadata for submission to app stores
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col sm: flex-row gap-2">
               <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">
                 <Download className="mr-2 h-4 w-4" />
                 JSON

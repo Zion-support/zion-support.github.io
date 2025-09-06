@@ -38,7 +38,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
         href={appStoreUrl}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover: bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
         target="_blank"
         rel="noopener noreferrer"

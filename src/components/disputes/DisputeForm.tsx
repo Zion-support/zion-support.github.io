@@ -23,6 +23,9 @@ import { disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
 import { FileText } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 const formSchema = z.object({
   reason_code: z.string()
@@ -30,7 +33,6 @@ const formSchema = z.object({
   description: z.string()
     .min(20, { message: "Description must be at least 20 characters" }),
   attachments: z.array(z.any()).optional()}),
-
 type DisputeFormProps = {
   projectId: string,
   milestoneId?: string;
@@ -39,10 +41,7 @@ type DisputeFormProps = {
 };
 
 export function DisputeForm({ 
-  projectId, 
-  milestoneId, 
-  onDisputeCreated, 
-  onCancel 
+  projectId, milestoneId, onDisputeCreated, onCancel 
 }: DisputeFormProps) {
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,7 +53,6 @@ export function DisputeForm({
       reason_code: "",
       description: "",
       attachments: []}}),
-
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files);
@@ -79,7 +77,6 @@ export function DisputeForm({
         milestone_id: milestoneId,
         reason_code: values.reason_code,
         description: values.description}),
-      
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
@@ -97,7 +94,7 @@ export function DisputeForm({
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
@@ -200,5 +197,5 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
-  )
+  );
 }

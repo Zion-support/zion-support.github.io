@@ -135,8 +135,7 @@ export default function Careers() {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Be part of a team that's revolutionizing technology through AI, quantum computing, 
-            and space technology. Help us build the future.
+            Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
 

@@ -10,7 +10,6 @@ const TalentProfile: NextPage = () => {
   const { slug } = router.query;
 
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
-
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   };

@@ -134,7 +134,7 @@ export function AIMilestoneGenerator({
                         onChange={() => toggleMilestoneSelection(index)}
                         className="mr-2 w-4 h-4 rounded text-primary"
                       />
-                      <AccordionTrigger className="hover:no-underline flex-1 text-left">
+                      <AccordionTrigger className="hover: no-underline flex-1 text-left">
                         <div className="flex items-center">
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
@@ -175,5 +175,5 @@ export function AIMilestoneGenerator({
         </Card>
       )}
     </div>
-  )
+  );
 }

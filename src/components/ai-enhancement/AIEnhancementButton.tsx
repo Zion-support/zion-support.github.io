@@ -105,7 +105,7 @@ export function AIEnhancementButton({
           Cancel
         </Button>
       </div>
-    )
+    );
   }
   
   return (
@@ -124,5 +124,5 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  )
+  );
 }

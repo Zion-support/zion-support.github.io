@@ -130,7 +130,7 @@ try {
     const originalPush = selfRef.webpackChunk_N_E.push;
     selfRef.webpackChunk_N_E.push = function(chunk: any) {
       try {
-        return originalPush.call(this, chunk)
+        return originalPush.call(this, chunk);
       } catch (error) {
         console.warn('Webpack chunk loading error prevented:', error);
         return 0
@@ -158,7 +158,7 @@ if (typeof window !== 'undefined') {
     
     // Call original error handler for other errors
     if (originalOnError) {
-      return originalOnError.call(this, message, source, lineno, colno, error)
+      return originalOnError.call(this, message, source, lineno, colno, error);
     }
     return false
   };
@@ -198,7 +198,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
     if (typeof (global as any)[helper] === 'undefined') {
       (global as any)[helper] = (tsHelpers as any)[helper]
     }
-  })
+  });
 }
 
 // Export a verification function for testing

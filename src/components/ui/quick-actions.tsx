@@ -5,6 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 
 interface QuickAction {
   id: string,
@@ -170,12 +173,10 @@ export function QuickActions() {
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
     maintenance: actions.filter(a => a.category === 'maintenance')},
-
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -189,7 +190,7 @@ export function QuickActions() {
           Quick Actions
         </Button>
       </div>
-    )
+    );
   }
 
   return (
@@ -253,5 +254,5 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 } 

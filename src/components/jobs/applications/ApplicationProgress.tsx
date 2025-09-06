@@ -51,7 +51,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
@@ -75,6 +75,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
     // This step is upcoming
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />
-  }
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+  };
 }

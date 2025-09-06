@@ -63,7 +63,6 @@ export function ContactPublisherModal({
     resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
     defaultValues: { subject: '', message: '' }}),
-
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true);
@@ -82,7 +81,7 @@ export function ContactPublisherModal({
       form.reset();
       onClose()
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
 
@@ -169,5 +168,5 @@ export function ContactPublisherModal({
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
+  );
 }

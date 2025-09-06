@@ -82,7 +82,7 @@ export default function InnovationsPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
-                Experience the future today with our revolutionary innovations in AI consciousness, 
+                Experience the future today with our revolutionary innovations in AI consciousness,
                 quantum computing, space technology, and enterprise solutions that are reshaping 
                 industries and unlocking unprecedented possibilities.
               </motion.p>
@@ -132,7 +132,7 @@ export default function InnovationsPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   icon: Brain,

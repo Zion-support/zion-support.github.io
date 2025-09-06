@@ -14,5 +14,5 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
         }
       `}</style>
     </div>
-  )
+  );
 }

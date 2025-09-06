@@ -100,12 +100,11 @@ export function SupportChatbot() {
       }
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err }),
-      
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
       const errorMsg: Msg = { 
-        id: Date.now().toString() + '-e', 
-        role: 'assistant', 
+        id: Date.now().toString() + '-e',
+        role: 'assistant',
         message: fallbackResponse
       };
       setMessages(prev => [...prev, errorMsg])
@@ -126,7 +125,7 @@ export function SupportChatbot() {
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-    )
+    );
   }
 
   return (
@@ -162,5 +161,5 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
-  )
+  );
 }

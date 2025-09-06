@@ -448,5 +448,5 @@ export default function AiToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

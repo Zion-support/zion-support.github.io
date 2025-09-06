@@ -137,5 +137,5 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

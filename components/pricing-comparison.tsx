@@ -376,5 +376,5 @@ export default function PricingComparisonPage() {
         </section>
       </div>
     </>
-  )
+  );
 }

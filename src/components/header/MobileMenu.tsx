@@ -23,7 +23,7 @@ const protectedRoutes = [
 
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
-  return protectedRoutes.some(route => href.startsWith(route))
+  return protectedRoutes.some(route => href.startsWith(route));
 }
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
@@ -72,11 +72,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       icon: User,
       matches: (path: string) => path.startsWith('/dashboard'),
       authRequired: true}],
-
   const navItems = baseItems.map((item) => ({
     ...item;
     name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
-
   // Filter items based on auth status
   const visibleItems = navItems.filter(
     (item) => !item.authRequired || (item.authRequired && isAuthenticated);

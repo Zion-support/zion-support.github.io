@@ -12,6 +12,7 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+import { Zap, Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -357,7 +358,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                     <div className="flex items-center justify-between">
                       <a
                         href={service.website}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
+                        className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors duration-300 text-sm font-medium"
                       >
                         Learn More
                         <ExternalLink className="ml-1 w-4 h-4" />
@@ -469,5 +470,5 @@ export default function CuttingEdgeServicesShowcase2025() {
         </section>
       </Layout>
     </>
-  )
+  );
 }

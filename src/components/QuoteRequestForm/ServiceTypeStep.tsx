@@ -182,7 +182,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
-                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : "";
                   }`}
                 >
                   <ListingScoreCard
@@ -205,5 +205,5 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  )
+  );
 }

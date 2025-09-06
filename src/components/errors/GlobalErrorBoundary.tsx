@@ -398,7 +398,7 @@ export const useErrorBoundary = () => {
     setError(error)
   }, [])
 
-  return { captureError }
+  return { captureError };
 }
 
 // Higher-order component for adding error boundaries
@@ -414,7 +414,7 @@ export const withErrorBoundary = <P extends object>(
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`
   
-  return WrappedComponent
+  return WrappedComponent;
 }
 
 export default GlobalErrorBoundary 

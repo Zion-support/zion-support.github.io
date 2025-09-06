@@ -129,5 +129,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         </Card>
       ))}
     </div>
-  )
+  );
 }

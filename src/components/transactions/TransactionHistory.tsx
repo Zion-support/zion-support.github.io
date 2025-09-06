@@ -75,7 +75,6 @@ export function TransactionHistory() {
       return data as Transaction[]
     };
     enabled: !!user}),
-
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
@@ -87,7 +86,6 @@ export function TransactionHistory() {
       toast({
         title: "Success",
         description: (data as any)?.message || "Transaction updated successfully"}),
-      
       refetch()
     } catch (error) {
       logErrorToProduction('Error managing transaction:', { data: error }),
@@ -174,7 +172,7 @@ export function TransactionHistory() {
           </Button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -341,7 +339,7 @@ export function TransactionHistory() {
                     )}
                   </CardFooter>
                 </Card>
-              )
+              );
             })}
           </div>
         ) : (
@@ -360,5 +358,5 @@ export function TransactionHistory() {
         )}
       </div>
     </div>
-  )
+  );
 }

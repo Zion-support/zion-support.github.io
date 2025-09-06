@@ -21,8 +21,7 @@ export const preloadCriticalResources = () => {
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
   });
 };

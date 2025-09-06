@@ -201,7 +201,7 @@ export default function ListingDetail() {
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",
@@ -296,5 +296,5 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

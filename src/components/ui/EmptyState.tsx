@@ -39,5 +39,5 @@ export function EmptyState({
         </Button>
       )}
     </div>
-  )
+  );
 } 

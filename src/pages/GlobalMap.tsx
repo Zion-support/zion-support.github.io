@@ -47,7 +47,6 @@ const INSTANCES: Instance[] = [
     votesPassed: 12,
     votesPending: 3,
     region: 'Europe'}],
-
 interface FeedItem {
   id: number,
   text: string
@@ -111,7 +110,7 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-              )
+              );
             })}
           </div>
           <div className="flex-1 space-y-6">
@@ -138,6 +137,6 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 

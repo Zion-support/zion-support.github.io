@@ -423,7 +423,7 @@ const Homepage2047: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25"

@@ -47,7 +47,7 @@ export default function PostJobPage() {
     } catch (err: any) {
       setError(err.message || 'Something went wrong')
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   }
 

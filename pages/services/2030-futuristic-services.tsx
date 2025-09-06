@@ -93,7 +93,7 @@ export default function FuturisticServices2030Page() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
+        <meta name="twitter: image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
         
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />

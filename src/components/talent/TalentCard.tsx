@@ -143,7 +143,7 @@ const TalentCardComponent = ({
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
                 Hire
               </Button>

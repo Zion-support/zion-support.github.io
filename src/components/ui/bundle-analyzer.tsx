@@ -93,7 +93,6 @@ export function BundleAnalyzer() {
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
         cacheHitRate: cacheHitRate * 100}),
-
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
     } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
@@ -142,7 +141,7 @@ export function BundleAnalyzer() {
           Bundle Analyzer
         </Button>
       </div>
-    )
+    );
   }
 
   return (
@@ -250,5 +249,5 @@ export function BundleAnalyzer() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 } 

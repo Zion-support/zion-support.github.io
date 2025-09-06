@@ -54,7 +54,7 @@ export function SafeImage({
       >
         <ImageIcon className="w-6 h-6" />
       </div>
-    )
+    );
   }
 
   return (
@@ -69,5 +69,5 @@ export function SafeImage({
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
     />
-  )
+  );
 } 

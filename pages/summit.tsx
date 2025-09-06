@@ -67,12 +67,10 @@ export default function SummitPage() {
       avatarUrl: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
       twitter: 'https://twitter.com'}],
-
   const partners: Partner[] = [
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
     { name: 'University Partner' }],
-
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -108,7 +106,7 @@ export default function SummitPage() {
     if (platform === 'twitch') {
       return (
         <iframe
-          className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+          className="w-full aspect-video rounded-lg border border-gray-200 dark: border-gray-800"
           src={`https://player.twitch.tv/?channel=${embedId}&parent=${typeof window !== 'undefined' ? window.location.hostname : 'localhost'}`}
           title="Twitch livestream"
           allowFullScreen

@@ -61,12 +61,12 @@ export function getEnv(key: string, defaultValue = ''): string {
 
 // Check if we're in development mode safely
 export function isDevelopment(): boolean {
-  return getEnv('NODE_ENV') === 'development'
+  return getEnv('NODE_ENV') === 'development';
 }
 
 // Check if we're in production mode safely
 export function isProduction(): boolean {
-  return getEnv('NODE_ENV') === 'production'
+  return getEnv('NODE_ENV') === 'production';
 }
 
 // Export the polyfilled process object

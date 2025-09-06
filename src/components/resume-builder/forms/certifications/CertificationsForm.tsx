@@ -41,7 +41,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       expiration_date: '',
       credential_id: '',
       credential_url: ''}}),
-
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
       setError(null);
@@ -54,7 +53,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         expiration_date: data.expiration_date || undefined,
         credential_id: data.credential_id,
         credential_url: data.credential_url},
-
       if (editingId) {
         success = await updateCertification(editingId, certData)
       } else {
@@ -134,7 +132,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       credential_url: ''})
                   } else {
                     onBack()
-                  }
+                  };
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
@@ -155,5 +153,5 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         </Form>
       </div>
     </div>
-  )
+  );
 }

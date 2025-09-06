@@ -59,7 +59,7 @@ export default function ComprehensivePricingPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    );
   }
 
   // Sort services
@@ -444,7 +444,7 @@ export default function ComprehensivePricingPage() {
             <motion.div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                : "space-y-6"
+                : "space-y-6";
               }
               variants={containerVariants}
               initial="hidden"
@@ -551,7 +551,7 @@ export default function ComprehensivePricingPage() {
                              <Button 
                                variant="futuristic" 
                                size="sm"
-                               onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                               onClick={() => window.open('https: //ziontechgroup.com/contact_blank')}
                              >
                                Get Pricing
                                <DollarSign className="ml-2 w-4 h-4" />

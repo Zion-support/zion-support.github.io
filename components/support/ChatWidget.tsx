@@ -74,7 +74,6 @@ export default function ChatWidget() {
     setInput('');
     setIsLoading(true);
     await logEvent('message/user', { content: text }),
-
     try {
       const res = await fetch('/api/support/chat', {
         method: 'POST',
@@ -140,7 +139,7 @@ export default function ChatWidget() {
                 <div
                   className={
                     m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }
                 >
@@ -208,5 +207,5 @@ export default function ChatWidget() {
         </div>
       )}
     </div>
-  )
+  );
 }

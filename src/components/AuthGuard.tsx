@@ -70,7 +70,7 @@ export function AuthGuard({
           <span>Loading...</span>
         </div>
       </div>
-    )
+    );
   }
 
   // Show unauthorized state if auth is required but user is not authenticated
@@ -85,7 +85,7 @@ export function AuthGuard({
           </p>
         </div>
       </div>
-    )
+    );
   }
 
   // Show role denied state if user doesn't have required role
@@ -122,8 +122,8 @@ export function withAuthGuard<P extends object>(
       <AuthGuard {...guardOptions}>
         <Component {...props} />
       </AuthGuard>
-    )
-  }
+    );
+  };
 }
 
 // Hook for programmatic auth checks

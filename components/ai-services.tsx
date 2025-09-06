@@ -180,5 +180,5 @@ export default function AIServices() {
         </section>
       </div>
     </>
-  )
+  );
 }

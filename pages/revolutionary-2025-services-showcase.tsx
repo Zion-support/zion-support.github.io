@@ -495,7 +495,7 @@ export default function Revolutionary2025ServicesShowcase() {
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
-                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover: text-white">
                                 {service.contactInfo.mobile}
                               </a>
                             </div>

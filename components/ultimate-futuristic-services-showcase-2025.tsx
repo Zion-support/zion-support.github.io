@@ -186,7 +186,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -382,10 +382,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
                   <div className="text-sm">
                     <div className="text-gray-300 mb-2">
-                      <span className="font-semibold text-white">ROI:</span> {service.roi}
+                      <span className="font-semibold text-white">ROI: </span> {service.roi}
                     </div>
                     <div className="text-gray-300">
-                      <span className="font-semibold text-white">Market Size:</span> {service.marketSize}
+                      <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
                     </div>
                   </div>
                 </div>
@@ -477,5 +477,5 @@ export default function UltimateFuturisticServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

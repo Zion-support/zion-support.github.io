@@ -471,6 +471,8 @@ const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 import json
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -617,7 +619,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   // Process the webhook event
   const event = JSON.parse(payload);
   logInfo('Received valid webhook:', { data: event }),
-  
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
 }),`}
@@ -655,8 +656,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
-                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
-              </p>
+                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload: </p>
               
               <CodeBlock
                 code={`{
@@ -736,8 +736,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
-                Error responses include a consistent JSON object with the following format:
-              </p>
+                Error responses include a consistent JSON object with the following format: </p>
               
               <CodeBlock
                 code={`{
@@ -857,7 +856,7 @@ function EndpointSection({
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
-                      : "text-zinc-400 hover:bg-zinc-800"
+                      : "text-zinc-400 hover:bg-zinc-800";
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >
@@ -883,6 +882,6 @@ function EndpointSection({
         </div>
       )}
     </div>
-  )
+  );
 }
 

@@ -150,5 +150,5 @@ export function SmartContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  )
+  );
 }

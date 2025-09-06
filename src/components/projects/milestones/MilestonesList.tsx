@@ -74,7 +74,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           } : undefined
         }
       />
-    )
+    );
   }
 
   return (

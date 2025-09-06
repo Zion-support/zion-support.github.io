@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const posts = readPosts();
     if (posts.some((p) => p.slug === body.slug)) {
-      return res.status(409).json({ error: 'Slug already exists' })
+      return res.status(409).json({ error: 'Slug already exists' });
     }
     const post: BlogPost = {
       id: uuidv4();
@@ -48,5 +48,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(201).json(post)
   }
 
-  return res.status(405).end()
+  return res.status(405).end();
 }

@@ -16,7 +16,6 @@ export default function MDMPage() {
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
-
   return (
     <Layout>
       <Head>

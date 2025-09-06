@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function AIContentGeneratorPage() {
   const features = [
     {
@@ -41,7 +43,6 @@ export default function AIContentGeneratorPage() {
       description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.';
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}],
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -390,5 +391,5 @@ export default function AIContentGeneratorPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -166,5 +166,5 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  )
+  );
 }

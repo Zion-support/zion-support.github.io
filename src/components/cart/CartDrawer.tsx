@@ -30,5 +30,5 @@ export function CartDrawer() {
       </Link>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
+  );
 }

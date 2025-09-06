@@ -4,7 +4,6 @@ import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
-
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
     const [k, v] = part.trim().split('=');

@@ -2,7 +2,6 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 type Props = { vendor: Vendor | null },
-
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -38,7 +37,7 @@ export default function VendorProfilePage({ vendor }: Props) {
           // eslint-disable-next-line @next/next/no-img-element
           <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
         ) : (
-          <div className="w-16 h-16 rounded bg-gray-100 dark:bg-gray-900" />
+          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
         )}
         <div>
           <div className="text-2xl font-semibold flex items-center gap-2">
@@ -104,7 +103,7 @@ export default function VendorProfilePage({ vendor }: Props) {
 
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  )
+  );
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {

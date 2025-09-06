@@ -81,7 +81,6 @@ export function PerformanceDashboard() {
     if (typeof window === 'undefined') return {};
     
     const vitals: Partial<PerformanceMetrics> = {},
-    
     // Collect navigation timing
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
@@ -112,7 +111,6 @@ export function PerformanceDashboard() {
         });
         
         observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
-        
         // Resolve after a short delay
         setTimeout(() => {
           observer.disconnect();
@@ -400,5 +398,5 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 } 

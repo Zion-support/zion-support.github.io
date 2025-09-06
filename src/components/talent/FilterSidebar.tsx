@@ -108,5 +108,5 @@ export function FilterSidebar({
         </Button>
       )}
     </>
-  )
+  );
 }

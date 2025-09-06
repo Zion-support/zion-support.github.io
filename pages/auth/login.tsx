@@ -32,14 +32,12 @@ const LoginPage = () => {
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
-
   // Using centralized Supabase client (imported at top)
 
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
     logInfo('LoginPage: Initial session check effect runs.'),
-
     const sessionTimeoutId = setTimeout(() => {
       if (mounted) {
         logWarn('LoginPage: Session check timeout after 5 seconds'),
@@ -68,7 +66,7 @@ const LoginPage = () => {
         }
       } catch (e) {
         if (mounted) {
-          logErrorToProduction('LoginPage: Exception during getSession:', { data:  e }),
+          logErrorToProduction('LoginPage: Exception during getSession:', { data: e }),
           clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
         }
       } finally {
@@ -84,7 +82,7 @@ const LoginPage = () => {
       const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
         if (!mounted) return;
         logInfo('LoginPage: onAuthStateChange event:', { 
-          event, 
+          event;
           userId: session?.user?.id 
         });
         setUser(session?.user ?? null);
@@ -115,7 +113,6 @@ const LoginPage = () => {
   // Effect for handling redirection AFTER session is checked and user state is updated
   useEffect(() => {
     logInfo(`LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`),
-    
     // Only redirect if the initial session check is complete, not currently submitting login form, and user exists
     if (sessionChecked && !isLoading && user) {
       // Get returnTo from query params, decode it if it exists
@@ -142,7 +139,6 @@ const LoginPage = () => {
       }
       
       logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
-      
       // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
@@ -231,7 +227,6 @@ const LoginPage = () => {
 
       if (signInError) {
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
-        
         // Check if error is related to email verification
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
@@ -244,7 +239,7 @@ const LoginPage = () => {
         if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
           setIsEmailUnverified(true);
           setError({ 
-            name: 'EmailNotVerifiedError', 
+            name: 'EmailNotVerifiedError',
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
           } as AuthError);
           setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
@@ -337,7 +332,6 @@ const LoginPage = () => {
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`),
-
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
@@ -352,7 +346,7 @@ const LoginPage = () => {
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
             <CardTitle>Sign In</CardTitle>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
@@ -88,6 +87,6 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
         {footer && <div className="pt-2">{footer}</div>}
       </div>
     </EnhancedCard>
-  )
+  );
 }
 >>>>>>> pr-11992

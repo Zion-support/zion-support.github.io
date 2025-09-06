@@ -115,5 +115,5 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-  )
+  );
 }

@@ -57,7 +57,7 @@ function GoogleBadge({ href }: { href: string }) {
         <div className="text-sm font-semibold">Google Play</div>
       </div>
     </a>
-  )
+  );
 }
 
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
@@ -98,7 +98,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
@@ -111,7 +111,6 @@ const testimonials = [
   { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
-
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
@@ -277,5 +276,5 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
-  )
+  );
 }

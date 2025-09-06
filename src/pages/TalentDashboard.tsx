@@ -189,7 +189,7 @@ function TalentDashboardContent() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export default function TalentDashboard() {
@@ -197,5 +197,5 @@ export default function TalentDashboard() {
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  )
+  );
 }

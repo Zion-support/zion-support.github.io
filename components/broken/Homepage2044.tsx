@@ -162,7 +162,6 @@ const Homepage2044: React.FC = () => {
     };
     
     window.addEventListener('mousemove', handleMouseMove, { passive: true }),
-    
     // Track scroll progress for performance monitoring
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -172,7 +171,6 @@ const Homepage2044: React.FC = () => {
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true }),
-    
     return () => {
       clearInterval(interval);
       window.removeEventListener('mousemove', handleMouseMove);
@@ -195,7 +193,7 @@ const Homepage2044: React.FC = () => {
           </motion.div>
         </div>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -285,8 +283,7 @@ const Homepage2044: React.FC = () => {
     )
   }
 
-  return (
-    <>
+  return(<>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
         <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
@@ -306,7 +303,7 @@ const Homepage2044: React.FC = () => {
         <meta property="twitter:url" content="https://ziontechgroup.com/" />
         <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
         <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
-        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="twitter: image" content="https://ziontechgroup.com/og-image.jpg" />
         
         {/* Structured Data */}
         <script
@@ -571,7 +568,7 @@ const Homepage2044: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <button 
-                  className="group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus:outline-none focus:ring-4 focus:ring-purple-500/50 text-xl"
+                  className="group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus: outline-none focus:ring-4 focus:ring-purple-500/50 text-xl"
                   onClick={handleGetStarted}
                 >
                   <span className="flex items-center">

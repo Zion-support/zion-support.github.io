@@ -102,5 +102,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }

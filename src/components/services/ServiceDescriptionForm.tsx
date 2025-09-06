@@ -32,15 +32,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       title: "",
       keyFeatures: "",
       targetAudience: ""}}),
-
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
     
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
         body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
+          title: data.title,
+          keyFeatures: data.keyFeatures,
           targetAudience: data.targetAudience 
         }
       });
@@ -165,5 +164,5 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>
       </CardContent>
     </Card>
-  )
+  );
 }

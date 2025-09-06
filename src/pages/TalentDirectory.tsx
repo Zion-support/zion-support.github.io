@@ -198,7 +198,7 @@ export default function TalentDirectory() {
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   if (error) {
@@ -206,7 +206,7 @@ export default function TalentDirectory() {
       <div key={pageKey} className="container mx-auto px-4 py-8">
         <ErrorBanner msg="Unable to load talent profiles." />
       </div>
-    )
+    );
   }
 
   return (
@@ -225,7 +225,7 @@ export default function TalentDirectory() {
           {isAdmin && (
             <Link
               href="/create-talent-profile"
-              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
+              className="bg-zion-purple text-white px-4 py-2 rounded hover: bg-zion-purple-dark"
             >
               Add Talent
             </Link>

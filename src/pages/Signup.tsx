@@ -85,7 +85,7 @@ export default function Signup() {
     validationSchema: SignupSchema,
     onSubmit: async (values, { setErrors }) => {
       logInfo('Form submission started with:', { 
-        name: values.name, 
+        name: values.name,
         email: values.email,
         hasPassword: !!values.password,
         isPartnerSignup 
@@ -112,14 +112,14 @@ export default function Signup() {
         };
         
         logInfo('Making API request to /api/auth/register with:', { 
-          ...requestData, 
+          ...requestData,
           password: '[REDACTED]' 
         });
         
         const res = await axios.post('/api/auth/register', requestData);
         
         logInfo('API response received:', { 
-          status: res.status, 
+          status: res.status,
           data: res.data 
         });
         
@@ -178,12 +178,10 @@ export default function Signup() {
         const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
         
         logInfo('Processed error message:', { data: errorMsg }),
-        
         if (status === 409) {
           // Handle duplicate email specifically
           setErrorMessage(errorMsg);
           setErrors({ email: errorMsg }),
-          
           // Show toast notification
           toast({
             title: 'Signup failed',
@@ -208,7 +206,6 @@ export default function Signup() {
           // Handle other errors (network, server, etc.)
           setErrorMessage(errorMsg);
           setErrors({ confirm: errorMsg }),
-          
           // Show toast notification for other errors
           toast({
             title: 'Signup failed',
@@ -317,7 +314,9 @@ export default function Signup() {
           )}
           
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">
+            <label htmlFor="name" className="block text-sm font-medium" htmlFor="input-
+              Full Name
+            ">
               Full Name
             </label>
             <Input
@@ -334,7 +333,9 @@ export default function Signup() {
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">
+            <label htmlFor="email" className="block text-sm font-medium" htmlFor="input-
+              Email address
+            ">
               Email address
             </label>
             <Input
@@ -352,7 +353,9 @@ export default function Signup() {
           </div>
           
           <div>
-            <label htmlFor="password" className="block text-sm font-medium">
+            <label htmlFor="password" className="block text-sm font-medium" htmlFor="input-
+              Password
+            ">
               Password
             </label>
           <Input
@@ -371,7 +374,9 @@ export default function Signup() {
         </div>
           
           <div>
-            <label htmlFor="confirm" className="block text-sm font-medium">
+            <label htmlFor="confirm" className="block text-sm font-medium" htmlFor="input-
+              Confirm Password
+            ">
               Confirm Password
             </label>
             <Input
@@ -414,7 +419,7 @@ export default function Signup() {
               type="submit" 
               disabled={loading} 
               data-testid="signup-submit"
-              className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
+              className={healthCheckError ? 'bg-yellow-600 hover: bg-yellow-700' : ''}
             >
               {loading ? (
                 <>
@@ -475,5 +480,5 @@ export default function Signup() {
         </div>
       </div>
     </AuthLayout>
-  )
+  );
 }

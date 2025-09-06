@@ -60,7 +60,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       is_current: false,
       description: '',
       location: ''}}),
-
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
       setError(null);
@@ -74,7 +73,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         is_current: data.is_current,
         description: data.description,
         location: data.location},
-
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData)
       } else {

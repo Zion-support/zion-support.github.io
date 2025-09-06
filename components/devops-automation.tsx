@@ -173,8 +173,7 @@ export default function DevOpsAutomationPage() {
               DevOps Automation
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, 
-              and intelligent security automation. Deploy faster, safer, and more reliably.
+              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, and intelligent security automation. Deploy faster, safer, and more reliably.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -436,5 +435,5 @@ export default function DevOpsAutomationPage() {
         </section>
       </div>
     </>
-  )
+  );
 }

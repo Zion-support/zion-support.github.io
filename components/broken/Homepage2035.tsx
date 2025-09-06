@@ -62,7 +62,7 @@ const Homepage2035: React.FC = () => {
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
-      opacity: 1, 
+      opacity: 1,
       scale: 1,
       transition: { duration: 1.5, ease: "easeOut" as const }
     }
@@ -272,7 +272,7 @@ const Homepage2035: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Brain className="w-12 h-12" />,

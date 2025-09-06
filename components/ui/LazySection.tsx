@@ -18,7 +18,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true }),
-
   const getInitialPosition = () => {
     switch (direction) {
       case 'up':

@@ -168,5 +168,5 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

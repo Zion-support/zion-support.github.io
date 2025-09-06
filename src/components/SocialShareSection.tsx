@@ -44,7 +44,7 @@ export function SocialShareSection() {
   const shareLinks = [
     {
       name: "Twitter",
-      icon: <Twitter className="h-5 w-5" aria-hidden="true" />, 
+      icon: <Twitter className="h-5 w-5" aria-hidden="true" />,
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
       onClick: shareToTwitter
     };
@@ -94,5 +94,5 @@ export function SocialShareSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

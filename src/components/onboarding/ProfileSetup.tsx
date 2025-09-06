@@ -34,7 +34,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       displayName: "",
       bio: "",
       headline: ""}}),
-
   const getTypeLabel = () => {
     switch (userType) {
       case "serviceProvider": return "Service Provider";
@@ -115,7 +114,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     placeholder={`Tell us about your ${
                       userType === "serviceProvider" ? "services and expertise" :
                       userType === "talent" ? "skills and experience" :
-                      "business and needs"
+                      "business and needs";
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
@@ -135,5 +134,5 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </form>
       </Form>
     </div>
-  )
+  );
 }

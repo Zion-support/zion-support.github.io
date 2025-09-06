@@ -63,7 +63,6 @@ export function EnterprisePricingTable() {
         { name: "API access", included: true },
         { name: "Custom integrations", included: true },
         { name: "Dedicated success manager", included: true }]}],
-
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
@@ -131,5 +130,5 @@ export function EnterprisePricingTable() {
         </div>
       </div>
     </section>
-  )
+  );
 }

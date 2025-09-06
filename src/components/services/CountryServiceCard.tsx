@@ -102,7 +102,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className={`w-full ${
             isPopular
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
           }`}
         >
           Select Service
@@ -123,5 +123,5 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

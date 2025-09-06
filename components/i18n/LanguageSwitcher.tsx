@@ -8,13 +8,11 @@ const localeToFlag: Record<string, string> = {
   pt: 'br',
   es: 'es',
   ar: 'sa'},
-
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic'},
-
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -58,5 +56,5 @@ export default function LanguageSwitcher() {
         </ul>
       )}
     </div>
-  )
+  );
 }

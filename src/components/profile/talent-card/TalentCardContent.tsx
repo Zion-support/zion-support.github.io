@@ -37,5 +37,5 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
-  )
+  );
 }

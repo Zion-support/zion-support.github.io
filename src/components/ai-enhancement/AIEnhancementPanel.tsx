@@ -69,7 +69,7 @@ export function AIEnhancementPanel({
       <CardContent className="space-y-4">
         {/* Input area */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Content to enhance</label>
+          <label className="text-sm font-medium" htmlFor="input-Content to enhance">Content to enhance</label>
           <Textarea
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
@@ -80,7 +80,7 @@ export function AIEnhancementPanel({
 
         {/* Context input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Context (optional)</label>
+          <label className="text-sm font-medium" htmlFor="input-Context (optional)">Context (optional)</label>
           <Textarea
             placeholder="Add any relevant context to guide the AI..."
             className="min-h-[60px]"
@@ -92,7 +92,7 @@ export function AIEnhancementPanel({
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
-            <label className="text-sm font-medium">Special instructions (optional)</label>
+            <label className="text-sm font-medium" htmlFor="input-Special instructions (optional)">Special instructions (optional)</label>
             <Input
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
@@ -124,7 +124,7 @@ export function AIEnhancementPanel({
         {generatedContent && (
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
-              <label className="text-sm font-medium">Generated content</label>
+              <label className="text-sm font-medium" htmlFor="input-Generated content">Generated content</label>
               <Button 
                 variant="ghost" 
                 size="sm" 
@@ -162,5 +162,5 @@ export function AIEnhancementPanel({
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }

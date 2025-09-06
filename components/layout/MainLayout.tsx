@@ -40,7 +40,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
         {/* Open Graph */}
-        <meta property="og:type" content={type} />
+        <meta property="og: type" content={type} />
         <meta property="og:title" content={title || 'Zion Tech Group'} />
         <meta property="og:description" content={description || 'Leading technology solutions provider'} />
         {image && <meta property="og:image" content={image} />}
@@ -59,7 +59,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <Footer />
       </div>
     </>
-  );
+  ),;
 };
 
 export default MainLayout;

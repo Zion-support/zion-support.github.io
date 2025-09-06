@@ -6,7 +6,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase();
 
   if (method === 'GET') {
-    return res.status(200).json({ tenants: getTenants() })
+    return res.status(200).json({ tenants: getTenants() });
   }
 
   const auth = authenticateRequest(req, false);
@@ -35,5 +35,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tenant: result })
   }
 
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }

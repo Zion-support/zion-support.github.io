@@ -56,7 +56,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
     // Initialize particles
     for (let i = 0, i < 100, i++) {
-      particles.push(createParticle())
+      particles.push(createParticle());
     }
 
     // Animation loop

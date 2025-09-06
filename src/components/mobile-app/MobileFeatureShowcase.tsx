@@ -1,6 +1,7 @@
 
 import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -47,7 +48,7 @@ export const MobileFeatureShowcase: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"
             >
               <div className="mb-4">
                 {feature.icon}

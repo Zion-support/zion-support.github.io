@@ -130,10 +130,10 @@ const useNetworkStatus = () => {
     return () => {
       window.removeEventListener('online', updateOnlineStatus)
       window.removeEventListener('offline', updateOnlineStatus)
-    }
+    };
   }, [])
 
-  return isOnline
+  return isOnline;
 }
 
 // Advanced Dynamic Component Loader
@@ -252,7 +252,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   if (loadingState.error) {
     if (errorFallback) {
       return React.createElement(errorFallback, { 
-        error: loadingState.error, 
+        error: loadingState.error,
         retry 
       })
     }
@@ -295,7 +295,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     )
   }
 
-  return null
+  return null;
 }
 
 // HOC for creating dynamic components easily
@@ -309,7 +309,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
       {...(options || {})}
       {...(props as any)}
     />
-  )
+  );
 }
 
 // Predefined dynamic loaders for common heavy components

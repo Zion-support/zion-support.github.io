@@ -66,7 +66,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       <div className="rounded border p-3">
         <div className="flex items-center gap-2 text-sm">
           <input id="isAdminToggle" type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <label htmlFor="isAdminToggle">Admin</label>
+          <label htmlFor="isAdminToggle" htmlFor="input-Admin">Admin</label>
         </div>
         <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
       </div>
@@ -109,5 +109,5 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
-  )
+  );
 }

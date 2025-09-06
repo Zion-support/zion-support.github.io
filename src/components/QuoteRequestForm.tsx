@@ -21,7 +21,6 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
-
 export function QuoteRequestForm() {
   const router = useRouter();
   const { toast } = useToast();
@@ -111,14 +110,12 @@ export function QuoteRequestForm() {
     try {
       // In a real application, you would send the data to your backend
       logDebug("Submitting form data:", { data: formData }),
-      
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       toast({
         title: "Quote Request Submitted",
         description: "We've received your request and will get back to you soon."}),
-      
       // Redirect to confirmation page or homepage
       router.push("/")
     } catch (error) {
@@ -127,7 +124,7 @@ export function QuoteRequestForm() {
         description: "There was an error submitting your request. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -249,5 +246,5 @@ export function QuoteRequestForm() {
         loading={autoFillLoading}
       />
     </div>
-  )
+  );
 }

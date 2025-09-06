@@ -1,6 +1,7 @@
 import React from 'react';
 import type { ReviewsSummary } from '../../types/reviews';
 import StarRating from './StarRating';
+import { Star } from 'lucide-react';
 type Props = {
   summary: ReviewsSummary
 };

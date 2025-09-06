@@ -71,7 +71,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ];
 
   const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
-  
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -117,7 +116,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >
-          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
+          <ul className="navbar-nav flex flex-col md: flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
             {links.map((link) => (
               <li key={link.name} className="nav-item">
                 <Link 
@@ -129,7 +128,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     link.matches(router.pathname)
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   {link.name}
@@ -149,7 +148,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     router.pathname === "/wishlist"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   <Heart className="w-4 h-4" />
@@ -174,7 +173,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     router.pathname === "/wallet"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   <Wallet className="w-4 h-4" />
@@ -194,7 +193,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
                     router.pathname === "/messages"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   <MessageSquare className="w-4 h-4" />

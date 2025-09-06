@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface GeneratedDescriptionDisplayProps {
   description: string,
@@ -12,7 +13,7 @@ interface GeneratedDescriptionDisplayProps {
 }
 
 export function GeneratedDescriptionDisplay({ 
-  description, 
+  description,
   onSave 
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
@@ -77,5 +78,5 @@ export function GeneratedDescriptionDisplay({
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }

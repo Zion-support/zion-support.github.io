@@ -331,7 +331,3 @@ const Home: React.FC = () => {
         </section>
       </main>
     </>
-  );
-};
-
-export default Home;

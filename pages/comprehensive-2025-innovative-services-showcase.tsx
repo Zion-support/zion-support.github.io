@@ -122,7 +122,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               2025 Comprehensive Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
+              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions;
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             

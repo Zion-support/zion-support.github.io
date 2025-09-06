@@ -3,7 +3,6 @@ import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-
 export default function EditJobPage() {
   const router = useRouter();
   const { id } = router.query;

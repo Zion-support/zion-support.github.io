@@ -46,7 +46,7 @@ export function CodeBlock({
         <code className="language-javascript">{code}</code>
       </pre>
       <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
+        className="absolute top-2 right-2 p-2 rounded-md hover: bg-zinc-800 transition-colors"
         onClick={handleCopyClick}
         aria-label="Copy code"
       >

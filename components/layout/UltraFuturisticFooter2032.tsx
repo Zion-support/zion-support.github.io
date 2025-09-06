@@ -293,8 +293,7 @@ export default function UltraFuturisticFooter2032() {
                 Stay Ahead with Future Technology
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, 
-                and autonomous systems development. Join our community of future technology pioneers.
+                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input
@@ -346,5 +345,5 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
-  )
+  );
 }

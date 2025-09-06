@@ -58,7 +58,7 @@ export function ActiveProjectsCard() {
           </Button>
         </CardContent>
       </Card>
-    )
+    );
   }
   
   return (
@@ -100,5 +100,5 @@ export function ActiveProjectsCard() {
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }

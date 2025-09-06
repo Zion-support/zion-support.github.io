@@ -50,7 +50,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
-    ) : null
+    ) : null;
   }
   
   // Detect iOS or Android

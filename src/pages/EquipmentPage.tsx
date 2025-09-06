@@ -188,7 +188,7 @@ const EquipmentFilterControls = ({
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency();
   return (
-    <Card className="h-full hover:shadow-lg transition-shadow">
+    <Card className="h-full hover: shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex-1 min-w-0">
@@ -257,7 +257,7 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
 
 // Main component
@@ -519,7 +519,7 @@ function EquipmentPageContent() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 
 // Main export with error boundary
@@ -528,5 +528,5 @@ export default function EquipmentPage() {
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
-  )
+  );
 }

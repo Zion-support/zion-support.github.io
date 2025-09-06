@@ -114,7 +114,7 @@ export default function ForumPostPage() {
           <Link href="/community">Back to Community</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   const handleUpvote = () => {
@@ -175,7 +175,6 @@ export default function ForumPostPage() {
     
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 }),
-    
     toast({
       title: "Reply posted",
       description: "Your reply has been added to the discussion"})
@@ -200,7 +199,6 @@ export default function ForumPostPage() {
     
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),
-    
     toast({
       title: "Answer marked",
       description: "The reply has been marked as the accepted answer"})
@@ -243,7 +241,6 @@ export default function ForumPostPage() {
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-  
   return (
     <>
       <SEO
@@ -428,5 +425,5 @@ export default function ForumPostPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -106,5 +106,5 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -124,7 +124,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions, 
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions;
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
 
@@ -251,7 +251,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                         {/* CTA Button */}
                         <Link
                           href={`/services/${service.id}`}
-                          className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                          className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover: from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-5 h-5" />

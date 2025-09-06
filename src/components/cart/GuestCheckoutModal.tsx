@@ -38,7 +38,7 @@ export default function GuestCheckoutModal({
     try {
       onSubmit({ email, address })
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
 
@@ -126,5 +126,5 @@ export default function GuestCheckoutModal({
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

@@ -61,11 +61,11 @@ export default function TalentProfilePage() {
   }, [error]);
 
   if (isLoading) {
-    return <ProfileLoadingState />
+    return <ProfileLoadingState />;
   }
 
   if (error || !profile) {
-    return <ProfileErrorState error={error} />
+    return <ProfileErrorState error={error} />;
   }
 
   const handleRequestHire = () => {
@@ -146,5 +146,5 @@ export default function TalentProfilePage() {
       />
     </div>
     </>
-  )
+  );
 }

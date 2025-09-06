@@ -10,7 +10,6 @@ const BADGES: Badge[] = [
   { id: "rising", label: "Rising Star", threshold: 200 },
   { id: "pro", label: "Pro", threshold: 500 },
   { id: "elite", label: "Elite", threshold: 1000 }],
-
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,
   for (const b of BADGES) {
@@ -40,5 +39,5 @@ export default function Badges({ balance }: { balance: number }) {
         <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
       )}
     </div>
-  )
+  );
 }

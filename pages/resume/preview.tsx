@@ -94,8 +94,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     portfolio: [
       { title: 'Agentic Resume Builder', description: 'Automated resume generation using LLMs and vector search.', link: 'https://example.com' },
       { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},
-
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
-
   return { props: { initialData, versions } }
 };

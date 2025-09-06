@@ -19,7 +19,7 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
     const response = await fetch(url);
     if (!response.ok) {
       logErrorToProduction('Categories API error:', { data: response.statusText }),
-      return CATEGORIES as CategoryType[]
+      return CATEGORIES as CategoryType[];
     }
     const data = await response.json();
     return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
@@ -87,7 +87,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
                     description={`Explore ${category.name.toLowerCase()} in our marketplace`}
                     icon={<Folder className="w-6 h-6" />}
                   />
-                )
+                );
               })}
             </div>
           )}
@@ -95,5 +95,5 @@ export default function Categories({ categories: initialCategories = [] }: Categ
       </div>
     </div>
     </>
-  )
+  );
 }

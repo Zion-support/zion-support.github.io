@@ -405,7 +405,7 @@ const Homepage2038: React.FC = () => {
                 Let's build the future together.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col sm: flex-row gap-6 justify-center">
                 <Link href="/contact">
                   <motion.button
                     className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"

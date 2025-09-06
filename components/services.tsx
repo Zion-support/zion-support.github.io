@@ -363,8 +363,7 @@ export default function ServicesPage() {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
-                and micro SAAS services designed to transform your business and drive innovation.
+                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
               <motion.div
@@ -471,7 +470,7 @@ export default function ServicesPage() {
                         className={`p-3 rounded-xl transition-all duration-300 ${
                           viewMode === 'list' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
-                            : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                            : 'text-gray-400 hover:text-white hover:bg-gray-700/50';
                         }`}
                       >
                         <List className="w-5 h-5" />
@@ -825,5 +824,5 @@ export default function ServicesPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  )
+  );
 }

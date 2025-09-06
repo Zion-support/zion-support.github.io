@@ -2,8 +2,10 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { StarIcon } from 'lucide-react'
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import useState
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 
 interface ListingScoreCardProps {
   title: string,
@@ -83,9 +85,7 @@ export function ListingScoreCard({
               {[1, 2, 3, 4, 5].map((star) => (
                 <StarIcon 
                   key={star}
-                  className={cn(
-                    "h-4 w-4", 
-                    star <= Math.round(rating) 
+                  className={cn("h-4 w-4", star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
                   )}
@@ -134,5 +134,5 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  )
+  );
 }

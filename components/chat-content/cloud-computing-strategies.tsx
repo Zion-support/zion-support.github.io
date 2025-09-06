@@ -5,5 +5,5 @@ export default function CloudComputingStrategiesPage() {
       <h1 className="text-2xl font-semibold">Cloud Computing Strategies</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
     </div>
-  )
+  );
 }

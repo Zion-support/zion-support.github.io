@@ -28,7 +28,7 @@ export default async function handler(
     const { password } = req.body;
 
     if (!password || typeof password !== 'string') {
-      return res.status(400).json({ error: 'Password is required' })
+      return res.status(400).json({ error: 'Password is required' });
     }
 
     // Password analysis

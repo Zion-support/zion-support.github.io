@@ -137,5 +137,5 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         />
       </div>
     </>
-  )
+  );
 }

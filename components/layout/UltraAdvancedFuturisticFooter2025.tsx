@@ -228,8 +228,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, 
-                and autonomous systems. Transforming businesses through next-generation technology.
+                Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.
               </p>
               
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">

@@ -140,7 +140,7 @@ export default function InnovativeServicesShowcase2036() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Experience the future of technology with our cutting-edge micro SAAS services, 
+            Experience the future of technology with our cutting-edge micro SAAS services,
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
           <motion.div 
@@ -203,7 +203,7 @@ export default function InnovativeServicesShowcase2036() {
               Revolutionary Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive portfolio of innovative micro SAAS services, 
+              Discover our comprehensive portfolio of innovative micro SAAS services,
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>

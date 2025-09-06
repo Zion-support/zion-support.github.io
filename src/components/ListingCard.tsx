@@ -80,5 +80,5 @@ export function ListingCard({
         )}
       </div>
     </Link>
-  )
+  );
 }

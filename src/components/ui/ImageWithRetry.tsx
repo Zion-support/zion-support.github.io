@@ -56,7 +56,7 @@ export function ImageWithRetry({
         </button>
       )}
     </div>
-  )
+  );
 }
 
 export default ImageWithRetry;

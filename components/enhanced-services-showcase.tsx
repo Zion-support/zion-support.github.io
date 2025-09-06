@@ -361,7 +361,7 @@ export default function EnhancedServicesShowcase() {
                   className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >
                   {viewMode === 'grid' ? (
-                    <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full">
+                    <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover: border-cyan-500/40 transition-colors h-full">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <span className="text-2xl">{service.icon}</span>
@@ -560,17 +560,16 @@ export default function EnhancedServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticMatrixBackground>
-  )
+  );
 }
 
 // Button component (if not imported)
 const Button = ({ 
-  href, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
-  children, 
-  onClick 
+  href,
+  variant = 'primary';
+  size = 'md';
+  className = '';
+  children, onClick 
 }: {
   href?: string;
   variant?: 'primary' | 'secondary';
@@ -580,7 +579,6 @@ const Button = ({
   onClick?: () => void
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
-  
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'

@@ -33,7 +33,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     return { riskLevel: level, reasonSummary: content.trim() }
   } catch (e: any) {
     return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` }
-  }
+  };
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -87,7 +87,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json(result)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
-    }
+    };
   }
 
   if (req.method === 'POST') {
@@ -106,7 +106,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json(breakdown)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
-    }
+    };
   }
 
   res.setHeader('AllowGET, POST');

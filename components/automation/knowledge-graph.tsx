@@ -6,7 +6,6 @@ interface Edge { source: string, target: string, weight: number, terms: string[]
 interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
@@ -50,5 +49,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+  );
 }

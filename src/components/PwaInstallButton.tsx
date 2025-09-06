@@ -31,14 +31,14 @@ export const PwaInstallButton: React.FC = () => {
   }, []);
 
   if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {
-    return null
+    return null;
   }
 
   const onClick = async () => {
     if (!promptEvent) {
       toast('Installation not available', {
         description: 'Your browser does not support app installation.'}),
-      return
+      return;
     }
     try {
       setIsInstalling(true);

@@ -6,6 +6,9 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
@@ -35,7 +38,7 @@ export function ZapierIntegration() {
             
             <div className="space-y-4">
               <div className="space-y-2">
-                <label className="text-sm font-medium">Your Zion API Key</label>
+                <label className="text-sm font-medium" htmlFor="input-Your Zion API Key">Your Zion API Key</label>
                 <div className="flex gap-2">
                   <Input 
                     value={apiKey} 
@@ -127,5 +130,5 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

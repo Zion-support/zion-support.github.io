@@ -86,5 +86,5 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         </div>
       ) : null}
     </div>
-  )
+  );
 }

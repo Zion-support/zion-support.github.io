@@ -128,7 +128,7 @@ export function CategoryListingPage({
 
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input
@@ -232,5 +232,5 @@ export function CategoryListingPage({
         </div>
       </div>
     </>
-  )
+  );
 }

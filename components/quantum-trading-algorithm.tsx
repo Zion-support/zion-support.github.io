@@ -281,5 +281,5 @@ export default function QuantumTradingAlgorithm() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

@@ -372,5 +372,5 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-  )
+  );
 }

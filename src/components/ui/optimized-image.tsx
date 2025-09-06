@@ -146,8 +146,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       });
 
       observer.observe({ entryTypes: ['resource'] }),
-
-      return () => observer.disconnect()
+      return () => observer.disconnect();
     }
     
     return () => {}, // Return empty cleanup function for the else case
@@ -217,7 +216,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           className={placeholderClassName}
           style={{ backgroundColor: placeholderColor }}
         />
-      )
+      );
     }
 
     return (
@@ -232,7 +231,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined},
-
   return (
     <div 
       ref={imgRef}
@@ -341,7 +339,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       <div 
         className={`grid gap-4`}
         style={{ 
-          gridTemplateColumns: `repeat(${columns}, 1fr)` 
+          gridTemplateColumns: `repeat(${columns}, 1fr)` ;
         }}
       >
         {images.map((image, index) => (
@@ -409,7 +407,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
           alt={alt}
           aspectRatio="1/1"
           objectFit="cover"
-          fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
+          fallbackSrc={`https: //ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder="color"
           placeholderColor="#f3f4f6"
           priority={true}
@@ -421,5 +419,5 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
         </div>
       )}
     </div>
-  )
-}, 
+  );
+},

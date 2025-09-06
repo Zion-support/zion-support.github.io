@@ -120,7 +120,7 @@ const ProductListingCardComponent = ({
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
@@ -274,7 +274,7 @@ const ProductListingCardComponent = ({
                 size="sm"
                 variant="outline" 
                 onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
+                className="border-primary text-primary hover: bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
               </Button>

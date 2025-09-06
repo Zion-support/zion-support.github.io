@@ -136,7 +136,7 @@ export default function CybersecurityServices() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence, 
+              Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence,
               we provide comprehensive protection that adapts to evolving threats.
             </p>
             

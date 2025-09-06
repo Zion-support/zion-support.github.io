@@ -48,5 +48,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       </button>
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
-  )
+  );
 }

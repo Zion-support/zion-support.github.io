@@ -32,5 +32,5 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
+  );
 }

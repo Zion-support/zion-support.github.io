@@ -85,5 +85,5 @@ export function TestimonialCarousel() {
         </div>
       </div>
     </section>
-  )
+  );
 }

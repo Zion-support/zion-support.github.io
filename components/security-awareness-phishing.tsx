@@ -49,6 +49,6 @@ export default function SecurityAwarenessPhishingPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

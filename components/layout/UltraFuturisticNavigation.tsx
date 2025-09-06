@@ -268,5 +268,5 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 }

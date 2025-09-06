@@ -163,8 +163,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     )
   }
 
-  return (
-    <div
+  return(<div
       className={cn(
         baseClasses;
         variantClasses[variant];
@@ -294,7 +293,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
             </details>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-2 justify-center">
+          <div className="flex flex-col sm: flex-row gap-2 justify-center">
             {canRetry && (
               <Button onClick={onRetry} variant="default">
                 <RefreshCw className="h-4 w-4 mr-2" />
@@ -423,7 +422,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <LoadingSpinner size="sm" />
         <span className="ml-1">Loading...</span>
       </Badge>
-    )
+    );
   }
 
   return (
@@ -438,5 +437,5 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <span>{itemCount} items loaded</span>
       )}
     </div>
-  )
-}, 
+  );
+};

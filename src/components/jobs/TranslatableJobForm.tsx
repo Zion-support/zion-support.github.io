@@ -30,14 +30,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     fr: "",
     pt: "",
     ar: ""}),
-  
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
     ar: ""}),
-  
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
@@ -184,7 +182,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       <div className="space-y-4">
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="title" className="text-lg font-medium">
+            <label htmlFor="title" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.job_title')}
+            ">
               {t('jobs.job_title')}
             </label>
             <Button
@@ -231,7 +231,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="description" className="text-lg font-medium">
+            <label htmlFor="description" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.job_description')}
+            ">
               {t('jobs.job_description')}
             </label>
             <Button
@@ -276,7 +278,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="requirements" className="text-lg font-medium">
+            <label htmlFor="requirements" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.skills_required')}
+            ">
               {t('jobs.skills_required')}
             </label>
             <Button
@@ -321,7 +325,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label htmlFor="budget" className="text-lg font-medium">
+            <label htmlFor="budget" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.budget')}
+            ">
               {t('jobs.budget')}
             </label>
             <Input
@@ -333,7 +339,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
             />
           </div>
           <div className="space-y-1">
-            <label htmlFor="deadline" className="text-lg font-medium">
+            <label htmlFor="deadline" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.deadline')}
+            ">
               {t('jobs.deadline')}
             </label>
             <Input
@@ -364,5 +372,5 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </Button>
       </div>
     </form>
-  )
+  );
 }

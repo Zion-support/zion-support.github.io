@@ -5,7 +5,6 @@ type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
@@ -51,5 +50,5 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  )
+  );
 }

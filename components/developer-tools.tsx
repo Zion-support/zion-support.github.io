@@ -466,5 +466,5 @@ export default function DeveloperToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

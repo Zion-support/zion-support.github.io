@@ -49,6 +49,6 @@ export default function PerformanceOptimizationSREPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

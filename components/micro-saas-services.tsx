@@ -228,8 +228,7 @@ export default function MicroSaasServicesPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover our comprehensive suite of micro SaaS services designed for modern businesses. 
-            From AI-powered content generation to enterprise-grade performance monitoring, 
-            we deliver professional solutions with competitive pricing and exceptional value.
+            From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.
           </p>
         </div>
       </section>
@@ -478,5 +477,5 @@ export default function MicroSaasServicesPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -59,7 +59,7 @@ export function ValidatedFormField({
     }
 
     if (debounceTimer) {
-      clearTimeout(debounceTimer)
+      clearTimeout(debounceTimer);
     }
 
     setValidationState('validating');
@@ -96,7 +96,7 @@ export function ValidatedFormField({
     }
 
     if (validation.custom) {
-      return validation.custom(value)
+      return validation.custom(value);
     }
 
     return null
@@ -180,8 +180,10 @@ export function ValidatedFormField({
             />
             <label
               htmlFor={name}
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
+              className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
+             htmlFor="input-
+              {label}
+            ">
               {label}
             </label>
             {getValidationIcon()}
@@ -259,7 +261,7 @@ export function ValidatedFormField({
           </FormItem>
         )}
       />
-    )
+    );
   }
 
   return (
@@ -291,7 +293,7 @@ export function ValidatedFormField({
         </FormItem>
       )}
     />
-  )
+  );
 }
 
 // Validation helpers for common patterns
@@ -300,12 +302,11 @@ export const validationPatterns = {
   phone: /^[\+]?[1-9][\d]{0,15}$/;
   url: /^https?:\/\/.+/,
   strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/},
-
 // Pre-configured validation rules
 export const commonValidations = {
   required: { required: true },
   email: { 
-    required: true, 
+    required: true,
     pattern: validationPatterns.email,
     custom: (value: string) => {
       if (value && !validationPatterns.email.test(value)) {
@@ -330,6 +331,6 @@ export const commonValidations = {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number'
       }
-      return null
-    }
-  }}, 
+      return null;
+    };
+  }},

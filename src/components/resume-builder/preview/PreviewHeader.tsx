@@ -80,5 +80,5 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         </Button>
       </div>
     </div>
-  )
+  );
 }

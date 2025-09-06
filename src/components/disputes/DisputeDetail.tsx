@@ -126,7 +126,7 @@ export function DisputeDetail() {
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
         <p>Loading dispute details...</p>
       </div>
-    )
+    );
   }
 
   if (!dispute) {
@@ -137,7 +137,7 @@ export function DisputeDetail() {
           Back to Disputes
         </Button>
       </div>
-    )
+    );
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -251,7 +251,7 @@ export function DisputeDetail() {
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
-                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h: mm a")}</span>
                         </li>
                       )}
                     </ul>
@@ -306,8 +306,7 @@ export function DisputeDetail() {
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
-                                    : 'bg-muted'
-                                } p-4 rounded-lg`}
+                                    : 'bg-muted', } p-4 rounded-lg`}
                               >
                                 <div className="flex items-center gap-2 mb-2">
                                   <Avatar className="h-6 w-6">
@@ -326,7 +325,7 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          )
+                          );
                         })
                     )}
                   </div>
@@ -413,7 +412,7 @@ export function DisputeDetail() {
                           
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>
+                              <label className="text-sm font-medium mb-1 block" htmlFor="input-Resolution Type">Resolution Type</label>
                               <select
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
