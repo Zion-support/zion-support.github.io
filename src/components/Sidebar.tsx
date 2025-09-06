@@ -12,6 +12,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
+<<<<<<< HEAD
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
       <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg">
         <div className="flex items-center justify-between p-4 border-b">
@@ -19,12 +20,32 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 rounded-lg"
+=======
+      {/* Backdrop */}
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50"
+        onClick={onClose}
+        onKeyDown={(e) => e.key === 'Escape' && onClose()}
+        role="button"
+        tabIndex={0}
+        aria-label="Close sidebar"
+      />
+      
+      {/* Sidebar */}
+      <div className="fixed top-0 right-0 h-full w-64 bg-gray-900 shadow-xl">
+        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+          <h2 className="text-white font-semibold">Menu</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
           >
-            <X className="h-5 w-5" />
+            <X className="h-6 w-6" />
           </button>
         </div>
         
         <nav className="p-4">
+<<<<<<< HEAD
           <ul className="space-y-2">
             <li>
               <Link
@@ -72,6 +93,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
             </li>
           </ul>
+=======
+          <div className="space-y-2">
+            <a href="/" className="block text-gray-300 hover:text-white py-2">Home</a>
+            <a href="/about" className="block text-gray-300 hover:text-white py-2">About</a>
+            <a href="/services" className="block text-gray-300 hover:text-white py-2">Services</a>
+            <a href="/pricing" className="block text-gray-300 hover:text-white py-2">Pricing</a>
+            <a href="/contact" className="block text-gray-300 hover:text-white py-2">Contact</a>
+          </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
         </nav>
       </div>
     </div>

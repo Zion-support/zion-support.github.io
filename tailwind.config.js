@@ -5,7 +5,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+    './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -127,9 +127,14 @@ module.exports = {
       },
     },
   },
+<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
 };
+=======
+  plugins: [],
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac

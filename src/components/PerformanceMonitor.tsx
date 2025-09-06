@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Activity } from 'lucide-react';
 
@@ -101,6 +102,12 @@ const PerformanceMonitor: React.FC = () => {
       {/* Performance monitoring component */}
     </div>
   );
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null; // Placeholder component
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
 };
 
 export default PerformanceMonitor;

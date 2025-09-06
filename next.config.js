@@ -315,6 +315,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/main
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -322,6 +323,12 @@ origin/main
           }
         }
       }
+=======
+            chunks: 'all',
+          },
+        },
+      };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
     }
 
 <<<<<<< HEAD
@@ -341,9 +348,9 @@ origin/main
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: "ignore-loader"
-    })
+    });
 
-    return config
+    return config;
   },
   async headers() {
     return [
@@ -368,7 +375,7 @@ origin/main
           }
         ]
       }
-    ]
+    ];
   }
 }
 <<<<<<< HEAD
@@ -442,6 +449,7 @@ origin/main
   },
 }
 
+<<<<<<< HEAD
 export default nextConfig
 
 
@@ -465,3 +473,6 @@ export default nextConfig
 
 export default nextConfig
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default nextConfig;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac

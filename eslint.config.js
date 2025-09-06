@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -12,8 +13,27 @@ import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import js from '@eslint/js';
-      'coverage/**',
+=======
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
+export default [
+  {
+    files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
+      'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -28,8 +48,12 @@ import js from '@eslint/js';
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
 
       '**/performance-*.txt'
+=======
+      '**/performance-*.txt',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -39,10 +63,32 @@ import js from '@eslint/js';
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
+<<<<<<< HEAD
 
+=======
+      'temp_exclude/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_conflicts/**',
+      'tests/**',
+      'types/**',
+      'utils/**',
+      'ultimate-*.cjs',
+      'zion-website/**',
+      'zion_academy/**',
+      'src_backup/**',
+      'supabase/**',
+      'start-dev.js',
+      'structural-fix.js',
+      'super-syntax-fixer.cjs',
+      'system-monitor.cjs',
+      'test-next.js',
+      'types/service-variants.js',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
     ],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -51,55 +97,10 @@ import js from '@eslint/js';
         },
       },
       globals: {
-        // Browser globals
-
-        window: "readonly",
-        document: "readonly",
-        console: "readonly",
-        localStorage: "readonly",
-        sessionStorage: "readonly",
-        fetch: "readonly",
-        URL: "readonly",
-        URLSearchParams: "readonly",
-        location: "readonly",
-        navigator: "readonly",
-        performance: "readonly",
-        addEventListener: "readonly",
-        removeEventListener: "readonly",
-        requestAnimationFrame: "readonly",
-        setTimeout: "readonly",
-        clearTimeout: "readonly",
-        setInterval: "readonly",
-        clearInterval: "readonly",
-        self: "readonly",
-        // Node.js globals
-        process: "readonly",
-        Buffer: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        module: "readonly",
-        require: "readonly",
-        exports: "readonly",
-        global: "readonly",
-        // DOM types
-        Element: "readonly",
-        HTMLElement: "readonly",
-        HTMLInputElement: "readonly",
-        HTMLTextAreaElement: "readonly",
-        HTMLSelectElement: "readonly",
-        HTMLDivElement: "readonly",
-        MouseEvent: "readonly",
-        KeyboardEvent: "readonly",
-        Node: "readonly",
-        PerformanceObserver: "readonly",
-        PerformanceNavigationTiming: "readonly",
-        PerformanceEventTiming: "readonly",
-        LayoutShift: "readonly",
-        IntersectionObserver: "readonly",
-        IntersectionObserverEntry: "readonly",
-
-        // React
+        ...globals.browser,
+        ...globals.node,
         React: 'readonly',
+<<<<<<< HEAD
         // Jest/Testing globals
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -620,11 +621,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         ...globals.node,
         React: 'readonly',
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -685,12 +689,20 @@ origin/automation-improvements-final
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
+=======
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
     },
     plugins: {
       '@typescript-eslint': tseslint,
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+<<<<<<< HEAD
       'jsx-a11y': jsxA11y
     },
     rules: {
@@ -738,19 +750,30 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
+<<<<<<< HEAD
         { allowConstantExport: true }
       ],
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        { allowConstantExport: true },
+      ],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -787,13 +810,29 @@ origin/automation-improvements-final
         version: 'detect'
       }
     }
+=======
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
   },
   {
     files: [
       '**/*.cjs',
       '**/scripts/**/*.js',
       '**/automation/**/*.js',
+<<<<<<< HEAD
       '**/pm2/**/*.js'
+=======
+      '**/pm2/**/*.js',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
     ],
     languageOptions: {
       ecmaVersion: 2021,
@@ -808,6 +847,7 @@ origin/automation-improvements-final
         __dirname: 'readonly',
         __filename: 'readonly',
         Buffer: 'readonly',
+<<<<<<< HEAD
         global: 'readonly'
       }
     },
@@ -908,3 +948,15 @@ origin/automation-improvements-final
   }
 ];
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        global: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error',
+    },
+  },
+];
+>>>>>>> cursor/fix-website-loading-errors-and-merge-08ac
