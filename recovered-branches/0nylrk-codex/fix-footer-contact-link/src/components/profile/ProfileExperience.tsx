@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,14 @@ import {Briefcase} from "lucide-react";
 =======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
+>>>>>>> main
+interface ProfileExperienceProps {
+  experience: ProfileExperienceType[];
+}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -20,6 +29,10 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Experience</h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       <div className="space-y-6">
         {experience.map((exp) => (
           <div key={exp.id} className="flex">
@@ -28,6 +41,10 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 <Briefcase className="h-5 w-5 text-zion-purple" />
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
@@ -75,8 +92,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
         ))}
       </div>
     </div>
-  )
-
+  );
 }
 
 export function ProfileExperience(): any ({ experience }: ProfileExperienceProps) {;

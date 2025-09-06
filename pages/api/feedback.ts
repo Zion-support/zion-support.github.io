@@ -234,4 +234,48 @@ async function tryWriteToFirestore(req, res) {
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const doc: FeedbackRecord = {
+    id: uuidv4(),
+    createdAtIso: new Date().toISOString(),
+    user,
+    rating: r,
+    comment: comment || undefined,
+    kind: k,
+    context: context || undefined,
+  };
+
+  const wrote = await tryWriteToFirestore(doc);
+  if (!wrote) saveFeedbackFallback(doc);
+  return ok(res, { id: doc.id });
+}
+=======
+  const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
+  const user = {;
+    id: (req.headers["x-demo-user-id"] as string) || undefined;
+    role: (req.headers["x-demo-user-role"] as string) || undefined;
+    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined};
+  const doc: FeedbackRecord = {;
+    id: uuidv4();
+    createdAtIso: new Date().toISOString();
+    user;
+    rating: r,;
+    comment: comment || undefined,;
+    kind: k,;
+    context: context || undefined},;
+  const wrote = await tryWriteToFirestore(doc);
+  if (!wrote) saveFeedbackFallback(doc);
+  return ok(res, { id: doc.id });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

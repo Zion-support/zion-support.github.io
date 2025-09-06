@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Skill  } from '@/types / resume';
 
@@ -7,14 +8,15 @@ export interface SkillsFormProps {
 
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
-
+=======
+import { Skill } from "@/types/resume";
+export interface SkillsFormProps {
+>>>>>>> main
   resumeId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   skills: Skill[];
-
-  on_complete: () => void;
-  on_back: () => void;
-
+  onComplete: () => void;
+  onBack: () => void;
 }
 export interface SkillItemProps {
   skill: Skill;
@@ -32,7 +34,7 @@ export interface SkillItemProps {;
 
   skill: Skill;
   category: string;
-  onDelete: (id: string, category: string) => Promise<void>
+  onDelete: (id: string, category: string) => Promise<void>;
 }
 
 
@@ -41,13 +43,14 @@ export interface SkillCategoryProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   category: string;
   skills: Skill[];
-
-
+  onDelete: (id: string, category: string) => Promise<void>;
+}
 
 export interface AddSkillFormProps {;
 
   resumeId: string;
-  onAddSkill: (skill: Skill) => Promise<boolean>;
+<<<<<<< HEAD
+  onAddSkill: (skill: Skill) => Promise<boolean>,
   defaultCategory?: string
 =======
 import { Skill } from '@/types/resume',;
@@ -74,18 +77,16 @@ export interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
+>>>>>>> main
 }
+
 export interface BulkAddSkillsProps {
   resumeId: string;
-
   onSuccess: () => Promise<void>;
-}
-
-  on_delete: (id: string, category: string) => Promise < void>;
 }
 export interface AddSkillFormProps {
   resume_id: string;

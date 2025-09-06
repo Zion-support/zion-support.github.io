@@ -249,5 +249,9 @@ if (=>) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

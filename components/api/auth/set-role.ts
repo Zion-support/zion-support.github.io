@@ -36,14 +36,9 @@
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-
-
-  headers["Set-Cookie"] = cookies && cookies.join();
-  res && res.writeHead(302, { ...headers, Location: "/" });
-  res && res.end();
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  headers["Set-Cookie"] = cookies.join();
+  res.writeHead(302, { ...headers, Location: "/" });
+  res.end();
 }
 
 

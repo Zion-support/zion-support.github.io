@@ -1,5 +1,16 @@
-
-
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+  Project,
+  Milestone,
+  MilestoneStatus,
+<<<<<<< HEAD
+  isMilestoneStatus,;
+=======
+  isMilestoneStatus
+>>>>>>> main
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 

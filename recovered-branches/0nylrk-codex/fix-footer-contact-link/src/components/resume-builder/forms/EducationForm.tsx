@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { EducationForm, as, EducationFormComponent  } from './education';
 import { EducationFormProps  } from './education / types';
@@ -28,8 +29,13 @@ import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {;
   return <EducationFormComponent {...props} />;
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { EducationForm, as, EducationFormComponent } from "./education";
+import { EducationFormProps } from "./education/types";
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />;
+>>>>>>> main
 }
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

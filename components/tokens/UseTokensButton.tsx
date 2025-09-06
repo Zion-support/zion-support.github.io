@@ -20,16 +20,17 @@
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-
-=======
-export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       />
     </>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
   const [open, setOpen] = useState(false);
   return (
     <>;

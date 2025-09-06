@@ -57,8 +57,14 @@ function handler() {
     return res.status(200).json(profile);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e: any) {
-    return res.status (500).json ({ error: e.message });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    return res.status(500).json({ error: e.message });
+  }
+  try {
+    const { address } = req.query as { address?: string };
+    const profile = await buildIdentityProfile(address);
+    return res.status(200).json(profile);
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
   }
 }
 =======

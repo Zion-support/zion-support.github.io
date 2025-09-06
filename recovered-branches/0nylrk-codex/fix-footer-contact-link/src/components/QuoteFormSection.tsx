@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 export function QuoteFormSection() {;
-
+=======
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+export function QuoteFormSection() {
+>>>>>>> main
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -20,7 +27,7 @@ export function QuoteFormSection() {
 
 
   const handleSubmit = (e: React.FormEvent) => {
-
+<<<<<<< HEAD
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -30,6 +37,16 @@ export function QuoteFormSection() {
       setIsSubmitted(true)
     }, 1000)
   },
+=======
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  };
+>>>>>>> main
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -140,52 +157,78 @@ export function QuoteFormSection() {
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
-
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Company;
-                  </label>;
-
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Company
+                  </label>
                   <Input
                     id="company"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Email;
-                  </label>;
-
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Email
+                  </label>
                   <Input
                     id="email"
                     type="email"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
-
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Phone;
-                  </label>;
-
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Phone
+                  </label>
                   <Input
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
+                  />
+                </div>
+              </div>
+<<<<<<< HEAD
 =======
+
+>>>>>>> main
+              <div className="mt-6">
+                <label
+                  htmlFor="interest"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
+                  I'm interested in (select all that apply)
+                </label>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
+                  {[
+                    "AI Products/Services",
+                    "IT Equipment",
+                    "Server Solutions",
+                    "Storage Solutions",
+                    "Networking",
+                    "24/7 Support",
+                    "Recycling Services",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center">
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
@@ -303,39 +346,55 @@ export function QuoteFormSection() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
+>>>>>>> main
                         {item}
                       </label>;
                     </div>;
                   ))}
+                </div>
+              </div>
+<<<<<<< HEAD
+=======
 
-                </div>;
-              </div>;
-
-              <div className="mt-6">;
-                <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                  Additional Details;
-                </label>;
+>>>>>>> main
+              <div className="mt-6">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
+                  Additional Details
+                </label>
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"></textarea>;
-              </div>;
+                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                ></textarea>
+              </div>
+<<<<<<< HEAD
+=======
 
-              <div className="mt-6">;
+>>>>>>> main
+              <div className="mt-6">
                 <Button
-                  type="submit" 
-                  disabled={isSubmitting} 
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3">;
-                  {isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
-                </Button>;
-              </div>;
-            </form>;
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3"
+                >
+                  {isSubmitting
+                    ? "Sending..."
+                    : "Get Your Free Commercial Proposal"}
+                </Button>
+              </div>
+            </form>
           )}
-        </div>;
-      </div>;
-    </section>;
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -51,10 +51,22 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-
-
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+=======
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface CandidateCardProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   application: JobApplication;

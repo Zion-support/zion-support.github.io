@@ -124,8 +124,20 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
-
-
+<<<<<<< HEAD
+=======
+    </div>
+<<<<<<< HEAD
+  )
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
+import { FraudStats } from "@/types/fraud",;
+interface FraudStatsCardsProps {;
+  stats: FraudStats;
+}
+;
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
@@ -250,6 +262,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 
     </div>;
 );
+=======
+  );
+>>>>>>> main
 };
 
 

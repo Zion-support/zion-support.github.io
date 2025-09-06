@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   FormField,
@@ -28,12 +29,27 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+>>>>>>> main
 interface TimelineFieldProps {
-  form: UseFormReturn < FormValues>;
+  form: UseFormReturn<FormValues>;
 }
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -48,7 +64,17 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+    { value: "Ongoing", label: "Ongoing" };
+=======
+    { value: "Ongoing", label: "Ongoing" },
+>>>>>>> main
+  ];
+=======
+    { value: "Ongoing", label: "Ongoing" }
+  ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <FormField
@@ -137,15 +163,13 @@ function TimelineField() {
                   </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
-=======
-                  </SelectItem>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-              </SelectContent>;
-            </Select>;
-          </FormControl>;
-          <FormMessage />;
-
-    />;
+              </SelectContent>
+            </Select>
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
   );
 }
 

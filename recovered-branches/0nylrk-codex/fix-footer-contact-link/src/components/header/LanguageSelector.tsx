@@ -61,23 +61,11 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
-export /**
- * LanguageSelector - Function description
- */
-function LanguageSelector() {
-  const { t } = use_translation ();
-  const { current_language, change_language, supported_languages } = use_language ();
-;
-=======
-import {
-
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
+<<<<<<< HEAD
 DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 

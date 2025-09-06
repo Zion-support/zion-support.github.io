@@ -6,19 +6,9 @@ interface ModernNavigationProps {
   class_name?: string;
 }
 
-
-export default function ModernNavigation() {
-
-=======
-interface ModernNavigationProps {
-
-
-=======
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function ModernNavigation({
+  className = "",
+}: ModernNavigationProps) {
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>

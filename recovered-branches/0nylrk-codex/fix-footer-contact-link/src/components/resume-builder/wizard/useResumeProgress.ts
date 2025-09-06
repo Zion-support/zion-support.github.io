@@ -1,20 +1,28 @@
+<<<<<<< HEAD
 
 
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
-
-
+=======
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+>>>>>>> main
   const [progress, setProgress] = useState(0);
+
   useEffect(() => {
     // Calculate progress based on completed sections
     if (!resume) {
       setProgress(0);
       return;
     }
+
     let completed = 0;
+
     // Basic info is always considered (1 point)
     completed += 1;
+
     // Work experience (1 point if at least one entry)
 
 import { useState, useEffect  } from './react';
@@ -25,7 +33,7 @@ export const useResumeProgress = (resume: Resume | null) =>: any {
   useEffect (() => {
 =======
     if (resume.work_experience && resume.work_experience.length > 0) {
-
+<<<<<<< HEAD
       completed += 1
 
 =======
@@ -51,11 +59,39 @@ if ( {) {
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;
-
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+      completed += 1;
+>>>>>>> main
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    // Education (1 point if at least one entry)
+    if (resume.education && resume.education.length > 0) {
+      completed += 1;
+    }
+
+    // Skills (1 point if at least one entry)
+    if (resume.skills && resume.skills.length > 0) {
+      completed += 1;
+    }
+
+    // Certifications (1 point if at least one entry)
+    if (resume.certifications && resume.certifications.length > 0) {
+      completed += 1;
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> main
+    const progressPercentage = (completed / 5) * 100;
+    setProgress(progressPercentage);
+  }, [resume]);
+
+<<<<<<< HEAD
+  return progress
+=======
 ;
     // Work experience (1 point if at least one entry);
     // Check condition
@@ -114,12 +150,10 @@ if ( {) {
   }, [resume]);
 ;
   return progress;
-}
-;
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-
-
+  return progress;
+>>>>>>> main
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -78,6 +78,8 @@ const SAMPLE_QUERIES = [;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
+  const { q = "" } = req.query;
+  const query = String(q).toLowerCase();
 
 
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>

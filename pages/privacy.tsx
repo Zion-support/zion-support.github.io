@@ -906,16 +906,12 @@ const PrivacyPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 <p className="text-sm text-gray-600 mt-8">
 =======
+
                 <p className="text-sm text-gray-600 mt-8">
->>>>>>> origin/automation-improvements-final
+>>>>>>> main
                   Last updated: January 2024
                 </p>
               </div>
@@ -923,6 +919,10 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
       </div>
+    </MainLayout>;
+  );
+}
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
@@ -1129,12 +1129,31 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <a;
+                    href="mailto:kleber@ziontechgroup.com";
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <Mail className="w-5 h-5" />;
+                    Email Us;
+                  </a>;
+                  <a;
+                    href="/contact";
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <User className="w-5 h-5" />;
+                    Contact Form;
+                  </a>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+        </main>;
+      </Layout>;
+    </ErrorBoundary>;
+  );
+},;
+export default PrivacyPage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> main

@@ -61,8 +61,13 @@ function handler() {
   } catch (e) {
     // ignore;
   }
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+res.status(200).json({ ok: true, data });
+=======
+  res.status(200).json({ ok: true, data });
+>>>>>>> main
+  res.status(200).json({ ok: true, data });
 }
 =======
 

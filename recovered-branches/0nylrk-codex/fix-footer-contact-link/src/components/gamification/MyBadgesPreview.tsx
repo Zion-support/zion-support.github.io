@@ -53,9 +53,20 @@ import { badge_list, BadgeKey  } from './badge_config';
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
-
+<<<<<<< HEAD
+        ))}
+      </div>
+      {/* Example progress for next badge */}
+      <div className="mt-3 text-xs text-zion-slate-light">
+        <span>Complete your profile for more rewards!</span>
+      </div>
+<<<<<<< HEAD
     </div>;
 );
+=======
+    </div>
+  );
+>>>>>>> main
 };
 
 =======

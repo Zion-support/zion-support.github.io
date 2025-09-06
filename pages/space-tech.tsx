@@ -61,8 +61,13 @@ return (
             href="/space-technology"
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
             <Globe2 className="w-4 h-4" />{" "}
-
-            <span>Explore detailed Space Technology offerings</span>;
+            <span>Explore detailed Space Technology offerings</span>
+          </a>
+        </section>
+      </div>
+    </div>
+  </Layout>
+);
 =======
 import React from './react';
 import Head from './next / head';

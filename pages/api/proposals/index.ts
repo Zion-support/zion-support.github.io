@@ -88,7 +88,7 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
   }
-  res.status (405).json ({ error: "Method not allowed" });
+  res.status(405).json({ error: "Method not allowed" });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

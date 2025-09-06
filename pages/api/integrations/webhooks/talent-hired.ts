@@ -66,8 +66,8 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-  res && res.status(200).json({ ok: true, results });
-
+<<<<<<< HEAD
+res.status(200).json({ ok: true, results });
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
@@ -121,9 +121,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

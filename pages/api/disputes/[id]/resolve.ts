@@ -53,10 +53,8 @@ export default async function handler(
     dispute.updatedAt = now;
     await upsertDispute(dispute);
 
-
-  res && res.setHeader("Allow", "POST");
-  return res && res.status(405).end("Method Not Allowed");
-
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
 }
 
 

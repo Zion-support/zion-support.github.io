@@ -99,31 +99,15 @@ function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 
-            </a>;
-          </div>;
-        </section>;
-      </main>;
-
-    </>);
-  return (
-    <>;
-      <SEO;
-        title="API Performance Testing";
-        description="Load, latency and regression testing - as - a-service with CI and SLOs.";
-      />;
-      <main id="main" className="container mx - auto px - 4 py - 24">;
-        <section className="max - w-5xl mx - auto">;
-          <h1 className="text - 4xl font - extrabold tracking - tight">;
-            API Performance Testing;
-          </h1>;
-          <p className="mt - 4 text - lg text - gray - 300">;
-            Ship with confidence using automated performance tests and;
-            guardrails integrated into your pipeline.;
-          </p>;
-          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
-            {features.map ((f) => (
-              <div;
+<<<<<<< HEAD
+<<<<<<< HEAD
+return (
 =======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  return (
+>>>>>>> main
     <>
       <SEO
         title="API Performance Testing"

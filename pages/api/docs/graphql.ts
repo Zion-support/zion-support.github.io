@@ -21,12 +21,15 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
-export default /**
- * handler - Function description
- */
-function handler() {
-  res.set_header ("Content - Type", "text / plain");
-  res.status (200).send (toSDL ());
+
+<<<<<<< HEAD
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+res.setHeader("Content-Type", "text/plain");
+=======
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "text/plain");
+>>>>>>> main
+  res.status(200).send(toSDL());
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

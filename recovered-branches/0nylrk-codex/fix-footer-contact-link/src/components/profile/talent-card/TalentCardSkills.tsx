@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,9 +10,11 @@ import {Badge} from "@/components/ui/badge";
 =======
 import React from "react",
 import { Badge } from "@/components/ui/badge",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> main
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
@@ -27,9 +30,6 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
-
-import {Badge} from "@/components/ui/badge";
-=======
         <Badge
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
@@ -66,8 +66,7 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
           +{skills && skills.length - 4} more;
         </Badge>;
       )}
-
-    </div>;
+    </div>
   );
 }
 

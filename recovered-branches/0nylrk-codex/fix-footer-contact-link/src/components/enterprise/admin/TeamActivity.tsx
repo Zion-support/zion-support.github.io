@@ -18,9 +18,11 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 TableRow,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  TableRow,
+>>>>>>> main
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";

@@ -96,16 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   });
 
-  res && res.status(200).json({ ok: true, results });
-
-
-}
-
-
-  writeState(s => {
-    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
-=======
-
+<<<<<<< HEAD
 res.status(200).json({ ok: true, results });
 
 =======
@@ -173,9 +164,9 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

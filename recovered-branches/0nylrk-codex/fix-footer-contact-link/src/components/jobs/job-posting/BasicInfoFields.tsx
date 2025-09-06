@@ -392,34 +392,28 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         control={control}
         name="location";
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Location</FormLabel>;
-            <FormControl>;
-              <Input;
-                placeholder="e.g. Remote, San Francisco, etc.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                {...field}
-              />;
-            </FormControl>;
-            <FormMessage />;
-
-          </FormItem>)}
-      />;
-    </div>);
-}
-;
-
-=======
-
+          <FormItem>
+            <FormLabel>Location</FormLabel>
+            <FormControl>
+              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+<<<<<<< HEAD
+      />
+    </div>
+<<<<<<< HEAD
 );
 
 =======
       />;
     </div>;
   );
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ReactNode  } from './react';
 
@@ -15,11 +16,15 @@ export interface HelpCategory {
 
 import {ReactNode} from "react";
 export interface HelpArticle {;
+=======
+import { ReactNode } from "react";
+export interface HelpArticle {
+>>>>>>> main
   id: string;
   title: string;
   content: string;
-  lastUpdated: string,
-  tags: string[]
+  lastUpdated: string;
+  tags: string[];
 }
 
 export interface HelpCategory {;
@@ -29,7 +34,7 @@ export interface HelpCategory {;
   name: string;
   description: string;
   icon: ReactNode;
-  articles: HelpArticle[]
+  articles: HelpArticle[];
 }
 
 
@@ -43,9 +48,8 @@ export interface SupportTicket {;
   message: string;
   status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
-
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 =======

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { Loader2 } from "lucide-react",
@@ -6,12 +7,13 @@ import { Loader2 } from "lucide-react",
 import {Loader2} from "lucide-react";
 =======
 import { Loader2 } from "lucide-react",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Loader2 } from "lucide-react";
+>>>>>>> main
 interface ResultsHeaderProps {
   isLoading: boolean;
-  resultCount: number
+  resultCount: number;
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -23,8 +25,14 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
-
-import {Loader2} from "lucide-react";
+<<<<<<< HEAD
+          {resultCount === 0 ? (
+            "No talents found. Try adjusting your filters."
+          ) : (
+            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
+<<<<<<< HEAD
+=======
+import { Loader2 } from "lucide-react",;
 interface ResultsHeaderProps {;
   isLoading: boolean,;
   resultCount: number;
@@ -53,7 +61,12 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
 
 
           )}
-        </span>;
+=======
+          {resultCount === 0
+            ? "No talents found. Try adjusting your filters."
+            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
+>>>>>>> main
+        </span>
       )}
 
 import { Loader2  } from './lucide-react';
@@ -82,8 +95,7 @@ function ResultsHeader() {
 
 =======
     </div>
-
-  )
+  );
 }
 ;
 

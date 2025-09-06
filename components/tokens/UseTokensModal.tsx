@@ -212,7 +212,15 @@ export default function UseTokensModal({
         </div>
       </div>
     </div>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

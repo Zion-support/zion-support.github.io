@@ -1,8 +1,25 @@
+<<<<<<< HEAD
 
-
-
-
-
+<<<<<<< HEAD
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+=======
+=======
+>>>>>>> main
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+<<<<<<< HEAD
+  SelectValue} from "@/components/ui/select",
+import { SortFilterProps } from "@/types/filters",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  SelectValue,
+} from "@/components/ui/select";
+import { SortFilterProps } from "@/types/filters";
+>>>>>>> main
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -22,11 +39,19 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
-export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
-  return (
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+  return (;
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -45,6 +70,10 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
       </Select>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 
 =======

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -8,42 +9,52 @@ import {HelpCategory} from "./types";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { HelpCategory } from "./types";
+>>>>>>> main
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
-  searchQuery: string
+  searchQuery: string;
 }
+
 export function HelpCategoryList({
-  categories
-  onCategorySelect
-  searchQuery
+  categories,
+  onCategorySelect,
+  searchQuery,
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           category.description
             .toLowerCase()
-            .includes(searchQuery.toLowerCase()) |
+            .includes(searchQuery.toLowerCase()) ||
           category.articles.some(
             (article) =>
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+<<<<<<< HEAD
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HelpCategory} from "./types";
-interface HelpCategoryListProps {;
-  categories: HelpCategory[],;
-  onCategorySelect: (categoryId: string) => void,;
-  searchQuery: string;
-}
+<<<<<<< HEAD
+      );
+=======
+              article.content.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
+      )
+>>>>>>> main
+    : categories;
 =======
 
       )
@@ -69,6 +80,14 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
+      <div className="text-center py-8">
+        <h3 className="text-lg font-medium mb-2">No results found</h3>
+        <p className="text-zion-slate-light">
+          Try adjusting your search query or browse all categories.
+        </p>
+      </div>
+    );
+  }
 
 =======
     );
@@ -178,8 +197,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
-
-    </div>;
+    </div>
   );
 }
 

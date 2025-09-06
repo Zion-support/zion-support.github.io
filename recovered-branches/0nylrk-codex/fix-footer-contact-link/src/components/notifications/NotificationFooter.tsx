@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -10,11 +11,15 @@ interface NotificationFooterProps {
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 =======
-
-
-  onClose: () => void
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+>>>>>>> main
+interface NotificationFooterProps {
+  onClose: () => void;
 }
 
+<<<<<<< HEAD
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
 
@@ -27,15 +32,27 @@ interface NotificationFooterProps {;
   onClose: () => void;
 }
 
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+  const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+  const handleViewAll = () => {
+    onClose(),
+    navigate('/notifications')
+  },
+  
+=======
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose,
+}) => {
   const navigate = useNavigate();
 
-  const handleViewAll = () => {;
+  const handleViewAll = () => {
     onClose();
-    navigate('/notifications');
+    navigate("/notifications");
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> main
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
       <Button
@@ -46,7 +63,12 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         onClick={handleViewAll}>;
 =======
         onClick={handleViewAll}
-
+<<<<<<< HEAD
+      >
+        View all notifications
+      </Button>
+    </div>
+<<<<<<< HEAD
   )
 
 =======
@@ -56,11 +78,10 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
       </Button>;
     </div>;
   );
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

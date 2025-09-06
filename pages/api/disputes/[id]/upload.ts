@@ -95,21 +95,8 @@ if ( {) {
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
-
-
-=======
-    dispute.updated_at = now;
-    await upsert_dispute (dispute);
-    return res.status (201).json ({ dispute });
-  }
-  res.set_header ("Allow", "POST");
-  return res.status (405).end ("Method Not Allowed");
-}
-async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void> {
-  const fs = await import ("fs");
-  await new Promise < void>((resolve, reject) => {
-    fs.mkdir (
-      require ("path").dirname (file_path),
+    fs.mkdir(
+      require("path").dirname(filePath),
       { recursive: true },
       (err: any) => {
         if (return reject (err)) {

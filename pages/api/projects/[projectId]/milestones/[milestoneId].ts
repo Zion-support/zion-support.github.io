@@ -54,15 +54,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      return;
-    }
-    res && res.status(200).json({ milestone: updated });
-    return;
-  }
-
-
+  res.setHeader("AllowPATCH");
+  res.status(405).end("Method Not Allowed");
+}
 =======
 }
 ;

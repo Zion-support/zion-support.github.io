@@ -43,17 +43,12 @@ function handler() {
       connected_at: now,
       sync_rules: sync_rules || {},
       lastSyncAt: undefined,
-
-      last_error: null,
-    }
-    // Check condition
-if (state.connections[existing_idx] = connection) {
-  $2
-}
-    else state.connections.push (connection);
-    state.logs.push ({
-      id: `${now}-${provider_id}-connect`,
-
+      lastError: null,
+    };
+    if (existingIdx >= 0) state.connections[existingIdx] = connection;
+    else state.connections.push(connection);
+    state.logs.push({
+      id: `${now}-${providerId}-connect`,
       timestamp: now,
       provider_id: provider_id as any,
       level: "info",

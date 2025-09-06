@@ -167,32 +167,24 @@ if (&& !disabled) {) {
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
-      />;
-
-        disabled={!message && message.trim() || disabled}>;
-        <Send className="h-5 w-5" />;
-      </Button>;
-    </form>;
-
-  );
-=======
-      <Button;
-        type="submit";
-        className="bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center";
-        disabled={!message.trim () || disabled}
-      >;
-        <Send className="h - 5 w - 5" />;
-      </Button>;
-    </form>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
-=======
-
+      />
+      <Button 
+        type="submit" 
+        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        disabled={!message.trim() || disabled}
+      >
+        <Send className="h-5 w-5" />
+      </Button>
+    </form>
+<<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
   )
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 =======
   )

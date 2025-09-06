@@ -73,7 +73,6 @@ function extractSection(body: string, title: string): string {
     return snippet && snippet.trim();
   }
   return "";
-
 }
 
 =======

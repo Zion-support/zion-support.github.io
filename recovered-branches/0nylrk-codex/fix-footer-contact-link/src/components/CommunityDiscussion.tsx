@@ -308,6 +308,49 @@ export const CommunityDiscussion: React.FC = () => {
             </div>
           </CardContent>
         </Card>
+      )}
+      <div className="flex flex-col gap-6">
+        {posts.map((post) => (
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
+            <CardContent className="py-4 flex gap-4">
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(" ")
+                    .map((s) => s[0])
+                    .join("")
+                    .toUpperCase()
+                    .slice(0, 2)}
+<<<<<<< HEAD
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <div className="flex gap-2 items-center">
+                  <span className="font-semibold text-white">
+                    {post.author}
+                  </span>
+                  <span className="text-xs text-zion-slate-light">
+                    {post.time}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">
+                  {post.title}
+                </h3>
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">
+                  {post.body}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">
+        🚀 Stay engaged! Top contributors are regularly featured on the
+        homepage.
+      </div>
+    </div>
+<<<<<<< HEAD
+);
 =======
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
 =======
@@ -365,56 +408,10 @@ export const CommunityDiscussion: React.FC = () => {
       </div>;
     </div>;
   );
-
-        </Card>)}
-      <div className="flex flex - col gap - 6">;
-        {posts.map ((post) => (
-          <Card;
-            key={post.id}
-            className="bg - zion - blue border - zion - slate - dark shadow - lg";
-          >;
-            <CardContent className="py - 4 flex gap - 4">;
-              <Avatar>;
-                <AvatarFallback>;
-                  {post.author;
-                    .split (" ");
-                    .map ((s) => s[0]);
-                    .join ("");
-                    .toUpperCase ();
-                    .slice (0, 2)}
-                </AvatarFallback>;
-              </Avatar>;
-              <div>;
-                <div className="flex gap - 2 items - center">;
-                  <span className="font - semibold text - white">;
-                    {post.author}
-                  </span>;
-                  <span className="text - xs text - zion - slate - light">;
-                    {post.time}
-                  </span>;
-                </div>;
-                <h3 className="text - lg font - bold text - zion - cyan mt - 1">;
-                  {post.title}
-                </h3>;
-                <p className="text - zion - slate - light mt - 1 whitespace - pre - line">;
-                  {post.body}
-                </p>;
-              </div>;
-            </CardContent>;
-          </Card>))}
-      </div>;
-      <div className="mt - 8 text - xs text - zion - slate - dark text - center">;
-        🚀 Stay engaged! Top contributors are regularly featured on the;
-        homepage.;
-      </div>;
-    </div>);
-}
-;
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+>>>>>>> main
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {FilePlus} from "lucide-react";
+import {EmptyResumeProps} from "./types";
+=======
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { FilePlus } from "lucide-react",
+import { EmptyResumeProps } from "./types",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FilePlus } from "lucide-react";
+import { EmptyResumeProps } from "./types";
+>>>>>>> main
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -19,13 +33,11 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
-
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {FilePlus} from "lucide-react";
-import {EmptyResumeProps} from "./types";
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-
+>>>>>>> main
+  );
 };
 
 =======

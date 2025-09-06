@@ -8,9 +8,11 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
+<<<<<<< HEAD
 DialogTitle,;
-
-
+=======
+  DialogTitle,
+>>>>>>> main
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";

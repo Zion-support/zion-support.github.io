@@ -3,7 +3,15 @@
     if (error) return res.status(500).json({ error: error.message });
 
     return res.status(200).json({ ok: true });
-
+  } catch (e: any) {
+<<<<<<< HEAD
+    return res.status(500).json({ error: e?.message })
+  };
+=======
+    return res.status(500).json({ error: e?.message });
+  }
+>>>>>>> main
+};
 =======
     const supabase = getServerSupabase (),
     const updates: any = {},
