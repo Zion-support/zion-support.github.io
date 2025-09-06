@@ -47,7 +47,7 @@ const getDefaultCategories = (t: any) => [;
     color: "from-amber-500 to-orange-600"}
   {// Helper to get icon component from name;
 const getIcon = (iconName?: string) => {switch (iconName) {id: "innovation",name: t('categories.innovation'),description: t('categories.innovation_desc'),iconName: "Lightbulb",link: "/innovation",color: "from-emerald-500 to-green-600"}],// Helper to get icon component from name;
-const getIcon = (iconName?: string,) => {switch (iconName) {title: "AI Services",description: "Cutting - edge AI solutions, chatbots, and machine learning",icon: "🤖",link: "/ai - services",color: "from - purple - 500 to - indigo - 600", ,},{title: "Micro SAAS",description: "Cloud - based software solutions for modern businesses",icon: "☁️",link: "/micro - saas",color: "from - cyan - 500 to - blue - 600", ,},{title: "IT Services",description: "Infrastructure, security, and technical consulting",icon: "⚡",link: "/all - services",color: "from - amber - 500 to - orange - 600", ,},{title: "Digital Transformation",description: "Business modernization and digital strategy",icon: "📈",link: "/all - services",color: "from - emerald - 500 to - green - 600", ,},];
+const getIcon = (iconName?: string,) => {switch (iconName) {title: "AI Services",description: "Cutting - edge AI solutions, chatbots, and machine learning",icon: "🤖",link: "/ai - services",color: "from - purple - 500 to - indigo - 600", },{title: "Micro SAAS",description: "Cloud - based software solutions for modern businesses",icon: "☁️",link: "/micro - saas",color: "from - cyan - 500 to - blue - 600", },{title: "IT Services",description: "Infrastructure, security, and technical consulting",icon: "⚡",link: "/all - services",color: "from - amber - 500 to - orange - 600", },{title: "Digital Transformation",description: "Business modernization and digital strategy",icon: "📈",link: "/all - services",color: "from - emerald - 500 to - green - 600", }];
 const special_services = [{title: "IT Onsite Services",link: "/it - onsite - services";
 },{title: "Comprehensive Services",link: "/comprehensive - services";
 },{title: "Services Comparison",link: "/services - comparison";
@@ -121,7 +121,7 @@ interface CategoryType  {id: string,name: string,description?: string;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
-function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {const categories = [{title: "AI Services",description: "Cutting - edge AI solutions, chatbots, and machine learning",icon: "🤖",link: "/ai - services",color: "from - purple - 500 to - indigo - 600",,},{title: "Micro SAAS",description: "Cloud - based software solutions for modern businesses",icon: "☁️",link: "/micro - saas",color: "from - cyan - 500 to - blue - 600",,},{title: "IT Services",description: "Infrastructure, security, and technical consulting",icon: "⚡",link: "/all - services",color: "from - amber - 500 to - orange - 600",,},{title: "Digital Transformation",description: "Business modernization and digital strategy",icon: "📈",link: "/all - services",color: "from - emerald - 500 to - green - 600",,},];
+function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {const categories = [{title: "AI Services",description: "Cutting - edge AI solutions, chatbots, and machine learning",icon: "🤖",link: "/ai - services",color: "from - purple - 500 to - indigo - 600",},{title: "Micro SAAS",description: "Cloud - based software solutions for modern businesses",icon: "☁️",link: "/micro - saas",color: "from - cyan - 500 to - blue - 600",},{title: "IT Services",description: "Infrastructure, security, and technical consulting",icon: "⚡",link: "/all - services",color: "from - amber - 500 to - orange - 600",},{title: "Digital Transformation",description: "Business modernization and digital strategy",icon: "📈",link: "/all - services",color: "from - emerald - 500 to - green - 600",}];
 const specialServices = [{title: "IT Onsite Services",link: "/it - onsite - services";
 },{title: "Comprehensive Services",link: "/comprehensive - services";
 },{title: "Services Comparison",link: "/services - comparison";
@@ -253,8 +253,8 @@ icon: getIcon (cat.iconName)}) )//If fetchedCategories is an empty array, and we
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
   t ('home.view all categories')}</Link> </div> </div> </section>)}'"}<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
           {displayCategories && displayCategories.map((category,) => (<Link;
-              key = {category && category.id,}
-              href = {category && category.link || '#',}
+              key = {category && category.id}
+              href = {category && category.link || '#'}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">;
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">;
                 <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category && category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
@@ -272,8 +272,8 @@ icon: getIcon (cat.iconName)}) )//If fetchedCategories is an empty array, and we
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home && home.featured_services')}</h3>;
           <div className="flex flex-wrap justify-center gap-4">;
             {getSpecialServices(t).map((service,) => (<Link;
-                key = {service && service.title,}
-                href = {service && service.link,}
+                key = {service && service.title}
+                href = {service && service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">;
                 {service && service.title}
               </Link>            ))}
@@ -322,8 +322,8 @@ if ( {) {$2;
           </div>)}
         <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
           {display_categories.map ((category, ) => (<Link;
-              key = {category.id, }
-              href = {category.link || '#', }
+              key = {category.id }
+              href = {category.link || '#' }
               className="group block rounded - lg focus:outline - none focus:ring - 2 focus:ring - zion - cyan";
             >;
               <div className="rounded - lg overflow - hidden h - full border border - zion - blue - light bg - zion - blue - dark p - 6 transition - all duration - 300 group - hover:border - zion - purple / 50 group - focus:border - zion - purple / 50 hover:translate - y-[-5px] group - hover:shadow - lg">;
@@ -342,8 +342,8 @@ if ( {) {$2;
           <h3 className="text - center text - xl font - bold text - white mb - 6">{t ('home.featured_services')}</h3>;
           <div className="flex flex - wrap justify - center gap - 4">;
             {getSpecialServices (t).map ((service, ) => (<Link;
-                key = {service.title, }
-                href = {service.link, }
+                key = {service.title }
+                href = {service.link }
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
               >;
                 {service.title}

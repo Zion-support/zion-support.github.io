@@ -10,6 +10,10 @@ export interface ModerationResult  {id: string;
   adminId: string;
   reason?: string;
   createdAt: string;export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';export interface ModerationAction  {id: string;
+
+;
+export interface ModerationAction {
+  id: string;
   type: "approve" | "remove" | "warn" | "ban";
   targetId: string;
   targetType: "post" | "comment" | "user";
@@ -17,6 +21,7 @@ export interface ModerationResult  {id: string;
   reason?: string;
   createdAt: string;
   created_at: string;
+
 }
 }
 export interface ModerationFlag  {export interface ModerationFlag  {id: string;

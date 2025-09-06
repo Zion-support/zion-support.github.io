@@ -8,7 +8,7 @@ interface SafeImageProps  {interface SafeImageProps  {interface SafeImageProps  
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img";
-        aria-label = {alt,}
+        aria-label = {alt}
       >;
         <ImageIcon className='w-6 h-6' />      </div>;
     )}/>;)aria-label={alt}
@@ -42,7 +42,7 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img";
-        aria-label = {alt,}
+        aria-label = {alt}
       >;
         <ImageIcon className='w-6 h-6' />      </div>;
     )}
@@ -59,7 +59,7 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
       </div>;
     )}/>;
   )return (/>;
-  )return (aria-label = {alt,}>;
+  )return (aria-label = {alt}>;
         <ImageIcon className='w-6 h-6' />      </div>;
     )}/>;
   )aria-label={alt}
@@ -68,15 +68,15 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
       </div>;
     )}/>;
   )return (<Image;
-      src = {currentSrc,}
-      alt = {alt,}
-      width = {width,}
-      height = {height,}
-      className = {className,}
-      onError = {handleError,}
-      priority = {priority,}
+      src = {currentSrc}
+      alt = {alt}
+      width = {width}
+      height = {height}
+      className = {className}
+      onError = {handleError}
+      priority = {priority}
       // Add unoptimized as fallback for problematic images;
-      unoptimized = {hasError,}}
+      unoptimized = {hasError}}
     />;
   )}}}
     />;
@@ -107,7 +107,7 @@ if ( {) {$2;
         className={`flex items - center justify - center bg - gray - 100 text - gray - 400 ${class_name}`}
         style={{ width, height }}
         role="img";
-        aria - label = {alt, }
+        aria - label = {alt }
       >;
         <ImageIcon className='w - 6 h - 6' />      </div>)}
     />)aria - label={alt}
@@ -124,7 +124,7 @@ if ( {) {$2;
       priority={priority}
       // Add unoptimized as fallback for problematic images;unoptimized={hasError}
     />;
-  )}unoptimized = {has_error, }
+  )}unoptimized = {has_error }
     />)}
 }/>;
   )

@@ -19,6 +19,28 @@ import { Search  } from 'lucide-react';
 // Categories for filtering;
 const CATEGORIES = [;
     "All Categories","Trends","Marketing","Sustainability","Ethics","Recruitment","Infrastructure";
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from "lucide-react";
+// Categories for filtering
+const CATEGORIES = [
+    "All Categories",
+    "Trends",
+    "Marketing",
+    "Sustainability",
+    "Ethics",
+    "Recruitment",
+    "Infrastructure"
 ];
 export default function Blog() {const [searchQuery, setSearchQuery] = useState("")const [selectedCategory, setSelectedCategory] = useState("All Categories")const [posts, setPosts] = useState([...BLOG_POSTS])useEffect(() => {const interval = setInterval(() => {setPosts(prev => [...prev, generateRandomBlogPost()])}, 120000)// every 2 minutes;
         return () => clearInterval(interval)}, [])// Filter blog posts based on search and category;
@@ -140,4 +162,52 @@ export default function Blog() {return (<div className="min-h-screen bg-backgrou
     </>)):src.broken/pages/Blog.js;
       </div>;
     </>))}ursor/automate-test-improve-and-merge-code-646c;
+}
+
+export default function Blog() {
+    return (
+        <div className="min-h-screen bg-background p-8">
+            <div className="max-w-4xl mx-auto">
+                <h1 className="text-4xl font-bold text-foreground mb-6">Blog</h1>
+                <p className="text-lg text-muted-foreground mb-8">
+                    Latest insights and updates from Zion Tech Group.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="border border-border rounded-lg p-6">
+                        <h3 className="text-xl font-bold text-foreground mb-3">AI in Modern Business</h3>
+                        <p className="text-muted-foreground mb-4">
+                            Discover how artificial intelligence is transforming business operations and creating new opportunities.
+                        </p>
+                        <span className="text-sm text-muted-foreground">January 15, 2025</span>
+                    </div>
+                    <div className="border border-border rounded-lg p-6">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Cloud Migration Best Practices</h3>
+                        <p className="text-muted-foreground mb-4">
+                            Learn the essential steps and strategies for successful cloud migration projects.
+                        </p>
+                        <span className="text-sm text-muted-foreground">January 10, 2025</span>
+                    </div>
+                    <div className="border border-border rounded-lg p-6">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Cybersecurity Trends 2025</h3>
+                        <p className="text-muted-foreground mb-4">
+                            Stay ahead of emerging cybersecurity threats and protect your business with the latest security measures.
+                        </p>
+                        <span className="text-sm text-muted-foreground">January 5, 2025</span>
+                    </div>
+                    <div className="border border-border rounded-lg p-6">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Digital Transformation Guide</h3>
+                        <p className="text-muted-foreground mb-4">
+                            A comprehensive guide to digital transformation for businesses of all sizes.
+                        </p>
+                        <span className="text-sm text-muted-foreground">December 28, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+:src.broken/pages/Blog.js
+      </div>
+    </>);
+    );
+      </div>
+    </>);
 }

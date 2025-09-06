@@ -7,7 +7,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin  } from 'lucide-react';
-import { ArrowRight,Star,TrendingUp,Clock,Users,Zap,Shield,Brain,Rocket,Atom,Globe,Target,Microscope,Phone,Mail,MapPin,} from 'lucide-react';
+import { ArrowRight,Star,TrendingUp,Clock,Users,Zap,Shield,Brain,Rocket,Atom,Globe,Target,Microscope,Phone,Mail,MapPin} from 'lucide-react';
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
@@ -196,7 +196,7 @@ export default function FuturisticServices2030Page() {try {const contactInfo = {
                 'Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology',provider: {'@type': 'Organization',name: 'Zion Tech Group',url: 'https://ziontechgroup.com';
               },url: 'https://ziontechgroup.com/services/2030-futuristic-services',contactPoint: {'@type': 'ContactPoint',telephone: '+1-302-464-0950',contactType: 'customer service',email: 'kleber@ziontechgroup.com';
               }
-            }),}}
+            })}}
         />;
       </Head>;
       <UltraFuturisticBackground2031>;

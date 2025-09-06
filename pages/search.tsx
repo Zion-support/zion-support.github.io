@@ -101,7 +101,7 @@ const filters = [;
 ];
 export default function SearchPage() {import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-  Search,Filter,Grid,List,ArrowRight,ExternalLink,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,TrendingUp,BarChart3,Cloud,Network,Lightbulb,Flame,Zap as ZapIcon,X,Sliders,SortAsc,SortDesc,} from 'lucide-react';
+  Search,Filter,Grid,List,ArrowRight,ExternalLink,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,TrendingUp,BarChart3,Cloud,Network,Lightbulb,Flame,Zap as ZapIcon,X,Sliders,SortAsc,SortDesc} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;

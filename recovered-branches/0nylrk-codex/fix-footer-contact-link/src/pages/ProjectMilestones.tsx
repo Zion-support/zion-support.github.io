@@ -15,6 +15,42 @@ import { Footer } from '@/components/Footer';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
 import React from 'react',import { SEO } from '@/components/SEO',import { AppHeader } from '@/layout/AppHeader',import { Footer } from '@/components/Footer',import { ProtectedRoute } from '@/components/ProtectedRoute',import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',function ProjectMilestones() {return (<ProtectedRoute>;
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesContent";
+function ProjectMilestones() {
+  return (
+    <ProtectedRoute>
+      <>
+        <SEO
+          title="Payment Milestones | Zion AI Marketplace"
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  );
+}
+
+        <SEO
+          title="Payment Milestones | Zion AI Marketplace"
+          description="Manage project payment milestones and deliverables"
+import {SEO} from '@/components / SEO';
+import {AppHeader} from '@/layout / AppHeader';
+import {Footer} from '@/components / Footer';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ProjectMilestonesContent} from '@/components / projects / milestones / ProjectMilestonesContent';
+/**
+ * ProjectMilestones - Function description
+ */
+function ProjectMilestones() {
+  return (
+    <ProtectedRoute>;
       <>;
         <SEO;
           title="Payment Milestones | Zion AI Marketplace";
@@ -50,7 +86,7 @@ function ProjectMilestones() {return (<ProtectedRoute>;
         <ProjectMilestonesContent />;
         <Footer />;
       </>;;export default ProjectMilestones;export default ProjectMilestones;</ProtectedRoute>;
-  ),}export default ProjectMilestones,<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
+  )}export default ProjectMilestones,<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
           description="Manage project payment milestones and deliverables";
         />;
         <AppHeader />;
@@ -60,3 +96,37 @@ function ProjectMilestones() {return (<ProtectedRoute>;
     </ProtectedRoute>;
   )})}
 export default ProjectMilestones;</ProtectedRoute>)}export default ProjectMilestones;export default ProjectMilestones;
+
+
+
+;
+
+
+export default ProjectMilestones;
+
+export default ProjectMilestones;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+export default ProjectMilestones;
+
+    </ProtectedRoute>);
+}
+
+;
+export default ProjectMilestones;
+
+;
+export default ProjectMilestones;

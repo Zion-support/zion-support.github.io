@@ -73,7 +73,7 @@ export default function JobDetails() {// navigate is now router;
     setIsApplyModalOpen(true)}const handleApplySuccess = async (appliedJobId: string) => {toast && toast.success('Application submitted successfully!')setIsApplyModalOpen(false)}const isOwnJob  = user?.id === job && job.client_id;return (<>;
       <SEO;
         title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description = {job && job.description.substring(0, 160),}
+        description = {job && job.description.substring(0, 160)}
       />;
       <Header />;
       <main className='container mx-auto px-4 py-8'>;

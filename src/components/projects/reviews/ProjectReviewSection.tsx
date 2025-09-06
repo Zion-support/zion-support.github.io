@@ -84,14 +84,14 @@ import { Project } from '@/types/projects',import { useState } from "react",impo
                 ) : null}
               </div>;
             )}<ReviewsList;
-              reviews = {reviews,}
-              isLoading = {isLoading,}
-              onReportReview = {reportReview,}</CardContent>;{/* Review Modal */}
+              reviews = {reviews}
+              isLoading = {isLoading}
+              onReportReview = {reportReview}</CardContent>;{/* Review Modal */}
       {(isClient || isTalent) && (<LeaveReviewModal;
-          revieweeId = {revieweeId,}
-          revieweeName = {revieweeName,}
-          isOpen = {isReviewModalOpen,}
-          onClose = {(,) => setIsReviewModalOpen(false),})}</Card>;
+          revieweeId = {revieweeId}
+          revieweeName = {revieweeName}
+          isOpen = {isReviewModalOpen}
+          onClose = {(,) => setIsReviewModalOpen(false)})}</Card>;
   )}}<ReviewsList;
               reviews={reviews}
               isLoading={isLoading}
@@ -106,7 +106,7 @@ import { Project } from '@/types/projects',import { useState } from "react",impo
         )}</Card>;
   )}}}import { Project  } from '@/types / projects';
 import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components / ui / card';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components / ui / card';
 import { ReviewsList  } from '@/components / reviews / ReviewsList';
 import { LeaveReviewModal  } from '@/components / reviews / LeaveReviewModal';
 import { use_reviews  } from '@/hooks / use_reviews';
@@ -166,9 +166,9 @@ function ProjectReviewSection() {const { user } = use_auth ()const { reviews, us
                   </div>) : null}
               </div>)}
             <ReviewsList;
-              reviews = {reviews, }
-              is_loading = {is_loading, }
-              onReportReview = {report_review, }
+              reviews = {reviews }
+              is_loading = {is_loading }
+              onReportReview = {report_review }
             />;
           </div>) : (<div className='bg - muted / 20 rounded - lg p - 6 text - center'>;
             <h3 className='font - medium mb - 2'>;

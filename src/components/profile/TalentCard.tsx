@@ -33,7 +33,7 @@ import React, { useState } from 'react'; // Import React and useState;export int
   onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
 export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: string,) => void,onRequestHire: (talent: TalentProfile,) => void,isSaved: boolean,onToggleSave: (id: string, isSaved: boolean,) => void,isAuthenticated: boolean;
-}export function TalentCard(): any ({talent,onViewProfile,onRequestHire,isSaved,onToggleSave,isAuthenticated,}: TalentCardProps) {const [avatarError, setAvatarError]  = useState(false)const handleViewProfile = () => {if (onViewProfile) {onViewProfile(talent && talent.id)}      onViewProfile(talent && talent.id)onToggleSave(talent.id, !isSaved)onToggleSave(talent.id, !isSaved)}
+}export function TalentCard(): any ({talent,onViewProfile,onRequestHire,isSaved,onToggleSave,isAuthenticated}: TalentCardProps) {const [avatarError, setAvatarError]  = useState(false)const handleViewProfile = () => {if (onViewProfile) {onViewProfile(talent && talent.id)}      onViewProfile(talent && talent.id)onToggleSave(talent.id, !isSaved)onToggleSave(talent.id, !isSaved)}
   }const handleRequestHire = (e: React && React.MouseEvent) => {e && e.preventDefault()e && e.stopPropagation(),if (onRequestHire) {onRequestHire(talent)}
       onRequestHire(talent)if (onRequestHire) {onRequestHire(talent)}
   }const handleToggleSave = (e: React && React.MouseEvent) => {e && e.preventDefault()e && e.stopPropagation(),if (onToggleSave) {onToggleSave(talent && talent.id, !isSaved)if (onToggleSave) {}

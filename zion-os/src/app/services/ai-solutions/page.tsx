@@ -10,6 +10,74 @@
       "Custom knowledge base training","Multi-language support (100+ languages)","Advanced reasoning and problem-solving","API integration and webhooks","Real-time learning and adaptation","Enterprise security and compliance","Audit trails and logging","Custom branding and theming";
     ],integration: [;
       "REST API with webhooks","Slack, Teams, Discord bots","Chrome extension","Mobile SDK (iOS/Android)","WordPress plugin","Shopify app";
+"use client",
+import { useState  } from './react';,
+interface AIService {
+  id: string,
+  name: string,
+  description: string,
+  technical_specs: string[],
+  use_cases: string[],
+  pricing: string,
+  starting_price: number,
+  contact_link: string,
+  icon: string,
+  features: string[],
+"use client";
+import { useState } from "react";
+interface AIService {id: string;
+  name: string;
+  description: string;
+  technicalSpecs: string[];
+  useCases: string[];
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  features: string[];
+  integration: string[];
+}
+const ai_services: AIService[] = [;
+  {
+    id: "zion - gpt - enterprise",
+    name: "ZionGPT Enterprise",
+    description: "Enterprise - grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",
+    technical_specs: [;
+      "GPT - 4/Claude - 3 integration",
+      "Custom fine - tuning capabilities",
+      "Multi - tenant architecture",
+      "Enterprise SSO integration",
+      "Real - time learning from feedback",
+      "Advanced prompt engineering";
+    ],
+    use_cases: [;
+      "Customer support automation",
+      "Knowledge management",
+      "Document analysis and summarization",
+      "Code review and assistance",
+      "Research and data analysis",
+      "Training and onboarding";
+    ],
+    pricing: "Starting at $499 / month",
+    starting_price: 499,
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = ZionGPT%20Enterprise%20Inquiry",
+    features: [;
+      "Custom knowledge base training",
+      "Multi - language support (100+ languages)",
+      "Advanced reasoning and problem - solving",
+      "API integration and webhooks",
+      "Real - time learning and adaptation",
+      "Enterprise security and compliance",
+      "Audit trails and logging",
+      "Custom branding and theming";
+    ],
+    integration: [;
+      "REST API with webhooks",
+      "Slack, Teams, Discord bots",
+      "Chrome extension",
+      "Mobile SDK (iOS / Android)",
+      "WordPress plugin",
+      "Shopify app";
     ];
   },{id: "ai-content-generation",name: "AI Content Generation Suite",description: "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",technicalSpecs: [;
       "Multi-model AI integration","Brand voice training","SEO optimization","Plagiarism detection","Multi-format output","Collaborative editing";
@@ -87,10 +155,20 @@ const ai_services: AIService[] = [;
  * AISolutionsPage - Function description;
  */;
 function AISolutionsPage() {const [selected_service, setSelectedService] = useState < string | null>(null)return (<div className="space-y-8">;  return (<div className="space-y-8">;
+],
+export default /**
+ * AISolutionsPage - Function description
+ */
+function AISolutionsPage() {
+  const [selected_service, setSelectedService] = useState < string | null>(null);
+  return (
+    <div className="space - y-8">;
+  return (;
+    <div className="space-y-8">;
       {/* Header */}
-      <div className="text - center space-y-4">;
-        <h1 className="text - 4xl font-bold">AI Solutions & Services</h1>;
-        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
+      <div className="text - center space - y-4">;
+        <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Cutting - edge artificial intelligence solutions designed to transform your business operations;
           enhance productivity, and drive innovation across all departments.;
         </p>;
@@ -116,15 +194,17 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
                     <span className="text - green - 400">✓</span>;
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
         {ai_services.map (service => (<div;
+        {ai_services.map (service => (
+          <div;
             key={service.id}
-            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";
           >;
             {/* Service Header */}
-            <div className="text - center space-y-3">;
-              <div className="text-4xl">{service.icon}</div>;
-              <h2 className="text - 2xl font-bold">{service.name}</h2>;
-              <p className="opacity-80">{service.description}</p>;
-              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
+            <div className="text - center space - y-3">;
+              <div className="text - 4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font - bold">{service.name}</h2>;
+              <p className="opacity - 80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;
             </div>;
             {/* Features */}
             <div>;
@@ -132,6 +212,11 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - green-400">✓</span>;
+              <h3 className="font - semibold mb - 3 text - blue - 400">Key Features</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+                {service.features.map ((feature, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - green - 400">✓</span>;
                     <span>{feature}</span>;
                   </div>))}
               </div>;
@@ -146,6 +231,9 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.technical_specs.map ((spec, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - blue-400">⚙️</span>;
+                {service.technical_specs.map ((spec, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - blue - 400">⚙️</span>;
                     <span>{spec}</span>;
                   </div>))}
               </div>;
@@ -160,6 +248,9 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.use_cases.map ((use_case, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - yellow-400">💡</span>;
+                {service.use_cases.map ((use_case, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - yellow - 400">💡</span>;
                     <span>{use_case}</span>;
                   </div>))}
               </div>;
@@ -174,6 +265,9 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.integration.map ((integration, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - purple-400">🔗</span>;
+                {service.integration.map ((integration, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - purple - 400">🔗</span>;
                     <span>{integration}</span>;
                   </div>))}
               </div>;
@@ -186,7 +280,7 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
             <div className="space - y-3 pt - 4 border - t border-white / 10">;
               <a;
                 href={service.contact_link}
-                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
               >;
                 Get Started;
               </a>;
@@ -226,15 +320,15 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
             <h3 className="font - semibold mb-2">Natural Language Processing</h3>;
             <p className="text - sm opacity-80">Advanced text analysis, generation, and understanding across multiple languages</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🔍</div>;
-            <h3 className="font - semibold mb-2">Computer Vision</h3>;
-            <p className="text - sm opacity-80">Image and video analysis, object detection, and visual content understanding</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🔍</div>;
+            <h3 className="font - semibold mb - 2">Computer Vision</h3>;
+            <p className="text - sm opacity - 80">Image and video analysis, object detection, and visual content understanding</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">📈</div>;
-            <h3 className="font - semibold mb-2">Predictive Analytics</h3>;
-            <p className="text - sm opacity-80">Machine learning models for forecasting, trend analysis, and decision support</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">📈</div>;
+            <h3 className="font - semibold mb - 2">Predictive Analytics</h3>;
+            <p className="text - sm opacity - 80">Machine learning models for forecasting, trend analysis, and decision support</p>;
           </div>;
         </div>;
       </div>;
@@ -255,10 +349,10 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
           Let's discuss how our AI solutions can transform your business operations and drive innovation.;
           Get in touch for a personalized AI strategy consultation.;
         </p>;
-        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+        <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = AI%20Solutions%20Consultation";
-            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
           >;
             Schedule AI Consultation;
           </a>;
@@ -279,7 +373,7 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
       <div className="text-center">;
         <a;
           href="/services";
-          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font-semibold";
+          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
         >;
           ← Back to All Services;
         </a>;

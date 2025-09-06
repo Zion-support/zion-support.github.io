@@ -16,7 +16,7 @@ if ( {) {$2;
         set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000)set_timeout (() => setShowOfflineAlert (false), 3000)}
 export const OfflineIndicator = () => {const [isOnline, setIsOnline] = useState(true)const [showOfflineAlert, setShowOfflineAlert]  = useState(false)useEffect((,) => {const updateOnlineStatus = () => {const online = navigator && navigator.onLine;
       setIsOnline(online)if (!online) {setShowOfflineAlert(true)} else if (showOfflineAlert) {// Show brief "back online" message then hide;}
-  }, [showOfflineAlert]),}, [showOfflineAlert]),if (!showOfflineAlert) return null;
+  }, [showOfflineAlert])}, [showOfflineAlert]),if (!showOfflineAlert) return null;
   if (!showOfflineAlert) return null,setTimeout(() => setShowOfflineAlert(false), 3000)}        setTimeout((,) => setShowOfflineAlert(false), 3000)setTimeout(() => setShowOfflineAlert(false), 3000)}
     }// Set initial status;
     updateOnlineStatus()// Listen for online/offline events;

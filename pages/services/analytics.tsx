@@ -101,7 +101,7 @@ function AnalyticsServicesPage() {const services = [;
     },{title: "Business Intelligence",description: "Interactive dashboards and reporting solutions",features: ["Custom Dashboards", "KPI Tracking", "Data Visualization", "Automated Reports"],price: "From $5,000",icon: BarChart3,color: "from-blue-500 to-cyan-500";
     },{title: "Predictive Analytics",description: "AI-powered predictive modeling and forecasting",features: ["Machine Learning Models", "Forecasting", "Risk Assessment", "Trend Analysis"],price: "From $12,000",icon: Zap,color: "from-purple-500 to-pink-500";
     },{title: "Data Strategy & Governance",description: "Comprehensive data strategy and governance frameworks",features: ["Data Architecture", "Governance Policies", "Compliance", "Data Quality"],price: "From $10,000",icon: Shield,color: 'from-emerald-500 to-teal-500';
-    },];color: "from-emerald-500 to-teal-500";
+    }];color: "from-emerald-500 to-teal-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   return (<div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
@@ -450,7 +450,7 @@ className='text-center mb-16';
         </div>;
       </section>;<EnhancedFooter />;
     </div>;
-  ),}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
+  )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0 && 0.8;
 }viewport= {{}

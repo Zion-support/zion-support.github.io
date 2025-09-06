@@ -11,12 +11,40 @@ interface ComprehensiveServicesProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/ComprehensiveServices.jsx;
+interface ComprehensiveServicesProps {
+  // Add props here as needed
+
+
+}
+
+export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
+  return (
+    <div>
+      <h1>ComprehensiveServices</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/ComprehensiveServices.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/ComprehensiveServices.jsx;
+:temp_exclude/src.pages.disabled/ComprehensiveServices.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/ComprehensiveServices.jsx
 }
 }
 }

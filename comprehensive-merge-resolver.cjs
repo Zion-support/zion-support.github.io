@@ -97,6 +97,7 @@ function pushChanges() {
 const fs = require('fs')
 const path = require('path')
 >>>>>>> main
+
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
   log(message, level = 'INFO')
@@ -117,6 +118,7 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 ursor/automate-test-improve-and-merge-code-646c
+
 }
 
 console.log(`Found ${conflictFiles.length} files with merge conflicts`);
@@ -189,3 +191,4 @@ console.log('\n🚀 Ready to proceed with improvements!');
 module.exports = { resolveConflicts, commitMerge, pushChanges };
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+

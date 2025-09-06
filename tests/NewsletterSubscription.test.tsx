@@ -6,3 +6,28 @@ describe('NewsletterSubscription', () => {test('renders without crashing', () =>
   })test('handles user interactions', () => {render(<NewsletterSubscription />)// Add interaction tests here;
   })test('applies correct styling', () => {render(<NewsletterSubscription />)// Add styling tests here;
   })})
+interface NewsletterSubscription.testProps {
+  // Add props here as needed
+}
+}
+
+
+interface NewsletterSubscription.testProps {
+  // Add props here as needed
+interface NewsletterSubscription.testProps {
+  // Add props here as needed
+}
+export default function NewsletterSubscription.test({}: NewsletterSubscription.testProps) {
+  return (
+    <div>
+      <h1>NewsletterSubscription.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+}
+}
+
+
+}

@@ -87,21 +87,21 @@ const loadNotificationFunctions = () => import("@/utils/notifications"),export d
   const handleTestNotification = async () => {try {}
   }
 }
-import {UserCheck,Bell,MessageSquare,LogOut,Send,Settings,FileText,Heart,Key,ShoppingBag,} from 'lucide-react';
+import {UserCheck,Bell,MessageSquare,LogOut,Send,Settings,FileText,Heart,Key,ShoppingBag} from 'lucide-react';
 // Lazy load heavy components to prevent router abort;
 const CommunityDiscussion = dynamic(() =>;
-    import('@/components/CommunityDiscussion').then(mod => ({default: mod && mod.CommunityDiscussion,})),{loading: () => (<div className='h-32 bg-zion-blue-light rounded animate-pulse' />;
-    ),ssr: false,}
+    import('@/components/CommunityDiscussion').then(mod => ({default: mod && mod.CommunityDiscussion})),{loading: () => (<div className='h-32 bg-zion-blue-light rounded animate-pulse' />;
+    ),ssr: false}
 )const PointsBadge = dynamic(() =>;
-    import('@/components/loyalty/PointsBadge').then(mod => ({default: mod && mod.PointsBadge,})),{loading: () => (<span className='text-zion-cyan font-medium'>Loading...</span>;
-    ),ssr: false,}
+    import('@/components/loyalty/PointsBadge').then(mod => ({default: mod && mod.PointsBadge})),{loading: () => (<span className='text-zion-cyan font-medium'>Loading...</span>;
+    ),ssr: false}
 )const ApiKeysManager = dynamic(() =>;
-    import('@/components/developers/ApiKeysManager').then(mod => ({default: mod && mod.ApiKeysManager,})),{loading: () => (<div className='h-24 bg-zion-blue-light rounded animate-pulse' />;
-    ),ssr: false,}
+    import('@/components/developers/ApiKeysManager').then(mod => ({default: mod && mod.ApiKeysManager})),{loading: () => (<div className='h-24 bg-zion-blue-light rounded animate-pulse' />;
+    ),ssr: false}
 )const NotificationBell = dynamic(() =>;
-    import('@/components/NotificationBell').then(mod => ({default: mod && mod.NotificationBell,})),{loading: () => <Bell size={16} className='text-zion-cyan' />,ssr: false,}
+    import('@/components/NotificationBell').then(mod => ({default: mod && mod.NotificationBell})),{loading: () => <Bell size={16} className='text-zion-cyan' />,ssr: false}
 )const GuidedTour = dynamic(() =>;
-    import('@/components/onboarding/GuidedTour').then(mod => ({default: mod && mod.GuidedTour,})),{ssr: false,}
+    import('@/components/onboarding/GuidedTour').then(mod => ({default: mod && mod.GuidedTour})),{ssr: false}
 )// Lazy load notification functions;
 const loadNotificationFunctions  = () => import('@/utils/notifications')export default function Dashboard() {const { logout } = useAuth()const { user, loading } = useRequireAuth()// This will handle authentication and redirects;
   const { toast }  = useToast()// Add safe checks for user ID to prevent premature API calls;

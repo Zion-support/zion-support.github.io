@@ -64,7 +64,7 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
         </div>;
       </div>;
     </div>;
-  )}'"},}// Only render on mobile devices;
+  )}'"}}// Only render on mobile devices;
   // Check condition;
 if (return null) {$2;
 }
@@ -83,7 +83,7 @@ if (return null) {$2;
             View;
           </a>;
           <button;
-            on_click = {dismiss_banner, }
+            on_click = {dismiss_banner }
             className="text - gray - 400 focus - visible: outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 rounded";
             aria - label="Dismiss banner";
           >;
@@ -92,4 +92,4 @@ if (return null) {$2;
         </div>;
       </div>;
     </div>)}
-'"},}))}'";
+'"}}))}'";

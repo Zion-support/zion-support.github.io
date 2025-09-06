@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import {AlertTriangle,CheckCircle,XCircle,Clock,TrendingUp,Activity,} from 'lucide-react';
+import {AlertTriangle,CheckCircle,XCircle,Clock,TrendingUp,Activity} from 'lucide-react';
 interface HealthData  {import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity  } from 'lucide-react';
 import { AlertTriangle;
   CheckCircle;
@@ -20,7 +20,7 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / c
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { AlertTriangle,CheckCircle,XCircle,Clock,TrendingUp,Activity,} from 'lucide-react';
+import { AlertTriangle,CheckCircle,XCircle,Clock,TrendingUp,Activity} from 'lucide-react';
 interface HealthData  {status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
@@ -951,5 +951,5 @@ if (return null) {$2;
         </TabsContent>;
       </Tabs>;export default HealthDashboard;</div>)}
 export default HealthDashboard;
-export default HealthDashboard,export default HealthDashboard,}
+export default HealthDashboard,export default HealthDashboard}
   )}export default HealthDashboard;

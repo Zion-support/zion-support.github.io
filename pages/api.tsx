@@ -315,7 +315,7 @@ const deployment = await client.cloud.deploy({appName: 'my-app', source: './dist
             </div>;
           </motion.div>;
         </div>;
-  Code,Check,Globe,Shield,Zap,Database,Cpu,Cloud,XCircle,} from "lucide-react";
+  Code,Check,Globe,Shield,Zap,Database,Cpu,Cloud,XCircle} from "lucide-react";
 export default function APIPage() {const apiEndpoints = [;
     {id: "auth";
       title: "Authentication";
@@ -383,7 +383,7 @@ ursor/automate-test-improve-and-merge-code-646c;
   -d '{}'`;
         }
       ];
-    },];const response_examples = {success: {status: 200;
+    }];const response_examples = {success: {status: 200;
       data: {message: "Request successful";
         data: {error: {status: 400;
       error: {code: "VALIDATION_ERROR";

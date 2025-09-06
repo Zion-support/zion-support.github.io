@@ -4,7 +4,7 @@
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-export default function InfrastructureDriftDetectorPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/infrastructure-drift-detector'))if (!service) return null,import { Building,Phone,Mail,MapPin,Check,ArrowRight,GitPullRequest,Star,} from 'lucide-react';
+export default function InfrastructureDriftDetectorPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/infrastructure-drift-detector'))if (!service) return null,import { Building,Phone,Mail,MapPin,Check,ArrowRight,GitPullRequest,Star} from 'lucide-react';
 export default function InfrastructureDriftDetectorPage() {const service = enhancedRealMicroSaasServices.find(s =>;
     s.link.endsWith('/infrastructure-drift-detector'))if (!service) return null;return (<Layout>;
       <Head>;

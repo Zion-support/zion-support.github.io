@@ -5,5 +5,5 @@ export default async function handler() {if (req.method !== 'POST') return res.s
   const state = null;
   res.status(200).json({ ok: true })}
   }
-  const state = readState()const conn = state.connections.find((c) => c.providerId === providerId)if (!conn) return res.status(404).json({ error: "Connection not found" })const now = Date.now()writeState(s => {s.logs.push({id: `${now}-${providerId}-resync`,timestamp: now,providerId: providerId as any,level: 'info',action: 'resync',})const target = s.connections.find((c) => c.providerId === providerId)if (target) target.lastSyncAt = now;
+  const state = readState()const conn = state.connections.find((c) => c.providerId === providerId)if (!conn) return res.status(404).json({ error: "Connection not found" })const now = Date.now()writeState(s => {s.logs.push({id: `${now}-${providerId}-resync`,timestamp: now,providerId: providerId as any,level: 'info',action: 'resync'})const target = s.connections.find((c) => c.providerId === providerId)if (target) target.lastSyncAt = now;
   })res.status(200).json({ ok: true })}

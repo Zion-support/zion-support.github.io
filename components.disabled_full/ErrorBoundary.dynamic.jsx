@@ -18,3 +18,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>'</p>';
 </p>';
+const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ErrorBoundary' ,'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

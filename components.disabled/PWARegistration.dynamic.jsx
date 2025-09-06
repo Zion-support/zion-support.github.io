@@ -17,3 +17,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
+const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

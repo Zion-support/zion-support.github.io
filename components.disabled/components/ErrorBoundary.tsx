@@ -10,8 +10,8 @@ interface Props  {children: ReactNode;
 }interface State  {hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-}export class ErrorBoundary extends Component<Props, State> {public state: State = {hasError: false,}constructor(props: Props) {super(props)this.state = { hasError: false, error: null, errorInfo: null }}public componentDidCatch(error: Error, errorInfo: ErrorInfo) {console.error('ErrorBoundary caught an error:', error, errorInfo)// Log error to monitoring service;
-    if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'exception', {description: error.message,fatal: false,})}
+}export class ErrorBoundary extends Component<Props, State> {public state: State = {hasError: false}constructor(props: Props) {super(props)this.state = { hasError: false, error: null, errorInfo: null }}public componentDidCatch(error: Error, errorInfo: ErrorInfo) {console.error('ErrorBoundary caught an error:', error, errorInfo)// Log error to monitoring service;
+    if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'exception', {description: error.message,fatal: false})}
   }render() {if (this.state.hasError) {return (this.props.fallback || (<div className="min-h-screen flex items-center justify-center bg-gray-50">;
             <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">;
               <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">;

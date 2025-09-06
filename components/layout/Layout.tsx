@@ -6,6 +6,7 @@ React from;
 import Header from 'react';
   './Header';import Footer from 'react';
   './Footer';
+
 import Header from '../Header';
 import Footer from '../Footer';
 import Header from './Header';
@@ -87,3 +88,26 @@ interface LayoutProps  {children: React.ReactNode;
       <Footer />;
     </div>;
   )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+}}
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}

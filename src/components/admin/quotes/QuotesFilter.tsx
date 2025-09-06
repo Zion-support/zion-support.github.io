@@ -24,7 +24,7 @@ interface QuotesFilterProps  {searchQuery: string;
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;onReset: () => void;
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({searchQuery,setSearchQuery,statusFilter,setStatusFilter,archiveFilter,setArchiveFilter,dateRange,setDateRange,onReset,}) => {onReset;
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({searchQuery,setSearchQuery,statusFilter,setStatusFilter,archiveFilter,setArchiveFilter,dateRange,setDateRange,onReset}) => {onReset;
 },) => {return (<Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
@@ -45,8 +45,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({searchQuery,setSearch
 import React from 'react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Input  } from '@/components / ui / input';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components / ui / select';
-  Popover,PopoverContent,PopoverTrigger,} from '@/components / ui / popover';
+import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components / ui / select';
+  Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
 import { Button  } from '@/components / ui / button';
 import { Calendar as CalendarComponent  } from '@/components / ui / calendar';
 import { format  } from 'date - fns';
@@ -61,7 +61,7 @@ interface QuotesFilterProps  {search_query: string;
   date_range: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
   on_reset: () => void;
-export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSearchQuery,status_filter,setStatusFilter,archive_filter,setArchiveFilter,date_range,setDateRange,on_reset, }) => {on_reset;
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSearchQuery,status_filter,setStatusFilter,archive_filter,setArchiveFilter,date_range,setDateRange,on_reset }) => {on_reset;
 }, ) => {return (<Card className='mb - 6 bg - zion - blue - dark border - zion - blue - light'>;
       <CardContent className='p - 6'>;
         <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4 items - end'>;
@@ -187,10 +187,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({format(dateRange.from
                   defaultMonth={dateRange?.from}selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
-                  defaultMonth = {dateRange?.from,}
-                  selected = {dateRange,}
-                  onSelect = {setDateRange,}
-                  numberOfMonths = {2,}onReset: () => void;
+                  defaultMonth = {dateRange?.from}
+                  selected = {dateRange}
+                  onSelect = {setDateRange}
+                  numberOfMonths = {2}onReset: () => void;
 }}<div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
             <Popover>;
@@ -219,10 +219,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({format(dateRange.from
                   selected={date_range}
                   on_select={setDateRange}
                   numberOfMonths={2}
-                  default_month = {date_range?.from, }
-                  selected = {date_range, }
-                  on_select = {setDateRange, }
-                  numberOfMonths = {2, }
+                  default_month = {date_range?.from }
+                  selected = {date_range }
+                  on_select = {setDateRange }
+                  numberOfMonths = {2 }
                 />;
               </PopoverContent>;
             </Popover>;

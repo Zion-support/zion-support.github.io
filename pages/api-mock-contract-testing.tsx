@@ -31,7 +31,7 @@ function ApiMockContractTestingPage() {const contact_info = {mobile: '+1 302 464
       contactInfo;
     }
         'OpenAPI/GraphQL import and live mock server','Contract tests gated in CI (GitHub/GitLab/Bitbucket)','Dynamic data generators and scenario templates','Snapshot diffs and changelog with approvals';
-      ],link: 'https://ziontechgroup.com/api-mock-contract-testing',contactInfo,},];
+      ],link: 'https://ziontechgroup.com/api-mock-contract-testing',contactInfo}];
   const tiers = [;
     {name: 'Starter';
       price: '$69/month';

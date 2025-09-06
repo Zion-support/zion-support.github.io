@@ -11,12 +11,40 @@ interface CustomerExperienceProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/CustomerExperience.jsx;
+interface CustomerExperienceProps {
+  // Add props here as needed
+
+
+}
+
+export default function CustomerExperience({}: CustomerExperienceProps) {
+  return (
+    <div>
+      <h1>CustomerExperience</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/CustomerExperience.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/CustomerExperience.jsx;
+:temp_exclude/src.pages.disabled/CustomerExperience.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/CustomerExperience.jsx
 }
 }
 }

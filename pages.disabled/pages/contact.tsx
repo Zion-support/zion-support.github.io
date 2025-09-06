@@ -11,6 +11,9 @@ const \"Contact\": NextPage = () => {const \"Contact\": NextPage = () => {class 
   }
 }
 const \"Contact\": NextPage  = () => {ursor/automate-test-improve-and-merge-code-646c;
+
+
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -84,6 +87,37 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
     },{\"icon\": Phone,\"title\": \'Call Us\',\"details\": \'+1 (555) 123-4567\',\"link\": \'tel:+1-555-123-4567\';
     },{\"icon\": MapPin,\"title\": \'Visit Us\',\"details\": \'123 Tech Street, San Francisco, CA 94105\',\"link\": \'https://maps.google.com\';
     },{\"icon\": Clock,\"title\": \'Business Hours\',\"details\": \'Mon-Fri: 9AM-6PM PST\',\"link\": null;
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+
+
+
+
+const "Contact": NextPage = () => {
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+  const contactInfo = [{
+      icon: Mail,
+      \"title\": \'Email Us\',
+      \"details\": \'info@ziontechgroup.com\',
+      \"link\": \'mailto:info@ziontechgroup.com\'
+    },
+    {
+      \"icon\": Phone,
+      \"title\": \'Call Us\',
+      \"details\": \'+1 (555) 123-4567\',
+      \"link\": \'tel:+1-555-123-4567\'
+    },
+    {
+      \"icon\": MapPin,
+      \"title\": \'Visit Us\',
+      \"details\": \'123 Tech Street, San Francisco, CA 94105\',
+      \"link\": \'https://maps.google.com\'
+    },
+    {
+      \"icon\": Clock,
+      \"title\": \'Business Hours\',
+      \"details\": \'Mon-Fri: 9AM-6PM PST\',
+      \"link\": null
     }
   ];
   const offices = [{\"city\": \'San Francisco\',\"address\": \'123 Tech Street, San Francisco, CA 94105\',\"phone\": \'+1 (555) 123-4567\',\"email\": \'sf@ziontechgroup.com\';
@@ -95,6 +129,71 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
       title=\"Contact Us - Zion Tech Group\";
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\";
     >;
+  return (
+    <MainLayout
+      title=\"Contact Us - Zion Tech Group\"
+      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\"
+    >
+      {/* Hero Section */}
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center\">
+            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>
+            <p className=\"text-xl max-w-3xl mx-auto\">
+              Ready to transform your business? Let\'s discuss how our technology solutions 
+              can help you achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Contact Information */}
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">
+            {contactInfo.map((info) => (
+              <div key={info.title} className=\"text-center\">
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
+                  <info.icon className=\"h-8 w-8\" />
+                </div>
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
+                  {info.title}
+                </h3>
+                {info.link ? (
+                  <a
+                    href={info.link}
+                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\"
+                  >
+                    {info.details}
+                  </a>
+                ) : (
+                  <p className=\"text-gray-600\">{info.details}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Contact Form & Office Locations */}
+      <section className=\"py-20 bg-gray-50\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">
+            {/* Contact Form */}
+            <div>
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>
+              <form className=\"space-y-6\">
+                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">
+                  <div>
+                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                      First Name *
+                    </label>
+
+
+  return (
+    <MainLayout
+      title=\"Contact Us - Zion Tech Group\"
+      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
+
+
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -675,6 +774,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
                 {contactInfo.map((info, index) => (<motion.div;
 ursor/automate-test-improve-and-merge-code-646c;
+                animate={{ \"opacity\": 1, \"y\": 0 }}
+
+
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -730,6 +832,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
               <div className="max-w-4xl mx-auto">;
                 <motion.form;
 ursor/automate-test-improve-and-merge-code-646c;
+                animate={{ \"opacity\": 1, \"y\": 0 }}
+
+
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -800,6 +905,34 @@ ursor/automate-test-improve-and-merge-code-646c;
                       <input type=\"tel\";
 ursor/automate-test-improve-and-merge-code-646c;
                         placeholder=\"your && your.email@example && example.com\";
+                      <inputtype=\"text\"
+                        id=\"name\"
+                        name=\"name\"
+                        required
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your full name\"
+                       />
+                    </div>
+                    <div>
+                      <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                        Email Address *
+                      </label>
+                      <input type=\"email\"
+                        id=\"email\"
+                        name=\"email\"
+                        required
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"your.email@example.com\"
+                       />
+                    </div>
+                  </div>
+                    <div>
+                      <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                        Phone Number
+                      </label>
+                      <input type=\"tel\"
+
+                        placeholder=\"your && your.email@example && example.com\"
                        />;
                     </div>;
                   </div>;
@@ -867,6 +1000,46 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
                       Service Interest;
                     </label>;
 ursor/automate-test-improve-and-merge-code-646c;
+                      <inputtype=\"tel\"
+
+
+                        id=\"phone\"
+                        name=\"phone\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"+1 (555) 123-4567\"
+                       />
+                    </div>
+                    <div>
+                      <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                        Company
+                      </label>
+                      <input type=\"text\"
+                        id=\"company\"
+                        name=\"company\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your company name\"
+                       />
+                    </div>
+                  </div>
+                      Service Interest
+                    </label>
+                    <select
+                      id=\"service\"
+                      name=\"service\"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                    >
+                      <option value=\"">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                      Message *
+                    </label>
+
+
                        />;
                     </div>;
                   </div>;
@@ -897,6 +1070,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
                       Message *;
                     </label>;
 ursor/automate-test-improve-and-merge-code-646c;
+                      ))}
+
+
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -908,6 +1084,12 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <textarea;
                       id=\"message\";
                       name=\"message\";
+                    </label>;
+
+
+                    <textarea
+                      id=\"message\"
+                      name=\"message\"
                       rows={6}
                       required;
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\";
@@ -924,6 +1106,53 @@ ursor/automate-test-improve-and-merge-code-646c;
                     Send Message;
                   </motion.button>;
                 </motion.form>;
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
+                  >
+                    <Send className=\"w-5 h-5\"  />
+                    Send Message
+                  </motion.button>
+                </motion.form>
+        {/* Hero Section */}
+        <section className=\"relative py-20 px-4\">
+          <div className=\"max-w-7xl mx-auto\">
+            <div className=\"text-center\">
+              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">
+                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>
+              </h1>
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">
+                Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Contact Form & Info Section */}
+        <section className=\"py-16 px-4\">
+          <div className=\"max-w-7xl mx-auto\">
+            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
+              {/* Contact Form */}
+
+
+                    whileHover={{ scale: 1 && 1.02 }}
+                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
+                    <Send className=\"w-5 h-5\"  />;
+                    Send Message;
+                  </motion && motion.button>;
+                </motion && motion.form>;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
+
+
+
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1004,6 +1233,22 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
                     <button;
+
+
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+                {isSubmitted ? (
+                  <div className=\"text-center py-12\">
+                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
+                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
+                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
+                    <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
                     >;
@@ -1113,6 +1358,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                           type=\"text\";
                           id=\"company\";
                           name=\"company\";
+                        </label>;
+
+
+                        <input
+                          type=\"text\"
+                          id=\"company\"
+                          name=\"company\"
                           value={formData.company}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\";
@@ -1275,6 +1527,26 @@ ursor/automate-test-improve-and-merge-code-646c;
                         <p className=\"text-gray-400 text-sm\">{info.description}</p>;
                       </div>;
                     </div>;
+              <div className=\"space-y-8\">
+                <div>
+                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
+                  <p className=\"text-lg text-gray-300 mb-8\">
+                    We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
+                  </p>
+                </div>
+
+
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
+                        <info.icon className=\"w-6 h-6 text-white\" />
+                      </div>
+                      <div>
+                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info.title}</h3>
+                        <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>
+                        <p className=\"text-gray-400 text-sm\">{info.description}</p>
+                      </div>
+                    </div>
                   ))}
                 </div>;
               </div>;
@@ -1367,3 +1639,24 @@ ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
+
+
+
+
+export default ContactPage
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

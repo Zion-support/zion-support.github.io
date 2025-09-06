@@ -10,10 +10,10 @@ import { ModelConfig   } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { useState, useEffect  } from 'react';
 import { Button  } from '@/components/ui/button';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
-import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow,} from '@/components/ui/table';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
+import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import { Badge  } from '@/components/ui/badge';
-import { Loader2,RefreshCw,Play,CheckCircle,AlertCircle,} from 'lucide-react';
+import { Loader2,RefreshCw,Play,CheckCircle,AlertCircle} from 'lucide-react';
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
 import { logErrorToProduction  } from '@/utils/productionLogger';
@@ -31,7 +31,7 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
       await supabase;
         .from('model_versions').update({ active: !currentActive }).eq('id', modelId),// Refresh the model list;
       fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error })}
-  },},export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),// Fetch model data on component mount;
+  }},export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),// Fetch model data on component mount;
   useEffect(() => {fetchModels()}, []),const fetchModels  = null;return (<Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
         <div>;
@@ -77,8 +77,8 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                     {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (<Button;
                         variant="ghost";
                         size="sm";
-                        onClick = {(,) => checkTrainingStatus(model && model.id),}
-                        disabled = {activeJobs[model && model.id],}
+                        onClick = {(,) => checkTrainingStatus(model && model.id)}
+                        disabled = {activeJobs[model && model.id]}
                       >;
                         {activeJobs[model && model.id] ? (<Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (<RefreshCw className="h-4 w-4" />;{model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (<Button;
@@ -105,11 +105,11 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         variant="ghost";
                         size="sm";
                         className="text-red-500";
-                        title = {model && model.errorMessage || "Training failed",}>;
+                        title = {model && model.errorMessage || "Training failed"}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;)}
                   </TableCell>;
-                </TableRow>;title={model.errorMessage || "Training failed"}title = {model.errorMessage || "Training failed",}
+                </TableRow>;title={model.errorMessage || "Training failed"}title = {model.errorMessage || "Training failed"}
                         title={model.errorMessage || "Training failed"}
                       >;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
@@ -161,15 +161,15 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                     {model.training_status === 'queued' || model.training_status === 'running' ? (<Button;
                         variant="ghost";
                         size="sm";
-                        on_click = {(, ) => checkTrainingStatus (model.id), }
-                        disabled = {active_jobs[model.id], }
+                        on_click = {(, ) => checkTrainingStatus (model.id) }
+                        disabled = {active_jobs[model.id] }
                       >;
                         {active_jobs[model.id] ? (<Loader2 className="h - 4 w - 4 animate - spin" />) : (<RefreshCw className="h - 4 w - 4" />)}
                         <span className="ml - 1">Check</span>;
                       </Button>) : model.training_status === 'succeeded' ? (<Button;
-                        variant = {model.active ? "outline" : "default", }
+                        variant = {model.active ? "outline" : "default" }
                         size="sm";
-                        on_click = {(, ) => toggleModelActive (model.id, model.active, model.purpose), }
+                        on_click = {(, ) => toggleModelActive (model.id, model.active, model.purpose) }
                       >;
                         {model.active ? (<>;
                             <CheckCircle className="h - 4 w - 4 mr - 1" /> Active;
@@ -180,7 +180,7 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         variant="ghost";
                         size="sm";
                         className="text - red - 500";
-                        title = {model.error_message || "Training failed", }
+                        title = {model.error_message || "Training failed" }
                       >;
                         <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
                       </Button>)}

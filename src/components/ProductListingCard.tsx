@@ -86,19 +86,19 @@ if ( {) {$2;
     >;
       {/* Image */}
       <div;
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
   const getPrice = () => {if (listing.price === null) return "Custom pricing",return formatPrice(listing.price)},const handleImageError = () => {if (!imageError) { // Prevent infinite loops if placeholder also fails;
       setImageSrc('/placeholder.svg'),setImageError(true)interface ProductListingCardProps  {listing: ProductListing,view?: 'grid' | 'list',onRequestQuote?: (id: string) => void,detailBasePath?: string;
-}log_debug ('[ProductCard] Navigating to:', {path: `${detailBasePath}/${listing.id}`,})log_debug ('[ProductCard] Listing ID:', { id: listing.id })log_debug ('[ProductCard] Listing Title:', { title: listing.title })}
+}log_debug ('[ProductCard] Navigating to:', {path: `${detailBasePath}/${listing.id}`})log_debug ('[ProductCard] Listing ID:', { id: listing.id })log_debug ('[ProductCard] Listing Title:', { title: listing.title })}
     // Validate listing ID exists before navigation;
     // Check condition;
 if ( {) {$2;
 }
       logErrorToProduction ('[ProductCard] Missing listing ID, cannot navigate',new Error ('Missing listing ID'),{ component: 'ProductListingCard' }
-      )toast ({title: 'Navigation Error',description: 'Product information is incomplete',variant: 'destructive',})return;
+      )toast ({title: 'Navigation Error',description: 'Product information is incomplete',variant: 'destructive'})return;
     }
     router.push (`${detailBasePath}/${listing.id}`)}
-  const dispatch = use_dispatch < AppDispatch>()const addToCart = () =>: any {set_loading (true)dispatch (add_item ({id: listing.id,title: listing.title,price: listing.price ?? 0,}))toast.success (`1× ${listing.title} added`, {action: {label: 'View Cart',on_click: () => router.push ('/cart'),},})set_loading (false)}
+  const dispatch = use_dispatch < AppDispatch>()const addToCart = () =>: any {set_loading (true)dispatch (add_item ({id: listing.id,title: listing.title,price: listing.price ?? 0}))toast.success (`1× ${listing.title} added`, {action: {label: 'View Cart',on_click: () => router.push ('/cart')}})set_loading (false)}
   const handleRequestQuote = (e: React.MouseEvent) =>: any {e.prevent_default ()e.stop_propagation ()// Check condition;
 if ( {) {$2;
 }
@@ -130,7 +130,7 @@ if ( {) {$2;
     if (!listing.id) {logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),toast({title: "Navigation Error",description: "Product information is incomplete",variant: "destructive"}),return;// Validate listing ID exists before navigation;
     if (!listing.id) {logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),toast({title: "Navigation Error",description: "Product information is incomplete",variant: "destructive"}),return;
     }router.push(`${detailBasePath}/${listing.id}`)},const dispatch = useDispatch<AppDispatch>(),const addToCart = () => {setLoading(true),dispatch(addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })),toast.success(`1× ${listing.title} added`, {action: {label: 'View Cart',onClick: () => router.push('/cart')}}),setLoading(false)},const handleRequestQuote = (e: React.MouseEvent) => {e.preventDefault(),e.stopPropagation(),if (onRequestQuote) {onRequestQuote(listing.id)} else {router.push(`/request-quote?listing=${listing.id}`)}
-  },const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',detailBasePath = '/marketplace/listing',}: ProductListingCardProps) => {const isGrid = view === 'grid';
+  },const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',detailBasePath = '/marketplace/listing'}: ProductListingCardProps) => {const isGrid = view === 'grid';
   const router = useRouter()const [loading, setLoading] = useState(false)const [imageSrc, setImageSrc] = useState(listing && listing.images && listing && listing.images.length > 0 && listing && listing.images[0];
       ? listing && listing.images[0];
       : '/placeholder && placeholder.svg';
@@ -152,14 +152,14 @@ if ( {) {$2;
     return formatPrice(listing && listing.price)}const handleImageError = () => {if (!imageError) {// Prevent infinite loops if placeholder also fails;
       setImageSrc('/placeholder && placeholder.svg')setImageError(true)}
   }const handleViewListing = () => {// Debug logging for development;
-    if (process && process.env.NODE_ENV === 'development') {logDebug('[ProductCard] Navigating to:', {path: `${detailBasePath}/${listing && listing.id}`,})logDebug('[ProductCard] Listing ID:', { id: listing && listing.id })logDebug('[ProductCard] Listing Title:', { title: listing && listing.title })}// Validate listing ID exists before navigation;
+    if (process && process.env.NODE_ENV === 'development') {logDebug('[ProductCard] Navigating to:', {path: `${detailBasePath}/${listing && listing.id}`})logDebug('[ProductCard] Listing ID:', { id: listing && listing.id })logDebug('[ProductCard] Listing Title:', { title: listing && listing.title })}// Validate listing ID exists before navigation;
     if (!listing && listing.id) {logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate',new Error('Missing listing ID'),{ component: 'ProductListingCard' }
-      )toast({title: 'Navigation Error',description: 'Product information is incomplete',variant: 'destructive',})return;
-    }router && router.push(`${detailBasePath}/${listing && listing.id}`)}const dispatch  = useDispatch<AppDispatch>()const addToCart = () => {setLoading(true)dispatch(addItem({id: listing && listing.id,title: listing && listing.title,price: listing && listing.price ?? 0,}))toast && toast.success(`1× ${listing && listing.title} added`, {action: {label: 'View Cart',onClick: () => router && router.push('/cart'),},})setLoading(false)}const handleRequestQuote = (e: React && React.MouseEvent) => {e && e.preventDefault()e && e.stopPropagation()if (onRequestQuote) {onRequestQuote(listing && listing.id)} else {router && router.push(`/request-quote?listing=${listing && listing.id}`)}
+      )toast({title: 'Navigation Error',description: 'Product information is incomplete',variant: 'destructive'})return;
+    }router && router.push(`${detailBasePath}/${listing && listing.id}`)}const dispatch  = useDispatch<AppDispatch>()const addToCart = () => {setLoading(true)dispatch(addItem({id: listing && listing.id,title: listing && listing.title,price: listing && listing.price ?? 0}))toast && toast.success(`1× ${listing && listing.title} added`, {action: {label: 'View Cart',onClick: () => router && router.push('/cart')}})setLoading(false)}const handleRequestQuote = (e: React && React.MouseEvent) => {e && e.preventDefault()e && e.stopPropagation()if (onRequestQuote) {onRequestQuote(listing && listing.id)} else {router && router.push(`/request-quote?listing=${listing && listing.id}`)}
   }const imageContainerClasses  = isGrid ? 'h-48' : 'h-32 w-48';onKeyDown={e => {if (e && e.key === 'Enter' || e && e.key === ' ') {e && e.preventDefault()handleViewListing()}      }}
     >;
       {/* Image */}<div;
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}onClick={handleViewListing} // Keep existing onClick for navigation;
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}onClick={handleViewListing} // Keep existing onClick for navigation;
         role='button';
         tabIndex={-1} // Remove from tab order as parent is focusable;
   return (<div;
@@ -205,7 +205,7 @@ if ( {) {$2;
     >;
       {/* Image */}
       <div;
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0', }
+        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0' }
         on_click={handleViewListing} // Keep existing on_click for navigation;
         role='button';
         tab_index={-1} // Remove from tab order as parent is focusable;
@@ -279,11 +279,11 @@ if ( {) {$2;
             </Badge>;
             {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />;
             )}</div>;{/* Title & Description */}<Image;
-            src = {image_src, }
-            alt = {listing.title, }
-            fill = {true, }
+            src = {image_src }
+            alt = {listing.title }
+            fill = {true }
             style={{ object_fit: 'cover' }}
-            on_error = {handleImageError, }
+            on_error = {handleImageError }
             priority={false} // Assuming these are not LCP images;
             sizes={is_grid;
                 ? '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
@@ -374,7 +374,7 @@ if ( {) {$2;
               size='sm';
               className='bg-primary hover:bg-primary/80 text-primary-foreground';
               onClick={e => {e && e.stopPropagation()// Prevent card click event;
-                addToCart()}}disabled = {loading,}
+                addToCart()}}disabled = {loading}
             >;
               {loading ? (<>;
                   <svg;
@@ -449,13 +449,13 @@ if ( {) {$2;
               onClick={(e) => {e.stopPropagation(), // Prevent card click event;
                 // Add to cart first, then redirect to checkout;
                 dispatch(addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })),router.push('/checkout')}}
-              disabled = {loading,}
+              disabled = {loading}
             >;
               Buy Now;
             </Button>;
               onClick={e => {e && e.stopPropagation()// Prevent card click event                // Add to cart first, then redirect to checkout;
-                dispatch(addItem({id: listing && listing.id,title: listing && listing.title,price: listing && listing.price ?? 0,}))router && router.push('/checkout')}}
-              disabled = {loading,}
+                dispatch(addItem({id: listing && listing.id,title: listing && listing.title,price: listing && listing.price ?? 0}))router && router.push('/checkout')}}
+              disabled = {loading}
             >;
               Buy Now;
             </Button>;{onRequestQuote && (<Button;
@@ -488,7 +488,7 @@ if ( {) {$2;
               className='bg - primary hover:bg - primary / 80 text - primary - foreground';
               on_click={e => {e.stop_propagation ()// Prevent card click event;
                 addToCart () }}
-              disabled = {loading, }
+              disabled = {loading }
             >;
               {loading ? (<>;
                   <svg;
@@ -519,8 +519,8 @@ if ( {) {$2;
               variant='default';
               className='bg - green - 600 hover:bg - green - 700 text - white';
               on_click={e => {e.stop_propagation ()// Prevent card click event                // Add to cart first, then redirect to checkout;
-                dispatch (add_item ({id: listing.id,title: listing.title,price: listing.price ?? 0,}))router.push ('/checkout')}}
-              disabled = {loading, }
+                dispatch (add_item ({id: listing.id,title: listing.title,price: listing.price ?? 0}))router.push ('/checkout')}}
+              disabled = {loading }
             >;
               Buy Now;
             </Button>;

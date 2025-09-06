@@ -38,9 +38,9 @@ const REWARDS = [;
     </div>;
   )})}
 const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },{ id: 'premium - week', title: 'Premium Week', cost: 1000 },{ id: 'swag - pack', title: 'Swag Pack', cost: 2000 },];
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 },{ id: 'premium - week', title: 'Premium Week', cost: 1000 },{ id: 'swag - pack', title: 'Swag Pack', cost: 2000 }];
 const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },{ id: 'premium - week', title: 'Premium Week', cost: 1000 },{ id: 'swag - pack', title: 'Swag Pack', cost: 2000 },];
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 },{ id: 'premium - week', title: 'Premium Week', cost: 1000 },{ id: 'swag - pack', title: 'Swag Pack', cost: 2000 }];
   return (<div className='container max - w-xl py - 10'>;
       <h1 className='text - 3xl font - bold mb - 6'>Rewards</h1>;
       <ul className='space - y-4'>;

@@ -17,3 +17,5 @@ export default function Iotplatforms() {return (<div>;
 =>>>>>>>> main:corrupted_backup/iot-platforms.tsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
+interface IotplatformsProps {
+  // Add props here as needed

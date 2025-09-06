@@ -112,7 +112,7 @@ export default /**;
  * IntegrationsFeature - Function description;
  */;
 function IntegrationsFeature() {const schema = {'@context': 'https://schema.org','@type': 'WebPage',name: 'API & Integrations',description:;
-      'Connect Zion with Slack, your website and other tools via our API and widgets.',url: 'https://app.ziontechgroup.com / features / integrations',}
+      'Connect Zion with Slack, your website and other tools via our API and widgets.',url: 'https://app.ziontechgroup.com / features / integrations'}
   const { markSlackConnected } = useAdvancedOnboardingStatus ()useEffect (() => {markSlackConnected ()}, [markSlackConnected])return (<>;
       <SEO;
         title='API & Integrations';

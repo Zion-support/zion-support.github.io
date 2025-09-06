@@ -1,6 +1,9 @@
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
+
+  return (
+    <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Blockchain Solutions</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Content coming soon.;
@@ -17,6 +20,20 @@ export default function BlockchainSolutionsPage() {return (<div className='conta
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Content coming soon.;
       </p>;
+  );
+
+}
+
+
+
+
+export default function BlockchainSolutionsPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Blockchain Solutions</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Content coming soon.
+      </p>
     </div>;
   )export default function BlockchainSolutionsPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>;
@@ -53,3 +70,44 @@ function BlockchainSolutionsPage() {return (<div className="container mx - auto 
   )}
 }</div>;
   )
+    </div>);
+}
+
+
+
+
+
+
+  )
+}
+
+
+export default function BlockchainSolutionsPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Blockchain Solutions</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Content coming soon.
+      </p>
+    </div>;
+  );export default function BlockchainSolutionsPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>
+
+    </div>
+  );
+
+    </div>
+  );
+
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}

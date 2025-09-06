@@ -41,7 +41,7 @@ function PortfolioPage() {const projects = [;
     },{title: "Predictive Healthcare Analytics",description: "AI-driven healthcare analytics platform for early disease detection and treatment optimization",category: "Data Analytics",client: "Healthcare Network",technologies: ["Python", "Scikit-learn", "React", "MongoDB", "Redis"],results: ["Early detection rate improved by 60%", "Treatment success rate increased by 35%", "Cost reduction of 25%"],image: "/api/placeholder/600/400",icon: BarChart3,color: "from-indigo-500 to-purple-500";
     },{title: "Zero-Trust Security Architecture",description: "Comprehensive zero-trust security implementation for enterprise network protection",category: "Cybersecurity",client: "Technology Corporation",technologies: ["OAuth 2.0", "JWT", "React", "Node.js", "PostgreSQL"],results: ["100% security compliance", "Zero unauthorized access", "24/7 threat monitoring"],image: "/api/placeholder/600/400",icon: Shield,color: "from-red-500 to-orange-500";
     },{title: "Digital Transformation Platform",description: "End-to-end digital transformation solution for legacy system modernization",category: "Digital Transformation",client: "Retail Chain",technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker"],results: ["80% faster deployment", "Customer satisfaction increased by 45%", "Operational costs reduced by 30%"],image: "/api/placeholder/600/400",icon: Rocket,color: 'from-yellow-500 to-orange-500';
-    },];color: "from-yellow-500 to-orange-500";
+    }];color: "from-yellow-500 to-orange-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   ],const stats = [;

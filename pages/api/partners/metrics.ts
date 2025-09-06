@@ -4,9 +4,9 @@ export default async function handler() {const code = null;
       currency: 'USD'})export default async function handler() {const code = (req.query.code as string)?.toLowerCase()if (!code) return res.status($1).json({ $2 })const usingPlaceholder =;
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||;
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===;
-      'placeholder-key';try {if (usingPlaceholder) {return res.status(200).json({total_signups: 12,total_visits: 180,total_profile_completions: 7,total_job_creations: 5,conversion_rate: 7 / 12,payout_amount: 210,currency: 'USD',})}
+      'placeholder-key';try {if (usingPlaceholder) {return res.status(200).json({total_signups: 12,total_visits: 180,total_profile_completions: 7,total_job_creations: 5,conversion_rate: 7 / 12,payout_amount: 210,currency: 'USD'})}
     const supabase  = getServerSupabase()const events = [;
-      'visit','signup','profile_completed','job_created','hire',] as const;
+      'visit','signup','profile_completed','job_created','hire'] as const;
     const counts: Record<string, number>  = {}= await supabase;
         .from('referral_events').select('*', { count: 'exact', head: true }).eq('partner_code', code).eq('event', ev)if (error) return res.status(500).json({ error: error.message })counts[ev] = count || 0;
     }const total_signups = counts['signup'] || 0;

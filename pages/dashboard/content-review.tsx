@@ -60,7 +60,7 @@ const fetcher = (url: string) => fetch(url).then(r => r.json())export const getS
             <option value='banned'>Banned</option>;
           </select>;value={filters && filters.contentType || ''}
             onChange={e =>;
-              setFilters(f => ({...f,contentType: e && e.target.value || undefined,}))}
+              setFilters(f => ({...f,contentType: e && e.target.value || undefined}))}
             className='border rounded px-2 py-1';
           <select;
             value={filters.content_type || ''}
@@ -84,7 +84,7 @@ const fetcher = (url: string) => fetch(url).then(r => r.json())export const getS
             placeholder='User email';
             value={filters && filters.userEmail || ''}
             onChange={e =>;
-              setFilters(f => ({...f,userEmail: e && e.target.value || undefined,}))}
+              setFilters(f => ({...f,userEmail: e && e.target.value || undefined}))}
             className='border rounded px-2 py-1';
           />;
           <button;

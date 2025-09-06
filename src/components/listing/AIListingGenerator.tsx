@@ -76,9 +76,9 @@ if (.error) {) {$2;
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
           </p>;
         </CardHeader>;
-        <CardContent>onSubmit = {handleGenerate,}
-            isLoading = {isLoading,}
-            initialValues = {initialValues,}
+        <CardContent>onSubmit = {handleGenerate}
+            isLoading = {isLoading}
+            initialValues = {initialValues}
           />;
         </CardContent>;
       </Card>;
@@ -96,7 +96,7 @@ if ( {) {$2;
 }
       onApplyGenerated (generated_content)toast ({title: "Content Applied",description: "The generated content has been applied to your listing.";
       })}
-  },}},return (<div className="space-y-6">;
+  }}},return (<div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -112,9 +112,9 @@ if ( {) {$2;
           />;
         </CardContent>;
       </Card>;<AIListingForm;
-            onSubmit = {handleGenerate,}
-            isLoading = {isLoading,}
-            initialValues = {initialValues,}<AIListingForm;
+            onSubmit = {handleGenerate}
+            isLoading = {isLoading}
+            initialValues = {initialValues}<AIListingForm;
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (<GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}<div className="space - y-6">;
@@ -130,9 +130,9 @@ if ( {) {$2;
         </CardHeader>;
         <CardContent>;
           <AIListingForm;
-            on_submit = {handle_generate, }
-            is_loading = {is_loading, }
-            initial_values = {initial_values, }
+            on_submit = {handle_generate }
+            is_loading = {is_loading }
+            initial_values = {initial_values }
           />;
         </CardContent>;
       </Card>;

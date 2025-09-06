@@ -21,7 +21,7 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
           textColor: '#ffffff', // Default light text;
         }
       : undefined)const headerStyle = effectiveTheme;
-    ? {backgroundColor: effectiveTheme.backgroundColor, color: effectiveTheme.textColor,borderColor: `${effectiveTheme.primaryColor}20`, }
+    ? {backgroundColor: effectiveTheme.backgroundColor, color: effectiveTheme.textColor,borderColor: `${effectiveTheme.primaryColor}20` }
     : {}// Handle scroll effect;
   useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const handleSubmit = e => {e.preventDefault()if (query.trim()) {navigate(`/search?q=${encodeURIComponent(query)}`)setQuery('')}
   }const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}return (<header;

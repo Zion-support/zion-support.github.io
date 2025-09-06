@@ -30,7 +30,7 @@ interface ReputationDisplayProps  {reputation: number,size?: 'sm' | 'md' | 'lg';
 import { Progress  } from '@/components / ui / progress';
 interface ReputationDisplayProps  {reputation: number;
   size?: 'sm' | 'md' | 'lg';
-export const ReputationDisplay = ({reputation,size = 'md', }: ReputationDisplayProps) =>: any {export const ReputationDisplay = ({reputation;
+export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayProps) =>: any {export const ReputationDisplay = ({reputation;
   size = 'md';
 }: ReputationDisplayProps, ) =>: any {// Calculate next milestone;
   const current_level = Math.floor (reputation / 100)const next_milestone = (current_level + 1) * 100;
@@ -57,7 +57,7 @@ export const ReputationDisplay = ({reputation,size = 'md', }: ReputationDisplayP
     </div>;
   )},export default ReputationDisplay,interface ReputationDisplayProps  {reputation: number,size?: 'sm' | 'md' | 'lg';}export default ReputationDisplay;
 ';
-    },md: {container: 'text - sm',icon: 'w - 4 h - 4',progress: 'h - 2',},lg: {container: 'text - base',icon: 'w - 5 h - 5',progress: 'h - 3',},}
+    },md: {container: 'text - sm',icon: 'w - 4 h - 4',progress: 'h - 2'},lg: {container: 'text - base',icon: 'w - 5 h - 5',progress: 'h - 3'}}
   return (<div className='space - y-1'>;
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
         <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
@@ -69,7 +69,7 @@ export const ReputationDisplay = ({reputation,size = 'md', }: ReputationDisplayP
         Level {current_level} • {Math.round (next_milestone - reputation)} to level;
         up;
       </div>;
-    </div>)}export const ReputationDisplay = ({reputation,size = 'md',}: ReputationDisplayProps) => {export const ReputationDisplay = ({reputation;
+    </div>)}export const ReputationDisplay = ({reputation,size = 'md'}: ReputationDisplayProps) => {export const ReputationDisplay = ({reputation;
   size = 'md' ;
 }: ReputationDisplayProps,) => {// Calculate next milestone;
   const currentLevel = Math && Math.floor(reputation / 100)const nextMilestone = (currentLevel + 1) * 100;
@@ -89,7 +89,7 @@ export const ReputationDisplay = ({reputation,size = 'md', }: ReputationDisplayP
         Level {currentLevel} • {Math && Math.round(nextMilestone - reputation)} to level up;</div>;
     </div>;
   )}export default ReputationDisplay;';
-    },md: {container: 'text-sm',icon: 'w-4 h-4',progress: 'h-2',},lg: {container: 'text-base',icon: 'w-5 h-5',progress: 'h-3',},}}
+    },md: {container: 'text-sm',icon: 'w-4 h-4',progress: 'h-2'},lg: {container: 'text-base',icon: 'w-5 h-5',progress: 'h-3'}}}
 export default ReputationDisplay;
 ';
     }

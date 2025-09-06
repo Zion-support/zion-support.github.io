@@ -52,7 +52,7 @@ export function ApplyForm() {const [message, setMessage] = useState(`Hi, I'm int
         } : null;
       let full_message  = message;let fullMessage  = message;import { Loader2 } from 'lucide-react'import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId: string,) => Promise<void>;interface ApplyFormProps  {job: Job;
-  onClose: () => void;}export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {const [activeTab, setActiveTab] = useState('message')const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)const [message, setMessage] = useState('')const [isSubmitting, setIsSubmitting]  = useState(false)const { applyToJob } = useJobApplications()const { sendMessage }  = useMessaging()const handleSubmit = async () => {if (!selectedResume) {toast({title: 'Resume required',description: 'Please select a resume before applying.',variant: 'destructive',})return;
+  onClose: () => void;}export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {const [activeTab, setActiveTab] = useState('message')const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)const [message, setMessage] = useState('')const [isSubmitting, setIsSubmitting]  = useState(false)const { applyToJob } = useJobApplications()const { sendMessage }  = useMessaging()const handleSubmit = async () => {if (!selectedResume) {toast({title: 'Resume required',description: 'Please select a resume before applying.',variant: 'destructive'})return;
     }const handleResumeSelected  = null;return (<>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
@@ -63,10 +63,10 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
             Resume;
           </TabsTrigger>;
         </TabsList>;
-            message = {message,}
-            setMessage = {setMessage,}
-            proposalLink = {proposalLink,}
-            setProposalLink = {setProposalLink,}
+            message = {message}
+            setMessage = {setMessage}
+            proposalLink = {proposalLink}
+            setProposalLink = {setProposalLink}
           />;
         </TabsContent>;
         <TabsContent value="message">;
@@ -83,8 +83,8 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
             Resume;
           </TabsTrigger>;
         </TabsList>;
-        <TabsContent value="message">;<MessageTab;setIsSubmitting(true)try {await applyToJob(job.id, {resumeId: selectedResume.id,message,})// Send a message to the job poster;
-      await sendMessage({content: `I'm interested in the ${job.title} position. ${message}`,recipientId: job.posterId,jobId: job.id,})toast({title: 'Application submitted',description: 'Your application has been sent successfully.',})onClose()} catch (error) {logErrorToProduction('Job application failed', error)toast({title: 'Application failed',description: 'There was an error submitting your application.',variant: 'destructive',})} finally {setIsSubmitting(false)}
+        <TabsContent value="message">;<MessageTab;setIsSubmitting(true)try {await applyToJob(job.id, {resumeId: selectedResume.id,message})// Send a message to the job poster;
+      await sendMessage({content: `I'm interested in the ${job.title} position. ${message}`,recipientId: job.posterId,jobId: job.id})toast({title: 'Application submitted',description: 'Your application has been sent successfully.'})onClose()} catch (error) {logErrorToProduction('Job application failed', error)toast({title: 'Application failed',description: 'There was an error submitting your application.',variant: 'destructive'})} finally {setIsSubmitting(false)}
   }return (<div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h2 className="text-xl font-semibold">Apply to {job.title}</h2>;

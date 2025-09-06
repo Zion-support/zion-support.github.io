@@ -63,7 +63,7 @@ export default function ITSupportPage() {const benefits = [;
       ctaLink="/request-quote";
     />;
   )import React from "react",import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",export default function ITSupportPage() {const benefits = [;
-    {name: 'Carlos Diaz',role: 'IT Lead',text: 'Professional and responsive. Their technicians feel like an extension of our own team.',avatar: '/placeholder && placeholder.svg',},];return (ctaText="Get IT Support";
+    {name: 'Carlos Diaz',role: 'IT Lead',text: 'Professional and responsive. Their technicians feel like an extension of our own team.',avatar: '/placeholder && placeholder.svg'}];return (ctaText="Get IT Support";
       ctaLink="/request-quote";
     />;
   )}}

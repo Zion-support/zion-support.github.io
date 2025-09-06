@@ -5,6 +5,14 @@ export type ForumCategory =;
   | "ai-tools";
   | "feedback";
   | "announcements";id: ForumCategory;
+export type ForumCategory =
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
+
+  id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean;
@@ -16,6 +24,17 @@ export type ForumCategory =;
   adminOnly: boolean;
   icon: string;
 }export interface ForumPost  {title: string;
+}
+
+
+export interface ForumPost {;
+
+export interface ForumPost {
+
+export interface ForumPost {;
+export interface ForumPost {
+  id: string;
+  title: string;
   content: string;
   author_id: string;
   author_name: string;
@@ -34,6 +53,18 @@ export type ForumCategory =;
 }export interface ForumReply  {export interface ForumReply  {export interface ForumReply  {}
 export interface ForumReply  {id: string;
 export interface ForumReply  {post_id: string;
+}
+
+
+export interface ForumReply {;
+
+export interface ForumReply {
+
+export interface ForumReply {;
+}
+export interface ForumReply {
+  id: string;
+  post_id: string;
   parentReplyId?: string;
   content: string;
   author_id: string;
@@ -61,6 +92,13 @@ export interface CommunityUser  {export interface UserBadge  {export interface U
 export interface Badge  {id: string;
   name: string;
 export interface UserBadge  {name: string,description: string;
+
+
+export interface Badge {;
+
+  id: string;
+  name: string;
+  description: string;
   icon: string;
   color: string;
 }
@@ -69,6 +107,40 @@ export interface Badge  {id: string;
   name: string,description: string;
 }
 export interface CommunityUser  {id: string;
+export interface UserBadge {
+  user_id: string;
+  badge_id: string,
+  awarded_at: string;
+
+}
+export interface CommunityUser {
+
+
+export interface UserBadge {;
+
+export interface UserBadge {
+
+
+export interface UserBadge {;
+  userId: string;
+  badgeId: string;
+  awardedAt: string;
+}
+
+
+export interface CommunityUser {;
+
+export interface CommunityUser {
+
+export interface CommunityUser {;
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
+  id: string;
   name: string;
   avatar?: string;
   role: string;
@@ -90,3 +162,4 @@ export interface CommunityUser  {id: string;
 }post_count: number;
   reply_count: number;
   badges: Badge[];
+}

@@ -12,7 +12,7 @@ export function Web3Login() {const handleWeb3Login = async () => {if (!isWalletS
       const ethereum = (window as any).ethereum;
     }
     try {setIsLoading(true),// Check if Ethereum provider (e.g., MetaMask) is available;
-      const ethereum = (window as any).ethereum,}
+      const ethereum = (window as any).ethereum}
     try {if (!ethereum) {toast("Web3 wallet not found", {description: "Please install MetaMask or another compatible wallet."})return;
       if (!ethereum) {toast("Web3 wallet not found", {description: "Please install MetaMask or another compatible wallet."}),return;
       }await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;

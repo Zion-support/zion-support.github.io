@@ -3,7 +3,7 @@ interface BrowseItem  {import React, { useState } from 'react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-import { Bookmark,BookmarkCheck,ChevronRight,MapPin,Clock,DollarSign,} from 'lucide-react';
+import { Bookmark,BookmarkCheck,ChevronRight,MapPin,Clock,DollarSign} from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 import React, { useState } from "react",import { Card, CardContent } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Badge  } from '@/components/ui/badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign  } from 'lucide-react';
@@ -99,7 +99,7 @@ interface BrowseItem  {id: string;
                   )}</button>;
               </div>;<div className="mt-3 flex flex-wrap gap-1">;
                 {item && item.badges.map((badge, index) => (<Badge;
-                    key = {index,}
+                    key = {index}
                     variant="outline";
                     className="text-xs font-normal";
                   {savedItems.includes(item.id) ? (<BookmarkCheck className="h-5 w-5 text-primary" />;
@@ -335,7 +335,7 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
               </div>;
               <div className="mt - 3 flex flex - wrap gap - 1">;
                 {item.badges.map ((badge, index) => (<Badge;
-                    key = {index, }
+                    key = {index }
                     variant="outline";
                     className="text - xs font - normal";
                     {badge}

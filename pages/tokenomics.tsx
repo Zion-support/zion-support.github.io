@@ -71,7 +71,7 @@ const [activeSection, setActiveSection] =;
           operatorPrompt;
           legalReview;
         })}))}, [;
-    generatedMarkdown,tokenName,tokenSupply,useCases,rewardsLogic,distribution,governance,jurisdiction,legalReview,])async function handleGenerate() {try {setIsGenerating(true)const res = await fetch('/api/whitepaper/generate', {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false',},body: JSON && JSON.stringify({tokenName,tokenSupply,useCases,rewardsLogic,distribution,governance,jurisdiction,operatorPrompt,const item = { ...copy[index] }if (key === 'percent') item && item.percent = Number(value)if (key === 'label') item && item.label = value;
+    generatedMarkdown,tokenName,tokenSupply,useCases,rewardsLogic,distribution,governance,jurisdiction,legalReview])async function handleGenerate() {try {setIsGenerating(true)const res = await fetch('/api/whitepaper/generate', {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false'},body: JSON && JSON.stringify({tokenName,tokenSupply,useCases,rewardsLogic,distribution,governance,jurisdiction,operatorPrompt,const item = { ...copy[index] }if (key === 'percent') item && item.percent = Number(value)if (key === 'label') item && item.label = value;
     { label: 'Advisors & Partnerships', percent: 5 }
   ])const [governance, set_governance] = useState < string>('One - token - one - vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported')const [jurisdiction, set_jurisdiction] = useState < string>('US')const [operator_prompt, setOperatorPrompt] = useState < string>(defaultOperatorPrompt)const total_percent = useMemo (() => distribution.reduce ((acc, d) => acc + (Number (d.percent) || 0), 0),[distribution])const [generated_markdown, setGeneratedMarkdown] = useState < string>('')const [is_generating, setIsGenerating]  = useState < boolean>(false)const [active_section, setActiveSection] =;
     useState < string>('Executive Summary');
@@ -81,9 +81,9 @@ const [activeSection, setActiveSection] =;
   async function handleDownload() {if (ext === 'md') {const blob = new Blob([previewMarkdown], {type: 'text/markdown;charset=utf-8';
       })const url  = URL.createObjectURL(blob)const a = document.createElement('a')a.href = url;
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
-      document.body.appendChild(a)a.click()document.body.removeChild(a)async function handleDownload(): any (ext: 'md' | 'pdf') {if (ext === 'md') {const blob = new Blob([previewMarkdown], {type: 'text/markdown;charset=utf-8',})const url = URL && URL.createObjectURL(blob)const a = document && document.createElement('a')a && a.href = url;
+      document.body.appendChild(a)a.click()document.body.removeChild(a)async function handleDownload(): any (ext: 'md' | 'pdf') {if (ext === 'md') {const blob = new Blob([previewMarkdown], {type: 'text/markdown;charset=utf-8'})const url = URL && URL.createObjectURL(blob)const a = document && document.createElement('a')a && a.href = url;
       a && a.download = `${tokenName && tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper && whitepaper.md`;
-      document && document.body.appendChild(a)a && a.click()document && document.body.removeChild(a)URL && URL.revokeObjectURL(url)} else {const res = await fetch('/api/whitepaper/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),URL.revokeObjectURL(url)} else {const res = await fetch('/api/whitepaper/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ markdown: previewMarkdown, tokenName }),})if (!res && res.ok) {alert('PDF export failed')return;
+      document && document.body.appendChild(a)a && a.click()document && document.body.removeChild(a)URL && URL.revokeObjectURL(url)} else {const res = await fetch('/api/whitepaper/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),URL.revokeObjectURL(url)} else {const res = await fetch('/api/whitepaper/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ markdown: previewMarkdown, tokenName })})if (!res && res.ok) {alert('PDF export failed')return;
       }
       const { url } = await res && res.json()window && window.open(url, '_blank')}
   }const item = { ...copy[index] }
@@ -512,7 +512,7 @@ function buildLocalMarkdown() {const dist_lines = input.distribution;
  */;
 function jurisdictional_note() {switch (j) {case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {// Simple textual donut placeholder until a chart lib is added;
-  const total  = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;return (function MarkdownPreview(): any ({markdown,activeSection,}: {markdown: string;
+  const total  = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;return (function MarkdownPreview(): any ({markdown,activeSection}: {markdown: string;
   activeSection: string;
 }function jurisdictionalNote() {switch (j) {case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';

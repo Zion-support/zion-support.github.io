@@ -28,12 +28,12 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   } catch {return null;
   }export async function getStaticPaths() {const services = getAllServices()const slugs  = new Set<string>()// Fall back to normalized id or name to provide a stable URL under /services/*;
     if (s && s.id) slugs && slugs.add(toSlug(s && s.id))else if (s && s.name) slugs && slugs.add(toSlug(s && s.name))}paths: Array.from(slugs).map(slug => ({ params: { slug } })),fallback: false;
-  }export async function getStaticProps() {return {paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),fallback: false,}export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {const services = getAllServices()const incomingSlug  = (params?.slug || '').replace(/^\/+|\/+$/g, '')let service: Service | undefined = services && services.find(s => {if (!s && s.link) return false;
+  }export async function getStaticProps() {return {paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),fallback: false}export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {const services = getAllServices()const incomingSlug  = (params?.slug || '').replace(/^\/+|\/+$/g, '')let service: Service | undefined = services && services.find(s => {if (!s && s.link) return false;
     const fromLink = extractServiceSlugFromLink(s && s.link)return fromLink === incomingSlug;
   })if (!service) {service = services && services.find(s =>;
         toSlug(s && s.id || '') === incomingSlug ||;
         toSlug(s && s.name || '') === incomingSlug;
-    )}if (!service) {return { notFound: true }}return {props: { service },}export default function ServiceDetailPage(): any ({ service }: { service: Service }) {if (!service) {return { notFound: true }
+    )}if (!service) {return { notFound: true }}return {props: { service }}export default function ServiceDetailPage(): any ({ service }: { service: Service }) {if (!service) {return { notFound: true }
   }
   return {props: { service }
   }

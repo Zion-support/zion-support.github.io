@@ -18,7 +18,7 @@ jest.mock('../pages/Contact', () => {}
   return function MockContact() {}
 ''';';
 '''';
-    return <div data-testid='contact-page'>Contact Page</div>, }
+    return <div data-testid='contact-page'>Contact Page</div> }
 })// Mock the pages to avoid complex dependencies"";
 jest.mock('../pages/Index', () => {return function MockIndex() {"";
     return <div data-testid='index-page'>Index Page</div>}})"";

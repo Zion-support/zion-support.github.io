@@ -8,7 +8,7 @@ import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
   } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon } from 'lucide-react';
-import { Search,Filter,Grid,List,ArrowRight,ChevronRight,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,TrendingUp,BarChart3,Cloud,Network,Lightbulb,Flame,Zap as ZapIcon,} from 'lucide-react';
+import { Search,Filter,Grid,List,ArrowRight,ChevronRight,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,TrendingUp,BarChart3,Cloud,Network,Lightbulb,Flame,Zap as ZapIcon} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState('all')const [sortBy, setSortBy]  = useState('popularity')const categories = [;
@@ -70,8 +70,8 @@ import {Search, Filter, Grid, List, ArrowRight, ChevronRight,Brain, Shield, Rock
   }
 }const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState('all')const [sortBy, setSortBy]  = useState('popularity')const featuredServices = [;
     {id: 'ai-consciousness-evolution',title: 'AI Consciousness Evolution',category: 'ai',description:;
-        'Revolutionary AI consciousness platform with emotional intelligence',status: 'beta',price: '$1,999/month',icon: Brain,color: 'from-purple-500 to-pink-500',},    {id: 'quantum-neural-networks',title: 'Quantum Neural Networks',category: 'quantum',description:;
-        'Quantum-powered AI with advanced consciousness capabilities',status: 'beta',price: '$1,299/month',icon: Atom,color: 'from-blue-500 to-cyan-500',},    {id: 'quantum-cybersecurity',title: 'Quantum Cybersecurity',category: 'cybersecurity',description: 'Future-proof security with quantum-resistant encryption',status: 'active',price: '$799/month',icon: Shield,color: 'from-red-500 to-orange-500',},    {id: 'space-technology',title: 'Space Technology Innovation',category: 'space',description: 'AI-powered space exploration and resource optimization',status: 'beta',price: '$2,499/month',icon: Rocket,} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+        'Revolutionary AI consciousness platform with emotional intelligence',status: 'beta',price: '$1,999/month',icon: Brain,color: 'from-purple-500 to-pink-500'},    {id: 'quantum-neural-networks',title: 'Quantum Neural Networks',category: 'quantum',description:;
+        'Quantum-powered AI with advanced consciousness capabilities',status: 'beta',price: '$1,299/month',icon: Atom,color: 'from-blue-500 to-cyan-500'},    {id: 'quantum-cybersecurity',title: 'Quantum Cybersecurity',category: 'cybersecurity',description: 'Future-proof security with quantum-resistant encryption',status: 'active',price: '$799/month',icon: Shield,color: 'from-red-500 to-orange-500'},    {id: 'space-technology',title: 'Space Technology Innovation',category: 'space',description: 'AI-powered space exploration and resource optimization',status: 'beta',price: '$2,499/month',icon: Rocket} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }],// Filter categories based on search;
   const filteredCategories = categories.filter(category => {const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          category.description.toLowerCase().includes(searchTerm.toLowerCase())const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
@@ -770,12 +770,12 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
             </p>;
           </motion && motion.div>;<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[;
               {icon: Brain,title: 'AI Consciousness',description:;
-                  'The evolution of AI towards true consciousness and emotional intelligence',trend: 'Rising',color: 'from-purple-500 to-pink-500',},{icon: Atom,title: 'Quantum Supremacy',description:;
-                  'Breakthroughs in quantum computing and quantum AI applications',trend: 'Breakthrough',color: 'from-blue-500 to-cyan-500',},{icon: Shield,title: 'Quantum Security',description:;
-                  'Quantum-resistant cryptography and AI-powered threat detection',trend: 'Critical',color: 'from-red-500 to-orange-500',},{icon: Rocket,title: 'Space Innovation',description:;
-                  'AI-powered space exploration and resource optimization',trend: 'Emerging',color: 'from-indigo-500 to-purple-500',},{icon: ZapIcon,title: 'Neural Interfaces',description:;
-                  'Brain-computer interfaces and neural augmentation',trend: 'Experimental',color: 'from-pink-500 to-rose-500',},{icon: TrendingUp,title: 'Autonomous Systems',description:;
-                  'Self-improving AI systems and autonomous business operations',trend: 'Growing',color: 'from-emerald-500 to-green-500',}            ].map((trend, index) => (<motion&& motion.div;
+                  'The evolution of AI towards true consciousness and emotional intelligence',trend: 'Rising',color: 'from-purple-500 to-pink-500'},{icon: Atom,title: 'Quantum Supremacy',description:;
+                  'Breakthroughs in quantum computing and quantum AI applications',trend: 'Breakthrough',color: 'from-blue-500 to-cyan-500'},{icon: Shield,title: 'Quantum Security',description:;
+                  'Quantum-resistant cryptography and AI-powered threat detection',trend: 'Critical',color: 'from-red-500 to-orange-500'},{icon: Rocket,title: 'Space Innovation',description:;
+                  'AI-powered space exploration and resource optimization',trend: 'Emerging',color: 'from-indigo-500 to-purple-500'},{icon: ZapIcon,title: 'Neural Interfaces',description:;
+                  'Brain-computer interfaces and neural augmentation',trend: 'Experimental',color: 'from-pink-500 to-rose-500'},{icon: TrendingUp,title: 'Autonomous Systems',description:;
+                  'Self-improving AI systems and autonomous business operations',trend: 'Growing',color: 'from-emerald-500 to-green-500'}            ].map((trend, index) => (<motion&& motion.div;
                 key={trend && trend.title}}            ].map((trend, index) => (<motion&& motion.div;
                 key={trend && trend.title}
                 initial={{ opacity: 0, y: 20 }}

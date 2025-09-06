@@ -20,7 +20,7 @@ import { NotificationProvider  } from './context/notifications/NotificationConte
 import { AnalyticsProvider  } from './context/AnalyticsContext';
 import { ViewModeProvider  } from './context/ViewModeContext';
 // Initialize a React Query client with global error handling;
-const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetchOnWindowFocus: false,}, },})const rootElement  = document.getElementById('root')const renderApp = () => {const app = (<React.StrictMode>;
+const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetchOnWindowFocus: false} }})const rootElement  = document.getElementById('root')const renderApp = () => {const app = (<React.StrictMode>;
             <HelmetProvider>;
                 <QueryClientProvider client={queryClient}>;
                     <WhitelabelProvider>;

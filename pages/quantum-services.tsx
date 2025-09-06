@@ -37,7 +37,7 @@ function QuantumServicesPage() {const features = [;
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 export default function QuantumServicesPage() {const features = [;
-    'Quantum-inspired optimization & annealing strategies','Hybrid quantum-classical pipelines (QAOA, VQE) where applicable','Quantum-safe cryptography assessments and roadmaps','R&D ideation for quantum-ready workloads',];export default function QuantumServicesPage() {const features = [;
+    'Quantum-inspired optimization & annealing strategies','Hybrid quantum-classical pipelines (QAOA, VQE) where applicable','Quantum-safe cryptography assessments and roadmaps','R&D ideation for quantum-ready workloads'];export default function QuantumServicesPage() {const features = [;
     'Quantum-inspired optimization & annealing strategies';
     'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable';
     'Quantum-safe cryptography assessments and roadmaps';

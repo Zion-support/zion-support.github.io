@@ -1,7 +1,7 @@
 
 ;
-                    src = {activeConversation && activeConversation.context_data.image_url,}
-                    alt = {activeConversation && activeConversation.context_data.title || "Context",}const { user } = useAuth()const {activeConversation;
+                    src = {activeConversation && activeConversation.context_data.image_url}
+                    alt = {activeConversation && activeConversation.context_data.title || "Context"}const { user } = useAuth()const {activeConversation;
     activeMessages;
     sendMessage;
 import React, { useState, useEffect, useRef } from 'react';
@@ -44,7 +44,7 @@ export function ConversationDetailView() {const { user } = useAuth()const {activ
             {activeConversation.context_data && activeConversation.context_data.image_url && (<div className="w-16 h-16 flex-shrink-0">;
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">;
                   <img;
-                    alt = {activeConversation.context_data.title || "Context",}
+                    alt = {activeConversation.context_data.title || "Context"}
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover";
@@ -99,7 +99,7 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
-export function ConversationDetailView() {const { user } = useAuth()const { currentConversation, sendMessage, messages, loading } = useMessaging()const [newMessage, setNewMessage] = useState('')const [isSending, setIsSending] = useState(false)const messagesEndRef  = useRef<HTMLDivElement>(null)const scrollToBottom = () => {messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}useEffect(() => {scrollToBottom()}, [messages])const handleSendMessage = async (e: React.FormEvent) => {e.preventDefault()if (!newMessage.trim() || !currentConversation) return;setIsSending(true)try {await sendMessage({content: newMessage,recipientId: currentConversation.participantId,conversationId: currentConversation.id,})setNewMessage('')} catch (error) {console.error('Failed to send message:', error)} finally {setIsSending(false)}
+export function ConversationDetailView() {const { user } = useAuth()const { currentConversation, sendMessage, messages, loading } = useMessaging()const [newMessage, setNewMessage] = useState('')const [isSending, setIsSending] = useState(false)const messagesEndRef  = useRef<HTMLDivElement>(null)const scrollToBottom = () => {messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}useEffect(() => {scrollToBottom()}, [messages])const handleSendMessage = async (e: React.FormEvent) => {e.preventDefault()if (!newMessage.trim() || !currentConversation) return;setIsSending(true)try {await sendMessage({content: newMessage,recipientId: currentConversation.participantId,conversationId: currentConversation.id})setNewMessage('')} catch (error) {console.error('Failed to send message:', error)} finally {setIsSending(false)}
   }if (!currentConversation) {return (<div className="flex items-center justify-center h-full">;
         <div className="text-center">;
           <MessageSquare className="mx-auto h-12 w-12 text-gray-400" />;

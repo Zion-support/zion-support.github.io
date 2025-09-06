@@ -27,7 +27,7 @@ interface YoutubeEmbedProps  {videoId: string;
       />;
     </div>;
   )}        loading="lazy";
-        onLoad = {() => setLoaded(true),}
+        onLoad = {() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         loading="lazy";
         onLoad={() => setLoaded(true)}
@@ -79,7 +79,7 @@ function YoutubeEmbed() {const [loaded, set_loaded] = useState (false)const src 
         allow='accelerometer; autoplay; clipboard - write; encrypted - media; gyroscope; picture - in - picture'        allowFullScreen;
       />;
     </div>)}        loading="lazy";
-        on_load = {() => set_loaded (true), }
+        on_load = {() => set_loaded (true) }
         allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
         loading="lazy";
         on_load={() => set_loaded (true)}

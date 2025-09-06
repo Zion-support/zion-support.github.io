@@ -50,6 +50,45 @@ import {PortfolioProject} from '@/types/resume';interface ProjectCardProps  {pro
     setDeleteDialogOpen(false)}<Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project.image_url ? (<img;
+import { useState } from "react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle
+} from "@/components/ui/alert-dialog";
+import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
+import { PortfolioProject } from "@/types/resume";
+interface ProjectCardProps {
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void;
+}
+
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  };
+
+  return (
+    <Card className="h-full flex flex-col">
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
+        {project.image_url ? (
+          <img
             src={project.image_url}
             alt={project.title}
             className="w-full h-full object-cover";
@@ -63,13 +102,55 @@ import {PortfolioProject} from '@/types/resume';interface ProjectCardProps  {pro
             className="w-full h-full object-cover";
           />;
         ) : (import { useState } from 'react',import { Card, CardContent, CardFooter } from '@/components/ui/card',import { Button } from '@/components/ui/button',import { Badge } from '@/components/ui/badge',import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',import { PortfolioProject } from '@/types/resume',interface ProjectCardProps  {project:PortfolioProject,onEdit:(project:PortfolioProject) => void,onDelete:(projectId:string) => void;
-}export function ProjectCard() {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id),}
-    setDeleteDialogOpen(false),},return (return (<Card className="h-full flex flex-col">;
+}export function ProjectCard() {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id)}
+    setDeleteDialogOpen(false)},return (return (<Card className="h-full flex flex-col">;
         ) : (<Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (<img;
             className="w-full h-full object-cover";
           />;) : () : (<div className="w-full h-full flex items-center justify-center bg-muted">;
+        ) : (;
+            src={project.image_url}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />;
+        ) : (;
+
+import { useState } from 'react',;
+import { Card, CardContent, CardFooter } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
+import { PortfolioProject } from '@/types/resume',;
+;
+interface ProjectCardProps {;
+  project:PortfolioProject,;
+  onEdit:(project:PortfolioProject) => void,;
+  onDelete:(projectId:string) => void;
+}
+;
+export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),;
+  ;
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id),;
+    }
+    setDeleteDialogOpen(false),;
+  },;
+  ;
+  return (;
+  return (
+    <Card className="h-full flex flex-col">;
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+        {project && project.image_url ? (;
+          <img
+            className="w-full h-full object-cover"
+          />;
+        ) :(;
+        ) : (;
+          <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}) :(<FileText className="h-12 w-12 text-muted-foreground/50" />;
@@ -93,6 +174,18 @@ import {PortfolioProject} from '@/types/resume';interface ProjectCardProps  {pro
         <div className="space-y-2">;
           <h3 className="font-semibold text-lg">{project.title}</h3>;
           {project.description && (<p className="text-sm text-muted-foreground line-clamp-3">;
+            </div>;
+      </div>
+      <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{project.title}</h3>
+
+      <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{project.title}</h3>
+
+          {project.description && (
+            <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
             </p>;
           )}</div>;
@@ -155,10 +248,34 @@ import {PortfolioProject} from '@/types/resume';interface ProjectCardProps  {pro
       </AlertDialog>;
     </Card>;
   )}</Card>;
-  ),}
+  )}
  const handleDelete = () => {if (project.id) {/>) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>)}</div> </Badge>) )}</div>)}</div> </CardContent> </Button> </Link>)}</Button> </Link>)}</div> </Button> </div> </CardFooter> <AlertDialog open= {deleteDialogOpen;
 }onOpenChange= {setDeleteDialogOpen;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}
   )}
 })}
   )}
+  ),;}
+ const handleDelete = () => {
+  if (project.id) {
+  />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) 
+}</div> </Badge>) ) 
+}</div>) 
+}</div> </CardContent> </Button> </Link>) 
+}</Button> </Link>) 
+}</div> </Button> </div> </CardFooter> <AlertDialog open= {
+  deleteDialogOpen 
+}onOpenChange= {
+  setDeleteDialogOpen 
+}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;

@@ -78,7 +78,7 @@
             {!sharedData && sharedData.is_public && isAdmin && (<span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View)</span>;
             )}
-        </div>;export default WhitepaperViewPage,},fetch_whitepaper ()}, [id]),// Check condition;
+        </div>;export default WhitepaperViewPage},fetch_whitepaper ()}, [id]),// Check condition;
 if ( {) {$2;
 }
     return <div className="flex justify - center items - center h - screen"><p > Loading whitepaper...</p></div>;
@@ -123,10 +123,10 @@ if ( {) {$2;
                     Private (Admin View)</span>)}
         </div>;
       <WhitepaperPreviewPanel;
-        sections = {whitepaper.sections, }
-        distributionChartData = {whitepaper.distributionChartData, }
-        token_name = {whitepaper.token_name, }
-        token_supply = {whitepaper.token_supply, }
+        sections = {whitepaper.sections }
+        distributionChartData = {whitepaper.distributionChartData }
+        token_name = {whitepaper.token_name }
+        token_supply = {whitepaper.token_supply }
       />;
     </div>)},export default WhitepaperViewPage,export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams;

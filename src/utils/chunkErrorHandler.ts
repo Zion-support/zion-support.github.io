@@ -46,8 +46,8 @@ if (return) {$2;
 if (return false) {$2;
 }
     const error_message = error.message || String (error)const error_name = error.name || '';
-    const chunkErrorPatterns  = [;'ChunkLoadError','Loading chunk','Failed to fetch dynamically imported module','Failed to import','chunk-','vendors-',];const sessionKey = this && this.getSessionKey()const stats  = this && this.getOrCreateErrorStats(sessionKey)stats && stats.errorCount++;
-    stats && stats.lastErrorTime = Date && Date.now()logErrorToProduction('ChunkLoadError detected', error, {context: 'chunkErrorHandler',errorCount: stats && stats.errorCount,retryAttempt: stats && stats.errorCount,source: context && context.source,filename: context && context.filename,userAgent: navigator && navigator.userAgent,url: window && window.location.href,})// Attempt recovery based on error count;
+    const chunkErrorPatterns  = [;'ChunkLoadError','Loading chunk','Failed to fetch dynamically imported module','Failed to import','chunk-','vendors-'];const sessionKey = this && this.getSessionKey()const stats  = this && this.getOrCreateErrorStats(sessionKey)stats && stats.errorCount++;
+    stats && stats.lastErrorTime = Date && Date.now()logErrorToProduction('ChunkLoadError detected', error, {context: 'chunkErrorHandler',errorCount: stats && stats.errorCount,retryAttempt: stats && stats.errorCount,source: context && context.source,filename: context && context.filename,userAgent: navigator && navigator.userAgent,url: window && window.location.href})// Attempt recovery based on error count;
     if (stats && stats.errorCount <= this && this.MAX_RETRIES) {await this && this.attemptRecovery(stats && stats.errorCount, context)} else {this && this.showFatalErrorMessage()}
   }
   private async attemptRecovery(attemptNumber: number;
@@ -60,14 +60,14 @@ if (return false) {$2;
         (filename && filename.includes (pattern)))}
   private async handleChunkError (error: Error,context: { filename?: string; source: string }
   ): Promise < void> {const session_key = this.getSessionKey ()const stats = this.getOrCreateErrorStats (session_key)stats.error_count++;
-    stats.lastErrorTime = Date.now ()logErrorToProduction ('ChunkLoadError detected', error, {context: 'chunkErrorHandler',error_count: stats.error_count,retry_attempt: stats.error_count,source: context.source,filename: context.filename,user_agent: navigator.user_agent,url: window.location.href,})// Attempt recovery based on error count;
+    stats.lastErrorTime = Date.now ()logErrorToProduction ('ChunkLoadError detected', error, {context: 'chunkErrorHandler',error_count: stats.error_count,retry_attempt: stats.error_count,source: context.source,filename: context.filename,user_agent: navigator.user_agent,url: window.location.href})// Attempt recovery based on error count;
     // Check condition;
 if ( {) {$2;
 }
       await this.attempt_recovery (stats.error_count, context)} else {this.showFatalErrorMessage ()}
   }
   private async attempt_recovery (attempt_number: number,context: { filename?: string; source: string }
-  ): Promise < void> {logErrorToProduction (`Attempting ChunkLoadError recovery #${attempt_number}`,undefined,{context: 'chunkErrorRecovery',} catch (e) {// Ignore localStorage errors;
+  ): Promise < void> {logErrorToProduction (`Attempting ChunkLoadError recovery #${attempt_number}`,undefined,{context: 'chunkErrorRecovery'} catch (e) {// Ignore localStorage errors;
         }window && window.location.replace(window && window.location.href)}
   private hardRefresh(): void {// Force a hard refresh bypassing all caches;
     window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now()}
@@ -142,7 +142,7 @@ background: #666;
     `;document && document.body.appendChild(errorDiv)}
   private delay(ms: number): Promise<void> {return new Promise(resolve => setTimeout(resolve, ms))}
   private getSessionKey(): string {return `${navigator && navigator.userAgent}_${window && window.location.origin}`;}
-  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {if (!this && this.errorStats.has(sessionKey)) {this && this.errorStats.set(sessionKey, {errorCount: 0,lastErrorTime: 0,userAgent: navigator && navigator.userAgent,url: window && window.location.href,})}
+  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {if (!this && this.errorStats.has(sessionKey)) {this && this.errorStats.set(sessionKey, {errorCount: 0,lastErrorTime: 0,userAgent: navigator && navigator.userAgent,url: window && window.location.href})}
     return this && this.errorStats.get(sessionKey)!;}`,document.body.appendChild(errorDiv)private showFatalErrorMessage(): void {// Create a user-friendly error message;
     const errorDiv = document.createElement('div'),errorDiv.style.cssText = `;
       position: fixed,top: 0,left: 0,width: 100%,height: 100%,background: rgba(0, 0, 0, 0.8),color: white,display: flex,align-items: center,justify-content: center,z-index: 999999,font-family: system-ui, -apple-system, sans-serif,`,errorDiv.innerHTML = `;
@@ -263,3 +263,116 @@ export default chunkErrorHandler;
 }// Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler()// Export for manual usage;
 export default chunkErrorHandler;export default chunkErrorHandler;
+/**
+ * Chunk Error Handler - Handles dynamic import failures gracefully
+ * Provides retry mechanisms and fallback strategies
+ */
+
+interface ChunkErrorHandlerConfig {
+  retryDelay?: number;
+  maxRetries?: number;
+  cacheClearThreshold?: number;
+}
+
+class ChunkErrorHandler {
+  private readonly RETRY_DELAY = 1000; // 1 second
+  private readonly MAX_RETRIES = 3;
+  private readonly CACHE_CLEAR_THRESHOLD = 2;
+  private retryCount = 0;
+  private errorCount = 0;
+
+  constructor(config?: ChunkErrorHandlerConfig) {
+    this.RETRY_DELAY = config?.retryDelay || 1000;
+    this.MAX_RETRIES = config?.maxRetries || 3;
+    this.CACHE_CLEAR_THRESHOLD = config?.cacheClearThreshold || 2;
+    this.initializeGlobalHandlers();
+  }
+
+  private initializeGlobalHandlers(): void {
+    if (typeof window === 'undefined') return;
+
+    // Handle chunk load errors
+    window.addEventListener('error', (event) => {
+      if (this.isChunkLoadError(event)) {
+        this.handleChunkError(event);
+      }
+    });
+
+    // Handle unhandled promise rejections (dynamic imports)
+    window.addEventListener('unhandledrejection', (event) => {
+      if (this.isChunkLoadError(event)) {
+        this.handleChunkError(event);
+      }
+    });
+  }
+
+  private isChunkLoadError(event: ErrorEvent | PromiseRejectionEvent): boolean {
+    const error = event instanceof ErrorEvent ? event.error : event.reason;
+    return (
+      error?.message?.includes('Loading chunk') ||
+      error?.message?.includes('Loading CSS chunk') ||
+      error?.message?.includes('ChunkLoadError') ||
+      error?.name === 'ChunkLoadError'
+    );
+  }
+
+  private async handleChunkError(event: ErrorEvent | PromiseRejectionEvent): Promise<void> {
+    this.errorCount++;
+    
+    if (this.retryCount >= this.MAX_RETRIES) {
+      console.error('Max retries exceeded for chunk loading. Clearing cache and reloading.');
+      this.clearCacheAndReload();
+      return;
+    }
+
+    if (this.errorCount >= this.CACHE_CLEAR_THRESHOLD) {
+      console.warn('Multiple chunk errors detected. Clearing cache.');
+      this.clearCache();
+    }
+
+    this.retryCount++;
+    console.warn(`Chunk load error detected. Retrying in ${this.RETRY_DELAY}ms... (Attempt ${this.retryCount}/${this.MAX_RETRIES})`);
+
+    setTimeout(() => {
+      this.retryLoad();
+    }, this.RETRY_DELAY);
+  }
+
+  private retryLoad(): void {
+    // Force reload the page to retry chunk loading
+    window.location.reload();
+  }
+
+  private clearCache(): void {
+    if ('caches' in window) {
+      caches.keys().then((cacheNames) => {
+        cacheNames.forEach((cacheName) => {
+          caches.delete(cacheName);
+        });
+      });
+    }
+  }
+
+  private clearCacheAndReload(): void {
+    this.clearCache();
+    // Clear any stored data that might be causing issues
+    if (typeof localStorage !== 'undefined') {
+      localStorage.clear();
+    }
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.clear();
+    }
+    window.location.reload();
+  }
+
+  public reset(): void {
+    this.retryCount = 0;
+    this.errorCount = 0;
+  }
+}
+
+// Export singleton instance
+export const chunkErrorHandler = new ChunkErrorHandler();
+
+// Export class for custom instances
+export default ChunkErrorHandler;

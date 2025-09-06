@@ -14,10 +14,10 @@ export function EmptyMatchesCard() {return (<Card className='p-6 text-center bor
         Run AI matching to find talents that match this job&apos;s requirements.;
       </p>;
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button;
-        onClick = {onRefresh,}
-        disabled = {isProcessing,}
+        onClick = {onRefresh}
+        disabled = {isProcessing}
   return (import { Card } from "@/components/ui/card",import { Button } from "@/components/ui/button",export interface EmptyMatchesCardProps  {onRefresh: () => void,isProcessing: boolean;
-}export function EmptyMatchesCard() {export function EmptyMatchesCard(): any ({onRefresh,isProcessing,}: EmptyMatchesCardProps) {return (<Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
+}export function EmptyMatchesCard() {export function EmptyMatchesCard(): any ({onRefresh,isProcessing}: EmptyMatchesCardProps) {return (<Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
       </div>;
@@ -57,8 +57,8 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
         Run AI matching to find talents that match this job & apos;s requirements.;
       </p>;
       <Button on_click={on_refresh} disabled={is_processing} className='mx - auto'>      <Button;
-        on_click = {on_refresh, }
-        disabled = {is_processing, }
+        on_click = {on_refresh }
+        disabled = {is_processing }
         className="mx - auto";
       >;
         {is_processing ? (<>;

@@ -1,6 +1,72 @@
 
 ;
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({severity,}) => {return (return (}) => {export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({severity,}) => {return (<SeverityIndicator;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({severity}) => {return (return (}) => {export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({severity}) => {return (<SeverityIndicator;
+
+import React from './react';
+import { SeverityIndicator  } from '@/components / ui / severity - indicator';
+interface SeverityDisplayProps {
+  severity: string;
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity
+
+}) => {
+  return (
+
+}) => {
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
+  return (
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+
+
+interface SeverityDisplayProps {
+  severity: string
+}
+
+
+};
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
+  );
+    />
+  );
+};
+  ),;
+},; interface SeverityDisplayProps {
+  severity: string 
+}severity 
+}) => {
+
+
+    <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
       show_icon={true}
       show_text={true}
@@ -22,7 +88,7 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({severity;
       showText={true}
     />;
   )/>;
-  ))}),},interface SeverityDisplayProps  {severity: string;
+  ))})},interface SeverityDisplayProps  {severity: string;
 }severity;
 }) => {<SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
@@ -31,3 +97,12 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({severity;
     />)}interface SeverityDisplayProps  {severity: string;
 }}}
 }
+;
+
+interface SeverityDisplayProps {
+  severity: string
+}
+
+
+};
+};

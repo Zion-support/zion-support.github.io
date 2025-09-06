@@ -1,9 +1,9 @@
-import { getProposal,updateProposalMeta,updateArtifacts,} from '../../../utils/data/proposals';
+import { getProposal,updateProposalMeta,updateArtifacts} from '../../../utils/data/proposals';
 async function submitByEmail() {const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587)const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
   const from = process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error('Email not configured')const transporter = nodemailer.createTransport({host,port,secure: port === 465,auth: { user, pass },})await transporter.sendMail({ from, to, subject, text, attachments })}
+  if (!host || !user || !pass) throw new Error('Email not configured')const transporter = nodemailer.createTransport({host,port,secure: port === 465,auth: { user, pass }})await transporter.sendMail({ from, to, subject, text, attachments })}
 export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })try {const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
     if (!id) return res.status($1).json({ $2 })const meta = getProposal(id)if (!meta) return res.status($1).json({ $2 })// Email submission;
     if (channels.includes("email")) {const to = emailTo |process.env.UN_GATEWAY_EMAIL |"example@un.org";

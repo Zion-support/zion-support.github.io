@@ -11,12 +11,40 @@ interface PortfolioBuilderProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/PortfolioBuilder.jsx;
+interface PortfolioBuilderProps {
+  // Add props here as needed
+
+
+}
+
+export default function PortfolioBuilder({}: PortfolioBuilderProps) {
+  return (
+    <div>
+      <h1>PortfolioBuilder</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/PortfolioBuilder.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/PortfolioBuilder.jsx;
+:temp_exclude/src.pages.disabled/PortfolioBuilder.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/PortfolioBuilder.jsx
 }
 }
 }

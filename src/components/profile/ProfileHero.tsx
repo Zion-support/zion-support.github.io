@@ -25,7 +25,7 @@ export function ProfileHero(): any ({name;
       <div className="relative">;
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
           {coverImageUrl ? (<img;
-              src = {coverImageUrl,}
+              src = {coverImageUrl}
               alt={`${name} cover`}
               className='w-full h-full object-cover';
               loading='lazy';
@@ -42,7 +42,7 @@ export function ProfileHero(): any ({name;
 }export function ProfileHero() {return (<div className="w-full overflow-hidden">;
       <div className="relative">;
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
-  profileType,}: ProfileHeroProps) {return (<div className='w-full overflow-hidden'>;
+  profileType}: ProfileHeroProps) {return (<div className='w-full overflow-hidden'>;
       <div className='relative'>;
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>;
           {coverImageUrl ? (<img;

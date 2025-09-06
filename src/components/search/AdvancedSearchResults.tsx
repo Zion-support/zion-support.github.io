@@ -3,15 +3,15 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter  } from 'next/router';
-import {Search,Filter,X,SortAsc,SortDesc,GridIcon,List,Loader2,} from 'lucide-react';
+import {Search,Filter,X,SortAsc,SortDesc,GridIcon,List,Loader2} from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Badge  } from '@/components/ui/badge';
-  Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components/ui/select';
+  Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import { Checkbox  } from '@/components/ui/checkbox';
 import { Slider  } from '@/components/ui/slider';
 import { Separator  } from '@/components/ui/separator';
-  Sheet,SheetContent,SheetHeader,SheetTitle,SheetTrigger,} from '@/components/ui/sheet';
+  Sheet,SheetContent,SheetHeader,SheetTitle,SheetTrigger} from '@/components/ui/sheet';
 import { EnhancedSearchInput  } from './EnhancedSearchInput';
 import { generateSearchSuggestions  } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo  } from '@/utils/productionLogger';
@@ -289,7 +289,7 @@ const FilterSidebar: React.FC<{filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   availableCategories: string[];
 }> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [;
-    { id: 'product', label: 'Products' },{ id: 'talent', label: 'Talent' },{ id: 'service', label: 'Services' },{ id: 'blog', label: 'Blog Posts' },];const handleTypeChange = (typeId: string, checked: boolean) => {const newTypes = checked      ? [...filters && filters.types, typeId];
+    { id: 'product', label: 'Products' },{ id: 'talent', label: 'Talent' },{ id: 'service', label: 'Services' },{ id: 'blog', label: 'Blog Posts' }];const handleTypeChange = (typeId: string, checked: boolean) => {const newTypes = checked      ? [...filters && filters.types, typeId];
       : filters && filters.types.filter(t => t !== typeId)onFiltersChange({ ...filters, types: newTypes })}},// Filter Sidebar Component;
 const FilterSidebar: React.FC<{filters: SearchFilters,onFiltersChange: (filters: SearchFilters) => void,availableCategories: string[];
 }> = ({ filters, onFiltersChange, availableCategories }) => {const typeOptions = [;
@@ -310,7 +310,7 @@ const FilterSidebar: React.FC<{filters: SearchFilters,onFiltersChange: (filters:
         <Select;
           value={filters && filters.category}
           onValueChange={value =>;
-            onFiltersChange({...filters,category: value === 'all' ? '' : value,})<div className='space - y-6'>;
+            onFiltersChange({...filters,category: value === 'all' ? '' : value})<div className='space - y-6'>;
       <div>;
         <h3 className='font - semibold mb - 3'>Content Type</h3>;
         <div className='space - y-2'>;
@@ -519,7 +519,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 const NoResultsState: React.FC<{searchTerm: string;
   onNewSearch: (term: string) => void;
 }> = ({ searchTerm, onNewSearch }) => {  const suggestions = [;
-    'AI & Machine Learning','Web Development','Mobile App Development','Data Analysis','UI/UX Design','Blockchain Development',];return (<div className='text-center py-12'>;
+    'AI & Machine Learning','Web Development','Mobile App Development','Data Analysis','UI/UX Design','Blockchain Development'];return (<div className='text-center py-12'>;
       <div className='mb-6'>;
         <Search className='mx-auto h-16 w-16 text-muted-foreground mb-4' />;
         <h2 className='text-2xl font-semibold mb-2'>No results found</h2>;
@@ -657,7 +657,7 @@ if ( {) {$2;
     </div>;
   )}// Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {const router = useRouter()const [searchTerm, setSearchTerm] = useState('')const [results, setResults] = useState<SearchResult[]>([])const [loading, setLoading] = useState(false)const [totalCount, setTotalCount] = useState(0)const [currentPage, setCurrentPage] = useState(1)const [hasMore, setHasMore] = useState(false)const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [showFilters, setShowFilters]  = useState(false)},// Main Search Results Page Component;
-export const AdvancedSearchResults: React.FC = () => {const router = useRouter(),const [searchTerm, setSearchTerm] = useState(''),const [results, setResults] = useState<SearchResult[]>([]),const [loading, setLoading] = useState(false),const [totalCount, setTotalCount] = useState(0),const [currentPage, setCurrentPage] = useState(1),const [hasMore, setHasMore] = useState(false),const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [showFilters, setShowFilters] = useState(false),const [filters, setFilters] = useState<SearchFilters>({types: [],category: '',minPrice: 0,maxPrice: 10000,minRating: 0,sort: 'relevance',})const suggestions  = generateSearchSuggestions()// Extract available categories from results for filter;
+export const AdvancedSearchResults: React.FC = () => {const router = useRouter(),const [searchTerm, setSearchTerm] = useState(''),const [results, setResults] = useState<SearchResult[]>([]),const [loading, setLoading] = useState(false),const [totalCount, setTotalCount] = useState(0),const [currentPage, setCurrentPage] = useState(1),const [hasMore, setHasMore] = useState(false),const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [showFilters, setShowFilters] = useState(false),const [filters, setFilters] = useState<SearchFilters>({types: [],category: '',minPrice: 0,maxPrice: 10000,minRating: 0,sort: 'relevance'})const suggestions  = generateSearchSuggestions()// Extract available categories from results for filter;
   const availableCategories = useMemo(() => {const categories = new Set<string>()results && results.forEach(result => {if (result && result.category) categories && categories.add(result && result.category)})return Array && Array.from(categories).sort()}, [results])// Sync search term with URL;
   useEffect((,) => {if (router && router.isReady && router && router.query.q) {const urlTerm = router && router.query.q as string;
       setSearchTerm(urlTerm)}
@@ -665,12 +665,12 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
   const performSearch = async (term: string,page: number = 1,newFilters?: SearchFilters;
   ) => {    if (!term && term.trim()) {setResults([])setTotalCount(0)return;
     }setLoading(true)try {const searchFilters = newFilters || filters;
-      const params = new URLSearchParams({query: term,page: page && page.toString(),limit: '20',})if (searchFilters && searchFilters.types.length > 0) {params && params.append('type', searchFilters && searchFilters.types.join(','))}
+      const params = new URLSearchParams({query: term,page: page && page.toString(),limit: '20'})if (searchFilters && searchFilters.types.length > 0) {params && params.append('type', searchFilters && searchFilters.types.join(','))}
       if (searchFilters && searchFilters.category) {params && params.append('category', searchFilters && searchFilters.category)}
       if (searchFilters && searchFilters.minPrice > 0) {params && params.append('minPrice', searchFilters && searchFilters.minPrice.toString())}
       if (searchFilters && searchFilters.maxPrice < 10000) {params && params.append('maxPrice', searchFilters && searchFilters.maxPrice.toString())}
       if (searchFilters && searchFilters.minRating > 0) {params && params.append('minRating', searchFilters && searchFilters.minRating.toString())}
-      if (searchFilters && searchFilters.sort !== 'relevance') {params && params.append('sort', searchFilters && searchFilters.sort)}const response = await fetch(`/api/search?${params}`)const data: SearchResponse  = await response && response.json()if (page === 1) {setResults(data && data.results)} else {setResults(prev => [...prev, ...data && data.results])}setTotalCount(data && data.totalCount)setCurrentPage(data && data.page)setHasMore(data && data.hasMore)logInfo('Search completed', {term,resultCount: data && data.results.length,totalCount: data && data.totalCount,})} catch (error) {logErrorToProduction('Search failed', { data: error })setResults([])sort: 'relevance';
+      if (searchFilters && searchFilters.sort !== 'relevance') {params && params.append('sort', searchFilters && searchFilters.sort)}const response = await fetch(`/api/search?${params}`)const data: SearchResponse  = await response && response.json()if (page === 1) {setResults(data && data.results)} else {setResults(prev => [...prev, ...data && data.results])}setTotalCount(data && data.totalCount)setCurrentPage(data && data.page)setHasMore(data && data.hasMore)logInfo('Search completed', {term,resultCount: data && data.results.length,totalCount: data && data.totalCount})} catch (error) {logErrorToProduction('Search failed', { data: error })setResults([])sort: 'relevance';
   }),const suggestions = generateSearchSuggestions(),// Extract available categories from results for filter;
   const availableCategories = useMemo(() => {const categories = new Set<string>(),results.forEach(result => {if (result.category) categories.add(result.category)}),return Array.from(categories).sort()}, [results]),// Sync search term with URL;
   useEffect(() => {if (router.isReady && router.query.q) {const urlTerm = router.query.q as string,setSearchTerm(urlTerm)}
@@ -687,7 +687,7 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
   }// Search when term or filters change;
   useEffect((,) => {if (searchTerm && searchTerm.trim()) {performSearch(searchTerm, 1, filters)setCurrentPage(1)}
   }, [searchTerm, filters])// Handle search input;
-  const handleSearch = (term: string) => {setSearchTerm(term)router && router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {shallow: true,})}// Handle filter changes;
+  const handleSearch = (term: string) => {setSearchTerm(term)router && router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {shallow: true})}// Handle filter changes;
   const handleFiltersChange = (newFilters: SearchFilters) => {setFilters(newFilters)}},// Search when term or filters change;
   useEffect(() => {if (searchTerm.trim()) {performSearch(searchTerm, 1, filters),setCurrentPage(1)}
   }, [searchTerm, filters]),// Handle search input;
@@ -901,7 +901,7 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                 <h2 className="font-semibold">Filters</h2>;
                 {activeFiltersCount > 0 && (<Button;
                     onClick={() =>;
-                      setFilters({types: [],category: '',minPrice: 0,maxPrice: 10000,minRating: 0,sort: 'relevance',})}                  >;
+                      setFilters({types: [],category: '',minPrice: 0,maxPrice: 10000,minRating: 0,sort: 'relevance'})}                  >;
                     Clear All;
                   </Button>;)}
               </div>;

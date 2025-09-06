@@ -42,9 +42,9 @@ export function ResumeWizard() {const { user } = useAuth()const {isLoading;
   }
   if (showNewResumeForm) {if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }if (showNewResumeForm) {return (<CreateResumeForm;
-        onCreateResume = {handleCreateNewResume,}
-        onCancel = {(,) => setShowNewResumeForm(false),}
-        isLoading = {isLoading,}/>;
+        onCreateResume = {handleCreateNewResume}
+        onCancel = {(,) => setShowNewResumeForm(false)}
+        isLoading = {isLoading}/>;
     )}if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }if (showNewResumeForm) {return (<CreateResumeForm;
         onCreateResume={handleCreateNewResume}
@@ -96,9 +96,9 @@ if ( {) {$2;
 if ( {) {$2;
 }
     return (<CreateResumeForm;
-        onCreateResume = {handleCreateNewResume, }
-        on_cancel = {(, ) => setShowNewResumeForm (false), }
-        is_loading = {is_loading, }
+        onCreateResume = {handleCreateNewResume }
+        on_cancel = {(, ) => setShowNewResumeForm (false) }
+        is_loading = {is_loading }
       />)}
   return (<div className="space - y-6">;
       <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
@@ -106,7 +106,7 @@ if ( {) {$2;
         <div className="flex gap - 4 flex - wrap items - center">;
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
           <Button;
-            on_click = {(, ) => setShowNewResumeForm (true), }
+            on_click = {(, ) => setShowNewResumeForm (true) }
             variant="outline";
             size="sm";
             className="gap - 2";
@@ -116,10 +116,10 @@ if ( {) {$2;
           </Button>;
         </div>;
       </div>;/>;{resume && (<ResumeStepContent;
-                activeTab = {activeTab,}
-                resume = {resume as Resume,}
-                onNextStep = {nextStep,}
-                onPrevStep = {prevStep,}
+                activeTab = {activeTab}
+                resume = {resume as Resume}
+                onNextStep = {nextStep}
+                onPrevStep = {prevStep}
               />;
             )}</Tabs>;
         </CardContent>;
@@ -144,15 +144,15 @@ if ( {) {$2;
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
             <ResumeSteps;
-              steps = {RESUME_STEPS, }
-              active_tab = {active_tab, }
-              on_change = {setActiveTab, }
+              steps = {RESUME_STEPS }
+              active_tab = {active_tab }
+              on_change = {setActiveTab }
             />;
             {resume && (<ResumeStepContent;
-                active_tab = {active_tab, }
-                resume = {resume as Resume, }
-                onNextStep = {next_step, }
-                onPrevStep = {prev_step, }
+                active_tab = {active_tab }
+                resume = {resume as Resume }
+                onNextStep = {next_step }
+                onPrevStep = {prev_step }
               />)}
           </Tabs>;
         </CardContent>;

@@ -113,7 +113,7 @@ function BasicsStep() {return (<Card>;
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
-            rows = {4,}
+            rows = {4}
           />;
         </div>;
       </CardContent>;
@@ -148,30 +148,30 @@ function MobileResumeBuilder() {const [current_step, setCurrentStep] = useState 
   },return (<div className="space - y-6 px - 4 pb - 24">;
       <div className="flex justify - between px - 1 py - 2 overflow - x-auto hide - scrollbar">;
         <Button;
-          variant = {current_step === "basics" ? "default" : "outline", }
+          variant = {current_step === "basics" ? "default" : "outline" }
           className="flex - 1 rounded - full";
-          on_click = {(, ) => setCurrentStep ("basics"), }
+          on_click = {(, ) => setCurrentStep ("basics") }
         >;
           Basics;
         </Button>;
         <Button;
-          variant = {current_step === "experience" ? "default" : "outline", }
+          variant = {current_step === "experience" ? "default" : "outline" }
           className="flex - 1 rounded - full";
-          on_click = {() => setCurrentStep ("experience"), }
+          on_click = {() => setCurrentStep ("experience") }
         >;
           Experience;
         </Button>;
         <Button;
-          variant = {current_step === "education" ? "default" : "outline", }
+          variant = {current_step === "education" ? "default" : "outline" }
           className="flex - 1 rounded - full";
-          on_click = {() => setCurrentStep ("education"), }
+          on_click = {() => setCurrentStep ("education") }
         >;
           Education;
         </Button>;
         <Button;
-          variant = {current_step === "skills" ? "default" : "outline", }
+          variant = {current_step === "skills" ? "default" : "outline" }
           className="flex - 1 rounded - full";
-          on_click = {() => setCurrentStep ("skills"), }
+          on_click = {() => setCurrentStep ("skills") }
         >;
           Skills;
         </Button>;
@@ -214,7 +214,7 @@ function BasicsStep() {return (<Card>;
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
-            rows = {4, }
+            rows = {4 }
           />;
         </div>;
       </CardContent>;

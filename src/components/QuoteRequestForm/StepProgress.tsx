@@ -19,7 +19,7 @@ return (<div className='relative'>;
           className='absolute h-full bg-zion-purple transition-all duration-500';
           style={{currentStep: QuoteRequestSteps;
 export function StepProgress() {const steps: { id: QuoteRequestSteps; label: string }[] = [;
-    { id: 'service', label: 'Service' },{ id: 'details', label: 'Details' },{ id: 'timeline', label: 'Timeline' },{ id: 'budget', label: 'Budget' },{ id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [;
+    { id: 'service', label: 'Service' },{ id: 'details', label: 'Details' },{ id: 'timeline', label: 'Timeline' },{ id: 'budget', label: 'Budget' },{ id: 'summary', label: 'Summary' }  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [;
 import { QuoteRequestSteps } from "../QuoteRequestForm",import { CheckIcon  } from 'lucide-react';
 import { cn } from "@/lib/utils",interface StepProgressProps  {currentStep: QuoteRequestSteps;
 }export function StepProgress() {const steps: { id: QuoteRequestSteps, label: string }[] = [;
@@ -33,7 +33,7 @@ import { cn } from "@/lib/utils",interface StepProgressProps  {currentStep: Quot
           }}
         />;
       </div>;
-            width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`,}}
+            width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`}}
         />;
       </div>;<div className='flex justify-between relative'>;
         {steps && steps.map(step => {const status  = getStepStatus(step && step.id)return (<div key={step && step.id} className='flex flex-col items-center relative'>;
@@ -74,7 +74,7 @@ import { cn } from "@/lib/utils",interface StepProgressProps  {currentStep: Quot
 }</span> </div>)})}</div> </div>)}"          )})}
       </div>;
     </div>;
-  )}),}>;
+  )})}>;
                 {step && step.label}<span;
                 className={cn("text-xs mt-2 font-medium",status === "complete" ? "text-zion-cyan" :;
                   status === "current" ? "text-white" :;
@@ -142,7 +142,7 @@ if (return "current", ) {$2;
       <div className='absolute top - 4 left - 0 right - 0 h - 0.5 bg - zion - blue - light'>;
         <div;
           className='absolute h - full bg - zion - purple transition - all duration - 500';
-          style={{width: `${(steps.find_index (string => s.id === current_step) / (steps.length - 1)) * 100}%`,}}
+          style={{width: `${(steps.find_index (string => s.id === current_step) / (steps.length - 1)) * 100}%`}}
         />;
       </div>;
       <div className='flex justify - between relative'>;
@@ -169,7 +169,7 @@ if (return "current", ) {$2;
               <span;
                 class_name = {cn ("text - xs mt - 2 font - medium",status === "complete" ? "text - zion - cyan" :;
                   status === "current" ? "text - white" :;
-                  "text - zion - slate - light"), }
+                  "text - zion - slate - light") }
               >;
                 {step.label}
               </span>;
@@ -182,7 +182,7 @@ if (return "current", ) {$2;
 }</span>)}</div> <span)}> {step.label;
 }</span> </div>)})}</div> </div>)}"          )})}
       </div>;
-    </div>)}),}
+    </div>)})}
               >;
                 {step.label}
               </span>;

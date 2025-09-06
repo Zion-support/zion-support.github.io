@@ -23,12 +23,12 @@ import { Search;
   Target;
   Award;
   Lightbulb; } from 'lucide-react';
-import {Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Monitor,Cpu,Zap,Database,Cloud,Lock,Code,Sparkles,Target,Award,Lightbulb,} from 'lucide-react';
+import {Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Monitor,Cpu,Zap,Database,Cloud,Lock,Code,Sparkles,Target,Award,Lightbulb} from 'lucide-react';
 import { innovative2025Services  } from '../data/innovative-2025-services';
 import { emergingTech2025Services  } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },{ id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },{id: 'quantum',name: 'Quantum Computing',icon: '⚛️',count: quantumCount,},{id: 'blockchain',name: 'Blockchain & Web3',icon: '⛓️',count: blockchainCount,},{ id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },{ id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },{id: 'security',name: 'Cybersecurity',icon: '🔒',count: cybersecurityCount,}  ];
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },{ id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },{id: 'quantum',name: 'Quantum Computing',icon: '⚛️',count: quantumCount},{id: 'blockchain',name: 'Blockchain & Web3',icon: '⛓️',count: blockchainCount},{ id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },{ id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },{id: 'security',name: 'Cybersecurity',icon: '🔒',count: cybersecurityCount}  ];
     }  ];const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },{ id: 'low', name: 'Under $2K/month', range: 'Under $2K' },{ id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },{ id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },{ id: 'premium', name: '$20K+/month', range: '$20K+' }  ];
     { id: 'premium', name: '$20K+/month', range: '$20K+' }  ];const sortOptions = [;
@@ -167,7 +167,7 @@ filtered.sort((a, b) => a.name.localeCompare(b.name))}return filtered;
         filtered.sort((a, b) => b.customers - a.customers),break,default:;
         filtered.sort((a, b) => a.name.localeCompare(b.name))} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }return filtered;
-  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]),const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1,},}  }}  }const itemVariants = {hidden: { opacity: 0, y: 20 },visible: {opacity: 1,duration: 0.5;
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]),const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1}}  }}  }const itemVariants = {hidden: { opacity: 0, y: 20 },visible: {opacity: 1,duration: 0.5;
       }
     }
   }>;
@@ -201,7 +201,7 @@ filtered.sort((a, b) => a.name.localeCompare(b.name))}return filtered;
 }
               transition={{ duration: 0.8 }  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-        duration: 0 && 0.5,},},}>;
+        duration: 0 && 0.5}}}>;
       <div className='min-h-screen'>;stagger_children: 0.1;
       }
     }  }const item_variants = {hidden: { opacity: 0, coordinate_y: 20 },visible: {opacity: 1,coordinate_y: 0,transition: {duration: 0.5;

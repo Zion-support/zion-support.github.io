@@ -40,9 +40,9 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
             </Badge>;
           </div>;<div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (<JobMatchesCard;
-                key = {match && match.id,}match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
+                key = {match && match.id}match = {match}
+                onApply = {handleApply}
+                onDecline = {handleDecline}
               />;<div className="grid gap-4 md:grid-cols-2">;
             {newMatches.map(match => (<JobMatchesCard;
                 key={match.id}match={match}onApply={handleApply}onDecline={handleDecline}/>;
@@ -60,9 +60,9 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
             <h3 className="text-lg font-medium">Previously Viewed</h3>;
           </div>;<div className="grid gap-4 md:grid-cols-2">;
             {viewedMatches && viewedMatches.map(match => (<JobMatchesCard;
-                key = {match && match.id,}match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
+                key = {match && match.id}match = {match}
+                onApply = {handleApply}
+                onDecline = {handleDecline}
               />;<div className="grid gap-4 md:grid-cols-2">;
             {viewedMatches.map(match => (<JobMatchesCard;
                 key={match.id}match={match}onApply={handleApply}onDecline={handleDecline}/>;
@@ -75,16 +75,16 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;
               <JobMatchesCard;
-                key = {match.id,}{/* Applied Jobs Section */}
+                key = {match.id}{/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (<div className="space-y-4">;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;<div className="grid gap-4 md:grid-cols-2">;
             {appliedMatches && appliedMatches.map(match => (<JobMatchesCard;
-                key = {match && match.id,}match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
-                showApplied = {true,}
+                key = {match && match.id}match = {match}
+                onApply = {handleApply}
+                onDecline = {handleDecline}
+                showApplied = {true}
               />;))}
           </div>;
         </div>;
@@ -105,10 +105,10 @@ if ( {) {$2;
           </div>;
           <div className="grid gap - 4 md:grid - cols - 2">;
             {new_matches.map (match => (<JobMatchesCard;
-                key = {match.id, }
-                match = {match, }
-                on_apply = {handle_apply, }
-                on_decline = {handle_decline, }
+                key = {match.id }
+                match = {match }
+                on_apply = {handle_apply }
+                on_decline = {handle_decline }
               />))}
           </div>;
         </div>)}
@@ -119,10 +119,10 @@ if ( {) {$2;
           </div>;
           <div className="grid gap - 4 md:grid - cols - 2">;
             {viewed_matches.map (match => (<JobMatchesCard;
-                key = {match.id, }
-                match = {match, }
-                on_apply = {handle_apply, }
-                on_decline = {handle_decline, }
+                key = {match.id }
+                match = {match }
+                on_apply = {handle_apply }
+                on_decline = {handle_decline }
               />))}
           </div>;
         </div>)}
@@ -133,11 +133,11 @@ if ( {) {$2;
           </div>;
           <div className="grid gap - 4 md:grid - cols - 2">;
             {applied_matches.map (match => (<JobMatchesCard;
-                key = {match.id, }
-                match = {match, }
-                on_apply = {handle_apply, }
-                on_decline = {handle_decline, }
-                show_applied = {true, }
+                key = {match.id }
+                match = {match }
+                on_apply = {handle_apply }
+                on_decline = {handle_decline }
+                show_applied = {true }
               />))}
           </div>;
         </div>)}

@@ -17,3 +17,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
+const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

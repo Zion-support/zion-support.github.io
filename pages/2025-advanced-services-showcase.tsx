@@ -11,7 +11,7 @@ import {ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,Spa
     .filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),const price = parseFloat(service.price.replace('$', '').replace(, '')),const matchesPrice = price >= priceRange[0] && price <= priceRange[1],return matchesSearch && matchesCategory && matchesPrice;
-  ArrowRight,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,ChevronRight,ExternalLink,TrendingUp,BarChart3,Cloud,Network,Search,Filter,Grid,List,Star as StarIcon,Eye,Heart,Share2,DollarSign,Calendar,Users as UsersIcon,Zap as ZapIcon,} from 'lucide-react';
+  ArrowRight,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,ChevronRight,ExternalLink,TrendingUp,BarChart3,Cloud,Network,Search,Filter,Grid,List,Star as StarIcon,Eye,Heart,Share2,DollarSign,Calendar,Users as UsersIcon,Zap as ZapIcon} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices  } from '../data/2025-advanced-innovative-services-expansion';

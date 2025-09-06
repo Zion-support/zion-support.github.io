@@ -3,12 +3,12 @@ import { Search  } from 'lucide-react';
 import { Input  } from '@/components/ui/input';
 import { Input   } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
-import { Input } from '@/components/ui/input',import { Button } from '@/components/ui/button',import {Pagination,PaginationContent,PaginationItem,PaginationButton,PaginationNext,PaginationPrevious,} from '@/components/ui/pagination';
+import { Input } from '@/components/ui/input',import { Button } from '@/components/ui/button',import {Pagination,PaginationContent,PaginationItem,PaginationButton,PaginationNext,PaginationPrevious} from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 import { CountryServiceCard  } from '@/components/services/CountryServiceCard';
 import { CountryPricing  } from '@/data/onsiteServicePricing';
   setSearchQuery: (query: string) => void;
-export function CountryTabs(): any ({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,setSearchQuery,}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1)const countriesPerPage  = 50;useEffect(() => {setCurrentPage(1)}, [searchQuery])const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage)const paginatedCountries = filteredCountries && filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
+export function CountryTabs(): any ({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1)const countriesPerPage  = 50;useEffect(() => {setCurrentPage(1)}, [searchQuery])const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage)const paginatedCountries = filteredCountries && filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
   )export function CountryTabs({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
   )setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1),const countriesPerPage = 50,useEffect(() => {setCurrentPage(1)}, [searchQuery]),const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage;
     currentPage * countriesPerPage;
@@ -42,11 +42,11 @@ export function CountryTabs(): any ({popularCountries,filteredCountries,handleCo
         </div>;<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country)).map(country => (              <CountryServiceCard;
-                key = {country.country,}
-                country = {country,}
-                onSelect = {handleCountrySelect,}
-                onQuote = {onQuote,}
-                isPopular = {true,}
+                key = {country.country}
+                country = {country}
+                onSelect = {handleCountrySelect}
+                onQuote = {onQuote}
+                isPopular = {true}
               />;
             ))}</div>;
       </TabsContent>;<TabsContent value='all' className='mt-0'>;
@@ -60,10 +60,10 @@ export function CountryTabs(): any ({popularCountries,filteredCountries,handleCo
           </div>;
         </div>;<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>;
           {paginatedCountries && paginatedCountries.map(country => (            <CountryServiceCard;
-              key = {country && country.country,}country = {country,}
-              onSelect = {handleCountrySelect,}
-              onQuote = {onQuote,}
-              isPopular = {popularCountries.includes(country.country),}
+              key = {country && country.country}country = {country}
+              onSelect = {handleCountrySelect}
+              onQuote = {onQuote}
+              isPopular = {popularCountries.includes(country.country)}
             />;
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
           {filteredCountries;
@@ -173,7 +173,7 @@ export function CountryTabs() {const [currentPage, setCurrentPage] = useState(1)
   )}import { useState, useEffect  } from 'react';
 import { Input  } from '@/components / ui / input';
 import { Button  } from '@/components / ui / button';
-import { Pagination,PaginationContent,PaginationItem,PaginationButton,PaginationNext,PaginationPrevious,} from '@/components / ui / pagination';
+import { Pagination,PaginationContent,PaginationItem,PaginationButton,PaginationNext,PaginationPrevious} from '@/components / ui / pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 import { CountryServiceCard  } from '@/components / services / CountryServiceCard';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
@@ -211,11 +211,11 @@ function CountryTabs() {const [current_page, setCurrentPage] = useState (1)const
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {filtered_countries;
             .filter (country => popular_countries.includes (country.country)).map (country => (              <CountryServiceCard;
-                key = {country.country, }
-                country = {country, }
-                on_select = {handleCountrySelect, }
-                on_quote = {on_quote, }
-                is_popular = {true, }
+                key = {country.country }
+                country = {country }
+                on_select = {handleCountrySelect }
+                on_quote = {on_quote }
+                is_popular = {true }
               />))}
         </div>;
       </TabsContent>;
@@ -233,11 +233,11 @@ function CountryTabs() {const [current_page, setCurrentPage] = useState (1)const
         </div>;
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 4'>;
           {paginated_countries.map (country => (            <CountryServiceCard;
-              key = {country.country, }
-              country = {country, }
-              on_select = {handleCountrySelect, }
-              on_quote = {on_quote, }
-              is_popular = {popular_countries.includes (country.country), }
+              key = {country.country }
+              country = {country }
+              on_select = {handleCountrySelect }
+              on_quote = {on_quote }
+              is_popular = {popular_countries.includes (country.country) }
             />))}
         </div>;
         {total_pages > 1 && (<div className='mt - 8'>;

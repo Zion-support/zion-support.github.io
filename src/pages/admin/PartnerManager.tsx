@@ -1,5 +1,5 @@
 
-onViewDetails, })}import { use_router  } from 'next / router';
+onViewDetails })}import { use_router  } from 'next / router';
 import { Button   } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components / ui / card';
 import { Input   } from '@/components / ui / input';
@@ -16,11 +16,11 @@ interface PartnerProfile  {id: string,user_id: string,name: string,status: 'pend
 import { useAuth  } from '@/hooks/useAuth';
 import { useRouter  } from 'next/router';
 import { Button  } from '@/components/ui/button';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
 import { Input  } from '@/components/ui/input';
-import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow,} from '@/components/ui/table';
+import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import { Badge  } from '@/components/ui/badge';
-import { Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger,} from '@/components/ui/dialog';
+import { Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components/ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { toast  } from '@/hooks/use-toast';
@@ -54,7 +54,7 @@ if ( {) {$2;
         return <Badge variant="outline" className="bg - red - 900 / 30 text - red - 500 border - red - 600">Rejected</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
-  partners,is_loading,onViewDetails, }
+  partners,is_loading,onViewDetails }
   )}interface PartnerTableProps  {partners: PartnerProfile[],isLoading: boolean,onViewDetails: (partner: PartnerProfile) => void,onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,onOpenSettings: (partner: PartnerProfile) => void,getStatusBadge: (status: string) => JSX.Element,getFraudFlagBadge: (flags?: number) => JSX.Element | null;
 }function PartnerTable() {if (isLoading) {return (<div className="text-center py-8">;
         <p className="text-zion-slate-light">Loading partner data...</p>;

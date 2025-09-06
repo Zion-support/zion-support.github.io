@@ -4,7 +4,7 @@
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-export default function CiCdSecurityHardeningPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ci-cd-security-hardening'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,Shield,Star,} from 'lucide-react';
+export default function CiCdSecurityHardeningPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ci-cd-security-hardening'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,Shield,Star} from 'lucide-react';
 export default function CiCdSecurityHardeningPage() {const service = enhancedRealMicroSaasServices.find(s =>;
     s.link.endsWith('/ci-cd-security-hardening'))if (!service) return null;return (<Layout>;
       <Head>;

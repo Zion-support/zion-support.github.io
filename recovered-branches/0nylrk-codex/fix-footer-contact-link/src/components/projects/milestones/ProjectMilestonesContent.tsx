@@ -27,8 +27,83 @@ export function ProjectMilestonesContent() {const { projectId } = useParams() as
       } catch (error) {console && console.error("Error loading project:", error)} finally {setIsLoading(false)}
     }
   useEffect(() => {const { isUnderDispute, disputeId }  = useDisputeCheck(projectId)useEffect(() => {async function loadProject() {if (projectData) {setProject(projectData)async function loadProject() {if (!projectId) return,setIsLoading(true),try {const projectData = await getProjectById(projectId)if (projectData) {setProject(projectData)}
-      } catch (error) {console.error("Error loading project:", error),} finally {setIsLoading(false),}
+      } catch (error) {console.error("Error loading project:", error)} finally {setIsLoading(false)}
         const projectData = await getProjectById(projectId)if (projectData) {setProject(projectData)}
+
+
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+
+  const { user } = useAuth();
+  const { getProjectById } = useProjects();
+  const {
+    milestones
+    activities;
+    isLoading: milestonesLoading
+
+
+
+import React, { useState, useEffect } from 'react';
+    createMilestone;
+    updateMilestoneStatus;
+    deleteMilestone;
+    uploadDeliverable;
+    isSubmitting;
+    refetch;
+    refetch;
+  } = useMilestones(projectId);
+  const [project, setProject] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('milestones');
+
+  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+
+  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return;
+
+      setIsLoading(true);
+      try {;
+
+        const projectData = await getProjectById(projectId);
+        if (projectData) {;
+          setProject(projectData);
+
+
+
+
+        }
+      } catch (error) {;
+        console && console.error("Error loading project:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    }
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return,;
+      ;
+      setIsLoading(true),;
+      try {;
+
+
+
+
+        const projectData = await getProjectById(projectId);
+        if (projectData) {;
+          setProject(projectData);
+        }
+      } catch (error) {;
+        console.error("Error loading project:", error),;
+      } finally {;
+        setIsLoading(false),;      }
+        const projectData = await getProjectById(projectId);
+        if (projectData) {
+          setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
     }
       <ProjectHeader title={project.job?.title |"Untitled Project"} />;
@@ -48,6 +123,39 @@ export function ProjectMilestonesContent() {const { projectId } = useParams() as
         </div>;
       </div>;
     )}
+        <ProjectActions 
+      } catch (error) {;
+        console.error("Error loading project:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    }
+;
+    loadProject(),;
+    refetch();
+  }, [projectId, getProjectById, refetch]),;
+
+
+
+    loadProject();
+    refetch();
+  }, [projectId, getProjectById, refetch]);
+
+
+    
+    loadProject(),
+    refetch()
+  }, [projectId, getProjectById, refetch]),
+
+
+  const handleMilestoneCreated = async () => {;
+    await refetch();
+  };
+
+  // Determine if the user is the client or talent;
+  const isClient = user?.id === project?.client_id;
+  const isTalent = user?.id === project?.talent_id;
+    return (
       <div className="container mx-auto py-8 px-4">;
         <div className="flex justify-center items-center h-64">;
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
@@ -63,15 +171,216 @@ export function ProjectMilestonesContent() {const { projectId } = useParams() as
         <ProjectActions;
           projectId={projectId || ''}
         <ProjectActions;
-    ),}const handleMilestoneSubmit = async (data:any) => {if (!projectId) return,// Ensure all required fields are present;
+    )}const handleMilestoneSubmit = async (data:any) => {if (!projectId) return,// Ensure all required fields are present;
     const milestoneData = {project_id:projectId,title:data.title,description:data.description || "",amount:data.amount,status:"pending" as const,due_date:data.due_date ? data.due_date.toISOString() :undefined;
-    },await createMilestone(milestoneData),setActiveTab('milestones'),await handleMilestoneCreated(),},return (<div className="container mx-auto py-8 px-4">;
+    },await createMilestone(milestoneData),setActiveTab('milestones'),await handleMilestoneCreated()},return (<div className="container mx-auto py-8 px-4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;<div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions ;
           projectId={projectId || ''}
       title: data.title,description: data.description || "",amount: data.amount,status: "pending" as const,due_date: data.due_date ? data.due_date.toISOString() : undefined;
     },await createMilestone(milestoneData),setActiveTab('milestones')await handleMilestoneCreated()}return (<div className="container mx-auto py-8 px-4">;
+    );
+  }
+
+
+    loadProject();
+    refetch();
+  }, [projectId, getProjectById, refetch]);
+  const handleMilestoneCreated = async () => {;
+    await refetch();
+  };
+  // Determine if the user is the client or talent;
+  const isClient = user?.id === project?.client_id;
+  const isTalent = user?.id === project?.talent_id;
+  // Determine project type based on job category or default to "Other";
+  const projectType = job?.category || "Other";
+  if (isLoading || !project) {;
+    return (
+
+import React, { useState, useEffect } from 'react',;
+import { useParams } from 'react-router-dom',;
+import { useProjects } from '@/hooks/useProjects',;
+import { useMilestones } from '@/hooks/useMilestones',;
+import { useJobDetails } from '@/hooks/useJobDetails',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+;
+import { ;
+  MilestoneActivities,;
+  MilestoneManager,;
+  MilestoneCreator,;
+  ProjectActions,;
+  ProjectHeader;
+} from './components',;
+;
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?:string },;
+  const { user } = useAuth(),;
+  const { getProjectById } = useProjects(),;
+  const { ;
+    milestones, ;
+    activities,;
+    isLoading:milestonesLoading, ;
+    createMilestone,;
+    updateMilestoneStatus,;
+    deleteMilestone,;
+    uploadDeliverable,;
+    isSubmitting,;
+    refetch;
+  } = useMilestones(projectId),;
+  const [project, setProject] = useState<any>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [activeTab, setActiveTab] = useState('milestones'),;
+  const { job, isLoading:jobLoading } = useJobDetails(project?.job_id),;
+  ;
+  const { isUnderDispute, disputeId } = useDisputeCheck(projectId),;
+;
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return,;
+      ;
+      setIsLoading(true),;
+      try {;
+        const projectData = await getProjectById(projectId);
+        if (projectData) {;
+          setProject(projectData),;
+        }
+      } catch (error) {;
+        console.error("Error loading project:", error),;
+      } finally {;
+        setIsLoading(false),;      }
+        const projectData = await getProjectById(projectId);
+        if (projectData) {
+          setProject(projectData)}
+      } catch (error) {} finally {setIsLoading(false)}
+    }
+    ;
+    loadProject(),;
+    refetch(),;
+  }, [projectId, getProjectById, refetch]),;
+;
+  const handleMilestoneCreated = async () => {;
+    await refetch(),;
+  },;
+  ;
+  // Determine if the user is the client or talent;
+  const isClient = user?.id === project?.client_id,;
+  const isTalent = user?.id === project?.talent_id,;
+;
+  // Determine project type based on job category or default to "Other";
+  const projectType = job?.category || "Other",;
+;
+  if (isLoading || !project) {;
+    return (;
+  const handleMilestoneCreated = async () => {;
+    await refetch();
+  },;
+  // Determine if the user is the client or talent;
+  const isClient = user?.id === project?.client_id,;
+  const isTalent = user?.id === project?.talent_id,;
+  // Determine project type based on job category or default to "Other";
+  const projectType = job?.category || "Other",;
+  if (isLoading || !project) {;
+    return (;
+      <div className="container mx-auto py-8 px-4">;
+        <div className="flex justify-center items-center h-64">;
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
+        </div>;
+      </div>;
+    );
+  }
+
+
+  const handleMilestoneSubmit = async (data: any) => {;
+    if (!projectId) return,;
+
+    // Ensure all required fields are present;
+    const milestoneData = {;
+      project_id: projectId,;
+      title: data && data.title,;
+      description: data && data.description || "",;
+      amount: data && data.amount,;
+      status: "pending" as const,;
+      due_date: data && data.due_date ? data && data.due_date.toISOString() : undefined;
+    };
+
+    await createMilestone(milestoneData);
+    setActiveTab('milestones');
+    await handleMilestoneCreated();
+  };
+
+  return (
+    <div className="container mx-auto py-8 px-4">;
+      <ProjectHeader title={project && project.job?.title || "Untitled Project"} />;
+
+      <div className="flex justify-between items-center my-6">;
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
+        <ProjectActions
+
+    },
+    
+    await createMilestone(milestoneData),
+    setActiveTab('milestones'),
+    await handleMilestoneCreated()
+  },
+
+
+  return (
+    <div className="container mx-auto py-8 px-4">
+
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+
+        <ProjectActions 
+
+
+          projectId={projectId || ''}
+        <ProjectActions
+    ),;
+  }
+;
+  const handleMilestoneSubmit = async (data:any) => {;
+    if (!projectId) return,;
+    ;
+    // Ensure all required fields are present;
+    const milestoneData = {;
+      project_id:projectId,;
+      title:data.title,;
+      description:data.description || "",;
+      amount:data.amount,;
+      status:"pending" as const,;
+      due_date:data.due_date ? data.due_date.toISOString() :undefined;
+    },;
+    ;
+    await createMilestone(milestoneData),;
+    setActiveTab('milestones'),;
+    await handleMilestoneCreated(),;
+  },;
+;
+  return (;
+    <div className="container mx-auto py-8 px-4">;
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />;
+      ;
+      <div className="flex justify-between items-center my-6">;
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
+        <ProjectActions ;
+          projectId={projectId || ''}
+      title: data.title,;
+      description: data.description || "",;
+      amount: data.amount,;
+      status: "pending" as const,;
+      due_date: data.due_date ? data.due_date.toISOString() : undefined;
+    },;
+    await createMilestone(milestoneData),;
+    setActiveTab('milestones');
+    await handleMilestoneCreated();
+  };
+  return (;
+    <div className="container mx-auto py-8 px-4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
@@ -95,6 +404,11 @@ export function ProjectMilestonesContent() {const { projectId } = useParams() as
             projectId={projectId || ''}            milestones={milestones}
         />;
       </div>;
+          onAddMilestone={() => setActiveTab('create')}
+
+        />;
+      </div>;
+
       <Tabs value={activeTab} onValueChange={setActiveTab}>;
         <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
@@ -114,6 +428,45 @@ export function ProjectMilestonesContent() {const { projectId } = useParams() as
             isClient={isClient}
             isTalent={isTalent}paymentTerms={project.paymentterms}isSubmitting={isSubmitting}
             paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
+          {isTalent && (;
+            <TabsTrigger value="create">Create Milestone</TabsTrigger>;
+          )}
+        </TabsList>;
+
+        <TabsContent value="milestones">;
+          <MilestoneManager
+            projectId={projectId || ''}
+
+          <MilestoneManager 
+            projectId={projectId || ''}
+
+            milestones={milestones}
+        ;
+        <TabsContent value="milestones">;
+          <MilestoneManager ;
+            projectId={projectId || ''}            milestones={milestones}
+        />
+      </div>
+      <Tabs value={activeTab} onValueChange={setActiveTab}>
+        <TabsList className="mb-6">
+          <TabsTrigger value="milestones">Milestones</TabsTrigger>
+          <TabsTrigger value="activity">Activity</TabsTrigger>
+          {isTalent && (
+            <TabsTrigger value="create">Create Milestone</TabsTrigger>
+          )}
+        </TabsList>
+        <TabsContent value="milestones">
+          <MilestoneManager
+            projectId={projectId |''}
+          <MilestoneManager 
+            projectId={projectId || ''}
+            milestones={milestones}
+            activities={activities}
+            isLoading={milestonesLoading}
+            isClient={isClient}
+            isTalent={isTalent}
+            paymentTerms={project && project.payment_terms}
+            isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 import { use_params } from 'react-router-dom';
 import { use_projects } from '@/hooks / use_projects';
@@ -156,6 +509,10 @@ if ( {) {$2;
       <div className="container mx - auto py - 8 px-4">;
         <div className="flex justify - center items - center h-64">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
+    return (
+      <div className="container mx - auto py - 8 px - 4">;
+        <div className="flex justify - center items - center h - 64">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;
         </div>;
       </div>)}
   const handleMilestoneSubmit = async (data: any) => {// Check condition;
@@ -168,9 +525,25 @@ if (return, ) {$2;
       <div className="flex justify - between items - center my - 6">;
         <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
     <div className="container mx - auto py - 8 px-4">;
+    const milestone_data = {
+      project_id: project_id,
+      title: data.title,
+      description: data.description || "",
+      amount: data.amount,
+      status: "pending" as const,
+      due_date: data.due_date ? data.due_date.toISOString () : undefined;
+    }
+;
+    await create_milestone (milestone_data);
+    setActiveTab ('milestones');
+    await handleMilestoneCreated ();
+  }
+;
+  return (
+    <div className="container mx - auto py - 8 px - 4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      <div className="flex justify - between items - center my-6">;
-        <h2 className="text - 2xl font-bold">Payment Milestones</h2>;
+      <div className="flex justify - between items - center my - 6">;
+        <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
         <ProjectActions;
           project_id={project_id || ''}
           isUnderDispute={isUnderDispute}
@@ -218,6 +591,24 @@ if (return, ) {$2;
           {(isClient || isTalent) && (<MilestoneCreator;
               onSubmit={handleMilestoneSubmit}
             refetch={refetch}              onSubmit={handleMilestoneSubmit}
+            refetch={refetch}
+
+          />;
+        </TabsContent>;
+
+        <TabsContent value="activity">;
+          <MilestoneActivities projectId={projectId || ''} />;
+        </TabsContent>;
+
+        <TabsContent value="create">;
+          {(isClient || isTalent) && (;
+
+            <MilestoneCreator
+
+          {(isClient || isTalent) && (
+            <MilestoneCreator 
+
+              onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
@@ -262,6 +653,47 @@ if (return, ) {$2;
   )}  ),setIsLoading (true)try {}finally {setIsLoading (false)}}loadProject ()refetch ()}, [projectId, getProjectById, refetch])if (isLoading || !project) {return (<div className="container mx-auto py-8 px-4" > <div className="flex justify-center items-center h-64" > <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary" ></div> </div> </div>)}const handleMilestoneSubmit = async (data: any) => {if (!projectId) return;
 //Ensure all required fields are present const milestoneData = {project id: projectId;
 title: data.title,description: data.description || "";
+  );
+}
+
+          />;
+        </TabsContent>;
+        <TabsContent value="activity">;
+          <MilestoneActivities project_id={project_id || ''} />;
+        </TabsContent>;
+        <TabsContent value="create">;
+          {(is_client || is_talent) && (
+            <MilestoneCreator;
+              on_submit={handleMilestoneSubmit}
+              is_submitting={is_submitting}
+              on_cancel={() => setActiveTab ('milestones')}
+              project_scope={project.scope_summary}
+              projectStartDate={project.start_date}
+              projectEndDate={project.end_date}
+              project_type={project_type}
+            />)}
+        </TabsContent>;
+      </Tabs>;
+    </div>);
+}
+
+  ),; setIsLoading (true);
+try {}finally {
+  setIsLoading (false) 
+}
+;
+
+}loadProject ();
+refetch () 
+}, [projectId, getProjectById, refetch]);
+if (isLoading || !project) {
+  return (<div className="container mx-auto py-8 px-4" > <div className="flex justify-center items-center h-64" > <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary" ></div> </div> </div>) 
+}const handleMilestoneSubmit = async (data: any) => {
+  if (!projectId) return;
+//Ensure all required fields are present const milestoneData = {
+  project id: projectId;
+title: data.title;
+description: data.description || "";
 amount: data.amount;
 status: " pending"as const;
 due date: data.due date ? data.due date.toISOString () : undefined;
@@ -308,3 +740,6 @@ due date: data.due date ? data.due date.toISOString () : undefined;
       </Tabs>;
     </div>;
   )}
+  );
+}
+;

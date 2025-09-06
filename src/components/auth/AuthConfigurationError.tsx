@@ -13,12 +13,12 @@ import React from 'react',import { AlertTriangle, ExternalLink, RefreshCw, Setti
 import { Button   } from '@/components/ui/button';
 interface AuthConfigurationErrorProps  {onRetry?: () => void;import Link from 'next/link',import { Button } from '@/components/ui/button',import { Alert, AlertDescription } from '@/components/ui/alert',interface AuthConfigurationErrorProps  {onRetry?: () => void,showSetupButton?: boolean;
 }export function AuthConfigurationError() {interface AuthConfigurationErrorProps  {onRetry?: () => void;showSetupButton?: boolean;
-export function AuthConfigurationError(): any ({onRetry,showSetupButton = true,}: AuthConfigurationErrorProps) {const handleRefresh = () => {if (onRetry) {onRetry()} else {}export function AuthConfigurationError() {const handleRefresh = () => {if (onRetry) {onRetry()} else {window.location.reload()}
+export function AuthConfigurationError(): any ({onRetry,showSetupButton = true}: AuthConfigurationErrorProps) {const handleRefresh = () => {if (onRetry) {onRetry()} else {}export function AuthConfigurationError() {const handleRefresh = () => {if (onRetry) {onRetry()} else {window.location.reload()}
   },return (<div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
       <div className="max-w-2xl w-full">;
         {/* Main Error Card */}window && window.location.reload()}
       window.location.reload()import Link from 'next / link';
-  AlertTriangle,ExternalLink,RefreshCw,Settings,CheckCircle,} from 'lucide-react'; import { Button } from '@/components / ui / button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle  } from 'lucide-react';
+  AlertTriangle,ExternalLink,RefreshCw,Settings,CheckCircle} from 'lucide-react'; import { Button } from '@/components / ui / button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle  } from 'lucide-react';
 import { Button  } from '@/components / ui / button';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 interface AuthConfigurationErrorProps  {on_retry?: () => void;
@@ -210,7 +210,7 @@ if ( {) {$2;
               <li>• AUTH0_CLIENT_ID</li>;
               <li>• AUTH0_CLIENT_SECRET</li>;
             </ul>;
-          </div>;onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+          </div>;onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
               >;
                 <Settings className='w-4 h-4 mr-2' />;
@@ -326,7 +326,7 @@ if ( {) {$2;
                 on_click={() =>;
                   window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
                 className='bg - blue - 600 hover:bg - blue - 700 text - white flex - 1'              <Button;
-                on_click = {(, ) => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'), }
+                on_click = {(, ) => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank') }
                 className="bg - blue - 600 hover:bg - blue - 700 text - white flex - 1";
               >;
                 <Settings className='w - 4 h - 4 mr - 2' />;
@@ -646,7 +646,7 @@ if ( {) {$2;
         </div>;
       </div>;
     </div>;
-              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}export default AuthConfigurationError }export default AuthConfigurationError;
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}export default AuthConfigurationError }export default AuthConfigurationError;
 }
 })<div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
@@ -745,7 +745,7 @@ if ( {) {$2;
           <p>;
             For detailed instructions, see{' '}
             <button;
-              on_click = {() => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'), }
+              on_click = {() => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank') }
               className="text - blue - 600 hover: underline";
               AUTH0_SETUP_GUIDE_ISSUE_1.md;
             </button>;
@@ -753,4 +753,4 @@ if ( {) {$2;
         </div>;
       </div>;
     </div>)export default AuthConfigurationError }
-export default AuthConfigurationError,}export default AuthConfigurationError;)export default AuthConfigurationError;
+export default AuthConfigurationError}export default AuthConfigurationError;)export default AuthConfigurationError;

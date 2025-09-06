@@ -25,13 +25,13 @@ if ( {) {$2;
     {name: 'Home';
       href: '/';
       icon: Home;
-      matches: (path: string) => path === '/',    }
-    {import {Home,Search,MessageCircle,Heart,MessageSquare,ShoppingCart,User,} from 'lucide-react';
+      matches: (path: string) => path === '/'    }
+    {import {Home,Search,MessageCircle,Heart,MessageSquare,ShoppingCart,User} from 'lucide-react';
 export function MobileBottomNav() {const router = useRouter(),const { user } = useAuth(),const isAuthenticated = !!user,const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict;
   const favoritesCount = wishlistItems.length,const cartContextValue = useCart(), // Call hook at top level;
   let cartCount = 0,if (cartContextValue && cartContextValue.items) {cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)} else {// logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")}
   const navItems = [;
-    {name: "Home",href: "/",icon: Home,{name: "Browse",href: "/talent",icon: Search,{name: "Community",href: "/community",icon: MessageCircle,{name: "Wishlist",href: "/wishlist",icon: Heart,},{name: "Messages",href: "/messages",icon: MessageSquare,},{name: "Cart",href: "/cart",icon: ShoppingCart,{name: "Dashboard",href: "/dashboard",icon: User,return (<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
+    {name: "Home",href: "/",icon: Home,{name: "Browse",href: "/talent",icon: Search,{name: "Community",href: "/community",icon: MessageCircle,{name: "Wishlist",href: "/wishlist",icon: Heart},{name: "Messages",href: "/messages",icon: MessageSquare},{name: "Cart",href: "/cart",icon: ShoppingCart,{name: "Dashboard",href: "/dashboard",icon: User,return (<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
       <div className="flex justify-around items-center h-16">;
         {visibleItems.map(item => (<Link;
             key={item.name}
@@ -50,12 +50,12 @@ import { useWishlist } from "@/hooks/useWishlist",import { useCart } from '@/con
   const favoritesCount  = wishlistItems && wishlistItems.length;const cartContextValue = useCart()// Call hook at top level;
   let cartCount = 0;
   if (cartContextValue && cartContextValue.items) {cartCount = cartContextValue.items.reduce((sum, i) => sum + i && i.quantity, 0)} else {// logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")}const navItems = [;
-    {name: 'Home',href: '/',icon: Home,matches: (path: string) => path === '/',    },{name: 'Browse',href: '/talent',icon: Search,matches: (path: string) =>;
+    {name: 'Home',href: '/',icon: Home,matches: (path: string) => path === '/'    },{name: 'Browse',href: '/talent',icon: Search,matches: (path: string) =>;
         path && path.startsWith('/talent') ||;
         path && path.startsWith('/categories') ||;
-        path && path.startsWith('/marketplace'),    },{name: 'Community',href: '/community',icon: MessageCircle,matches: (path: string) =>;
-        path && path.startsWith('/community') || path && path.startsWith('/forum'),    },{name: 'Wishlist',href: '/wishlist',icon: Heart,matches: (path: string) => path && path.startsWith('/wishlist'),      badge: favoritesCount,authRequired: true,},{name: 'Messages',href: '/messages',icon: MessageSquare,matches: (path: string) =>;
-        path && path.startsWith('/messages') || path && path.startsWith('/inbox'),      badge: unreadCount,authRequired: true,},{name: 'Cart',href: '/cart',icon: ShoppingCart,matches: (path: string) => path && path.startsWith('/cart'),badge: cartCount,    },{name: 'Dashboard',href: '/dashboard',icon: User,matches: (path: string) => path && path.startsWith('/dashboard'),authRequired: true,},];
+        path && path.startsWith('/marketplace')    },{name: 'Community',href: '/community',icon: MessageCircle,matches: (path: string) =>;
+        path && path.startsWith('/community') || path && path.startsWith('/forum')    },{name: 'Wishlist',href: '/wishlist',icon: Heart,matches: (path: string) => path && path.startsWith('/wishlist'),      badge: favoritesCount,authRequired: true},{name: 'Messages',href: '/messages',icon: MessageSquare,matches: (path: string) =>;
+        path && path.startsWith('/messages') || path && path.startsWith('/inbox'),      badge: unreadCount,authRequired: true},{name: 'Cart',href: '/cart',icon: ShoppingCart,matches: (path: string) => path && path.startsWith('/cart'),badge: cartCount    },{name: 'Dashboard',href: '/dashboard',icon: User,matches: (path: string) => path && path.startsWith('/dashboard'),authRequired: true}];
   // Filter items based on auth status;
   const visibleItems = navItems && navItems.filter(item => !item && item.authRequired || (item && item.authRequired && isAuthenticated))'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',item && item.matches(router && router.pathname)? 'text-primary';
                 : 'text-foreground/70 hover:text-foreground';
@@ -90,9 +90,9 @@ import { useWishlist } from "@/hooks/useWishlist",import { useCart } from '@/con
   )}name: 'Browse',href: '/talent',icon: Search,matches: (path: string) =>;
         path.starts_with ('/talent') ||;
         path.starts_with ('/categories') ||;
-        path.starts_with ('/marketplace'),    },{name: 'Community',href: '/community',icon: MessageCircle,matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),    },{name: 'Wishlist',href: '/wishlist',icon: Heart,matches: (path: string) => path.starts_with ('/wishlist'),      badge: favorites_count,auth_required: true,},{name: 'Messages',href: '/messages',icon: MessageSquare,matches: (path: string) =>;
-        path.starts_with ('/messages') || path.starts_with ('/inbox'),      badge: unread_count,auth_required: true,},{name: 'Cart',href: '/cart',icon: ShoppingCart,matches: (path: string) => path.starts_with ('/cart'),badge: cart_count,    },{name: 'Dashboard',href: '/dashboard',icon: User,matches: (path: string) => path.starts_with ('/dashboard'),auth_required: true,},];
+        path.starts_with ('/marketplace')    },{name: 'Community',href: '/community',icon: MessageCircle,matches: (path: string) =>;
+        path.starts_with ('/community') || path.starts_with ('/forum')    },{name: 'Wishlist',href: '/wishlist',icon: Heart,matches: (path: string) => path.starts_with ('/wishlist'),      badge: favorites_count,auth_required: true},{name: 'Messages',href: '/messages',icon: MessageSquare,matches: (path: string) =>;
+        path.starts_with ('/messages') || path.starts_with ('/inbox'),      badge: unread_count,auth_required: true},{name: 'Cart',href: '/cart',icon: ShoppingCart,matches: (path: string) => path.starts_with ('/cart'),badge: cart_count    },{name: 'Dashboard',href: '/dashboard',icon: User,matches: (path: string) => path.starts_with ('/dashboard'),auth_required: true}];
   // Filter items based on auth status;
   const visible_items = nav_items.filter (item => !item.auth_required || (item.auth_required && is_authenticated))return (<nav className='md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - card / 90 backdrop - blur - md border - t border - primary / 20'>;
       <div className='flex justify - around items - center h - 16'>;

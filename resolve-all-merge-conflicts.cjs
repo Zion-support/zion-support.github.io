@@ -333,6 +333,12 @@ function resolveContentConflicts() {
         // Clean up any remaining conflict markers
         content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
         content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
+
+        content = content.replace(/
+        
+        // Clean up any remaining conflict markers
+        content = content.replace(/
+        content = content.replace(/
         
         // Write the cleaned content
         fs.writeFileSync(file, content);
@@ -450,3 +456,5 @@ async function main() {
 
 main();
 ursor/integrate-build-improve-and-re-verify-7ffc
+        content = content.replace(/
+          const parts = match.split('

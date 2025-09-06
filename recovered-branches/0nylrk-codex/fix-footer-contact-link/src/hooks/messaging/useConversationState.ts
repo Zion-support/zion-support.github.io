@@ -10,6 +10,22 @@ import { Conversation, Message } from '@/types/messaging';
  * Hook to manage messaging state;
  */;
 export function useConversationState() {const [messages, setMessages] = useState<Message[]>([])const [activeMessages, setActiveMessages]  = useState<Message[]>([])const [conversations, setConversations] = useState<Conversation[]>([])const [unreadCount, setUnreadCount] = useState(0)const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),const [isLoading, setIsLoading]  = useState(false)const [unreadCount, setUnreadCount] = useState(0)const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),const [isLoading, setIsLoading] = useState(false)import { Conversation, Message } from '@/types / messaging';
+
+import {useState} from 'react';
+import {Conversation, Message} from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+
+
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
+  const [isLoading, setIsLoading] = useState(false);
+import {Conversation, Message} from '@/types / messaging';
 /**;
 * Hook to manage messaging state;
 */;
@@ -28,6 +44,11 @@ function useConversationState() {const [messages, set_messages] = useState < Mes
     activeConversation;
     setUnreadCount;    activeConversation;
 import { useState } from 'react',import { Conversation, Message } from '@/types/messaging',/**;
+
+    activeConversation;
+import { useState } from 'react',;
+import { Conversation, Message } from '@/types/messaging',;
+/**;
  * Hook to manage messaging state;
  */;
 export function useConversationState() {const [messages, setMessages] = useState<Message[]>([]),const [activeMessages, setActiveMessages] = useState<Message[]>([]),const [conversations, setConversations] = useState<Conversation[]>([]),const [unreadCount, setUnreadCount] = useState(0),const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),const [isLoading, setIsLoading] = useState(false),return {// State;
@@ -38,10 +59,12 @@ export function useConversationState() {const [messages, setMessages] = useState
  * Hook to manage messaging state;
  */;
 export function useConversationState() {const [messages, setMessages] = useState<Message[]>([]),const [activeMessages, setActiveMessages] = useState<Message[]>([]),const [conversations, setConversations] = useState<Conversation[]>([]),const [unreadCount, setUnreadCount] = useState(0),const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),const [isLoading, setIsLoading]  = useState(false),return {// State;
-    messages,setMessages,activeMessages,setActiveMessages,conversations,setConversations,unreadCount,setUnreadCount,activeConversation,setActiveConversation,isLoading,setIsLoading},} /** * Hook to manage messaging state */;
+    messages,setMessages,activeMessages,setActiveMessages,conversations,setConversations,unreadCount,setUnreadCount,activeConversation,setActiveConversation,isLoading,setIsLoading}} /** * Hook to manage messaging state */;
 }
     setActiveConversation;
     isLoading;
     setIsLoading}
 }}
 }}
+}
+}

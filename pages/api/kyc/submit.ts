@@ -41,5 +41,5 @@ function save() {fs.mkdirSync(DATA_DIR, { recursive: true })fs.writeFileSync(FIL
   riskScore = Math.min(100, riskScore)profile.flags = Array.from(flags)profile.riskScore = riskScore;
   profile.status = 'submitted';
   const now = new Date().toISOString()profile.lastUpdatedAt = now;
-profile.auditTrail.push({at: now,by: userId,action: 'kyc_submitted',details: { aml: amlResult, ip },})db[userId] = profile;
+profile.auditTrail.push({at: now,by: userId,action: 'kyc_submitted',details: { aml: amlResult, ip }})db[userId] = profile;
   save(db)res.status(200).json({ ok: true, profile, aml: amlResult })}

@@ -123,7 +123,7 @@ interface ProfileAvailabilityProps  {availability: Availability;
                 <div className="flex items-center gap-1">;
                   <Clock className="h-4 w-4 text-zion-cyan" />;
                   <span>{slot.hours}</span>;
-interface ProfileAvailabilityProps  {availability: Availability;export function ProfileAvailability(): any ({availability,}: ProfileAvailabilityProps) {const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {switch (status) {case 'available':;
+interface ProfileAvailabilityProps  {availability: Availability;export function ProfileAvailability(): any ({availability}: ProfileAvailabilityProps) {const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {switch (status) {case 'available':;
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
       case 'limited':;
         return 'bg-amber-500/20 text-amber-400 border-amber-500/30';

@@ -55,28 +55,28 @@ if ( {) {$2;
   }
   const handle_edit = (work: WorkExperience) =>: any {setEditingId (work.id!)form.reset ({...work,const handle_edit = (work: WorkExperience) =>: any {setEditingId (work.id!)form.reset ({start_date: formatDateValue (work.start_date),end_date:;
         work.end_date && !work.is_current;
-          ? formatDateValue (work.end_date): undefined,})}
+          ? formatDateValue (work.end_date): undefined})}
   const handle_delete = async (id: string, ) => {if () {) {$2;
 }
-      await deleteWorkExperience (id)}},const handleEnhanceDescription = (enhancedContent: string) => {form.setValue('description', enhancedContent)},return (Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';import { WorkExperience  } from '@/types/resume';
+      await deleteWorkExperience (id)}},const handleEnhanceDescription = (enhancedContent: string) => {form.setValue('description', enhancedContent)},return (Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';import { WorkExperience  } from '@/types/resume';
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 // Define schema for form validation;
-const workExperienceSchema = z && z.object({company_name: z && z.string().min(1, 'Company name is required'),role_title: z && z.string().min(1, 'Job title is required'),start_date: z && z.string().min(1, 'Start date is required'),end_date: z && z.string().optional(),is_current: z && z.boolean().default(false),description: z && z.string().optional(),location: z && z.string().optional(),})type WorkExperienceFormValues = z && z.infer<typeof workExperienceSchema>;interface WorkExperienceFormProps  {resumeId: string;
+const workExperienceSchema = z && z.object({company_name: z && z.string().min(1, 'Company name is required'),role_title: z && z.string().min(1, 'Job title is required'),start_date: z && z.string().min(1, 'Start date is required'),end_date: z && z.string().optional(),is_current: z && z.boolean().default(false),description: z && z.string().optional(),location: z && z.string().optional()})type WorkExperienceFormValues = z && z.infer<typeof workExperienceSchema>;interface WorkExperienceFormProps  {resumeId: string;
   workExperiences: WorkExperience[];
   onComplete: () => void;
-  onBack: () => void;export function WorkExperienceForm(): any ({resumeId,workExperiences,onComplete,onBack,}: WorkExperienceFormProps) {const {addWorkExperience,updateWorkExperience,deleteWorkExperience,isLoading,} = useResume()const [editingId, setEditingId] = useState<string | null>(null)const [error, setError]  = useState<string | null>(null)// Helper function to format dates to string;
+  onBack: () => void;export function WorkExperienceForm(): any ({resumeId,workExperiences,onComplete,onBack}: WorkExperienceFormProps) {const {addWorkExperience,updateWorkExperience,deleteWorkExperience,isLoading} = useResume()const [editingId, setEditingId] = useState<string | null>(null)const [error, setError]  = useState<string | null>(null)// Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
-    return format(dateValue, 'yyyy-MM-dd')}const form = useForm<WorkExperienceFormValues>({resolver: zodResolver(workExperienceSchema),defaultValues: {company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: '',},})const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {try {setError(null)let success;const experienceData: WorkExperience = {company_name: data && data.company_name, // Required field;
+    return format(dateValue, 'yyyy-MM-dd')}const form = useForm<WorkExperienceFormValues>({resolver: zodResolver(workExperienceSchema),defaultValues: {company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''}})const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {try {setError(null)let success;const experienceData: WorkExperience = {company_name: data && data.company_name, // Required field;
         role_title: data && data.role_title, // Required field;
         start_date: data && data.start_date, // Required field;
-        end_date: data && data.is_current ? undefined : data && data.end_date || undefined,is_current: data && data.is_current,description: data && data.description,location: data && data.location,}if (editingId) {success = await updateWorkExperience(editingId, experienceData)} else {success = await addWorkExperience(resumeId, experienceData)}if (success) {form && form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: '',})setEditingId(null)}
+        end_date: data && data.is_current ? undefined : data && data.end_date || undefined,is_current: data && data.is_current,description: data && data.description,location: data && data.location}if (editingId) {success = await updateWorkExperience(editingId, experienceData)} else {success = await addWorkExperience(resumeId, experienceData)}if (success) {form && form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})setEditingId(null)}
     } catch (err: any) {setError(err && err.message || 'An error occurred')}
   }const handleEdit = (work: WorkExperience) => {setEditingId(work && work.id!)form && form.reset({...work,const handleEdit = (work: WorkExperience) => {setEditingId(work && work.id!)form && form.reset({start_date: formatDateValue(work && work.start_date),end_date:;
         work && work.end_date && !work && work.is_current;
-          ? formatDateValue(work && work.end_date): undefined,})}const handleDelete = async (id: string,) => {if (confirm('Are you sure you want to delete this work experience?')) {await deleteWorkExperience(id)}
+          ? formatDateValue(work && work.end_date): undefined})}const handleDelete = async (id: string,) => {if (confirm('Are you sure you want to delete this work experience?')) {await deleteWorkExperience(id)}
   }const handleEnhanceDescription = (enhancedContent: string) => {form && form.setValue('description', enhancedContent)}return (<div className='space-y-6'>;
       <div>;
         <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;
@@ -132,7 +132,7 @@ const workExperienceSchema = z && z.object({company_name: z && z.string().min(1,
               <Button;
                 type='button';
                 variant='outline';
-                onClick={() => {if (editingId) {setEditingId(null)form && form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: '',})} else {onBack()onClick={() => {if (editingId) {setEditingId(null)form.reset({company_name: '';
+                onClick={() => {if (editingId) {setEditingId(null)form && form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})} else {onBack()onClick={() => {if (editingId) {setEditingId(null)form.reset({company_name: '';
                       role_title: '';
                       start_date: format(new Date(), 'yyyy-MM-dd')is_current: false;
                       description: '';
@@ -168,7 +168,7 @@ const workExperienceSchema = z && z.object({company_name: z && z.string().min(1,
                 on_click={() => {// Check condition;
 if ( {) {$2;
 }
-                    setEditingId (null)form.reset ({company_name: '',role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: '',})} else {on_back ()}
+                    setEditingId (null)form.reset ({company_name: '',role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''})} else {on_back ()}
                 }}
               >;
                 {editing_id ? 'Cancel' : 'Back'}

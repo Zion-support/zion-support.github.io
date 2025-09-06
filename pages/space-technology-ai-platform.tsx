@@ -52,10 +52,10 @@ import React from 'react';
       enableNeuralNetwork={true  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   const features = [;
-    'AI-powered satellite operations','Autonomous space exploration','Space data analytics','Satellite constellation management','Space debris tracking','Real-time monitoring','Predictive maintenance','Mission planning tools','API access','Expert consultation',];const useCases = [;
-    'Satellite operations','Space exploration','Earth observation','Space debris monitoring','Mission planning','Space research',];const integrations = [;
-    'NASA APIs','ESA APIs','Satellite ground stations','GIS systems','Slack','Microsoft Teams','Custom applications',];const competitors = [;
-    'Maxar ($5000-50000/month)','Planet Labs ($1000-10000/month)','Airbus Defence ($10000-100000/month)','Lockheed Martin','Boeing','Northrop Grumman',];>;
+    'AI-powered satellite operations','Autonomous space exploration','Space data analytics','Satellite constellation management','Space debris tracking','Real-time monitoring','Predictive maintenance','Mission planning tools','API access','Expert consultation'];const useCases = [;
+    'Satellite operations','Space exploration','Earth observation','Space debris monitoring','Mission planning','Space research'];const integrations = [;
+    'NASA APIs','ESA APIs','Satellite ground stations','GIS systems','Slack','Microsoft Teams','Custom applications'];const competitors = [;
+    'Maxar ($5000-50000/month)','Planet Labs ($1000-10000/month)','Airbus Defence ($10000-100000/month)','Lockheed Martin','Boeing','Northrop Grumman'];>;
       <div className='min-h-screen'>;
         <Head>;
           <title>Space Technology AI Platform - Zion Tech Group</title>;<meta;

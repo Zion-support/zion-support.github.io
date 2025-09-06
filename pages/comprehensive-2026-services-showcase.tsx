@@ -13,7 +13,7 @@ import { revolutionaryITInfrastructure2026  } from '../data/revolutionary-it-inf
 import { innovativeMicroSaas2026  } from '../data/innovative-micro-saas-2026';
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
       return matchesSearch && matchesCategory;
-  Search,Filter,Star,TrendingUp,Zap,Brain,Shield,Globe,Database,Cloud,Lock,Palette,Target,Layers,Sparkles,Atom,Microscope,Satellite,CheckCircle,ArrowRight,Phone,Mail,MapPin,Rocket,Users,BarChart3,Award,Clock,DollarSign,} from 'lucide-react';
+  Search,Filter,Star,TrendingUp,Zap,Brain,Shield,Globe,Database,Cloud,Lock,Palette,Target,Layers,Sparkles,Atom,Microscope,Satellite,CheckCircle,ArrowRight,Phone,Mail,MapPin,Rocket,Users,BarChart3,Award,Clock,DollarSign} from 'lucide-react';
 import { nextGenAIServices2026   } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026   } from '../data/revolutionary-it-infrastructure-2026';
   }// Combine all services;

@@ -10,6 +10,24 @@ export type MilestoneStatus =;
   | "approved";import { supabase } from '@/integrations / supabase / client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';export interface Milestone  {import { supabase } from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';export interface Milestone  {export interface Milestone  {export interface Milestone  {export interface Milestone  {id: string;
+import { supabase } from "@/integrations/supabase/client";
+export type MilestoneStatus =
+  | "pending"
+  | "in_progress"
+  | "submitted"
+  | "completed"
+  | "rejected"
+  | "paid"
+  | "approved";
+
+export interface Milestone {
+import {supabase} from '@/integrations/supabase/client';
+export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
+
+export interface Milestone {;
+
+export interface Milestone {
+  id: string;
   project_id: string;
   title: string;
   description?: string;
@@ -26,6 +44,23 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
 }
 export interface MilestoneActivity  {export interface MilestoneActivity  {}
 export interface MilestoneActivity  {id: string;
+  updated_at: string;
+  created_by: string;
+  deliverables?: any[];
+}
+
+
+export interface MilestoneActivity {;
+
+  created_by: string
+  deliverables?: any[]
+}
+export interface MilestoneActivity {
+
+export interface MilestoneActivity {;
+}
+export interface MilestoneActivity {
+  id: string;
   milestone_id: string;
   user_id: string;
   action: string;
@@ -36,4 +71,9 @@ export interface MilestoneActivity  {id: string;
   created_by_profile?: {display_name: string;
     avatar_url?: string;
   }}}
+}
+  created_by_profile?: {
+    display_name: string;
+    avatar_url?: string;
+  };
 }

@@ -11,6 +11,24 @@
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
             <span className="text - green - 400 text - sm font - medium">;
+            Start your free trial and launch sovereign AI-powered digital economies;
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+export default function SignUpPage() {const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { register } = useAuth();
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    if (password !== confirmPassword) {;
+      setError("Passwords do not match");
+      setIsLoading(false);
       return;
     }
     try {await register (name, email, password)} catch (error) {set_error (error instanceof Error ? error.message : "Registration failed")} finally {setIsLoading (false)}
@@ -21,6 +39,15 @@
           <h1 className="text - 3xl font - bold text - white mb-2">Join Zion OS</h1>;
           <p className="text - zinc - 400 mb-4">;
             Start your free trial and launch sovereign AI - powered digital economies;  return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
+  return (
+    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;
+      <div className="max - w-md w - full space - y-8 p - 8">;
+        <div className="text - center">;
+          <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
+          <p className="text - zinc - 400 mb - 4">;
+            Start your free trial and launch sovereign AI - powered digital economies;
+  return (;
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
         <div className="text-center">;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
@@ -28,8 +55,8 @@
             Start your free trial and launch sovereign AI-powered digital economies;
           </p>;
           {/* Free Trial Badge */}
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded-full">;
-            <span className="text - green - 400 text - sm font-medium">;
+          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
+            <span className="text - green - 400 text - sm font - medium">;
               🚀 Free Trial Available;
             </span>;
           </div>;
@@ -68,21 +95,22 @@
               <span className="text - green-400">✓</span>;
               Launch new instances in minutes;
             </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
               Access to marketplace templates;
             </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
               Governance and identity tools;
             </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
               Full admin dashboard access;
             </li>;
           </ul>;
-        </div>;            <div>;
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb-2">;
+        </div>;
+            <div>;
+              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;
               </label>;
               <input;
@@ -133,10 +161,10 @@
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
                 placeholder="Create a strong password";
               />;
-              <p className="text - xs text - zinc - 500 mt-1">Must be at least 8 characters</p>;
+              <p className="text - xs text - zinc - 500 mt - 1">Must be at least 8 characters</p>;
             </div>;
             <div>;
-              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb-2">;
+              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Confirm Password;
               </label>;
               <input;
@@ -166,7 +194,7 @@
           <div className="mt - 6 text-center">;
             <p className="text - zinc - 400 text-sm">;
               Already have an account?{" "}
-              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font-medium">;
+              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font - medium">;
                 Sign in;
               </Link>;
             </p>;
@@ -183,11 +211,11 @@
         <div className="text-center">;
           <p className="text - zinc - 500 text-xs">;
             By signing up, you agree to our{" "}
-            <Link href="/terms" className="text - zinc - 400 hover:text - zinc-300">;
+            <Link href="/terms" className="text - zinc - 400 hover:text - zinc - 300">;
               Terms of Service;
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc-300">;
+            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
               Privacy Policy;
             </Link>;
           </p>;

@@ -9,7 +9,7 @@ import { Search;
   Phone;
   MapPin;
   MessageSquare;
-  Globe;import {Search,CheckCircle,ArrowRight,Rocket,Mail,Phone,MapPin,MessageSquare,Globe,} from 'lucide-react';
+  Globe;import {Search,CheckCircle,ArrowRight,Rocket,Mail,Phone,MapPin,MessageSquare,Globe} from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
@@ -40,7 +40,7 @@ export default function Revolutionary2027ServicesShowcase() {const [searchTerm, 
 import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices } from '../data / revolutionary - 2027 - ai - services';
 import { revolutionary2027ITServices } from '../data / revolutionary - 2027 - it - services';
-import { revolutionary2027MicroSaasServices  } from '../data / revolutionary - 2027 - micro - saas';MessageSquare,Globe,} from 'lucide-react';
+import { revolutionary2027MicroSaasServices  } from '../data / revolutionary - 2027 - micro - saas';MessageSquare,Globe} from 'lucide-react';
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
@@ -150,7 +150,7 @@ export default function Revolutionary2027ServicesShowcase() {try {const [searchT
   const holographicCount  = allServices.filter(service => service.category.includes('Holographic')).length;const price_ranges = [;
     { id: 'all', name: 'All Prices', range: 'All' },{ id: 'under - 500', name: 'Under $500', range: 'Under $500' },{ id: '500 - 2000', name: '$500 - $2, 000', range: '$500 - $2, 000' },{ id: '2000 - 10000', name: '$2, 000 - $10, 000', range: '$2, 000 - $10, 000' },{ id: 'over - 10000', name: 'Over $10, 000', range: 'Over $10, 000' }  ];const sort_options  = [;{ id: 'name', name: 'Name' },{ id: 'price', name: 'Price' },{ id: 'rating', name: 'Rating' },{ id: 'customers', name: 'Customers' },if (selectedCategory === 'quantum') return service.category.includes('Quantum')if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure')if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')if (selectedCategory === 'holographic') return service.category.includes('Holographic')return true;
       })}const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },{ id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },{id: 'quantum',name: 'Quantum Services',icon: '⚛️',count: quantumCount,},{ id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },{ id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },{id: 'holographic',name: 'Holographic',icon: '🎭',count: holographicCount,}  ];const priceRanges = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },{ id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },{id: 'quantum',name: 'Quantum Services',icon: '⚛️',count: quantumCount},{ id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },{ id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },{id: 'holographic',name: 'Holographic',icon: '🎭',count: holographicCount}  ];const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },{ id: 'under-500', name: 'Under $500', range: 'Under $500' },{ id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },{ id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },const sortOptions = [;
     { id: 'name', name: 'Name' },{ id: 'price', name: 'Price' },{ id: 'rating', name: 'Rating' },{ id: 'customers', name: 'Customers' },)if (selectedCategory === 'micro-saas')return (service && service.category.includes('Micro SaaS') ||;
             service && service.category.includes('Marketing') ||;

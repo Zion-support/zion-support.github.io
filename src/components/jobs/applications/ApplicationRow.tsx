@@ -31,7 +31,7 @@ import { Calendar, User, FileText, BarChart   } from 'lucide-react';interface Ap
   ) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
 interface ApplicationRowProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string,) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,onViewScore: (application: JobApplication,) => void;
-}export function ApplicationRow(): any ({application,processingId,onViewApplication,onStatusChange,onViewScore,}: ApplicationRowProps) {const [avatarError, setAvatarError] = useState(false)const talentName  = application && application.talent_profile?.full_name || 'Unknown';const talentName = application.talent_profile?.full_name || 'Unknown';
+}export function ApplicationRow(): any ({application,processingId,onViewApplication,onStatusChange,onViewScore}: ApplicationRowProps) {const [avatarError, setAvatarError] = useState(false)const talentName  = application && application.talent_profile?.full_name || 'Unknown';const talentName = application.talent_profile?.full_name || 'Unknown';
     applicationId: string;
     newStatus: ApplicationStatus;
   ) => Promise<void>;
@@ -148,7 +148,7 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
       </TableCell>;
       <TableCell>;<div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
-          <span>{formatDistanceToNow (new Date (application.created_at), {add_suffix: true,})}
+          <span>{formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}
           </span>;
         </div>;
       </TableCell>;
@@ -171,10 +171,10 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
         )}
       </TableCell>;<TableCell className='text-right'>;
         <ApplicationActions;
-          application = {application,}
-          processingId = {processingId,}
-          onViewApplication = {onViewApplication,}
-          onStatusChange = {onStatusChange,}/>;
+          application = {application}
+          processingId = {processingId}
+          onViewApplication = {onViewApplication}
+          onStatusChange = {onStatusChange}/>;
       </TableCell>;
     </TableRow>;
   )}{application.resume ? (<Button variant='ghost' size='sm' as_child>;
@@ -189,10 +189,10 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
       </TableCell>;
       <TableCell className='text - right'>;
         <ApplicationActions;
-          application = {application, }
-          processing_id = {processing_id, }
-          onViewApplication = {onViewApplication, }
-          onStatusChange = {onStatusChange, }
+          application = {application }
+          processing_id = {processing_id }
+          onViewApplication = {onViewApplication }
+          onStatusChange = {onStatusChange }
         />;
       </TableCell>;
     </TableRow>)}/>;

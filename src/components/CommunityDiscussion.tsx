@@ -23,13 +23,13 @@ import { Avatar, AvatarFallback  } from '@/components/ui/avatar';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Separator  } from '@/components/ui/separator';
 interface DiscussionPost  {body: string;const initialPosts: DiscussionPost[] = [;
-  {id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",},{id: 2,author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',},];export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle] = useState('')const [newBody, setNewBody]  = useState('')body: string;
+  {id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},{id: 2,author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle] = useState('')const [newBody, setNewBody]  = useState('')body: string;
 }const initialPosts: DiscussionPost[] = [;
-  {author: "Anna Zhou",time: "2h ago",title: "What AI trends are you most excited for in 2025?",body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},const initial_posts: DiscussionPost[]  = [;{id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",},id: 2,export const CommunityDiscussion: React.FC = () => {author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',},];
+  {author: "Anna Zhou",time: "2h ago",title: "What AI trends are you most excited for in 2025?",body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},const initial_posts: DiscussionPost[]  = [;{id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?"},id: 2,export const CommunityDiscussion: React.FC = () => {author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];
 export const CommunityDiscussion: React.FC = () => {const [posts, set_posts] = useState (initial_posts)const [show_new, setShowNew] = useState (false)const [new_title, setNewTitle] = useState ('')const [new_body, setNewBody] = useState ('')const [new_title, setNewTitle] = useState ("")const [new_body, setNewBody] = useState ("")const handleAddPost = () =>: any {if (|| !new_body.trim ()) return) {$2;
 }
     set_posts ([;
-      {id: Date.now (),author: 'You',time: 'Now',title: new_title,body: new_body,},...posts,])setNewTitle ('')setNewBody ('')setShowNew (false)}
+      {id: Date.now (),author: 'You',time: 'Now',title: new_title,body: new_body},...posts])setNewTitle ('')setNewBody ('')setShowNew (false)}
 import React, { useState, useMemo } from 'react';
 interface DiscussionPost  {id: number;
   author: string;
@@ -41,9 +41,9 @@ const initialPosts: DiscussionPost[] = [;
   {id: 1,  time: string,title: string,body: string;
 }
 const initialPosts: DiscussionPost[] = [;
-  {id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",},id: 2,author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',},];export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle]  = useState('')export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts),const [showNew, setShowNew] = useState(false),const [newTitle, setNewTitle] = useState(""),const [newBody, setNewBody] = useState(""),const handleAddPost = () => {const [newBody, setNewBody] = useState('')const [newTitle, setNewTitle] = useState("")const [newBody, setNewBody]  = useState("")const handleAddPost = () => {if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
+  {id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},id: 2,author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle]  = useState('')export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts),const [showNew, setShowNew] = useState(false),const [newTitle, setNewTitle] = useState(""),const [newBody, setNewBody] = useState(""),const handleAddPost = () => {const [newBody, setNewBody] = useState('')const [newTitle, setNewTitle] = useState("")const [newBody, setNewBody]  = useState("")const handleAddPost = () => {if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
-      {id: Date && Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody,},...posts,])id: 1;
+      {id: Date && Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody},...posts])id: 1;
     author: "Anna Zhou";
     time: "2h ago";
     title: "What AI trends are you most excited for in 2025?";
@@ -54,7 +54,7 @@ const initialPosts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],export const CommunityDiscussion: React.FC;
   const handleAddPost = () => {if (!newTitle.trim() |!newBody.trim()) return;
     setPosts([;
-      {id: Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody,},...posts,])setNewTitle('')setNewBody('')setShowNew(false)}return (className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'        title: newTitle,body: newBody},...posts])setNewTitle("")setNewBody("")setShowNew(false)<div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
+      {id: Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody},...posts])setNewTitle('')setNewBody('')setShowNew(false)}return (className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'        title: newTitle,body: newBody},...posts])setNewTitle("")setNewBody("")setShowNew(false)<div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
         <MessageCircle size={28} className='text - zion - cyan' />;
         <span className='font - bold text - 2xl text - white tracking - tight'>;
@@ -198,13 +198,13 @@ className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-
 size='sm';
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale';
                 onClick={handleAddPost}disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
-                onClick = {handleAddPost,}<div className="flex flex-col gap-6">;
+                onClick = {handleAddPost}<div className="flex flex-col gap-6">;
         {posts.map((post) => (<Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">;
             <CardContent className="py-4 flex gap-4">;
               <Avatar>;
                 <AvatarFallback>;
                   {post.author;
-                    .split(" ").map((s) => s[0]).join("").toUpperCase().slice(0, 2)}disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
+                    .split(" ").map((s) => s[0]).join("").toUpperCase().slice(0, 2)}disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
         <MessageCircle size={28} className="text - zion - cyan" />;
@@ -250,7 +250,7 @@ size='sm';
                 variant="secondary";
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
-                on_click = {() => setShowNew (false), }
+                on_click = {() => setShowNew (false) }
               >;
                 Cancel;
               </Button>;
@@ -260,8 +260,8 @@ size='sm';
                 className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
-                on_click = {handleAddPost, }
-                disabled = {!new_title.trim () || !new_body.trim (), }
+                on_click = {handleAddPost }
+                disabled = {!new_title.trim () || !new_body.trim () }
               >;Post;
               </Button>;
             </div>;
@@ -273,7 +273,7 @@ size='sm';
         🚀 Stay engaged! Top contributors are regularly featured on the;
         homepage.;
       </div>;
-    </div>;disabled = {!newTitle.trim() |!newBody.trim(),}
+    </div>;disabled = {!newTitle.trim() |!newBody.trim()}
               >;
                 Post;
               </Button>;

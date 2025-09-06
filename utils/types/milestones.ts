@@ -5,6 +5,13 @@
 }
 export type Project = {  id: string;export type ProjectParticipants = {export type ProjectParticipants = {clientUserId: string;
   talentUserId: string;
+export type ProjectParticipants = {
+
+export type ProjectParticipants = {
+
+
+  clientUserId: string;
+  talentUserId: string;
 }
 export type Project = {  id: string;
   title: string;
@@ -24,6 +31,18 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {retu
     value === 'Approved' ||;
     value === 'Paid';
   )export interface MilestoneAttachment  {ursor/fix-website-loading-errors-and-merge-6662;
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+
+  );export interface MilestoneAttachment {
+
+
+    value === 'Pending' ||
+    value === 'In Progress' ||
+    value === 'Submitted' ||
+    value === 'Approved' ||;
+    value === 'Paid';
+  );export interface MilestoneAttachment {;
   id: string;
   name: string;
   url: string;
@@ -38,6 +57,21 @@ export interface CreateMilestoneRequest  {uploadedAt: string;
   description?: string;
 }
 export interface UpdateMilestoneRequest  {export interface UpdateMilestoneRequest  {export interface UpdateMilestoneRequest  {export interface UpdateMilestoneRequest  {ursor/fix-website-loading-errors-and-merge-6662;
+  size: number;
+export interface CreateMilestoneRequest {
+
+
+export interface CreateMilestoneRequest {;
+
+  title: string;
+  description?: string;
+}
+export interface UpdateMilestoneRequest {
+
+
+export interface UpdateMilestoneRequest {;
+
+export interface UpdateMilestoneRequest {
   title?: string;
   description?: string;
   due_date?: string;
@@ -60,3 +94,17 @@ export interface UpdateMilestoneRequest  {export interface UpdateMilestoneReques
     value === 'Approved' ||;
     value === 'Paid';
   )
+  attachments?: MilestoneAttachment[];
+}
+
+
+export function getDaysUntilDue(milestone: Milestone): number | null {
+  if (!milestone.dueDate) return null;
+  const dueDate = new Date(milestone.dueDate);
+  const now = new Date();
+  const diffTime = dueDate.getTime() - now.getTime();
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+
+}
+}

@@ -79,6 +79,9 @@ ursor/automate-test-improve-and-merge-code-646c
     "baseUrl": ".";
 >>>>>>> main:fix-tsconfig.cjs
 ursor/automate-test-improve-and-merge-code-646c
+    ];
+    "baseUrl": ".";
+    ],
     "paths": {
       "@/*": [
         "./src/*"
@@ -99,6 +102,7 @@ ursor/automate-test-improve-and-merge-code-646c
 :backup-problematic-files/temp-exclude/zion-website/tsconfig.json
 }
 ursor/automate-test-improve-and-merge-code-646c
+}
 }`;
 
 // Write the clean tsconfig.json

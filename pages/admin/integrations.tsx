@@ -3,7 +3,7 @@
   id: string;
   name: string;
   category: 'crm' | 'ats';
-  description?: string;interface ConnectionMap  {[providerId: string]: any,function StatusIcon(): any ({status,}: {status: 'connected' | 'warning' | 'disconnected',}) {const label =;status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';return (<span className='text-xl' title={status}>;
+  description?: string;interface ConnectionMap  {[providerId: string]: any,function StatusIcon(): any ({status}: {status: 'connected' | 'warning' | 'disconnected'}) {const label =;status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';return (<span className='text-xl' title={status}>;
       {label}
     </span>;
   )export default function AdminIntegrationsPage() {import Head from 'next/head';
@@ -18,8 +18,8 @@ function StatusIcon() {const label = status === 'connected' ? '✅' : status ===
   return <span className="text-xl" title={status}>{label}</span>;
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-export default function AdminIntegrationsPage() {[key: string]: boolean;const AdminIntegrationsPage: React.FC = () => {const [providers, setProviders] = useState<ProviderMeta[]>([])const [connections, setConnections] = useState<ConnectionMap>({})const [loading, setLoading] = useState(false)const [selected, setSelected]  = useState<string | null>(null)const [syncRules, setSyncRules] = useState<any>({autoCreateContacts: true,pushNotesMode: 'auto',autoSyncApplicants: true,autoUploadResumes: true,})async function refresh() {const [p, s] = await Promise && Promise.all([;
-      fetch('/api/integrations/providers').then(r => r && r.json()),fetch('/api/integrations/status').then(r => r && r.json()),])setProviders(p && p.providers || [])setConnections(s && s.connections || {})}
+export default function AdminIntegrationsPage() {[key: string]: boolean;const AdminIntegrationsPage: React.FC = () => {const [providers, setProviders] = useState<ProviderMeta[]>([])const [connections, setConnections] = useState<ConnectionMap>({})const [loading, setLoading] = useState(false)const [selected, setSelected]  = useState<string | null>(null)const [syncRules, setSyncRules] = useState<any>({autoCreateContacts: true,pushNotesMode: 'auto',autoSyncApplicants: true,autoUploadResumes: true})async function refresh() {const [p, s] = await Promise && Promise.all([;
+      fetch('/api/integrations/providers').then(r => r && r.json()),fetch('/api/integrations/status').then(r => r && r.json())])setProviders(p && p.providers || [])setConnections(s && s.connections || {})}
   useEffect(() => {refresh()}, [])async function connect(): any (providerId: string) {setLoading(true),try {// Open mock oauth popup;
       window && window.open(`/api/integrations/oauth/${providerId}/start`,'oauth','width=500,height=700';
       )await new Promise(r => setTimeout(r, 500))await fetch('/api/integrations/connect', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ providerId, syncRules }),const [syncRules, setSyncRules] = useState<any>({autoCreateContacts: true,pushNotesMode: 'auto',autoSyncApplicants: true,autoUploadResumes: true;
@@ -30,11 +30,11 @@ window.open(`/api/integrations/oauth/${providerId}/start`,'oauth','width=500,hei
       )await new Promise(r => setTimeout(r, 500))await fetch('/api/integrations/connect', {method: 'POST';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ providerId, syncRules })})await refresh()} finally {setLoading(false)}  }window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700')await new Promise(r => setTimeout(r, 500))await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) })await refresh()} finally { setLoading(false) }
-  }async function disconnect() {setLoading(true)try {async function disconnect(): any (providerId: string) {setLoading(true),try {await fetch('/api/integrations/disconnect', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ providerId }),}  }
+  }async function disconnect() {setLoading(true)try {async function disconnect(): any (providerId: string) {setLoading(true),try {await fetch('/api/integrations/disconnect', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ providerId })}  }
     }
-  }async function disconnect() {setLoading(true)try {await fetch('/api/integrations/disconnect', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ providerId }),})await refresh()} finally {setLoading(false)}  }async function resync(): any (providerId: string) {setLoading(true),try {await fetch('/api/integrations/resync', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ providerId }),}  }
+  }async function disconnect() {setLoading(true)try {await fetch('/api/integrations/disconnect', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ providerId })})await refresh()} finally {setLoading(false)}  }async function resync(): any (providerId: string) {setLoading(true),try {await fetch('/api/integrations/resync', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ providerId })}  }
     }
-  }async function resync() {setLoading(true)try {await fetch('/api/integrations/resync', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ providerId }),})await refresh()} finally {setLoading(false)}
+  }async function resync() {setLoading(true)try {await fetch('/api/integrations/resync', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ providerId })})await refresh()} finally {setLoading(false)}
   }const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true })async function refresh() {const [p, s] = await Promise.all([;
       fetch('/api/integrations/providers').then(r => r.json()),fetch('/api/integrations/status').then(r => r.json())])setProviders(p.providers || [])setConnections(s.connections || {})} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
@@ -109,7 +109,7 @@ window.open(`/api/integrations/oauth/${providerId}/start`,'oauth','width=500,hei
         </div>;
       </div>;
 )}function RulesModal() {if (!selected) return null,const provider = providers.find(p => p.id === selected)!,const isCrm = provider.category === 'crm',async function resync() {setLoading(true)try {await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),await refresh()} finally { setLoading(false) }
-  }const grouped = useMemo(() => ({crm: providers && providers.filter(p => p && p.category === 'crm'),ats: providers && providers.filter(p => p && p.category === 'ats'),}),[providers];
+  }const grouped = useMemo(() => ({crm: providers && providers.filter(p => p && p.category === 'crm'),ats: providers && providers.filter(p => p && p.category === 'ats')}),[providers];
   )function Card(): any ({ p }: { p: ProviderMeta }) {const conn = connections[p && p.id] || { status: 'disconnected' }const isConnected = conn && conn.status === 'connected';
     return (<div className='fixed inset-0 bg-black/40 flex items-center justify-center'>;
         <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>;
@@ -141,7 +141,7 @@ window.open(`/api/integrations/oauth/${providerId}/start`,'oauth','width=500,hei
                       Auto;
                     </label>;checked={syncRules && syncRules.pushNotesMode === 'manual'}
                         onChange={() =>;
-                          setSyncRules({...syncRules,pushNotesMode: 'manual',})<label className='flex items - center gap - 2'>;
+                          setSyncRules({...syncRules,pushNotesMode: 'manual'})<label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
                         name='push_notes';
@@ -252,7 +252,7 @@ window.open(`/api/integrations/oauth/${providerId}/start`,'oauth','width=500,hei
               <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP;
               </code>;
             </li>          </ul>;
-        </section>;)function ManualOverrideForm() {)function ManualOverrideForm() {)function ManualOverrideForm() {const [jobId, setJobId] = useState('')const [disableCrmSync, setDisableCrmSync] = useState(false)const [disableAtsSync, setDisableAtsSync] = useState(false)const [message, setMessage]  = useState('')async function save() {setMessage('')const res = await fetch('/api/integrations/overrides', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),})if (res && res.ok) setMessage('Saved')else setMessage('Error'))} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+        </section>;)function ManualOverrideForm() {)function ManualOverrideForm() {)function ManualOverrideForm() {const [jobId, setJobId] = useState('')const [disableCrmSync, setDisableCrmSync] = useState(false)const [disableAtsSync, setDisableAtsSync] = useState(false)const [message, setMessage]  = useState('')async function save() {setMessage('')const res = await fetch('/api/integrations/overrides', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ jobId, disableCrmSync, disableAtsSync })})if (res && res.ok) setMessage('Saved')else setMessage('Error'))} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
 function ManualOverrideForm() {const [jobId, setJobId] = useState(''),const [disableCrmSync, setDisableCrmSync] = useState(false),const [disableAtsSync, setDisableAtsSync] = useState(false),const [message, setMessage] = useState(''),async function save() {setMessage(''),const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),if (res.ok) setMessage('Saved'), else setMessage('Error')setMessage(''),const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),if (res.ok) setMessage('Saved'), else setMessage('Error')} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }return (return (setMessage('')const res = await fetch('/api/integrations/overrides', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync })})if (res.ok) setMessage('Saved')else setMessage('Error')}

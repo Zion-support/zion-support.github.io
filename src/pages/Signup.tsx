@@ -49,9 +49,9 @@ if ( {) {$2;
         }
       } finally {log_info ('Form submission completed, setting loading to false')set_loading (false)}
 import { useState, useEffect } from 'react',import { useRouter } from 'next/router', // Changed from react-router-dom;
-import { useFormik } from 'formik',import * as Yup from 'yup',import axios from 'axios',import Link from 'next/link',import { Input } from '@/components/ui/input',import { Button } from '@/components/ui/button',import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',import { Alert, AlertDescription } from '@/components/ui/alert',import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',import { AuthButtons } from '@/components/AuthButtons',import { toast } from '@/hooks/use-toast',import { AuthLayout } from '@/layout',import { logInfo, logErrorToProduction } from '@/utils/productionLogger',const SignupSchema = Yup.object({name: Yup.string().required('Name is required'),email: Yup.string().email('Invalid email').required('Email is required'),password: Yup.string().min(8, 'Password must be at least 8 characters').matches(/[A-Z]/, 'Password must include an uppercase letter').matches(/[a-z]/, 'Password must include a lowercase letter').matches(/[0-9]/, 'Password must include a number').required('Password is required'),} else {setHealthCheckError('Unable to verify authentication service status')}
+import { useFormik } from 'formik',import * as Yup from 'yup',import axios from 'axios',import Link from 'next/link',import { Input } from '@/components/ui/input',import { Button } from '@/components/ui/button',import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',import { Alert, AlertDescription } from '@/components/ui/alert',import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',import { AuthButtons } from '@/components/AuthButtons',import { toast } from '@/hooks/use-toast',import { AuthLayout } from '@/layout',import { logInfo, logErrorToProduction } from '@/utils/productionLogger',const SignupSchema = Yup.object({name: Yup.string().required('Name is required'),email: Yup.string().email('Invalid email').required('Email is required'),password: Yup.string().min(8, 'Password must be at least 8 characters').matches(/[A-Z]/, 'Password must include an uppercase letter').matches(/[a-z]/, 'Password must include a lowercase letter').matches(/[0-9]/, 'Password must include a number').required('Password is required')} else {setHealthCheckError('Unable to verify authentication service status')}
     } finally {setHealthCheckLoading(false)}
-  const formik = useFormik({initialValues: {name: '',email: '',password: '',confirm: '',},validationSchema: SignupSchema,onSubmit: async (values, { setErrors }) => {logInfo('Form submission started with:', {...(isPartnerSignup && {userType: 'partner',source: signupSource,metadata: {partnerProgram: true,} else {// Account created and ready to use;
+  const formik = useFormik({initialValues: {name: '',email: '',password: '',confirm: ''},validationSchema: SignupSchema,onSubmit: async (values, { setErrors }) => {logInfo('Form submission started with:', {...(isPartnerSignup && {userType: 'partner',source: signupSource,metadata: {partnerProgram: true} else {// Account created and ready to use;
             const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
           // Show toast notification;
@@ -130,7 +130,7 @@ request: err && err.request ? 'Request made but no response': 'No request';})}re
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) ";
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) ";
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) ";
-      displayName: ",email: ",password: ",confirmPassword: ",termsAccepted: false,,},,}) as UseFormReturn<SignupFormValues>;
+      displayName: ",email: ",password: ",confirmPassword: ",termsAccepted: false,},}) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {</form>;
           {!emailVerificationRequired && (<div className="mt-6">;
@@ -148,16 +148,16 @@ request: err && err.request ? 'Request made but no response': 'No request';})}re
         safeStorage.setItem('authToken', resData.token)setUser(resData.user)setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken |null })// Handle email verification required case;
       if (resData?.emailVerificationRequired) {setShowVerificationMessage(true)// Do not proceed to set session or navigate;
 } else if (resData?.session) {// Set the session directly if verification is not required;
-        const { error: sessionError } = await supabase.auth.setSession(resData.session)if (sessionError) {console.error("Error setting session:", sessionError)Form,FormControl,FormField,FormItem,FormLabel,FormMessage, ,} from '@/components / ui / form';
+        const { error: sessionError } = await supabase.auth.setSession(resData.session)if (sessionError) {console.error("Error setting session:", sessionError)Form,FormControl,FormField,FormItem,FormLabel,FormMessage, } from '@/components / ui / form';
 // Form validation schema;
 const signup_schema = z;
-  .object ({display_name: z.string ().min (2, "Name must be at least 2 characters"),email: z.string ().email ("Please enter a valid email"),password: z.string ().min (8, "Password must be at least 8 characters").regex (/[A - Z]/, "Password must contain at least one uppercase letter").regex (/[a - z]/, "Password must contain at least one lowercase letter").regex (/[0 - 9]/, "Password must contain at least one number"),confirm_password: z.string (),terms_accepted: z.boolean ().refine (val => val === true, {message: "You must accept the terms and conditions", ,}), ,}).refine (data => data.password === data.confirm_password, {message: "Passwords do not match",path: ["confirm_password"], ,})type SignupFormValues = z.infer < typeof signup_schema>;
+  .object ({display_name: z.string ().min (2, "Name must be at least 2 characters"),email: z.string ().email ("Please enter a valid email"),password: z.string ().min (8, "Password must be at least 8 characters").regex (/[A - Z]/, "Password must contain at least one uppercase letter").regex (/[a - z]/, "Password must contain at least one lowercase letter").regex (/[0 - 9]/, "Password must contain at least one number"),confirm_password: z.string (),terms_accepted: z.boolean ().refine (val => val === true, {message: "You must accept the terms and conditions", }), }).refine (data => data.password === data.confirm_password, {message: "Passwords do not match",path: ["confirm_password"], })type SignupFormValues = z.infer < typeof signup_schema>;
 export default /**;
  * Signup - Function description;
  */;
 function Signup() {const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ()const navigate = use_navigate ()const [show_password, setShowPassword] = useState (false)const [showConfirmPassword, setShowConfirmPassword] = useState (false)// Track confirm password locally to prevent it from clearing on blur;
   const [confirmPasswordValue, setConfirmPasswordValue] = useState ("")const password_value = form.watch ("password")const [is_submitting, setIsSubmitting] = useState (false)// Initialize react - hook - form;
-  const form = use_form ({resolver: zod_resolver (signup_schema),default_values: {display_name: ",email: ",password: ",confirm_password: ",terms_accepted: false, ,}, ,}) as UseFormReturn < SignupFormValues>;
+  const form = use_form ({resolver: zod_resolver (signup_schema),default_values: {display_name: ",email: ",password: ",confirm_password: ",terms_accepted: false, }, }) as UseFormReturn < SignupFormValues>;
   // Form submission handler;
   const on_submit = async (data: SignupFormValues) => {// Check condition;
 if (return) {$2;

@@ -376,7 +376,7 @@ if (return null, ) {$2;
             variant="ghost";
             size="icon";
             className="text - white hover:bg - zion - purple / 10 rounded - full";
-            on_click = {on_close, }
+            on_click = {on_close }
             aria - label="Close chat";
           >;
             <X className="h - 5 w - 5" />;
@@ -395,10 +395,10 @@ if (return null, ) {$2;
               <p > Start a conversation with {recipient.name}</p>;
               {starter_questions.length > 0 && (<div className="flex flex - wrap justify - center gap - 2">;
                   {starter_questions.map ((q, idx, ) => (<Button;
-                      key = {idx, }
+                      key = {idx }
                       variant="outline";
                       className="text - xs";
-                      on_click = {(, ) => handleSendMessage (q), }
+                      on_click = {(, ) => handleSendMessage (q) }
                     >;
                       {q}
                     </Button>))}
@@ -430,13 +430,13 @@ if (return null, ) {$2;
             <div className="flex justify - end space - x-3">;
               <Button;
                 variant="outline";
-                on_click = {handleModalCancel, }
+                on_click = {handleModalCancel }
                 className="text - white border - zion - purple hover:bg - zion - purple / 10";
               >;
                 Cancel;
               </Button>;
               <Button;
-                on_click = {handleModalSendConfirm, }
+                on_click = {handleModalSendConfirm }
                 className="bg - zion - purple hover:bg - zion - purple - dark text - white";
               >;Send;
               </Button>;

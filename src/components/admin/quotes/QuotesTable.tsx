@@ -87,7 +87,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({quotes;
                   : "No quote requests found."}
               </TableCell>;
             </TableRow>) : (quotes.map (quote => (<TableRow;
-                key = {quote.id, }
+                key = {quote.id }
                 className="border - zion - blue - light hover:bg - zion - blue";
               >;
                 <TableCell className="text - white">;
@@ -110,7 +110,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({quotes;
                         <Button;
                           variant="ghost";
                           size="icon";
-                          onClick = {(,) => toggleArchive(quote.id, false),}
+                          onClick = {(,) => toggleArchive(quote.id, false)}
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
@@ -120,10 +120,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({quotes;
   quotes;
   isArchived = false;
 import React from 'react';
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {Table;
   TableBody,TableCell,TableHead,TableHeader,TableRow ;
 } from "@/components/ui/table";import { Button  } from '@/components/ui/button';
-import {DropdownMenu;
   DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge  } from '@/components/quotes/QuoteStatusBadge';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
@@ -210,7 +208,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
               </TableCell>;
             </TableRow>;
           ) : (quotes && quotes.map(quote => (<TableRow;
-                key = {quote && quote.id,}
+                key = {quote && quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue">;
                 <TableCell className="text-white">;
                   {quote && quote.talent_name || 'Unknown Talent'}
@@ -243,7 +241,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                     <Button;
                       variant="ghost";
                       size="icon";
-                      onClick = {() => onViewDetails(quote),}
+                      onClick = {() => onViewDetails(quote)}
                     >;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
@@ -251,14 +249,14 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                         <Button;
                           variant="ghost";
                           size="icon";
-                          onClick = {(,) => toggleArchive(quote && quote.id, false),}>;
+                          onClick = {(,) => toggleArchive(quote && quote.id, false)}>;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;<Button;
                           variant="ghost";
                           size="icon";
                           className="text-red-500";
-                          onClick = {() => {if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote && quote.id),}
+                          onClick = {() => {if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote && quote.id)}
                           }}>;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
@@ -328,7 +326,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                     <Button;
                       variant="ghost";
                       size="icon";
-                      on_click = {() => onViewDetails (quote), }
+                      on_click = {() => onViewDetails (quote) }
                     >;
                       <Eye className="h - 4 w - 4" />;
                       <span className="sr - only">View Details</span>;
@@ -337,7 +335,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                         <Button;
                           variant="ghost";
                           size="icon";
-                          on_click = {(, ) => toggle_archive (quote.id, false), }
+                          on_click = {(, ) => toggle_archive (quote.id, false) }
                         >;
                           <Archive className="h - 4 w - 4" />;
                           <span className="sr - only">Unarchive</span>;
@@ -348,7 +346,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                           className="text - red - 500";
                           on_click = {() => {if () {) {$2;
 }
-                              delete_quote (quote.id), }
+                              delete_quote (quote.id) }
                           }}
                         >;
                           <Trash2 className="h - 4 w - 4" />;

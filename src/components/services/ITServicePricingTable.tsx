@@ -1,14 +1,14 @@
 
 import { useState, useMemo  } from 'react';
-import {onsiteServicePricing,CountryPricing,} from '@/data/onsiteServicePricing';
+import {onsiteServicePricing,CountryPricing} from '@/data/onsiteServicePricing';
 import { Input  } from '@/components/ui/input';
-  Table,TableBody,TableCell,TableHead,TableHeader,TableRow,} from '@/components/ui/table';
+  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig]  = useState<{import { useState, useMemo } from "react",import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",import { Input } from "@/components/ui/input",import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
 export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState("")const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
     direction: 'ascending' | 'descending';
-  }>({key: 'country',direction: 'ascending',})const sortedData = useMemo(() => {let filteredData = [...onsiteServicePricing];
+  }>({key: 'country',direction: 'ascending'})const sortedData = useMemo(() => {let filteredData = [...onsiteServicePricing];
     // Filter by search query;
     if (searchQuery) {filteredData = filteredData && filteredData.filter(item =>;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))const sortedData = null;
@@ -37,7 +37,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
           : "ascending"})},const handleSort = (key: keyof CountryPricing,) => {setSortConfig({key,direction:;
         sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
           ? 'descending';
-          : 'ascending',})}key;
+          : 'ascending'})}key;
       direction:;
         sortConfig.key === key && sortConfig.direction === 'ascending';
           ? 'descending';

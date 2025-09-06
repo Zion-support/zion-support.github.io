@@ -13,6 +13,49 @@ import { ArrowRight,Brain,Cloud,Shield,Zap,Database,Server,Lock,BarChart3,Users,
  } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 export default function Services() {const description  = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';return (<Layout>;
+
+
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award,
+  Mail,
+  Calendar,
+  Settings,
+  Eye,
+  MessageSquare,
+  Palette,
+  Bot,
+  Cpu,
+  Link2,
+  Wifi,
+  HardDrive,
+  Monitor,
+  Activity,
+  Terminal,
+  CreditCard,
+  Smartphone;
+} from 'lucide-react';
+
+export default function Services() {;
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
+
+	return (
+		<Layout>;
 			<PageTransition>;
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>;
@@ -75,6 +118,9 @@ export default function Services() {const description  = 'AI autonomous systems,
 								<Link;
 									href='/contact';
 									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group';
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
 									aria-label='Get started with AI services'>;
 									Get started with AI;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -121,6 +167,9 @@ export default function Services() {const description  = 'AI autonomous systems,
 								<Link;
 									href='/contact';
 									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group';
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group'
 									aria-label='Get started with cloud services'>;
 									Get started with Cloud;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -167,6 +216,9 @@ export default function Services() {const description  = 'AI autonomous systems,
 								<Link;
 									href='/contact';
 									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group';
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
 									aria-label='Get started with cybersecurity services'>;
 									Get started with Security;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -220,6 +272,9 @@ ursor/automate-test-improve-and-merge-code-646c;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
 								</Link>;
 							</div>;
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
 						</div>;
 					</div>;
 				</div>;
@@ -1479,7 +1534,14 @@ ursor/automate-test-improve-and-merge-code-646c;
 			</section>;ursor/automate-test-improve-and-merge-code-646c;
 		</PageTransition>;
 		</Layout>;
-	),}}ursor/integrate-build-improve-and-re-verify-8f7d;
+	)}}ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 }
+
+
+}
+
+
+
+

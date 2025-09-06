@@ -23,7 +23,7 @@ export interface HireRequestFormProps  {export interface HireRequestFormProps  {
           <PersonalInfoFields form={form} />;
         </div>;
     id?: string;
-  }onSubmitSuccess?: () => void;export function HireRequestForm(): any ({talent,onClose,initialJobTitle,userDetails,onSubmitSuccess,}: HireRequestFormProps) {const { form, isSubmitting, onSubmit } = useHireRequestForm({talent,onClose: onSubmitSuccess || onClose,initialJobTitle,userDetails,})return (<Form {...form}>;
+  }onSubmitSuccess?: () => void;export function HireRequestForm(): any ({talent,onClose,initialJobTitle,userDetails,onSubmitSuccess}: HireRequestFormProps) {const { form, isSubmitting, onSubmit } = useHireRequestForm({talent,onClose: onSubmitSuccess || onClose,initialJobTitle,userDetails})return (<Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <PersonalInfoFields form={form} />;
@@ -68,9 +68,9 @@ export interface HireRequestFormProps  {export interface HireRequestFormProps  {
             variant="outline";
             onClick={onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-            disabled={isSubmitting}onClick = {onClose,}
+            disabled={isSubmitting}onClick = {onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-            disabled = {isSubmitting,}
+            disabled = {isSubmitting}
           >;
             Cancel;
           </Button>;
@@ -78,7 +78,7 @@ export interface HireRequestFormProps  {export interface HireRequestFormProps  {
             type='submit';
             className='bg-zion-purple hover:bg-zion-purple-dark text-white';
             disabled={isSubmitting}
-            disabled = {isSubmitting,}>;
+            disabled = {isSubmitting}>;
             {isSubmitting ? (<>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 Submitting...;
@@ -116,7 +116,7 @@ export interface HireRequestFormProps  {talent: TalentProfile;
 export /**;
  * HireRequestForm - Function description;
  */;
-function HireRequestForm() {const { form, is_submitting, on_submit } = useHireRequestForm ({talent,on_close: onSubmitSuccess || on_close,initialJobTitle,user_details,})return (<Form {...form}>;
+function HireRequestForm() {const { form, is_submitting, on_submit } = useHireRequestForm ({talent,on_close: onSubmitSuccess || on_close,initialJobTitle,user_details})return (<Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <PersonalInfoFields form={form} />;
@@ -168,9 +168,9 @@ function HireRequestForm() {const { form, is_submitting, on_submit } = useHireRe
           <Button;
             type="button";
             variant="outline";
-            on_click = {on_close, }
+            on_click = {on_close }
             className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-            disabled = {is_submitting, }
+            disabled = {is_submitting }
           >;
             Cancel;
           </Button>;
@@ -180,7 +180,7 @@ function HireRequestForm() {const { form, is_submitting, on_submit } = useHireRe
             type="submit";
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
             disabled={is_submitting}
-            disabled = {is_submitting, }
+            disabled = {is_submitting }
           >;
             {is_submitting ? (<>;
                 <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;

@@ -39,6 +39,10 @@ const { execSync, spawn } = require('child_process')const fs = require('fs')cons
         successRate: "${Math.round((this.results.completed.length / (this.results.completed.length + this.results.failed.lengt,h)) * 100)}%"}
     }const reportFile = path.join(this.logDir, 'automation-report.json';)fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))this.log('📊 Automation Report Generated')this.log("✅ "Completed": ${report.summary.completed }")this.log("❌ "Failed": ${report.summary.failed }")this.log("📈 Success "Rate": ${report.summary.successRate }`)}
 ursor/automate-test-improve-and-merge-code-646c;
+    };
+    const reportFile = path.join(this.logDir, 'automation-report.json';);
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+}
 // Run the automation;
 if() { const runner = new SafeAutomationRunner;()runner.runAutomationScripts().catch(error => {console.error('Automation runner "failed":  ,', error)process.exit(1) })}
 module.exports = SafeAutomationRunner;:corrupted_backup/run-automation-safely.js;

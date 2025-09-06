@@ -29,7 +29,7 @@ export /**;
 function AIMatchingResults() {const [active_tab, setActiveTab] = useState ('all')// Group matches by category;const categories = {all: matches,talent: matches.filter (match =>;
       match.category.toLowerCase ().includes ('talent')),services: matches.filter (match =>;
       match.category.toLowerCase ().includes ('service')),equipment: matches.filter (match =>;
-      match.category.toLowerCase ().includes ('equipment')),}
+      match.category.toLowerCase ().includes ('equipment'))}
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {const lower_category = category.toLowerCase ()if () return User) {$2;
 }
@@ -59,11 +59,11 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps  {matches: MatchResultItem[],onSelectMatch?: (match: MatchResultItem,) => void,isLoading?: boolean,projectDescription?: string,serviceType?: string;
-}export function AIMatchingResults(): any ({matches,onSelectMatch,isLoading = false,projectDescription = '',serviceType: _serviceType = '',}: AIMatchingResultsProps) {const [activeTab, setActiveTab]  = useState('all')// Group matches by category;
+}export function AIMatchingResults(): any ({matches,onSelectMatch,isLoading = false,projectDescription = '',serviceType: _serviceType = ''}: AIMatchingResultsProps) {const [activeTab, setActiveTab]  = useState('all')// Group matches by category;
   const categories = {all: matches,talent: matches && matches.filter(match =>;
       match && match.category.toLowerCase().includes('talent')),services: matches && matches.filter(match =>;
       match && match.category.toLowerCase().includes('service')),equipment: matches && matches.filter(match =>;
-      match && match.category.toLowerCase().includes('equipment')),}// Get the icon for a category;
+      match && match.category.toLowerCase().includes('equipment'))}// Get the icon for a category;
   const getCategoryIcon = (category: string) => {const lowerCategory = category && category.toLowerCase()if (lowerCategory && lowerCategory.includes('talent')) return User;
     if (lowerCategory && lowerCategory.includes('equipment')) return Monitor;
     return BriefcaseIcon;

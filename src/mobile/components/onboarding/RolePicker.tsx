@@ -67,7 +67,7 @@ function RolePicker() {const [selected_role, setSelectedRole] = useState < UserR
               ? 'border - primary bg - primary / 5';
               : 'border - border hover:border - primary / 40';
           }`}
-          on_click = {(, ) => handle_select ('talent'), }
+          on_click = {(, ) => handle_select ('talent') }
         >;
           <CardContent className='p - 5'>;
             <div className='flex items - center'>;
@@ -89,7 +89,7 @@ function RolePicker() {const [selected_role, setSelectedRole] = useState < UserR
               ? 'border - primary bg - primary / 5';
               : 'border - border hover:border - primary / 40';
           }`}
-          on_click = {() => handle_select ('client'), }
+          on_click = {() => handle_select ('client') }
         >;
           <CardContent className='p - 5'>;
             <div className='flex items - center'>;

@@ -11,12 +11,40 @@ interface PartnersProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/Partners.jsx;
+interface PartnersProps {
+  // Add props here as needed
+
+
+}
+
+export default function Partners({}: PartnersProps) {
+  return (
+    <div>
+      <h1>Partners</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/Partners.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/Partners.jsx;
+:temp_exclude/src.pages.disabled/Partners.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Partners.jsx
 }
 }
 }

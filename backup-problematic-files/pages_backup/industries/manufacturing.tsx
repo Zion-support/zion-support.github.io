@@ -38,15 +38,38 @@ const benefits = [;
 const benefits = [;
   {title: 'Increased Efficiency',,description: 'Automated processes and AI optimization improve production efficiency.',icon: Activity;
   },{}
-    title: 'Reduced Downtime,',,description: 'Predictive maintenance prevents unexpected equipment failures.,',icon: Wrench,},{}
-    title: 'Better Quality,',,description: 'Automated quality control ensures consistent product quality.,',icon: Shield,},{}
-    title: 'Cost Savings,',,description: 'Optimized operations and reduced waste lower manufacturing costs.,',icon: BarChart3,}];
+    title: 'Reduced Downtime,',,description: 'Predictive maintenance prevents unexpected equipment failures.,',icon: Wrench},{}
+    title: 'Better Quality,',,description: 'Automated quality control ensures consistent product quality.,',icon: Shield},{}
+    title: 'Cost Savings,',,description: 'Optimized operations and reduced waste lower manufacturing costs.,',icon: BarChart3}];
 export default function ManufacturingPage() {return (<Layout)title="Manufacturing Technology Solutions - Zion Tech Group"";
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."";
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4 && 4.0"">;
+import { motion } from 'framer-motion';
+import { Settings, 
+  Brain, 
+  Shield, 
+  BarChart3, 
+const services = [;
+  {}
+    title: 'Smart Factory Solutions,',
+    description: 'IoT-enabled manufacturing systems for intelligent production management.,',
+;];
+const benefits = [;
+  {}
+    title: 'Increased Efficiency,',
+    description: 'Automated processes and AI optimization improve production efficiency.,',
+    icon: Activity;
+;];
+export default function ManufacturingPage() {
+  return (;
+    <Layout );
+      title="Manufacturing Technology Solutions - Zion Tech Group"";
+      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology.""
+      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">";
+        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
@@ -54,13 +77,18 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
             <motion&& motion.div;
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center max-w-4xl mx-auto"">;
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";
                 <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,<span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
+                <h1 className="text-5xl md:text-6xl font-bold">";
+                  Manufacturing;
+                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
                 </h1>;
@@ -68,10 +96,19 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
                 Revolutionize manufacturing with Industry 4 && 4.0 technologies including smart factories,IoT networks, predictive maintenance, and digital twin solutions.,</p>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",Get Manufacturing Consultation;
+                Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
+                IoT networks, predictive maintenance, and digital twin solutions.,
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Get Manufacturing Consultation;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
+                  View Manufacturing Case Studies;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,</Link>;
               </div>;
-            </motion && motion.div>;
+            </motion.div>;
           </div>;
         </section>;
 ];
@@ -90,6 +127,7 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-center mb-16"";
+              className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Manufacturing Technology Services;
@@ -115,6 +153,9 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"";
+              {services.map((service, index) => (,
+                <motion.div}),
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
                     <service.icon className="w-6 h-6 text-white" />";
@@ -151,6 +192,10 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"";
+            </div>,
+          </div>;
+        </section>;
+              className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Manufacturing Solutions?;
@@ -196,6 +241,13 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,<h2 className="text-4xl md:text-5xl font-bold mb-6">";
+              {benefits.map((benefit, index) => (,
+                <motion.div}),
+            </div>,
+          </div>;
+        </section>;
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
@@ -375,3 +427,10 @@ export default function ManufacturingPage() {return (<Layout)title="Manufacturin
       </div>;
     </Layout>;
   )}
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;

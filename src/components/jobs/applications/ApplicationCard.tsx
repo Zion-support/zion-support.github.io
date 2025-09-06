@@ -5,8 +5,8 @@ application: JobApplication;
 import { formatDistanceToNow  } from 'date - fns';
 import { JobApplication  } from '@/types / jobs';
 import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardFooter,CardHeader,CardTitle,} from '@/components / ui / card';
-  FileText,MessageSquare,HelpCircle,Calendar,ExternalLink,Download,} from 'lucide-react';
+import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+  FileText,MessageSquare,HelpCircle,Calendar,ExternalLink,Download} from 'lucide-react';
 import Link from 'next / link';
 import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';
@@ -82,7 +82,7 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}<CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>;
             <div className='text-sm text-muted-foreground mt-1'>;
               Applied{' '}
-              {formatDistanceToNow(new Date(application.created_at), {addSuffix: true,})}</div>;
+              {formatDistanceToNow(new Date(application.created_at), {addSuffix: true})}</div>;
           </div>;
           <StatusBadge status={application.status} />;
         </div>;
@@ -94,7 +94,7 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
             <CardTitle>{application.job?.title || 'Unknown Job'}</CardTitle>;
             <div className='text - sm text - muted - foreground mt - 1'>;
               Applied{' '}
-              {formatDistanceToNow (new Date (application.created_at), {add_suffix: true,})}            </div>            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
+              {formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}            </div>            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
             <div className="text - sm text - muted - foreground mt - 1">;
               Applied {formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}
             </div>;
@@ -114,8 +114,8 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
                   {application.cover_letter}import { formatDistanceToNow  } from 'date-fns';
 import { JobApplication  } from '@/types/jobs';
 import { Button  } from '@/components/ui/button';
-import {Card,CardContent,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
-  FileText,MessageSquare,HelpCircle,Calendar,ExternalLink,Download,} from 'lucide-react';
+import {Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+  FileText,MessageSquare,HelpCircle,Calendar,ExternalLink,Download} from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';import Link from 'next/link';
@@ -146,7 +146,7 @@ interface ApplicationCardProps  {application: JobApplication;export function App
             <CardTitle>{application && application.job?.title || 'Unknown Job'}</CardTitle>;
             <div className='text-sm text-muted-foreground mt-1'>;
               Applied{' '}
-              {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true,})}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job"}</CardTitle>;
+              {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true})}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job"}</CardTitle>;
             <div className="text-sm text-muted-foreground mt-1">;
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
             </div>;

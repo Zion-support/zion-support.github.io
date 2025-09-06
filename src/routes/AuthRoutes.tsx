@@ -15,13 +15,13 @@ const Login = lazy(() => import('../pages/Login'))const Signup = lazy(() => impo
         <Route path='/service-onboarding' element={<ServiceOnboarding /" >} />";
         <Route path='/profile' element={<ProtectedRoute" >";
             <div>Profile Page</div>;
-          </ProtectedRoute>, } />"";
+          </ProtectedRoute> } />"";
         <Route path='/dashboard' element={<ProtectedRoute" >";
             <div>Dashboard</div>;
-          </ProtectedRoute>,} />"";
+          </ProtectedRoute>} />"";
         <Route path='/settings' element={<ProtectedRoute" >";
             <div>Settings</div>;
-          </ProtectedRoute>, } />;
+          </ProtectedRoute> } />;
       </Routes>;
     </Suspense>;
   )}

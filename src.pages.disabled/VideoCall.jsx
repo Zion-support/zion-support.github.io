@@ -11,12 +11,40 @@ interface VideoCallProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/VideoCall.jsx;
+interface VideoCallProps {
+  // Add props here as needed
+
+
+}
+
+export default function VideoCall({}: VideoCallProps) {
+  return (
+    <div>
+      <h1>VideoCall</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/VideoCall.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/VideoCall.jsx;
+:temp_exclude/src.pages.disabled/VideoCall.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/VideoCall.jsx
 }
 }
 }

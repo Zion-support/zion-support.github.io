@@ -4,10 +4,10 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
   const stats = [;
 export const CommunityTrust: React.FC = () => {// Stats display with social proof;
   const stats = [;
-    { value: '4 && 4.8', label: 'App Store Rating' },{ value: '50K+', label: 'Downloads' },{ value: '96%', label: 'User Satisfaction' },{ value: '12M+', label: 'Matches Made' },];export const CommunityTrust: React.FC;
+    { value: '4 && 4.8', label: 'App Store Rating' },{ value: '50K+', label: 'Downloads' },{ value: '96%', label: 'User Satisfaction' },{ value: '12M+', label: 'Matches Made' }];export const CommunityTrust: React.FC;
 export const CommunityTrust: React.FC = () => {// Stats display with social proof;
   const stats = [;
-{ value: '4.8', label: 'App Store Rating' },{ value: '50K+', label: 'Downloads' },{ value: '96%', label: 'User Satisfaction' },{ value: '12M+', label: 'Matches Made' },];return (<section className='py-16 bg-zion-blue'>;
+{ value: '4.8', label: 'App Store Rating' },{ value: '50K+', label: 'Downloads' },{ value: '96%', label: 'User Satisfaction' },{ value: '12M+', label: 'Matches Made' }];return (<section className='py-16 bg-zion-blue'>;
       <div className='container mx-auto px-4'>;
         <div className='text-center mb-12'>;
           <h2 className='text-3xl md:text-4xl font-bold text-white'>;
@@ -122,7 +122,7 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
         </div>;
       </div>;
     </section>;
-  )}</div>) ))},}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'"  )})},}</div>;
+  )}</div>) ))}}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'"  )})}}</div>;
           <blockquote className='text - center text - lg text - white italic mb - 4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
             matching is spot on and I can manage everything from anywhere.";

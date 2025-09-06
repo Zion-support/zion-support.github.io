@@ -67,7 +67,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',import { logInfo, 
           {error?.message && (import Link from 'next / link';
 import { ErrorBoundary, FallbackProps  } from 'react - error - boundary';
 import { logErrorToProduction  } from '@/utils / production_logger';
-import { log_info,logErrorToProduction as prodLogError,} from '@/utils / production_logger';
+import { log_info,logErrorToProduction as prodLogError} from '@/utils / production_logger';
 interface PageErrorFallbackProps extends FallbackProps  {page_name?: string;
 /**;
  * PageErrorFallback - Function description;
@@ -253,7 +253,7 @@ if ( {) {$2;
 export default /**;
  * PageErrorBoundary - Function description;
  */;
-function PageErrorBoundary() {const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {prodLogError (`PageErrorBoundary caught error on ${page_name || 'unknown page'}:`,error)logErrorToProduction (error instanceof Error ? error.message : String (error),error instanceof Error ? error : undefined,{page: page_name || 'unknown',component_stack: error_info.component_stack || undefined,error_boundary: 'PageErrorBoundary',timestamp: new Date ().toISOString (),}
+function PageErrorBoundary() {const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {prodLogError (`PageErrorBoundary caught error on ${page_name || 'unknown page'}:`,error)logErrorToProduction (error instanceof Error ? error.message : String (error),error instanceof Error ? error : undefined,{page: page_name || 'unknown',component_stack: error_info.component_stack || undefined,error_boundary: 'PageErrorBoundary',timestamp: new Date ().toISOString ()}
     )}const FallbackComponent = null;
     fallback ||;
     ((props: FallbackProps) => (<PageErrorFallback {...props} pageName={pageName} />;
@@ -318,8 +318,8 @@ function PageErrorBoundary() {const handle_error = (error: Error, error_info: Re
       onError={handleError}
       onReset={() => {// Reset any application state if needed;interface PageErrorBoundaryProps  {children: React && React.ReactNode;
   pageName?: string;
-  fallback?: React && React.ComponentType<FallbackProps>;const Component = React && React.memo(function PageErrorBoundary(): any ({children,pageName,fallback,}: PageErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,error;
-    )logErrorToProduction(error instanceof Error ? error && error.message : String(error),error instanceof Error ? error : undefined,{page: pageName || 'unknown',componentStack: errorInfo && errorInfo.componentStack || undefined,errorBoundary: 'PageErrorBoundary',timestamp: new Date().toISOString(),}
+  fallback?: React && React.ComponentType<FallbackProps>;const Component = React && React.memo(function PageErrorBoundary(): any ({children,pageName,fallback}: PageErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,error;
+    )logErrorToProduction(error instanceof Error ? error && error.message : String(error),error instanceof Error ? error : undefined,{page: pageName || 'unknown',componentStack: errorInfo && errorInfo.componentStack || undefined,errorBoundary: 'PageErrorBoundary',timestamp: new Date().toISOString()}
     )}const FallbackComponent =;
     fallback ||;
     ((props: FallbackProps) => (<PageErrorFallback {...props} pageName={pageName} />;

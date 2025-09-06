@@ -14,7 +14,7 @@ type StepKey = (typeof STEPS)[number]['key'];const STEPS = [;
     skills: false;
     availability: false;
     match: false;
-    profile: false,skills: false,availability: false,match: false,})useEffect(() => {try {const raw = window.localStorage.getItem('onboarding.talent')if (raw) setCompleted(JSON.parse(raw))} catch {}}, [])useEffect(() => {export default function TalentDashboard() {const [completed, setCompleted] = useState<Record<StepKey, boolean>>({profile: false,skills: false,availability: false,match: false,})useEffect(() => {try {const raw = window && window.localStorage.getItem('onboarding && onboarding.talent')if (raw) setCompleted(JSON && JSON.parse(raw))} catch {}
+    profile: false,skills: false,availability: false,match: false})useEffect(() => {try {const raw = window.localStorage.getItem('onboarding.talent')if (raw) setCompleted(JSON.parse(raw))} catch {}}, [])useEffect(() => {export default function TalentDashboard() {const [completed, setCompleted] = useState<Record<StepKey, boolean>>({profile: false,skills: false,availability: false,match: false})useEffect(() => {try {const raw = window && window.localStorage.getItem('onboarding && onboarding.talent')if (raw) setCompleted(JSON && JSON.parse(raw))} catch {}
   }, [])useEffect(() => {try {window && window.localStorage.setItem('onboarding && onboarding.talent',JSON && JSON.stringify(completed)if (raw) setCompleted(JSON.parse(raw))} catch {}
   }, [])useEffect(() => {try {window.localStorage.setItem('onboarding.talent';
         JSON.stringify(completed))} catch {}

@@ -17,7 +17,7 @@ interface Toast  {id: string;"";
       {toasts.map(toast => (<Toast key={toast.id} toast={toast} onRemove={removeToast} /" >";
       ))}
     </div>;
-  )}function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {const bgColor = {success: 'bg-green-500', error: 'bg-red-500',warning: 'bg-yellow-500', info: 'bg-blue-500',}[toast.type];return (<div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}" >";
+  )}function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {const bgColor = {success: 'bg-green-500', error: 'bg-red-500',warning: 'bg-yellow-500', info: 'bg-blue-500'}[toast.type];return (<div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}" >";
       <div className="flex items-start justify-between">;
         <div>"";
           <h4 className="font-medium">{toast.title}</h4>;

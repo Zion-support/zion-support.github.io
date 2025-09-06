@@ -14,7 +14,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA  } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage  } from '@/utils/safeStorage';
 // Example listing type;
-import { Select,SelectTrigger,SelectContent,SelectItem,} from '@/components/ui/select';
+import { Select,SelectTrigger,SelectContent,SelectItem} from '@/components/ui/select';
 interface Listing  {id: string;
   title: string;
   description: string;
@@ -202,17 +202,17 @@ interface Listing  {id: string,title: string,description: string,category: strin
             {isLoading ? (<ListingGridSkeleton />;
             ) : processedListings && processedListings.length > 0 ? (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
                 {processedListings && processedListings.map(listing => (                  <ListingScoreCard;
-                    key = {listing && listing.id,}
-                    title = {listing && listing.title,}
-                    description = {listing && listing.description,}
-                    category = {listing && listing.subcategory || listing && listing.category,}
-                    image = {listing && listing.image,}
-                    tags = {listing && listing.tags,}
-                    author = {listing && listing.author,}
-                    authorImage = {listing && listing.authorImage,}
-                    aiScore = {listing && listing.aiScore,}
-                    rating = {listing && listing.rating,}
-                    reviewCount = {listing && listing.reviewCount,}
+                    key = {listing && listing.id}
+                    title = {listing && listing.title}
+                    description = {listing && listing.description}
+                    category = {listing && listing.subcategory || listing && listing.category}
+                    image = {listing && listing.image}
+                    tags = {listing && listing.tags}
+                    author = {listing && listing.author}
+                    authorImage = {listing && listing.authorImage}
+                    aiScore = {listing && listing.aiScore}
+                    rating = {listing && listing.rating}
+                    reviewCount = {listing && listing.reviewCount}
                   />;
               {description}
             </p>;
@@ -274,7 +274,7 @@ interface Listing  {id: string,title: string,description: string,category: strin
 }interface CategoryListingPageProps  {category: string;
   listings: Listing[];
   loading?: boolean;
-}export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({category,listings,loading = false,}) => {const [searchTerm, setSearchTerm] = useState('')const [sortBy, setSortBy] = useState('newest')const [filterBy, setFilterBy] = useState('all')const [filteredListings, setFilteredListings]  = useState<Listing[]>([])useEffect(() => {let filtered  = listings;// Filter by search term;
+}export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({category,listings,loading = false}) => {const [searchTerm, setSearchTerm] = useState('')const [sortBy, setSortBy] = useState('newest')const [filterBy, setFilterBy] = useState('all')const [filteredListings, setFilteredListings]  = useState<Listing[]>([])useEffect(() => {let filtered  = listings;// Filter by search term;
     if (searchTerm) {filtered = filtered.filter(listing =>;
           listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
           listing.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;

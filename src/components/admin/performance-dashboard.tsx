@@ -21,7 +21,7 @@ interface PerformanceMetrics  {bundleSize: number;
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Progress  } from '@/components/ui/progress';
-import {Activity,Zap,Package,TrendingUp,TrendingDown,AlertTriangle,CheckCircle,RefreshCw,BarChart3,Clock,Globe,} from 'lucide-react';
+import {Activity,Zap,Package,TrendingUp,TrendingDown,AlertTriangle,CheckCircle,RefreshCw,BarChart3,Clock,Globe} from 'lucide-react';
 import { bundleMonitor  } from '@/utils/bundleMonitor';
 interface PerformanceMetrics  {bundleSize: number;
   loadTime: number;
@@ -61,7 +61,7 @@ interface PerformanceMetrics  {bundleSize: number;
 }interface BundleChunk  {name: string,size: number,loadTime: number,cached: boolean,type: string;
 }export function PerformanceDashboard() {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),const [chunks, setChunks] = useState<BundleChunk[]>([]),const [isLoading, setIsLoading] = useState(false),const [lastUpdated, setLastUpdated] = useState<Date | null>(null),const collectMetrics = async () => {try {// Collect performance metrics;
       const memoryInfo = (performance as any).memory,const navigationEntry = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,const resourceCount = window.window.window.performance.getEntriesByType('resource').length,const performanceMetrics: PerformanceMetrics = {bundleSize: 0, // This would need to be calculated separately;
-        loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,Activity,Zap,Package,TrendingUp,TrendingDown,AlertTriangle,CheckCircle,RefreshCw,BarChart3,Clock,Globe,} from 'lucide-react';
+        loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,Activity,Zap,Package,TrendingUp,TrendingDown,AlertTriangle,CheckCircle,RefreshCw,BarChart3,Clock,Globe} from 'lucide-react';
 import { bundle_monitor  } from '@/utils / bundle_monitor';
 import { logErrorToProduction, log_info  } from '@/utils / production_logger';
 interface PerformanceMetrics  {bundle_size: number;
@@ -94,8 +94,8 @@ function PerformanceDashboard() {const [metrics, set_metrics] = useState < Perfo
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
         fid: 0, // First Input Delay - would need Performance Observer;
       }
-      set_metrics (performance_metrics)log_info ('Performance metrics collected successfully', {load_time: performance_metrics.load_time,resource_count: performance_metrics.chunk_count,})} catch (error) {logErrorToProduction ('Failed to collect performance metrics', error, {component: 'PerformanceDashboard',action: 'collect_metrics',})// Set fallback metrics;
-      set_metrics ({bundle_size: 0,load_time: 0,performance_score: 0,chunk_count: 0,cacheHitRate: 0,fcp: 0,lcp: 0,cls: 0,fid: 0,})}
+      set_metrics (performance_metrics)log_info ('Performance metrics collected successfully', {load_time: performance_metrics.load_time,resource_count: performance_metrics.chunk_count})} catch (error) {logErrorToProduction ('Failed to collect performance metrics', error, {component: 'PerformanceDashboard',action: 'collect_metrics'})// Set fallback metrics;
+      set_metrics ({bundle_size: 0,load_time: 0,performance_score: 0,chunk_count: 0,cacheHitRate: 0,fcp: 0,lcp: 0,cls: 0,fid: 0})}
   }
   const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>> => {// Check condition;
 if (return {}
@@ -133,7 +133,7 @@ if ( {) {$2;
 }
               vitals.fid = (entry as any).processing_start - entry.start_time;
             }})})observer.observe ({entry_types: [;
-            'paint','largest - contentful - paint','layout - shift','first - input',],})// Resolve after a short delay;
+            'paint','largest - contentful - paint','layout - shift','first - input']})// Resolve after a short delay;
         set_timeout (() => {observer.disconnect ()resolve (vitals)}, 2000)}) }
     return vitals;
   }
@@ -143,7 +143,7 @@ if (return []) {$2;
     const resource_entries = performance.getEntriesByType ('resource') as PerformanceResourceTiming[];
     const script_entries = resource_entries.filter (entry =>;
         entry.name.includes ('/_next / static/') && entry.name.ends_with ('.js'))return script_entries;
-      .map (entry => ({name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',size: entry.transfer_size || entry.encodedBodySize || 0,load_time: entry.response_end - entry.request_start,cached: entry.transfer_size === 0,type: categorize_chunk (entry.name),})).sort ((a, b) => b.size - a.size)}
+      .map (entry => ({name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',size: entry.transfer_size || entry.encodedBodySize || 0,load_time: entry.response_end - entry.request_start,cached: entry.transfer_size === 0,type: categorize_chunk (entry.name)})).sort ((a, b) => b.size - a.size)}
   const categorize_chunk = (filename: string): string => {if () return 'framework') {$2;
 }
     if () return 'vendor') {$2;
@@ -189,9 +189,9 @@ if (return <AlertTriangle className='w - 4 h - 4 text - yellow - 600' />) {$2;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;fid: 0  // First Input Delay - would need Performance Observer;
       },setMetrics(performanceMetrics),logInfo('Performance metrics collected successfully', {loadTime: performanceMetrics.loadTime,resourceCount: performanceMetrics.chunkCount;fid: 0, // First Input Delay - would need Performance Observer;
-      }setMetrics(performanceMetrics)logInfo('Performance metrics collected successfully', {loadTime: performanceMetrics && performanceMetrics.loadTime,resourceCount: performanceMetrics && performanceMetrics.chunkCount,})} catch (error) {logErrorToProduction('Failed to collect performance metrics', error, {component: 'PerformanceDashboard',action: 'collectMetrics';
-      }),action: 'collectMetrics',})// Set fallback metrics;
-      setMetrics({bundleSize: 0,loadTime: 0,performanceScore: 0,chunkCount: 0,cacheHitRate: 0,fcp: 0,lcp: 0,cls: 0,fid: 0;fid: 0,})}
+      }setMetrics(performanceMetrics)logInfo('Performance metrics collected successfully', {loadTime: performanceMetrics && performanceMetrics.loadTime,resourceCount: performanceMetrics && performanceMetrics.chunkCount})} catch (error) {logErrorToProduction('Failed to collect performance metrics', error, {component: 'PerformanceDashboard',action: 'collectMetrics';
+      }),action: 'collectMetrics'})// Set fallback metrics;
+      setMetrics({bundleSize: 0,loadTime: 0,performanceScore: 0,chunkCount: 0,cacheHitRate: 0,fcp: 0,lcp: 0,cls: 0,fid: 0;fid: 0})}
   }const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {if (typeof window === 'undefined') return {}const vitals: Partial<PerformanceMetrics>  = {}// Collect navigation timing;
     const navigation = performance && performance.getEntriesByType('navigation';
     )[0] as PerformanceNavigationTiming;
@@ -208,7 +208,7 @@ if (return <AlertTriangle className='w - 4 h - 4 text - yellow - 600' />) {$2;
             if (entry && entry.entryType === 'first-input') {vitals && vitals.fid = (entry as any).processingStart - entry && entry.startTime;
             }
           })})observer && observer.observe({entryTypes: [;
-            'paint','largest-contentful-paint','layout-shift','first-input',],})// Resolve after a short delay;
+            'paint','largest-contentful-paint','layout-shift','first-input']})// Resolve after a short delay;
         setTimeout(() => {observer && observer.disconnect()resolve(vitals)}, 2000)})}return scriptEntries.map(entry => ({name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',size: entry.transferSize || entry.encodedBodySize || 0,loadTime: entry.responseEnd - entry.requestStart,cached: entry.transferSize === 0,type: categorizeChunk(entry.name)})).sort((a, b) => b.size - a.size)},const categorizeChunk = (filename: string): string => {if (filename.includes('framework')) return 'framework',if (filename.includes('vendor')) return 'vendor',if (filename.includes('pages')) return 'page',if (filename.includes('chunks')) return 'chunk',return 'other';
   },const formatSize = (bytes: number): string => {if (bytes === 0) return '0 B',const k = 1024,const sizes = ['BKBMBGB'],const i = Math.floor(Math.log(bytes) / Math.log(k)),return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   },const getScoreColor = (score: number): string => {if (score >= 90) return 'text-green-600',if (score >= 70) return 'text-yellow-600',return 'text-red-600';
@@ -241,7 +241,7 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
     ) as PerformanceResourceTiming[];
     const scriptEntries = resourceEntries && resourceEntries.filter(entry =>;
         entry && entry.name.includes('/_next/static/') && entry && entry.name.endsWith('.js'))return scriptEntries;
-      .map(entry => ({name: entry && entry.name.split('/').pop()?.split('?')[0] || 'unknown',size: entry && entry.transferSize || entry && entry.encodedBodySize || 0,loadTime: entry && entry.responseEnd - entry && entry.requestStart,cached: entry && entry.transferSize === 0,type: categorizeChunk(entry && entry.name),})).sort((a, b) => b && b.size - a && a.size)}const categorizeChunk = (filename: string): string => {if (filename && filename.includes('framework')) return 'framework';
+      .map(entry => ({name: entry && entry.name.split('/').pop()?.split('?')[0] || 'unknown',size: entry && entry.transferSize || entry && entry.encodedBodySize || 0,loadTime: entry && entry.responseEnd - entry && entry.requestStart,cached: entry && entry.transferSize === 0,type: categorizeChunk(entry && entry.name)})).sort((a, b) => b && b.size - a && a.size)}const categorizeChunk = (filename: string): string => {if (filename && filename.includes('framework')) return 'framework';
     if (filename && filename.includes('vendor')) return 'vendor';
     if (filename && filename.includes('pages')) return 'page';
     if (filename && filename.includes('chunks')) return 'chunk';

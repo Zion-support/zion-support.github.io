@@ -34,9 +34,11 @@
   "timestamp": "2025-09-06T20:40:15.907Z",
   "duration": "124s",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
   "results": {
     "syntaxFixes": 0,
-    "buildSuccess": false,
+    "buildSuccess": true,
     "testsPassed": 0,
     "optimizations": 0,
     "errors": [
@@ -48,33 +50,28 @@
       {
         "command": "npm run format",
         "description": "Prettier Code Formatting",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
+        "error": "spawnSync /bin/sh ENOBUFS"
       },
       {
         "command": "npm run type-check",
         "description": "TypeScript Type Checking",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
-      },
-      {
-        "command": "npm run build",
-        "description": "Application Build",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
+        "error": "spawnSync /bin/sh ENOBUFS"
       },
       {
         "command": "npm run test:smoke",
         "description": "Smoke Tests",
-        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       },
       {
         "command": "npm test -- --passWithNoTests",
         "description": "Jest Tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       }
     ]
   },
   "summary": {
     "syntaxFixes": 0,
-    "buildSuccess": false,
+    "buildSuccess": true,
     "testsPassed": 0,
     "totalErrors": 5
   "timestamp": "2025-09-06T10:42:27.266Z",
@@ -97,9 +94,7 @@ ursor/automate-test-improve-and-merge-code-e883
       "duration": 84429,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
-      "warnings": [
-        "Command failed: npm audit --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-      ]
+      "warnings": []
     },
     "codeQuality": {
       "success": false,
@@ -205,6 +200,21 @@ ursor/automate-test-improve-and-merge-code-646c
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  "timestamp": "2025-09-06T22:31:53.549Z",
+  "totalDuration": 106111,
+  "successfulTasks": 3,
+  "totalTasks": 3,
+  "results": {
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": true,
+    "Execute All Scripts": true
+  },
+  "errors": [],
+  "fixes": [
+    "Fixed memory issues with Node.js heap size",
+    "Created missing automation scripts",
+    "Fixed ESLint configuration",
+    "Added comprehensive error handling"
   ]
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

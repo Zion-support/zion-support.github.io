@@ -15,7 +15,7 @@ import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 import { Milestone  } from '../../../utils/types/milestones';
-import { createMilestone,fetchMilestones,updateMilestoneStatus,} from '../../../utils/api/milestones-client';
+import { createMilestone,fetchMilestones,updateMilestoneStatus} from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): any (): 'client' | 'talent' | 'admin' {if (typeof window === 'undefined') return 'client';
 import { Milestone   } from '../../../utils/types/milestones';
 import { createMilestone, fetchMilestones, updateMilestoneStatus  } from '../../../utils/api/milestones-client';

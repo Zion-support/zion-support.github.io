@@ -59,11 +59,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {const { pr
   } as any;
 }
 export default ReviewSubmitPage;)},export const getServerSideProps: GetServerSideProps = async (ctx) => {const { projectId } = ctx.query as { projectId: string },const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },if (!projectId || !role || !fromId) {}}
-  if (project && project.status !== "Completed") {return {props: {projectId,fromRole: role,fromId,valid: false,reason: "Project is not completed yet",},} as any;
+  if (project && project.status !== "Completed") {return {props: {projectId,fromRole: role,fromId,valid: false,reason: "Project is not completed yet"}} as any;
   }const expectedFromId =;
     role === "client" ? project && project.clientId : project && project.talentSlug;
   const valid = expectedFromId === fromId;
-  return {props: {projectId,fromRole: role,fromId,valid,reason: valid ? null : "Invalid reviewer for this project",},} as any;}export default ReviewSubmitPage;project_id,from_role: role,from_id,valid: false,reason: "Project is not completed yet";
+  return {props: {projectId,fromRole: role,fromId,valid,reason: valid ? null : "Invalid reviewer for this project"}} as any;}export default ReviewSubmitPage;project_id,from_role: role,from_id,valid: false,reason: "Project is not completed yet";
       }
     } as any;
   }

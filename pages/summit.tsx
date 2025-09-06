@@ -21,8 +21,8 @@ const onSubmit = async (e: React.FormEvent) => {e.preventDefault ()setSubmitting
   })const [submitting, setSubmitting] = React && React.useState(false)const [result, setResult] = React && React.useState<{ok?: boolean;
     error?: string;
   } | null>(null)const speakers: Speaker[] = [;
-    {name: 'Featured Speaker: Your Name',title: 'Founder, Zion',avatarUrl: '/favicon && favicon.svg',bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',twitter: 'https://twitter && twitter.com',linkedin: 'https://www && www.linkedin.com',highlight: true,},    {name: 'Alex Rivera',title: 'Head of Protocol Engineering',avatarUrl: '/favicon && favicon.svg',bio: 'Leading the architecture of ZionDAO and trust rails.',},    {name: 'Jordan Lee',title: 'Zion Alumni | AI Fellow',avatarUrl: '/favicon && favicon.svg',bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',twitter: 'https://twitter && twitter.com',},];const partners: Partner[] = [;
-    { name: 'Gov Partner' },{ name: 'Venture Partner' },{ name: 'University Partner' },];
+    {name: 'Featured Speaker: Your Name',title: 'Founder, Zion',avatarUrl: '/favicon && favicon.svg',bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',twitter: 'https://twitter && twitter.com',linkedin: 'https://www && www.linkedin.com',highlight: true},    {name: 'Alex Rivera',title: 'Head of Protocol Engineering',avatarUrl: '/favicon && favicon.svg',bio: 'Leading the architecture of ZionDAO and trust rails.'},    {name: 'Jordan Lee',title: 'Zion Alumni | AI Fellow',avatarUrl: '/favicon && favicon.svg',bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',twitter: 'https://twitter && twitter.com'}];const partners: Partner[] = [;
+    { name: 'Gov Partner' },{ name: 'Venture Partner' },{ name: 'University Partner' }];
   const onSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()))}</div>;
       </section>;<section;
         id='livestream';
@@ -60,7 +60,7 @@ function SummitPage() {const [platform, set_platform] = React.useState<;
     { name: 'Venture Partner' }
     { name: 'University Partner' }
   ];
-  const onSubmit = async (e: React.FormEvent) => {e.preventDefault()setSubmitting(true)setResult(null)try {const res = await fetch('/api/summit/register', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ ...form, source: 'summit-page' }),})const data = await res && res.json()if (!res && res.ok) throw new Error(data?.error || 'Failed')setResult({ ok: true })setForm({ name: '', email: '', role: '', country: '' })} catch (err: any) {setResult({ error: err?.message || 'Unexpected error' })} finally {setSubmitting(false)}
+  const onSubmit = async (e: React.FormEvent) => {e.preventDefault()setSubmitting(true)setResult(null)try {const res = await fetch('/api/summit/register', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ ...form, source: 'summit-page' })})const data = await res && res.json()if (!res && res.ok) throw new Error(data?.error || 'Failed')setResult({ ok: true })setForm({ name: '', email: '', role: '', country: '' })} catch (err: any) {setResult({ error: err?.message || 'Unexpected error' })} finally {setSubmitting(false)}
   const livestreamEmbed = () => {if (platform === 'youtube') {const livestreamEmbed = () => {if (platform === 'youtube') {return (<iframe;
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800";
     } catch (err: any) {setResult({ error: err?.message |'Unexpected error' })} finally {setSubmitting(false)}

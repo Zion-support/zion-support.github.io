@@ -24,7 +24,7 @@ export default async function handler() {if (req.method !== 'POST')return res.st
       ];
       temperature: 0.3;
         { role: 'system', content: SYSTEM_PROMPT },{ role: 'user', content: userPrompt }
-      ],temperature: 0.3,})title;
+      ],temperature: 0.3})title;
       target_institution;
       type;
       regional_scope;

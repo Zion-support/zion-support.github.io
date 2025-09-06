@@ -20,19 +20,19 @@ import { Check, Clock, Key, MoreVertical, RefreshCw, X  } from 'lucide-react';
 import { format  } from 'date - fns';
 import { useApiKeys, type ApiKeyScope  } from '@/hooks / useApiKeys';
 import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components / ui / card';
-  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger,} from '@/components / ui / dialog';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
 import { Input  } from '@/components / ui / input';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { Label  } from '@/components / ui / label';
 import { Badge  } from '@/components / ui / badge';
-  Popover,PopoverContent,PopoverTrigger,} from '@/components / ui / popover';
-  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,} from '@/components / ui / dropdown - menu';
-  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,} from '@/components / ui / alert - dialog';
+  Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
+  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
 export /**;
  * ApiKeysManager - Function description;
  */;
-function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,clearNewApiKey,} = useApiKeys ()const [showCreateDialog, setShowCreateDialog] = useState (false)const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>(null)const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
+function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,clearNewApiKey} = useApiKeys ()const [showCreateDialog, setShowCreateDialog] = useState (false)const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>(null)const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
     string | null;
   >(null)// Create key form state;
   const [key_name, setKeyName] = useState ('')const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([])// Load keys on mount;
@@ -81,7 +81,7 @@ function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiK
                   <Label>Scopes</Label>;
                   <div className="grid gap-2 pt-2">;
                     {scopeOptions.map((scope) => (<div key={scope.value} className="flex items-center space-x-2">;
-import { useState } from "react",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",import CodeBlock from "./CodeBlock",value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints',},];
+import { useState } from "react",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",import CodeBlock from "./CodeBlock",value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints'}];
   // Toggle a scope selection;
   const toggle_scope = (scope: ApiKeyScope) =>: any {setSelectedScopes (prev =>;
       prev.includes (scope) ? prev.filter (string => s !== scope) : [...prev, scope])}
@@ -100,20 +100,20 @@ import { useState } from "react",import { AlertDialog, AlertDialogAction, AlertD
   const handleDialogClose = () => {setKeyName('')setSelectedScopes([])setShowCreateDialog(false)}return (import { format  } from 'date-fns';
 import { useApiKeys, type ApiKeyScope  } from '@/hooks/useApiKeys';
 import { Button  } from '@/components/ui/button';
-import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
-  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger,} from '@/components/ui/dialog';
+import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components/ui/dialog';
 import { Input  } from '@/components/ui/input';
 import { Checkbox  } from '@/components/ui/checkbox';
 import { Label  } from '@/components/ui/label';
 import { Badge  } from '@/components/ui/badge';
-  Popover,PopoverContent,PopoverTrigger,} from '@/components/ui/popover';
-  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,} from '@/components/ui/dropdown-menu';
-  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,} from '@/components/ui/alert-dialog';
+  Popover,PopoverContent,PopoverTrigger} from '@/components/ui/popover';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components/ui/alert-dialog';
 export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,await revokeApiKey(keyId),setShowDeleteConfirm(null)},// Scope options;
           Create and manage API keys for accessing the Zion APIs.;
         </CardDescription>;
       </CardHeader>;
-      <CardContent>;clearNewApiKey,}  = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null;
+      <CardContent>;clearNewApiKey}  = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null;
   )const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
     string | null;
   >(null)// Create key form state;
@@ -125,7 +125,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
     label: string;
     description: string;
   }[] = [;
-    {value: 'jobs:read',label: 'Read Jobs',description: 'Access to view job listings',},{value: 'jobs:write',label: 'Write Jobs',description: 'Create and manage job listings',},{value: 'talent:read',label: 'Read Talent',description: 'Access to view talent profiles',},{value: 'quotes:write',label: 'Write Quotes',description: 'Create and manage quotes',},{value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints',},];// Toggle a scope selection;
+    {value: 'jobs:read',label: 'Read Jobs',description: 'Access to view job listings'},{value: 'jobs:write',label: 'Write Jobs',description: 'Create and manage job listings'},{value: 'talent:read',label: 'Read Talent',description: 'Access to view talent profiles'},{value: 'quotes:write',label: 'Write Quotes',description: 'Create and manage quotes'},{value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints'}];// Toggle a scope selection;
   const toggleScope = (scope: ApiKeyScope) => {setSelectedScopes(prev =>;
       prev && prev.includes(scope) ? prev && prev.filter(s => s !== scope) : [...prev, scope];
     )}const getExampleCode = (key: string) => {    return `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs" \\;
@@ -548,9 +548,9 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                         onClick={() => setShowRegenerateConfirm(key && key.id)}
                         className='cursor-pointer';
                         disabled={!key && key.is_active}
-                        onClick = {() => setShowRegenerateConfirm(key && key.id),}
+                        onClick = {() => setShowRegenerateConfirm(key && key.id)}
                         className="cursor-pointer";
-                        disabled = {!key && key.is_active,}
+                        disabled = {!key && key.is_active}
                       >;
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
                       </DropdownMenuItem>;<DropdownMenuItem;
@@ -581,7 +581,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'>                ;
                 <div className="mt-3 flex flex-wrap gap-2">;
                   {key && key.scopes.map((scope,) => (<Badge;
-                      key = {scope,}
+                      key = {scope}
                       variant="secondary";
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800";
 <div className='mt-3 flex flex-wrap gap-2'>;
@@ -712,9 +712,9 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                         on_click={() => setShowRegenerateConfirm (key.id)}
                         className='cursor - pointer';
                         disabled={!key.is_active}
-                        on_click = {() => setShowRegenerateConfirm (key.id), }
+                        on_click = {() => setShowRegenerateConfirm (key.id) }
                         className="cursor - pointer";
-                        disabled = {!key.is_active, }
+                        disabled = {!key.is_active }
                       >;
                         <RefreshCw size={14} className='mr - 2' /> Regenerate;
                       </DropdownMenuItem>;
@@ -737,7 +737,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       className='bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800'                    >;
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {key.scopes.map ((scope, ) => (<Badge;
-                      key = {scope, }
+                      key = {scope }
                       variant="secondary";
                       className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";
                       {scope}
@@ -882,7 +882,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
       <AlertDialog;
         open={showRegenerateConfirm !== null}onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}className='bg-blue-600 hover:bg-blue-700'            >;
             <AlertDialogAction;
-              onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
+              onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700";>;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
@@ -896,7 +896,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                 handleRegenerateKey (showRegenerateConfirm)}
               className='bg - blue - 600 hover:bg - blue - 700'            >;
             <AlertDialogAction;
-              on_click = {() => showRegenerateConfirm && handleRegenerateKey (showRegenerateConfirm), }
+              on_click = {() => showRegenerateConfirm && handleRegenerateKey (showRegenerateConfirm) }
               className="bg - blue - 600 hover:bg - blue - 700";
       >;
         <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
@@ -931,7 +931,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                 showDeleteConfirm && handleRevokeKey (showDeleteConfirm)}
               className='bg - red - 600 hover:bg - red - 700'            >;
             <AlertDialogAction;
-              on_click = {() => showDeleteConfirm && handleRevokeKey (showDeleteConfirm), }
+              on_click = {() => showDeleteConfirm && handleRevokeKey (showDeleteConfirm) }
               className="bg - red - 600 hover: bg - red - 700";
       >;
         <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;

@@ -2,7 +2,7 @@
 ;
   const handleSaveNotes = () => {const handleSaveNotes = () => {// Here you would save the notes to the database;
     // For now, we'll just show a toast;
-    toast({title: 'Notes saved',description: 'Your notes have been saved',})setShowNotes(false)}
+    toast({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes(false)}
   const handleHireConfirmed = () => {// Hiring process completed via the modal;
     toast({title: 'Hiring process initiated';
       description: 'Offer has been sent to the talent.';
@@ -41,9 +41,9 @@ import Link from 'next/link';
 import { JobApplication  } from '@/types/jobs';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict;
-  MessageSquare,User,FileText,MoreVertical,Calendar,AlertTriangle,BriefcaseIcon,} from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't;
+  MessageSquare,User,FileText,MoreVertical,Calendar,AlertTriangle,BriefcaseIcon} from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
-import {DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,} from '@/components/ui/dropdown-menu';
+import {DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import { ScoreBadge  } from '@/components/jobs/applications/ScoreBadge';
 import Image from 'next/image'; // Import next/image;
 interface CandidateCardProps  {application: JobApplication;
@@ -52,8 +52,8 @@ interface CandidateCardProps  {application: JobApplication;
     new Date(application && application.updated_at).getTime() <;
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;const handleSaveNotes = () => {// Here you would save the notes to the database;
     // For now, we'll just show a toast;
-    toast({title: 'Notes saved',description: 'Your notes have been saved',})setShowNotes(false)}const handleHireConfirmed = () => {// Hiring process completed via the modal;
-    toast({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.',})}const candidateName  = application && application.talent_profile?.full_name || 'Candidate';return (<>;<Draggable draggableId={application.id} index={index}>;
+    toast({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes(false)}const handleHireConfirmed = () => {// Hiring process completed via the modal;
+    toast({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'})}const candidateName  = application && application.talent_profile?.full_name || 'Candidate';return (<>;<Draggable draggableId={application.id} index={index}>;
         {(provided) => (<Card;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
@@ -136,7 +136,7 @@ interface CandidateCardProps  {application: JobApplication;
               <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>;
                 <div className='flex items-center'>;
                   <Calendar className='h-3 w-3 mr-1' />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true,})}
+                  {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true})}
                 </div>;{isStalled && (<div className='flex items-center text-amber-500'>;
                     <AlertTriangle className='h-3 w-3 mr-1' />;
                     Stalled;
@@ -214,10 +214,10 @@ interface CandidateCardProps  {application: JobApplication;
           </Card>;
         )}</Draggable>;{/* Hire Confirmation Modal */}
       <HireConfirmationModal;
-        isOpen = {showHireModal,}
-        onClose = {() => setShowHireModal(false),}
-        application = {application,}
-        onConfirm = {handleHireConfirmed,}// Local stub is used in place of the @hello - pangea / dnd package which isn't;
+        isOpen = {showHireModal}
+        onClose = {() => setShowHireModal(false)}
+        application = {application}
+        onConfirm = {handleHireConfirmed}// Local stub is used in place of the @hello - pangea / dnd package which isn't;
 // available in this environment.;
 import { Draggable  } from '@/lib / dnd - stub';
 import { formatDistanceToNow  } from 'date - fns';
@@ -227,7 +227,7 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed to avoid conflict;
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
-  MessageSquare,User,FileText,MoreVertical,Calendar,AlertTriangle,BriefcaseIcon,} from 'lucide-react';// Local stub is used in place of the @hello - pangea / dnd package which isn't;
+  MessageSquare,User,FileText,MoreVertical,Calendar,AlertTriangle,BriefcaseIcon} from 'lucide-react';// Local stub is used in place of the @hello - pangea / dnd package which isn't;
 // available in this environment.;
 import { Draggable   } from '@/lib / dnd - stub';
 import { formatDistanceToNow   } from './date - fns';
@@ -237,7 +237,7 @@ import { Card, CardContent   } from '@/components / ui / card';
 import { Avatar as AvatarPrimitive  } from '@/components / ui / avatar';, // Renamed to avoid conflict;
 import { Button   } from '@/components / ui / button';
 import { Textarea   } from '@/components / ui / textarea';
-  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,} from '@/components / ui / dropdown - menu';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
 import { ScoreBadge  } from '@/components / jobs / applications / ScoreBadge';
 import { toast  } from '@/hooks / use - toast';
 import Image from 'next / image'; // Import next / image;
@@ -252,9 +252,9 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
       Date.now () - 7 * 24 * 60 * 60 * 1000;
   const handleSaveNotes = () =>: any {// Here you would save the notes to the database;
     // For now, we'll just show a toast;
-    toast ({title: 'Notes saved',description: 'Your notes have been saved',})setShowNotes (false)}
+    toast ({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes (false)}
   const handleHireConfirmed = () =>: any {// Hiring process completed via the modal;
-    toast ({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.',})}
+    toast ({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'})}
   const candidate_name = application.talent_profile?.full_name || 'Candidate';
   return (<>;
       <Draggable draggable_id={application.id} index={index}>;
@@ -328,7 +328,7 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
               <div className='flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2'>;
                 <div className='flex items - center'>;
                   <Calendar className='h - 3 w - 3 mr - 1' />;
-                  {formatDistanceToNow (new Date (application.created_at), {add_suffix: true,})}
+                  {formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}
                 </div>;
                 {is_stalled && (<div className='flex items - center text - amber - 500'>;
                     <AlertTriangle className='h - 3 w - 3 mr - 1' />;
@@ -384,10 +384,10 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
-        is_open = {showHireModal, }
-        on_close = {() => setShowHireModal (false), }
-        application = {application, }
-        on_confirm = {handleHireConfirmed, }
+        is_open = {showHireModal }
+        on_close = {() => setShowHireModal (false) }
+        application = {application }
+        on_confirm = {handleHireConfirmed }
       />;
     </>)//Here you would save the notes to the database //For now, we'll just show a toast toast ({setShowNotes (false)}
   //Hiring process completed via the modal toast ({application.id;

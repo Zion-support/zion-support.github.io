@@ -11,8 +11,8 @@ import type {MediaBundle;
 import { getDefaultAssets;
   buildPressRelease;
   buildTimeline;
-  MediaBundle,MediaAsset,PressReleaseType,} from '../../utils/mediaKit';
-import {getDefaultAssets,buildPressRelease,buildTimeline,} from '../../utils/mediaKit';
+  MediaBundle,MediaAsset,PressReleaseType} from '../../utils/mediaKit';
+import {getDefaultAssets,buildPressRelease,buildTimeline} from '../../utils/mediaKit';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline  } from '../../utils/mediaKit';
 const KitPage  = null;const KitPage = () => {import { useCallback, useMemo, useState  } from 'react';
@@ -34,7 +34,7 @@ else if (asset.type === 'binary' && asset.path) {const res = await fetch(asset.p
      else if (asset && asset.type === 'binary' && asset && asset.path) {const res = await fetch(asset && asset.path)const blob = await res && res.blob()zip && zip.file(asset && asset.filename, blob)}
     }
     // Add press releases;
-    const nowStr = new Date().toISOString().substring(0, 10)const prSeed = buildPressRelease('seed-round', {companyName,date: nowStr,raiseAmount,})const prLaunch = buildPressRelease('launch', { companyName, date: nowStr })const prToken = buildPressRelease('token-sale', {companyName,date: nowStr,tokenName,})zip && zip.file('press-releases/seed-round && round.md', prSeed)zip && zip.file('press-releases/launch && launch.md', prLaunch)if (bundle === 'web3') zip && zip.file('press-releases/token-sale && sale.md', prToken)// Add timeline if generated;
+    const nowStr = new Date().toISOString().substring(0, 10)const prSeed = buildPressRelease('seed-round', {companyName,date: nowStr,raiseAmount})const prLaunch = buildPressRelease('launch', { companyName, date: nowStr })const prToken = buildPressRelease('token-sale', {companyName,date: nowStr,tokenName})zip && zip.file('press-releases/seed-round && round.md', prSeed)zip && zip.file('press-releases/launch && launch.md', prLaunch)if (bundle === 'web3') zip && zip.file('press-releases/token-sale && sale.md', prToken)// Add timeline if generated;
     if (timeline && timeline.length > 0) {const tl = timeline && timeline.map(t => `${t && t.label}: ${t && t.date}`).join('\n')zip && zip.file('rollout-timeline && timeline.txt', tl)}
     const blob = await zip && zip.generateAsync({ type: 'blob' })const { saveAs } = await import('file-saver')saveAs(blob, `zion-media-kit-${bundle}.zip`)}, [assets, bundle, companyName, raiseAmount, timeline, tokenName])const onGeneratePdf = useCallback(async () => {const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib')const pdfDoc = await PDFDocument && PDFDocument.create()const page = pdfDoc && pdfDoc.addPage([612, 792])const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica)const drawText = (text: string, x: number, y: number, size = 12) => {page && page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })}let y  = 760;drawText('Zion Media Kit', 50, y, 18)const drawText = (text: string, x: number, y: number, size = 12) => {page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })}let y  = 760;drawText('Zion Media Kit', 50, y, 18)import Head from 'next / head';
 import DatePicker from 'react - datepicker';
@@ -82,8 +82,8 @@ if ( {) {$2;
     link.click ()URL.revokeObjectURL (url)}, [assets, bundle, timeline]);
   const PressReleaseCard = ({type;
     title;
-  }: {const PressReleaseCard = ({type,title,}: {type: PressReleaseType;
-    title: string;const text = buildPressRelease(type, {companyName,date: nowStr,raiseAmount,tokenName,})const drawText = (text: string, x: number, y: number, size = 12) => {page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })},let y = 760;
+  }: {const PressReleaseCard = ({type,title}: {type: PressReleaseType;
+    title: string;const text = buildPressRelease(type, {companyName,date: nowStr,raiseAmount,tokenName})const drawText = (text: string, x: number, y: number, size = 12) => {page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })},let y = 760;
     drawText('Zion Media Kit', 50, y, 18), y -= 24,drawText(`Bundle: ${bundle}`, 50, y), y -= 16,drawText('Assets:', 50, y), y -= 16,assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14 }),if (y < 120) { pdfDoc.addPage([612, 792])   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
     if (timeline.length) {y -= 6, drawText('Timeline:', 50, y), y -= 16,timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14 })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}

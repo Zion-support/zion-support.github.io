@@ -61,7 +61,7 @@ import { toast } from "sonner",import { JobApplication } from "@/types/jobs",int
         }if (data && data.scored_at) {setIsScoring(false),toast && toast.success("Resume scoring completed"),if (onScoreUpdated) onScoreUpdated(data as JobApplication),return;
         }if (attempts < maxAttempts) {setTimeout(checkScore, 3000)} else {setIsScoring(false),toast && toast.info("Scoring is taking longer than expected. Check back later.")}
       },setIsScoring(false),toast.error("Failed to check scoring status"),return;}
-        if (data.scored_at) {setIsScoring(false),toast.success("Resume scoring completed"),if (onScoreUpdated) onScoreUpdated(data as JobApplication),}if (attempts < maxAttempts) {setTimeout(checkScore, 3000)} else {setIsScoring(false),toast.info("Scoring is taking longer than expected. Check back later.")}
+        if (data.scored_at) {setIsScoring(false),toast.success("Resume scoring completed"),if (onScoreUpdated) onScoreUpdated(data as JobApplication)}if (attempts < maxAttempts) {setTimeout(checkScore, 3000)} else {setIsScoring(false),toast.info("Scoring is taking longer than expected. Check back later.")}
   },setTimeout(checkScore, 3000)} catch (error: any) {setIsScoring(false),toast && toast.error(`Failed to score resume: ${error && error.message}`)}
   },// Render the score result or button to score;const hasScore = null;
   // Render the score result or button to score;
@@ -268,8 +268,8 @@ if ( {) {$2;
             <p className="text-muted-foreground mb-4">;
               Analyze how well this resume matches your job requirements.;
             </p>;<Button;
-              onClick = {handleScore,}
-              disabled = {isScoring,}
+              onClick = {handleScore}
+              disabled = {isScoring}
               className="w-full">;
               {isScoring ? (<>;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -303,8 +303,8 @@ if ( {) {$2;
               Analyze how well this resume matches your job requirements.;
             </p>;
             <Button;
-              on_click = {handle_score, }
-              disabled = {is_scoring, }
+              on_click = {handle_score }
+              disabled = {is_scoring }
               className="w - full";
             >;
               {is_scoring ? (<>;

@@ -41,7 +41,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
         )}import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,} from '@/components / ui / alert - dialog';
+import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
 import Image from 'next / image';
 import { PortfolioProject  } from '@/types / resume';
 interface ProjectCardProps  {project: PortfolioProject;
@@ -141,7 +141,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
               rel='noopener noreferrer';
               aria-label='GitHub';
               title='GitHub';
-              href = {project && project.github_url,}<CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
+              href = {project && project.github_url}<CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
         <div className="flex gap-2">;
           {project.github_url && (<a;
               href={project.github_url}target="_blank";
@@ -229,7 +229,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
               rel='noopener noreferrer';
               aria - label='GitHub';
               title='GitHub';
-              href = {project.github_url, }
+              href = {project.github_url }
               target="_blank";
               rel="noopener noreferrer";
               aria - label="GitHub";

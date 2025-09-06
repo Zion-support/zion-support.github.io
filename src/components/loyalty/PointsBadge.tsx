@@ -14,7 +14,7 @@ import { usePoints } from '@/hooks/usePoints',import { useAuth } from '@/hooks/u
     },{ purchase: 0, post: 0, referral: 0 }
   ),const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {if (!isAuthenticated) {e.preventDefault(),setLoginOpen(true)}
   },const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {e.preventDefault(),e.stopPropagation(),if (!isAuthenticated) return,setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {setIsRefreshing(false)}
-  },}
+  }}
   },import React, { useState } from 'react';
 import { usePoints   } from '@/hooks/usePoints';
 import { useAuth   } from '@/hooks/useAuth';

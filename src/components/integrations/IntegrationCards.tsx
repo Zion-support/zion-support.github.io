@@ -30,8 +30,8 @@ interface IntegrationCardProps  {title: string;
   status?: 'connected' | 'disconnected' | 'pending';
   href?: string;
   onConnect?: () => void;
-import {Card,CardContent,CardFooter,CardHeader,} from '@/components/ui/card';
-  ArrowRight,Check,ExternalLink,Slack,Briefcase,Users,} from 'lucide-react';
+import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
+  ArrowRight,Check,ExternalLink,Slack,Briefcase,Users} from 'lucide-react';
 }interface IntegrationCardProps  {title: string;
   description: string;
   icon: React && React.ReactNode;
@@ -175,9 +175,9 @@ export function IntegrationCard() {return (<Card className="overflow-hidden">;
         onConnect={() => logDebug('Connect Teams clicked')}}/>;
     </div>;
   )})}import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardFooter,CardHeader,} from '@/components / ui / card';
+import { Card,CardContent,CardFooter,CardHeader} from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
-  ArrowRight,Check,ExternalLink,Slack,Briefcase,Users,} from 'lucide-react';
+  ArrowRight,Check,ExternalLink,Slack,Briefcase,Users} from 'lucide-react';
 interface IntegrationCardProps  {title: string;
   description: string;
   icon: React.ReactNode;
@@ -283,8 +283,8 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
       <IntegrationCard;
         title="Salesforce";
         description="Sync leads and opportunities with Salesforce.";
-        icon = {<Briefcase className="h - 5 w - 5" />, }
-        on_connect = {() => log_debug ('Connect Salesforce clicked'), }
+        icon = {<Briefcase className="h - 5 w - 5" /> }
+        on_connect = {() => log_debug ('Connect Salesforce clicked') }
       />;
       <IntegrationCard;
         title='Microsoft Teams';
@@ -299,19 +299,19 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
         description="Receive updates through Microsoft Teams.";
         icon={<Users className="h - 5 w - 5" />}
         on_connect={() => log_debug ('Connect Teams clicked')}
-        icon = {<Users className="h - 5 w - 5" />, }
-        on_connect = {() => log_debug ('Connect Teams clicked'), }
+        icon = {<Users className="h - 5 w - 5" /> }
+        on_connect = {() => log_debug ('Connect Teams clicked') }
       />;
-    </div>)}icon = {<Briefcase className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Salesforce clicked'),}
+    </div>)}icon = {<Briefcase className="h-5 w-5" />}
+        onConnect = {() => logDebug('Connect Salesforce clicked')}
       />;
       <IntegrationCard;
         title='Microsoft Teams';
         description='Receive updates through Microsoft Teams.';
         icon={<Users className='h-5 w-5' />}
         onConnect={() => logDebug('Connect Teams clicked')}
-        icon = {<Users className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Teams clicked'),}
+        icon = {<Users className="h-5 w-5" />}
+        onConnect = {() => logDebug('Connect Teams clicked')}
       />;
     </div>;
   )}

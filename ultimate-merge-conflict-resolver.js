@@ -45,6 +45,87 @@ function fixSyntaxAndConflicts() {console.log('\n🔧 Fixing syntax errors and m
   }console.log(`\n📊 Fixed ${fixedCount} files`)return fixedCount;
 }// Step 4: Create GitHub PR automation;
 function createGitHubPRAutomation() {console.log('\n🔧 Creating GitHub PR automation...')const prScript = `#!/usr/bin/env node;
+      
+    } catch (error) {
+      console.log(`❌ Error processing ${branch}: ${error.message}`);
+      conflictCount++;
+      runCommand('git merge --abort', 'Aborting failed merge');
+    }
+  }
+  
+  console.log(`\n📊 Branch Processing Summary:`);
+  console.log(`✅ Successfully merged: ${mergedCount} branches`);
+  console.log(`❌ Failed to merge: ${conflictCount} branches`);
+  
+  return { mergedCount, conflictCount };
+}
+
+// Step 3: Fix syntax errors and merge conflicts
+function fixSyntaxAndConflicts() {
+  console.log('\n🔧 Fixing syntax errors and merge conflicts...');
+  
+  // Find all TypeScript/JavaScript files
+  const files = runCommand('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -50', 'Finding files to fix');
+  if (!files) return;
+  
+  const fileList = files.split('\n').filter(f => f.trim());
+  let fixedCount = 0;
+  
+  for (const file of fileList) {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      let originalContent = content;
+      
+      // Remove merge conflict markers
+      
+      // Fix import statements
+      content = content.replace(/import React from "react",/g, 'import React from "react";');
+      content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");
+      content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';");
+      content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
+      content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");
+      content = content.replace(/from '..\/components\/Layout',/g, "from '../components/Layout';");
+      content = content.replace(/from '..\/components\/layout\/MainLayout',/g, "from '../components/layout/MainLayout';");
+      
+      // Fix semicolons in imports
+      content = content.replace(/import ([^;]+)(?<!;)$/gm, 'import $1;');
+      
+      // Fix array and object syntax
+      content = content.replace(/\[\s*\{\s*\}/g, '[');
+      content = content.replace(/\{\s*\}\s*([a-zA-Z])/g, ',\n  {\n    $1');
+      content = content.replace(/\[\s*([a-zA-Z])/g, '[\n  {\n    $1');
+      
+      // Fix specific syntax issues
+      content = content.replace(/Play;/g, 'Play');
+      content = content.replace(/CheckCircle ;/g, 'CheckCircle');
+      content = content.replace(/Shield;/g, 'Shield');
+      content = content.replace(/Handshake ;/g, 'Handshake');
+      content = content.replace(/Heart;/g, 'Heart');
+      content = content.replace(/Gamepad2;/g, 'Gamepad2');
+      content = content.replace(/Filter;/g, 'Filter');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content);
+        console.log(`✅ Fixed ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.log(`❌ Error fixing ${file}: ${error.message}`);
+    }
+  }
+  
+  console.log(`\n📊 Fixed ${fixedCount} files`);
+  return fixedCount;
+}
+
+// Step 4: Create GitHub PR automation
+function createGitHubPRAutomation() {
+  console.log('\n🔧 Creating GitHub PR automation...');
+  
+  const prScript = `#!/usr/bin/env node
+
+import { execSync } from 'child_process';
+
 const GITHUB_TOKEN = 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME  = 'zion.app';function githubAPI() {const url  = \`https://api.github.com/repos/\${REPO_OWNER}/\${REPO_NAME}\${endpoint}\`;let curlCommand = \`curl -s -X \${method} \\;

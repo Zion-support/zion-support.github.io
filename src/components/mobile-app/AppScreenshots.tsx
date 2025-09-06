@@ -39,11 +39,11 @@ const mockScreenshots = [;
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;<div;
-            ref = {scrollContainerRef,}
+            ref = {scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (<div;
-                key = {screenshot && screenshot.id,}
+                key = {screenshot && screenshot.id}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;<img;
                   src={screenshot.src}
                   alt={screenshot.alt}
@@ -104,7 +104,7 @@ const mockScreenshots = [;
         </div>;
       </div>;
     </section>;
-  )}'"},}}
+  )}'"}}}
 import React, { useRef } from './react';
 import { Button   } from '@/components / ui / button';
 // These would be replaced with actual screenshots;
@@ -127,23 +127,23 @@ if ( {) {$2;
             variant="ghost";
             size="icon";
             className="absolute left - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";
-            on_click = {(, ) => scroll ("left"), }
+            on_click = {(, ) => scroll ("left") }
             aria - label="Scroll left";
           >;
             <ChevronLeft className="h - 6 w - 6" />;
           </Button>;
           <div;
-            ref = {scrollContainerRef, }
+            ref = {scrollContainerRef }
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap - mandatory";
             style={{ scrollbar_width: "none", msOverflowStyle: "none" }}
           >;
             {mock_screenshots.map ((screenshot, ) => (<div;
-                key = {screenshot.id, }
+                key = {screenshot.id }
                 className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion - purple / 30";
               >;
                 <img;
-                  src = {screenshot.src, }
-                  alt = {screenshot.alt, }
+                  src = {screenshot.src }
+                  alt = {screenshot.alt }
                   className="w - full h - full object - cover";
                   loading="lazy";
                 />;
@@ -153,7 +153,7 @@ if ( {) {$2;
             variant="ghost";
             size="icon";
             className="absolute right - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";
-            on_click = {() => scroll ("right"), }
+            on_click = {() => scroll ("right") }
             aria - label="Scroll right";
           >;
             <ChevronRight className="h - 6 w - 6" />;
@@ -161,5 +161,5 @@ if ( {) {$2;
         </div>;
       </div>;
     </section>)}
-'"},}))// These would be replaced with actual screenshots;
+'"}}))// These would be replaced with actual screenshots;
   )}'";

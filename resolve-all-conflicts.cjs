@@ -33,6 +33,8 @@ console.log(`Total files to process: ${allConflictFiles.length}`);
 
 // Function to resolve conflicts by choosing incoming changes
 function resolveConflicts(filePath) {
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
     console.log(`Resolving conflicts in ${filePath}...`);
     
@@ -58,6 +60,7 @@ function resolveConflicts(filePath) {
       console.log(`⚠️  File not found: ${filePath}`);
       console.log(`⚠️  File not found: ${filePath}`);
 >>>>>>> main
+
       return false;
     }
 
@@ -229,6 +232,8 @@ function resolveConflicts(filePath) {
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
+    if (!content.includes('
+        const parts = match.split('
     return false;
   }
 }
@@ -245,6 +250,7 @@ function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
+
 function findFilesWithConflicts() {
   try {
     const result = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -259,6 +265,7 @@ function findConflictedFiles() {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
 >>>>>>> main
+
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
     return [];
@@ -381,3 +388,4 @@ console.log('🎉 Merge conflict resolution completed!');
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
+

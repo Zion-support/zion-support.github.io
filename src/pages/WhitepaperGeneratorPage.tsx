@@ -47,7 +47,7 @@ import { Button } from "@/components/ui/button",import { Input } from "@/compone
 import { Send } from 'lucide-react', // Added Send icon;
 import { toast } from "sonner",import { logErrorToProduction } from '@/utils/productionLogger',interface WhitepaperSection  {id: string,title: string,id: string;
   title: string;content: string;
-        useCases,rewardsLogic,governanceLogic,legalDisclaimers,}
+        useCases,rewardsLogic,governanceLogic,legalDisclaimers}
       if (data && (data as any).error) {throw new Error(`Generation error: ${(data as any).error}`)}
       if (!data || !(data as any).whitepaperDraft) {throw new Error('No whitepaper draft received from the function.')}
       setSections([])} finally {setIsLoading(false)}

@@ -18,7 +18,7 @@
     )}return (<>;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
-        description = {profileData.bio || "View the profile of this talented individual.",}return (<>;
+        description = {profileData.bio || "View the profile of this talented individual."}return (<>;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}/>;
@@ -80,8 +80,8 @@
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
               <div className="space-y-3">;
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (profileData.portfolio_links.map((link: string, index: number) => (<a;
-                      key = {link + index,}
-                      href = {link,}
+                      key = {link + index}
+                      href = {link}
                       target="_blank";
                       rel="noopener noreferrer";
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
@@ -136,7 +136,7 @@ import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { HireNowCTA  } from '@/components/profile/HireNowCTA';
 import { logErrorToProduction  } from '@/utils/productionLogger';
-import { Star,MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2,} from 'lucide-react';
+import { Star,MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2} from 'lucide-react';
 import { useState, useEffect } from "react",import { useRouter } from "next/router",import { supabase } from "@/integrations/supabase/client",import { toast } from "@/components/ui/use-toast",import { SEO } from "@/components/SEO",import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2  } from 'lucide-react';
 import { Star  } from 'lucide-react';
 export default function ProfilePage() {// useParams may be untyped in this environment, so avoid passing a;

@@ -12,6 +12,49 @@ const monitor = new DependencyMonitor()monitor.run().catch(error = > {process.ex
       }),,const audit = JSON.parse(auditResult),return audit;
     } catch (error) {,// npm audit might fail if there are vulnerabilities,try {,const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {,// Try to parse the error output for vulnerability info,const lines = output.split('\n'),const vulnerabilities = [],,lines.forEach(line => {,if (line.includes('│')) {,const parts = line.split('│').map(p => p.trim()).filter(Boolean),if (parts.length >= 4) {,vulnerabilities.push({,packag: e: parts[0],severit: y: parts[1],titl: e: parts[2],pat: h: parts[3];
                 })}
+;
+  log(message) {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+;
+    try {;
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {,;
+      console.error('Error writing to log: file:', error.message);
+}
+},;
+,;
+  async checkNpmAudit() {,;
+    try {,;
+      this.log('🔒 Running npm audit...'),;
+      const auditResult = execSync('npm audit --json', {;
+        cw: d: this.projectRoot,;
+        encodin: g: 'utf8',;
+        stdi: o: 'pipe';
+      }),;
+,;
+      const audit = JSON.parse(auditResult),;
+      return audit;
+    } catch (error) {,;
+      // npm audit might fail if there are vulnerabilities,;
+      try {,;
+        const output = error.stdout?.toString() || error.stderr?.toString() || '',;
+        if (output.includes('npm ERR!')) {,;
+          // Try to parse the error output for vulnerability info,;
+          const lines = output.split('\n'),;
+          const vulnerabilities = [],;
+,;
+          lines.forEach(line => {,;
+            if (line.includes('│')) {,;
+              const parts = line.split('│').map(p => p.trim()).filter(Boolean),;
+              if (parts.length >= 4) {,;
+                vulnerabilities.push({,;
+                  packag: e: parts[0],;
+                  severit: y: parts[1],;
+                  titl: e: parts[2],;
+                  pat: h: parts[3];
+                });
+              }
             }
           }),,return { vulnerabilities, erro: r: true;
         }
@@ -42,7 +85,7 @@ const monitor = new DependencyMonitor()monitor.run().catch(error = > {process.ex
       })},,if (!packageLockInfo.exists) {,report.recommendations.push({,priorit: y: 'medium',messag: e: 'No package-lock.json found',actio: n: 'Run npm install to generate package-lock.json';
       })},,return report;
 },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursiv: e: true })},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved: to: ${this.reportFile}`)} catch (error) {,this.log(`Error saving: report: ${error.message}`)}
-},,async run() {,this.log('🔍 Starting Dependency Monitor...'),this.log(`Project: root: ${this.projectRoot}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true })},,// Run all checks,this.log('🔒 Checking security vulnerabilities...'),const auditResult = await this.checkNpmAudit(),,this.log('📦 Checking outdated packages...'),const outdatedResult = await this.checkOutdatedPackages(),,this.log('📋 Checking package-lock.json...'),const packageLockInfo = await this.checkPackageLock(),,this.log('🟢 Checking Node.js and npm versions...'),const nodeInfo = await this.checkNodeVersion(),,this.log('🎣 Checking git hooks...'),const gitHooksInfo = await this.checkGitHooks(),,// Generate report,this.log('📊 Generating dependency report...'),const report = await this.generateReport(,auditResult,outdatedResult,packageLockInfo,nodeInfo,gitHooksInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Dependency Monitor: Summary: '),this.log(`Security: vulnerabilities: ${report.summary.vulnerabilities.total}`),this.log(`  Critica: l: ${report.summary.vulnerabilities.critical}`),this.log(`  Hig: h: ${report.summary.vulnerabilities.high}`),this.log(`  Moderat: e: ${report.summary.vulnerabilities.moderate}`),this.log(`  Lo: w: ${report.summary.vulnerabilities.low}`),this.log(`Outdated: packages: ${report.summary.outdatedPackages}`),this.log(`Package lock: status: ${report.summary.packageLockStatus}`),this.log(`Node: version: ${report.summary.nodeVersion}`),this.log(`NPM: version: ${report.summary.npmVersion}`),this.log(`Duratio: n: ${duration}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)})} else {,this.log('\n✨ All dependencies are healthy!')},,// If there are critical vulnerabilities, suggest immediate action,if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,this.log('\n🚨 CRITICA: L: Security vulnerabilities detected!'),this.log('Consider: running: npm audit fix'),} catch (error) {,this.log(`❌ Error running dependency: monitor: ${error.message}`),process.exit(1)}
+},,async run() {,this.log('🔍 Starting Dependency Monitor...'),this.log(`Project: root: ${this.projectRoot}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true })},,// Run all checks,this.log('🔒 Checking security vulnerabilities...'),const auditResult = await this.checkNpmAudit(),,this.log('📦 Checking outdated packages...'),const outdatedResult = await this.checkOutdatedPackages(),,this.log('📋 Checking package-lock.json...'),const packageLockInfo = await this.checkPackageLock(),,this.log('🟢 Checking Node.js and npm versions...'),const nodeInfo = await this.checkNodeVersion(),,this.log('🎣 Checking git hooks...'),const gitHooksInfo = await this.checkGitHooks(),,// Generate report,this.log('📊 Generating dependency report...'),const report = await this.generateReport(,auditResult,outdatedResult,packageLockInfo,nodeInfo,gitHooksInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Dependency Monitor: Summary: '),this.log(`Security: vulnerabilities: ${report.summary.vulnerabilities.total}`),this.log(`  Critica: l: ${report.summary.vulnerabilities.critical}`),this.log(`  Hig: h: ${report.summary.vulnerabilities.high}`),this.log(`  Moderat: e: ${report.summary.vulnerabilities.moderate}`),this.log(`  Lo: w: ${report.summary.vulnerabilities.low}`),this.log(`Outdated: packages: ${report.summary.outdatedPackages}`),this.log(`Package lock: status: ${report.summary.packageLockStatus}`),this.log(`Node: version: ${report.summary.nodeVersion}`),this.log(`NPM: version: ${report.summary.npmVersion}`),this.log(`Duratio: n: ${duration}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)})} else {,this.log('\n✨ All dependencies are healthy!')},,// If there are critical vulnerabilities, suggest immediate action,if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,this.log('\n🚨 CRITICA: L: Security vulnerabilities detected!'),this.log('Consider: running: npm audit fix')} catch (error) {,this.log(`❌ Error running dependency: monitor: ${error.message}`),process.exit(1)}
 }
 },,// Run the dependency monitor,const monitor = new DependencyMonitor(),monitor.run().catch(error => {,process.exit(1)}),#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class DependencyMonitor {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log: file:', error.message)}
   },,async checkNpmAudit() {,try {,this.log('🔒 Running npm audit...'),const auditResult = execSync('npm audit --json', {,cw: d: this.projectRoot,encodin: g: 'utf8',stdi: o: 'pipe';
@@ -120,7 +163,7 @@ const monitor = new DependencyMonitor()monitor.run().catch(error = > {process.ex
       })},,if (!packageLockInfo.exists) {,report.recommendations.push({,priorit: y: 'medium',messag: e: 'No package-lock.json found',actio: n: 'Run npm install to generate package-lock.json';
       })},,return report;
 },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursiv: e: true })},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved: to: ${this.reportFile}`)} catch (error) {,this.log(`Error saving: report: ${error.message}`)}
-},,async run() {,this.log('🔍 Starting Dependency Monitor...'),this.log(`Project: root: ${this.projectRoot}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true })},,// Run all checks,this.log('🔒 Checking security vulnerabilities...'),const auditResult = await this.checkNpmAudit(),,this.log('📦 Checking outdated packages...'),const outdatedResult = await this.checkOutdatedPackages(),,this.log('📋 Checking package-lock.json...'),const packageLockInfo = await this.checkPackageLock(),,this.log('🟢 Checking Node.js and npm versions...'),const nodeInfo = await this.checkNodeVersion(),,this.log('🎣 Checking git hooks...'),const gitHooksInfo = await this.checkGitHooks(),,// Generate report,this.log('📊 Generating dependency report...'),const report = await this.generateReport(,auditResult,outdatedResult,packageLockInfo,nodeInfo,gitHooksInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Dependency Monitor: Summary: '),this.log(`Security: vulnerabilities: ${report.summary.vulnerabilities.total}`),this.log(`  Critica: l: ${report.summary.vulnerabilities.critical}`),this.log(`  Hig: h: ${report.summary.vulnerabilities.high}`),this.log(`  Moderat: e: ${report.summary.vulnerabilities.moderate}`),this.log(`  Lo: w: ${report.summary.vulnerabilities.low}`),this.log(`Outdated: packages: ${report.summary.outdatedPackages}`),this.log(`Package lock: status: ${report.summary.packageLockStatus}`),this.log(`Node: version: ${report.summary.nodeVersion}`),this.log(`NPM: version: ${report.summary.npmVersion}`),this.log(`Duratio: n: ${duration}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)})} else {,this.log('\n✨ All dependencies are healthy!')},,// If there are critical vulnerabilities, suggest immediate action,if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,this.log('\n🚨 CRITICA: L: Security vulnerabilities detected!'),this.log('Consider: running: npm audit fix'),} catch (error) {,this.log(`❌ Error running dependency: monitor: ${error.message}`),process.exit(1)}
+},,async run() {,this.log('🔍 Starting Dependency Monitor...'),this.log(`Project: root: ${this.projectRoot}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true })},,// Run all checks,this.log('🔒 Checking security vulnerabilities...'),const auditResult = await this.checkNpmAudit(),,this.log('📦 Checking outdated packages...'),const outdatedResult = await this.checkOutdatedPackages(),,this.log('📋 Checking package-lock.json...'),const packageLockInfo = await this.checkPackageLock(),,this.log('🟢 Checking Node.js and npm versions...'),const nodeInfo = await this.checkNodeVersion(),,this.log('🎣 Checking git hooks...'),const gitHooksInfo = await this.checkGitHooks(),,// Generate report,this.log('📊 Generating dependency report...'),const report = await this.generateReport(,auditResult,outdatedResult,packageLockInfo,nodeInfo,gitHooksInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Dependency Monitor: Summary: '),this.log(`Security: vulnerabilities: ${report.summary.vulnerabilities.total}`),this.log(`  Critica: l: ${report.summary.vulnerabilities.critical}`),this.log(`  Hig: h: ${report.summary.vulnerabilities.high}`),this.log(`  Moderat: e: ${report.summary.vulnerabilities.moderate}`),this.log(`  Lo: w: ${report.summary.vulnerabilities.low}`),this.log(`Outdated: packages: ${report.summary.outdatedPackages}`),this.log(`Package lock: status: ${report.summary.packageLockStatus}`),this.log(`Node: version: ${report.summary.nodeVersion}`),this.log(`NPM: version: ${report.summary.npmVersion}`),this.log(`Duratio: n: ${duration}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)})} else {,this.log('\n✨ All dependencies are healthy!')},,// If there are critical vulnerabilities, suggest immediate action,if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,this.log('\n🚨 CRITICA: L: Security vulnerabilities detected!'),this.log('Consider: running: npm audit fix')} catch (error) {,this.log(`❌ Error running dependency: monitor: ${error.message}`),process.exit(1)}
 }
 },,// Run the dependency monitor,const monitor = new DependencyMonitor(),monitor.run().catch(error => {,process.exit(1)}),#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class DependencyMonitor {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log: file:', error.message)}
   },,async checkNpmAudit() {,try {,this.log('🔒 Running npm audit...'),const auditResult = execSync('npm audit --json', {,cw: d: this.projectRoot,encodin: g: 'utf8',stdi: o: 'pipe';
@@ -178,6 +221,119 @@ const monitor = new DependencyMonitor()monitor.run().catch(error = > {process.ex
       try {const output = error.stdout?.toString() || '';
         if (output) {return JSON.parse(output)}} catch (parseError) {this.log(`Error parsing npm outdated output: ${parseError.message}`)}return {}}}async checkPackageLock() {try {const packageLockPath  = path.join(this.projectRoot, 'package-lock.json')if (!fs.existsSync(packageLockPath)) {return { exists: false, message: 'No package-lock.json found';
       }const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'))const lockfileVersion  = packageLock.lockfileVersion;return {exists: true, lockfileVersion,dependencies: Object.keys(packageLock.dependencies || {}).length;
+},;
+,;
+// Run the dependency monitor,;
+const monitor = new DependencyMonitor(),;
+monitor.run().catch(error => {,;
+  process.exit(1);
+}),;
+
+
+      , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
+    low: 0;
+    },
+
+
+class DependencyMonitor {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log');
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
+    this.startTime = Date.now();
+};
+;
+  log(message) {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+;
+    try {;
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {;
+      console.error('Error writing to log file:', error.message);
+};
+};
+;
+  async checkNpmAudit() {;
+    try {;
+      this.log('🔒 Running npm audit...');
+      const auditResult = execSync('npm audit --json', {;
+        cwd: this.projectRoot, encoding: 'utf8',
+        stdio: 'pipe'
+      });
+;
+      const audit = JSON.parse(auditResult);
+      return audit;
+    } catch (error) {;
+      // npm audit might fail if there are vulnerabilities;
+      try {;
+        const output = error.stdout?.toString() || error.stderr?.toString() || '';
+        if (output.includes('npm ERR!')) {;
+          // Try to parse the error output for vulnerability info;
+          const lines = output.split('\n');
+          const vulnerabilities = [];
+;
+          lines.forEach(line => {;
+            if (line.includes('│')) {;
+              const parts = line.split('│').map(p => p.trim()).filter(Boolean);
+              if (parts.length >= 4) {;
+                vulnerabilities.push({;
+                  package: parts[0], severity: parts[1],
+                  title: parts[2], path: parts[3]
+                });
+              };
+            };
+          });
+;
+          return { vulnerabilities, error: true 
+        };
+      } catch (parseError) {;
+        this.log(`Error parsing npm audit output: ${parseError.message}`);
+      };
+;
+      return { error: true, message: error.message 
+};
+};
+;
+  async checkOutdatedPackages() {;
+    try {;
+      this.log('📦 Checking for outdated packages...');
+      const outdatedResult = execSync('npm outdated --json', {;
+        cwd: this.projectRoot, encoding: 'utf8',
+        stdio: 'pipe'
+      });
+;
+      const outdated = JSON.parse(outdatedResult);
+      return outdated;
+    } catch (error) {;
+      // npm outdated returns non-zero exit code if there are outdated packages;
+      try {;
+        const output = error.stdout?.toString() || '';
+        if (output) {;
+          return JSON.parse(output);
+        };
+      } catch (parseError) {;
+        this.log(`Error parsing npm outdated output: ${parseError.message}`);
+      };
+;
+      return {};
+};
+};
+;
+  async checkPackageLock() {;
+    try {;
+      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+;
+      if (!fs.existsSync(packageLockPath)) {;
+        return { exists: false, message: 'No package-lock.json found' 
+      };
+;
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
+      const lockfileVersion = packageLock.lockfileVersion;
+;
+      return {;
+        exists: true, lockfileVersion,
+        dependencies: Object.keys(packageLock.dependencies || {}).length;
         devDependencies: Object.keys(packageLock.devDependencies || {}).length;
       }} catch (error) {return { exists: false, error: error.message;
 }}async checkNodeVersion() {try {const nodeVersion = process.version;
@@ -238,3 +394,119 @@ if ( {) {$2;
 const monitor = new DependencyMonitor ()monitor.run ().catch (error = > { process.exit (1)});
 monitor.run().catch(error = > {process.exit(1)})ursor/fix-website-loading-errors-and-merge-6662;
 monitor.run().catch(error = > {process.exit(1)})
+        packageLockInfo, nodeInfo, gitHooksInfo);
+;
+      // Save report;
+      await this.saveReport(report);
+;
+      const duration = Date.now() - this.startTime;
+;
+      // Log summary;
+      this.log('\n📊 Dependency Monitor Summary: '),
+      this.log(`Security vulnerabilities: ${report.summary.vulnerabilities.total}`);
+      this.log(`  Critical: ${report.summary.vulnerabilities.critical}`);
+      this.log(`  High: ${report.summary.vulnerabilities.high}`);
+      this.log(`  Moderate: ${report.summary.vulnerabilities.moderate}`);
+      this.log(`  Low: ${report.summary.vulnerabilities.low}`);
+      this.log(`Outdated packages: ${report.summary.outdatedPackages}`);
+      this.log(`Package lock status: ${report.summary.packageLockStatus}`);
+      this.log(`Node version: ${report.summary.nodeVersion}`);
+      this.log(`NPM version: ${report.summary.npmVersion}`);
+      this.log(`Duration: ${duration}ms`);
+;
+      if (report.recommendations.length > 0) {;
+        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+          this.log(`    Action: ${rec.action}`);
+        });
+      } else {;
+        this.log('\n✨ All dependencies are healthy!');
+      };
+;
+      // If there are critical vulnerabilities, suggest immediate action;
+      if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {;
+        this.log('\n🚨 CRITICAL: Security vulnerabilities detected!'), this.log('Consider running: npm audit fix'),
+      ;
+;
+    } catch (error) {;
+      this.log(`❌ Error running dependency monitor: ${error.message}`);
+      process.exit(1);
+};
+};
+};
+;
+// Run the dependency monitor;
+const monitor = new DependencyMonitor();
+
+    outdated_packages: Object.keys (outdated_result).length, packageLockStatus: packageLockInfo.exists ? 'healthy': 'missing', node_version: node_info.node_version,
+    npm_version: node_info.npm_version} details: {
+      , audit: audit_result, outdated: outdated_result, package_lock: packageLockInfo, node: node_info,
+    git_hooks: gitHooksInfo;
+    },
+    recommendations: []}
+; // Count vulnerabilities by severity; // Check condition
+if ( {) {
+  $2
+} Object.values (audit_result.vulnerabilities).for_each (vuln = > { report.summary.vulnerabilities.total++; const severity = vuln.severity?.toLowerCase () || 'unknown'; // Check condition
+if (report.summary.vulnerabilities.critical++) {
+  $2
+} else // Check condition
+if (report.summary.vulnerabilities.high++) {
+  $2
+} else // Check condition
+if (report.summary.vulnerabilities.moderate++) {
+  $2
+} else if (report.summary.vulnerabilities.low++})}) {
+  $2
+} // Generate recommendations; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'critical', message: 'Critical or high security vulnerabilities detected', action: 'Run npm audit fix immediately'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'high', message: 'Moderate security vulnerabilities detected', action: 'Review and fix moderate vulnerabilities'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'Many outdated packages detected', action: 'Consider updating packages in batches'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'No package - lock.json found', action: 'Run npm install to generate package - lock.json'})}
+; return report}
+; async save_report (report) { try { const report_dir = path.dirname (this.report_file); if () {) {
+  $2
+} fs.mkdir_sync (report_dir, { recursive: true })}
+; fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2)); this.log (`Report saved to: ${this.report_file}`)} catch (error) { this.log (`Error saving report: ${error.message}`)}}
+; async run () { this.log ('🔍 Starting Dependency Monitor...'); this.log (`Project root: ${this.project_root}`);
+; try { // Create logs directory if it doesn't exist; const logs_dir = path.dirname (this.log_file); if () {) {
+  $2
+} fs.mkdir_sync (logs_dir, { recursive: true })}
+; // Run all checks; this.log ('🔒 Checking security vulnerabilities...'); const audit_result = await this.checkNpmAudit ();
+; this.log ('📦 Checking outdated packages...'); const outdated_result = await this.checkOutdatedPackages ();
+; this.log ('📋 Checking package - lock.json...'); const packageLockInfo = await this.checkPackageLock ();
+; this.log ('🟢 Checking Node.js and npm versions...'); const node_info = await this.checkNodeVersion ();
+; this.log ('🎣 Checking git hooks...'); const gitHooksInfo = await this.checkGitHooks ();
+; // Generate report; this.log ('📊 Generating dependency report...'); const report = await this.generate_report ( audit_result; outdated_result; packageLockInfo, node_info, gitHooksInfo);
+; // Save report; await this.save_report (report);
+; const duration = Date.now () - this.start_time;
+; // Log summary; this.log ('\n📊 Dependency Monitor Summary: '); this.log (`Security vulnerabilities: ${report.summary.vulnerabilities.total}`); this.log (` Critical: ${report.summary.vulnerabilities.critical}`); this.log (` High: ${report.summary.vulnerabilities.high}`); this.log (` Moderate: ${report.summary.vulnerabilities.moderate}`); this.log (` Low: ${report.summary.vulnerabilities.low}`); this.log (`Outdated packages: ${report.summary.outdated_packages}`); this.log (`Package lock status: ${report.summary.packageLockStatus}`); this.log (`Node version: ${report.summary.node_version}`); this.log (`NPM version: ${report.summary.npm_version}`); this.log (`Duration: ${duration}ms`);
+; // Check condition
+if ( {) {
+  $2
+} this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ All dependencies are healthy!')}
+; // If there are critical vulnerabilities, suggest immediate action; // Check condition
+if ( {) {
+  $2
+} this.log ('\n🚨 CRITICAL: Security vulnerabilities detected!'); this.log ('Consider running: npm audit fix')}
+} catch (error) { this.log (`❌ Error running dependency monitor: ${error.message}`); process.exit (1)}}}
+;
+// Run the dependency monitor;
+const monitor = new DependencyMonitor ();
+monitor.run ().catch (error = > { process.exit (1)});
+;
+
+monitor.run().catch(error = > {; process.exit(1)});
+
+

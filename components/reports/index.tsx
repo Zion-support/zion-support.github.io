@@ -1,5 +1,9 @@
 
 export default function ReportsIndex() {export default function ReportsIndex() {return (<div className='min-h-screen bg-slate-950 text-white'>;
+export default function ReportsIndex() {;
+export default function ReportsIndex() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
         {/* Header */}
         <div className='mb-8'>;
@@ -31,6 +35,20 @@ export default function ReportsIndex() {export default function ReportsIndex() {
         <div className='mt-12 text-center'>;
           <Link;
             href='/';
+            agents.          </p>export default function ReportsIndex() {;
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <main className="container mx-auto px-4 py-12 max-w-7xl">;
+        {/* Header */}
+
+
+        {/* Back to Home */}
+
+
+        {/* Back to Home */}
+        <div className='mt-12 text-center'>;
+          <Link
+            href='/'
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'>            ← Back to home        <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
 import Link from 'next / link';
@@ -39,6 +57,12 @@ export default /**;
  * ReportsIndex - Function description;
  */;
 function ReportsIndex() {return (<div className='min - h-screen bg - slate - 950 text - white'>;
+export default /**
+ * ReportsIndex - Function description
+ */
+function ReportsIndex() {
+  return (
+    <div className='min - h-screen bg - slate - 950 text - white'>;
       <main className='container mx - auto px - 4 py - 12 max - w-7xl'>;
         {/* Header */}
         <div className='mb - 8'>;
@@ -51,6 +75,12 @@ function ReportsIndex() {return (<div className='min - h-screen bg - slate - 950
  * ReportsIndex - Function description;
  */;
 function ReportsIndex() {return (<div className="min - h-screen bg - slate - 950 text - white">;
+            agents.          </p > export default /**
+ * ReportsIndex - Function description
+ */
+function ReportsIndex() {
+  return (
+    <div className="min - h-screen bg - slate - 950 text - white">;
       <main className="container mx - auto px - 4 py - 12 max - w-7xl">;
         {/* Header */}
         <div className="mb - 8">;
@@ -151,6 +181,47 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
     </div>;
   )})<div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
+
+  );
+}
+        <div className="mt-12 text-center">
+
+
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+        {/* Content Categorizer Component */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <ContentCategorizer />;
+        {/* Back to Home */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mt-12 text-center">
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+            ← Back to home
+          </Link>
+        </div>
+      </main>
+
+    </div>);
+}
+
+
+
+    </div>
+    </div>
+  );
+}
+    </div>;
+  );
+}
+
+  )
+        <div className="mt-12 text-center">;
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
             ← Back to home;
           </Link>;
         </div>;
@@ -158,3 +229,18 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
     </div>;
   )} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }</div>)}</div>)}
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+    </div>);
+}
+
+
+
+    </div>);
+}

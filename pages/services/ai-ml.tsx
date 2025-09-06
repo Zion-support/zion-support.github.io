@@ -104,7 +104,7 @@ function AIMLServicesPage() {const services = [;
     },{title: "AI-Powered Automation",description: "Intelligent automation systems that learn and adapt",features: ["Process Automation", "Workflow Optimization", "Smart Decision Making", "Continuous Learning"],price: "From $3,500",icon: Zap,color: "from-blue-500 to-cyan-500";
     },{title: "Data Intelligence Platform",description: "Advanced analytics and insights powered by AI",features: ["Big Data Processing", "Real-time Analytics", "Business Intelligence", "Predictive Insights"],price: "From $7,500",icon: Database,color: "from-emerald-500 to-teal-500";
     },{title: "AI Consulting & Strategy",description: "Strategic guidance for AI implementation and transformation",features: ["AI Roadmap Planning", "Technology Assessment", "Implementation Strategy", "ROI Optimization"],price: "From $2,500",icon: Rocket,color: 'from-orange-500 to-red-500';
-    },];color: "from-orange-500 to-red-500";
+    }];color: "from-orange-500 to-red-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   return (<div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
@@ -458,7 +458,7 @@ className='text-center';
         </div>;
       </section>;<EnhancedFooter />;
     </div>;
-  ),}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
+  )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0 && 0.8;
 }viewport= {{}

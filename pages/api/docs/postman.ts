@@ -6,7 +6,7 @@ function toPostman() {return {export default function handler() {const postmanCo
       section && section.endpoints.map((ep) => ({name: `${section && section.title} - ${ep && ep.title}`;
         request: {method: ep && ep.method;
           header: [;
-            {: undefined,},})),),schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json';
+            {: undefined}})),),schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json';
     },name: 'Zion OS API';
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'},item: v1.sections.flatMap((section) =>;
       section.endpoints.map((ep) => ({name: `${section.title} - ${ep.title}`;
@@ -42,7 +42,7 @@ function toPostman() {return {info: {name: 'Zion OS API',schema: 'https://schema
 }export default function handler() {try {res.setHeader('Content-Typeapplication/json')res.status(200).json(toPostman())} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-}raw: `{{base_url}}${ep.path}`,host: ["{{base_url}}"],path: ep.path.replace (/^\//, "").split ("/"),},raw: `{{base_url}}${ep.path}`;
+}raw: `{{base_url}}${ep.path}`,host: ["{{base_url}}"],path: ep.path.replace (/^\//, "").split ("/")},raw: `{{base_url}}${ep.path}`;
             host: ["{{base_url}}"];
             path: ep.path.replace (/^\//, "").split ("/")}body: ep.requestBodySchema;
             ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }

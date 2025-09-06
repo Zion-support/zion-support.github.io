@@ -1,5 +1,5 @@
-
 import React from 'react';
+
 interface CardProps  {children: React.ReactNode;
   className?: string;
 }export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>;
@@ -109,4 +109,7 @@ const Card: React.FC<CardProps> = ({children;
 ))CardFooter.displayName = "CardFooter";export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }hover?: boolean;
 }
 const Card: React.FC<CardProps> = ({export {Card,CardHeader,CardFooter,CardTitle,CardDescription,CardContent;
+}
+    </div>
+  );
 }

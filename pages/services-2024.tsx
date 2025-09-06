@@ -3,7 +3,7 @@
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}import { Search,Filter,Star,Users,TrendingUp,Brain,Atom,Cpu,Shield,Database,Cloud,ArrowRight,CheckCircle,Zap,Sparkles,} from 'lucide-react';
+}import { Search,Filter,Star,Users,TrendingUp,Brain,Atom,Cpu,Shield,Database,Cloud,ArrowRight,CheckCircle,Zap,Sparkles} from 'lucide-react';
 import {Search, Filter, Star, Users, TrendingUp,Brain, Atom, Cpu, Shield, Database, Cloud,ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',import React, { useState, useMemo } from 'react',import Head from 'next/head';
 import { motion  } from 'framer-motion';
@@ -21,7 +21,7 @@ import { innovativeITServices2024  } from '../data/2024-innovative-it-services';
     'name' | 'price' | 'rating' | 'customers';
   >('name')const [sortOrder, setSortOrder]  = useState<'asc' | 'desc'>('asc')// Combine all services;
   const allServices = [;
-    ...realMicroSaasServices2024,...innovativeITServices2024,];// Filter and sort services;
+    ...realMicroSaasServices2024,...innovativeITServices2024];// Filter and sort services;
   const filteredServices = useMemo(() => {let filtered = allServices && allServices.filter(service => {const matchesSearch =;
         service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
         service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
@@ -679,7 +679,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       </p>;
                       <div className='flex items-start justify-between mb-4'>;
                         <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
-                          {React && React.createElement(getVariantIcon(service && service.variant),{className: `w-6 h-6 text-cyan-400`,}
+                          {React && React.createElement(getVariantIcon(service && service.variant),{className: `w-6 h-6 text-cyan-400`}
                           )}
                         </div>;
                         <div className='text-right'>;
@@ -953,7 +953,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
         </section>;
       </div>;
     </>;
-  ),}export default Services2024Page;},export default Services2024Page,<section className="px-4 sm:px-6 lg:px-8 mb-20">;
+  )}export default Services2024Page;},export default Services2024Page,<section className="px-4 sm:px-6 lg:px-8 mb-20">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}

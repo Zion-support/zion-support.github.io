@@ -20,7 +20,7 @@ className?: string;
 interface AIMatchmakerProps  {serviceType?: string;
   onMatchSelect?: (match: any,) => void;
   className?: string;
-}export function AIMatchmaker() {const [query, setQuery] = useState(""),const [isMatchmaking, setIsMatchmaking] = useState(false),const [matches, setMatches] = useState([] as MatchResult[]),const [hasSearched, setHasSearched] = useState(false),const handleSearch = async () => {if (!query.trim()) {toast({title: "Please enter a description",description: "Tell us what you're looking for so we can find matches.",const handleSearch = async () => {if (!query.trim()) {toast({title: "Please enter a description",description: "Tell us what you're looking for so we can find matches.",})return;
+}export function AIMatchmaker() {const [query, setQuery] = useState(""),const [isMatchmaking, setIsMatchmaking] = useState(false),const [matches, setMatches] = useState([] as MatchResult[]),const [hasSearched, setHasSearched] = useState(false),const handleSearch = async () => {if (!query.trim()) {toast({title: "Please enter a description",description: "Tell us what you're looking for so we can find matches.",const handleSearch = async () => {if (!query.trim()) {toast({title: "Please enter a description",description: "Tell us what you're looking for so we can find matches."})return;
     }
     setIsMatchmaking(true)setHasSearched(true)try {logInfo('Starting AI matching', { data: { query, serviceType } })// Get AI matches;
       const results = await findMatches(query, serviceType, 3)logInfo('AI matching results:', { data: results })setMatches(results)toast({title: 'Matches Found';
@@ -62,11 +62,11 @@ export /**;
  */;
 function AIMatchmaker() {const [query, set_query] = useState ('')const [is_matchmaking, setIsMatchmaking] = useState (false)const [matches, set_matches] = useState ([] as MatchResult[])const [has_searched, setHasSearched] = useState (false)const handle_search = async () => {if () {) {$2;
 }
-      toast ({title: 'Please enter a description',description: "Tell us what you're looking for so we can find matches.",variant: 'destructive',})return;
+      toast ({title: 'Please enter a description',description: "Tell us what you're looking for so we can find matches.",variant: 'destructive'})return;
     }
     setIsMatchmaking (true)setHasSearched (true)try {log_info ('Starting AI matching', { data: { query, service_type } })// Get AI matches;
-      const results = await find_matches (query, service_type, 3)log_info ('AI matching results:', { data: results })set_matches (results)toast ({title: 'Matches Found',description: `Found ${results.length} matches based on your description.`,})} catch (error) {logErrorToProduction ('Error during AI matching:', { data: error })toast ({title: 'Matching Error',description:;
-          "We couldn't find matches for your request. Please try again.",variant: 'destructive',})// Set empty matches to show no results found UI;
+      const results = await find_matches (query, service_type, 3)log_info ('AI matching results:', { data: results })set_matches (results)toast ({title: 'Matches Found',description: `Found ${results.length} matches based on your description.`})} catch (error) {logErrorToProduction ('Error during AI matching:', { data: error })toast ({title: 'Matching Error',description:;
+          "We couldn't find matches for your request. Please try again.",variant: 'destructive'})// Set empty matches to show no results found UI;
       set_matches ([])} finally {setIsMatchmaking(false)<Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -86,12 +86,12 @@ interface AIMatchmakerProps  {serviceType?: string,onMatchSelect?: (match: any) 
     }setIsMatchmaking(true),setHasSearched(true),try {logInfo("Starting AI matching", { data: { query, serviceType } }),// Get AI matches;
       const results = await findMatches(query,serviceType,3;
       ),logInfo('AI matching results:', { data: results }),setMatches(results),toast({title: "Matches Found",description: `Found ${results.length} matches based on your description.`})} catch (error) {logErrorToProduction('Error during AI matching:', { data: error }),toast({title: "Matching Error",description: "We couldn't find matches for your request. Please try again.",variant: "destructive"}),onMatchSelect?: (match: any,) => void,className?: string;
-}export function AIMatchmaker(): any ({serviceType = '',onMatchSelect,className,}: AIMatchmakerProps) {const [query, setQuery] = useState('')const [isMatchmaking, setIsMatchmaking] = useState(false)const [matches, setMatches] = useState([] as MatchResult[])const [hasSearched, setHasSearched]  = useState(false)const handleSearch = async () => {if (!query && query.trim()) {toast({title: 'Please enter a description',description: "Tell us what you're looking for so we can find matches.",variant: 'destructive',})return;
+}export function AIMatchmaker(): any ({serviceType = '',onMatchSelect,className}: AIMatchmakerProps) {const [query, setQuery] = useState('')const [isMatchmaking, setIsMatchmaking] = useState(false)const [matches, setMatches] = useState([] as MatchResult[])const [hasSearched, setHasSearched]  = useState(false)const handleSearch = async () => {if (!query && query.trim()) {toast({title: 'Please enter a description',description: "Tell us what you're looking for so we can find matches.",variant: 'destructive'})return;
     }setIsMatchmaking(true)setHasSearched(true)try {logInfo('Starting AI matching', { data: { query, serviceType } })// Get AI matches;
-      const results  = await findMatches(query, serviceType, 3)logInfo('AI matching results:', { data: results })setMatches(results)toast({title: 'Matches Found',description: `Found ${results && results.length} matches based on your description.`,})} catch (error) {logErrorToProduction('Error during AI matching:', { data: error })toast({title: 'Matching Error',description:;
-          "We couldn't find matches for your request. Please try again.",variant: 'destructive',})// Set empty matches to show no results found UI;
+      const results  = await findMatches(query, serviceType, 3)logInfo('AI matching results:', { data: results })setMatches(results)toast({title: 'Matches Found',description: `Found ${results && results.length} matches based on your description.`})} catch (error) {logErrorToProduction('Error during AI matching:', { data: error })toast({title: 'Matching Error',description:;
+          "We couldn't find matches for your request. Please try again.",variant: 'destructive'})// Set empty matches to show no results found UI;
       setMatches([])} finally {setIsMatchmaking(false)}},const handleItemSelect = (item: any) => {if (onMatchSelect) {// Find the original MatchResult that contains this item;
-      const matchResult  = matches.find(match => match.item.id === item.id),}const handleItemSelect = (item: any) => {    if (onMatchSelect) {// Find the original MatchResult that contains this item;
+      const matchResult  = matches.find(match => match.item.id === item.id)}const handleItemSelect = (item: any) => {    if (onMatchSelect) {// Find the original MatchResult that contains this item;
       const matchResult  = matches && matches.find(match => match && match.item.id === item && item.id),if (matchResult) {onMatchSelect(matchResult)}
     }const handleItemSelect = (item: any) =>: any {    // Check condition;
 if ( {) {$2;

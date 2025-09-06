@@ -3,7 +3,7 @@
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle  } from 'lucide-react';
 interface FraudTabContentProps  {tab_value: string;
-export const FraudTabContent: React.FC < FraudTabContentProps> = ({tab_value,}) => {<div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
+export const FraudTabContent: React.FC < FraudTabContentProps> = ({tab_value}) => {<div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertTriangle className='mx - auto h - 12 w - 12 text - amber - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Pending Review Flags</h3>;
           <p className='text - muted - foreground'>;
@@ -48,7 +48,7 @@ interface FraudTabContentProps  {tabValue: string;import React from "react",inte
       return null;
   }}}),default:;
       return null;
-interface FraudTabContentProps  {tabValue: string;export const FraudTabContent: React.FC<FraudTabContentProps> = ({tabValue,}) => {switch (tabValue) {    case 'pending':;
+interface FraudTabContentProps  {tabValue: string;export const FraudTabContent: React.FC<FraudTabContentProps> = ({tabValue}) => {switch (tabValue) {    case 'pending':;
       return (<div className='bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center'>;
           <AlertTriangle className='mx-auto h-12 w-12 text-amber-500 mb-4' />;
           <h3 className='text-xl font-medium mb-4'>Pending Review Flags</h3>;

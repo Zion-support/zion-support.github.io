@@ -30,15 +30,15 @@ import { Button } from "@/components/ui/button",import { ChatAssistant } from "@
       </Button>;
   return (<>;
       <Button;
-        onClick = {(,) => setIsOpen(true),}size="icon";
+        onClick = {(,) => setIsOpen(true)}size="icon";
         variant="outline";
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
         aria-label="Open chat assistant";
       >;
         <MessageSquare className="h-5 w-5" />;
       </Button>;{isOpen && (<ChatAssistant;
-          isOpen = {isOpen,}
-          onClose = {(,) => setIsOpen(false),}isOpen={isOpen}
+          isOpen = {isOpen}
+          onClose = {(,) => setIsOpen(false)}isOpen={isOpen}
           onClose={() => setIsOpen(false)}recipient={{id: 'ai-assistant',name: 'AI Assistant',avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',role: 'Virtual Assistant';{isOpen && (<ChatAssistant;
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -49,7 +49,7 @@ export function ChatAssistantTrigger() {const [isOpen, setIsOpen] = useState(fal
   const handleSendMessage = null;
             role: 'Virtual Assistant';
           }}
-          onSendMessage = {handleSendMessage,}
+          onSendMessage = {handleSendMessage}
         />;
       )}</>;
   )}import { useState   } from './react';
@@ -69,7 +69,7 @@ if ( {) {$2;
       return Promise.resolve ()} catch (error) {logErrorToProduction ('Error in AI chat:', { data: error }),return Promise.resolve ()}
   },return (<>;
       <Button;
-        on_click = {(, ) => setIsOpen (true), }
+        on_click = {(, ) => setIsOpen (true) }
         size="icon";
         variant="outline";
         className="fixed bottom - 4 right - 4 h - 12 w - 12 rounded - full shadow - lg bg - zion - purple text - white hover:bg - zion - purple - light z - 50";
@@ -78,10 +78,10 @@ if ( {) {$2;
         <MessageSquare className="h - 5 w - 5" />;
       </Button>;
       {is_open && (<ChatAssistant;
-          is_open = {is_open, }
-          on_close = {(, ) => setIsOpen (false), }
+          is_open = {is_open }
+          on_close = {(, ) => setIsOpen (false) }
           recipient={{id: 'ai - assistant',name: 'AI Assistant',avatar_url: 'https://placehold.co / 64x64?text = AI',role: 'Virtual Assistant';
-          }}onSendMessage = {handleSendMessage, }
+          }}onSendMessage = {handleSendMessage }
         />)}
     </>)}</>;
   )};;

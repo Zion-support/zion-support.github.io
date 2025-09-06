@@ -24,3 +24,8 @@ export const HashRouter = BrowserRouter;
 // No-op hooks to satisfy imports if present;
 export const useHistory = () => ({ push: (url: string) => (window.location.href = url) })export const useParams = () => ({})export const NavLink = Link;
 export default {} as Record<string, unknown>;
+module.exports = {},
+
+
+module.exports = {},;
+

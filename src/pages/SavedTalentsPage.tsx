@@ -35,7 +35,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger',export default funct
           const talentProfiles = data.map((item: any) => item.talent_profile as unknown as TalentProfile;
           ),setSavedTalents(talentProfiles)}
       } catch (error) {logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }),toast({title: "Error",description: "Failed to load saved talents. Please try again later.",variant: "destructive"})} finally {setIsLoading(false)}
-    },fetchSavedTalents()}, [user]),const handleViewProfile = (talentId: string) => {router.push(`/talent/${talentId}`)},const handleRequestHire = (talent: TalentProfile) => {const handleViewProfile = (talentId: string) => {router.push(`/talent/${talentId}`)}const handleRequestHire = (talent: TalentProfile) => {logInfo('Request to hire:', { data: talent })toast({title: 'Hire Request Sent',description: `A hire request has been sent to ${talent.full_name}.`,})}
+    },fetchSavedTalents()}, [user]),const handleViewProfile = (talentId: string) => {router.push(`/talent/${talentId}`)},const handleRequestHire = (talent: TalentProfile) => {const handleViewProfile = (talentId: string) => {router.push(`/talent/${talentId}`)}const handleRequestHire = (talent: TalentProfile) => {logInfo('Request to hire:', { data: talent })toast({title: 'Hire Request Sent',description: `A hire request has been sent to ${talent.full_name}.`})}
   const handleToggleSave = async (talentId: string,isCurrentlySaved: boolean;
   ) => {    try {if (!user) {logWarn('User not authenticated.')return;
       }

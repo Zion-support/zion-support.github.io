@@ -9,9 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle   } from '@/components/ui/card
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-import { ArrowUp,Filter,SortAsc,Zap,TrendingUp,Star,ShoppingCart,MapPin,Package,AlertTriangle,RefreshCw,} from 'lucide-react';
+import { ArrowUp,Filter,SortAsc,Zap,TrendingUp,Star,ShoppingCart,MapPin,Package,AlertTriangle,RefreshCw} from 'lucide-react';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
-  generateDatacenterEquipment,getEquipmentMarketStats,getRecommendedEquipment,} from '@/utils/equipmentAutoFeedAlgorithm';
+  generateDatacenterEquipment,getEquipmentMarketStats,getRecommendedEquipment} from '@/utils/equipmentAutoFeedAlgorithm';
 import { ProductListing  } from '@/types/listings';
 import { SkeletonCard  } from '@/components/ui/skeleton';
 import { Button  } from '@/components/ui/button';

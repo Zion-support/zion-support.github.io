@@ -31,6 +31,36 @@ export interface Job  {id: string;
   client_id: string;
   title: string;
   title: string,description: string;
+export type JobStatus = "new" | "in_progress" | "filled" | "closed";
+
+export type JobCategory =
+  | "development"
+  | "design"
+  | "marketing"
+  | "content"
+  | "data"
+  | "business"
+  | "other";
+
+export interface JobBudget {;
+
+  min: number;
+  max: number;
+  currency: string;
+}
+
+
+export interface Job {;
+
+export interface Job {
+
+export interface Job {;
+}
+export interface Job {
+  id: string;
+  client_id: string;
+  title: string;
+  description: string;
   category: JobCategory;
   skills: string[];
   budget: JobBudget;
@@ -43,6 +73,19 @@ export interface Job  {id: string;
 export interface JobFormData  {export interface JobFormData  {}
 export interface JobFormData {}
 export interface JobFormData  {title: string;
+
+
+export interface JobFormData {;
+
+  created_at: string
+  updated_at: string
+}
+export interface JobFormData {
+
+export interface JobFormData {;
+}
+export interface JobFormData {
+  title: string;
   description: string;
   category: JobCategory;
   skills: string;
@@ -58,6 +101,22 @@ export interface JobFormData  {title: string;
 }
 // Add JobMatch interface to be shared across components;
 export interface JobMatch  {id: string;
+}
+
+  budget_min: number;
+  budget_max: number,
+  deadline: Date;
+}
+// Add JobMatch interface to be shared across components;
+
+export interface JobMatch {
+  budgetMin: number;
+  budgetMax: number
+  deadline: Date
+}
+// Add JobMatch interface to be shared across components
+export interface JobMatch {;
+  id: string;
   job_id: string;
   talent_id: string;
   match_score: number;
@@ -67,6 +126,8 @@ export interface JobMatch  {id: string;
   viewed_at?: string;
   job?: Job;
   talent_profile?: {id?: string;
+  talent_profile?: {
+    id?: string;
     user_id: string;
     full_name: string;
     professional_title: string;
@@ -85,6 +146,19 @@ export interface JobMatch  {id: string;
 export interface ResumeAttachment  {export interface ResumeAttachment  {export interface ResumeAttachment  {export interface ResumeAttachment  {title: string,description: string;
   category: JobCategory;
   skills: string;export interface ResumeAttachment  {export interface ResumeAttachment {export interface ResumeAttachment  {id: string;
+    location?: string;
+    category?: string;
+    company_name?: string;
+  };
+}
+
+
+
+export interface ResumeAttachment {;
+
+
+export interface ResumeAttachment {
+  id: string;
   title: string;
   type: "ai_resume" | "custom_upload";
   file_url?: string;
@@ -99,6 +173,28 @@ export interface ResumeAttachment  {export interface ResumeAttachment  {export i
   | "rejected";export interface JobApplication  {export interface JobApplication  {export interface JobApplication  {export interface JobApplication  {summary?: string;
 export interface JobApplication  {export interface JobApplication  {export interface JobApplication  {export interface JobApplication {  summary?: string;
   skills?: string[];
+}
+
+export type ApplicationStatus =
+  | "new"
+  | "viewed"
+  | "shortlisted"
+  | "interview"
+  | "hired"
+  | "rejected";
+
+export interface JobApplication {
+;
+
+export interface JobApplication {
+
+export interface JobApplication {
+
+
+export interface JobApplication {;
+
+  summary?: string
+  skills?: string[]
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 export interface JobApplication  {export interface JobApplication  {export interface JobApplication  {id: string;
@@ -128,6 +224,18 @@ export interface JobApplication  {export interface JobApplication  {export inter
     skills: string[];
 }resume?: ResumeAttachment;
   // New fields for resume scoring;  }
+    profile_picture_url?: string;
+    bio: string;
+    skills: string[];
+  };
+  resume?: ResumeAttachment;
+  // New fields for resume scoring;
+    bio: string
+    skills: string[]
+  }
+  resume?: ResumeAttachment;
+  // New fields for resume scoring
+  }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
   match_score?: number;
@@ -160,7 +268,44 @@ export interface JobMatch  {id: string,job_id: string,talent_id: string,match_sc
   match_score?: number,match_summary?: string,match_breakdown?: {skills_match?: {score: number,matching: string[],missing: string[];
     },experience_match?: {score: number,analysis: string;
     },education_match?: {score: number,analysis: string;
+  match_breakdown?: {
+    skills_match?: {
+      score: number;
+      matching: string[];
+      missing: string[];
+    };
+    experience_match?: {
+      score: number;
+      analysis: string;
+    };
+    education_match?: {
+      score: number;
+      analysis: string;
+    };
+  };
+  match_suggestion?: string;
+  scored_at?: string;
+  notes?: string; // New field for client notes
+}
+;
+      missing: string[];
+    },;
+    experience_match?: {;
+      score: number,;
+      analysis: string;
+    },;
+    education_match?: {;
+      score: number,;
+      analysis: string;
     }
   },match_suggestion?: string,scored_at?: string;
   notes?: string,  // New field for client notes;
 }}}
+}
+;
+
+
+
+}
+;
+}

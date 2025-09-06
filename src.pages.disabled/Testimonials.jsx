@@ -11,12 +11,40 @@ interface TestimonialsProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/Testimonials.jsx;
+interface TestimonialsProps {
+  // Add props here as needed
+
+
+}
+
+export default function Testimonials({}: TestimonialsProps) {
+  return (
+    <div>
+      <h1>Testimonials</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/Testimonials.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/Testimonials.jsx;
+:temp_exclude/src.pages.disabled/Testimonials.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Testimonials.jsx
 }
 }
 }

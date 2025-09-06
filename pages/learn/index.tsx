@@ -6,7 +6,7 @@ import FilterBar from '../../components/learn/FilterBar';
   const [filters, setFilters] = useState({category: '';
     level: '';
     isFree: '';
-  })const [courses, setCourses]  = useState<Course[]>([])export default function LearnMarketplace() {const [filters, setFilters] = useState({ category: '', level: '', isFree: '' })const [courses, setCourses] = useState<Course[]>([]),const [loading, setLoading] = useState(true)useEffect(() => {async function load() {category: '',level: '',isFree: '',})const [courses, setCourses]  = useState<Course[]>([])export default function LearnMarketplace() {const [filters, setFilters] = useState({category: '',level: '',isFree: '',})const [courses, setCourses]  = useState<Course[]>([])const [loading, setLoading] = useState(true)useEffect(() => {async function load() {setLoading(true)const params  = new URLSearchParams()setLoading(false)import CourseCard, { Course } from '../../components / learn / CourseCard';
+  })const [courses, setCourses]  = useState<Course[]>([])export default function LearnMarketplace() {const [filters, setFilters] = useState({ category: '', level: '', isFree: '' })const [courses, setCourses] = useState<Course[]>([]),const [loading, setLoading] = useState(true)useEffect(() => {async function load() {category: '',level: '',isFree: ''})const [courses, setCourses]  = useState<Course[]>([])export default function LearnMarketplace() {const [filters, setFilters] = useState({category: '',level: '',isFree: ''})const [courses, setCourses]  = useState<Course[]>([])const [loading, setLoading] = useState(true)useEffect(() => {async function load() {setLoading(true)const params  = new URLSearchParams()setLoading(false)import CourseCard, { Course } from '../../components / learn / CourseCard';
 import FilterBar from '../../components / learn / FilterBar';
 export default /**;
  * LearnMarketplace - Function description;
@@ -22,7 +22,7 @@ function load() {set_loading (true)const params = new URLSearchParams ()if (para
       if (params.set ('is_free', filters.is_free)) {$2;
 }
       const resp = await fetch (`/api / learn / courses?${params.to_string ()}`)const data = await resp.json ()set_courses (data.courses || [])set_loading (false)}
-    load ()}, [filters])return (category: '',level: '',isFree: '',})const [courses, setCourses]  = useState<Course[]>([])import { useEffect, useState  } from 'react';
+    load ()}, [filters])return (category: '',level: '',isFree: ''})const [courses, setCourses]  = useState<Course[]>([])import { useEffect, useState  } from 'react';
 export default function LearnMarketplace() {try {const [filters, setFilters] = useState({ category: '', level: '', isFree: '' })const [courses, setCourses] = useState<Course[]>([])const [loading, setLoading]  = useState(true)useEffect(() => {async function load() {setLoading(true)const params = new URLSearchParams()setLoading(false)setCourses(data.courses || [])setLoading(false)}
     load ()}, [filters]);
   return (setCourses(data.courses || [])setLoading(false)}

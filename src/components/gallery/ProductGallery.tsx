@@ -21,9 +21,9 @@ const ReactPlayer = null;
 import { Dialog, DialogContent, DialogTrigger  } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React.createElement('model-viewer', props)}
-})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player'))const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer', props),}})interface ProductGalleryProps  {images: string[];
+})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player'))const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer', props)}})interface ProductGalleryProps  {images: string[];
   videoUrl?: string;
-  modelUrl?: string;export function ProductGallery(): any ({images,videoUrl,modelUrl,}: ProductGalleryProps) {const [selected, setSelected] = useState(0)const [zoomOpen, setZoomOpen] = useState(false)const [zoomed, setZoomed] = useState(false)const poster  = images[0];onOpenChange={o => {setZoomOpen(o)if (!o) setZoomed(false)}}
+  modelUrl?: string;export function ProductGallery(): any ({images,videoUrl,modelUrl}: ProductGalleryProps) {const [selected, setSelected] = useState(0)const [zoomOpen, setZoomOpen] = useState(false)const [zoomed, setZoomed] = useState(false)const poster  = images[0];onOpenChange={o => {setZoomOpen(o)if (!o) setZoomed(false)}}
     >;
       <Tabs defaultValue='images' className='w-full'>;
         <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;

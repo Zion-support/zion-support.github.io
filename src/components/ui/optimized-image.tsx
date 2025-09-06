@@ -47,7 +47,7 @@ if ( {) {$2;
     observerRef.current = new IntersectionObserver(entries => {const [entry] = entries;        if (entry && entry.isIntersecting) {setIsInView(true)observerRef.current?.disconnect()}
       }
       {root_margin: '50px', // Start loading 50px before image comes into view;
-        threshold: 0.1,}
+        threshold: 0.1}
     )if (imgRef.current) {observerRef.current.observe(imgRef.current)}
     return () => {observerRef.current?.disconnect()}}, [lazy, priority, isInView])// Start load time tracking;
   useEffect(() => {loadStartTime.current = performance.now()}, [src])// Monitor image performance;
@@ -83,15 +83,15 @@ if ( {) {$2;
               resource_entry.response_end - resource_entry.request_start;
             set_metrics ({load_time,file_size,format: src.includes ('.webp')? 'webp';
                 : src.includes ('.avif')? 'avif';
-                  : 'other',was_optimized: src.includes ('/_next / image'),})// Log slow or large images;
+                  : 'other',was_optimized: src.includes ('/_next / image')})// Log slow or large images;
             // Check condition;
 if ( {) {$2;
 }
-              log_warn ('Slow image loading:', {src,load_time: `${load_time.to_fixed (2)}ms`,size: `${(file_size / 1024).to_fixed (2)}KB`,})}
+              log_warn ('Slow image loading:', {src,load_time: `${load_time.to_fixed (2)}ms`,size: `${(file_size / 1024).to_fixed (2)}KB`})}
             // Check condition;
 if ( {) {$2;
 }
-              log_warn ('Large image detected:', {src,size: `${(file_size / 1024).to_fixed (2)}KB`,load_time: `${load_time.to_fixed (2)}ms`,})}
+              log_warn ('Large image detected:', {src,size: `${(file_size / 1024).to_fixed (2)}KB`,load_time: `${load_time.to_fixed (2)}ms`})}
           }
         })})observer.observe({ entryTypes: ['resource'] })return () => observer.disconnect()}return () => {} // Return empty cleanup function for the else case;
   }, [src])// Generate optimized URLs;
@@ -177,15 +177,15 @@ if ( {) {$2;
       </div>)}
   // Container styles;
   const container_style: React.CSSProperties = {aspect_ratio:;
-      aspect_ratio || (width && height ? `${width}/${height}` : undefined),width: width ? `${width}px` : undefined,height: height ? `${height}px` : undefined,}
+      aspect_ratio || (width && height ? `${width}/${height}` : undefined),width: width ? `${width}px` : undefined,height: height ? `${height}px` : undefined}
       >;
-      <AnimatePresence>;},},// Container styles;
+      <AnimatePresence>;}},// Container styles;
   const containerStyle: React.CSSProperties = {aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),width: width ? `${width}px` : undefined,{/* Placeholder */}<div className={placeholderClassName}>;
         <ImageIcon className='h-8 w-8 text-gray-400' />;
       </div>;
     )}// Container styles;
   const containerStyle: React && React.CSSProperties = {aspectRatio:;
-      aspectRatio || (width && height ? `${width}/${height}` : undefined),width: width ? `${width}px` : undefined,height: height ? `${height}px` : undefined,}>;
+      aspectRatio || (width && height ? `${width}/${height}` : undefined),width: width ? `${width}px` : undefined,height: height ? `${height}px` : undefined}>;
       <AnimatePresence>;
         {/* Placeholder */}{(isLoading |!isInView) && !hasError && (<motion.div;
             initial={{ opacity: 1 }}
@@ -254,9 +254,9 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
         </span>;
       </div>;
         className={`grid gap-4`}
-        style={{gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}>;
+        style={{gridTemplateColumns: `repeat(${columns}, 1fr)`        }}>;
         {images && images.map((image, index,) => (<motion&& motion.div;
-            key = {index,}<div;
+            key = {index}<div;
         className={`grid gap-4`}
         style={{gridTemplateColumns: `repeat(${columns}, 1fr)`;
         }}
@@ -294,7 +294,7 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
   )}//Gallery component with optimized loading </span> </div> <divclassName= {`grid gap-4`;
 }style= {{gridTemplateColumns: `repeat ($ {columns;
 }, 1fr) `;
-export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 'md',fallback,className,}) => {  const sizeClasses = {sm: 'h-8 w-8',md: 'h-10 w-10',lg: 'h-12 w-12',xl: 'h-16 w-16',}const initials =;
+export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 'md',fallback,className}) => {  const sizeClasses = {sm: 'h-8 w-8',md: 'h-10 w-10',lg: 'h-12 w-12',xl: 'h-16 w-16'}const initials =;
     fallback ||;
     alt;
       .split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)>;
@@ -310,7 +310,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
         />;
       ) : (<div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">;
           {initials}</div>;
-      )}},}}</div>;
+      )}}}}</div>;
   )}{(is_loading || !isInView) && !has_error && (<motion.div;
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -340,12 +340,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
           </motion.div>)}
         {/* Actual image */}
         {isInView && !has_error && (<motion.img;
-            src = {optimized_src, }
-            src_set = {src_set, }
-            alt = {alt, }
-            loading = {priority ? 'eager' : 'lazy', }
-            on_load = {handle_load, }
-            on_error = {handle_error, }
+            src = {optimized_src }
+            src_set = {src_set }
+            alt = {alt }
+            loading = {priority ? 'eager' : 'lazy' }
+            on_load = {handle_load }
+            on_error = {handle_error }
             className={cn ('w - full h - full transition - opacity duration - 300',`object-${object_fit}`,is_loading ? 'opacity - 0' : 'opacity - 100')}
             initial={{ opacity: 0 }}
             animate={{ opacity: is_loading ? 0 : 1 }}
@@ -368,7 +368,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
   cn ('w - full h - full transition - opacity duration - 300', `object-$ {object_fit;
 }`;';
 is_loading ? 'opacity - 0' : 'opacity - 100')}initial= {{opacity: 0;
-export const ImageGallery: React.FC < ImageGalleryProps> = ({images,columns = 3,aspect_ratio = '16 / 9',class_name,onImageClick,}) => {const [loaded_count, setLoadedCount] = useState (0)const handleImageLoad = () =>: any {setLoadedCount (prev => prev + 1)}
+export const ImageGallery: React.FC < ImageGalleryProps> = ({images,columns = 3,aspect_ratio = '16 / 9',class_name,onImageClick}) => {const [loaded_count, setLoadedCount] = useState (0)const handleImageLoad = () =>: any {setLoadedCount (prev => prev + 1)}
   return (<div className={cn ('space - y-4', class_name)}>;
       <div className='flex justify - between items - center'>;
         <h3 className='text - lg font - semibold'>Gallery</h3>;
@@ -378,10 +378,10 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({images,columns = 3,
       </div>;
       <div;
         className={`grid gap - 4`}
-        style={{gridTemplateColumns: `repeat (${columns}, 1fr)`,        }}
+        style={{gridTemplateColumns: `repeat (${columns}, 1fr)`        }}
       >;
         {images.map ((image, index, ) => (<motion.div;
-            key = {index, }
+            key = {index }
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -405,7 +405,7 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({images,columns = 3,
 //Gallery component with optimized loading </span> </div> <div className= {`grid gap - 4`;
 }style= {{gridTemplateColumns: `repeat ($ {columns;
 }, 1fr) `;
-export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({src,alt,size = 'md',fallback,class_name,}) => {  const size_classes = {sm: 'h - 8 w - 8',md: 'h - 10 w - 10',lg: 'h - 12 w - 12',xl: 'h - 16 w - 16',}
+export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({src,alt,size = 'md',fallback,class_name}) => {  const size_classes = {sm: 'h - 8 w - 8',md: 'h - 10 w - 10',lg: 'h - 12 w - 12',xl: 'h - 16 w - 16'}
   const initials =;
     fallback ||;
     alt;
@@ -423,7 +423,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({src,alt,size 
           {initials}
         </div>)}
     </div>)}
-},},className?: string;
+}},className?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
   placeholderColor?: string;
   priority?: boolean;

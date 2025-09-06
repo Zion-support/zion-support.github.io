@@ -102,7 +102,7 @@ import Head from 'next/head',import { motion } from 'framer-motion',Shield, Lock
     },{title: "Quantum-Resistant Encryption",description: "Future-proof security with quantum-resistant cryptography",features: ["Post-Quantum Algorithms", "Key Management", "Compliance Ready", "Future-Proof"],price: "From $12,000",icon: Lock,color: "from-purple-500 to-pink-500";
     },{title: "Security Auditing & Compliance",description: "Comprehensive security assessments and compliance solutions",features: ["Penetration Testing", "Vulnerability Assessment", "SOC2 Compliance", "GDPR Ready"],price: "From $5,000",icon: Shield,color: "from-blue-500 to-cyan-500";
     },{title: "Zero Trust Architecture",description: "Modern security framework for distributed environments",features: ["Identity Verification", "Access Control", "Network Segmentation", "Continuous Monitoring"],price: "From $15,000",icon: Zap,color: 'from-emerald-500 to-teal-500';
-    },];color: "from-emerald-500 to-teal-500";
+    }];color: "from-emerald-500 to-teal-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
       {/* Hero Section */}
@@ -387,7 +387,7 @@ className='text-center';
         </div>;
       </section>;<EnhancedFooter />;
     </div>;
-  ),}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
+  )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0 && 0.8;
 }viewport= {{}

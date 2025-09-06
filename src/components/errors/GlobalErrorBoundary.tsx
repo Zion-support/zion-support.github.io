@@ -1,5 +1,5 @@
 
-import { AlertTriangle,RefreshCw,Home,Bug,Send,Clipboard,} from 'lucide-react';
+import { AlertTriangle,RefreshCw,Home,Bug,Send,Clipboard} from 'lucide-react';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
@@ -25,33 +25,33 @@ interface ErrorBoundaryProps  {children: ReactNode;
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error;
     }this.state;
   }
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error,}}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId  = this.generateErrorId()// Enhanced error logging;
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error}}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId  = this.generateErrorId()// Enhanced error logging;
     const enhancedError = {scope.setLevel('error')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack;
         retryCount: this.state.retryCount;
       })Sentry.captureException(error)...error;...error,componentStack: errorInfo.componentStack,errorBoundary: this.props.context || 'GlobalErrorBoundary',timestamp: new Date().toISOString(),userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',url: typeof window !== 'undefined' ? window.location.href : 'SSR',userId: this.getUserId(),buildInfo: this.getBuildInfo()export class GlobalErrorBoundary extends Component<;
   ErrorBoundaryProps,ErrorBoundaryState;
 > {private retry_timeouts: NodeJS.Timeout[] = [];
   constructor (props: ErrorBoundaryProps) {super (props)export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBoundaryState> {private retry_timeouts: NodeJS.Timeout[] = [];
-  constructor (props: ErrorBoundaryProps) {super (props)this.state = {has_error: false,error: null,error_info: null,error_id: null,retry_count: 0,user_feedback: '',show_details: false,} }    , }
+  constructor (props: ErrorBoundaryProps) {super (props)this.state = {has_error: false,error: null,error_info: null,error_id: null,retry_count: 0,user_feedback: '',show_details: false} }     }
       show_details: false;
     }
   }
-  static getDerivedStateFromError (error: Error): Partial < ErrorBoundaryState> {return {has_error: true,error,}
+  static getDerivedStateFromError (error: Error): Partial < ErrorBoundaryState> {return {has_error: true,error}
   }
   componentDidCatch (error: Error, error_info: ErrorInfo) {const error_id = this.generateErrorId ()}
   componentDidCatch (error: Error, error_info: ErrorInfo) {const error_id = this.generateErrorId ()// Enhanced error logging;
     const enhanced_error = {...error,// Enhanced error logging;
     const enhanced_error = {...error,      component_stack: error_info.component_stack,      ...error;
-      component_stack: error_info.component_stack,error_boundary: this.props.context || 'GlobalErrorBoundary',timestamp: new Date ().toISOString (),user_agent: typeof window !== 'undefined' ? navigator.user_agent : 'SSR',url: typeof window !== 'undefined' ? window.location.href : 'SSR',user_id: this.getUserId (),build_info: this.getBuildInfo (),}
+      component_stack: error_info.component_stack,error_boundary: this.props.context || 'GlobalErrorBoundary',timestamp: new Date ().toISOString (),user_agent: typeof window !== 'undefined' ? navigator.user_agent : 'SSR',url: typeof window !== 'undefined' ? window.location.href : 'SSR',user_id: this.getUserId (),build_info: this.getBuildInfo ()}
     // Log to console in development;
     // Check condition;
 if ( {) {$2;
 }
-      console.group ('🚨 Error Boundary Caught Error')logErrorToProduction ('Error:', { data: error })logErrorToProduction ('Error Info:', { data: error_info })logErrorToProduction ('Enhanced Error:', { data: enhanced_error })console.group_end ()}})buildInfo: this.getBuildInfo(),}// Log to console in development;
+      console.group ('🚨 Error Boundary Caught Error')logErrorToProduction ('Error:', { data: error })logErrorToProduction ('Error Info:', { data: error_info })logErrorToProduction ('Enhanced Error:', { data: enhanced_error })console.group_end ()}})buildInfo: this.getBuildInfo()}// Log to console in development;
     if (process.env.NODE_ENV === 'development') {console.group('🚨 Error Boundary Caught Error')logErrorToProduction('Error:', { data: error })logErrorToProduction('Error Info:', { data: errorInfo })logErrorToProduction('Enhanced Error:', { data: enhancedError })console.groupEnd()}// Report to Sentry;
     Sentry.withScope(scope => {scope.setTag('errorBoundary',this.props.context || 'GlobalErrorBoundary';
-      )scope.setLevel('error')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack,retryCount: this.state.retryCount,})Sentry.captureException(error)})// Custom error handler;
-    if (this.props.onError) {this.props.onError(error, errorInfo)}this.setState({errorInfo,errorId,})}componentWillUnmount() {// Clear any pending retry timeouts;
+      )scope.setLevel('error')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack,retryCount: this.state.retryCount})Sentry.captureException(error)})// Custom error handler;
+    if (this.props.onError) {this.props.onError(error, errorInfo)}this.setState({errorInfo,errorId})}componentWillUnmount() {// Clear any pending retry timeouts;
     this.retryTimeouts.forEach(timeout => clearTimeout(timeout))this.retryTimeouts.forEach(timeout => clearTimeout(timeout))}private generateErrorId(): string {return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }private generateErrorId(): string {return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }private getUserId(): string | null {// Try to get user ID from various sources;
@@ -60,12 +60,12 @@ if ( {) {$2;
                sessionStorage.getItem('userId') ||;
                null;
     // Report to Sentry;
-    Sentry.with_scope (scope => {scope.set_tag ('error_boundary',this.props.context || 'GlobalErrorBoundary')scope.set_level ('error')scope.set_context ('error_info', {component_stack: error_info.component_stack,retry_count: this.state.retry_count,})Sentry.capture_exception (error)})// Custom error handler;
+    Sentry.with_scope (scope => {scope.set_tag ('error_boundary',this.props.context || 'GlobalErrorBoundary')scope.set_level ('error')scope.set_context ('error_info', {component_stack: error_info.component_stack,retry_count: this.state.retry_count})Sentry.capture_exception (error)})// Custom error handler;
     // Check condition;
 if ( {) {$2;
 }
       this.props.on_error (error, error_info)}
-    this.set_state ({error_info,error_id,}) }
+    this.set_state ({error_info,error_id}) }
   componentWillUnmount () {// Clear any pending retry timeouts;
       error_info;
       error_id;
@@ -102,7 +102,7 @@ if ( {) {$2;
       }
     }'use client';import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-import {AlertTriangle,RefreshCw,Home,Bug,Send,Clipboard,} from 'lucide-react';
+import {AlertTriangle,RefreshCw,Home,Bug,Send,Clipboard} from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -126,17 +126,17 @@ interface ErrorBoundaryState  {hasError: boolean;
   context?: string;
 }export class GlobalErrorBoundary extends Component<;
   ErrorBoundaryProps,ErrorBoundaryState;
-> {private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];constructor(props: ErrorBoundaryProps) {super(props)export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];constructor(props: ErrorBoundaryProps) {super(props)this && this.state = {hasError: false,error: null,errorInfo: null,errorId: null,retryCount: 0,userFeedback: '',showDetails: false,}}    ,}
+> {private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];constructor(props: ErrorBoundaryProps) {super(props)export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];constructor(props: ErrorBoundaryProps) {super(props)this && this.state = {hasError: false,error: null,errorInfo: null,errorId: null,retryCount: 0,userFeedback: '',showDetails: false}}    }
       showDetails: false;
     }
-  }static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error,}}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId = this && this.generateErrorId()}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId  = this && this.generateErrorId()// Enhanced error logging;
+  }static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error}}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId = this && this.generateErrorId()}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId  = this && this.generateErrorId()// Enhanced error logging;
     const enhancedError = {...error,// Enhanced error logging;
     const enhancedError = {...error,      componentStack: errorInfo && errorInfo.componentStack,      ...error;
-      componentStack: errorInfo && errorInfo.componentStack,errorBoundary: this && this.props.context || 'GlobalErrorBoundary',timestamp: new Date().toISOString(),userAgent: typeof window !== 'undefined' ? navigator && navigator.userAgent : 'SSR',url: typeof window !== 'undefined' ? window && window.location.href : 'SSR',userId: this && this.getUserId(),buildInfo: this && this.getBuildInfo(),}// Log to console in development;
+      componentStack: errorInfo && errorInfo.componentStack,errorBoundary: this && this.props.context || 'GlobalErrorBoundary',timestamp: new Date().toISOString(),userAgent: typeof window !== 'undefined' ? navigator && navigator.userAgent : 'SSR',url: typeof window !== 'undefined' ? window && window.location.href : 'SSR',userId: this && this.getUserId(),buildInfo: this && this.getBuildInfo()}// Log to console in development;
     if (process && process.env.NODE_ENV === 'development') {console && console.group('🚨 Error Boundary Caught Error')logErrorToProduction('Error:', { data: error })logErrorToProduction('Error Info:', { data: errorInfo })logErrorToProduction('Enhanced Error:', { data: enhancedError })console && console.groupEnd()}// Report to Sentry;
     Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary',this && this.props.context || 'GlobalErrorBoundary';
-      )scope && scope.setLevel('error')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack,retryCount: this && this.state.retryCount,})Sentry && Sentry.captureException(error)})// Custom error handler;
-    if (this && this.props.onError) {this && this.props.onError(error, errorInfo)}this && this.setState({errorInfo,errorId,})}componentWillUnmount() {// Clear any pending retry timeouts;
+      )scope && scope.setLevel('error')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack,retryCount: this && this.state.retryCount})Sentry && Sentry.captureException(error)})// Custom error handler;
+    if (this && this.props.onError) {this && this.props.onError(error, errorInfo)}this && this.setState({errorInfo,errorId})}componentWillUnmount() {// Clear any pending retry timeouts;
       errorInfo;
       errorId;
     })// Log to console in development;
@@ -164,7 +164,7 @@ interface ErrorBoundaryState  {hasError: boolean;
     }
     return null;return null;}
   private getBuildInfo () {return {version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',environment: process.env.NODE_ENV,return 'This appears to be a temporary issue. Please try again.';
-      build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',}
+      build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}
   }
   private getErrorSeverity (error: Error): 'low' | 'medium' | 'high' | 'critical' {const message = error.message.toLowerCase ()const stack = error.stack?.toLowerCase () || '';
     // Critical errors;
@@ -199,7 +199,7 @@ interface ErrorBoundaryState  {hasError: boolean;
       return 'You may need to log in again or check your permissions.';
     }
     return 'This appears to be a temporary issue. Please try again.' }
-  private retry = () => {if () {  }
+  private retry = () => {if () {}
 ) {$2;
 }
   private getErrorSeverity (error: Error): 'low' | 'medium' | 'high' | 'critical' {const message = error.message.toLowerCase ()const stack = error.stack?.toLowerCase () || '';
@@ -234,7 +234,7 @@ interface ErrorBoundaryState  {hasError: boolean;
 }
       return 'You may need to log in again or check your permissions.';
     }
-    return 'This appears to be a temporary issue. Please try again.';buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',}}
+    return 'This appears to be a temporary issue. Please try again.';buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}}
   private getErrorSeverity(error: Error;
   ): 'low' | 'medium' | 'high' | 'critical' {const message = error.message.toLowerCase()const stack  = error.stack?.toLowerCase() || '';// Critical errors;
     if (message.includes('network') || message.includes('fetch')) {return 'medium';
@@ -257,19 +257,19 @@ interface ErrorBoundaryState  {hasError: boolean;
       return;
     }
     const retry_delay = Math.pow (2, this.state.retry_count) * 1000 // Exponential backoff;
-    const timeout = set_timeout (() => {      this.set_state ({has_error: false,error: null,error_info: null,error_id: null,retry_count: this.state.retry_count + 1,show_details: false,})}, retry_delay)this.retry_timeouts.push (timeout)}        show_details: false;
+    const timeout = set_timeout (() => {      this.set_state ({has_error: false,error: null,error_info: null,error_id: null,retry_count: this.state.retry_count + 1,show_details: false})}, retry_delay)this.retry_timeouts.push (timeout)}        show_details: false;
       })}, retry_delay)this.retry_timeouts.push (timeout)}const error_details = {error_id: this.state.error_id,message: this.state.error?.message,stack: this.state.error?.stack,component_stack: this.state.error_info?.component_stack,timestamp: new Date ().toISOString (),url: typeof window !== 'undefined' ? window.location.href : 'unknown',user_agent:;
-        typeof window !== 'undefined' ? navigator.user_agent : 'unknown',}
+        typeof window !== 'undefined' ? navigator.user_agent : 'unknown'}
     try {await navigator.clipboard.write_text (JSON.stringify (error_details, null, 2))// Could show a toast notification here;
     } catch (err) {logErrorToProduction ('Failed to copy error details:', { data: err })}
-  }showDetails: false,})}, retryDelay)this.retryTimeouts.push(timeout)}private copyErrorDetails = async () => {const errorDetails = {errorId: this.state.errorId,message: this.state.error?.message,stack: this.state.error?.stack,componentStack: this.state.errorInfo?.componentStack,timestamp: new Date().toISOString(),url: typeof window !== 'undefined' ? window.location.href : 'unknown',userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown';
+  }showDetails: false})}, retryDelay)this.retryTimeouts.push(timeout)}private copyErrorDetails = async () => {const errorDetails = {errorId: this.state.errorId,message: this.state.error?.message,stack: this.state.error?.stack,componentStack: this.state.errorInfo?.componentStack,timestamp: new Date().toISOString(),url: typeof window !== 'undefined' ? window.location.href : 'unknown',userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown';
     }private report_error = async () => {// Check condition;
 if (return) {$2;
 }
     // Check condition;
 if (return) {$2;
 }userAgent:;
-        typeof window !== 'undefined' ? navigator.userAgent : 'unknown',}try {await navigator.clipboard.write_text (JSON.stringify (error_details, null, 2))// Could show a toast notification here;
+        typeof window !== 'undefined' ? navigator.userAgent : 'unknown'}try {await navigator.clipboard.write_text (JSON.stringify (error_details, null, 2))// Could show a toast notification here;
     } catch (err) {logErrorToProduction ('Failed to copy error details:', { data: err })}
   }if (!this.state.error || !this.state.errorId) return;
   private reportError = async () => {if (!this.state.error || !this.state.errorId) return;try {// Report to your error reporting service;
@@ -284,12 +284,12 @@ if (return) {$2;
           errorInfo: this.state.errorInfo;
           userFeedback: this.state.userFeedback;
           context: this.props.context;
-          timestamp: new Date().toISOString()})})timestamp: new Date().toISOString()})})'Content-Type': 'application/json',},body: JSON.stringify({errorId: this.state.errorId,error: {message: this.state.error.message,stack: this.state.error.stack,name: this.state.error.name,},errorInfo: this.state.errorInfo,userFeedback: this.state.userFeedback,context: this.props.context,timestamp: new Date().toISOString(),}),})if (response.ok) {// Show success message;
+          timestamp: new Date().toISOString()})})timestamp: new Date().toISOString()})})'Content-Type': 'application/json'},body: JSON.stringify({errorId: this.state.errorId,error: {message: this.state.error.message,stack: this.state.error.stack,name: this.state.error.name},errorInfo: this.state.errorInfo,userFeedback: this.state.userFeedback,context: this.props.context,timestamp: new Date().toISOString()})})if (response.ok) {// Show success message;
   private report_error = async () => {// Check condition;
 if (return) {$2;
 }
     try {// Report to your error reporting service;
-      const response = await fetch ('/api / error - report', {method: 'POST',headers: {'Content - Type': 'application / json',},error_id: this.state.error_id,error: {message: this.state.error.message,stack: this.state.error.stack,name: this.state.error.name,},error_info: this.state.error_info,user_feedback: this.state.user_feedback,context: this.props.context,timestamp: new Date ().toISOString (),}),})timestamp: new Date ().toISOString ()})})// Check condition;
+      const response = await fetch ('/api / error - report', {method: 'POST',headers: {'Content - Type': 'application / json'},error_id: this.state.error_id,error: {message: this.state.error.message,stack: this.state.error.stack,name: this.state.error.name},error_info: this.state.error_info,user_feedback: this.state.user_feedback,context: this.props.context,timestamp: new Date ().toISOString ()})})timestamp: new Date ().toISOString ()})})// Check condition;
 if ( {) {$2;
 }
         // Show success message;}
@@ -337,7 +337,7 @@ if ( {) {$2;
   }}this.setState({errorInfo,errorId,logErrorToProduction('Failed to report error:', { data: err })}
   }private goHome = () => {if (typeof window !== 'undefined') {window.location.href = '/';
     }}}render() {if (this.state.hasError && this.state.error) {// Use custom fallback if provided;
-      if (this.props.fallback) {return this.props.fallback;private getBuildInfo() {return {version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',environment: process && process.env.NODE_ENV,buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',}}}const severity = this.getErrorSeverity(this.state.error)const suggestion = this.getErrorSuggestion(this.state.error)const canRetry = this.props.enableRetry !== false &&;
+      if (this.props.fallback) {return this.props.fallback;private getBuildInfo() {return {version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',environment: process && process.env.NODE_ENV,buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}}}const severity = this.getErrorSeverity(this.state.error)const suggestion = this.getErrorSuggestion(this.state.error)const canRetry = this.props.enableRetry !== false &&;
                        this.state.retryCount < (this.props.maxRetries || 3)return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">;
 return this.props.fallback;
       }const severity = this.getErrorSeverity(this.state.error)const suggestion = this.getErrorSuggestion(this.state.error)const canRetry =;
@@ -409,7 +409,7 @@ return this.props.fallback;
                     }>;
                     {severity && severity.toUpperCase()}
                   </Badge>;
-                  {this && this.state.errorId && (<Badge variant='outline' className='text-xs'>                      ID: {this && this.state.errorId && errorId.slice(-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
+                  {this && this.state.errorId && (<Badge variant='outline' className='text-xs'>                      ID: {this && this.state.errorId && errorId.slice(-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
                 </div>;
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">;
                   Oops! Something went wrong;
@@ -597,7 +597,7 @@ if ( {) {$2;
                     }                  >;
                     {severity.toUpperCase ()}
                   </Badge>;
-                  {this.state.error_id && (<Badge variant='outline' className='text - xs'>                      ID: {this.state.error_id.slice (-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary', }
+                  {this.state.error_id && (<Badge variant='outline' className='text - xs'>                      ID: {this.state.error_id.slice (-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary' }
                 </div>;
                 <CardTitle className="text - 2xl font - bold text - gray - 900 dark:text - gray - 100">;
                   Oops! Something went wrong;

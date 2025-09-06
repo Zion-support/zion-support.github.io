@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
-import {TooltipProvider,Tooltip,TooltipTrigger,TooltipContent,} from '@/components/ui/tooltip';
+import {TooltipProvider,Tooltip,TooltipTrigger,TooltipContent} from '@/components/ui/tooltip';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Loader2, Info, ThumbsUp  } from 'lucide-react';
@@ -62,7 +62,7 @@ interface PricingSuggestionBoxProps  {suggestion: PricingSuggestion | null,isLoa
         <div className="flex items-center justify-between">;
           <h4 className="font-semibold">AI Suggested Price</h4>;
           <Badge variant="outline" className={confidenceColor}>;
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({suggestion,isLoading,onApplySuggestion,rateType,}) => {  if (isLoading) {return (<Card className='border border-dashed border-muted'>;
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({suggestion,isLoading,onApplySuggestion,rateType}) => {  if (isLoading) {return (<Card className='border border-dashed border-muted'>;
         <CardContent className='flex items-center justify-center p-6'>;
           <div className='text-center'>;
             <Loader2 className='h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4' />;
@@ -76,7 +76,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({sugge
         </CardContent>;
       </Card>;
     )}    )}if (!suggestion) {return null;
-  }const confidenceColor = {High: 'bg-green-100 text-green-800',Medium: 'bg-yellow-100 text-yellow-800',Low: 'bg-red-100 text-red-800',}[suggestion && suggestion.confidence];return (<Card className='border-2 border-dashed border-muted-foreground/20'>;
+  }const confidenceColor = {High: 'bg-green-100 text-green-800',Medium: 'bg-yellow-100 text-yellow-800',Low: 'bg-red-100 text-red-800'}[suggestion && suggestion.confidence];return (<Card className='border-2 border-dashed border-muted-foreground/20'>;
       <CardContent className='p-5 space-y-4'>;
         <div className='flex items-center justify-between'>;
           <h4 className='font-semibold'>AI Suggested Price</h4>;
@@ -105,7 +105,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({sugge
                 <Button;
                   variant='default'            ${suggestion && suggestion.minRate.toFixed(0)} - ${suggestion && suggestion.maxRate.toFixed(0)}
           </span>;
-          <span className="text-sm text-muted-foreground ml-1">;High: 'bg-green-100 text-green-800',Medium: 'bg-yellow-100 text-yellow-800',Low: 'bg-red-100 text-red-800',}[suggestion.confidence];return (<Card className='border-2 border-dashed border-muted-foreground/20'>;
+          <span className="text-sm text-muted-foreground ml-1">;High: 'bg-green-100 text-green-800',Medium: 'bg-yellow-100 text-yellow-800',Low: 'bg-red-100 text-red-800'}[suggestion.confidence];return (<Card className='border-2 border-dashed border-muted-foreground/20'>;
       <CardContent className='p-5 space-y-4'>;
         <div className='flex items-center justify-between'>;
           <h4 className='font-semibold'>AI Suggested Price</h4>;
@@ -220,7 +220,7 @@ variant='default';
       </CardContent>;
     </Card>;
   )}}import { Button  } from '@/components / ui / button';
-import { TooltipProvider,Tooltip,TooltipTrigger,TooltipContent,} from '@/components / ui / tooltip';
+import { TooltipProvider,Tooltip,TooltipTrigger,TooltipContent} from '@/components / ui / tooltip';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { PricingSuggestion  } from '@/services / pricingSuggestionService';
@@ -228,7 +228,7 @@ interface PricingSuggestionBoxProps  {suggestion: PricingSuggestion | null;
   is_loading: boolean;
   onApplySuggestion: () => void;
   rate_type: 'hourly' | 'fixed';
-export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({suggestion,is_loading,onApplySuggestion,rate_type,}) => {  // Check condition;
+export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({suggestion,is_loading,onApplySuggestion,rate_type}) => {  // Check condition;
 if ( {) {$2;
 }
     return (<Card className='border border - dashed border - muted'>;
@@ -249,7 +249,7 @@ if ( {) {$2;
 }
     return null;
   }
-  const confidence_color = {High: 'bg - green - 100 text - green - 800',Medium: 'bg - yellow - 100 text - yellow - 800',Low: 'bg - red - 100 text - red - 800',}[suggestion.confidence];
+  const confidence_color = {High: 'bg - green - 100 text - green - 800',Medium: 'bg - yellow - 100 text - yellow - 800',Low: 'bg - red - 100 text - red - 800'}[suggestion.confidence];
   return (<Card className='border - 2 border - dashed border - muted - foreground / 20'>;
       <CardContent className='p - 5 space - y-4'>;
         <div className='flex items - center justify - between'>;

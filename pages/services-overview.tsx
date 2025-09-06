@@ -2327,17 +2327,17 @@ export default function ServicesOverviewPage() {class ErrorBoundary extends Reac
       </section>;
     </PageTransition>;
   )}
-import {Brain,Network,Cloud,Shield,Zap,Target,Users,BarChart3,ArrowRight,CheckCircle,Star,Award,Clock,Globe,} from 'lucide-react';
+import {Brain,Network,Cloud,Shield,Zap,Target,Users,BarChart3,ArrowRight,CheckCircle,Star,Award,Clock,Globe} from 'lucide-react';
 const serviceCategories = [;
   {title: "AI Services",description:;
       "Cutting-edge artificial intelligence solutions for modern businesses",icon: Brain,services: [;
-      "AI Analytics","Machine Learning","Natural Language Processing","Computer Vision",],link: "/ai-services",color: "from-blue-500 to-purple-600",},{title: "IT Services",description: "Comprehensive IT solutions and infrastructure management",icon: Network,services: [;
-      "Cloud Migration","System Integration","Network Security","Data Management",],link: "/it-services",color: "from-green-500 to-blue-600",},{title: "Micro SAAS",description:;
+      "AI Analytics","Machine Learning","Natural Language Processing","Computer Vision"],link: "/ai-services",color: "from-blue-500 to-purple-600"},{title: "IT Services",description: "Comprehensive IT solutions and infrastructure management",icon: Network,services: [;
+      "Cloud Migration","System Integration","Network Security","Data Management"],link: "/it-services",color: "from-green-500 to-blue-600"},{title: "Micro SAAS",description:;
       "Innovative micro software solutions for specific business needs",icon: Cloud,services: [;
-      "Workflow Automation","Project Management","Customer Analytics","API Integration",],link: "/micro-saas",color: "from-purple-500 to-pink-600",},{title: "Security",description: "Advanced cybersecurity and data protection solutions",icon: Shield,services: [;
-      "Threat Detection","Data Encryption","Access Control","Compliance Management",],link: "/security",color: "from-red-500 to-orange-600",},{title: "Automation",description: "Intelligent automation solutions to streamline operations",icon: Zap,services: [;
-      "Process Automation","Workflow Optimization","Task Scheduling","Integration Hub",],link: "/automation",color: "from-yellow-500 to-red-600",},{title: "Analytics",description: "Data-driven insights and business intelligence solutions",icon: BarChart3,services: [;
-      "Business Intelligence","Predictive Analytics","Data Visualization","Reporting",],link: "/analytics",color: "from-indigo-500 to-purple-600",},];ursor/automate-test-improve-and-merge-code-646c;
+      "Workflow Automation","Project Management","Customer Analytics","API Integration"],link: "/micro-saas",color: "from-purple-500 to-pink-600"},{title: "Security",description: "Advanced cybersecurity and data protection solutions",icon: Shield,services: [;
+      "Threat Detection","Data Encryption","Access Control","Compliance Management"],link: "/security",color: "from-red-500 to-orange-600"},{title: "Automation",description: "Intelligent automation solutions to streamline operations",icon: Zap,services: [;
+      "Process Automation","Workflow Optimization","Task Scheduling","Integration Hub"],link: "/automation",color: "from-yellow-500 to-red-600"},{title: "Analytics",description: "Data-driven insights and business intelligence solutions",icon: BarChart3,services: [;
+      "Business Intelligence","Predictive Analytics","Data Visualization","Reporting"],link: "/analytics",color: "from-indigo-500 to-purple-600"}];ursor/automate-test-improve-and-merge-code-646c;
           <div className="container mx-auto px-4 relative z-10">;
             <motion.div;
               initial={{ opacity: 0, y: 30 }}

@@ -22,6 +22,39 @@ interface SaveTalentButtonProps  {talentId: string,onSave: (talentId: string) =>
 }export function SaveTalentButton() {export function SaveTalentButton() {isSaved;
   isSaved;
 }: SaveTalentButtonProps) {return (<Button;
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
+interface SaveTalentButtonProps {
+  talentId: string;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+interface SaveTalentButtonProps {
+  talentId: string;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+}
+
+export function SaveTalentButton({
+  talentId,
+  onSave,
+  isSaved
+}: SaveTalentButtonProps) {
+import {Button} from "@/components/ui/button";
+import {Star} from "lucide-react";
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string) => void,;
+  isSaved: boolean;
+}
+
+export function SaveTalentButton({
+  talentId,
+  onSave,
+  isSaved
+}: SaveTalentButtonProps) {
+  return (
+    <Button
       onClick={() => onSave(talentId)}
       variant={isSaved ? "default" : "outline"}className={is_saved;
           ? "bg - yellow - 500 hover:bg - yellow - 600 text - white";

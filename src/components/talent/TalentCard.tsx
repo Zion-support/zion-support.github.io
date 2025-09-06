@@ -67,7 +67,7 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
         {skills && skills.length > 0 && (<div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index,) => (<span;
-                  key = {index,}
+                  key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;{skills.map((skill, index) => (<span;
                   key={index}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
                 >;
@@ -135,8 +135,8 @@ if ( {) {$2;
   },// Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice (0, 5) || [],return (<Card;
       className="overflow - hidden transition - all hover:shadow - lg border - zion - blue - light bg - zion - blue cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - zion - purple";
-      on_click = {handleViewProfile, }
-      tab_index = {0, }
+      on_click = {handleViewProfile }
+      tab_index = {0 }
     >;
       <div className="p - 6">;
         <div className="flex items - start">;
@@ -144,8 +144,8 @@ if ( {) {$2;
           <div className="relative mr - 4">;
             <div className="w - 16 h - 16 rounded - full overflow - hidden bg - zion - blue - dark border border - zion - blue - light">;
               {talent.profile_picture_url ? (<img;
-                  src = {talent.profile_picture_url, }
-                  alt = {talent.full_name, }
+                  src = {talent.profile_picture_url }
+                  alt = {talent.full_name }
                   className="w - full h - full object - cover";
                   loading="lazy";
                 />) : (<div className="w - full h - full flex items - center justify - center text - zion - slate - light text - xl font - bold">;
@@ -180,7 +180,7 @@ if ( {) {$2;
         {skills.length > 0 && (<div className="mt - 4">;
             <div className="flex flex - wrap gap - 2">;
               {skills.map ((skill, index, ) => (<span;
-                  key = {index, }
+                  key = {index }
                   className="px - 2 py - 1 text - xs rounded - full bg - zion - blue - light text - zion - slate - light";
                 >;
                   {skill}
@@ -202,7 +202,7 @@ if ( {) {$2;
             {is_authenticated && (<Button;
                 size="sm";
                 variant="secondary";
-                on_click = {handleRequestHire, }
+                on_click = {handleRequestHire }
                 className="bg - zion - purple hover:bg - zion - purple - light text - white";
               >;
                 Hire;
@@ -216,4 +216,4 @@ if ( {) {$2;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;</Button>;
           </div>;
         </div>;
-      </div>;</Card>)},export const TalentCard = React.memo (TalentCardComponent),TalentCard.display_name = 'TalentCard',export const TalentCard = React.memo (TalentCardComponent)TalentCard.display_name = 'TalentCard';export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard',},export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard',export interface TalentCardProps  {)}";
+      </div>;</Card>)},export const TalentCard = React.memo (TalentCardComponent),TalentCard.display_name = 'TalentCard',export const TalentCard = React.memo (TalentCardComponent)TalentCard.display_name = 'TalentCard';export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard'},export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard',export interface TalentCardProps  {)}";

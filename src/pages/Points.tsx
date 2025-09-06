@@ -25,12 +25,12 @@ import {Card;
   CardHeader;
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History  } from 'lucide-react';
-import {Gift,Star,Users,ShoppingBag,MessageSquare,TrendingUp,History,} from 'lucide-react';
+import {Gift,Star,Users,ShoppingBag,MessageSquare,TrendingUp,History} from 'lucide-react';
 import { useAuth  } from '@/hooks/useAuth';
 import { usePoints  } from '@/hooks/usePoints';
-  Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History  } from 'lucide-react';
+  Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History  } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-  Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';import { Button  } from '@/components/ui/button';
+  Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import { formatDistanceToNow  } from 'date-fns';
@@ -45,7 +45,7 @@ export default function PointsPage() {const { isAuthenticated, user } = useAuth(
           reward: reward.title;
         })})await fetchLedger()} finally {setRedeeming(false)}      })await fetchLedger()} finally {setRedeeming(false)import React, { useState } from 'react',import { useAuth } from '@/hooks/useAuth',import { usePoints } from '@/hooks/usePoints',import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',import { Button } from '@/components/ui/button',import { Badge } from '@/components/ui/badge',import { ScrollArea } from '@/components/ui/scroll-area',import { formatDistanceToNow } from 'date-fns',import Link from 'next/link',import { LoginModal } from '@/components/auth/LoginModal',export default function PointsPage() {const { isAuthenticated, user } = useAuth(),const { ledger, balance, loading, fetchLedger } = usePoints(),const [loginOpen, setLoginOpen] = useState(false),const [redeeming, setRedeeming] = useState(false),async function handleRedeem() {if (!user?.id) return,setRedeeming(true),try {await fetch('/api/points/redeem', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })}),await fetchLedger()} finally {setRedeeming(false)}      })await fetchLedger()} finally {setRedeeming(false)method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })})await fetchLedger()} finally {setRedeeming(false)}
   }const earningOpportunities = [;
-    {title: 'Sign Up & Profile Setup',description: 'Complete your profile and verify your email',points: '50 pts',action: is_authenticated ? '✓ Completed' : 'Get Started',},icon: <ShoppingBag className='h - 5 w - 5' />,icon: <Users className='h-5 w-5' />,icon: <Users className='h-5 w-5' />,title: 'Sign Up & Profile Setup',description: 'Complete your profile and verify your email',points: '50 pts',action: isAuthenticated ? '✓ Completed' : 'Get Started',},icon: <ShoppingBag className='h-5 w-5' />,title: 'First Purchase',description: 'Make your first purchase on the marketplace',points: '100 pts',action: 'Browse Marketplace',icon: <Users className='h-5 w-5' />;
+    {title: 'Sign Up & Profile Setup',description: 'Complete your profile and verify your email',points: '50 pts',action: is_authenticated ? '✓ Completed' : 'Get Started'},icon: <ShoppingBag className='h - 5 w - 5' />,icon: <Users className='h-5 w-5' />,icon: <Users className='h-5 w-5' />,title: 'Sign Up & Profile Setup',description: 'Complete your profile and verify your email',points: '50 pts',action: isAuthenticated ? '✓ Completed' : 'Get Started'},icon: <ShoppingBag className='h-5 w-5' />,title: 'First Purchase',description: 'Make your first purchase on the marketplace',points: '100 pts',action: 'Browse Marketplace',icon: <Users className='h-5 w-5' />;
       title: 'Sign Up & Profile Setup';
       description: 'Complete your profile and verify your email';
       points: '50 pts';
@@ -65,8 +65,8 @@ export default function PointsPage() {const { isAuthenticated, user } = useAuth(
       points: '25 pts per post';
       action: 'Join Community';
     }
-    {icon: <MessageSquare className='h-5 w-5' />,title: 'Community Engagement',description: 'Post in the community or comment on discussions',points: '25 pts per post',action: 'Join Community',},{icon: <Users className='h-5 w-5' />,title: 'Refer Friends',description: 'Invite friends to join Zion marketplace',points: '200 pts per referral',action: 'Share Referral Link',},];const upcomingRewards = [;
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },{id: 'premium1',title: 'Premium Features (1 month)',cost: 1000,category: 'Subscription',},{id: 'swag';
+    {icon: <MessageSquare className='h-5 w-5' />,title: 'Community Engagement',description: 'Post in the community or comment on discussions',points: '25 pts per post',action: 'Join Community'},{icon: <Users className='h-5 w-5' />,title: 'Refer Friends',description: 'Invite friends to join Zion marketplace',points: '200 pts per referral',action: 'Share Referral Link'}];const upcomingRewards = [;
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },{id: 'premium1',title: 'Premium Features (1 month)',cost: 1000,category: 'Subscription'},{id: 'swag';
       title: 'Zion Swag Pack';
       cost: 1500;
       category: 'Merchandise';
@@ -76,14 +76,14 @@ export default function PointsPage() {const { isAuthenticated, user } = useAuth(
       category: 'Discount';
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }const earningOpportunities = [;
-    {icon: <Users className='h-5 w-5' />,title: 'Sign Up & Profile Setup',description: 'Complete your profile and verify your email',points: '50 pts',action: isAuthenticated ? '✓ Completed' : 'Get Started',},icon: <ShoppingBag className='h-5 w-5' />,title: 'First Purchase',description: 'Make your first purchase on the marketplace',points: '100 pts',action: 'Browse Marketplace',},{icon: <MessageSquare className='h-5 w-5' />,title: 'Community Engagement',description: 'Post in the community or comment on discussions',points: '25 pts per post',action: 'Join Community',},{icon: <Users className='h-5 w-5' />,title: 'Refer Friends',description: 'Invite friends to join Zion marketplace',points: '200 pts per referral',action: 'Share Referral Link',icon: <Users className="h-5 w-5" />,title: "Sign Up & Profile Setup",description: "Complete your profile and verify your email",points: "50 pts",action: isAuthenticated ? "✓ Completed" : "Get Started";
+    {icon: <Users className='h-5 w-5' />,title: 'Sign Up & Profile Setup',description: 'Complete your profile and verify your email',points: '50 pts',action: isAuthenticated ? '✓ Completed' : 'Get Started'},icon: <ShoppingBag className='h-5 w-5' />,title: 'First Purchase',description: 'Make your first purchase on the marketplace',points: '100 pts',action: 'Browse Marketplace'},{icon: <MessageSquare className='h-5 w-5' />,title: 'Community Engagement',description: 'Post in the community or comment on discussions',points: '25 pts per post',action: 'Join Community'},{icon: <Users className='h-5 w-5' />,title: 'Refer Friends',description: 'Invite friends to join Zion marketplace',points: '200 pts per referral',action: 'Share Referral Link',icon: <Users className="h-5 w-5" />,title: "Sign Up & Profile Setup",description: "Complete your profile and verify your email",points: "50 pts",action: isAuthenticated ? "✓ Completed" : "Get Started";
     },{icon: <ShoppingBag className="h-5 w-5" />,title: "First Purchase",description: "Make your first purchase on the marketplace",points: "100 pts",action: "Browse Marketplace";
-    },{},  ];const upcomingRewards = [;
+    },{}  ];const upcomingRewards = [;
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",icon: <MessageSquare className="h-5 w-5" />,title: "Community Engagement",description: "Post in the community or comment on discussions",points: "25 pts per post",action: "Join Community";
     },{description: "Invite friends to join Zion marketplace",points: "200 pts per referral",action: "Share Referral Link";
     }
   ],const upcomingRewards = [;
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },{id: 'premium1',title: 'Premium Features (1 month)',cost: 1000,category: 'Subscription',},{id: 'swag',title: 'Zion Swag Pack',cost: 1500,category: 'Merchandise',},{id: 'coupon25',title: '$25 Off Coupon',cost: 2000,category: 'Discount',},{ id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },description: "Invite friends to join Zion marketplace",points: "200 pts per referral",action: "Share Referral Link";
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },{id: 'premium1',title: 'Premium Features (1 month)',cost: 1000,category: 'Subscription'},{id: 'swag',title: 'Zion Swag Pack',cost: 1500,category: 'Merchandise'},{id: 'coupon25',title: '$25 Off Coupon',cost: 2000,category: 'Discount'},{ id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },description: "Invite friends to join Zion marketplace",points: "200 pts per referral",action: "Share Referral Link";
     }if (!isAuthenticated) {return (const upcomingRewards = [;
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },{ id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },{ id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },{ id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' }{ id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   ],if (!isAuthenticated) {return (<>;
@@ -370,7 +370,7 @@ export default function PointsPage() {const { isAuthenticated, user } = useAuth(
                           ? 'bg-green-100 text-green-800';
                           : 'bg-red-100 text-red-800';
                       }                      variant="outline";
-                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts;

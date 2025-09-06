@@ -11,12 +11,40 @@ interface ProductsAdminPageProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/ProductsAdminPage.jsx;
+interface ProductsAdminPageProps {
+  // Add props here as needed
+
+
+}
+
+export default function ProductsAdminPage({}: ProductsAdminPageProps) {
+  return (
+    <div>
+      <h1>ProductsAdminPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/ProductsAdminPage.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/ProductsAdminPage.jsx;
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/ProductsAdminPage.jsx
 }
 }
 }

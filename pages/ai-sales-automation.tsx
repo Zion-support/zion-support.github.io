@@ -16,7 +16,7 @@ export default function AISalesAutomation() {return (<Layout title="AI Sales Aut
     </Layout>;
   )import Head from 'next/head';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-export default function AISalesAutomationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))if (!service) return null,export default function AISalesAutomationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,Star,ChartBar,} from 'lucide-react';
+export default function AISalesAutomationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))if (!service) return null,export default function AISalesAutomationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,Star,ChartBar} from 'lucide-react';
 export default function AISalesAutomationPage() {const service = enhancedRealMicroSaasServices.find(s =>;
     s.link.endsWith('/ai-sales-automation'))if (!service) return null;return (<Layout>;
       <Head>;

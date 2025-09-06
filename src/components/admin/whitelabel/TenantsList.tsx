@@ -18,7 +18,7 @@ import { format } from 'date-fns',export function TenantsList() {const [tenants,
         (t as any).id === (tenant as any).id ? { ...t, dns_verified: true } : t;
       )),toast({title: 'DNS verified',description: `Custom domain for ${(tenant as any).brand_name} has been verified.`})} catch (error: any) {logErrorToProduction('Error verifying DNS:', { data: error }),toast({variant: 'destructive',title: 'Failed to verify DNS';
         description: error.message})}
-  },}.order('created_at', { ascending: false }),}.order ('created_at', { ascending: false }),}
+  }}.order('created_at', { ascending: false })}.order ('created_at', { ascending: false })}
 }import React, { useState, useEffect } from 'react';
 import { supabase   } from '@/integrations/supabase/client';
 import { logErrorToProduction } from '@/utils/productionLogger';

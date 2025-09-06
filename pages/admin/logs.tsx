@@ -25,9 +25,9 @@ import { AlertTriangle;
   Search;
   Download;
   RefreshCw;
-  SelectTrigger,SelectValue,} from '@/components/ui/select';
-import {AlertTriangle,Info,AlertCircle,XCircle,Search,Download,RefreshCw,Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components/ui/select';
-  AlertTriangle,Info,AlertCircle,XCircle,Search,Download,RefreshCw,} from 'lucide-react';import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
+  SelectTrigger,SelectValue} from '@/components/ui/select';
+import {AlertTriangle,Info,AlertCircle,XCircle,Search,Download,RefreshCw,Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
+  AlertTriangle,Info,AlertCircle,XCircle,Search,Download,RefreshCw} from 'lucide-react';import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
@@ -94,9 +94,9 @@ return <Info className='h-4 w-4 text-blue-500' />;case 'info':;
   warningCount;
   totalCount;
   lastUpdated;
-  logs: initialLogs,errorCount,warningCount,totalCount,lastUpdated,}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs)return <XCircle className="h-4 w-4 text-red-700" />,default: return <Info className="h-4 w-4 text-gray-500" />;const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {switch (level) {case 'debug':;
-const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {const colors = {debug: 'bg-blue-100 text-blue-800',info: 'bg-green-100 text-green-800',warn: 'bg-yellow-100 text-yellow-800',error: 'bg-red-100 text-red-800',critical: 'bg-red-200 text-red-900',}return <Badge className={colors[level]}>{level && level.toUpperCase()}</Badge>;
-}export default function LogsPage(): any ({logs: initialLogs,errorCount,warningCount,totalCount,lastUpdated,}: LogsPageProps) {  const [logs, setLogs]  = useState<LogEntry[]>(initialLogs)cause?: unknown;
+  logs: initialLogs,errorCount,warningCount,totalCount,lastUpdated}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs)return <XCircle className="h-4 w-4 text-red-700" />,default: return <Info className="h-4 w-4 text-gray-500" />;const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {switch (level) {case 'debug':;
+const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {const colors = {debug: 'bg-blue-100 text-blue-800',info: 'bg-green-100 text-green-800',warn: 'bg-yellow-100 text-yellow-800',error: 'bg-red-100 text-red-800',critical: 'bg-red-200 text-red-900'}return <Badge className={colors[level]}>{level && level.toUpperCase()}</Badge>;
+}export default function LogsPage(): any ({logs: initialLogs,errorCount,warningCount,totalCount,lastUpdated}: LogsPageProps) {  const [logs, setLogs]  = useState<LogEntry[]>(initialLogs)cause?: unknown;
   }performance?: {memory?: number;
     timing?: number;
     fps?: number;
@@ -783,7 +783,7 @@ if ( {) {$2;
     const errorCount = logs && logs.filter(log => log && log.level === 'error' || log && log.level === 'critical';
     ).length;    const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
     const totalCount  = logs && logs.length;return {props: {logs: logs && logs.slice(0, 1000), // Limit to most recent 1000 logs;
-        errorCount,warningCount,totalCount,lastUpdated: new Date().toISOString(),},}} catch (error) {logErrorToProduction('Error reading logs:', error)return {props: {logs: [],errorCount: 0,warningCount: 0,totalCount: 0,lastUpdated: new Date().toISOString(),},}}}}
+        errorCount,warningCount,totalCount,lastUpdated: new Date().toISOString()}}} catch (error) {logErrorToProduction('Error reading logs:', error)return {props: {logs: [],errorCount: 0,warningCount: 0,totalCount: 0,lastUpdated: new Date().toISOString()}}}}}
   }
 }
 }errorCount;

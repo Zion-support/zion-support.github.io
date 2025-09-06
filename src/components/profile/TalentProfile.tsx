@@ -16,13 +16,13 @@ import { Availability  } from '@/types/profile';
 interface TalentProfileProps  {profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void;
-export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent,}: TalentProfileProps) {const { isAuthenticated }  = useAuth()// Create proper availability object from talent profile;
+export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: TalentProfileProps) {const { isAuthenticated }  = useAuth()// Create proper availability object from talent profile;
   const availability: Availability = {status:;
       profile && profile.availability_type === 'full_time';
         ? 'available';
         : profile && profile.availability_type === 'part_time';
           ? 'limited';
-          : 'unavailable',message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`,}// Create proper skills array for ProfileSkills component;
+          : 'unavailable',message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`}// Create proper skills array for ProfileSkills component;
   const skillsArray =;
     profile && profile.skills?.map(skill => ({name: skill,level: 3, // Default level since we don't have this data;
     })) || [];// Create proper projects array for ProfileProjects component;
@@ -68,7 +68,7 @@ function TalentProfile() {const { is_authenticated } = use_auth ()// Create prop
         ? 'available';
         : profile.availability_type === 'part_time';
           ? 'limited';
-          : 'unavailable',message: `${profile.professional_title} with ${profile.years_experience} years of experience`,}
+          : 'unavailable',message: `${profile.professional_title} with ${profile.years_experience} years of experience`}
   // Create proper skills array for ProfileSkills component;
   const skills_array =;
     profile.skills?.map (skill => ({name: skill,level: 3, // Default level since we don't have this data;

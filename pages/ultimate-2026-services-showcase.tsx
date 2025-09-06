@@ -43,7 +43,7 @@ import { ultimate2026Services  } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations  } from '../data/revolutionary-2026-innovations';
   ChevronDown, Sparkles;
 } from 'lucide-react';
-Search,Star,DollarSign,CheckCircle,ArrowRight,Rocket,Phone,Mail,MapPin,Grid,List,ChevronDown,Sparkles,} from 'lucide-react';export default function Ultimate2026ServicesShowcase() {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
+Search,Star,DollarSign,CheckCircle,ArrowRight,Rocket,Phone,Mail,MapPin,Grid,List,ChevronDown,Sparkles} from 'lucide-react';export default function Ultimate2026ServicesShowcase() {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
   }// Combine all services;
   const allServices = [;
     ...ultimate2026Services;...revolutionary2026Innovations;

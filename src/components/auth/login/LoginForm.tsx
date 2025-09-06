@@ -10,7 +10,7 @@ import { fireEvent  } from '@/lib/analytics';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
-import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';
+import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import Link from 'next/link';
 import { useRouter   } from 'next/router';
@@ -29,16 +29,16 @@ import { z   } from './zod';
 import { use_auth   } from '@/context / auth / AuthProvider';
 import { Button   } from '@/components / ui / button';
 import { Input   } from '@/components / ui / input';
-  FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components / ui / form';
+  FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components / ui / form';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import Link from 'next / link';
 import { Checkbox } from '@/components / ui / checkbox';// Form validation schema;
 const login_schema = z.object ({email: z;
-    .string ().email ('Please enter a valid email').min (1, 'Email is required'),password: z.string ().min (6, 'Password must be at least 6 characters'),remember_me: z.boolean (),})type LoginFormValues = z.infer < typeof login_schema>;
+    .string ().email ('Please enter a valid email').min (1, 'Email is required'),password: z.string ().min (6, 'Password must be at least 6 characters'),remember_me: z.boolean ()})type LoginFormValues = z.infer < typeof login_schema>;
 export /**;
  * LoginForm - Function description;
  */;
-function LoginForm() {const { is_loading, login } = use_auth ()const [show_password, setShowPassword] = useState (false)const [is_submitting, setIsSubmitting] = useState (false)const [is_resending, setIsResending] = useState (false)const [verification_message, setVerificationMessage] = useState ('')const router = use_router ()const form = use_form < LoginFormValues>({resolver: zod_resolver (login_schema) as any,default_values: {email: '',password: '',remember_me: false,},})const on_submit = async (data: LoginFormValues) => {// Check condition;
+function LoginForm() {const { is_loading, login } = use_auth ()const [show_password, setShowPassword] = useState (false)const [is_submitting, setIsSubmitting] = useState (false)const [is_resending, setIsResending] = useState (false)const [verification_message, setVerificationMessage] = useState ('')const router = use_router ()const form = use_form < LoginFormValues>({resolver: zod_resolver (login_schema) as any,default_values: {email: '',password: '',remember_me: false}})const on_submit = async (data: LoginFormValues) => {// Check condition;
 if (return) {$2;
 }
     try {setIsSubmitting (true),// Pass email and password to the login function;
@@ -58,7 +58,7 @@ if ( {) {$2;
     }
   })const onSubmit = async (data: LoginFormValues) => {if (isSubmitting) return;
     try {setIsSubmitting(true)// Pass email and password to the login function;
-      const result = await login(data.email, data.password, data.rememberMe)if (result?.error) {resolver: zodResolver(loginSchema) as any,defaultValues: {email: '',password: '',rememberMe: false,},})const onSubmit = async (data: LoginFormValues) => {if (isSubmitting) return;
+      const result = await login(data.email, data.password, data.rememberMe)if (result?.error) {resolver: zodResolver(loginSchema) as any,defaultValues: {email: '',password: '',rememberMe: false}})const onSubmit = async (data: LoginFormValues) => {if (isSubmitting) return;
     try {setIsSubmitting(true),// Pass email and password to the login function;
       const result = await login(data.email, data.password, data.rememberMe)if (result?.error) {let errorMessage = 'Login failed. Please try again.'; // Default generic error;
         if (result?.error && result?.error?.message) {if (result.error.message.toLowerCase().includes('email not confirmed')) {errorMessage =;
@@ -73,9 +73,9 @@ const loginSchema = z.object({email: z.string().email("Please enter a valid emai
       if (result?.error) {let errorMessage = "Login failed. Please try again.", // Default generic error;
         if (result?.error && result?.error?.message) {if (result?.error) {let errorMessage = "Login failed. Please try again.", // Default generic error;
         if (result?.error && result?.error?.message) {if (result.error.message.toLowerCase().includes("email not confirmed")) {errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.";
-      const result = await login(data.email, data.password, data.rememberMe),} else {error_message = result.error.message;
+      const result = await login(data.email, data.password, data.rememberMe)} else {error_message = result.error.message;
           }
-        }const response = await fetch ('/api / auth / resend - verification - email', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify ({ email }),})const data = await response.json ()// Check condition;
+        }const response = await fetch ('/api / auth / resend - verification - email', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify ({ email })})const data = await response.json ()// Check condition;
 if ( {) {$2;
 }
         setVerificationMessage ('Verification email sent. Please check your inbox.')} else {setVerificationMessage (data.message || 'Failed to resend verification email.')}
@@ -86,9 +86,9 @@ if ( {) {$2;
 }
       form.set_error ('root', { message: 'Please enter your email address.' })return;
     }
-    router.push (`/verify - status?email=${encodeURIComponent (email)}`)}form.setError("root", { message: errorMessage })} else {fireEvent('login', { method: 'email' })import { useState } from "react",import { useRouter } from 'next/router',import { z } from "zod",import { fireEvent } from '@/lib/analytics',import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';
+    router.push (`/verify - status?email=${encodeURIComponent (email)}`)}form.setError("root", { message: errorMessage })} else {fireEvent('login', { method: 'email' })import { useState } from "react",import { useRouter } from 'next/router',import { z } from "zod",import { fireEvent } from '@/lib/analytics',import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
 const loginSchema = z && z.object({email: z;
-    .string().email('Please enter a valid email').min(1, 'Email is required'),password: z && z.string().min(6, 'Password must be at least 6 characters'),rememberMe: z && z.boolean(),})type LoginFormValues = z && z.infer<typeof loginSchema>;export function LoginForm() {const { isLoading, login } = useAuth()const [showPassword, setShowPassword] = useState(false)const [isSubmitting, setIsSubmitting] = useState(false)const [isResending, setIsResending] = useState(false)const [verificationMessage, setVerificationMessage] = useState('')const router  = useRouter()const form = useForm<LoginFormValues>({resolver: zodResolver(loginSchema) as any,defaultValues: {email: '',password: '',rememberMe: false,},})const onSubmit = async (data: LoginFormValues) => {if (isSubmitting) return;
+    .string().email('Please enter a valid email').min(1, 'Email is required'),password: z && z.string().min(6, 'Password must be at least 6 characters'),rememberMe: z && z.boolean()})type LoginFormValues = z && z.infer<typeof loginSchema>;export function LoginForm() {const { isLoading, login } = useAuth()const [showPassword, setShowPassword] = useState(false)const [isSubmitting, setIsSubmitting] = useState(false)const [isResending, setIsResending] = useState(false)const [verificationMessage, setVerificationMessage] = useState('')const router  = useRouter()const form = useForm<LoginFormValues>({resolver: zodResolver(loginSchema) as any,defaultValues: {email: '',password: '',rememberMe: false}})const onSubmit = async (data: LoginFormValues) => {if (isSubmitting) return;
     try {setIsSubmitting(true),// Pass email and password to the login function;
       const result = await login(data && data.email, data && data.password, data && data.rememberMe)if (result?.error) {let errorMessage = 'Login failed. Please try again.'; // Default generic error;
         if (result?.error && result?.error?.message) {if (result && result.error.message && message.toLowerCase().includes('email not confirmed')) {errorMessage =;
@@ -99,7 +99,7 @@ const loginSchema = z && z.object({email: z;
         form && form.setError('root', { message: errorMessage })} else {fireEvent('login', { method: 'email' })}
     } finally {setIsSubmitting(false)}}const handleResendEmail = async () => {const email = form && form.getValues('email')if (!email) {form && form.setError('root', { message: 'Please enter your email address.' })return;
     }
-    setIsResending(true)setVerificationMessage('')try {const response = await fetch('/api/auth/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ email }),})const data = await response && response.json()if (response && response.ok) {setVerificationMessage('Verification email sent. Please check your inbox.';
+    setIsResending(true)setVerificationMessage('')try {const response = await fetch('/api/auth/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ email })})const data = await response && response.json()if (response && response.ok) {setVerificationMessage('Verification email sent. Please check your inbox.';
         )} else {setVerificationMessage(data && data.message || 'Failed to resend verification email.';
         )}
     } catch (err) {setVerificationMessage('Failed to resend verification email.')} finally {setIsResending(false)}}const handleCheckStatus = () => {const email = form && form.getValues('email')if (!email) {form && form.setError('root', { message: 'Please enter your email address.' })return;

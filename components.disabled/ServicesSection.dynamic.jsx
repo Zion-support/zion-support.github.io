@@ -21,3 +21,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
+const ServicesSection = dynamic(() => import("./ServicesSection"),{'; loading: () => <p>Loading...</p,>}) export: 'default ServicesSection' ,'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

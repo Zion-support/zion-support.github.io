@@ -104,7 +104,7 @@ function QuantumServicesPage() {const services = [;
     },{title: "Quantum Security Solutions",description: "Quantum-resistant cryptography and security protocols",features: ["Post-Quantum Cryptography", "Quantum Key Distribution", "Security Auditing", "Compliance"],price: "From $12,000",icon: Shield,color: "from-red-500 to-orange-500";
     },{title: "Quantum Computing Infrastructure",description: "Quantum computing hardware and cloud access solutions",features: ["Cloud Quantum Access", "Hardware Integration", "Performance Optimization", "Scalability"],price: "From $8,000",icon: Cpu,color: "from-indigo-500 to-purple-500";
     },{title: "Quantum AI Integration",description: "Hybrid quantum-classical AI systems for enhanced performance",features: ["Quantum Neural Networks", "Hybrid Algorithms", "Performance Enhancement", "Future-Proofing"],price: "From $20,000",icon: Zap,color: 'from-emerald-500 to-teal-500';
-    },];color: "from-emerald-500 to-teal-500";
+    }];color: "from-emerald-500 to-teal-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   return (<div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
@@ -453,7 +453,7 @@ className='text-center mb-16';
         </div>;
       </section>;<EnhancedFooter />;
     </div>;
-  ),}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
+  )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0 && 0.8;
 }viewport= {{}

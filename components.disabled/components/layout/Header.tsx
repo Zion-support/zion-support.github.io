@@ -2,11 +2,11 @@
 ;
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Brain,ChevronDown,Cloud,Code,Home,Info,Mail,Menu,Phone,X,} from 'lucide-react';
+import { Brain,ChevronDown,Cloud,Code,Home,Info,Mail,Menu,Phone,X} from 'lucide-react';
 const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false)const [isServicesOpen, setIsServicesOpen] = useState(false)const services = [;
-    {name: 'AI Services',href: '/ai-services',icon: Brain,description: 'Artificial Intelligence Solutions',},{name: 'IT Services',href: '/it-services',icon: Cloud,description: 'Information Technology Services',},{name: 'Micro SaaS',href: '/micro-saas',icon: Code,description: 'Custom Software Solutions',},{name: 'All Services',href: '/services',icon: null,description: 'Complete Service Portfolio',},];
+    {name: 'AI Services',href: '/ai-services',icon: Brain,description: 'Artificial Intelligence Solutions'},{name: 'IT Services',href: '/it-services',icon: Cloud,description: 'Information Technology Services'},{name: 'Micro SaaS',href: '/micro-saas',icon: Code,description: 'Custom Software Solutions'},{name: 'All Services',href: '/services',icon: null,description: 'Complete Service Portfolio'}];
   const navigation = [;
-    { name: 'Home', href: '/' },{ name: 'Services', href: '/services', hasDropdown: true },{ name: 'Pricing', href: '/pricing-guide' },{ name: 'About', href: '/about' },{ name: 'Contact', href: '/contact' },];
+    { name: 'Home', href: '/' },{ name: 'Services', href: '/services', hasDropdown: true },{ name: 'Pricing', href: '/pricing-guide' },{ name: 'About', href: '/about' },{ name: 'Contact', href: '/contact' }];
   return (<header className="bg-white shadow-sm sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">;

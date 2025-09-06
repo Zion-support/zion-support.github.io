@@ -258,21 +258,21 @@ if ( {) {$2;
         </motion.div>;
       )}
         <MarketplaceFilterControls;
-          sortBy = {sortBy,}
-          setSortBy = {setSortBy,}
-          filterCategory = {filterCategory,}
-          setFilterCategory = {setFilterCategory,}
-          categories = {categories,}
-          showRecommended = {showRecommended,}
-          setShowRecommended = {setShowRecommended,}
-          loading = {isFetching,}
+          sortBy = {sortBy}
+          setSortBy = {setSortBy}
+          filterCategory = {filterCategory}
+          setFilterCategory = {setFilterCategory}
+          categories = {categories}
+          showRecommended = {showRecommended}
+          setShowRecommended = {setShowRecommended}
+          loading = {isFetching}
         />;
       </motion.div>;
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>;
         <AnimatePresence mode="popLayout">;
           {products.map((item, index,) => (<motion.div;
-              key = {item.id,}
-              ref = {index === products.length - 1 ? lastElementRef : null,}
+              key = {item.id}
+              ref = {index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }}animate={{ opacity: 1, scale: 1 }}<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <MarketplaceFilterControls;
           sortBy={sortBy}
@@ -292,7 +292,7 @@ if ( {) {$2;
               whileHover={{ scale: 1.02 }}
             >;
               <MarketplaceCard;
-                product = {item,}
+                product = {item}
                 onViewDetails={() => {// Check condition;
 if ( {) {$2;
 }
@@ -319,7 +319,7 @@ if ( {) {$2;
         </motion && motion.div>;</Button>;
           )}
       )}
-            onClick = {scrollToTop,}
+            onClick = {scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -346,7 +346,7 @@ if ( {) {$2;
         </motion.div>)}
       <AnimatePresence>;
         {showScrollTop && (<motion.button;
-            on_click = {scrollToTop, }
+            on_click = {scrollToTop }
             className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50";
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

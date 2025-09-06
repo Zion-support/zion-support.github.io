@@ -97,10 +97,10 @@ totalSize += size;
         const load_time = entry.response_end - entry.request_start;
         const cached = entry.transfer_size === 0;
         totalLoadTime += load_time;
-        chunk_data.push ({name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',size,load_time,cached,})})// Estimate gzipped size (roughly 70% of original)const gzipped_size = total_size * 0.7;
+        chunk_data.push ({name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',size,load_time,cached})})// Estimate gzipped size (roughly 70% of original)const gzipped_size = total_size * 0.7;
       const cacheHitRate =;
         chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
-      setBundleInfo ({total_size,gzipped_size,chunk_count: chunk_data.length,load_time: totalLoadTime / chunk_data.length,cacheHitRate: cacheHitRate * 100,})set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5))// Top 5 largest chunks    } catch (error) {logErrorToProduction ('Failed to collect bundle info:', { data: error })} finally {setIsCollecting(false)}
+      setBundleInfo ({total_size,gzipped_size,chunk_count: chunk_data.length,load_time: totalLoadTime / chunk_data.length,cacheHitRate: cacheHitRate * 100})set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5))// Top 5 largest chunks    } catch (error) {logErrorToProduction ('Failed to collect bundle info:', { data: error })} finally {setIsCollecting(false)}
   }
   const formatSize = (bytes: number): string => {if (bytes === 0) return '0 B';
     const k = 1024;

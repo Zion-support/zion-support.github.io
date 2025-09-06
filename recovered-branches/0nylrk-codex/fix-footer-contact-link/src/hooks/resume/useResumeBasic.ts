@@ -13,6 +13,45 @@ import { useFetchResume } from './useFetchResume',import { useResumeActions } fr
     isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
     error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
     // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
+export function useResumeBasic() {
+
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+export function useResumeBasic() {;
+  const fetchResumeOperations = useFetchResume();
+  const resumeActions = useResumeActions();
+  return {
+    // From useFetchResume
+    isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
+    error: fetchResumeOperations.error |resumeActions.error;
+    resume: fetchResumeOperations.resume;
+    fetchResume: fetchResumeOperations.fetchResume;
+    // From useResumeActions
+    createResume: resumeActions.createResume;
+    updateBasicInfo: resumeActions.updateBasicInfo
+
+    updateBasicInfo: resumeActions.updateBasicInfo,
+import { useFetchResume } from './useFetchResume',;
+import { useResumeActions } from './useResumeActions',;
+export function useResumeBasic() {;
+  const fetchResumeOperations = useFetchResume();
+  const resumeActions = useResumeActions(),;
+  return {;
+    // From useFetchResume;
+    isLoading: fetchResumeOperations.isLoading || resumeActions.isLoading,;
+    error: fetchResumeOperations.error || resumeActions.error,;
+    resume: fetchResumeOperations.resume,;
+    fetchResume: fetchResumeOperations.fetchResume,;
+    // From useResumeActions;
+    createResume: resumeActions.createResume;
+    updateBasicInfo: resumeActions.updateBasicInfo;
+
+
+
+    setActiveResume: resumeActions.setActiveResume}
+}
+    isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
+    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;// From useResumeActions;
     createResume: resumeActions && resumeActions.createResume;
@@ -30,6 +69,6 @@ function useResumeBasic() {const fetchResumeOperations = useFetchResume ()const 
     updateBasicInfo: resume_actions.updateBasicInfo,setActiveResume: resume_actions.setActiveResume}
 }export function useResumeBasic() {const fetchResumeOperations = useFetchResume(),const resumeActions  = useResumeActions(),return {// From useFetchResume;
     isLoading:fetchResumeOperations.isLoading || resumeActions.isLoading,error:fetchResumeOperations.error || resumeActions.error,resume:fetchResumeOperations.resume,fetchResume:fetchResumeOperations.fetchResume,// From useResumeActions;
-    createResume:resumeActions.createResume,updateBasicInfo:resumeActions.updateBasicInfo,setActiveResume:resumeActions.setActiveResume},}}
+    createResume:resumeActions.createResume,updateBasicInfo:resumeActions.updateBasicInfo,setActiveResume:resumeActions.setActiveResume}}}
     setActiveResume: resumeActions.setActiveResume}
 }

@@ -17,3 +17,5 @@ export default function Dataanalytics() {return (<div>;
 =>>>>>>>> main:corrupted_backup/data-analytics.tsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
+interface DataanalyticsProps {
+  // Add props here as needed

@@ -50,7 +50,7 @@ import {import { useEffect } from 'react',import { useAuth } from '@/hooks/useAu
         </div>;
         <Button className="flex items-center gap-2" onClick={copyReferralLink}>;
           <Share className="h-4 w-4" />;
-title: 'Authentication required',description: 'Please login to access the referral program',variant: 'destructive',})router.push('/login')// Changed to router.push;
+title: 'Authentication required',description: 'Please login to access the referral program',variant: 'destructive'})router.push('/login')// Changed to router.push;
     }
   }, [isAuthenticated, router])// Changed navigate to router in dependencies;
   const referralLink = getReferralLink()return (<div className='container max-w-7xl py-10'>;

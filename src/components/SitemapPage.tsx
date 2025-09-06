@@ -65,7 +65,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
               {complete_sitemap;
                 .filter (route => !route.required_auth).map (route => (<li key={route.path}>;
                     <Link;
-                      href = {resolve_path (route.path), }
+                      href = {resolve_path (route.path) }
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;{route.label}
@@ -81,7 +81,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.requiredRoles?.includes('jobSeeker') |;
                   route.requiredRoles?.includes('creator')).map(route => (<li key={route.path}>;
                     <Link;
-                      href = {resolvePath(route.path),}
+                      href = {resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple";
                     >;
                       <ChevronRight className="h-4 w-4 mr-2" />;
@@ -96,7 +96,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.required_roles?.includes ('job_seeker') ||;
                   route.required_roles?.includes ('creator')).map (route => (<li key={route.path}>;
                     <Link;
-                      href = {resolve_path (route.path), }
+                      href = {resolve_path (route.path) }
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
@@ -113,7 +113,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.requiredRoles?.includes('employer') |;
                   route.requiredRoles?.includes('buyer')).map(route => (<li key={route.path}>;
                     <Link;
-                      href = {resolvePath(route.path),}
+                      href = {resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple";
                     >;
                       <ChevronRight className="h-4 w-4 mr-2" />;
@@ -128,7 +128,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.required_roles?.includes ('employer') ||;
                   route.required_roles?.includes ('buyer')).map (route => (<li key={route.path}>;
                     <Link;
-                      href = {resolve_path (route.path), }
+                      href = {resolve_path (route.path) }
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
@@ -145,7 +145,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.requiredAuth &&;
                   (!route.requiredRoles |route.requiredRoles.length === 0)).map(route => (<li key={route.path}>;
                     <Link;
-                      href = {resolvePath(route.path),}
+                      href = {resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple";
                     >;
                       <ChevronRight className="h-4 w-4 mr-2" />;
@@ -160,7 +160,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.required_auth &&;
                   (!route.required_roles || route.required_roles.length === 0)).map (route => (<li key={route.path}>;
                     <Link;
-                      href = {resolve_path (route.path), }
+                      href = {resolve_path (route.path) }
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
@@ -177,7 +177,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                 .filter(route =>;
                   route.requiredRoles?.includes('admin')).map(route => (<li key={route.path}>;
                     <Link;
-                      href = {resolvePath(route.path),}
+                      href = {resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple";
                     >;
                       <ChevronRight className="h-4 w-4 mr-2" />;
@@ -207,11 +207,11 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                 .filter (route =>;
                   route.required_roles?.includes ('admin')).map (route => (<li key={route.path}>;
                     <Link;
-                      href = {resolve_path (route.path), }
+                      href = {resolve_path (route.path) }
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
-                      {route.label}href = {resolvePath(route && route.path),}
+                      {route.label}href = {resolvePath(route && route.path)}
                       className="flex items-center hover:text-zion-purple">;
                       <ChevronRight className="h-4 w-4 mr-2" />;
                       {route && route.label}</Link>;
@@ -237,9 +237,9 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
       </div>;
     </>)}
 '"},const sitemap_data = [{title: 'Main Pages',links: [;
-        { name: 'Home', url: '/' },{ name: 'About', url: '/about' },{ name: 'Services', url: '/services' },{ name: 'Contact', url: '/contact' },{ name: 'Blog', url: '/blog' },{ name: 'Careers', url: '/careers' },];
-},{title: 'Services',links: [{ name: 'AI Services', url: '/services / ai' },{ name: 'IT Services', url: '/services / it' },{ name: 'Cloud Solutions', url: '/services / cloud' },{ name: 'Cybersecurity', url: '/services / cybersecurity' },{ name: 'Digital Transformation', url: '/services / digital - transformation' },];
-},{title: 'Solutions',links: [{ name: 'Enterprise', url: '/solutions / enterprise' },{ name: 'Healthcare', url: '/solutions / healthcare' },{ name: 'Financial Services', url: '/solutions / financial' },{ name: 'Manufacturing', url: '/solutions / manufacturing' },];
+        { name: 'Home', url: '/' },{ name: 'About', url: '/about' },{ name: 'Services', url: '/services' },{ name: 'Contact', url: '/contact' },{ name: 'Blog', url: '/blog' },{ name: 'Careers', url: '/careers' }];
+},{title: 'Services',links: [{ name: 'AI Services', url: '/services / ai' },{ name: 'IT Services', url: '/services / it' },{ name: 'Cloud Solutions', url: '/services / cloud' },{ name: 'Cybersecurity', url: '/services / cybersecurity' },{ name: 'Digital Transformation', url: '/services / digital - transformation' }];
+},{title: 'Solutions',links: [{ name: 'Enterprise', url: '/solutions / enterprise' },{ name: 'Healthcare', url: '/solutions / healthcare' },{ name: 'Financial Services', url: '/solutions / financial' },{ name: 'Manufacturing', url: '/solutions / manufacturing' }];
 },{title: 'Resources';
       links: [{ name: 'Case Studies', url: '/case - studies' }
         { name: 'White Papers', url: '/white - papers' },        { name: 'Webinars', url: '/webinars' }
@@ -248,7 +248,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
       ]}{ name: 'Case Studies', url: '/case - studies' }, ';
         { name: 'White Papers', url: '/white - papers' }, ';
         { name: 'Webinars', url: '/webinars' }, ';
-        { name: 'Documentation', url: '/docs' }, '        { name: 'API Reference', url: '/api' },]}
+        { name: 'Documentation', url: '/docs' }, '        { name: 'API Reference', url: '/api' }]}
   ];
   return (<div className="min - h - screen bg - slate - 900 text - white py - 16">;
       <SEO;

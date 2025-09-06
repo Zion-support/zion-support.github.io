@@ -68,7 +68,7 @@ const contactInfo = null;
   }
 ];const heroFeatures = [;
   {title: 'AI-Powered Automation',description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',icon: Brain,gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
-  }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}icon: Code,color: 'from - emerald - 500 to - teal - 600',features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence'];
+  }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com'}icon: Code,color: 'from - emerald - 500 to - teal - 600',features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence'];
 description:;
       'Advanced AI algorithms that automate complex development, testing, and operations tasks.',icon: Brain,gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
   },{title: 'Intelligent Optimization',description:;
@@ -77,7 +77,7 @@ description:;
       'Self-managing systems that operate independently with minimal human intervention.',icon: Settings,gradient: 'bg-gradient-to-r from-green-500 to-emerald-600';
   },{title: 'Predictive Analytics',description:;
       'AI-powered insights that predict issues before they occur and optimize performance.',icon: BarChart3,gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
-  },];const testimonials = [;
+  }];const testimonials = [;
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';

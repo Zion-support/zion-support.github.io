@@ -57,7 +57,7 @@ ursor/automate-test-improve-and-merge-code-646c;
   async checkSystemHealth() {}
     try {}
       const os = require('os')',const health = {}
-        timestamp: new Date().toISOString(),uptime: os.uptime(),totalMemory: os.totalmem(),freeMemory: os.freemem(),loadAverage: os.loadavg(),platform: os.platform(),nodeVersion: process.version,},const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;
+        timestamp: new Date().toISOString(),uptime: os.uptime(),totalMemory: os.totalmem(),freeMemory: os.freemem(),loadAverage: os.loadavg(),platform: os.platform(),nodeVersion: process.version},const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;
       this.log(`System Health Check:`)this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`),this.log(`  - Memory Usage: ${memoryUsage.toFixed(1)}%`),this.log(`  - Load Average: ${health.loadAverage[0].toFixed(2)}`),this.log(`  - Platform: ${health.platform}`),this.log(`  - Node Version: ${health.nodeVersion}`),return health;
     } catch (error) {}
       this.error(`Health check failed: ${error.message}`),return null;

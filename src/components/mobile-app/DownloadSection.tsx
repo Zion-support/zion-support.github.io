@@ -1,9 +1,9 @@
 
 ;
-appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
-                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}import React from "react",import { QrCodeIcon  } from 'lucide-react';
+appStoreUrl = {appStoreUrl}
+                googlePlayUrl = {googlePlayUrl}
+                onAppStoreClick = {(,) => logInfo("App Store button clicked")}
+                onGooglePlayClick = {() => logInfo("Google Play button clicked")}import React from "react",import { QrCodeIcon  } from 'lucide-react';
 import { AppStoreButtons } from "./AppStoreButtons",import { logInfo } from '@/utils/productionLogger',import { AppStoreButtons  } from './AppStoreButtons';
 import { logInfo  } from '@/utils/productionLogger';
 export const DownloadSection: React.FC;

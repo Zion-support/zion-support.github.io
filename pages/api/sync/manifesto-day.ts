@@ -3,7 +3,7 @@ import { readState;
   writeState;
   upsertEvent,readState;
   writeState;
-  upsertEvent,} from '../../../utils/sync/storage';
+  upsertEvent} from '../../../utils/sync/storage';
 import { readState, writeState, upsertEvent  } from '../../../utils/sync/storage';
 } from "../../../utils/sync/storage";import type { NextApiRequest, NextApiResponse } from "next",import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",import { signPayload  } from '../../../utils/sync/signature';
 import axios from 'axios';

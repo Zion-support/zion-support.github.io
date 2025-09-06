@@ -1,6 +1,9 @@
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
+
+  return (
+    <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Forgot Password</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Enter your email to reset your password.;
@@ -17,6 +20,18 @@ export default function ForgotPasswordPage() {return (<div className='container 
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Enter your email to reset your password.;
       </p>;
+  );
+
+}
+
+
+export default function ForgotPasswordPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Forgot Password</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Enter your email to reset your password.
+      </p>
     </div>;
   )export default function ForgotPasswordPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Forgot Password</h1>;
@@ -43,6 +58,38 @@ function ForgotPasswordPage() {return (<div className="container mx - auto px - 
   )export default function ForgotPasswordPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Forgot Password</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Enter your email to reset your password.</p>;
+    </div>);
+}
+
+
+
+
+
+
+  )
+}
+
+
+export default function ForgotPasswordPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Forgot Password</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Enter your email to reset your password.
+      </p>
+    </div>;
+  );export default function ForgotPasswordPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Forgot Password</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Enter your email to reset your password.</p>
+
+    </div>
+  );
+
+    </div>
+  );
+
     </div>;
   )ursor/fix-website-loading-errors-and-merge-6662;
     </div>;
@@ -53,3 +100,9 @@ function ForgotPasswordPage() {return (<div className="container mx - auto px - 
 }
     </div>;
   )
+
+}
+    </div>
+  );
+}
+}

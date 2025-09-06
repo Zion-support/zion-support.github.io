@@ -16,6 +16,15 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions', titleTempl
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;import type { DefaultSeoProps } from 'next - seo';
+
+  additionalMetaTags: [
+{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    { name: 'theme-color', content: '#111827' }]}
+export default config;
+
+
+
+import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',description: 'Engineering services, AI / ML, DevOps, and product development by Zion.';
   open_graph: {type: 'website';
@@ -29,3 +38,10 @@ export default config;import type { DefaultSeoProps } from 'next - seo';
 export default config;
 const config: DefaultSeoProps;
 export default config;
+;
+
+
+
+export default config
+
+

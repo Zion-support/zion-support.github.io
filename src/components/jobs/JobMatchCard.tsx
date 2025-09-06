@@ -9,7 +9,7 @@
   category;
   matchPercent;
 }
-}talent_id,name,title,company,avatar,location,category,match_percent,}
+}talent_id,name,title,company,avatar,location,category,match_percent}
 }import React from 'react';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';

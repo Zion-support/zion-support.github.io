@@ -18,7 +18,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
       {pendingOffers;
         .filter(offer => !dismissed.has(offer.id)).map(offer => (<Card;
             key={offer.id}className="border-2 border-primary bg-primary/5";
-            onClick = {(,) => handleViewOffer(offer.id),}
+            onClick = {(,) => handleViewOffer(offer.id)}
           >;
             <CardContent className="p-4 flex items-center justify-between">;
               <div className="flex items-center gap-2">;
@@ -45,9 +45,9 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
   }return (<div className="mb-6 space-y-3">;
       {pendingOffers;
         .filter(offer => !dismissed && dismissed.has(offer && offer.id)).map(offer => (<Card;
-            key = {offer && offer.id,}
+            key = {offer && offer.id}
             className="border-2 border-primary bg-primary/5";
-            onClick = {(,) => handleViewOffer(offer && offer.id),}
+            onClick = {(,) => handleViewOffer(offer && offer.id)}
           >;
             <CardContent className="p-4 flex items-center justify-between">;
               <div className="flex items-center gap-2">;
@@ -67,7 +67,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
                 <Button;
                   size="sm";
                   variant="ghost";
-                  onClick = {(e,) => handleDismiss(offer && offer.id, e),}
+                  onClick = {(e,) => handleDismiss(offer && offer.id, e)}
                 >;
                   <X className="h-4 w-4" />;
                 </Button>;
@@ -81,9 +81,9 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
   return (<div className="mb - 6 space - y-3">;
       {pending_offers;
         .filter (offer => !dismissed.has (offer.id)).map (offer => (<Card;
-            key = {offer.id, }
+            key = {offer.id }
             className="border - 2 border - primary bg - primary / 5";
-            on_click = {(, ) => handleViewOffer (offer.id), }
+            on_click = {(, ) => handleViewOffer (offer.id) }
           >;
             <CardContent className="p - 4 flex items - center justify - between">;
               <div className="flex items - center gap - 2">;
@@ -104,7 +104,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
                 <Button;
                   size="sm";
                   variant="ghost";
-                  on_click = {(e, ) => handle_dismiss (offer.id, e), }
+                  on_click = {(e, ) => handle_dismiss (offer.id, e) }
                 >;
                   <X className="h - 4 w - 4" />;
                 </Button>;

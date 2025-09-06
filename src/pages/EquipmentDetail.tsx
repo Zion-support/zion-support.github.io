@@ -36,7 +36,7 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
         payload: {load_equipment ()}, [id])const handleAddToCart = async () => {// Check condition;
 if ( {) {$2;
 }
-      toast ({title: 'Authentication Required',description: 'Please log in to add items to cart',variant: 'destructive',})return;
+      toast ({title: 'Authentication Required',description: 'Please log in to add items to cart',variant: 'destructive'})return;
       })toast({title: 'Added to Cart';
         description: `${equipment.name} has been added to your cart.`;
       })} catch (error) {toast({title: 'Error';

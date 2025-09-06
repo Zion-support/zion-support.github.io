@@ -83,6 +83,32 @@ export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false
       <CardHeader>;
         <CardTitle className="text-white flex items-center gap-2">;
           <MessageSquare className="h-5 w-5 text-zion-cyan"/>;
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        projectDescription: '',
+        budget: '',
+        startDate: '',
+        message: ''
+        e.preventDefault();
+        if (onHire) {
+            onHire(formData);
+        }
+        // Reset form and close
+        setFormData({
+            projectDescription: '',
+            budget: '',
+            startDate: '',
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    };
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center gap-2">
+          <MessageSquare className="h-5 w-5 text-zion-cyan"/>
           Hire {talentName}
         </CardTitle>;
       </CardHeader>;
@@ -136,4 +162,8 @@ export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false
           </form>)}
       </CardContent>;
     </Card>)}}
+}
+      </CardContent>
+    </Card>);
+}
 }

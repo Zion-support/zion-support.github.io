@@ -28,3 +28,37 @@ export interface TenantResponse  {tenant: TenantInfo | null;
 }
 export interface TenantResponse  {tenant: TenantInfo | null;
   error?: string;
+  landing_page_copy: {
+    headline: string;
+    subtitle: string;
+    cta: string;
+  };
+  is_active: boolean;
+}
+export interface TenantResponse {
+  tenant: TenantInfo | null;
+  error?: string;
+}
+}
+
+
+export interface TenantInfo {;
+
+    cta: string;
+  },;
+  is_active: boolean;
+}
+;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+  error?: string;
+}
+;
+}
+
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string
+}
+;
+}

@@ -136,10 +136,10 @@ if ( {) {$2;
       <form on_submit={handle_submit} className="relative">;
         <Search className="absolute left - 2 top - 2.5 h - 4 w - 4 text - zinc - 500" />;
         <EnhancedSearchInput;
-        value = {search_value, }
-          on_change = {setSearchValue, }
-          onSelectSuggestion = {handleSelectSuggestion, }
-          search_suggestions = {docsSearchSuggestions, }
+        value = {search_value }
+          on_change = {setSearchValue }
+          onSelectSuggestion = {handleSelectSuggestion }
+          search_suggestions = {docsSearchSuggestions }
           placeholder="Search documentation";
         />;
       </form>;

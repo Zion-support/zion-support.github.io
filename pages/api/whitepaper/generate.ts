@@ -31,7 +31,7 @@ function fallbackMarkdown(input: any): string {let markdown: string;
       const completion = await client.responses.create({model: "gpt-4.1-mini";
         input: [;
 { role: 'system', content: sysPrompt },{ role: 'user', content: userPrompt }
-        ],temperature: 0.3,} as any)const content = (completion as any)?.output_text || "";
+        ],temperature: 0.3} as any)const content = (completion as any)?.output_text || "";
     } else {markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })}
   }
 }

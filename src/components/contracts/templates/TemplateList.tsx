@@ -20,7 +20,7 @@ import { useAuth  } from '@/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router;
   AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from "@/components/ui/alert-dialog",// use_router replaces the old use_location hook from react - router;
 import { use_router  } from 'next / router';
-import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger,} from '@/components/ui/tooltip';
+import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter  } from 'next/router';
 import { AlertDialog;
@@ -171,7 +171,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
                 <Button;
                   variant="ghost";
                   size="icon";
-                  onClick = {() => onEdit(template),}
+                  onClick = {() => onEdit(template)}
                   aria-label="Edit template";
                 >;
                   <Edit className="h-4 w-4" />;
@@ -182,7 +182,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
                         <Button;
                           variant="ghost";
                           size="icon";
-                          onClick = {(,) => handleSetDefault(template && template.id),}
+                          onClick = {(,) => handleSetDefault(template && template.id)}
                           aria-label="Set as default";
                         >;
                           <Star className="h-4 w-4" />;
@@ -227,7 +227,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
-              onClick = {handleDeleteConfirm,}
+              onClick = {handleDeleteConfirm}
             >;
               Delete;
             </AlertDialogAction>;
@@ -249,14 +249,14 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return;
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) ";
 }<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )}<AlertDialog open= {!!templateToDelete;
 }onOpenChange= {() => setTemplateToDelete (null) ";
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={onClick = {() => handleDeleteClick(template && template.id),}
+}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={onClick = {() => handleDeleteClick(template && template.id)}
                   aria-label="Delete template";
                 >;
                   <Trash className="h-4 w-4 text-destructive" />;
                 </Button>;
               </div>;
             </div>;<Separator className="my-3" />;<Button;
-              onClick = {() => onSelect(template),}
+              onClick = {() => onSelect(template)}
               variant="outline" ;
               className="w-full";
             >;
@@ -278,7 +278,7 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return;
               onClick={handleDeleteConfirm}
             >;<AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
-              onClick = {handleDeleteConfirm,}>;Delete;
+              onClick = {handleDeleteConfirm}>;Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
@@ -314,7 +314,7 @@ if ( {) {$2;
                 <Button;
                   variant="ghost";
                   size="icon";
-                  on_click = {() => on_edit (template), }
+                  on_click = {() => on_edit (template) }
                   aria - label="Edit template";
                 >;
                   <Edit className="h - 4 w - 4" />;
@@ -325,7 +325,7 @@ if ( {) {$2;
                         <Button;
                           variant="ghost";
                           size="icon";
-                          on_click = {(, ) => handleSetDefault (template.id), }
+                          on_click = {(, ) => handleSetDefault (template.id) }
                           aria - label="Set as default";
                         >;
                           <Star className="h - 4 w - 4" />;
@@ -340,7 +340,7 @@ if ( {) {$2;
                 <Button;
                   variant="ghost";
                   size="icon";
-                  on_click = {() => handleDeleteClick (template.id), }
+                  on_click = {() => handleDeleteClick (template.id) }
                   aria - label="Delete template";
                 >;
                   <Trash className="h - 4 w - 4 text - destructive" />;
@@ -349,7 +349,7 @@ if ( {) {$2;
             </div>;
             <Separator className="my - 3" />;
             <Button;
-              on_click = {() => on_select (template), }
+              on_click = {() => on_select (template) }
               variant="outline";
               className="w - full";
             >;
@@ -368,7 +368,7 @@ if ( {) {$2;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
-              on_click = {handleDeleteConfirm, }
+              on_click = {handleDeleteConfirm }
             >;
               Delete;
             </AlertDialogAction>;

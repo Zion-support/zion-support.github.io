@@ -64,7 +64,7 @@ const FilterControls: React.FC<{sortBy: string,setSortBy: (sort: string) => void
   Star;
 import { AuthModal  } from '@/components/auth/AuthModal';
 import { ArrowUp,Filter,SortAsc,Sparkles,TrendingUp,Star;} from 'lucide-react';
-  ArrowUp,Filter,SortAsc,Sparkles,TrendingUp,Star,} from 'lucide-react';import { SkeletonCard  } from '@/components/ui/skeleton';
+  ArrowUp,Filter,SortAsc,Sparkles,TrendingUp,Star} from 'lucide-react';import { SkeletonCard  } from '@/components/ui/skeleton';
 import { ErrorState  } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState  } from '@/components/marketplace/EmptyState';
 import { Button  } from '@/components/ui/button';
@@ -136,7 +136,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (<Card className
           <div className="text-sm text-muted-foreground">Categories</div>;
         </div>;
       </div>;
-  sortBy,setSortBy,filter_category,setFilterCategory,categories,price_range,setPriceRange,minAiScore,setMinAiScore,min_rating,setMinRating,filter_availability,setFilterAvailability,availability_options,filter_location,setFilterLocation,locations,show_recommended,setShowRecommended,loading: boolean;}> = ({sortBy,setSortBy,filterCategory,setFilterCategory,categories,priceRange,setPriceRange,minAiScore,setMinAiScore,minRating,setMinRating,filterAvailability,setFilterAvailability,availabilityOptions,filterLocation,setFilterLocation,locations,showRecommended,setShowRecommended,loading,}) => (<div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>;
+  sortBy,setSortBy,filter_category,setFilterCategory,categories,price_range,setPriceRange,minAiScore,setMinAiScore,min_rating,setMinRating,filter_availability,setFilterAvailability,availability_options,filter_location,setFilterLocation,locations,show_recommended,setShowRecommended,loading: boolean;}> = ({sortBy,setSortBy,filterCategory,setFilterCategory,categories,priceRange,setPriceRange,minAiScore,setMinAiScore,minRating,setMinRating,filterAvailability,setFilterAvailability,availabilityOptions,filterLocation,setFilterLocation,locations,showRecommended,setShowRecommended,loading}) => (<div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>;
     {loading && (<Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />;)}
     <div className='flex items-center gap-2'>;
       <Filter className='h-4 w-4 text-muted-foreground' />;

@@ -34,7 +34,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
           <span>Under Dispute</span>;status: 'open' | 'under_review' | 'resolved' | 'closed';export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message  = 'This item has an open dispute';import { Badge  } from '@/components / ui / badge';
-import { Tooltip,TooltipContent,TooltipTrigger,} from '@/components / ui / tooltip';
+import { Tooltip,TooltipContent,TooltipTrigger} from '@/components / ui / tooltip';
 interface DisputeStatusBadgeProps  {status: 'open' | 'under_review' | 'resolved' | 'closed';
 export /**;
  * DisputeStatusBadge - Function description;

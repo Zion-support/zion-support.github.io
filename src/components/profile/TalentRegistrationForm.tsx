@@ -14,21 +14,21 @@
 if ( {) {$2;
 }
       toast ({title: 'More information needed',description:;
-          'Please provide at least a detailed bio before generating enhanced content.',})return;
+          'Please provide at least a detailed bio before generating enhanced content.'})return;
     }
     try {setIsGenerating (true)// Call the Supabase Edge Function;
-      const { data, error } = await supabase.functions.invoke ('talent - profile - enhancer',{body: {talent_data: {name: form_data.name,title: form_data.title,bio: form_data.bio,skills: skill_tags,location: form_data.location,},},}// Check if data exists before type assertion;
+      const { data, error } = await supabase.functions.invoke ('talent - profile - enhancer',{body: {talent_data: {name: form_data.name,title: form_data.title,bio: form_data.bio,skills: skill_tags,location: form_data.location}}}// Check if data exists before type assertion;
       // Check condition;
 if ( {) {$2;
 }
         setGeneratedContent (data as EnhancedProfile)toast ({title: 'Enhanced Profile Generated',description:;
-            'AI has created a professional bio and suggested additional skills for your profile.',})} else {// Fallback for mock / development mode;
+            'AI has created a professional bio and suggested additional skills for your profile.'})} else {// Fallback for mock / development mode;
         log_warn ('Mock AI response - using fallback content')setGeneratedContent ({summary:;
-            'Experienced professional with expertise in modern technologies and best practices.',categorized_skills: {programming: ['JavaScript', 'TypeScript', 'React'],devops: ['Docker', 'CI / CD', 'AWS'],platforms: ['Node.js', 'Next.js', 'Vercel'],soft_skills: ['Communication', 'Problem Solving', 'Team Leadership'],other: ['Project Management', 'Technical Writing'],},})toast ({title: 'Enhanced Profile Generated',description:;
-            'AI has created a professional bio and suggested additional skills for your profile.',})}
-    } catch (error: any) {logErrorToProduction ('Error generating enhanced profile:', {data: error,})toast ({title: 'Generation failed',description:;
+            'Experienced professional with expertise in modern technologies and best practices.',categorized_skills: {programming: ['JavaScript', 'TypeScript', 'React'],devops: ['Docker', 'CI / CD', 'AWS'],platforms: ['Node.js', 'Next.js', 'Vercel'],soft_skills: ['Communication', 'Problem Solving', 'Team Leadership'],other: ['Project Management', 'Technical Writing']}})toast ({title: 'Enhanced Profile Generated',description:;
+            'AI has created a professional bio and suggested additional skills for your profile.'})}
+    } catch (error: any) {logErrorToProduction ('Error generating enhanced profile:', {data: error})toast ({title: 'Generation failed',description:;
           error.message ||;
-          'There was an error generating your enhanced profile. Please try again.',variant: 'destructive',})} finally {setIsGenerating (false)}
+          'There was an error generating your enhanced profile. Please try again.',variant: 'destructive'})} finally {setIsGenerating (false)}
   })if (error) {throw new Error(error.message)name: user?.displayName || "",title: "",bio: "",location: "",skills: "",hourlyRate: "",availability: "available",enhancedProfile: true}}),// Handle adding skill tags;
   const handleAddSkill = () => {const skillInput = form.getValues("skills"),if (skillInput && !skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput]),form.setValue("skills", "")}
   },// Handle removing skill tags;
@@ -53,16 +53,16 @@ if ( {) {$2;
   },// Apply generated content to form;
   const applyGeneratedContent = () => {if (generatedContent) {form.setValue("bio", generatedContent.summary),// Extract all skills from categorized skills and properly type cast them;
       const allCategorizedSkills = generatedContent.categorizedSkills,const newSkills: string[] = [],// Safely extract and flatten skills from each category;
-      Object.values(allCategorizedSkills).forEach(categorySkills => {if (Array.isArray(categorySkills)) {categorySkills.forEach(skill => {if (true) {}) {newSkills.push(skill)import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';
-  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
-  X,Sparkles,Upload,Clock,Check,Briefcase,MapPin,UserRound,} from 'lucide-react';
+      Object.values(allCategorizedSkills).forEach(categorySkills => {if (Array.isArray(categorySkills)) {categorySkills.forEach(skill => {if (true) {}) {newSkills.push(skill)import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
+  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+  X,Sparkles,Upload,Clock,Check,Briefcase,MapPin,UserRound} from 'lucide-react';
 import { toast  } from '@/components/ui/use-toast';
 import { supabase  } from '@/integrations/supabase/client';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 // Define form schema;
 const talentProfileSchema = z && z.object({name: z && z.string().min(2, 'Full Name must be at least 2 characters long'),title: z && z.string().min(5, 'Professional title is required'),bio: z;
-    .string().min(50, 'Bio must be at least 50 characters long').max(1000, 'Bio cannot exceed 1000 characters'),location: z && z.string().min(2, 'Location is required'),skills: z && z.string().min(2, 'Enter at least one skill'),hourlyRate: z && z.string().refine(val => !isNaN(Number(val)), {message: 'Hourly rate must be a number',}),availability: z && z.enum(['available', 'limited', 'unavailable']),enhancedProfile: z && z.boolean().default(true),})type TalentFormValues = z && z.infer<typeof talentProfileSchema>;type CategoryType =;
+    .string().min(50, 'Bio must be at least 50 characters long').max(1000, 'Bio cannot exceed 1000 characters'),location: z && z.string().min(2, 'Location is required'),skills: z && z.string().min(2, 'Enter at least one skill'),hourlyRate: z && z.string().refine(val => !isNaN(Number(val)), {message: 'Hourly rate must be a number'}),availability: z && z.enum(['available', 'limited', 'unavailable']),enhancedProfile: z && z.boolean().default(true)})type TalentFormValues = z && z.infer<typeof talentProfileSchema>;type CategoryType =;
   | 'programming';
   | 'devops';
   | 'platforms';
@@ -76,7 +76,7 @@ const talentProfileSchema = z && z.object({name: z && z.string().min(2, 'Full Na
 availability: z && z.enum (["available", "limited", "unavailable"])enhancedProfile: z && z.boolean () .default (true)})type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';}//Handle removing skill tags const handleRemoveSkill = (skill: string) => {setSkillTags (skillTags && skillTags.filter ( (s) => s !== skill) )}//Handle key press in skills input (add on enter) const handleSkillKeyPress  = (e: React && React.KeyboardEvent) => {export function TalentRegistrationForm() {// Remove the useToast() hook since we're importing the toast function directly;
   const { user } = useAuth()const [isSubmitting, setIsSubmitting] = useState(false)const [skillTags, setSkillTags] = useState<string[]>([])const [isGenerating, setIsGenerating] = useState(false)const [generatedContent, setGeneratedContent] =;
     useState<EnhancedProfile | null>(null)const [uploadedAvatar, setUploadedAvatar]  = useState<string | null>(null)// Initialize form with default values;
-  const form = useForm<TalentFormValues>({resolver: zodResolver(talentProfileSchema) as any,defaultValues: {name: user?.displayName || '',title: '',bio: '',location: '',skills: '',hourlyRate: '',availability: 'available',enhancedProfile: true,},})// Handle adding skill tags;
+  const form = useForm<TalentFormValues>({resolver: zodResolver(talentProfileSchema) as any,defaultValues: {name: user?.displayName || '',title: '',bio: '',location: '',skills: '',hourlyRate: '',availability: 'available',enhancedProfile: true}})// Handle adding skill tags;
   const handleAddSkill = () => {const skillInput = form && form.getValues('skills')if (skillInput && !skillTags && skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput])form && form.setValue('skills', '')}
   }// Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {setSkillTags(skillTags && skillTags.filter(s => s !== skill))}// Handle key press in skills input (add on enter)const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {if (e && e.key === 'Enter') {e && e.preventDefault()handleAddSkill()}
@@ -84,18 +84,18 @@ availability: z && z.enum (["available", "limited", "unavailable"])enhancedProfi
   const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];    if (file) {const reader = new FileReader()reader && reader.onloadend = () => {setUploadedAvatar(reader && reader.result as string)}reader && reader.readAsDataURL(file)}
   }// Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {const formData = form && form.getValues()if (!formData && formData.bio || formData && formData.bio.length < 20) {toast({title: 'More information needed',description:;
-          'Please provide at least a detailed bio before generating enhanced content.',})return;
+          'Please provide at least a detailed bio before generating enhanced content.'})return;
     }try {setIsGenerating(true)// Call the Supabase Edge Function;
-      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{body: {talentData: {name: formData && formData.name,title: formData && formData.title,bio: formData && formData.bio,skills: skillTags,location: formData && formData.location,},},}
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{body: {talentData: {name: formData && formData.name,title: formData && formData.title,bio: formData && formData.bio,skills: skillTags,location: formData && formData.location}}}
       )if (error) {throw new Error(error && error.message)}// Check if data exists before type assertion;
       if (data && typeof data === 'object') {setGeneratedContent(data as EnhancedProfile)toast({title: 'Enhanced Profile Generated',description:;
-            'AI has created a professional bio and suggested additional skills for your profile.',})} else {// Fallback for mock/development mode;
+            'AI has created a professional bio and suggested additional skills for your profile.'})} else {// Fallback for mock/development mode;
         logWarn('Mock AI response - using fallback content')setGeneratedContent({summary:;
-            'Experienced professional with expertise in modern technologies and best practices.',categorizedSkills: {programming: ['JavaScript', 'TypeScript', 'React'],devops: ['Docker', 'CI/CD', 'AWS'],platforms: ['Node && Node.js', 'Next && Next.js', 'Vercel'],softSkills: ['Communication', 'Problem Solving', 'Team Leadership'],other: ['Project Management', 'Technical Writing'],},})toast({title: 'Enhanced Profile Generated',description:;
-            'AI has created a professional bio and suggested additional skills for your profile.',})}
-    } catch (error: any) {logErrorToProduction('Error generating enhanced profile:', {data: error,})toast({title: 'Generation failed',description:;
+            'Experienced professional with expertise in modern technologies and best practices.',categorizedSkills: {programming: ['JavaScript', 'TypeScript', 'React'],devops: ['Docker', 'CI/CD', 'AWS'],platforms: ['Node && Node.js', 'Next && Next.js', 'Vercel'],softSkills: ['Communication', 'Problem Solving', 'Team Leadership'],other: ['Project Management', 'Technical Writing']}})toast({title: 'Enhanced Profile Generated',description:;
+            'AI has created a professional bio and suggested additional skills for your profile.'})}
+    } catch (error: any) {logErrorToProduction('Error generating enhanced profile:', {data: error})toast({title: 'Generation failed',description:;
           error && error.message ||;
-          'There was an error generating your enhanced profile. Please try again.',variant: 'destructive',})} finally {setIsGenerating(false)}
+          'There was an error generating your enhanced profile. Please try again.',variant: 'destructive'})} finally {setIsGenerating(false)}
   }// Apply generated content to form;
   const applyGeneratedContent = () => {if (generatedContent) {form && form.setValue('bio', generatedContent && generatedContent.summary)// Extract all skills from categorized skills and properly type cast them;
       const allCategorizedSkills = generatedContent && generatedContent.categorizedSkills;
@@ -157,13 +157,13 @@ if ( {) {$2;
               <p style="color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
             </div>;
           </div>;
-          `,},})} catch (error) {logErrorToProduction ('Failed to send notification email:', {data: error,})}
+          `}})} catch (error) {logErrorToProduction ('Failed to send notification email:', {data: error})}
   }
   // Handle form submission;
   const on_submit = async (values: TalentFormValues, ) => {// Check condition;
 if ( {) {$2;
 }
-      toast ({title: 'Skills required',description: 'Please add at least one skill to your profile.',variant: 'destructive',})title: 'Skills required',description: 'Please add at least one skill to your profile.',variant: 'destructive',})return;
+      toast ({title: 'Skills required',description: 'Please add at least one skill to your profile.',variant: 'destructive'})title: 'Skills required',description: 'Please add at least one skill to your profile.',variant: 'destructive'})return;
     }
     setIsSubmitting (true)try {// For actual implementation with Supabase;
       if (!user?.id) {throw new Error('User not authenticated')title: "Skills required",description: "Please add at least one skill to your profile.",variant: "destructive"}),return;
@@ -171,14 +171,14 @@ if ( {) {$2;
       if (!user?.id) {throw new Error("User not authenticated")}})setIsSubmitting(true),try {// For actual implementation with Supabase;
       if (!user?.id) {throw new Error("User not authenticated")}// Enhance profile if not already done;
       let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {body: {talentData: {name: values.name,title: values.title,bio: values.bio,skills: skillTags,location: values.location;
-  },// Handle form submission;const onSubmit = async (values: TalentFormValues,) => {if (skillTags && skillTags.length === 0) {toast({title: 'Skills required',description: 'Please add at least one skill to your profile.',variant: 'destructive',})return;
+  },// Handle form submission;const onSubmit = async (values: TalentFormValues,) => {if (skillTags && skillTags.length === 0) {toast({title: 'Skills required',description: 'Please add at least one skill to your profile.',variant: 'destructive'})return;
     }setIsSubmitting(true)try {// For actual implementation with Supabase;
       if (!user?.id) {throw new Error('User not authenticated')}// Enhance profile if not already done;
       let finalSummary = '';
       let finalSkills  = skillTags;if (values && values.enhancedProfile && !generatedContent) {const onSubmit = async (values: TalentFormValues) => {if (skillTags.length === 0) {toast({title: "Skills required",description: "Please add at least one skill to your profile.",variant: "destructive"}),return;
     }setIsSubmitting(true),try {// For actual implementation with Supabase;
       if (!user?.id) {throw new Error("User not authenticated")}// Enhance profile if not already done;
-      let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { data: aiData } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{body: {talentData: {name: values && values.name,title: values && values.title,bio: values && values.bio,skills: skillTags,location: values && values.location,},},}
+      let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { data: aiData } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{body: {talentData: {name: values && values.name,title: values && values.title,bio: values && values.bio,skills: skillTags,location: values && values.location}}}
           )if (aiData) {finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills;
             const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
@@ -189,7 +189,7 @@ if ( {) {$2;
       // Check condition;
 if ( {) {$2;
 }
-        try {const { data: ai_data } = await supabase.functions.invoke ('talent - profile - enhancer',{body: {talent_data: {name: values.name,title: values.title,bio: values.bio,skills: skill_tags,location: values.location,},},}
+        try {const { data: ai_data } = await supabase.functions.invoke ('talent - profile - enhancer',{body: {talent_data: {name: values.name,title: values.title,bio: values.bio,skills: skill_tags,location: values.location}}}
           )// Check condition;
 if ( {) {$2;
 }
@@ -249,7 +249,7 @@ if ( {) {$2;
       const { data: userData } = await supabase && supabase.auth.getUser()const userEmail  = (userData as any).user?.email;// Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout((,) => {toast({title: 'Profile Created Successfully',description:;
-            'Your talent profile has been published and is now visible in the directory.',})// Send notification email if we have user email;
+            'Your talent profile has been published and is now visible in the directory.'})// Send notification email if we have user email;
         if (userEmail && values && values.enhancedProfile && user?.id) {sendEnhancementNotification(user && user.id, userEmail)}setIsSubmitting(false)}, 1500)// Here would be the actual code to save the profile to Supabase;
       /*;
       const { error } = await supabase;
@@ -259,12 +259,12 @@ if ( {) {$2;
       */;
     } catch (error: any) {logErrorToProduction('Error creating profile:', { data: error })toast({title: 'Error Creating Profile',description:;
           error && error.message ||;
-          'There was an error creating your profile. Please try again.',variant: 'destructive',})setIsSubmitting(false)// Get user email for notification;
+          'There was an error creating your profile. Please try again.',variant: 'destructive'})setIsSubmitting(false)// Get user email for notification;
       const { data: user_data } = await supabase.auth.get_user ()const user_email = (user_data as any).user?.email;
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       set_timeout ((, ) => {toast ({title: 'Profile Created Successfully',description:;
-            'Your talent profile has been published and is now visible in the directory.',})// Send notification email if we have user email;
+            'Your talent profile has been published and is now visible in the directory.'})// Send notification email if we have user email;
         // Check condition;
 if ( {) {$2;
 }
@@ -280,7 +280,7 @@ if (throw error) {$2;
       */;
     } catch (error: any) {logErrorToProduction ('Error creating profile:', { data: error })toast ({title: 'Error Creating Profile',description:;
           error.message ||;
-          'There was an error creating your profile. Please try again.',variant: 'destructive',})setIsSubmitting (false)}
+          'There was an error creating your profile. Please try again.',variant: 'destructive'})setIsSubmitting (false)}
   }import React, { useState } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -811,7 +811,7 @@ const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 
                             <Input;
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white';
                               placeholder='Add a skill...';
-                              {...field}onKeyDown = {handleSkillKeyPress,}
+                              {...field}onKeyDown = {handleSkillKeyPress}
                             />;
                           </FormControl>;onKeyDown={handleSkillKeyPress}
                             />;
@@ -1018,7 +1018,7 @@ const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 
                               className='flex - 1 bg - zion - blue border - zion - blue - light text - white';
                               placeholder='Add a skill...';
                               {...field}
-                              onKeyDown = {handleSkillKeyPress, }
+                              onKeyDown = {handleSkillKeyPress }
                             />;
                           </FormControl>;
                           <Button;

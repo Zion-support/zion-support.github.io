@@ -19,7 +19,7 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({id: S
       : ['Top Rated']) as Talent['badges'],testimonial:;
     i % 5 === 0;
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
-      : undefined,}))const TalentDirectory: NextPage  = () => {const [page, setPage] = useState(1)const pageSize  = 10;: ['Top Rated']) as Talent['badges'],testimonial:;
+      : undefined}))const TalentDirectory: NextPage  = () => {const [page, setPage] = useState(1)const pageSize  = 10;: ['Top Rated']) as Talent['badges'],testimonial:;
     i % 5 === 0;testimonial?: { quote: string, author: string }
 }const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({id: String(i + 1)name: `Talent ${i + 1}`,title: 'Full-Stack Developer',badges: (i % 3 === 0;
     ? ['Verified'];

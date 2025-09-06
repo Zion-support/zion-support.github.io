@@ -2,7 +2,7 @@
 if (isLoading) {return ())}
       </div>;
     )}if (milestones.length === 0 && !showAddForm) {return (<EmptyState;
-        icon = {<span className="text-3xl">📊</span>,}
+        icon = {<span className="text-3xl">📊</span>}
         title="No Milestones Yet";
         description={isClient ?;
           "Break down the project into manageable milestones to track progress and payments." :;
@@ -10,11 +10,11 @@ if (isLoading) {return ())}
         action={isClient ?;
           {text: "Create First Milestone",onClick: () => setShowAddForm(true)} : undefined;
         }}if (milestones && milestones.length === 0 && !showAddForm) {return (<EmptyState;
-        icon = {<span className="text-3xl">📊</span>,}
+        icon = {<span className="text-3xl">📊</span>}
         title="No Milestones Yet";
         description = {isClient ? ;
           "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet.",}
+          "No milestones have been created for this project yet."}
         action={isClient ? ;
           {text: "Create First Milestone",onClick: (,) => setShowAddForm(true)} : undefined;
         }
@@ -25,24 +25,24 @@ if (isLoading) {return ())}
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;<AddMilestoneForm;
             <AddMilestoneForm;
-              onSubmit = {handleSubmit,}
-              isSubmitting = {isSubmitting,}
-              onCancel = {(,) => setShowAddForm(false),}
+              onSubmit = {handleSubmit}
+              isSubmitting = {isSubmitting}
+              onCancel = {(,) => setShowAddForm(false)}
             />;
           </CardContent>;
         </Card>;
       )}<div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (<MilestoneCard;
-            key = {milestone.id,}
-            id = {milestone.id,}
-            projectId = {milestone.project_id,}
-            title = {milestone.title,}
-            description = {milestone.description,}
-            amount = {parseFloat(milestone.amount.toString()),}
-            status = {milestone.status,}
-            dueDate = {milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
+            key = {milestone.id}
+            id = {milestone.id}
+            projectId = {milestone.project_id}
+            title = {milestone.title}
+            description = {milestone.description}
+            amount = {parseFloat(milestone.amount.toString())}
+            status = {milestone.status}
+            dueDate = {milestone.due_date}
+            onApprove = {onApprove}
+            onReject = {onReject}
           />;
         ))}</div>;
     </div>;
@@ -62,11 +62,11 @@ if ( {) {$2;
 if ( {) {$2;
 }
     return (<EmptyState;
-        icon = {<span className="text - 3xl">📊</span>, }
+        icon = {<span className="text - 3xl">📊</span> }
         title="No Milestones Yet";
         description = {is_client ?;
           "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet.", }
+          "No milestones have been created for this project yet." }
         action={is_client ?;
           {text: "Create First Milestone",on_click: (, ) => setShowAddForm (true)} : undefined;
         }
@@ -82,30 +82,30 @@ if ( {) {$2;
           <CardContent className="pt - 6">;
             <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
             <AddMilestoneForm;
-              on_submit = {handle_submit, }
-              is_submitting = {is_submitting, }
-              on_cancel = {(, ) => setShowAddForm (false), }
+              on_submit = {handle_submit }
+              is_submitting = {is_submitting }
+              on_cancel = {(, ) => setShowAddForm (false) }
             />;
           </CardContent>;
         </Card>)}
       <div className="space - y-4">;
         {milestones.map ((milestone, ) => (<MilestoneCard;
-            key = {milestone.id, }
-            id = {milestone.id, }
-            project_id = {milestone.project_id, }
-            title = {milestone.title, }
-            description = {milestone.description, }
-            amount = {parse_float (milestone.amount.to_string ()), }
-            status = {milestone.status, }
-            due_date = {milestone.due_date, }
-            on_approve = {on_approve, }
-            on_reject = {on_reject, }
+            key = {milestone.id }
+            id = {milestone.id }
+            project_id = {milestone.project_id }
+            title = {milestone.title }
+            description = {milestone.description }
+            amount = {parse_float (milestone.amount.to_string ()) }
+            status = {milestone.status }
+            due_date = {milestone.due_date }
+            on_approve = {on_approve }
+            on_reject = {on_reject }
           />))}
       </div>;
     </div>)}
 ";<AddMilestoneForm;
 import React, { useState } from 'react';
-import { Milestone,MilestoneStatus,MilestoneActivity,} from '@/hooks/useMilestones';
+import { Milestone,MilestoneStatus,MilestoneActivity} from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
 import { AddMilestoneForm  } from './AddMilestoneForm';

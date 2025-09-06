@@ -40,7 +40,7 @@
             strokeWidth={2}icon: (d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z';
           />;
         </svg>;
-      ),},{title: 'Impactful Projects',description:;
+      )},{title: 'Impactful Projects',description:;
         'Contribute to innovations that make advanced technology accessible worldwide.',icon: (<svg;
           className='w-10 h-10 text-zion-cyan';
           fill='none';
@@ -54,7 +54,7 @@
             d='M13 10V3L4 14h7v7l9-11h-7z';
           />;
         </svg>;
-      ),},];import { SEO  } from '@/components/SEO';
+      )}];import { SEO  } from '@/components/SEO';
 import { GradientHeading  } from '@/components/GradientHeading';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';

@@ -79,7 +79,7 @@ export default function AIHRRecruitmentPage() {const service  = null;import {Pho
                   <MapPin />;
                   <span>{service && service.contactInfo.address}</span>;import Head from 'next / head';
 import React from 'react';
-  Phone,Mail,MapPin,Check,ArrowRight,Star,Users,} from 'lucide-react';
+  Phone,Mail,MapPin,Check,ArrowRight,Star,Users} from 'lucide-react';
 import Layout from '../components / layout / Layout';import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micro - saas - services';
 export default /**;
  * AIHRRecruitmentPage - Function description;

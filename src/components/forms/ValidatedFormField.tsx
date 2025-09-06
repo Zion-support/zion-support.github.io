@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {FormField,FormItem,FormLabel,FormControl,FormMessage,} from '@/components/ui/form';
+import {FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
-import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components/ui/select';import { Checkbox  } from '@/components/ui/checkbox';
+import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';import { Checkbox  } from '@/components/ui/checkbox';
 import { cn  } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
@@ -57,10 +57,10 @@ export function ValidatedFormField() {const [showPassword, setShowPassword] = us
   useEffect((,) => {if (!fieldValue |!isTouched) {setValidationState('idle')return;
     }
     if (debounceTimer) {clearTimeout(debounceTimer)}
-    setValidationState('validating')const timer = setTimeout(() => {const error = validateField(fieldValue)setValidationState(error ? 'invalid' : 'valid')}, debounceMs)setDebounceTimer(timer)import { FormField,FormItem,FormLabel,FormControl,FormMessage,} from '@/components / ui / form';
+    setValidationState('validating')const timer = setTimeout(() => {const error = validateField(fieldValue)setValidationState(error ? 'invalid' : 'valid')}, debounceMs)setDebounceTimer(timer)import { FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { Textarea  } from '@/components / ui / textarea';
-  Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components / ui / select'; import { Checkbox  } from '@/components / ui / checkbox';
+  Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components / ui / select'; import { Checkbox  } from '@/components / ui / checkbox';
 import { cn  } from '@/lib / utils';
 import { Button  } from '@/components / ui / button';
 interface ValidationRule  {required?: boolean;
@@ -177,7 +177,7 @@ interface ValidatedFormFieldProps  {name: string;
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
-  debounceMs?: number;export function ValidatedFormField(): any ({name,label,type = 'text',placeholder,description,validation = {},options = [],form,className,disabled = false,showValidIcon = true,debounceMs = 300,}: ValidatedFormFieldProps) {const [showPassword, setShowPassword] = useState(false)const [validationState, setValidationState] = useState<;
+  debounceMs?: number;export function ValidatedFormField(): any ({name,label,type = 'text',placeholder,description,validation = {},options = [],form,className,disabled = false,showValidIcon = true,debounceMs = 300}: ValidatedFormFieldProps) {const [showPassword, setShowPassword] = useState(false)const [validationState, setValidationState] = useState<;
     'idle' | 'validating' | 'valid' | 'invalid';
   >('idle')const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(null;
   )const fieldValue = form && form.watch(name)const fieldError = form && form.formState.errors[name];
@@ -287,9 +287,9 @@ interface ValidatedFormFieldProps  {name: string;
         )}case 'textarea':;
         return (<div className='relative'>;
             <Textarea;
-              disabled = {disabled, }
-              class_name = {base_classes, }
-              rows = {4, }
+              disabled = {disabled }
+              class_name = {base_classes }
+              rows = {4 }
               {...form.register (name)}
             />;
             <div className='absolute top - 2 right - 2'>{getValidationIcon ()}</div>;
@@ -325,9 +325,9 @@ interface ValidatedFormFieldProps  {name: string;
           </div>)case 'password':;
         return (<div className='relative'>;
             <Input;
-              type = {show_password ? 'text' : 'password', }
-              disabled = {disabled, }
-              class_name = {cn (base_classes, 'pr - 20'), }
+              type = {show_password ? 'text' : 'password' }
+              disabled = {disabled }
+              class_name = {cn (base_classes, 'pr - 20') }
               {...form.register (name)}
             />;
             <div className='absolute inset - y-0 right - 0 flex items - center gap - 1 pr - 3'>;
@@ -345,9 +345,9 @@ interface ValidatedFormFieldProps  {name: string;
           </div>)default:;
         return (<div className='relative'>;
             <Input;
-              type = {type, }
-              disabled = {disabled, }
-              class_name = {base_classes, }
+              type = {type }
+              disabled = {disabled }
+              class_name = {base_classes }
               {...form.register (name)}
             />;
             <div className='absolute inset - y-0 right - 0 flex items - center pr - 3'>;
@@ -400,38 +400,38 @@ if ( {) {$2;
         </FormItem>)}
     />)// Validation helpers for common patterns;
 export const validation_patterns = {email: /^[a - z_a - Z0 - 9._%+-]+@[a - z_a - Z0 - 9.-]+\.[a - z_a - Z]{2}$/,phone: /^[\+]?[1 - 9][\d]{0, 15}$/,url: /^https?:\/\/.+/,strong_password:;
-    /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d)(?=.*[@$!%*?&])[A - Za - z\d@$!%*?&]{8}$/,}
+    /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d)(?=.*[@$!%*?&])[A - Za - z\d@$!%*?&]{8}$/}
 // Pre - configured validation rules;
 export const common_validations = {required: { required: true },email: {required: true,pattern: validation_patterns.email,custom: (value: string, ) => {if () {) {$2;
 }
         return 'Please enter a valid email address';
       }
       return null;
-    },},password: {required: true,min_length: 8,custom: (value: string, ) => {if () {) {$2;
+    }},password: {required: true,min_length: 8,custom: (value: string, ) => {if () {) {$2;
 }
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
       }
       return null;
-    },},phone: {pattern: validation_patterns.phone,custom: (value: string, ) => {if () {) {$2;
+    }},phone: {pattern: validation_patterns.phone,custom: (value: string, ) => {if () {) {$2;
 }
         return 'Please enter a valid phone number';
       }
       return null;
-    },},}
+    }}}
     }
   }}
-    }}},}}}/>;
+    }}}}}}/>;
   )// Validation helpers for common patterns;
 export const validationPatterns = {email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,phone: /^[\+]?[1-9][\d]{0,15}$/,url: /^https?:\/\/.+/,strongPassword:;
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,}// Pre-configured validation rules;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/}// Pre-configured validation rules;
 export const commonValidations = {required: { required: true },email: {required: true,pattern: validationPatterns && validationPatterns.email,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.email.test(value)) {return 'Please enter a valid email address';
       }
       return null;
-    },},password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+    }},password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
       }
       return null;
-    },},phone: {pattern: validationPatterns && validationPatterns.phone,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.phone.test(value)) {return 'Please enter a valid phone number';
+    }},phone: {pattern: validationPatterns && validationPatterns.phone,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.phone.test(value)) {return 'Please enter a valid phone number';
       }
-      return null;}},}
+      return null;}}}
   }}return null;
-    },},}
+    }}}

@@ -1,6 +1,9 @@
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
+
+  return (
+    <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>IoT Platforms</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Content coming soon.;
@@ -17,6 +20,20 @@ export default function IotPlatformsPage() {return (<div className='container mx
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Content coming soon.;
       </p>;
+  );
+
+}
+
+
+
+
+export default function IotPlatformsPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>IoT Platforms</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Content coming soon.
+      </p>
     </div>;
   )export default function IotPlatformsPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">IoT Platforms</h1>;
@@ -53,3 +70,44 @@ function IotPlatformsPage() {return (<div className="container mx - auto px - 4 
   )}
 }</div>;
   )
+    </div>);
+}
+
+
+
+
+
+
+  )
+}
+
+
+export default function IotPlatformsPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>IoT Platforms</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Content coming soon.
+      </p>
+    </div>;
+  );export default function IotPlatformsPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">IoT Platforms</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>
+
+    </div>
+  );
+
+    </div>
+  );
+
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}

@@ -61,8 +61,8 @@ export const QrCodeDownload: React.FC = () => {// App store links - these would 
               </p>;
               <AppStoreButtons;
                 className="mb - 8";
-                appStoreUrl = {appStoreUrl, }
-                googlePlayUrl = {googlePlayUrl, }
+                appStoreUrl = {appStoreUrl }
+                googlePlayUrl = {googlePlayUrl }
               />;
               <div className="flex gap - 2 items - center text - sm text - gray - 400">;
                 <span className="block h - 1 w - 1 rounded - full bg - zion - purple"></span>;

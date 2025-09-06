@@ -497,8 +497,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';
                             on_change={e => setNewNote (e.target.value)}
                             className='min - h-[100px] mb - 2'                          />;
                           <Button;
-                            on_click = {handleSubmitNote, }
-                            disabled = {!new_note.trim () || isSubmittingNote, }
+                            on_click = {handleSubmitNote }
+                            disabled = {!new_note.trim () || isSubmittingNote }
                           >;
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button>;

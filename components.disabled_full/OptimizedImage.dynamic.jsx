@@ -18,3 +18,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>'</p>';
 </p>';
+const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

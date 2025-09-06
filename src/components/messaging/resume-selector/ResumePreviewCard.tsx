@@ -17,7 +17,7 @@ interface ResumePreviewCardProps  {resume: Resume;
   isSelected: boolean;
   onSelect: (resume: Resume) => void;
   onDownload: (resume: Resume) => void;
-}export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({resume,isSelected,onSelect,onDownload,}) => {const getStatusColor = (status?: string) => {switch (status) {case 'published':;
+}export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({resume,isSelected,onSelect,onDownload}) => {const getStatusColor = (status?: string) => {switch (status) {case 'published':;
         return 'bg-green-100 text-green-800';
       case 'draft':;
         return 'bg-yellow-100 text-yellow-800';

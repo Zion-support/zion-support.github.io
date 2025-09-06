@@ -49,7 +49,7 @@ export const ClientBudgetRecommender: React.FC<;
   onSuggestionApplied;
 }) => {const [isLoading, setIsLoading] = useState(false)const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)const { user } = useAuth()const generateSuggestion = async () => {if (!jobTitle |!category) {return;
     }
-    setIsLoading(true)try {const params: ClientBudgetParams = {jobTitle,category,}if (timeline) params.timeline = timeline;
+    setIsLoading(true)try {const params: ClientBudgetParams = {jobTitle,category}if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;const result = await getClientBudgetSuggestion(params)setSuggestion(result)} catch (error) {logErrorToProduction('Error generating budget suggestion:', {data: error;
       })} finally {setIsLoading(false)}

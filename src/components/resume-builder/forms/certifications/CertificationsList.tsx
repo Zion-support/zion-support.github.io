@@ -8,7 +8,7 @@ export function CertificationsList() {if (certifications.length === 0) {return n
 interface CertificationsListProps  {certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
-export function CertificationsList(): any ({certifications,onEdit,onDelete,}: CertificationsListProps) {  if (certifications && certifications.length === 0) {export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {import { Certification  } from '@/types/resume';
+export function CertificationsList(): any ({certifications,onEdit,onDelete}: CertificationsListProps) {  if (certifications && certifications.length === 0) {export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
@@ -48,7 +48,7 @@ interface CertificationsListProps  {certifications: Certification[],onEdit: (cer
                   size='icon';
                   onClick={() => onEdit(cert)}className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a;
-                  href = {cert && cert.credential_url,}variant="ghost";
+                  href = {cert && cert.credential_url}variant="ghost";
                   size="icon";
                   onClick={() => onDelete(cert.id!)}aria-label="Delete certification";
                 >;
@@ -135,7 +135,7 @@ if ( {) {$2;
                   on_click={() => on_edit (cert)}
                   aria - label='Edit certification'                  variant="ghost";
                   size="icon";
-                  on_click = {() => on_edit (cert), }
+                  on_click = {() => on_edit (cert) }
                   aria - label="Edit certification";
                 >;
                   <Edit className='h - 4 w - 4' />;
@@ -159,7 +159,7 @@ if ( {) {$2;
                   rel='noopener noreferrer';
                   className='text - primary hover:underline'                >              <p className="text - xs mt - 2">;
                 <a;
-                  href = {cert.credential_url, }
+                  href = {cert.credential_url }
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text - primary hover:underline";

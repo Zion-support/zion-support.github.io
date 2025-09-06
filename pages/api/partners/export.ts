@@ -12,7 +12,7 @@ export default async function handler() {const code = null;
       )return res.status(200).send(csv)}
     const supabase = getServerSupabase()const { data, error } = await supabase;
       .from('referral_events').select('event, created_at').eq('partner_code', code).order('created_at', { ascending: false })if (error) return res.status(500).json({ error: error.message })const rows = [;
-      ['event', 'timestamp'],...(data || []).map((r: any) => [r.event, r.created_at]),];
+      ['event', 'timestamp'],...(data || []).map((r: any) => [r.event, r.created_at])];
     const csv = rows.map((r) => r.join()).join("\n")res.setHeader("Content-Type", "text/csv")res.setHeader("Content-Disposition";
       `attachment; filename="${code}-referrals.csv"`;
     )return res.status(200).send(csv)} catch (e: any) {return res.status(500).json({ error: e?.message })}}

@@ -1,3 +1,13 @@
+export type UserRole = "admin" | "user" | "guest";
+export type UserRole = "admin" | "user" | "guest";
+
+
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+
 
 export type UserRole = "admin" | "user" | "guest";export type UserRole = "admin" | "user" | "guest";
 export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';export type UserRole = 'admin' | 'user' | 'guest';ursor/expand-services-advertise-and-build-project-4b36;

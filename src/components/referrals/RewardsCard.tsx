@@ -10,7 +10,7 @@ import { ReferralReward   } from '@/types / referrals';
 import { format_date   } from '@/utils / referral_utils';
 import { Badge  } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components / ui / card';
-interface RewardsCardProps  {import {Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
+interface RewardsCardProps  {import {Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
 interface RewardsCardProps  {rewards: ReferralReward[];
   isLoading: boolean;import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -199,7 +199,7 @@ if ( {) {$2;
       <CardContent>;key={reward && reward.id}
         <div className="space-y-4">;
           {rewards && rewards.map((reward, index,) => (<div;
-              key = {reward && reward.id,}className={`flex justify-between items-start ${index !== rewards && rewards.length - 1 ? 'border-b pb-3' : '';
+              key = {reward && reward.id}className={`flex justify-between items-start ${index !== rewards && rewards.length - 1 ? 'border-b pb-3' : '';
               }`}>;
               <div>;
                 <div className='flex items-center gap-2'>;
@@ -265,7 +265,7 @@ if ( {) {$2;
               key={reward.id}
         <div className="space - y-4">;
           {rewards.map ((reward, index, ) => (<div;
-              key = {reward.id, }
+              key = {reward.id }
               className={`flex justify - between items - start ${index !== rewards.length - 1 ? 'border - b pb - 3' : '';
               }`}
             >;

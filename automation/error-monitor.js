@@ -43,6 +43,75 @@ ursor/automate-test-improve-and-merge-code-646c;
   async checkTypeScriptErrors() {try {execSync('npx tsc --noEmit --pretty false', {encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe', 'pipe', 'pipe'];
       })this.monitoringReport.metrics.typeCheckSuccess = true;
       console.log('✅ TypeScript check passed')} catch (error) {if (error.stdout) {const errors = this.parseTypeScriptErrors(error.stdout)this.monitoringReport.errorsDetected.push(...errors)this.monitoringReport.metrics.totalErrors += errors.length;
+  async start() {
+    console.log('🔍 Starting Error Monitor...');
+    this.isRunning = true;
+    // Create logs directory
+    const logsDir = path.join(this.projectRoot, 'automation', 'logs');
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+
+
+
+
+    // Initial health check
+    await this.performHealthCheck();
+    // Start continuous monitoring
+    this.startContinuousMonitoring();
+    // Handle graceful shutdown
+    process.on('SIGINT', () => this.shutdown());
+    process.on('SIGTERM', () => this.shutdown());
+  }
+  async performHealthCheck() {
+    console.log('🏥 Performing health check...');
+    try {
+      // Check TypeScript errors
+      await this.checkTypeScriptErrors();
+      // Check ESLint errors
+      await this.checkESLintErrors();
+      // Check build status
+      await this.checkBuildStatus();
+      // Check for critical files
+      await this.checkCriticalFiles();
+      // Update health status
+      this.updateHealthStatus();
+      // Log results
+      this.logHealthStatus();
+      // Trigger error fixer if needed
+      if (this.monitoringReport.metrics.totalErrors > this.alertThreshold) {
+        await this.triggerErrorFixer();
+      }
+    } catch (error) {
+      console.error('❌ Health check failed:', error);
+      this.monitoringReport.errorsDetected.push({
+        type: 'health_check_failure',
+        message: error.message,
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
+  async checkTypeScriptErrors() {
+    try {
+      execSync('npx tsc --noEmit --pretty false', {
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipe', 'pipe', 'pipe']
+      });
+      this.monitoringReport.metrics.typeCheckSuccess = true;
+      console.log('✅ TypeScript check passed');
+    } catch (error) {
+      if (error.stdout) {
+        const errors = this.parseTypeScriptErrors(error.stdout);
+        this.monitoringReport.errorsDetected.push(...errors);
+        this.monitoringReport.metrics.totalErrors += errors.length;
         this.monitoringReport.metrics.typeCheckSuccess = false;
         console.log(`❌ TypeScript check failed with ${errors.length} errors`)}
     }
@@ -86,6 +155,12 @@ ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>>> main:corrupted_backup/error-monitor.js;
             timestamp: new Date().toISOString()timestamp: new Date().toISOString()=;
             timestamp: new Date().toISOString()timestamp: new Date().toISOString()})}
+    }
+
+
+            timestamp: new Date().toISOString()
+          });
+        }
       }
     }ursor/automate-test-improve-and-merge-code-646c;
     return errors;
@@ -107,6 +182,27 @@ ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>>> main:corrupted_backup/error-monitor.js;
 ursor/automate-test-improve-and-merge-code-646c;
 >          timestamp: new Date().toISOString()})}
+  parseESLintErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    for (const line of lines) {
+      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          type: 'eslint_error',
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+
+
+
+    );
+      }
     }
 <;
           timestamp: new Date().toISOString()})}
@@ -115,6 +211,10 @@ ursor/automate-test-improve-and-merge-code-646c;
           timestamp: new Date().toISOString()})}
     }
 =;
+
+
+
+
     return errors;
   }
   updateHealthStatus() {const totalErrors = this.monitoringReport.metrics.totalErrors;
@@ -172,6 +272,95 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
 =;
     // Add duration to report;
+  logHealthStatus() {
+    const status = this.monitoringReport.healthStatus;
+    const totalErrors = this.monitoringReport.metrics.totalErrors;
+    const totalWarnings = this.monitoringReport.metrics.totalWarnings;
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(
+      `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
+    );
+  }
+  async triggerErrorFixer() {
+    console.log('🚀 Triggering error fixer...');
+    try {
+      const ErrorFixerAutomation = require('./error-fixer-automation.js');
+      const automation = new ErrorFixerAutomation();
+      await automation.run();
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+
+
+
+      console.log('✅ Error fixer completed');
+    } catch (error) {
+      console.error('❌ Error fixer failed:', error);
+      this.monitoringReport.errorsDetected.push({
+        type: 'error_fixer_failure',
+        message: error.message,
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
+  startContinuousMonitoring() {
+    console.log(
+      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
+    );
+    setInterval(async () => {
+      if (this.isRunning) {
+        await this.performHealthCheck();
+        await this.saveReport();
+      }
+    }, this.checkInterval);
+  }
+  async saveReport() {
+    const reportPath = path.join(
+      this.projectRoot,
+      'error-reports',
+      `error-monitor-report-${Date.now()}.json`
+    );
+    const reportDir = path.dirname(reportPath);
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
+    }
+
+
+
+
+    // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(reportPath,JSON.stringify(this.monitoringReport, null, 2))// Keep only the latest 10 reports;
     this.cleanupOldReports(reportDir)}
@@ -190,5 +379,14 @@ module.exports = ErrorMonitor;
 ursor/automate-test-improve-and-merge-code-646c;
 module.exports = ErrorMonitor;}
 module.exports = ErrorMonitor;ursor/automate-test-improve-and-merge-code-646c;
+}
+module.exports = ErrorMonitor;
+}
+// Run the monitor
+if (require.main === module) {
+  const monitor = new ErrorMonitor();
+  monitor.start().catch(console.error);
+}
+module.exports = ErrorMonitor;
 }
 module.exports = ErrorMonitor;

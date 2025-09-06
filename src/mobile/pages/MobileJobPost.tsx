@@ -120,13 +120,13 @@ export function MobileJobPost() {const [currentStep, setCurrentStep]  = useState
           {currentStep !== "details" && (<Button;
               variant="outline";
               className="flex-1 gap-1";
-              onClick = {goToPrevStep,}>;
+              onClick = {goToPrevStep}>;
               <ChevronLeft className="h-4 w-4" /> Back;
             </Button>;
           )}<Button;
           <Button;
             className="flex-1 gap-1";
-            onClick = {goToNextStep,}>;
+            onClick = {goToNextStep}>;
             {currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}<BottomNavigation />;
     </div>;
@@ -207,13 +207,13 @@ import { Textarea } from "@/components/ui/textarea",import { Label } from "@/com
           {current_step !== "details" && (<Button;
               variant="outline";
               className="flex - 1 gap - 1";
-              on_click = {goToPrevStep, }
+              on_click = {goToPrevStep }
             >;
               <ChevronLeft className="h - 4 w - 4" /> Back;
             </Button>)}
           <Button;
             className="flex - 1 gap - 1";
-            on_click = {goToNextStep, }
+            on_click = {goToNextStep }
           >;
             {current_step === "preview" ? "Publish Job" : "Continue"}
             {current_step !== "preview" && <ChevronRight className="h - 4 w - 4" />}title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
@@ -300,7 +300,7 @@ function DetailsStep() {return (<div className="space - y-4">;
         <Textarea;
           id="description";
           placeholder="Describe the job role and responsibilities";
-          rows = {5, }
+          rows = {5 }
         />;
       </div>;
     </div>)<div className="space-y-2">;
@@ -390,7 +390,7 @@ function DetailsStep() {return (<div className="space - y-4">;
         <Textarea;
           id="description";
           placeholder="Describe the job role and responsibilities";
-          rows = {5,}
+          rows = {5}
         />;
       </div>;
     </div>;
@@ -543,10 +543,10 @@ function DetailsStep() {return (<div className="space - y-4">;
         </div>;
         <div className="flex gap-2">;
           <Input;
-            value = {newSkill,}
-            onChange = {(e,) => setNewSkill(e && e.target.value),}
+            value = {newSkill}
+            onChange = {(e,) => setNewSkill(e && e.target.value)}
             placeholder="Add a skill";
-            onKeyDown = {(e,) => e && e.key === 'Enter' && addSkill(),}
+            onKeyDown = {(e,) => e && e.key === 'Enter' && addSkill()}
           />;
           <Button onClick={addSkill}>Add</Button>;
         </div>;
@@ -555,14 +555,14 @@ function DetailsStep() {return (<div className="space - y-4">;
         <Textarea;
           id="requirements";
           placeholder="List any specific requirements or qualifications";
-          rows = {4,}
+          rows = {4}
         />;
       </div>;<div className="space-y-2">;
         <Label htmlFor="responsibilities">Key Responsibilities</Label>;
         <Textarea;
           id="responsibilities";
           placeholder="List the key responsibilities for this role";
-          rows = {4,}
+          rows = {4}
         />;
       </div>;
     </div>;
@@ -622,7 +622,7 @@ function DetailsStep() {return (<div className="space - y-4">;
         <Textarea;
           id="additionalInfo";
           placeholder="Any additional information about budget or payment";
-          rows = {3,}
+          rows = {3}
         />;
       </div>;
     </div>;
@@ -669,14 +669,14 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
         <Label > Required Skills</Label>;
         <div className="flex flex - wrap gap - 2 mb - 3">;
           {skills.map ((skill, ) => (<Badge;
-              key = {skill, }
+              key = {skill }
               variant="secondary";
               className="flex items - center gap - 1 px - 3 py - 1";
             >;
               {skill}
               <button;
                 className="ml - 1 rounded - full hover:bg - background / 20 p - 1";
-                on_click = {(, ) => remove_skill (skill), }
+                on_click = {(, ) => remove_skill (skill) }
               >;
                 ×;
               </button>;
@@ -684,10 +684,10 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
         </div>;
         <div className="flex gap - 2">;
           <Input;
-            value = {new_skill, }
-            on_change = {(e, ) => setNewSkill (e.target.value), }
+            value = {new_skill }
+            on_change = {(e, ) => setNewSkill (e.target.value) }
             placeholder="Add a skill";
-            onKeyDown = {(e, ) => e.key === 'Enter' && add_skill (), }
+            onKeyDown = {(e, ) => e.key === 'Enter' && add_skill () }
           />;
           <Button on_click={add_skill}>Add</Button>;
         </div>;
@@ -697,7 +697,7 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
         <Textarea;
           id="requirements";
           placeholder="List any specific requirements or qualifications";
-          rows = {4, }
+          rows = {4 }
         />;
       </div>;
       <div className="space - y-2">;
@@ -705,7 +705,7 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
         <Textarea;
           id="responsibilities";
           placeholder="List the key responsibilities for this role";
-          rows = {4, }
+          rows = {4 }
         />;
       </div>;
     </div>)}
@@ -774,7 +774,7 @@ function BudgetStep() {return (<div className="space - y-4">;
         <Textarea;
           id="additional_info";
           placeholder="Any additional information about budget or payment";
-          rows = {3, }
+          rows = {3 }
         />;
       </div>;
     </div>)}

@@ -310,6 +310,52 @@ ursor/fix-lint-push-and-merge-to-main-32fb;
           />;
         </div>;
       </section>;
+      <section className="bg-gray-900 text-white py-16 rounded-lg">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Transform Your Meetings?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of teams already using our AI Meeting Assistant to make their meetings more productive and actionable.
+          </p>
+          <Link
+            href="/contact"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <blockquote className="text-gray-600 mb-4">
+              &ldquo;The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate.&rdquo;
+            </blockquote>
+            <div>
+              <p className="font-semibold text-gray-900">Jennifer Martinez</p>
+              <p className="text-sm text-gray-500">Account Director, Marketing Agency Pro</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <blockquote className="text-gray-600 mb-4">
+              &ldquo;Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work.&rdquo;
+            </blockquote>
+            <div>
+              <p className="font-semibold text-gray-900">David Kim</p>
+              <p className="text-sm text-gray-500">Engineering Manager, TechCorp Solutions</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <blockquote className="text-gray-600 mb-4">
+              &ldquo;As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly.&rdquo;
+            </blockquote>
+            <div>
+              <p className="font-semibold text-gray-900">Lisa Thompson</p>
+              <p className="text-sm text-gray-500">Management Consultant, Strategic Insights LLC</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-12 bg-purple-600 rounded-lg text-white text-center">;
         <h2 className="text-3xl font-bold mb-4">;

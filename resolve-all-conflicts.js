@@ -18,6 +18,60 @@ function resolveMergeConflicts() {try {console.log(`🔧 Processing: ${filePath}
 }// Function to get all files with merge conflicts;
 function getConflictFiles() {try {const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {// If git command fails, use grep to find files with conflict markers;
         const { execSync } = require('child_process')try {const result = execSync('grep -l "" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs"', { encoding: 'utf8' })return result.trim().split('\n').filter(file => file.length > 0)const result = execSync('grep -l "            return result.trim().split('\n').filter(file => file.length > 0)} catch (e) {return [];
+#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+console.log('🚀 Starting comprehensive merge conflict resolution...');
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+    try {
+        console.log(`🔧 Processing: ${filePath}`);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check if file has merge conflicts
+        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+            return false; // No conflicts to resolve
+        }
+        
+        // Strategy: Keep HEAD version (current branch) for most conflicts
+        // Remove merge conflict markers and keep the HEAD version
+        
+        // Remove any remaining conflict markers
+        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
+        
+        // Remove any remaining conflict markers
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/\n?/g, '');
+        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+        
+        // Clean up any duplicate content
+        content = content.replace(/\n\n\n+/g, '\n\n');
+        
+        // Write the resolved content back
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`✅ Resolved conflicts in: ${filePath}`);
+        return true;
+    } catch (error) {
+        console.error(`❌ Error processing ${filePath}:`, error.message);
+        return false;
+    }
+}
+
+// Function to get all files with merge conflicts
+function getConflictFiles() {
+    try {
+        const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+        return result.trim().split('\n').filter(file => file.length > 0);
+    } catch (error) {
+        // If git command fails, use grep to find files with conflict markers
+        try {
+            const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+            return result.trim().split('\n').filter(file => file.length > 0);
+        } catch (e) {
+            return [];
         }
     }
 }// Main execution;

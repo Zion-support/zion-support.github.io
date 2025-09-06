@@ -17,3 +17,5 @@ export default function Greenit() {return (<div>;
 =>>>>>>>> main:corrupted_backup/green-it.tsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
+interface GreenitProps {
+  // Add props here as needed

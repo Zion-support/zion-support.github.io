@@ -41,7 +41,7 @@ function UpcomingInterviewsCard() {const { fetch_interviews } = use_interviews (
               !is_past (parseISO (interview.scheduled_date))).sort ((a, b) =>;
               parseISO (a.scheduled_date).get_time () -;
               parseISO (b.scheduled_date).get_time ()          ).slice (0, 3)// Take only the next 3 interviews;
-        setUpcomingInterviews (upcoming)} catch (error) {logErrorToProduction ('Error loading upcoming interviews:', {data: error,})} finally {setIsLoading (false)}
+        setUpcomingInterviews (upcoming)} catch (error) {logErrorToProduction ('Error loading upcoming interviews:', {data: error})} finally {setIsLoading (false)}
     }import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -57,7 +57,7 @@ export function UpcomingInterviewsCard() {const { fetchInterviews } = useIntervi
               interview && interview.status === 'confirmed' &&;
               !isPast(parseISO(interview && interview.scheduled_date))).sort((a, b) =>;
               parseISO(a && a.scheduled_date).getTime() -;
-              parseISO(b && b.scheduled_date).getTime()          ).slice(0, 3)// Take only the next 3 interviews;setUpcomingInterviews(upcoming)} catch (error) {logErrorToProduction('Error loading upcoming interviews:', {data: error,})} finally {setIsLoading(false)}
+              parseISO(b && b.scheduled_date).getTime()          ).slice(0, 3)// Take only the next 3 interviews;setUpcomingInterviews(upcoming)} catch (error) {logErrorToProduction('Error loading upcoming interviews:', {data: error})} finally {setIsLoading(false)}
     }loadInterviews()}, [])if (isLoading) {return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;

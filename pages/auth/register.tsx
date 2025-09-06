@@ -210,4 +210,4 @@ if ( {) {$2;
           </div>;
         </div>;
       </div>;
-    </>)},export default RegisterPage,},)}export default RegisterPage;
+    </>)},export default RegisterPage},)}export default RegisterPage;

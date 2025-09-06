@@ -21,7 +21,7 @@ interface Speaker  {name: string;
   linkedin?: string;
 }
 interface Speaker  {linkedin?: string;const speakers: Speaker[] = [;
-  {name: 'Alex Zion',title: 'Founder & CEO',avatar: 'https://placehold.co/100x100',twitter: '#',linkedin: '#',},];
+  {name: 'Alex Zion',title: 'Founder & CEO',avatar: 'https://placehold.co/100x100',twitter: '#',linkedin: '#'}];
   linkedin?: string;
 }
 const speakers: Speaker[] = [;

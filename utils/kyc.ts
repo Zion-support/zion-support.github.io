@@ -1,6 +1,7 @@
 
 ;
 export interface KycProfile  {user_id: string;kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
@@ -8,6 +9,15 @@ export interface KycProfile  {user_id: string;kind: "document" | 'government_id_
 export interface KycProfile  {user_id: string;export interface KycProfile  {user_id: string;export interface KycProfile  {userId: string;
 export interface KycProfile  {user_id: string;
 ursor/fix-website-loading-errors-and-merge-6662;
+export interface KycProfile {
+  user_id: string;
+
+
+export interface KycProfile {;
+
+  userId: string;
+export interface KycProfile {
+  user_id: string;
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -51,7 +61,7 @@ if ( {) {$2;
   if (!profile && profile.country) {missing && missing.push('country')const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {missing.push('name')}if (!profile && profile.country) {missing && missing.push('country')}
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {missing && missing.push('dateOfBirth')}
-  return { ok: missing && missing.length === 0, missing }if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {missing && missing.push('businessRegistrationNumber')}if (!profile && profile.fullLegalName && !profile && profile.businessName) {missing && missing.push('name'),}if (!profile && profile.country) {missing && missing.push('country')}if (profile.role === 'client' && !profile.dateOfBirth) {missing.push('dateOfBirth')}missing && missing.push('name')}
+  return { ok: missing && missing.length === 0, missing }if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {missing && missing.push('businessRegistrationNumber')}if (!profile && profile.fullLegalName && !profile && profile.businessName) {missing && missing.push('name')}if (!profile && profile.country) {missing && missing.push('country')}if (profile.role === 'client' && !profile.dateOfBirth) {missing.push('dateOfBirth')}missing && missing.push('name')}
   if (!profile && profile.country) {missing && missing.push('country')}if (!profile && profile.country) {missing && missing.push('country')}if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {missing.push('businessRegistrationNumber')if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {missing && missing.push('dateOfBirth')}
   return { ok: missing && missing.length === 0, missing }if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {missing && missing.push('businessRegistrationNumber')}
   return {ok: missing && missing.length === 0,missing;
@@ -61,6 +71,52 @@ if ( {) {$2;
   status: 'pending' | 'approved' | 'rejected';}}
 }
 export interface KycProfile  {export interface KycProfile  {userId: string;
+    action: string;
+    return ['government_id', 'proof_of_address'];
+  } else {
+    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
+  }
+}
+    return ['bank_statement', 'utility_bill'];
+  } else {
+    return ['bank_statement', 'utility_bill', 'tax_certificate'];
+  }
+}
+  const missing: string[] = [];
+  
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name')
+  }
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+  }
+  
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+  }
+  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
+    missing.push('businessRegistrationNumber');
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
+  }
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
+  }
+  return {
+
+
+export interface KycDocumentMeta {;
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploadedAt: string;
+  status: 'pending' | 'approved' | 'rejected';
+}
+export interface KycProfile {
+  userId: string;
   role: KycRole;
   fullLegalName?: string;
   businessName?: string;
@@ -87,6 +143,9 @@ export interface KycProfile  {export interface KycProfile  {userId: string;
   }>;
 }
 }
+export function generateKycDocumentId(): string {
+  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
 export function generateKycDocumentId(): string {return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function isKycProfileComplete(profile: KycProfile): boolean {return profile.status === 'approved' &&;
@@ -100,6 +159,13 @@ if ( {) {$2;
     missing.push ('name')}
   // Check condition;
 if ( {) {$2;
+
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+;
+  // Check condition
+if ( {) {
+  $2
 }
     missing.push ('country')}
   // Check condition;
@@ -114,3 +180,30 @@ if ( {) {$2;
   }
 }ursor/fix-website-loading-errors-and-merge-6662;
   return { ok: missing.length === 0, missing }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('country');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('dateOfBirth');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
+  return {
+    ok: missing.length === 0,
+    missing;
+  }
+}
+
+
+
+

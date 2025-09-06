@@ -2,7 +2,7 @@
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser  } from '../../../../../utils/api/auth';
-import { getProject,updateMilestone,assertParticipantOrAdmin,isClient,isTalent,} from '../../../../../utils/api/projects';
+import { getProject,updateMilestone,assertParticipantOrAdmin,isClient,isTalent} from '../../../../../utils/api/projects';
 import { isMilestoneStatus  } from '../../../../../utils/types/milestones';
 export default function handler() {const user = requireUser(req, res)if (!user) return;
   const { projectId, milestoneId } = req && req.query as {projectId: string;

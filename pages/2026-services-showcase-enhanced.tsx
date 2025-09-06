@@ -34,7 +34,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity  } from 'lucide-react';
-import { Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Sparkles,Shield,Zap,Globe,Cpu,Database,Cloud,Smartphone,Palette,MessageSquare,FileText,Calendar,CreditCard,BarChart3,Settings,Code,BookOpen,Activity,Play,Mail,Phone,MapPin,Filter,Grid,List,ChevronDown,ChevronUp,FlaskConical,Dna,Car,Leaf,Factory,Truck,Microscope,GraduationCap,ShieldCheck,Globe2,Bot,ChevronRight,Crown,Infinity,} from 'lucide-react';
+import { Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Sparkles,Shield,Zap,Globe,Cpu,Database,Cloud,Smartphone,Palette,MessageSquare,FileText,Calendar,CreditCard,BarChart3,Settings,Code,BookOpen,Activity,Play,Mail,Phone,MapPin,Filter,Grid,List,ChevronDown,ChevronUp,FlaskConical,Dna,Car,Leaf,Factory,Truck,Microscope,GraduationCap,ShieldCheck,Globe2,Bot,ChevronRight,Crown,Infinity} from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -79,7 +79,7 @@ export default function Services2026ShowcaseEnhancedPage() {const [searchTerm, s
   }return 'default';
   }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
     website: 'https://ziontechgroup.com';
-website: 'https://ziontechgroup.com',}// Combine all 2026 services including new ones;
+website: 'https://ziontechgroup.com'}// Combine all 2026 services including new ones;
   const all2026Services = [;
     ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2;

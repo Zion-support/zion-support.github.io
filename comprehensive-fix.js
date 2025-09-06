@@ -71,6 +71,32 @@ import Link from "next/link";";
     content = content.replace(/<a href="(\/[^"]*)"([^>]*)>/g,"<Link href="$1"$2>";
     )// Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>")fs.writeFileSync(filePath, content)console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {console.error(`Error fixing links in ${filePath}:`, error.message)}// "Note": previously broken fixer removed to avoid syntax errors.;
+export default ${componentName};`}
+;
+// Function to fix Next.js Link issues;
+function fixNextLinks(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
+    // Add Link import if not present and file has href attributes;
+    if (content.includes("href="/") && !content.includes("import Link")) {
+  content = content.replace(;
+        /import React from "react";/,
+        "import React from "react";
+      )}
+    ;
+    // Replace <a href="/..."> with <Link href="/...">;
+    content = content.replace(;
+      /<a href="(\/[^"]*)"([^>]*)>/g,
+      "<Link href="$1"$2>";
+    );
+    // Replace </a> with </Link>;
+    content = content.replace(/<\/a>/g, "</Link>");
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {
+  console.error(`Error fixing links in ${filePath}:`, error.message)}
+}
+;
+// "Note": previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;
 function fixTestFiles() {const testFiles = ["src/test/App.test.tsx"];
   testFiles.forEach(filePath => {try {if (fs.existsSync(filePath)) {let content = fs.readFileSync(filePath, "utf8")// Fix common test syntax errors;

@@ -105,11 +105,11 @@ export function ContractTypeCards() {return (<div className="grid md:grid-cols-2
         </CardFooter>;
       </Card>;
     </div>;
-import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
+import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
           <Button;
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
 import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",interface ContractTypeCardsProps  {onStandardClick: () => void;
-  onSmartClick: () => void;export function ContractTypeCards(): any ({onStandardClick,onSmartClick,}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
+  onSmartClick: () => void;export function ContractTypeCards(): any ({onStandardClick,onSmartClick}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
@@ -121,7 +121,7 @@ import { Button } from "@/components/ui/button",import { Card, CardContent, Card
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components / ui / card';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
 interface ContractTypeCardsProps  {onStandardClick: () => void;
   onSmartClick: () => void;
 export /**;
@@ -213,7 +213,7 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
         <CardFooter>;
           <Button;
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
-            on_click = {onSmartClick, }
+            on_click = {onSmartClick }
           >;Create Smart Contract;
           </Button>;
         </CardFooter>;

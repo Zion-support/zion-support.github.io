@@ -460,7 +460,7 @@ export default SpaceTechnologyPage;export default SpaceTechnologyPage,export def
           </div>;
         </section>;
       </main>;
-    </Layout>)},export default SpaceTechnologyPage,},Lock, Cloud, Settings, Eye, Award, Clock, Heart;
+    </Layout>)},export default SpaceTechnologyPage},Lock, Cloud, Settings, Eye, Award, Clock, Heart;
   Lightbulb, Search, Grid, List, TrendingUp;
   User, ShoppingCart, Bell, HelpCircle, FileText;
   Video, Headphones, Code, Database, Network, Server;

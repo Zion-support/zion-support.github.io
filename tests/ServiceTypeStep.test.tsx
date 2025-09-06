@@ -6,3 +6,28 @@ describe('ServiceTypeStep', () => {test('renders without crashing', () => {rende
   })test('handles user interactions', () => {render(<ServiceTypeStep />)// Add interaction tests here;
   })test('applies correct styling', () => {render(<ServiceTypeStep />)// Add styling tests here;
   })})
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+}
+}
+
+
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+}
+export default function ServiceTypeStep.test({}: ServiceTypeStep.testProps) {
+  return (
+    <div>
+      <h1>ServiceTypeStep.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+}
+}
+
+
+}

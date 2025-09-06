@@ -21,7 +21,7 @@ export function Step() {return (<li;
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",{"bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;
               status === "incomplete","bg-zion-blue border-zion-cyan text-white":;
               status === "current","bg-zion-purple border-zion-purple text-white":;
-              status === "complete",}
+              status === "complete"}
         )}>;"shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",{"bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;
               status === "incomplete","bg-zion-blue border-zion-cyan text-white":;
               status === "current","bg-zion-purple border-zion-purple text-white":;
@@ -107,7 +107,7 @@ function Step() {return (<li;
             "bg - zion - blue border - zion - cyan text - white":;
               status === "current";
             "bg - zion - purple border - zion - purple text - white":;
-              status === "complete", }
+              status === "complete" }
         )}
       >;
         {status === "complete" ? (<CheckIcon className="h - 5 w - 5" />) : (<span>{/* Step number would go here */}

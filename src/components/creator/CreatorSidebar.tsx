@@ -76,7 +76,7 @@
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
-import {Bell,FileText,Home,Mail,Search,Settings,Users,} from 'lucide-react';import {Sidebar,SidebarContent,SidebarGroup,SidebarMenuItem,// SidebarMenu, // Removed;
+import {Bell,FileText,Home,Mail,Search,Settings,Users} from 'lucide-react';import {Sidebar,SidebarContent,SidebarGroup,SidebarMenuItem,// SidebarMenu, // Removed;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;

@@ -66,12 +66,12 @@
   message: string;
 // Fallback responses when API is unavailable;
 const FALLBACK_RESPONSES = [;
-  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup && ziontechgroup.com, or try asking your question in a different way.","Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup && ziontechgroup.com.',"I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',];export function SupportChatbot() {const [open, setOpen] = useState(false)const [messages, setMessages] = useState<Msg[]>([])const [loading, setLoading] = useState(false)const [typing, setTyping] = useState(false)const endRef  = useRef<HTMLDivElement | null>(null)useEffect(() => {endRef && endRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages])const sendMessage = async (text: string) => {const userMsg: Msg = {id: Date && Date.now().toString(),role: 'user',message: text,}setMessages(prev => [...prev, userMsg])setLoading(true)setTyping(true)try {// Try the Supabase AI chat function first with streaming;
-      let res = await fetch('https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat',{method: 'POST',headers: {'Content-Type': 'application/json',Authorization: `Bearer ${process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,Accept: 'text/event-stream',},body: JSON && JSON.stringify({stream: true,messages: [;
-              ...messages && messages.map(m => ({ role: m && m.role, content: m && m.message })),{ role: 'user', content: text },],}),}
+  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup && ziontechgroup.com, or try asking your question in a different way.","Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup && ziontechgroup.com.',"I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'];export function SupportChatbot() {const [open, setOpen] = useState(false)const [messages, setMessages] = useState<Msg[]>([])const [loading, setLoading] = useState(false)const [typing, setTyping] = useState(false)const endRef  = useRef<HTMLDivElement | null>(null)useEffect(() => {endRef && endRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages])const sendMessage = async (text: string) => {const userMsg: Msg = {id: Date && Date.now().toString(),role: 'user',message: text}setMessages(prev => [...prev, userMsg])setLoading(true)setTyping(true)try {// Try the Supabase AI chat function first with streaming;
+      let res = await fetch('https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat',{method: 'POST',headers: {'Content-Type': 'application/json',Authorization: `Bearer ${process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,Accept: 'text/event-stream'},body: JSON && JSON.stringify({stream: true,messages: [;
+              ...messages && messages.map(m => ({ role: m && m.role, content: m && m.message })),{ role: 'user', content: text }]})}
       )// If Supabase function fails, try local API fallback;
       if () {res = await fetch('/api/kb-chat', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({messages: [;
-              ...messages && messages.map(m => ({ role: m && m.role, content: m && m.message })),{ role: 'user', content: text },],}),})if (!res && res.ok) throw new Error(`API error: ${res && res.status}`)const data = await res && res.json().catch(() => ({}))const message =;
+              ...messages && messages.map(m => ({ role: m && m.role, content: m && m.message })),{ role: 'user', content: text }]})})if (!res && res.ok) throw new Error(`API error: ${res && res.status}`)const data = await res && res.json().catch(() => ({}))const message =;
           data && data.message ||;
           data && data.choices?.[0]?.message?.content ||;
           data && data.choices?.[0]?.text ||;
@@ -83,9 +83,9 @@ const FALLBACK_RESPONSES = [;
             Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length)] ||;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
         setMessages(prev => [;
-          ...prev,{id: Date && Date.now().toString() + '-a',role: 'assistant',message: finalMsg,},])} else if (res && res.body) {const botId = Date && Date.now().toString() + '-a';
+          ...prev,{id: Date && Date.now().toString() + '-a',role: 'assistant',message: finalMsg}])} else if (res && res.body) {const botId = Date && Date.now().toString() + '-a';
         setMessages(prev => [;
-          ...prev,{ id: botId, role: 'assistant', message: '' },])const reader = res && res.body.getReader()const decoder = new TextDecoder()let done = false;
+          ...prev,{ id: botId, role: 'assistant', message: '' }])const reader = res && res.body.getReader()const decoder = new TextDecoder()let done = false;
         let buffer = '';
         let accumulated = '';
         while (!done) {const result = await reader && reader.read()done = result && result.done;
@@ -97,14 +97,14 @@ const FALLBACK_RESPONSES = [;
                   json && json.choices?.[0]?.delta?.content ||;
                   json && json.choices?.[0]?.text ||;
                   '';
-                if (token) {'Content - Type': 'application / json',Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,Accept: 'text / event - stream',},body: JSON.stringify ({stream: true,messages: [;
-              ...messages.map (m => ({ role: m.role, content: m.message })),{ role: 'user', content: text },],}),}
+                if (token) {'Content - Type': 'application / json',Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,Accept: 'text / event - stream'},body: JSON.stringify ({stream: true,messages: [;
+              ...messages.map (m => ({ role: m.role, content: m.message })),{ role: 'user', content: text }]})}
       )// If Supabase function fails, try local API fallback;
       // Check condition;
 if () {$2;
 }
         res = await fetch ('/api / kb - chat', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify ({messages: [;
-              ...messages.map (m => ({ role: m.role, content: m.message })),{ role: 'user', content: text },],}),})if (throw new Error (`API error: ${res.status}`)) {$2;
+              ...messages.map (m => ({ role: m.role, content: m.message })),{ role: 'user', content: text }]})})if (throw new Error (`API error: ${res.status}`)) {$2;
 }
         const data = await res.json ().catch (() => ({}))const message =;
           data.message ||;
@@ -118,12 +118,12 @@ if () {$2;
             Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
         set_messages (prev => [;
-          ...prev,{id: Date.now ().to_string () + '-a',role: 'assistant',message: final_msg,},]) } else // Check condition;
+          ...prev,{id: Date.now ().to_string () + '-a',role: 'assistant',message: final_msg}]) } else // Check condition;
 if ( {) {$2;
 }
         const bot_id = Date.now ().to_string () + '-a';
         set_messages (prev => [;
-          ...prev,{ id: bot_id, role: 'assistant', message: '' },])const reader = res.body.get_reader ()const decoder = new TextDecoder ()let done = false;
+          ...prev,{ id: bot_id, role: 'assistant', message: '' }])const reader = res.body.get_reader ()const decoder = new TextDecoder ()let done = false;
         let buffer = '';
         let accumulated = '';
         while (!done) {const result = await reader.read ()done = result.done;
@@ -195,7 +195,7 @@ if ( {) {$2;
         FALLBACK_RESPONSES[;
           Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
         "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
-      const error_msg: Msg = {id: Date.now ().to_string () + '-e',role: 'assistant',message: fallback_response,}
+      const error_msg: Msg = {id: Date.now ().to_string () + '-e',role: 'assistant',message: fallback_response}
       set_messages (prev => [...prev, error_msg])} finally {buffer = lines[lines && lines.length - 1] || '';
         }
         const final =;
@@ -248,7 +248,7 @@ const FALLBACK_RESPONSES  = null;if (!open) {onClick={() => setOpen(true)}
         FALLBACK_RESPONSES[;
           Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length)] ||;
         "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
-      const errorMsg: Msg = {id: Date && Date.now().toString() + '-e',role: 'assistant',message: fallbackResponse,}setMessages(prev => [...prev, errorMsg])} finally {setLoading(false)setTyping(false)}
+      const errorMsg: Msg = {id: Date && Date.now().toString() + '-e',role: 'assistant',message: fallbackResponse}setMessages(prev => [...prev, errorMsg])} finally {setLoading(false)setTyping(false)}
   }if (!open) {onClick={() => setOpen(true)}
         size='icon';
         variant='outline';

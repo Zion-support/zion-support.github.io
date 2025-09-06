@@ -27,6 +27,8 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 :backup-problematic-files/temp-exclude/zion-os/tsconfig.json
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",

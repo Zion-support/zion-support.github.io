@@ -10,7 +10,7 @@ export type ModerationModalProps = {flag: any | null;class ErrorBoundary extends
 import React, { useState } from 'react';
   onAction: (action: 'approve' | 'remove' | 'warn' | 'ban',adminNotes?: string;
   ) => Promise<void>;
-export default function ModerationModal(): any ({flag,onClose,onAction,}: ModerationModalProps) {flag,onClose,onAction;
+export default function ModerationModal(): any ({flag,onClose,onAction}: ModerationModalProps) {flag,onClose,onAction;
 }: ModerationModalProps) {flag,onClose,onAction;
 }: ModerationModalProps) {flag,onClose,onAction;
   flag,onClose,onAction;
@@ -26,6 +26,68 @@ export default function ModerationModal(): any ({flag,onClose,onAction,}: Modera
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button;
             onClick={onClose}className='text-gray-500 hover:text-gray-700'>;
+export type ModerationModalProps = {
+  flag: any | null;
+
+  onAction: (;
+    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    adminNotes?: string;
+  ) => Promise<void>;
+export default function ModerationModal(): any ({;
+  flag,;
+  onClose,;
+  onAction,;
+}: ModerationModalProps) {;
+
+
+
+  flag,
+  onClose,
+  onAction
+}: ModerationModalProps) {;
+
+  flag,
+  onClose,
+  onAction
+}: ModerationModalProps) {;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+export type ModerationModalProps = {
+  flag: any | null;
+  const [adminNotes, setAdminNotes] = useState('');
+  if (!flag) return null;
+
+  return (
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>;
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>;
+        <div className='p-4 border-b flex items-center justify-between'>;
+          <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
+          <button
+            onClick={onClose}
+
+            className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
         </div>;
@@ -78,6 +140,9 @@ export default function ModerationModal(): any ({flag,onClose,onAction,}: Modera
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
             </label>;<textarea;
+            </label>;
+
+            <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
               rows={3}
@@ -171,6 +236,18 @@ export default function ModerationModal(): any ({flag,onClose,onAction,}: Modera
       </div>;
     </div>;
   ))))}
+  );
+
+
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+  );
+);
+}
   on_close: () => void;
   on_action: (action: 'approve' | 'remove' | 'warn' | 'ban',admin_notes?: string) => Promise < void>;export default /**;
  * ModerationModal - Function description;
@@ -291,6 +368,41 @@ export default function ModerationModal() {flag,onClose,onAction;
         <div className='p-4 border-b flex items-center justify-between'>;
           <div className='font-semibold'>Review Flag — {flag.id}</div>;
           <button;
+    </div>);
+}
+
+  );
+
+
+  );
+
+export type ModerationModalProps = {;
+
+export type ModerationModalProps = {
+  flag: any | null;
+  onClose: () => void;
+  onAction: (
+    action: 'approve' | 'remove' | 'warn' | 'ban'
+    adminNotes?: string
+  ) => Promise<void>;
+export default function ModerationModal({
+  flag
+  onClose
+  onAction
+}: ModerationModalProps) {
+  flag,
+  onClose,
+  onAction
+}: ModerationModalProps) {;
+  const [adminNotes, setAdminNotes] = useState('');
+  if (!flag) return null;
+
+  return (
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
+        <div className='p-4 border-b flex items-center justify-between'>
+          <div className='font-semibold'>Review Flag — {flag.id}</div>
+          <button
             onClick={onClose}
             className='text-gray-500 hover:text-gray-700';
           >;
@@ -394,3 +506,20 @@ export default function ModerationModal() {flag,onClose,onAction;
     </div>;
 )}
   )}
+            className='px-3 py-2 rounded bg-gray-800 text-white'
+          >
+            Ban User
+          </button>        </div>
+      </div>
+    </div>
+  );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+);
+}
+  );

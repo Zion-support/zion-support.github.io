@@ -19,6 +19,79 @@ const fadeInUp = {initial: { opacity: 0, y: 20 },animate: { opacity: 1, y: 0 },t
     },{id: 'ai-services',name: 'AI & Machine Learning',icon: <Brain className="w-8 h-8" />,color: 'from-green-500 to-emerald-500',services: advancedAIServices2025,description: 'Intelligent AI solutions for business transformation';
     },{id: 'industry-solutions',name: 'Industry Solutions',icon: <Building className="w-8 h-8" />,color: 'from-orange-500 to-red-500',services: advancedITServices2025,description: 'Specialized solutions for specific industries';
     },{id: 'emerging-tech',name: 'Emerging Technology',icon: <Zap className="w-8 h-8" />,color: 'from-indigo-500 to-purple-500',services: advancedAIServices2025,description: 'Breakthrough technologies of the future';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Zap, Shield, Circle, ArrowRight;
+  Check, Star, TrendingUp, Users;
+  Globe, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
+} from 'lucide-react';
+
+// Import our new 2025 V2 innovative services
+import { advancedMicroSaasExpansion2025V2 } from '../data/2025-advanced-micro-saas-expansion-v2';
+import { advancedITServices2025 } from '../data/2025-advanced-it-services';
+import { advancedAIServices2025 } from '../data/2025-advanced-ai-services';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+export default function ComprehensiveServicesShowcase2025V2() {
+  const allNewServices = [
+    ...advancedMicroSaasExpansion2025V2;
+    ...advancedITServices2025;
+    ...advancedAIServices2025
+  ];
+
+  const serviceCategories = [
+    {
+      id: 'micro-saas',
+      name: 'Innovative Micro SAAS',
+      icon: <Smartphone className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-500',
+      services: advancedMicroSaasExpansion2025V2,
+      description: 'Cutting-edge micro SAAS solutions for modern businesses'
+    },
+    {
+      id: 'it-infrastructure',
+      name: 'IT Infrastructure Services',
+      icon: <Cloud className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500',
+      services: advancedITServices2025,
+      description: 'Advanced IT infrastructure and security solutions'
+    },
+    {
+      id: 'ai-services',
+      name: 'AI & Machine Learning',
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500',
+      services: advancedAIServices2025,
+      description: 'Intelligent AI solutions for business transformation'
+    },
+    {
+      id: 'industry-solutions',
+      name: 'Industry Solutions',
+      icon: <Building className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-500',
+      services: advancedITServices2025,
+      description: 'Specialized solutions for specific industries'
+    },
+    {
+      id: 'emerging-tech',
+      name: 'Emerging Technology',
+      icon: <Zap className="w-8 h-8" />,
+      color: 'from-indigo-500 to-purple-500',
+      services: advancedAIServices2025,
+      description: 'Breakthrough technologies of the future'
     }
   ];const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
   }return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;

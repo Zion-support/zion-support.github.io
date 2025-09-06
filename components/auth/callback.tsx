@@ -1,6 +1,9 @@
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
+
+  return (
+    <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Auth Callback</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Processing sign-in...;
@@ -17,6 +20,18 @@ export default function AuthCallbackPage() {return (<div className='container mx
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Processing sign-in...;
       </p>;
+  );
+
+}
+
+
+export default function AuthCallbackPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Auth Callback</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Processing sign-in...
+      </p>
     </div>;
   )export default function AuthCallbackPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Auth Callback</h1>;
@@ -43,6 +58,38 @@ function AuthCallbackPage() {return (<div className="container mx - auto px - 4 
   )export default function AuthCallbackPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Auth Callback</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Processing sign-in...</p>;
+    </div>);
+}
+
+
+
+
+
+
+  )
+}
+
+
+export default function AuthCallbackPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Auth Callback</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Processing sign-in...
+      </p>
+    </div>;
+  );export default function AuthCallbackPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Auth Callback</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Processing sign-in...</p>
+
+    </div>
+  );
+
+    </div>
+  );
+
     </div>;
   )ursor/fix-website-loading-errors-and-merge-6662;
     </div>;
@@ -53,3 +100,9 @@ function AuthCallbackPage() {return (<div className="container mx - auto px - 4 
 }
     </div>;
   )
+
+}
+    </div>
+  );
+}
+}

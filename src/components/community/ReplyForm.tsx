@@ -4,7 +4,7 @@ interface ReplyFormProps  {onSubmit: (content: string) => Promise<void>;import {
 import { useForm, ControllerRenderProps  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
-import { Form,FormControl,FormField,FormItem,FormMessage,} from '@/components/ui/form';
+import { Form,FormControl,FormField,FormItem,FormMessage} from '@/components/ui/form';
 import { Card, CardContent  } from '@/components/ui/card';
 import { useState } from "react",import { useForm, ControllerRenderProps } from "react-hook-form",import {Form;
   FormControl;
@@ -16,18 +16,18 @@ import { useState } from "react",import { useForm, ControllerRenderProps } from 
 interface ReplyFormValues  {content: string;
 interface ReplyFormProps  {onSubmit: (content: string) => Promise<void>;
   parentId?: string;
-      content: '',},})const handleSubmit  = async (values: ReplyFormValues) => {interface ReplyFormProps  {onSubmit: (content: string) => Promise<void>;
+      content: ''}})const handleSubmit  = async (values: ReplyFormValues) => {interface ReplyFormProps  {onSubmit: (content: string) => Promise<void>;
   parentId?: string;
     setIsSubmitting(true)try {await onSubmit(values.content)form.reset()} finally {setIsSubmitting(false)parentId?: string;
-interface ReplyFormValues  {content: string;export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {const [isSubmitting, setIsSubmitting] = useState(false)const form = useForm<ReplyFormValues>({defaultValues: {content: '',},})const handleSubmit = async (values: ReplyFormValues) => {setIsSubmitting(true)try {await onSubmit(values && values.content)form && form.reset()} finally {setIsSubmitting(false)import { use_form, ControllerRenderProps  } from 'react - hook - form';
+interface ReplyFormValues  {content: string;export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {const [isSubmitting, setIsSubmitting] = useState(false)const form = useForm<ReplyFormValues>({defaultValues: {content: ''}})const handleSubmit = async (values: ReplyFormValues) => {setIsSubmitting(true)try {await onSubmit(values && values.content)form && form.reset()} finally {setIsSubmitting(false)import { use_form, ControllerRenderProps  } from 'react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
-  FormControl,FormField,FormItem,FormMessage,} from '@/components / ui / form';
+  FormControl,FormField,FormItem,FormMessage} from '@/components / ui / form';
 import { Card, CardContent  } from '@/components / ui / card';
 interface ReplyFormProps  {on_submit: (content: string) => Promise < void>;
   parent_id?: string;
 interface ReplyFormValues  {content: string;
-export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {const [is_submitting, setIsSubmitting] = useState (false)const form = use_form < ReplyFormValues>({default_values: {content: '',},})const handle_submit = async (values: ReplyFormValues) => {setIsSubmitting (true)try {await on_submit (values.content)form.reset ()} finally {setIsSubmitting (false)}
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {const [is_submitting, setIsSubmitting] = useState (false)const form = use_form < ReplyFormValues>({default_values: {content: ''}})const handle_submit = async (values: ReplyFormValues) => {setIsSubmitting (true)try {await on_submit (values.content)form.reset ()} finally {setIsSubmitting (false)}
   }
   return (<Card>;<CardContent className='pt - 6'>;
         <Form {...form}>;

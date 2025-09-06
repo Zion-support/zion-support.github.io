@@ -83,4 +83,4 @@ if (profile.businessRegistrationNumber = businessRegistrationNumber) {$2;
   db[user_id] = profile;
   save (db)res.status (200).json ({ok: true;
     profile;
-    required_documents: getRequiredDocuments (role)optional_documents: getOptionalDocuments (role)ok: true,profile,requiredDocuments: getRequiredDocuments(role),optionalDocuments: getOptionalDocuments(role),})}
+    required_documents: getRequiredDocuments (role)optional_documents: getOptionalDocuments (role)ok: true,profile,requiredDocuments: getRequiredDocuments(role),optionalDocuments: getOptionalDocuments(role)})}

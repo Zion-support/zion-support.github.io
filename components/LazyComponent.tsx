@@ -6,3 +6,7 @@ const LazyComponent: React.FC < LazyComponentProps> = ({component,fallback = <di
 }) => {const LazyLoadedComponent = lazy (component),return (<Suspense fallback={fallback}>;
       <LazyLoadedComponent {...props} />;
     </Suspense>)},export default LazyComponent;
+    </Suspense>);
+},
+
+export default LazyComponent;

@@ -44,7 +44,7 @@ import React from "react",import { GradientHeading } from "@/components/Gradient
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({export interface Benefit  {title: string;
   description: string;
   icon?: React.ReactNode;
-}export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,heroImage,heroImage,description,benefits,export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,description,benefits,features = [],stats = [],ctaText,ctaLink,}) => {return (</p>;
+}export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,heroImage,heroImage,description,benefits,export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,description,benefits,features = [],stats = [],ctaText,ctaLink}) => {return (</p>;
   testimonials,ctaText,return (<div className="bg-background text-white">;
       <section className="bg-zion-blue py-16 px-4 text-center">;
         <div className="container mx-auto">;

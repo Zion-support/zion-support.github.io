@@ -18,8 +18,8 @@ import { supabase  } from '@/utils/supabase/client';
 } from '@supabase/supabase-js';
 import { logInfo;
   logWarn;
-  logErrorToProduction;import type {AuthError,User,AuthError,User,AuthChangeEvent,Session,} from '@supabase/supabase-js';
-import {logInfo,logWarn,logErrorToProduction,} from '@/utils/productionLogger';
+  logErrorToProduction;import type {AuthError,User,AuthError,User,AuthChangeEvent,Session} from '@supabase/supabase-js';
+import {logInfo,logWarn,logErrorToProduction} from '@/utils/productionLogger';
 import { useTranslation  } from 'react-i18next';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -28,7 +28,7 @@ import { Input  } from '@/components/ui/input';
   CardDescription;
   CardHeader;
   CardTitle;
-  Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';const LoginPage = () => {import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
+  Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';const LoginPage = () => {import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction  } from '@/utils/productionLogger';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
   const router = useRouter()const { t } = useTranslation()const [email, setEmail] = useState('')const [password, setPassword] = useState('')const [error, setError]  = useState<AuthError | null>(null)const [isEmailUnverified, setIsEmailUnverified] = useState(false)const [verificationEmailSent, setVerificationEmailSent] = useState(false)const [isResendingVerification, setIsResendingVerification]  = useState(false)// States for the new proactive resend form;const [showProactiveResendForm, setShowProactiveResendForm] = useState(false)const [proactiveResendEmail, setProactiveResendEmail] = useState('')const [isProactivelyResending, setIsProactivelyResending]  = useState(false)type: 'success' | 'error';const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),const [isLoading, setIsLoading] = useState(false)// For login form submission;
@@ -38,7 +38,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/co
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false)const [proactiveResendEmail, setProactiveResendEmail] = useState('')const [isProactivelyResending, setIsProactivelyResending] = useState(false)const [proactiveResendMessage, setProactiveResendMessage] = useState<{type: 'success' | 'error';
     text: string;
   } | null>(null)// Using centralized Supabase client (imported at top)// Effect for initial session check and auth state changes;
-  useEffect(() => {let mounted  = true;text: string,} | null>(null)// Using centralized Supabase client (imported at top)// Effect for initial session check and auth state changes;
+  useEffect(() => {let mounted  = true;text: string} | null>(null)// Using centralized Supabase client (imported at top)// Effect for initial session check and auth state changes;
   useEffect(() => {let mounted = true;
     logInfo('LoginPage: Initial session check effect runs.')const sessionTimeoutId = setTimeout(() => {if (mounted) {logWarn('LoginPage: Session check timeout after 5 seconds')setSessionCheckTimedOut(true)setIsCheckingSession(false)// Allow form to render if timeout;
         setSessionChecked(true)// Mark check as complete even on timeout      }
@@ -70,12 +70,12 @@ logInfo('LoginPage: Setting up onAuthStateChange listener.')const { data: authLi
           })setUser(session?.user ?? null)// If auth state changes after initial check, ensure sessionChecked is true;
           // This handles cases like login/logout in another tab.;
           if (!sessionChecked && event !== 'INITIAL_SESSION') {setSessionChecked(true)logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.';
-            ),}
+            )}
         }
       )return () => {// Cleanup for listener;logInfo('LoginPage: Unsubscribing from onAuthStateChange.')authListener?.subscription?.unsubscribe()}}
     const unsubscribePromise  = checkSessionAndListen()// Prevent redirecting back to auth pages or creating loops;
       const authPages = [;
-        '/auth/login','/auth/register','/login','/signup','/auth/forgot-password',}}const unsubscribePromise = checkSessionAndListen()return () => {mounted = false;
+        '/auth/login','/auth/register','/login','/signup','/auth/forgot-password'}}const unsubscribePromise = checkSessionAndListen()return () => {mounted = false;
 clearTimeout(sessionTimeoutId)// Clear timeout on unmount;
       logInfo('LoginPage: Unmounting, cleaning up auth listener.')unsubscribePromise.then(cleanup => cleanup && cleanup())}
   }, [])// Run only once on mount;
@@ -101,7 +101,7 @@ clearTimeout(sessionTimeoutId)// Clear timeout on unmount;
       if (returnTo && returnTo.startsWith('http') || returnTo && returnTo.includes('://')) {returnTo = '/dashboard';
       }}, 100)// Small delay to let session stabilize;return () => clearTimeout(redirectTimer)}// Return undefined for all other cases;
     return undefined;
-  }, [user, sessionChecked, isLoading, router, router && router.query.returnTo])// Dependencies: user, sessionChecked, isLoading, router;const handleResendVerification = async () => {if (!email) {setError({name: 'ValidationError',message: 'Please enter your email address first',} as AuthError)return;
+  }, [user, sessionChecked, isLoading, router, router && router.query.returnTo])// Dependencies: user, sessionChecked, isLoading, router;const handleResendVerification = async () => {if (!email) {setError({name: 'ValidationError',message: 'Please enter your email address first'} as AuthError)return;
     }// Ensure returnTo is a relative path to prevent open redirect attacks;
       if (returnTo.startsWith('http') || returnTo.includes('://')) {returnTo = '/dashboard';
       }logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),// Add a small delay to ensure session is fully established;
@@ -115,7 +115,7 @@ logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`)router.replace(re
     return undefined;
   }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router;
   const handleResendVerification = async () => {if (!email) {setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),return;
-    }setIsResendingVerification(true)try {const response = await fetch('/api/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ email }),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email })try {const response = await fetch('/api/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email }),})if (response && response.ok) {setVerificationEmailSent(true)setError(null)} else {const data = await response && response.json()setError({name: 'ResendError',message: data && data.message || 'Failed to resend verification email',} as AuthError)}setIsProactivelyResending(true)setProactiveResendMessage(null)try {const response = await fetch('/api/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ email: proactiveResendEmail })      })}body: JSON && JSON.stringify({ email: proactiveResendEmail })      })method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email: proactiveResendEmail })})const data = await response.json()if (response.ok) {setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })} else {setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })}
+    }setIsResendingVerification(true)try {const response = await fetch('/api/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ email }),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email })try {const response = await fetch('/api/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email })})if (response && response.ok) {setVerificationEmailSent(true)setError(null)} else {const data = await response && response.json()setError({name: 'ResendError',message: data && data.message || 'Failed to resend verification email'} as AuthError)}setIsProactivelyResending(true)setProactiveResendMessage(null)try {const response = await fetch('/api/resend-verification-email', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ email: proactiveResendEmail })      })}body: JSON && JSON.stringify({ email: proactiveResendEmail })      })method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email: proactiveResendEmail })})const data = await response.json()if (response.ok) {setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })} else {setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })}
     } catch (err) {setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' })} finally {setIsProactivelyResending(false)}
   }logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }

@@ -2,7 +2,7 @@
 ;
 import React from 'react',import Head from 'next/head',import Link from 'next/link',import { motion } from 'framer-motion',import {Atom, Brain, Cpu, Zap, Shield, Globe,Atom, Brain, Cpu, Zap, Shield, Globe,Rocket, Target, TrendingUp, Users, CheckCircle,ArrowRight, Star, Award, Clock, DollarSign;
 } from 'lucide-react',const QuantumNeuralNetworkPlatform = () => {const features = [;
-  Atom,Brain,Cpu,Zap,Shield,Globe,Rocket,Target,TrendingUp,Users,CheckCircle,ArrowRight,Star,Award,Clock,DollarSign,} from 'lucide-react';const QuantumNeuralNetworkPlatform = () => {const features = [;
+  Atom,Brain,Cpu,Zap,Shield,Globe,Rocket,Target,TrendingUp,Users,CheckCircle,ArrowRight,Star,Award,Clock,DollarSign} from 'lucide-react';const QuantumNeuralNetworkPlatform = () => {const features = [;
     {icon: Brain,title: "Quantum Consciousness Integration",description: "Advanced AI consciousness with quantum processing capabilities",description: "Accelerate AI breakthroughs with quantum processing power";
     }
 title: 'Quantum Consciousness Integration',description:;
@@ -506,4 +506,4 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl bo
           </div>;
         </section>;
       </div>;
-    </>)},export default QuantumNeuralNetworkPlatform,},
+    </>)},export default QuantumNeuralNetworkPlatform},

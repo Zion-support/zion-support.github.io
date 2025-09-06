@@ -8,7 +8,7 @@ id?: string,title: string,description: string,images?: string[],category: string
   category: string;
   tags?: string[];
   author?: { name: string; id?: string; avatarUrl?: string; email?: string }className?: string;
-  profileType?: 'service' | 'talent';export function ListingCard(): any ({id,title,description,images,category,tags,author,className,profileType = 'service',}: ListingCardProps) {// Generate a profile ID based on the listing data;
+  profileType?: 'service' | 'talent';export function ListingCard(): any ({id,title,description,images,category,tags,author,className,profileType = 'service'}: ListingCardProps) {// Generate a profile ID based on the listing data;
   // In a real app, this would be a proper ID from the database;
   const profileId =;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')>;

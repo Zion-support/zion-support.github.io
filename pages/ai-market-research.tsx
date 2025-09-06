@@ -81,7 +81,7 @@ export default function AIMarketResearchPage() {const service  = null;import {Ph
                   <MapPin />;
                   <span>{service && service.contactInfo.address}</span>;import Head from 'next / head';
 import React from 'react';
-  Phone,Mail,MapPin,Check,ArrowRight,Star,Search,} from 'lucide-react';
+  Phone,Mail,MapPin,Check,ArrowRight,Star,Search} from 'lucide-react';
 import Layout from '../components / layout / Layout';import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micro - saas - services';
 export default /**;
  * AIMarketResearchPage - Function description;

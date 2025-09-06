@@ -11,12 +11,40 @@ interface SOC2ComplianceAutomationProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/SOC2ComplianceAutomation.jsx;
+interface SOC2ComplianceAutomationProps {
+  // Add props here as needed
+
+
+}
+
+export default function SOC2ComplianceAutomation({}: SOC2ComplianceAutomationProps) {
+  return (
+    <div>
+      <h1>SOC2ComplianceAutomation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/SOC2ComplianceAutomation.jsx;
+:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
 }
 }

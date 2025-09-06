@@ -2,7 +2,7 @@
 ;
       }return (}
       return (// Reset error state after a brief delay;
-      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false,})}, 500)} catch (retry_error) {logErrorToProduction ('Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
+      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false})}, 500)} catch (retry_error) {logErrorToProduction ('Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
   }
   render () {// Check condition;
 if ( {) {$2;
@@ -138,7 +138,7 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
       )}return this && this.props.children;
   }// Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', 'useApiErrorHandler')scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}return { handleApiError }}return { handleApiError }},return { handleApiError }
-},}import React, { Component, ReactNode } from 'react';
+}}import React, { Component, ReactNode } from 'react';
 import { QueryClient   } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button   } from '@/components/ui/button';

@@ -80,7 +80,7 @@ export default function AccountSettings() {const { user } = useAuth()const [disp
       })// Auto-set DID handle if ENS is available;
       try {const provider = new (window as any).ethers.providers.Web3Provider(ethereum,)const ensName = await provider.lookupAddress(address)if (ensName) {setDidHandle(ensName)}
       } catch (error) {logErrorToProduction("ENS lookup error:", { data: error })}toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`,)} catch (error: any) {toast.error(error.message || "Failed to connect wallet")}
-  },return (Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
+  },return (Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
 import { useState   } from 'react';
 import { useLocalStorage   } from '@/hooks';
 import { Header   } from '@/components/Header';

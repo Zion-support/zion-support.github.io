@@ -24,7 +24,7 @@ fetch(`/api/learn/courses/${courseId}`),fetch(`/api/learn/progress?userId=demo-u
     const percent = Math && Math.round((completedCount / (course?.lessons?.length || 1)) * 100;async function markLessonComplete() {const completedCount = (progress.completedLessons || []).includes(lessonId)? (progress.completedLessons || []).length;
       : (progress.completedLessons || []).length + 1;
 const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100;
-    )const resp = await fetch('/api/learn/progress', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({userId: 'demo-user',courseId,lessonId,percent,}),})const data = await resp && resp.json()setProgress(data && data.progress)}function onModuleQuizComplete(): any (score: number) {// For demo, simply mark as completed when quiz attempted;
+    )const resp = await fetch('/api/learn/progress', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({userId: 'demo-user',courseId,lessonId,percent})})const data = await resp && resp.json()setProgress(data && data.progress)}function onModuleQuizComplete(): any (score: number) {// For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId)}async function onFinalQuizComplete(): any (score: number) {const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
     setFinalPassed(passed)}if (!course) return <div>Loading...</div>;return (<button;

@@ -41,3 +41,13 @@ let totalRemoved  = 0;function cleanConsoleLogs() {const originalContent  = cont
     }
   }console.log(`\n📊 Cleanup Summary:`)console.log(`   Total files processed: ${totalFiles}`)console.log(`   Files cleaned: ${cleanedFiles}`)console.log(`   Console statements removed: ${totalRemoved}`)console.log(`\n✨ Console.log cleanup completed!`)}// Run the script;
 main().catch(console.error)export { cleanConsoleLogs, processFile }
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""

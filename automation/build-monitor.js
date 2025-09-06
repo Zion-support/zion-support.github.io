@@ -159,6 +159,15 @@ const monitor = new BuildMonitor()if (require.main === module) {const monitor = 
 module.exports = BuildMonitor;
 ursor/automate-test-improve-and-merge-code-646c;
 const fs = require('fs)const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
+
+const fs = require('fs);
+const path = require('path'),
+  const { execSync } = require(child_process');
+class BuildMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
+    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
     this.consecutiveFailures = 0;
   log(message, level = INFO') {const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}

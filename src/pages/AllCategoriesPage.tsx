@@ -15,7 +15,7 @@ const categories = [;
   },{title: 'Equipment',description: 'Rent or buy specialized hardware, servers, and devices',icon: <HardDrive className='w-10 h-10' />,link: '/equipment', // Link for the card itself;
     color: undefined, // Let CategoryCard use default color;
   },{title: 'Innovation',description: 'Discover cutting-edge solutions and tech breakthroughs',icon: <Lightbulb className='w-10 h-10' />,link: '/innovation',color: undefined, // Let CategoryCard use default color;
-  },];export default function AllCategoriesPage() {import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary;
+  }];export default function AllCategoriesPage() {import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary;
 // Reusing the categories array from CategoriesSection.tsx;
 // Ideally, this would come from a shared data source or API;
 title: 'Services',description: 'On-demand IT support, consulting, development, and more',icon: <Briefcase className='w-10 h-10' />,link: '/services', // Link for the card itself;

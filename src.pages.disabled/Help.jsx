@@ -11,12 +11,40 @@ interface HelpProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/Help.jsx;
+interface HelpProps {
+  // Add props here as needed
+
+
+}
+
+export default function Help({}: HelpProps) {
+  return (
+    <div>
+      <h1>Help</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/Help.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/Help.jsx;
+:temp_exclude/src.pages.disabled/Help.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Help.jsx
 }
 }
 }

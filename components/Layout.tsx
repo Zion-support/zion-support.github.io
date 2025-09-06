@@ -9,6 +9,25 @@ interface LayoutProps  {children: React.ReactNode;
   static getDerivedStateFromError(error) {return { hasError: true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
@@ -112,6 +131,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {return (<main className
 }
     </main>;
   )}export default Layout;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </main>
+  );
+};
+export default Layout;
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Link from 'next/link';
@@ -174,3 +202,31 @@ interface LayoutProps  {title?: string;
       <Footer />;
     </div>;
   )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogTitle,
+  ogDescription,
+  ogUrl
+}: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}

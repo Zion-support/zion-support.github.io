@@ -48,7 +48,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({quote;
           <Button;
             variant="outline";
             size="sm";
-            onClick = {() => onViewDetails(quote),}
+            onClick = {() => onViewDetails(quote)}
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
@@ -58,7 +58,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({quote;
             {quote.status !== 'responded' && onMarkAsResponded && (<Button;
                 variant="ghost";
                 size="sm";
-                onClick = {(,) => onMarkAsResponded(quote.id),}
+                onClick = {(,) => onMarkAsResponded(quote.id)}
                 className="flex items-center gap-1";
               >;
                 <MessageSquare className="h-4 w-4" />;
@@ -68,7 +68,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({quote;
             <Button;
               variant="ghost";
               size="sm";
-              onClick = {() => onToggleArchive(quote.id, !quote.is_archived),}
+              onClick = {() => onToggleArchive(quote.id, !quote.is_archived)}
               className="flex items-center gap-1";
             >;
               {quote.is_archived ? (<RefreshCw className="h-4 w-4" />;

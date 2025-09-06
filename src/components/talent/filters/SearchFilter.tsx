@@ -55,8 +55,8 @@ import { SearchFilterProps  } from '@/types / filters';
           id="talent - search";
           type="text";
           placeholder="Search talents...";
-          value = {search_term, }
-          on_change = {(e, ) => setSearchTerm (e.target.value), }
+          value = {search_term }
+          on_change = {(e, ) => setSearchTerm (e.target.value) }
           aria - describedby="talent - search - help";
           className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
         />;

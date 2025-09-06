@@ -171,10 +171,10 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24"
                     92% match;
                   </div>;
                   <span className='text-xs text-muted-foreground mt-1'>;
-import { Card,CardContent,CardHeader,CardTitle,CardDescription,} from '@/components / ui / card';
+import { Card,CardContent,CardHeader,CardTitle,CardDescription} from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-  ChevronRight,FileText,Image,Clock,Zap,BookOpen,} from 'lucide-react';
+  ChevronRight,FileText,Image,Clock,Zap,BookOpen} from 'lucide-react';
 import Link from 'next / link';
 import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription   } from '@/components / ui / card';

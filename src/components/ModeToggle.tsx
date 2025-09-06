@@ -25,9 +25,9 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',import 
         ? 'dark';
         : 'light';
 import { Button  } from '@/components / ui / button';
-import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger,} from '@/components / ui / tooltip';
+import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components / ui / tooltip';
 import { toast  } from '@/hooks / use - toast';
-  darkModeMessages,lightModeMessages,} from '@/utils / themeToggleMessages';
+  darkModeMessages,lightModeMessages} from '@/utils / themeToggleMessages';
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { use_theme  } from '@/components / ThemeProvider';
 import { log_issue  } from '@/utils / log_issue';
@@ -115,8 +115,8 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme(),const [i
           <Button;
             variant="ghost";
             size="icon";
-import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger,} from '@/components/ui/tooltip';
-  darkModeMessages,lightModeMessages,} from '@/utils/themeToggleMessages';
+import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
+  darkModeMessages,lightModeMessages} from '@/utils/themeToggleMessages';
 // Use the ThemeProvider hook directly to ensure no conflicts;
 // Use the ThemeProvider hook directly to ensure no conflicts;
 export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [isClient, setIsClient]  = useState(false)// Ensure we're on the client side to avoid hydration mismatches;
@@ -135,12 +135,12 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
       const messages =;
         newTheme === 'dark' ? darkModeMessages : lightModeMessages;
       const title = messages[Math && Math.floor(Math && Math.random() * messages && messages.length)];
-      toast({title,description: `Theme changed to ${newTheme} mode successfully`,})// Accessibility announcement for screen readers;
+      toast({title,description: `Theme changed to ${newTheme} mode successfully`})// Accessibility announcement for screen readers;
       const announcement  = `Theme switched to ${newTheme} mode`;// Create a live region announcement;
       const liveRegion = document && document.createElement('div')liveRegion && liveRegion.setAttribute('aria-live', 'polite')liveRegion && liveRegion.setAttribute('aria-atomic', 'true')liveRegion && liveRegion.className = 'sr-only';
       liveRegion && liveRegion.textContent = announcement;
       document && document.body.appendChild(liveRegion)// Clean up the announcement after it's been read;
-      setTimeout(() => {document && document.body.removeChild(liveRegion)}, 1000)} catch (error) {logErrorToProduction('Theme toggle error:', { data: error })logIssue('Theme switch failed', {error,currentTheme: theme,resolvedTheme,})toast({title: 'Theme switch failed',description: 'Unable to change theme. Please try again.',variant: 'destructive',})}
+      setTimeout(() => {document && document.body.removeChild(liveRegion)}, 1000)} catch (error) {logErrorToProduction('Theme toggle error:', { data: error })logIssue('Theme switch failed', {error,currentTheme: theme,resolvedTheme})toast({title: 'Theme switch failed',description: 'Unable to change theme. Please try again.',variant: 'destructive'})}
   }if (!isClient) {// Return a neutral state during SSR to prevent hydration issues;>;
         <div className='h-5 w-5 bg-muted rounded animate-pulse' />{' '}
         {/* Changed to bg-muted for theme consistency */}
@@ -213,13 +213,13 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
       const messages =;
         new_theme === 'dark' ? darkModeMessages : lightModeMessages;
       const title = messages[Math.floor (Math.random () * messages.length)];
-      toast ({title,description: `Theme changed to ${new_theme} mode successfully`,})// Accessibility announcement for screen readers;
+      toast ({title,description: `Theme changed to ${new_theme} mode successfully`})// Accessibility announcement for screen readers;
       const announcement = `Theme switched to ${new_theme} mode`;
       // Create a live region announcement;
       const live_region = document.create_element ('div')live_region.set_attribute ('aria - live', 'polite')live_region.set_attribute ('aria - atomic', 'true')live_region.class_name = 'sr - only';
       live_region.text_content = announcement;
       document.body.append_child (live_region)// Clean up the announcement after it's been read;
-      set_timeout (() => {document.body.remove_child (live_region)}, 1000) } catch (error) {logErrorToProduction ('Theme toggle error:', { data: error })log_issue ('Theme switch failed', {error,current_theme: theme,resolved_theme,})toast ({title: 'Theme switch failed',description: 'Unable to change theme. Please try again.',variant: 'destructive',})}
+      set_timeout (() => {document.body.remove_child (live_region)}, 1000) } catch (error) {logErrorToProduction ('Theme toggle error:', { data: error })log_issue ('Theme switch failed', {error,current_theme: theme,resolved_theme})toast ({title: 'Theme switch failed',description: 'Unable to change theme. Please try again.',variant: 'destructive'})}
   }
   // Check condition;
 if ( {) {$2;

@@ -4,7 +4,7 @@
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-export default function PromptPolicyRegistryPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/prompt-policy-registry'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,FileText,Star,} from 'lucide-react';
+export default function PromptPolicyRegistryPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/prompt-policy-registry'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,FileText,Star} from 'lucide-react';
 export default function PromptPolicyRegistryPage() {const service = enhancedRealMicroSaasServices.find(s =>;
     s.link.endsWith('/prompt-policy-registry'))if (!service) return null;return (<Layout>;
       <Head>;

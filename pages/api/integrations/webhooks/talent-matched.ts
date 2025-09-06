@@ -14,7 +14,7 @@ export default async function handler() {try {if (req && req.method !== "POST")r
   }
   if (!match) return res.status(400).json({ error: "Missing match payload" })// record Zapier event;
   const eventId = `${Date.now()}-talent-matched`;
-  writeState(s => {s.events.push({id: eventId,type: 'zion.talent.matched',timestamp: Date.now(),payload: { match },})const eventId = `${Date.now()}-talent-matched`;
+  writeState(s => {s.events.push({id: eventId,type: 'zion.talent.matched',timestamp: Date.now(),payload: { match }})const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })});
   // log to connected CRMs as a note;
   const state = read_state ()const crms = state.connections.filter ((c) =>;

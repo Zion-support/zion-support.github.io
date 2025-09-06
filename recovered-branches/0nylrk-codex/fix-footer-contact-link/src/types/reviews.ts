@@ -1,5 +1,14 @@
 
 export type ReviewStatus = "pending" | "approved" | "rejected";export type ReviewStatus = "pending" | "approved" | "rejected";export type ReviewStatus = 'pending' | 'approved' | 'rejected';export interface Review  {export type ReviewStatus = 'pending' | 'approved' | 'rejected';export interface Review  {export interface Review  {export interface Review {export interface Review  {id: string;
+export type ReviewStatus = "pending" | "approved" | "rejected";
+
+export interface Review {
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+
+export interface Review {;
+
+export interface Review {
+  id: string;
   project_id: string;
   reviewer_id: string;
   reviewee_id: string;
@@ -30,3 +39,23 @@ export interface ReviewReport  {export interface ReviewReport  {export interface
   created_at: string;
   resolved_at?: string;
 }status: 'pending' | 'resolved' | 'dismissed';}
+  reviewer_profile?: {
+    display_name: string;
+    avatar_url?: string;
+  };
+}
+
+
+
+export interface ReviewReport {;
+
+
+export interface ReviewReport {
+  id: string;
+  review_id: string;
+  reporter_id: string;
+  reason: string;
+  status: "pending" | "resolved" | "dismissed";
+  created_at: string;
+  resolved_at?: string;
+}

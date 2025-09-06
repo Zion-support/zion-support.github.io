@@ -35,7 +35,7 @@ const securityStats = [;
   { number: '0', label: 'Security Breaches' }
   { number: '100%', label: 'Data Encryption' }
 ];
-export default function SecurityPage() {return (import { Shield,Lock,Eye,Database,Server,Key,CheckCircle,Mail,Phone,MapPin,} from 'lucide-react';
+export default function SecurityPage() {return (import { Shield,Lock,Eye,Database,Server,Key,CheckCircle,Mail,Phone,MapPin} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function Security() {const securityMeasures = [;
@@ -958,7 +958,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                   View Compliance Details;
                 </Link>;
                 </Link>;
-  Shield,Lock,Eye,Database,Server,Key,CheckCircle,Mail,Phone,MapPin,} from 'lucide-react';ursor/integrate-build-improve-and-re-verify-8f7d;
+  Shield,Lock,Eye,Database,Server,Key,CheckCircle,Mail,Phone,MapPin} from 'lucide-react';ursor/integrate-build-improve-and-re-verify-8f7d;
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-8f7d;

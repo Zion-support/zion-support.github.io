@@ -10,6 +10,12 @@ import { AddMilestoneForm  } from '../AddMilestoneForm';
 interface MilestoneCreatorProps  {onSubmit: (data: any) => Promise<void>;
   isSubmitting: boolean;
   onCancel: () => void;
+import {AddMilestoneForm} from '../AddMilestoneForm';
+interface MilestoneCreatorProps {;
+  onSubmit: (data: any) => Promise<void>,;
+  isSubmitting: boolean,;
+  onCancel: () => void,;
+
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
@@ -22,6 +28,105 @@ export function MilestoneCreator() {return (projectType;
   return (<AddMilestoneForm;
   projectType;
 }: MilestoneCreatorProps) {return (<AddMilestoneForm;
+
+
+export function MilestoneCreator(): any ({;
+
+
+
+export function MilestoneCreator({;
+
+export function MilestoneCreator(): any ({;
+
+import React from 'react';
+interface MilestoneCreatorProps {
+
+  onSubmit: (data: any) => Promise<void>
+  isSubmitting: boolean
+  onCancel: () => void
+
+  projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string | null;
+  projectType?: string
+}
+export function MilestoneCreator({
+
+export function MilestoneCreator({;
+
+export function MilestoneCreator({;
+  onSubmit;
+  isSubmitting;
+  onCancel;
+  projectScope;
+  projectStartDate;
+  projectEndDate;
+
+  projectType
+}: MilestoneCreatorProps) {
+  return (
+
+    <AddMilestoneForm 
+
+import React from 'react',;
+import { AddMilestoneForm } from '../AddMilestoneForm',;
+interface MilestoneCreatorProps {;
+  onSubmit: (data: any) => Promise<void>,;
+  isSubmitting: boolean,;
+  onCancel: () => void,;
+  projectScope?: string,;
+  projectStartDate?: string,;
+  projectEndDate?: string | null,;
+  projectType?: string;
+}
+;
+export function MilestoneCreator({;
+  onSubmit,;
+  isSubmitting,;
+  onCancel,;
+  projectScope,;
+  projectStartDate;
+  projectEndDate;
+  projectType;
+}: MilestoneCreatorProps) {;
+  return (;
+    <AddMilestoneForm;
+
+
+
+
+
+  return (
+    <AddMilestoneForm
+
+;
+interface MilestoneCreatorProps {;
+  onSubmit:(data:any) => Promise<void>,;
+  isSubmitting:boolean,;
+  onCancel:() => void,;
+  projectScope?:string,;
+  projectStartDate?:string,;
+  projectEndDate?:string | null,;
+  projectType?:string;
+}
+;
+export function MilestoneCreator({;
+  onSubmit,;
+  isSubmitting,;
+  onCancel,;
+  projectScope,;
+  projectStartDate,;
+  projectEndDate,;
+  projectType;
+} MilestoneCreatorProps) {;
+  return (;
+    <AddMilestoneForm ;
+  return (;
+    <AddMilestoneForm;
+  projectType;
+}: MilestoneCreatorProps) {;
+  return (
+    <AddMilestoneForm
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -30,6 +135,15 @@ export function MilestoneCreator() {return (projectType;
       projectEndDate={projectEndDate}
       projectType={projectType}
   on_submit: (data: any) => Promise < void>,<AddMilestoneForm;  on_submit: (data: any) => Promise < void>,is_submitting: boolean,on_cancel: () => void,project_scope?: string;
+
+    />;
+  );
+}
+
+  on_submit: (data: any) => Promise < void>,
+  is_submitting: boolean,
+  on_cancel: () => void,
+  project_scope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   project_type?: string;
@@ -45,7 +159,7 @@ function MilestoneCreator() {return (<AddMilestoneForm;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       project_type={project_type}
-    />)}),}
+    />)})}
  export function MilestoneCreator () {return (<AddMilestoneForm onSubmit= {onSubmit;
 }isSubmitting= {isSubmitting;
 }onCancel= {onCancel;
@@ -56,3 +170,28 @@ function MilestoneCreator() {return (<AddMilestoneForm;
 }/>)}
     />;
   )}}
+    />);
+}
+  ),;}
+ export function MilestoneCreator ({
+  onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
+}: MilestoneCreatorProps) {
+  return (<AddMilestoneForm onSubmit= {
+  onSubmit 
+}isSubmitting= {
+  isSubmitting 
+}onCancel= {
+  onCancel 
+}projectScope= {
+  projectScope 
+}projectStartDate= {
+  projectStartDate 
+}projectEndDate= {
+  projectEndDate 
+}projectType= {
+  projectType 
+}/>) 
+}
+    />
+  )
+}

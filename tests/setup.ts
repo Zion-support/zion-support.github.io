@@ -37,3 +37,27 @@ import { cleanup  } from '@testing-library/react';
 import { afterEach, vi  } from 'vitest';
 // Ensure React Testing Library cleans up and mocks are restored between tests;
 afterEach(() => {cleanup()vi.restoreAllMocks()})
+(global_this as any).jest = {
+  // Core mocking utilities;
+  fn: vi.fn.bind (vi),
+  mock: vi.mock.bind (vi),
+  spy_on: vi.spy_on.bind (vi),
+  // Timing helpers;
+  useFakeTimers: vi.useFakeTimers.bind (vi),
+  useRealTimers: vi.useRealTimers.bind (vi),
+  advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
+  runAllTimers: vi.runAllTimers.bind (vi),
+  // Reset / clear mocks;
+
+interface SetupProps {
+  // Add props here as needed
+}
+
+export default function Setup({}: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

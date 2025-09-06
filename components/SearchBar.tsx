@@ -6,11 +6,14 @@ interface SearchResult  {title: string, description: string;
 import React, { useState } from 'react';
 import { Search, X  } from 'lucide-react';
 interface SearchResult  {title: string;
+
+interface SearchResult {
+  title: string;
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
 }
-const SearchBar: React.FC = () => {interface SearchResult  {title: string, description: string,url: string, type: 'service' | 'page' | 'category',}const SearchBar: React.FC = () => {const [query, setQuery] = useState('')const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false)const [isLoading, setIsLoading] = useState(false)const searchRef = useRef<HTMLDivElement>(null)const inputRef  = useRef<HTMLInputElement>(null)// Mock search data - in a real app, this would come from an API;
+const SearchBar: React.FC = () => {interface SearchResult  {title: string, description: string,url: string, type: 'service' | 'page' | 'category'}const SearchBar: React.FC = () => {const [query, setQuery] = useState('')const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false)const [isLoading, setIsLoading] = useState(false)const searchRef = useRef<HTMLDivElement>(null)const inputRef  = useRef<HTMLInputElement>(null)// Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {title: 'Micro SaaS Products',description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',url: '/micro-saas',type: 'category';
     },{title: 'AI Services',description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',url: '/ai-services',type: 'category';
@@ -18,6 +21,60 @@ const SearchBar: React.FC = () => {interface SearchResult  {title: string, descr
     },{title: 'Cloud Cost Guard',description: 'FinOps Assistant for anomaly detection and cost optimization',url: '/services',type: 'service';
     },{title: 'Contact Us',description: 'Get in touch with our experts for consultation and quotes',url: '/contact',type: 'page';
     },{title: 'Pricing',description: 'View our transparent pricing for all services',url: '/pricing',type: 'page';
+
+const SearchBar: React.FC = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Mock search data - in a real app, this would come from an API
+  const searchData: SearchResult[] = [
+    {
+      title: 'Micro SaaS Products',
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
+      url: '/micro-saas',
+      type: 'category'
+    },
+    {
+      title: 'AI Services',
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      url: '/ai-services',
+      type: 'category'
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it-services',
+      type: 'category'
+    },
+    {
+      title: 'Cloud Cost Guard',
+      description: 'FinOps Assistant for anomaly detection and cost optimization',
+      url: '/services',
+      type: 'service'
+    },
+    {
+      title: 'Contact Us',
+      description: 'Get in touch with our experts for consultation and quotes',
+      url: '/contact',
+      type: 'page'
+    },
+    {
+      title: 'Pricing',
+      description: 'View our transparent pricing for all services',
+      url: '/pricing',
+      type: 'page'
+    }
+  ];
+
+  const handleSearch = async (searchQuery: string) => {
+    if (!searchQuery.trim()) {
+      setResults([]);
+      setIsOpen(false);
+      return;
     }
   ];const handleSearch = async (searchQuery: string) => {if (!searchQuery.trim()) {setResults([])setIsOpen(false)return;
     }setIsLoading(true)// Simulate API delay;
@@ -116,6 +173,55 @@ interface SearchBarProps  {onSearch?: (query: string) => void;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
           <input;
             type="text";
+    </div>
+  );
+};
+
+export default SearchBar;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  placeholder = 'Search...',
+  className = ''
+}) => {
+  const [query, setQuery] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch && query.trim()) {
+      onSearch(query.trim());
+    }
+    {
+      title: 'Contact Us'
+      description: 'Get in touch with our experts for consultation and quotes'
+      url: '/contact'
+      type: 'page'
+    }
+    {
+      title: 'Pricing'
+      description: 'View our transparent pricing for all services'
+      url: '/pricing'
+      type: 'page'
+    }
+  ];
+    );
+    setResults(filteredResults);
+    setIsOpen(true);
+    setIsLoading(false);
+  };
+
+  const handleClear = () => {
+    setQuery('');
+  };
+
+  return (
+    <div className={'relative ' + className}>
+      <form onSubmit={handleSubmit} className="relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <input
+            type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => {}}
@@ -193,3 +299,15 @@ interface SearchBarProps  {onSearch?: (query: string) => void;
       </form>;
     </div>;
   )}export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default SearchBar;

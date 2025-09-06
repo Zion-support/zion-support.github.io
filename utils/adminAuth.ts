@@ -24,6 +24,46 @@ export const isAdmin = () => {// Placeholder implementation;
   return true;// Admin authentication utilities;
 import { NextApiRequest, NextApiResponse  } from 'next';
 export interface AdminUser  {id: string;
+
+export interface Session {
+
+export interface Session {;
+  userId: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+
+
+export interface Session {
+  user_id: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+
+
+  // Check for internal agent headers or IPs;
+  const userAgent = req.headers['user-agent'] || '';
+
+
+  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+}
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+}
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+// Admin authentication utilities
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export interface AdminUser {
+  id: string;
   email: string;
   role: 'admin' | 'super_admin' | 'moderator';
   permissions: string[];
@@ -48,6 +88,13 @@ const adminUsers: AdminUser[] = [;
   return null;
 }export function getAdminUser(id: string): AdminUser | null {return adminUsers.find(u => u.id === id) || null;
 }}export function getSessionFromReq (req: NextApiRequest): Session | null {// Mock implementation - replace with actual session logic;
+}
+
+export function getAdminUser(id: string): AdminUser | null {
+  return adminUsers.find(u => u.id === id) || null;
+}
+export function getSessionFromReq (req: NextApiRequest): Session | null {
+  // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
   // Check condition;
 if ( {) {$2;
@@ -67,6 +114,19 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {// Check 
 export const is_admin = () =>: any {// Placeholder implementation;
   return true;}}ursor/fix-website-loading-errors-and-merge-6662;
 export function isInternalAgentRequest(req: NextApiRequest): boolean {// Check for internal agent headers or IPs;
+  const internal_agents = ['zion - bot', 'internal - agent', 'automation'];
+;
+  return internal_agents.some (agent => user_agent.toLowerCase ().includes (agent));
+}
+export const is_admin = () =>: any {
+  // Placeholder implementation;
+  return true;
+
+
+
+
+export function isInternalAgentRequest(req: NextApiRequest): boolean {
+  // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
@@ -81,3 +141,17 @@ export const requireAdminAuth = () => {// Placeholder implementation;
   return true;
 }}}}ursor/fix-website-loading-errors-and-merge-6662;
 }
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+}
+export const isAdmin = () => {
+  // Placeholder implementation;
+  return true;
+}
+
+};
+
+};
+
+}
+;
+

@@ -8,13 +8,13 @@ import { ensureDisputeUploadDir,getDisputeById,upsertDispute;
 } from '../../../../utils/auth';export const config = null;
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))})})}ensureDisputeUploadDir;
   getDisputeById;
-  upsertDispute,} from "../../../../utils/fsdb";ensureDisputeUploadDir,getDisputeById,upsertDispute,} from "../../../../utils/fsdb";
+  upsertDispute} from "../../../../utils/fsdb";ensureDisputeUploadDir,getDisputeById,upsertDispute} from "../../../../utils/fsdb";
   parseUserFromRequest,ensureDisputeUploadDir;
   getDisputeById;
-  upsertDispute,} from "../../../../utils/fsdb";
+  upsertDispute} from "../../../../utils/fsdb";
   parseUserFromRequest;
-  ensureInvolvedOrAdmin,} from "../../../../utils/auth";
-export const config = {api: { bodyParser: { sizeLimit: "20mb" } },}export default async function handler() {req: NextApiRequest;
+  ensureInvolvedOrAdmin} from "../../../../utils/auth";
+export const config = {api: { bodyParser: { sizeLimit: "20mb" } }}export default async function handler() {req: NextApiRequest;
   res: NextApiResponse;
 ) {const { id }  = req.query;if (typeof id !== "string")return res && res.status(400).json({ error: "Invalid id" })if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' })if (typeof id !== 'string')return res.status(400).json({ error: 'Invalid id' })const user  = parseUserFromRequest(req)if (req && req.method === "POST") {const dispute  = await getDisputeById(id)return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" })}
     const { files } =;

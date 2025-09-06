@@ -24,7 +24,7 @@ export function AchievementBadges() {export interface Achievement  {id: string;
   title: string;
   description: string;
   achieved: boolean;interface AchievementBadgesProps  {achievements: Achievement[];
-  achievements: Achievement[];export interface Achievement  {id: string,title: string,description: string,}export interface Achievement  {id: string,title: string,description: string,achieved: boolean;
+  achievements: Achievement[];export interface Achievement  {id: string,title: string,description: string}export interface Achievement  {id: string,title: string,description: string,achieved: boolean;
 }interface AchievementBadgesProps  {achievements: Achievement[];
 }export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {return (<p className="font-medium">{a.title}</p>;
               <p className="text-sm text-muted-foreground">{a.description}</p>;

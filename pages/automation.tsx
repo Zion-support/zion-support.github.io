@@ -31,9 +31,9 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
-import {RefreshCw,Zap,Bot,Workflow,ArrowRight,Check,BarChart3,} from 'lucide-react';
+import {RefreshCw,Zap,Bot,Workflow,ArrowRight,Check,BarChart3} from 'lucide-react';
 export default function AutomationPage() {const features = [;
-    {icon: <Workflow className='w-8 h-8 text-white' />,title: 'Workflow Automation',description: 'Create complex workflows with drag-and-drop interface',},{icon: <Bot className='w-8 h-8 text-white' />,title: 'AI-Powered Bots',description: 'Intelligent automation agents that learn and adapt',},{icon: <BarChart3 className='w-8 h-8 text-white' />,title: 'Process Analytics',description: 'Real-time insights into your automation performance',},{icon: <Zap className='w-8 h-8 text-white' />,title: 'Smart Triggers',description: 'Automated responses based on events and conditions',},<section className="pt-32 pb-20 relative overflow-hidden">;
+    {icon: <Workflow className='w-8 h-8 text-white' />,title: 'Workflow Automation',description: 'Create complex workflows with drag-and-drop interface'},{icon: <Bot className='w-8 h-8 text-white' />,title: 'AI-Powered Bots',description: 'Intelligent automation agents that learn and adapt'},{icon: <BarChart3 className='w-8 h-8 text-white' />,title: 'Process Analytics',description: 'Real-time insights into your automation performance'},{icon: <Zap className='w-8 h-8 text-white' />,title: 'Smart Triggers',description: 'Automated responses based on events and conditions'},<section className="pt-32 pb-20 relative overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />;
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />;
@@ -413,7 +413,7 @@ const automationServices = [;
       </section>;
     </Layout>;
   )}
-  RefreshCw,Zap,Bot,Workflow,ArrowRight,Check,BarChart3,} from 'lucide-react';
+  RefreshCw,Zap,Bot,Workflow,ArrowRight,Check,BarChart3} from 'lucide-react';
 } from 'lucide-react';
 export default /**;
  * AutomationPage - Function description;
@@ -439,9 +439,9 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
-  RefreshCw,Zap,Bot,Workflow,ArrowRight,Check,BarChart3,} from 'lucide-react';
+  RefreshCw,Zap,Bot,Workflow,ArrowRight,Check,BarChart3} from 'lucide-react';
 export default function AutomationPage() {const features = [;
-    {icon: <Workflow className='w-8 h-8 text-white' />,title: 'Workflow Automation',description: 'Create complex workflows with drag-and-drop interface',},{icon: <Bot className='w-8 h-8 text-white' />,title: 'AI-Powered Bots',description: 'Intelligent automation agents that learn and adapt',},{icon: <BarChart3 className='w-8 h-8 text-white' />,title: 'Process Analytics',description: 'Real-time insights into your automation performance',},{icon: <Zap className='w-8 h-8 text-white' />,title: 'Smart Triggers',description: 'Automated responses based on events and conditions',},export default function AutomationPage() {const features = [;
+    {icon: <Workflow className='w-8 h-8 text-white' />,title: 'Workflow Automation',description: 'Create complex workflows with drag-and-drop interface'},{icon: <Bot className='w-8 h-8 text-white' />,title: 'AI-Powered Bots',description: 'Intelligent automation agents that learn and adapt'},{icon: <BarChart3 className='w-8 h-8 text-white' />,title: 'Process Analytics',description: 'Real-time insights into your automation performance'},{icon: <Zap className='w-8 h-8 text-white' />,title: 'Smart Triggers',description: 'Automated responses based on events and conditions'},export default function AutomationPage() {const features = [;
     {icon: <Workflow className="w-8 h-8 text-white" />,title: 'Workflow Automation',description: 'Create complex workflows with drag-and-drop interface';
     },{icon: <Bot className="w-8 h-8 text-white" />,title: 'AI-Powered Bots',description: 'Intelligent automation agents that learn and adapt';
     },{icon: <BarChart3 className="w-8 h-8 text-white" />,title: 'Process Analytics',description: 'Real-time insights into your automation performance';

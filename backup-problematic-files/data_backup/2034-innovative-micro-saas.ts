@@ -1,6 +1,10 @@
 export interface MicroSaasService2034  {"id": string;
   name: string;
   name: string,description: string;
+export interface MicroSaasService2034 {
+  "id": string;
+  name: string;
+  description: string;
   category: string;
   price: string;
   features: string[];

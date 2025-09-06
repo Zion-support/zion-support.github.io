@@ -1,14 +1,14 @@
 
 ;
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign  } from 'lucide-react';
-export type BadgeKey = any;import { LucideIcon,BadgeCheck,Award,Star,Trophy,BadgePlus,BadgeDollarSign,} from 'lucide-react';
+export type BadgeKey = any;import { LucideIcon,BadgeCheck,Award,Star,Trophy,BadgePlus,BadgeDollarSign} from 'lucide-react';
 export type BadgeKey =;
   | 'first_listing';
   | 'top_contributor';
   | 'profile_complete';
   | 'featured_creator';
   | 'first_action';
-  LucideIcon,BadgeCheck,Award,Star,Trophy,BadgePlus,BadgeDollarSign,} from 'lucide-react';
+  LucideIcon,BadgeCheck,Award,Star,Trophy,BadgePlus,BadgeDollarSign} from 'lucide-react';
 export type BadgeKey =;
   | 'first_listing';
   | 'top_contributor';

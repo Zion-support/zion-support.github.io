@@ -31,7 +31,7 @@ export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] 
           <Button;
             variant="default";
             size="sm";
-            onClick = {handleRequestHire,}
+            onClick = {handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
             Hire;
@@ -39,7 +39,7 @@ export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] 
           <Button;
             variant="outline";
             size="sm";
-            onClick = {handleViewProfile,}
+            onClick = {handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
           >;
             View;
@@ -49,10 +49,10 @@ export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] 
       </div>;
       {/* Hire Request Modal */}
       <HireRequestModal;
-        talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {() => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
+        talent = {profile}
+        isOpen = {isHireModalOpen}
+        onClose = {() => setIsHireModalOpen(false)}
+        userDetails = {userProfile}
       />;
     </>;
   )}//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {e.stopPropagation ()';

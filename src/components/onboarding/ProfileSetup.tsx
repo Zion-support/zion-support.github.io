@@ -80,7 +80,7 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
       </div>;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;<FormField;
-            control = {form && form.control,}
+            control = {form && form.control}
             name="displayName";
             render={({ field }: { field: any },) => (<FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
@@ -97,7 +97,7 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}/>;<FormField;
-            control = {form && form.control,}
+            control = {form && form.control}
             name="headline";
             render={({ field }: { field: any },) => (<FormItem>;
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
@@ -124,7 +124,7 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
       <Form {...form}>;
         <form on_submit={form.handle_submit (on_complete)} className="space - y-6">;
           <FormField;
-            control = {form.control, }
+            control = {form.control }
             name="display_name";
             render={({ field }: { field: any }, ) => (<FormItem>;
                 <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;
@@ -142,7 +142,7 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
               </FormItem>)}
           />;
           <FormField;
-            control = {form.control, }
+            control = {form.control }
             name="headline";
             render={({ field }: { field: any }, ) => (<FormItem>;
                 <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel>;
@@ -155,7 +155,7 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
                       {...field}
                     />;/>;<FormField;
-            control = {form.control,}
+            control = {form.control}
             name="bio";
             render={({ field }: { field: any },) => (<FormItem>;
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
@@ -168,7 +168,7 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
               </FormItem>)}
           />;
           <FormField;
-            control = {form.control, }
+            control = {form.control }
             name="bio";
             render={({ field }: { field: any }, ) => (<FormItem>;
                 <FormLabel className="text - zion - slate - light">Bio</FormLabel>;

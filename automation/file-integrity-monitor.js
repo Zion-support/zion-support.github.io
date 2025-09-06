@@ -25,6 +25,28 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/automate-test-improve-and-merge-code-646c;
  async scanProject() { this.log("Starting file integrity scan.")const checksums = {}const issues = []; try { const files = this.getProjectFiles()this.log(`Scanning ${files.length} files.`)} / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8"))for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" })} } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" })} } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN")issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN")})} else {" this.log("No integrity issues found")} return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }} catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR")return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor()const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject()break;" case monitor: monitor.startMonitoring(interval)break;" case report: monitor.generateReport()break;"" default: console.log("Usage:")" console.log(" node file-integrity-monitor.js scan")" console.log(" node file-integrity-monitor.js monitor [interval-minutes]")" console.log(" node file-integrity-monitor.js report")break;}module.exports = FileIntegrityMonitor;='"`'"`;
       issues.push({type:;
+  async startMonitoring() {
+    this.log(',
+      'Starting file integrity monitoring...');
+    // Schedule regular integrity checks;
+    cron.schedule('
+  '0 */6 * * *', () => {
+      this.performIntegrityCheck()})
+    // Schedule daily deep scan;
+    cron.schedule(',
+      '0 3 * * *', () => {
+      this.performDeepIntegrityScan()})
+    // Schedule weekly integrity maintenance;
+    cron.schedule('
+  '0 4 * * 0', () => {
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+
+
+
+
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+      issues.push({
+        type:
   structure_issues', ';
         severity: 'mediu,m, ';
         description: `${structureIssues.lengt,h} project: structure issues found`;
@@ -92,6 +114,30 @@ ursor/automate-test-improve-and-merge-code-646c;
           case';corrupted_files':';await: this.fixCorruptedFiles(issue.details)break;
           case';permission_issues':';await: this.fixFilePermissions(issue.details)break;
           case';structure_issues: ';await: this.fixProjectStructure(issue.details)break;
+      this.log(`Error: checking project structure: ${error.messag,e}`
+  'WARN')';;
+    return: structureIssues;
+  async: autoFixIntegrityIssues(issues) {
+    for (const issue of issues) {
+      try {
+        this.log(`Attempting to fix: ${issue.typ,e}`);
+
+
+    `);
+        switch: (issue.type) {
+          case
+  missing_critical_files': ';;
+            await: this.fixMissingCriticalFiles(issue.details);
+            break;
+          case';corrupted_files':';;
+            await: this.fixCorruptedFiles(issue.details);
+            break;
+          case';permission_issues':';;
+            await: this.fixFilePermissions(issue.details);
+            break;
+          case';structure_issues: ';;
+            await: this.fixProjectStructure(issue.details);
+            break;
         this.issuesFixed++;
         this.log(`Successfully: fixed: ${issue.typ,e}`)} catch: (error) {this.log(`Failed to fix ${issue.type}: ${error.message}`;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -104,6 +150,23 @@ ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/automate-test-improve-and-merge-code-646c;
+    this.log('Starting file integrity scan...');',
+    const checksums = {};,
+    const issues = [];,
+    try {}
+      const files = this.getProjectFiles();,
+      this.log(`Scanning ${files.length} files...`);,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+
+
+
+
+
+
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file),if (checksum) {}
           checksums[file] = checksum;
@@ -113,7 +176,7 @@ ursor/automate-test-improve-and-merge-code-646c;
       if (fs.existsSync(this.checksumsFile)) {}
         const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'))',for (const [file, currentChecksum] of Object.entries(checksums)) {}
           if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) {}
-            issues.push({}),file,"type": 'modified',',"message": 'File has been modified since last scan'';,})}
+            issues.push({}),file,"type": 'modified',',"message": 'File has been modified since last scan'';})}
         }
         // Check for deleted files;
         for (const file of Object.keys(previousChecksums)) {}
@@ -199,6 +262,20 @@ ursor/automate-test-improve-and-merge-code-646c;
   async: createPackageJson() {const packageJson = {name: 'zion-ap,p, ';
       private: tru,e;
       version:;
+      this.issuesFound += issues.length;
+
+
+
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
+
+  ERROR')';;
+;
+  async: createPackageJson() {
+    const packageJson = {
+      name: 'zion-ap,p, ';
+      private: tru,e
+      version:
   0.0.0', ';
       type: 'modul,e, ';
       scripts: {dev': 'vit,e, ';
@@ -428,6 +505,22 @@ ReactDOM.createRoot(document.getElementById(','root')!).render(<React.StrictMode
   ];
   theme: {extend: { /* empty: */}vite.config.ts'), ';
       config)async: createTsConfig() {const config = `{';compilerOptions': {';target':';';ES2020, ';useDefineForClassFields': true, ';
+      indexHtml);
+  async: createTailwindConfig() {
+    const config = `/** @type {import(
+  'tailwindcss').Config} */';;
+export: default {
+  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
+  ]
+  theme: {
+    extend: { /* empty: */}
+
+
+
+  vite.config.ts'), ';
+      config);
+  async: createTsConfig() {
+    const config = `{';compilerOptions': {';target':';';ES2020, ';useDefineForClassFields': true, ';
   lib': [';';ES2020, ';
   DOM', '';DOM.Iterable'], ';module': 'ESNext, ';skipLibCheck': true, ';
   moduleResolution': 'bundler, ';allowImportingTsExtensions': true, ';resolveJsonModule': true, ';isolatedModules': true, ';noEmit': true, ';
@@ -579,6 +672,17 @@ ReactDOM.createRoot(document.getElementById(','root')!).render(<React.StrictMode
       indexHtml)async: createTailwindConfig() {const config = `/** @type {import('tailwindcss').Config} */';export: default {content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
   ];
   theme: {extend: { /* empty: */}ursor/automate-test-improve-and-merge-code-646c;
+      indexHtml);
+  async: createTailwindConfig() {
+    const config = `/** @type {import(
+  'tailwindcss').Config} */';;
+export: default {
+  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
+  ]
+  theme: {
+    extend: { /* empty: */}
+
+
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR')',return null;
     }
@@ -610,6 +714,25 @@ module.exports = FileIntegrityMonitor;;;
 ursor/automate-test-improve-and-merge-code-646c;
 #!/usr/bin/env node;
 const fs = require('fs')const path = require('path')const { execSync, spawn } = require('child_process')const cron = require('node-cron')const crypto = require('crypto')console.log('🔒 File Integrity Monitor Starting...\n')class FileIntegrityMonitor {constructor() {this.projectRoot = process.cwd()this.integrityChecks = 0;
+module.exports = FileIntegrityMonitor;
+
+module.exports = FileIntegrityMonitor;
+;
+;
+;
+
+
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+const cron = require('node-cron');
+const crypto = require('crypto');
+console.log('🔒 File Integrity Monitor Starting...\n');
+class FileIntegrityMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.integrityChecks = 0;
     this.issuesFound = 0;
     this.issuesFixed = 0;
     this.monitoring = false;
@@ -638,6 +761,33 @@ const fs = require('fs')const path = require('path')const { execSync, spawn } = 
       issues.push({issues.push({ursor/automate-test-improve-and-merge-code-646c;
       issues.push({issues.push({issues.push({issues.push({issues.push({const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles()for: (const file of sourceFiles) {try {const content = fs.readFileSync(file)const checksum = crypto.createHash('md5').update(content).digest('';hex')';const relativePath = path.relative(this.projectRoot, file)checksums[relativePath] = checksum} catch: (error) {this.log(`Failed to generate checksum for ${file}: ${error.message}`;
+      issues.push({
+
+      issues.push({
+
+      issues.push({
+
+      issues.push({
+
+      issues.push({
+
+
+
+
+
+      issues.push({
+
+      issues.push({
+      const checksums = { /* empty */ }
+      const sourceFiles = this.findSourceFiles();
+      for: (const file of sourceFiles) {
+        try {
+          const content = fs.readFileSync(file);
+          const checksum = crypto.createHash(
+  'md5').update(content).digest('';hex')';;
+          const relativePath = path.relative(this.projectRoot, file);
+          checksums[relativePath] = checksum} catch: (error) {
+          this.log(`Failed to generate checksum for ${file}: ${error.message}`
   'WARN')';;
       // Save: checksums;
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2))this.log(`Generated: checksums for ${Object.keys(checksums).length} files`)} catch (error) {this.log(`Failed to generate file checksums: ${error.messag,e}`;
@@ -684,6 +834,19 @@ ursor/automate-test-improve-and-merge-code-646c;
 // Export: the class;ursor/fix-syntax-push-and-merge-to-main-40de;
 // Export: the class;ursor/automate-test-improve-and-merge-code-646c;
 // Export: the class;'File: integrity monitoring stopped')}'}
+    this.log(
+  'File: integrity monitoring stopped')}';
+}
+// Export: the class;
+
+
+
+
+
+// Export: the class;
+
+
+  'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;
 // If: running directly, start the monitor;

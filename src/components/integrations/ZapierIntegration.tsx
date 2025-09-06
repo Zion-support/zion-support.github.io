@@ -6,7 +6,7 @@ import { Check, Copy, ExternalLink  } from 'lucide-react';
 export function ZapierIntegration() {import React, { useState } from 'react';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
-import {Card,CardContent,CardFooter,CardHeader,} from '@/components/ui/card';
+import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
 export function ZapierIntegration() {const [copied, setCopied] = useState(false)const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Zap  } from 'lucide-react';
 export function ZapierIntegration() {const [copied, setCopied] = useState(false)const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")const handleCopyApiKey = () => {navigator && navigator.clipboard.writeText(apiKey)setCopied(true)setTimeout(() => setCopied(false), 2000)toast && toast.success('API key copied to clipboard')navigator && navigator.clipboard.writeText(apiKey),setCopied(true),setTimeout((,) => setCopied(false), 2000),toast && toast.success("API key copied to clipboard")},return (<div className='space-y-6'>;
@@ -18,7 +18,7 @@ export function ZapierIntegration() {const [copied, setCopied] = useState(false)
               <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardFooter,CardHeader,} from '@/components / ui / card';
+import { Card,CardContent,CardFooter,CardHeader} from '@/components / ui / card';
 import { Input  } from '@/components / ui / input';
 export /**;
  * ZapierIntegration - Function description;

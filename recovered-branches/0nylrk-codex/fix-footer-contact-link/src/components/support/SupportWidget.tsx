@@ -38,6 +38,28 @@ import { cn } from "@/lib/utils",import { useTheme } from "@/hooks/useTheme",exp
               ? "bg-zion-blue-dark border border-zion-blue-light";
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",theme === "dark";
               ? "bg-zion-blue-dark border border-zion-blue-light";
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {ChatBotPanel} from "./ChatBotPanel";
+import {MessageSquare, Info, X} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useTheme} from "@/hooks/useTheme";
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+
+
+  return (
+    <>;
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (;
+        <Button
+
+
+
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -47,6 +69,74 @@ import { cn } from "@/lib/utils",import { useTheme } from "@/hooks/useTheme",exp
         </Button>;
       )}
               : "bg-white border border-gray-200";
+
+
+      {/* Support panel */}
+      {isOpen && (;
+        <div
+          className={cn(
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+
+  
+  return (
+    <>
+  return (
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+    <>;
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (;
+        <Button
+
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+
+import { cn } from "@/lib/utils",
+import { useTheme } from "@/hooks/useTheme",
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false),
+  const { theme } = useTheme(),
+  
+  return (
+    <>
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ChatBotPanel } from "./ChatBotPanel",;
+import { MessageSquare, Info, X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useTheme } from "@/hooks/useTheme",;
+      ;
+      {/* Support panel */}
+      {isOpen && (;
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+
+          onClick={() => setIsOpen(true)}
+          size="icon";
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
+          aria-label="Open support";
+        >;
+          <MessageSquare className="h-6 w-6" />;
+        </Button>;
+      )}
+              : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
@@ -107,6 +197,11 @@ import { cn } from "@/lib/utils",import { useTheme } from "@/hooks/useTheme",exp
               >;
                 <Info className="h-5 w-5" />;
               </Button>;onClick={() => window.location.href = "/help"}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"
+                onClick={() => window && window.location.href = "/help"}
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
@@ -115,6 +210,12 @@ import { cn } from "@/lib/utils",import { useTheme } from "@/hooks/useTheme",exp
                 variant="ghost";
                 size="icon";
                 className="h-8 w-8 rounded-full";
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"
+                onClick={() => setIsOpen(false)}
+
               <Button;
                 variant="ghost";
                 size="icon";
@@ -130,6 +231,7 @@ import { cn } from "@/lib/utils",import { useTheme } from "@/hooks/useTheme",exp
               </Button>;
             </div>;
           </div>;
+
           <ChatBotPanel />;
         </div>;
       )}
@@ -146,6 +248,25 @@ export /**;
 function SupportWidget() {const [is_open, setIsOpen] = useState (false)const { theme }  = use_theme ()return (<>;
       {/* Fixed button in the bottom right */}
       {!is_open && (<Button;
+  );
+}
+
+import { Button } from '@/components / ui / button';
+import { MessageSquare, Info, X } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { use_theme } from '@/hooks / use_theme';
+export /**
+ * SupportWidget - Function description
+ */
+function SupportWidget() {
+  const [is_open, setIsOpen] = useState (false);
+  const { theme } = use_theme ();
+;
+  return (
+    <>;
+      {/* Fixed button in the bottom right */}
+      {!is_open && (
+        <Button;
           on_click={() => setIsOpen (true)}
           size="icon";
           className="fixed bottom - 6 right - 6 h - 14 w - 14 rounded - full shadow - lg bg - zion - purple hover:bg - zion - purple - light text - white z - 50";
@@ -156,6 +277,10 @@ function SupportWidget() {const [is_open, setIsOpen] = useState (false)const { t
       {/* Support panel */}
       {is_open && (<div;
           className={cn ("fixed bottom - 6 right - 6 w-[380px] rounded - 2xl shadow - xl z - 50 flex flex - col";
+      {is_open && (
+        <div;
+          className={cn (
+            "fixed bottom - 6 right - 6 w-[380px] rounded - 2xl shadow - xl z - 50 flex flex - col";
             theme === "dark";
               ? "bg - zion - blue - dark border border - zion - blue - light";
               : "bg - white border border - gray - 200")}
@@ -191,7 +316,7 @@ function SupportWidget() {const [is_open, setIsOpen] = useState (false)const { t
           </div>;
           <ChatBotPanel />;
         </div>)}
-    </>)}),}
+    </>)})}
  export function SupportWidget () {const [isOpen, setIsOpen] = useState (false)const {theme;
 }= useTheme ()/* Fixed button in the bottom right */;
 }{!isOpen && (<Button onClick= {() => setIsOpen (true)}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>)}{/* Support panel */;
@@ -208,3 +333,36 @@ function SupportWidget() {const [is_open, setIsOpen] = useState (false)const { t
       )}
     </>;
   )})}
+    </>);
+}
+  ),;}
+ export function SupportWidget () {
+  const [isOpen, setIsOpen] = useState (false);
+const {
+  theme 
+}= useTheme ();
+/* Fixed button in the bottom right */ 
+}{
+  !isOpen && (<Button onClick= {
+  () => setIsOpen (true) 
+}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) 
+}{
+  /* Support panel */ 
+}{
+  isOpen && (<div className= {
+  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) 
+}</>) 
+}
+                onClick={() => setIsOpen(false)}
+                aria-label="Close support"
+              >
+                <X className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+          <ChatBotPanel />
+        </div>
+      )}
+    </>
+  )
+}

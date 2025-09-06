@@ -17,12 +17,12 @@ import React from 'react';
 import Link from 'next/link';
 const AIHealthcareDiagnosticsPro: React.FC = () => {const features = [;
     {icon: Brain,title: 'Advanced AI Diagnostics',description:;
-        'Deep learning algorithms analyze medical images, lab results, and patient data with 99 && 99.2% accuracy for early disease detection.',color: 'from-blue-500 to-cyan-500',},{icon: Eye,title: 'Multi-Modal Imaging',description:;
-        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.',color: 'from-purple-500 to-pink-500',},{icon: Heart,title: 'Predictive Analytics',description:;
-        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.',color: 'from-red-500 to-orange-500',},{icon: Shield,title: 'HIPAA Compliant',description:;
-        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.',color: 'from-green-500 to-emerald-500',},{icon: BarChart3,title: 'Real-time Monitoring',description:;
-        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.',color: 'from-indigo-500 to-blue-500',},{icon: Zap,title: 'Automated Workflows',description:;
-        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',color: 'from-yellow-500 to-orange-500',}  ];},{name: "RIS Systems",icon: BarChart3,description: 'Radiology information systems',color: 'from - orange - 500 to - red - 500';
+        'Deep learning algorithms analyze medical images, lab results, and patient data with 99 && 99.2% accuracy for early disease detection.',color: 'from-blue-500 to-cyan-500'},{icon: Eye,title: 'Multi-Modal Imaging',description:;
+        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.',color: 'from-purple-500 to-pink-500'},{icon: Heart,title: 'Predictive Analytics',description:;
+        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.',color: 'from-red-500 to-orange-500'},{icon: Shield,title: 'HIPAA Compliant',description:;
+        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.',color: 'from-green-500 to-emerald-500'},{icon: BarChart3,title: 'Real-time Monitoring',description:;
+        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.',color: 'from-indigo-500 to-blue-500'},{icon: Zap,title: 'Automated Workflows',description:;
+        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',color: 'from-yellow-500 to-orange-500'}  ];},{name: "RIS Systems",icon: BarChart3,description: 'Radiology information systems',color: 'from - orange - 500 to - red - 500';
     },{name: "Medical Devices",icon: Stethoscope,description: 'CT, MRI, X - ray, ultrasound machines',color: 'from - indigo - 500 to - blue - 500';
     },{name: "Cloud Platforms",icon: Cpu,href='https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics-pro';
         />;
@@ -743,7 +743,7 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
           </motion && motion.div>;
         </div>;
       </section>;
-    </Layout>;),}export default AIHealthcareDiagnosticsPro;</motion.div>;
+    </Layout>;)}export default AIHealthcareDiagnosticsPro;</motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (<motion.div;
                 key={index}
                 initial={{ opacity: 0, coordinate_y: 30 }}

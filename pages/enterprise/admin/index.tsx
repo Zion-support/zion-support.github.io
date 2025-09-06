@@ -13,7 +13,7 @@ type Invoice = {id: string;
   number: string;
   amount_usd: number;
   periodStartIso: string;
-  periodEndIso: string;status: string,}const COMPANY_ID  = 'cmp_acme';export default function CompanyAdmin() {const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members';)const [members, setMembers] = useState<Member[]>([])const [usage, setUsage] = useState<Usage | null>(null)const [activity, setActivity] = useState<any[]>([])const [invoices, setInvoices]  = useState<Invoice[]>([])useEffect(() => {fetch(`/api/enterprise/companies/${COMPANY_ID}/members`).then(r => r && r.json()).then(setMembers)fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`).then(r => r && r.json()).then(setUsage)fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`).then(r => r && r.json()).then(setActivity)fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`).then(r => r && r.json()).then(setInvoices)}, [])const seatsUsed  = members.length;return (<main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>;
+  periodEndIso: string;status: string}const COMPANY_ID  = 'cmp_acme';export default function CompanyAdmin() {const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members';)const [members, setMembers] = useState<Member[]>([])const [usage, setUsage] = useState<Usage | null>(null)const [activity, setActivity] = useState<any[]>([])const [invoices, setInvoices]  = useState<Invoice[]>([])useEffect(() => {fetch(`/api/enterprise/companies/${COMPANY_ID}/members`).then(r => r && r.json()).then(setMembers)fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`).then(r => r && r.json()).then(setUsage)fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`).then(r => r && r.json()).then(setActivity)fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`).then(r => r && r.json()).then(setInvoices)}, [])const seatsUsed  = members.length;return (<main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>;
   status: string;
 }const COMPANY_ID = 'cmp_acme';
 export default function CompanyAdmin() {const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members';
@@ -90,7 +90,7 @@ function CompanyAdmin() {const [tab, set_tab] = useState<'members' | 'usage' | '
   setMembers;
 }: {members: Member[];
   setMembers: (m: Member[]) => void;
-}) {const [name, setName] = useState('')const [email, setEmail] = useState('')const [role, setRole] = useState<Member['role']>('viewer')const add = async () => {const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ name, email, role }),})const created = await r && r.json()setMembers([created, ...members])setName('')setEmail('')setRole('viewer'){tab === 'activity' && (<ActivityTab events={activity} />;
+}) {const [name, setName] = useState('')const [email, setEmail] = useState('')const [role, setRole] = useState<Member['role']>('viewer')const add = async () => {const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ name, email, role })})const created = await r && r.json()setMembers([created, ...members])setName('')setEmail('')setRole('viewer'){tab === 'activity' && (<ActivityTab events={activity} />;
       )}{tab === 'billing' && (<BillingTab invoices={invoices} />;
       )}
     </main>;
@@ -278,7 +278,7 @@ function BillingTab() {return (<section>;
                 >;
                   Remove;
                 </button>              </td>;
-  usage: Usage;const [budgetCapUsd, setBudgetCapUsd]  = useState<number>(usage && usage.budgetCapUsd)const save = async () => {await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {method: 'PATCH',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ monthlyJobPosts, budgetCapUsd }),})setUsage({ monthlyJobPosts, budgetCapUsd })}return (<section>;
+  usage: Usage;const [budgetCapUsd, setBudgetCapUsd]  = useState<number>(usage && usage.budgetCapUsd)const save = async () => {await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {method: 'PATCH',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ monthlyJobPosts, budgetCapUsd })})setUsage({ monthlyJobPosts, budgetCapUsd })}return (<section>;
       <h2>Usage limits</h2>;
       <div;
         style={{display: 'grid',gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',gap: 12,maxWidth: 600;

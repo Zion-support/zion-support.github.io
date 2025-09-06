@@ -296,6 +296,30 @@ const accessibilityFeatures = [;
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion.div;
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Our Commitment
+                </h2>
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-gray-600 mb-6">
+                    At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance – it's about creating inclusive digital experiences that empower all users.
+                  </p>
+                  <p className="text-gray-600 mb-6">
+                    We continuously work to improve our products and services, incorporating feedback from users with disabilities and staying up-to-date with the latest accessibility standards and best practices.
+                  </p>
+                  <p className="text-gray-600 mb-6">
+                    If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
+                  </p>
+                </div>
+>:pages-disabled/accessibility.tsx.disabled
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

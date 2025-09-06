@@ -98,14 +98,14 @@ export default function ListingDetail() {// useParams may be untyped in this env
                         )}
                   <div className="flex p-4 gap-2 overflow-x-auto">;
                     {listing.images.map((image, index,) => (<div;
-                        key = {index,}
-                        onClick = {(,) => setSelectedImageIndex(index),}fallbackSrc="/placeholder.svg";
+                        key = {index}
+                        onClick = {(,) => setSelectedImageIndex(index)}fallbackSrc="/placeholder.svg";
                         className = {cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
-                        ),}
+                        )}
                       >;
                         <ImageWithRetry;
-                          src = {image,}
+                          src = {image}
                           alt={`${listing.title} - image ${index + 1}`}
 className='object-cover';
                           fallbackSrc='/placeholder.svg';
@@ -152,12 +152,12 @@ className='object-cover';
                           index === selectedImageIndex ? "border - zion - purple" : "border - transparent")}
                   <div className="flex p - 4 gap - 2 overflow - x-auto">;
                     {listing.images.map ((image, index, ) => (<div;
-                        key = {index, }
-                        on_click = {(, ) => setSelectedImageIndex (index), }
-                        class_name = {cn ("w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",index === selectedImageIndex ? "border - zion - purple" : "border - transparent"), }
+                        key = {index }
+                        on_click = {(, ) => setSelectedImageIndex (index) }
+                        class_name = {cn ("w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",index === selectedImageIndex ? "border - zion - purple" : "border - transparent") }
                       >;
                         <ImageWithRetry;
-                          src = {image, }
+                          src = {image }
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object - cover';
                           fallback_src='/placeholder.svg'                        />                          className="object - cover";
@@ -327,10 +327,10 @@ className='object-cover';
                   <div className="flex items-center gap-2 mb-6">;
                     <div className="flex items-center">;
                       {[...Array(5)].map((_, i,) => (<Star;
-                          key = {i,}
+                          key = {i}
                           className = {cn("h-5 w-5";
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light";
-                          ),}: 'text-zion-slate-light';
+                          )}: 'text-zion-slate-light';
                           )}/>;
                       ))}
                             "h-5 w-5",i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light";
@@ -374,9 +374,9 @@ className='object-cover';
                       providerId={listing.author.id}
                       buttonText='Buy Now';
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6';
-                      amount = {listing.price,}
-                      serviceId = {listing.id,}
-                      providerId = {listing.author.id,}
+                      amount = {listing.price}
+                      serviceId = {listing.id}
+                      providerId = {listing.author.id}
                       buttonText="Buy Now";
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                       onPaymentInitiated={(,) => {toast({<Button;
@@ -397,9 +397,9 @@ className='object-cover';
                       providerId={listing.author.id}
 buttonText='Buy Now';
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6';
-                      amount = {listing.price,}
-                      serviceId = {listing.id,}
-                      providerId = {listing.author.id,}
+                      amount = {listing.price}
+                      serviceId = {listing.id}
+                      providerId = {listing.author.id}
                       buttonText="Buy Now";
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                       onPaymentInitiated={(,) => {toast({title: 'Payment Processing';
@@ -503,12 +503,12 @@ buttonText='Buy Now';
                       provider_id={listing.author.id}
                       button_text='Buy Now';
                       className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6';
-                      amount = {listing.price, }
-                      service_id = {listing.id, }
-                      provider_id = {listing.author.id, }
+                      amount = {listing.price }
+                      service_id = {listing.id }
+                      provider_id = {listing.author.id }
                       button_text="Buy Now";
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
-                      onPaymentInitiated={(, ) => {toast ({title: 'Payment Processing',description: 'Redirecting to secure checkout...',})}}
+                      onPaymentInitiated={(, ) => {toast ({title: 'Payment Processing',description: 'Redirecting to secure checkout...'})}}
                     />) : (<Button;
                       on_click={handle_contact}
                       disabled={is_loading}
@@ -590,10 +590,10 @@ buttonText='Buy Now';
           </div>;
         </div>;
       </div>;<ChatWidget;
-        roomId = {listing && listing.id,}
-        recipientId = {listing && listing.author.id,}
-        isOpen = {isChatOpen,}
-        onClose = {() => setIsChatOpen(false),}
+        roomId = {listing && listing.id}
+        recipientId = {listing && listing.author.id}
+        isOpen = {isChatOpen}
+        onClose = {() => setIsChatOpen(false)}
       />;
       {/* Contact Dialog */}<Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>;

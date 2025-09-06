@@ -6,6 +6,18 @@
   getArticleById: (id: string) => null;
 }export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
   return null;export interface IntentMatch  {intentMatched: boolean;
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+  getArticleById: (id: string) => null;
+};
+
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here
+  return null;
+
+
+export interface IntentMatch {
+  intentMatched: boolean;
   matchedArticleIds: string[];
   confidence: number;
 }export function matchIntent(query: string,articles: HelpArticle[],): IntentMatch {const queryLower = query.toLowerCase()const matchedArticles: string[] = [];
@@ -28,6 +40,14 @@
   return null;
   // Add support functionality here;
   log_event: (event: any) => null,get_articles: () => [];
+  log_event: (event: any) => null,
+  get_articles: () => []
+}
+}
+}
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here;
+  return null;
 }
 }
 }export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;

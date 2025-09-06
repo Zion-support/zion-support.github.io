@@ -36,7 +36,7 @@ interface CertificationsFormProps  {resumeId: string;
   onBack: () => void;
   }const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert;
   }
-  const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert,issue_date: formatDateValue(cert.issue_date),expiration_date: formatDateValue(cert.expiration_date),})}const handleDelete = async (id: string) => {if (confirm('Are you sure you want to delete this certification?')) {await deleteCertification(id)}
+  const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert,issue_date: formatDateValue(cert.issue_date),expiration_date: formatDateValue(cert.expiration_date)})}const handleDelete = async (id: string) => {if (confirm('Are you sure you want to delete this certification?')) {await deleteCertification(id)}
   }
   return (<div className='space-y-6'>;
       <div>;
@@ -88,7 +88,7 @@ interface CertificationsFormProps  {resumeId: string;
               <Button;
                 type='button';
                 variant='outline';
-                onClick={() => {if (editingId) {setEditingId(null)form && form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: '',})} else {onBack()}
+                onClick={() => {if (editingId) {setEditingId(null)form && form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})} else {onBack()}
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}</Button>;
@@ -123,11 +123,11 @@ interface CertificationsFormProps  {resumeId: string;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'"}// Check condition;
 if ( {) {$2;
 }
-        form.reset ({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: '',})setEditingId (null)}
+        form.reset ({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})setEditingId (null)}
     } catch (err: any) {set_error (err.message || 'An error occurred')}
   }
-  const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({...cert,}
-  const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({issue_date: formatDateValue (cert.issue_date),expiration_date: formatDateValue (cert.expiration_date),})}
+  const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({...cert}
+  const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({issue_date: formatDateValue (cert.issue_date),expiration_date: formatDateValue (cert.expiration_date)})}
   const handle_delete = async (id: string, ) => {if () {) {$2;
 }
       await delete_certification (id)}
@@ -166,7 +166,7 @@ if ( {) {$2;
                 on_click={() => {// Check condition;
 if ( {) {$2;
 }
-                    setEditingId (null)form.reset ({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: '',})} else {on_back ()}
+                    setEditingId (null)form.reset ({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})} else {on_back ()}
                 }}
               >;
                 {editing_id ? 'Cancel' : 'Back'}

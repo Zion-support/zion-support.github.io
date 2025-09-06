@@ -55,8 +55,8 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
             </p>;
             <div className="mb - 8">;
               <AppStoreButtons;
-                appStoreUrl = {appStoreUrl, }
-                googlePlayUrl = {googlePlayUrl, }
+                appStoreUrl = {appStoreUrl }
+                googlePlayUrl = {googlePlayUrl }
               />;
             </div>;
             <Link href="/open - app">;

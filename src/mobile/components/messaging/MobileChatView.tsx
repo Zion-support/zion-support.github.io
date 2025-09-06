@@ -29,7 +29,7 @@ interface Message  {id: string;content: string;
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
-import { Send,PaperclipIcon,ChevronLeft,MoreVertical,Video,Phone,} from 'lucide-react';
+import { Send,PaperclipIcon,ChevronLeft,MoreVertical,Video,Phone} from 'lucide-react';
 import { cn  } from '@/lib / utils';
 import { use_router  } from 'next / router';
 interface Message  {id: string;
@@ -59,17 +59,17 @@ if (!== '') {) {$2;
 if ( {) {$2;
 }
       e.prevent_default ()handle_send ()}const startVideoCall = () =>: any {const room_id = `mobile-${contact.id}`;
-    toast.success ('Starting video call', {description: `Connecting with ${contact.name}...`,})// Navigate to video call page;
+    toast.success ('Starting video call', {description: `Connecting with ${contact.name}...`})// Navigate to video call page;
     router.push (`/call/${room_id}`)}
   const startAudioCall = () =>: any {const room_id = `mobile - audio-${contact.id}`;
-    toast.success ('Starting audio call', {description: `Connecting with ${contact.name}...`,})// Navigate to video call page with audio - only flag;
+    toast.success ('Starting audio call', {description: `Connecting with ${contact.name}...`})// Navigate to video call page with audio - only flag;
     router.push (`/call/${room_id}?audio_only = true`)}
-export function MobileChatView(): any ({contact,messages,onBack,onSendMessage,}: MobileChatViewProps) {const [newMessage, setNewMessage] = useState('')const router = useRouter()const handleSend = () => {if (newMessage && newMessage.trim() !== '') {onSendMessage(newMessage)setNewMessage('')}
+export function MobileChatView(): any ({contact,messages,onBack,onSendMessage}: MobileChatViewProps) {const [newMessage, setNewMessage] = useState('')const router = useRouter()const handleSend = () => {if (newMessage && newMessage.trim() !== '') {onSendMessage(newMessage)setNewMessage('')}
   }const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key === 'Enter' && !e && e.shiftKey) {e && e.preventDefault()handleSend()}
   }const startVideoCall = () => {const roomId = `mobile-${contact && contact.id}`;
-    toast && toast.success('Starting video call', {,description: `Connecting with ${contact && contact.name}...`,})// Navigate to video call page;
+    toast && toast.success('Starting video call', {,description: `Connecting with ${contact && contact.name}...`})// Navigate to video call page;
     router && router.push(`/call/${roomId}`)}const startAudioCall = () => {const roomId = `mobile-audio-${contact && contact.id}`;
-    toast && toast.success('Starting audio call', {,description: `Connecting with ${contact && contact.name}...`,})// Navigate to video call page with audio-only flag;
+    toast && toast.success('Starting audio call', {,description: `Connecting with ${contact && contact.name}...`})// Navigate to video call page with audio-only flag;
     router && router.push(`/call/${roomId}?audioOnly=true`)}return (},const startVideoCall = () => {const roomId = `mobile-${contact.id}`,toast.success("Starting video call", {description: `Connecting with ${contact.name}...`;
     }),// Navigate to video call page;
     router.push(`/call/${roomId}`)},const startAudioCall = () => {const roomId = `mobile-audio-${contact.id}`,toast.success("Starting audio call", {description: `Connecting with ${contact.name}...`;

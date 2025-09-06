@@ -66,9 +66,9 @@ import { useForm  } from 'react-hook-form';
 import { WorkExperience  } from '@/types/resume';
 import { Button  } from '@/components/ui/button';
 import { Calendar  } from '@/components/ui/calendar';
-import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';
+import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
 import { Input  } from '@/components/ui/input';
-  Popover,PopoverContent,PopoverTrigger,} from '@/components/ui/popover';
+  Popover,PopoverContent,PopoverTrigger} from '@/components/ui/popover';
 import { Textarea  } from '@/components/ui/textarea';
 import { cn  } from '@/lib/utils';
 import { Switch  } from '@/components/ui/switch';
@@ -76,15 +76,15 @@ import { format  } from 'date-fns';
 import { AIEnhancementButton  } from '@/components/ai-enhancement/AIEnhancementButton';
 import { AIEnhancementDialog  } from '@/components/ai-enhancement/AIEnhancementDialog';
 // Define form schema;
-const formSchema = z && z.object({company_name: z && z.string().min(1, 'Company name is required'),role_title: z && z.string().min(1, 'Role title is required'),start_date: z && z.date({required_error: 'Start date is required',}),end_date: z && z.date().optional(),is_current: z && z.boolean().default(false),description: z && z.string().optional(),location: z && z.string().optional(),})type FormValues = z && z.infer<typeof formSchema>;interface WorkExperienceItemFormProps  {initialData?: WorkExperience;
+const formSchema = z && z.object({company_name: z && z.string().min(1, 'Company name is required'),role_title: z && z.string().min(1, 'Role title is required'),start_date: z && z.date({required_error: 'Start date is required'}),end_date: z && z.date().optional(),is_current: z && z.boolean().default(false),description: z && z.string().optional(),location: z && z.string().optional()})type FormValues = z && z.infer<typeof formSchema>;interface WorkExperienceItemFormProps  {initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
-export function WorkExperienceItemForm(): any ({initialData,onSubmit,onCancel,}: WorkExperienceItemFormProps) {const [isEnhancementDialogOpen, setIsEnhancementDialogOpen]  = useState(false)import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",// Define form schema;
+export function WorkExperienceItemForm(): any ({initialData,onSubmit,onCancel}: WorkExperienceItemFormProps) {const [isEnhancementDialogOpen, setIsEnhancementDialogOpen]  = useState(false)import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",// Define form schema;
 const formSchema = z.object({company_name: z.string().min(1, "Company name is required"),role_title: z.string().min(1, "Role title is required"),start_date: z.date({required_error: "Start date is required"}),end_date: z.date().optional(),is_current: z.boolean().default(false),description: z.string().optional(),location: z.string().optional()}),type FormValues = z.infer<typeof formSchema>,interface WorkExperienceItemFormProps  {initialData?: WorkExperience,onSubmit: (data: WorkExperience) => Promise<void>,onCancel: () => void;
 }export function WorkExperienceItemForm() {const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),// Set up form;
   const form = useForm<FormValues>({resolver: zodResolver(formSchema),defaultValues: {company_name: initialData?.company_name || '',role_title: initialData?.role_title || '',start_date: initialData?.start_date;
         ? new Date(initialData && initialData.start_date): new Date(),end_date: initialData?.end_date;
-        ? new Date(initialData && initialData.end_date): undefined,is_current: initialData?.is_current || false,description: initialData?.description || '',location: initialData?.location || '',},})const { isSubmitting } = form && form.formState;
+        ? new Date(initialData && initialData.end_date): undefined,is_current: initialData?.is_current || false,description: initialData?.description || '',location: initialData?.location || ''}})const { isSubmitting } = form && form.formState;
   const watchIsCurrent = form && form.watch('is_current')const watchRoleTitle = form && form.watch('role_title')const watchCompanyName  = form && form.watch('company_name')const handleFormSubmit = async (values: FormValues,) => {// Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {id: initialData?.id,company_name: values && values.company_name, // Required;
       role_title: values && values.role_title, // Required;
@@ -360,7 +360,7 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
                       options={{enhancementType: 'work-description',content: field && field.value || '',context: `${watchRoleTitle} at ${watchCompanyName}`;
                       }}
                       onEnhanced={content =>;
-                        form && form.setValue('description', content, {shouldDirty: true,})}
+                        form && form.setValue('description', content, {shouldDirty: true})}
                       buttonText='Enhance with AI';
                     />;
                     <Button;
@@ -514,7 +514,7 @@ const formSchema = null;
         initial_content={form.get_values ('description') || ''}      />;
     </>)is current: z.boolean () .default (false)description: z.string () .optional ()location: z.string () .optional ()})type FormValues = z.infer < typeof form_schema>;
 //Create a properly typed WorkExperience object with all required fields const work_experience: WorkExperience = {await on_submit (work_experience)}
-setIsEnhancementDialogOpen (false)}defaultOptions={{enhancementType: 'work-description',content: form && form.getValues('description') || '',context: `${watchRoleTitle} at ${watchCompanyName}`,}}
+setIsEnhancementDialogOpen (false)}defaultOptions={{enhancementType: 'work-description',content: form && form.getValues('description') || '',context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form && form.getValues('description') || ''}      />;
     </>;
   )is current: z && z.boolean () .default (false)description: z && z.string () .optional ()location: z && z.string () .optional ()})type FormValues = z && z.infer<typeof formSchema>;

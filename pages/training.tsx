@@ -34,7 +34,7 @@ export default function Training() {return (<Layout;
           </div>;
         </div>;
 export default function Training() {export default function Training() {ursor/automate-test-improve-and-merge-code-646c;
-export default function Training() {GraduationCap,Users,Clock,Award,BookOpen,Video,Headphones,Code,Brain,Atom,Rocket,Shield,Zap,Star,CheckCircle,ArrowRight,ChevronDown,ChevronUp,Play,Download,ExternalLink,Calendar,MapPin,DollarSign,TrendingUp,Target,Lightbulb,Building,Globe,Server,} from 'lucide-react';export default function TrainingPage() {const [selectedCategory, setSelectedCategory] = useState('all')const [expandedProgram, setExpandedProgram] = useState<number | null>(null),const trainingCategories = [;
+export default function Training() {GraduationCap,Users,Clock,Award,BookOpen,Video,Headphones,Code,Brain,Atom,Rocket,Shield,Zap,Star,CheckCircle,ArrowRight,ChevronDown,ChevronUp,Play,Download,ExternalLink,Calendar,MapPin,DollarSign,TrendingUp,Target,Lightbulb,Building,Globe,Server} from 'lucide-react';export default function TrainingPage() {const [selectedCategory, setSelectedCategory] = useState('all')const [expandedProgram, setExpandedProgram] = useState<number | null>(null),const trainingCategories = [;
     { id: 'all', name: 'All Programs', count: 24 },{ id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },{ id: 'quantum-computing', name: 'Quantum Computing', count: 6 },{ id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },{ id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
   ];const featuredPrograms = [;
     {id: 1,title: 'AI Consciousness Developer Certification',description:;
@@ -55,7 +55,7 @@ export default function Training() {GraduationCap,Users,Clock,Award,BookOpen,Vid
     },{title: 'Cloud Architecture & DevOps',description:;
         'Master cloud computing and DevOps practices for scalable applications',duration: '60 hours',level: 'Intermediate',format: 'Hybrid',price: '$499',rating: 4.8,students: 890,features: [;
         'Cloud platform fundamentals','Containerization with Docker','Kubernetes orchestration','CI/CD pipelines','Infrastructure as Code','Monitoring and logging';
-      ],instructor: 'Michael Chen',category: 'Cloud & DevOps',}
+      ],instructor: 'Michael Chen',category: 'Cloud & DevOps'}
   ];const allPrograms = [;
     // AI Consciousness Programs;
     {id: 4,title: 'AI Consciousness Fundamentals',description:;
@@ -177,7 +177,7 @@ import { motion  } from 'framer-motion';
     },{title: 'Full-Stack Development',description: 'Build complete web applications with modern technologies',duration: '80 hours',level: 'Beginner',format: 'Hybrid',price: '$599',rating: 4.7,students: 2100,features: [;
         'Frontend development (React)','Backend development (Node.js)','Database design','API development','Deployment strategies','Project portfolio';
       ],instructor: 'Emily Davis',category: 'Development';
-    },];const allPrograms = [;
+    }];const allPrograms = [;
     // AI Consciousness Programs;
     {id: 4,title: 'AI Consciousness Fundamentals',description: 'Introduction to artificial consciousness concepts and basic implementation.',category: 'ai-consciousness',duration: '6 weeks',level: 'Beginner',price: '$1,299',rating: 4.7,students: '2,341',icon: <Brain className="w-8 h-8" />;
     }{id: 5,title: 'Advanced AI Consciousness Architecture',description: 'Deep dive into complex AI consciousness system design and optimization.',category: 'ai-consciousness',duration: '14 weeks',level: 'Advanced',price: '$3,999',rating: 4.9,students: '567',icon: <Brain className="w-8 h-8" />;

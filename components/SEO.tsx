@@ -3,6 +3,9 @@
 import React from 'react';
 import Head from 'next/head';
 interface SEOProps  {title?: string;
+
+interface SEOProps {
+  title?: string;
   description?: string;
   canonical?: string;
   ogImage?: string;
@@ -26,7 +29,7 @@ import Head from './next / head';interface SEOProps  {interface SEOProps  {title
   description?: string;
   keywords?: string;
 }
-}) => {const SEO: React.FC<SEOProps> = ({title = "Zion Tech Group - Technology Solutions",description = "Leading provider of AI services, IT solutions, and micro SaaS development.",keywords = "AI services, IT solutions, micro SaaS, technology consulting",}) => {return (}
+}) => {const SEO: React.FC<SEOProps> = ({title = "Zion Tech Group - Technology Solutions",description = "Leading provider of AI services, IT solutions, and micro SaaS development.",keywords = "AI services, IT solutions, micro SaaS, technology consulting"}) => {return (}
   image?: string;
   url?: string;
   type?: string;export default function SEO() {const router = useRouter()const canonicalUrl = url || `https://zion.app${router.asPath}`;
@@ -85,3 +88,14 @@ export default SEO;interface SEOProps  {title?: string;
       <link rel="manifest" href="/site.webmanifest" />;
     </Head>;
   )}export default SEO;
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+    </Head>
+  );
+}

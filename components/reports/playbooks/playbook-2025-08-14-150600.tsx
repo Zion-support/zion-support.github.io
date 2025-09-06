@@ -13,6 +13,19 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
         <meta;
           property='og:description';
           content='A practical step-by-step playbook for reliable autonomous delivery.';
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>;
+      <Head>;
+        <title>Playbook — Autonomous Delivery</title>;
+        <meta
+          name='description'
+          content='A practical step-by-step playbook for reliable autonomous delivery.'
+        />;
+        <meta property='og:title' content='Playbook — Autonomous Delivery' />;
+        <meta
+          property='og:description'
+          content='A practical step-by-step playbook for reliable autonomous delivery.'
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -23,7 +36,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
         <div;
           className='mt-4';
           dangerouslySetInnerHTML={{__html:;
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>','<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>','<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>',}}
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>','<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>','<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>'}}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
           Auto-generated by Cloud Playbook Factory.;
@@ -32,6 +45,13 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
     </div>;
   )export default function Page() {'<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';
+        <div
+          className='mt-4'
+          dangerouslySetInnerHTML={{
+            __html:
+
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>',;
+
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -39,6 +59,35 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
         </p>;
       </main>;
   )export default function Page() {return (export default function Page() {return (</div>;)export default function Page() {return (export default function Page() {export default function Page() {export default function Page() {export default function Page() {return (}export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;
+    </div>;
+  );export default function Page() {;
+
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>'
+
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'>
+          Auto-generated by Cloud Playbook Factory.
+        </p>
+      </main>
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+
+    </div>;
+
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+
+}
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Playbook — Autonomous Delivery</title>;
         <meta name="description" content="A practical step-by-step playbook for reliable autonomous delivery." />;
@@ -58,6 +107,14 @@ export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;
+  );
+}
+export default /**
+ * Page - Function description
+ */
+function Page() {
+  return (
+    <div className='min - h-screen bg - slate - 950 text - white'>;
       <Head>;
         <title > Playbook — Autonomous Delivery</title>;
         <meta;
@@ -80,6 +137,9 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
           dangerouslySetInnerHTML={{__html:;
               '<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75">Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';
               '<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75">Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';
+          dangerouslySetInnerHTML={{
+            __html:;
+              '<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75">Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>'
           }}
         />;
         <p className='mt - 6 text - white / 60 text - sm'>;
@@ -90,6 +150,12 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
  * Page - Function description;
  */;
 function Page() {return (<div className="min - h-screen bg - slate - 950 text - white">;
+    </div>);export default /**
+ * Page - Function description
+ */
+function Page() {
+  return (
+    <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
         <title > Playbook — Autonomous Delivery</title>;
         <meta name="description" content="A practical step - by - step playbook for reliable autonomous delivery." />;
@@ -147,3 +213,68 @@ function Page() {return (<div className="min - h-screen bg - slate - 950 text - 
     </div>;
   )})} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 })
+    </div>);
+}
+
+
+
+
+      <Head>
+        <title>Playbook — Autonomous Delivery</title>
+        <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Playbook — Autonomous Delivery&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>
+        <h1 className='text-3xl font-extrabold'>
+          Playbook — Autonomous Delivery
+        </h1>
+        <div
+          className='mt-4'
+          dangerouslySetInnerHTML={{
+            __html:
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>'
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>'
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'>
+          Auto-generated by Cloud Playbook Factory.
+        </p>
+      </main>
+    </div>
+    </div>;
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Playbook — Autonomous Delivery</title>
+        <meta name="description" content="A practical step-by-step playbook for reliable autonomous delivery." />
+        <meta property="og:title" content="Playbook — Autonomous Delivery" />
+        <meta property="og:description" content="A practical step-by-step playbook for reliable autonomous delivery." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Playbook — Autonomous Delivery</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>
+      </main>
+
+    </div>
+  );
+}
+    </div>;
+  );
+}
+
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+

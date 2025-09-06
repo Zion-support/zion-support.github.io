@@ -118,7 +118,7 @@ default:;
     }
     return iconMap[category] |<Sparkles className='w-5 h-5' />;
   }const allServices = [;
-    ...innovativeMicroSaasServices2026,...specializedITSolutions2026,...emergingTechServices2026,];const categories = [;
+    ...innovativeMicroSaasServices2026,...specializedITSolutions2026,...emergingTechServices2026];const categories = [;
     'all','Business Intelligence & Analytics','Content Creation & Marketing','Customer Service & Support','E-commerce & Retail','HR & Recruitment','Financial Management','Project Management','Education & Training','Healthcare & Medical','Cloud Infrastructure & DevOps','Cybersecurity & Threat Intelligence','Data Engineering & Analytics','API Management & Integration','Network Monitoring & Management','Database Management & Optimization','IT Service Management','Backup & Disaster Recovery','Quantum Computing & AI','Blockchain & Web3','Internet of Things (IoT)','Edge Computing & 5G','AR/VR & Immersive Technology','Robotics & Automation','Digital Twin & Simulation'  ];
     'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management';
     'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization';
@@ -152,7 +152,7 @@ default:;
           case '400 - 600':;
             return price > 400 && price <= 600;
           case '600+':;
-            return price > 600;default: return true,}
+            return price > 600;default: return true}
       })()return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''))case 'price-high':;
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''))case 'rating':;return matches_search && matches_category && matches_price;  })const sorted_services = [...filtered_services].sort ((a, b) => {switch (sort_by) {case 'popularity':;
         return b.popular ? 1 : -1;

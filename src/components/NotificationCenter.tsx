@@ -25,21 +25,21 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         <NotificationHeader;
-          unreadCount = {unreadCount,}
-          onMarkAllAsRead = {handleMarkAllAsRead,}
+          unreadCount = {unreadCount}
+          onMarkAllAsRead = {handleMarkAllAsRead}
         />;<NotificationFilter;
-          filter = {filter as FilterType,}
-          onFilterChange = {handleFilterChange,})}
+          filter = {filter as FilterType}
+          onFilterChange = {handleFilterChange})}
         </Button>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         />;<NotificationList;
-          loading = {loading,}
-          error = {error,}
-          notifications = {filteredNotifications,}
-          onMarkAsRead = {markAsRead,}
-          onDismiss = {dismissNotification,}
-          onRetry = {fetchNotifications,}/>;
+          loading = {loading}
+          error = {error}
+          notifications = {filteredNotifications}
+          onMarkAsRead = {markAsRead}
+          onDismiss = {dismissNotification}
+          onRetry = {fetchNotifications}/>;
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
@@ -67,20 +67,20 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p - 0 bg - zion - blue border - zion - blue - light max - h-[500px] flex flex - col">;
         <NotificationHeader;
-          unread_count = {unread_count, }
-          onMarkAllAsRead = {handleMarkAllAsRead, }
+          unread_count = {unread_count }
+          onMarkAllAsRead = {handleMarkAllAsRead }
         />;
         <NotificationFilter;
-          filter = {filter as FilterType, }
-          onFilterChange = {handleFilterChange, }
+          filter = {filter as FilterType }
+          onFilterChange = {handleFilterChange }
         />;
         <NotificationList;
-          loading = {loading, }
-          error = {error, }
-          notifications = {filtered_notifications, }
-          onMarkAsRead = {markAsRead, }
-          on_dismiss = {dismiss_notification, }
-          on_retry = {fetch_notifications, }
+          loading = {loading }
+          error = {error }
+          notifications = {filtered_notifications }
+          onMarkAsRead = {markAsRead }
+          on_dismiss = {dismiss_notification }
+          on_retry = {fetch_notifications }
         />;
         <NotificationFooter on_close={() => set_open (false)} />;
       </PopoverContent>;

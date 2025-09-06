@@ -12,7 +12,7 @@ export const safeEnv = {NODE_ENV:;
     '',NEXT_PUBLIC_SUPABASE_ANON_KEY:;
     (typeof (globalThis as any).process !== 'undefined' &&;
       (globalThis as any).process && process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) ||;
-    '',} as const;// Safe environment getter function;
+    ''} as const;// Safe environment getter function;
 export function getEnv(key: string, defaultValue = ''): string {if (typeof (globalThis as any).process !== 'undefined' &&;
     (globalThis as any).process.env &&;
     typeof (globalThis as any).process.env[key] === 'string';
@@ -33,9 +33,9 @@ export const processEnv =;
 */;
 // Define safe defaults for environment variables;
 const default_env = {NODE_ENV: 'production', // Default to production for safety;
-  NEXT_PUBLIC_APP_URL: '',NEXT_PUBLIC_SUPABASE_URL: '',NEXT_PUBLIC_SUPABASE_ANON_KEY: '',}
+  NEXT_PUBLIC_APP_URL: '',NEXT_PUBLIC_SUPABASE_URL: '',NEXT_PUBLIC_SUPABASE_ANON_KEY: ''}
 // Create a safe process object;
-const createProcessObject = () =>: any ({env: { ...default_env },versions: {},platform: 'browser',arch: 'x64',version: '18.0.0',browser: true,})// Ensure process is available on global_this;
+const createProcessObject = () =>: any ({env: { ...default_env },versions: {},platform: 'browser',arch: 'x64',version: '18.0.0',browser: true})// Ensure process is available on global_this;
 // Check condition;
 if ( {) {$2;
 }
@@ -64,7 +64,7 @@ export const safe_env = {NODE_ENV:;
     '',NEXT_PUBLIC_SUPABASE_ANON_KEY:;
     (typeof (global_this as any).process !== 'undefined' &&;
       (global_this as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) ||;
-    '',} as const;
+    ''} as const;
 // Safe environment getter function;
 export function get_env (key: string, default_value = ''): string {// Check condition;
 if (.process !== 'undefined' &&) {$2;
@@ -116,4 +116,44 @@ export default safe_env;/**;
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.;
  */;
 // Define safe defaults for environment variables;
-        NODE_ENV: 'production',NEXT_PUBLIC_APP_URL: '',NEXT_PUBLIC_SUPABASE_URL: '',NEXT_PUBLIC_SUPABASE_ANON_KEY: '',}console.log('✅ Environment polyfill loaded successfully')export default safeEnv;
+        NODE_ENV: 'production',NEXT_PUBLIC_APP_URL: '',NEXT_PUBLIC_SUPABASE_URL: '',NEXT_PUBLIC_SUPABASE_ANON_KEY: ''}console.log('✅ Environment polyfill loaded successfully')export default safeEnv;
+/**
+ * Environment polyfill for server-side rendering compatibility
+ * Provides fallbacks for Node.js environment variables
+ */
+
+// Polyfill for process.env in browser environment
+if (typeof window !== 'undefined' && typeof process === 'undefined') {
+  (window as any).process = {
+    env: {
+      NODE_ENV: 'development',
+      ...(window as any).__ENV__ || {}
+    }
+  };
+}
+
+// Ensure process.env is available
+if (typeof process === 'undefined') {
+  (global as any).process = {
+    env: {
+      NODE_ENV: 'development',
+      ...(global as any).__ENV__ || {}
+    }
+  };
+}
+
+// Export environment utilities
+export const getEnvVar = (key: string, defaultValue?: string): string => {
+  if (typeof window !== 'undefined') {
+    return (window as any).__ENV__?.[key] || process.env[key] || defaultValue || '';
+  }
+  return process.env[key] || defaultValue || '';
+};
+
+export const isDevelopment = (): boolean => {
+  return getEnvVar('NODE_ENV', 'development') === 'development';
+};
+
+export const isProduction = (): boolean => {
+  return getEnvVar('NODE_ENV', 'development') === 'production';
+};

@@ -1,6 +1,6 @@
 
 ;
-    {Monitor,Brain,Cpu,Zap,Shield,Globe,Rocket,Target,TrendingUp,Users,CheckCircle,ArrowRight,Star,Award,Clock,DollarSign,Database,Network,Server,Laptop,Smartphone,} from 'lucide-react';const AIPoweredITAssetManagement = () => {const features = [;
+    {Monitor,Brain,Cpu,Zap,Shield,Globe,Rocket,Target,TrendingUp,Users,CheckCircle,ArrowRight,Star,Award,Clock,DollarSign,Database,Network,Server,Laptop,Smartphone} from 'lucide-react';const AIPoweredITAssetManagement = () => {const features = [;
     {icon: Brain,title: 'AI-Powered Asset Discovery',description:;
         'Intelligent detection and cataloging of all IT assets across your network',color: 'from-purple-500 to-pink-500';
     },{icon: Monitor,title: 'Real-Time Monitoring',description:;
@@ -676,4 +676,4 @@ className='flex items-center space-x-3';
           </div>;
         </section>;
       </div>;
-    </>)},export default AIPoweredITAssetManagement,},
+    </>)},export default AIPoweredITAssetManagement},

@@ -18,7 +18,7 @@ const Page = () => {return (<MainLayout;
     </MainLayout>;
   )}export default Page;
 ursor/automate-test-improve-and-merge-code-646c;
-  Users,MapPin,Clock,DollarSign,ArrowRight,Heart,Star,Award,Coffee,Zap,Shield,Briefcase,GraduationCap,Globe,CheckCircle,} from "lucide-react";const Careers: React.FC<CareersProps> = ({ className }) => {} from "lucide-react";
+  Users,MapPin,Clock,DollarSign,ArrowRight,Heart,Star,Award,Coffee,Zap,Shield,Briefcase,GraduationCap,Globe,CheckCircle} from "lucide-react";const Careers: React.FC<CareersProps> = ({ className }) => {} from "lucide-react";
 } from "lucide-react";
 const jobOpenings = [;
   {id: 1;

@@ -41,7 +41,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export 
 }</div> <div className="text-sm text-muted-foreground" > Posted by {post.authorName ;
 }{timeAgo ";
 }</div> <div className="flex flex-wrap gap-2 mt-2" > {post.tags?.map (tag => (<Badge key= {tag ";
-}variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {tag ;const PostCardComponent = ({ post, compact = false }: PostCardProps) => {logInfo('PostCardComponent rendering with post:', {data: post ? post.id : 'NO POST',})const timeAgo = formatDistanceToNow(new Date(post.createdAt), {addSuffix: true,})>;
+}variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {tag ;const PostCardComponent = ({ post, compact = false }: PostCardProps) => {logInfo('PostCardComponent rendering with post:', {data: post ? post.id : 'NO POST'})const timeAgo = formatDistanceToNow(new Date(post.createdAt), {addSuffix: true})>;
       <p>DEBUG: PostCard ID: {post?.id}</p>;
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>;
         <Avatar className='h-10 w-10'>;

@@ -15,10 +15,10 @@ interface EmptyStateProps  {class ErrorBoundary extends React.Component {constru
     }return this.props.children;
   }
 }
-import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger,} from '@/components/ui/tooltip';
+import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
 interface EmptyStateProps  {import Link from 'next / link';
 import { Button  } from '@/components / ui / button';
-import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger,} from '@/components / ui / tooltip';
+import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
 interface EmptyStateProps  {title: string;
   subtitle: string;
@@ -37,7 +37,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({title;
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>;
 import { Button } from '@/components/ui/button',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
 }interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
-const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSession,}) => {  return (<div className='text-center py-16'>;
+const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSession}) => {  return (<div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
       </div>;
@@ -70,7 +70,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSessi
       </TooltipProvider>;
     </div>;
   )export default EmptyState;}export default EmptyState;has_session: boolean;
-const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_session,}) => {  return (<div className='text - center py - 16'>;
+const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_session}) => {  return (<div className='text - center py - 16'>;
       <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
       </div>;

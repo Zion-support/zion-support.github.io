@@ -12,6 +12,15 @@ ursor/add-new-services-and-deploy-updates-0462;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 :temp_exclude/src.disabled/layout/MainNavigation.jsx;
+
+export default function MainNavigation({}: MainNavigationProps) {
+  return (
+    <div>
+      <h1>MainNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
 }
 :src.disabled/layout/MainNavigation.jsx;
 }
@@ -20,4 +29,9 @@ ursor/add-new-services-and-deploy-updates-0462;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 :temp_exclude/src.disabled/layout/MainNavigation.jsx;
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/layout/MainNavigation.jsx
 }

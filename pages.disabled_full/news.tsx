@@ -3,3 +3,5 @@ const Head from "next/head"; import Link from "next/link"; export default functi
 import React from 'react';
 interface NewsProps  {// Add props here as needed;
 =>;
+interface NewsProps {
+  // Add props here as needed

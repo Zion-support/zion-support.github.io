@@ -8,7 +8,7 @@ import { TalentCardSkills  } from './TalentCardSkills';
 interface TalentCardContentProps  {summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-}export function TalentCardContent(): any ({summary,bio,timezone,skills,}: TalentCardContentProps) {const [isHovering, setIsHovering]  = useState(false)return (<div>;
+}export function TalentCardContent(): any ({summary,bio,timezone,skills}: TalentCardContentProps) {const [isHovering, setIsHovering]  = useState(false)return (<div>;
       {/* Location */}
       {timezone && (<div className='flex items-center gap-2 text-sm text-zion-slate-light mb-3'>;
           <MapPin className='h-3 w-3' />;

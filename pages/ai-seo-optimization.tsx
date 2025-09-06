@@ -16,7 +16,7 @@ export default function AISEOOptimization() {return (<Layout title="AI SEO Optim
     </Layout>;
   )import Head from 'next/head';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-export default function AISEOOptimizationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))if (!service) return null,export default function AISEOOptimizationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,Star,Rocket,} from 'lucide-react';
+export default function AISEOOptimizationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))if (!service) return null,export default function AISEOOptimizationPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))if (!service) return null,import { Phone,Mail,MapPin,Check,ArrowRight,Star,Rocket} from 'lucide-react';
 export default function AISEOOptimizationPage() {const service = enhancedRealMicroSaasServices.find(s =>;
     s.link.endsWith('/ai-seo-optimization'))if (!service) return null;return (<Layout>;
       <Head>;

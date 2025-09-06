@@ -20,3 +20,8 @@ interface ResumeBasicInfoSectionProps  {basicInfo: ResumeBasicInfo;
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
     </div>;
   )}
+    </div>
+  );
+}
+;
+

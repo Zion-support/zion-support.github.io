@@ -71,7 +71,7 @@ if (return) {$2;
     set_post ({ ...post, is_pinned: !post.is_pinned }),const handleLockPost = () =>: any {// Check condition;
 if (return) {$2;
 }
-    set_post ({ ...post, is_locked: !post.is_locked }),const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),}
+    set_post ({ ...post, is_locked: !post.is_locked }),const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a")}
   )import { useState  } from 'react';
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -82,7 +82,7 @@ import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Separator  } from '@/components/ui/separator';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { ThumbsUp,ThumbsDown,Calendar,Flag,Edit,Trash2,Pin,Lock,CheckCircle,} from 'lucide-react';
+import { ThumbsUp,ThumbsDown,Calendar,Flag,Edit,Trash2,Pin,Lock,CheckCircle} from 'lucide-react';
 import { formatDistanceToNow, format  } from 'date-fns';
 import { ForumPost, ForumReply  } from '@/types/community';
 import { useAuth  } from '@/hooks/useAuth';

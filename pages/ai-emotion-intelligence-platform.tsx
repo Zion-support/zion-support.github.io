@@ -14,7 +14,7 @@ const features = [;
     description: 'Get instant notifications for negative emotions requiring immediate attention';
 const contactInfo = {description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time';
   }
-  CheckCircle,ArrowRight,Star,TrendingUp,Phone,Zap,DollarSign,Shield,Mail,MapPin,Brain,Sparkles,Users,Clock,Award,Eye,Heart,MessageCircle,BarChart3,Globe,Smartphone,} from 'lucide-react';}const features = [;
+  CheckCircle,ArrowRight,Star,TrendingUp,Phone,Zap,DollarSign,Shield,Mail,MapPin,Brain,Sparkles,Users,Clock,Award,Eye,Heart,MessageCircle,BarChart3,Globe,Smartphone} from 'lucide-react';}const features = [;
   {icon: Eye,title: 'Real-time Emotion Detection',description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time';
   }
   {icon: MessageCircle;

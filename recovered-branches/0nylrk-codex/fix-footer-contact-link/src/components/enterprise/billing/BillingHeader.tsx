@@ -12,20 +12,43 @@ function BillingHeader() {return (export function BillingHeader() {return (<div 
     <div className="space-y-2">;
       <div className="flex items - center justify-between">;
         <h1 className="text - 3xl font - bold tracking-tight">;
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Download, FileText, Mail, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, FileText, Mail, BarChart3 } from "lucide-react",
+import { Link } from "react-router-dom",
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Download, FileText, Mail, BarChart3  } from './lucide-react';
+import { Link  } from './react-router-dom';
+export /**
+ * BillingHeader - Function description
+ */
+function BillingHeader() {
+  return (
+    <div className="space - y-2">;
+      <div className="flex items - center justify - between">;
+        <h1 className="text - 3xl font - bold tracking - tight">;
           Billing & Invoices;
         </h1>;
-        <div className="flex gap-2">;
-          <Button variant="outline" size="sm" className="gap-1">;
-            <Download className="h - 4 w-4" />;
+        <div className="flex gap - 2">;
+          <Button variant="outline" size="sm" className="gap - 1">;
+            <Download className="h - 4 w - 4" />;
             Export;
           </Button>;
-          <Button variant="outline" size="sm" className="gap-1">;
-            <Mail className="h - 4 w-4" />;
+          <Button variant="outline" size="sm" className="gap - 1">;
+            <Mail className="h - 4 w - 4" />;
             Contact Billing Support;
           </Button>;
-          <Button variant="outline" size="sm" className="gap-1" as_child>;
+          <Button variant="outline" size="sm" className="gap - 1" as_child>;
             <Link to="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w-4" />;<div className="flex items-center justify-between">;
+              <BarChart3 className="h - 4 w - 4" />;
+
+    <div className="space-y-2">;
+      <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold tracking-tight">;
           Billing & Invoices;
         </h1>;
@@ -47,6 +70,65 @@ import { Button  } from '@/components/ui/button';
           <Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link to="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;export function BillingHeader() {return (<div className="space-y-2">;
+              <BarChart3 className="h-4 w-4" />;
+              Analytics;
+            </Link>;
+          </Button>;
+        </div>;
+      </div>;
+
+      <p className="text - muted - foreground">;
+        Manage your subscription, view invoice history, and update payment;
+        methods.;
+      </p>;
+    </div>);
+
+}
+
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+export function BillingHeader() {
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
+        <div className="flex gap-2">
+          <Button variant="outline" size="sm" className="gap-1">
+            <Download className="h-4 w-4" />
+            Export
+          </Button>
+          <Button variant="outline" size="sm" className="gap-1">
+            <Mail className="h-4 w-4" />
+            Contact Billing Support
+          </Button>
+          <Button variant="outline" size="sm" className="gap-1" asChild>
+            <Link to="/dashboard/client/analytics">
+              <BarChart3 className="h-4 w-4" />
+              Analytics
+            </Link>
+          </Button>
+        </div>
+      </div>
+      <p className="text-muted-foreground">
+        Manage your subscription, view invoice history, and update payment methods.
+      </p>
+
+    </div>
+  );
+}
+    </div>;
+  );
+}
+    </div>
+  )
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Download, FileText, Mail, BarChart3 } from "lucide-react",;
+export function BillingHeader() {;
+  return (;
+    <div className="space-y-2">;
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>;
         <div className="flex gap-2">;
@@ -99,3 +181,9 @@ import { Button  } from '@/components/ui/button';
       </p>;
     </div>;
   )}}}
+  );
+}
+;
+
+
+}

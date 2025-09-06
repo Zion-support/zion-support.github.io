@@ -43,7 +43,7 @@ const toastVariants = cva("group pointer-events-auto relative flex w-full items-
 ))ToastViewport && ToastViewport.displayName = ToastPrimitives && ToastPrimitives.Viewport.displayName;const toastVariants = cva('group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full',{variants: {variant: {default: 'border bg-background text-foreground',destructive:;
           'destructive border-destructive bg-destructive text-destructive-foreground',success:;
           'border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100',warning:;
-          'border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100',info: 'border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100',},},defaultVariants: {variant: 'default',},}
+          'border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100',info: 'border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100'}},defaultVariants: {variant: 'default'}}
 )const Toast = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Root>,React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Root> &;
     VariantProps<typeof toastVariants>;
@@ -55,7 +55,7 @@ const toastVariants = cva("group pointer-events-auto relative flex w-full items-
 const toast_variants = cva ('group pointer - events - auto relative flex w - full items - center justify - between space - x-4 overflow - hidden rounded - md border p - 6 pr - 8 shadow - lg transition - all data-[swipe = cancel]:translate - x-0 data-[swipe = end]:translate - x-[var (--radix - toast - swipe - end - x)] data-[swipe = move]:translate - x-[var (--radix - toast - swipe - move - x)] data-[swipe = move]:transition - none data-[state = open]:animate - in data-[state = closed]:animate - out data-[swipe = end]:animate - out data-[state = closed]:fade - out - 80 data-[state = closed]:slide - out - to - right - full data-[state = open]:slide - in - from - top - full data-[state = open]:sm:slide - in - from - bottom - full',{variants: {variant: {default: 'border bg - background text - foreground',destructive:;
           'destructive border - destructive bg - destructive text - destructive - foreground',success:;
           'border - green - 500 bg - green - 50 text - green - 900 dark:bg - green - 900 / 20 dark:text - green - 100',warning:;
-          'border - yellow - 500 bg - yellow - 50 text - yellow - 900 dark:bg - yellow - 900 / 20 dark:text - yellow - 100',info: 'border - blue - 500 bg - blue - 50 text - blue - 900 dark:bg - blue - 900 / 20 dark:text - blue - 100',},},default_variants: {variant: 'default',},}
+          'border - yellow - 500 bg - yellow - 50 text - yellow - 900 dark:bg - yellow - 900 / 20 dark:text - yellow - 100',info: 'border - blue - 500 bg - blue - 50 text - blue - 900 dark:bg - blue - 900 / 20 dark:text - blue - 100'}},default_variants: {variant: 'default'}}
 )const Toast = React.forward_ref<;
   React.ElementRef < typeof ToastPrimitives.Root>,React.ComponentPropsWithoutRef < typeof ToastPrimitives.Root> &;
     VariantProps < typeof toast_variants>;
@@ -65,7 +65,7 @@ const ToastAction = React.forward_ref<;
 >(({ class_name, ...props }, ref, ) => (<ToastPrimitives.Action;
     ref={ref}
     className={cn('inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive',      className;
-    ),}
+    )}
     {...props}/>;
 ))ToastAction && ToastAction.displayName = ToastPrimitives && ToastPrimitives.Action.displayName;const ToastClose = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Close>,React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Close>;

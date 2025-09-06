@@ -7,7 +7,7 @@ export default function ComposePage() {try {const router = useRouter()const { ty
     type,recipientId,recipientName,jobId,jobTitle,talentId,talentName;
   } = router.query as Record<string, string>;const { user, loading } = useCurrentUser()const [message, setMessage] = React.useState('')const [linkUrl, setLinkUrl] = React.useState('')const [file, setFile] = React.useState<File | null>(null)const [sending, setSending]  = React.useState(false)import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage() {const router = useRouter()const {type,recipientId,recipientName,jobId,jobTitle,talentId,talentName,} = router && router.query as Record<string, string>;  const { user, loading } = useCurrentUser()const [message, setMessage] = React && React.useState('')const [linkUrl, setLinkUrl] = React && React.useState('')const [file, setFile] = React && React.useState<File | null>(null)const [sending, setSending] = React && React.useState(false)React && React.useEffect(() => {if (!loading && !user) router && router.replace('/auth')}, [loading, user, router])if (!user) return null;const headerTitle =;
+export default function ComposePage() {const router = useRouter()const {type,recipientId,recipientName,jobId,jobTitle,talentId,talentName} = router && router.query as Record<string, string>;  const { user, loading } = useCurrentUser()const [message, setMessage] = React && React.useState('')const [linkUrl, setLinkUrl] = React && React.useState('')const [file, setFile] = React && React.useState<File | null>(null)const [sending, setSending] = React && React.useState(false)React && React.useEffect(() => {if (!loading && !user) router && router.replace('/auth')}, [loading, user, router])if (!user) return null;const headerTitle =;
     type === 'invite';
       ? `Invite ${recipientName || talentName || 'Talent'}`;
       : type === 'apply';
@@ -41,7 +41,7 @@ export default function ComposePage() {const router = useRouter()const {type,rec
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({let attachmentBase64: string | undefined;    if (file) {const buff = await file && file.arrayBuffer()const base64 = Buffer && Buffer.from(buff).toString('base64')const mime = file && file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime}base64,${base64}`;    }
-    const res = await fetch('/api/messages/compose', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({recipientId: recipientId || talentId,body: message,linkUrl: linkUrl || undefined,attachmentBase64,attachmentName: file?.name,context,}),})const data = await res && res.json()setSending(false)if (data?.conversation?.id)router && router.replace(`/messages/${data && data.conversation.id}`)}return (<div className='min-h-screen bg-gray-50'>;
+    const res = await fetch('/api/messages/compose', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({recipientId: recipientId || talentId,body: message,linkUrl: linkUrl || undefined,attachmentBase64,attachmentName: file?.name,context})})const data = await res && res.json()setSending(false)if (data?.conversation?.id)router && router.replace(`/messages/${data && data.conversation.id}`)}return (<div className='min-h-screen bg-gray-50'>;
       <div className='max-w-2xl mx-auto p-4'>;
         <div className='bg-white rounded-xl shadow-sm'>;
           <div className='p-4 border-b'>;

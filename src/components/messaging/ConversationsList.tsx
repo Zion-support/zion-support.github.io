@@ -71,7 +71,7 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
   activeConversation: Conversation | null;
   onConversationSelect: (conversation: Conversation) => void;
   loading?: boolean;
-}export const ConversationsList: React.FC<ConversationsListProps> = ({conversations,activeConversation,onConversationSelect,loading = false,}) => {const sortedConversations = useMemo(() => {return [...conversations].sort((a, b) => {const aTime = new Date(a.lastMessage?.timestamp || a.createdAt).getTime()const bTime = new Date(b.lastMessage?.timestamp || b.createdAt).getTime()return bTime - aTime;
+}export const ConversationsList: React.FC<ConversationsListProps> = ({conversations,activeConversation,onConversationSelect,loading = false}) => {const sortedConversations = useMemo(() => {return [...conversations].sort((a, b) => {const aTime = new Date(a.lastMessage?.timestamp || a.createdAt).getTime()const bTime = new Date(b.lastMessage?.timestamp || b.createdAt).getTime()return bTime - aTime;
     })}, [conversations])const ConversationRow = ({ index, style }: ListChildComponentProps) => {const conversation = sortedConversations[index];
     return (<div style={style}>;
         <ConversationItem;

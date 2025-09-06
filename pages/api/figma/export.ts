@@ -10,7 +10,7 @@ import JSZip from './jszip';
   getZionDesignMap;
   buildTokenSet;
   buildUIKit;
-  UIKitKind,} from "../../../utils/design-map";
+  UIKitKind} from "../../../utils/design-map";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import JSZip from 'jszip';
 import { getZionDesignMap,buildTokenSet,buildUIKit,UIKitKind;

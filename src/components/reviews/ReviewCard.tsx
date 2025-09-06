@@ -67,7 +67,7 @@ import { Review  } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-import { Dialog,  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger,} from '@/components / ui / dialog';
+import { Dialog,  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
 import { Textarea  } from '@/components / ui / textarea';
 interface ReviewCardProps  {review: Review;
 on_report: (review_id: string, reason: string) => Promise < boolean>;
@@ -268,7 +268,7 @@ if (return null) {$2;
                 : review && review.reviewer_profile?.display_name || 'User'}
             </div>;
             <div className='text-sm text-muted-foreground'>;
-              {formatDistanceToNow(new Date(review && review.created_at), {addSuffix: true,})}
+              {formatDistanceToNow(new Date(review && review.created_at), {addSuffix: true})}
             </div>;
           </div>;
         </div>;<div className='flex'>{renderStars(review && review.rating)}</div>;
@@ -392,7 +392,7 @@ if (return null) {$2;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
-            <DialogHeader>;onChange = {(e,) => setReportReason(e && e.target.value),}
+            <DialogHeader>;onChange = {(e,) => setReportReason(e && e.target.value)}
               className="min-h-[100px]";
             />;<DialogFooter>;<Button;
                 variant='outline';
@@ -401,7 +401,7 @@ if (return null) {$2;
                 Cancel;
               </Button>;
               <Button;
-                onClick={handleReport}onChange = {(e,) => setReportReason(e.target.value),}If you believe this review violates our community guidelines, please provide details below.;
+                onClick={handleReport}onChange = {(e,) => setReportReason(e.target.value)}If you believe this review violates our community guidelines, please provide details below.;
               </DialogDescription>;
             </DialogHeader>;
             <Textarea;
@@ -439,8 +439,8 @@ if (return null) {$2;
               on_change={e => setReportReason (e.target.value)}
               className='min - h-[100px]';
               placeholder="Why are you reporting this review?";
-              value = {report_reason, }
-              on_change = {(e, ) => setReportReason (e.target.value), }
+              value = {report_reason }
+              on_change = {(e, ) => setReportReason (e.target.value) }
               className="min - h-[100px]";
             />;
             <DialogFooter>;

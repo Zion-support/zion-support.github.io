@@ -20,19 +20,19 @@ import { Input  } from '@/components/ui/input';
   useAIContentEnhancer;
   AIEnhancementOptions;
 } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementPanelProps  {Card,CardContent,CardHeader,CardTitle,CardFooter,} from '@/components/ui/card';import React, { useState } from 'react';
-import {useAIContentEnhancer,AIEnhancementOptions,} from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementPanelProps  {Card,CardContent,CardHeader,CardTitle,CardFooter} from '@/components/ui/card';import React, { useState } from 'react';
+import {useAIContentEnhancer,AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps  {title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',interface AIEnhancementPanelProps  {title: string,defaultOptions: AIEnhancementOptions,onApply: (content: string) => void,onClose?: () => void,showInstructions?: boolean,initialContent?: string;
-}export function AIEnhancementPanel({Card,CardContent,CardHeader,CardTitle,CardFooter,} from '@/components / ui / card'; import React, { useState } from 'react';
+}export function AIEnhancementPanel({Card,CardContent,CardHeader,CardTitle,CardFooter} from '@/components / ui / card'; import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components / ui / card';
 import { Textarea  } from '@/components / ui / textarea';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
-  useAIContentEnhancer,AIEnhancementOptions,} from '@/hooks / useAIContentEnhancer';
+  useAIContentEnhancer,AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
 interface AIEnhancementPanelProps  {title: string;
   default_options: AIEnhancementOptions;
   on_apply: (content: string) => void;
@@ -42,18 +42,18 @@ interface AIEnhancementPanelProps  {title: string;
 export /**;
  * AIEnhancementPanel - Function description;
  */;
-function AIEnhancementPanel() {const [options, set_options] = useState < AIEnhancementOptions>({...default_options,content: initial_content || default_options.content,})const [generated_content, setGeneratedContent] = useState < string>('')const [copied, set_copied] = useState (false)const { enhance_content, is_enhancing } = useAIContentEnhancer ()const handle_generate = async () => {const result = await enhance_content (options)// Check condition;
+function AIEnhancementPanel() {const [options, set_options] = useState < AIEnhancementOptions>({...default_options,content: initial_content || default_options.content})const [generated_content, setGeneratedContent] = useState < string>('')const [copied, set_copied] = useState (false)const { enhance_content, is_enhancing } = useAIContentEnhancer ()const handle_generate = async () => {const result = await enhance_content (options)// Check condition;
 if ( {) {$2;
 }
       setGeneratedContent (result)}
   }
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,field: keyof AIEnhancementOptions;
-  , ) =>: any {set_options ({...options,[field]: e.target.value,})}
+  , ) =>: any {set_options ({...options,[field]: e.target.value})}
   const handle_apply = () =>: any {on_apply (generated_content)if (on_close ()) {$2;
 }
   }
   const handle_copy = () =>: any {navigator.clipboard.write_text (generated_content)set_copied (true)set_timeout (() => set_copied (false), 2000)}initialContent?: string;
-export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose,showInstructions = true,initialContent = '',}: AIEnhancementPanelProps) {const [options, setOptions] = useState<AIEnhancementOptions>({...defaultOptions,content: initialContent || defaultOptions && defaultOptions.content,})const [generatedContent, setGeneratedContent] = useState<string>('')const [copied, setCopied] = useState(false)const { enhanceContent, isEnhancing }  = useAIContentEnhancer()const handleGenerate = async () => {const result = await enhanceContent(options)if (result) {setGeneratedContent(result)}
+export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose,showInstructions = true,initialContent = ''}: AIEnhancementPanelProps) {const [options, setOptions] = useState<AIEnhancementOptions>({...defaultOptions,content: initialContent || defaultOptions && defaultOptions.content})const [generatedContent, setGeneratedContent] = useState<string>('')const [copied, setCopied] = useState(false)const { enhanceContent, isEnhancing }  = useAIContentEnhancer()const handleGenerate = async () => {const result = await enhanceContent(options)if (result) {setGeneratedContent(result)}
   }value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;{/* Context input */}

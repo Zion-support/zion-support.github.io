@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
   ArrowRight, CheckCircle, Globe,Search, Grid, List, Star as StarIcon,Phone, Mail, MapPin;
-} from 'lucide-react',ArrowRight,CheckCircle,Globe,Search,Grid,List,Star as StarIcon,Phone,Mail,MapPin,} from 'lucide-react';import EnhancedNavigation from '../components/EnhancedNavigation';
+} from 'lucide-react',ArrowRight,CheckCircle,Globe,Search,Grid,List,Star as StarIcon,Phone,Mail,MapPin} from 'lucide-react';import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices  } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices  } from '../data/specialized-2025-enterprise-services';

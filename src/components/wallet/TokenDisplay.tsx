@@ -69,7 +69,7 @@ import { Button } from "@/components/ui/button",import Skeleton from "@/componen
             <div className='mt-2'>;
               <Button variant='outline' size='sm'>                View Wallet <div className = "mt-2">;import React from 'react';
 import { use_wallet  } from '@/hooks / use_wallet';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components / ui / card';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import Skeleton from '@/components / ui / skeleton';
 export /**;

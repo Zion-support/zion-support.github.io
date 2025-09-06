@@ -17,3 +17,16 @@ export default function Index() {return (<div>;
       <p>This component is currently under development.</p>;
     </div>;
   )}ursor/automate-test-improve-and-merge-code-646c;
+interface IndexProps {
+  // Add props here as needed
+}
+export default function Index({}: IndexProps) {
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+}

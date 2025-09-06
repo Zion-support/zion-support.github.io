@@ -101,10 +101,10 @@ export function PortfolioBuilder() {<ProjectForm;
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
           {projects.map((project,) => (<ProjectCard;
-              key = {project.id,}
-              project = {project,}
-              onEdit = {(,) => setEditingProject(project),}
-              onDelete = {handleDeleteProject,}
+              key = {project.id}
+              project = {project}
+              onEdit = {(,) => setEditingProject(project)}
+              onDelete = {handleDeleteProject}
             />;
           ))}
         </div>;
@@ -144,10 +144,10 @@ export function PortfolioBuilder() {<ProjectForm;
               on_edit={() => setEditingProject (project)}
               on_delete={handleDeleteProject}
           {projects.map ((project, ) => (<ProjectCard;
-              key = {project.id, }
-              project = {project, }
-              on_edit = {(, ) => setEditingProject (project), }
-              on_delete = {handleDeleteProject, }
+              key = {project.id }
+              project = {project }
+              on_edit = {(, ) => setEditingProject (project) }
+              on_delete = {handleDeleteProject }
             />))}
         </div>) : (!showAddProject && (<Card className='text - center py - 12'>;
             <CardContent>;

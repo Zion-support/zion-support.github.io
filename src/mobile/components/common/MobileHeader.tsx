@@ -52,7 +52,7 @@ interface MobileHeaderProps  {title: string;  showBack?: boolean;  title: string
               variant="ghost";
               size="icon";
               className="mr-2";
-              onClick = {(,) => router && router.back(),}
+              onClick = {(,) => router && router.back()}
             >;
               <ChevronLeft className="h-5 w-5" />;
               <span className="sr-only">Back</span>;
@@ -65,7 +65,7 @@ interface MobileHeaderProps  {title: string;  showBack?: boolean;  title: string
           {showNotifications && (<Button;
               variant="ghost";
               size="icon";
-              onClick = {onNotificationsClick,}>;
+              onClick = {onNotificationsClick}>;
               <Bell className="h-5 w-5" />;
               <span className="sr-only">Notifications</span>;
             </Button>;
@@ -119,7 +119,7 @@ import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button"
               <span className='sr-only'>Settings</span>            </Button>            <Button;
               variant="ghost";
               size="icon";
-              onClick = {onSettingsClick,}>;
+              onClick = {onSettingsClick}>;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
           )}onClick={() => router.back()}

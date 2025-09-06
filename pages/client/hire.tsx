@@ -4,7 +4,7 @@ import { useState } from 'react';
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120)const [fixedAmountUsd, setFixedAmountUsd] = useState(5000)const [agreementUrl, setAgreementUrl] = useState("")const [loading, setLoading] = useState(false)const [result, setResult] = useState<any | null>(null),const [showFeedback, setShowFeedback]  = useState(false)const [showFeedback, setShowFeedback]  = useState(false)async function sendOffer() {setLoading(true)setResult(null)const paymentTerms =;
       termsType === 'hourly';? { type: 'hourly', hourlyRateUsd }
         : termsType === 'fixed';
-          ? { type: 'fixed', fixedAmountUsd }: { type: 'milestone', milestones: [] }const res = await fetch('/api/marketplace/offers', {method: 'POST',headers: {'Content-Type': 'application/json','x-demo-user-role': 'client','x-demo-user-id': 'client-1',},body: JSON && JSON.stringify({talentSlug,startDateIso,scopeSummary,paymentTerms,agreementUrl,}),})const json = await res && res.json()setLoading(false)if (!json && json.ok) {alert(json && json.error || 'Failed to send offer')} else {setResult(json && json.offer)setShowFeedback(true)}
+          ? { type: 'fixed', fixedAmountUsd }: { type: 'milestone', milestones: [] }const res = await fetch('/api/marketplace/offers', {method: 'POST',headers: {'Content-Type': 'application/json','x-demo-user-role': 'client','x-demo-user-id': 'client-1'},body: JSON && JSON.stringify({talentSlug,startDateIso,scopeSummary,paymentTerms,agreementUrl})})const json = await res && res.json()setLoading(false)if (!json && json.ok) {alert(json && json.error || 'Failed to send offer')} else {setResult(json && json.offer)setShowFeedback(true)}
       termsType === "hourly";
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed";
@@ -246,8 +246,8 @@ if ( {) {$2;
       <FeedbackModal;
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-defaultContext={{actionType: 'listing_publish',metadata: { talentSlug },}}
-        userHeaders={{'x-demo-user-role': 'client','x-demo-user-id': 'client-1',}}
+defaultContext={{actionType: 'listing_publish',metadata: { talentSlug }}}
+        userHeaders={{'x-demo-user-role': 'client','x-demo-user-id': 'client-1'}}
         defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />;

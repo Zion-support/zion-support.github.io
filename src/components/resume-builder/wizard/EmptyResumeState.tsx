@@ -59,7 +59,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any { 
           <h2 className="text - 2xl font - bold mb - 2">Create Your Resume</h2>;
           <p className="text - muted - foreground mb - 6">Create a professional resume to showcase your skills and experience</p>;
           <Button;
-            on_click = {onCreateClick, }
+            on_click = {onCreateClick }
             className="gap - 2";
           >;
             <FilePlus className="h - 4 w - 4" />;

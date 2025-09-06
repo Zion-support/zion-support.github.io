@@ -14,7 +14,7 @@ export const config = {api: {bodyParser: {sizeLimit: "10mb";
     }
   },sizeLimit: '10mb';
     }
-  },}function escapeHtml(s: string): string {return s;
+  }}function escapeHtml(s: string): string {return s;
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;")}
 function chapterToHtml(text: string): string {if (!text) return "";
   return text;

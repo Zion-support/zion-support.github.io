@@ -11,12 +11,40 @@ interface PricingGuidePageProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/PricingGuidePage.jsx;
+interface PricingGuidePageProps {
+  // Add props here as needed
+
+
+}
+
+export default function PricingGuidePage({}: PricingGuidePageProps) {
+  return (
+    <div>
+      <h1>PricingGuidePage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/PricingGuidePage.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/PricingGuidePage.jsx;
+:temp_exclude/src.pages.disabled/PricingGuidePage.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/PricingGuidePage.jsx
 }
 }
 }

@@ -105,7 +105,7 @@ function CloudServicesPage() {const services = [;
     },{title: "DevOps & CI/CD",description: "Automated development and deployment pipelines",features: ["CI/CD Automation", "Infrastructure as Code", "Monitoring & Alerting", "Performance Optimization"],price: "From $6,000",icon: Zap,color: "from-blue-500 to-cyan-500";
     },{title: "Edge Computing Solutions",description: "Distributed computing for improved performance and reliability",features: ["Edge Deployment", "Load Balancing", "Global Distribution", "Low Latency"],price: "From $8,000",icon: Cpu,color: "from-purple-500 to-pink-500";
     },{title: "Cloud Security & Compliance",description: "Comprehensive security and compliance for cloud environments",features: ["Identity Management", "Data Protection", "Compliance Auditing", "Threat Prevention"],price: "From $12,000",icon: Shield,color: 'from-red-500 to-orange-500';
-    },];color: "from-red-500 to-orange-500";
+    }];color: "from-red-500 to-orange-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   return (<div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
@@ -448,7 +448,7 @@ className='text-center mb-16';
         </div>;
       </section>;<EnhancedFooter />;
     </div>;
-  ),}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
+  )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0 && 0.8;
 }viewport= {{}

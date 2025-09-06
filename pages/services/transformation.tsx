@@ -104,7 +104,7 @@ function DigitalTransformationPage() {const services = [;
     },{title: "Legacy System Modernization",description: "Transform outdated systems into modern, scalable solutions",features: ["System Analysis", "Migration Planning", "Data Migration", "Performance Optimization"],price: "From $25,000",icon: Cpu,color: "from-blue-500 to-cyan-500";
     },{title: "Process Automation",description: "AI-powered automation for improved efficiency and productivity",features: ["Workflow Analysis", "RPA Implementation", "Integration", "Monitoring"],price: "From $12,000",icon: Zap,color: "from-purple-500 to-pink-500";
     },{title: "Change Management",description: "Comprehensive change management and training programs",features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],price: "From $8,000",icon: Users,color: 'from-emerald-500 to-teal-500';
-    },];color: "from-emerald-500 to-teal-500";
+    }];color: "from-emerald-500 to-teal-500";
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   return (<div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
@@ -453,7 +453,7 @@ className='text-center mb-16';
         </div>;
       </section>;<EnhancedFooter />;
     </div>;
-  ),}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
+  )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) )}</div> </div> </section> <motion&& motion.div initial= {{opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0 && 0.8;
 }viewport= {{}

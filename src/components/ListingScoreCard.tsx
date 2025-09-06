@@ -62,7 +62,7 @@ interface ListingScoreCardProps  {title: string;
 import { cn } from "@/lib/utils",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
 interface ListingScoreCardProps  {title: string,description: string,image?: string,category: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,className?: string;
-}export function ListingScoreCard({export function ListingScoreCard(): any ({title,description,image,category,tags,author,authorImage,aiScore,rating = 0,reviewCount = 0,className,}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false)const [authorImageError, setAuthorImageError]  = useState(false)>;
+}export function ListingScoreCard({export function ListingScoreCard(): any ({title,description,image,category,tags,author,authorImage,aiScore,rating = 0,reviewCount = 0,className}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false)const [authorImageError, setAuthorImageError]  = useState(false)>;
       {image && !mainImageError && (<div className='h-48 w-full overflow-hidden relative'>;author_image?: string;
   ai_score?: number;
   rating?: number;

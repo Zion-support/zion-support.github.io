@@ -47,7 +47,7 @@ const heroStats = [;
       'Advanced AI algorithms that provide intelligent insights and automation for business operations.';
     icon: Brain;
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
-  }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}{title: 'HR Management';
+  }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com'}{title: 'HR Management';
     description: 'AI-powered HR automation and management solutions';
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'HR Management';
     )icon: TeamIcon;

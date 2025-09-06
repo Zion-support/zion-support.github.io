@@ -78,7 +78,7 @@ interface SearchResult  {id: string;
 function highlight() {if (!term) return text;
   const escaped = null;
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)}}
-            searchSuggestions = {suggestions,}placeholder="Search talent, jobs, and projects...";
+            searchSuggestions = {suggestions}placeholder="Search talent, jobs, and projects...";
         </form>;
         {loading && (<div className="flex justify-center py-8">;
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;

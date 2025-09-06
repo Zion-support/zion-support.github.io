@@ -25,7 +25,7 @@ const FILE_PATH  = path.join(process.cwd(), 'dataproposalscomments.json')async f
       author: body.author || 'anon';
       text: body.text || '';
       createdAt: new Date().toISOString()text: body.text || '';
-      createdAt: new Date().toISOString()createdAt: new Date().toISOString(),}data.comments.push(comment)await fs.writeJson(FILE_PATH, data, { spaces: 2 })return res.status(201).json(comment)}
+      createdAt: new Date().toISOString()createdAt: new Date().toISOString()}data.comments.push(comment)await fs.writeJson(FILE_PATH, data, { spaces: 2 })return res.status(201).json(comment)}
 }
 res.status(405).json({ error: "Method not allowed" })}
 export default function handler() {res.status(200).json({ message: 'API endpoint' })const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json')async function ensure() {await fs.ensureFile(FILE_PATH)try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}

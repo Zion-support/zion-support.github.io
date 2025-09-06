@@ -11,12 +11,40 @@ interface PostJobProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/PostJob.jsx;
+interface PostJobProps {
+  // Add props here as needed
+
+
+}
+
+export default function PostJob({}: PostJobProps) {
+  return (
+    <div>
+      <h1>PostJob</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/PostJob.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/PostJob.jsx;
+:temp_exclude/src.pages.disabled/PostJob.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/PostJob.jsx
 }
 }
 }

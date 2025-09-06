@@ -264,7 +264,7 @@ export default function ResourceCaseStudyPage() {try {const caseStudy = {id: 'ai
     title: 'AI-Powered Manufacturing Automation';
     company: 'Global Manufacturing Corp';
     industry: 'Manufacturing';
-    results: '40% increase in production efficiency, 60% reduction in downtime',}import React from 'react',import Head from 'next / head',import Link from 'next / link',export default /**;
+    results: '40% increase in production efficiency, 60% reduction in downtime'}import React from 'react',import Head from 'next / head',import Link from 'next / link',export default /**;
  * ResourceCaseStudyPage - Function description;
  */;
 function ResourceCaseStudyPage() {const case_study = {id: 'ai - automation - manufacturing',title: 'AI - Powered Manufacturing Automation',company: 'Global Manufacturing Corp',industry: 'Manufacturing',results: '40% increase in production efficiency, 60% reduction in downtime',description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.';

@@ -35,7 +35,7 @@ import { ShieldAlert  } from 'lucide-react';
 import Link from 'next/link';
 type DisputesListProps = any;type DisputesListProps = {import React, { useState } from 'react';
 import { Dispute, DisputeStatus  } from '@/types/disputes';
-import { Table,  Table,TableBody,TableCell,TableHead,TableHeader,TableRow,} from '@/components/ui/table';
+import { Table,  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
 type DisputesListProps = {disputes: Dispute[];
 isLoading: boolean ;
@@ -346,7 +346,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
                 <TableCell className="font-mono text-xs">;
                   {dispute.id.split('-')[0]}
                 </TableCell>;
-                <TableCell>addSuffix: true,})}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}{dispute.project?.title || "Unknown Project"}
+                <TableCell>addSuffix: true})}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}{dispute.project?.title || "Unknown Project"}
                 </TableCell>;
                 <TableCell>;
                   <div className="flex flex-col text-sm">;
@@ -391,7 +391,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
                   </div>;
                 </TableCell>;
                 <TableCell>;
-                  {formatDistanceToNow(new Date(dispute && dispute.created_at), {addSuffix: true,})}                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
+                  {formatDistanceToNow(new Date(dispute && dispute.created_at), {addSuffix: true})}                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
         <Button;
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
@@ -433,7 +433,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
                   </div>;
                 </TableCell>;
                 <TableCell>;
-                  {formatDistanceToNow (new Date (dispute.created_at), {add_suffix: true,})}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+                  {formatDistanceToNow (new Date (dispute.created_at), {add_suffix: true})}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
                     </span>;
                   </div>;
                 </TableCell>;
@@ -447,7 +447,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
                 <TableCell className="text-right">;
                   <Button asChild size="sm">;
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>;
-{formatDistanceToNow(new Date(dispute.created_at), {addSuffix: true,})}
+{formatDistanceToNow(new Date(dispute.created_at), {addSuffix: true})}
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
@@ -462,7 +462,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
                   </Button>;
                 </TableCell>;
               </TableRow>;
-            ))}{formatDistanceToNow (new Date (dispute.created_at), {add_suffix: true,})}
+            ))}{formatDistanceToNow (new Date (dispute.created_at), {add_suffix: true})}
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant (dispute.status)}>;

@@ -1,13 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { CheckCircle,Star,Users,Building,ArrowRight,Phone,Mail,Calculator,TrendingUp,Shield,Clock,Award,} from 'lucide-react';
+import { CheckCircle,Star,Users,Building,ArrowRight,Phone,Mail,Calculator,TrendingUp,Shield,Clock,Award} from 'lucide-react';
 export default function PricingGuide() {const pricingTiers = [;
     {name: 'Startup',price: '$2,500',period: '/month',description: 'Perfect for startups and small businesses',icon: Users,features: [;
-        'Basic AI automation','Cloud infrastructure setup','Email support','Monthly reporting','Up to 5 team members','Basic security features',],popular: false,},{name: 'Professional',price: '$7, 500',period: '/month',description: 'Ideal for growing businesses',icon: Building,features: [;
-        'Advanced AI solutions','Full cloud migration','Priority support','Weekly reporting','Up to 25 team members','Advanced security','API integrations','Custom dashboards',],popular: true,},{name: 'Enterprise',price: 'Custom',period: '',description: 'Tailored solutions for large organizations',icon: Award,features: [;
-        'Custom AI development','Multi-cloud architecture','24/7 dedicated support','Real-time monitoring','Unlimited team members','Enterprise security','Custom integrations','Dedicated account manager','SLA guarantees',],popular: false,},];const addOnServices = [;
-    {name: 'AI Development',price: '$150/hour',description: 'Custom AI model development and training',},{name: 'Cloud Migration',price: '$5, 000',description: 'Complete cloud infrastructure migration',},{name: 'Security Audit',price: '$3, 500',description: 'Comprehensive security assessment and recommendations',},{name: 'Training & Support',price: '$200/hour',description: 'Team training and ongoing technical support',},];return (<>;
+        'Basic AI automation','Cloud infrastructure setup','Email support','Monthly reporting','Up to 5 team members','Basic security features'],popular: false},{name: 'Professional',price: '$7, 500',period: '/month',description: 'Ideal for growing businesses',icon: Building,features: [;
+        'Advanced AI solutions','Full cloud migration','Priority support','Weekly reporting','Up to 25 team members','Advanced security','API integrations','Custom dashboards'],popular: true},{name: 'Enterprise',price: 'Custom',period: '',description: 'Tailored solutions for large organizations',icon: Award,features: [;
+        'Custom AI development','Multi-cloud architecture','24/7 dedicated support','Real-time monitoring','Unlimited team members','Enterprise security','Custom integrations','Dedicated account manager','SLA guarantees'],popular: false}];const addOnServices = [;
+    {name: 'AI Development',price: '$150/hour',description: 'Custom AI model development and training'},{name: 'Cloud Migration',price: '$5, 000',description: 'Complete cloud infrastructure migration'},{name: 'Security Audit',price: '$3, 500',description: 'Comprehensive security assessment and recommendations'},{name: 'Training & Support',price: '$200/hour',description: 'Team training and ongoing technical support'}];return (<>;
       <Head>;
         <title>Pricing Guide - Zion Tech Group</title>;
         <meta;

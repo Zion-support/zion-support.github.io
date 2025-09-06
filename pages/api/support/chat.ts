@@ -36,7 +36,7 @@ const matchedArticles = articles.filter(a =>;
       model: "gpt - 4o - mini";
       messages: [sys_message, ...messages];
       temperature: 0.2;
-      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '')}try {const completion = await openai.chat.completions.create({model: 'gpt-4o-mini',messages: [sysMessage, ...messages],temperature: 0.2,})const assistantMessage =;
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '')}try {const completion = await openai.chat.completions.create({model: 'gpt-4o-mini',messages: [sysMessage, ...messages],temperature: 0.2})const assistantMessage =;
       completion.choices?.[0]?.message?.content ??;
       "Let me know how I can help.";await logSupportEventToOperator({type: "chat_completion",sessionId: sessionId ?? "unknown",payload: { intent }
     })return res.status(200).json({assistantMessage,meta: {intentMatched: intent.intentMatched,matchedArticleIds: intent.matchedArticleIds,links: matchedArticles.map((a) => ({title: a.title,href: `/help/${a.slug}`;

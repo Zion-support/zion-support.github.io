@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       governanceMode = "democratic";
       branding = {}
       modules = {}
-      bonusModules = {}instanceName,defaultLanguage = 'en',deploymentRegion,tokenActivation = false,governanceMode = 'democratic',branding = {},modules = {},bonusModules = {},} = body;if (!instanceName || !deploymentRegion) {return res && res.status(400).json({error: "Missing required fields: instanceName, deploymentRegion";
+      bonusModules = {}instanceName,defaultLanguage = 'en',deploymentRegion,tokenActivation = false,governanceMode = 'democratic',branding = {},modules = {},bonusModules = {}} = body;if (!instanceName || !deploymentRegion) {return res && res.status(400).json({error: "Missing required fields: instanceName, deploymentRegion";
       })}
     // Simulated provisioning operations;
     const now  = new Date().toISOString()const provisionId  = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;const outputActions = {zionGPT: {initialized: true;

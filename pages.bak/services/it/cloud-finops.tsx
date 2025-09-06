@@ -6,7 +6,13 @@ module.exports = default function CloudFinOps() { return ( <Article title="Cloud
 ursor/automate-test-improve-and-merge-code-646c;
 export default function CloudFinOps() { return ( <Article title=\"Cloud FinOps\" subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\" price=\"from $4k/mo\" bullets={[\'Tagging strategy and cost allocation by team and customer\',\'Automated rightsizing and commitment planning (SP/RI/CCA)\',\'Unit economics dashboard by feature and environment\',\'FinOps runbooks and CFO-ready monthly reporting\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function CloudFinOps() { return ( <Article title="Cloud FinOps" subtitle="Cost visibility,unit economics,and automated savings for AWS/Azure/GCP" price="from $4k/mo" bullets={["Tagging strategy and cost allocation by team and customer","Automated rightsizing and commitment planning (SP/RI/CCA)","Unit economics dashboard by feature and environment","FinOps runbooks and CFO-ready monthly reporting" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";
+module.exports = default function CloudFinOps() { return ( <Article title="Cloud FinOps" subtitle="Cost visibility,unit economics,and automated savings for AWS/Azure/GCP" price="from $4k/mo" bullets={["Tagging strategy and cost allocation by team and customer","Automated rightsizing and commitment planning (SP/RI/CCA)","Unit economics dashboard by feature and environment","FinOps runbooks and CFO-ready monthly reporting" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 import React from 'react';
+interface CloudfinopsProps {
+  // Add props here as needed
+
+
+
 interface CloudfinopsProps  {// Add props here as needed;
 import * as React from 'react';
 interface CloudfinopsProps  {// Add props here as needed;
@@ -15,6 +21,38 @@ module.exports = default function CloudFinOps() { return ( <Article title="Cloud
 interface CloudfinopsProps  {// Add props here as needed;
 }
 export default function Cloudfinops() {interface CloudfinopsProps  {// Add props here as needed;
+export default function Cloudfinops({}: CloudfinopsProps) {
+  return (
+    <div>
+      <h1>Cloudfinops</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}
+}
+export default function Cloudfinops({}: CloudfinopsProps) {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
 }
 export default function Cloudfinops() {return (<div>;
       <h1>Cloudfinops</h1>;
@@ -56,3 +94,7 @@ export default function Cloudfinops(): any ({}: CloudfinopsProps) {return (<div>
 }
 }
   )
+  );
+}
+}
+}

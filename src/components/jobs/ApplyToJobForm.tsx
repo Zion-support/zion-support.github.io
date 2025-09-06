@@ -51,7 +51,7 @@ if ( {) {$2;
 }
           on_success ()}
       }
-    } catch (err: any) {set_error (err.message || "Failed to submit application"),toast.error ("Failed to submit application")} finally {setIsSubmitting (false)}},},import { useState  } from 'react';
+    } catch (err: any) {set_error (err.message || "Failed to submit application"),toast.error ("Failed to submit application")} finally {setIsSubmitting (false)}}},import { useState  } from 'react';
 import { useRouter  } from 'next/router';
 import { useJobApplications  } from '@/hooks/useJobApplications';
 import { useResume  } from '@/hooks/useResume';
@@ -59,7 +59,7 @@ import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
 import { Label  } from '@/components/ui/label';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components/ui/select';
+import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { formatDistanceToNow  } from 'date-fns';
 import { Job  } from '@/types/jobs';
@@ -102,9 +102,9 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
           <Textarea;
             id="coverLetter";
-            value = {coverLetter,}
-            onChange = {(e,) => setCoverLetter(e && e.target.value),}
-            rows = {6,}<div>;
+            value = {coverLetter}
+            onChange = {(e,) => setCoverLetter(e && e.target.value)}
+            rows = {6}<div>;
           <Label htmlFor="resume">Select Resume (Optional)</Label>;
           {isResumesLoading ? (<div className="flex items-center gap-2 mt-2">;
               <Loader2 className="h-4 w-4 animate-spin" />;
@@ -160,8 +160,8 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
               <span>Loading your resumes...</span>;
             </div>;
           ) : resumes && resumes.length > 0 ? (<Select;
-              value = {selectedResumeId,}
-              onValueChange = {setSelectedResumeId,}>;
+              value = {selectedResumeId}
+              onValueChange = {setSelectedResumeId}>;
               <SelectTrigger className="mt-1">;
     <form on_submit={handle_submit} className="space - y-6">;
       <div>;
@@ -179,9 +179,9 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
           <Label html_for="cover_letter">Cover Letter</Label>;
           <Textarea;
             id="cover_letter";
-            value = {cover_letter, }
-            on_change = {(e, ) => setCoverLetter (e.target.value), }
-            rows = {6, }
+            value = {cover_letter }
+            on_change = {(e, ) => setCoverLetter (e.target.value) }
+            rows = {6 }
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt - 1";
           />;
@@ -195,8 +195,8 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
               <span > Loading your resumes...</span>;
             </div>) : resumes && resumes.length > 0 ? (<Select;
-              value = {selectedResumeId, }
-              onValueChange = {setSelectedResumeId, }
+              value = {selectedResumeId }
+              onValueChange = {setSelectedResumeId }
             >;
               <SelectTrigger className="mt - 1">;
                 <SelectValue placeholder="Select a resume" />;
@@ -218,7 +218,7 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
                 variant="outline";
                 size="sm";
                 type="button";
-                onClick = {(,) => router && router.push("/dashboard/talent/portfolio"),}
+                onClick = {(,) => router && router.push("/dashboard/talent/portfolio")}
               >;
                 Create Resume;
               </Button>;
@@ -234,7 +234,7 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
         </div>;
       </div>;
       <div className="flex justify-end gap-2">;
-            onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
+            onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null)}
           />;
         </div>;
       </div>;<div className="flex justify-end gap-2">;<Button;
@@ -271,7 +271,7 @@ if ( {) {$2;
                 variant="outline";
                 size="sm";
                 type="button";
-                on_click = {(, ) => router.push ("/dashboard / talent / portfolio"), }
+                on_click = {(, ) => router.push ("/dashboard / talent / portfolio") }
               >;
                 Create Resume;
               </Button>;
@@ -284,7 +284,7 @@ if ( {) {$2;
             type="file";
             accept=".pdf";
             className="mt - 1";
-            on_change = {(e, ) => setResumeFile (e.target.files?.[0] || null), }
+            on_change = {(e, ) => setResumeFile (e.target.files?.[0] || null) }
           />;
         </div>;
       </div>;
@@ -292,7 +292,7 @@ if ( {) {$2;
         <Button;
           type="button";
           variant="outline";
-          disabled = {is_submitting, }
+          disabled = {is_submitting }
           on_click={() => {if (on_success ()) {$2;
 }
           }}

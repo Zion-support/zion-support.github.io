@@ -107,7 +107,7 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       })})},const handleAddMilestone = (milestone: GeneratedMilestone,) => {onSubmit({title: milestone && milestone.title,description: milestone && milestone.description,due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    })}return (},}
+    })}return (}}
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {onSubmit({title: milestone.title;
       description: milestone.description;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
@@ -123,24 +123,24 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
           onAddMilestone={handleAddMilestone}
         />;)}<Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;<FormField;
-            control = {form && form.control,}
+            control = {form && form.control}
             name="title";
             render={({ field }: { field: any },) => (<FormItem>;
                 <FormLabel>Title</FormLabel>;
     <div className="space - y-6">;
       {/* AI Milestone Generator */}
       {project_scope && projectStartDate && (<AIMilestoneGenerator;
-          scope = {project_scope, }
-          start_date = {projectStartDate, }
-          end_date = {projectEndDate, }
-          project_type = {project_type, }
-          onAddMilestones = {handleAddMilestones, }
-          onAddMilestone = {handleAddMilestone, }
+          scope = {project_scope }
+          start_date = {projectStartDate }
+          end_date = {projectEndDate }
+          project_type = {project_type }
+          onAddMilestones = {handleAddMilestones }
+          onAddMilestone = {handleAddMilestone }
         />)}
       <Form {...form}>;
         <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
           <FormField;
-            control = {form.control, }
+            control = {form.control }
             name="title";
             render={({ field }: { field: any }, ) => (<FormItem>;
                 <FormLabel > Title</FormLabel>;
@@ -148,7 +148,7 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;/>;<FormField;
-            control = {form && form.control,}
+            control = {form && form.control}
             name="description";
             render={({ field }: { field: any }) => (<FormItem>;
                 <FormLabel>Description (optional)</FormLabel>;
@@ -159,7 +159,7 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
               </FormItem>)}
           />;
           <FormField;
-            control = {form.control, }
+            control = {form.control }
             name="description";
             render={({ field }: { field: any }, ) => (<FormItem>;
                 <FormLabel > Description (optional)</FormLabel>;
@@ -171,7 +171,7 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                   />;
                 </FormControl>;
                 <FormMessage />;/>;<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;<FormField;
-              control = {form && form.control,}
+              control = {form && form.control}
               name="due_date";
               render={({ field }: { field: any },) => (<FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
@@ -206,7 +206,7 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
           />;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
-              control = {form.control, }
+              control = {form.control }
               name="due_date";
               render={({ field }: { field: any }, ) => (<FormItem className="flex flex - col">;
                   <FormLabel > Due Date (optional)</FormLabel>;
@@ -227,15 +227,15 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                     <PopoverContent className="w - auto p - 0" align="start">;
                       <Calendar;
                         mode="single";
-                        selected = {field.value, }
-                        on_select = {field.on_change, }
-                        disabled = {(date, ) => date < new Date (), }
+                        selected = {field.value }
+                        on_select = {field.on_change }
+                        disabled = {(date, ) => date < new Date () }
                         initial_focus;
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;/>;<FormField;
-              control = {form && form.control,}
+              control = {form && form.control}
               name="amount";
               render={({ field }: { field: any },) => (<FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
@@ -255,7 +255,7 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                 </FormItem>)}
             />;
             <FormField;
-              control = {form.control, }
+              control = {form.control }
               name="amount";
               render={({ field }: { field: any }, ) => (<FormItem>;
                   <FormLabel > Amount ($)</FormLabel>;
@@ -296,8 +296,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
             {on_cancel && (<Button;
                 type="button";
                 variant="outline";
-                on_click = {on_cancel, }
-                disabled = {is_submitting, }
+                on_click = {on_cancel }
+                disabled = {is_submitting }
               >;
                 Cancel;
               </Button>)}

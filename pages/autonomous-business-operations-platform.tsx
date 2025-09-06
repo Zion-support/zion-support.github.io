@@ -1,7 +1,7 @@
 
 ;
   Rocket, Target, TrendingUp, Users, CheckCircle,ArrowRight, Star, Award, Clock, DollarSign,Building2, Gauge, BarChart3, Settings, Workflow;
-} from 'lucide-react',Bot,Brain,Cpu,Zap,Shield,Globe,Rocket,Target,TrendingUp,Users,CheckCircle,ArrowRight,Star,Award,Clock,DollarSign,Building2,Gauge,BarChart3,Settings,Workflow,} from 'lucide-react';const AutonomousBusinessOperationsPlatform = () => {const features = [;
+} from 'lucide-react',Bot,Brain,Cpu,Zap,Shield,Globe,Rocket,Target,TrendingUp,Users,CheckCircle,ArrowRight,Star,Award,Clock,DollarSign,Building2,Gauge,BarChart3,Settings,Workflow} from 'lucide-react';const AutonomousBusinessOperationsPlatform = () => {const features = [;
     {icon: Bot,title: "AI Autonomous Management",description: "Fully autonomous business operations with intelligent decision-making",description: "Automated production lines, quality control, and supply chain management";
     }
     {title: "Healthcare";
@@ -619,4 +619,4 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl bo
           </div>;
         </section>;
       </div>;
-    </>)},export default AutonomousBusinessOperationsPlatform,},
+    </>)},export default AutonomousBusinessOperationsPlatform},

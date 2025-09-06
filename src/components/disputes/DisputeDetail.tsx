@@ -21,11 +21,11 @@ import { useAuth } from "@/hooks/useAuth",import { toast } from "sonner",export 
 } from "@/types/disputes",export function DisputeDetail() {const router = useRouter(),const { disputeId } = router.query as { disputeId?: string },const { user } = useAuth(),const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),const [dispute, setDispute] = useState<Dispute | null>(null),const [messages, setMessages] = useState<DisputeMessage[]>([]),const [isLoading, setIsLoading] = useState(true),const [message, setMessage] = useState(""),const [adminNote, setAdminNote] = useState(""),const [isSending, setIsSending] = useState(false),const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({summary: "",resolution_type: "compromise"}),const [activeTab, setActiveTab] = useState("overview"),// Check if user is admin (placeholder - implement proper admin check)const isAdmin = user?.userType === "admin",useEffect(() => {if (!disputeId) return,const loadDisputeData = async () => {setIsLoading(true),try {const disputeData = await getDisputeById(disputeId),if (!disputeData) {toast.error("Dispute not found"),router.push("/dashboard/disputes"),return;
         }
         setDispute(disputeData),const messagesData = await getDisputeMessages(disputeId),setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error }),toast.error("Failed to load dispute")} finally {setIsLoading(false)}
-    },loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router]),const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return,const success  = await updateDisputeStatus(disputeId, status),}const success = await resolve_dispute (dispute_id, {summary: resolution.summary,resolution_type:;
-        (resolution.resolution_type as ResolutionType) || 'compromise',})// Check condition;
+    },loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router]),const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return,const success  = await updateDisputeStatus(disputeId, status)}const success = await resolve_dispute (dispute_id, {summary: resolution.summary,resolution_type:;
+        (resolution.resolution_type as ResolutionType) || 'compromise'})// Check condition;
 if ( {) {$2;
 }
-      set_dispute ({...dispute,resolution_summary: resolution.summary,resolution_type: resolution.resolution_type,resolved_at: new Date ().toISOString (),})} else {toast.error ('Failed to resolve dispute')}
+      set_dispute ({...dispute,resolution_summary: resolution.summary,resolution_type: resolution.resolution_type,resolved_at: new Date ().toISOString ()})} else {toast.error ('Failed to resolve dispute')}
   }
   const handleSendMessage = async () => {if () return) {$2;
 }
@@ -43,11 +43,11 @@ if ( {) {$2;
         <div className='w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full'></div>;
         <p > Loading dispute details...</p>;
       </div>)}import { logErrorToProduction } from '@/utils/productionLogger';
-import {Dispute,disputeReasonLabels,DisputeMessage,DisputeStatus,ResolutionType,} from '@/types/disputes';
+import {Dispute,disputeReasonLabels,DisputeMessage,DisputeStatus,ResolutionType} from '@/types/disputes';
 import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
+  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Separator  } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
@@ -55,9 +55,9 @@ import { format, formatDistanceToNow  } from 'date-fns';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast  } from 'sonner';
-export function DisputeDetail() {const router = useRouter()const { disputeId } = router && router.query as { disputeId?: string }const { user } = useAuth()const {getDisputeById,updateDisputeStatus,resolveDispute,getDisputeMessages,addDisputeMessage,}  = useDisputes()const [dispute, setDispute] = useState<Dispute | null>(null)const [messages, setMessages] = useState<DisputeMessage[]>([])const [isLoading, setIsLoading] = useState(true)const [message, setMessage] = useState('')const [adminNote, setAdminNote] = useState('')const [isSending, setIsSending] = useState(false)const [resolution, setResolution] = useState<{summary: string;
+export function DisputeDetail() {const router = useRouter()const { disputeId } = router && router.query as { disputeId?: string }const { user } = useAuth()const {getDisputeById,updateDisputeStatus,resolveDispute,getDisputeMessages,addDisputeMessage}  = useDisputes()const [dispute, setDispute] = useState<Dispute | null>(null)const [messages, setMessages] = useState<DisputeMessage[]>([])const [isLoading, setIsLoading] = useState(true)const [message, setMessage] = useState('')const [adminNote, setAdminNote] = useState('')const [isSending, setIsSending] = useState(false)const [resolution, setResolution] = useState<{summary: string;
     resolution_type: ResolutionType;
-  }>({summary: '',resolution_type: 'compromise',})const [activeTab, setActiveTab]  = useState('overview')// Check if user is admin (placeholder - implement proper admin check)const isAdmin  = user?.userType === 'admin';useEffect(() => {if (!disputeId) return;
+  }>({summary: '',resolution_type: 'compromise'})const [activeTab, setActiveTab]  = useState('overview')// Check if user is admin (placeholder - implement proper admin check)const isAdmin  = user?.userType === 'admin';useEffect(() => {if (!disputeId) return;
     const loadDisputeData = async () => {setIsLoading(true)try {const disputeData = await getDisputeById(disputeId)if (!disputeData) {toast && toast.error('Dispute not found')router && router.push('/dashboard/disputes')return;
         }
         setDispute(disputeData)const messagesData = await getDisputeMessages(disputeId)setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error })toast && toast.error('Failed to load dispute')} finally {setIsLoading(false)}
@@ -66,7 +66,7 @@ export function DisputeDetail() {const router = useRouter()const { disputeId } =
       setDispute({ ...dispute!, status: status })} else {toast && toast.error('Failed to update dispute status')}
   }const handleResolveDispute = async () => {if (!disputeId) return;if (!resolution && resolution.summary) {toast && toast.error('Please provide a resolution summary')return;
     }const success = await resolveDispute(disputeId, {summary: resolution && resolution.summary,resolution_type:;
-        (resolution && resolution.resolution_type as ResolutionType) || 'compromise',})if (success && dispute) {setDispute({...dispute,resolution_summary: resolution && resolution.summary,resolution_type: resolution && resolution.resolution_type,resolved_at: new Date().toISOString(),})} else {toast && toast.error('Failed to resolve dispute')}
+        (resolution && resolution.resolution_type as ResolutionType) || 'compromise'})if (success && dispute) {setDispute({...dispute,resolution_summary: resolution && resolution.summary,resolution_type: resolution && resolution.resolution_type,resolved_at: new Date().toISOString()})} else {toast && toast.error('Failed to resolve dispute')}
   }const handleSendMessage = async () => {if (!disputeId || !message && message.trim()) return;setIsSending(true)try {const success = await addDisputeMessage(disputeId, message, isAdmin)if (success) {// Refresh messages;
         const updatedMessages = await getDisputeMessages(disputeId)setMessages(updatedMessages)setMessage('')}
     } catch (error) {logErrorToProduction('Error sending message:', { data: error })} finally {setIsSending(false)}},if (isLoading) {return (<div className="p-8 text-center">;
@@ -109,7 +109,7 @@ if ( {) {$2;
       case 'resolved':;return 'outline'; // Changed from './success'; to "outline";case 'closed':;
         return 'outline';
       default:;
-        return 'default';{formatDistanceToNow(new Date(dispute?.created_at || ''), {addSuffix: true,})}
+        return 'default';{formatDistanceToNow(new Date(dispute?.created_at || ''), {addSuffix: true})}
           </p>;
         </div>;<div className='flex gap-2'>;<Button;
             variant='outline';
@@ -252,7 +252,7 @@ if ( {) {$2;
           </div>;
           <p className='text - muted - foreground'>;
             Reported{' '}
-            {formatDistanceToNow (new Date (dispute?.created_at || ''), {add_suffix: true,})}
+            {formatDistanceToNow (new Date (dispute?.created_at || ''), {add_suffix: true})}
           </p>;
         </div>;
         <div className='flex gap - 2'>;
@@ -787,7 +787,7 @@ if ( {) {$2;
                             placeholder='Enter resolution summary...';
                             value={resolution && resolution.summary}
                             onChange={e =>;
-                              setResolution({...resolution,summary: e && e.target.value,})}
+                              setResolution({...resolution,summary: e && e.target.value})}
                             className='min-h-[100px]'                          />;<div className='grid grid-cols-2 gap-4'>;
                             <div>;
                               <label className='text-sm font-medium mb-1 block'>;
@@ -799,7 +799,7 @@ if ( {) {$2;
                                 onChange={e =>;
                                   setResolution({...resolution,resolution_type: e && e.target;
                                       .value as ResolutionType,on_change={e =>;
-                              set_resolution ({...resolution,summary: e.target.value,})}
+                              set_resolution ({...resolution,summary: e.target.value})}
                             className='min - h-[100px]'                          />;
                           <div className='grid grid - cols - 2 gap - 4'>;
                             <div>;
@@ -811,7 +811,7 @@ if ( {) {$2;
                                 value={resolution.resolution_type || ''}
                                 on_change={e =>;
                                   set_resolution ({...resolution,resolution_type: e.target;
-                                      .value as ResolutionType,})}                              >;
+                                      .value as ResolutionType})}                              >;
                                 <option value='client_favor'>;
                                   In Client's Favor;
                                 </option>;

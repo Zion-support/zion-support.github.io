@@ -1,6 +1,9 @@
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
+
+  return (
+    <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>;
         Innovation in Enterprise Technology;
       </h1>;
@@ -21,6 +24,22 @@ export default function InnovationInEnterpriseTechnologyPage() {return (<div cla
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Article coming soon.;
       </p>;
+  );
+
+}
+
+
+
+
+export default function InnovationInEnterpriseTechnologyPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>
+        Innovation in Enterprise Technology
+      </h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Article coming soon.
+      </p>
     </div>;
   )export default function InnovationInEnterpriseTechnologyPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Innovation in Enterprise Technology</h1>;
@@ -61,3 +80,46 @@ function InnovationInEnterpriseTechnologyPage() {return (<div className="contain
   )}
 }</div>;
   )
+    </div>);
+}
+
+
+
+
+
+
+  )
+}
+
+
+export default function InnovationInEnterpriseTechnologyPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>
+        Innovation in Enterprise Technology
+      </h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Article coming soon.
+      </p>
+    </div>;
+  );export default function InnovationInEnterpriseTechnologyPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Innovation in Enterprise Technology</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
+
+    </div>
+  );
+
+    </div>
+  );
+
+    </div>;
+  );
+}
+
+}
+    </div>
+  );
+}
+}

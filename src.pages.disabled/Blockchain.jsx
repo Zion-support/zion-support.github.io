@@ -11,12 +11,40 @@ interface BlockchainProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/Blockchain.jsx;
+interface BlockchainProps {
+  // Add props here as needed
+
+
+}
+
+export default function Blockchain({}: BlockchainProps) {
+  return (
+    <div>
+      <h1>Blockchain</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/Blockchain.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/Blockchain.jsx;
+:temp_exclude/src.pages.disabled/Blockchain.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Blockchain.jsx
 }
 }
 }

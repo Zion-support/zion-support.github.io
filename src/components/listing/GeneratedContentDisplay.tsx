@@ -35,7 +35,7 @@ interface GeneratedContent  {description: string,tags: string[],suggestedPrice: 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
           <div className="flex flex-wrap gap-2">;
             {content.tags.map((tag, index) => (<Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
-import { Card,CardContent,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
+import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 interface GeneratedContent  {description: string;
   tags: string[];
   suggestedPrice: {min: number;
@@ -118,7 +118,7 @@ export function GeneratedContentDisplay() {return (<Card className='border borde
           <ul className="list-disc pl-5 text-white space-y-1">;
             {content && content.keyPoints.map((point, index) => ({content && content.keyPoints.map((point, index,) => (<li key={index}>{point}</li>;))}import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-  CardContent,CardFooter,CardHeader,CardTitle,} from '@/components / ui / card';
+  CardContent,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
 interface GeneratedContent  {description: string;
 tags: string[];
 suggested_price: {min: number;

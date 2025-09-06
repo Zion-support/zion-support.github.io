@@ -10,6 +10,78 @@
       "AWS, Azure, Google Cloud","Terraform, CloudFormation","Docker, Kubernetes","Jenkins, GitLab CI","Prometheus, Grafana","Ansible, Chef";
     ],industries: [;
       "Financial Services","Healthcare","E-commerce","Manufacturing","Education","Government";
+"use client",
+import { useState  } from './react';,
+interface ITService {
+  id: string,
+  name: string,
+  description: string,
+  deliverables: string[],
+  timeline: string,
+  pricing: string,
+  starting_price: number,
+  contact_link: string,
+  icon: string,
+  features: string[],
+  technologies: string[],
+"use client";
+import { useState } from "react";
+interface ITService {id: string;
+  name: string;
+  description: string;
+  deliverables: string[];
+  timeline: string;
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  features: string[];
+  technologies: string[];
+  industries: string[];
+}
+const it_services: ITService[] = [;
+  {
+    id: "cloud - migration - complete",
+    name: "Complete Cloud Migration & DevOps",
+    description: "End - to - end cloud migration services with DevOps implementation, ensuring smooth transitions and optimal window.window.window.performance.",
+    deliverables: [;
+      "Cloud architecture design",
+      "Migration strategy and planning",
+      "Infrastructure as Code (IaC)",
+      "CI / CD pipeline setup",
+      "Performance optimization",
+      "Security and compliance",
+      "24 / 7 monitoring and support";
+    ],
+    timeline: "4 - 12 weeks depending on complexity",
+    pricing: "Starting at $15, 000",
+    starting_price: 15000,
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = Cloud%20Migration%20Inquiry",
+    features: [;
+      "Multi - cloud strategy planning",
+      "Infrastructure as Code (IaC)",
+      "CI / CD pipeline setup",
+      "Performance optimization",
+      "Security and compliance",
+      "24 / 7 monitoring and support",
+      "Disaster recovery planning",
+      "Cost optimization analysis";
+    ],
+    technologies: [;
+      "AWS, Azure, Google Cloud",
+      "Terraform, CloudFormation",
+      "Docker, Kubernetes",
+      "Jenkins, GitLab CI",
+      "Prometheus, Grafana",
+      "Ansible, Chef";
+    ],
+    industries: [;
+      "Financial Services",
+      "Healthcare",
+      "E - commerce",
+      "Manufacturing",
+      "Education",
+      "Government";
     ];
   },{id: "cybersecurity-comprehensive",name: "Comprehensive Cybersecurity & Compliance",description: "Full-spectrum cybersecurity solutions including penetration testing, compliance audits, and security infrastructure setup.",deliverables: [;
       "Security assessment report","Penetration testing results","Compliance audit findings","Security policy documentation","Incident response plan","Security awareness training","Ongoing monitoring setup";
@@ -123,10 +195,18 @@ const it_services: ITService[] = [;
  * ITSolutionsPage - Function description;
  */;
 function ITSolutionsPage() {return (<div className="space-y-8">;    <div className="space-y-8">;
+],
+export default /**
+ * ITSolutionsPage - Function description
+ */
+function ITSolutionsPage() {
+  return (
+    <div className="space - y-8">;
+    <div className="space-y-8">;
       {/* Header */}
-      <div className="text - center space-y-4">;
-        <h1 className="text - 4xl font-bold">IT Solutions & Services</h1>;
-        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
+      <div className="text - center space - y-4">;
+        <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade IT solutions designed to modernize your infrastructure;
           enhance security, and drive operational efficiency across your organization.;
         </p>;
@@ -153,16 +233,18 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
                     <span className="text - green - 400">✓</span>;
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
         {it_services.map (service => (<div;
+        {it_services.map (service => (
+          <div;
             key={service.id}
-            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";
           >;
             {/* Service Header */}
-            <div className="text - center space-y-3">;
-              <div className="text-4xl">{service.icon}</div>;
-              <h2 className="text - 2xl font-bold">{service.name}</h2>;
-              <p className="opacity-80">{service.description}</p>;
-              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
-              <div className="text - sm opacity-60">Timeline: {service.timeline}</div>;
+            <div className="text - center space - y-3">;
+              <div className="text - 4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font - bold">{service.name}</h2>;
+              <p className="opacity - 80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;
+              <div className="text - sm opacity - 60">Timeline: {service.timeline}</div>;
             </div>;
             {/* Deliverables */}
             <div>;
@@ -170,6 +252,11 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
               <div className="grid grid - cols - 1 gap-2">;
                 {service.deliverables.map ((deliverable, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - green-400">✓</span>;
+              <h3 className="font - semibold mb - 3 text - blue - 400">Deliverables</h3>;
+              <div className="grid grid - cols - 1 gap - 2">;
+                {service.deliverables.map ((deliverable, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - green - 400">✓</span>;
                     <span>{deliverable}</span>;
                   </div>))}
               </div>;
@@ -184,6 +271,9 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - blue-400">⚙️</span>;
+                {service.features.map ((feature, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - blue - 400">⚙️</span>;
                     <span>{feature}</span>;
                   </div>))}
               </div>;
@@ -198,6 +288,9 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.technologies.map ((tech, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - yellow-400">🔧</span>;
+                {service.technologies.map ((tech, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - yellow - 400">🔧</span>;
                     <span>{tech}</span>;
                   </div>))}
               </div>;
@@ -212,6 +305,9 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.industries.map ((industry, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - purple-400">🏢</span>;
+                {service.industries.map ((industry, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - purple - 400">🏢</span>;
                     <span>{industry}</span>;
                   </div>))}
               </div>;
@@ -224,7 +320,7 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
             <div className="space - y-3 pt - 4 border - t border-white / 10">;
               <a;
                 href={service.contact_link}
-                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
               >;
                 Get Started;
               </a>;
@@ -269,20 +365,20 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
             <h3 className="font - semibold mb-2">Cloud Solutions</h3>;
             <p className="text - sm opacity-80">Multi - cloud strategy, migration, and optimization</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🔒</div>;
-            <h3 className="font - semibold mb-2">Cybersecurity</h3>;
-            <p className="text - sm opacity-80">Comprehensive security and compliance solutions</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🔒</div>;
+            <h3 className="font - semibold mb - 2">Cybersecurity</h3>;
+            <p className="text - sm opacity - 80">Comprehensive security and compliance solutions</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🌐</div>;
-            <h3 className="font - semibold mb-2">Infrastructure</h3>;
-            <p className="text - sm opacity-80">Network design, implementation, and management</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🌐</div>;
+            <h3 className="font - semibold mb - 2">Infrastructure</h3>;
+            <p className="text - sm opacity - 80">Network design, implementation, and management</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">💡</div>;
-            <h3 className="font - semibold mb-2">Strategy</h3>;
-            <p className="text - sm opacity-80">IT strategy and digital transformation consulting</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">💡</div>;
+            <h3 className="font - semibold mb - 2">Strategy</h3>;
+            <p className="text - sm opacity - 80">IT strategy and digital transformation consulting</p>;
           </div>;
         </div>;
       </div>;
@@ -303,10 +399,10 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
           Let's discuss how our IT solutions can transform your technology landscape;
           enhance security, and drive operational efficiency. Get in touch for a comprehensive IT assessment.;
         </p>;
-        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+        <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = IT%20Solutions%20Consultation";
-            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
           >;
             Schedule IT Consultation;
           </a>;
@@ -327,7 +423,7 @@ function ITSolutionsPage() {return (<div className="space-y-8">;    <div classNa
       <div className="text-center">;
         <a;
           href="/services";
-          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font-semibold";
+          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
         >;
           ← Back to All Services;
         </a>;

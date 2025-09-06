@@ -4,6 +4,6 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 }export default function IntelligentProjectManagementSuite() {try {return <ServicePage {...props} />;
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-}import ServicePage, {getStaticProps as getSlugStaticProps,} from './services/[slug]';
+}import ServicePage, {getStaticProps as getSlugStaticProps} from './services/[slug]';
 export async function getStaticProps() {return (getSlugStaticProps as any)({params: { slug: 'intelligent-project-management-suite' }
   })export default function IntelligentProjectManagementSuite() {return <ServicePage {...props} />;

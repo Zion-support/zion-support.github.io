@@ -18,17 +18,17 @@ import { Textarea  } from '@/components/ui/textarea';
 import { Input  } from '@/components/ui/input';
 import { Checkbox  } from '@/components/ui/checkbox';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components / ui / form';
+import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components / ui / form';
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education  } from '@/types / resume';
 // Define schema for form validation;
-const education_schema = z.object ({institution: z.string ().min (1, 'Institution is required'),degree: z.string ().min (1, 'Degree is required'),field_of_study: z.string ().optional (),start_date: z.string ().min (1, 'Start date is required'),end_date: z.string ().optional (),is_current: z.boolean ().default (false),description: z.string ().optional (),location: z.string ().optional (),})type EducationFormValues = z.infer < typeof education_schema>;
+const education_schema = z.object ({institution: z.string ().min (1, 'Institution is required'),degree: z.string ().min (1, 'Degree is required'),field_of_study: z.string ().optional (),start_date: z.string ().min (1, 'Start date is required'),end_date: z.string ().optional (),is_current: z.boolean ().default (false),description: z.string ().optional (),location: z.string ().optional ()})type EducationFormValues = z.infer < typeof education_schema>;
 export /**;
  * EducationFormFields - Function description;
  */;
-function EducationFormFields() {const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),default_values: {institution: '',degree: '',field_of_study: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: '',},})const handle_submit = async (data: EducationFormValues) => {setIsLoading (true)set_error (null)try {await on_submit (data)} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
-  }FormMessage,} from '@/components/ui/form';
+function EducationFormFields() {const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),default_values: {institution: '',degree: '',field_of_study: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''}})const handle_submit = async (data: EducationFormValues) => {setIsLoading (true)set_error (null)try {await on_submit (data)} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
+  }FormMessage} from '@/components/ui/form';
 import { Education  } from '@/types/resume';
 import { useForm   } from 'react-hook-form';
 import { zodResolver   } from '@hookform/resolvers/zod';
@@ -130,8 +130,8 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
           <div className='space-y-4'>;
             <FormField;
               control={form.control}<Checkbox;
-                      checked = {field && field.value,}
-                      onCheckedChange = {field && field.onChange,}
+                      checked = {field && field.value}
+                      onCheckedChange = {field && field.onChange}
                     />;
                   </FormControl>;
                   <div className='space-y-1 leading-none'>;
@@ -195,8 +195,8 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
               name='is_current';
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
                     <Checkbox;
-                      checked = {field.value, }
-                      onCheckedChange = {field.on_change, }
+                      checked = {field.value }
+                      onCheckedChange = {field.on_change }
                     />;
                   </FormControl>;
                   <div className='space - y-1 leading - none'>;

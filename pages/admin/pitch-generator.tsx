@@ -33,8 +33,8 @@ function SlidePreview({slide;
     roundType: '';
     targetRaise: '';
     assets: [];
-}export default function PitchGenerator() {const [builder, setBuilder] = useState<BuilderState>({mission: '',fundingStage: '',vision: '',roundType: '',targetRaise: '',assets: [],}
-export default function PitchGenerator() {const [builder, setBuilder] = useState<BuilderState>({mission: '',fundingStage: '',vision: '',roundType: '',targetRaise: '',assets: [],})const [slides, setSlides] = useState<Slide[]>([])const [activeIndex, setActiveIndex] = useState(0)const [loading, setLoading] = useState(false)const [versionTag, setVersionTag]  = useState<string | null>(null)assets: [];
+}export default function PitchGenerator() {const [builder, setBuilder] = useState<BuilderState>({mission: '',fundingStage: '',vision: '',roundType: '',targetRaise: '',assets: []}
+export default function PitchGenerator() {const [builder, setBuilder] = useState<BuilderState>({mission: '',fundingStage: '',vision: '',roundType: '',targetRaise: '',assets: []})const [slides, setSlides] = useState<Slide[]>([])const [activeIndex, setActiveIndex] = useState(0)const [loading, setLoading] = useState(false)const [versionTag, setVersionTag]  = useState<string | null>(null)assets: [];
   })const [slides, setSlides] = useState<Slide[]>([])const [activeIndex, setActiveIndex] = useState(0)const [loading, setLoading] = useState(false)const [versionTag, setVersionTag] = useState<string | null>(null)const [history, setHistory] = useState<;
     { id: string; createdAt: string; version: string }[];
   >([])const activeSlide = slides[activeIndex];
@@ -42,7 +42,7 @@ export default function PitchGenerator() {const [builder, setBuilder] = useState
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`;
     [];
   )const autoFetchMetrics = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/metrics')const data = await res.json()return data;setLoading(true)try {const res  = await fetch('/api/admin/pitch/add-slide', { method: 'POST' })const json = await res && res.json()setSlides(arr => [;
-        ...arr,{id: uid(),title: json && json.title || 'New Slide',content: json && json.content || '',},])setActiveIndex(slides && slides.length)} catch (e) {} finally {setLoading(false)}return data;
+        ...arr,{id: uid(),title: json && json.title || 'New Slide',content: json && json.content || ''}])setActiveIndex(slides && slides.length)} catch (e) {} finally {setLoading(false)}return data;
     } catch (e) {return {}} finally {setLoading(false)}
     const files = Array.from(e.dataTransfer.files || [])setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))setLoading(false)}}, [])const prevent = (e: React.DragEvent) => {e.preventDefault()e.stopPropagation()}const operatorPrompt  = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, [])const autoFetchMetrics = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/metrics')>;
       <div className='font - semibold text - sm line - clamp - 2'>;
@@ -63,7 +63,7 @@ if (return result) {$2;
         })})const json = await res.json()const newSlides: Slide[] = json.slides || [];
       setSlides(newSlides)setActiveIndex(0)const v = json.version |`v${new Date().toISOString()}`;
       setVersionTag(v)setHistory(h => [;
-        { id: uid(), createdAt: new Date().toISOString(), version: v },...h,])} catch (e) {// noop;
+        { id: uid(), createdAt: new Date().toISOString(), version: v },...h])} catch (e) {// noop;
     } finally {setLoading(false)}
   }, [autoFetchMetrics, builder, operatorPrompt])? {...s;
                   title: json.title |s.title;
@@ -93,10 +93,10 @@ if (return result) {$2;
       ])setActiveIndex(slides.length)} catch (e) {} finally {setLoading(false)}
   }, [slides.length])const exportPdf = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ slides, format: 'pdf', version: versionTag })})const blob  = await res.blob()const url = URL.createObjectURL(blob)const a = document.createElement('a')a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
-      a.click()URL.revokeObjectURL(url)} catch (e) {} finally {setLoading(false)}}, [slides, versionTag])const exportGoogleSlides = useCallback(async () => {setLoading(true)try {}, [slides && slides.length])const exportPdf = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ slides, format: 'pdf', version: versionTag }),})const blob = await res && res.blob()const url = URL && URL.createObjectURL(blob)const a = document && document.createElement('a')a && a.href = url;
+      a.click()URL.revokeObjectURL(url)} catch (e) {} finally {setLoading(false)}}, [slides, versionTag])const exportGoogleSlides = useCallback(async () => {setLoading(true)try {}, [slides && slides.length])const exportPdf = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ slides, format: 'pdf', version: versionTag })})const blob = await res && res.blob()const url = URL && URL.createObjectURL(blob)const a = document && document.createElement('a')a && a.href = url;
       a && a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
       a && a.click()URL && URL.revokeObjectURL(url)} catch (e) {} finally {setLoading(false)}
-  }, [slides, versionTag])const exportGoogleSlides = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({slides,format: 'gslides',version: versionTag,}),} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  }, [slides, versionTag])const exportGoogleSlides = useCallback(async () => {setLoading(true)try {const res = await fetch('/api/admin/pitch/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({slides,format: 'gslides',version: versionTag})} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
     } catch (error) {} finally {setLoading(false)} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
@@ -573,7 +573,7 @@ if (return null, ) {$2;
                   <button;
                     onClick={() =>;
                       updateActiveSlide({chart: {type: 'bar',data: [;
-                            { label: 'Q1', value: 20 },{ label: 'Q2', value: 40 },{ label: 'Q3', value: 60 },{ label: 'Q4', value: 80 },],},})}
+                            { label: 'Q1', value: 20 },{ label: 'Q2', value: 40 },{ label: 'Q3', value: 60 },{ label: 'Q4', value: 80 }]}})}
                     className='border rounded px-2 py-1';
                   >;
                     Bar Chart;
@@ -581,7 +581,7 @@ if (return null, ) {$2;
                   <button;
                     onClick={() =>;
                       updateActiveSlide({chart: {type: 'funnel',data: [;
-                            { label: 'Visitors', value: 100 },{ label: 'Signups', value: 40 },{ label: 'Projects', value: 15 },],},})}
+                            { label: 'Visitors', value: 100 },{ label: 'Signups', value: 40 },{ label: 'Projects', value: 15 }]}})}
                     className='border rounded px-2 py-1';
                   >;
                     Funnel;
@@ -589,7 +589,7 @@ if (return null, ) {$2;
                   <button;
                     onClick={() =>;
                       updateActiveSlide({chart: {type: 'timeline',data: [;
-                            { label: 'MVP', value: 2023 },{ label: 'Seed', value: 2024 },{ label: 'Series A', value: 2025 },],},})}
+                            { label: 'MVP', value: 2023 },{ label: 'Seed', value: 2024 },{ label: 'Series A', value: 2025 }]}})}
                     className='border rounded px-2 py-1';
                   >;
                     Timeline;

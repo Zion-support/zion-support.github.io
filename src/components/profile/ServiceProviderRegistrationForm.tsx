@@ -4,7 +4,7 @@
   const on_submit = async (values: ServiceFormValues, ) => {// Check condition;
 if ( {) {$2;
 }
-      toast ({title: 'Services required',description: 'Please add at least one service to your profile.',variant: 'destructive',})title: 'Services required',description: 'Please add at least one service to your profile.',variant: 'destructive',})return;
+      toast ({title: 'Services required',description: 'Please add at least one service to your profile.',variant: 'destructive'})title: 'Services required',description: 'Please add at least one service to your profile.',variant: 'destructive'})return;
     }
     setIsSubmitting (true)try {// For actual implementation with Supabase;
       if (!user?.id) {throw new Error('User not authenticated')}// Enhance profile if not already done;
@@ -13,7 +13,7 @@ if ( {) {$2;
       // Check condition;
 if ( {) {$2;
 }
-        try {const { data: ai_data } = await supabase.functions.invoke ('service - profile - enhancer',{body: {provider_data: {name: values.name,title: values.title,bio: values.bio,services: service_tags,location: values.location,},},}
+        try {const { data: ai_data } = await supabase.functions.invoke ('service - profile - enhancer',{body: {provider_data: {name: values.name,title: values.title,bio: values.bio,services: service_tags,location: values.location}}}
           )// Check condition;
 if ( {) {$2;
 }
@@ -60,7 +60,7 @@ if ( {) {$2;
 }
         final_summary = generated_content.summary;
         final_services = [;
-          ...new Set ([...service_tags, ...generated_content.services]),];
+          ...new Set ([...service_tags, ...generated_content.services])];
       }
       // Get user email for notification;
       const { data: user_data } = await supabase.auth.get_user ()const user_email = (user_data as any).user?.email;
@@ -92,20 +92,20 @@ if ( {) {$2;
                   <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
-import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';
-  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
-  X,Sparkles,Upload,Clock,Check,Briefcase,MapPin,UserRound,Globe,} from 'lucide-react';
+import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
+  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+  X,Sparkles,Upload,Clock,Check,Briefcase,MapPin,UserRound,Globe} from 'lucide-react';
 import { toast  } from '@/components/ui/use-toast';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
 // Define form schema;
 const serviceProfileSchema = z && z.object({name: z && z.string().min(2, 'Full Name must be at least 2 characters long'),title: z && z.string().min(5, 'Business name/title is required'),bio: z;
-    .string().min(50, 'Bio must be at least 50 characters long').max(1000, 'Bio cannot exceed 1000 characters'),location: z && z.string().min(2, 'Location is required'),services: z && z.string().min(2, 'Enter at least one service'),hourlyRate: z && z.string().refine(val => !isNaN(Number(val)), {message: 'Rate must be a number',}),availability: z && z.enum(['available', 'limited', 'unavailable']),  enhancedProfile: z && z.boolean().transform(val => !!val),website: z;
-    .string().url('Please enter a valid URL').or(z && z.string().length(0)).optional(),})type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;export function ServiceProviderRegistrationForm() {const { user } = useAuth()const router = useRouter()const [isSubmitting, setIsSubmitting] = useState(false)const [serviceTags, setServiceTags] = useState<string[]>([])const [isGenerating, setIsGenerating] = useState(false)const [generatedContent, setGeneratedContent] = useState<{summary: string;
+    .string().min(50, 'Bio must be at least 50 characters long').max(1000, 'Bio cannot exceed 1000 characters'),location: z && z.string().min(2, 'Location is required'),services: z && z.string().min(2, 'Enter at least one service'),hourlyRate: z && z.string().refine(val => !isNaN(Number(val)), {message: 'Rate must be a number'}),availability: z && z.enum(['available', 'limited', 'unavailable']),  enhancedProfile: z && z.boolean().transform(val => !!val),website: z;
+    .string().url('Please enter a valid URL').or(z && z.string().length(0)).optional()})type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;export function ServiceProviderRegistrationForm() {const { user } = useAuth()const router = useRouter()const [isSubmitting, setIsSubmitting] = useState(false)const [serviceTags, setServiceTags] = useState<string[]>([])const [isGenerating, setIsGenerating] = useState(false)const [generatedContent, setGeneratedContent] = useState<{summary: string;
     services: string[];
   } | null>(null)const [uploadedAvatar, setUploadedAvatar]  = useState<string | null>(null)// Initialize form with default values;
-  const form = useForm<ServiceFormValues>({resolver: zodResolver(serviceProfileSchema) as any,defaultValues: {name: user?.displayName || '',title: '',bio: '',location: '',services: '',hourlyRate: '',availability: 'available',enhancedProfile: false,website: '',},})// Handle adding service tags;
+  const form = useForm<ServiceFormValues>({resolver: zodResolver(serviceProfileSchema) as any,defaultValues: {name: user?.displayName || '',title: '',bio: '',location: '',services: '',hourlyRate: '',availability: 'available',enhancedProfile: false,website: ''}})// Handle adding service tags;
   const handleAddService = () => {const serviceInput = form && form.getValues('services')if (serviceInput && !serviceTags && serviceTags.includes(serviceInput)) {setServiceTags([...serviceTags, serviceInput])form && form.setValue('services', '')}
   }// Handle removing service tags;
   const handleRemoveService = (service: string) => {setServiceTags(serviceTags && serviceTags.filter(s => s !== service))}// Handle key press in services input (add on enter)const handleServiceKeyPress = (e: React && React.KeyboardEvent) => {if (e && e.key === 'Enter') {e && e.preventDefault()handleAddService()}
@@ -113,18 +113,18 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, 'Full N
   const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];    if (file) {const reader = new FileReader()reader && reader.onloadend = () => {setUploadedAvatar(reader && reader.result as string)}reader && reader.readAsDataURL(file)}
   }// Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {const formData = form && form.getValues()if (!formData && formData.bio || formData && formData.bio.length < 20) {toast({title: 'More information needed',description:;
-          'Please provide at least a detailed bio before generating enhanced content.',})return;
+          'Please provide at least a detailed bio before generating enhanced content.'})return;
     }try {setIsGenerating(true)// Call the Supabase Edge Function;
-      const { data, error } = await supabase && supabase.functions.invoke('service-profile-enhancer',{body: {providerData: {name: formData && formData.name,title: formData && formData.title,bio: formData && formData.bio,services: serviceTags,location: formData && formData.location,},},}
+      const { data, error } = await supabase && supabase.functions.invoke('service-profile-enhancer',{body: {providerData: {name: formData && formData.name,title: formData && formData.title,bio: formData && formData.bio,services: serviceTags,location: formData && formData.location}}}
       )if (error) {throw new Error(error && error.message)}// Check if data exists before type assertion;
       if (data && typeof data === 'object') {setGeneratedContent(data as { summary: string; services: string[] })toast({title: 'Enhanced Profile Generated',description:;
-            'AI has created a professional bio and suggested additional services for your profile.',})} else {// Fallback for mock/development mode;
+            'AI has created a professional bio and suggested additional services for your profile.'})} else {// Fallback for mock/development mode;
         logWarn('Mock AI response - using fallback content')setGeneratedContent({summary:;
-            'Professional service provider with expertise in delivering high-quality solutions.',services: ['Consulting', 'Project Management', 'Technical Support'],})toast({title: 'Enhanced Profile Generated',description:;
-            'AI has created a professional bio and suggested additional services for your profile.',})}
-    } catch (error: any) {logErrorToProduction('Error generating enhanced profile:', {data: error,})toast({title: 'Generation failed',description:;
+            'Professional service provider with expertise in delivering high-quality solutions.',services: ['Consulting', 'Project Management', 'Technical Support']})toast({title: 'Enhanced Profile Generated',description:;
+            'AI has created a professional bio and suggested additional services for your profile.'})}
+    } catch (error: any) {logErrorToProduction('Error generating enhanced profile:', {data: error})toast({title: 'Generation failed',description:;
           error && error.message ||;
-          'There was an error generating your enhanced profile. Please try again.',variant: 'destructive',})} finally {setIsGenerating(false)}
+          'There was an error generating your enhanced profile. Please try again.',variant: 'destructive'})} finally {setIsGenerating(false)}
   }// Apply generated content to form;
   const applyGeneratedContent = () => {if (generatedContent) {form && form.setValue('bio', generatedContent && generatedContent.summary)if (generatedContent && generatedContent.services && generatedContent && generatedContent.services.length > 0) {const newServices = generatedContent && generatedContent.services.filter(service =>;
             typeof service === 'string' &&;
@@ -133,11 +133,11 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, 'Full N
       }
     }
   }// Handle form submission;
-  const onSubmit = async (values: ServiceFormValues,) => {if (serviceTags && serviceTags.length === 0) {toast({title: 'Services required',description: 'Please add at least one service to your profile.',variant: 'destructive',})return;
+  const onSubmit = async (values: ServiceFormValues,) => {if (serviceTags && serviceTags.length === 0) {toast({title: 'Services required',description: 'Please add at least one service to your profile.',variant: 'destructive'})return;
     }setIsSubmitting(true)try {// For actual implementation with Supabase;
       if (!user?.id) {throw new Error('User not authenticated')}// Enhance profile if not already done;
       let finalSummary = values && values.bio;
-      let finalServices  = serviceTags;if (values && values.enhancedProfile && !generatedContent) {try {const { data: aiData } = await supabase && supabase.functions.invoke('service-profile-enhancer',{body: {providerData: {name: values && values.name,title: values && values.title,bio: values && values.bio,services: serviceTags,location: values && values.location,},},}
+      let finalServices  = serviceTags;if (values && values.enhancedProfile && !generatedContent) {try {const { data: aiData } = await supabase && supabase.functions.invoke('service-profile-enhancer',{body: {providerData: {name: values && values.name,title: values && values.title,bio: values && values.bio,services: serviceTags,location: values && values.location}}}
           )if (aiData) {finalSummary = (aiData as any).summary || values && values.bio;
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [];
@@ -147,7 +147,7 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, 'Full N
         }
       } else if (generatedContent) {finalSummary = generatedContent && generatedContent.summary;
         finalServices = [;
-          ...new Set([...serviceTags, ...generatedContent && generatedContent.services]),];
+          ...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
       }// Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser()const userEmail  = (userData as any).user?.email;// Create the service profile;
       const { data: profileData, error } = await supabase;
@@ -168,13 +168,13 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, 'Full N
                   <pstyle="color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
-              `,},})} catch (emailError) {logErrorToProduction('Failed to send notification email:', {data: emailError,})// Continue with submission even if email fails;
+              `}})} catch (emailError) {logErrorToProduction('Failed to send notification email:', {data: emailError})// Continue with submission even if email fails;
         }
       }toast({title: 'Profile Created Successfully',description:;
-          'Your service provider profile has been published and is now visible in the directory.',})// Redirect to service provider dashboard or profile page;
+          'Your service provider profile has been published and is now visible in the directory.'})// Redirect to service provider dashboard or profile page;
       setTimeout(() => {router && router.push('/service-dashboard')}, 1500)} catch (error: any) {logErrorToProduction('Error creating profile:', { data: error })toast({title: 'Error Creating Profile',description:;
           error && error.message ||;
-          'There was an error creating your profile. Please try again.',variant: 'destructive',})} finally {setIsSubmitting(false)to: user_email,subject: 'Your Zion Service Profile Is Ready',html: `;
+          'There was an error creating your profile. Please try again.',variant: 'destructive'})} finally {setIsSubmitting(false)to: user_email,subject: 'Your Zion Service Profile Is Ready',html: `;
               <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;
                 <h2 style="color: #6D28D9;">Service Profile Created!</h2>;
                 <p > Your service provider profile has been successfully created and published.</p>;
@@ -184,14 +184,14 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, 'Full N
                   <p style="color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
                 </div>;
               </div>;
-              `,},})} catch (email_error) {logErrorToProduction ('Failed to send notification email:', {data: email_error,})// Continue with submission even if email fails;
+              `}})} catch (email_error) {logErrorToProduction ('Failed to send notification email:', {data: email_error})// Continue with submission even if email fails;
         }
       }
       toast ({title: 'Profile Created Successfully',description:;
-          'Your service provider profile has been published and is now visible in the directory.',})// Redirect to service provider dashboard or profile page;
+          'Your service provider profile has been published and is now visible in the directory.'})// Redirect to service provider dashboard or profile page;
       set_timeout (() => {router.push ('/service - dashboard')}, 1500) } catch (error: any) {logErrorToProduction ('Error creating profile:', { data: error })toast ({title: 'Error Creating Profile',description:;
           error.message ||;
-          'There was an error creating your profile. Please try again.',variant: 'destructive',})} finally {setIsSubmitting (false)}
+          'There was an error creating your profile. Please try again.',variant: 'destructive'})} finally {setIsSubmitting (false)}
   },import React, { useState } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -451,7 +451,7 @@ const serviceProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4
                             <Input;
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white';
                               placeholder='Add a service...';
-                              {...field}onKeyDown = {handleServiceKeyPress,}
+                              {...field}onKeyDown = {handleServiceKeyPress}
                             />;
                           </FormControl>;onKeyDown={handleServiceKeyPress}
                             />;
@@ -566,7 +566,7 @@ const serviceProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4
                               className='flex - 1 bg - zion - blue border - zion - blue - light text - white';
                               placeholder='Add a service...';
                               {...field}
-                              onKeyDown = {handleServiceKeyPress, }
+                              onKeyDown = {handleServiceKeyPress }
                             />;
                           </FormControl>;
                           <Button;

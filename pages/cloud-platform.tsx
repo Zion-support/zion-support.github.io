@@ -3,7 +3,7 @@
 import React from 'react';
 import Head from 'next / head';
 import { Cloud,Shield,Globe,Server,Database,ArrowRight,Check;
-  ArrowRight,Check,} from 'lucide-react';
+  ArrowRight,Check} from 'lucide-react';
 } from 'lucide-react';
 export default /**;
  * CloudPlatformPage - Function description;
@@ -32,9 +32,9 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
-import {Cloud,Shield,Globe,Server,Database,ArrowRight,Check,} from 'lucide-react';
+import {Cloud,Shield,Globe,Server,Database,ArrowRight,Check} from 'lucide-react';
 export default function CloudPlatformPage() {const features = [;
-    {icon: <Server className='w-8 h-8 text-white' />,title: 'Scalable Infrastructure',description: 'Auto-scaling compute resources that grow with your needs',},{icon: <Database className='w-8 h-8 text-white' />,title: 'Managed Databases',description: 'Fully managed databases with automated backups and scaling',},{icon: <Globe className='w-8 h-8 text-white' />,title: 'Global CDN',description: 'Lightning-fast content delivery across the globe',},{icon: <Shield className='w-8 h-8 text-white' />,title: 'Enterprise Security',description: 'SOC 2 compliant with advanced threat protection',},export default function CloudPlatformPage() {const features = [;
+    {icon: <Server className='w-8 h-8 text-white' />,title: 'Scalable Infrastructure',description: 'Auto-scaling compute resources that grow with your needs'},{icon: <Database className='w-8 h-8 text-white' />,title: 'Managed Databases',description: 'Fully managed databases with automated backups and scaling'},{icon: <Globe className='w-8 h-8 text-white' />,title: 'Global CDN',description: 'Lightning-fast content delivery across the globe'},{icon: <Shield className='w-8 h-8 text-white' />,title: 'Enterprise Security',description: 'SOC 2 compliant with advanced threat protection'},export default function CloudPlatformPage() {const features = [;
     {icon: <Server className="w-8 h-8 text-white" />,title: 'Scalable Infrastructure',description: 'Auto-scaling compute resources that grow with your needs';
     },{icon: <Database className="w-8 h-8 text-white" />,title: 'Managed Databases',description: 'Fully managed databases with automated backups and scaling';
     },{icon: <Globe className="w-8 h-8 text-white" />,title: 'Global CDN',description: 'Lightning-fast content delivery across the globe';

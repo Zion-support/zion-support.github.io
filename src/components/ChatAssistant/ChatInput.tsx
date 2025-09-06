@@ -10,7 +10,7 @@ disabled?: boolean;
   const [message, setMessage] = useState ('')const inputRef = useRef<HTMLTextAreaElement> (null)//Focus input when component mounts;
 export function ChatInput() {const [ message, setMessage ] = useState('')const inputRef = useRef<HTMLTextAreaElement>(null)useEffect(() => {    // Focus input when component mounts;
     inputRef.current?.focus() }, [])inputRef.current?.focus()interface ChatInputProps  {onSend: (message: string) => void,disabled?: boolean;
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',import { Button } from "@/components/ui/button",import React, {useState,useRef,useEffect,FormEvent,KeyboardEvent,} from 'react';
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',import { Button } from "@/components/ui/button",import React, {useState,useRef,useEffect,FormEvent,KeyboardEvent} from 'react';
 interface ChatInputProps  {onSend: (message: string) => void,disabled?: boolean;
 interface ChatInputProps  {onSend: (message: string) => void;
 disabled?: boolean ;

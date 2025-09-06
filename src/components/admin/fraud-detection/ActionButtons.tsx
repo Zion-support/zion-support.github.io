@@ -109,7 +109,7 @@ import React from "react",import { Button } from "@/components/ui/button",interf
   )}interface ActionButtonsProps  {flag_id: string;
   status: string;
   on_action: (flag_id: string,action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
-export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on_action,}) => {  return (<div className='flex space - x-2'>;
+export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on_action}) => {  return (<div className='flex space - x-2'>;
       <Button;
         variant='ghost';
         size='icon';
@@ -119,7 +119,7 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
         size="icon";
         title="View Details";
         aria - label="View details";
-        on_click = {(, ) => alert ("View details (would open a detailed view)"), }
+        on_click = {(, ) => alert ("View details (would open a detailed view)") }
       >;
         <Eye className='h - 4 w - 4' />;
       </Button>;
@@ -155,7 +155,7 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
           size='sm'          on_click={() => on_action (flag_id, 'ignore')}          variant="ghost";
           size="sm";
           on_click={() => on_action (flag_id, 'ignore')}
-          on_click = {(, ) => on_action (flag_id, 'ignore'), }
+          on_click = {(, ) => on_action (flag_id, 'ignore') }
         >;
           Ignore;
         </Button>)}

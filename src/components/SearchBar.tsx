@@ -119,9 +119,9 @@ interface SearchBarProps  {/**;
 }/**;
  * SearchBar component that allows users to search for content.;
  */;
-export function SearchBar(): any ({value,onChange,onSelectSuggestion,placeholder = 'Search...',}: SearchBarProps) {  const router = useRouter()export function SearchBar(): any ({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {const router = useRouter()const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])const [focused, setFocused] = useState(false)const [highlightedIndex, setHighlightedIndex] = useState(-1)const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)const inputRef = useRef<HTMLInputElement>(null)const containerRef  = useRef<HTMLDivElement>(null)useEffect((,) => {if (!debounced) {setSuggestions([])setHighlightedIndex(-1)return;
+export function SearchBar(): any ({value,onChange,onSelectSuggestion,placeholder = 'Search...'}: SearchBarProps) {  const router = useRouter()export function SearchBar(): any ({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {const router = useRouter()const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])const [focused, setFocused] = useState(false)const [highlightedIndex, setHighlightedIndex] = useState(-1)const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)const inputRef = useRef<HTMLInputElement>(null)const containerRef  = useRef<HTMLDivElement>(null)useEffect((,) => {if (!debounced) {setSuggestions([])setHighlightedIndex(-1)return;
     }
-    const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {signal: controller && controller.signal,}).then(res => {if (!res && res.ok) throw new Error('Failed to fetch suggestions')return res && res.json()}).then(data => {if (Array && Array.isArray(data)) {setSuggestions(data && data.slice(0, 5))} else {  const debounced = useDebounce(value, 150)const inputRef = useRef<HTMLInputElement>(null)const containerRef  = useRef<HTMLDivElement>(null)useEffect(() => {if (!debounced) {setSuggestions([])setHighlightedIndex(-1)}
+    const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {signal: controller && controller.signal}).then(res => {if (!res && res.ok) throw new Error('Failed to fetch suggestions')return res && res.json()}).then(data => {if (Array && Array.isArray(data)) {setSuggestions(data && data.slice(0, 5))} else {  const debounced = useDebounce(value, 150)const inputRef = useRef<HTMLInputElement>(null)const containerRef  = useRef<HTMLDivElement>(null)useEffect(() => {if (!debounced) {setSuggestions([])setHighlightedIndex(-1)}
     const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller && controller.signal }).then(res => {if (!res && res.ok) throw new Error('Failed to fetch suggestions')return res && res.json()}).then(data => {if (Array && Array.isArray(data)) {setSuggestions(data && data.slice(0, 5))} else {setSuggestions([])}
         setHighlightedIndex(-1)}).catch(() => setSuggestions([]))}, [debounced])useOnClickOutside(containerRef, () => {setFocused(false)})const handleSelect = (suggestion: SearchSuggestion) => {onChange(suggestion && suggestion.text)if (onSelectSuggestion) onSelectSuggestion(suggestion)const searchQuery = encodeURIComponent(suggestion && suggestion.text)router && router.push(`/search?q=${searchQuery}`)fireEvent('search', { search_term: suggestion && suggestion.text })setFocused(false)setHighlightedIndex(-1)aria-controls={listId}
       data-testid='search-bar'    >;
@@ -301,7 +301,7 @@ if ( {) {$2;
 }
       set_suggestions ([])setHighlightedIndex (-1)return;
     }
-    const controller = new AbortController ()fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {signal: controller.signal,}).then (res => {if (throw new Error ('Failed to fetch suggestions')) {$2;
+    const controller = new AbortController ()fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {signal: controller.signal}).then (res => {if (throw new Error ('Failed to fetch suggestions')) {$2;
 }
         return res.json ()}).then (data => {if () {) {$2;
 }
@@ -415,12 +415,12 @@ if ( {) {$2;
           </button>)}
       </div>;
       <AutocompleteSuggestions;
-        suggestions = {suggestions, }
-        search_term = {value, }
-        onSelectSuggestion = {handle_select, }
-        visible = {focused, }
-        highlighted_index = {highlighted_index, }
-        list_id = {list_id, }
+        suggestions = {suggestions }
+        search_term = {value }
+        onSelectSuggestion = {handle_select }
+        visible = {focused }
+        highlighted_index = {highlighted_index }
+        list_id = {list_id }
       />;
     </div>)}/> on_click={';
   () => on_change ('') ";
@@ -432,12 +432,12 @@ if ( {) {$2;
 }list_id= {list_id;
 }/> </div>)}'"  )}</div>;
       <AutocompleteSuggestions;
-        suggestions = {suggestions,}
-        searchTerm = {value,}
-        onSelectSuggestion = {handleSelect,}
-        visible = {focused,}
-        highlightedIndex = {highlightedIndex,}
-        listId = {listId,}
+        suggestions = {suggestions}
+        searchTerm = {value}
+        onSelectSuggestion = {handleSelect}
+        visible = {focused}
+        highlightedIndex = {highlightedIndex}
+        listId = {listId}
       />;
     </div>;
 )}/> onClick={';

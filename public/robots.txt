@@ -35,6 +35,10 @@ Allow: /guides/
 # Crawl delay
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
+Disallow: /private/
+
+Crawl-delay: 1
+
 Disallow: /test/
 Disallow: /temp/
 
@@ -112,3 +116,6 @@ Allow: /guides/
 Crawl-delay: 1
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+Crawl-delay: 1
+

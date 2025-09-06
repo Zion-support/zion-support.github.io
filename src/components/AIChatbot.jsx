@@ -18,7 +18,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     const addMessage = useCallback((message) => {const newMessage = {...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date()}setMessages(prev => {const updated = [...prev, newMessage];
             // Keep only the last maxMessages;
             return updated.slice(-maxMessages)})// Update conversation context;
-        if (enableContext && message.content.length > 10) {// setConversationContext(prev => [...prev.slice(-4), message.content])// This line was removed, }
+        if (enableContext && message.content.length > 10) {// setConversationContext(prev => [...prev.slice(-4), message.content])// This line was removed }
         return newMessage}, [maxMessages, enableContext])// Add bot message with typing effect;
     const addBotMessage = useCallback((content, metadata) => {const message = addMessage({type: 'bot', content,metadata;
         })// Track bot response;
@@ -44,7 +44,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     const handleUserInput = useCallback(async (input) => {if (!input.trim())return;
         // Add user message;
         const userMessage = addMessage({type: 'user', content: input.trim()})// Track user input;
-        trackChatbotInteraction('user_input', {messageId: userMessage.id,inputLength: input.length, })// Clear input"";
+        trackChatbotInteraction('user_input', {messageId: userMessage.id,inputLength: input.length })// Clear input"";
         setInputValue('')setIsTyping(true)try {// Get AI response;
             const response = await simulateAIProcessing(input)// Add bot response;
             addBotMessage(response, {"";
@@ -52,12 +52,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                     "Tell me more","Get a quote", "View services","Contact sales";
                 ];
             })// Track successful interaction;
-            trackChatbotInteraction('conversation_success', {userInput: input,responseLength: response.length, })}
+            trackChatbotInteraction('conversation_success', {userInput: input,responseLength: response.length })}
         catch (error) {// Handle error;
             addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {'';
-                intent: 'error',confidence: 0.8, })"";
+                intent: 'error',confidence: 0.8 })"";
             trackChatbotInteraction('conversation_error', {"";
-                error: error instanceof Error ? error.message : 'Unknown error',})}
+                error: error instanceof Error ? error.message : 'Unknown error'})}
         finally {setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction])// Handle form submission;
     const handleSubmit = useCallback((e) => {e.preventDefault()handleUserInput(inputValue)}, [inputValue, handleUserInput])// Handle suggestion click;
@@ -94,7 +94,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
       </motion.button>;
       {/* Chatbot Interface */}
       <AnimatePresence>;
-        {isOpen && (<motion .div initial = {{ opacity: 0, scale: 0.9,y: 20, }} animate = {{ opacity: 1, scale: 1, y: 0,}} exit = {{ opacity: 0, scale: 0.9,y: 20;
+        {isOpen && (<motion .div initial = {{ opacity: 0, scale: 0.9,y: 20 }} animate = {{ opacity: 1, scale: 1, y: 0}} exit = {{ opacity: 0, scale: 0.9,y: 20;
 ", `";
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >";
             {/* Header */}"";

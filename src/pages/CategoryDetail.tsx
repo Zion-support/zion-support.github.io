@@ -66,7 +66,7 @@ function generateInnovationListing (index: number): ProductListing {const title 
       description: "Speech recognition and synthesis tools";
       icon: <Mic className="w-6 h-6" />;
     },'developer-tools': {title: "Developer Tools",description: "AI-powered coding assistance and automation",icon: <Code className="w-6 h-6" />;
-    }icon: <Bot className="w-6 h-6" />},},'developer-tools': {title: "Developer Tools";
+    }icon: <Bot className="w-6 h-6" />}},'developer-tools': {title: "Developer Tools";
       description: "AI-powered coding assistance and automation";
       icon: <Code className="w-6 h-6" />;
     },'business-solutions': {title: "Business Solutions",description: "Enterprise AI integrations and services",icon: <Briefcase className="w-6 h-6" />;
@@ -128,9 +128,9 @@ function generateInnovationListing (index: number): ProductListing {const title 
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
                 <ProductListingCard;
-                  key = {listing && listing.id,}
-                  listing = {listing,}
-                  onRequestQuote = {handleRequestQuote,}
+                  key = {listing && listing.id}
+                  listing = {listing}
+                  onRequestQuote = {handleRequestQuote}
                   detailBasePath="/marketplace/listing";
                 />;))}
             </div>;

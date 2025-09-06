@@ -430,13 +430,13 @@ viewport={{ once: true }}
               </p>;
             </motion && motion.div>;<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[;
                 {icon: '🧠',title: 'AI Consciousness',description:;
-                    'Revolutionary AI consciousness and emotional intelligence platforms',color: 'from-violet-500 to-purple-600',count: '5+ Services',},{icon: '⚛️',title: 'Quantum Tech',description:;
-                    'Quantum computing, DNA computing, and quantum internet infrastructure',color: 'from-indigo-500 to-blue-600',count: '6+ Services',},{icon: '🌌',title: 'Space & Metaverse',description:;
-                    'Space mining automation and metaverse development platforms',color: 'from-teal-500 to-emerald-600',count: '4+ Services',},{icon: '🏙️',title: 'Enterprise IT',description:;
-                    'Autonomous DevOps and zero-trust security solutions',color: 'from-blue-500 to-cyan-600',count: '5+ Services',},{icon: '🧬',title: 'Biotech & Neural',description:;
-                    'Synthetic biology automation and neural interface platforms',color: 'from-green-500 to-emerald-600',count: '3+ Services',},{icon: '🤖',title: 'Robotics & Automation',description:;
-                    'Swarm robotics orchestration and autonomous systems',color: 'from-orange-500 to-red-600',count: '2+ Services',},{icon: '⚡',title: 'Energy & Materials',description:;
-                    'Fusion energy control and nanotechnology materials',color: 'from-yellow-500 to-orange-600',count: '3+ Services',},                {icon: '🔄',title: 'Digital Twins',description: 'Digital twin simulation and edge AI computing',color: 'from-teal-500 to-cyan-600',count: '2+ Services',}              ].map((category, index) => (<motion&& motion.div;
+                    'Revolutionary AI consciousness and emotional intelligence platforms',color: 'from-violet-500 to-purple-600',count: '5+ Services'},{icon: '⚛️',title: 'Quantum Tech',description:;
+                    'Quantum computing, DNA computing, and quantum internet infrastructure',color: 'from-indigo-500 to-blue-600',count: '6+ Services'},{icon: '🌌',title: 'Space & Metaverse',description:;
+                    'Space mining automation and metaverse development platforms',color: 'from-teal-500 to-emerald-600',count: '4+ Services'},{icon: '🏙️',title: 'Enterprise IT',description:;
+                    'Autonomous DevOps and zero-trust security solutions',color: 'from-blue-500 to-cyan-600',count: '5+ Services'},{icon: '🧬',title: 'Biotech & Neural',description:;
+                    'Synthetic biology automation and neural interface platforms',color: 'from-green-500 to-emerald-600',count: '3+ Services'},{icon: '🤖',title: 'Robotics & Automation',description:;
+                    'Swarm robotics orchestration and autonomous systems',color: 'from-orange-500 to-red-600',count: '2+ Services'},{icon: '⚡',title: 'Energy & Materials',description:;
+                    'Fusion energy control and nanotechnology materials',color: 'from-yellow-500 to-orange-600',count: '3+ Services'},                {icon: '🔄',title: 'Digital Twins',description: 'Digital twin simulation and edge AI computing',color: 'from-teal-500 to-cyan-600',count: '2+ Services'}              ].map((category, index) => (<motion&& motion.div;
                   key={category && category.title}initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }} className="group">;
@@ -613,12 +613,12 @@ viewport={{ once: true }}className='text-center mb-16';
               </p>;
             </motion && motion.div>;<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[;
                 {icon: '🚀',title: 'First-to-Market',description:;
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",color: 'from-cyan-500 to-blue-600',},{icon: '🧠',title: 'AI-First Approach',description:;
-                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',color: 'from-purple-500 to-pink-600',},{icon: '⚡',title: 'Lightning Fast',description:;
-                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',color: 'from-yellow-500 to-orange-600',},{icon: '🛡️',title: 'Enterprise Security',description:;
-                    'Military-grade security protocols ensure your data and operations are always protected.',color: 'from-green-500 to-emerald-600',},{icon: '🌍',title: 'Global Scale',description:;
-                    'Built to scale globally, our services work seamlessly across borders and time zones.',color: 'from-teal-500 to-cyan-600',},{icon: '💎',title: 'Premium Support',description:;
-                    '24/7 expert support from our team of technology pioneers and industry experts.',color: 'from-indigo-500 to-purple-600',}              ].map((feature, index) => (}              ].map((feature, index) => (<motion&& motion.div;
+                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",color: 'from-cyan-500 to-blue-600'},{icon: '🧠',title: 'AI-First Approach',description:;
+                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',color: 'from-purple-500 to-pink-600'},{icon: '⚡',title: 'Lightning Fast',description:;
+                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',color: 'from-yellow-500 to-orange-600'},{icon: '🛡️',title: 'Enterprise Security',description:;
+                    'Military-grade security protocols ensure your data and operations are always protected.',color: 'from-green-500 to-emerald-600'},{icon: '🌍',title: 'Global Scale',description:;
+                    'Built to scale globally, our services work seamlessly across borders and time zones.',color: 'from-teal-500 to-cyan-600'},{icon: '💎',title: 'Premium Support',description:;
+                    '24/7 expert support from our team of technology pioneers and industry experts.',color: 'from-indigo-500 to-purple-600'}              ].map((feature, index) => (}              ].map((feature, index) => (<motion&& motion.div;
                   key={feature && feature.title}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;

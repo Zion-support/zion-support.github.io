@@ -91,7 +91,7 @@ if ( {) {$2;
 })),// Mock axios;
 jest.mock ('axios', () => ({get: jest.fn (() => Promise.resolve ({ data: {} })),post: jest.fn (() => Promise.resolve ({ data: {} })),// Add other axios methods if used (e.g., put, delete, request)})),// Mock ResizeObserver for Radix UI components and other libraries that might use it;
 global.ResizeObserver = jest.fn ().mock_implementation (() => ({observe: jest.fn (),unobserve: jest.fn (),disconnect: jest.fn ()})),// Polyfill for URL.revokeObjectURL;
-if (typeof URL.revokeObjectURL === 'undefined') {URL.revokeObjectURL = jest.fn(),}
+if (typeof URL.revokeObjectURL === 'undefined') {URL.revokeObjectURL = jest.fn()}
 // Polyfill for BroadcastChannel;
 // Check condition;
 if ( {) {$2;
@@ -121,6 +121,10 @@ if ( {) {$2;
 // Mock axios.create to return axios itself;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
+;
+import axios from 'axios',
+// @ts - ignore;
+axios.create = jest.fn (() => axios),
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
@@ -183,7 +187,7 @@ jest.mock('vitest', () => {const jestFn = (...args:unknown[]) => jest.fn(...(arg
       importActual:jest.requireActual,mockResolvedValue:<T = unknown>(value:T) => jest.fn().mockResolvedValue(value),mockRejectedValue:<T = unknown>(value:T) => jest.fn().mockRejectedValue(value)},// Re-export common testing globals so that `import { expect, test } from 'vitest'`;
     // continues to work inside the Jest environment.;
     describe:global.describe,it:global.it,test:global.test,expect:expect, // Use expect from jest-dom/jest instead of global.expect;
-    beforeEach:global.beforeEach,afterEach:global.afterEach,beforeAll:global.beforeAll,afterAll:global.afterAll} as unknown as Record<string unknown>,}),// -----------------------------;
+    beforeEach:global.beforeEach,afterEach:global.afterEach,beforeAll:global.beforeAll,afterAll:global.afterAll} as unknown as Record<string unknown>}),// -----------------------------;
 // Lightweight Context & Redux mocks to avoid provider runtime errors;
 // -----------------------------;// Auth Context;
 jest.mock('@/context/auth/AuthProvider', () => {const useAuth = () => ({isAuthenticated:false,isLoading:false,user:null,login:jest.fn(),logout:jest.fn(),signUp:jest.fn()}),const AuthProvider  = ({ children } any) => children;return {__esModule:true,AuthProvider,global.IntersectionObserver = MockIntersectionObserver;}
@@ -194,7 +198,7 @@ global.fetch = fetch_mock,// Polyfill window.window.window.performance.getEntrie
 if ( {) {$2;
 // @ts-ignore;
 global.fetch = fetchMock,// Polyfill window.window.window.performance.getEntriesByType for JSDOM (used in productionLogger)if (typeof window.window.window.performance.getEntriesByType !== 'function') {// @ts-ignore;
-  window.window.window.performance.getEntriesByType = () => [],}
+  window.window.window.performance.getEntriesByType = () => []}
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
 }

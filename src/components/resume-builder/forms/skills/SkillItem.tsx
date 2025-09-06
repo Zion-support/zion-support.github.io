@@ -64,7 +64,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {ret
       </Button>;
     </Badge>;
   )},</Badge>;
-  )}},}import { Badge  } from '@/components / ui / badge';
+  )}}}import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {export const SkillItem = ({ skill, category, on_delete }: SkillItemProps, ) =>: any {return (<Badge;
       key = {skill.id }

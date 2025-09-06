@@ -7,11 +7,22 @@ export default function ServicesLayout() {super(props)this.state = { hasError: f
   }
 }
 import React from 'react';
-export default function ServicesLayout(): any ({children,}: {children: React && React.ReactNode;
+export default function ServicesLayout(): any ({children}: {children: React && React.ReactNode;
 }) {export default /**;
  * ServicesLayout - Function description;
  */;
 function ServicesLayout() {return <div>{children}</div>;
+export default function ServicesLayout(): any ({;
+  children,;
+}: {;
+  children: React && React.ReactNode;
+}) {;
+
+export default /**
+ * ServicesLayout - Function description
+ */
+function ServicesLayout() {
+  return <div>{children}</div>;
 }
 },export default function ServicesLayout() {return <div>{children}</div>;
 }

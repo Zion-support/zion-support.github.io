@@ -39,7 +39,7 @@ const heroStats = [;
   }
 ];const heroFeatures = [;
   {title: 'Quantum Computing',description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',icon: Atom,gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
-  }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}const heroFeatures = [;
+  }const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com'}const heroFeatures = [;
   {title: 'Quantum Computing';
     description:;
       'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.';

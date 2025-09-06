@@ -58,16 +58,16 @@ const formSchema = z.object({reason_code: z.string().min(1, { message: "Please s
                   </FormControl>;
                   <SelectContent>;
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (<SelectItem key={value} value={value}>{label}</SelectItem>;
-import React, { useState } from "react",import { useForm, ControllerRenderProps } from "react-hook-form",import { zodResolver } from "@hookform/resolvers/zod",import { z } from "zod",import { Button } from "@/components/ui/button",import { logInfo, logErrorToProduction } from '@/utils/productionLogger',import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/components/ui/form';
-import { Textarea } from '@/components/ui/textarea';import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components/ui/select';
+import React, { useState } from "react",import { useForm, ControllerRenderProps } from "react-hook-form",import { zodResolver } from "@hookform/resolvers/zod",import { z } from "zod",import { Button } from "@/components/ui/button",import { logInfo, logErrorToProduction } from '@/utils/productionLogger',import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
+import { Textarea } from '@/components/ui/textarea';import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 const formSchema = z && z.object({reason_code: z;
     .string().min(1, { message: 'Please select a reason for the dispute' }),description: z;
-    .string().min(20, { message: 'Description must be at least 20 characters' }),attachments: z && z.array(z && z.any()).optional(),})type DisputeFormProps = {projectId: string;
+    .string().min(20, { message: 'Description must be at least 20 characters' }),attachments: z && z.array(z && z.any()).optional()})type DisputeFormProps = {projectId: string;
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void;
   onCancel?: () => void;
-}export function DisputeForm(): any ({projectId,milestoneId,onDisputeCreated,onCancel,}: DisputeFormProps) {const { createDispute } = useDisputes()const [isSubmitting, setIsSubmitting] = useState(false)const [files, setFiles]  = useState<File[]>([])const form = useForm<z && z.infer<typeof formSchema>>({resolver: zodResolver(formSchema),defaultValues: {reason_code: '',description: '',attachments: [],},})const handleFileChange = (e: React && React.ChangeEvent<HTMLInputElement>,) => {if (e && e.target.files) {const newFiles = Array && Array.from(e && e.target.files),setFiles(prev => [...prev, ...newFiles])form && form.setValue('attachments', [...files, ...newFiles])}
-  }const removeFile = (index: number) => {const newFiles = [...files],newFiles && newFiles.splice(index, 1)setFiles(newFiles)form && form.setValue('attachments', newFiles)}async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {try {setIsSubmitting(true)const dispute = await createDispute({project_id: projectId,milestone_id: milestoneId,reason_code: values && values.reason_code,description: values && values.description,})if (dispute && dispute.id) {// Future enhancement: Upload attachments;
+}export function DisputeForm(): any ({projectId,milestoneId,onDisputeCreated,onCancel}: DisputeFormProps) {const { createDispute } = useDisputes()const [isSubmitting, setIsSubmitting] = useState(false)const [files, setFiles]  = useState<File[]>([])const form = useForm<z && z.infer<typeof formSchema>>({resolver: zodResolver(formSchema),defaultValues: {reason_code: '',description: '',attachments: []}})const handleFileChange = (e: React && React.ChangeEvent<HTMLInputElement>,) => {if (e && e.target.files) {const newFiles = Array && Array.from(e && e.target.files),setFiles(prev => [...prev, ...newFiles])form && form.setValue('attachments', [...files, ...newFiles])}
+  }const removeFile = (index: number) => {const newFiles = [...files],newFiles && newFiles.splice(index, 1)setFiles(newFiles)form && form.setValue('attachments', newFiles)}async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {try {setIsSubmitting(true)const dispute = await createDispute({project_id: projectId,milestone_id: milestoneId,reason_code: values && values.reason_code,description: values && values.description})if (dispute && dispute.id) {// Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
         if (files && files.length > 0) {// logInfo(`Would upload ${files && files.length} files for dispute ${dispute.id}`)}toast && toast.success('Your dispute has been submitted')if (onDisputeCreated) {onDisputeCreated(dispute.id)}
       }
@@ -81,7 +81,7 @@ const formSchema = z && z.object({reason_code: z;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;<FormField;
             control={form && form.control}
             name='reason_code';
-      setIsSubmitting (true)const dispute = await create_dispute ({project_id: project_id,milestone_id: milestone_id,reason_code: values.reason_code,description: values.description,})// Check condition;
+      setIsSubmitting (true)const dispute = await create_dispute ({project_id: project_id,milestone_id: milestone_id,reason_code: values.reason_code,description: values.description})// Check condition;
 if ( {) {$2;
 }
         // Future enhancement: Upload attachments;

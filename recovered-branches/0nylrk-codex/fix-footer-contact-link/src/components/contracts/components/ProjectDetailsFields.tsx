@@ -13,20 +13,79 @@ import {FormField,FormItem,FormLabel,FormControl,FormDescription,FormMessage,imp
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
 import { Button  } from '@/components/ui/button';
-  Popover,PopoverContent,PopoverTrigger,} from "@/components/ui/popover";
+  Popover,PopoverContent,PopoverTrigger} from "@/components/ui/popover";
 import { Calendar  } from '@/components/ui/calendar';
 import { ContractFormValues  } from './ContractForm';
 interface ProjectDetailsFieldsProps {} from "@/components/ui/form";} from "@/components/ui/popover";} from "@/components/ui/popover";interface ProjectDetailsFieldsProps  {import { CalendarIcon } from "lucide-react",import { UseFormReturn } from "react-hook-form",FormField,FormItem,FormLabel,FormControl,FormDescription,FormMessage;
 } from "@/components/ui/form",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Button } from "@/components/ui/button",import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",import { Calendar } from "@/components/ui/calendar",import { ContractFormValues } from "./ContractForm",interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;
-import {FormField,FormItem,FormLabel,FormControl,FormDescription,} from '@/components/ui/form';
-  Popover,PopoverContent,PopoverTrigger,} from "@/components/ui/popover";interface ProjectDetailsFieldsProps  {} from "@/components/ui/popover";interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;
+import {FormField,FormItem,FormLabel,FormControl,FormDescription} from '@/components/ui/form';
+  Popover,PopoverContent,PopoverTrigger} from "@/components/ui/popover";interface ProjectDetailsFieldsProps  {} from "@/components/ui/popover";interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;
 }export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {form: UseFormReturn<ContractFormValues>;
 }
-  FormMessage,} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Button } from "@/components/ui/button";} from "@/components/ui/popover";interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;
 }form: UseFormReturn<ContractFormValues>;
 }export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {return (<>;
       <FormField;
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+import { CalendarIcon } from "lucide-react",
+import { UseFormReturn } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { ContractFormValues } from "./ContractForm",
+interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+  FormMessage,;
+
+} from "@/components/ui/form";
+
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+
+} from "@/components/ui/popover";
+
+interface ProjectDetailsFieldsProps {;
+
+
+  form: UseFormReturn<ContractFormValues>;
+}
+
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+
+  form: UseFormReturn<ContractFormValues>;
+}
+  return (
+    <>;
+      <FormField
         control={form && form.control}
         name="projectName";
         render={({ field }) => (control={form.control}
@@ -64,6 +123,22 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
             <FormControl>;<Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
+            <FormMessage />;
+
+      />;
+
+
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Scope Summary</FormLabel>;
+            <FormControl>;
+              <Textarea
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
+
           </FormItem>)}
       />;
       <FormField;
@@ -78,6 +153,9 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";{...field}
                 className="min-h-[120px]";                {...field}
+                className="min - h-[120px]";
+
+                {...field}
               />;
             </FormControl>;
             <FormDescription>Be specific about what is included and any limitations;
@@ -190,6 +268,39 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
           control={form.control}
           name="startDate";
           render={({ field }) => (<FormItem className="flex flex-col">;
+            <FormMessage />;
+
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              Be specific about what is included and any limitations
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      
+
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <FormField
+          control={form && form.control}
+          name="startDate"
+          </FormItem>;
+        )}
+      />;
+      ;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+        <FormField;
+          control={form.control}
+          name="startDate";
+        <FormField
+          control={form && form.control}
+          name="startDate"
+          render={({ field }) => (;
+            <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
@@ -199,6 +310,13 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >;
                       {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>;
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
+                      {field && field.value ? (;
+                        format(field && field.value, "PPP");
+                      ) : (;
+                        <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                     </Button>;
@@ -209,6 +327,10 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                     mode="single";
                     selected={field.value}
                     onSelect={field.onChange}
+                  <Calendar
+                    mode="single"
+                    selected={field && field.value}
+                    onSelect={field && field.onChange}
                     disabled={(date) => date < new Date()}
                     initialFocus;
                   />;
@@ -217,12 +339,36 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
               <FormMessage />;
             </FormItem>;
           )}
+
+        />;
+
+
+        <FormField
+          control={form && form.control}
+
         />;
         <FormField />;
         <FormField;
           control={form.control}
           name="endDate";
           render={({ field }) => (<FormItem className="flex flex-col">;
+          name="endDate"
+          control={form.control}
+          name="endDate"
+            </FormItem>;          )}
+        />;
+        ;
+        <FormField;
+          control={form.control}
+          name="endDate";
+                  <Calendar
+                    mode="single"
+          control={form.control}
+        <FormField
+          control={form && form.control}
+          name="endDate"
+          render={({ field }) => (;
+            <FormItem className="flex flex-col">;
               <FormLabel>End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
@@ -232,6 +378,13 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >;
                       {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>;
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
+                      {field && field.value ? (;
+                        format(field && field.value, "PPP");
+                      ) : (;
+                        <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                     </Button>;
@@ -256,6 +409,11 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                     mode="single"                  <Calendar;
                     mode="single";
     </>;
+                  <Calendar
+                    mode="single"
+                  <Calendar
+                    mode="single"
+    </>
         />;
       </div>;
     </>;selected={field && field.value || undefined}
@@ -271,6 +429,11 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
           name="start_date";
           render={({ field }) => (<FormItem className="flex flex - col">;
             <FormItem className="flex flex-col">;
+        <FormField;
+          control={form.control}
+          name="start_date";
+          render={({ field }) => (
+            <FormItem className="flex flex - col">;
               <FormLabel > Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -286,10 +449,14 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p - 0" align="start">;
                       <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                      {field.value ? (
+                        format (field.value, "PPP")) : (
+                        <span > Pick a date</span>)}
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
-                <PopoverContent className="w - auto p-0" align="start">;
+                <PopoverContent className="w - auto p - 0" align="start">;
                   <Calendar;
                     mode="single";
                     selected={field.value}
@@ -307,6 +474,8 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
           name="end_date";
           render={({ field }) => (<FormItem className="flex flex - col">;
             <FormItem className="flex flex-col">;
+          render={({ field }) => (
+            <FormItem className="flex flex - col">;
               <FormLabel > End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -322,10 +491,14 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p - 0" align="start">;
                       <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                      {field.value ? (
+                        format (field.value, "PPP")) : (
+                        <span > Pick a date</span>)}
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
-                <PopoverContent className="w - auto p-0" align="start">;
+                <PopoverContent className="w - auto p - 0" align="start">;
                   <Calendar;
                     mode="single";
                     selected={field.value || undefined}
@@ -348,3 +521,26 @@ import { Button } from "@/components/ui/button";} from "@/components/ui/popover"
         />;
       </div>;
     </>)}
+                    initial_focus;
+
+
+                  />;
+                </PopoverContent>;
+              </Popover>;
+              <FormDescription>;
+                Leave empty if the end date is flexible;
+              </FormDescription>;
+              <FormMessage />;
+
+
+
+
+        />;
+      </div>;
+    </>;
+  );
+            </FormItem>)}
+        />;
+      </div>;
+    </>);
+}

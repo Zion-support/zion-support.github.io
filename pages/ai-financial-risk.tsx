@@ -31,7 +31,7 @@ import Button from '../components/ui/Button';
               </p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
                 {(service?.features?.slice(0, 12) || [;
-                    'Credit/market risk','Anomaly detection','Explainable AI','Stress testing','Model governance','Real-time alerts',];
+                    'Credit/market risk','Anomaly detection','Explainable AI','Stress testing','Model governance','Real-time alerts'];
                 ).map((feat, i) => (<li;
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;

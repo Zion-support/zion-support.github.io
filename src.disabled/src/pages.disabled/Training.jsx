@@ -9,3 +9,4 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 const React from "react"; import { Link } from "react-router-dom"; export default function Training() { return; }return null} }export default Training; export { Training }export { Training }export { Training }export { Training }export { Training }''";
 ursor/automate-test-improve-and-merge-code-646c;
+import _React from 'react'; import { Link } from 'react-router-dom'; export default function Training() {}; return null} }; export default Training; export { Training }; export { Training }; export { Training }; export { Training }; export { Training };

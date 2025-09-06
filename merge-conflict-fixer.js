@@ -15,6 +15,55 @@ function resolveMergeConflicts() {try {console.log(`🔧 Processing: ${filePath}
 function findConflictFiles() {const conflictFiles = [];
     const searchDirs  = ['.'];function searchDirectory() {try {const items = fs.readdirSync(dir)for (const item of items) {const itemPath = path.join(dir, item)const stat  = fs.statSync(itemPath)if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {searchDirectory(itemPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {try {const content = fs.readFileSync(itemPath, 'utf8')if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {conflictFiles.push(itemPath)if (content.includes('                            conflictFiles.push(itemPath)}
                     } catch (error) {// Skip files that can't be read;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('🚀 Starting merge conflict resolution...');
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+    try {
+        console.log(`🔧 Processing: ${filePath}`);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Remove merge conflict markers and keep the HEAD version
+        
+        // Remove any remaining conflict markers
+        
+        // Clean up any duplicate content
+        content = content.replace(/\n\n\n+/g, '\n\n');
+        
+        fs.writeFileSync(filePath, content);
+        console.log(`✅ Resolved conflicts in: ${filePath}`);
+        return true;
+    } catch (error) {
+        console.log(`❌ Error processing ${filePath}: ${error.message}`);
+        return false;
+    }
+}
+
+// Function to find all files with merge conflicts
+function findConflictFiles() {
+    const conflictFiles = [];
+    const searchDirs = ['.'];
+    
+    function searchDirectory(dir) {
+        try {
+            const items = fs.readdirSync(dir);
+            for (const item of items) {
+                const itemPath = path.join(dir, item);
+                const stat = fs.statSync(itemPath);
+                
+                if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+                    searchDirectory(itemPath);
+                } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {
+                    try {
+                        const content = fs.readFileSync(itemPath, 'utf8');
+                            conflictFiles.push(itemPath);
+                        }
+                    } catch (error) {
+                        // Skip files that can't be read
                     }
                 }
             }

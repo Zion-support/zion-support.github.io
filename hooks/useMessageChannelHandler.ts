@@ -1,3 +1,7 @@
+// Type definition for MessageEvent
+interface MessageEvent {
+  data: unknown;
+import { useEffect, useCallback } from "react";
 
 ;
 }: MessageChannelHandlerProps = {}) {const handleMessage = useCallback((event: MessageEvent<unknown>) => {try {if (onMessage) {onMessage(event.data)}
@@ -11,6 +15,12 @@ import { useEffect, useCallback  } from 'react';
 interface Event  {type: string;
   target: EventTarget | null;
 }type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
+}
+
+type EventListener = (event: Event) => void;
+
+interface EventTarget {
+  addEventListener(type: string, listener: EventListener): void;
   removeEventListener(type: string, listener: EventListener): void;
 }interface MessageEventSource  {postMessage(message: any, targetOrigin: string): void;
 }interface MessagePort  {postMessage(message: any): void;
@@ -26,3 +36,27 @@ interface Event  {type: string;
 }export function useMessageChannelHandler() {const handleMessage = useCallback((event: MessageEvent<unknown>) => {try {if (onMessage) {onMessage(event.data)ursor/automate-test-improve-and-merge-code-646c;
       }
     },[onMessage, onError],)useEffect(() => {window.addEventListener("message", handleMessage)return () => {window.removeEventListener("message", handleMessage)}}, [handleMessage])}import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError])useEffect(() => { window.addEventListener('message',handleMessage)return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}ursor/automate-test-improve-and-merge-code-646c;
+}
+
+export function useMessageChannelHandler({
+  onMessage,
+  onError,
+  onError
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {;
+        onMessage(event.data);
+      }
+    },
+    [onMessage, onError],
+  );
+
+  useEffect(() => {
+    window.addEventListener("message", handleMessage);
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
+  }, [handleMessage]);
+}
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}

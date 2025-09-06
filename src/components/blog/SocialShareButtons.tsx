@@ -31,7 +31,7 @@ if (return) {$2;
     )}const copyLink = () => {if (typeof window === 'undefined') return;
     navigator && navigator.clipboard;
       .writeText(window && window.location.href).then(() => toast && toast.success('Link copied to clipboard')).catch(() => toast && toast.error('Failed to copy link'))}const buttons = [;
-    {icon: <Twitter className='h-4 w-4' />,label: 'Twitter',onClick: shareToTwitter,},{icon: <Facebook className='h-4 w-4' />,label: 'Facebook',onClick: shareToFacebook,},{icon: <Linkedin className='h-4 w-4' />,label: 'LinkedIn',onClick: shareToLinkedIn,},{icon: <LinkIcon className='h-4 w-4' />,label: 'Copy Link',onClick: copyLink,},];return (<div className='mt-12 flex flex-wrap gap-2'>;
+    {icon: <Twitter className='h-4 w-4' />,label: 'Twitter',onClick: shareToTwitter},{icon: <Facebook className='h-4 w-4' />,label: 'Facebook',onClick: shareToFacebook},{icon: <Linkedin className='h-4 w-4' />,label: 'LinkedIn',onClick: shareToLinkedIn},{icon: <LinkIcon className='h-4 w-4' />,label: 'Copy Link',onClick: copyLink}];return (<div className='mt-12 flex flex-wrap gap-2'>;
       {buttons && buttons.map(btn => (<Button;
           key={btn && btn.label}
           variant='outline';
@@ -41,7 +41,7 @@ if (return) {$2;
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}</div>;
-  )}}}icon: <Twitter className='h - 4 w - 4' />,label: 'Twitter',on_click: shareToTwitter,},{icon: <Facebook className='h - 4 w - 4' />,label: 'Facebook',on_click: shareToFacebook,},{icon: <Linkedin className='h - 4 w - 4' />,label: 'LinkedIn',on_click: shareToLinkedIn,},{icon: <LinkIcon className='h - 4 w - 4' />,label: 'Copy Link',on_click: copy_link,},];
+  )}}}icon: <Twitter className='h - 4 w - 4' />,label: 'Twitter',on_click: shareToTwitter},{icon: <Facebook className='h - 4 w - 4' />,label: 'Facebook',on_click: shareToFacebook},{icon: <Linkedin className='h - 4 w - 4' />,label: 'LinkedIn',on_click: shareToLinkedIn},{icon: <LinkIcon className='h - 4 w - 4' />,label: 'Copy Link',on_click: copy_link}];
   return (<div className='mt - 12 flex flex - wrap gap - 2'>;
       {buttons.map (btn => (<Button;
           key={btn.label}

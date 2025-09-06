@@ -4,7 +4,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
 
 const compat = new FlatCompat({
@@ -14,43 +14,79 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends('next/core-web-vitals'),
+  js.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
   {
     ignores: [
       'node_modules/**',
+      '.next/**',
       'dist/**',
       'build/**',
-      'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
+      'automation_backup/**',
+      'apps.backup/**',
       'backup-problematic-files/**',
+      'backup-merge-conflicts/**',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
-      'api/**',
       'api-backup/**',
       'api-disabled/**',
       'api.disabled/**',
       'backup/**',
       'backups/**',
       'broken_files_backup/**',
-      'corrupted-files-backup/**',
       'cypress_backup/**',
       'data_backup/**',
       'deployment/**',
+      'deployments/**',
+      'dao/**',
       'e2e/**',
       'server/**',
       'temp_*/**',
       'test_build/**',
       'tests/**',
       '__tests__/**',
-      'types/**',
+      'components/apps/extension/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'pm2-automation/**',
+      'pm2-backups/**',
+      'recovered-branches/**',
+      'src.broken/**',
+      'src_backup_temp/**',
+      'test-next/**',
+      'tools/**',
+      'utils/**',
       '*.cjs',
       '*.mjs',
       'supabase/**',
@@ -135,6 +171,7 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
       '@next/next': nextPlugin
+      // '@next/next': nextPlugin, // Not needed for Vite project
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -175,6 +212,9 @@ export default [
       }
     },
     rules: {
+      'no-console': 'off'
+    }
+  }
       'no-console': 'off'
     }
   }

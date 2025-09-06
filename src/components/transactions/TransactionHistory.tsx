@@ -6,7 +6,7 @@ function TransactionHistory() {const { user } = use_auth ()const { toast } = use
     query_fn: async () => {// Check condition;
 if (return []) {$2;
 }
-          provider:profiles ! provider_id (display_name)query = query.order ('created_at', { ascending: false }),},const is_client = user?.id === transaction.user_id;              const is_pending =;
+          provider:profiles ! provider_id (display_name)query = query.order ('created_at', { ascending: false })},const is_client = user?.id === transaction.user_id;              const is_pending =;
                 transaction.status === 'pending' || transaction.status === 'in_escrow';
               const isInEscrow = transaction.in_escrow;
               const can_release = !is_client && is_pending && isInEscrow;
@@ -20,10 +20,10 @@ import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
 import { useToast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
-import { ArrowLeft,ArrowRight,RefreshCcw,CheckCircle2,XCircle,Clock,AlertCircle,ShieldAlert,} from 'lucide-react';
+import { ArrowLeft,ArrowRight,RefreshCcw,CheckCircle2,XCircle,Clock,AlertCircle,ShieldAlert} from 'lucide-react';
 import { formatDistanceToNow  } from 'date-fns';
 import { safeStorage  } from '@/utils/safeStorage';
 import { useCurrency  } from '@/hooks/useCurrency';

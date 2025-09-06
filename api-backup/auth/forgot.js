@@ -17,3 +17,10 @@ function ForgotPassword() {return (}}<div>;
       <p>Password reset functionality would go here.</p>;
     </div>;
   )}
+(" ");
+export default /**
+ * ForgotPassword - Function description
+ */
+function ForgotPassword() {
+  return (
+}

@@ -744,7 +744,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {const [selectedCategory,
           </motion.footer>;
         </div>;
       </div>;
-    </>)},export default Innovative2025ServicesShowcase,},TrendingUp, Users, Star, Zap, Lock, Target;
+    </>)},export default Innovative2025ServicesShowcase},TrendingUp, Users, Star, Zap, Lock, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink;
   } from 'lucide-react';
 // Import our new innovative services;

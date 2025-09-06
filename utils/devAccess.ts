@@ -7,6 +7,23 @@ export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: b
 }const gitDir = path && path.join(process && process.cwd(), '.git')if (!fs && fs.existsSync(gitDir)) return { connected: false }const branch = execSync('git rev-parse --abbrev-ref HEAD', {stdio: ['ignore', 'pipe', 'ignore'];
     }).toString().trim()return { connected: true, branch }
   } catch {return { connected: false }
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+
+
+  roles: DevRole[];
+  userId?: string;
+}
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore']
+    })
+      .toString()
+      .trim();
+    return { connected: true, branch }
+  } catch {
+    return { connected: false }
   }
 }export function getDevIdentity(req: NextApiRequest): DevIdentity {// TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
@@ -27,6 +44,28 @@ export function requireRoles(req: NextApiRequest;
   res: NextApiResponse;
   allowed: DevRole[];
 ): DevIdentity | undefined {const identity = getDevIdentity(req)if (!identity.isAuthenticated) {res.status(401).json({ error: "Unauthorized" })return undefined;
+  const adminToken = process && process.env.ADMIN_TOKEN;
+
+  if (token && adminToken && token === adminToken) {}
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
+export function requireRoles(
+  req: NextApiRequest
+  res: NextApiResponse
+  allowed: DevRole[]
+): DevIdentity | undefined {;
+  const identity = getDevIdentity(req);
+  if (!identity.isAuthenticated) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return undefined;
   }
   const hasRole = identity.roles.some((r) => allowed.includes(r))if (!hasRole) {const identity = getDevIdentity(req)if (!identity.isAuthenticated) {res.status(401).json({ error: 'Unauthorized' })return undefined;
   }
@@ -34,6 +73,10 @@ export function requireRoles(req: NextApiRequest;
   }
   return identity;}// Development access utilities;
 export interface DevAccessConfig  {enabled: boolean;
+  return identity;
+// Development access utilities
+export interface DevAccessConfig {
+  enabled: boolean;
   allowedIps: string[];
   allowedUsers: string[];
   requireAuth: boolean;
@@ -69,6 +112,10 @@ export function isDevelopmentMode(): boolean {return process.env.NODE_ENV === 'd
          (req.connection.socket ? req.connection.socket.remoteAddress : null) ||;
          'unknown';
 }export function getDevIdentity (req: NextApiRequest): DevIdentity {// TODO: integrate real auth; for now, check a header and env var for dev;
+}
+
+export function getDevIdentity (req: NextApiRequest): DevIdentity {
+  // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
   const admin_token = process.env.ADMIN_TOKEN;
   // Check condition;
@@ -90,3 +137,6 @@ if ( {) {$2;
   }
   return identity;
 }ursor/fix-website-loading-errors-and-merge-6662;
+}
+
+

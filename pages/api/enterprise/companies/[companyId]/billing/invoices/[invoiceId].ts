@@ -1,7 +1,7 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export const config = {api: {export const config = {api: {responseLimit: false;
-  },}responseLimit: false;
+  }}responseLimit: false;
   }
 }export default async function handler() {const { companyId, invoiceId }  = req.query;export const config = {api: {if (!companyId |;
     typeof companyId !== "string" |;

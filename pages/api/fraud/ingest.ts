@@ -9,7 +9,7 @@ import { AdminActionRecord,GptClassification,GptClassificationLabel,MonitoredSou
   GptClassification;
   GptClassificationLabel;
   MonitoredSource;
-  StoredFraudRecord,} from '../../../utils/fraud/types';
+  StoredFraudRecord} from '../../../utils/fraud/types';
 import { sendWarningEmail  } from '../../../utils/email';
 const allowedSources: MonitoredSource[] = [;
   "signup";
@@ -79,7 +79,7 @@ export default async function handler() {if (req.method !== 'POST') {res.status(
     }const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
 const metadata =;
-      body.metadata && typeof body.metadata === 'object' ? body.metadata : null;const ip = extractClientIp(req)const store = getFraudStore()const event = newEvent({source,userId,content,metadata,ipAddress: ip,})const heuristic = await evaluate_heuristics (event, {countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m)})// Privacy opt - out check for content analysis;
+      body.metadata && typeof body.metadata === 'object' ? body.metadata : null;const ip = extractClientIp(req)const store = getFraudStore()const event = newEvent({source,userId,content,metadata,ipAddress: ip})const heuristic = await evaluate_heuristics (event, {countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m)})// Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined  = undefined;// Check condition;
 if ( {) {$2;
 }

@@ -49,7 +49,7 @@ import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/compon
     } else if (diffDays < 7) {return `${diffDays} days ago`;
     } else {return date.toLocaleDateString()}
   },const getCategoryBadge = (category: string) => {const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" }},return <Badge variant={style && style.variant}>{category}</Badge>;
-  }import {TableRow,} from '@/components/ui/table';
+  }import {TableRow} from '@/components/ui/table';
   TableBody;
   TableCell;
   TableHead;

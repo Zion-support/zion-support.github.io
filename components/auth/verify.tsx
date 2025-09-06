@@ -1,6 +1,9 @@
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
+
+  return (
+    <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Verify Email</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Please verify your email to continue.;
@@ -17,6 +20,18 @@ export default function VerifyEmailPage() {return (<div className='container mx-
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Please verify your email to continue.;
       </p>;
+  );
+
+}
+
+
+export default function VerifyEmailPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Verify Email</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Please verify your email to continue.
+      </p>
     </div>;
   )export default function VerifyEmailPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Verify Email</h1>;
@@ -43,6 +58,38 @@ function VerifyEmailPage() {return (<div className="container mx - auto px - 4 p
   )export default function VerifyEmailPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Verify Email</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>;
+    </div>);
+}
+
+
+
+
+
+
+  )
+}
+
+
+export default function VerifyEmailPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Verify Email</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Please verify your email to continue.
+      </p>
+    </div>;
+  );export default function VerifyEmailPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Verify Email</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
+
+    </div>
+  );
+
+    </div>
+  );
+
     </div>;
   )ursor/fix-website-loading-errors-and-merge-6662;
     </div>;
@@ -53,3 +100,9 @@ function VerifyEmailPage() {return (<div className="container mx - auto px - 4 p
 }
     </div>;
   )
+
+}
+    </div>
+  );
+}
+}

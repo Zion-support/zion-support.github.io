@@ -62,6 +62,34 @@
         <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
 "use client",import { useState  } from './react';,interface MicroSAASService  {id: string,name: string,description: string,target_market: string[],features: string[],pricing: string,starting_price: number,contact_link: string,icon: string,benefits: string[],integrations: string[],deployment: string;
+"use client",
+import { useState  } from './react';,
+interface MicroSAASService {
+  id: string,
+  name: string,
+  description: string,
+  target_market: string[],
+  features: string[],
+  pricing: string,
+  starting_price: number,
+  contact_link: string,
+  icon: string,
+  benefits: string[],
+  integrations: string[],
+"use client";
+import { useState } from "react";
+interface MicroSAASService {id: string;
+  name: string;
+  description: string;
+  targetMarket: string[];
+  features: string[];
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  benefits: string[];
+  integrations: string[];
+  deployment: string;
 }
 const microSAASServices: MicroSAASService[] = [;
   {id: "marketplace - platform - pro",name: "Digital Marketplace Platform Pro",description: "White - label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI - powered matching.",target_market: [;
@@ -123,10 +151,18 @@ const microSAASServices: MicroSAASService[] = [;
  * MicroSAASPage - Function description;
  */;
 function MicroSAASPage() {return (<div className="space-y-8">;    <div className="space-y-8">;
+],
+export default /**
+ * MicroSAASPage - Function description
+ */
+function MicroSAASPage() {
+  return (
+    <div className="space - y-8">;
+    <div className="space-y-8">;
       {/* Header */}
-      <div className="text - center space-y-4">;
-        <h1 className="text - 4xl font-bold">Micro SAAS Solutions</h1>;
-        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
+      <div className="text - center space - y-4">;
+        <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Innovative software - as - a-service solutions designed to accelerate your business growth;
           streamline operations, and provide competitive advantages in the digital economy.;
         </p>;
@@ -152,15 +188,17 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
                     <span className="text - green - 400">🎯</span>;
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
         {microSAASServices.map (service => (<div;
+        {microSAASServices.map (service => (
+          <div;
             key={service.id}
-            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";
           >;
             {/* Service Header */}
-            <div className="text - center space-y-3">;
-              <div className="text-4xl">{service.icon}</div>;
-              <h2 className="text - 2xl font-bold">{service.name}</h2>;
-              <p className="opacity-80">{service.description}</p>;
-              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
+            <div className="text - center space - y-3">;
+              <div className="text - 4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font - bold">{service.name}</h2>;
+              <p className="opacity - 80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;
             </div>;
             {/* Target Market */}
             <div>;
@@ -168,6 +206,11 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.target_market.map ((market, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - green-400">🎯</span>;
+              <h3 className="font - semibold mb - 3 text - blue - 400">Target Markets</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+                {service.target_market.map ((market, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - green - 400">🎯</span>;
                     <span>{market}</span>;
                   </div>))}
               </div>;
@@ -182,6 +225,9 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
               <div className="grid grid - cols - 1 gap-2">;
                 {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - blue-400">✓</span>;
+                {service.features.map ((feature, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - blue - 400">✓</span>;
                     <span>{feature}</span>;
                   </div>))}
               </div>;
@@ -196,6 +242,9 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
               <div className="grid grid - cols - 1 gap-2">;
                 {service.benefits.map ((benefit, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - yellow-400">💡</span>;
+                {service.benefits.map ((benefit, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - yellow - 400">💡</span>;
                     <span>{benefit}</span>;
                   </div>))}
               </div>;
@@ -210,6 +259,9 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.integrations.map ((integration, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
                     <span className="text - purple-400">🔗</span>;
+                {service.integrations.map ((integration, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - purple - 400">🔗</span>;
                     <span>{integration}</span>;
                   </div>))}
               </div>;
@@ -228,10 +280,10 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
               <div className="text - sm opacity-80">{service.deployment}</div>;
             </div>;
             {/* CTA */}
-            <div className="space - y-3 pt - 4 border - t border-white / 10">;
+            <div className="space - y-3 pt - 4 border - t border - white / 10">;
               <a;
                 href={service.contact_link}
-                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
               >;
                 Get Started;
               </a>;
@@ -276,20 +328,20 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
             <h3 className="font - semibold mb-2">Rapid Deployment</h3>;
             <p className="text - sm opacity-80">Get to market faster with pre - built solutions</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🔧</div>;
-            <h3 className="font - semibold mb-2">Customization</h3>;
-            <p className="text - sm opacity-80">White - label and customize for your brand</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🔧</div>;
+            <h3 className="font - semibold mb - 2">Customization</h3>;
+            <p className="text - sm opacity - 80">White - label and customize for your brand</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">📊</div>;
-            <h3 className="font - semibold mb-2">Analytics</h3>;
-            <p className="text - sm opacity-80">Built - in analytics and reporting</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">📊</div>;
+            <h3 className="font - semibold mb - 2">Analytics</h3>;
+            <p className="text - sm opacity - 80">Built - in analytics and reporting</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🔌</div>;
-            <h3 className="font - semibold mb-2">Integrations</h3>;
-            <p className="text - sm opacity-80">Connect with your existing tools</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🔌</div>;
+            <h3 className="font - semibold mb - 2">Integrations</h3>;
+            <p className="text - sm opacity - 80">Connect with your existing tools</p>;
           </div>;
         </div>;
       </div>;
@@ -310,10 +362,10 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
           Let's discuss how our micro SAAS solutions can transform your business operations;
           reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.;
         </p>;
-        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+        <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";
-            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
           >;
             Schedule SAAS Consultation;
           </a>;
@@ -334,7 +386,7 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       <div className="text-center">;
         <a;
           href="/services";
-          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font-semibold";
+          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
         >;
           ← Back to All Services;
         </a>;

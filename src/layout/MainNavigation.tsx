@@ -24,9 +24,9 @@ import { cn  } from '@/lib/utils';
 import { useAuth  } from '@/hooks/useAuth';
 import { useTranslation  } from 'react-i18next';
 import { useFavorites  } from '@/hooks/useFavorites';
-import { Heart,MessageSquare,CreditCard,ShoppingCart,Wallet,} from 'lucide-react';
+import { Heart,MessageSquare,CreditCard,ShoppingCart,Wallet} from 'lucide-react';
 import { LanguageSelector  } from '@/components / header / LanguageSelector';
-  HoverCard,HoverCardTrigger,HoverCardContent,} from '@/components / ui / hover - card';
+  HoverCard,HoverCardTrigger,HoverCardContent} from '@/components / ui / hover - card';
 import { MiniCartPreview  } from '@/components / cart / MiniCartPreview';
 import { LoginModal } from '@/components / auth / LoginModal'; import { LanguageSelector  } from '@/components / header / LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components / ui / hover - card';
@@ -51,21 +51,21 @@ if ( {) {$2;
   const baseLinks = [;
     {key: 'home';
       href: '/';
-      matches: (path: string) => path === '/',    }
+      matches: (path: string) => path === '/'    }
     {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
 import React from 'react';
-import {Heart,MessageSquare,CreditCard,ShoppingCart,Wallet,} from 'lucide-react';
+import {Heart,MessageSquare,CreditCard,ShoppingCart,Wallet} from 'lucide-react';
 import { LanguageSelector  } from '@/components/header/LanguageSelector';
-  HoverCard,HoverCardTrigger,HoverCardContent,} from '@/components/ui/hover-card';
+  HoverCard,HoverCardTrigger,HoverCardContent} from '@/components/ui/hover-card';
 import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector  } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
 interface MainNavigationProps  {isAdmin?: boolean,unreadCount?: number,className?: string;
 }const baseLinks = [;
-    {key: 'home',href: '/',href: '/analytics',matches: (path: string) => path && path.startsWith('/analytics'),})}return (<nav;
+    {key: 'home',href: '/',href: '/analytics',matches: (path: string) => path && path.startsWith('/analytics')})}return (<nav;
         className={cn('navbar', className)}
         role='navigation';
         aria-label='Main navigation'>;<div;
@@ -127,20 +127,20 @@ interface MainNavigationProps  {isAdmin?: boolean,unreadCount?: number,className
                     className={cn('nav-link','inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')'nav-link';
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')? 'bg-zion-purple/20 text-zion-cyan';
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                    ),}>;
+                    )}>;
                     <ShoppingCart className='w-4 h-4 mr-1' />;
                     {t('nav && nav.cart', 'Cart')}
                     {cartCount > 0 && (<span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>;
-                        {cartCount}key: 'marketplace',href: '/marketplace',matches: (path: string) => path.starts_with ('/marketplace'),    },{}
+                        {cartCount}key: 'marketplace',href: '/marketplace',matches: (path: string) => path.starts_with ('/marketplace')    },{}
     links.push ({key: 'dashboard',name: t ('nav.dashboard'),href: '/dashboard',matches: (path: string) =>;
         path === '/dashboard' ||;
         path === '/client - dashboard' ||;
-        path === '/talent - dashboard',}) }
+        path === '/talent - dashboard'}) }
   // Add admin - only links;
   // Check condition;
 if ( {) {$2;
 }
-    links.push ({key: 'analytics',name: t ('nav.analytics'),href: '/analytics',matches: (path: string) => path.starts_with ('/analytics'),}) }
+    links.push ({key: 'analytics',name: t ('nav.analytics'),href: '/analytics',matches: (path: string) => path.starts_with ('/analytics')}) }
   return (<>;
       <button;
         className='navbar - toggler md:hidden ml - auto mr - 4 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary' // Added ml - auto and mr - 4 for positioning;
@@ -223,7 +223,7 @@ if ( {) {$2;
                     aria - label={t ('nav.cart')}
                     on_click={handleCartClick}
                     className={cn ('nav - link','inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',                      router.pathname.starts_with ('/cart')? 'bg - zion - purple / 20 text - zion - cyan';
-                        : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan'), }
+                        : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan') }
                   >;
                     <ShoppingCart className='w - 4 h - 4 mr - 1' />;
                     {t ('nav.cart', 'Cart')}

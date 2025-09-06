@@ -59,13 +59,13 @@ import Layout from '../components / layout / Layout';
 const [sortBy, setSortBy] = useState<;
     'name' | 'price' | 'rating' | 'marketSize';
   >('name')const allServices = [;
-    ...real2036InnovativeServices,...real2036SpecializedServices,];const filteredServices = allServices && allServices.filter(service => {const matchesCategory =;
+    ...real2036InnovativeServices,...real2036SpecializedServices];const filteredServices = allServices && allServices.filter(service => {const matchesCategory =;
       selectedCategory === 'All Services' ||;
       service && service.category === selectedCategory;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase())return matchesCategory && matchesSearch;  })Brain,Rocket,Shield,Zap,Target,Atom,Globe,Cpu,Lock,Cloud,Settings,Eye,Award,Clock,Star,TrendingUp,Users,Building,Lightbulb,ArrowRight,Filter,Search,Grid,List,Phone,Mail,MapPin,} from 'lucide-react';
+      service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase())return matchesCategory && matchesSearch;  })Brain,Rocket,Shield,Zap,Target,Atom,Globe,Cpu,Lock,Cloud,Settings,Eye,Award,Clock,Star,TrendingUp,Users,Building,Lightbulb,ArrowRight,Filter,Search,Grid,List,Phone,Mail,MapPin} from 'lucide-react';
 import React, { useState } from 'react',import SEO from '../components/SEO',import Layout from '../components/layout/Layout',import { motion } from 'framer-motion',Brain, Rocket, Shield, Zap, Target, Atom, Globe,Cpu, Lock, Cloud, Settings, Eye, Award, Clock,Star, TrendingUp, Users, Building, Lightbulb,ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin;
 } from 'lucide-react',import { real2036InnovativeServices } from '../data/real-2036-innovative-services',import { real2036SpecializedServices } from '../data/real-2036-specialized-services',const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {case 'price':;return (parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
           parseFloat(b && b.price.replace('$', '').replace(',', '')))case 'rating':;
@@ -73,7 +73,7 @@ import React, { useState } from 'react',import SEO from '../components/SEO',impo
         return (parseFloat(b && b.marketSize?.replace('$', '').replace('B', '') || '0') -;
           parseFloat(a && a.marketSize?.replace('$', '').replace('B', '') || '0'))default:;
         return a && a.name.localeCompare(b && b.name)}
-  })const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1,},}  }}  }const itemVariants = {hidden: { y: 20, opacity: 0 },visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.5,},}  }}  }return ({/* Floating Elements */}
+  })const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1}}  }}  }const itemVariants = {hidden: { y: 20, opacity: 0 },visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.5}}  }}  }return ({/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>;
           {[...Array(20)].map((_, i) => (<motion&& motion.div;
         stagger_children: 0.1;

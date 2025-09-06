@@ -52,7 +52,7 @@ import { useDisputeCheck } from '@/hooks/useDisputeCheck',import { DisputeStatus
       case 'in_progress':;return 'bg-blue-500';return 'bg-blue-500',case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
-        return 'bg-red-500';import { Card,CardContent,CardFooter,CardHeader,CardTitle,} from '@/components / ui / card';
+        return 'bg-red-500';import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { format  } from 'date - fns';
@@ -254,8 +254,8 @@ interface MilestoneCardProps  {id: string,project_id: string,import { Button } f
               milestone_id={id}
               variant='ghost';
               size='sm'            <RaiseDisputeButton;
-              project_id = {project_id, }
-              milestone_id = {id, }
+              project_id = {project_id }
+              milestone_id = {id }
               variant="ghost";
               size="sm";
             />)}

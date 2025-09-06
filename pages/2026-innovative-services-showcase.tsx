@@ -7,7 +7,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
 import Head from 'next/head';
 import Link from 'next/link';
-import {Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Zap,Brain,Globe,Shield,Phone,Mail,} from 'lucide-react';import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
+import {Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Zap,Brain,Globe,Shield,Phone,Mail} from 'lucide-react';import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail  } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
 import { motion, AnimatePresence   } from 'framer-motion';
@@ -46,7 +46,7 @@ return (service.category?.includes('Emerging') ||;
       })}// Price range filter;
     if (selectedPriceRange !== 'all') {filtered = filtered.filter(service => {const price = parseInt(service.price.replace(/[^0-9]/g, ''))switch (selectedPriceRange) {case 'low':;
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },{ id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },{ id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },{id: 'enterprise',name: 'Enterprise IT',icon: '🏢',count: enterpriseCount,},{ id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },{id: 'emerging',name: 'Emerging Tech',icon: '🔬',count: emergingTechCount,}  ];
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },{ id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },{ id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },{id: 'enterprise',name: 'Enterprise IT',icon: '🏢',count: enterpriseCount},{ id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },{id: 'emerging',name: 'Emerging Tech',icon: '🔬',count: emergingTechCount}  ];
     }  ];const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },{ id: 'low', name: 'Under $500', range: 'Under $500' },{ id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },{ id: 'high', name: 'Over $1,000', range: 'Over $1,000' }  ];
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' }  ];const sortOptions = [;
@@ -60,7 +60,7 @@ return (service.category?.includes('Emerging') ||;
             return service && service.category?.includes('Micro SaaS')case 'emerging':;
             return (service && service.category?.includes('Emerging') ||;
               service && service.category?.includes('Neuromorphic') ||;
-              service && service.category?.includes('Synthetic'))default: return true,}
+              service && service.category?.includes('Synthetic'))default: return true}
       })}// Price range filter;
     if (selectedPriceRange !== 'all') {filtered = filtered && filtered.filter(service => {const price = parseInt(service && service.price.replace(/[^0-9]/g, ''))switch (selectedPriceRange) {case 'low':;
             return price < 500;
@@ -89,7 +89,7 @@ default:;
         case 'rating':;
           return b.rating - a.rating;
         case 'popularity':;
-          return b.customers - a.customers;default: return true,}
+          return b.customers - a.customers;default: return true}
       })}// Search filter;
     if (searchTerm) {filtered = filtered && filtered.filter(service =>;
           service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -102,10 +102,10 @@ default:;
           return b && b.rating - a && a.rating;
         case 'popularity':;
           return b && b.customers - a && a.customers;
-        default: return a && a.name.localeCompare(b && b.name),}
+        default: return a && a.name.localeCompare(b && b.name)}
     })return filtered;
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy])const containerVariants = {}
-    })const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1,},}  }}  }duration: 0.5;
+    })const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1}}  }}  }duration: 0.5;
       }
     }  }export default function Innovative2026ServicesShowcase() {try {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')const allServices = [;
     ...innovative2026MicroSaasServicesV4;

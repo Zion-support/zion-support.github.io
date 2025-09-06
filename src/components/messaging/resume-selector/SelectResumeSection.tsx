@@ -35,9 +35,9 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
               </div>;
             </button>;
           ))}{selectedResume?.type === 'ai_resume' && selectedResume.resume && (<ResumePreviewCard;
-              resume = {selectedResume.resume as Resume,}
-              onDownload = {handleDownloadResume,}
-              isLoading = {isLoading,}
+              resume = {selectedResume.resume as Resume}
+              onDownload = {handleDownloadResume}
+              isLoading = {isLoading}
             />;{selectedResume?.type === 'ai_resume' && selectedResume.resume && (<ResumePreviewCard;
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
@@ -62,7 +62,7 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
 }interface ResumePreviewCardProps  {resume: Resume;
   isSelected: boolean;
   onSelect: (resume: Resume) => void;
-}const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({resume,isSelected,onSelect,}) => {return (<div;
+}const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({resume,isSelected,onSelect}) => {return (<div;
       className={`p-4 border rounded-lg cursor-pointer transition-colors ${isSelected;
           ? 'border-blue-500 bg-blue-50';
           : 'border-gray-200 hover:border-gray-300';
@@ -85,7 +85,7 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
   selectedResume: ResumeOption | null;
   onSelectResume: (resume: ResumeOption) => void;
   onUploadNew: () => void;
-}export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({resumes,selectedResume,onSelectResume,onUploadNew,}) => {return (<div className="space-y-4">;
+}export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({resumes,selectedResume,onSelectResume,onUploadNew}) => {return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-semibold">Select Resume</h3>;
         <button;

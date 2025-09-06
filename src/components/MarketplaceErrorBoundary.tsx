@@ -53,7 +53,7 @@ function MarketplaceErrorFallback() {const handleRetry = null;
             className="w-full";
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { logErrorToProduction  } from '@/utils/productionLogger';
-interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional props if needed;function MarketplaceErrorFallback(): any ({error,resetErrorBoundary,}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;
+interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional props if needed;function MarketplaceErrorFallback(): any ({error,resetErrorBoundary}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;
       await mutate(() => true, undefined, { revalidate: true })resetErrorBoundary()} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError })Sentry && Sentry.captureException(retryError)}
     }}return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;
       await mutate((,) => true, undefined, { revalidate: true }),resetErrorBoundary()} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError }),Sentry && Sentry.captureException(retryError)}
@@ -164,7 +164,7 @@ export /**;
  * MarketplaceErrorBoundary - Function description;
  */;
 function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {// Log boundary errors to Sentry;
-    logErrorToProduction ('MarketplaceErrorBoundary caught an error:', error, {component_stack: error_info.component_stack,})Sentry.with_scope (scope => {scope.set_tag ('error_boundary', 'marketplace')scope.set_context ('error_info', {component_stack: error_info.component_stack || undefined,})scope.set_level ('error')Sentry.capture_exception (error)})}
+    logErrorToProduction ('MarketplaceErrorBoundary caught an error:', error, {component_stack: error_info.component_stack})Sentry.with_scope (scope => {scope.set_tag ('error_boundary', 'marketplace')scope.set_context ('error_info', {component_stack: error_info.component_stack || undefined})scope.set_level ('error')Sentry.capture_exception (error)})}
       >;
       {children}
     </ErrorBoundary>)}   return (<div className='flex items-center justify-center min-h-[400px] p-6'>;
@@ -231,17 +231,17 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
         </div>;
       </div>;
     </div>;
-  )}interface MarketplaceErrorBoundaryProps  {children: React && React.ReactNode;export function MarketplaceErrorBoundary(): any ({children,}: MarketplaceErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {// Log boundary errors to Sentry;
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStack,})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary', 'marketplace')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack || undefined,})scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}>;{children}
+  )}interface MarketplaceErrorBoundaryProps  {children: React && React.ReactNode;export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {// Log boundary errors to Sentry;
+    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStack})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary', 'marketplace')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}>;{children}
     </ErrorBoundary>;
   )}   return (<ErrorBoundary;
-        componentStack: errorInfo.componentStack || undefined,})scope.setLevel('error')Sentry.captureException(error)})}>;
+        componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)})}>;
       {children}
     </ErrorBoundary>;
   )}FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}</ErrorBoundary>;
-  )})}interface MarketplaceErrorBoundaryProps  {children: React.ReactNode,}export function MarketplaceErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {// Log boundary errors to Sentry;
+  )})}interface MarketplaceErrorBoundaryProps  {children: React.ReactNode}export function MarketplaceErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack })Sentry.withScope((scope) => {scope.setTag('errorBoundarymarketplace')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)})}return (<ErrorBoundary;
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}

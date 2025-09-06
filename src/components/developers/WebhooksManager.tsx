@@ -16,7 +16,7 @@ export function WebhooksManager() {const {webhooks;
     testWebhook;
     clearTestResult;
   } = useWebhooks()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showTestDialog, setShowTestDialog] = useState<string | null>(null),const [showTestResult, setShowTestResult] = useState(false)import { format  } from 'date-fns';
-import { Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook,} from 'lucide-react';
+import { Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook} from 'lucide-react';
 import { useWebhooks, type WebhookEventType  } from '@/hooks/useWebhooks';
 import { Button  } from '@/components/ui/button';
   Card;
@@ -63,21 +63,21 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components/ui/dialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger  } from '@/components/ui/dropdown-menu';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
-export function WebhooksManager() {X,} from 'lucide-react';
-import { ScrollArea } from "@/components/ui/scroll-area",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function WebhooksManager() {const {webhooks,loading,X,} from 'lucide-react';
+export function WebhooksManager() {X} from 'lucide-react';
+import { ScrollArea } from "@/components/ui/scroll-area",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function WebhooksManager() {const {webhooks,loading,X} from 'lucide-react';
 import { use_webhooks, type WebhookEventType  } from '@/hooks / use_webhooks';
 import { Button  } from '@/components / ui / button';
-  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components / ui / card';
-  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger,} from '@/components / ui / dialog';
+  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
 import { Input  } from '@/components / ui / input';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { Label  } from '@/components / ui / label';
 import { Badge  } from '@/components / ui / badge';
 import { Switch  } from '@/components / ui / switch';
-  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,} from '@/components / ui / dropdown - menu';
-  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,} from '@/components / ui / alert - dialog';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
+  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
 import { ScrollArea  } from '@/components / ui / scroll - area';
-  Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components / ui / select';
+  Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components / ui / select';
 import { Button   } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle   } from '@/components / ui / card';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger   } from '@/components / ui / dialog';
@@ -139,7 +139,7 @@ if (=== '' ||) {$2;
       label: 'Milestone Approved';
       description: 'When a project milestone is approved';
     }
-    {}, []),}, [])const handleCreateWebhook = async () => {clearTestResult;
+    {}, [])}, [])const handleCreateWebhook = async () => {clearTestResult;
   } = useWebhooks(),const [showCreateDialog, setShowCreateDialog] = useState(false),const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showTestDialog, setShowTestDialog] = useState<string | null>(null),const [showTestResult, setShowTestResult] = useState(false),// Create webhook form state;
   const [webhookName, setWebhookName] = useState(""),const [webhookUrl, setWebhookUrl] = useState(""),const [webhookSecret, setWebhookSecret] = useState(""),const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),// Load webhooks on mount;
   useEffect(() => {fetchWebhooks()}, []),const handleCreateWebhook = async () => {if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,await createWebhook(webhookName,webhookUrl,selectedEvents,webhookSecret.trim() === "" ? undefined : webhookSecret;
@@ -172,12 +172,12 @@ if (=== '' ||) {$2;
                   Add a webhook endpoint to receive event notifications.;
                 </DialogDescription>;
               </DialogHeader>;
-import {Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook,X,} from 'lucide-react';
-  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
-  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger,} from '@/components/ui/dialog';
-  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,} from '@/components/ui/dropdown-menu';
-  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,} from '@/components/ui/alert-dialog';
-  Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from '@/components/ui/select';
+import {Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook,X} from 'lucide-react';
+  Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components/ui/dialog';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components/ui/alert-dialog';
+  Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 export function WebhooksManager() {const {    webhooks,    webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult,const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null;
   )const [showTestDialog, setShowTestDialog] = useState<string | null>(null)const [showTestResult, setShowTestResult]  = useState(false)// Create webhook form state;
   const [webhookName, setWebhookName] = useState('')const [webhookUrl, setWebhookUrl] = useState('')const [webhookSecret, setWebhookSecret] = useState('')const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([])const [testEventType, setTestEventType] =;
@@ -192,7 +192,7 @@ export function WebhooksManager() {const {    webhooks,    webhooks,loading,test
     label: string;
     description: string;
   }[] = [;
-    {value: 'new_application',label: 'New Application',description: 'When a talent applies to a job',},{value: 'quote_received',label: 'Quote Received',description: 'When a quote is received from talent',},{value: 'milestone_approved',label: 'Milestone Approved',description: 'When a project milestone is approved',},{value: 'talent_hired',label: 'Talent Hired',description: 'When talent is hired for a project',},];// Toggle an event selection;
+    {value: 'new_application',label: 'New Application',description: 'When a talent applies to a job'},{value: 'quote_received',label: 'Quote Received',description: 'When a quote is received from talent'},{value: 'milestone_approved',label: 'Milestone Approved',description: 'When a project milestone is approved'},{value: 'talent_hired',label: 'Talent Hired',description: 'When talent is hired for a project'}];// Toggle an event selection;
   const toggleEvent = (event: WebhookEventType) => {setSelectedEvents(prev =>;
       prev && prev.includes(event) ? prev && prev.filter(e => e !== event) : [...prev, event];
     )}return (<Card className='bg-zinc-900 border-zinc-800 text-white'>;
@@ -238,7 +238,7 @@ export function WebhooksManager() {const {    webhooks,    webhooks,loading,test
                     onChange={e => setWebhookUrl(e && e.target.value)}
                     placeholder='https://example && example.com/webhook';
                     className='bg-zinc-800 border-zinc-700'                  />;
-                  <p className='text-xs text-zinc-500'>;value: 'talent_hired',label: 'Talent Hired',description: 'When talent is hired for a project',},];
+                  <p className='text-xs text-zinc-500'>;value: 'talent_hired',label: 'Talent Hired',description: 'When talent is hired for a project'}];
   // Toggle an event selection;
   const toggle_event = (event: WebhookEventType) =>: any {setSelectedEvents (prev =>;
       prev.includes (event) ? prev.filter (e => e !== event) : [...prev, event])}
@@ -777,7 +777,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       key={event}
                       variant='secondary';
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'>                    <Badge;
-                      key = {event,}
+                      key = {event}
                       variant="secondary";
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800";
                 <div className="mt-3 flex flex-wrap gap-2">;
@@ -847,7 +847,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       key={event}
                       variant='secondary';
                       className='bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800'                    >                    <Badge;
-                      key = {event, }
+                      key = {event }
                       variant="secondary";
                       className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";
                       {event}
@@ -920,7 +920,7 @@ if ( {) {$2;
       </CardFooter>;{/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null}
-        onOpenChange={open => {        open = {showTestDialog !== null, }
+        onOpenChange={open => {        open = {showTestDialog !== null }
         onOpenChange = {(open, ) => {<Dialog;
         open={showTestDialog !== null}<Dialog;
         open={showTestDialog !== null}onOpenChange={(open) => {<CardFooter className='justify-between border-t border-zinc-800 py-4'>;
@@ -952,7 +952,7 @@ if ( {) {$2;
         }}
       >;
         <DialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>              clearTestResult ()}
-            , }setShowTestResult(false)clearTestResult()}}
+             }setShowTestResult(false)clearTestResult()}}
         }}>;
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
 <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>;
@@ -967,8 +967,8 @@ if ( {) {$2;
                     value={testEventType}
                     onValueChange={value =>;
                       setTestEventType(value as WebhookEventType)}
-                    value = {testEventType,}
-                    onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}
+                    value = {testEventType}
+                    onValueChange = {(value,) => setTestEventType(value as WebhookEventType)}
                   >;
                     </SelectTrigger>;
                     <SelectContent className='bg-zinc-900 border-zinc-800'>;
@@ -989,8 +989,8 @@ if ( {) {$2;
                     value={testEventType}
                     onValueChange={value =>;
                       setTestEventType(value as WebhookEventType)}
-                    value = {testEventType,}
-                    onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}clearTestResult()}
+                    value = {testEventType}
+                    onValueChange = {(value,) => setTestEventType(value as WebhookEventType)}clearTestResult()}
           }
         }}
       >;
@@ -1038,8 +1038,8 @@ if ( {) {$2;
                     value={testEventType}
                     onValueChange={value =>;
                       setTestEventType (value as WebhookEventType)}
-                    value = {testEventType, }
-                    onValueChange = {(value, ) => setTestEventType (value as WebhookEventType), }
+                    value = {testEventType }
+                    onValueChange = {(value, ) => setTestEventType (value as WebhookEventType) }
                   >;
                     <SelectTrigger className='bg - zinc - 800 border - zinc - 700'>;
                       <SelectValue placeholder='Select an event type' />;
@@ -1115,7 +1115,7 @@ if ( {) {$2;
                       className = {testResult && testResult.status>= 200 && testResult.status < 300;
                           ? "bg-green-700";
                           : "bg-red-700";
-                      ,}
+                      }
                     >;<div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <div className="flex items-center justify-between">;
@@ -1199,7 +1199,7 @@ if ( {) {$2;
                       class_name = {test_result && test_result.status >= 200 && test_result.status < 300;
                           ? "bg - green - 700";
                           : "bg - red - 700";
-                      , }
+                       }
                     >;
                       {test_result?.status} {test_result?.status_text}
                     </Badge>;
@@ -1254,7 +1254,7 @@ if ( {) {$2;
             </>;)}
         </DialogContent>;
       </Dialog>;
-      {/* Delete Webhook Confirmation Dialog */}onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
+      {/* Delete Webhook Confirmation Dialog */}onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
                   onClick={() => {setShowTestResult(false)clearTestResult()}}
                 >                  Test Another Event                <Button variant="outline" onClick={() => {setShowTestResult(false)clearTestResult()}}>;
@@ -1268,7 +1268,7 @@ if ( {) {$2;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;<AlertDialogAction;
-              onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
+              onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
       <AlertDialog;
         open={showDeleteConfirm !== null}onOpenChange={(open) => !open && setShowDeleteConfirm(null)}>;
@@ -1315,7 +1315,7 @@ if ( {) {$2;
     </Card>;
   )className='bg-red-600 hover:bg-red-700'            >;
             <AlertDialogAction;
-              onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
+              onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
@@ -1491,7 +1491,7 @@ setTestEventType ('new application')if (showTestResult) {}";
                 showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
               className='bg - red - 600 hover:bg - red - 700'            >;
             <AlertDialogAction;
-              on_click = {() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm), }
+              on_click = {() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm) }
               className="bg - red - 600 hover: bg - red - 700";<AlertDialog;
         open={showDeleteConfirm !== null}onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >;

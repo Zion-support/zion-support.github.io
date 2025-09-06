@@ -1,6 +1,6 @@
 
 ;
-import { Brain,Rocket,Target,Cpu,Globe,Eye,ChevronRight,Star,TrendingUp,Zap,Shield,ArrowRight,Search,Filter,Grid,List,Phone,Mail,MapPin,ExternalLink,Sparkles,} from 'lucide-react';
+import { Brain,Rocket,Target,Cpu,Globe,Eye,ChevronRight,Star,TrendingUp,Zap,Shield,ArrowRight,Search,Filter,Grid,List,Phone,Mail,MapPin,ExternalLink,Sparkles} from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';

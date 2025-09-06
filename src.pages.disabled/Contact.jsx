@@ -11,12 +11,40 @@ interface ContactProps  {// Add props here as needed;
     </div>;
   )}
 :src.pages.disabled/Contact.jsx;
+interface ContactProps {
+  // Add props here as needed
+
+
+}
+
+export default function Contact({}: ContactProps) {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+}
+
+:src.pages.disabled/Contact.jsx
 }
 }
 }
 }
 }
 }:src.pages.disabled/Contact.jsx;
+:temp_exclude/src.pages.disabled/Contact.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Contact.jsx
 }
 }
 }

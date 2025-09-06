@@ -47,8 +47,8 @@ function LandingPage() {const { t } = use_translation ()const { isRTL }  = use_l
     {title: t('home.tool_analytics')description: t('home.tool_analytics_desc')icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />;
       link: '/analytics';
     }
-    {title: t ('home.tool_analytics'),description: t ('home.tool_analytics_desc'),icon: <BarChart3 className='h - 6 w - 6 text - zion - cyan' />,link: '/analytics',},{title: 'Mobile App',description:;
-        'Take Zion with you on the go with our mobile app for iOS and Android',icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,link: '/mobile - launch',},];const toolsFeatures  = null;return (<div;
+    {title: t ('home.tool_analytics'),description: t ('home.tool_analytics_desc'),icon: <BarChart3 className='h - 6 w - 6 text - zion - cyan' />,link: '/analytics'},{title: 'Mobile App',description:;
+        'Take Zion with you on the go with our mobile app for iOS and Android',icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,link: '/mobile - launch'}];const toolsFeatures  = null;return (<div;
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
             {toolsFeatures && toolsFeatures.map((feature, index) => (<Link;
                 key={index}

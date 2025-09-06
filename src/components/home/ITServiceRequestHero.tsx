@@ -26,7 +26,7 @@ export function ITServiceRequestHero() {return (";
       <div className="absolute inset-0">";
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
-      </div>;export function ITServiceRequestHero() {const [name, setName] = useState('')const [email, setEmail] = useState('')const [phone, setPhone] = useState('')const [company, setCompany] = useState('')const [location, setLocation] = useState('')const [details, setDetails] = useState('')const [isSubmitting, setIsSubmitting] = useState(false)const { toast } = useToast()const { t }  = useTranslation()const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!name || !email || !location) {toast({title: 'Missing Information',description: 'Name, email and location are required.',variant: 'destructive',})return;
+      </div>;export function ITServiceRequestHero() {const [name, setName] = useState('')const [email, setEmail] = useState('')const [phone, setPhone] = useState('')const [company, setCompany] = useState('')const [location, setLocation] = useState('')const [details, setDetails] = useState('')const [isSubmitting, setIsSubmitting] = useState(false)const { toast } = useToast()const { t }  = useTranslation()const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!name || !email || !location) {toast({title: 'Missing Information',description: 'Name, email and location are required.',variant: 'destructive'})return;
     }import Image from 'next / image';
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Button  } from '@/components / ui / button';
@@ -77,10 +77,10 @@ export /**;
 function ITServiceRequestHero() {const [name, set_name] = useState ('')const [email, set_email] = useState ('')const [phone, set_phone] = useState ('')const [company, set_company] = useState ('')const [location, set_location] = useState ('')const [details, set_details] = useState ('')const [is_submitting, setIsSubmitting] = useState (false)const { toast } = use_toast ()const { t } = use_translation ()const handle_submit = async (e: React.FormEvent) => {e.prevent_default ()// Check condition;
 if ( {) {$2;
 }
-      toast ({title: 'Missing Information',description: 'Name, email and location are required.',variant: 'destructive',})return;
+      toast ({title: 'Missing Information',description: 'Name, email and location are required.',variant: 'destructive'})return;
     }
-    setIsSubmitting (true)setIsSubmitting(true),try {const res = await axios.post ('/api / onsite - request', {name,email,phone,company,location,}
-    } catch (err: any) {logErrorToProduction(err)toast({title: 'Submission Failed',description: 'There was an error submitting your request.',variant: 'destructive',})} finally {setIsSubmitting (false)}
+    setIsSubmitting (true)setIsSubmitting(true),try {const res = await axios.post ('/api / onsite - request', {name,email,phone,company,location}
+    } catch (err: any) {logErrorToProduction(err)toast({title: 'Submission Failed',description: 'There was an error submitting your request.',variant: 'destructive'})} finally {setIsSubmitting (false)}
   }return (<section;
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]";
     >;

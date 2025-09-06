@@ -25,6 +25,65 @@ function handler() {  try {export default async /**;
  * handler - Function description;
  */;
 function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null,const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
+
+
+      supabase
+        .from('profile_views')
+        .select('id, talent_id')
+        .eq('talent_id', talentId)
+      supabase
+        .from('quotes')
+        .select('id, talent_id, status')
+        .eq('talent_id', talentId)
+      supabase
+        .from('applications')
+        .select('id, talent_id, status')
+        .eq('talent_id', talentId)
+      supabase
+        .from('search_matches')
+        .select('talent_id, tag')
+        .eq('talent_id', talentId)
+    ]);
+    const views =
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([label, value]) => ({ label, value }))
+    });
+  } catch (e) {
+      topTags: [
+        { label: 'react', value: 2 }
+        { label: 'node', value: 1 }
+        { label: 'ai', value: 1 }
+      ]
+
+    });
+
+
+  }
+
+}
+
+
+  }
+
+}
+
+}
+
+}
+import { createServerClient } from '../../../utils / supabase / server';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {  try {export default async /**
+ * handler - Function description
+ */
+function handler() {
+  try {
+    const supabase = createServerClient ();
+    const talent_id = (req.query.talent_id as string) || null,
+    const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
       supabase;
         .from ('profile_views').select ('id, talent_id').eq ('talent_id', talent_id),supabase;
         .from ('quotes').select ('id, talent_id, status').eq ('talent_id', talent_id),supabase;
@@ -61,3 +120,5 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
 }
 }}
   }
+}
+}

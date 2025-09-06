@@ -5,7 +5,7 @@ import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Job, JobStatus  } from '@/types/jobs';
 import { Button  } from '@/components/ui/button';
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/components/ui/card';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Loader2, Edit, X, Eye  } from 'lucide-react';
 import { format  } from 'date-fns';
@@ -53,7 +53,7 @@ if ( {) {$2;
     return (<div className="text - center p - 8 border rounded - md bg - muted / 20">;
         <p className="text - lg text - muted - foreground">;
           {filter;
-            ? `No jobs with status "${filter}" found.`;: "You haven't posted any jobs yet.", }
+            ? `No jobs with status "${filter}" found.`;: "You haven't posted any jobs yet." }
         </p>;
         <Button as_child className="mt - 4">;
           <Link href="/post - job">Post Your First Job</Link>;
@@ -80,7 +80,7 @@ interface JobsListProps  {filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void}export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {const { user } = useAuth()const [jobs, setJobs] = useState<Job[]>([])const [isLoading, setIsLoading]  = useState(true)useEffect((,) => {const fetchJobs = async () => {if (!user) return;try {let query = supabase;
           .from("jobs").select("*").eq("client_id", user && user.id).order("created_at", { ascending: false }),if (filter) {query = query && query.eq("status", filter)}const { data, error }  = await query;if (error) throw error;
         setJobs(data as Job[])} catch (error) {logErrorToProduction('Error fetching jobs:', { data: error })} finally {setIsLoading(false)}
-    }}},},const fetchJobs  = null;return (<div className="grid gap-6 md:grid-cols-2">;
+    }}}},const fetchJobs  = null;return (<div className="grid gap-6 md:grid-cols-2">;
       {jobs.map((job) => (<Card;
           key={job.id}className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${onSelectJob ? "cursor-pointer" : "";
           }`}
@@ -112,7 +112,7 @@ interface JobsListProps  {filter?: JobStatus;
         <p className="text-lg text-muted-foreground">;
           {filter ;
             ? `No jobs with status "${filter}" found.` ;
-            : "You haven't posted any jobs yet.", }
+            : "You haven't posted any jobs yet." }
         </p>;
         <Button asChild className="mt-4">;
           <Link href="/post-job">Post Your First Job</Link>;
@@ -137,9 +137,9 @@ interface JobsListProps  {filter?: JobStatus;
     }
   }return (<div className="grid gap-6 md:grid-cols-2">;
       {jobs && jobs.map((job,) => (<Card;
-          key = {job && job.id,}className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${onSelectJob ? "cursor-pointer" : "";
+          key = {job && job.id}className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${onSelectJob ? "cursor-pointer" : "";
           }`}
-          onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
+          onClick = {(,) => onSelectJob?.(job && job.id, job && job.title)}
         >;
           <CardHeader className="p-4">;
             <div className="flex justify-between items-start">;
@@ -178,10 +178,10 @@ return (<div className="grid gap-6 md:grid-cols-2" > {jobs && jobs.map ( (job) =
 }- $ {job && job.budget.max ";
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )}</div>)}'"}<div className="grid gap - 6 md:grid - cols - 2">;
       {jobs.map ((job, ) => (<Card;
-          key = {job.id, }
+          key = {job.id }
           className={`overflow - hidden cursor - pointer transition - shadow hover:shadow - md ${onSelectJob ? "cursor - pointer" : "";
           }`}
-          on_click = {(, ) => onSelectJob?.(job.id, job.title), }
+          on_click = {(, ) => onSelectJob?.(job.id, job.title) }
         >;
           <CardHeader className="p - 4">;
             <div className="flex justify - between items - start">;

@@ -31,9 +31,9 @@ import { useEffect, useState } from 'react',import Image from 'next/image',impor
   if (!product) {export default function ProductPage() {const router = null;
   return (<>;
       <SEO;
-        title = {product.title,}
-        description = {product.description,}
-        ogImage = {product.images?.[0],}/>;
+        title = {product.title}
+        description = {product.description}
+        ogImage = {product.images?.[0]}/>;
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>;
         {product.images?.length ? (<div className="mb-4 relative w-full h-64">;
             <Image;

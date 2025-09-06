@@ -203,12 +203,12 @@ function Revolutionary2026ServicesPage() {return (<>;
             {/* Features Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[;
                 {icon: '🧠',title: 'AI Consciousness',description:;
-                    'First-to-market AI consciousness orchestration and autonomous intelligence systems.',color: 'from-purple-500 to-pink-500',},{icon: '⚛️',title: 'Quantum Technology',description:;
-                    'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',color: 'from-blue-500 to-cyan-500',},{icon: '🚀',title: 'Emerging Tech',description:;
-                    'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',color: 'from-green-500 to-emerald-500',},{icon: '🏥',title: 'Healthcare Innovation',description:;
-                    'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',color: 'from-teal-500 to-cyan-500',},{icon: '💰',title: 'Fintech Revolution',description:;
-                    'Next-generation autonomous business intelligence and quantum blockchain solutions.',color: 'from-yellow-500 to-orange-500',},{icon: '🌐',title: 'Global Impact',description:;
-                    'Serving 2,500+ customers worldwide with transformative technology solutions.',color: 'from-indigo-500 to-purple-500',},].map((feature, index) => (<div key={index} className='group'>;
+                    'First-to-market AI consciousness orchestration and autonomous intelligence systems.',color: 'from-purple-500 to-pink-500'},{icon: '⚛️',title: 'Quantum Technology',description:;
+                    'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',color: 'from-blue-500 to-cyan-500'},{icon: '🚀',title: 'Emerging Tech',description:;
+                    'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',color: 'from-green-500 to-emerald-500'},{icon: '🏥',title: 'Healthcare Innovation',description:;
+                    'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',color: 'from-teal-500 to-cyan-500'},{icon: '💰',title: 'Fintech Revolution',description:;
+                    'Next-generation autonomous business intelligence and quantum blockchain solutions.',color: 'from-yellow-500 to-orange-500'},{icon: '🌐',title: 'Global Impact',description:;
+                    'Serving 2,500+ customers worldwide with transformative technology solutions.',color: 'from-indigo-500 to-purple-500'}].map((feature, index) => (<div key={index} className='group'>;
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105'>;<div;
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>;
                       {feature && feature.icon}

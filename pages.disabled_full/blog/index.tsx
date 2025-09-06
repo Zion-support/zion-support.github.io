@@ -17,3 +17,5 @@ export default function Index() {return (<div>;
 =>>>>>>>> main:corrupted_backup/index.tsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
+interface IndexProps {
+  // Add props here as needed

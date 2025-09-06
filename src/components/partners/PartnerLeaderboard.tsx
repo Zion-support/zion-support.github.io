@@ -1,6 +1,6 @@
 
 ;
-  referrals: number,earnings: number,import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
+  referrals: number,earnings: number,import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Badge  } from '@/components/ui/badge';
 import { Crown, Medal, Trophy  } from 'lucide-react';
@@ -77,7 +77,7 @@ function PartnerLeaderboard() {// Placeholder data - would come from API in real
     {id: "3",rank: 3,name: "Neural Networks Pro",avatar: "",referrals: 124,earnings: 3100,badges: ["bronze"];
     }
     {id: "4",rank: 4,name: "AI Career Insights",avatar: "",referrals: 98,earnings: 2450,badges: [];
-    }},},{id: "5",rank: 5,name: "Deep Learning Daily",avatar: "",referrals: 87,earnings: 2175,badges: ["newcomer"];
+    }}},{id: "5",rank: 5,name: "Deep Learning Daily",avatar: "",referrals: 87,earnings: 2175,badges: ["newcomer"];
       id: "1";
       rank: 1;
       name: "AI Tech Guru";

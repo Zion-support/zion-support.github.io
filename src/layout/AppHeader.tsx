@@ -85,7 +85,7 @@ import React from 'react';
       {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">;
           <div;
             className="absolute inset-0 bg-black/50 backdrop-blur-sm";
-            onClick = {(,) => setMobileMenuOpen(false),}
+            onClick = {(,) => setMobileMenuOpen(false)}
             aria-hidden="true";
           />;
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;<MobileMenu;
@@ -94,9 +94,9 @@ import React from 'react';
           />;
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
             <MobileMenu;
-              unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {openLoginModal,}
+              unreadCount = {unreadCount}
+              onClose = {() => setMobileMenuOpen(false)}
+              openLoginModal = {openLoginModal}
             />;
           </div>;
         </div>;
@@ -114,7 +114,7 @@ import React from 'react';
     setLoginOpen (true)},return (<>;
       <header;
         style={{ "--nav - height": "64px" } as React.CSSProperties}
-        class_name = {cn ("sticky top - 0 z - 50 w - full border - b border - border bg - background / 90 backdrop - blur - md text - foreground",{ "bg - red - 500": mobileMenuOpen , }
+        class_name = {cn ("sticky top - 0 z - 50 w - full border - b border - border bg - background / 90 backdrop - blur - md text - foreground",{ "bg - red - 500": mobileMenuOpen  }
         )}
       >;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -130,10 +130,10 @@ import React from 'react';
           {/* Mobile menu button */}
           <div className="md:hidden ml - auto mr - 4">;
             <button;
-              on_click = {() => setMobileMenuOpen (!mobileMenuOpen), }
+              on_click = {() => setMobileMenuOpen (!mobileMenuOpen) }
               className="inline - flex items - center justify - center rounded - md p - 2 text - foreground / 70 hover:text - foreground hover:bg - primary / 10 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring";
-              aria - expanded = {mobileMenuOpen, }
-              aria - label = {t ('general.toggle_mobile_menu'), }
+              aria - expanded = {mobileMenuOpen }
+              aria - label = {t ('general.toggle_mobile_menu') }
             >;
               <span className="sr - only">{t ('general.open_main_menu')}</span>;
               {mobileMenuOpen ? (<X className="block h - 6 w - 6" aria - hidden="true" />) : (<Menu className="block h - 6 w - 6" aria - hidden="true" />)}
@@ -144,7 +144,7 @@ import React from 'react';
               <Link;
                 href="/auth / login";
                 className="text - sm font - medium text - foreground / 70 hover:text - foreground";
-                aria - label = {t ('auth.login'), }
+                aria - label = {t ('auth.login') }
                 data - testid="login - link";
                 on_click={(e, ) => {e.prevent_default (),// For the main login link, we might not have a specific return_to beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub - menus now set it:;
@@ -155,7 +155,7 @@ import React from 'react';
               <Link;
                 href="/signup";
                 className="ml - 2 text - sm font - medium text - foreground / 70 hover:text - foreground";
-                aria - label = {t ('auth.signup'), }
+                aria - label = {t ('auth.signup') }
                 data - testid="signup - nav - link";
               >;
                 {t ('auth.signup')}
@@ -171,14 +171,14 @@ import React from 'react';
       {mobileMenuOpen && (<div className="md:hidden fixed inset - 0 z - 60 pt - 16">;
           <div;
             className="absolute inset - 0 bg - black / 50 backdrop - blur - sm";
-            on_click = {(, ) => setMobileMenuOpen (false), }
+            on_click = {(, ) => setMobileMenuOpen (false) }
             aria - hidden="true";
           />;
           <div className="relative bg - background border - t border - border h - auto max - h-[calc (100vh - 4rem)] overflow - y-auto">;
             <MobileMenu;
-              unread_count = {unread_count, }
-              on_close = {() => setMobileMenuOpen (false), }
-              openLoginModal = {openLoginModal, }
+              unread_count = {unread_count }
+              on_close = {() => setMobileMenuOpen (false) }
+              openLoginModal = {openLoginModal }
             />;
           </div>;
         </div>)}
@@ -648,15 +648,15 @@ import React from 'react';
           {/* Right side actions */}
           <div className="flex items-center space-x-4">;
             {/* Search */}<form on_submit={handle_search} className="hidden md:flex relative">  const navigation = [;
-    { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false },];
+    { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false }];
   const services = [;
-    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' },];return (<>;
+    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' }];return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
           {/* Logo */}<form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
-    { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false },];
+    { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false }];
   const services = [;
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },];
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' }];
   return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;

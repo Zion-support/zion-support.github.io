@@ -18,3 +18,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>'</p>';
 </p>';
+const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Analytics' ,'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

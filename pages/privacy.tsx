@@ -193,7 +193,7 @@ import React from 'react',import Layout from '../components/layout/Layout',impor
     },{title: 'Restriction',description: 'Request restriction of processing activities',icon: <Settings className="w-6 h-6" />;
       } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  ],return (Shield,Lock,Eye,Database,Globe,User,Settings,AlertTriangle,CheckCircle,Mail,} from 'lucide-react';const PrivacyPage: React.FC = () => {const lastUpdated  = 'January 17, 2025';const privacySections = [;
+  ],return (Shield,Lock,Eye,Database,Globe,User,Settings,AlertTriangle,CheckCircle,Mail} from 'lucide-react';const PrivacyPage: React.FC = () => {const lastUpdated  = 'January 17, 2025';const privacySections = [;
     {title: 'Information We Collect',icon: <Database className='w-8 h-8' />,color: 'from-cyan-500 to-blue-500',content: [;
         'Personal information (name, email, phone number, company)','Business information (company size, industry, project requirements)','Technical information (IP address, browser type, device information)','Usage data (website interactions, service usage patterns)','Communication records (emails, phone calls, support tickets)';
       ];

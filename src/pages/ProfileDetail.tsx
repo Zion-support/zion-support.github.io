@@ -18,7 +18,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
   if (!profileData) {return (<div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
-        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+        description = {profileData.bio || "Check out this talent's profile on Zion!"}
 import { Badge } from "@/components/ui/badge",import { HireNowCTA } from "@/components/profile/HireNowCTA",export default function ProfileDetail() {// useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const router = useRouter(),const profileId = router.query.profileId as string,const [profileData, setProfileData] = useState<any>(null),const [isLoading, setIsLoading] = useState(true),const [error, setError] = useState<string | null>(null),useEffect(() => {const fetchProfile = async () => {setIsLoading(true),setError(null),try {if (!profileId) {setError("Profile ID is missing."),return;
@@ -136,8 +136,8 @@ import { SEO  } from '@/components/SEO';
 import { Header  } from '@/components/Header';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Button  } from '@/components/ui/button';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
-import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2,Mail,Phone,Globe,} from 'lucide-react';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
+import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2,Mail,Phone,Globe} from 'lucide-react';
 import { HireNowCTA  } from '@/components/profile/HireNowCTA';
 export default function ProfileDetail() {// useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;

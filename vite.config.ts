@@ -15,6 +15,16 @@ export default defineConfig({plugins: [react()],resolve: {alias: {'@': path.reso
         }
       }
     }
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    host: true
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true
   }
 })ursor/automate-test-improve-and-merge-code-646c;
   },resolve: {alias: {'@': '/workspace/src';

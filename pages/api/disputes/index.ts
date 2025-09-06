@@ -21,7 +21,7 @@ export default async function handler() {const user = null;
       talentUserId;
       reason;
       reasonDetails;
-      projectId,entityType,entityId,clientUserId,talentUserId,reason,reasonDetails,description,}  = req.body || {}if (!projectId |;
+      projectId,entityType,entityId,clientUserId,talentUserId,reason,reasonDetails,description}  = req.body || {}if (!projectId |;
       !clientUserId |;
       !talentUserId |;
       !reason |;

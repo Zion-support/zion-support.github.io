@@ -17,3 +17,5 @@ export default function Researchdevelopment() {return (<div>;
 =>>>>>>>> main:corrupted_backup/research-development.tsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
+interface ResearchdevelopmentProps {
+  // Add props here as needed

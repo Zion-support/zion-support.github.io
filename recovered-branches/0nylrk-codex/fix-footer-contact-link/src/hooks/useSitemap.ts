@@ -44,6 +44,83 @@ type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';export
  * use_sitemap - Function description;
  */;
 function use_sitemap() {const { user, is_authenticated }  = use_auth ()// Get routes that the current user can access;
+
+import {useAuth} from './useAuth';
+import {getAccessibleRoutes} from '@/config/sitemap';
+
+// Define the allowed user types
+
+
+export function useSitemap() {;
+
+
+  const { user, isAuthenticated } = useAuth();
+  // Get routes that the current user can access
+  // Cast userType to UserType or pass undefined if not valid
+  const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path
+  const findRouteByPath = (path: string): SitemapItem | undefined => {
+
+    return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
+  };
+  
+
+// Define the allowed user types
+
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+export function useSitemap() {;
+  const { user, isAuthenticated } = useAuth();
+  // Get routes that the current user can access
+  // Cast userType to UserType or pass undefined if not valid
+  const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path
+  const findRouteByPath = (path: string): SitemapItem | undefined => {
+    return accessibleRoutes.find(route => route.path === path)
+  }
+  // Helper function to check if a user can access a specific path
+  const canAccessRoute = (path: string): boolean => {
+    const route = findRouteByPath(path);
+    if (!route) return false;
+    // If route requires authentication and user is not authenticated
+
+    if (route && route.requiredAuth && !isAuthenticated) return false;
+    
+    // If route requires specific roles and user doesn't have one
+    if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
+      if (!user || !user && user.userType) return false;
+      const userTypeEnum = isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined,
+      return userTypeEnum ? route && route.requiredRoles.includes(userTypeEnum) : false
+
+    }
+    return true
+  }
+    }
+    return true
+  }
+  // Helper function to check if userType is valid
+  function isValidUserType(type: string): boolean {
+    return ['employerbuyerjobSeekercreatoradmin'].includes(type)
+  }
+  return {
+    accessibleRoutes;
+    findRouteByPath;
+
+    canAccessRoute
+import {use_auth} from './use_auth';
+import {getAccessibleRoutes} from '@/config / sitemap';
+// Define the allowed user types;
+type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
+;
+export /**
+ * use_sitemap - Function description
+ */
+function use_sitemap() {
+  const { user, is_authenticated } = use_auth ();
+;
+  // Get routes that the current user can access;
   // Cast user_type to UserType or pass undefined if not valid;
   const user_type = user?.user_type && isValidUserType (user.user_type) ? user.user_type as UserType : undefined;
   const accessible_routes  = getAccessibleRoutes (is_authenticated, user_type)// Helper function to find a route by path;
@@ -72,7 +149,24 @@ if (return false) {$2;
     canAccessRoute;}
 }}
 }return {accessibleRoutes,findRouteByPath,canAccessRoute;
-  },} // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+  }} // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+    canAccessRoute;
+
+
+
+
+  }
+}
+
+  }
+}
+  ;
+  return {;
+    accessibleRoutes,;
+    findRouteByPath,;
+    canAccessRoute;
+  },;
+} // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 if (!route) return false;
 // If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
 // If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {return true;

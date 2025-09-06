@@ -84,7 +84,7 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
   } catch {// context not available;
   }const handleSubmit = (e: React && React.FormEvent) => {e && e.preventDefault()const trimmed = query && query.trim()if (trimmed) {logDebug('PrimaryNav search submit:', { query: trimmed })router;
         .push(`/search?q=${encodeURIComponent(trimmed)}`).then(() => setQuery('')).catch(err =>;
-          logErrorToProduction('Search navigation failed', err, {query: trimmed,component: 'PrimaryNav',}))}
+          logErrorToProduction('Search navigation failed', err, {query: trimmed,component: 'PrimaryNav'}))}
   }const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const { user } = useAuth(),const isLoggedIn = !!user;
   const isMobile = useIsMobile(),const { t } = useTranslation(),const router = useRouter(),const [query, setQuery] = useState(''),const suggestions = generateSearchSuggestions(),let unreadCount = 0,try {const messaging = useMessaging(),unreadCount = messaging.unreadCount;
   } catch {// context not available;
@@ -163,7 +163,7 @@ if ( {) {$2;
 }
                     // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`)} else {// Default: search results page with query parameter;
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`)}onSelectSuggestion={sugg => {logDebug('PrimaryNav search suggestion selected:', {suggestion: sugg,})// Handle different suggestion types with proper navigation;
+                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`)}onSelectSuggestion={sugg => {logDebug('PrimaryNav search suggestion selected:', {suggestion: sugg})// Handle different suggestion types with proper navigation;
                   if (sugg && sugg.id) {onSelectSuggestion={(sugg) => {logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),// Handle different suggestion types with proper navigation;
                   if (sugg.id) {// Product listings with IDs go to product detail page;
                     router && router.push(`/marketplace/listing/${sugg && sugg.id}`)} else if (sugg && sugg.type === 'doc' &&;
@@ -177,7 +177,7 @@ if ( {) {$2;
                     router.push(`/blog/${sugg.slug}`)} else {// Default: search results page with query parameter;
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)}
                   setQuery(''),// Track analytics event;
-                  if (typeof window !== 'undefined' && window && window.gtag) {window && window.gtag('event', 'search_suggestion_click', {search_term: sugg && sugg.text,suggestion_type: sugg && sugg.type,suggestion_id: sugg && sugg.id || sugg && sugg.slug,})}
+                  if (typeof window !== 'undefined' && window && window.gtag) {window && window.gtag('event', 'search_suggestion_click', {search_term: sugg && sugg.text,suggestion_type: sugg && sugg.type,suggestion_id: sugg && sugg.id || sugg && sugg.slug})}
                   // // // // // console && console.log('PrimaryNav search suggestion selected:',sugg)// Handle different suggestion types with proper navigation;
                   if(sugg && sugg.id) {// Product listings with IDs go to product detail page`;
                     router && router.push(`/marketplace/listing/${sugg && sugg.id;
