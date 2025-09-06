@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function EmergingTechnologyTrends() {
   return (
     <div className="space-y-2">
@@ -6,3 +7,6 @@ export default function EmergingTechnologyTrends() {
     </div>
   );
 }
+=======
+export default function EmergingTechnologyTrends() { return <div>Emerging Technology Trends</div>; }
+>>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

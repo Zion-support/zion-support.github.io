@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function BlockchainSolutionsPage() {
@@ -8,3 +9,8 @@ export default function BlockchainSolutionsPage() {
     </div>
   );
 }
+=======
+export default function BlockchainSolutionsPage() {
+  return <div className="py-8 text-slate-300">Blockchain Solutions</div>;
+}
+>>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

@@ -6,11 +6,13 @@ export default function ContactPage() {
     </div>
   );
 }
+=======
 import React from 'react';
 
 export default function ContactPage() {
   return <div>Contact Zion</div>;
 }
+=======
 export default function Contact(){
   return <div style={{padding:20}}>Contact</div>
 }

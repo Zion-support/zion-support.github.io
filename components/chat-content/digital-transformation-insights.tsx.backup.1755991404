@@ -6,6 +6,7 @@ export default function DigitalTransformationInsights() {
     </div>
   );
 }
+=======
 export default function DigitalTransformationInsightsPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -14,4 +15,5 @@ export default function DigitalTransformationInsightsPage() {
     </div>
   );
 }
+=======
 export default function ChatContent5() { return <div className="py-10 text-white">Content coming soon.</div>; }

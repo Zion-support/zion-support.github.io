@@ -490,6 +490,7 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
+=======
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Real Micro SaaS Services',
       description: '48+ fully functional micro SaaS tools with real implementations, not just mockups.',

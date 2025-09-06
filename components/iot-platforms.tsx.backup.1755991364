@@ -18,6 +18,7 @@ const IotPlatforms: NextPage = () => {
 };
 
 export default IotPlatforms;
+=======
 import Head from "next/head";
 
 const Page: React.FC = () => {
@@ -35,4 +36,5 @@ const Page: React.FC = () => {
 };
 
 export default Page;
+=======
 export default function IoTPlatforms() { return null; }

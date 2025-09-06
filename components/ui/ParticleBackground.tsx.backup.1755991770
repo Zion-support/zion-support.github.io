@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
+=======
+import React, { useEffect, useRef } from 'react';
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+
 interface Particle {
   x: number;
   y: number;
@@ -9,6 +14,7 @@ interface Particle {
   opacity: number;
 }
 
+<<<<<<< HEAD
 interface ParticleBackgroundProps {
   children: React.ReactNode;
   className?: string;
@@ -28,11 +34,22 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
   useEffect(() => {
     if (!isClient || !canvasRef.current) return;
 
-    const canvas = canvasRef.current;    const ctx = canvas.getContext('2d');
+    const canvas = canvasRef.current;
+=======
+const ParticleBackground: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     // Set canvas size
     const resizeCanvas = () => {
+<<<<<<< HEAD
       if (typeof window !== 'undefined') {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -43,6 +60,15 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', resizeCanvas);
     }
+=======
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+
     // Particle configuration
     const particles: Particle[] = [];
     const particleCount = 100;
@@ -114,11 +140,18 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     animate();
 
     return () => {
+<<<<<<< HEAD
       if (typeof window !== 'undefined') {
         window.removeEventListener('resize', resizeCanvas);
       }
     };
   }, [isClient]);
+=======
+      window.removeEventListener('resize', resizeCanvas);
+    };
+  }, []);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+
   const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     const time = Date.now() * 0.001;
 
@@ -177,11 +210,18 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
   return (
     <canvas
       ref={canvasRef}
+<<<<<<< HEAD
       className={`fixed inset-0 pointer-events-none z-0 ${className}`}
       style={{ opacity: 0.3 }}
     >
       {children}
-    </canvas>  );
+    </canvas>
+=======
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{ opacity: 0.3 }}
+    />
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+  );
 };
 
 export default ParticleBackground;

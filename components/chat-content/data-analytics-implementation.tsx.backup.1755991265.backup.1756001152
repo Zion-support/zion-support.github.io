@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function DataAnalyticsImplementationPage() {
@@ -8,3 +9,8 @@ export default function DataAnalyticsImplementationPage() {
     </div>
   );
 }
+=======
+export default function DataAnalyticsImplementationPage() {
+  return <div className="py-8 text-slate-300">Data Analytics Implementation</div>;
+}
+>>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

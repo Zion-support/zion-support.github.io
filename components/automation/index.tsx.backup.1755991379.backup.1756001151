@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -25,3 +26,8 @@ export default function AutomationHubPage() {
     </div>
   );
 }
+=======
+export default function Automation(){
+  return <div className="max-w-3xl mx-auto p-6">Automation</div>;
+}
+>>>>>>> origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7

@@ -46,7 +46,12 @@ const Header = () => {
     { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/about' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }  ];
+<<<<<<< HEAD
+    { name: 'Contact', href: '/contact' }
+=======
+    { name: 'Compare', href: '/pricing-comparison' },
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-3e2f
+  ];
 
   const productDropdown = [
     { name: 'AI Content Generator', href: '/ai-content-generator', description: 'Professional AI writing tool from $19/month' },

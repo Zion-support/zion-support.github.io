@@ -183,6 +183,7 @@ export default function ServicesPage() {
       icon: <GraduationCapIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Education Technology').length,
       color: 'from-blue-500 to-indigo-600'
+=======
       color: 'from-green-500 to-emerald-600'
     },
     {
@@ -607,6 +608,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </EnhancedFuturisticBackground>
+=======
     <UltraFuturisticBackground>
       <Head>
         <title>500+ Revolutionary Micro SAAS Services | Zion Tech Group</title>

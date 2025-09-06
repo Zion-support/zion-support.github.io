@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -265,4 +266,15 @@ export default function AIHRAnalyticsPlatform() {
         </section>
       </div>
     </>
-  );}
+  );
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-hr-analytics-platform' } });
+}
+
+export default function AIHRAnalyticsPlatform(props: any) {
+	return <ServicePage {...props} />;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e11d
+}

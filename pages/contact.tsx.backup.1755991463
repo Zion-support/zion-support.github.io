@@ -17,4 +17,21 @@ const Contact: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Contact;
+=======
+export default function ContactPage() { return null; }
+=======
+import React from "react";
+
+export default function ContactPage() {
+  return (
+    <main className="p-6">
+      <h1 className="text-2xl font-bold">Contact</h1>
+      <p className="text-gray-600">Reach us at support@zion.ai</p>
+    </main>
+  );
+}
+=======
+export default Contact;
+>>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178

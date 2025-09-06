@@ -6,7 +6,9 @@ export default function Contact() {
     </div>
   );
 }
+=======
 export default function Contact() {
   return <div>Contact Us</div>;
 }
+=======
 export default function Page(){return null}

@@ -215,6 +215,7 @@ export default function MicroSaasPage() {
       icon: '📱',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
+<<<<<<< HEAD
       link: 'https://social.ziontechgroup.com',
       marketPosition: 'Competitive with Buffer ($6-99), Hootsuite ($29-599), and Later ($18-40)',
       targetAudience: 'Social media managers, small businesses, and influencers',
@@ -329,6 +330,7 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '35 minutes',
       category: 'Analytics & Data'
+=======
       link: 'https://ziontechgroup.com/social-media-scheduler',
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',
       targetAudience: 'Social media managers, influencers, and marketing teams'
@@ -1079,6 +1081,7 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '20 minutes',
       category: 'Productivity & Collaboration'
+=======
       name: 'Screenshot API',
       tagline: 'Capture websites as images',
       price: '$12',

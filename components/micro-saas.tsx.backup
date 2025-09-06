@@ -965,6 +965,7 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '20 minutes',
       category: 'Productivity & Collaboration'
+=======
       name: 'Screenshot API',
       tagline: 'Capture websites as images',
       price: '$12',

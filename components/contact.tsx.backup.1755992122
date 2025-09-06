@@ -1,5 +1,8 @@
 export default function Page(){return null}
+=======
+=======
 import React from 'react';
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -186,6 +189,7 @@ export default function ContactPage() {
                       <p>✓ Service recommendations prepared</p>
                       <p>✓ ROI analysis in progress</p>
                     </div>
+=======
   return (
     <UltraFuturisticBackground2029>
       <Head>

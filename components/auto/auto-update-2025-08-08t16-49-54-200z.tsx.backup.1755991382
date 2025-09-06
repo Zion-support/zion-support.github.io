@@ -18,6 +18,8 @@ const AutoUpdate20250808t164954200z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t164954200z;
+=======
   return <div className="max-w-3xl mx-auto p-6">Auto Update</div>;
 }
+=======
 export default function AutoUpdatePage() { return null }

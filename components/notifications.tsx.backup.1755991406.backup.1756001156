@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import NotificationList from '../components/ui/NotificationList';
@@ -16,3 +17,15 @@ export default function NotificationsPage() {
     </EnhancedLayout>
   );
 }
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false,
+});
+
+export default function NotificationsPage() {
+  return <NotificationCenter />;
+}
+>>>>>>> origin/cursor/build-zion-ai-notification-center-5a66

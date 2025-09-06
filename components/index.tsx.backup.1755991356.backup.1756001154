@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -44,3 +45,6 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+=======
+export default function HomePage() { return null; }
+>>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81

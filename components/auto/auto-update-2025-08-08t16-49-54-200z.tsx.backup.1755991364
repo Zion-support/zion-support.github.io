@@ -18,6 +18,7 @@ const AutoUpdate20250808t164954200z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t164954200z;
+=======
 import Head from "next/head";
 
 const Page: React.FC = () => {
@@ -35,4 +36,5 @@ const Page: React.FC = () => {
 };
 
 export default Page;
+=======
 export default function Page() { return null; }

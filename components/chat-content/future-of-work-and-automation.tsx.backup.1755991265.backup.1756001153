@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function FutureOfWorkAndAutomationPage() {
@@ -8,3 +9,6 @@ export default function FutureOfWorkAndAutomationPage() {
     </div>
   );
 }
+=======
+export default function Page(){return <div className="py-8 text-slate-300">future of work and automation</div>}
+>>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

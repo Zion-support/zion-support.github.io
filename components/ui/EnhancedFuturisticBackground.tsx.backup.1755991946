@@ -1,16 +1,34 @@
 import React, { useEffect, useRef } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode;
-  variant?: 'neural' | 'quantum' | 'holographic' | 'cyberpunk' | 'quantum-advanced' | 'holographic-advanced' | 'quantum-holographic' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'space-time' | 'dimensional-rift' | 'consciousness-stream' | 'reality-matrix';  intensity?: 'low' | 'medium' | 'high';
+  variant?: 'neural' | 'quantum' | 'holographic' | 'cyberpunk' | 'quantum-advanced' | 'holographic-advanced' | 'quantum-holographic' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'space-time' | 'dimensional-rift' | 'consciousness-stream' | 'reality-matrix';
+=======
+
+interface EnhancedFuturisticBackgroundProps {
+  children: React.ReactNode;
+  variant?: 'neural' | 'quantum' | 'cyber' | 'cosmic';
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+  intensity?: 'low' | 'medium' | 'high';
   className?: string;
 }
 
+<<<<<<< HEAD
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({ 
   children, 
   className = '' 
-}) => {  const canvasRef = useRef<HTMLCanvasElement>(null);
+}) => {
+=======
+export default function EnhancedFuturisticBackground({ 
+  children, 
+  variant = 'neural', 
+  intensity = 'medium',
+  className = '' 
+}: EnhancedFuturisticBackgroundProps) {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -24,6 +42,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+<<<<<<< HEAD
     const resizeCanvas = () => {
       width = window.innerWidth;
       height = window.innerHeight;
@@ -35,12 +54,17 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     window.addEventListener('resize', resizeCanvas);
 
     // Enhanced particle system with new types
-    class Particle {      x: number;
+    class Particle {
+=======
+    const particles: Array<{
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+      x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
       color: string;
+<<<<<<< HEAD
       type: 'particle' | 'energy' | 'data' | 'quantum';
       life: number;
       maxLife: number;
@@ -65,11 +89,34 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     // Create particles based on variant
     const createParticles = () => {
-      const particleCount = intensity === 'high' ? 800 : intensity === 'medium' ? 500 : 250;      
+      const particleCount = intensity === 'high' ? 800 : intensity === 'medium' ? 500 : 250;
+=======
+      type: 'neural' | 'quantum' | 'cyber' | 'cosmic';
+    }> = [];
+
+    const colors = {
+      neural: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
+      quantum: ['#8b5cf6', '#06b6d4', '#3b82f6', '#ec4899'],
+      cyber: ['#ef4444', '#f97316', '#eab308', '#22c55e'],
+      cosmic: ['#1e40af', '#7c3aed', '#be185d', '#059669']
+    };
+
+    const intensityMultiplier = {
+      low: 0.5,
+      medium: 1,
+      high: 1.5
+    };
+
+    // Create particles
+    const createParticles = () => {
+      const particleCount = Math.floor(50 * intensityMultiplier[intensity]);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+      
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
+<<<<<<< HEAD
           vx: (Math.random() - 0.5) * 8,
           vy: (Math.random() - 0.5) * 8,
           size: Math.random() * 12 + 4,
@@ -91,10 +138,20 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           spaceTimeWarp: Math.random() * Math.PI * 2,
           dimensionalPhase: Math.random() * Math.PI * 2,
           consciousnessLevel: Math.random() * Math.PI * 2,
-          realityDistortion: Math.random() * Math.PI * 2        });
+          realityDistortion: Math.random() * Math.PI * 2
+=======
+          vx: (Math.random() - 0.5) * 2 * intensityMultiplier[intensity],
+          vy: (Math.random() - 0.5) * 2 * intensityMultiplier[intensity],
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
+          type: variant
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+        });
       }
     };
 
+<<<<<<< HEAD
     const getParticleColor = (variant: string): string => {
       switch (variant) {
         case 'neural':
@@ -497,7 +554,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       if (intensity === 'low') return;
       
       ctx.strokeStyle = 'rgba(100, 150, 255, 0.1)';
-      ctx.lineWidth = 0.5;      
+      ctx.lineWidth = 0.5;
+=======
+    // Neural network connections
+    const drawNeuralConnections = () => {
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+      
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -505,8 +569,63 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           const distance = Math.sqrt(dx * dx + dy * dy);
           
           if (distance < 150) {
+<<<<<<< HEAD
             const alpha = (150 - distance) / 150 * 0.1;
-            ctx.strokeStyle = `rgba(100, 150, 255, ${alpha})`;      }
+            ctx.strokeStyle = `rgba(100, 150, 255, ${alpha})`;
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+<<<<<<< HEAD
+            break;
+          }
+            
+          case 'entanglement': {
+            // Entangled particles with quantum state
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            
+            // Quantum state indicator
+            ctx.strokeStyle = this.color;
+            ctx.globalAlpha = alpha * 0.7;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size * 1.5, 0, Math.PI * 2);
+            ctx.stroke();
+            break;
+          }
+            
+          case 'neural-cyber': {
+            // Neural-cyber fusion particle
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            
+            // Cyber circuit pattern
+            ctx.strokeStyle = this.color;
+            ctx.globalAlpha = alpha * 0.6;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(this.x - this.size, this.y);
+            ctx.lineTo(this.x + this.size, this.y);
+            ctx.moveTo(this.x, this.y - this.size);
+            ctx.lineTo(this.x, this.y + this.size);
+            ctx.stroke();
+            break;
+          }
+        }
+        
+        ctx.restore();
+=======
+          }
+        }
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+      }
     };
 
     // Quantum entanglement effect
@@ -572,11 +691,70 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     // Update and draw particles
     const animate = () => {
+<<<<<<< HEAD
       time++;
       updateParticles();
       drawParticles();
       animationRef.current = requestAnimationFrame(animate);
     };
+
+=======
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw background effects based on variant
+      switch (variant) {
+        case 'neural':
+          drawNeuralConnections();
+          break;
+        case 'quantum':
+          drawQuantumEntanglement();
+          break;
+        case 'cyber':
+          drawCyberGrid();
+          break;
+        case 'cosmic':
+          drawCosmicWaves();
+          break;
+      }
+      
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        // Update position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        
+        // Bounce off edges
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
+        
+        // Keep particles in bounds
+        particle.x = Math.max(0, Math.min(canvas.width, particle.x));
+        particle.y = Math.max(0, Math.min(canvas.height, particle.y));
+        
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
+        ctx.fill();
+        
+        // Add glow effect
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 15;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        
+        // Add trail effect
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size * 0.5, 0, Math.PI * 2);
+        ctx.fillStyle = `${particle.color}20`;
+        ctx.fill();
+      });
+      
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    createParticles();
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
     animate();
 
     const handleResize = () => {
@@ -587,7 +765,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);      if (animationRef.current) {
+<<<<<<< HEAD
+      window.removeEventListener('resize', resizeCanvas);
+=======
+      window.removeEventListener('resize', handleResize);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+      if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
@@ -600,11 +783,21 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className={`relative w-full h-full ${className}`}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}      />
+        style={{ zIndex: -1 }}
+=======
+    <div className={`relative min-h-screen ${className}`}>
+      {/* Animated Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%)' }}
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+      />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/20 z-10" />

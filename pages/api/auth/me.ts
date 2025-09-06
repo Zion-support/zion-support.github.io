@@ -1,4 +1,7 @@
-// Auth me API endpoint
-export default function handler(req: any, res: any) {
-  res.status(200).json({ message: 'Auth me endpoint' });
+import { NextApiRequest, NextApiResponse } from 'next',;
+import { getUserFromRequest } from '../../../utils/auth',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const user = getUserFromRequest(req);
+  if (!user) return res.status(200).json({ user: null });
+  res.status(200).json({ user });
 }

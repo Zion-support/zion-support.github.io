@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
 
 export default class MyDocument extends Document {
@@ -9,7 +10,19 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />        <body>
+        <Head />
+=======
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <meta name="theme-color" content="#1f2937" />
+        </Head>
+>>>>>>> origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3
+        <body>
           <Main />
           <NextScript />
         </body>
@@ -17,5 +30,8 @@ export default class MyDocument extends Document {
     );
   }
 }
+<<<<<<< HEAD
+=======
 
 export default MyDocument;
+>>>>>>> origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3

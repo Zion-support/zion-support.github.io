@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function About() {
   return (
     <div className="space-y-2">
@@ -6,3 +7,10 @@ export default function About() {
     </div>
   );
 }
+=======
+export default function About() {
+  return <div>About Zion</div>;
+}
+=======
+export default function Page(){return null}
+>>>>>>> origin/cursor/enable-vendor-agency-marketplace-operations-5a51

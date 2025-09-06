@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,3 +19,6 @@ const DigitalTransformationInsights: NextPage = () => {
 };
 
 export default DigitalTransformationInsights;
+=======
+export default function ChatE() { return null; }
+>>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253

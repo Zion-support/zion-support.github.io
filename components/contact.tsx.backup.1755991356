@@ -12,6 +12,7 @@ const Contact: NextPage = () => (
 );
 
 export default Contact;
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -32,4 +33,5 @@ const Contact: NextPage = () => {
 };
 
 export default Contact;
+=======
 export default function ContactPage() { return null; }

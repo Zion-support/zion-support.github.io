@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,3 +19,6 @@ const AutoUpdate20250808t172307688z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t172307688z;
+=======
+export default function AutoUpdatePage() { return <div className="py-8">Auto update 17-23-07</div>; }
+>>>>>>> origin/cursor/create-zion-ai-dashboard-interfaces-6fb9

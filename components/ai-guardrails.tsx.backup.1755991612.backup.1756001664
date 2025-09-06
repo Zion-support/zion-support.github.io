@@ -3,7 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiGuardrailsSuite() {
 	return (
-:components/ai-guardrails.tsx.backup.1755991612
+<<<<<<< HEAD:components/ai-guardrails.tsx.backup.1755991612
 		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
 			<Head>
 				<title>AI Guardrails Platform | Zion Tech Group</title>
@@ -47,6 +47,7 @@ export default function AiGuardrailsSuite() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+=======
 		<ServiceLanding
 			title="AI Guardrails Suite"
 			description="Add input/output filtering, PII redaction, jailbreak resistance, and policy enforcement to your LLM apps."
@@ -65,5 +66,6 @@ export default function AiGuardrailsSuite() {
 			industries={["SaaS", "Healthcare", "Fintech", "Government"]}
 			canonical="https://ziontechgroup.com/ai-guardrails"
 		/>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dcf3:pages/ai-guardrails.tsx
 	);
 }

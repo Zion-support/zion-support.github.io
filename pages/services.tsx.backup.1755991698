@@ -8,6 +8,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraAdvancedFuturisticCard from '../components/ui/UltraAdvancedFuturisticCard';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
+=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -94,6 +95,8 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
+=======
   // Enhanced service advertising content with comprehensive market data
   const serviceHighlights = [
     {
@@ -214,6 +217,7 @@ export default function ServicesPage() {
     }
   ];
 
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
   const popularServices = getPopularServices();
 
   // Enhanced service categories with better descriptions
@@ -759,6 +763,7 @@ export default function ServicesPage() {
     </div>
   );
 }
+=======
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -777,3 +782,4 @@ export default function Placeholder() {
     </main>
   );
 }
+=======

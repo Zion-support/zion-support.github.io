@@ -42,7 +42,12 @@ const Header = () => {
   const navigation = [
     { name: 'Product', href: '#', hasDropdown: true },
     { name: 'Solutions', href: '/services' },
-    { name: 'SaaS Tools', href: '#', hasDropdown: true },    { name: 'Resources', href: '/resources' },
+<<<<<<< HEAD
+    { name: 'SaaS Tools', href: '#', hasDropdown: true },
+=======
+    { name: 'Micro SaaS', href: '/micro-saas' },
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-b762
+    { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/about' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }

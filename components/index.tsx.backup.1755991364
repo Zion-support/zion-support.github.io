@@ -95,6 +95,7 @@ function AutomationCard(props: {
             <a className="inline-block px-3 py-2 rounded-lg bg-[var(--text-accent)] text-black text-sm">{l.label}</a>
           </Link>
         ))}
+=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -159,6 +160,7 @@ export default function HomePage() {
     </div>
   );
 }
+=======
 import Link from "next/link";
 
 export default function Home() {

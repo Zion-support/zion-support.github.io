@@ -1,0 +1,1 @@
+export default function MessageThreadPage() {_return <div>Thread</div>}

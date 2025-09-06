@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function CloudComputingStrategiesPage() {
@@ -8,3 +9,8 @@ export default function CloudComputingStrategiesPage() {
     </div>
   );
 }
+=======
+export default function CloudComputingStrategiesPage() {
+  return <div className="py-8 text-slate-300">Cloud Computing Strategies</div>;
+}
+>>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

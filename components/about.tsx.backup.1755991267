@@ -6,6 +6,7 @@ export default function AboutPage() {
     </div>
   );
 }
+=======
 export default function About() {
   return (
     <div className="py-10">

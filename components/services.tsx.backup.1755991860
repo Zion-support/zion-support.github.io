@@ -181,6 +181,7 @@ export default function ServicesPage() {
       icon: <GraduationCapIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Education Technology').length,
       color: 'from-blue-500 to-indigo-600'
+=======
       color: 'from-green-500 to-emerald-600'
     },
     {
@@ -533,6 +534,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
+=======
         {/* Popular Services */}
         <section className="py-20">
           <div className="container mx-auto px-4">

@@ -1,4 +1,4 @@
-// Auth role API endpoint
-export default function handler(req: any, res: any) {
-  res.status(200).json({ message: 'Auth role endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  res.status(200).json({ ok: true });
 }
