@@ -1,47 +1,47 @@
 import { useState, useEffect, useCallback } from 'react';
 
-interface UseApiOptions {
-  immediate?: boolean;
-  onSuccess?: (data: any) => void;
-  onError?: (error: Error) => void;
-}
-
-interface UseApiResult<T> {
+interface ApiState<T> {
   data: T | null;
   loading: boolean;
-  error: Error | null;
-  execute: (...args: any[]) => Promise<void>;
+  error: string | null;
 }
 
-export function useApi<T = any>(
-  apiFunction: (...args: any[]) => Promise<T>,
+interface UseApiOptions {
+  immediate?: boolean;
+}
+
+export function useApi<T>(
+  apiCall: () => Promise<T>,
   options: UseApiOptions = {}
-): UseApiResult<T> {
+): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const execute = useCallback(async (...args: any[]) => {
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
     try {
-      setLoading(true);
-      setError(null);
-      const result = await apiFunction(...args);
+      const result = await apiCall();
       setData(result);
-      options.onSuccess?.(result);
     } catch (err) {
-      const error = err instanceof Error ? err : new Error('An error occurred');
-      setError(error);
-      options.onError?.(error);
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
     }
-  }, [apiFunction, options]);
+  }, [apiCall]);
 
   useEffect(() => {
-    if (options.immediate) {
-      execute();
+    if (options.immediate !== false) {
+      fetchData();
     }
-  }, [execute, options.immediate]);
+  }, [fetchData, options.immediate]);
 
-  return { data, loading, error, execute };
+  return {
+    data,
+    loading,
+    error,
+    refetch: fetchData,
+  };
 }
