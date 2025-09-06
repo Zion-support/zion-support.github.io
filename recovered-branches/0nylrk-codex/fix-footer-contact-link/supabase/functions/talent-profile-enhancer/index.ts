@@ -31,7 +31,7 @@ body: JSON.stringify ({
   role: 'system', content: `You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.` 
 };
 {
-  role: 'user', content: `Create a professional profile summary and categorize skills based on this information: Name: $ {
+  role: 'user', content: `Create a professional profile summary and categorize skills based on this information: $ {
   talentData.name 
 }
 }Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.` 

@@ -1,0 +1,21 @@
+/* eslint-disable */
+ import {;
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormMessage interface ReplyFormProps {;
+  onSubmit: (content: string) => Promise<void>;
+parentId?: string ;
+}interface ReplyFormValues {;
+  content: string ;
+}export const ReplyForm = ({;
+  onSubmit, parentId ;
+}: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState (false);
+defaultValues: {;
+  ...field ;
+}/> </FormControl> <FormMessage /> </FormItem>) ;
+}/> </Button> </div> </form> </Form> </CardContent> </Card>) ;
+};
+export default ReplyForm;

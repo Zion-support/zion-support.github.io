@@ -11,11 +11,7 @@ export default function Cache.test({ }: Cache.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
+
 }
 =======
 }

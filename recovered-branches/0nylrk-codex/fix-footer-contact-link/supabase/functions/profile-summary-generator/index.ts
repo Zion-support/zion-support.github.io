@@ -15,7 +15,7 @@ body: JSON.stringify ({
   role: 'system', content: `You are a professional AI assistant that helps optimize talent profiles. Your task is to create a compelling summary for the talent based on their information and suggest additional skills that would complement their profile.` 
 };
 {
-  role: 'user', content: `Create a professional profile summary (150-200 words) for a talent with the following information: Name: $ {
+  role: 'user', content: `Create a professional profile summary (150-200 words) for a talent with the following information: $ {
   name 
 }
 }];

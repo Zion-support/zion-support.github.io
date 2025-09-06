@@ -1,18 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 =======
 
 interface SitemapProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 interface SitemapProps {
   // Add props here as needed
 }
@@ -31,12 +25,7 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
+
 }
 =======
 }
