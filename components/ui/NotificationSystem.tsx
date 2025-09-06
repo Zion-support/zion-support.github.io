@@ -1,62 +1,80 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
-interface Notification {
+export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
   message: string;
-  title?: string;
+  duration?: number;
 }
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onDismiss?: (notificationId: string) => void;
-  className?: string;
+  onRemove: (id: string) => void;
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications;
-  onDismiss;
-  className
+  notifications,
+  onRemove,
 }) => {
-  const getNotificationStyles = (type: Notification['type']) => {
+  const getIcon = (type: Notification['type']) => {
     switch (type) {
       case 'success':
-        return 'bg-green-50 border-green-200 text-green-800';
+        return <CheckCircle className="h-5 w-5 text-green-500" />;
       case 'error':
-        return 'bg-red-50 border-red-200 text-red-800';
+        return <AlertCircle className="h-5 w-5 text-red-500" />;
       case 'warning':
-        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+        return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
       case 'info':
-        return 'bg-blue-50 border-blue-200 text-blue-800';
+        return <Info className="h-5 w-5 text-blue-500" />;
       default:
-        return 'bg-gray-50 border-gray-200 text-gray-800';
+        return <Info className="h-5 w-5 text-blue-500" />;
+    }
+  };
+
+  const getBackgroundColor = (type: Notification['type']) => {
+    switch (type) {
+      case 'success':
+        return 'bg-green-50 border-green-200';
+      case 'error':
+        return 'bg-red-50 border-red-200';
+      case 'warning':
+        return 'bg-yellow-50 border-yellow-200';
+      case 'info':
+        return 'bg-blue-50 border-blue-200';
+      default:
+        return 'bg-blue-50 border-blue-200';
     }
   };
 
   return (
-    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+    <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
         <div
           key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+          className={`max-w-sm w-full ${getBackgroundColor(notification.type)} border rounded-lg shadow-lg p-4 transition-all duration-300`}
         >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>
-              )}
-              <p className="text-sm">{notification.message}</p>
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              {getIcon(notification.type)}
             </div>
-            {onDismiss && (
+            <div className="ml-3 flex-1">
+              <h3 className="text-sm font-medium text-gray-900">
+                {notification.title}
+              </h3>
+              <p className="mt-1 text-sm text-gray-600">
+                {notification.message}
+              </p>
+            </div>
+            <div className="ml-4 flex-shrink-0">
               <button
-                onClick={() => onDismiss(notification.id)}
-                className="ml-4 text-gray-400 hover:text-gray-600"
+                onClick={() => onRemove(notification.id)}
+                className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
               >
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <X className="h-4 w-4" />
               </button>
-            )}
+            </div>
           </div>
         </div>
       ))}
