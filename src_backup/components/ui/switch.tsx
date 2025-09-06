@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import { 
   SERVICE_CATEGORIES,
   ALL_SERVICES, 
@@ -9,7 +9,7 @@ import {
   DATA_ANALYTICS_SERVICES,
   CLOUD_SOLUTIONS
 } from '@/data/servicesData',
-import { ServiceCategory, ServiceSolution } from '@/types/services',
+import { ServiceCategory, ServiceSolution } from '@/types/services';
 
 export function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),

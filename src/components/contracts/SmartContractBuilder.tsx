@@ -10,7 +10,6 @@ import { TemplateManager } from "./templates/TemplateManager";
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,

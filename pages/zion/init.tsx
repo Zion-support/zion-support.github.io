@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
-type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
 type DeployFormState = {
   instanceName: string,
   defaultLanguage: string,

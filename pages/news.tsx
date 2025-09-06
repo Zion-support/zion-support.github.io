@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink, TrendingUp, Award, Rocket, Globe, Brain, Atom, Zap } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -231,7 +230,6 @@ import React, { useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Newspaper, Globe, Award, Users, Rocket, Brain, ArrowRight, ExternalLink, Calendar, Tag, Star } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function NewsPage() {

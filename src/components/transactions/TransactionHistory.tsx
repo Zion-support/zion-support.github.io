@@ -11,7 +11,6 @@ import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertC
 import { formatDistanceToNow } from "date-fns";
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface Transaction {
   id: string,
   user_id: string,

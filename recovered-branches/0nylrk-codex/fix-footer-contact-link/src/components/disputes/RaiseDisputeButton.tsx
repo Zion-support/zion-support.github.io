@@ -1,6 +1,6 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { 
   Dialog,
   DialogContent,
@@ -9,9 +9,9 @@ import {
   DialogDescription,
   DialogOverlay
 } from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
-import { useNavigate } from "react-router-dom",
-import { ShieldAlert } from "lucide-react",
+import { DisputeForm } from "./DisputeForm";
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,

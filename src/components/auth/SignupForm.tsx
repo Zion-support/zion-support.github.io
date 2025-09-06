@@ -10,7 +10,6 @@ import { toast } from '@/hooks/use-toast';
 import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { fireEvent } from '@/lib/analytics';
-import { logErrorToProduction } from '@/utils/productionLogger';
 const signupSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters');
   email: z.string().email('Please enter a valid email address').min(1, 'Email is required');

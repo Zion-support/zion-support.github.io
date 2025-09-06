@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Zap, Shield, BarChart3, Globe, Users, Lock, TrendingUp, Code, Database, Cloud, ArrowRight, Star, Check, ExternalLink } from 'lucide-react';
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {

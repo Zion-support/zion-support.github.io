@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Rocket, Brain, Atom, Shield, Cloud, BarChart3, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {

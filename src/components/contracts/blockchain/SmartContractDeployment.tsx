@@ -9,7 +9,6 @@ import { Switch } from "@/components/ui/switch";
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
 import { Loader2, ShieldCheck, Download } from 'lucide-react'
 import { toast } from "sonner";
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,

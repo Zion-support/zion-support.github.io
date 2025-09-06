@@ -8,8 +8,6 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { useEffect } from 'react', // Added useEffect
 
 export default function WishlistPage() {
   const { favorites, loading, toggleFavorite } = useFavorites();

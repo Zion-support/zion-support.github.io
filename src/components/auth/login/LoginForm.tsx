@@ -9,7 +9,6 @@ import { fireEvent } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Star, CheckCircle, ArrowRight, TrendingUp, Users, Award, Clock, Zap, Shield, Brain, Atom, Rocket, ShoppingCart, Cpu, Globe, Lock, Video, Palette, BarChart, UserCheck, FileText, Heart, Eye, Search, Phone } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 const contactInfo = {

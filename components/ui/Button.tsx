@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';

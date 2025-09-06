@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
-const defaultTargets = ['enptesar'];
 export default function TranslationPreview() {
   const [text, setText] = useState('');
   const [targets, setTargets] = useState<string[]>(defaultTargets);

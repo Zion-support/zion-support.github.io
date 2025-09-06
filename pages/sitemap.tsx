@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Home, Search, Rocket, FileText, Users, Mail, Map, ArrowRight, ExternalLink, ChevronRight, Globe, Building } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function SitemapPage() {

@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Code, GitBranch, Database, Cloud, Shield, Zap, Star, ExternalLink, CheckCircle, TrendingUp, Cpu, Globe } from 'lucide-react';
 export default function DeveloperToolsPage() {
   const developerTools = [
     {

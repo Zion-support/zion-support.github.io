@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Brain, Sparkles, Zap, Target, Shield, Globe, CheckCircle, Star } from 'lucide-react';
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [
     {
@@ -363,11 +362,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     </div>
   )
 },
-export default AIConsciousnessEvolutionPlatform;
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp, DollarSign, Users, Target, Award, Rocket, Cpu, Lock } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';

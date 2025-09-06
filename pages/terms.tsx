@@ -11,12 +11,10 @@ import React from 'react';
       title: 'Cybersecurity Services',
       terms: [
         'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be sharedPenetration testing requires written authorizationIncident response follows our established protocols'
-import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
-import { FileText, Shield, AlertTriangle, CheckCircle, User, Lock, Globe, Scale, Clock, Mail } from 'lucide-react';
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
   const termsSections = [
@@ -55,7 +53,6 @@ const TermsPage: React.FC = () => {
   ],
   const prohibitedActivities = [
 import { motion } from 'framer-motion';
-import { FileText, Shield, CheckCircle, AlertTriangle, Globe, Calendar, Scale, Users, ArrowRight, BookOpen, Lock, Zap, Building, Brain, Rocket } from 'lucide-react';
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="container mx-auto px-4 text-center">

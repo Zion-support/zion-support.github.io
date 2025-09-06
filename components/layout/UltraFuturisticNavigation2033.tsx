@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, Cpu, Target, Microscope, Shield, Zap, Sparkles, Menu, X, Search, ChevronDown, Home, Briefcase, DollarSign, BookOpen, Users, MessageCircle } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

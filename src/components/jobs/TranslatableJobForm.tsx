@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 import { useTranslationService } from "@/hooks/useTranslationService";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
   isSubmitting?: boolean

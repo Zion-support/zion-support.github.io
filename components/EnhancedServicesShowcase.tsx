@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Brain, Shield, Rocket, Cpu, Database, Atom, Users, CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown } from 'lucide-react';
 interface Service {
   id: string,
   name: string,

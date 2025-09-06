@@ -4,7 +4,6 @@
  */
 import React from 'react';
 import dynamic from 'next/dynamic';
-const LoadingSpinner = () => React.createElement('div';
   { className: "flex items-center justify-center p-8" },
   React.createElement('div', { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary" })
 ),
@@ -74,5 +73,3 @@ export const DynamicVirtualList = dynamic(
     ssr: false 
   }
 ),
-// Usage examples: // Replace: import Chart from '../components/charts/Chart',
-// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents',

@@ -349,7 +349,6 @@ export default function AIServices() {
     </>
   )
 }
-import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Link from 'next/link';
 export default function AIServicesPage() {

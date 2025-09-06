@@ -9,7 +9,6 @@ import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import { logErrorToProduction } from '@/utils/productionLogger';
 export function SignUpForm() {
 
   const router = useRouter();

@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const configPath = path.join(process.cwd(), 'datadaoconfig.json');
-const cachePath = path.join(process.cwd(), 'datadaometrics.json');
 async function fetchJson(url: string) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);

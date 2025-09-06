@@ -14,7 +14,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth();

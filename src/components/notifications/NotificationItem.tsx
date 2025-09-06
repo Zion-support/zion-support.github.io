@@ -5,9 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { useRouter } from 'next/router';
-import { Notification, NotificationType } from '@/context/notifications';
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':

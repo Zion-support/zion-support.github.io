@@ -5,8 +5,8 @@ import {
   DialogHeader,
   DialogTitle
 } from "@/components/ui/dialog",
-import { JobApplication } from "@/types/jobs",
-import { ApplicationScoreCard } from "../ApplicationScoreCard",
+import { JobApplication } from "@/types/jobs";
+import { ApplicationScoreCard } from "../ApplicationScoreCard";
 interface ScoreDialogProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,

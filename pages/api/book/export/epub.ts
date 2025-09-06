@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 import { promises as fs } from 'fs';
-const Epub = require('epub-gen');
 export const config = {
   api: {
     bodyParser: {

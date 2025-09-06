@@ -1,8 +1,8 @@
 
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { ContractFormValues } from "../components/ContractForm",
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
+import { ContractFormValues } from "../components/ContractForm";
 interface Milestone {
   title: string,
   description: string,

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom, ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensivePricingPage() {

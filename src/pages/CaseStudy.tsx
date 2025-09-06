@@ -4,7 +4,6 @@ import { CASE_STUDIES } from '@/data/case-studies';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {

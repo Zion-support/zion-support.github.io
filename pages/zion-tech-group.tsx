@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Target, BarChart3, Users, TrendingUp, MessageSquare, Mail, Phone, MapPin, ArrowRight, Star, CheckCircle, Rocket, Globe, Shield, Cpu, FileText, Image, Video, Music, Palette, Type, User, Search, Eye, Heart, ShoppingCart, Code, Database, Users2, Award, Lock, Server, Network, Monitor, Settings, RefreshCw, Play, Pause, AlertTriangle, CheckCircle2, Building, Wifi, HardDrive, Cloud, Smartphone, Blocks, Wallet, CreditCard, PiggyBank, Building2, Activity, Waves, BrainCircuit, CpuIcon, MonitorHeart, Film, Headphones, Camera, Gamepad2, Tv, Radio, Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2, Calendar, Clock, FileText2, PieChart, Atom, Truck, ChevronRight, Home } from 'lucide-react';
 export default function ZionTechGroupPage() {
   return (
     <>

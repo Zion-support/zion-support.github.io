@@ -1,6 +1,6 @@
 
-import React from 'react',
-import { AddMilestoneForm } from '../AddMilestoneForm',
+import React from 'react';
+import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
   onSubmit: (data: any) => Promise<void>,
   isSubmitting: boolean,

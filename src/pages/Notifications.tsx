@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
-import { NotificationType, NotificationContextType } from '@/context/notifications';
 import { formatDistanceToNow } from 'date-fns';
 import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
 import { Button } from '@/components/ui/button';

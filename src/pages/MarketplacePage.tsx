@@ -14,7 +14,6 @@ import Spinner from '@/components/ui/spinner';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
 import { useCurrency } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
 // Market insights component
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">

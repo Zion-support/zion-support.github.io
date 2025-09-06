@@ -16,7 +16,6 @@ import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
 import { QuoteFormData } from "@/types/quotes";
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod";
-export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),

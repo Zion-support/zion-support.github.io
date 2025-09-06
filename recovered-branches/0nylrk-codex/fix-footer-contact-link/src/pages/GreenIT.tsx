@@ -1,10 +1,10 @@
 
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Leaf, Server, Cloud } from "lucide-react",
-import { Link } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
 export default function GreenIT() {
   const greenITSolutions = [
     {

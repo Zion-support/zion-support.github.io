@@ -12,7 +12,6 @@ import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
-import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TranslationManager() {
 
   const { t, i18n } = useTranslation();

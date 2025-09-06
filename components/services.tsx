@@ -1,5 +1,4 @@
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Brain, Rocket, Dna, Globe, Shield, Wifi, Package, Bot, Car, Building2, Monitor, Cpu, Zap, Atom, Database, Cloud, Lock, Code } from 'lucide-react';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -22,7 +21,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Search, Grid, List, Brain, Atom, Shield, Target, Rocket, ArrowRight, Check, Palette, Heart, Truck, GraduationCap, Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';

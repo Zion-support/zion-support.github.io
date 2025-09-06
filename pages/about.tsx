@@ -43,7 +43,6 @@ const AboutPage: React.FC = () => {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
   ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function AboutPage() {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Brain, Building, Target, Cpu, Shield, Check, Phone, Mail, MapPin, TrendingUp, Zap, Globe } from 'lucide-react';
 // Import our new service data
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
 import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';

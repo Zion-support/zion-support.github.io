@@ -17,7 +17,6 @@ import { format, addDays } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, AlertTriangle, CheckCircle, X, RefreshCw, BarChart3, Gauge } from 'lucide-react';
 interface PerformanceMetrics {
   fcp: number,
   lcp: number,

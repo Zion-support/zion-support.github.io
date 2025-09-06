@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, writeReviews } from '../../../utils/dataStore';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
-type Action = 'approve' | 'remove' | 'edit';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })

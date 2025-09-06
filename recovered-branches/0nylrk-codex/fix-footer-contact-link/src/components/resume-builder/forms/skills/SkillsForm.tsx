@@ -1,13 +1,13 @@
 
-import { useState } from 'react',
-import { Skill } from '@/types/resume',
-import { Button } from '@/components/ui/button',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { useResume } from '@/hooks/useResume',
-import { SkillsFormProps } from './types',
-import { SkillsList } from './SkillsList',
-import { AddSkillForm } from './AddSkillForm',
-import { BulkAddSkills } from './BulkAddSkills',
+import { useState } from 'react';
+import { Skill } from '@/types/resume';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useResume } from '@/hooks/useResume';
+import { SkillsFormProps } from './types';
+import { SkillsList } from './SkillsList';
+import { AddSkillForm } from './AddSkillForm';
+import { BulkAddSkills } from './BulkAddSkills';
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
   const { addSkill, deleteSkill, fetchResume } = useResume(),
   const [error, setError] = useState<string | null>(null),

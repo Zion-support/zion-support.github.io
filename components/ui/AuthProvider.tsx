@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-type UserRole = 'talent' | 'client';
 type AuthContextType = {
   role: UserRole,
   setRole: (role: UserRole) => void

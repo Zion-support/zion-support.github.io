@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 }

@@ -7,7 +7,6 @@ import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 const profileSchema = z.object({
   displayName: z.string().min(2, "Full Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");

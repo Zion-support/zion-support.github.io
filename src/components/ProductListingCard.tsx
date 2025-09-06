@@ -12,7 +12,6 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
-import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing,

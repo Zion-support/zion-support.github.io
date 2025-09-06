@@ -34,7 +34,6 @@ import { real2027Q1Additions } from '../data/real-2027-q1-additions';
 import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import fs from 'fs';
 import path from 'path';
-type Service = typeof enhancedRealMicroSaasServices[number];
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[])

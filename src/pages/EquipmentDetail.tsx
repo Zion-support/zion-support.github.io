@@ -15,7 +15,6 @@ import { equipmentListings } from '@/data/equipmentData';
 import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {
   name: string,
   value: string

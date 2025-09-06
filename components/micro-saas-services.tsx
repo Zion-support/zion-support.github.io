@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Brain, Monitor, Search, Shield, Mail, Share2, Check, Star, Zap, TrendingUp, Users, Globe, Lock, BarChart3, Calendar, Target } from 'lucide-react';
 export default function MicroSaasServicesPage() {
   const microSaasServices = [
     {

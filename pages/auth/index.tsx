@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-const steps = ['AccountProfilePreferencesPreview'];
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0);
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1));

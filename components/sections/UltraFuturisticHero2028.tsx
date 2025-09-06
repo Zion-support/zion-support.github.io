@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ArrowRight, Star, TrendingUp, Users, Award, Play, CheckCircle, DollarSign, Clock, Target, Crown } from 'lucide-react';
 export default function UltraFuturisticHero2028() {
   const features = [
     { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },

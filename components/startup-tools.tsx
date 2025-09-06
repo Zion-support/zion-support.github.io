@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Rocket, DollarSign, Users, BarChart3, Mail, Calendar, Shield, Globe, ArrowRight, Star, Check, ExternalLink, TrendingUp, Zap, Target, Lightbulb, BookOpen } from 'lucide-react';
 export default function StartupToolsPage() {
   const startupTools = [
     {

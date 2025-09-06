@@ -26,7 +26,7 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner',
 declare module 'lucide-react' {
-  import { FC, SVGProps } from 'react',
+  import { FC, SVGProps } from 'react';
   export type LucideProps = SVGProps<SVGSVGElement>,
   export type LucideIcon = FC<LucideProps>,
 

@@ -2,8 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import PDFDocument from 'pdfkit';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }

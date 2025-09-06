@@ -1,8 +1,8 @@
 
-import { toast } from "@/hooks/use-toast",
-import type { UserProfile } from "@/types/auth",
-import { checkNewRegistration } from "@/utils/authUtils",
-import { useNavigate } from 'react-router-dom',
+import { toast } from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import { checkNewRegistration } from "@/utils/authUtils";
+import { useNavigate } from 'react-router-dom';
 /**
  * Custom hook for auth event handling
  */

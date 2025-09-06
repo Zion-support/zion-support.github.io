@@ -7,7 +7,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume';

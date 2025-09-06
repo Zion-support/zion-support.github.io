@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 export interface CuttingEdgeInnovation2029V2 {
   id: string,
   name: string,

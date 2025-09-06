@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-export type UserRole = 'client' | 'talent';
 type RoleContextValue = {
   role: UserRole,
   setRole: (role: UserRole) => void

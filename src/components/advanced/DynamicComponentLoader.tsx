@@ -6,7 +6,6 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
   isLoading: boolean
   error: Error | null

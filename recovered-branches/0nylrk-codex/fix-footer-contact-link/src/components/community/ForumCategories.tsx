@@ -1,7 +1,7 @@
 
-import { Link } from "react-router-dom",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
+import { Link } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
 import {
   MessageSquare,
   Briefcase,
@@ -9,7 +9,7 @@ import {
   FileText,
   Megaphone
 } from "@/components/icons",
-import { ForumCategory, ForumCategoryInfo } from "@/types/community",
+import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 
 const categories: ForumCategoryInfo[] = [
   {

@@ -14,7 +14,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { UserMenu } from '@/components/header/UserMenu';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router';
 export function AppHeader() {
 

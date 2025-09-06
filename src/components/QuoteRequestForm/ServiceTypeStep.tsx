@@ -9,7 +9,6 @@ import Skeleton from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { z } from "zod";
-import { logErrorToProduction } from '@/utils/productionLogger';
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),

@@ -1,10 +1,10 @@
-import { useState } from "react",
-import { useMutation } from "@tanstack/react-query",
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
-import { format } from "date-fns",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { Review, ReviewStatus } from "@/types/reviews",
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react";
+import { format } from "date-fns";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Review, ReviewStatus } from "@/types/reviews";
 
 import {
   Table,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
@@ -26,8 +26,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,

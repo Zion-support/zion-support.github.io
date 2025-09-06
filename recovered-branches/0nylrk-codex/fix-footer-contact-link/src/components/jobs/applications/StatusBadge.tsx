@@ -1,6 +1,6 @@
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Badge } from "@/components/ui/badge",
+import { ApplicationStatus } from "@/types/jobs";
+import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {
   status: ApplicationStatus
 }

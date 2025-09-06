@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Search, Shield, Globe, TrendingUp, Brain, Atom, Zap, Cpu, Cloud, BarChart3, Lock, Rocket, Eye, Sparkles, Target, Users, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';

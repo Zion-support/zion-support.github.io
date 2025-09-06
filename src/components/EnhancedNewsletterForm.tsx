@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { useState, useRef } from "react";
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
 
   const [email, setEmail] = useState("");

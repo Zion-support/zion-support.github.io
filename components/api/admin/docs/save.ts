@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const DOCS_DIR = path.join(process.cwd(), 'datadocs');
-const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
-const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })

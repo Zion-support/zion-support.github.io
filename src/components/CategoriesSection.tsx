@@ -2,7 +2,6 @@
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.

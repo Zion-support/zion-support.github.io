@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook } from 'lucide-react'
 import { signIn } from 'next-auth/react';
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps {
   providers?: Provider[]
 }

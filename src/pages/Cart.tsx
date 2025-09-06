@@ -5,8 +5,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
-import { removeItem as removeItemAction, updateQuantity as updateQuantityAction } from '@/store/cartSlice';
-import { logErrorToProduction } from '@/utils/productionLogger';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart

@@ -10,7 +10,6 @@ import { toast } from "@/hooks/use-toast";
 import { NextSeo } from '@/components/NextSeo';
 import { Header } from "@/components/Header";
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
-import { logErrorToProduction } from '@/utils/productionLogger';
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support";
   "Cloud Infrastructure Management";

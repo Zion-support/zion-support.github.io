@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Brain, MessageSquare, Image, Video, FileText, BarChart3, Users, Zap, ArrowRight, Star, Check, ExternalLink, TrendingUp, Shield, Globe } from 'lucide-react';
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {

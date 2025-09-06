@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now(),
   const auth = await authenticateRequest(req);

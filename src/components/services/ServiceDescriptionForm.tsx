@@ -10,7 +10,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { logErrorToProduction } from '@/utils/productionLogger';
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z.string(),

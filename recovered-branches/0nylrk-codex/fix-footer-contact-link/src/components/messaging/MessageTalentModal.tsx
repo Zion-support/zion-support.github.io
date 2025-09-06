@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -7,13 +7,13 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Textarea } from "@/components/ui/textarea",
-import { useMessaging } from "@/context/MessagingContext",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/components/ui/use-toast",
-import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Textarea } from "@/components/ui/textarea";
+import { useMessaging } from "@/context/MessagingContext";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/components/ui/use-toast";
+import { useNavigate } from "react-router-dom";
 export interface MessageTalentModalProps {
   talent: TalentProfile,
   isOpen: boolean,

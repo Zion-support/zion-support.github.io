@@ -6,7 +6,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { AIListingForm } from "./AIListingForm";
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
   description: string,
   tags: string[],

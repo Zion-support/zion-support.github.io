@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Search, Filter, TrendingUp, DollarSign, Users, Star, Check, X, ArrowRight, ExternalLink, Zap, Brain, Globe, Rocket } from 'lucide-react';
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');

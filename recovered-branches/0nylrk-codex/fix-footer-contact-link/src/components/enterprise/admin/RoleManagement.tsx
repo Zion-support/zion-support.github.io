@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import {
   Table,
   TableBody,
@@ -7,10 +7,10 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
-import { toast } from "@/hooks/use-toast",
-import { InfoIcon } from "lucide-react",
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+import { InfoIcon } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,

@@ -47,7 +47,6 @@ import React from 'react';
   Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink;
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
   Clock, BookOpen, Video, Podcast, FileText, Search
-} from 'lucide-react';
 import Link from 'next/link';
   return (
     <UltraFuturisticBackground>
@@ -369,7 +368,6 @@ export default function NewsPage() {
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Calendar, Clock, User, Tag, ArrowRight, ExternalLink, TrendingUp, BookOpen, Globe, Video } from 'lucide-react';
 import Link from 'next/link';
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');

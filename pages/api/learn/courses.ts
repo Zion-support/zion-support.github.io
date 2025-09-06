@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const dataPath = path.join(process.cwd(), 'datalearncourses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const raw = fs.readFileSync(dataPath, 'utf-8');

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseITBreakthroughService2029 {
   id: string,
   name: string,

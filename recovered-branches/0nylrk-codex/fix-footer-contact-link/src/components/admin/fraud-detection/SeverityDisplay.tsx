@@ -1,6 +1,6 @@
 
-import React from "react",
-import { SeverityIndicator } from "@/components/ui/severity-indicator",
+import React from "react";
+import { SeverityIndicator } from "@/components/ui/severity-indicator";
 interface SeverityDisplayProps {
   severity: string
 }

@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react",
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",
+import { useState, useEffect } from "react";
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
 
 export function useReferrals() {
   const { user } = useAuth(),

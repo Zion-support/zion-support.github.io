@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Star, TrendingUp, Zap, Brain, Rocket, Shield, DollarSign, Users, Clock, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';

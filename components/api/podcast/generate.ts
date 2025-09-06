@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),

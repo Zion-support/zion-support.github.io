@@ -13,7 +13,6 @@ import { moreRealServices2025 } from '../../data/more-real-services-2025';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
-type Service = typeof enhancedRealMicroSaasServices[number];
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',

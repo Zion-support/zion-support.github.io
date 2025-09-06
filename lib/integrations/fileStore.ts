@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { IntegrationsState } from './types';
-const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
-const STATE_FILE = path.join(DATA_DIR, 'state.json');
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true })

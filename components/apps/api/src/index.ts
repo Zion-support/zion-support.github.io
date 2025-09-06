@@ -4,7 +4,6 @@ import rateLimit from '@fastify/rate-limit';
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost } from './openai.js';
 import { getPool, withUser } from './pg.js';
-dotenv.config();
 const app = Fastify({ logger: true }),
 await app.register(cors, {
   origin: (origin, cb) => {

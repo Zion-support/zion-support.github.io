@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Search, ChevronDown, ChevronRight, Home, Users, Settings, HelpCircle, Mail, Phone, MapPin, BookOpen, MessageCircle, Star, TrendingUp, Layers, Cpu, Database, Cloud, Lock, Shield, Globe, Factory, Car, Building, GraduationCap, Scale, Palette, Camera, Video, Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind, Droplets, Mountain, Code, Wrench, Smartphone, BarChart3, Eye, Globe2, Zap, Rocket, Brain, Sparkles, ShieldCheck, Target, Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 export interface EnhancedRealMicroSaasService {
   id: string,
   name: string,

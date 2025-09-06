@@ -1,9 +1,9 @@
 // Export all micro SaaS services
-export { urlShortenerService } from './urlShortenerService',
-export { passwordGeneratorService } from './passwordGeneratorService',
-export { qrCodeService } from './qrCodeService',
-export { fileConverterService } from './fileConverterService',
-export { textAnalysisService } from './textAnalysisService',
+export { urlShortenerService } from './urlShortenerService';
+export { passwordGeneratorService } from './passwordGeneratorService';
+export { qrCodeService } from './qrCodeService';
+export { fileConverterService } from './fileConverterService';
+export { textAnalysisService } from './textAnalysisService';
 
 // Export service types and interfaces
 export type {

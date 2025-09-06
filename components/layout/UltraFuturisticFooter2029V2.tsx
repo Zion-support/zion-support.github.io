@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, ArrowRight, Brain, Rocket, Target, Shield, Cpu, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageCircle, Star, Zap, Sparkles, Home, Users, Briefcase, BookOpen, TrendingUp, MessageSquare, Calendar, GraduationCap, ShieldCheck, Eye, Code, Wrench, Smartphone, BarChart3, Palette, Camera, Video, Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind, Droplets, Mountain, Globe2, Bot, Crown, Infinity } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
