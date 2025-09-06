@@ -17,7 +17,6 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
   async redirects() {
@@ -133,8 +132,7 @@ const nextConfig = {
     }
     
     return config;
-  },
-  serverExternalPackages: ['sharp']
+  }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
