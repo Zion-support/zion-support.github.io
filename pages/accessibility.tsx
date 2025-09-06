@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -163,6 +167,13 @@ const accessibilityGuidelines = [
     ]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 
 export default function AccessibilityPage() {
   return (
@@ -187,6 +198,10 @@ export default function AccessibilityPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Ensuring digital inclusion for everyone
               </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
             </motion.div>
           </div>
         </section>
@@ -439,6 +454,14 @@ export default function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
       </div>
     </MainLayout>
   );

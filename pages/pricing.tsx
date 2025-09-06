@@ -1,6 +1,10 @@
 import React from 'react';
 
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 
 const PricingPage: React.FC = () => {
   return (
@@ -84,11 +88,16 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
+=======
+
+=======
+>>>>>>> origin/automation-improvements-final
 import {
   Check,
   Star,
@@ -918,3 +927,8 @@ export default function PricingPage() {
     </UltraFuturisticBackground>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

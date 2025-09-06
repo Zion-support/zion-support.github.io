@@ -2,7 +2,19 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
+<<<<<<< HEAD
   return twMerge(clsx(inputs));}
+=======
+  return twMerge(clsx(inputs));
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+}
+>>>>>>> origin/automation-improvements-final
 
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
@@ -19,6 +31,10 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 
 };
 
+<<<<<<< HEAD
 },
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

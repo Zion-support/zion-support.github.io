@@ -2,6 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import { 
   Home, 
   Brain, 
@@ -123,7 +127,11 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+=======
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 }
 import {
@@ -684,7 +692,13 @@ export default function SitemapPage() {
 
       <SmartFooter />
     </div>
+<<<<<<< HEAD
   ),
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+>>>>>>> origin/automation-improvements-final
 
 }animate= {
   {

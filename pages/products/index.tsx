@@ -1,6 +1,10 @@
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -96,8 +100,18 @@ const ProductsIndex: NextPage = () => {
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -299,6 +313,29 @@ const ProductsIndex: NextPage = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+=======
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+<<<<<<< HEAD
+        <meta name='description' content='Index page' />
+      </Head>
+
+=======
+        <meta name="description" content="Index page" />
+      </Head>
+      
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
 };
 

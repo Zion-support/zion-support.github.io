@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       setLoading(false)};
 ;
   return { data, loading, error, execute }};
@@ -45,6 +46,12 @@ export function useApi<T>(url: string, options?: RequestInit) {
 
   return state;
 }
+=======
+<<<<<<< HEAD
+import { useState,useEffect,useCallback } from &apos;react&apos;; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+const { useState,useEffect,useCallback } from "react"; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (.args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (.args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(.args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;''"
+import React from 'react';
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 };
 
@@ -52,6 +59,18 @@ interface UseApiProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
+=======
+=======
+interface UseApiProps {
+  // Add props here as needed
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+import { useState, useEffect, useCallback } from 'react';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 interface UseApiOptions {
 =======
 };interface UseApiOptions {
@@ -87,6 +106,10 @@ export const useApi = <T = any>(
   }, [execute, options.immediate]);
   return { data, loading, error, execute }};
 export default useApi;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 export default function UseApi({ }: UseApiProps) {
   return (
@@ -98,6 +121,15 @@ export default function UseApi({ }: UseApiProps) {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+>>>>>>> origin/automation-improvements-final
 }
 }
 
@@ -136,4 +168,8 @@ export function useApi<T>(
   return state;
 
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

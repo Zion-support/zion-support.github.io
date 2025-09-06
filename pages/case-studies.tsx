@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -285,9 +289,15 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
+=======
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -311,6 +321,10 @@ export default function CaseStudiesPage() {
         </p>
       </section>
     </Layout>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
 
  </Head> </section> </Layout> 

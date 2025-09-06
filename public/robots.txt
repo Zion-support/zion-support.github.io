@@ -3,6 +3,7 @@ Allow: /
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Sitemap: https://zion.app/sitemap.xml
 
 # Crawl-delay for respectful crawling
@@ -10,6 +11,9 @@ Crawl-delay: 1
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+# Sitemaps
+>>>>>>> origin/automation-improvements-final
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 <<<<<<< HEAD
@@ -33,6 +37,7 @@ Allow: /about
 Allow: /contact
 Allow: /blog/
 Allow: /careers/
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -43,3 +48,11 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+=======
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

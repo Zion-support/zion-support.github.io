@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
+=======
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+>>>>>>> origin/automation-improvements-final
 import {
   Users,
   MapPin,
@@ -172,6 +179,21 @@ export default function CareersPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function CareersPage() {
+  
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -424,6 +446,14 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
+=======
+<<<<<<< HEAD
+    </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
 }

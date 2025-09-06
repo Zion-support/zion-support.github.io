@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -16,6 +20,21 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+<<<<<<< HEAD
+=======
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode,
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean,
+  error?: Error;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -25,16 +44,32 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+<<<<<<< HEAD
     // Update state so the next render will show the fallback UI
+=======
+<<<<<<< HEAD
+    // Update state so the next render will show the fallback UI
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+=======
+<<<<<<< HEAD
+    // Log the error to console or error reporting service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    this.setState({
+>>>>>>> origin/automation-improvements-final
       error,
       errorInfo
     });
 
+<<<<<<< HEAD
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo });    }
@@ -49,6 +84,17 @@ class ErrorBoundary extends Component<Props, State> {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
     }
+=======
+    // You can also log the error to an error reporting service here
+    // Example: logErrorToService(error, errorInfo);
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   }
 
   handleReload = () => {
@@ -60,6 +106,10 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -109,11 +159,42 @@ class ErrorBoundary extends Component<Props, State> {
               <button
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
+<<<<<<< HEAD
+=======
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center text-white max-w-md mx-auto p-6">
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚠️</span>
+              </div>
+              <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>
+              <p className="text-slate-300 mb-6">
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <button 
+                onClick={() => typeof window !== 'undefined' && window.location.reload()} 
+                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Reload Page
+              </button>
+              <button 
+                onClick={() => this.setState({ hasError: false })} 
+                className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -121,6 +202,17 @@ class ErrorBoundary extends Component<Props, State> {
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
+<<<<<<< HEAD
+=======
+=======
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
+                  {this.state.error.stack}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
                 </pre>
               </details>
             )}

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -10,7 +14,16 @@ import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
+<<<<<<< HEAD
 export default function App() {
+=======
+export default function App(): React.JSX.Element {
+=======
+import React, { JSX } from 'react',
+
+export default function App(): JSX.Element {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   return (
     <ErrorBoundary>
       <Router>

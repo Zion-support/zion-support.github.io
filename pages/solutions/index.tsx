@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -14,6 +18,12 @@ import {
   Target
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 
 const solutions = [
   {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = {;
   apps:[;
     {;
@@ -89,6 +90,9 @@ module.exports = {;
       time: true
     }
   ]
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 },
 export default {
@@ -294,3 +298,9 @@ module.exports = {
     time: true
   }]
 };
+<<<<<<< HEAD
+=======
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

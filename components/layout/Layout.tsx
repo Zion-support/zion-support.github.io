@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React, { ReactNode } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 import Header from '../Header';
 import Footer from '../Footer';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -14,6 +32,10 @@ interface LayoutProps {
   noIndex?: boolean;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 export default function Layout({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -25,6 +47,12 @@ export default function Layout({
   ogImage,
   noIndex = false
 }: LayoutProps) {
+<<<<<<< HEAD
+=======
+=======
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   return (
     <div className="min-h-screen bg-white">
       <Header />
