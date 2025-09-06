@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 };
 =======
@@ -9,6 +10,14 @@ export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
 };
+=======
+import Link from 'next/link';
+
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 
 export default function ServicesOverviewPage() {
   return (
@@ -18,6 +27,7 @@ export default function ServicesOverviewPage() {
           Our Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
           Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
           we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
         </p>
@@ -93,10 +103,13 @@ export default function ServicesOverviewPage() {
           Our Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           Product engineering and AI-first consulting to deliver measurable
           outcomes for your business.
         </p>
       </div>
+<<<<<<< HEAD
 =======
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 >>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
@@ -133,10 +146,25 @@ export default function ServicesOverviewPage() {
           ]}
           icon="🚀"
           pricing="From $2,999/month"
+=======
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <ServiceCard
+          href="/services/micro-saas"
+          title="Micro SaaS"
+          description="End-to-end product development with billing, auth, and analytics"
+          bullets={[
+            "Foundational architecture",
+            "Billing + subscriptions",
+            "Growth analytics",
+            "Multi-tenant systems"
+          ]}
+          icon="🚀"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           description="LLM applications, RAG systems, and AI automation"
@@ -165,10 +193,16 @@ export default function ServicesOverviewPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           icon="🤖"
           pricing="From $5,000/project"
+=======
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI solutions"]}
+          icon="🤖"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           description="Cloud migration, DevOps, and security solutions"
@@ -524,6 +558,14 @@ export default function ServicesOverviewPage() {
           </a>
         </div>
       </div>
+=======
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure optimization"]}
+          icon="⚙️"
+        />
+      </div>
+      <CTA />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
     </div>
   );
 }
@@ -535,6 +577,7 @@ function ServiceCard({
   bullets, 
   icon 
 }: { 
+<<<<<<< HEAD
   href: string; 
   title: string; 
   description: string; 
@@ -563,11 +606,14 @@ function ServiceCard({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -575,10 +621,13 @@ function ServiceCard({
 =======
   pricing: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 }) {
   return (
     <Link
       href={href}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
@@ -597,6 +646,8 @@ function ServiceCard({
   );
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -604,20 +655,28 @@ function ServiceCard({
         {title}
       </h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+<<<<<<< HEAD
       <ul className="text-gray-600 space-y-2 mb-4">
+=======
+      <ul className="text-gray-600 space-y-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         {bullets.map((bullet) => (
           <li key={bullet} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {bullet}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
       <div className="text-lg font-semibold text-blue-600">
         {pricing}
       </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
     </Link>
   );
 }
 
+<<<<<<< HEAD
 function StatCard({ 
   number, 
   label, 
@@ -636,6 +695,8 @@ function StatCard({
   );
 }
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
@@ -643,14 +704,20 @@ function CTA() {
         Ready to Get Started?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
+=======
+        Talk to our experts about your project. We'll help you choose the right
+        service and create a custom solution for your business needs.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           {" "}
           Call +1 302 464 0950{" "}
@@ -660,10 +727,15 @@ function CTA() {
           Call +1 302 464 0950
         </a>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+          Call +1 302 464 0950
+        </a>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         <a
           href="mailto:kleber@ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -682,4 +754,11 @@ function CTA() {
     </div>
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          Email Us
+        </a>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 }

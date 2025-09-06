@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 =======
 =======
@@ -11,10 +12,14 @@ import React, { Component, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
 }
+=======
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 
 interface Props {
   children: ReactNode;
 }
+
 interface State {
   hasError: boolean;
 <<<<<<< HEAD
@@ -34,12 +39,14 @@ export default class ErrorBoundary extends Component<Props, State> {
 =======
   errorInfo?: ErrorInfo;
 }
+
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
+<<<<<<< HEAD
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
     this.setState({
       error,
@@ -59,11 +66,19 @@ class ErrorBoundary extends Component<Props, State> {
 =======
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
 =======
+=======
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
   }
+
   render() {
     if (this.state.hasError) {
       return (
@@ -111,6 +126,7 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
+<<<<<<< HEAD
 export default ErrorBoundary
     return { hasError: true, error };
   };
@@ -281,3 +297,10 @@ export default ErrorBoundary;
 =======
 export default ErrorBoundary;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86

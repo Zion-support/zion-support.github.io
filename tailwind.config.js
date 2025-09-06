@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   darkMode: "class",
   content: [
 <<<<<<< HEAD
@@ -17,13 +18,23 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+  darkMode: "class",
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         background: 'var(--background)',
         foreground: 'var(--foreground)',
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -38,8 +49,13 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           950: '#172554'},
         // Extended color palette
+=======
+          950: '#172554'
+        },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -51,6 +67,7 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
           950: '#030712'},
         blue: {
           50: '#eff6ff',
@@ -585,24 +602,37 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           950: '#030712'
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+<<<<<<< HEAD
         mono: ['JetBrains Mono', 'monospace'],
+=======
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         'scale-in': 'scaleIn 0.3s ease-out',
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
+<<<<<<< HEAD
         'spin-slow': 'spin 8s linear infinite'
+=======
+        'spin-slow': 'spin 8s linear infinite',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       },
       keyframes: {
         fadeIn: {
@@ -611,6 +641,7 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         scaleIn: {
@@ -621,6 +652,18 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' }
         }
+=======
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       },
       spacing: {
         '18': '4.5rem',
@@ -629,18 +672,29 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+<<<<<<< HEAD
         '5xl': '2.5rem'
+=======
+        '5xl': '2.5rem',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+<<<<<<< HEAD
         'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
       }
     }
+=======
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
+    },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+<<<<<<< HEAD
 <<<<<<< HEAD
     require('@tailwindcss/aspect-ratio'),
   ],
@@ -655,3 +709,8 @@ module.exports = {
   ]
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86

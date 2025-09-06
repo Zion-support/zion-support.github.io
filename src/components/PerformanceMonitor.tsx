@@ -101,6 +101,7 @@ export default PerformanceMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
 
+<<<<<<< HEAD
 import React from 'react';
 ;
 <<<<<<< HEAD
@@ -108,3 +109,14 @@ import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86

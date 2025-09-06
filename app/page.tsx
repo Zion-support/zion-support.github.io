@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import Link from 'next/link';
 
+<<<<<<< HEAD
 =======
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -15,6 +16,13 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
+=======
+import Link from 'next/link';
+
+export default function HomePage() {
+  return (
+    <div className="animate-fade-in">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       <section className="text-center py-12 md:py-20">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Build and scale with{' '}
@@ -24,6 +32,7 @@ export default function HomePage() {
           <span className="text-purple-600">Enterprise IT</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+<<<<<<< HEAD
           We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
           automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
         </p>
@@ -150,10 +159,18 @@ export default function HomePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="/services" 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Get Started
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -181,6 +198,10 @@ export default function HomePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+          <a 
+            href="https://ziontechgroup.com" 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             View Services
@@ -194,6 +215,7 @@ export default function HomePage() {
       <section className="py-12">
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -211,6 +233,8 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           <Card 
             title="Micro SaaS" 
             href="/services/micro-saas" 
@@ -225,6 +249,7 @@ export default function HomePage() {
             description="Intelligent automation tools that streamline operations and boost productivity by 300%."
             icon="⚡"
           />
+<<<<<<< HEAD
           <Card
             title="AI Copilots"
             href="/services/ai-copilots"
@@ -329,6 +354,13 @@ export default function HomePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+          <Card 
+            title="IT Services" 
+            href="/services/it-services" 
+            description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
+            icon="⚙️" 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           />
         </div>
       </section>
@@ -344,7 +376,10 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           <FeatureCard 
             title="Fast Delivery" 
             description="Rapid prototyping and deployment with modern tools and practices." 
@@ -370,6 +405,7 @@ export default function HomePage() {
             title="24/7 Support"
             description="Round-the-clock monitoring and support for your critical systems."
           />
+<<<<<<< HEAD
           <FeatureCard
             title="Cost Effective"
             description="Optimized solutions that reduce operational costs and improve efficiency."
@@ -384,6 +420,11 @@ export default function HomePage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          <FeatureCard 
+            title="Cost Effective" 
+            description="Optimized solutions that reduce operational costs and improve efficiency." 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
           />
 =======
           />
@@ -455,6 +496,7 @@ export default function HomePage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -470,6 +512,8 @@ function Card({ title, description, href, icon }: { title: string; description: 
     <Link
       href={href}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 function Card({ title, description, href, icon }: { 
   title: string; 
   description: string; 
@@ -479,6 +523,7 @@ function Card({ title, description, href, icon }: {
   return (
     <Link 
       href={href} 
+<<<<<<< HEAD
 >>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
 =======
 <<<<<<< HEAD
@@ -495,6 +540,8 @@ function Card({ title, description, href, icon }: {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -507,10 +554,14 @@ function Card({ title, description, href, icon }: {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
 }) {
+<<<<<<< HEAD
 >>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
 =======
 <<<<<<< HEAD
@@ -525,6 +576,8 @@ function FeatureCard({ title, description }: { title: string; description: strin
 function FeatureCard({ title, description }: { title: string; description: string }) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
@@ -533,6 +586,7 @@ function FeatureCard({ title, description }: { title: string; description: strin
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -550,3 +604,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86

@@ -386,6 +386,7 @@ const Home: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 
 const Home: React.FC = () => {
   return (
@@ -418,3 +419,6 @@ const Home: React.FC = () => {
 
 export default Home;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export default Home;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
