@@ -1,9 +1,12 @@
-
-  "gzip"
-    "enabled"
-    "level"
-    "threshold"
-  "brotli"
-    "enabled"
-    "level"
-    "threshold"
+{
+  "gzip": {
+    "enabled": true,
+    "level": 6,
+    "threshold": 1024
+  },
+  "brotli": {
+    "enabled": true,
+    "level": 4,
+    "threshold": 1024
+  }
+}

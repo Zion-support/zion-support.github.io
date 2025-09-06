@@ -6,6 +6,6 @@ const UserMenu.js = ({ className }) => {
       <h1>UserMenu.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

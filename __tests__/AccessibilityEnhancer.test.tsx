@@ -84,3 +84,4 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+});

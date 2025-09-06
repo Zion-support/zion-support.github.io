@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
@@ -24,22 +25,15 @@ jest.mock('next/router', () => ({
 =======
 import React from 'react';
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+import React from 'react';
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+interface SetupProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Mock IntersectionObserver
 // @ts-ignore
@@ -60,6 +54,8 @@ global.ResizeObserver = class ResizeObserver {
 // Mock window.scrollTo
 global.window.scrollTo = jest.fn();
 =======
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -98,4 +94,21 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+import React from 'react';
+
+interface SetupProps {
+  // Add props here as needed
+}
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

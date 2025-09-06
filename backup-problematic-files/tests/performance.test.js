@@ -1,7 +1,7 @@
 // Performance.test utility
 export const Performance.test = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 interface Performance.testProps {

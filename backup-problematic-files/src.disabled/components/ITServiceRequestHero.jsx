@@ -6,6 +6,6 @@ const ITServiceRequestHero = ({ className }) => {
       <h1>ITServiceRequestHero</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -6,6 +6,6 @@ const AICodeGenerator = ({ className }) => {
       <h1>AICodeGenerator</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

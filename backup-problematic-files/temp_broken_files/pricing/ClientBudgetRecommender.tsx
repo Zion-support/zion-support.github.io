@@ -132,7 +132,7 @@ const generateSuggestion = async () => {;
 try {;
   const params: ClientBudgetParams = {;
   jobTitle;
-category ;
+category 
 };
 if (scope) params.scope = scope;
 if (experienceLevel) params.experienceLevel = experienceLevel;

@@ -44,8 +44,8 @@ export function TalentProfile({ ;
   // Create proper projects array for ProfileProjects component;
   const projectsArray = profile.key_projects?.map((proj, i) => ({;
     id:`project-${i}`,;
-    title:proj.title,;
-    description:proj.description,;
+    title:proj.title,,
+  description:proj.description,;
     date:new Date().toISOString() // Default date since we don't have this data;
   })) || [],;
   ;
@@ -156,7 +156,7 @@ message: `$ {;
   profile.professional title ;
 }with $ {;
   profile.years experience ;
-}years of experience` ;
+}years of experience` 
 };
 //Create proper skills array for ProfileSkills component const skillsArray = profile.skills?.map (skill => ({;
   name: skill;';
@@ -165,8 +165,8 @@ level: 3 //Default level since we don't have this data ;
 id: `project-$ {;
   i ;
 }`;
-title: proj.title;
-description: proj.description;';
+title: proj.title,
+  description: proj.description;';
 date: new Date () .toISOString () //Default date since we don't have this data ;
 }) ) || [];
 return (</div> </div> {;

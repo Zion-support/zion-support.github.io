@@ -24,6 +24,6 @@ const FaqSection = ({ className }) => {
       <h1>FaqSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

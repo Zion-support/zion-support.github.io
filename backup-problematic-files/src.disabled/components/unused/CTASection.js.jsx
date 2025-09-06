@@ -6,6 +6,6 @@ const CTASection.js = ({ className }) => {
       <h1>CTASection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

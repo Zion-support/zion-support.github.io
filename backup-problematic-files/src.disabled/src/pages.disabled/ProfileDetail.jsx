@@ -24,6 +24,6 @@ const ProfileDetail = ({ className }) => {
       <h1>ProfileDetail</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -6,8 +6,8 @@ import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'l
 const features = [;
   {}
     icon: Cloud,;
-    title: 'Cloud Migration,',;
-    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
+    title: 'Cloud Migration,',,
+  description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
@@ -29,28 +29,28 @@ import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} fro
 const features = [;
   {;
     icon: Cloud,;
-    title: 'Cloud Migration',;
-    description: 'Seamless migration to cloud platforms with zero downtime';
+    title: 'Cloud Migration',,
+  description: 'Seamless migration to cloud platforms with zero downtime';
   },;
   {}
     icon: Server,;
-    title: 'Infrastructure as Code,',;
-    description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',;
+    title: 'Infrastructure as Code,',,
+  description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',;
   },;
   {}
     icon: Database,;
-    title: 'Database Management,',;
-    description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',;
+    title: 'Database Management,',,
+  description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',;
   },;
   {}
     icon: Shield,;
-    title: 'Security & Compliance,',;
-    description: 'Implement robust security measures and maintain compliance with industry standards.'',;
+    title: 'Security & Compliance,',,
+  description: 'Implement robust security measures and maintain compliance with industry standards.'',;
   },;
   {}
     icon: Zap,;
-    title: 'CI/CD Pipelines,',;
-    description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
+    title: 'CI/CD Pipelines,',,
+  description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
   }
 ;];
 const services = [;

@@ -6,6 +6,6 @@ const FuturisticLoader.js = ({ className }) => {
       <h1>FuturisticLoader.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

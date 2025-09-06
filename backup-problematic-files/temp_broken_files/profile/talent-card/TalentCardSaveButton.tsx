@@ -31,8 +31,8 @@ export function TalentCardSaveButton({;
 ;
     if (!isAuthenticated) {;
       toast({;
-        title:"Authentication required",;
-        description:"Please log in to save talents to your favorites",;
+        title:"Authentication required",,
+  description:"Please log in to save talents to your favorites",;
         variant:"destructive";
       }),;
       const returnTo = encodeURIComponent(router.asPath),;
@@ -46,8 +46,8 @@ export function TalentCardSaveButton({;
     }
     ;
     toast({;
-      title:localIsSaved ? "Removed from favorites" :"Added to favorites",;
-      description:localIsSaved ;
+      title:localIsSaved ? "Removed from favorites" :"Added to favorites",,
+  description:localIsSaved ;
         ? `${profileName} has been removed from your favorites` ;
         :`${profileName} has been added to your favorites`,;
       variant:"default";
@@ -89,11 +89,11 @@ const router = useRouter ();
 :temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
 
 }variant: "default",
-}) ;
+}) 
 };
 }/> </button>) ;"}"
 }variant: "default" ;
-}) ;
+}) 
 };
 }/> </button>) ;
 }"

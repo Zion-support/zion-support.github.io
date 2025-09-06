@@ -34,13 +34,13 @@ const services = [
       'Medical image analysis,',
       'Symptom pattern recognition',',
       'Risk assessment algorithms',',
-    title: 'AI-Powered Medical Diagnostics,',;
-    description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',;
+    title: 'AI-Powered Medical Diagnostics,',,
+  description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'AI-Powered Medical Diagnostics',;
-    description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.',;
+    title: 'AI-Powered Medical Diagnostics',,
+  description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.',;
     icon: Brain,;
     features: [,;
       'Medical image analysis,',;
@@ -50,8 +50,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Telemedicine Platforms,',;
-    description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',;
+    title: 'Telemedicine Platforms,',,
+  description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',;
     icon: Phone,;
     features: [,;
       'Video consultation systems,',;
@@ -61,8 +61,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Electronic Health Records (EHR),',;
-    description: 'Secure, interoperable health information management systems.',',;
+    title: 'Electronic Health Records (EHR),',,
+  description: 'Secure, interoperable health information management systems.',',;
     icon: Database,;
     features: [,;
       'Patient data management,',;
@@ -72,8 +72,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Medical Imaging AI,',;
-    description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',;
+    title: 'Medical Imaging AI,',,
+  description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',;
     icon: Camera,;
     features: [,;
       'Radiology image analysis,',;
@@ -83,8 +83,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Healthcare Analytics,',;
-    description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',;
+    title: 'Healthcare Analytics,',,
+  description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',;
     icon: BarChart3,;
     features: [,;
       'Population health analytics,',;
@@ -94,8 +94,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Patient Management Systems,',;
-    description: 'Comprehensive patient care coordination and management platforms.,',;
+    title: 'Patient Management Systems,',,
+  description: 'Comprehensive patient care coordination and management platforms.,',;
     icon: Users,;
     features: [,;
       'Appointment scheduling,',;
@@ -107,29 +107,29 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Improved Patient Outcomes,',;
-    description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',;
+    title: 'Improved Patient Outcomes,',,
+  description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',;
     icon: Heart;
 ];
 const benefits = [;
   {;
-    title: 'Improved Patient Outcomes',;
-    description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.',;
+    title: 'Improved Patient Outcomes',,
+  description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.',;
     icon: Heart;
   },;
   {}
-    title: 'Enhanced Efficiency,',;
-    description: 'Streamlined workflows and automated processes reduce administrative burden.,',;
+    title: 'Enhanced Efficiency,',,
+  description: 'Streamlined workflows and automated processes reduce administrative burden.,',;
     icon: Activity,;
   },;
   {}
-    title: 'Cost Reduction,',;
-    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',;
+    title: 'Cost Reduction,',,
+  description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',;
     icon: BarChart3,;
   },;
   {}
-    title: 'Regulatory Compliance,',;
-    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',;
+    title: 'Regulatory Compliance,',,
+  description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',;
     icon: Shield,;
   }
 ;];
@@ -138,18 +138,18 @@ const caseStudies = [;
 ];
 const caseStudies = [;
   {;
-    title: 'AI Diagnostic System Implementation',;
-    description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',;
+    title: 'AI Diagnostic System Implementation',,
+  description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',;
     results: ['60% faster diagnosis', '25% accuracy improvement', '40% cost reduction'];
   },;
   {}
-    title: 'Telemedicine Platform Deployment,',;
-    description: 'Enabled remote care for 50,000+ patients during the pandemic with 99 && 99.9% uptime.',',;
+    title: 'Telemedicine Platform Deployment,',,
+  description: 'Enabled remote care for 50,000+ patients during the pandemic with 99 && 99.9% uptime.',',;
     results: ['50,000+ patients served', '99 && 99.9% uptime', '95% patient satisfaction']',;
   },;
   {}
-    title: 'EHR Integration Project,',;
-    description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',;
+    title: 'EHR Integration Project,',,
+  description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',;
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',;
   }
 ;];
@@ -589,6 +589,6 @@ export default function HealthcarePage() {;
         </section>
       </div>
     </Layout>
-  );
+  )
 };
 

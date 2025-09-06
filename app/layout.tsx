@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import './global-styles.css';
@@ -20,6 +21,55 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+=======
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    template: '%s | Zion Tech Group'
+  },
+  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology and expert consulting.',
+  keywords: 'AI solutions, micro SaaS, enterprise IT, cloud migration, DevOps, cybersecurity, business automation, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology.',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
+    images: ['/og-image.jpg'],
+    creator: '@ziontechgroup',
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   },
   robots: {
     index: true,
@@ -32,8 +82,17 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  category: 'technology',
+  classification: 'Business Technology Services',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
+  themeColor: '#000000',
 };
 
+<<<<<<< HEAD
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -112,6 +171,8 @@ function Footer() {
 
 =======
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function RootLayout({
   children,
 }: {
@@ -119,6 +180,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
 <<<<<<< HEAD
       <body className="min-h-screen bg-gray-50">
         <Header />
@@ -134,4 +196,13 @@ export default function RootLayout({
     </html>
   )
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+      <body className={inter.className}>
+        <div className="min-h-screen bg-white">
+          {children}
+        </div>
+      </body>
+    </html>
+  );
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 }

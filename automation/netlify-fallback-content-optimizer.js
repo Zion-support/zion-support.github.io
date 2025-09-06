@@ -27,8 +27,6 @@ message: error && error.message
 
 #!/usr/bin/env node
 #!/usr/bin/env node
-#!/usr/bin/env node
-#!/usr/bin/env node
 
 // Netlify Function Fallback: content-optimizer
 // This is a local fallback when the main function is unavailable
@@ -36,7 +34,6 @@ message: error && error.message
 exports.handler = async (_event, _context) => {
     console.log('content-optimizer fallback executed locally'),
 
-    
     
     try {
         // Basic fallback logic;

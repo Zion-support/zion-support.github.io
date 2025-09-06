@@ -6,6 +6,6 @@ const EnhancedErrorBoundary.js = ({ className }) => {
       <h1>EnhancedErrorBoundary.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

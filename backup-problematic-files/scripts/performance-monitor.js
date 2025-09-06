@@ -14,7 +14,7 @@ const performanceChecks = {
   bundleAnalysis: false,
   lighthouseScore: false,
   loadTime: false,
-  memoryUsage: false;
+  memoryUsage: false
 };
       "bundleSize": 0,
       "memoryUsage": 0,
@@ -131,7 +131,7 @@ const report = {
   timestamp: new Date().toISOString(),
   score: performanceScore,
   checks: performanceChecks,
-  recommendations: [];
+  recommendations: []
 };
 if (performanceScore < 80) {
   "timestamp": new Date().toISOString(),

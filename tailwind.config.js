@@ -2,24 +2,52 @@
 module.exports = {
   content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+<<<<<<< HEAD
 =======
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}'
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   ],
   theme: {
     extend: {
       colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
         primary: {
           50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        blue: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
         },
         gray: {
           50: '#f9fafb',
@@ -43,7 +71,10 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -54,7 +85,10 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+<<<<<<< HEAD
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
       },
       keyframes: {
         fadeIn: {
@@ -64,6 +98,7 @@ module.exports = {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
 <<<<<<< HEAD
+<<<<<<< HEAD
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
       },
@@ -72,6 +107,8 @@ module.exports = {
   plugins: [],
 };
 =======
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         slideDown: {
@@ -155,5 +192,9 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+<<<<<<< HEAD
 };
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+};
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

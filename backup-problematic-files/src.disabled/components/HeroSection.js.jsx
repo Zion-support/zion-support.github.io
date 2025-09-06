@@ -6,6 +6,6 @@ const HeroSection.js = ({ className }) => {
       <h1>HeroSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

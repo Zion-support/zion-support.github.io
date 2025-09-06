@@ -14,7 +14,8 @@ async function checkAutomationStatus() { const statusReport = {
     // Check PM2 processes}
     _console.log(' Checking PM2 processes...');',
     try {
-      const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
+      const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', 
+};);
     // Check automation scripts}
     _console.log(' Checking automation scripts...');',
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',',
@@ -41,7 +42,8 @@ async function checkAutomationStatus() { const statusReport = {
       "uptime": process.uptime(),",
       "nodeVersion": process.version,",
       "platform": process.platform";,
-;    };,
+
+};,
     statusReport.systemHealth = systemHealth;,
 
     const runningProcesses = statusReport.pm2Processes.filter(proc => );

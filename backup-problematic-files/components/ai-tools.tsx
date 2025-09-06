@@ -120,56 +120,56 @@ export default function AiToolsPage() {
     {;
       title: 'AI Market Size',;
       value: '$136.6B',;
-      growth: '+37% YoY',;
-      description: 'Global AI market value in 2024';
+      growth: '+37% YoY',,
+  description: 'Global AI market value in 2024';
     },;
     {;
       title: 'AI Adoption Rate',;
       value: '35%',;
-      growth: '+12% YoY',;
-      description: 'Businesses actively using AI tools';
+      growth: '+12% YoY',,
+  description: 'Businesses actively using AI tools';
     },;
     {;
       title: 'AI Investment',;
       value: '$93.5B',;
-      growth: '+28% YoY',;
-      description: 'Global AI investment in 2024';
+      growth: '+28% YoY',,
+  description: 'Global AI investment in 2024';
     },;
     {;
       title: 'AI Productivity Gain',;
       value: '40%',;
-      growth: '+15% YoY',;
-      description: 'Average productivity improvement';
+      growth: '+15% YoY',,
+  description: 'Average productivity improvement';
     }
   ],;
   const aiCategories = [;
     {;
-      name: 'Conversational AI',;
-      description: 'Chatbots, virtual assistants, and language models',;
+      name: 'Conversational AI',,
+  description: 'Chatbots, virtual assistants, and language models',;
       tools: 3,;
       avgPrice: '$20/month';
     },;
     {;
-      name: 'Image Generation',;
-      description: 'AI-powered art, design, and visual content creation',;
+      name: 'Image Generation',,
+  description: 'AI-powered art, design, and visual content creation',;
       tools: 1,;
       avgPrice: '$20/month';
     },;
     {;
-      name: 'Code Generation',;
-      description: 'AI-assisted programming and development tools',;
+      name: 'Code Generation',,
+  description: 'AI-assisted programming and development tools',;
       tools: 1,;
       avgPrice: '$10/month';
     },;
     {;
-      name: 'Video Generation',;
-      description: 'AI video creation and editing tools',;
+      name: 'Video Generation',,
+  description: 'AI video creation and editing tools',;
       tools: 1,;
       avgPrice: '$44/month';
     },;
     {;
-      name: 'Content Creation',;
-      description: 'AI-powered writing and content generation',;
+      name: 'Content Creation',,
+  description: 'AI-powered writing and content generation',;
       tools: 1;
       avgPrice: '$82/month';
     }

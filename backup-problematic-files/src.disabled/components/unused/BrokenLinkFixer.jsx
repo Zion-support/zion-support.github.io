@@ -6,6 +6,6 @@ const BrokenLinkFixer = ({ className }) => {
       <h1>BrokenLinkFixer</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

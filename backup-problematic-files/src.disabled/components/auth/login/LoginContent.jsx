@@ -24,6 +24,6 @@ const LoginContent = ({ className }) => {
       <h1>LoginContent</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

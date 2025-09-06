@@ -93,8 +93,8 @@ export function ChatBotPanel() {;
       console.error("Error in AI chat:", error),;
       toast({;
         variant:"destructive",;
-        title:"Communication Error",;
-        description:"We're having trouble connecting to our support service."}),;
+        title:"Communication Error",,
+  description:"We're having trouble connecting to our support service."}),;
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -189,8 +189,8 @@ export function ChatBotPanel() {;
     ;
     // In a real implementation, this would trigger a live chat request;
     toast({;
-      title:"Support request submitted",;
-      description:"A support agent will be with you shortly."}),;
+      title:"Support request submitted",,
+  description:"A support agent will be with you shortly."}),;
   },;
 ;
   const handleEmailSupport = () => {;
@@ -390,7 +390,7 @@ timestamp: new Date ()
 timestamp: new Date () 
 }]);
 //In a real implementation, this would trigger a live chat request 
-};
+}
 };
 timestamp: new Date () 
 }]) 

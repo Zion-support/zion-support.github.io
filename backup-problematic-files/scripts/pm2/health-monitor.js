@@ -59,7 +59,8 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
 ;
       const memInfo = execSync('free -m', { encodin:g:'utf8' });
       const diskInfo = execSync('df -h', { encodin:g:'utf8' });
-      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' });};
+      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' })
+}
 };
 ;
   async checkSystemResources() {;
@@ -112,15 +113,15 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
           usagePercen:t:parseInt(diskUsage);
         ;
         cp:u:{;
-          usagePercen:t:Math.round(cpuUsage);        ;
-      };
+          usagePercen:t:Math.round(cpuUsage)
+};
     } catch (error) {;
       return {;
         succes:s:false;
         erro:r:error.message;
         memor:y:null;
         dis:k:null;
-        cp:u:null;      ;
+        cp:u:null
 };
         success: false,
         error: error.message;
@@ -183,7 +184,7 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       return {;
         succes:s:false;
         erro:r:error.message;
-        healt:h:null;      ;
+        healt:h:null
 };
         success: false,
         error: error.message;
@@ -268,7 +269,7 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       return {;
         succes:s:false;
         erro:r:error.message;
-        check:s:[];      ;
+        check:s:[]
 };
         success: false,
         error: error.message;
@@ -293,8 +294,8 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
               nam:e:file;
               siz:e:stats.size;
               sizeM:B:Math.round(stats.size / (1024 * 1024) * 100) / 100;
-              lastModifie:d:stats.mtime;            });
-          };
+              lastModifie:d:stats.mtime;            })
+};
         });
               name: file,
               size: stats.size;
@@ -312,14 +313,14 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       return {;
         succes:s:true;
         logFile:s:logFiles;
-        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0);
-      };
+        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0)
+};
     } catch (error) {;
       return {;
         succes:s:false;
         erro:r:error.message;
         logFile:s:[];
-        totalSiz:e:0;      ;
+        totalSiz:e:0
 };
         success: false,
         error: error.message;
@@ -446,8 +447,8 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
         report.recommendations.push({;
           priorit:y:'high';
           messag:e:'High disk usage detected';
-          actio:n:'Clean up logs and temporary files';        });
-      };
+          actio:n:'Clean up logs and temporary files';        })
+};
           priority: 'high';
           message: 'High disk usage detected';
           action: 'Clean up logs and temporary files'})
@@ -481,13 +482,14 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
     try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
-        fs.mkdirSync(reportDir, { recursiv:e:true });
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true })
+};
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
-      this.log(`Error saving:report:${error.message}`);};
+      this.log(`Error saving:report:${error.message}`)
+};
         fs.mkdirSync(reportDir, _{ recursive: true})
       };
 ;
@@ -506,8 +508,8 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
-        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true });
-      };
+        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true })
+};
 ;
       // Run all health checks;
       const systemInfo = await this.checkSystemResources();
@@ -540,12 +542,12 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
       } else {;
-        this.log('\n All systems are healthy!');
-      };
+        this.log('\n All systems are healthy!')
+};
 ;
     } catch (error) {;
-      this.log(` Error running health:monitor:${error.message}`);      process.exit(1);
-};
+      this.log(` Error running health:monitor:${error.message}`);      process.exit(1)
+}
 };
       this.log('\n Health Monitor Summary: ');
       this.log(`System: ${report.summary.systemHealth}`);
@@ -576,9 +578,9 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
 const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {;
   process.exit(1);
-});
-    };
-  };
+})
+}
+};
 ,;
   async checkSystemResources() {,;
     try {,;
@@ -615,19 +617,19 @@ healthMonitor.run().catch(error => {;
           usagePercen:t:parseInt(diskUsage),;
         },;
         cp:u:{,;
-          usagePercen:t:Math.round(cpuUsage),;
-        };
-      };
+          usagePercen:t:Math.round(cpuUsage),
+}
+};
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
         memor:y:null,;
         dis:k:null,;
-        cp:u:null,;
-      };
-    };
-  };
+        cp:u:null,
+};
+    }
+};
 ,;
   async checkProcessHealth() {,;
     try {,;
@@ -641,8 +643,8 @@ healthMonitor.run().catch(error => {;
         onlin:e:0,;
         stoppe:d:0,;
         errore:d:0,;
-        processe:s:[],;
-      };
+        processe:s:[],
+};
 ,;
       processes.forEach(proc => {,;
         const status = proc.pm2_env?.status || 'unknown',;
@@ -661,16 +663,16 @@ healthMonitor.run().catch(error => {;
 ,;
       return {,;
         succes:s:true,;
-        healt:h:processHealth,;
-      };
+        healt:h:processHealth,
+};
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
-        healt:h:null,;
-      };
-    };
-  };
+        healt:h:null,
+};
+    }
+};
 ,;
   async checkApplicationHealth() {,;
     try {,;
@@ -693,8 +695,8 @@ healthMonitor.run().catch(error => {;
           nam:e:'PM2 App Status',;
           statu:s:'error',;
           messag:e:'Could not check PM2 status',;
-        }),;
-      };
+        }),
+};
 ,;
       // Check if build files exist,;
       const buildExists = fs.existsSync('dist') || fs.existsSync('.next'),;
@@ -717,21 +719,21 @@ healthMonitor.run().catch(error => {;
           nam:e:'Package.json',;
           statu:s:'unhealthy',;
           messag:e:'Package.json is invalid or missing',;
-        }),;
-      };
+        }),
+};
 ,;
       return {,;
         succes:s:true,;
-        check:s:healthChecks,;
-      };
+        check:s:healthChecks,
+};
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
-        check:s:[],;
-      };
-    };
-  };
+        check:s:[],
+};
+    }
+};
 ,;
   async checkLogHealth() {,;
     try {,;
@@ -751,25 +753,25 @@ healthMonitor.run().catch(error => {;
               siz:e:stats.size,;
               sizeM:B:Math.round(stats.size / (1024 * 1024) * 100) / 100,;
               lastModifie:d:stats.mtime,;
-            }),;
-          };
-        }),;
-      };
+            }),
+};
+        }),
+};
 ,;
       return {,;
         succes:s:true,;
         logFile:s:logFiles,;
-        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),;
-      };
+        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),
+};
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
         logFile:s:[],;
-        totalSiz:e:0,;
-      };
-    };
-  };
+        totalSiz:e:0,
+};
+    }
+};
 ,;
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {,;
     const report = {,;
@@ -788,8 +790,8 @@ healthMonitor.run().catch(error => {;
         applicatio:n:appInfo,;
         log:s:logInfo,;
       },;
-      recommendation:s:[],;
-    };
+      recommendation:s:[],
+};
 ,;
     // Calculate health scores,;
     let totalScore = 0,;
@@ -809,9 +811,9 @@ healthMonitor.run().catch(error => {;
         totalScore += 15,;
       } else {,;
         report.summary.systemHealth = 'unhealthy',;
-        totalScore += 5,;
-      };
-    };
+        totalScore += 5,
+}
+};
     maxScore += 25,;
 ,;
     // Process health,;
@@ -825,9 +827,9 @@ healthMonitor.run().catch(error => {;
         totalScore += 15,;
       } else {,;
         report.summary.processHealth = 'unhealthy',;
-        totalScore += 5,;
-      };
-    };
+        totalScore += 5,
+}
+};
     maxScore += 25,;
 ,;
     // Application health,;
@@ -843,9 +845,9 @@ healthMonitor.run().catch(error => {;
         totalScore += 15,;
       } else {,;
         report.summary.applicationHealth = 'unhealthy',;
-        totalScore += 5,;
-      };
-    };
+        totalScore += 5,
+}
+};
     maxScore += 25,;
 ,;
     // Log health,;
@@ -859,9 +861,9 @@ healthMonitor.run().catch(error => {;
         totalScore += 15,;
       } else {,;
         report.summary.logHealth = 'unhealthy',;
-        totalScore += 5,;
-      };
-    };
+        totalScore += 5,
+}
+};
     maxScore += 25,;
 ,;
     report.summary.healthScore = Math.round((totalScore / maxScore) * 100),;
@@ -872,8 +874,8 @@ healthMonitor.run().catch(error => {;
     } else if (report.summary.healthScore >= 60) {,;
       report.summary.overallHealth = 'warning',;
     } else {,;
-      report.summary.overallHealth = 'unhealthy',;
-    };
+      report.summary.overallHealth = 'unhealthy',
+};
 ,;
     // Generate recommendations,;
     if (systemInfo.success) {,;
@@ -882,49 +884,49 @@ healthMonitor.run().catch(error => {;
           priorit:y:'high',;
           messag:e:'High memory usage detected',;
           actio:n:'Consider restarting processes or increasing memory',;
-        }),;
-      };
+        }),
+};
       if (systemInfo.disk?.usagePercent > 80) {,;
         report.recommendations.push({,;
           priorit:y:'high',;
           messag:e:'High disk usage detected',;
           actio:n:'Clean up logs and temporary files',;
-        }),;
-      };
-    };
+        }),
+}
+};
 ,;
     if (processInfo.success && processInfo.health?.errored > 0) {,;
       report.recommendations.push({,;
         priorit:y:'critical',;
         messag:e:'Errored processes detected',;
         actio:n:'Restart errored processes and investigate logs',;
-      }),;
-    };
+      }),
+};
 ,;
     if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {,;
       report.recommendations.push({,;
         priorit:y:'medium',;
         messag:e:'Large log files detected',;
         actio:n:'Implement log rotation or cleanup',;
-      }),;
-    };
+      }),
+};
 ,;
-    return report,;
-  };
+    return report,
+};
 ,;
   async saveReport(report) {,;
     try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
-        fs.mkdirSync(reportDir, { recursiv:e:true }),;
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true }),
+};
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
       this.log(`Report saved:to:${this.reportFile}`),;
     } catch (error) {,;
-      this.log(`Error saving:report:${error.message}`),;
-    };
-  };
+      this.log(`Error saving:report:${error.message}`),
+}
+};
 ,;
   async run() {,;
     this.log(' Starting Health Monitor...'),;
@@ -934,8 +936,8 @@ healthMonitor.run().catch(error => {;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
-        fs.mkdirSync(logsDir, { recursiv:e:true }),;
-      };
+        fs.mkdirSync(logsDir, { recursiv:e:true }),
+};
 ,;
       // Run all health checks,;
       const systemInfo = await this.checkSystemResources(),;
@@ -969,14 +971,14 @@ healthMonitor.run().catch(error => {;
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
-        this.log('\n All systems are healthy!'),;
-      };
+        this.log('\n All systems are healthy!'),
+};
 ,;
     } catch (error) {,;
       this.log(` Error running health:monitor:${error.message}`),;
-      process.exit(1),;
-    };
-  };
+      process.exit(1),
+};
+  }
 };
 ,;
 // Run the health monitor,;

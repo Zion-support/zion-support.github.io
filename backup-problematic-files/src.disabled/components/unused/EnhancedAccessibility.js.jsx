@@ -6,6 +6,6 @@ const EnhancedAccessibility.js = ({ className }) => {
       <h1>EnhancedAccessibility.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

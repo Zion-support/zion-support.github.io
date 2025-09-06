@@ -36,8 +36,8 @@ const PostPage:NextPage<Props> = ({ post, all }) => {;
 ;
   const jsonLd = {;
     '@context':'https://schema.org@type':'BlogPosting',;
-    headline:post.seo.metaTitle || post.title,;
-    description:post.seo.metaDescription,;
+    headline:post.seo.metaTitle || post.title,,
+  description:post.seo.metaDescription,;
     image:post.seo.ogImageUrl || post.coverImageUrl,;
     datePublished:post.publishDate,;
     author:[{ '@type':'Person', name:post.author }],;

@@ -10,8 +10,8 @@ export default function Compliance() {;
     {;
       id:'soc2',;
       title:'SOC 2 Type II',;
-      icon:Shield,;
-      description:'Annual audits of security, availability, and confidentiality controls',;
+      icon:Shield,,
+  description:'Annual audits of security, availability, and confidentiality controls',;
       details:[;
         'Independent third-party auditingSecurity controls assessment',;
         'Availability and processing integrityConfidentiality safeguards',;
@@ -21,8 +21,8 @@ export default function Compliance() {;
     {;
       id:'iso27001',;
       title:'ISO 27001',;
-      icon:Scale,;
-      description:'International standard for information security management',;
+      icon:Scale,,
+  description:'International standard for information security management',;
       details:[;
         'Information security management system (ISMS)Risk assessment and management',;
         'Security policy implementationContinuous improvement processes',;
@@ -32,8 +32,8 @@ export default function Compliance() {;
     {;
       id:'gdpr',;
       title:'GDPR Compliance',;
-      icon:Globe,;
-      description:'European Union data protection regulation compliance',;
+      icon:Globe,,
+  description:'European Union data protection regulation compliance',;
       details:[;
         'Data protection by design and defaultIndividual rights management',;
         'Data processing agreementsPrivacy impact assessments',;
@@ -43,8 +43,8 @@ export default function Compliance() {;
     {;
       id:'hipaa',;
       title:'HIPAA Compliance',;
-      icon:Users,;
-      description:'Healthcare information privacy and security standards',;
+      icon:Users,,
+  description:'Healthcare information privacy and security standards',;
       details:[;
         'Protected health information (PHI) safeguardsBusiness associate agreements',;
         'Access controls and audit logsWorkforce training programs',;

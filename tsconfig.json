@@ -9,9 +9,14 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
+<<<<<<< HEAD
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
+=======
+    "esModuleInterop": true,
+    "module": "ESNext",
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,6 +25,7 @@
       {
         "name": "next"
       }
+<<<<<<< HEAD
     ]
   },
   "include": [
@@ -32,3 +38,22 @@
     "node_modules"
   ]
 }
+=======
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
