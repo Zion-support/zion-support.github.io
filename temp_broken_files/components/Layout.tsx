@@ -1,15 +1,15 @@
-import React, { ReactNode } from "react",
-,
-interface LayoutProps {,
-  children: ReactNode
+import React, { ReactNode } from "react";
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <main>{children}</main>
+    </div>
+  );
 };
-,
-const Layout: React.FC<LayoutProps> = ({ children }) => {,
-  return (,
-    <main className="min-h-screen">,
-      {children};
-    </main>)
-};
-,
-export default Layout,
-,
+
+export default Layout;

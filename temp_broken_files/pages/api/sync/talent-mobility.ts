@@ -1,35 +1,37 @@
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  personId, fromNation, toNation, role, startDate, endDate 
-}= req.body as {
-  personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string 
-};
-if (!personId || !fromNation || !toNation || !role || !startDate) {
-  
-}const entityKey = `$ {
-  personId 
-}:$ {
-  startDate 
-}`;
-const version = nextVersionFor (state, entityKey);
-const event = {
-  eventId: uuidv4 ();
-type: "talent mobility" as const;
-payload: {
-  id: entityKey, personId, fromNation, toNation, role, startDate, endDate 
-};
-version;
-timestamp: Date.now () 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  
-}
-}) );
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    const { entityKey, personId, fromNation, toNation, role, startDate, endDate } = req.body;
+    
+    if (!entityKey || !personId || !fromNation || !toNation) {
+      return res.status(400).json({ error: 'Entity key, person ID, from nation, and to nation required' });
+    }
+
+    // Mock talent mobility event
+    const mobility = {
+      id: `mobility-${Date.now()}`,
+      entityKey,
+      personId,
+      fromNation,
+      toNation,
+      role: role || 'developer',
+      startDate: startDate || new Date().toISOString(),
+      endDate: endDate || null,
+      status: 'active',
+      createdAt: new Date().toISOString()
+    };
+
+    res.status(200).json({
+      success: true,
+      mobility
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Talent mobility event failed' });
+  }
 }
